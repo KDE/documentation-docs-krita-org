@@ -7,7 +7,7 @@
     :authors: - Dmitry Kazakov <dimula73@gmail.com>
               - Michael Abrahams <miabraha@gmail.com>
               - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
-              
+
     :license: GNU free documentation license 1.3 or later.
 
 .. _unittests_in_krita:
@@ -50,10 +50,99 @@ Comment:
 Automated regression testing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. editme
-    We now use automated testing qith jenkins, right? And what about gitlab CI?
+Most of our unit tests are run nightly on the CI. You can see the results and coverage reports at https://build.kde.org/job/Extragear/job/krita/.
 
-Ideally, unit tests should also facilitate automated regression catching (ask `Jenkins <https://build.kde.org/job/calligra%20calligra-2.9%20stable-qt4/>`_). But at the moment some of Krita unit tests are not stable enough to do the trick. They do straightforward QImage comparisons, so the test results can depend no only on version of the libraries installed, but also on build options and even type of CPU the tests are run on. In the future we plan to split such "unstable" unit test into a separate group and don't run them on Jenkins.
+However, some of the unit tests are not stable enough to be run automatically and therefore are disabled. (They do straightforward
+QImage comparisons, so the test results can depend no only on version of the libraries installed,
+but also on build options and even type of CPU the tests are run on.) While the overall coverage is decent, this issue limits the ability of the unit test suite to catch regressions in several parts of the codebase. (More information on that in the respective Phabricator task: https://phabricator.kde.org/T11904.)
+
+How to build and run tests?
+---------------------------
+
+Building the tests
+~~~~~~~~~~~~~~~~~~
+
+To enable unit tests, build Krita with an additional cmake flag: ``-DBUILD_TESTING=ON``.
+
+.. code:: bash
+
+  # example build command
+  you@yourcomputer:~/kritadev/build>cmake ../krita \
+    -DCMAKE_INSTALL_PREFIX=$HOME/kritadev/install \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DKRITA_DEVS=ON \
+    -DBUILD_TESTING=ON
+
+
+.. seealso::
+  * If you need help with building from source, see :ref:`building_krita`
+  * For more information about cmake options, please refer to :ref:`cmake_settings_for_developers`
+
+Once built, the tests are run from the the **build** directory. There you can either run the whole suite at once or you can run a single test (or even a single test with a single data row for data-driven tests).
+
+Run all the tests
+~~~~~~~~~~~~~~~~~
+
+.. code:: bash
+
+  # change to the build directory
+  you@yourcomputer:~/> cd kritadev/build
+  # run the whole suite
+  you@yourcomputer:~/kritadev/build> make test
+
+
+Run a single test
+~~~~~~~~~~~~~~~~~
+
+Every test class is built into a separate executable file. This executable file resides in the build directory tree. The relative path is the same as the path in source directory.
+
+To run all tests in a single test class, run the executable:
+
+
+.. code:: bash
+
+  # running all tests in a test class
+  you@yourcomputer:~/kritadev/build>./libs/ui/tests/KisSpinBoxSplineUnitConverterTest
+
+You can also run a single test method from the class or invoke the test method with a single test data row, if you have a data-driven test. Add the test method name (and optionally the test data row name) as an argument to the test class executable:
+
+.. code:: bash
+
+  # the syntax for running single tests:
+  # you@yourcomputer:~/kritadev/build>./test-class-executable "test method name":"data row name"
+
+  # run a single method in a test class
+  you@yourcomputer:~/kritadev/build>./libs/ui/tests/KisSpinBoxSplineUnitConverterTest testCurveCalculationTwoWay
+
+  # run a single method in a test class with the selected test data row
+  you@yourcomputer:~/kritadev/build>./libs/ui/tests/KisSpinBoxSplineUnitConverterTest testCurveCalculationTwoWay:"0.5 in (0, 10) = 5"
+
+Environment variables for running tests
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Prior to running the tests, you can set several environment variables to change the behavior of the tests.
+
+* Suppress safe assert dialogs:
+
+  .. code:: bash
+
+    you@yourcomputer:~/kritadev/build> export KRITA_NO_ASSERT_MSG=1
+
+* Set source directory for QImage-based test data
+
+  .. code:: bash
+
+    you@yourcomputer:~/kritadev/build> export KRITA_UNITTESTS_DATA_DIR=<directory>
+
+
+* Create reference images for QImage-based tests
+
+  .. code:: bash
+
+    you@yourcomputer:~/kritadev/build> export KRITA_WRITE_UNITTESTS=1
+
+
 
 When to write a unit test?
 --------------------------
@@ -79,8 +168,6 @@ Suppose you want to write a unittest for kritaimage library. You need to perform
 
     .. code:: cpp
 
-        
-        
         #ifndef __KIS_SOME_CLASS_TEST_H
         #define __KIS_SOME_CLASS_TEST_H
 
@@ -112,14 +199,14 @@ Suppose you want to write a unittest for kritaimage library. You need to perform
 #. Modify ./image/tests/CMakeLists.txt to include your new test class:
 
     .. code:: cmake
-    
-        # ...
-        ########### next target ###############
-        set(kis_some_class_test_SRCS kis_some_class_test.cpp )
-        ecm_add_tests(${kis_some_class_test_SRCS}
-        NAME_PREFIX "libs-somelib-"
-        LINK_LIBRARIES kritaimage Qt5::Test)
-        # ...
+
+      # ...
+      ########### next target ###############
+      set(kis_some_class_test_SRCS kis_some_class_test.cpp )
+      ecm_add_tests(${kis_some_class_test_SRCS}
+      NAME_PREFIX "libs-somelib-"
+      LINK_LIBRARIES kritaimage Qt5::Test)
+      # ...
 
 #. Write your test. You can use any macro commands provided by Qt (QVERIFY, QCOMPARE or QBENCHMARK).
 
