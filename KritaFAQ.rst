@@ -63,18 +63,6 @@ Krita has no clipping mask, but it has a clipping feature called
 inherit alpha. Let's see :ref:`this page <clipping_masks_and_alpha_inheritance>` and learn how to do
 clipping in Krita!
 
-Windows: OBS can't record the Krita OpenGL canvas
--------------------------------------------------
-
-The possible workarounds for this is to do either of the following:
-
-#. Turn off OpenGL in :menuselection:`Settings --> Configure Krita --> Display`.
-#. Or don't use the hardware accelerated mode (game recording mode) in
-   OBS, thus capturing the whole desktop instead of attempting to capture
-   only Krita.
-
-You might also be able to work around the problem by using the ANGLE renderer instead of native OpenGL.
-
 Where are the configuration files stored?
 -----------------------------------------
 
@@ -176,45 +164,11 @@ You’re probably used to Gimp or Photoshop. The default background or first lay
 
 In Krita, all layers have an alpha channel, if you want to paint in the background color, you should simply do it in a layer above the first one (Layer 1), that would prevent  you from erasing the white background color, making the checkerboard visible. You get the same effect in, say, gimp, if you create new image, add an alpha channel and then use the eraser tool. Most Krita users will actually start a sketch in Krita by adding a new blank layer first before doing anything else. (The :kbd:`Ins` key is a useful shortcut here). That doesn’t use extra memory, since a blank layer or a layer with a default color just takes one pixel worth of memory.
 
-Windows: Can I use Krita with Sandboxie?
-----------------------------------------
-
-No, this is not recommended. Sandboxie causes stuttering and freezes due to the way it intercepts calls for resources on disk.
-
-Windows: Krita cannot save
---------------------------
-
-If the message is "File not found. Check the file name and try again.", you probably have Controlled Folder Access enabled.
-
--   Select :menuselection:`Start --> Settings`.
--   Choose :menuselection:`Update & security --> Windows Defender`.
--   Select :guilabel:`Open Windows Defender Security Center`.
--   Select :guilabel:`Virus & threat protection`, and then choose :guilabel:`Virus & threat protection settings`.
--   Under :guilabel:`Controlled folder access`, turn it on or off.
-
-You can also whitelist Krita, following `these instructions <https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/customize-controlled-folders-exploit-guard#allow-specific-apps-to-make-changes-to-controlled-folders>`_.
-
 Can krita work with 8 bit (indexed) images?
 -------------------------------------------
 
 No. Krita has been designed from the ground up to use real colors, not indexed palettes. There are no plans to support indexed color images, although Krita can export to some indexed color image formats, such as GIF. However, it does not offer detailed control over pixel values.
 
-Krita crashes on Windows 7 on start-up
---------------------------------------
-
-Starting with Krita 4.2.0, Krita uses version 5.12 of the Qt toolkit. This needs to have access to Direct3D 11 or OpenGL ES 2.0 or higher. You might need to install drivers appropriate to your GPU (Nvidia, AMD/ATI, Intel). This also makes it hard to run Krita in a virtual environment: in Virtual Box you need to install the guest addition in safe mode, and enable the experimental Direct3D support. 
-
-
-How can I produce a backtrace on Windows?
------------------------------------------
-
-.. seealso::
-
-    :ref:`Dr. Mingw debugger <dr_minw>`
-
-If you experience a crash on Windows, and can reproduce the crash, the bug report will be much more valuable if you can create a backtrace. A backtrace is somewhat akin to an airplane's blackbox, in that they tell what set of instructions your computer was running when it was crashing (where the crash happened), making it very useful to figure out why the crash happened.
-
-The :ref:`Dr. Mingw debugger <dr_minw>` is bundled with Krita. Please visit the page :ref:`Dr. Mingw debugger <dr_minw>` for instructions on getting a backtrace with it.
 
 Where can I find older versions of Krita?
 -----------------------------------------
@@ -240,6 +194,58 @@ Windows: In fullscreen mode, why is there a thin gap at the bottom of the window
 ---------------------------------------------------------------------------------
 
 When :ref:`Canvas Graphics Acceleration <display_settings>` is set to OpenGL, you may see a thin gap at the bottom of the window which you can see through. This is done deliberately to work around a bug causing menus and dropdowns to be unusable. If you find it distracting, you can consider changing the Renderer to Direct3D 11 which doesn't require this workaround.
+
+Windows: OBS can't record the Krita OpenGL canvas
+-------------------------------------------------
+
+The possible workarounds for this is to do either of the following:
+
+#. Turn off OpenGL in :menuselection:`Settings --> Configure Krita --> Display`.
+#. Or don't use the hardware accelerated mode (game recording mode) in
+   OBS, thus capturing the whole desktop instead of attempting to capture
+   only Krita.
+
+You might also be able to work around the problem by using the ANGLE renderer instead of native OpenGL.
+
+Windows: Can I use Krita with Sandboxie?
+----------------------------------------
+
+No, this is not recommended. Sandboxie causes stuttering and freezes due to the way it intercepts calls for resources on disk.
+
+Windows: Krita cannot save
+--------------------------
+
+If the message is "File not found. Check the file name and try again.", you probably have Controlled Folder Access enabled.
+
+-   Select :menuselection:`Start --> Settings`.
+-   Choose :menuselection:`Update & security --> Windows Defender`.
+-   Select :guilabel:`Open Windows Defender Security Center`.
+-   Select :guilabel:`Virus & threat protection`, and then choose :guilabel:`Virus & threat protection settings`.
+-   Under :guilabel:`Controlled folder access`, turn it on or off.
+
+You can also whitelist Krita, following `these instructions <https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/customize-controlled-folders-exploit-guard#allow-specific-apps-to-make-changes-to-controlled-folders>`_.
+
+Krita crashes on Windows 7 on start-up
+--------------------------------------
+
+Starting with Krita 4.2.0, Krita uses version 5.12 of the Qt toolkit. This needs to have access to Direct3D 11 or OpenGL ES 2.0 or higher. You might need to install drivers appropriate to your GPU (Nvidia, AMD/ATI, Intel). This also makes it hard to run Krita in a virtual environment: in Virtual Box you need to install the guest addition in safe mode, and enable the experimental Direct3D support. 
+
+
+Windows: How can I produce a backtrace?
+-----------------------------------------
+
+.. seealso::
+
+    :ref:`Dr. Mingw debugger <dr_minw>`
+
+If you experience a crash on Windows, and can reproduce the crash, the bug report will be much more valuable if you can create a backtrace. A backtrace is somewhat akin to an airplane's blackbox, in that they tell what set of instructions your computer was running when it was crashing (where the crash happened), making it very useful to figure out why the crash happened.
+
+The :ref:`Dr. Mingw debugger <dr_minw>` is bundled with Krita. Please visit the page :ref:`Dr. Mingw debugger <dr_minw>` for instructions on getting a backtrace with it.
+
+Windows: Krita's window is semi-transparent
+-------------------------------------------
+
+Chances are you are using an NVidia GPU. Due to a bug in Nvidia's driver that we haven't been able to workaround yet, sometimes Krita's window will be transparent or semi-transparent. The solution is to enable the Angle renderer in Krita's Settings dialog. Open the :menuselection:`Settings` menu (Press Alt-N if the menubar is not visible and your system is in English), then open the :guilabel:`Configure Krita` dialog. In the dialog window select the :guilabel:`Display` page and select the Angle renderer in the :guilabel:`Preferred Renderer` combobox. Restart Krita.
 
 
 Tablets
