@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: contributors_manual\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-09-04 21:07+0200\n"
+"PO-Revision-Date: 2019-09-05 20:48+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -339,9 +339,9 @@ msgid ""
 "those files into the manual folder and push the differences using the mail "
 "address."
 msgstr ""
-"Després, si s'accepten els canvis, algú amb accés d'entrega (commit) "
-"desempaquetarà aquests fitxers a la carpeta del manual i publicarà les "
-"diferències utilitzant l'adreça de correu."
+"Després, si s'accepten els canvis, algú amb accés d'entrega desempaquetarà "
+"aquests fitxers a la carpeta del manual i publicarà les diferències "
+"utilitzant l'adreça de correu."
 
 #: ../../contributors_manual/krita_manual_readme.rst:103
 msgid "Creating merge requests using Edit mode"
@@ -558,14 +558,21 @@ msgid ""
 "that :guilabel:`Start a new merge request` is checked. Otherwise you'll need "
 "to make a new merge request manually later."
 msgstr ""
+"Assegureu-vos que els ajustaments són correctes: haureu de seleccionar "
+":guilabel:`Create a new branch` (Crea una branca nova) (el nom de la branca "
+"haurà de ser: ``[nom_usuari]/[descripció_molt_breu_dels_vostres_canvis]). Si "
+"els heu acabat, assegureu-vos que heu marcat :guilabel:`Start a new merge "
+"request` (Inicia una sol·licitud de fusionat nova). En cas contrari, més tard "
+"haureu de realitzar una nova sol·licitud de fusionat manualment."
 
 #: ../../contributors_manual/krita_manual_readme.rst:165
 msgid "Click :guilabel:`Stage & Commit`."
-msgstr "Feu clic a :guilabel:`Stage & Commit` (etapa i consigna)."
+msgstr "Feu clic a :guilabel:`Stage & Commit` (Etapa i entrega)."
 
 #: ../../contributors_manual/krita_manual_readme.rst:167
 msgid "Fill all of the fields correctly: see :ref:`new-merge-request`."
 msgstr ""
+"Ompliu tots els camps correctament: vegeu les :ref:`new-merge-request`."
 
 #: ../../contributors_manual/krita_manual_readme.rst:169
 msgid ""
@@ -574,6 +581,12 @@ msgid ""
 "click :guilabel:`Create a new merge request` (bright green button at the "
 "left). Select your fork and select the branch that you've created in WebIDE."
 msgstr ""
+"Per a crear una nova sol·licitud de fusionat manualment, aneu al repositori "
+"oficial del «Krita Manual» (assegureu-vos que l'URL ara *no* conté el nom "
+"d'usuari) i feu clic a :guilabel:`Create a new merge request` (Crea una "
+"sol·licitud de fusionat nova) (el botó verd brillant que hi ha a l'esquerra). "
+"Seleccioneu la vostra bifurcació i seleccioneu la branca que heu creat al "
+"WebIDE."
 
 #: ../../contributors_manual/krita_manual_readme.rst:176
 msgid ""
@@ -584,12 +597,22 @@ msgid ""
 "access, you can't do it). It will just show the message: `An error occurred "
 "whilst committing your changes. Please try again.`"
 msgstr ""
+"Si no teniu accés de «push» al repositori oficial, el GitLab no us permetrà "
+"desar els canvis si per error estàveu editant el repositori oficial (i "
+":guilabel:`Create a merge request` (Crea una sol·licitud de fusionat) no "
+"ajudarà amb això: encara necessiteu entregar (commit) els canvis a la vostra "
+"branca, però si no teniu accés de «push», no podreu fer-ho). Simplement es "
+"mostrarà el missatge: *S'ha produït un error en entregar els canvis. "
+"Intenteu-ho de nou.*"
 
 #: ../../contributors_manual/krita_manual_readme.rst:178
 msgid ""
 "In this case, simply copy contents of all of the files you changed, go to "
 "your fork and paste them in the fork WebIDE."
 msgstr ""
+"En aquest cas, simplement copieu el contingut de tots els fitxers que heu "
+"modificat, aneu a la vostra bifurcació i enganxeu-los a la bifurcació del "
+"WebIDE."
 
 #: ../../contributors_manual/krita_manual_readme.rst:184
 msgid "Creating merge requests using command line"
@@ -601,6 +624,8 @@ msgstr ""
 msgid ""
 "Recommended for users that know how Git works and how to use command line."
 msgstr ""
+"Està recomanat per als usuaris que saben com funciona el Git i com utilitzar "
+"la línia d'ordres."
 
 #: ../../contributors_manual/krita_manual_readme.rst:192
 msgid ""
@@ -610,6 +635,12 @@ msgid ""
 "computer to edit these text files as well as build the manual locally to "
 "check for errors. (You need to do this step only once)."
 msgstr ""
+"Cloneu localment el repositori amb :guilabel:`git clone`. La pàgina del "
+"repositori té els URL des dels que podreu fer-ho, i després feu «push» a la "
+"vostra bifurcació. L'avantatge d'això és que podreu utilitzar totes les eines "
+"a l'ordinador per editar aquests fitxers de text, així com també construir el "
+"manual localment per a verificar si hi ha cap error. (Només haureu de fer "
+"aquest pas una vegada)."
 
 #: ../../contributors_manual/krita_manual_readme.rst:195
 msgid ""
@@ -634,17 +665,23 @@ msgid ""
 "Remember to always pull changes from the official repository before making "
 "new changes:"
 msgstr ""
+"Recordeu fer «pull» (extreure) sempre pels canvis des del repositori oficial "
+"abans de realitzar canvis nous:"
 
 #: ../../contributors_manual/krita_manual_readme.rst:208
 msgid "git pull upstream master"
 msgstr "git pull upstream master"
 
+# skip-rule: t-acc_obe
 #: ../../contributors_manual/krita_manual_readme.rst:213
 msgid ""
 "Make sure you create a new branch for your changes and make sure you "
 "branched from the correct branch: ``master`` in case if your changes only "
 "contain typo fixes, ``draft`` in all other cases."
 msgstr ""
+"Assegureu-vos de crear una branca nova per als vostres canvis i que ho feu "
+"des de la branca correcta: ``master`` en el cas que els vostres canvis només "
+"continguin esmenes d'errors tipogràfics, ``draft`` en tots els altres casos."
 
 #: ../../contributors_manual/krita_manual_readme.rst:216
 msgid ""
@@ -670,6 +707,10 @@ msgid ""
 "detailed description of how to use Git in terminal in case of this workflow, "
 "go to :ref:`forking_gitlab`."
 msgstr ""
+"Després de fer els canvis, feu «commit» (entregar) i «push» (publicar) a la "
+"vostra branca. Per obtenir una descripció detallada sobre com utilitzar el "
+"Git des del terminal en un cas com aquest flux de treball, aneu a "
+":ref:`forking_gitlab`."
 
 # skip-rule: t-sp_pu
 #: ../../contributors_manual/krita_manual_readme.rst:230
@@ -703,17 +744,26 @@ msgid ""
 "your fork and the correct branch and create a new merge request. For "
 "instruction on how to fill the fields, see :ref:`new-merge-request`."
 msgstr ""
+"Finalment, aneu al lloc web del repositori original (assegureu-vos d'estar a "
+"la branca correcta, ``master`` o ``draft``), i després a «Merge Requests» "
+"(Sol·licituds de fusionat). Seleccioneu la vostra bifurcació, la branca "
+"correcta i creeu una nova sol·licitud de fusionat. Per obtenir instruccions "
+"sobre com omplir els camps, vegeu les :ref:`new-merge-request`."
 
 #: ../../contributors_manual/krita_manual_readme.rst:249
 msgid "Guidelines for new merge requests"
 msgstr ""
 "Directrius per a les noves sol·licituds de fusionat («merge request» -MR-)"
 
+# skip-rule: t-acc_obe
 #: ../../contributors_manual/krita_manual_readme.rst:251
 msgid ""
 "Your commit messages should conform to standards explained here: `How to "
 "Write a Git Commit Message <https://chris.beams.io/posts/git-commit/>`_"
 msgstr ""
+"Els vostres missatges d'entrega (commit) hauran de complir amb els estàndards "
+"que s'expliquen aquí: `How to Write a Git Commit Message <https://chris.beams"
+".io/posts/git-commit/>`_ (Com escriure un missatge de commit al Git)"
 
 #: ../../contributors_manual/krita_manual_readme.rst:253
 msgid ""
@@ -721,18 +771,26 @@ msgid ""
 "did you make and why did you make them, just like a commit message, so "
 "follow the guidelines from the link above in this case, too."
 msgstr ""
+"El :guilabel:`Títol` i la :guilabel:`Descripció` hauran d'explicar quins "
+"canvis heu realitzat i per què, com en un missatge de commit (entrega), de "
+"manera que aquí també haureu de seguir les pautes de l'enllaç anterior."
 
 #: ../../contributors_manual/krita_manual_readme.rst:255
 msgid ""
 ":guilabel:`Target` should point to ``draft``, unless your changes contain "
 "only typo fixes."
 msgstr ""
+":guilabel:`Target` (Destinació) haurà d'apuntar a ``draft``, llevat que els "
+"vostres canvis només continguin correccions d'errors tipogràfics."
 
 #: ../../contributors_manual/krita_manual_readme.rst:257
 msgid ""
 "If you're sure the merge request will demand some changes later, start the "
 "title of your merge request with :code:`[WIP]`."
 msgstr ""
+"Si esteu segur que la sol·licitud de fusionat exigirà alguns canvis més "
+"endavant, poseu :code:`[WIP]` al començament del títol de la vostra "
+"sol·licitud de fusionat."
 
 #: ../../contributors_manual/krita_manual_readme.rst:259
 msgid ""
@@ -744,12 +802,23 @@ msgid ""
 "check this checkbox so the reviewer can do it themselves with only a few "
 "clicks."
 msgstr ""
+"Assegureu-vos de marcar :guilabel:`Allow commits from members who can merge "
+"to the target branch` (Permetre els «commit» dels membres que poden fusionar "
+"amb la branca de destinació) -sovint és necessari per raons tècniques que la "
+"sol·licitud de fusionat faci «rebase» sobre ``master``, el qual tècnicament "
+"canviarà la sol·licitud de fusionat, però no canviarà el contingut real de la "
+"mateixa. Tu o el revisor podran realitzar el «rebase»- si no voleu que us "
+"molestin més tard, marqueu aquesta casella de selecció perquè el revisor "
+"pugui fer-ho sol amb uns quants clics."
 
 #: ../../contributors_manual/krita_manual_readme.rst:261
 msgid ""
 "You can safely check :guilabel:`Delete source branch when merge request is "
 "accepted` in most cases."
 msgstr ""
+"En la majoria dels casos podreu marcar amb seguretat :guilabel:`Delete source "
+"branch when merge request is accepted` (Suprimeix la branca d'origen quan "
+"s'accepti la sol·licitud de fusionat)."
 
 #: ../../contributors_manual/krita_manual_readme.rst:263
 msgid ""
@@ -758,18 +827,30 @@ msgid ""
 "come from the :guilabel:`Title` of your merge request and the rest of it "
 "will be taken from the :guilabel:`Description` of the merge request."
 msgstr ""
+"A menys que els revisors us indiquin el contrari, marqueu :guilabel:`Squash "
+"commits when merge request is accepted` (Aixafa els «commit» quan s'accepti "
+"la sol·licitud de fusionat). La primera línia del missatge d'entrega "
+"esdevindrà del títol de la vostra sol·licitud de fusionat i la resta es "
+"prendrà des de la Descripció de la vostra sol·licitud de fusionat."
 
+# skip-rule: t-acc_obe
 #: ../../contributors_manual/krita_manual_readme.rst:265
 msgid ""
 "When you finish creating your merge request, go to IRC and ask someone with "
 "push access to add the ``Needs Review`` label on your merge request."
 msgstr ""
+"Quan acabeu de crear la vostra sol·licitud de fusionat, aneu a l'IRC i "
+"demaneu-li a algú amb accés de «push» que afegeixi l'etiqueta ``Needs "
+"Review`` (Necessita revisió) a la vostra sol·licitud de fusionat."
 
 #: ../../contributors_manual/krita_manual_readme.rst:267
 msgid ""
 "You might get feedback on your merge request if it has mistakes. Just fix "
 "the mistakes in your branch in one of the following ways."
 msgstr ""
+"Si aquesta conté errors, és possible que rebeu comentaris sobre la vostra "
+"sol·licitud de fusionat. Simplement corregiu-los a la vostra branca d'una de "
+"les següents maneres."
 
 #: ../../contributors_manual/krita_manual_readme.rst:269
 msgid ""
@@ -777,12 +858,17 @@ msgid ""
 "section of the merge request and click on the pencil icon (with a tooltip "
 "that says `Edit`) to use the Edit mode again."
 msgstr ""
+"Si voleu utilitzar el mode :guilabel:`Edita`, simplement aneu a la secció "
+":guilabel:`Changes` (Canvis) de la sol·licitud de fusionat i feu clic sobre "
+"la icona de llapis (amb un consell d'eina que diu *Edita*)."
 
 #: ../../contributors_manual/krita_manual_readme.rst:271
 msgid ""
 "If you want to use :guilabel:`WebIDE` mode, go to your fork, select the "
 "branch your changes are on and go to the WebIDE."
 msgstr ""
+"Si voleu utilitzar el :guilabel:`Mode WebIDE`, aneu a la vostra bifurcació, "
+"seleccioneu la branca que conté els canvis i aneu al WebIDE."
 
 #: ../../contributors_manual/krita_manual_readme.rst:273
 msgid ""
@@ -790,18 +876,27 @@ msgid ""
 "on the correct branch and push your changes - gitlab will update your merge "
 "request automatically."
 msgstr ""
+"Si editeu els fitxers a l'ordinador i treballeu amb el terminal, "
+"assegureu-vos d'estar a la branca correcta i feu «push» (entregueu) els "
+"vostres canvis -el GitLab actualitzarà la vostra sol·licitud de fusionat de "
+"manera automàtica-."
 
+# skip-rule: t-acc_obe
 #: ../../contributors_manual/krita_manual_readme.rst:275
 msgid ""
 "After making changes, make sure you ask someone to change the label to "
 "``Needs Review`` again."
 msgstr ""
+"Després de fer canvis, assegureu-vos de demanar-li a algú que canviï "
+"l'etiqueta altra vegada a ``Needs Review`` (Necessita revisió)."
 
 #: ../../contributors_manual/krita_manual_readme.rst:278
 msgid ""
 "For more detailed information, check out :ref:`forking_gitlab` in the "
 "technical section."
 msgstr ""
+"Per obtenir informació més detallada, reviseu :ref:`forking_gitlab` a la "
+"secció tècnica."
 
 #: ../../contributors_manual/krita_manual_readme.rst:282
 msgid ""
@@ -812,6 +907,12 @@ msgid ""
 "get on IRC (see :ref:`the_krita_community`) and ask someone to label it for "
 "you."
 msgstr ""
+"Al moment d'escriure aquesta guia, l'establiment de les etiquetes a les "
+"sol·licituds de fusionat només és possible per als col·laboradors amb accés "
+"d'escriptura al repositori oficial. (Si no sabeu què vol dir això, "
+"probablement no sou un d'ells). Per això, quan creeu o canvieu la vostra "
+"sol·licitud de fusionat, haureu d'entrar a l'IRC (vegeu "
+":ref:`the_krita_community`) i demaneu-li a algú que l'etiqueti."
 
 #: ../../contributors_manual/krita_manual_readme.rst:286
 msgid "General philosophy"
@@ -824,6 +925,10 @@ msgid ""
 "underpinned by a goal or general philosophy. What do we want to achieve with "
 "the manual, and for whom is the manual meant?"
 msgstr ""
+"Serveix per a determinar quin serà un estil d'escriptura adequat. Un estil "
+"d'escriptura, tant si tenim en compte les seves qualitats pràctiques com "
+"estètiques, generalment es basa en un objectiu o filosofia general. Què volem "
+"aconseguir amb el manual i per a qui serà?"
 
 #: ../../contributors_manual/krita_manual_readme.rst:291
 msgid "Demographics and target audience(s)"
@@ -835,36 +940,44 @@ msgid ""
 "are 55 year old men. Krita is used by a hugely different amount of people, "
 "and we are actually kind of proud that we have such a varied userbase."
 msgstr ""
+"No podem parlar d'un grup demogràfic en el sentit que sabem que tots els "
+"usuaris del Krita són homes de 55 anys. El Krita és utilitzat per una "
+"quantitat molt diversa de persones, i estem realment orgullosos de tenir una "
+"base d'usuaris tan variada."
 
 #: ../../contributors_manual/krita_manual_readme.rst:295
 msgid "Despite that, we know a couple of things about our users:"
-msgstr ""
+msgstr "Tot i això, sabem un parell de coses sobre els nostres usuaris:"
 
 #: ../../contributors_manual/krita_manual_readme.rst:297
 msgid "They are artists. This is explicitly the type of users that we target."
 msgstr ""
+"Són artistes. Aquest és explícitament el tipus d'usuaris als quals ens "
+"dirigim."
 
 #: ../../contributors_manual/krita_manual_readme.rst:299
 msgid "Therefore, we know they prefer pretty pictures."
-msgstr ""
+msgstr "Per tant, sabem que prefereixen imatges boniques."
 
 #: ../../contributors_manual/krita_manual_readme.rst:300
 msgid "They are visual."
-msgstr ""
+msgstr "Són visuals."
 
 #: ../../contributors_manual/krita_manual_readme.rst:301
 msgid "They are trying to achieve pretty pictures."
-msgstr ""
+msgstr "Miren d'aconseguir imatges boniques."
 
 #: ../../contributors_manual/krita_manual_readme.rst:303
 msgid ""
 "Therefore, the implicit goal of each page would be to get the feature used "
 "for pretty pictures."
 msgstr ""
+"Per tant, l'objectiu implícit de cada pàgina serà obtenir la característica "
+"emprada per a imatges boniques."
 
 #: ../../contributors_manual/krita_manual_readme.rst:305
 msgid "Other than that, we've observed the following groups:"
-msgstr ""
+msgstr "A part d'això, hem observat els següents grups:"
 
 #: ../../contributors_manual/krita_manual_readme.rst:307
 msgid ""
@@ -874,6 +987,12 @@ msgid ""
 "possibilities in :program:`Krita`. This group's strength is that they share "
 "a lot of information with each other like tips and tricks and tutorials."
 msgstr ""
+"Estudiants de secundària i universitaris que proven programari de dibuix per "
+"a il·lustracions. En general, no tenen cap experiència anterior amb un "
+"programari de dibuix, com el Painttool Sai o el Photoshop, però necessiten "
+"una introducció a les possibilitats en el :program:`Krita`. El punt fort "
+"d'aquest grup és que comparteixen molta informació entre ells, com consells, "
+"trucs i guies d'aprenentatge."
 
 #: ../../contributors_manual/krita_manual_readme.rst:308
 msgid ""
@@ -881,6 +1000,9 @@ msgid ""
 "The strength of this group is that they have a lot of know-how and are "
 "willing to donate to improve the program. These come in two types:"
 msgstr ""
+"Professionals, gent que es guanya la vida amb el programari de dibuix "
+"digital. El punt fort d'aquest grup és que tenen molts coneixements i estan "
+"disposats a fer donacions per a millorar el programa. Vénen en dos tipus:"
 
 #: ../../contributors_manual/krita_manual_readme.rst:310
 msgid ""
@@ -890,6 +1012,11 @@ msgid ""
 "instincts. These tend to be illustrators, painters and people working with "
 "print."
 msgstr ""
+"Professionals no tècnics. Són gent que en realitat no comprenen les "
+"peculiaritats més matemàtiques d'una peça de programari, però que han "
+"desenvolupat fluxos de treball sòlids al llarg dels anys i treballen amb "
+"programari utilitzant els seus instints finament perfeccionats. Tendeixen a "
+"ser il·lustradors, pintors i persones que treballen amb la impressió."
 
 #: ../../contributors_manual/krita_manual_readme.rst:311
 msgid ""
@@ -898,6 +1025,10 @@ msgid ""
 "tend to be people working in the games and VFX industry, but occasionally "
 "there's a scientist in there as well."
 msgstr ""
+"Professionals tècnics. Són gent que utilitzen el :program:`Krita` com a part "
+"d'un flux, i es preocupen per les matemàtiques precises i l'empenta dels "
+"píxels. Solen ser gent que treballa a la indústria dels jocs i els efectes "
+"visuals, però en ocasions també hi ha algun científic."
 
 #: ../../contributors_manual/krita_manual_readme.rst:313
 msgid ""
@@ -908,37 +1039,52 @@ msgid ""
 "professional has no time for and create cool stuff with that, as well as "
 "that they have a tempering effect on the first group in the larger community."
 msgstr ""
+"Adults i gent gran aficionada. Aquest grup no sap gaire sobre els ordinadors, "
+"i sempre semblen enredar-se en aquest petit pas quan manca una guia "
+"d'aprenentatge. El seu punt fort com a grup és que adapten fluxos de treball "
+"no convencionals de la vida real que l'estudiant no coneix i que el "
+"professional no té temps per a crear coses genials amb aquests, així com que "
+"tenen un efecte moderador sobre l'entusiasme excessiu en tota la comunitat."
 
 #: ../../contributors_manual/krita_manual_readme.rst:315
 msgid "From these four groups..."
-msgstr ""
+msgstr "D'aquests quatre grups..."
 
 #: ../../contributors_manual/krita_manual_readme.rst:317
 msgid ""
 "there's only one that is technical. Which is why we need the concept pages, "
 "so that we can create a solid base to write our manual texts on top of."
 msgstr ""
+"Només n'hi ha un que és tècnic. És per això que necessitem les pàgines de "
+"concepte, perquè puguem crear una base sòlida sobre la que escriure els "
+"nostres textos del manual."
 
 #: ../../contributors_manual/krita_manual_readme.rst:318
 msgid ""
 "three of them likely have previous experience with software and may need "
 "migration guides and be told how."
 msgstr ""
+"És probable que tres d'ells no tinguin experiència amb el programari i que "
+"necessitin guies de migració i se'ls hagi de dir com fer-ho."
 
 #: ../../contributors_manual/krita_manual_readme.rst:319
 msgid ""
 "two of them need to know how to get Krita to cooperate with other software."
 msgstr ""
+"Dos d'ells necessiten saber com fer que el Krita cooperi amb un altra "
+"programari."
 
 #: ../../contributors_manual/krita_manual_readme.rst:320
 msgid ""
 "two of them have no clue what they are doing and may need to be guided "
 "through the most basic of steps."
 msgstr ""
+"Dos d'ells no tenen ni idea del que estan fent i és possible que necessitin "
+"ser guiats pels passos més bàsics."
 
 #: ../../contributors_manual/krita_manual_readme.rst:322
 msgid "From that we can get the following rules:"
-msgstr ""
+msgstr "D'això podem obtenir les següents regles:"
 
 #: ../../contributors_manual/krita_manual_readme.rst:325
 msgid "General Writing"
@@ -954,6 +1100,8 @@ msgid ""
 "We use American English in the manual, in accordance to Krita's UI being "
 "American English by default."
 msgstr ""
+"Emprarem l'anglès americà en el manual, d'acord amb la interfície d'usuari "
+"del Krita, la qual de manera predeterminada està en anglès americà."
 
 # skip-rule: punctuation-period
 #: ../../contributors_manual/krita_manual_readme.rst:329
@@ -968,6 +1116,12 @@ msgid ""
 "reader is acknowledged might give the idea that the text is far more complex "
 "than necessary, and thus scare away users."
 msgstr ""
+"Com a comunitat, volem donar la benvinguda als usuaris, de manera que "
+"tractarem d'evitar un llenguatge que no sigui de benvinguda. Per descomptat, "
+"el KDE no accepta les paraulotes, però anant a l'altre extrem, un estil "
+"acadèmic en el qual no es reconeix ni a l'escriptor ni al lector podria donar "
+"la idea que el text és molt més complex del que és necessari i, per tant, "
+"farà fugir als usuaris."
 
 #: ../../contributors_manual/krita_manual_readme.rst:331
 msgid "Avoid using gifs (open for debate)"
@@ -980,6 +1134,10 @@ msgid ""
 "explanation. If you can't help but use gifs, at the least notify the reader "
 "of this in the introduction of the page."
 msgstr ""
+"La raó és que les persones amb epilèpsia poden veure's afectades per imatges "
+"en moviment ràpid. De la mateixa manera, els GIF de vegades poden portar "
+"massa càrrega de l'explicació. Si no ho podeu evitar, almenys notifiqueu-ho "
+"al lector a la introducció de la pàgina."
 
 #: ../../contributors_manual/krita_manual_readme.rst:334
 msgid "Keep it translation compatible"
@@ -990,6 +1148,8 @@ msgid ""
 "This consists of using svg for infographics, and using the appropriate "
 "markup for a given text."
 msgstr ""
+"Això consisteix en utilitzar SVG per a les infografies i el marcatge adequat "
+"per a un text donat."
 
 #: ../../contributors_manual/krita_manual_readme.rst:337
 msgid "Regarding photos and paintings"
