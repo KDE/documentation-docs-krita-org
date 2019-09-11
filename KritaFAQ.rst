@@ -456,6 +456,12 @@ Why is Krita Free?
 
 Krita is developed as `free software <https://www.gnu.org/>`_ within the KDE community. We believe that good tools should be available for all artists. You can also buy Krita on the Windows Store if you want to support Krita's development or want to have automatic updates to newer versions.
 
+Why isn't Krita on Steam and in the Windows Store Free?
+-------------------------------------------------------
+
+Krita on Steam and in the Windows Store is still Free and Open Source software; the binaries are exactly the ones you can also download from krita.org. We've put a price tag on downloading Krita from either store to support Krita's development. Nobody is getting rich out of it, but the income from Steam and the Windows Store currently pays for the full-time involvement with Krita of four developers. See `Krita Available from the Windows Store <https://krita.org/en/item/krita-available-from-the-windows-store/>`_ for more information.
+
+
 Can I use Krita commercially?
 -----------------------------
 
