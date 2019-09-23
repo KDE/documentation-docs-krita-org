@@ -45,7 +45,7 @@ Quick solutions
 
 *For Windows, all devices:*
 
-#. Change API in :menuselection:`Settings --> Configure Krita --> Tablet Settings` (for some devices, especially N-trig ones (some of the convertible 2-in-1 devices), Windows Ink work better, for some it's Wintab).
+#. Change API in :menuselection:`Settings --> Configure Krita... --> Tablet Settings` (for some devices, especially N-trig ones (some of the convertible 2-in-1 devices), Windows Ink work better, for some it's Wintab).
 
 *For Windows, tablet/digitizer devices (not convertible/2-in-1 ones):*
 
@@ -66,7 +66,7 @@ Gathering information
 
 #. What is the version of the tablet driver?
 
-#. Please collect Tablet Tester (:menuselection:`Settings --> Configure Krita --> Tablet Settings`) text output and share it: :ref:`intro_user_support_sharing_files`.
+#. Please collect Tablet Tester (:menuselection:`Settings --> Configure Krita... --> Tablet Settings`) text output and share it: :ref:`intro_user_support_sharing_files`.
 
 #. More detailed Tablet Events log:
 
@@ -74,11 +74,11 @@ Gathering information
 	
     #. In the Log Viewer docker, make sure the first button is pressed (which means the logging is turned on).
 	
-    #. Press :kbd:`Ctlr+Shift+T` to turn on tablet events logging.
+    #. Press :kbd:`Ctlr + Shift + T` to turn on tablet events logging.
 	
     #. Make a few strokes (depending on the situation, the user supporter or developer can ask you for specific series of strokes).
 	
-    #. Press :kbd:`Ctlr+Shift+T` to turn off the logging of the tablet events.
+    #. Press :kbd:`Ctlr + Shift + T` to turn off the logging of the tablet events.
 
     #. Press the third button in the Log Viewer to save the output into a file.
 	
@@ -98,7 +98,7 @@ Additional information for supporters
 
 #. XP-Pen tablets and other brands can have issues everywhere.
 
-#. If someone asks about a tablet to buy, generally a cheaper Wacom or a Huion are the best options as of 2019, if they want to work with Krita. :ref:`list_supported_tablets`
+#. If someone asks about a tablet to buy, generally a cheaper Wacom or a Huion are the best options as of 2019, if they want to work with Krita. :ref:`list_supported_tablets`.
 
 #. `Possibly useful instruction in case of XP-Pen tablet issues <https://www.reddit.com/r/krita/comments/btzh72/xppen_artist_12s_issue_with_krita_how_to_fix_it/>`_.
 
@@ -112,7 +112,7 @@ Issues with rendering animation can be of various shapes and colors. First thing
 
         If the user opens the Log Viewer docker, turns on logging and then tries to render a video, Krita will print out the whole ffmpeg command to Log Viewer so it can be easily investigated.
 
-There is a log file called `log_encode.log` in the directory that user tries to render to. It can contain information useful to investigation of the issue (sharing files: :ref:`intro_user_support_sharing_files`).
+There is a log file called *log_encode.log* in the directory that user tries to render to. It can contain information useful to investigation of the issue (sharing files: :ref:`intro_user_support_sharing_files`).
 
 Onion skin issues
 -----------------
@@ -138,7 +138,7 @@ Other possible questions with quick solutions
 #. When the user has any weird issue, something you've never heard about, ask them to reset the configuration: :ref:`faq_reset_krita_configuration`.
 
 
-#. When the user has trouble with anything related to preview or display, ask them to change :guilabel:`Canvas Graphics Acceleration` in :menuselection:`Settings --> Configure Krita --> Display`.
+#. When the user has trouble with anything related to preview or display, ask them to change :guilabel:`Canvas Graphics Acceleration` in :menuselection:`Settings --> Configure Krita... --> Display`.
 
     .. note::
     
@@ -156,7 +156,7 @@ Advices for supporters
 
 #. Explain steps the user needs to make clearly, for example if you need them to change something in settings, clearly state the whole path of buttons and tabs to get there.
 
-#. Instead of :menuselection:`Settings --> Configure Krita` use just :menuselection:`Configure Krita` -- it's easy enough to find and Mac users (where you need to select :menuselection:`Krita --> Settings`) won't get confused.
+#. Instead of :menuselection:`Settings --> Configure Krita...` use just :menuselection:`Configure Krita` -- it's easy enough to find and Mac users (where you need to select :menuselection:`Krita --> Preferences...`) won't get confused.
 
 #. If you ask for an image, mention usage of `Imgur <https://imgur.com>`_ or `Pasteboard <https://pasteboard.co>`_ (:ref:`intro_user_support_sharing_files`), otherwise Reddit users might create a new post with this image instead of including it to the old conversation.
 
@@ -174,7 +174,7 @@ How to share a file
    
 * Text only: `Pastebin <https://pastebin.com>`_ [*], `BPaste <https://bpaste.net>`_, `paste.ubuntu.org.cn <https://paste.ubuntu.org.cn>`_, `FedoraProject's Paste <https://paste.fedoraproject.org/>`_ or `KDE Snippets (needs KDE Identity) <https://invent.kde.org/dashboard/snippets>`_.
    
-* ``.kra`` and other formats: by mail? Or encode the file using `base64` command on Linux, send by mail or on Pastebin, then decode using the same command.
+* ``.kra`` and other formats: by mail? Or encode the file using *base64* command on Linux, send by mail or on Pastebin, then decode using the same command.
 
 
 
