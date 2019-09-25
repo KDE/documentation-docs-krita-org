@@ -225,6 +225,17 @@ If the message is "File not found. Check the file name and try again.", you prob
 
 You can also whitelist Krita, following `these instructions <https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/customize-controlled-folders-exploit-guard#allow-specific-apps-to-make-changes-to-controlled-folders>`_.
 
+Windows: Krita cannot open my file anymore
+------------------------------------------
+
+Your file got corrupted. There are several things that might cause this:
+
+#. Windows was shutdown improperly, like by holding the power button. This prevents your harddrive from finishing up the things it is doing and file away your files incorrectly. Please always try to shutdown your computer via the proper shutdown procedure, and if you are in a situation where this is not possible (like frequent blackouts), make daily backups! This may lead to the file being filled with zeroes, so it cannot be recovered from.
+#. Badly programmed security software may attempt to rewrite kra files, or prevent Krita from writing to the folder you wish to save to. The can be checked by trying to save in that location, and then, without shutting down Krita, checking in the folder to see if the file saved. Files lost due this cannot be recovered.
+#. Cloud services like dropbox and onedrive have been known to prevent Krita from saving. We've implemented fixes for this, but much like the above point it is worth checking that this isn't the cause of the issue. Files lost due this cannot be recovered.
+#. Occasionally the zips that kra files comprise of will have the last few bytes missing. We're doing everything in our power to prevent this kind of corruption, but it might be a file system issue. This particular bug can be fixed by renaming the extension (in windows you will need to enable the file extensions, which this FAQ will not cover) to zip, and then using a zip repairing utility to fix the zip file. Then rename it back to kra.
+#. If Krita doesn't give an error message, but rather crashes, your file is too big, and Krita is not so much crashing as that the operating system is shutting it down. Try shutting down some other programs like webbrowsers or streaming services to free up working memory. You should be able to open the file in question. At this point the recommended course of action is to try and reduce the file size in some manner, such as merging layers, splitting up an animation or scaling the image down.
+
 Krita crashes on Windows 7 on start-up
 --------------------------------------
 
