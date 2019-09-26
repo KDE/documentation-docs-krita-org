@@ -19,13 +19,31 @@ Dr. MinW Debugger
 
 .. note::
 
-    The information on this page applies only to the Windows release of Krita 3.1 Beta 3 (3.0.92) and later.
+    The information on this page applies only to the Windows release of Krita.
+
+Using the Debug Package
+-----------------------
+
+If you have your Krita version installed and you want to get a backtrace, it's best to download a portable version 
+(either the latest release, or the one that someone told you to try, for example Krita Next or Krita Plus package). 
+Alongside downloading the portable version, download the debug symbols package, too. It should be located in the same place
+you download Krita. You can see which is which by checking the end of the name of the zip file - debug symbols package always ends with `-dbg.zip`.
+
+* Links to the debug packages should be available on the release announcement news item on https://krita.org/, along with the release packages. You can find debug packages for any release either in https://download.kde.org/stable/krita for stable releases or in https://download.kde.org/unstable/krita for unstable releases (for example beta versions). Portable zip and debug zip are found next to each other.
+* Make sure you’ve downloaded the same version of debug package for the portable package you intend to debug / get a better backtrace.
+* Extract the portable Krita.
+* Extract the files from the debug symbols package inside the portable Krita main directory, where the sub-directories `bin`, `lib` and `share` is located, like in the figures below:
+
+    .. image:: /images/Mingw-dbg7zip.png
+    
+    .. image:: /images/Mingw-dbg7zip-dir.png
+
+* After extracting the files, check the ``bin`` dir and make sure you see the ``.debug`` dir inside. If you don't see it, you probably extracted to the wrong place.
 
 
 Getting a Backtrace
 -------------------
 
-There are some additions to Krita which makes getting a backtrace much easier on Windows.
 
 #.
         
@@ -59,21 +77,5 @@ There are some additions to Krita which makes getting a backtrace much easier on
     * If ``kritacrash.log`` does not exist, or a backtrace with a matching time does not exist, then you don’t have a backtrace. This means Krita was very likely locked up, and a crash didn’t actually happen. In this case, make a bug report too.
     * If the backtrace looks truncated, or there is nothing after the time, it means there was a crash and the crash handler was creating the stack trace before being closed manually. In this case, try to re-trigger the crash and wait longer until the crash dialog appears.
 
-.. note::
 
-    Starting from Krita 3.1 Beta 3 (3.0.92), the external DrMingw JIT debugger is not needed for getting the backtrace.
 
-Using the Debug Package
------------------------
-
-Starting from 3.1 Beta 3, the debug package contains only the debug symbols separated from the executables, so you have to download the portable package separately too (though usually you already have it in the first place.)
-
-* Links to the debug packages should be available on the release announcement news item on https://krita.org/, along with the release packages. You can find debug packages for any release either in https://download.kde.org/stable/krita for stable releases or in https://download.kde.org/unstable/krita for unstable releases. Portable zip and debug zip are found next to each other.
-* Make sure you’ve downloaded the same version of debug package for the portable package you intend to debug / get a better (sort of) backtrace.
-* Extract the files inside the Krita install directory, where the sub-directories `bin`, `lib` and `share` is located, like in the figures below:
-
-    .. image:: /images/Mingw-dbg7zip.png
-    
-    .. image:: /images/Mingw-dbg7zip-dir.png
-
-* After extracting the files, check the ``bin`` dir and make sure you see the ``.debug`` dir inside. If you don't see it, you probably extracted to the wrong place.
