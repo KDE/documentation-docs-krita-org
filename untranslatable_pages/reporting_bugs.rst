@@ -95,6 +95,8 @@ Give all information. That means that you should give information about your ope
 - If you are using a drawing tablet, tell us the brand and type.
 - Tell us what kind of image you were working on: the size, the resolution, the color model and channel depth.
 - If you are reporting a crash, attach a crash log. Follow `this link <https://docs.krita.org/en/reference_manual/dr_minw_debugger.html#dr-minw>`_ to learn how to get a crash log on Windows. On Linux, follow your distribution's instructions to install debug symbols if you have installed Krita from a distribution package. It is not possible to create a useful crash log with Linux appimages.
+- Attach the contents of the Help->Show system information for bug reports dialog to the bug report.
+
 
 The problem needs to be clearly stated:
 - what happened,
@@ -108,6 +110,9 @@ If at all possible, attach your original Krita file (the one that ends in .kra) 
 If you think it would be useful, you can also attach or link to a video. Note that the Krita developers and bug triagers are extremely busy, and that it takes less time to read a good description and a set of steps to reproduce than it takes to watch a video for clues for what is going on.
 
 When making a video or a screenshot, include the whole Krita window, including the titlebar and the statusbar.
+
+
+
 
 You're Not Done After You Have Filed the Report
 -----------------------------------------------
