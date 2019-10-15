@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
+"POT-Creation-Date: 2019-10-14 03:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -17,19 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../reference_manual/dr_minw_debugger.rst:0
-msgid ".. image:: images/Mingw-crash-screen.png"
-msgstr ""
-
-#: ../../reference_manual/dr_minw_debugger.rst:0
-msgid ".. image:: images/Mingw-explorer-path.png"
-msgstr ""
-
-#: ../../reference_manual/dr_minw_debugger.rst:0
+#: ../../<rst_epilog>:0
 msgid ".. image:: images/Mingw-crash-log-start.png"
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:0
+#: ../../<rst_epilog>:0
 msgid ".. image:: images/Mingw-crash-log-end.png"
 msgstr ""
 
@@ -39,6 +31,14 @@ msgstr ""
 
 #: ../../reference_manual/dr_minw_debugger.rst:0
 msgid ".. image:: images/Mingw-dbg7zip-dir.png"
+msgstr ""
+
+#: ../../reference_manual/dr_minw_debugger.rst:0
+msgid ".. image:: images/Mingw-crash-screen.png"
+msgstr ""
+
+#: ../../reference_manual/dr_minw_debugger.rst:0
+msgid ".. image:: images/Mingw-explorer-path.png"
 msgstr ""
 
 #: ../../reference_manual/dr_minw_debugger.rst:1
@@ -59,32 +59,74 @@ msgstr ""
 
 #: ../../reference_manual/dr_minw_debugger.rst:22
 msgid ""
-"The information on this page applies only to the Windows release of Krita "
-"3.1 Beta 3 (3.0.92) and later."
+"The information on this page applies only to the Windows release of Krita."
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:26
-msgid "Getting a Backtrace"
+#: ../../reference_manual/dr_minw_debugger.rst:25
+msgid "Using the Debug Package"
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:28
+#: ../../reference_manual/dr_minw_debugger.rst:27
 msgid ""
-"There are some additions to Krita which makes getting a backtrace much "
-"easier on Windows."
+"If you have your Krita version installed and you want to get a backtrace, "
+"it's best to download a portable version (either the latest release, or the "
+"one that someone told you to try, for example Krita Next or Krita Plus "
+"package). Alongside downloading the portable version, download the debug "
+"symbols package, too. It should be located in the same place you download "
+"Krita. You can see which is which by checking the end of the name of the zip "
+"file - debug symbols package always ends with `-dbg.zip`."
 msgstr ""
 
 #: ../../reference_manual/dr_minw_debugger.rst:32
+msgid ""
+"Links to the debug packages should be available on the release announcement "
+"news item on https://krita.org/, along with the release packages. You can "
+"find debug packages for any release either in https://download.kde.org/"
+"stable/krita for stable releases or in https://download.kde.org/unstable/"
+"krita for unstable releases (for example beta versions). Portable zip and "
+"debug zip are found next to each other."
+msgstr ""
+
+#: ../../reference_manual/dr_minw_debugger.rst:33
+msgid ""
+"Make sure you’ve downloaded the same version of debug package for the "
+"portable package you intend to debug / get a better backtrace."
+msgstr ""
+
+#: ../../reference_manual/dr_minw_debugger.rst:34
+msgid "Extract the portable Krita."
+msgstr ""
+
+#: ../../reference_manual/dr_minw_debugger.rst:35
+msgid ""
+"Extract the files from the debug symbols package inside the portable Krita "
+"main directory, where the sub-directories `bin`, `lib` and `share` is "
+"located, like in the figures below:"
+msgstr ""
+
+#: ../../reference_manual/dr_minw_debugger.rst:41
+msgid ""
+"After extracting the files, check the ``bin`` dir and make sure you see the "
+"``.debug`` dir inside. If you don't see it, you probably extracted to the "
+"wrong place."
+msgstr ""
+
+#: ../../reference_manual/dr_minw_debugger.rst:45
+msgid "Getting a Backtrace"
+msgstr ""
+
+#: ../../reference_manual/dr_minw_debugger.rst:50
 msgid ""
 "When there is a crash, Krita might appear to be unresponsive for a short "
 "time, ranging from a few seconds to a few minutes, before the crash dialog "
 "appears."
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:36
+#: ../../reference_manual/dr_minw_debugger.rst:54
 msgid "An example of the crash dialog."
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:38
+#: ../../reference_manual/dr_minw_debugger.rst:56
 msgid ""
 "If Krita keeps on being unresponsive for more than a few minutes, it might "
 "actually be locked up, which may not give a backtrace. In that situation, "
@@ -92,43 +134,43 @@ msgid ""
 "instructions to check whether it was a crash or not."
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:40
+#: ../../reference_manual/dr_minw_debugger.rst:58
 msgid ""
 "Open Windows Explorer and type ``%LocalAppData%`` (without quotes) on the "
 "address bar and press the :kbd:`Enter` key."
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:44
+#: ../../reference_manual/dr_minw_debugger.rst:62
 msgid ""
 "Find the file ``kritacrash.log`` (it might appear as simply ``kritacrash`` "
 "depending on your settings.)"
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:45
+#: ../../reference_manual/dr_minw_debugger.rst:63
 msgid ""
 "Open the file with Notepad and scroll to the bottom, then scroll up to the "
 "first occurrence of “Error occurred on <time>” or the dashes."
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:49
+#: ../../reference_manual/dr_minw_debugger.rst:67
 msgid "Start of backtrace."
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:51
+#: ../../reference_manual/dr_minw_debugger.rst:69
 msgid "Check the time and make sure it matches the time of the crash."
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:55
+#: ../../reference_manual/dr_minw_debugger.rst:73
 msgid "End of backtrace."
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:57
+#: ../../reference_manual/dr_minw_debugger.rst:75
 msgid ""
 "The text starting from this line to the end of the file is the most recent "
 "backtrace."
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:59
+#: ../../reference_manual/dr_minw_debugger.rst:77
 msgid ""
 "If ``kritacrash.log`` does not exist, or a backtrace with a matching time "
 "does not exist, then you don’t have a backtrace. This means Krita was very "
@@ -136,56 +178,10 @@ msgid ""
 "bug report too."
 msgstr ""
 
-#: ../../reference_manual/dr_minw_debugger.rst:60
+#: ../../reference_manual/dr_minw_debugger.rst:78
 msgid ""
 "If the backtrace looks truncated, or there is nothing after the time, it "
 "means there was a crash and the crash handler was creating the stack trace "
 "before being closed manually. In this case, try to re-trigger the crash and "
 "wait longer until the crash dialog appears."
-msgstr ""
-
-#: ../../reference_manual/dr_minw_debugger.rst:64
-msgid ""
-"Starting from Krita 3.1 Beta 3 (3.0.92), the external DrMingw JIT debugger "
-"is not needed for getting the backtrace."
-msgstr ""
-
-#: ../../reference_manual/dr_minw_debugger.rst:67
-msgid "Using the Debug Package"
-msgstr ""
-
-#: ../../reference_manual/dr_minw_debugger.rst:69
-msgid ""
-"Starting from 3.1 Beta 3, the debug package contains only the debug symbols "
-"separated from the executables, so you have to download the portable package "
-"separately too (though usually you already have it in the first place.)"
-msgstr ""
-
-#: ../../reference_manual/dr_minw_debugger.rst:71
-msgid ""
-"Links to the debug packages should be available on the release announcement "
-"news item on https://krita.org/, along with the release packages. You can "
-"find debug packages for any release either in https://download.kde.org/"
-"stable/krita for stable releases or in https://download.kde.org/unstable/"
-"krita for unstable releases. Portable zip and debug zip are found next to "
-"each other."
-msgstr ""
-
-#: ../../reference_manual/dr_minw_debugger.rst:72
-msgid ""
-"Make sure you’ve downloaded the same version of debug package for the "
-"portable package you intend to debug / get a better (sort of) backtrace."
-msgstr ""
-
-#: ../../reference_manual/dr_minw_debugger.rst:73
-msgid ""
-"Extract the files inside the Krita install directory, where the sub-"
-"directories `bin`, `lib` and `share` is located, like in the figures below:"
-msgstr ""
-
-#: ../../reference_manual/dr_minw_debugger.rst:79
-msgid ""
-"After extracting the files, check the ``bin`` dir and make sure you see the "
-"``.debug`` dir inside. If you don't see it, you probably extracted to the "
-"wrong place."
 msgstr ""

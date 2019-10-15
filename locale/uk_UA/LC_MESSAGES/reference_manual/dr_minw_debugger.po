@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docs_krita_org_reference_manual___dr_minw_debugger\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-08-02 11:51+0300\n"
+"POT-Creation-Date: 2019-10-14 03:15+0200\n"
+"PO-Revision-Date: 2019-10-14 09:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -18,21 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.04.0\n"
+"X-Generator: Lokalize 19.11.70\n"
 
-#: ../../reference_manual/dr_minw_debugger.rst:0
-msgid ".. image:: images/Mingw-crash-screen.png"
-msgstr ".. image:: images/Mingw-crash-screen.png"
-
-#: ../../reference_manual/dr_minw_debugger.rst:0
-msgid ".. image:: images/Mingw-explorer-path.png"
-msgstr ".. image:: images/Mingw-explorer-path.png"
-
-#: ../../reference_manual/dr_minw_debugger.rst:0
+#: ../../<rst_epilog>:0
 msgid ".. image:: images/Mingw-crash-log-start.png"
 msgstr ".. image:: images/Mingw-crash-log-start.png"
 
-#: ../../reference_manual/dr_minw_debugger.rst:0
+#: ../../<rst_epilog>:0
 msgid ".. image:: images/Mingw-crash-log-end.png"
 msgstr ".. image:: images/Mingw-crash-log-end.png"
 
@@ -43,6 +35,14 @@ msgstr ".. image:: images/Mingw-dbg7zip.png"
 #: ../../reference_manual/dr_minw_debugger.rst:0
 msgid ".. image:: images/Mingw-dbg7zip-dir.png"
 msgstr ".. image:: images/Mingw-dbg7zip-dir.png"
+
+#: ../../reference_manual/dr_minw_debugger.rst:0
+msgid ".. image:: images/Mingw-crash-screen.png"
+msgstr ".. image:: images/Mingw-crash-screen.png"
+
+#: ../../reference_manual/dr_minw_debugger.rst:0
+msgid ".. image:: images/Mingw-explorer-path.png"
+msgstr ".. image:: images/Mingw-explorer-path.png"
 
 #: ../../reference_manual/dr_minw_debugger.rst:1
 msgid "How to get a backtrace in Krita using the dr. MinW debugger."
@@ -62,26 +62,106 @@ msgid "Dr. MinW Debugger"
 msgstr "Засіб діагностики Dr. MinW"
 
 #: ../../reference_manual/dr_minw_debugger.rst:22
+#| msgid ""
+#| "The information on this page applies only to the Windows release of Krita "
+#| "3.1 Beta 3 (3.0.92) and later."
 msgid ""
-"The information on this page applies only to the Windows release of Krita "
-"3.1 Beta 3 (3.0.92) and later."
-msgstr ""
-"Відомості з цієї сторінки стосуються лише випусків Krita для Windows версії "
-"3.1 Beta 3 (3.0.92) та новіших версій."
+"The information on this page applies only to the Windows release of Krita."
+msgstr "Відомості з цієї сторінки стосуються лише випусків Krita для Windows."
 
-#: ../../reference_manual/dr_minw_debugger.rst:26
+#: ../../reference_manual/dr_minw_debugger.rst:25
+msgid "Using the Debug Package"
+msgstr "Користування діагностичним пакунком"
+
+#: ../../reference_manual/dr_minw_debugger.rst:27
+msgid ""
+"If you have your Krita version installed and you want to get a backtrace, "
+"it's best to download a portable version (either the latest release, or the "
+"one that someone told you to try, for example Krita Next or Krita Plus "
+"package). Alongside downloading the portable version, download the debug "
+"symbols package, too. It should be located in the same place you download "
+"Krita. You can see which is which by checking the end of the name of the zip "
+"file - debug symbols package always ends with `-dbg.zip`."
+msgstr ""
+"Якщо у вашій системі встановлено Krita, і ви хочете отримати дані зворотного"
+" трасування, найкращим варіантом є використання портативної версії"
+" (найсвіжішого випуску або випуску, який вам рекомендуватимуть розробник,"
+" наприклад пакунка Krita Next або Krita Plus). Окрім пакунка самої"
+" портативної версії, вам слід також отримати пакунок із діагностичними"
+" символами. Посилання на нього можна знайти на тій самій сторінці, з якої ви"
+" отримали пакунок Krita. Відрізнити пакунки один від одного можна за"
+" закінченням назви архіву zip — назва файла пакунка із діагностичними"
+" символами закінчується на «-dbg.zip»."
+
+#: ../../reference_manual/dr_minw_debugger.rst:32
+#| msgid ""
+#| "Links to the debug packages should be available on the release "
+#| "announcement news item on https://krita.org/, along with the release "
+#| "packages. You can find debug packages for any release either in https://"
+#| "download.kde.org/stable/krita for stable releases or in https://download."
+#| "kde.org/unstable/krita for unstable releases. Portable zip and debug zip "
+#| "are found next to each other."
+msgid ""
+"Links to the debug packages should be available on the release announcement "
+"news item on https://krita.org/, along with the release packages. You can "
+"find debug packages for any release either in https://download.kde.org/"
+"stable/krita for stable releases or in https://download.kde.org/unstable/"
+"krita for unstable releases (for example beta versions). Portable zip and "
+"debug zip are found next to each other."
+msgstr ""
+"Посилання на діагностичні пакунки має бути наведено у оголошенні щодо "
+"випуску на https://krita.org/, разом із посиланнями на пакунки випуску. Ви "
+"можете знайти діагностичні пакунки для усіх випусків або на https://download."
+"kde.org/stable/krita (стабільні випуски) або на https://download.kde.org/"
+"unstable/krita (нестабільні випуски, зокрема тестові версії). Архів zip"
+" портативної версії та "
+"діагностичний архів zip зберігаються у одному каталозі."
+
+#: ../../reference_manual/dr_minw_debugger.rst:33
+#| msgid ""
+#| "Make sure you’ve downloaded the same version of debug package for the "
+#| "portable package you intend to debug / get a better (sort of) backtrace."
+msgid ""
+"Make sure you’ve downloaded the same version of debug package for the "
+"portable package you intend to debug / get a better backtrace."
+msgstr ""
+"Переконайтеся, що вами отримати ту саму версію діагностичного пакунка, що і "
+"портативна версія, діагностику якої ви хочете виконати або дані зворотного "
+"трасування якої ви хочете поліпшити."
+
+#: ../../reference_manual/dr_minw_debugger.rst:34
+msgid "Extract the portable Krita."
+msgstr "Розпакуйте портативну Krita."
+
+#: ../../reference_manual/dr_minw_debugger.rst:35
+#| msgid ""
+#| "Extract the files inside the Krita install directory, where the sub-"
+#| "directories `bin`, `lib` and `share` is located, like in the figures "
+#| "below:"
+msgid ""
+"Extract the files from the debug symbols package inside the portable Krita "
+"main directory, where the sub-directories `bin`, `lib` and `share` is "
+"located, like in the figures below:"
+msgstr ""
+"Розпакуйте файли із пакунка діагностичних символів до основного каталогу"
+" портативної версії Krita, тобто каталогу, де розташовано підкаталоги "
+"«bin», «lib» та «share», як показано на наведених нижче знімках:"
+
+#: ../../reference_manual/dr_minw_debugger.rst:41
+msgid ""
+"After extracting the files, check the ``bin`` dir and make sure you see the "
+"``.debug`` dir inside. If you don't see it, you probably extracted to the "
+"wrong place."
+msgstr ""
+"Після видобування файлів зазирніть до каталогу ``bin`` і переконайтеся, що у "
+"ньому є каталог ``.debug``. Якщо такого каталогу немає, ймовірно, "
+"видобування відбулося до якогось не того місця."
+
+#: ../../reference_manual/dr_minw_debugger.rst:45
 msgid "Getting a Backtrace"
 msgstr "Отримання даних зворотного трасування"
 
-#: ../../reference_manual/dr_minw_debugger.rst:28
-msgid ""
-"There are some additions to Krita which makes getting a backtrace much "
-"easier on Windows."
-msgstr ""
-"Існують додаткові до Krita програми, які значно спрощують отримання даних "
-"трасування у Windows."
-
-#: ../../reference_manual/dr_minw_debugger.rst:32
+#: ../../reference_manual/dr_minw_debugger.rst:50
 msgid ""
 "When there is a crash, Krita might appear to be unresponsive for a short "
 "time, ranging from a few seconds to a few minutes, before the crash dialog "
@@ -91,11 +171,11 @@ msgstr ""
 "декількох секунд до декількох хвилин, перш ніж ви побачите діалогове вікно "
 "повідомлення щодо аварійного завершення роботи."
 
-#: ../../reference_manual/dr_minw_debugger.rst:36
+#: ../../reference_manual/dr_minw_debugger.rst:54
 msgid "An example of the crash dialog."
 msgstr "Приклад вікна аварійного завершення роботи."
 
-#: ../../reference_manual/dr_minw_debugger.rst:38
+#: ../../reference_manual/dr_minw_debugger.rst:56
 msgid ""
 "If Krita keeps on being unresponsive for more than a few minutes, it might "
 "actually be locked up, which may not give a backtrace. In that situation, "
@@ -108,7 +188,7 @@ msgstr ""
 "роботу Krita вручну. Виконайте наведені далі настанови, щоб перевірити, чи "
 "завершила програма роботу у аварійному режимі."
 
-#: ../../reference_manual/dr_minw_debugger.rst:40
+#: ../../reference_manual/dr_minw_debugger.rst:58
 msgid ""
 "Open Windows Explorer and type ``%LocalAppData%`` (without quotes) on the "
 "address bar and press the :kbd:`Enter` key."
@@ -116,7 +196,7 @@ msgstr ""
 "Відкрийте Провідник Windows, введіть ``%LocalAppData%`` (без лапок) у смужці "
 "адреси і натисніть клавішу :kbd:`Enter`."
 
-#: ../../reference_manual/dr_minw_debugger.rst:44
+#: ../../reference_manual/dr_minw_debugger.rst:62
 msgid ""
 "Find the file ``kritacrash.log`` (it might appear as simply ``kritacrash`` "
 "depending on your settings.)"
@@ -124,7 +204,7 @@ msgstr ""
 "Знайдіть файл ``kritacrash.log`` (може мати назву ``kritacrash``, залежно "
 "від параметрів роботи програми)"
 
-#: ../../reference_manual/dr_minw_debugger.rst:45
+#: ../../reference_manual/dr_minw_debugger.rst:63
 msgid ""
 "Open the file with Notepad and scroll to the bottom, then scroll up to the "
 "first occurrence of “Error occurred on <time>” or the dashes."
@@ -132,21 +212,21 @@ msgstr ""
 "Відкрийте файл у Notepad і гортайте його вміст до кінця, потім підніміться "
 "трохи вгору до першого запису «Error occurred on <час>» або рядка з дефісів."
 
-#: ../../reference_manual/dr_minw_debugger.rst:49
+#: ../../reference_manual/dr_minw_debugger.rst:67
 msgid "Start of backtrace."
 msgstr "Початок зворотного трасування."
 
-#: ../../reference_manual/dr_minw_debugger.rst:51
+#: ../../reference_manual/dr_minw_debugger.rst:69
 msgid "Check the time and make sure it matches the time of the crash."
 msgstr ""
 "Перевірте часову позначку, щоб переконатися, що вона збігається із моментом "
 "аварійного завершення роботи."
 
-#: ../../reference_manual/dr_minw_debugger.rst:55
+#: ../../reference_manual/dr_minw_debugger.rst:73
 msgid "End of backtrace."
 msgstr "Кінець зворотного трасування."
 
-#: ../../reference_manual/dr_minw_debugger.rst:57
+#: ../../reference_manual/dr_minw_debugger.rst:75
 msgid ""
 "The text starting from this line to the end of the file is the most recent "
 "backtrace."
@@ -154,7 +234,7 @@ msgstr ""
 "Текст від цього рядка і до кінця файла і є найсвіжішими даними зворотного "
 "трасування."
 
-#: ../../reference_manual/dr_minw_debugger.rst:59
+#: ../../reference_manual/dr_minw_debugger.rst:77
 msgid ""
 "If ``kritacrash.log`` does not exist, or a backtrace with a matching time "
 "does not exist, then you don’t have a backtrace. This means Krita was very "
@@ -167,7 +247,7 @@ msgstr ""
 "заблоковано, а аварійного завершення роботи не відбулося. У цьому випадку "
 "теж слід створити звіт щодо вади."
 
-#: ../../reference_manual/dr_minw_debugger.rst:60
+#: ../../reference_manual/dr_minw_debugger.rst:78
 msgid ""
 "If the backtrace looks truncated, or there is nothing after the time, it "
 "means there was a crash and the crash handler was creating the stack trace "
@@ -181,67 +261,27 @@ msgstr ""
 "почекайте ще деякий час, аж доки не з'явиться діалогове вікно повідомлення "
 "щодо аварії."
 
-#: ../../reference_manual/dr_minw_debugger.rst:64
-msgid ""
-"Starting from Krita 3.1 Beta 3 (3.0.92), the external DrMingw JIT debugger "
-"is not needed for getting the backtrace."
-msgstr ""
-"Починаючи з Krita 3.1 Beta 3 (3.0.92), зовнішній засіб діагностики JIT "
-"DrMingw вже не потрібне для отримання даних зворотного трасування."
+#~ msgid ""
+#~ "There are some additions to Krita which makes getting a backtrace much "
+#~ "easier on Windows."
+#~ msgstr ""
+#~ "Існують додаткові до Krita програми, які значно спрощують отримання даних "
+#~ "трасування у Windows."
 
-#: ../../reference_manual/dr_minw_debugger.rst:67
-msgid "Using the Debug Package"
-msgstr "Користування діагностичним пакунком"
+#~ msgid ""
+#~ "Starting from Krita 3.1 Beta 3 (3.0.92), the external DrMingw JIT "
+#~ "debugger is not needed for getting the backtrace."
+#~ msgstr ""
+#~ "Починаючи з Krita 3.1 Beta 3 (3.0.92), зовнішній засіб діагностики JIT "
+#~ "DrMingw вже не потрібне для отримання даних зворотного трасування."
 
-#: ../../reference_manual/dr_minw_debugger.rst:69
-msgid ""
-"Starting from 3.1 Beta 3, the debug package contains only the debug symbols "
-"separated from the executables, so you have to download the portable package "
-"separately too (though usually you already have it in the first place.)"
-msgstr ""
-"Починаючи з версії 3.1 Beta 3, діагностичний пакунок містить лише "
-"діагностичні символи і не містить виконуваних файлів. Тому вам слід отримати "
-"пакунок портативної версії програми (хоча, зазвичай, він має у вас уже бути)."
-
-#: ../../reference_manual/dr_minw_debugger.rst:71
-msgid ""
-"Links to the debug packages should be available on the release announcement "
-"news item on https://krita.org/, along with the release packages. You can "
-"find debug packages for any release either in https://download.kde.org/"
-"stable/krita for stable releases or in https://download.kde.org/unstable/"
-"krita for unstable releases. Portable zip and debug zip are found next to "
-"each other."
-msgstr ""
-"Посилання на діагностичні пакунки має бути наведено у оголошенні щодо "
-"випуску на https://krita.org/, разом із посиланнями на пакунки випуску. Ви "
-"можете знайти діагностичні пакунки для усіх випусків або на https://download."
-"kde.org/stable/krita (стабільні випуски) або на https://download.kde.org/"
-"unstable/krita (нестабільні випуски). Архів zip портативної версії та "
-"діагностичний архів zip зберігаються у одному каталозі."
-
-#: ../../reference_manual/dr_minw_debugger.rst:72
-msgid ""
-"Make sure you’ve downloaded the same version of debug package for the "
-"portable package you intend to debug / get a better (sort of) backtrace."
-msgstr ""
-"Переконайтеся, що вами отримати ту саму версію діагностичного пакунка, що і "
-"портативна версія, діагностику якої ви хочете виконати або дані зворотного "
-"трасування якої ви хочете поліпшити."
-
-#: ../../reference_manual/dr_minw_debugger.rst:73
-msgid ""
-"Extract the files inside the Krita install directory, where the sub-"
-"directories `bin`, `lib` and `share` is located, like in the figures below:"
-msgstr ""
-"Розпакуйте файли до каталогу встановлення Krita, де розташовано підкаталоги "
-"«bin», «lib» та «share», як показано на наведених нижче знімках:"
-
-#: ../../reference_manual/dr_minw_debugger.rst:79
-msgid ""
-"After extracting the files, check the ``bin`` dir and make sure you see the "
-"``.debug`` dir inside. If you don't see it, you probably extracted to the "
-"wrong place."
-msgstr ""
-"Після видобування файлів зазирніть до каталогу ``bin`` і переконайтеся, що у "
-"ньому є каталог ``.debug``. Якщо такого каталогу немає, ймовірно, "
-"видобування відбулося до якогось не того місця."
+#~ msgid ""
+#~ "Starting from 3.1 Beta 3, the debug package contains only the debug "
+#~ "symbols separated from the executables, so you have to download the "
+#~ "portable package separately too (though usually you already have it in "
+#~ "the first place.)"
+#~ msgstr ""
+#~ "Починаючи з версії 3.1 Beta 3, діагностичний пакунок містить лише "
+#~ "діагностичні символи і не містить виконуваних файлів. Тому вам слід "
+#~ "отримати пакунок портативної версії програми (хоча, зазвичай, він має у "
+#~ "вас уже бути)."

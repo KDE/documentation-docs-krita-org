@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: reference_manual\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
+"POT-Creation-Date: 2019-10-14 03:15+0200\n"
 "PO-Revision-Date: 2019-09-21 16:39+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -19,19 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.11.70\n"
 
-#: ../../reference_manual/dr_minw_debugger.rst:0
-msgid ".. image:: images/Mingw-crash-screen.png"
-msgstr ".. image:: images/Mingw-crash-screen.png"
-
-#: ../../reference_manual/dr_minw_debugger.rst:0
-msgid ".. image:: images/Mingw-explorer-path.png"
-msgstr ".. image:: images/Mingw-explorer-path.png"
-
-#: ../../reference_manual/dr_minw_debugger.rst:0
+#: ../../<rst_epilog>:0
 msgid ".. image:: images/Mingw-crash-log-start.png"
 msgstr ".. image:: images/Mingw-crash-log-start.png"
 
-#: ../../reference_manual/dr_minw_debugger.rst:0
+#: ../../<rst_epilog>:0
 msgid ".. image:: images/Mingw-crash-log-end.png"
 msgstr ".. image:: images/Mingw-crash-log-end.png"
 
@@ -42,6 +34,14 @@ msgstr ".. image:: images/Mingw-dbg7zip.png"
 #: ../../reference_manual/dr_minw_debugger.rst:0
 msgid ".. image:: images/Mingw-dbg7zip-dir.png"
 msgstr ".. image:: images/Mingw-dbg7zip-dir.png"
+
+#: ../../reference_manual/dr_minw_debugger.rst:0
+msgid ".. image:: images/Mingw-crash-screen.png"
+msgstr ".. image:: images/Mingw-crash-screen.png"
+
+#: ../../reference_manual/dr_minw_debugger.rst:0
+msgid ".. image:: images/Mingw-explorer-path.png"
+msgstr ".. image:: images/Mingw-explorer-path.png"
 
 #: ../../reference_manual/dr_minw_debugger.rst:1
 msgid "How to get a backtrace in Krita using the dr. MinW debugger."
@@ -61,26 +61,104 @@ msgid "Dr. MinW Debugger"
 msgstr "Depurador Dr. MinW"
 
 #: ../../reference_manual/dr_minw_debugger.rst:22
+#, fuzzy
+#| msgid ""
+#| "The information on this page applies only to the Windows release of Krita "
+#| "3.1 Beta 3 (3.0.92) and later."
 msgid ""
-"The information on this page applies only to the Windows release of Krita "
-"3.1 Beta 3 (3.0.92) and later."
+"The information on this page applies only to the Windows release of Krita."
 msgstr ""
 "La informació d'aquesta pàgina només s'aplica als llançaments per a Windows "
 "del Krita 3.1 Beta 3 (3.0.92) i posteriors."
 
-#: ../../reference_manual/dr_minw_debugger.rst:26
+#: ../../reference_manual/dr_minw_debugger.rst:25
+msgid "Using the Debug Package"
+msgstr "Ús del paquet de depuració"
+
+#: ../../reference_manual/dr_minw_debugger.rst:27
+msgid ""
+"If you have your Krita version installed and you want to get a backtrace, "
+"it's best to download a portable version (either the latest release, or the "
+"one that someone told you to try, for example Krita Next or Krita Plus "
+"package). Alongside downloading the portable version, download the debug "
+"symbols package, too. It should be located in the same place you download "
+"Krita. You can see which is which by checking the end of the name of the zip "
+"file - debug symbols package always ends with `-dbg.zip`."
+msgstr ""
+
+#: ../../reference_manual/dr_minw_debugger.rst:32
+#, fuzzy
+#| msgid ""
+#| "Links to the debug packages should be available on the release "
+#| "announcement news item on https://krita.org/, along with the release "
+#| "packages. You can find debug packages for any release either in https://"
+#| "download.kde.org/stable/krita for stable releases or in https://download."
+#| "kde.org/unstable/krita for unstable releases. Portable zip and debug zip "
+#| "are found next to each other."
+msgid ""
+"Links to the debug packages should be available on the release announcement "
+"news item on https://krita.org/, along with the release packages. You can "
+"find debug packages for any release either in https://download.kde.org/"
+"stable/krita for stable releases or in https://download.kde.org/unstable/"
+"krita for unstable releases (for example beta versions). Portable zip and "
+"debug zip are found next to each other."
+msgstr ""
+"Els enllaços als paquets de depuració haurien d'estar disponibles a la "
+"notícia de l'anunci de la versió a https://krita.org/, juntament amb els "
+"paquets de la versió. Trobareu els paquets de depuració per a qualsevol "
+"versió a https://download.kde.org/stable/krita per a les versions estables o "
+"a https://download.kde.org/unstable/krita per a les versions inestables. El "
+"ZIP portable i el ZIP de depuració es troben un al costat de l'altre."
+
+#: ../../reference_manual/dr_minw_debugger.rst:33
+#, fuzzy
+#| msgid ""
+#| "Make sure you’ve downloaded the same version of debug package for the "
+#| "portable package you intend to debug / get a better (sort of) backtrace."
+msgid ""
+"Make sure you’ve downloaded the same version of debug package for the "
+"portable package you intend to debug / get a better backtrace."
+msgstr ""
+"Assegureu-vos que heu descarregat la mateixa versió del paquet de depuració "
+"per al paquet portable en el qual intenteu depurar/obtenir una traça inversa "
+"millor (més o menys)."
+
+#: ../../reference_manual/dr_minw_debugger.rst:34
+msgid "Extract the portable Krita."
+msgstr ""
+
+# skip-rule: t-acc_obe
+#: ../../reference_manual/dr_minw_debugger.rst:35
+#, fuzzy
+#| msgid ""
+#| "Extract the files inside the Krita install directory, where the sub-"
+#| "directories `bin`, `lib` and `share` is located, like in the figures "
+#| "below:"
+msgid ""
+"Extract the files from the debug symbols package inside the portable Krita "
+"main directory, where the sub-directories `bin`, `lib` and `share` is "
+"located, like in the figures below:"
+msgstr ""
+"Extraieu els fitxers dins del directori d'instal·lació del Krita, on es "
+"troben els subdirectoris `bin`, `lib` i `share`, com en la següent captura "
+"de pantalla:"
+
+# skip-rule: t-acc_obe
+#: ../../reference_manual/dr_minw_debugger.rst:41
+msgid ""
+"After extracting the files, check the ``bin`` dir and make sure you see the "
+"``.debug`` dir inside. If you don't see it, you probably extracted to the "
+"wrong place."
+msgstr ""
+"Després d'extreure els fitxers, comproveu el directori ``bin`` i assegureu-"
+"vos que hi veieu el directori ``.debug`` a dins. Si no el veieu, "
+"probablement ho heu extret al lloc equivocat."
+
+#: ../../reference_manual/dr_minw_debugger.rst:45
 msgid "Getting a Backtrace"
 msgstr "Obtenir una traça inversa"
 
-#: ../../reference_manual/dr_minw_debugger.rst:28
-msgid ""
-"There are some additions to Krita which makes getting a backtrace much "
-"easier on Windows."
-msgstr ""
-"Hi ha algunes addicions al Krita que faciliten molt el procés de traça "
-"inversa sobre el Windows."
-
-#: ../../reference_manual/dr_minw_debugger.rst:32
+#: ../../reference_manual/dr_minw_debugger.rst:50
 msgid ""
 "When there is a crash, Krita might appear to be unresponsive for a short "
 "time, ranging from a few seconds to a few minutes, before the crash dialog "
@@ -90,11 +168,11 @@ msgstr ""
 "breu període de temps, des d'uns pocs segons fins uns quants minuts, abans "
 "que aparegui el diàleg de bloqueig."
 
-#: ../../reference_manual/dr_minw_debugger.rst:36
+#: ../../reference_manual/dr_minw_debugger.rst:54
 msgid "An example of the crash dialog."
 msgstr "Un exemple del diàleg de bloqueig."
 
-#: ../../reference_manual/dr_minw_debugger.rst:38
+#: ../../reference_manual/dr_minw_debugger.rst:56
 msgid ""
 "If Krita keeps on being unresponsive for more than a few minutes, it might "
 "actually be locked up, which may not give a backtrace. In that situation, "
@@ -107,7 +185,7 @@ msgstr ""
 "les següents instruccions per a verificar si s'ha o no bloquejat."
 
 # skip-rule: t-acc_obe
-#: ../../reference_manual/dr_minw_debugger.rst:40
+#: ../../reference_manual/dr_minw_debugger.rst:58
 msgid ""
 "Open Windows Explorer and type ``%LocalAppData%`` (without quotes) on the "
 "address bar and press the :kbd:`Enter` key."
@@ -116,7 +194,7 @@ msgstr ""
 "a la barra d'adreces i premeu la tecla :kbd:`Retorn`."
 
 # skip-rule: t-acc_obe
-#: ../../reference_manual/dr_minw_debugger.rst:44
+#: ../../reference_manual/dr_minw_debugger.rst:62
 msgid ""
 "Find the file ``kritacrash.log`` (it might appear as simply ``kritacrash`` "
 "depending on your settings.)"
@@ -124,7 +202,7 @@ msgstr ""
 "Trobeu el fitxer ``kritacrash.log`` (pot aparèixer simplement com a "
 "``kritacrash``, segons els vostres ajustaments)."
 
-#: ../../reference_manual/dr_minw_debugger.rst:45
+#: ../../reference_manual/dr_minw_debugger.rst:63
 msgid ""
 "Open the file with Notepad and scroll to the bottom, then scroll up to the "
 "first occurrence of “Error occurred on <time>” or the dashes."
@@ -133,20 +211,20 @@ msgstr ""
 "inferior, després aneu a la primera ocurrència «Error occurred on <temps>» o "
 "dels guions."
 
-#: ../../reference_manual/dr_minw_debugger.rst:49
+#: ../../reference_manual/dr_minw_debugger.rst:67
 msgid "Start of backtrace."
 msgstr "Inici de la traça inversa."
 
-#: ../../reference_manual/dr_minw_debugger.rst:51
+#: ../../reference_manual/dr_minw_debugger.rst:69
 msgid "Check the time and make sure it matches the time of the crash."
 msgstr ""
 "Comproveu l'hora i assegureu-vos que coincideixi amb l'hora del bloqueig."
 
-#: ../../reference_manual/dr_minw_debugger.rst:55
+#: ../../reference_manual/dr_minw_debugger.rst:73
 msgid "End of backtrace."
 msgstr "Final de la traça inversa."
 
-#: ../../reference_manual/dr_minw_debugger.rst:57
+#: ../../reference_manual/dr_minw_debugger.rst:75
 msgid ""
 "The text starting from this line to the end of the file is the most recent "
 "backtrace."
@@ -155,7 +233,7 @@ msgstr ""
 "inversa més recent."
 
 # skip-rule: t-acc_obe
-#: ../../reference_manual/dr_minw_debugger.rst:59
+#: ../../reference_manual/dr_minw_debugger.rst:77
 msgid ""
 "If ``kritacrash.log`` does not exist, or a backtrace with a matching time "
 "does not exist, then you don’t have a backtrace. This means Krita was very "
@@ -167,7 +245,7 @@ msgstr ""
 "Krita probablement estava molt bloquejat, i que en realitat no s'ha produït "
 "cap bloqueig. En aquest cas, feu també un informe d'error."
 
-#: ../../reference_manual/dr_minw_debugger.rst:60
+#: ../../reference_manual/dr_minw_debugger.rst:78
 msgid ""
 "If the backtrace looks truncated, or there is nothing after the time, it "
 "means there was a crash and the crash handler was creating the stack trace "
@@ -180,71 +258,27 @@ msgstr ""
 "intenteu tornar a activar el bloqueig i espereu més fins que aparegui el "
 "diàleg de bloqueig."
 
-#: ../../reference_manual/dr_minw_debugger.rst:64
-msgid ""
-"Starting from Krita 3.1 Beta 3 (3.0.92), the external DrMingw JIT debugger "
-"is not needed for getting the backtrace."
-msgstr ""
-"A partir del Krita 3.1 Beta 3 (3.0.92), el depurador extern DrMingw del JIT "
-"ja no és necessari per obtenir la traça inversa."
+#~ msgid ""
+#~ "There are some additions to Krita which makes getting a backtrace much "
+#~ "easier on Windows."
+#~ msgstr ""
+#~ "Hi ha algunes addicions al Krita que faciliten molt el procés de traça "
+#~ "inversa sobre el Windows."
 
-#: ../../reference_manual/dr_minw_debugger.rst:67
-msgid "Using the Debug Package"
-msgstr "Ús del paquet de depuració"
+#~ msgid ""
+#~ "Starting from Krita 3.1 Beta 3 (3.0.92), the external DrMingw JIT "
+#~ "debugger is not needed for getting the backtrace."
+#~ msgstr ""
+#~ "A partir del Krita 3.1 Beta 3 (3.0.92), el depurador extern DrMingw del "
+#~ "JIT ja no és necessari per obtenir la traça inversa."
 
-#: ../../reference_manual/dr_minw_debugger.rst:69
-msgid ""
-"Starting from 3.1 Beta 3, the debug package contains only the debug symbols "
-"separated from the executables, so you have to download the portable package "
-"separately too (though usually you already have it in the first place.)"
-msgstr ""
-"A partir de la versió 3.1 Beta 3, el paquet de depuració només conté els "
-"símbols de depuració separats dels executables, per la qual cosa també "
-"haureu de descarregar el paquet portable per separat (encara que normalment "
-"ja el teníeu)."
-
-#: ../../reference_manual/dr_minw_debugger.rst:71
-msgid ""
-"Links to the debug packages should be available on the release announcement "
-"news item on https://krita.org/, along with the release packages. You can "
-"find debug packages for any release either in https://download.kde.org/"
-"stable/krita for stable releases or in https://download.kde.org/unstable/"
-"krita for unstable releases. Portable zip and debug zip are found next to "
-"each other."
-msgstr ""
-"Els enllaços als paquets de depuració haurien d'estar disponibles a la "
-"notícia de l'anunci de la versió a https://krita.org/, juntament amb els "
-"paquets de la versió. Trobareu els paquets de depuració per a qualsevol "
-"versió a https://download.kde.org/stable/krita per a les versions estables o "
-"a https://download.kde.org/unstable/krita per a les versions inestables. El "
-"ZIP portable i el ZIP de depuració es troben un al costat de l'altre."
-
-#: ../../reference_manual/dr_minw_debugger.rst:72
-msgid ""
-"Make sure you’ve downloaded the same version of debug package for the "
-"portable package you intend to debug / get a better (sort of) backtrace."
-msgstr ""
-"Assegureu-vos que heu descarregat la mateixa versió del paquet de depuració "
-"per al paquet portable en el qual intenteu depurar/obtenir una traça inversa "
-"millor (més o menys)."
-
-# skip-rule: t-acc_obe
-#: ../../reference_manual/dr_minw_debugger.rst:73
-msgid ""
-"Extract the files inside the Krita install directory, where the sub-"
-"directories `bin`, `lib` and `share` is located, like in the figures below:"
-msgstr ""
-"Extraieu els fitxers dins del directori d'instal·lació del Krita, on es "
-"troben els subdirectoris `bin`, `lib` i `share`, com en la següent captura "
-"de pantalla:"
-
-# skip-rule: t-acc_obe
-#: ../../reference_manual/dr_minw_debugger.rst:79
-msgid ""
-"After extracting the files, check the ``bin`` dir and make sure you see the "
-"``.debug`` dir inside. If you don't see it, you probably extracted to the "
-"wrong place."
-msgstr ""
-"Després d'extreure els fitxers, comproveu el directori ``bin`` i assegureu-"
-"vos que hi veieu el directori ``.debug`` a dins. Si no el veieu, "
-"probablement ho heu extret al lloc equivocat."
+#~ msgid ""
+#~ "Starting from 3.1 Beta 3, the debug package contains only the debug "
+#~ "symbols separated from the executables, so you have to download the "
+#~ "portable package separately too (though usually you already have it in "
+#~ "the first place.)"
+#~ msgstr ""
+#~ "A partir de la versió 3.1 Beta 3, el paquet de depuració només conté els "
+#~ "símbols de depuració separats dels executables, per la qual cosa també "
+#~ "haureu de descarregar el paquet portable per separat (encara que "
+#~ "normalment ja el teníeu)."
