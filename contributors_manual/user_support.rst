@@ -43,11 +43,19 @@ The majority of help requests are about pen pressure and tablet support in gener
 Quick solutions
 ~~~~~~~~~~~~~~~
 
-#. On Windows: reinstall your driver (Windows Update often breaks tablet driver settings, reinstallation helps).
+*For Windows, all devices:*
 
-#. Change API in :menuselection:`Settings --> Configure Krita --> Tablet Settings` (for some devices, especially N-trig ones, Windows Ink work better, for some it's Wintab).
+#. Change API in :menuselection:`Settings --> Configure Krita --> Tablet Settings` (for some devices, especially N-trig ones (some of the convertible 2-in-1 devices), Windows Ink work better, for some it's Wintab).
 
-#. On Windows, Wacom tablets: if you get straight lines at the beginnings of the strokes, disable/minimize "double-click distance" in Wacom settings.
+*For Windows, tablet/digitizer devices (not convertible/2-in-1 ones):*
+
+#. Reinstall your driver (Windows Update often breaks tablet driver settings, reinstallation helps).
+
+#. *Wacom tablets:* if you get straight lines at the beginnings of the strokes, disable/minimize "double-click distance" in Wacom settings.
+
+#. *XP-Pen tablets, pressure being uneven:* either switch to Windows 8+ Pointer, or disable Windows Ink in XP-Pen settings.
+
+
 
 Gathering information
 ~~~~~~~~~~~~~~~~~~~~~
@@ -58,8 +66,28 @@ Gathering information
 
 #. What is the version of the tablet driver?
 
-#. Please collect Tablet Tester (:menuselection:`Settings --> Configure Krita --> Tablet Settings`) output, paste it to `Pastebin <https://pastebin.com/>`_ or similar website and give us a link.
+#. Please collect Tablet Tester (:menuselection:`Settings --> Configure Krita --> Tablet Settings`) text output and share it: :ref:`intro_user_support_sharing_files`.
 
+#. More detailed Tablet Events log:
+
+    1. Go to :menuselection:`Settings --> Dockers --> Log Viewer` docker, make sure it's checked.
+	
+    #. In the Log Viewer docker, make sure the first button is pressed (which means the logging is turned on).
+	
+    #. Press :kbd:`Ctlr+Shift+T` to turn on tablet events logging.
+	
+    #. Make a few strokes (depending on the situation, the user supporter or developer can ask you for specific series of strokes).
+	
+    #. Press :kbd:`Ctlr+Shift+T` to turn off the logging of the tablet events.
+
+    #. Press the third button in the Log Viewer to save the output into a file.
+	
+    #. Share the file or share the content of the file: :ref:`intro_user_support_sharing_files`.
+	
+    On Linux, you can just use a console instead of Log Viewer -- then you'd only need to enable tablet events logging, not logging in general.
+
+
+	
 
 Additional information for supporters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,7 +112,7 @@ Issues with rendering animation can be of various shapes and colors. First thing
 
         If the user opens the Log Viewer docker, turns on logging and then tries to render a video, Krita will print out the whole ffmpeg command to Log Viewer so it can be easily investigated.
 
-There is a log file in the directory that user tries to render to. It can contain information useful to investigation of the issue.
+There is a log file called `log_encode.log` in the directory that user tries to render to. It can contain information useful to investigation of the issue (sharing files: :ref:`intro_user_support_sharing_files`).
 
 Onion skin issues
 -----------------
@@ -107,13 +135,14 @@ In case of crash try to determine if the problem is known, if not, instruct user
 Other possible questions with quick solutions
 ---------------------------------------------
 
+#. When the user has any weird issue, something you've never heard about, ask them to reset the configuration: :ref:`faq_reset_krita_configuration`.
+
+
 #. When the user has trouble with anything related to preview or display, ask them to change :guilabel:`Canvas Graphics Acceleration` in :menuselection:`Settings --> Configure Krita --> Display`.
 
-    .. note: 
+    .. note::
     
          Telling people to disable canvas acceleration to get better performance is something we shouldn't do, ever.
-
-#. When the user has any weird issue, something you've never heard about, ask them to reset the configuration: :ref:`faq_reset_krita_configuration`.
 
 
 Advices for supporters
@@ -129,22 +158,32 @@ Advices for supporters
 
 #. Instead of :menuselection:`Settings --> Configure Krita` use just :menuselection:`Configure Krita` -- it's easy enough to find and Mac users (where you need to select :menuselection:`Krita --> Settings`) won't get confused.
 
-#. If you ask for an image, mention usage of `Imgur <https://imgur.com>`_ or `Pasteboard <https://pasteboard.co>`_, otherwise Reddit users might create a new post with this image instead of including it to the old conversation.
+#. If you ask for an image, mention usage of `Imgur <https://imgur.com>`_ or `Pasteboard <https://pasteboard.co>`_ (:ref:`intro_user_support_sharing_files`), otherwise Reddit users might create a new post with this image instead of including it to the old conversation.
 
 #. If you want to quickly answer someone, just link to the appropriate place in this manual page -- you can click on the little link icon next to the section or subsection title and give the link to the user so they for example know what information about their tablet issue you need.
 
-#. If the user access the internet from the country or a workplace with some of the websites blocked (like imgur.com or pastebin.com), here is a list of alternatives that works:
+
+
+.. _intro_user_support_sharing_files:
+
+How to share a file
+-------------------
+
+
+* Images (e.g. screenshots): `Imgur <https://imgur.com>`_ [*], `Pasteboard <https://pasteboard.co>`_
    
-   * Images (e.g. screenshots): `Pasteboard <https://pasteboard.co>`_
+* Text only: `Pastebin <https://pastebin.com>`_ [*], `BPaste <https://bpaste.net>`_, `paste.ubuntu.org.cn <paste.ubuntu.org.cn>`_, `FedoraProject's Paste <https://paste.fedoraproject.org/>`_ or `KDE Snippets (needs KDE Identity) <https://invent.kde.org/dashboard/snippets>`_.
    
-   * Text only: `BPaste <https://bpaste.net>`_, `paste.ubuntu.org.cn <paste.ubuntu.org.cn>`_, `paste.fedoraproject.org <https://paste.fedoraproject.org/>`_ or `https://invent.kde.org/dashboard/snippets (needs KDE Identity) <https://invent.kde.org/dashboard/snippets>`_.
-   
-   * ``.kra`` and other formats: by mail? Or encode the file using `base64` command on Linux, send by mail or on Pastebin, then decode using the same command.
+* ``.kra`` and other formats: by mail? Or encode the file using `base64` command on Linux, send by mail or on Pastebin, then decode using the same command.
+
+
 
   .. attention::
       
       
       If you ask user to store their log or other data on a website, make sure it stays there long enough for you to get it -- for example bpaste.net stores files by default only for a day! And you can extend it only to one week.
       
-      Make sure they don't post their personal data. Tablet Tester log is safe, log from the :menuselection:`Help -> Show system information for bug reports` might not be that safe. Maybe you could ask them to send it to you by mail?
-
+	  
+  .. admonition:: Blocked websites
+      
+      If the user is behind a firewall of some sorts (for example lives in China), websites with [*] will probably be blocked; please use the alternatives.
