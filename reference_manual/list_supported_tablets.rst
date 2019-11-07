@@ -318,6 +318,9 @@ This is specifically about support on Windows, not Linux or OSX.
    * - Huion / Turcom 
      - H58L
      - ✔️ Supposed to work
+   * - Huion
+     - H950P
+     - ✔️ Supported
    * - Huion / Turcom 
      - DWH96
      - ✔️ Supposed to work
