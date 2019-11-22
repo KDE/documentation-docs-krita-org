@@ -172,7 +172,7 @@ How to share a file
 
 * Images (e.g. screenshots): `Imgur <https://imgur.com>`_ [*], `Pasteboard <https://pasteboard.co>`_
    
-* Text only: `Pastebin <https://pastebin.com>`_ [*], `BPaste <https://bpaste.net>`_, `paste.ubuntu.org.cn <paste.ubuntu.org.cn>`_, `FedoraProject's Paste <https://paste.fedoraproject.org/>`_ or `KDE Snippets (needs KDE Identity) <https://invent.kde.org/dashboard/snippets>`_.
+* Text only: `Pastebin <https://pastebin.com>`_ [*], `BPaste <https://bpaste.net>`_, `paste.ubuntu.org.cn <https://paste.ubuntu.org.cn>`_, `FedoraProject's Paste <https://paste.fedoraproject.org/>`_ or `KDE Snippets (needs KDE Identity) <https://invent.kde.org/dashboard/snippets>`_.
    
 * ``.kra`` and other formats: by mail? Or encode the file using `base64` command on Linux, send by mail or on Pastebin, then decode using the same command.
 
