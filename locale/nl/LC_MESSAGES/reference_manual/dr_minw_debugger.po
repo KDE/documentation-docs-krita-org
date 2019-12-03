@@ -5,20 +5,21 @@
 #
 # Automatically generated, 2019.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
+# Ronald Stroethoff <stroet43@zonnet.nl>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-14 03:15+0200\n"
-"PO-Revision-Date: 2019-10-14 11:58+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"PO-Revision-Date: 2019-11-24 11:06+0100\n"
+"Last-Translator: Ronald Stroethoff <stroet43@zonnet.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.1\n"
+"X-Generator: Lokalize 18.12.3\n"
 
 #: ../../<rst_epilog>:0
 msgid ".. image:: images/Mingw-crash-log-start.png"
@@ -65,12 +66,12 @@ msgstr "Dr. MinW Debugger"
 msgid ""
 "The information on this page applies only to the Windows release of Krita."
 msgstr ""
-"De informatie op deze pagina is alleen van toepassing op de Windows uitgave "
+"De informatie op deze pagina is alleen van toepassing op de Windows versie "
 "van Krita."
 
 #: ../../reference_manual/dr_minw_debugger.rst:25
 msgid "Using the Debug Package"
-msgstr ""
+msgstr "Het Debug pakket gebruiken"
 
 #: ../../reference_manual/dr_minw_debugger.rst:27
 msgid ""
@@ -82,6 +83,14 @@ msgid ""
 "Krita. You can see which is which by checking the end of the name of the zip "
 "file - debug symbols package always ends with `-dbg.zip`."
 msgstr ""
+"Als u uw Krita versie heeft geïnstalleerd en u wilt een backtrace krijgen, "
+" dan kunt u het beste een portable versie (de laatste release, of diegene die"
+" iemand u opdroeg om te proberen, bijvoorbeeld het Krita Next of het Krita"
+" Plus pakket) installeren. Download behalve de portable versie ook het de"
+" debug symbols pakket. U zou het op dezelfde locatie moeten vinden waar u"
+" Krita downloadde. U kunt zien wat is wat door het eind van de naam van het"
+" zip-bestand te controleren - debug symbols pakketten eindigen altijd met"
+" `-dbg.zip`."
 
 #: ../../reference_manual/dr_minw_debugger.rst:32
 msgid ""
@@ -92,16 +101,26 @@ msgid ""
 "krita for unstable releases (for example beta versions). Portable zip and "
 "debug zip are found next to each other."
 msgstr ""
+"In het nieuwsbericht over de release op https://krita.org/ zouden er naast"
+" de links naar de release pakketten ook links naar de debug pakketten"
+" beschikbaar moeten zijn. U kunt voor elke release de debug pakketten vinden"
+" op zowel in https://download.kde.org/"
+"stable/krita voor de stabiele releases of in"
+" https://download.kde.org/unstable/"
+"krita voor de onstabiele releases (bijvoorbeeld beta versies). Portable zip"
+" en debug zip zijn naast elkaar te vinden."
 
 #: ../../reference_manual/dr_minw_debugger.rst:33
 msgid ""
 "Make sure you’ve downloaded the same version of debug package for the "
 "portable package you intend to debug / get a better backtrace."
 msgstr ""
+"Let erop dat u dezelfde versie van het debug pakket download als die van het"
+" portable pakket dat u wilt debuggen / een betere backtrace te krijgen."
 
 #: ../../reference_manual/dr_minw_debugger.rst:34
 msgid "Extract the portable Krita."
-msgstr ""
+msgstr "Pak de portable Krita uit."
 
 #: ../../reference_manual/dr_minw_debugger.rst:35
 msgid ""
@@ -109,6 +128,9 @@ msgid ""
 "main directory, where the sub-directories `bin`, `lib` and `share` is "
 "located, like in the figures below:"
 msgstr ""
+"Pakt de bestanden uit het debug symbols pakket uit in de hoofdmap van de"
+" portable Krita, waar de sub-mappen `bin`, `lib` en `share` te vinden moeten"
+" zijn, zoals in de afbeeldingen hieronder:"
 
 #: ../../reference_manual/dr_minw_debugger.rst:41
 msgid ""
@@ -116,6 +138,9 @@ msgid ""
 "``.debug`` dir inside. If you don't see it, you probably extracted to the "
 "wrong place."
 msgstr ""
+"Controleer of u na het uitpakken van de bestanden in de map ``bin`` de map "
+"``.debug`` ziet. Als deze niet aanwezig is, dan heeft u waarschijnlijk op de"
+" verkeerde plek uitgepakt."
 
 #: ../../reference_manual/dr_minw_debugger.rst:45
 msgid "Getting a Backtrace"
@@ -142,24 +167,35 @@ msgid ""
 "you have to close Krita manually. Continue to follow the following "
 "instructions to check whether it was a crash or not."
 msgstr ""
+"Als Krita langer langer dan een paar minuten niet reageert, dan kan het op"
+" slot zitten, wat geen backtrace hoeft te geven. In die situatie moet u"
+" Krita handmatig afsluiten. Volg daarna de volgende instructies om te bepalen"
+" of het een crash was."
 
 #: ../../reference_manual/dr_minw_debugger.rst:58
 msgid ""
 "Open Windows Explorer and type ``%LocalAppData%`` (without quotes) on the "
 "address bar and press the :kbd:`Enter` key."
 msgstr ""
+"Open de verkenner van Windows en type ``%LocalAppData%`` (zonder"
+" aanhalingstekens) in de adresbalk en druk op de :kbd:`Enter`-toets."
 
 #: ../../reference_manual/dr_minw_debugger.rst:62
 msgid ""
 "Find the file ``kritacrash.log`` (it might appear as simply ``kritacrash`` "
 "depending on your settings.)"
 msgstr ""
+"Zoek het bestand ``kritacrash.log`` op (het kan gewoon als ``kritacrash``"
+" opduiken, afhankelijk van uw instellingen.)"
 
 #: ../../reference_manual/dr_minw_debugger.rst:63
 msgid ""
 "Open the file with Notepad and scroll to the bottom, then scroll up to the "
 "first occurrence of “Error occurred on <time>” or the dashes."
 msgstr ""
+"Open het bestand in Kladblok en scroll helemaal naar beneden, scroll dan"
+" omhoog tot u "
+" de eerste “Error occurred on <time>” of de streepjes tegenkomt."
 
 #: ../../reference_manual/dr_minw_debugger.rst:67
 msgid "Start of backtrace."
@@ -168,6 +204,8 @@ msgstr "Start van backtrace."
 #: ../../reference_manual/dr_minw_debugger.rst:69
 msgid "Check the time and make sure it matches the time of the crash."
 msgstr ""
+"Controleer de tijd en zorg dat de tijd overeenkomt met het tijdstip van de"
+" crash."
 
 #: ../../reference_manual/dr_minw_debugger.rst:73
 msgid "End of backtrace."
@@ -178,6 +216,8 @@ msgid ""
 "The text starting from this line to the end of the file is the most recent "
 "backtrace."
 msgstr ""
+"De tekst vanaf deze regel tot aan het eind van het bestand is de meest"
+" recente backtrace."
 
 #: ../../reference_manual/dr_minw_debugger.rst:77
 msgid ""
@@ -186,6 +226,10 @@ msgid ""
 "likely locked up, and a crash didn’t actually happen. In this case, make a "
 "bug report too."
 msgstr ""
+"Als ``kritacrash.log`` niet bestaat, of geen backtrace met overeenkomende"
+" tijd bestaat, dan heeft u geen backtrace. Dit betekent dat Krita"
+" waarschijnlijk op slot zat, en eigenlijk geen crash was. Maak in dat"
+" geval ook een bug rapport."
 
 #: ../../reference_manual/dr_minw_debugger.rst:78
 msgid ""
@@ -194,6 +238,11 @@ msgid ""
 "before being closed manually. In this case, try to re-trigger the crash and "
 "wait longer until the crash dialog appears."
 msgstr ""
+"Als de backtrace er afgebroken uitziet, of er is niet meer na het tijdstip,"
+" dan betekent dit dat er een crash was en dat de crash handler bezig was met"
+" de creatie van de stack trace voor dat het handmatig werd afgesloten."
+" Probeer in dat geval de crash opnieuw op te wekken en wacht langer totdat"
+" het crashdialoog verschijnt."
 
 #~ msgid ""
 #~ "There are some additions to Krita which makes getting a backtrace much "
