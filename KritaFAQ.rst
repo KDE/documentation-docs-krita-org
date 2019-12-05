@@ -223,7 +223,7 @@ If the message is "File not found. Check the file name and try again.", you prob
 -   Select :guilabel:`Virus & threat protection`, and then choose :guilabel:`Virus & threat protection settings`.
 -   Under :guilabel:`Controlled folder access`, turn it on or off.
 
-You can also whitelist Krita, following `these instructions <https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/customize-controlled-folders-exploit-guard#allow-specific-apps-to-make-changes-to-controlled-folders>`_.
+You can also whitelist Krita, following `these instructions <https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/customize-controlled-folders#allow-specific-apps-to-make-changes-to-controlled-folders>`_.
 
 Windows: Krita cannot open my file anymore
 ------------------------------------------
