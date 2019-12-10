@@ -242,6 +242,41 @@ Your file got corrupted. There are several things that might cause this:
 #. Occasionally the zips that kra files comprise of will have the last few bytes missing. We're doing everything in our power to prevent this kind of corruption, but it might be a file system issue. This particular bug can be fixed by renaming the extension (in windows you will need to enable the file extensions, which this FAQ will not cover) to zip, and then using a zip repairing utility to fix the zip file. Then rename it back to kra.
 #. If Krita doesn't give an error message, but rather crashes, your file is too big, and Krita is not so much crashing as that the operating system is shutting it down. Try shutting down some other programs like webbrowsers or streaming services to free up working memory. You should be able to open the file in question. At this point the recommended course of action is to try and reduce the file size in some manner, such as merging layers, splitting up an animation or scaling the image down.
 
+
+How to recover my files?
+-------------------------
+#. Check whether you have any backup file or autosave left: :ref:`autosave` .
+#. Check whether you can open the file as zip archive.
+    #. Rename the extension of the file from .kra to .zip.
+    #. Try to open (your system should automatically select an archive opener tool).
+    #. There is file called mergedimage.png inside that represents all layers merged that you can use for reference in case you can't restore anything else.
+#. Check whether zip repairer tool helps.
+    #. Copy the file so you have a backup just in case.
+    #. Rename the extension of the file from .kra to .zip.
+    #. Use zip repairer tool on the .zip file.
+
+        .. code-block:: bash
+        
+            # On Linux:
+            mv file.kra file_copy.zip
+            zip -F file_copy.zip --out file_new1.zip
+            unzip file_new1.zip
+            # if it still doesn't work:
+            zip -FF file_copy.zip --out file_new2.zip
+            unzip file_new2.zip
+            # if it still doesn't work, try to run it again on file_new2.zip file, or try on file_new1.zip file
+
+            # On Windows:
+            Copy the file, rename the extension.
+            Use any graphical zip repairer on the new file. (Follow the instructions for that specific program).
+
+
+    #. Try to open in Krita.
+    #. If it cannot be opened in Krita, try the trick from 2.: open the archive and find mergedimage.png file.
+
+#. Open your file in Notepad or any other text editor. If the the content of the file is only a repeated `NUL` symbol, it means the file is most probably unrecoverable using the standard method. If it's of a very high importance for you, you can try to recover the previous save using methods that checks the hard drive directly.
+
+
 Krita crashes on Windows 7 on start-up
 --------------------------------------
 
