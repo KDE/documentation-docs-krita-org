@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 03:33+0100\n"
+"POT-Creation-Date: 2019-12-11 03:31+0100\n"
 "PO-Revision-Date: 2019-10-31 20:34+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -142,7 +142,7 @@ msgid ""
 msgstr "De lagras på följande platser för följande operativsystem:"
 
 #: ../../KritaFAQ.rst:72 ../../KritaFAQ.rst:90 ../../KritaFAQ.rst:114
-#: ../../KritaFAQ.rst:366
+#: ../../KritaFAQ.rst:407
 msgid "Linux"
 msgstr "Linux"
 
@@ -151,7 +151,7 @@ msgid ":file:`$HOME/.config/kritarc`"
 msgstr ":file:`$HOME/.config/kritarc`"
 
 #: ../../KritaFAQ.rst:74 ../../KritaFAQ.rst:92 ../../KritaFAQ.rst:116
-#: ../../KritaFAQ.rst:368
+#: ../../KritaFAQ.rst:409
 msgid "Windows"
 msgstr "Windows"
 
@@ -250,7 +250,7 @@ msgstr ""
 msgid "Where are my resources stored?"
 msgstr "Var lagras mina resurser?"
 
-#: ../../KritaFAQ.rst:115 ../../KritaFAQ.rst:367
+#: ../../KritaFAQ.rst:115 ../../KritaFAQ.rst:408
 msgid ":file:`$HOME/.local/share/krita/`"
 msgstr ":file:`$HOME/.local/share/krita/`"
 
@@ -262,7 +262,7 @@ msgstr ":file:`%APPDATA%\\\\krita\\\\`"
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: ../../KritaFAQ.rst:119 ../../KritaFAQ.rst:371
+#: ../../KritaFAQ.rst:119 ../../KritaFAQ.rst:412
 msgid ":file:`~/Library/Application Support/Krita/`"
 msgstr ":file:`~/Library/Application Support/Krita/`"
 
@@ -705,13 +705,29 @@ msgstr ""
 "dagliga säkerhetskopior! Det kan leda till att filen fylls med nollor, så "
 "att den inte kan återställas."
 
-#: ../../KritaFAQ.rst:234
+#: ../../KritaFAQ.rst:237
+msgid ""
+"Krita version 4.2.8 introduced special safety measure for Windows that "
+"should help avoiding this situation. But in any case, unless something makes "
+"it impossible, always make sure to shutdown your system using the standard "
+"approach. On Windows that means going to Start menu and selecting \"Shutdown"
+"\"."
+msgstr ""
+
+#: ../../KritaFAQ.rst:239
+#, fuzzy
+#| msgid ""
+#| "Badly programmed security software may attempt to rewrite kra files, or "
+#| "prevent Krita from writing to the folder you wish to save to. The can be "
+#| "checked by trying to save in that location, and then, without shutting "
+#| "down Krita, checking in the folder to see if the file saved. Files lost "
+#| "due this cannot be recovered."
 msgid ""
 "Badly programmed security software may attempt to rewrite kra files, or "
-"prevent Krita from writing to the folder you wish to save to. The can be "
-"checked by trying to save in that location, and then, without shutting down "
-"Krita, checking in the folder to see if the file saved. Files lost due this "
-"cannot be recovered."
+"prevent Krita from writing to the folder you wish to save to. These cases "
+"can be checked by trying to save in that location, and then, without "
+"shutting down Krita, checking in the folder to see if the file saved. Files "
+"lost due this cannot be recovered."
 msgstr ""
 "Dåligt programmerad säkerhetsprogramvara kan försöka skriva om kra-filer, "
 "eller förhindra Krita från att skriva i mappen som man vill spara i. Det kan "
@@ -719,7 +735,7 @@ msgstr ""
 "för att se om filen sparades utan att stänga av Krita. Filer förlorade på "
 "grund av detta går inte att återställa."
 
-#: ../../KritaFAQ.rst:235
+#: ../../KritaFAQ.rst:241
 msgid ""
 "Cloud services like dropbox and onedrive have been known to prevent Krita "
 "from saving. We've implemented fixes for this, but much like the above point "
@@ -731,7 +747,7 @@ msgstr ""
 "ovan är det värt att kontrollera att det inte är orsaken till problemet. "
 "Filer förlorade på grund av detta går inte att återställa."
 
-#: ../../KritaFAQ.rst:236
+#: ../../KritaFAQ.rst:242
 msgid ""
 "Occasionally the zips that kra files comprise of will have the last few "
 "bytes missing. We're doing everything in our power to prevent this kind of "
@@ -748,7 +764,7 @@ msgstr ""
 "reparationsverktyg för att rätta zip-filen. Byt därefter tillbaka namnet "
 "till kra."
 
-#: ../../KritaFAQ.rst:237
+#: ../../KritaFAQ.rst:243
 msgid ""
 "If Krita doesn't give an error message, but rather crashes, your file is too "
 "big, and Krita is not so much crashing as that the operating system is "
@@ -766,11 +782,89 @@ msgstr ""
 "på något sätt, såsom att sammanfoga lager, dela upp en animering eller skala "
 "ner bilden."
 
-#: ../../KritaFAQ.rst:240
+#: ../../KritaFAQ.rst:247
+msgid "How to recover my files?"
+msgstr ""
+
+#: ../../KritaFAQ.rst:248
+msgid ""
+"Check whether you have any backup file or autosave left: :ref:`autosave` ."
+msgstr ""
+
+#: ../../KritaFAQ.rst:250 ../../KritaFAQ.rst:255
+msgid "Rename the extension of the file from .kra to .zip."
+msgstr ""
+
+#: ../../KritaFAQ.rst:251
+msgid "Check whether you can open the file as zip archive."
+msgstr ""
+
+#: ../../KritaFAQ.rst:251
+msgid ""
+"Try to open (your system should automatically select an archive opener tool)."
+msgstr ""
+
+#: ../../KritaFAQ.rst:252
+msgid ""
+"There is file called mergedimage.png inside that represents all layers "
+"merged that you can use for reference in case you can't restore anything "
+"else."
+msgstr ""
+
+#: ../../KritaFAQ.rst:254
+msgid "Copy the file so you have a backup just in case."
+msgstr ""
+
+#: ../../KritaFAQ.rst:256
+msgid "Use zip repairer tool on the .zip file."
+msgstr ""
+
+#: ../../KritaFAQ.rst:258
+msgid ""
+"# On Linux:\n"
+"mv file.kra file_copy.zip\n"
+"zip -F file_copy.zip --out file_new1.zip\n"
+"unzip file_new1.zip\n"
+"# if it still doesn't work:\n"
+"zip -FF file_copy.zip --out file_new2.zip\n"
+"unzip file_new2.zip\n"
+"# if it still doesn't work, try to run it again on file_new2.zip file, or "
+"try on file_new1.zip file\n"
+"\n"
+"# On Windows:\n"
+"Copy the file, rename the extension.\n"
+"Use any graphical zip repairer on the new file. (Follow the instructions for "
+"that specific program)."
+msgstr ""
+
+#: ../../KritaFAQ.rst:274
+msgid "Try to open in Krita."
+msgstr ""
+
+#: ../../KritaFAQ.rst:275
+msgid "Check whether zip repairer tool helps."
+msgstr ""
+
+#: ../../KritaFAQ.rst:275
+msgid ""
+"If it cannot be opened in Krita, try the trick from 2.: open the archive and "
+"find mergedimage.png file."
+msgstr ""
+
+#: ../../KritaFAQ.rst:277
+msgid ""
+"Open your file in Notepad or any other text editor. If the the content of "
+"the file is only a repeated `NUL` symbol, it means the file is most probably "
+"unrecoverable using the standard method. If it's of a very high importance "
+"for you, you can try to recover the previous save using methods that checks "
+"the hard drive directly."
+msgstr ""
+
+#: ../../KritaFAQ.rst:281
 msgid "Krita crashes on Windows 7 on start-up"
 msgstr "Krita kraschar vid start på Windows 7"
 
-#: ../../KritaFAQ.rst:242
+#: ../../KritaFAQ.rst:283
 msgid ""
 "Starting with Krita 4.2.0, Krita uses version 5.12 of the Qt toolkit. This "
 "needs to have access to Direct3D 11 or OpenGL ES 2.0 or higher. You might "
@@ -786,15 +880,15 @@ msgstr ""
 "miljö: Med Virtual Box måste man installera gästtillägget i säkert läge, och "
 "aktivera det experimentella stödet för Direct3D."
 
-#: ../../KritaFAQ.rst:246
+#: ../../KritaFAQ.rst:287
 msgid "Windows: How can I produce a backtrace?"
 msgstr "Windows: Hur kan man skapa en bakåtspårning?"
 
-#: ../../KritaFAQ.rst:250
+#: ../../KritaFAQ.rst:291
 msgid ":ref:`Dr. Mingw debugger <dr_minw>`"
 msgstr ":ref:`Dr. Mingw debugger <dr_minw>`"
 
-#: ../../KritaFAQ.rst:252
+#: ../../KritaFAQ.rst:293
 msgid ""
 "If you experience a crash on Windows, and can reproduce the crash, the bug "
 "report will be much more valuable if you can create a backtrace. A backtrace "
@@ -809,7 +903,7 @@ msgstr ""
 "kraschade (där kraschen inträffade), vilket gör det mycket användbar för att "
 "räkna ut varför kraschen inträffade."
 
-#: ../../KritaFAQ.rst:254
+#: ../../KritaFAQ.rst:295
 msgid ""
 "The :ref:`Dr. Mingw debugger <dr_minw>` is bundled with Krita. Please visit "
 "the page :ref:`Dr. Mingw debugger <dr_minw>` for instructions on getting a "
@@ -819,11 +913,11 @@ msgstr ""
 "ref:`Dr. Mingw debugger <dr_minw>` för instruktioner om hur man skapar en "
 "bakåtspårning med den."
 
-#: ../../KritaFAQ.rst:257
+#: ../../KritaFAQ.rst:298
 msgid "Windows: Krita's window is semi-transparent"
 msgstr "Windows: Kritas fönster är halvgenomskinligt"
 
-#: ../../KritaFAQ.rst:259
+#: ../../KritaFAQ.rst:300
 msgid ""
 "Chances are you are using an NVidia GPU. Due to a bug in Nvidia's driver "
 "that we haven't been able to workaround yet, sometimes Krita's window will "
@@ -844,15 +938,15 @@ msgstr ""
 "välj ANGLE återgivning i kombinationsrutan :guilabel:`Föredragen "
 "återgivning`. Starta om Krita."
 
-#: ../../KritaFAQ.rst:263
+#: ../../KritaFAQ.rst:304
 msgid "Tablets"
 msgstr "Ritplattor"
 
-#: ../../KritaFAQ.rst:266
+#: ../../KritaFAQ.rst:307
 msgid "What tablets does Krita support?"
 msgstr "Vilka ritplattor stöder Krita?"
 
-#: ../../KritaFAQ.rst:268
+#: ../../KritaFAQ.rst:309
 msgid ""
 "Krita isn’t much fun without a pressure sensitive tablet. If the tablet has "
 "been properly configured, Krita should work out of the box."
@@ -860,7 +954,7 @@ msgstr ""
 "Krita är inte särskilt kul utan en tryckkänslig ritplatta. Om ritplattan har "
 "ställts in på ett riktigt sätt ska Krita fungera direkt."
 
-#: ../../KritaFAQ.rst:270
+#: ../../KritaFAQ.rst:311
 msgid ""
 "On Windows, you need to either install the Wintab drivers for your tablet, "
 "or enable the :guilabel:`Windows 8+ Pointer Input` option in Krita's "
@@ -870,7 +964,7 @@ msgstr ""
 "ritplattan, eller aktivera alternativet för :guilabel:`Windows 8 "
 "pekarinmatning` i Kritas inställningar."
 
-#: ../../KritaFAQ.rst:272
+#: ../../KritaFAQ.rst:313
 msgid ""
 "You can find a community curated list of tablets supported by krita :ref:"
 "`here <list_supported_tablets>`."
@@ -878,7 +972,7 @@ msgstr ""
 "Det finns en gemenskapsövervakad lista över ritplattor som stöds av Krita :"
 "ref:`här <list_supported_tablets>`."
 
-#: ../../KritaFAQ.rst:274
+#: ../../KritaFAQ.rst:315
 msgid ""
 "If you're looking for information about tablets like the iPad or Android "
 "tablets, look :ref:`here <krita_android>`."
@@ -886,11 +980,11 @@ msgstr ""
 "Om du letar efter information om surfplattor som iPad eller Android "
 "surfplattor, titta :ref:`här <krita_android>`."
 
-#: ../../KritaFAQ.rst:278
+#: ../../KritaFAQ.rst:319
 msgid "What if your tablet is not recognized by Krita?"
 msgstr "Vad händer om ritplattan inte känns igen av Krita?"
 
-#: ../../KritaFAQ.rst:280
+#: ../../KritaFAQ.rst:321
 msgid ""
 "First, check if you have installed drivers and the like. The :ref:"
 "`drawing_tablets` page has some explanations and descriptions of common "
@@ -903,7 +997,7 @@ msgstr ""
 "kde.org, med en logg från ritplattan. Så här skapar man en logg från "
 "ritplattan:"
 
-#: ../../KritaFAQ.rst:282
+#: ../../KritaFAQ.rst:323
 msgid ""
 "You need to have something to output the log to. On 4.2 you can use the :ref:"
 "`log_viewer` docker for this. Just open the log viewer, and enable logging."
@@ -911,7 +1005,7 @@ msgstr ""
 "Du måste ha något att mata ut loggen i. Med 4.2 kan panelen  :ref:"
 "`log_viewer` användas. Öppna bara loggvisningen och aktivera loggningen."
 
-#: ../../KritaFAQ.rst:286
+#: ../../KritaFAQ.rst:327
 msgid ""
 "The log viewer got added to Krita in 4.2, so for older versions of Krita, "
 "you will need to either run Krita in the terminal if you have Linux or "
@@ -925,12 +1019,12 @@ msgstr ""
 "sysinternals/downloads/debugview>`_ från Microsofts officiella plats, starta "
 "DebugView och starta sedan Krita."
 
-#: ../../KritaFAQ.rst:288
+#: ../../KritaFAQ.rst:329
 msgid "When using a terminal, make sure to enable 'unlimited scrollback'"
 msgstr ""
 "När en terminal används säkerställ att 'obegränsad historik' är aktiverat."
 
-#: ../../KritaFAQ.rst:290
+#: ../../KritaFAQ.rst:331
 msgid ""
 "Press the :kbd:`Ctrl + Shift + T` shortcut, you will see a message box "
 "telling the logging has started."
@@ -938,7 +1032,7 @@ msgstr ""
 "Tryck på genvägen :kbd:`Ctrl + Shift + T`, så visas en meddelanderuta som "
 "talar om att loggning har startat."
 
-#: ../../KritaFAQ.rst:291
+#: ../../KritaFAQ.rst:332
 msgid ""
 "Try to reproduce your problem, you will be able to see the log being created "
 "in the log viewer as you draw."
@@ -946,7 +1040,7 @@ msgstr ""
 "Försök att reproducera problemet. Du kan se loggen som skapas i "
 "loggvisningen medan du ritar."
 
-#: ../../KritaFAQ.rst:292
+#: ../../KritaFAQ.rst:333
 msgid ""
 "Save the output from the log viewer into a txt file, and attach it to the "
 "bugreport."
@@ -954,23 +1048,23 @@ msgstr ""
 "Spara utmatningen från loggvisningen i en textfil, och bilägg den till "
 "felrapporten."
 
-#: ../../KritaFAQ.rst:294
+#: ../../KritaFAQ.rst:335
 msgid "On Linux, it is also useful to have the following information:"
 msgstr "På Linux är det också användbart att ha följande information:"
 
-#: ../../KritaFAQ.rst:296
+#: ../../KritaFAQ.rst:337
 msgid "``lsmod``"
 msgstr "``lsmod``"
 
-#: ../../KritaFAQ.rst:297
+#: ../../KritaFAQ.rst:338
 msgid "``xinput``"
 msgstr "``xinput``"
 
-#: ../../KritaFAQ.rst:298
+#: ../../KritaFAQ.rst:339
 msgid "``xinput list-props`` (id can be fetched from the item 2)"
 msgstr "``xinput list-props`` (id kan hämtas från steg 2)"
 
-#: ../../KritaFAQ.rst:300
+#: ../../KritaFAQ.rst:341
 msgid ""
 "However, in 100\\% of the cases where Windows users have reported that their "
 "tablet didn't work over the past five years, the problem has been either a "
@@ -980,13 +1074,13 @@ msgstr ""
 "installation av drivrutinen, inte ett fel i Krita, i 100 \\% av fallen där "
 "Windows-användare har rapporterat att ritplattan inte fungerar."
 
-#: ../../KritaFAQ.rst:304
+#: ../../KritaFAQ.rst:345
 msgid "How to fix a tablet offset on multiple screen setup on Windows"
 msgstr ""
 "Hur man rättar positionsfel för en ritplatta vid användning av flera skärmar "
 "på Windows"
 
-#: ../../KritaFAQ.rst:306
+#: ../../KritaFAQ.rst:347
 msgid ""
 "If you see that your tablet pointer has an offset when working with Krita "
 "canvas, it might be highly likely that Krita got an incorrect screen "
@@ -999,15 +1093,15 @@ msgstr ""
 "systemet. Problemet uppstår oftast när det finns en extern bildskärm och när "
 "antingen en bildskärm eller en ritplatta anslöts efter datorn startades."
 
-#: ../../KritaFAQ.rst:308
+#: ../../KritaFAQ.rst:349
 msgid "You can configure this by going to the :ref:`tablet_settings`."
 msgstr "Du kan ställa in det genom att gå till :ref:`tablet_settings`."
 
-#: ../../KritaFAQ.rst:311
+#: ../../KritaFAQ.rst:352
 msgid "Microsoft Surface Pro and N-Trig"
 msgstr "Microsoft Surface Pro och N-Trig"
 
-#: ../../KritaFAQ.rst:313
+#: ../../KritaFAQ.rst:354
 msgid ""
 "Krita 3.3.0 and later supports the Windows Pointer API (Windows Ink) "
 "natively. Your Surface Pro or other N-Trig enabled pen tablet should work "
@@ -1020,11 +1114,11 @@ msgstr ""
 "aktiverats under :menuselection:`Inställningar --> Anpassa Krita --> "
 "Ritplatta`."
 
-#: ../../KritaFAQ.rst:316
+#: ../../KritaFAQ.rst:357
 msgid "Tablet Pro and the Surface Pro"
 msgstr "Tablet Pro och Surface Pro"
 
-#: ../../KritaFAQ.rst:318
+#: ../../KritaFAQ.rst:359
 msgid ""
 "Unlike Wacom's Companion, the Surface line of tablets doesn't have working "
 "hardware buttons. Tablet Pro is a (non-free) utility that puts virtual "
@@ -1036,15 +1130,15 @@ msgstr ""
 "till virtuella knappar på skärmen. Krita 3.1 och senare har fördefinierade "
 "genvägsprofiler för att fungera med Tablet Pro."
 
-#: ../../KritaFAQ.rst:320
+#: ../../KritaFAQ.rst:361
 msgid "https://tabletpro.com/"
 msgstr "https://tabletpro.com/"
 
-#: ../../KritaFAQ.rst:322
+#: ../../KritaFAQ.rst:363
 msgid "See https://www.youtube.com/watch?v=WKXZgYqC3tI for instructions."
 msgstr "Se https://www.youtube.com/watch?v=WKXZgYqC3tI för instruktioner."
 
-#: ../../KritaFAQ.rst:325
+#: ../../KritaFAQ.rst:366
 msgid ""
 "Weird stuff happens on Windows, like ripples, rings, squiggles or "
 "poltergeists"
@@ -1052,7 +1146,7 @@ msgstr ""
 "Konstiga saker händer på Windows, som krusningar, ringar, krumelurer eller "
 "spöken"
 
-#: ../../KritaFAQ.rst:327
+#: ../../KritaFAQ.rst:368
 msgid ""
 "Windows comes with a lot of settings to make it work with a pen. All these "
 "settings can be annoying. This tool can help you set the settings correctly "
@@ -1063,15 +1157,15 @@ msgstr ""
 "hjälpa till att anpassa inställningarna på ett riktigt sätt vid användning "
 "av en ritplatta:"
 
-#: ../../KritaFAQ.rst:329
+#: ../../KritaFAQ.rst:370
 msgid "https://github.com/saveenr/Fix_My_Pen/releases"
 msgstr "https://github.com/saveenr/Fix_My_Pen/releases"
 
-#: ../../KritaFAQ.rst:332
+#: ../../KritaFAQ.rst:373
 msgid "Touch doesn't seem to work on Windows"
 msgstr "Beröring verkar inte fungera på Windows"
 
-#: ../../KritaFAQ.rst:334
+#: ../../KritaFAQ.rst:375
 msgid ""
 "You might have to disable and enable the touch driver: go to the device "
 "manager. (Click the :guilabel:`Start` button and type device manager). "
@@ -1084,15 +1178,15 @@ msgstr ""
 "Intel(R) Precise Touch Device. Högerklicka, Inaktivera den. Högerklicka. "
 "Aktivera den."
 
-#: ../../KritaFAQ.rst:337
+#: ../../KritaFAQ.rst:378
 msgid "Toolbox"
 msgstr "Verktygslåda"
 
-#: ../../KritaFAQ.rst:340
+#: ../../KritaFAQ.rst:381
 msgid "Toolbox missing"
 msgstr "Verktygslåda saknas"
 
-#: ../../KritaFAQ.rst:342
+#: ../../KritaFAQ.rst:383
 msgid ""
 "You can reset the Workspace by pressing the right most button on the "
 "toolbar, the Workspace switcher, and click on a desired Workspace from the "
@@ -1101,7 +1195,7 @@ msgstr ""
 "Arbetsytan kan återställas genom att klicka på knappen längst till höger på "
 "verktygsraden, byte av arbetsyta, och klicka på en önskad arbetsyta i listan."
 
-#: ../../KritaFAQ.rst:344
+#: ../../KritaFAQ.rst:385
 msgid ""
 "Or you can right-click on any docker title bar or open space in any toolbar, "
 "and select Toolbox. It's the first option."
@@ -1110,7 +1204,7 @@ msgstr ""
 "eller tomt utrymme i vilken verktygsrad som helst, och välja Verktygslåda. "
 "Det är första alternativet."
 
-#: ../../KritaFAQ.rst:346
+#: ../../KritaFAQ.rst:387
 msgid ""
 "Also, you can check the :guilabel:`Settings` menu, it has got a lot of "
 "interesting stuff, then go to the Dockers menu and select :guilabel:"
@@ -1120,19 +1214,19 @@ msgstr ""
 "hel del intressanta saker, och därefter gå till panelmenyn och välja :"
 "guilabel:`Verktygslåda`."
 
-#: ../../KritaFAQ.rst:349
+#: ../../KritaFAQ.rst:390
 msgid "Tool icons size is too big"
 msgstr "Ikonstorleken för verktyg är för stor"
 
-#: ../../KritaFAQ.rst:351
+#: ../../KritaFAQ.rst:392
 msgid "Right click the toolbox to set the size."
 msgstr "Högerklicka på verktygslådan för att ställa in storleken."
 
-#: ../../KritaFAQ.rst:354
+#: ../../KritaFAQ.rst:395
 msgid "Krita can't get maximized"
 msgstr "Krita kan inte maximeras"
 
-#: ../../KritaFAQ.rst:356
+#: ../../KritaFAQ.rst:397
 msgid ""
 "This happens when your dockers are placed in such a way that the window "
 "cannot be made less high. Rearrange your Workspace."
@@ -1140,11 +1234,11 @@ msgstr ""
 "Det händer när panelerna är placerade på ett sådant sätt att fönstret inte "
 "kan göras mindre i höjd. Arrangera om arbetsytan."
 
-#: ../../KritaFAQ.rst:359
+#: ../../KritaFAQ.rst:400
 msgid "Resources"
 msgstr "Resurser"
 
-#: ../../KritaFAQ.rst:362
+#: ../../KritaFAQ.rst:403
 msgid ""
 "Is there a way to restore a default brush that I have mistakenly overwritten "
 "with new settings to default?"
@@ -1152,11 +1246,11 @@ msgstr ""
 "Finns det ett sätt att återställa en standardpensel som av misstag har "
 "skrivits över med nya inställningar till standardvärden?"
 
-#: ../../KritaFAQ.rst:364
+#: ../../KritaFAQ.rst:405
 msgid "Yes. First go to the resource folder, which is in"
 msgstr "Ja. Gå först till resurskatalogen, som finns under"
 
-#: ../../KritaFAQ.rst:369
+#: ../../KritaFAQ.rst:410
 msgid ""
 ":file:`user\\\\Appdata\\\\Roaming\\\\krita\\\\` or :file:`%APPDATA%\\"
 "\\Roaming\\\\krita\\\\`"
@@ -1164,11 +1258,11 @@ msgstr ""
 ":file:`user\\\\Appdata\\\\Roaming\\\\krita\\\\` or :file:`%APPDATA%\\"
 "\\Roaming\\\\krita\\\\`"
 
-#: ../../KritaFAQ.rst:371
+#: ../../KritaFAQ.rst:412
 msgid "OSX"
 msgstr "OSX"
 
-#: ../../KritaFAQ.rst:373
+#: ../../KritaFAQ.rst:414
 msgid ""
 "You can easily do this by going into :menuselection:`Settings --> Manage "
 "Resources --> Open Resource Folder`."
@@ -1176,7 +1270,7 @@ msgstr ""
 "Det är lätt att göra det genom att använda :menuselection:`Inställningar --> "
 "Hantera resurser --> Öppna resurskatalog`."
 
-#: ../../KritaFAQ.rst:375
+#: ../../KritaFAQ.rst:416
 msgid ""
 "Then go into the *paintoppresets* folder and remove the latest created file "
 "that you made of your preset."
@@ -1184,7 +1278,7 @@ msgstr ""
 "Gå därefter till katalogen *paintoppresets* och ta bort den senast skapade "
 "filen som gjordes av förinställningarna."
 
-#: ../../KritaFAQ.rst:378
+#: ../../KritaFAQ.rst:419
 msgid ""
 "After that go back to the resources folder and edit the blacklist file to "
 "remove the previous paintoppreset so Krita will load it. (Yes, it is a bit "
@@ -1194,11 +1288,11 @@ msgstr ""
 "ta bort föregående paintoppresets så att Krita läser in den. (Ja, det är ett "
 "något invecklat system, men åtminstone går inte dina penslar förlorade)."
 
-#: ../../KritaFAQ.rst:384
+#: ../../KritaFAQ.rst:425
 msgid "How do I set favorite presets?"
 msgstr "Hur ställer man in favoritförinställningar?"
 
-#: ../../KritaFAQ.rst:386
+#: ../../KritaFAQ.rst:427
 msgid ""
 "Right-click a brush in the brush docker and assign it a tag. Then right-"
 "click on canvas to call popup palette, click the second right-most icon on "
@@ -1210,11 +1304,11 @@ msgstr ""
 "näst längst nere till höger i paletten. Nu kan du välja etiketten som "
 "innehåller penseln du tilldelade till den."
 
-#: ../../KritaFAQ.rst:389
+#: ../../KritaFAQ.rst:430
 msgid "Can Krita load Photoshop Brushes?"
 msgstr "Kan Krita läsa in penslar från Photoshop?"
 
-#: ../../KritaFAQ.rst:391
+#: ../../KritaFAQ.rst:432
 msgid ""
 "Yes, but there are limitations. You can load ABR files by using the :"
 "guilabel:`Import` button in the :guilabel:`Predefined brush` tab in the "
@@ -1228,18 +1322,18 @@ msgstr ""
 "filformat, förlitar vi oss på demontering för att räkna ut vad som ska läsas "
 "in, och för närvarande är det begränsat till grundfunktioner."
 
-#: ../../KritaFAQ.rst:394
+#: ../../KritaFAQ.rst:435
 msgid "Krita is slow"
 msgstr "Krita är långsamt"
 
-#: ../../KritaFAQ.rst:396
+#: ../../KritaFAQ.rst:437
 msgid ""
 "There is a myriad of reasons why this might be. Below is a short checklist."
 msgstr ""
 "Det finns en uppsjö orsaker som kan orsaka det. En kort checklista finns "
 "nedan."
 
-#: ../../KritaFAQ.rst:398
+#: ../../KritaFAQ.rst:439
 msgid ""
 "Something else is hogging the CPU or the memory: spotify and other electron "
 "apps have been known to do this."
@@ -1247,7 +1341,7 @@ msgstr ""
 "Någonting annat har lagt beslag på processorn eller minnet: Spotify och "
 "andra Electron applikationer är kända för att göra det."
 
-#: ../../KritaFAQ.rst:399
+#: ../../KritaFAQ.rst:440
 msgid ""
 "You are running Windows, and have 3rdparty security software like Sandboxie "
 "or Total Defender installed"
@@ -1255,7 +1349,7 @@ msgstr ""
 "Du använder Windows och har säkerhetsprogramvara från tredje part såsom "
 "Sandboxie eller Total Defender installerade."
 
-#: ../../KritaFAQ.rst:400
+#: ../../KritaFAQ.rst:441
 msgid ""
 "You are working on images that are too big for your hardware (dimensions, "
 "channel depth or number of layers)"
@@ -1263,23 +1357,23 @@ msgstr ""
 "Du arbetar med bilder som är för stora för hårdvaran (dimensioner, kanaldjup "
 "eller antal lager)"
 
-#: ../../KritaFAQ.rst:401
+#: ../../KritaFAQ.rst:442
 msgid "You do not have canvas acceleration enabled"
 msgstr "Du har inte acceleration av duken aktiverad"
 
-#: ../../KritaFAQ.rst:402
+#: ../../KritaFAQ.rst:443
 msgid "You have (NVidia) Vertical Sync enabled"
 msgstr "Vertikal synkronisering (NVidia) är aktiverad"
 
-#: ../../KritaFAQ.rst:404
+#: ../../KritaFAQ.rst:445
 msgid "Please also check `this page <https://phabricator.kde.org/T7199>`__"
 msgstr "Titta också på `den här sidan: <https://phabricator.kde.org/T7199>`__"
 
-#: ../../KritaFAQ.rst:407
+#: ../../KritaFAQ.rst:448
 msgid "Slow start-up"
 msgstr "Långsam start"
 
-#: ../../KritaFAQ.rst:409
+#: ../../KritaFAQ.rst:450
 msgid ""
 "You probably have too many resources installed. Deactivate some bundles "
 "under :menuselection:`Settings --> Manage Resources`."
@@ -1287,7 +1381,7 @@ msgstr ""
 "Troligen är för många resurser installerade. Inaktivera några packar med :"
 "menuselection:`Inställningar --> Hantera resurser`."
 
-#: ../../KritaFAQ.rst:411
+#: ../../KritaFAQ.rst:452
 msgid ""
 "If you're using Windows with the portable zip file, Windows will scan all "
 "files every time you start Krita. That takes ages. Either use the installer "
@@ -1298,11 +1392,11 @@ msgstr ""
 "installationsprogrammet eller tala om för Microsoft Security Essentials att "
 "göra ett undantag för Krita."
 
-#: ../../KritaFAQ.rst:414
+#: ../../KritaFAQ.rst:455
 msgid "Slow Brushes"
 msgstr "Långsamma penslar"
 
-#: ../../KritaFAQ.rst:416
+#: ../../KritaFAQ.rst:457
 msgid ""
 "Check if you accidentally turned on the stabilizer in the tool options "
 "docker."
@@ -1310,7 +1404,7 @@ msgstr ""
 "Kontrollera om du aktiverade stabilisering i verktygsalternativpanelen av "
 "misstag."
 
-#: ../../KritaFAQ.rst:417
+#: ../../KritaFAQ.rst:458
 msgid ""
 "Try another scaling mode like trilinear. :menuselection:`Settings --> "
 "Configure Krita --> Display`."
@@ -1318,15 +1412,15 @@ msgstr ""
 "Prova med ett annat skalningsläge som trilinjärt i :menuselection:"
 "`Inställningar --> Anpassa Krita --> Bildskärm`."
 
-#: ../../KritaFAQ.rst:418
+#: ../../KritaFAQ.rst:459
 msgid "Try a lower channel depth than 16-bit."
 msgstr "Försök med mindre kanaldjup än 16 bitar."
 
-#: ../../KritaFAQ.rst:419
+#: ../../KritaFAQ.rst:460
 msgid "For NVidia, try a 16-bit floating point color space."
 msgstr "Försök med en färgrymd med 16-bitars flyttal för NVidia."
 
-#: ../../KritaFAQ.rst:420
+#: ../../KritaFAQ.rst:461
 msgid ""
 "For older AMD CPU's (Krita 2.9.10 and above), turn off the vector "
 "optimizations that are broken on AMD CPUs. :menuselection:`Settings --> "
@@ -1338,7 +1432,7 @@ msgstr ""
 "`Inställningar --> Anpassa Krita --> Prestanda`. Det behövs inte om du har "
 "en AMD Threadripper™ processor."
 
-#: ../../KritaFAQ.rst:421
+#: ../../KritaFAQ.rst:462
 msgid ""
 "It's a fairly memory hungry program, so 2GB of RAM is the minimum, and 4GB "
 "is the preferable minimum."
@@ -1346,11 +1440,11 @@ msgstr ""
 "Det är ett ganska minneshungrigt program, så 2 GiB minne är minimum, och 4 "
 "GiB är föredraget minimum."
 
-#: ../../KritaFAQ.rst:422
+#: ../../KritaFAQ.rst:463
 msgid "Check that nothing else is hogging your CPU"
 msgstr "Kontrollera att ingenting annat har lagit beslag på processorn"
 
-#: ../../KritaFAQ.rst:423
+#: ../../KritaFAQ.rst:464
 msgid ""
 "Check that Instant Preview is enabled if you're using bigger brushes (but "
 "for very small brushes, make sure is disabled)."
@@ -1358,15 +1452,15 @@ msgstr ""
 "Kontrollera om Direkt förhandsgranskning är aktiverad om du använder större "
 "penslar (men för mycket små penslar, säkerställ att den är inaktiverad)."
 
-#: ../../KritaFAQ.rst:424
+#: ../../KritaFAQ.rst:465
 msgid "Set brush precision to 3 or auto."
 msgstr "Ställ in penselprecision till 3 eller automatisk."
 
-#: ../../KritaFAQ.rst:425
+#: ../../KritaFAQ.rst:466
 msgid "Use a larger value for brush spacing."
 msgstr "Använd ett större värde för penselmellanrum."
 
-#: ../../KritaFAQ.rst:426
+#: ../../KritaFAQ.rst:467
 msgid ""
 "If all of this fails, record a video and post a link and description on the "
 "Krita forum."
@@ -1374,7 +1468,7 @@ msgstr ""
 "Om allt misslyckas, spela in en video och skicka in en länk och beskrivning "
 "till Kritas forum."
 
-#: ../../KritaFAQ.rst:427
+#: ../../KritaFAQ.rst:468
 msgid ""
 "Check whether OpenGL is enabled, and if it isn't, enable it. If it is "
 "enabled, and you are on Windows, try the Angle renderer. Or disable it."
@@ -1383,11 +1477,11 @@ msgstr ""
 "det är aktiverat och Windows används, prova återgivningsprogrammet Angle. "
 "Eller inaktivera det."
 
-#: ../../KritaFAQ.rst:430
+#: ../../KritaFAQ.rst:471
 msgid "Slowdown after a been working for a while"
 msgstr "Långsamhet efter att ha arbetat en stund"
 
-#: ../../KritaFAQ.rst:432
+#: ../../KritaFAQ.rst:473
 msgid ""
 "Once you have the slowdown, click on the image-dimensions in the status bar. "
 "It will tell you how much RAM Krita is using, if it has hit the limit, or "
@@ -1403,15 +1497,15 @@ msgstr ""
 "eller öka den maximala minnesstorleken under fliken :menuselection:"
 "`Inställningar --> Anpassa Krita --> Prestanda --> Avancerat`."
 
-#: ../../KritaFAQ.rst:435
+#: ../../KritaFAQ.rst:476
 msgid "Animation"
 msgstr "Animering"
 
-#: ../../KritaFAQ.rst:438
+#: ../../KritaFAQ.rst:479
 msgid "Why is my animation black in my video player"
 msgstr "Varför är min animering svart i videospelaren"
 
-#: ../../KritaFAQ.rst:440
+#: ../../KritaFAQ.rst:481
 msgid ""
 "You did not render the animation using the \"baseline\" option and you are "
 "using the default Windows media player. Re-render using the baseline option "
@@ -1425,11 +1519,11 @@ msgstr ""
 "på `det här användbara diagrammet <https://www.deviantart.com/tiarevlyn/art/"
 "T-Krita-4-1-7-rendering-issues-manual-783473428>`__."
 
-#: ../../KritaFAQ.rst:444
+#: ../../KritaFAQ.rst:485
 msgid "Tools"
 msgstr "Verktyg"
 
-#: ../../KritaFAQ.rst:447
+#: ../../KritaFAQ.rst:488
 msgid ""
 "Why does the Transform Tool give a good result and then get blurry upon "
 "finalizing?"
@@ -1437,7 +1531,7 @@ msgstr ""
 "Varför ger transformeringsverktyget ett gott resultat som sedan blir suddigt "
 "när det slutförs?"
 
-#: ../../KritaFAQ.rst:449
+#: ../../KritaFAQ.rst:490
 msgid ""
 "The transform tool makes a preview that you edit before computing the "
 "finalized version. As this preview is using the screen resolution rather "
@@ -1452,15 +1546,15 @@ msgstr ""
 "sidan <https://forum.kde.org/viewtopic.php?f=139&t=127269>`__ för mer "
 "information."
 
-#: ../../KritaFAQ.rst:453
+#: ../../KritaFAQ.rst:494
 msgid "License, rights and the Krita Foundation"
 msgstr "Licens, rättigheter och Krita-stiftelsen"
 
-#: ../../KritaFAQ.rst:456
+#: ../../KritaFAQ.rst:497
 msgid "Who owns Krita?"
 msgstr "Vem äger Krita?"
 
-#: ../../KritaFAQ.rst:458
+#: ../../KritaFAQ.rst:499
 msgid ""
 "The Stichting Krita Foundation owns the Krita trademark. The copyright on "
 "the source code is owned by everyone who has worked on the source code."
@@ -1468,11 +1562,11 @@ msgstr ""
 "Stichting Krita stiftelsen äger varumärket Krita. Upphovsrätten till "
 "källkoden ägs av alla som har arbetat på källkoden."
 
-#: ../../KritaFAQ.rst:461
+#: ../../KritaFAQ.rst:502
 msgid "Who and what is Kiki?"
 msgstr "Vem och vad är Kiki?"
 
-#: ../../KritaFAQ.rst:463
+#: ../../KritaFAQ.rst:504
 msgid ""
 "Kiki is a cybersquirrel. She’s our mascot and has been designed by Tyson "
 "Tan. We choose a squirrel when we discovered that ‘krita’ is the Albanian "
@@ -1482,11 +1576,11 @@ msgstr ""
 "valde en ekorre när vi upptäckte att 'krita' är det albanska ordet för "
 "ekorre."
 
-#: ../../KritaFAQ.rst:466
+#: ../../KritaFAQ.rst:507
 msgid "Why is Krita Free?"
 msgstr "Varför är Krita fritt?"
 
-#: ../../KritaFAQ.rst:468
+#: ../../KritaFAQ.rst:509
 msgid ""
 "Krita is developed as `free software <https://www.gnu.org/>`_ within the KDE "
 "community. We believe that good tools should be available for all artists. "
@@ -1499,11 +1593,11 @@ msgstr ""
 "Kritas utveckling eller vill få automatiska uppdateringar till nyare "
 "versioner."
 
-#: ../../KritaFAQ.rst:471
+#: ../../KritaFAQ.rst:512
 msgid "Why isn't Krita on Steam and in the Windows Store Free?"
 msgstr "Varför är inte Krita på Steam och Windows Store gratis?"
 
-#: ../../KritaFAQ.rst:473
+#: ../../KritaFAQ.rst:514
 msgid ""
 "Krita on Steam and in the Windows Store is still Free and Open Source "
 "software; the binaries are exactly the ones you can also download from krita."
@@ -1522,11 +1616,11 @@ msgstr ""
 "av fyra utvecklare. Se `Krita tillgänglig från Windows Store <https://krita."
 "org/en/item/krita-available-from-the-windows-store/>`_ för mer information."
 
-#: ../../KritaFAQ.rst:477
+#: ../../KritaFAQ.rst:518
 msgid "Can I use Krita commercially?"
 msgstr "Kan man använda Krita kommersiellt?"
 
-#: ../../KritaFAQ.rst:479
+#: ../../KritaFAQ.rst:520
 msgid ""
 "Yes. What you create with Krita is your sole property. You own your work and "
 "can license your art however you want. Krita’s GPL license applies to "
@@ -1542,7 +1636,7 @@ msgstr ""
 "visuella effekter, av spelkonstnärer för att arbeta med kommersiella spel, "
 "av forskare i forskningssyfte, och av studenter på läroinstitut."
 
-#: ../../KritaFAQ.rst:481
+#: ../../KritaFAQ.rst:522
 msgid ""
 "If you modify Krita itself, and distribute the result, you have to share "
 "your modifications with us. Krita’s GNU GPL license guarantees you this "
@@ -1552,11 +1646,11 @@ msgstr ""
 "dig av ändringarna med oss. Kritas GNU GPL-licens garanterar dig denna "
 "frihet. Ingen får någonsin ta bort den."
 
-#: ../../KritaFAQ.rst:487
+#: ../../KritaFAQ.rst:528
 msgid "Can I get Krita for iPad? for Android?"
 msgstr "Kan man finna Krita för iPad? för Android?"
 
-#: ../../KritaFAQ.rst:489
+#: ../../KritaFAQ.rst:530
 msgid ""
 "Not for iOS or iPadOS at this point in time. Android is being worked on, but "
 "it will not have a phone or tablet, but the same desktop ui as always."
@@ -1565,11 +1659,11 @@ msgstr ""
 "kommer inte att ha en telefon eller surfplatta, utan samma "
 "skrivbordsanvändargränssnitt som alltid."
 
-#: ../../KritaFAQ.rst:492
+#: ../../KritaFAQ.rst:533
 msgid "Who translates Krita"
 msgstr "Vem översätter Krita"
 
-#: ../../KritaFAQ.rst:494
+#: ../../KritaFAQ.rst:535
 msgid ""
 "Krita is a `KDE application <https://www.kde.org/>`_ — and proud of it! That "
 "means that Krita’s translations are done by `KDE localization teams <https://"
@@ -1585,11 +1679,11 @@ msgstr ""
 "bra ut på alla språk, och det är att gå med i utvecklingsgruppen och rätta "
 "fel i koden som gör Krita svårare att översätta."
 
-#: ../../KritaFAQ.rst:497
+#: ../../KritaFAQ.rst:538
 msgid "Reference"
 msgstr "Referens"
 
-#: ../../KritaFAQ.rst:499
+#: ../../KritaFAQ.rst:540
 msgid "https://answers.launchpad.net/krita-ru/+faqs"
 msgstr "https://answers.launchpad.net/krita-ru/+faqs"
 

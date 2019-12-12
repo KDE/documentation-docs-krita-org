@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 03:33+0100\n"
+"POT-Creation-Date: 2019-12-11 03:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -122,7 +122,7 @@ msgid ""
 msgstr ""
 
 #: ../../KritaFAQ.rst:72 ../../KritaFAQ.rst:90 ../../KritaFAQ.rst:114
-#: ../../KritaFAQ.rst:366
+#: ../../KritaFAQ.rst:407
 msgid "Linux"
 msgstr ""
 
@@ -131,7 +131,7 @@ msgid ":file:`$HOME/.config/kritarc`"
 msgstr ""
 
 #: ../../KritaFAQ.rst:74 ../../KritaFAQ.rst:92 ../../KritaFAQ.rst:116
-#: ../../KritaFAQ.rst:368
+#: ../../KritaFAQ.rst:409
 msgid "Windows"
 msgstr ""
 
@@ -212,7 +212,7 @@ msgstr ""
 msgid "Where are my resources stored?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:115 ../../KritaFAQ.rst:367
+#: ../../KritaFAQ.rst:115 ../../KritaFAQ.rst:408
 msgid ":file:`$HOME/.local/share/krita/`"
 msgstr ""
 
@@ -224,7 +224,7 @@ msgstr ""
 msgid "Mac OS X"
 msgstr ""
 
-#: ../../KritaFAQ.rst:119 ../../KritaFAQ.rst:371
+#: ../../KritaFAQ.rst:119 ../../KritaFAQ.rst:412
 msgid ":file:`~/Library/Application Support/Krita/`"
 msgstr ""
 
@@ -555,16 +555,25 @@ msgid ""
 "the file being filled with zeroes, so it cannot be recovered from."
 msgstr ""
 
-#: ../../KritaFAQ.rst:234
+#: ../../KritaFAQ.rst:237
 msgid ""
-"Badly programmed security software may attempt to rewrite kra files, or "
-"prevent Krita from writing to the folder you wish to save to. The can be "
-"checked by trying to save in that location, and then, without shutting down "
-"Krita, checking in the folder to see if the file saved. Files lost due this "
-"cannot be recovered."
+"Krita version 4.2.8 introduced special safety measure for Windows that "
+"should help avoiding this situation. But in any case, unless something makes "
+"it impossible, always make sure to shutdown your system using the standard "
+"approach. On Windows that means going to Start menu and selecting \"Shutdown"
+"\"."
 msgstr ""
 
-#: ../../KritaFAQ.rst:235
+#: ../../KritaFAQ.rst:239
+msgid ""
+"Badly programmed security software may attempt to rewrite kra files, or "
+"prevent Krita from writing to the folder you wish to save to. These cases "
+"can be checked by trying to save in that location, and then, without "
+"shutting down Krita, checking in the folder to see if the file saved. Files "
+"lost due this cannot be recovered."
+msgstr ""
+
+#: ../../KritaFAQ.rst:241
 msgid ""
 "Cloud services like dropbox and onedrive have been known to prevent Krita "
 "from saving. We've implemented fixes for this, but much like the above point "
@@ -572,7 +581,7 @@ msgid ""
 "this cannot be recovered."
 msgstr ""
 
-#: ../../KritaFAQ.rst:236
+#: ../../KritaFAQ.rst:242
 msgid ""
 "Occasionally the zips that kra files comprise of will have the last few "
 "bytes missing. We're doing everything in our power to prevent this kind of "
@@ -582,7 +591,7 @@ msgid ""
 "repairing utility to fix the zip file. Then rename it back to kra."
 msgstr ""
 
-#: ../../KritaFAQ.rst:237
+#: ../../KritaFAQ.rst:243
 msgid ""
 "If Krita doesn't give an error message, but rather crashes, your file is too "
 "big, and Krita is not so much crashing as that the operating system is "
@@ -593,11 +602,89 @@ msgid ""
 "up an animation or scaling the image down."
 msgstr ""
 
-#: ../../KritaFAQ.rst:240
+#: ../../KritaFAQ.rst:247
+msgid "How to recover my files?"
+msgstr ""
+
+#: ../../KritaFAQ.rst:248
+msgid ""
+"Check whether you have any backup file or autosave left: :ref:`autosave` ."
+msgstr ""
+
+#: ../../KritaFAQ.rst:250 ../../KritaFAQ.rst:255
+msgid "Rename the extension of the file from .kra to .zip."
+msgstr ""
+
+#: ../../KritaFAQ.rst:251
+msgid "Check whether you can open the file as zip archive."
+msgstr ""
+
+#: ../../KritaFAQ.rst:251
+msgid ""
+"Try to open (your system should automatically select an archive opener tool)."
+msgstr ""
+
+#: ../../KritaFAQ.rst:252
+msgid ""
+"There is file called mergedimage.png inside that represents all layers "
+"merged that you can use for reference in case you can't restore anything "
+"else."
+msgstr ""
+
+#: ../../KritaFAQ.rst:254
+msgid "Copy the file so you have a backup just in case."
+msgstr ""
+
+#: ../../KritaFAQ.rst:256
+msgid "Use zip repairer tool on the .zip file."
+msgstr ""
+
+#: ../../KritaFAQ.rst:258
+msgid ""
+"# On Linux:\n"
+"mv file.kra file_copy.zip\n"
+"zip -F file_copy.zip --out file_new1.zip\n"
+"unzip file_new1.zip\n"
+"# if it still doesn't work:\n"
+"zip -FF file_copy.zip --out file_new2.zip\n"
+"unzip file_new2.zip\n"
+"# if it still doesn't work, try to run it again on file_new2.zip file, or "
+"try on file_new1.zip file\n"
+"\n"
+"# On Windows:\n"
+"Copy the file, rename the extension.\n"
+"Use any graphical zip repairer on the new file. (Follow the instructions for "
+"that specific program)."
+msgstr ""
+
+#: ../../KritaFAQ.rst:274
+msgid "Try to open in Krita."
+msgstr ""
+
+#: ../../KritaFAQ.rst:275
+msgid "Check whether zip repairer tool helps."
+msgstr ""
+
+#: ../../KritaFAQ.rst:275
+msgid ""
+"If it cannot be opened in Krita, try the trick from 2.: open the archive and "
+"find mergedimage.png file."
+msgstr ""
+
+#: ../../KritaFAQ.rst:277
+msgid ""
+"Open your file in Notepad or any other text editor. If the the content of "
+"the file is only a repeated `NUL` symbol, it means the file is most probably "
+"unrecoverable using the standard method. If it's of a very high importance "
+"for you, you can try to recover the previous save using methods that checks "
+"the hard drive directly."
+msgstr ""
+
+#: ../../KritaFAQ.rst:281
 msgid "Krita crashes on Windows 7 on start-up"
 msgstr ""
 
-#: ../../KritaFAQ.rst:242
+#: ../../KritaFAQ.rst:283
 msgid ""
 "Starting with Krita 4.2.0, Krita uses version 5.12 of the Qt toolkit. This "
 "needs to have access to Direct3D 11 or OpenGL ES 2.0 or higher. You might "
@@ -607,15 +694,15 @@ msgid ""
 "experimental Direct3D support."
 msgstr ""
 
-#: ../../KritaFAQ.rst:246
+#: ../../KritaFAQ.rst:287
 msgid "Windows: How can I produce a backtrace?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:250
+#: ../../KritaFAQ.rst:291
 msgid ":ref:`Dr. Mingw debugger <dr_minw>`"
 msgstr ""
 
-#: ../../KritaFAQ.rst:252
+#: ../../KritaFAQ.rst:293
 msgid ""
 "If you experience a crash on Windows, and can reproduce the crash, the bug "
 "report will be much more valuable if you can create a backtrace. A backtrace "
@@ -624,18 +711,18 @@ msgid ""
 "happened), making it very useful to figure out why the crash happened."
 msgstr ""
 
-#: ../../KritaFAQ.rst:254
+#: ../../KritaFAQ.rst:295
 msgid ""
 "The :ref:`Dr. Mingw debugger <dr_minw>` is bundled with Krita. Please visit "
 "the page :ref:`Dr. Mingw debugger <dr_minw>` for instructions on getting a "
 "backtrace with it."
 msgstr ""
 
-#: ../../KritaFAQ.rst:257
+#: ../../KritaFAQ.rst:298
 msgid "Windows: Krita's window is semi-transparent"
 msgstr ""
 
-#: ../../KritaFAQ.rst:259
+#: ../../KritaFAQ.rst:300
 msgid ""
 "Chances are you are using an NVidia GPU. Due to a bug in Nvidia's driver "
 "that we haven't been able to workaround yet, sometimes Krita's window will "
@@ -647,44 +734,44 @@ msgid ""
 "guilabel:`Preferred Renderer` combobox. Restart Krita."
 msgstr ""
 
-#: ../../KritaFAQ.rst:263
+#: ../../KritaFAQ.rst:304
 msgid "Tablets"
 msgstr ""
 
-#: ../../KritaFAQ.rst:266
+#: ../../KritaFAQ.rst:307
 msgid "What tablets does Krita support?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:268
+#: ../../KritaFAQ.rst:309
 msgid ""
 "Krita isn’t much fun without a pressure sensitive tablet. If the tablet has "
 "been properly configured, Krita should work out of the box."
 msgstr ""
 
-#: ../../KritaFAQ.rst:270
+#: ../../KritaFAQ.rst:311
 msgid ""
 "On Windows, you need to either install the Wintab drivers for your tablet, "
 "or enable the :guilabel:`Windows 8+ Pointer Input` option in Krita's "
 "settings."
 msgstr ""
 
-#: ../../KritaFAQ.rst:272
+#: ../../KritaFAQ.rst:313
 msgid ""
 "You can find a community curated list of tablets supported by krita :ref:"
 "`here <list_supported_tablets>`."
 msgstr ""
 
-#: ../../KritaFAQ.rst:274
+#: ../../KritaFAQ.rst:315
 msgid ""
 "If you're looking for information about tablets like the iPad or Android "
 "tablets, look :ref:`here <krita_android>`."
 msgstr ""
 
-#: ../../KritaFAQ.rst:278
+#: ../../KritaFAQ.rst:319
 msgid "What if your tablet is not recognized by Krita?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:280
+#: ../../KritaFAQ.rst:321
 msgid ""
 "First, check if you have installed drivers and the like. The :ref:"
 "`drawing_tablets` page has some explanations and descriptions of common "
@@ -692,13 +779,13 @@ msgid ""
 "kde.org, with a tablet log. Here's how you make a tablet log:"
 msgstr ""
 
-#: ../../KritaFAQ.rst:282
+#: ../../KritaFAQ.rst:323
 msgid ""
 "You need to have something to output the log to. On 4.2 you can use the :ref:"
 "`log_viewer` docker for this. Just open the log viewer, and enable logging."
 msgstr ""
 
-#: ../../KritaFAQ.rst:286
+#: ../../KritaFAQ.rst:327
 msgid ""
 "The log viewer got added to Krita in 4.2, so for older versions of Krita, "
 "you will need to either run Krita in the terminal if you have Linux or "
@@ -707,56 +794,56 @@ msgid ""
 "DebugView and then start Krita."
 msgstr ""
 
-#: ../../KritaFAQ.rst:288
+#: ../../KritaFAQ.rst:329
 msgid "When using a terminal, make sure to enable 'unlimited scrollback'"
 msgstr ""
 
-#: ../../KritaFAQ.rst:290
+#: ../../KritaFAQ.rst:331
 msgid ""
 "Press the :kbd:`Ctrl + Shift + T` shortcut, you will see a message box "
 "telling the logging has started."
 msgstr ""
 
-#: ../../KritaFAQ.rst:291
+#: ../../KritaFAQ.rst:332
 msgid ""
 "Try to reproduce your problem, you will be able to see the log being created "
 "in the log viewer as you draw."
 msgstr ""
 
-#: ../../KritaFAQ.rst:292
+#: ../../KritaFAQ.rst:333
 msgid ""
 "Save the output from the log viewer into a txt file, and attach it to the "
 "bugreport."
 msgstr ""
 
-#: ../../KritaFAQ.rst:294
+#: ../../KritaFAQ.rst:335
 msgid "On Linux, it is also useful to have the following information:"
 msgstr ""
 
-#: ../../KritaFAQ.rst:296
+#: ../../KritaFAQ.rst:337
 msgid "``lsmod``"
 msgstr ""
 
-#: ../../KritaFAQ.rst:297
+#: ../../KritaFAQ.rst:338
 msgid "``xinput``"
 msgstr ""
 
-#: ../../KritaFAQ.rst:298
+#: ../../KritaFAQ.rst:339
 msgid "``xinput list-props`` (id can be fetched from the item 2)"
 msgstr ""
 
-#: ../../KritaFAQ.rst:300
+#: ../../KritaFAQ.rst:341
 msgid ""
 "However, in 100\\% of the cases where Windows users have reported that their "
 "tablet didn't work over the past five years, the problem has been either a "
 "buggy driver or a broken driver installation, but not a bug in Krita."
 msgstr ""
 
-#: ../../KritaFAQ.rst:304
+#: ../../KritaFAQ.rst:345
 msgid "How to fix a tablet offset on multiple screen setup on Windows"
 msgstr ""
 
-#: ../../KritaFAQ.rst:306
+#: ../../KritaFAQ.rst:347
 msgid ""
 "If you see that your tablet pointer has an offset when working with Krita "
 "canvas, it might be highly likely that Krita got an incorrect screen "
@@ -765,15 +852,15 @@ msgid ""
 "the system booted."
 msgstr ""
 
-#: ../../KritaFAQ.rst:308
+#: ../../KritaFAQ.rst:349
 msgid "You can configure this by going to the :ref:`tablet_settings`."
 msgstr ""
 
-#: ../../KritaFAQ.rst:311
+#: ../../KritaFAQ.rst:352
 msgid "Microsoft Surface Pro and N-Trig"
 msgstr ""
 
-#: ../../KritaFAQ.rst:313
+#: ../../KritaFAQ.rst:354
 msgid ""
 "Krita 3.3.0 and later supports the Windows Pointer API (Windows Ink) "
 "natively. Your Surface Pro or other N-Trig enabled pen tablet should work "
@@ -781,11 +868,11 @@ msgid ""
 "`Settings --> Configure Krita --> Tablet`."
 msgstr ""
 
-#: ../../KritaFAQ.rst:316
+#: ../../KritaFAQ.rst:357
 msgid "Tablet Pro and the Surface Pro"
 msgstr ""
 
-#: ../../KritaFAQ.rst:318
+#: ../../KritaFAQ.rst:359
 msgid ""
 "Unlike Wacom's Companion, the Surface line of tablets doesn't have working "
 "hardware buttons. Tablet Pro is a (non-free) utility that puts virtual "
@@ -793,36 +880,36 @@ msgid ""
 "profiles to work with Tablet Pro."
 msgstr ""
 
-#: ../../KritaFAQ.rst:320
+#: ../../KritaFAQ.rst:361
 msgid "https://tabletpro.com/"
 msgstr ""
 
-#: ../../KritaFAQ.rst:322
+#: ../../KritaFAQ.rst:363
 msgid "See https://www.youtube.com/watch?v=WKXZgYqC3tI for instructions."
 msgstr ""
 
-#: ../../KritaFAQ.rst:325
+#: ../../KritaFAQ.rst:366
 msgid ""
 "Weird stuff happens on Windows, like ripples, rings, squiggles or "
 "poltergeists"
 msgstr ""
 
-#: ../../KritaFAQ.rst:327
+#: ../../KritaFAQ.rst:368
 msgid ""
 "Windows comes with a lot of settings to make it work with a pen. All these "
 "settings can be annoying. This tool can help you set the settings correctly "
 "when you're using a tablet:"
 msgstr ""
 
-#: ../../KritaFAQ.rst:329
+#: ../../KritaFAQ.rst:370
 msgid "https://github.com/saveenr/Fix_My_Pen/releases"
 msgstr ""
 
-#: ../../KritaFAQ.rst:332
+#: ../../KritaFAQ.rst:373
 msgid "Touch doesn't seem to work on Windows"
 msgstr ""
 
-#: ../../KritaFAQ.rst:334
+#: ../../KritaFAQ.rst:375
 msgid ""
 "You might have to disable and enable the touch driver: go to the device "
 "manager. (Click the :guilabel:`Start` button and type device manager). "
@@ -830,100 +917,100 @@ msgid ""
 "Precise Touch Device. Right click, Disable it. Right click, Enable it."
 msgstr ""
 
-#: ../../KritaFAQ.rst:337
+#: ../../KritaFAQ.rst:378
 msgid "Toolbox"
 msgstr ""
 
-#: ../../KritaFAQ.rst:340
+#: ../../KritaFAQ.rst:381
 msgid "Toolbox missing"
 msgstr ""
 
-#: ../../KritaFAQ.rst:342
+#: ../../KritaFAQ.rst:383
 msgid ""
 "You can reset the Workspace by pressing the right most button on the "
 "toolbar, the Workspace switcher, and click on a desired Workspace from the "
 "list."
 msgstr ""
 
-#: ../../KritaFAQ.rst:344
+#: ../../KritaFAQ.rst:385
 msgid ""
 "Or you can right-click on any docker title bar or open space in any toolbar, "
 "and select Toolbox. It's the first option."
 msgstr ""
 
-#: ../../KritaFAQ.rst:346
+#: ../../KritaFAQ.rst:387
 msgid ""
 "Also, you can check the :guilabel:`Settings` menu, it has got a lot of "
 "interesting stuff, then go to the Dockers menu and select :guilabel:"
 "`Toolbox`."
 msgstr ""
 
-#: ../../KritaFAQ.rst:349
+#: ../../KritaFAQ.rst:390
 msgid "Tool icons size is too big"
 msgstr ""
 
-#: ../../KritaFAQ.rst:351
+#: ../../KritaFAQ.rst:392
 msgid "Right click the toolbox to set the size."
 msgstr ""
 
-#: ../../KritaFAQ.rst:354
+#: ../../KritaFAQ.rst:395
 msgid "Krita can't get maximized"
 msgstr ""
 
-#: ../../KritaFAQ.rst:356
+#: ../../KritaFAQ.rst:397
 msgid ""
 "This happens when your dockers are placed in such a way that the window "
 "cannot be made less high. Rearrange your Workspace."
 msgstr ""
 
-#: ../../KritaFAQ.rst:359
+#: ../../KritaFAQ.rst:400
 msgid "Resources"
 msgstr ""
 
-#: ../../KritaFAQ.rst:362
+#: ../../KritaFAQ.rst:403
 msgid ""
 "Is there a way to restore a default brush that I have mistakenly overwritten "
 "with new settings to default?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:364
+#: ../../KritaFAQ.rst:405
 msgid "Yes. First go to the resource folder, which is in"
 msgstr ""
 
-#: ../../KritaFAQ.rst:369
+#: ../../KritaFAQ.rst:410
 msgid ""
 ":file:`user\\\\Appdata\\\\Roaming\\\\krita\\\\` or :file:`%APPDATA%\\"
 "\\Roaming\\\\krita\\\\`"
 msgstr ""
 
-#: ../../KritaFAQ.rst:371
+#: ../../KritaFAQ.rst:412
 msgid "OSX"
 msgstr ""
 
-#: ../../KritaFAQ.rst:373
+#: ../../KritaFAQ.rst:414
 msgid ""
 "You can easily do this by going into :menuselection:`Settings --> Manage "
 "Resources --> Open Resource Folder`."
 msgstr ""
 
-#: ../../KritaFAQ.rst:375
+#: ../../KritaFAQ.rst:416
 msgid ""
 "Then go into the *paintoppresets* folder and remove the latest created file "
 "that you made of your preset."
 msgstr ""
 
-#: ../../KritaFAQ.rst:378
+#: ../../KritaFAQ.rst:419
 msgid ""
 "After that go back to the resources folder and edit the blacklist file to "
 "remove the previous paintoppreset so Krita will load it. (Yes, it is a bit "
 "of a convoluted system, but at the least you don't lose your brushes)"
 msgstr ""
 
-#: ../../KritaFAQ.rst:384
+#: ../../KritaFAQ.rst:425
 msgid "How do I set favorite presets?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:386
+#: ../../KritaFAQ.rst:427
 msgid ""
 "Right-click a brush in the brush docker and assign it a tag. Then right-"
 "click on canvas to call popup palette, click the second right-most icon on "
@@ -931,11 +1018,11 @@ msgid ""
 "brush you assigned to it."
 msgstr ""
 
-#: ../../KritaFAQ.rst:389
+#: ../../KritaFAQ.rst:430
 msgid "Can Krita load Photoshop Brushes?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:391
+#: ../../KritaFAQ.rst:432
 msgid ""
 "Yes, but there are limitations. You can load ABR files by using the :"
 "guilabel:`Import` button in the :guilabel:`Predefined brush` tab in the "
@@ -944,87 +1031,87 @@ msgid ""
 "that’s limited to basic features."
 msgstr ""
 
-#: ../../KritaFAQ.rst:394
+#: ../../KritaFAQ.rst:435
 msgid "Krita is slow"
 msgstr ""
 
-#: ../../KritaFAQ.rst:396
+#: ../../KritaFAQ.rst:437
 msgid ""
 "There is a myriad of reasons why this might be. Below is a short checklist."
 msgstr ""
 
-#: ../../KritaFAQ.rst:398
+#: ../../KritaFAQ.rst:439
 msgid ""
 "Something else is hogging the CPU or the memory: spotify and other electron "
 "apps have been known to do this."
 msgstr ""
 
-#: ../../KritaFAQ.rst:399
+#: ../../KritaFAQ.rst:440
 msgid ""
 "You are running Windows, and have 3rdparty security software like Sandboxie "
 "or Total Defender installed"
 msgstr ""
 
-#: ../../KritaFAQ.rst:400
+#: ../../KritaFAQ.rst:441
 msgid ""
 "You are working on images that are too big for your hardware (dimensions, "
 "channel depth or number of layers)"
 msgstr ""
 
-#: ../../KritaFAQ.rst:401
+#: ../../KritaFAQ.rst:442
 msgid "You do not have canvas acceleration enabled"
 msgstr ""
 
-#: ../../KritaFAQ.rst:402
+#: ../../KritaFAQ.rst:443
 msgid "You have (NVidia) Vertical Sync enabled"
 msgstr ""
 
-#: ../../KritaFAQ.rst:404
+#: ../../KritaFAQ.rst:445
 msgid "Please also check `this page <https://phabricator.kde.org/T7199>`__"
 msgstr ""
 
-#: ../../KritaFAQ.rst:407
+#: ../../KritaFAQ.rst:448
 msgid "Slow start-up"
 msgstr ""
 
-#: ../../KritaFAQ.rst:409
+#: ../../KritaFAQ.rst:450
 msgid ""
 "You probably have too many resources installed. Deactivate some bundles "
 "under :menuselection:`Settings --> Manage Resources`."
 msgstr ""
 
-#: ../../KritaFAQ.rst:411
+#: ../../KritaFAQ.rst:452
 msgid ""
 "If you're using Windows with the portable zip file, Windows will scan all "
 "files every time you start Krita. That takes ages. Either use the installer "
 "or tell Microsoft Security Essentials to make an exception for Krita."
 msgstr ""
 
-#: ../../KritaFAQ.rst:414
+#: ../../KritaFAQ.rst:455
 msgid "Slow Brushes"
 msgstr ""
 
-#: ../../KritaFAQ.rst:416
+#: ../../KritaFAQ.rst:457
 msgid ""
 "Check if you accidentally turned on the stabilizer in the tool options "
 "docker."
 msgstr ""
 
-#: ../../KritaFAQ.rst:417
+#: ../../KritaFAQ.rst:458
 msgid ""
 "Try another scaling mode like trilinear. :menuselection:`Settings --> "
 "Configure Krita --> Display`."
 msgstr ""
 
-#: ../../KritaFAQ.rst:418
+#: ../../KritaFAQ.rst:459
 msgid "Try a lower channel depth than 16-bit."
 msgstr ""
 
-#: ../../KritaFAQ.rst:419
+#: ../../KritaFAQ.rst:460
 msgid "For NVidia, try a 16-bit floating point color space."
 msgstr ""
 
-#: ../../KritaFAQ.rst:420
+#: ../../KritaFAQ.rst:461
 msgid ""
 "For older AMD CPU's (Krita 2.9.10 and above), turn off the vector "
 "optimizations that are broken on AMD CPUs. :menuselection:`Settings --> "
@@ -1032,47 +1119,47 @@ msgid ""
 "Threadripper™ CPU."
 msgstr ""
 
-#: ../../KritaFAQ.rst:421
+#: ../../KritaFAQ.rst:462
 msgid ""
 "It's a fairly memory hungry program, so 2GB of RAM is the minimum, and 4GB "
 "is the preferable minimum."
 msgstr ""
 
-#: ../../KritaFAQ.rst:422
+#: ../../KritaFAQ.rst:463
 msgid "Check that nothing else is hogging your CPU"
 msgstr ""
 
-#: ../../KritaFAQ.rst:423
+#: ../../KritaFAQ.rst:464
 msgid ""
 "Check that Instant Preview is enabled if you're using bigger brushes (but "
 "for very small brushes, make sure is disabled)."
 msgstr ""
 
-#: ../../KritaFAQ.rst:424
+#: ../../KritaFAQ.rst:465
 msgid "Set brush precision to 3 or auto."
 msgstr ""
 
-#: ../../KritaFAQ.rst:425
+#: ../../KritaFAQ.rst:466
 msgid "Use a larger value for brush spacing."
 msgstr ""
 
-#: ../../KritaFAQ.rst:426
+#: ../../KritaFAQ.rst:467
 msgid ""
 "If all of this fails, record a video and post a link and description on the "
 "Krita forum."
 msgstr ""
 
-#: ../../KritaFAQ.rst:427
+#: ../../KritaFAQ.rst:468
 msgid ""
 "Check whether OpenGL is enabled, and if it isn't, enable it. If it is "
 "enabled, and you are on Windows, try the Angle renderer. Or disable it."
 msgstr ""
 
-#: ../../KritaFAQ.rst:430
+#: ../../KritaFAQ.rst:471
 msgid "Slowdown after a been working for a while"
 msgstr ""
 
-#: ../../KritaFAQ.rst:432
+#: ../../KritaFAQ.rst:473
 msgid ""
 "Once you have the slowdown, click on the image-dimensions in the status bar. "
 "It will tell you how much RAM Krita is using, if it has hit the limit, or "
@@ -1082,15 +1169,15 @@ msgid ""
 "Tab`."
 msgstr ""
 
-#: ../../KritaFAQ.rst:435
+#: ../../KritaFAQ.rst:476
 msgid "Animation"
 msgstr ""
 
-#: ../../KritaFAQ.rst:438
+#: ../../KritaFAQ.rst:479
 msgid "Why is my animation black in my video player"
 msgstr ""
 
-#: ../../KritaFAQ.rst:440
+#: ../../KritaFAQ.rst:481
 msgid ""
 "You did not render the animation using the \"baseline\" option and you are "
 "using the default Windows media player. Re-render using the baseline option "
@@ -1099,17 +1186,17 @@ msgid ""
 "issues-manual-783473428>`__"
 msgstr ""
 
-#: ../../KritaFAQ.rst:444
+#: ../../KritaFAQ.rst:485
 msgid "Tools"
 msgstr ""
 
-#: ../../KritaFAQ.rst:447
+#: ../../KritaFAQ.rst:488
 msgid ""
 "Why does the Transform Tool give a good result and then get blurry upon "
 "finalizing?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:449
+#: ../../KritaFAQ.rst:490
 msgid ""
 "The transform tool makes a preview that you edit before computing the "
 "finalized version. As this preview is using the screen resolution rather "
@@ -1118,36 +1205,36 @@ msgid ""
 "f=139&t=127269>`__ for more info."
 msgstr ""
 
-#: ../../KritaFAQ.rst:453
+#: ../../KritaFAQ.rst:494
 msgid "License, rights and the Krita Foundation"
 msgstr ""
 
-#: ../../KritaFAQ.rst:456
+#: ../../KritaFAQ.rst:497
 msgid "Who owns Krita?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:458
+#: ../../KritaFAQ.rst:499
 msgid ""
 "The Stichting Krita Foundation owns the Krita trademark. The copyright on "
 "the source code is owned by everyone who has worked on the source code."
 msgstr ""
 
-#: ../../KritaFAQ.rst:461
+#: ../../KritaFAQ.rst:502
 msgid "Who and what is Kiki?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:463
+#: ../../KritaFAQ.rst:504
 msgid ""
 "Kiki is a cybersquirrel. She’s our mascot and has been designed by Tyson "
 "Tan. We choose a squirrel when we discovered that ‘krita’ is the Albanian "
 "word for Squirrel."
 msgstr ""
 
-#: ../../KritaFAQ.rst:466
+#: ../../KritaFAQ.rst:507
 msgid "Why is Krita Free?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:468
+#: ../../KritaFAQ.rst:509
 msgid ""
 "Krita is developed as `free software <https://www.gnu.org/>`_ within the KDE "
 "community. We believe that good tools should be available for all artists. "
@@ -1155,11 +1242,11 @@ msgid ""
 "development or want to have automatic updates to newer versions."
 msgstr ""
 
-#: ../../KritaFAQ.rst:471
+#: ../../KritaFAQ.rst:512
 msgid "Why isn't Krita on Steam and in the Windows Store Free?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:473
+#: ../../KritaFAQ.rst:514
 msgid ""
 "Krita on Steam and in the Windows Store is still Free and Open Source "
 "software; the binaries are exactly the ones you can also download from krita."
@@ -1171,11 +1258,11 @@ msgid ""
 "more information."
 msgstr ""
 
-#: ../../KritaFAQ.rst:477
+#: ../../KritaFAQ.rst:518
 msgid "Can I use Krita commercially?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:479
+#: ../../KritaFAQ.rst:520
 msgid ""
 "Yes. What you create with Krita is your sole property. You own your work and "
 "can license your art however you want. Krita’s GPL license applies to "
@@ -1185,28 +1272,28 @@ msgid ""
 "educational institutions."
 msgstr ""
 
-#: ../../KritaFAQ.rst:481
+#: ../../KritaFAQ.rst:522
 msgid ""
 "If you modify Krita itself, and distribute the result, you have to share "
 "your modifications with us. Krita’s GNU GPL license guarantees you this "
 "freedom. Nobody is ever permitted to take it away."
 msgstr ""
 
-#: ../../KritaFAQ.rst:487
+#: ../../KritaFAQ.rst:528
 msgid "Can I get Krita for iPad? for Android?"
 msgstr ""
 
-#: ../../KritaFAQ.rst:489
+#: ../../KritaFAQ.rst:530
 msgid ""
 "Not for iOS or iPadOS at this point in time. Android is being worked on, but "
 "it will not have a phone or tablet, but the same desktop ui as always."
 msgstr ""
 
-#: ../../KritaFAQ.rst:492
+#: ../../KritaFAQ.rst:533
 msgid "Who translates Krita"
 msgstr ""
 
-#: ../../KritaFAQ.rst:494
+#: ../../KritaFAQ.rst:535
 msgid ""
 "Krita is a `KDE application <https://www.kde.org/>`_ — and proud of it! That "
 "means that Krita’s translations are done by `KDE localization teams <https://"
@@ -1216,10 +1303,10 @@ msgid ""
 "code that make Krita harder to translate."
 msgstr ""
 
-#: ../../KritaFAQ.rst:497
+#: ../../KritaFAQ.rst:538
 msgid "Reference"
 msgstr ""
 
-#: ../../KritaFAQ.rst:499
+#: ../../KritaFAQ.rst:540
 msgid "https://answers.launchpad.net/krita-ru/+faqs"
 msgstr ""
