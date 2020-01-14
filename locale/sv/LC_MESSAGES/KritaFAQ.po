@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-11 03:31+0100\n"
-"PO-Revision-Date: 2019-12-15 10:30+0100\n"
+"PO-Revision-Date: 2020-01-13 22:31+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 19.04.3\n"
 
 #: ../../KritaFAQ.rst:20
 msgid "FAQ"
@@ -707,6 +707,11 @@ msgid ""
 "approach. On Windows that means going to Start menu and selecting \"Shutdown"
 "\"."
 msgstr ""
+"Krita version 4.2.8 introducerade särskilda säkerhetsåtgärder för Windows som"
+" borde hjälpa till att undvika situationen. Men hur som helst, om inte något"
+" gör det omöjligt, säkerställ alltid att datorn stängs av med"
+" standardmetoden. För Windows betyder det att gå till startmenyn och välja"
+" \"Av/På\"."
 
 #: ../../KritaFAQ.rst:239
 msgid ""
@@ -771,25 +776,29 @@ msgstr ""
 
 #: ../../KritaFAQ.rst:247
 msgid "How to recover my files?"
-msgstr ""
+msgstr "Hur återställer man sina filer?"
 
 #: ../../KritaFAQ.rst:248
 msgid ""
 "Check whether you have any backup file or autosave left: :ref:`autosave` ."
 msgstr ""
+"Kontroller om det finns någon säkerhetskopia eller automatiskt sparad fil"
+" kvar: :ref:`autosave` ."
 
 #: ../../KritaFAQ.rst:250 ../../KritaFAQ.rst:255
 msgid "Rename the extension of the file from .kra to .zip."
-msgstr ""
+msgstr "Byt namn på filändelsen från .kra till .zip."
 
 #: ../../KritaFAQ.rst:251
 msgid "Check whether you can open the file as zip archive."
-msgstr ""
+msgstr "Kontroller om det går att öppna filen som ett zip-arkiv."
 
 #: ../../KritaFAQ.rst:251
 msgid ""
 "Try to open (your system should automatically select an archive opener tool)."
 msgstr ""
+"Försök att öppna den (datorn bör automatiskt välja ett verktyg för att öppna"
+" arkiv)."
 
 #: ../../KritaFAQ.rst:252
 msgid ""
@@ -797,14 +806,17 @@ msgid ""
 "merged that you can use for reference in case you can't restore anything "
 "else."
 msgstr ""
+"Det finns en fil som kallas mergedimage.png inuti som representerar alla"
+" sammanfogade lager som kan användas som referens ifall det inte går att"
+" återställa någonting annat."
 
 #: ../../KritaFAQ.rst:254
 msgid "Copy the file so you have a backup just in case."
-msgstr ""
+msgstr "Kopiera filen så att det finns en säkerhetskopia för säkerhets skull."
 
 #: ../../KritaFAQ.rst:256
 msgid "Use zip repairer tool on the .zip file."
-msgstr ""
+msgstr "Använd ett zip-reparationsverktyg för .zip-filen."
 
 #: ../../KritaFAQ.rst:258
 msgid ""
@@ -823,20 +835,37 @@ msgid ""
 "Use any graphical zip repairer on the new file. (Follow the instructions for "
 "that specific program)."
 msgstr ""
+"# På Linux:\n"
+"mv fil.kra fil_kopia.zip\n"
+"zip -F fil_kopia.zip --out fil_ny1.zip\n"
+"unzip fil_ny1.zip\n"
+"# om det ändå inte fungerar:\n"
+"zip -FF fil_kopia.zip --out fil_ny2.zip\n"
+"unzip fil_ny2.zip\n"
+"# om det ändå inte fungerar, försök köra det igen med filen fil_ny2.zip, eller"
+"försök med filen fil_ny1.zip\n"
+"\n"
+"# På Windows:\n"
+"Kopiera filen, byt namn på filändelsen.\n"
+"Använd vilket grafiskt zip-reparationsvertyg som helst (följ instruktionerna"
+" för "
+"det speciella programmet)."
 
 #: ../../KritaFAQ.rst:274
 msgid "Try to open in Krita."
-msgstr ""
+msgstr "Försök att öppna i Krita."
 
 #: ../../KritaFAQ.rst:275
 msgid "Check whether zip repairer tool helps."
-msgstr ""
+msgstr "Kontrollera om zip-reparationsverktyg hjälper."
 
 #: ../../KritaFAQ.rst:275
 msgid ""
 "If it cannot be opened in Krita, try the trick from 2.: open the archive and "
 "find mergedimage.png file."
 msgstr ""
+"Om den inte kan öppnas i Krita, försök med tricket från 2: öppna arkivet och"
+" leta rätt på filen mergedimage.png."
 
 #: ../../KritaFAQ.rst:277
 msgid ""
@@ -846,6 +875,11 @@ msgid ""
 "for you, you can try to recover the previous save using methods that checks "
 "the hard drive directly."
 msgstr ""
+"Öppna filen i Notepad eller någon annan texteditor. Om innehållet i filen"
+" bara är en upprepad 'NUL-symbol', betyder det att filen troligtvis inte är"
+" möjlig att återställa med den normala metoden. Om den är av avgörande"
+" betydelse för dig, kan du försöka återställa den föregående sparade filen"
+" med metoder som direkt kontrollerar hårddisken."
 
 #: ../../KritaFAQ.rst:281
 msgid "Krita crashes on Windows 7 on start-up"
