@@ -27,6 +27,14 @@ First make sure you have Docker installed
 
     sudo apt install docker docker.io
 
+Decide where you want to store your Docker images. All the docker images and containers are by default stored in a special docker-daemon controlled folder under */var* directory. You might not have enough space there for building Krita (it needs about 10 GiB). In such a case it is recommended to move the docker images
+folder into another location, where there is enough space.
+
+.. code::
+    
+    # this step is optional
+    echo 'DOCKER_OPTS="-g /path/where/you/want/to/store/docker/images/"' >> /etc/default/docker
+
 
 Then you need to download deps and Krita source tree. These steps are not included into the *Dockerfile* to save internal bandwidth 
 
@@ -141,13 +149,3 @@ The docker run script automatically forwards the GPU devices into the container,
 
     ./bin/install_nvidia_drivers.sh
 
-
-Not enough space on root partition
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-All the docker images and containers are stored in a special docker-daemon controlled folder under */var* directory. You might not have enough space there for building Krita (it needs about 10 GiB). In such a case it is recommended to move the docker images
-folder into another location, where there is enough space.
-
-.. code::
-
-    echo 'DOCKER_OPTS="-g /home/devel5/docker"' >> /etc/default/docker
