@@ -65,6 +65,10 @@ Through GUI
 
 The easiest way to get Krita Usage Log is through Krita's GUI. Go to  :menuselection:`Help --> Show Krita Log for bug reports`. A new dialog will open, showing the content of the log.
 
+    .. versionchanged:: 4.2.9
+
+        In versions 4.2.0-4.2.9, Krita Usage Log is accessible through :menuselection:`Help --> Show system information for bug reports`. Note that for Krita versions 4.1.7 and below, no usage log is available and the menu entry only contains system information.
+
 
 From the file system
 ====================
@@ -97,6 +101,10 @@ Through GUI
 
 
 The easiest way to get system information related to Krita is through Krita's GUI. Go to  :menuselection:`Help --> Show system information for bug reports`. A new dialog will open, showing the content.
+
+    .. versionchanged:: 4.2.9
+
+        In versions 4.2.0-4.2.8, this menu entry contains both system information and Krita Usage Log.
 
 
 From the file system
