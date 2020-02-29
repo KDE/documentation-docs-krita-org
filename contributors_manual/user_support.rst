@@ -45,13 +45,17 @@ Quick solutions
 
 *For Windows, all devices:*
 
-#. Change API in :menuselection:`Settings --> Configure Krita... --> Tablet Settings` (for some devices, especially N-trig ones (some of the convertible 2-in-1 devices), Windows Ink work better, for some it's Wintab).
+#. Change API in :menuselection:`Settings --> Configure Krita... --> Tablet Settings`.
+
+      #. Wintab: older standard; it supports multiple buttons and high number of pressure levels high. If it works fine for you, don't change to Windows Ink. 2-in-1 devices by default use Windows Ink, you can get a Wintab driver but you need to install it separately. 
+      
+      #. Windows Ink: newer standard; it cuts the pressure levels to 1024. It is more suitable for 2-in-1 devices like Surfacce Pro and Yoga. Some less known brands might not have this standard implemented.
 
 *For Windows, tablet/digitizer devices (not convertible/2-in-1 ones):*
 
 #. Reinstall your driver (Windows Update often breaks tablet driver settings, reinstallation helps).
 
-#. *Wacom tablets:* if you get straight lines at the beginnings of the strokes, disable/minimize "double-click distance" in Wacom settings.
+#. *Wacom tablets:* if you get straight lines at the beginnings of the strokes, first try to update your driver: it should be fixed in 6.3.34-3. If it doesn't work, disable/minimize "double-click distance" in Wacom settings.
 
 #. *XP-Pen tablets, pressure being uneven:* either switch to Windows 8+ Pointer, or disable Windows Ink in XP-Pen settings.
 
