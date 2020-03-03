@@ -4,14 +4,14 @@
 # This file is distributed under the same license as the Krita Manual package.
 #
 # Automatically generated, 2019.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
-# Ronald Stroethoff <stroet43@zonnet.nl>, 2019.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020.
+# Ronald Stroethoff <stroet43@zonnet.nl>, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-11 03:31+0100\n"
-"PO-Revision-Date: 2019-12-11 10:55+0100\n"
+"PO-Revision-Date: 2020-03-02 11:43+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 19.12.2\n"
 
 #: ../../KritaFAQ.rst:20
 msgid "FAQ"
@@ -732,6 +732,11 @@ msgid ""
 "approach. On Windows that means going to Start menu and selecting \"Shutdown"
 "\"."
 msgstr ""
+"Bij Krita versie 4.2.8 is voor Windows een speciale veiligheidsmaatregel"
+" geïntroduceerd dat deze situatie zou moeten voorkomen. Maar zorg er in elk"
+" geval voor dat u, tenzij iemand dat verhindert, altijd uw systeem via de"
+" standaard methode uitschakelt. Bij Windows houd dit in dat u naar het Start"
+" menu gaat en \"Afsluiten\" selecteert."
 
 #: ../../KritaFAQ.rst:239
 msgid ""
@@ -814,12 +819,14 @@ msgstr "Hernoem de extensie van het bestand van .kra naar .zip."
 
 #: ../../KritaFAQ.rst:251
 msgid "Check whether you can open the file as zip archive."
-msgstr "Controleer of u het bestand als zip-archief kunt openen."
+msgstr "Probeer of u het bestand als zip-bestand kunt openen."
 
 #: ../../KritaFAQ.rst:251
 msgid ""
 "Try to open (your system should automatically select an archive opener tool)."
 msgstr ""
+"Probeer het te openen (uw systeem zou automatisch een programma voor het"
+" openen van archieven moeten selecteren)."
 
 #: ../../KritaFAQ.rst:252
 msgid ""
@@ -827,14 +834,17 @@ msgid ""
 "merged that you can use for reference in case you can't restore anything "
 "else."
 msgstr ""
+"Hierin vindt u een bestand genaamd mergedimage.png met een afbeelding van alle"
+" lagen samengevoegd die u als referentie kunt gebruiken in het"
+" geval dat u niets anders kunt gebruiken."
 
 #: ../../KritaFAQ.rst:254
 msgid "Copy the file so you have a backup just in case."
-msgstr ""
+msgstr "Kopieer het bestand zodat u een backup heeft voor het geval dat."
 
 #: ../../KritaFAQ.rst:256
 msgid "Use zip repairer tool on the .zip file."
-msgstr ""
+msgstr "Gebruik een zip reparatie-programma bij het .zip-bestand."
 
 #: ../../KritaFAQ.rst:258
 msgid ""
@@ -853,20 +863,36 @@ msgid ""
 "Use any graphical zip repairer on the new file. (Follow the instructions for "
 "that specific program)."
 msgstr ""
+"# Bij Linux:\n"
+"mv file.kra file_copy.zip\n"
+"zip -F file_copy.zip --out file_new1.zip\n"
+"unzip file_new1.zip\n"
+"# als het nog steeds niet lukt:\n"
+"zip -FF file_copy.zip --out file_new2.zip\n"
+"unzip file_new2.zip\n"
+"# als het nog steeds niet lukt, probeer het opnieuw met het bestand"
+" file_new2.zip, of probeer het met het bestand file_new1.zip\n"
+"\n"
+"# Bij Windows:\n"
+"Kopieer het bestand, wijzig de extensie.\n"
+"Gebruik een grafisch zip-reparatie-programma bij dat nieuwe bestand. (Volg de"
+" instructies voor dat specifieke programma)."
 
 #: ../../KritaFAQ.rst:274
 msgid "Try to open in Krita."
-msgstr ""
+msgstr "Probeer het te openen met Krita."
 
 #: ../../KritaFAQ.rst:275
 msgid "Check whether zip repairer tool helps."
-msgstr ""
+msgstr "Probeer of het met een zip reparatie-programma lukt."
 
 #: ../../KritaFAQ.rst:275
 msgid ""
 "If it cannot be opened in Krita, try the trick from 2.: open the archive and "
 "find mergedimage.png file."
 msgstr ""
+"Als u het niet in Krita kunt openen, probeer dan het advies van 2.: open het"
+" zip-bestand en zoek het bestand mergedimage.png op."
 
 #: ../../KritaFAQ.rst:277
 msgid ""
@@ -876,6 +902,12 @@ msgid ""
 "for you, you can try to recover the previous save using methods that checks "
 "the hard drive directly."
 msgstr ""
+"Open uw bestand in Notepad of een andere tekstverwerker. Als de inhoud van"
+" het bestand uit herhaalde `NUL` symbolen bestaat, dan houd dit in dat het"
+" bestand waarschijnlijk met de standaard methodes onherstelbaar is. Als het"
+" voor u erg belangrijk is, dan kunt u proberen om wat u de vorige keer heeft"
+" opgeslagen terug te halen met methodes die de harde schijf direct"
+" controleren."
 
 #: ../../KritaFAQ.rst:281
 msgid "Krita crashes on Windows 7 on start-up"
@@ -950,7 +982,7 @@ msgstr ""
 "Krita' soms transparant of half transparant. De oplossing is het "
 "overschakelen naar de Angle renderer in het instellingen-venster van Krita. "
 "Open het :menuselection:`Instellingen` menu (Toets Alt-N als de menubalk "
-"niet zichtbaar is en uw systeem op Engels staat  ingesteld), open vervolgens "
+"niet zichtbaar is en uw systeem op Engels staat ingesteld), open vervolgens "
 "het :guilabel:`Krita instellen` dialoogvenster. Selecteer in het "
 "dialoogvenster de :guilabel:`Weergave` pagina en selecteer de Angle renderer "
 "in het : guilabel:`Renderer met voorkeur` keuzelijst. Herstart Krita."
