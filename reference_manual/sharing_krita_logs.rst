@@ -124,6 +124,11 @@ The file is called :file:`krita.log`. Location of the file:
 .. note::
 
     In Windows you can simply paste this path into the file browser textbox on the top bar and it will find you the file.
+    
+    .. versionchanged:: 4.2.9
+
+        Before version 4.2.9, this file is not created. To find the system information, you need to look for the file mentioned in :ref:`Krita Usage Log <krita_usage_log>`
+    
 
 .. _getting_backtrace:
 
