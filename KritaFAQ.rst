@@ -56,6 +56,27 @@ Krita should automatically use the system language. If that is not the case, ple
 
 If this doesn't work, you might have to add a fall-back language as well. This is a bug, but we haven't found the solution yet.
 
+I have a problem, how to get support for Krita?
+-----------------------------------------------
+
+#. Ask your question on one of the user support forums. It can be `Krita Artists forum <https://krita-artists.org/>`_ (recommended), `Krita KDE forum <https://forum.kde.org/viewforum.php?f=136>`_ or alternatively `Krita subreddit <https://forum.kde.org/viewforum.php?f=136>`_ .
+
+#. Remember -- most probably the person you're interacting with is a volunteer, and even if not, it's not someone actually paid for doing user support. Treat them nicely and respect their time! They will for sure reciprocate that.
+
+#. Create a new thread or post for your issue and state the issue in the title. Even if you don't know how to describe it exactly, for example you title the post "Krita's text tool is acting weird", it is much better than simple "Help!".
+
+#. Describe your issue. You can add screenshots and videos, but even if you do that, write a few words what the video shows and what the issue is.
+
+#. State all relevant details: most importantly your operating system (Windows, MacOS, Linux...), which version of Krita you use (go to :menuselection:`Help -> About Krita` to find out) and what kind of tablet you have (if your issue is related to a tablet driver).
+
+#. Answer all questions your supporter asks, even if you don't think they're relevant. They probably have a reason to ask about that.
+
+#. If you don't know the answer or you don't know how to get the information your supporter asks for, don't hesitate to ask for clarification.
+
+#. If you mentioned an issue, please help with testing if you're asked to do that -- that will speed up the process of finding the cause and preparing a fix.
+
+
+
 Does Krita have layer clip or clipping mask?
 --------------------------------------------
 

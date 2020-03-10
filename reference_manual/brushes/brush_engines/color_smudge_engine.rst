@@ -30,9 +30,9 @@ Options
 * :ref:`blending_modes`
 * :ref:`option_opacity_n_flow`
 * :ref:`option_size`
+* :ref:`option_ratio`
 * :ref:`option_spacing`
 * :ref:`option_mirror`
-* :ref:`option_softness`
 * :ref:`option_rotation`
 * :ref:`option_scatter`
 * :ref:`option_gradient`
