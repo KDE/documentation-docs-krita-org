@@ -15,6 +15,17 @@ Split Layer
 -----------
 Splits a layer according to color. This is useful in combination with the :ref:`colorize_mask` and the :kbd:`R +` |mouseleft| shortcut to select layers at the cursor.
 
+At the top, of the dialog there is a dropdown, here you can choose between...
+
+Split Into Layers
+    The image's colors is split into paint layers. Fantastic for artwork that works more with flats, such as the cel-shaded look.
+Split Into Local Selection Masks
+    .. versionadded:: 4.2.9
+    
+    The image's colors are outlined as a selection, and a :ref:`selection_masks` is made. This is useful for artwork that has a more painterly look, with the selection masks making it easy to select several areas at once. Because selection masks are not paint layers, several of the options below are unavailable.
+    
+The other options are:
+
 Put all new layers in a group layer
     Put all the result layers into a new group.
 Put every layer in its own, separate group layer
