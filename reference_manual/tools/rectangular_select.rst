@@ -22,7 +22,7 @@ This tool, represented by a rectangle with a dashed border, allows you to make :
 Hotkeys and Stickykeys
 ----------------------
 
-* :kbd:`J` selects this tool.
+* :kbd:`Ctrl + R` selects this tool.
 * :kbd:`R` sets the selection to 'replace' in the tool options, this is the default mode.
 * :kbd:`A` sets the selection to 'add' in the tool options.
 * :kbd:`S` sets the selection to 'subtract' in the tool options.
