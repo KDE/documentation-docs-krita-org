@@ -5,6 +5,7 @@
 .. metadata-placeholder
 
     :authors: - Boudewijn Rempt <boud@valdyas.org>
+              - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
     :license: GNU free documentation license 1.3 or later.
     
 .. _kra_the_krita_file_format.rst:
@@ -153,6 +154,8 @@ The ``layer.defaultpixel`` file contains a binary representation of a color
 conforming to the layer's colorspace and defines the default color for pixels that
 are not defined.
 
+
+
 Vector layers are saved as SVG documents, in a further subfolder like ``layer2.shapelayer/content.svg``.
 
 preview.png
@@ -177,4 +180,339 @@ An .kra file can have a ``mergedimage.png`` in order to accommodate
 interoperability with viewer software and other application. It must 
 contain the final rendered image without any frame or decoration. This 
 file must be a PNG file with 8 or 16 bits per channel. Backup and 
-autosave files do not have a mergedimage.png/
+autosave files do not have a mergedimage.png.
+
+Layer Types
+-----------
+
+Krita supports a number of layer and mask types.
+
+As shown in the example section, there's several bits of data that makes up a stored layer in Krita.
+
+The first part is it's entry in the maindoc.xml. This is where things like visibility and layer blending mode are stored, as well as the position of the layer inside the layer stack.
+
+colorlabel
+    An integer determining the color label.
+x
+    The x offset in pixels.
+y
+    The y offset in pixels
+onionskin
+    Whether or not onionskins are enabled.
+filename
+    References the main file in the layer folder that holds the pixeldata or svg data of this layer.
+locked
+    Whether or not editing is enabled.
+collapsed
+    Whether or not child layers are visible in the docker.
+opacity
+    The opacity of the layer, running from 0 to 255
+compositeop
+    The composite operation, or blending mode of the layer
+nodetype
+    The type of layer a given layer is.
+name
+    The label assigned to this layer inside the layer docker. this is not unique.
+colorspacename
+    The model of the colorspace.
+visible
+    Whether or not the layer is visible.
+selected
+    Whether the layer was selected upon save.
+uuid
+    The unique identifier of this layer. Should always be unique.
+intimeline
+    Whether or not the layer is visible in the timeline.
+channelflags
+    Which channels are enabled.
+channellockflags
+    Which channels are locked for editing.
+keyframes
+    The filename of the keyframes
+
+
+The second part is the 
+
+Raster based layers
+~~~~~~~~~~~~~~~~~~~
+
+These include paint layers, transparency masks, selection masks, colorize masks and yes, filter layers, filter masks and fill layers.
+
+Of these, only paint and colorize masks have pixel data in multiple channels, with the maximum amount of color channels being five, for CMYKA. For the other layers, the main pixeldata is the single-channel alpha color model, which determines where the mask or layer is active. These single channel layers will not have an associated icc profile embedded, but will have a defaultpixel file.
+
+For filter layers, filter masks, and fill layers, the filter itself is stored as an xml configuration with the suffix 'filterconfig'.
+
+Within the maindoc.xml, masks are always children of regular layer types.
+
+::
+
+    <layer collapsed="0" channelflags="" nodetype="clonelayer" clonetype="0" opacity="255" locked="0" name="Copy of cloneofcolumn" compositeop="normal" x="96" clonefrom="lowerpart" visible="1" colorlabel="0" filename="layer164" y="96" uuid="{9c2ad9b5-7430-4a5b-a1fb-04066eb549cf}" clonefromuuid="{004207ce-e03c-4994-966c-a690618e3555}">
+          <masks>
+           <mask nodetype="transparencymask" locked="0" name="Transparency Mask 1" x="32" visible="1" filename="mask165" y="0" uuid="{5022b0f4-65dd-4323-8090-55dafa78a662}"/>
+          </masks>
+         </layer>
+
+With colorize masks, there's a seperate folder (mask#.colorizemask) holding all the layer data stored for each guidance color stroke (named 'keystroke_#') as well as the total calculated result of the colorize mask. Furthermore, there is a configuration file stored in the content.xml, sorting the strokes. Mask specific settings are in maindoc.xml
+::
+
+    <layer collapsed="0" visible="1" selected="true" compositeop="normal" nodetype="paintlayer" x="0" channellockflags="" filename="layer2" name="Layer 5 Merged" colorlabel="0" y="0" colorspacename="RGBA" opacity="255" locked="0" channelflags="" uuid="{83910f4f-c93d-41a4-856a-af5ec307a152}">
+      <masks>
+        <mask visible="1" fuzzy-radius="33.5" colorspacename="RGBA" name="Colorize Mask 1" use-edge-detection="1" y="-138" locked="0" limit-to-device="1" nodetype="colorizemask" compositeop="behind" edit-keystrokes="1" cleanup="70" x="466" show-coloring="1" uuid="{33fc243f-b24e-4e16-99f4-fed536283593}" filename="mask7" edge-detection-size="2"/>
+      </masks>
+    </layer>
+
+use-edge-detection
+    whether or not to use edge detection.
+limit-to-device
+    whether or not to limit the colorize area to the total layer size instead of the full canvas size.
+cleanup
+    strength of the cleanup.
+show-coloring
+    Whether or not the result is shown, corresponds to 'show output' in the ui.
+edgedetectionsize
+    strength of the edgedetection filter.
+edit-keystrokes
+    whether or not the editing of keystrokes is available.
+fuzzy-radius
+    corresponds to gap-close-hint.
+    
+The configuration file looks as follows:
+::
+    <!DOCTYPE doc>
+    <colorize>
+     <keystrokes type="array">
+      <item_0 filename="keystroke_0" is-transparent="0" ColorData="9Z9j/w==" type="keystroke"/>
+      <item_1 filename="keystroke_1" is-transparent="0" ColorData="88y6/w==" type="keystroke"/>
+      <item_2 filename="keystroke_2" is-transparent="0" ColorData="Y1w9/w==" type="keystroke"/>
+     </keystrokes>
+    </colorize>
+
+Vector Layers
+~~~~~~~~~~~~~
+
+Vector layers are SVG files, which largely conform to the SVG 1.1 standard.
+
+The following items are unique to Krita:
+
+- something something markers.
+
+
+Group Layers
+~~~~~~~~~~~~
+
+Group layers are groupings of other layers. They therefore only exist in the xml.
+
+code::
+
+    <layer collapsed="0" channelflags="1110" passthrough="0" nodetype="grouplayer" opacity="255" locked="0" name="shading" compositeop="hard_light" x="0" visible="1" colorlabel="0" filename="layer111" y="0" uuid="{fc5cef48-b073-41d9-99d7-0e98b42c106e}">
+      <layers>
+       <layer collapsed="0" channelflags="" nodetype="adjustmentlayer" opacity="255" locked="0" name="phongbumpmapfilter" filterversion="2" compositeop="normal" x="0" visible="1" colorlabel="7" filtername="phongbumpmap" filename="layer112" y="0" uuid="{e4a9012d-7f0b-4079-bc58-2574e9827774}"/>
+       <layer collapsed="0" channellockflags="1111" channelflags="" nodetype="paintlayer" opacity="255" locked="0" colorspacename="RGBA" name="center Merged" compositeop="normal" x="0" visible="1" colorlabel="0" filename="layer113" y="0" uuid="{675de85e-e8fe-4759-b4b6-064ba8c0000a}"/>
+       <layer collapsed="0" channellockflags="" channelflags="" nodetype="paintlayer" opacity="255" locked="0" colorspacename="RGBA" name="left-side-roof Merged" compositeop="normal" x="0" visible="1" colorlabel="0" filename="layer114" y="0" uuid="{7ba85939-2ca3-47b8-afc9-24c915ca48ea}"/>
+       <layer collapsed="0" channellockflags="" channelflags="" nodetype="paintlayer" opacity="255" locked="0" colorspacename="RGBA" name="right-side-roof Merged" compositeop="normal" x="0" visible="1" colorlabel="0" filename="layer115" y="0" uuid="{d8eed159-fcca-48d0-9b35-900c5e6d1b68}"/>
+       <layer collapsed="0" channellockflags="" channelflags="" nodetype="paintlayer" opacity="255" locked="0" colorspacename="RGBA" name="frontal Merged" compositeop="normal" x="0" visible="1" colorlabel="0" filename="layer116" y="0" uuid="{12d2dd09-1c49-4c36-98be-a6f28a15df5b}"/>
+      </layers>
+     </layer>
+
+In the above xml, there is a group layer named 'shading', which has three paintlayers and a filter layer on top.
+
+Clone Layers
+~~~~~~~~~~~~
+
+Clone layers intended to be instances of other layers. Therefore, clone layers only exist inside the maindoc.xml.
+
+code::
+    <layer collapsed="0" channelflags="" nodetype="clonelayer" clonetype="0" opacity="176" locked="0" name="Layer 15" compositeop="multiply" x="0" clonefrom="base" visible="1" colorlabel="0" filename="layer5" y="0" uuid="{d5bef0e8-a56d-468c-a4b1-3e2ee14b5ecf}" clonefromuuid="{6efa9638-73da-4d0e-87dc-987572c7f854}"/>
+
+
+clonefrom
+    name of the layer to cloen from.
+clonetype
+    ???
+clonefromuuid
+    the unique identifier of the layer to clone from.
+
+File Layers
+~~~~~~~~~~~
+
+
+Transform Masks
+~~~~~~~~~~~~~~~
+
+
+Guides, grids, assistants and other side info.
+----------------------------------------------
+
+Grids
+~~~~~
+
+Only exist inside the maindoc.xml.
+
+::
+
+  <grid>
+   <showGrid value="1" type="value"/>
+   <snapToGrid value="1" type="value"/>
+   <offset type="point" x="0" y="0"/>
+   <spacing type="point" x="16" y="16"/>
+   <offsetAspectLocked value="1" type="value"/>
+   <spacingAspectLocked value="1" type="value"/>
+   <subdivision value="2" type="value"/>
+  </grid>
+
+Animation
+~~~~~~~~~
+
+In the maindoc.xml, the total length of animation is stored:
+
+::
+
+ <animation>
+   <framerate value="8" type="value"/>
+   <range to="12" from="0" type="timerange"/>
+   <currentTime value="6" type="value"/>
+  </animation>
+  
+framerate
+    the fps.
+range
+    the range of the active animation area.
+currentTime
+    the selected frame upon save.
+
+With the exception of the colorize mask, each of the raster based layers can have animation keyframes, which can be of the frame-by-frame type or the animation curves type (opacity only in this case). In both cases, there will be a layername.keyframes.xml file in the layers folder, which is referenced inside the maindoc.xml with the keyframes attribute:
+
+::
+   <layer onionskin="0" colorspacename="RGBA" intimeline="0" keyframes="layer2.keyframes.xml" filename="layer2" collapsed="0" nodetype="paintlayer" locked="0" channelflags="" colorlabel="0" opacity="255" compositeop="normal" channellockflags="1111" y="0" visible="1" name="Layer 9" uuid="{14ea94f7-faaf-48a7-b38e-e27537b614d2}" x="0"/>
+
+The keyframes.xml file will look something like this:
+
+::
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE keyframes PUBLIC '-//KDE//DTD krita-keyframes 1.0//EN' 'http://www.calligra.org/DTD/krita-keyframes-1.0.dtd'>
+        <keyframes xmlns="http://www.calligra.org/DTD/krita-keyframes">
+          <channel name="content">
+            <keyframe color-label="0" time="0" frame="layer4">
+              <offset y="0" type="point" x="0"/>
+            </keyframe>
+            <keyframe color-label="0" time="1" frame="layer4.f5">
+              <offset y="-1" type="point" x="0"/>
+            </keyframe>
+            <keyframe color-label="0" time="2" frame="layer4.f6">
+              <offset y="-2" type="point" x="0"/>
+            </keyframe>
+        
+            -- snip --
+            
+            <keyframe color-label="0" time="12" frame="layer4.f18">
+              <offset y="0" type="point" x="0"/>
+            </keyframe>
+          </channel>
+          <channel name="opacity">
+            <keyframe color-label="0" time="0" interpolation="bezier" value="77" tangents="sharp">
+              <leftTangent y="0" type="pointf" x="0"/>
+              <rightTangent y="3" type="pointf" x="3.16667"/>
+            </keyframe>
+            <keyframe color-label="0" time="6" interpolation="bezier" value="253.736" tangents="smooth">
+              <leftTangent y="-0.0963729" type="pointf" x="-3.11309"/>
+              <rightTangent y="0.106614" type="pointf" x="3.4439"/>
+            </keyframe>
+            <keyframe color-label="0" time="12" interpolation="bezier" value="77" tangents="smooth">
+              <leftTangent y="0" type="pointf" x="-3.83333"/>
+              <rightTangent y="0" type="pointf" x="0"/>
+            </keyframe>
+          </channel>
+        </keyframes>
+        
+time
+    the frame at which a given keyframe is placed.
+color-label
+    the color of the frame. This is the exact same list as the regular layer color labels, and these are often used to mark important parts of the animation.
+frame
+    the frame data file that a 'content' channel is pointing at. Note how the first frame points at the regular layer data, but subsequent frames are suffixed with 'f#' .
+offset
+    unique frame x/y offset. This gets added on top of the layer offset.
+
+Animation curves are drawn from keyframe to keyframe. They can be visualized as having the time as the x-axis value and value as the y-axis value. The left and right tangent are then the extra nodes used for interpolation, in this case using bezier.
+
+Assistants
+~~~~~~~~~~
+
+
+::
+ <GlobalAssistantsColor SimpleColorData="176,176,176,255"/>
+ <assistants>
+   <assistant type="perspective" filename="perspective0.assistant"/>
+  </assistants>
+  
+An assistant file will be stored under the assistants folder, and will look something like this:
+
+::
+    <?xml version="1.0" encoding="UTF-8"?>
+    <assistant type="perspective">
+      <handles>
+        <handle id="0" x="904.497" y="673.939"/>
+        <handle id="1" x="642.474" y="736.140"/>
+        <handle id="2" x="362.778" y="663.851"/>
+        <handle id="3" x="623.824" y="637.784"/>
+      </handles>
+    </assistant>
+
+
+Guides
+~~~~~~
+
+::
+  <guides>
+   <showGuides type="value" value="0"/>
+   <snapToGuides type="value" value="1"/>
+   <lockGuides type="value" value="1"/>
+   <horizontalGuides type="array">
+    <item_0 type="value" value="70.866265639"/>
+    <item_1 type="value" value="827.71799415"/>
+    <item_2 type="value" value="28.346504912"/>
+    <item_3 type="value" value="870.23764067"/>
+   </horizontalGuides>
+   <verticalGuides type="array">
+    <item_0 type="value" value="57.6"/>
+    <item_1 type="value" value="595.27662382"/>
+    <item_2 type="value" value="28.346506553"/>
+    <item_3 type="value" value="623.62310133"/>
+   </verticalGuides>
+   <rulersMultiple2 type="value" value="0"/>
+   <unit type="value" value="px"/>
+  </guides>
+
+
+Proofing
+~~~~~~~~
+
+::
+
+ <IMAGE description="" proofing-intent="3" width="2718" colorspacename="RGBA" name="Page 1" height="3747" mime="application/x-kra" y-res="300" profile="sRGB-elle-V2-srgbtrc.icc" proofing-adaptation-state="1" proofing-model="CMYKA" proofing-depth="U8" proofing-profile-name="Chemical proof" x-res="300">
+ 
+ -- snip layers --
+ 
+    <ProofingWarningColor>
+      <RGB r="0.0039215688594" space="sRGB-elle-V2-srgbtrc.icc" b="0" g="1"/>
+    </ProofingWarningColor>
+  
+  </IMAGE>
+  
+The proofing profile will be stored inside the annotations/proofing folder.
+
+Layerstyles
+~~~~~~~~~~~
+
+::
+    <layer channelflags="" opacity="255" uuid="{f6f4dd3f-8277-405c-84bf-e90c05893706}" x="109" y="127" name="panel1" filename="layer9" collapsed="1" intimeline="0" passthrough="0" nodetype="grouplayer" layerstyle="{6504ac26-78b7-47ea-9f1b-d36528b430df}" compositeop="normal" visible="1" colorlabel="0" locked="0">
+    
+The layerstyles themselves will be stored inside the layerstyles.asl file, in the annotations folder.
+    
+Other
+~~~~~
+
+Projection background:
+
+::
+    <ProjectionBackgroundColor ColorData="oKu8/w=="/>
