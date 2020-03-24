@@ -287,6 +287,13 @@ The configuration file looks as follows:
      </keystrokes>
     </colorize>
 
+filename
+    The name of the pixeldata file for a guiding stroke.
+ColorData
+    A 8bit sRGB representation of the stroke color, encoded in base64.
+is-transparent
+    Whether the stroke area is filled with a fully transparent color upon calculation.
+
 Vector Layers
 ~~~~~~~~~~~~~
 
@@ -316,6 +323,9 @@ code::
 
 In the above xml, there is a group layer named 'shading', which has three paintlayers and a filter layer on top.
 
+passthrough
+    Whether or not passthrough compositing is enabled.
+
 Clone Layers
 ~~~~~~~~~~~~
 
@@ -335,13 +345,58 @@ clonefromuuid
 File Layers
 ~~~~~~~~~~~
 
+File layers refer to an image on disk, can dynamically update, and thus only exist in maindoc.xml.
+
+::
+    <layer uuid="{649eef83-f6d0-4a04-abdc-d4f50ff927f9}" colorlabel="0" locked="0" x="0" collapsed="0" name="Layer 2" colorspacename="RGBA" channelflags="" source="bluemorning_3_big.png" y="0" scale="false" scalingmethod="1" opacity="255" compositeop="normal" intimeline="1" visible="1" nodetype="filelayer" filename="layer3">
+    
+Source is the location of the referenced image via a relative path. If Krita cannot find the source, it will ask the user to reselect the image for it.
+
+scale
+    ???
+scalingmethod
+    how the file layer is scaled.
 
 Transform Masks
 ~~~~~~~~~~~~~~~
 
+::
+    <masks>
+     <mask locked="0" visible="1" x="0" nodetype="transformmask" uuid="{991f279d-fbf6-4e58-8c14-628573984eda}" filename="mask4" y="0" name="Transform Mask 1"/>
+    </masks>
 
-Guides, grids, assistants and other side info.
-----------------------------------------------
+which then refers to mask4.transformconfig:
+
+::
+
+    <!DOCTYPE transform_params>
+    <transform_params>
+     <main id="tooltransformparams"/>
+     <data mode="0">
+      <free_transform>
+       <transformedCenter type="pointf" x="1237.26259759923" y="2075.58428207406"/>
+       <originalCenter type="pointf" x="1240" y="697.5"/>
+       <rotationCenterOffset type="pointf" x="0" y="0"/>
+       <transformAroundRotationCenter type="value" value="1"/>
+       <aX type="value" value="0"/>
+       <aY type="value" value="0"/>
+       <aZ type="value" value="5.8985950918511"/>
+       <cameraPos type="vector3d" z="1024" x="0" y="0"/>
+       <scaleX type="value" value="0.669217242265994"/>
+       <scaleY type="value" value="0.615848150006081"/>
+       <shearX type="value" value="-0.606236132474432"/>
+       <shearY type="value" value="0"/>
+       <keepAspectRatio type="value" value="0"/>
+       <flattenedPerspectiveTransform m12="0" m23="0" type="transform" m11="1" m33="1" m22="1" m32="0" m13="0" m21="0" m31="0"/>
+       <filterId type="value" value="Bilinear"/>
+      </free_transform>
+     </data>
+    </transform_params>
+
+Guides, grids, assistants and other data
+----------------------------------------
+
+Outside of layers and their composition, Krita also stores a number of other things inside a kra file.
 
 Grids
 ~~~~~
@@ -360,6 +415,24 @@ Only exist inside the maindoc.xml.
    <subdivision value="2" type="value"/>
   </grid>
 
+Mirror Axes
+~~~~~~~~~~~
+
+::
+
+    <MirrorAxis>
+        <mirrorHorizontal value="1" type="value"/>
+        <mirrorVertical value="0" type="value"/>
+        <lockHorizontal value="0" type="value"/>
+        <lockVertical value="0" type="value"/>
+        <hideHorizontalDecoration value="0" type="value"/>
+        <hideVerticalDecoration value="0" type="value"/>
+        <handleSize value="32" type="value"/>
+        <horizontalHandlePosition value="107" type="value"/>
+        <verticalHandlePosition value="64" type="value"/>
+        <axisPosition y="1754" x="444.102203369141" type="pointf"/>
+    </MirrorAxis>
+  
 Animation
 ~~~~~~~~~
 
@@ -504,15 +577,39 @@ The proofing profile will be stored inside the annotations/proofing folder.
 Layerstyles
 ~~~~~~~~~~~
 
+Layer styles, when applied to a layer are referenced via a UUID.
+
 ::
     <layer channelflags="" opacity="255" uuid="{f6f4dd3f-8277-405c-84bf-e90c05893706}" x="109" y="127" name="panel1" filename="layer9" collapsed="1" intimeline="0" passthrough="0" nodetype="grouplayer" layerstyle="{6504ac26-78b7-47ea-9f1b-d36528b430df}" compositeop="normal" visible="1" colorlabel="0" locked="0">
     
 The layerstyles themselves will be stored inside the layerstyles.asl file, in the annotations folder.
-    
-Other
-~~~~~
 
-Projection background:
+Reference Images
+~~~~~~~~~~~~~~~~
+
+::
+
+    <layer nodetype="referenceimages">
+      <referenceimage keepAspectRatio="true" transform="translate(39.1135888501742, 101.695331010453)" saturation="1" opacity="1" src="reference_images/0.png" width="152.542996515679" height="152.542996515679"/>
+    </layer>
+
+Reference images, weirdly enough, are not in the document name folder, instead they're top-level in the reference_images folder.
+
+Projection Background
+~~~~~~~~~~~~~~~~~~~~~
 
 ::
     <ProjectionBackgroundColor ColorData="oKu8/w=="/>
+
+The projection background is an 8bit sRGB color encoded in base64. This is the color that is shown between the lowest of the layers and the transparency checkers.
+
+Palettes
+~~~~~~~~
+
+::
+
+    <palettes>
+        <palette filename="flower_palette_embedded.kpl"/>
+    </palettes>
+    
+The palettes are stored as KPL files as palettes/palete_name.kpl.
