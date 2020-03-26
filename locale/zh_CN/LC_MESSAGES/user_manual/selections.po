@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2020-03-10 10:41\n"
+"PO-Revision-Date: 2020-03-25 19:55\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,6 +14,7 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-trunk/messages/www/"
 "docs_krita_org_user_manual___selections.pot\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -22,7 +22,7 @@ msgid ""
 "   :alt: mouseleft"
 msgstr ""
 ".. image:: images/icons/Krita_mouse_left.png\n"
-"   :alt:鼠标左键"
+"   :alt: mouseleft"
 
 #: ../../<rst_epilog>:4
 msgid ""
@@ -30,7 +30,7 @@ msgid ""
 "   :alt: mouseright"
 msgstr ""
 ".. image:: images/icons/Krita_mouse_right.png\n"
-"   :alt: 鼠标右键"
+"   :alt: mouseright"
 
 #: ../../<rst_epilog>:66
 msgid ""
@@ -130,6 +130,8 @@ msgid ""
 "your polygon and finalize your selection area. Use the :kbd:`Shift + Z` "
 "shortcut to undo last point."
 msgstr ""
+"建立一个多边形的选区，在画布上点击一次可以建立一个节点，按 :kbd:`Shift + Z` "
+"可以退回到上一个点的位置。双击时会自动连接首尾节点，封闭该多边形选区。"
 
 #: ../../user_manual/selections.rst:1
 msgid ":ref:`outline_selection_tool`"
@@ -188,10 +190,12 @@ msgid ""
 "drag to get flowing lines and close the path with the :kbd:`Enter` key or "
 "connecting back to the first point."
 msgstr ""
+"通过一条矢量路径建立选区。直接点击可以创建尖角和直线，点击并拖动可以拉出曲"
+"线，按 :kbd:`回车` 可以自动把路径首尾相连建立选区。"
 
 #: ../../user_manual/selections.rst:12
 msgid "Selection"
-msgstr ""
+msgstr "选区"
 
 #: ../../user_manual/selections.rst:17
 msgid "Selections"
@@ -206,6 +210,11 @@ msgid ""
 "tools will stay inside that area. On that area you can draw or use gradients "
 "to quickly get colored and/or shaded shapes with hard edges."
 msgstr ""
+"选区可以让你先指定一个区域，然后只可以在该区域内进行修改。你可以对一个选区进"
+"行移动、变形等操作，且在选区内的绘制操作不会影响到选区外。选区工具有许多种，"
+"他们建立选区的方式有所区别。选区被建立后，绝大多数工具只能在选区内部生效。在"
+"该选区内部你可以进行快速且大胆地进行绘制、填充、渐变等会大面积改变颜色的操"
+"作，也可以根据选区轮廓来营造锐利的阴影或边线。"
 
 #: ../../user_manual/selections.rst:22
 msgid "Creating Selections"
@@ -252,7 +261,7 @@ msgstr "快捷键 (永久切换)"
 
 #: ../../user_manual/selections.rst:47
 msgid "Description"
-msgstr ""
+msgstr "功能描述"
 
 #: ../../user_manual/selections.rst:49
 msgid "Replace"
@@ -268,7 +277,7 @@ msgstr "R"
 
 #: ../../user_manual/selections.rst:49
 msgid "Replace the current selection."
-msgstr ""
+msgstr "替换当前选区。"
 
 #: ../../user_manual/selections.rst:51
 msgid "Intersect"
@@ -284,7 +293,7 @@ msgstr "无"
 
 #: ../../user_manual/selections.rst:51
 msgid "Get the overlapping section of both selections"
-msgstr ""
+msgstr "选取两个选区重叠的部分。"
 
 #: ../../user_manual/selections.rst:53
 msgid "Add"
@@ -300,7 +309,7 @@ msgstr "A"
 
 #: ../../user_manual/selections.rst:53
 msgid "Add the new selection to the current selection."
-msgstr ""
+msgstr "把新的选区添加到当前选区。"
 
 #: ../../user_manual/selections.rst:55
 msgid "Subtract"
@@ -316,19 +325,19 @@ msgstr "S"
 
 #: ../../user_manual/selections.rst:55
 msgid "Subtract the selection from the current selection."
-msgstr ""
+msgstr "从当前选区减去新选区。"
 
 #: ../../user_manual/selections.rst:57
 msgid "Symmetric Difference"
-msgstr ""
+msgstr "对称差异"
 
 #: ../../user_manual/selections.rst:57
 msgid "Make a selection where both the new and current do not overlap."
-msgstr ""
+msgstr "把新选区添加到已有选区，但新旧选区的叠加部分不被选中。"
 
 #: ../../user_manual/selections.rst:61
 msgid "You can change this in :ref:`tool_options_settings`."
-msgstr ""
+msgstr "以上模式可在 :ref:`tool_options_settings` 中进行切换。"
 
 #: ../../user_manual/selections.rst:63
 msgid ""
@@ -336,6 +345,9 @@ msgid ""
 "activated, you can move it. To quickly go into transform mode, |mouseright| "
 "and select :guilabel:`Edit Selection`."
 msgstr ""
+"在选中选区工具的情况下，如果没有选中其他选区图层，把鼠标光标悬浮在选区边线"
+"上，即可对选区进行移动。要快速编辑选区，右键单击 |mouseright| 并选中 :"
+"guilabel:`编辑选区`。"
 
 #: ../../user_manual/selections.rst:66
 msgid "Removing Selections"
@@ -370,7 +382,7 @@ msgstr ""
 
 #: ../../user_manual/selections.rst:77
 msgid ".. image:: images/selection/Ants-displayMode.jpg"
-msgstr ""
+msgstr ".. image:: images/selection/Ants-displayMode.jpg"
 
 #: ../../user_manual/selections.rst:78
 msgid ""
@@ -382,7 +394,7 @@ msgstr ""
 
 #: ../../user_manual/selections.rst:81
 msgid ".. image:: images/selection/Mask-displayMode.jpg"
-msgstr ""
+msgstr ".. image:: images/selection/Mask-displayMode.jpg"
 
 #: ../../user_manual/selections.rst:82
 msgid ""
@@ -390,12 +402,13 @@ msgid ""
 "transparency levels for your selection. For example, when you have a "
 "selection with very soft edges due using feathering."
 msgstr ""
+"蒙版模式：可以呈现出选区的不透明度情况。例如在选区边缘是羽化后的柔边的情况。"
 
 #: ../../user_manual/selections.rst:86
 msgid ""
 "Mask mode is activated as well when a selection mask is the active layer so "
 "you can see the different selection levels."
-msgstr ""
+msgstr "当选中一个选区蒙版作为当前图层时，将自动切换到蒙版模式。"
 
 #: ../../user_manual/selections.rst:89
 msgid "Global Selection Mask (Painting a Selection)"
@@ -412,7 +425,7 @@ msgstr ""
 
 #: ../../user_manual/selections.rst:94
 msgid ".. image:: images/selection/Global-selection-mask.jpg"
-msgstr ""
+msgstr ".. image:: images/selection/Global-selection-mask.jpg"
 
 #: ../../user_manual/selections.rst:95
 msgid ""
@@ -421,12 +434,22 @@ msgid ""
 "using any of the normal painting tools, including the transform and move. "
 "The information is saved as grayscale."
 msgstr ""
+"勾选“显示全局选区蒙版”后，创建一个选区，你将看到全部图层的顶部多出了一个新图"
+"层，它就是这个选区的全局选区蒙版图层。你可以把它视作应用于整个图像的透明度蒙"
+"版。选中这个蒙版图层，Krita 就会自动切换成蒙版模式显示选区。现在你可以直接用"
+"笔刷、移动和变形等工具绘制选区了。由于蒙版图层只包含灰阶信息，你会发现颜色选"
+"择器也自动变成了灰阶。纯黑区域为完全透明 (非选中)，纯白区域为完全不透明 (选"
+"中)，所有灰色为不同程度的半透明。其中纯黑在蒙版中会显示为蒙版颜色 (默认为纯"
+"红)。"
 
 #: ../../user_manual/selections.rst:98
 msgid ""
 "You can enter the global selection mask mode quickly from the selection "
 "tools by doing |mouseright| and select :guilabel:`Edit Selection`."
 msgstr ""
+"在选中了选区工具，且画布上存在活动选区时，单击鼠标右键 |mouseright| 并选中 :"
+"guilabel:`编辑选区` 可快速切换到全局选区蒙版模式。切换至其它图层可退出该模"
+"式。"
 
 #: ../../user_manual/selections.rst:101
 msgid "Selection from layer transparency"
@@ -447,6 +470,8 @@ msgid ""
 "menuselection:`Select --> Select Opaque`, where you can find specific "
 "actions for each."
 msgstr ""
+"你还可以在选择不透明区域时进行选区的添加、减去、相交等布尔操作。前往\n"
+":menuselection:`选择 --> 选择不透明区域` ，在其子菜单可找到对应的选项。"
 
 #: ../../user_manual/selections.rst:110
 msgid ""
@@ -456,6 +481,11 @@ msgid ""
 "to intersect :kbd:`Ctrl + Shift + Alt +` |mouseleft|. This works with any "
 "mask that has pixel or vector data (so everything but transform masks)."
 msgstr ""
+"如需快速选中某个图层的不透明区域，按住 :kbd:`Ctrl +`鼠标左键 |mouseleft| 点击"
+"该图层在图层面板中的 *缩略图*。你还可以按 :kbd:`Ctrl + Shift +` 鼠标左键 |"
+"mouseleft| 添加，按 :kbd:`Ctrl + Alt +` 鼠标左键 |mouseleft| 减去，按 :kbd:"
+"`Ctrl + Shift + Alt +` 鼠标左键 |mouseleft| 相交新选区。此组合键在除变形蒙版"
+"外的各种图层上都可使用，包括颜料和矢量图层。"
 
 #: ../../user_manual/selections.rst:114
 msgid "Pixel and Vector Selection Types"
@@ -474,7 +504,7 @@ msgstr ""
 
 #: ../../user_manual/selections.rst:119
 msgid ".. image:: images/selection/Vector-pixel-selections.jpg"
-msgstr ""
+msgstr ".. image:: images/selection/Vector-pixel-selections.jpg"
 
 #: ../../user_manual/selections.rst:120
 msgid ""
@@ -482,6 +512,8 @@ msgid ""
 "from the Mode in the selection tool options: Pixel or Vector. By default "
 "this will be a vector."
 msgstr ""
+"在创建选区时，你可以在工具选项面板选择创建选区的种类：像素选区或者矢量选区。"
+"默认使用矢量选区。"
 
 #: ../../user_manual/selections.rst:122
 msgid ""
@@ -493,6 +525,11 @@ msgid ""
 "selections using the options in the :guilabel:`Selection` menu. Krita will "
 "add a new vector layer for this shape."
 msgstr ""
+"矢量选区和其它 :ref:`矢量形状 <vector_graphics>` 一样通过 :ref:"
+"`shape_selection_tool` 进行调整。如果在矢量选区的选区蒙版中使用笔刷绘制，它将"
+"会被转换成像素选区。你既可以将矢量形状转换成矢量选区，也可以将矢量选区转换成"
+"矢量形状。Krita 会自动为从矢量选区转换的矢量形状新建一个矢量图层。这些转换操"
+"作可在 :guilabel:`选择` 菜单中找到。"
 
 #: ../../user_manual/selections.rst:124
 msgid ""
@@ -502,6 +539,9 @@ msgid ""
 "`shape_edit_tool` to change the anchor points in the selection, allowing you "
 "to precisely adjust bezier curves or add corners to rectangular selections."
 msgstr ""
+"矢量选区的一大优点是无论怎么对其进行移动和变形操作，选区都不会像像素选区那样"
+"发生劣化。你还可以使用 :ref:`shape_edit_tool` 来操作选区的锚点，精确地调整构"
+"成选区的贝塞尔曲线、为矩形选区添加新角等。"
 
 #: ../../user_manual/selections.rst:126
 msgid ""
@@ -517,6 +557,7 @@ msgid ""
 "If you have multiple levels of transparency when you convert a selection to "
 "vector, you will lose the semi-transparent values."
 msgstr ""
+"如果你的像素选区有多级不透明度，把它转换成矢量选区时将丢失半透明部分的数值。"
 
 #: ../../user_manual/selections.rst:133
 msgid "Common Shortcuts while Using Selections"
@@ -552,21 +593,27 @@ msgstr "切换显示/隐藏选区  --  :kbd:`Ctrl + H`"
 
 #: ../../user_manual/selections.rst:142
 msgid "Select Opaque -- :kbd:`Ctrl +` |mouseleft| on layer thumbnail."
-msgstr ""
+msgstr "选择不透明区域 -- :kbd:`Ctrl +` 鼠标左键点击 |mouseleft| 图层缩略图。"
 
 #: ../../user_manual/selections.rst:143
 msgid ""
 "Select Opaque (Add) -- :kbd:`Ctrl + Shift +` |mouseleft| on layer thumbnail."
 msgstr ""
+"选择不透明区域 (添加) -- :kbd:`Ctrl + Shift +` 鼠标左键点击 |mouseleft| 图层"
+"缩略图。"
 
 #: ../../user_manual/selections.rst:144
 msgid ""
 "Select Opaque (Subtract) -- :kbd:`Ctrl + Alt +` |mouseleft| on layer "
 "thumbnail."
 msgstr ""
+"选择不透明区域 (减去) -- :kbd:`Ctrl + Alt +` 鼠标左键点击 |mouseleft| 图层缩"
+"略图。"
 
 #: ../../user_manual/selections.rst:145
 msgid ""
 "Select Opaque (Intersect) -- :kbd:`Ctrl + Shift + Alt +` |mouseleft| on "
 "layer thumbnail."
 msgstr ""
+"选择不透明区域 (相交) -- :kbd:`Ctrl + Shift + Alt +` 鼠标左键点击 |"
+"mouseleft| 图层缩略图。"

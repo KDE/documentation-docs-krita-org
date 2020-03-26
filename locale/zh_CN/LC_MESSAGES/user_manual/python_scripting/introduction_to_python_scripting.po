@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2020-03-10 10:40\n"
+"PO-Revision-Date: 2020-03-25 19:54\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,10 +15,11 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/www/"
 "docs_krita_org_user_manual___python_scripting___introduction_to_python_scripting."
 "pot\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:188
 msgid "-DENABLE_PYTHON_2=ON"
-msgstr ""
+msgstr "-DENABLE_PYTHON_2=ON"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:1
 msgid "Introduction to using Krita's python plugin API."
@@ -27,23 +27,23 @@ msgstr "介绍 Krita 的 Python 插件 API。"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
 msgid "Python"
-msgstr ""
+msgstr "Python"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
 msgid "Python Scripting"
-msgstr ""
+msgstr "Python 脚本编程"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
 msgid "Scripting"
-msgstr ""
+msgstr " 脚本编程"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
 msgid "Plugin"
-msgstr ""
+msgstr "插件"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
 msgid "Debug"
-msgstr ""
+msgstr "调试"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:18
 msgid "Introduction to Python Scripting"
@@ -139,19 +139,23 @@ msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:47
 msgid "print(\"hello world\")"
-msgstr ""
+msgstr "print(\"hello world\")"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:48
 msgid ""
 "Press the big play button or press the :kbd:`Ctrl + R` shortcut to run the "
 "script. Then, below, in the output area the following should show up::"
 msgstr ""
+"要执行脚本，可以点击对话框左上角的“播放”按钮，也可以按 :kbd:`Ctrl + R` 快捷"
+"键。现在输出框中应该会显示："
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:50
 msgid ""
 "==== Warning: Script not saved! ====\n"
 "hello world"
 msgstr ""
+"==== Warning: Script not saved! ====\n"
+"hello world"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:53
 msgid ""
@@ -187,6 +191,9 @@ msgid ""
 "\n"
 "Krita.instance().action('python_scripter').trigger()"
 msgstr ""
+"from krita import *\n"
+"\n"
+"Krita.instance().action('python_scripter').trigger()"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:68
 msgid ""
@@ -204,6 +211,11 @@ msgid ""
 "\"RGBA\", \"U8\", \"\", 120.0)\n"
 "Krita.instance().activeWindow().addView(d)"
 msgstr ""
+"from krita import *\n"
+"\n"
+"d = Krita.instance().createDocument(512, 512, \"Python test document\", "
+"\"RGBA\", \"U8\", \"\", 120.0)\n"
+"Krita.instance().activeWindow().addView(d)"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:77
 msgid ""
@@ -310,6 +322,9 @@ msgid ""
 "\n"
 "print(Krita.instance().filters())"
 msgstr ""
+"from krita import *\n"
+"\n"
+"print(Krita.instance().filters())"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:101
 msgid "Outputs as: ::"
@@ -331,6 +346,19 @@ msgid ""
 "'sharpen', 'smalltiles', 'threshold', 'unsharp',\n"
 "'wave', 'waveletnoisereducer']"
 msgstr ""
+"['asc-cdl', 'autocontrast', 'blur', 'burn', 'colorbalance', 'colortoalpha', "
+"'colortransfer',\n"
+"'desaturate', 'dodge', 'edge detection', 'emboss', 'emboss all directions', "
+"'emboss horizontal and vertical',\n"
+"'emboss horizontal only', 'emboss laplascian', 'emboss vertical only', "
+"'gaussian blur', 'gaussiannoisereducer',\n"
+"'gradientmap', 'halftone', 'height to normal', 'hsvadjustment', "
+"'indexcolors', 'invert', 'lens blur', 'levels',\n"
+"'maximize', 'mean removal', 'minimize', 'motion blur', 'noise', 'normalize', "
+"'oilpaint', 'perchannel', 'phongbumpmap',\n"
+"'pixelize', 'posterize', 'raindrops', 'randompick', 'roundcorners', "
+"'sharpen', 'smalltiles', 'threshold', 'unsharp',\n"
+"'wave', 'waveletnoisereducer']"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:112
 msgid "However, sometimes the conversion doesn't go quite as smoothly."
@@ -342,6 +370,9 @@ msgid ""
 "\n"
 "print(Krita.instance().documents())"
 msgstr ""
+"from krita import *\n"
+"\n"
+"print(Krita.instance().documents())"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:120
 msgid "gives something like this::"
@@ -353,6 +384,9 @@ msgid ""
 "<PyKrita.krita.Document object at 0x7f72946309d8>,\n"
 "<PyKrita.krita.Document object at 0x7f7294630c18>]"
 msgstr ""
+"[<PyKrita.krita.Document object at 0x7f7294630b88>,\n"
+"<PyKrita.krita.Document object at 0x7f72946309d8>,\n"
+"<PyKrita.krita.Document object at 0x7f7294630c18>]"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:127
 msgid ""
@@ -380,6 +414,11 @@ msgid ""
 "    print(doc.name())\n"
 "    print(\" \"+str(doc.width())+\"x\"+str(doc.height()))"
 msgstr ""
+"from krita import *\n"
+"\n"
+"for doc in Krita.instance().documents():\n"
+"    print(doc.name())\n"
+"    print(\" \"+str(doc.width())+\"x\"+str(doc.height()))"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:137
 msgid "We get an output like::"
@@ -395,6 +434,13 @@ msgid ""
 "Blue morning\n"
 " 1600x900"
 msgstr ""
+"==== Warning: Script not saved! ====\n"
+"Unnamed\n"
+" 2480x3508\n"
+"sketch21\n"
+" 3508x2480\n"
+"Blue morning\n"
+" 1600x900"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:147
 msgid ""
@@ -416,6 +462,7 @@ msgstr ""
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:154
 msgid "[print([a.objectName(), a.text()]) for a in Krita.instance().actions()]"
 msgstr ""
+"[print([a.objectName(), a.text()]) for a in Krita.instance().actions()]"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:155
 msgid ""
@@ -434,6 +481,12 @@ msgid ""
 "\n"
 "getInfo(Krita.instance())"
 msgstr ""
+"import inspect\n"
+"def getInfo(target):\n"
+"    [print(item) for item in inspect.getmembers(target) if not item[0]."
+"startswith('_')]\n"
+"\n"
+"getInfo(Krita.instance())"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:167
 msgid ""

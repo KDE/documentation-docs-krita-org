@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2020-03-10 10:41\n"
+"PO-Revision-Date: 2020-03-25 19:55\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,10 +14,11 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-trunk/messages/www/"
 "docs_krita_org_general_concepts___colors___profiling_and_callibration.pot\n"
+"Language: zh_CN\n"
 
 #: ../../<generated>:1
 msgid "Soft-proofing"
-msgstr ""
+msgstr "软打样"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:1
 msgid "Color Models in Krita"
@@ -98,6 +98,16 @@ msgid ""
 "RGB workspace first and then convert the output to the appropriate CMYK "
 "profile."
 msgstr ""
+"针对线性特性文件明度级数利用效率不好的缺点，人们设计了 sRGB 特性文件。sRGB 特"
+"性文件把颜色响应直线修正为一条 gamma > 1 的曲线，从而在计算机常见的每通道 8 "
+"位条件下把可用的 256 种颜色尽可能多地安排给了人眼最敏感的暗部颜色，实现了人类"
+"感知上的平滑过渡。 (参见：https://en.wikipedia.org/wiki/SRGB) 而一些其他特性"
+"文件，如 AdobeRGB 等是为了在同样颜色数量下面容纳更多的可打印颜色而优化的，它"
+"们一般会在色彩空间的青-绿方位进行延伸。使用宽色域进行作业可以改善打印效果，但"
+"必须配合已校准并配有正确特性文件的高品质显示器使用，否则极易造成问题。绝大多"
+"数常见的 CMYK 工作空间特性文件可以在每通道 8 位下面容纳它们的全部颜色，但它们"
+"之间的差别很大，所以最好先用常规的 RGB 工作空间制作图像，然后在输出时才转换至"
+"所需的 CMYK 特性文件。"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:38
 msgid ""
@@ -187,6 +197,9 @@ msgid ""
 "If you don't have software packaged with your colorimeter, or are unhappy "
 "with the results, we recommend `ArgyllCMS <https://www.argyllcms.com/>`_."
 msgstr ""
+"如果你的校色设备没有配套软件，或者你不满意自带软件的结果，我们推荐使用 "
+"`ArgyllCMS <https://www.argyllcms.com/>`_。这是一个命令行软件，一般人可以配合"
+"它的图形化前端 `DisplayCAL <https://displaycal.net/>`_ 使用。"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:62
 msgid ""
@@ -251,17 +264,21 @@ msgstr "仅进行特性化："
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:79
 msgid "With a good monitor"
-msgstr ""
+msgstr "高品质显示器"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:80
 msgid ""
 "You can get most of the sRGB colors and lot of extra colors not inside sRGB. "
 "So this can be good to have more visible colors."
 msgstr ""
+"你的显示器在特性化之后可以正确显示出 sRGB 空间内的绝大多数颜色，如果它的色域"
+"比 sRGB 宽广，它还会显示一些在 sRGB 空间之外的颜色。如果你需要更宽广的色域，"
+"可以在显示器的原生色域模式下进行特性化。如果你需要更好的 sRGB 兼容性，记得在"
+"特性化之前把显示器的颜色设为“sRGB 模式”。"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:82
 msgid "With a bad monitor"
-msgstr ""
+msgstr "低品质显示器"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:82
 msgid ""
@@ -269,6 +286,9 @@ msgid ""
 "have hue shifts. Trying to calibrate it before profiling can help to get "
 "closer to full-sRGB colors."
 msgstr ""
+"你的显示器在特性化之后虽然可以正确显示出 sRGB 空间内的一部分颜色，但大量的颜"
+"色细节可能会丢失，颜色的色相甚至也会发生变化。为了得到更接近标准 sRGB 空间的"
+"色彩，我们建议对低品质的显示器进行校准并特性化。"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:84
 msgid "Calibration+profiling:"
@@ -276,15 +296,15 @@ msgstr "校准并进行特性化："
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:86
 msgid "Bad monitors"
-msgstr ""
+msgstr "低品质显示器"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:87
 msgid "As explained just before."
-msgstr ""
+msgstr "如“仅进行特性化”中所述。"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:88
 msgid "Multi-monitor setup"
-msgstr ""
+msgstr "多显示器配置"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:89
 msgid ""
@@ -294,6 +314,9 @@ msgid ""
 "profile (or another standard for high-end monitors if they both support it) "
 "can be a good solution."
 msgstr ""
+"在使用多个显示器时，尤其是在使用镜像模式在多个显示器上显示相同画面时，你无法"
+"把内容同时用两个不同的特性文件进行色彩管理。在这种情况下，可把两个显示器按照 "
+"sRGB 特性文件 (或者两个显示器同时支持的其他特性文件) 进行校准。"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:91
 msgid ""
@@ -302,3 +325,6 @@ msgid ""
 "through several monitor calibration and profiles should be done extremely "
 "carefully."
 msgstr ""
+"如果你需要为软打样匹配一模一样的渲染环境，你可以在特性化前把显示器校准到更为"
+"接近软打样目标的效果。但在不同的显示器校准状态和特性文件之间来回切换时就要极"
+"为谨慎，避免在错误的校准状态下加载了不属于它的特性文件。"

@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-11 03:49+0100\n"
-"PO-Revision-Date: 2020-03-10 10:42\n"
+"PO-Revision-Date: 2020-03-25 19:55\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,28 +14,29 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-trunk/messages/www/"
 "docs_krita_org_contributors_manual___user_support.pot\n"
+"Language: zh_CN\n"
 
 #: ../../contributors_manual/user_support.rst:1
 msgid "Introduction to user support."
-msgstr "用户支持的介绍。"
+msgstr "介绍如何进行用户支持。"
 
 #: ../../contributors_manual/user_support.rst:20
 msgid "Introduction to User Support"
-msgstr "用户支持的介绍"
+msgstr "用户支持介绍"
 
 #: ../../contributors_manual/user_support.rst:35
 msgid "Contents"
-msgstr "内容"
+msgstr "目录"
 
 #: ../../contributors_manual/user_support.rst:38
 msgid "Tablet Support"
-msgstr "Krita 数位板支持"
+msgstr "数位板支持"
 
 #: ../../contributors_manual/user_support.rst:40
 msgid ""
 "The majority of help requests are about pen pressure and tablet support in "
 "general."
-msgstr "通常大多数帮助请求都是涉及笔压力和平板电脑支持。"
+msgstr "大多数用户提出的问题都跟笔压感应、数位板支持有关。"
 
 #: ../../contributors_manual/user_support.rst:44
 msgid "Quick solutions"
@@ -50,7 +50,7 @@ msgstr "*对于 Windows，所有设备：*"
 msgid ""
 "Change API in :menuselection:`Settings --> Configure Krita... --> Tablet "
 "Settings`."
-msgstr ""
+msgstr "在 :menuselection:`设置 --> 配置 Krita... --> 数位板设置` 中更改API。"
 
 #: ../../contributors_manual/user_support.rst:50
 msgid ""
@@ -59,6 +59,9 @@ msgid ""
 "2-in-1 devices by default use Windows Ink, you can get a Wintab driver but "
 "you need to install it separately."
 msgstr ""
+"Wintab：这是一个存在已久的标准。它支持多个按钮、高压力感应级别。如果此 API 工"
+"作正常，则无需切换成 Windows Ink。变形本默认使用 Windows Ink，你需要单独安装"
+"它们的 Wintab 驱动程序。"
 
 #: ../../contributors_manual/user_support.rst:52
 msgid ""
@@ -66,16 +69,20 @@ msgid ""
 "suitable for 2-in-1 devices like Surfacce Pro and Yoga. Some less known "
 "brands might not have this standard implemented."
 msgstr ""
+"Windows Ink：这是一个近期出现的标准。压力感应级别只有 1024 级。它更适合 "
+"Surface Pro 和 Yoga 一类的变形本使用。某些冷门产品可能不适用该接口。"
 
 #: ../../contributors_manual/user_support.rst:54
 msgid "*For Windows, tablet/digitizer devices (not convertible/2-in-1 ones):*"
-msgstr ""
+msgstr "*对于 Windows，数位板、数位屏设备 (非变形本)：*"
 
 #: ../../contributors_manual/user_support.rst:56
 msgid ""
 "Reinstall your driver (Windows Update often breaks tablet driver settings, "
 "reinstallation helps)."
 msgstr ""
+"重新安装驱动程序 (Windows 更新很容易损坏数位板的驱动程序配置文件，往往重装驱"
+"动即可解决问题)。"
 
 #: ../../contributors_manual/user_support.rst:58
 msgid ""
@@ -83,12 +90,17 @@ msgid ""
 "first try to update your driver: it should be fixed in 6.3.34-3. If it "
 "doesn't work, disable/minimize \"double-click distance\" in Wacom settings."
 msgstr ""
+"*Wacom 数位板：* 如果笔画的起始段是直线，首先更新驱动程序。Wacom 的 6.3.34-3 "
+"版驱动程序应该已经解决了此问题。如果依然不行，在 Wacom 驱动程序面板中把“双击"
+"距离”调到最小或干脆禁用。"
 
 #: ../../contributors_manual/user_support.rst:60
 msgid ""
 "*XP-Pen tablets, pressure being uneven:* either switch to Windows 8+ "
 "Pointer, or disable Windows Ink in XP-Pen settings."
 msgstr ""
+"*XP-Pen 数位板，压感不稳* 要么在 Krita 里面切换到 Windows 8+ 指针模式，要么"
+"在 XP-Pen 驱动面板里面禁用 Windows Ink。"
 
 #: ../../contributors_manual/user_support.rst:65
 msgid "Gathering information"
@@ -96,15 +108,15 @@ msgstr "收集信息"
 
 #: ../../contributors_manual/user_support.rst:67
 msgid "Which OS do you use?"
-msgstr "您使用哪个操作系统？"
+msgstr "你在使用什么操作系统？"
 
 #: ../../contributors_manual/user_support.rst:69
 msgid "Which tablet do you have?"
-msgstr "您拥有哪个平板电脑？"
+msgstr "你在使用什么数位板？"
 
 #: ../../contributors_manual/user_support.rst:71
 msgid "What is the version of the tablet driver?"
-msgstr "平板电脑驱动程序版本是什么？"
+msgstr "数位板的驱动程序的版本号是多少？"
 
 #: ../../contributors_manual/user_support.rst:73
 msgid ""
@@ -112,74 +124,87 @@ msgid ""
 "Krita... --> Tablet Settings`) text output and share it: :ref:"
 "`intro_user_support_sharing_files`."
 msgstr ""
+"请通过数位板测试工具 (:menuselection:`设置 --> 配置 Krita... --> 数位板设置"
+"`) 获取其输出的文字信息，把该信息与我们分享。参见：:ref:"
+"`intro_user_support_sharing_files`。"
 
 #: ../../contributors_manual/user_support.rst:75
 msgid "More detailed Tablet Events log:"
-msgstr ""
+msgstr "更详尽的数位板事件日志："
 
 #: ../../contributors_manual/user_support.rst:77
 msgid ""
 "Go to :menuselection:`Settings --> Dockers --> Log Viewer` docker, make sure "
 "it's checked."
-msgstr ""
+msgstr "前往 :menuselection:`设置 --> 工具面板 --> 日志查看器`，勾选该面板。"
 
 #: ../../contributors_manual/user_support.rst:79
 msgid ""
 "In the Log Viewer docker, make sure the first button is pressed (which means "
 "the logging is turned on)."
-msgstr ""
+msgstr "在日志查看器面板中，确保按下了它的第一个按钮 (意味着开始记录日志)。"
 
 #: ../../contributors_manual/user_support.rst:81
 msgid "Press :kbd:`Ctlr + Shift + T` to turn on tablet events logging."
-msgstr ""
+msgstr "按 :kbd:`Ctlr + Shift + T` 开始记录数位板事件。"
 
 #: ../../contributors_manual/user_support.rst:83
 msgid ""
 "Make a few strokes (depending on the situation, the user supporter or "
 "developer can ask you for specific series of strokes)."
 msgstr ""
+"画上几笔 (根据具体情况，用户支持人员或开发人员可能会请你绘制特定的一系列笔"
+"画)。"
 
 #: ../../contributors_manual/user_support.rst:85
 msgid ""
 "Press :kbd:`Ctlr + Shift + T` to turn off the logging of the tablet events."
-msgstr ""
+msgstr "按 :kbd:`Ctlr + Shift + T` 停止记录数位板事件。"
 
 #: ../../contributors_manual/user_support.rst:87
 msgid ""
 "Press the third button in the Log Viewer to save the output into a file."
-msgstr ""
+msgstr "点击日志查看器面板的第三个按钮，将输出的日志保存到文件。"
 
 #: ../../contributors_manual/user_support.rst:89
 msgid ""
 "Share the file or share the content of the file: :ref:"
 "`intro_user_support_sharing_files`."
 msgstr ""
+"将该文件或其内容分享给支持人员或开发人员：:ref:"
+"`intro_user_support_sharing_files`。"
 
 #: ../../contributors_manual/user_support.rst:91
 msgid ""
 "On Linux, you can just use a console instead of Log Viewer -- then you'd "
 "only need to enable tablet events logging, not logging in general."
 msgstr ""
+"在 Linux 环境里，可以用命令行终端代替日志查看器 -- 那样可以只对数位板事件进行"
+"日志记录，而无需对整个软件进行日志记录。"
 
 #: ../../contributors_manual/user_support.rst:97
 msgid "Additional information for supporters"
-msgstr "支持者的补充资料"
+msgstr "面向技术支持人员的补充信息"
 
 #: ../../contributors_manual/user_support.rst:99
 msgid ""
 "Except for the issue with beginnings of the strokes, Wacom tablets usually "
 "work no matter the OS."
 msgstr ""
+"除了笔画起始段有关的问题之外，Wacom 数位板通常在可以任意操作系统下面正常工"
+"作。"
 
 #: ../../contributors_manual/user_support.rst:101
 msgid ""
 "Huion tablets should work on Windows and on Linux, on Mac there might be "
 "issues."
 msgstr ""
+"Huion 数位板在 Windows 和 Linux 下面应该都可以正常工作，但在 Mac 下面可能会遇"
+"到问题。"
 
 #: ../../contributors_manual/user_support.rst:103
 msgid "XP-Pen tablets and other brands can have issues everywhere."
-msgstr ""
+msgstr "XP-Pen 和其他牌子的数位板可能会在任何条件下出现各种问题。"
 
 #: ../../contributors_manual/user_support.rst:105
 msgid ""
@@ -187,6 +212,8 @@ msgid ""
 "are the best options as of 2019, if they want to work with Krita. :ref:"
 "`list_supported_tablets`."
 msgstr ""
+"如果有人询问应该为 Krita 购买哪种数位板，截至 2019 年，最佳选项大概是 Wacom "
+"和 Huion 的廉价型号。:ref:`list_supported_tablets`。"
 
 #: ../../contributors_manual/user_support.rst:107
 msgid ""
@@ -194,10 +221,12 @@ msgid ""
 "reddit.com/r/krita/comments/btzh72/"
 "xppen_artist_12s_issue_with_krita_how_to_fix_it/>`_."
 msgstr ""
+"`XP-Pen 数位板可能遇到的问题和相关指引 <https://www.reddit.com/r/krita/"
+"comments/btzh72/xppen_artist_12s_issue_with_krita_how_to_fix_it/>`_。"
 
 #: ../../contributors_manual/user_support.rst:111
 msgid "Animation"
-msgstr ""
+msgstr "动画功能"
 
 #: ../../contributors_manual/user_support.rst:113
 msgid ""
@@ -210,6 +239,12 @@ msgid ""
 "options are wrong (if for example not every frame got rendered), or it's a "
 "bug in Krita."
 msgstr ""
+"动画渲染的过程中可能会发生各式各样的问题。首先要排查的是问题到底出在 Krita 还"
+"是 FFMpeg 上面。(Krita 负责保存全部帧的图像，FFmpeg 把该图像序列渲染成视频)。"
+"要搞懂到底是哪边的问题，指导用户把动画渲染成“图像序列”。如果生成的图像序列没"
+"有问题，那么问题就出在 FFMpeg 身上 (或者更有可能出在渲染选项上)。如果生成的图"
+"像序列有问题，那要么是选项搞错了 (例如并没有渲染出每一帧)，要么就是 Krita 本"
+"身有问题了。"
 
 #: ../../contributors_manual/user_support.rst:117
 msgid ""
@@ -217,6 +252,8 @@ msgid ""
 "render a video, Krita will print out the whole ffmpeg command to Log Viewer "
 "so it can be easily investigated."
 msgstr ""
+"如果用户打开了日志查看器面板，开始记录日志，然后开始渲染一段视频，Krita 会把"
+"FFMpeg 的完整命令输出显示在日志查看器里，这样调查起来就很容易了。"
 
 #: ../../contributors_manual/user_support.rst:119
 msgid ""
@@ -224,10 +261,13 @@ msgid ""
 "to render to. It can contain information useful to investigation of the "
 "issue (sharing files: :ref:`intro_user_support_sharing_files`)."
 msgstr ""
+"在用户渲染视频的目标目录里面包含了一个名为 *log_encode.log* 的日志文件。它可"
+"能包含了有助于调查问题的信息 (让用户将此文件分享给我们 :ref:"
+"`intro_user_support_sharing_files`)。"
 
 #: ../../contributors_manual/user_support.rst:122
 msgid "Onion skin issues"
-msgstr ""
+msgstr "洋葱皮视图问题"
 
 #: ../../contributors_manual/user_support.rst:124
 msgid ""
@@ -235,10 +275,12 @@ msgid ""
 "Nonetheless, you need to find out why it happens and direct the user how to "
 "use onion skin properly."
 msgstr ""
+"跟洋葱皮视图有关的问题大多数都是用户自己搞错了，并不是程序错误。不管怎样，你"
+"还是要搞明白该用户为什么会遇到那些问题，并教会他们如何正确地使用洋葱皮视图。"
 
 #: ../../contributors_manual/user_support.rst:128
 msgid "Crash"
-msgstr "崩溃"
+msgstr "程序崩溃"
 
 #: ../../contributors_manual/user_support.rst:130
 msgid ""
@@ -246,16 +288,18 @@ msgid ""
 "user to create a bug report (or create it yourself) with following "
 "information:"
 msgstr ""
+"如果遇到了程序崩溃的情况，先确定它是否属于已知问题。如果是未知问题，则引导用"
+"户创建一个问题报告 (或者由你来代为创建)，并包含下列信息："
 
 #: ../../contributors_manual/user_support.rst:132
 msgid "What happened, what was being done just before the crash."
-msgstr ""
+msgstr "发生了什么情况，在崩溃之前进行了什么操作。"
 
 #: ../../contributors_manual/user_support.rst:134
 msgid ""
 "Is it possible to reproduce (repeat)? If yes, provide a step-by-step "
 "instruction to get the crash."
-msgstr ""
+msgstr "是否能够再现 (反复触发) 该问题？如果可以，则应提供触发该崩溃的步骤。"
 
 #: ../../contributors_manual/user_support.rst:136
 msgid ""
@@ -264,16 +308,22 @@ msgid ""
 "the user has. But it could be easier to just point the user to `https://"
 "download.kde.org/stable/krita <https://download.kde.org/stable/krita>`_."
 msgstr ""
+"Backtrace (崩溃回溯、崩溃日志) -- 参见此指引：:ref:`dr_minw`。所需的 debug "
+"symbols (调试符号包) 可以在用户使用的 Krita 版本的发行通知中下载到。不过，最"
+"方便的办法还是让用户到官网上下载最新版本的软件 `https://download.kde.org/"
+"stable/krita <https://download.kde.org/stable/krita>`_。"
 
 #: ../../contributors_manual/user_support.rst:140
 msgid "Other possible questions with quick solutions"
-msgstr ""
+msgstr "其他可被快速解决的问题"
 
 #: ../../contributors_manual/user_support.rst:142
 msgid ""
 "When the user has any weird issue, something you've never heard about, ask "
 "them to reset the configuration: :ref:`faq_reset_krita_configuration`."
 msgstr ""
+"如果用户遇到了一些你闻所未闻的奇怪问题，可以让他们重置 Krita 的配置文件：:"
+"ref:`faq_reset_krita_configuration`。"
 
 #: ../../contributors_manual/user_support.rst:145
 msgid ""
@@ -281,22 +331,26 @@ msgid ""
 "them to change :guilabel:`Canvas Graphics Acceleration` in :menuselection:"
 "`Settings --> Configure Krita... --> Display`."
 msgstr ""
+"如果用户遇到了和预览视图和显示有关的问题，让他们更改：:guilabel:`画布图形加速"
+"` 选项，它在 :menuselection:`设置 --> 配置 Krita... --> 显示` 选项卡。"
 
 #: ../../contributors_manual/user_support.rst:149
 msgid ""
 "Telling people to disable canvas acceleration to get better performance is "
 "something we shouldn't do, ever."
-msgstr ""
+msgstr "在任何情况下，都不要教人们通过禁用画布加速来获得更佳性能。"
 
 #: ../../contributors_manual/user_support.rst:153
 msgid "Advices for supporters"
-msgstr "给支持者的建议"
+msgstr "给技术支持人员的建议"
 
 #: ../../contributors_manual/user_support.rst:155
 msgid ""
 "If you don't understand the question, ask for clarification -- asking for a "
 "screen recording or a screenshot is perfectly fine."
-msgstr "如果您不能理解问题，要求澄清——使用屏幕录制或屏幕截图是非常好。"
+msgstr ""
+"如果你没搞懂提问者的意思，让对方把情况解释清楚 -- 例如索取截图或者录屏等都是"
+"很好的办法。"
 
 #: ../../contributors_manual/user_support.rst:157
 msgid ""
@@ -306,6 +360,10 @@ msgid ""
 "whole process, so you're helping a lot just by asking for additional "
 "information. This is very much true in case of tablet issues, for example."
 msgstr ""
+"如果你不知道解决问题的方法，但知道哪些信息有助于调查该问题，应大胆地向对方索"
+"要这些信息。其他的技术支持人员可能知道解决方法，但没空手把手教用户走完整个流"
+"程，因此你通过询问这些额外信息就可以帮上大忙了。对于数位板的相关问题尤其是这"
+"样。"
 
 #: ../../contributors_manual/user_support.rst:159
 msgid ""
@@ -313,6 +371,9 @@ msgid ""
 "other supporters, you can always ask for help on Krita IRC channel. It's "
 "#krita on freenote.net: :ref:`the_krita_community`."
 msgstr ""
+"如果你不知道问题的答案或解决方法，而其他技术人员又貌似对该问题撒手不管了，你"
+"可以在 Krita 的 IRC 频道上面寻求帮助。它位于 freenote.net 的 #krita 频道：:"
+"ref:`the_krita_community`。"
 
 #: ../../contributors_manual/user_support.rst:161
 msgid ""
@@ -320,6 +381,8 @@ msgid ""
 "to change something in settings, clearly state the whole path of buttons and "
 "tabs to get there."
 msgstr ""
+"向用户解释清楚他们需要采取的步骤。例如，你想让他们更改某些设置，就要把如何找"
+"到某个按钮和标签页的全过程给说明白。"
 
 #: ../../contributors_manual/user_support.rst:163
 msgid ""
@@ -328,6 +391,9 @@ msgid ""
 "(where you need to select :menuselection:`Krita --> Preferences...`) won't "
 "get confused."
 msgstr ""
+"如需指示用户前往 :menuselection:`设置 --> 配置 Krita...` ，可以干脆告诉他们 :"
+"menuselection:`配置 Krita` -- 反正这不难找到，对于 Mac 用户来说还不容易搞混 "
+"(他们要通过 :menuselection:`Krita --> 偏好设置...`) 来访问。"
 
 #: ../../contributors_manual/user_support.rst:165
 msgid ""
@@ -336,6 +402,10 @@ msgid ""
 "`intro_user_support_sharing_files`), otherwise Reddit users might create a "
 "new post with this image instead of including it to the old conversation."
 msgstr ""
+"如果你需要索取图像，告诉他们可以使用 `Imgur <https://imgur.com>`_ 或者 "
+"`Pasteboard <https://pasteboard.co>`_ (:ref:"
+"`intro_user_support_sharing_files`)，否则 Reddit 用户可能会用这个图像开新帖，"
+"而不是把它包含在已有对话里面。"
 
 #: ../../contributors_manual/user_support.rst:167
 msgid ""
@@ -344,51 +414,43 @@ msgid ""
 "section or subsection title and give the link to the user so they for "
 "example know what information about their tablet issue you need."
 msgstr ""
+"如果你想快速回答某人的问题，可以干脆把使用手册的页面链接粘贴给他们。如果要直"
+"接跳传到页面内部的章节，可以点击章节标题旁边的链接图标，它会给出该章节的链"
+"接。例如你可以用此方式让他们直接跳传到某种数位板的技术支持章节。"
 
 #: ../../contributors_manual/user_support.rst:174
 msgid "How to share a file"
-msgstr "如何分享文件"
+msgstr "如何引导用户分享文件"
 
 #: ../../contributors_manual/user_support.rst:177
 msgid ""
 "Images (e.g. screenshots): `Imgur <https://imgur.com>`_ [*], `Pasteboard "
 "<https://pasteboard.co>`_"
 msgstr ""
-"图像 (比如截图)：`Imgur <https://imgur.com>`_ [*]，`Pasteboard <https://"
+"图像 (如截图)：`Imgur <https://imgur.com>`_ [*]、`Pasteboard <https://"
 "pasteboard.co>`_"
 
 #: ../../contributors_manual/user_support.rst:179
-#, fuzzy
-#| msgid ""
-#| "Text only: `Pastebin <https://pastebin.com>`_ [*], `BPaste <https://"
-#| "bpaste.net>`_, `paste.ubuntu.org.cn <paste.ubuntu.org.cn>`_, "
-#| "`FedoraProject's Paste <https://paste.fedoraproject.org/>`_ or `KDE "
-#| "Snippets (needs KDE Identity) <https://invent.kde.org/dashboard/"
-#| "snippets>`_."
 msgid ""
 "Text only: `Pastebin <https://pastebin.com>`_ [*], `BPaste <https://bpaste."
 "net>`_, `paste.ubuntu.org.cn <https://paste.ubuntu.org.cn>`_, "
 "`FedoraProject's Paste <https://paste.fedoraproject.org/>`_ or `KDE Snippets "
 "(needs KDE Identity) <https://invent.kde.org/dashboard/snippets>`_."
 msgstr ""
-"仅文本：`Pastebin <https://pastebin.com>`_ [*]，`BPaste <https://bpaste."
-"net>`_，`paste.ubuntu.org.cn <paste.ubuntu.org.cn>`_，`FedoraProject's Paste "
-"<https://paste.fedoraproject.org/>`_ 或 `KDE Snippets (需要 KDE Identity 登"
-"录) <https://invent.kde.org/dashboard/snippets>`_。"
+"仅文本：`Pastebin <https://pastebin.com>`_ [*]、`BPaste <https://bpaste."
+"net>`_、 `paste.ubuntu.org.cn <https://paste.ubuntu.org.cn>`_、`Fedora 项目"
+"的 Paste <https://paste.fedoraproject.org/>`_ 或 `KDE Snippets (需要 KDE "
+"Identity) <https://invent.kde.org/dashboard/snippets>`_。"
 
 #: ../../contributors_manual/user_support.rst:181
-#, fuzzy
-#| msgid ""
-#| "``.kra`` and other formats: by mail? Or encode the file using `base64` "
-#| "command on Linux, send by mail or on Pastebin, then decode using the same "
-#| "command."
 msgid ""
 "``.kra`` and other formats: by mail? Or encode the file using *base64* "
 "command on Linux, send by mail or on Pastebin, then decode using the same "
 "command."
 msgstr ""
-"``.kra`` 和其他格式：通过邮件？或使用 `base64` 命令编码，通过邮件或 Pastebin "
-"分享，然后用同样的命令解码。"
+"``.kra`` 和其他格式：可通过邮件附件发送。在 Linux 上还可以使用 *base64* 命令"
+"把文件编码为文本，然后通过邮件正文或在 Pastebin 上发送，收到后使用相同的命令"
+"解码。"
 
 #: ../../contributors_manual/user_support.rst:188
 msgid ""
@@ -396,24 +458,18 @@ msgid ""
 "stays there long enough for you to get it -- for example bpaste.net stores "
 "files by default only for a day! And you can extend it only to one week."
 msgstr ""
+"如果你让用户把日志或其他数据保存在某个网站上，要确保那些文件可以被保留足够长"
+"的时间，让你可以下载到手 -- 以 bpaste.net 为例，在默认情况下它只会把文件保留"
+"一天，尽管可以延长期限，但最多也不能超过一周。"
 
 #: ../../contributors_manual/user_support.rst:191
 msgid "Blocked websites"
-msgstr "被屏蔽的网站"
+msgstr "被墙网站"
 
 #: ../../contributors_manual/user_support.rst:193
 msgid ""
 "If the user is behind a firewall of some sorts (for example lives in China), "
 "websites with [*] will probably be blocked; please use the alternatives."
 msgstr ""
-"如果用户处于某些防火墙内 (比如中国用户遇到的墙)，有[*]标记的网站可能被屏蔽"
-"了；请使用其他替代链接。"
-
-#~ msgid ""
-#~ "Change API in :menuselection:`Settings --> Configure Krita --> Tablet "
-#~ "Settings` (for some devices, especially N-trig ones (some of the "
-#~ "convertible 2-in-1 devices), Windows Ink work better, for some it's "
-#~ "Wintab)."
-#~ msgstr ""
-#~ "在:menuselection:`设置 --> 配置 Krita --> 数位板设置`中更改 API (对某些设"
-#~ "备，尤其是二合一平板电脑，Windows Ink 更好用，而其他一些 Wintab 更好用)。"
+"如果用户身处某些防火墙之内 (如中国大陆境内)，带 [*] 标记的网站可能被墙。请使"
+"用其他服务代替。"

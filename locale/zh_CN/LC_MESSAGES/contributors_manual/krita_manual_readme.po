@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2020-03-10 10:41\n"
+"PO-Revision-Date: 2020-03-25 19:55\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,6 +14,7 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-trunk/messages/www/"
 "docs_krita_org_contributors_manual___krita_manual_readme.pot\n"
+"Language: zh_CN\n"
 
 #: ../../contributors_manual/krita_manual_readme.rst:None
 msgid ".. image:: images/gitlab/screenshot_editmode.png"
@@ -670,6 +670,8 @@ msgid ""
 "Your commit messages should conform to standards explained here: `How to "
 "Write a Git Commit Message <https://chris.beams.io/posts/git-commit/>`_"
 msgstr ""
+"你的提交消息应符合此文介绍的规范: `How to Write a Git Commit Message "
+"<https://chris.beams.io/posts/git-commit/>`_"
 
 #: ../../contributors_manual/krita_manual_readme.rst:253
 msgid ""
@@ -677,18 +679,23 @@ msgid ""
 "did you make and why did you make them, just like a commit message, so "
 "follow the guidelines from the link above in this case, too."
 msgstr ""
+":guilabel:`Title` 和 :guilabel:`Description` 栏应该说明你更改的内容和更改的原"
+"因，这和提交消息的要求是一样的，可按照上文链接内的规范进行。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:255
 msgid ""
 ":guilabel:`Target` should point to ``draft``, unless your changes contain "
 "only typo fixes."
 msgstr ""
+":guilabel:`Target` 栏应该指向 ``draft``，除非更改的内容不仅是拼写问题。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:257
 msgid ""
 "If you're sure the merge request will demand some changes later, start the "
 "title of your merge request with :code:`[WIP]`."
 msgstr ""
+"如果你确定该合并请求将需要在稍后进行修改，请在合并请求的标题前方加入 :code:"
+"`[WIP]` 前缀。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:259
 msgid ""
@@ -700,12 +707,19 @@ msgid ""
 "check this checkbox so the reviewer can do it themselves with only a few "
 "clicks."
 msgstr ""
+"确保你选中了 :guilabel:`Allow commits from members who can merge to the "
+"target branch.` 项 -- 出于技术原因往往需要这样做。合并请求会在 master 分支被 "
+"rebased，这样做在技术上被视为更改了该合并请求，尽管实际上并未改动合并请求的内"
+"容。你本人和审核人都可以进行 rebase -- 所以如果不希望后面遇到太多麻烦，可勾选"
+"此选项，以便审核人自行完成所需操作。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:261
 msgid ""
 "You can safely check :guilabel:`Delete source branch when merge request is "
 "accepted` in most cases."
 msgstr ""
+"在大多数情况下勾选 :guilabel:`Delete source branch when merge request is "
+"accepted` 项是安全的。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:263
 msgid ""
@@ -714,18 +728,25 @@ msgid ""
 "come from the :guilabel:`Title` of your merge request and the rest of it "
 "will be taken from the :guilabel:`Description` of the merge request."
 msgstr ""
+"除非你的审核人告诉你不要这样做，应勾选 :guilabel:`Squash commits when merge "
+"request is accepted`。提交消息的第一行将是合并请求的 :guilabel:`Title` 栏中填"
+"写的内容，其余部分则是合并请求中 :guilabel:`Description` 栏的内容。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:265
 msgid ""
 "When you finish creating your merge request, go to IRC and ask someone with "
 "push access to add the ``Needs Review`` label on your merge request."
 msgstr ""
+"在你完成创建合并请求后，访问 IRC，找有 push 权限的开发者帮你添加 ``Needs "
+"Review`` 标签到该合并请求。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:267
 msgid ""
 "You might get feedback on your merge request if it has mistakes. Just fix "
 "the mistakes in your branch in one of the following ways."
 msgstr ""
+"如果你的合并请求包含错误，你可能会得到反馈。只需在你的 branch 里面用下列方式"
+"修正错误。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:269
 msgid ""
@@ -733,12 +754,16 @@ msgid ""
 "section of the merge request and click on the pencil icon (with a tooltip "
 "that says `Edit`) to use the Edit mode again."
 msgstr ""
+"如果你打算使用 :guilabel:`Edit` 模式，可转到该合并请求的 :guilabel:`Changes` "
+"部分，点击铅笔图标 (弹出 `Edit` 工具提示) 即可重新使用 Edit 模式了。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:271
 msgid ""
 "If you want to use :guilabel:`WebIDE` mode, go to your fork, select the "
 "branch your changes are on and go to the WebIDE."
 msgstr ""
+"如果你打算使用 :guilabel:`WebIDE` 模式，转到你的 fork，选中你的更改所在的 "
+"branch，然后转到其 WebIDE。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:273
 msgid ""
@@ -746,18 +771,20 @@ msgid ""
 "on the correct branch and push your changes - gitlab will update your merge "
 "request automatically."
 msgstr ""
+"如果你在你的电脑或者通过命令行终端编辑文件，确保你在正确的 branch 上并 push "
+"你的更改 - gitlab 会自动更新你的合并请求。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:275
 msgid ""
 "After making changes, make sure you ask someone to change the label to "
 "``Needs Review`` again."
-msgstr ""
+msgstr "在进行更改后，确保你找人把标签重新改为 ``Needs Review``。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:278
 msgid ""
 "For more detailed information, check out :ref:`forking_gitlab` in the "
 "technical section."
-msgstr ""
+msgstr "如需更详尽的信息，请移步 :ref:`forking_gitlab` 页面的技术性章节。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:282
 msgid ""
@@ -768,6 +795,10 @@ msgid ""
 "get on IRC (see :ref:`the_krita_community`) and ask someone to label it for "
 "you."
 msgstr ""
+"在本文写作期间，只有具备 write 权限的贡献者才可以为官方库的合并请求设置标签。"
+"(如果你不知道这是什么意思，你大概也不会有这个权限)。因此，在你创建或更改合并"
+"请求后，必须到 IRC 上 (参见 :ref:`the_krita_community`) 找其他人帮你设置标"
+"签。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:286
 msgid "General philosophy"
@@ -1113,7 +1144,7 @@ msgstr "移除页面"
 
 #: ../../contributors_manual/krita_manual_readme.rst:376
 msgid "If a feature is removed in a certain version, the corresponding pages:"
-msgstr ""
+msgstr "如果某项特性在新版软件中被移除，相关页面会被如下处理："
 
 #: ../../contributors_manual/krita_manual_readme.rst:378
 msgid "Will first be marked deprecated."
@@ -1129,6 +1160,9 @@ msgid ""
 "\n"
 "    Text to indicate what the user should do without this feature."
 msgstr ""
+".. deprecated:: 版本号\n"
+"\n"
+"    文字说明，告诉用户在失去此项功能后怎么办。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:386
 msgid "Will be linked on a page called 'deprecated'"
@@ -1139,6 +1173,7 @@ msgid ""
 "If the next version rolls around, all the pages linked in the deprecated "
 "section will be removed."
 msgstr ""
+"如果软件的下一个新版本维持该废弃决定，已废弃章节所链接的页面将会被移除。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:390
 msgid "Adding Pages"
@@ -1168,6 +1203,8 @@ msgid ""
 "\n"
 "    optional something or the other."
 msgstr ""
+".. versionadded:: 版本号\n"
+"    可选的文字描述。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:401
 msgid ""
@@ -1206,6 +1243,8 @@ msgid ""
 "\n"
 "    This and that changed."
 msgstr ""
+".. versionchanged:: 版本号\n"
+"    说明被改动的内容。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:415
 msgid ""
@@ -1223,7 +1262,7 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_readme.rst:422
 msgid "grep -d recurse versionadded * --exclude-dir={_build,locale}"
-msgstr ""
+msgstr "grep -d recurse versionadded * --exclude-dir={_build,locale}"
 
 #: ../../contributors_manual/krita_manual_readme.rst:424
 msgid "Faulty pages"
@@ -1235,7 +1274,7 @@ msgstr "如果某个页面的内容有问题，可以..."
 
 #: ../../contributors_manual/krita_manual_readme.rst:428
 msgid "Make a merge request per the :ref:`making_changes_sphinx` section."
-msgstr ""
+msgstr "按照 :ref:`making_changes_sphinx` 章节创建一个合并请求。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:429
 msgid "Make a task at the `Manual Project Workboard`_."
@@ -1260,10 +1299,12 @@ msgid ""
 "The most important one is **reviewing changes people make**. You can do this "
 "on `KDE_gitlab`_ in two ways:"
 msgstr ""
+"其中最重要的一项工作是 **审核人们进行的改动**。你可以在 `KDE_gitlab`_ 里面通"
+"过两种方式进行："
 
 #: ../../contributors_manual/krita_manual_readme.rst:439
 msgid "Reviewing merge requests"
-msgstr ""
+msgstr "审核合并请求"
 
 #: ../../contributors_manual/krita_manual_readme.rst:441
 msgid ""
@@ -1272,6 +1313,9 @@ msgid ""
 "code is text based just like regular text, we can use this to check against "
 "typos as well!"
 msgstr ""
+"你可以协助审核合并请求。合并请求的审核工作一般是为程序员相互找出别人所写代码"
+"的失误而进行的，但由于程序的代码也是基于文本的，我们可以用同样的手段来检查文"
+"字的拼写问题。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:443
 msgid ""
@@ -1284,10 +1328,15 @@ msgid ""
 "incorrect. After a patch has been accepted it can be pushed into the version "
 "control system."
 msgstr ""
+"合并请求是以机器可读的文件格式记录了某个文档中发生的更改的总和 (包括增删)。 "
+"当有人提交了一个审核请求 (在 gitlab 和 github 系统里叫做 merge 和 pull 请求) "
+"时，负责维护原始文件的人员要检查并为需要改动的地方撰写评语。他们可以为拼写错"
+"误、过度冗繁的文风，还有错误的信息留下评语。某个补丁只有在被接受后，才可以被"
+"推送到版本控制系统中。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:445
 msgid "Commenting on changes in the manual."
-msgstr ""
+msgstr "为使用手册的改动撰写评语。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:447
 msgid ""
@@ -1296,6 +1345,8 @@ msgid ""
 "then click on an entry), where you will be able to make comments on the "
 "changes made."
 msgstr ""
+"评语是在改动被提交后撰写的。你可以到 commit message (在 repository 页面，转"
+"到 history 然后点击其中一项)，在那里你就可以为相关改动撰写评语了。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:449
 msgid ""
@@ -1305,6 +1356,8 @@ msgid ""
 "be marked with red. You can click a speech bubble icon to add an 'inline' "
 "comment."
 msgstr ""
+"在这两种情况下，界面会显示前后版本的差别，左栏显示旧版，右栏显示新版。新增的"
+"行标记为绿色，移除的行显示成红色。你可以点击对话泡泡图标，添加一条内联评语。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:451
 msgid ""
@@ -1366,6 +1419,12 @@ msgid ""
 "dutch version of :file:`/images/dockers/Krita-tutorial2-I.1-2.png` in :file:"
 "`/images/dockers/nl/Krita-tutorial2-I.1-2.png`."
 msgstr ""
+"图像也是可以被翻译的，但需要翻译团队自行提供翻译后的图像版本。在 image 文件夹"
+"中的所有图像的语言都默认为 'en'。如果你要翻译某张图像，在该文件夹中添加一个以"
+"你的语言代码命名的文件夹，然后把翻译后的图像文件放到里面。例如 Sphinx 会把 :"
+"file:`/images/Pixels-brushstroke.png` 的荷语版本定位到 :file:`/images/nl/"
+"Pixels-brushstroke.png`；把 :file:`/images/dockers/Krita-tutorial2-I.1-2."
+"png` 的荷语版本定位到 :file:`/images/dockers/nl/Krita-tutorial2-I.1-2.png`。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:464
 msgid ""
@@ -1386,3 +1445,4 @@ msgstr "其他"
 msgid ""
 "For restructured text conventions, check :ref:`krita_markup_conventions`."
 msgstr ""
+"关于 restructured 文本的使用惯例，可查阅 :ref:`krita_markup_conventions`。"
