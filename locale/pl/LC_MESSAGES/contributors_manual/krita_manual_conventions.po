@@ -1,22 +1,22 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2019.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-27 03:58+0100\n"
-"PO-Revision-Date: 2019-11-24 08:47+0100\n"
+"POT-Creation-Date: 2020-03-29 04:53+0200\n"
+"PO-Revision-Date: 2020-03-29 08:52+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 19.07.70\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10"
+" || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.07.70\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -50,6 +50,10 @@ msgstr ""
 ".. image:: images/icons/Krita_mouse_scroll.png\n"
 "   :alt: mousescroll"
 
+#: ../../contributors_manual/krita_manual_conventions.rst:None
+msgid "Horizontal Rulers"
+msgstr "Linijki w poziomie"
+
 #: ../../contributors_manual/krita_manual_conventions.rst:0
 msgid ""
 ".. image:: images/sample.png\n"
@@ -57,10 +61,6 @@ msgid ""
 msgstr ""
 ".. image:: images/sample.png\n"
 "   :alt: an image."
-
-#: ../../contributors_manual/krita_manual_conventions.rst:None
-msgid "Horizontal Rulers"
-msgstr "Linijki w poziomie"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:1
 msgid "reStructuredText conventions for the Krita Manual"
@@ -311,6 +311,32 @@ msgid ""
 "Heading 6\n"
 "\"\"\"\"\"\"\"\"\""
 msgstr ""
+"############\n"
+"Część/Rozdział\n"
+"############\n"
+"\n"
+"Dla stron, które zawierają wiele podstron.\n"
+"\n"
+"=========\n"
+"Nagłówek 1\n"
+"=========\n"
+"\n"
+"Tym rozpoczynaj większość ze stron podręcznika.\n"
+"\n"
+"Nagłówek 2\n"
+"---------\n"
+"\n"
+"Nagłówek 3\n"
+"~~~~~~~~~\n"
+"\n"
+"Nagłówek 4\n"
+"^^^^^^^^^\n"
+"\n"
+"Nagłówek 5\n"
+"'''''''''\n"
+"\n"
+"Nagłówek 6\n"
+"\"\"\"\"\"\"\"\"\""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:105
 msgid ""
@@ -319,6 +345,11 @@ msgid ""
 "headings, ask yourself first if the page hasn't gotten too complicated and "
 "needs splitting up."
 msgstr ""
+"Te zasady pochodzą w większości z `Pandoc <https://pandoc.org/"
+">`_'s mediawiki nt przekształceń reStructuredText. Jeśli potrzebujesz więcej"
+" niż 4 "
+"nagłówki, to zapytaj siebie samego, czy twoja strona nie stała się zbyt"
+" skomplikowana i czy nie potrzebuje zostać podzielona."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:107
 msgid ""
@@ -361,6 +392,12 @@ msgid ""
 "because it is. That is also the exact reason why we'd like to avoid links "
 "like these."
 msgstr ""
+"`Pandoc <https://pandoc.org/>`_ lubi zamieniać to na ```link name`__`` "
+"a później dodawać  ``.. __ :url`` na końcu dokumentu. Nazywa się to "
+"'anonimowym hiperłączem', co oznacza, że kolejności łączy pojawiających się w"
+" tekście, jest skojarzona z kolejność łączy na końcu tekstu. Jeśli brzmi to"
+" niezrozumiale i trudno, to dlatego bo takie jest. Jest to także dokładny"
+" powód, dla którego chcielibyśmy uniknąć łączy takie jak te."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:121
 msgid "Footnotes and further reading"
@@ -416,9 +453,14 @@ msgid ""
 "links, while reStructuredText suggests to use ``.. rubic:: Footnotes`` for "
 "specifically collecting footnotes as that plays nice with LaTeX."
 msgstr ""
+"Zazwyczaj nie używamy stopek w naszym podręczniku ze względu, że może to być"
+" zbyt akademickie dla naszych czytelników. Jednakże, zbieramy dokumenty i"
+" łącza, które dostarczają więcej szczegółów na dany temat, na końcu strony."
+" Sphinx ma także dyrektywę ``.. seealso::`` do łączenia do zewnętrznych"
+" odnośników, podczas gdy reStructuredText zaleca używanie ``.. rubic::"
+" Footnotes`` aby gromadzić stopki, bo dobrze to współgra z LaTeX."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:145
-#, fuzzy
 msgid "Images"
 msgstr "Obrazy"
 
@@ -501,6 +543,9 @@ msgid ""
 "semantic markup in sphinx in any case, because that makes it easier for "
 "translators to make decisions about the nature of the text::"
 msgstr ""
+"Używaj jednak tego bardzo oszczędnie! Zaleca się używania znaczników już"
+" dostępnych w Sfinksie, bo to umożliwia tłumaczom na podejmowanie kroków"
+" wobec natury text::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:188
 msgid ""
@@ -535,6 +580,10 @@ msgid ""
 "with 'something or the other'. This is useful for images and text that needs "
 "to be formatted in a complicated way, like in the case of \"LaTeX\"."
 msgstr ""
+"co oznacza, że gdy użyjesz ``|shorthand|``, w tekście, to zostanie on"
+" zamieniony 'czymś lub czymś innym'. Jest to użyteczne dla obrazów i tekstu,"
+" który musi być sformatowany w skomplikowany sposób, jak w przypadku"
+" \"LaTeX\"."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:204
 msgid ""
@@ -543,6 +592,11 @@ msgid ""
 "mousemiddle|, |mousescroll| and |mouseright| respectively. These are defined "
 "in the sphinx conf.py, and are appended to each rst file."
 msgstr ""
+"Dokumentacja Krity ma ``|mouseleft|``, ``|mousemiddle|``, ``|"
+"mousescroll|`` oraz ``|mouseright|``, które przekształcą się odpowiednio na"
+" |mouseleft|, |"
+"mousemiddle|, |mousescroll| oraz |mouseright|. Są one określone w pliku"
+" Sfinksa conf.py oraz dołączane do każdego pliku rst."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:206
 msgid ""
@@ -562,6 +616,9 @@ msgid ""
 "bugzilla with \"bugzilla\" used as the text of the link. ```Krita Manual`_`` "
 "will in turn link to docs.krita.org with the text \"Krita Manual\"."
 msgstr ""
+"Następnie, wpisując łącze, możesz użyć ```bugzilla`_`` aby dowiązać do"
+"bugzilli z \"bugzilla\" użytym jako tekst łącza. ```Krita Manual`_`` "
+"zamieni łącze na docs.krita.org z tekstem \"Podręcznik Krity\"."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:214
 msgid "Lists"
@@ -734,6 +791,18 @@ msgid ""
 "            - very light emerald.\n"
 "- blue"
 msgstr ""
+"- czerwony\n"
+"- żółty\n"
+"- zielony\n"
+"    - morski zielony\n"
+"    - grynszpan\n"
+"    - zielononiebieski\n"
+"    - zieleń Guigneta\n"
+"    - szmaragdowy\n"
+"        - ciemny szmaragdowy\n"
+"        - jasny szmaragdowy\n"
+"            - bardzo jasny szmaragdowy.\n"
+"- niebieski"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:289
 msgid "Definition Lists"
@@ -752,9 +821,8 @@ msgstr "Definicja"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:294
 #: ../../contributors_manual/krita_manual_conventions.rst:296
-#, fuzzy
 msgid "Explanation."
-msgstr "Wyjaśnienie"
+msgstr "Wyjaśnienie."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:296
 msgid "Another option"
@@ -777,7 +845,6 @@ msgid "To make them."
 msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:307
-#, fuzzy
 msgid "Tables"
 msgstr "Tabele"
 
@@ -849,6 +916,35 @@ msgid ""
 "   - * simple but long\n"
 "     * list table"
 msgstr ""
+"================== ============\n"
+"Przeznaczenie            Rodzaj tabeli\n"
+"================== ============\n"
+"wymienianie skrótów Prosta tabela\n"
+"wiele rozpórek kolumn   Tabela siatki\n"
+"Prosta lecz długa    Tabela listy\n"
+"================== ============\n"
+"\n"
+"+-----------------+------------+\n"
+"|Przeznaczenie          |Rodzaj tabeli  |\n"
+"+=================+============+\n"
+"|wymienianie skrótów|Prosta tabela|\n"
+"+-----------------+------------+\n"
+"|wiele rozpórek kolumn |Tabela siatki  |\n"
+"+-----------------+------------+\n"
+"|Prosta lecz długa  |Tabela listy  |\n"
+"+-----------------+------------+\n"
+"\n"
+".. list-table::\n"
+"   :header-rows: 1\n"
+"\n"
+"   - * Przeznaczenie\n"
+"     * Rodzaj tabeli\n"
+"   - * wymienianie skrótów\n"
+"     * prosta tabela\n"
+"   - * wiele rozpórek kolumn\n"
+"     * tabela siatki\n"
+"   - * prosta lecz długa\n"
+"     * tabela listy"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:349
 msgid ""
@@ -858,6 +954,11 @@ msgid ""
 "best done with a list directive because that is just much easier to write "
 "and maintain."
 msgstr ""
+"Pełne tabele siatkowe są najlepsze, gdy potrzebujesz wszystkich możliwości"
+" złożonych rozpórek kolumn i wierszy, lecz jest je także trudniej stworzyć. Z"
+" tego powodu, najlepiej tworzyć małe tabele, przy użyciu prostej składni,"
+" podczas gdy długie table dyrektywą listy, bo jest je łatwiej zapisać, a"
+" później utrzymać."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:352
 msgid "Admonishments and asides"
@@ -926,9 +1027,8 @@ msgid "Generic admonition that can have any text"
 msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:394
-#, fuzzy
 msgid "Text."
-msgstr "Tekst"
+msgstr "Tekst."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:396
 msgid "You can make it like this::"
@@ -964,6 +1064,16 @@ msgid ""
 "section. It is therefore better to use headings or the ``.. Topic::`` "
 "directive. Headings also make it easier to read."
 msgstr ""
+"Linijki w poziomie są zazwyczaj używane, gdy temat zmienia się raczej"
+" bezpośrednio. Jest to bardzo powszechne w bardziej narracyjnym pisaniu,"
+" takim jak o historii lub fikcji. Podręcznik Krity jest bardziej pisany jako"
+" instrukcja, czy źródło odniesienia, co oznacza, że zazwyczaj nie opowiadamy"
+" długiej historii o tym jak różne elementy zostały złożone w całość, lecz"
+" długie historie są tu po to, żeby opowiedzieć dlaczego pewne kroki są"
+" podejmowane w pewien sposób. Temat wtedy się zmienia zazwyczaj z powoduj"
+" przejścia do nowego rozdziału, raczej ze względu na przejście do powiązanego"
+" rozdziału. Lepiej jest zatem użyć nagłówków lub dyrektywy ``.. Topic::`` "
+". Nagłówki ułatwiają także czytanie."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:418
 msgid "That said, horizontal rulers can be made with ``----``."
@@ -1110,6 +1220,18 @@ msgid ""
 "    line-height: 1.4;\n"
 "}"
 msgstr ""
+"/* Uwagi CSS */\n"
+"body {\n"
+"    margin: 0 auto;\n"
+"    /* is 800 still sensible? */\n"
+"    max-width:800px;\n"
+"    font-size:16px;\n"
+"    color:#333;\n"
+"    background-color: #eee;\n"
+"    padding:1em;\n"
+"    font-family:serif;\n"
+"    line-height: 1.4;\n"
+"}"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:502
 msgid ""
@@ -1146,9 +1268,8 @@ msgid "with a pipe"
 msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:513
-#, fuzzy
 msgid "symbol"
-msgstr "Symbol"
+msgstr "symbol"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:515
 msgid "Like so::"
@@ -1189,9 +1310,8 @@ msgid ""
 msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:537
-#, fuzzy
 msgid "Quotes"
-msgstr "Notowania"
+msgstr "Cudzysłowy"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:539
 msgid "Quotes are done like this::"
