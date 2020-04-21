@@ -172,6 +172,10 @@ ThreeSlots plugin: creates three brushtool shortcuts that memorize last used bru
 
     https://github.com/DarkDefender/threeslots
 
+ToggleRefLayer: enables you to assign a keyboard shortcut to toggle the visibility of a reference layer named "reference"
+
+    https://drive.google.com/file/d/11O8FiejleajsT_uHd4Q4VBrCrYX9Rh5v/view?usp=sharing
+
 See Something We Missed?
 ------------------------
 Have a resource you made and want to to share it with other artists? Let us know in the forum or visit our chat room to discuss getting the resource added to here.
