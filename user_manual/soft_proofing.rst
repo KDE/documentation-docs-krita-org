@@ -33,7 +33,7 @@ So ideally, you would do the image in RGB, and use all your favorite RGB tools, 
     
     On the left, the original, on the right, a view where soft proofing is turned on. The difference is subtle due to the lack of really bright colors, but the soft proofed version is slightly less blueish in the whites of the flowers and slightly less saturated in the greens of the leaves.
 
-You can toggle soft proofing on any image using the :kbd:`Ctrl + Y` shortcut. Unlike other programs, this is per-view, so that you can look at your image non-proofed and proofed, side by side. The settings are also per image, and saved into the .kra file. You can set the proofing options in :menuselection:`Image --> Image Properties --> Soft Proofing`.
+You can toggle soft proofing on any image using the :kbd:`Ctrl + Y` shortcut. Unlike other programs, this is per-view, so that you can look at your image non-proofed and proofed, side by side. The settings are also per image, and saved into the ``.kra`` file. You can set the proofing options in :menuselection:`Image --> Image Properties --> Soft Proofing`.
 
 There you can set the following options:
 
@@ -46,7 +46,7 @@ Intent
         :align: center
         :figwidth: 800
     
-        Left: Soft proofed image with Adaptation state slider set to max. Right: Soft proofed image with Adaptation State set to minimum
+        Left: Soft proofed image with Adaptation state slider set to max. Right: Soft proofed image with Adaptation State set to minimum.
 Adaptation State
     A feature which allows you to set whether :guilabel:`Absolute Colorimetric` will make the white in the image screen-white during proofing (the slider set to max), or whether it will use the white point of the profile (the slider set to minimum). Often CMYK profiles have a different white as the screen, or amongst one another due to the paper color being different.
 Black Point Compensation
@@ -54,7 +54,7 @@ Black Point Compensation
 Gamut Warning
     Set the color of the out-of-gamut warning.
 
-You can set the defaults that Krita uses in :menuselection:`Settings --> Configure Krita --> Color Management`.
+You can set the defaults that Krita uses in :menuselection:`Settings --> Configure Krita... --> Color Management`.
 
 To configure this properly, it's recommended to make a test image to print (and that is printed by a properly set-up printer) and compare against, and then approximate in the proofing options how the image looks compared to the real-life copy you have made.
 
@@ -69,7 +69,7 @@ This can be useful to determine where certain contrasts are being lost, and to a
     :align: center
     :figwidth: 800
     
-    Left: View with original image, Right: View with soft proofing and gamut warnings turned on. Krita will save the gamut warning color alongside the proofing options into the Kra file, so pick a color that you think will stand out for your current image.
+    Left: View with original image, Right: View with soft proofing and gamut warnings turned on. Krita will save the gamut warning color alongside the proofing options into the KRA file, so pick a color that you think will stand out for your current image.
 
 You can activate Gamut Warnings with the :kbd:`Ctrl + Shift + Y` shortcut, but it needs soft proofing activated to work fully.
 

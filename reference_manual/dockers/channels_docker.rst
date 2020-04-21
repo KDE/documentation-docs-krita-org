@@ -24,18 +24,18 @@ Editing Channels
 If you want to edit individual channels by their grayscale component, you will need to manually separate a layer. This can be done with a series of commands with the layer docker.
 
 #. Select the layer you want to break apart.
-#. Go to :menuselection:`Image --> Separate Image`
+#. Go to :menuselection:`Image --> Separate Image`.
 #. Select the following options and click :guilabel:`OK`:
 
-    #. Source: Current Layer
-    #. Alpha Options: Create separate separation from alpha channel 
-    #. Output to Grayscale, not color: unchecked
+    #. Source: Current Layer.
+    #. Alpha Options: Create separate separation from alpha channel.
+    #. Output to Grayscale, not color: unchecked.
 
-#. Hide your original layer
-#. Select All of the new channel layers and put them in a group layer (:menuselection:`Layer --> Quick Group`)
-#. Select the Red layer and change the blending mode to "Copy Red" (these are in the Misc. category)
-#. Select the Green layer and change the blending mode  to "Copy Green"
-#. Select the Blue layer and change the blending mode to "Copy Blue" 
+#. Hide your original layer.
+#. Select All of the new channel layers and put them in a group layer (:menuselection:`Layer --> Quick Group`).
+#. Select the Red layer and change the blending mode to "Copy Red" (these are in the Misc. category).
+#. Select the Green layer and change the blending mode  to "Copy Green".
+#. Select the Blue layer and change the blending mode to "Copy Blue" .
 #. Make sure the Alpha layer is at the bottom of the group.
 #. Enable Inherit Alpha for the Red, Green, and Blue layers. 
 

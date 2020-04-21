@@ -18,7 +18,7 @@ Grid Settings
 
     Deprecated in 3.0, use the :ref:`grids_and_guides_docker` instead.
 
-Use :menuselection:`Settings --> Configure Krita --> Grid` menu item.
+Use :menuselection:`Settings --> Configure Krita... --> Grid` menu item.
 
 .. image:: /images/preferences/Krita_Preferences_Grid.png
 

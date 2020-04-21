@@ -6,6 +6,7 @@
 
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - Scott Petrovic
+       	     - Alberto Eleuterio Flores Guerrero <barbanegra+bugs@posteo.mx>
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Tools, Ellipse, Circle, Elliptical Select, Selection
@@ -17,7 +18,11 @@ Elliptical Selection Tool
 
 |toolselectellipse|
 
-This tool, represented by an ellipse with a dashed border, allows you to make :ref:`selections_basics` of a elliptical area. Simply click and drag around the section you wish to select.
+This tool, represented by an ellipse with a dashed border, allows you to make :ref:`selections_basics` of a elliptical area. Simply |mouseleft| and drag around the section you wish to select.
+
+.. important::
+
+    Most of the behavior of the Elliptical Selection Tool is common to all other selection tools, please make sure to read :ref:`selections_basics` to learn more about this tool.
 
 Hotkeys and Stickykeys
 ----------------------
@@ -26,37 +31,73 @@ Hotkeys and Stickykeys
 * :kbd:`R` sets the selection to 'replace' in the tool options, this is the default mode.
 * :kbd:`A` sets the selection to 'add' in the tool options.
 * :kbd:`S` sets the selection to 'subtract' in the tool options.
-* :kbd:`Shift` after starting the selection, constraints it to a perfect circle.
-* :kbd:`Ctrl` after starting the selection, makes the selection resize from center.
-* :kbd:`Alt` after starting the selection, allows you to move it.
-* :kbd:`Shift +` |mouseleft| sets the subsequent selection to 'add'. You can release the :kbd:`Shift` key while dragging, but it will still be set to 'add'. Same for the others.
-* :kbd:`Alt +` |mouseleft| sets the subsequent selection to 'subtract'.
-* :kbd:`Ctrl +` |mouseleft| sets the subsequent selection to 'replace'.
-* :kbd:`Shift + Alt +` |mouseleft| sets the subsequent selection to  'intersect'.
+* |mouseleft| + :kbd:`Shift` constrains the selection to a perfect circle. (Make sure to press |mouseleft| before :kbd:`Shift`)
+* |mouseleft| + :kbd:`Ctrl` makes the selection resize from the center. (Make sure to press |mouseleft| before :kbd:`Ctrl`)
+* |mouseleft| + :kbd:`Alt` allows you to move the selection. (Make sure to press |mouseleft| before :kbd:`Alt`)
+* :kbd:`Shift` + |mouseleft| sets the subsequent selection to 'add'. You can release the :kbd:`Shift` key while dragging, but it will still be set to 'add'. Same for the others.
+* :kbd:`Alt` + |mouseleft| sets the subsequent selection to 'subtract'.
+* :kbd:`Ctrl` + |mouseleft| sets the subsequent selection to 'replace'.
+* :kbd:`Shift + Alt +` |mouseleft| sets the subsequent selection to 'intersect'.
 
 .. versionadded:: 4.2
 
-   * Hovering over a selection allows you to move it.
+   * Hovering your cursor over the dashed line of the selection, or marching ants as it is commonly called, turns the cursor into the move tool icon, which you |mouseleft| and drag to move the selection.
    * |mouseright| will open up a selection quick menu with amongst others the ability to edit the selection.
 
-.. note::
+.. image:: /images/tools/selections-right-click-menu.png
+   :width: 200
+   :alt: Menu of elliptical selection
 
-    So to subtract a perfect circle, you do :kbd:`Alt +` |mouseleft|, then release the :kbd:`Alt` key while dragging and press the :kbd:`Shift` key to constrain.
+
+.. hint::
+
+    To subtract a perfect circle, you can follow two different methods:
+
+    1. Press :kbd:`S` to substract then |mouseleft| to select and press :kbd:`Shift` while dragging to constrain to a perfect circle.
+
+    2. Press :kbd:`Alt +` |mouseleft|, then release the :kbd:`Alt` key while dragging and press :kbd:`Shift` to constrain.   
 
 
-.. note::
+.. tip::
 
     You can switch the behavior of the :kbd:`Alt` key to use the :kbd:`Ctrl` key instead by toggling the switch in the :ref:`general_settings`.
+
 
 Tool Options
 ------------
 
+.. image:: /images/tools/selections-elliptical-selection-options.png
+   :width: 300
+   :alt: Elliptical selection options
+
+Mode
+    This option is explained in the :ref:`pixel_vector_selection` section.
+Action
+    This option is explained in the :ref:`pixel_vector_selection` section.
 Anti-aliasing
     This toggles whether or not to give selections feathered edges. Some people prefer hard-jagged edges for their selections.
-Width
-    Gives the current width. Use the lock to force the next selection made to this width.
-Height
-    Gives the current height. Use the lock to force the next selection made to this height.
-Ratio
-    Gives the current ratio. Use the lock to force the next selection made to this ratio.
 
+.. note::
+
+   Anti-aliasing is only available on Pixel Selection Mode.
+
+Width
+    Shows you the current width while you are creating the selection. You can manually type the value and use the 'Lock Width' for your next selection to have the selected value.
+Lock Width
+    Forces the next selection to have the current width.
+Height
+    Shows you the current height while you are creating the selection. You can manually type the value and use the 'Lock Height' for your next selection to have the selected value.
+Lock Height
+    Forces the next selection to have the current height.
+Ratio
+    Shows the ratio between height and width of the selection. Similar to Height, and Width, you can manually type the value and use the 'Lock Ratio' for your next selection to have the selected value.
+Lock Ratio
+    Forces the next selection to have the current ratio.
+
+.. hint::
+
+    If you want your selection to be of specific size:
+
+    1. Type the width and height.
+    2. Press the Lock Width and Lock Height buttons.
+    3. |mouseleft| where you want your selection to be.

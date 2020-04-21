@@ -42,12 +42,12 @@ can specify the dimensions, color model, bit depth, resolution, etc.
 In the top-most field of the :guilabel:`Dimensions` tab, from the Predefined
 drop-down you can select predefined pixel sizes and PPI (pixels per inch). You
 can also set custom dimensions and the orientation of the document from the
-input fields below the predefined drop-down. This can also be saved as a new
-predefined preset for your future use by giving a name in the Save As field and
-clicking on the Save button. Below we find the Color section of the new
-document dialog box, where you can select the color model and the bit-depth.
-Check :ref:`general_concept_color` for more detailed information regarding
-color.
+input fields below the :guilabel:`Predefined:` drop-down. This can also be saved
+as a new predefined preset for your future use by giving a name in the
+:guilabel:`Save Image Size as:` input box and clicking on the :guilabel:`Save`
+button. Below we find the Color section of the new document dialog box, where
+you can select the color model and the bit-depth. Check :ref:`general_concept_color`
+for more detailed information regarding color.
 
 On the :guilabel:`Content` tab, you can define a name for your new document.
 This name will appear in the metadata of the file, and Krita will use it for
@@ -69,9 +69,9 @@ Templates:
 ~~~~~~~~~~
 
 These are separate categories where we deliver special defaults. Templates are
-just .kra files which are saved in a special location, so they can be pulled up
-by Krita quickly. You can make your own template file from any .kra file, by
-using :menuselection:`File --> Create Template From Image` in the top menu.
+just ``.kra`` files which are saved in a special location, so they can be pulled up
+by Krita quickly. You can make your own template file from any ``.kra`` file, by
+using :menuselection:`File --> Create Template from Image...` in the top menu.
 This will add your current document as a new template, including all its
 properties along with the layers and layer contents.
 

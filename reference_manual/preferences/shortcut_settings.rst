@@ -15,7 +15,7 @@
 Shortcut Settings
 =================
 
-Most of Krita's shortcuts are configured in the menu section :menuselection:`Settings --> Configure Krita --> Configure Shortcuts`. The shortcuts configured here are simple key combinations, for example the :kbd:`Ctrl + X` shortcut to cut. Shortcuts can also be sequences of key combinations (e.g. :kbd:`Shift + S` shortcut then the :kbd:`B` key). Krita also has a special interface for configuring the mouse and stylus events sent to the canvas, found under :ref:`canvas_input_settings`. 
+Most of Krita's shortcuts are configured in the menu section :menuselection:`Settings --> Configure Krita... --> Shortcuts`. The shortcuts configured here are simple key combinations, for example the :kbd:`Ctrl + X` shortcut to cut. Shortcuts can also be sequences of key combinations (e.g. :kbd:`Shift + S` shortcut then the :kbd:`B` key). Krita also has a special interface for configuring the mouse and stylus events sent to the canvas, found under :ref:`canvas_input_settings`.
 
 Menu Items
 ----------
@@ -23,7 +23,7 @@ Menu Items
 Search bar
     Entering text here will search for matching shortcuts in the shortcut list.
 Shortcut List
-    Shortcuts are organized into sections. Each shortcut can be given a primary and alternate key combination
+    Shortcuts are organized into sections. Each shortcut can be given a primary and alternate key combination.
 Load/Save Shortcuts Profiles
     The bottom row of buttons contains commands for exporting and import keyboard shortcuts.
 

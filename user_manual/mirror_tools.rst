@@ -30,11 +30,9 @@ results along the vertical axis.
 There are additional options for each tool. You can access these by the
 clicking the drop-down arrow located on the right of each tool.
 
--  Hide Mirror Line (toggle) -- Locks the mirror axis and hides the axis
-   line.
--  Lock (toggle) - hides the move icon on the axis line.
--  Move to Canvas Center - Moves the axis line to the center of the
-   canvas.
+-  Hide Mirror X/Y Line (toggle) -- Locks the mirror axis and hides the axis line.
+-  Lock X/Y Line (toggle) - hides the move icon on the axis line.
+-  Move to Canvas Center X/Y - Moves the axis line to the center of the canvas.
 
 Mirroring along a rotated line
 ------------------------------

@@ -37,9 +37,9 @@ The Brush settings drop-down
 ----------------------------
 
 To start, the Brush Settings Editor panel can be accessed in the
-toolbar, between the :guilabel:`Blending Modes` button on the right and the :guilabel:`Patterns`
-button on the left. Alternately, you can use the :kbd:`F5` key to open
-it.
+toolbar, between the :guilabel:`Choose brush preset` button on the right
+and the :guilabel:`Fill Patterns` button on the left. Alternately, you
+can use the :kbd:`F5` key to open it.
 
 When you open Brush Settings Editor panel you will see something like
 this:
@@ -60,7 +60,7 @@ Name**, the **Engine** name, and several buttons for saving, renaming,
 and reloading.
 
 Krita's brush settings are stored into the metadata of a 200x200
-png (the KPP file), where the image in the png file becomes the preset
+PNG (the KPP file), where the image in the PNG file becomes the preset
 icon. This icon is used everywhere in Krita, and is useful for
 differentiating brushes in ways that the live preview cannot.
 
@@ -94,39 +94,40 @@ Reloading
 '''''''''
 
 If you change a preset, an icon will appear behind the engine name. This
-is the :guilabel:`reload` button. You can use it to revert to the original brush
-settings.
+is the :guilabel:`Reload the brush preset` button. You can use it to
+revert to the original brush settings.
 
 Saving a preset
 ''''''''''''''''
 
-On the right, there's :guilabel:`Save New Brush Preset` and :guilabel:`Overwrite Brush`.
+On the right, there's :guilabel:`Save New Brush Preset...` and
+:guilabel:`Overwrite Brush` buttons.
 
+Save New Brush Preset...
+    Will take the current preset and all its changes and save it as a
+    new preset. If no change was made, you will be making a copy of the
+    current preset.
 Overwrite Brush
     This will only enable if there are any changes. Pressing this will
     override the current preset with the new settings, keeping the name
     and the icon intact. It will always make a timestamped back up in
     the resources folder.
-Save New Brush Preset
-    Will take the current preset and all its changes and save it as a
-    new preset. If no change was made, you will be making a copy of the
-    current preset.
 
 Save new preset will call up the following window, with a mini scratch
 pad, and all sorts of options to change the preset icon:
 
 .. image:: /images/brushes/Krita_4_0_Save_New_Brush_Preset_Dialog.png
 
-The image on the left is a mini scratchpad, you can draw on it with the
+The image on the left is a mini scratch pad, you can draw on it with the
 current brush, allowing small modifications on the fly.
 
-Brush Name
+Brush Name:
     The Name of your brush. This is also used for the KPP file. If
     there's already a brush with that name, it will effectively
     overwrite it.
 Load Existing Thumbnail
     This will load the existing thumbnail inside the preset.
-Load scratch pad thumbnail
+Load Scratch Pad Thumbnail
     This will load the dashed area from the big scratch pad (Section C)
     into the thumbnail area.
 Load Image
@@ -149,7 +150,7 @@ scratch pad and you can draw in the stroke.
 
 If you go to your resources folder, there's a folder there called
 "preset\_icons", and in this folder there are "tool\_icons" and
-"emblem\_icons". You can add semi-transparent pngs here and Krita will
+"emblem\_icons". You can add semi-transparent PNGs here and Krita will
 load those into the icon library as well so you can customize your icons
 even more!
 
@@ -160,8 +161,9 @@ filter. This is done this way because the levels filter allows
 maintaining the darkest shadows and brightest highlights on a tool icon,
 making it much better for quick adjustments.
 
-If you're done with everything, you can press :guilabel:`Save` in the :guilabel:`Save New
-Brush Preset` dialog and Krita will save the new brush.
+If you're done with everything, you can press :guilabel:`Save` in the
+:guilabel:`Save New Brush Preset` dialog and Krita will save the new
+brush.
 
 Section B - The Preset Chooser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -197,15 +199,15 @@ top right of the brush settings to show it.
 
 When saving a new preset, you can choose to get the icon from the
 scratch pad, this will load the dash area into the mini scratch pad of
-the Save New Brush Preset dialog.
+the :guilabel:`Save New Brush Preset` dialog.
 
-The scratch pad has four buttons underneath it. These are in order for:
+The scratch pad has five buttons underneath it. These are in order for:
 
-#. Showing the current brush image
-
-#. Adding a gradient to the scratch pad (useful for smudge brushes)
-#. Filling with the background color
-#. Clearing everything on the scratch pad
+#. Fill area with brush preset icon
+#. Fill area with current image
+#. Fill area with gradient (useful for smudge brushes)
+#. Fill area with background color
+#. Reset area to white
 
 Section D - The Options List
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -259,11 +261,11 @@ thick strokes should try the third button, the S shape.
 
 Underneath the curve widget there are two more options:
 
-Share Curves across all settings
+Share curve across all settings
     This is for the list of sensors. Toggling this will make all the
     sensors use the same curve. Unchecked, all checked sensors will have
     separate curves.
-Curves Calculation Mode
+Curves calculation mode:
     This indicates how the multiple values of the sensor curves are
     used. The curves always go from 0 to 1.0, so if one curve outputs
     0.5 and the other 0.7, then...
@@ -304,7 +306,12 @@ The first two are regular, the rest with different multiplication types.
 Section F - Miscellaneous options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Temporarily Save Tweaks to Preset (Dirty Presets)
+Eraser switch size
+    This switches the brush to a separately stored size when using the
+    :kbd:`E` key.
+Eraser switch opacity
+    Same as above, but then with Eraser opacity.
+Temporarily save tweaks to preset
     This enables dirty presets. Dirty presets store the tweaks you make
     as long as this session of Krita is active. After that, they revert
     to default. Dirtied presets can be recognized by the icon in the
@@ -315,12 +322,7 @@ Temporarily Save Tweaks to Preset (Dirty Presets)
 
        The icon in the top left of the first two presets indicate it is “Dirty”, meaning there are tweaks made to the preset.
 
-Eraser Switch Size
-    This switches the brush to a separately stored size when using the
-    :kbd:`E` key.
-Eraser Switch Opacity
-    Same as above, but then with Eraser opacity.
-Instant Preview
+Instant preview
     This allows you to toggle instant preview on the brush. The Instant
     Preview has a super-secret feature: when you press the instant
     preview label, and then right click it, it will show a threshold
@@ -401,7 +403,7 @@ Saving the new Brush
 ~~~~~~~~~~~~~~~~~~~~
 
 When you're satisfied, go to the upper left and select :guilabel:`Save New 
-Brush Preset`.
+Brush Preset...` button.
 
 You will get the save preset dialog. Name the brush something like “My
 Preset”. Then, select :guilabel:`Load from Icon Library` to get the icon library.
@@ -449,7 +451,7 @@ So when you have a brush that uses unique predefined tips for either
 brush tip or masked brush, or unique textures you will need to share
 those resources as well with the other person.
 
-To find those resources, go to :menuselection:`Settings --> Manage Resources --> Open Resource Folder`.
+To find those resources, go to :menuselection:`Settings --> Manage Resources... --> Open Resource Folder`.
 
 There, the preset file will be inside paintoppresets, the brush tips
 inside brushes and the texture inside patterns.
@@ -471,14 +473,14 @@ Sharing via ZIP (old-fashioned)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sharing via ZIP should be replaced with resource bundles, but older
-brush packs are stored in zip files.
+brush packs are stored in ZIP files.
 
 Using a ZIP with the relevant files.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Go to :menuselection:`Settings --> Manage Resources --> Open Resource Folder` to open the resource folder.
-#. Then, open up the zip file.
-#. Copy the brushes, paintoppresets and patterns folders from the zip
+#. Go to :menuselection:`Settings --> Manage Resources... --> Open Resource Folder` to open the resource folder.
+#. Then, open up the ZIP file.
+#. Copy the brushes, paintoppresets and patterns folders from the ZIP
    file to the resource folder. You should get a prompt to merge the
    folders, agree to this.
 #. Restart Krita.

@@ -52,8 +52,8 @@ Masked brush is new feature that is only available in the :ref:`pixel_brush_engi
 
 Difference from :ref:`option_texture`:
 
-    - You don’t need seamless texture to make cool looking brush
-    - Stroke generates on the fly, it always different
-    - Brush strokes looks same on any brush size
-    - Easier to fill some areas with solid color but harder to make it hard textured
+    - You don’t need seamless texture to make cool looking brush.
+    - Stroke generates on the fly, it always different.
+    - Brush strokes looks same on any brush size.
+    - Easier to fill some areas with solid color but harder to make it hard textured.
  

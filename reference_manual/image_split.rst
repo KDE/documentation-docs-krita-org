@@ -1,6 +1,6 @@
 .. meta::
    :description:
-        The Image Split functionality in Krita
+        The Image Split functionality in Krita.
 
 .. metadata-placeholder
 

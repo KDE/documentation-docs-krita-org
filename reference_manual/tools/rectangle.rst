@@ -5,6 +5,7 @@
 .. metadata-placeholder
 
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
+             - Alberto Eleuterio Flores Guerrero <barbanegra+bugs@posteo.mx>
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Tools, Rectangle

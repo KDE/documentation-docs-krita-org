@@ -1,6 +1,6 @@
 .. meta::
    :description:
-        Contributor's Readme for the Krita Manual
+        Contributor's Readme for the Krita Manual.
 
 .. metadata-placeholder
 
@@ -85,15 +85,15 @@ Not recommended when you plan to contribute more in the future. (See :ref:`merge
 
     You can use the `Online Sphinx Editor <https://livesphinx.herokuapp.com/>`_ to check if your changes don't break the manual.
 
-4. Bundle up the items into a zip.
+4. Bundle up the items into a ZIP.
 
-    Put all the files you changed into a zip file. This also includes the images if you're changing them.
+    Put all the files you changed into a ZIP file. This also includes the images if you're changing them.
     Try to keep the filenames the same, that's easier for us to copy over.
-5. Upload the zip on phabricator.
+5. Upload the ZIP on Phabricator.
 
     1. First, go to phabricator.kde.org and log in with your identity account.
     2. Go to the `Manual Project Workboard`_ and there create a new task.
-    3. Explain what you did and use drag and drop to move the zip file to the input textbox. That should upload it. We will also need the email address you associate with your kde identity account.
+    3. Explain what you did and use drag and drop to move the ZIP file to the input textbox. That should upload it. We will also need the email address you associate with your kde identity account.
     4. Then, if the changes are accepted, someone with commit access will unpack those files into the manual folder and push the differences using the mail address.
 
 
@@ -118,7 +118,7 @@ If you have a lot of changes you want to contribute, we recommend trying to foll
 
  #. Gitlab has an option to Edit files in the gitlab itself. To access this, go to :menuselection:`Repository --> Files`.
 
- #. At the top of the page you see a dropbox with ``master`` as a chosen item; please select ``draft`` if your changes contain anything other than pure typo fixes.
+ #. At the top of the page you should see a dropbox with ``master`` as a chosen item.
 
  #. Find the file you want to edit, open it and then click :guilabel:`Edit`.
 
@@ -150,7 +150,7 @@ Not recommended when you don't know what a branch is (see :ref:`merge-request-ed
 
 #. Go to your fork (make sure the url contains your username).
 
-#. Make sure you're on ``draft``, not on ``master``, unless your changes contain *only* spelling and grammatical fixes.
+#. Make sure you're on the ``master`` branch.
 
 #. Click :guilabel:`WebIDE`. This should take you to a page that has a list of files on the left side and a big empty space for file contents on the right side.
 
@@ -168,12 +168,12 @@ Not recommended when you don't know what a branch is (see :ref:`merge-request-ed
 
 #. To create a new merge request manually, go to Krita Manual official repository (make sure the url *doesn't* contain your username now) and click :guilabel:`Create a new merge request` (bright green button at the left). Select your fork and select the branch that you've created in WebIDE. 
 
-.. image:: /images/gitlab/screenshot_webidemode.png
-   :width: 1000px
+.. .. image:: /images/gitlab/screenshot_webidemode.png
+..   :width: 1000px
 
 .. note::
    
-   If you don't have a push access to the official repository, gitlab won't allow you to save your changes if you were editing the official repository by mistake (and :guilabel:`Create a merge request` won't help with that: you still need to commit your changes to your branch, but if you don't have push access, you can't do it). It will just show the message: `An error occurred whilst committing your changes. Please try again.`
+   If you don't have a push access to the official repository, gitlab won't allow you to save your changes if you were editing the official repository by mistake (and :guilabel:`Create a merge request` won't help with that: you still need to commit your changes to your branch, but if you don't have push access, you can't do it). It will just show the message: *An error occurred whilst committing your changes. Please try again.*
 
    In this case, simply copy contents of all of the files you changed, go to your fork and paste them in the fork WebIDE.
 
@@ -195,12 +195,12 @@ Not recommended when you don't know what a branch is (see :ref:`merge-request-ed
     .. code-block:: bash
 
         # for ssh access
-        git clone git@invent.kde.org:<username>/krita.git
-        git remote add upstream git@invent.kde.org:kde/krita.git
+        git clone git@invent.kde.org:<username>/docs-krita-org.git
+        git remote add upstream git@invent.kde.org:websites/docs-krita-org.git
 
         # for https access
-        git clone https://invent.kde.org/<username>/krita.git
-        git remote add upstream https://invent.kde.org/kde/krita.git
+        git clone https://invent.kde.org/<username>/docs-krita-org.git
+        git remote add upstream https://invent.kde.org/websites/docs-krita-org.git
 
 
 #. Remember to always pull changes from the official repository before making new changes:
@@ -210,15 +210,12 @@ Not recommended when you don't know what a branch is (see :ref:`merge-request-ed
         git pull upstream master
 
 
-#. Make sure you create a new branch for your changes and make sure you branched from the correct branch: ``master`` in case if your changes only contain typo fixes, ``draft`` in all other cases.
+#. Make sure you create a new branch for your changes, since september 2019, all changes should be branched from ``master``.
 
 
     .. code-block:: bash
 
-        # if your changes need to go to master 
         git checkout master
-        # if your changes need to go to draft
-        git checkout draft
 
         # and then:
         git checkout -b "<username>/<description of the new feature>"
@@ -229,6 +226,8 @@ Not recommended when you don't know what a branch is (see :ref:`merge-request-ed
 
     .. code-block:: bash
 
+        # install the python3-sphinx package for your system. For example for Ubuntu:
+        sudo apt install python3-sphinx
         # make sure everything is correct
         make html
         git status
@@ -240,7 +239,7 @@ Not recommended when you don't know what a branch is (see :ref:`merge-request-ed
         # submit your changes to your fork
         git push
 
-#. Finally, go to the website of the original repository (make sure you're on the correct branch, `master` or `draft`), and then to Merge Requests. Select your fork and the correct branch and create a new merge request. For instruction on how to fill the fields, see :ref:`new-merge-request`.
+#. Finally, go to the website of the original repository, and then to Merge Requests. Select your fork and the correct branch and create a new merge request. For instruction on how to fill the fields, see :ref:`new-merge-request`.
 
 
 .. _new-merge-request:
@@ -252,7 +251,7 @@ Guidelines for new merge requests
 
 #. :guilabel:`Title` and :guilabel:`Description` should explain what changes did you make and why did you make them, just like a commit message, so follow the guidelines from the link above in this case, too.
 
-#. :guilabel:`Target` should point to ``draft``, unless your changes contain only typo fixes.
+#. :guilabel:`Target` should point to ``master``.
 
 #. If you're sure the merge request will demand some changes later, start the title of your merge request with :code:`[WIP]`.
 
@@ -266,7 +265,7 @@ Guidelines for new merge requests
        
 #. You might get feedback on your merge request if it has mistakes. Just fix the mistakes in your branch in one of the following ways.
      
-    * If you want to use :guilabel:`Edit` mode, just go to :guilabel:`Changes` section of the merge request and click on the pencil icon (with a tooltip that says `Edit`) to use the Edit mode again.
+    * If you want to use :guilabel:`Edit` mode, just go to :guilabel:`Changes` section of the merge request and click on the pencil icon (with a tooltip that says *Edit*) to use the Edit mode again.
 
     * If you want to use :guilabel:`WebIDE` mode, go to your fork, select the branch your changes are on and go to the WebIDE.
 
@@ -328,10 +327,10 @@ Use American English if possible.
     We use American English in the manual, in accordance to Krita's UI being American English by default.
 Keep the language polite, but do not use academic language.
     As a community, we want to be welcoming to the users, so we try to avoid language that is unwelcoming. Swearing is already not condoned by KDE, but going to the far other end, an academic style where neither writer nor reader is acknowledged might give the idea that the text is far more complex than necessary, and thus scare away users.
-Avoid using gifs (open for debate)
-    The reason is that people with epilepsy may be affected by fast moving images. Similarly, gifs can sometimes carry too much of the burden of explanation. If you can't help but use gifs, at the least notify the reader of this in the introduction of the page.
+Avoid using GIFs (open for debate)
+    The reason is that people with epilepsy may be affected by fast moving images. Similarly, GIFs can sometimes carry too much of the burden of explanation. If you can't help but use GIFs, at the least notify the reader of this in the introduction of the page.
 Keep it translation compatible
-    This consists of using svg for infographics, and using the appropriate markup for a given text.
+    This consists of using SVG for infographics, and using the appropriate markup for a given text.
 
 Regarding photos and paintings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

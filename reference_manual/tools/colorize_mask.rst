@@ -108,7 +108,7 @@ This way we can very quickly paint the image. Due to the colorize mask going fro
    :width: 800
    :align: center
 
-The colorize masks are saved to the .kra file, so as long as you don't save and open to a different file format, nor convert the colorize mask to a paintlayer, you can keep working adjust the results.
+The colorize masks are saved to the ``.kra`` file, so as long as you don't save and open to a different file format, nor convert the colorize mask to a paintlayer, you can keep working adjust the results.
 
 Tool Options
 ------------

@@ -1,6 +1,6 @@
 .. meta::
    :description:
-        Detailed steps on how images work in Krita
+        Detailed steps on how images work in Krita.
 
 .. metadata-placeholder
 
@@ -108,9 +108,9 @@ Image color space vs layer color space vs conversion.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Because there's a difference between image color space and layer color
-space, you can change only the image color space in :menuselection:`Image --> Properties` which will leave the layers alone. But if you want to change the color
+space, you can change only the image color space in :menuselection:`Image --> Properties...` which will leave the layers alone. But if you want to change the color
 space of the file including all the layers you can do it by going to
-:menuselection:`Image --> Convert Image Color Space` this will convert all the layers color space as well.
+:menuselection:`Image --> Convert Image Color Space...` this will convert all the layers color space as well.
 
 Author and Description
 ----------------------
@@ -124,36 +124,36 @@ document information dialog, useful for professional illustrators,
 speed-painters to keep track of the time they worked on artwork for
 billing purposes. It detects when you haven’t performed actions for a
 while, and has a precision of ±60 seconds. You can empty it in the
-document info dialog and of course by unzipping you .kra file and
+document info dialog and of course by unzipping you ``.kra`` file and
 editing the metadata there.
 
-These things can be edited in :menuselection:`File --> Document Information`, and for the author's information :menuselection:`Settings --> Configure Krita --> Author Information`. Profiles can be switched under :menuselection:`Settings --> Active Author Profile`.
+These things can be edited in :menuselection:`File --> Document Information`, and for the author's information :menuselection:`Settings --> Configure Krita... --> Author`. Profiles can be switched under :menuselection:`Settings --> Active Author Profile`.
 
 Setting the canvas background color
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can set the canvas background color via :menuselection:`Image --> Image Background
-Color and Transparency`. This allows you to turn the background color
+Color and Transparency...` menu item. This allows you to turn the background color
 non-transparent and to change the color. This is also useful for certain file
 formats which force a background color instead of transparency. PNG and
 JPG export use this color as the default color to fill in transparency
 if you do not want to export transparency.
 
 If you come in from a program like :program:`Paint Tool Sai`, then using this
-option, or using :guilabel:`Set Canvas Background Color` in the new file options,
-will allow you to work in a slightly more comfortable environment, where
-transparency isn't depicted with checkered boxes.
+option, or using :guilabel:`As canvas color` radio button at :guilabel:`Background:`
+section in the new file options, will allow you to work in a slightly more comfortable
+environment, where transparency isn't depicted with checkered boxes.
 
 Basic transforms
 ~~~~~~~~~~~~~~~~
 
-There are some basic transforms available in the image menu.
+There are some basic transforms available in the Image menu.
 
-Shear Image
+Shear Image...
     This will allow you to skew the whole image and its layers.
 Rotate
-    This will allow you to rotate the image and all its layers quickly.
-Mirror Horizontal/Vertical
+    This show a submenu that will allow you to rotate the image and all its layers quickly.
+Mirror Image Horizontally/Vertically
     This will allow you to mirror the whole image with all its layers.
 
 But there are more options than that...
@@ -167,15 +167,16 @@ You can crop and image with the
 Trimming
 ~~~~~~~~
 
-Using :menuselection:`Image --> Trim to Layer`, Krita resizes the image to the dimensions
-of the layer selected. Useful for when you paste a too large image into
-the layer and want to resize the canvas to the extent of this layer.
+Using :menuselection:`Image --> Trim to Current Layer`, Krita resizes the
+image to the dimensions of the layer selected. Useful for when you paste
+a too large image into the layer and want to resize the canvas to the extent
+of this layer.
 
-:menuselection:`Image --> Trim to Selection` is a faster cousin to the crop tool. This helps
-us to resize the canvas to the dimension of any active selection. This
-is especially useful with right clicking the layer on the layer stack
-and choosing :guilabel:`Select Opaque`. :menuselection:`Image --> Trim to Selection` will then crop the
-canvas to the selection bounding box.
+:menuselection:`Image --> Trim to Selection` is a faster cousin to the crop
+tool. This helps us to resize the canvas to the dimension of any active selection.
+This is especially useful with right clicking the layer on the layer stack and
+choosing :guilabel:`Select Opaque`. :menuselection:`Image --> Trim to Selection`
+will then crop the canvas to the selection bounding box.
 
 :menuselection:`Image --> Trim to Image Size` is actually for layers, and will trim all
 layers to the size of the image, making your files lighter by getting
@@ -184,12 +185,12 @@ rid of invisible data.
 Resizing the canvas
 -------------------
 
-You can also resize the canvas via :menuselection:`Image --> Resize Canvas` (or the :kbd:`Ctrl + Alt +
-C` shortcut). The dialog box is shown below.
+You can also resize the canvas via :menuselection:`Image --> Resize Canvas...` (or
+the :kbd:`Ctrl + Alt + C` shortcut). The dialog box is shown below.
 
 .. image:: /images/Resize_Canvas.png
 
-In this, constraint proportions will make sure the height and width stay
+In this, :guilabel:`Constrain proportions` checkbox will make sure the height and width stay
 in proportion to each other as you change them. Offset indicates
 where the new canvas space is added around the current image. You
 basically decide where the current image goes (if you press the
@@ -197,9 +198,9 @@ left-button, it'll go to the center left, and the new canvas space will
 be added to the right of the image).
 
 Another way to resize the canvas according to the need while drawing is
-when you scroll away from the end of the canvas, you can see an arrow
-appear. Clicking this will extend the canvas in that direction. You can
-see the arrow marked in red in the example below:
+when you scroll away from the end of the canvas, you can see a strip with
+an arrow appear. Clicking this will extend the canvas in that direction.
+You can see the arrow marked in red in the example below:
 
 .. image:: /images/Infinite-canvas.png
    :width: 700px
@@ -208,7 +209,7 @@ see the arrow marked in red in the example below:
 Resizing the image
 ~~~~~~~~~~~~~~~~~~
 
-:guilabel:`Scale Image to New Size` allows you to resize the whole image. Also,
+:guilabel:`Scale Image to New Size...` allows you to resize the whole image. Also,
 importantly, this is where you can change the resolution or *upres* your
 image. So for instance, if you were initially working at 72 PPI to block
 in large shapes and colors, images, etc... And now you want to really get
@@ -217,7 +218,7 @@ the change.
 
 Like all other dialogs where a chain link appears, when the chain is
 linked the aspect ratio is maintained. To disconnect the chain, just click
-on the links and the two halves will separate.
+on the link and the two halves will separate.
 
 .. image:: /images/Scale_Image_to_New_Size.png
 
@@ -235,8 +236,8 @@ textures. There's no combine functionality, but what you can do, if
 using colored output, is to set two of the channels to the addition
 :ref:`blending_modes`.
 
-For grayscale images in the RGB space, you can use the copy red, copy
-green and copy blue blending modes, with using the red one for the red
+For grayscale images in the RGB space, you can use the Copy Red, Copy
+Green and Copy Blue blending modes, with using the red one for the red
 channel image, etc.
 
 Saving, Exporting and Opening Files
@@ -252,28 +253,29 @@ Save
     Krita saves the current image in its memory to a defined place on
     the hard-drive. If the image hadn't been saved before, Krita will
     ask you where to save it.
-Save As
+Save As...
     Make a copy of your current file by saving it with a different name.
     Krita will switch to the newly made file as its active document.
-Open
+Open...
     Open a saved file. Fairly straightforward.
-Export
+Export...
     Save a file to a new location without actively opening it. Useful
     for when you are working on a layered file, but only need to save a
     flattened version of it to a certain location.
-Open Existing Document As Untitled Document
+Open Existing Document as Untitled Document...
     This is a bit of an odd one, but it opens a file, and forgets where
     you saved it to, so that when pressing 'save' it asks you where to
     save it. This is also called 'import' in other programs.
 Create Copy from Current Image
-    Makes a new copy of the current image. Similar to Open Existing
-    Document As Untitled Document, but then with already opened files.
+    Makes a new copy of the current image. Similar to :menuselection:`Open
+    Existing Document as Untitled Document...`, but then with already
+    opened files.
 Save Incremental Version
-    Saves the current image as 'filename'\_XXX.kra and switches the
+    Saves the current image as *'filename'\_XXX.kra* and switches the
     current document to it.
 Save Incremental Backup
     Copies and renames the last saved version of your file to a back-up file and saves your document under the original name.
     
 
 .. note::
-    Since Krita's file format is compressed data file, in case of a corrupt or broken file you can open it with archive managers and extract the contents of the layers. This will help you to recover as much as possible data from the file. On Windows, you will need to rename it to filename.zip to open it.
+    Since Krita's file format is compressed data file, in case of a corrupt or broken file you can open it with archive managers and extract the contents of the layers. This will help you to recover as much as possible data from the file. On Windows, you will need to rename it to *filename.zip* to open it.

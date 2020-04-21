@@ -26,7 +26,7 @@ Hot Spots
 * tile engine 1 has the BKL; tile engine 2 cannot swap yet and isn't optimized yet
 * projection recomposition doesn't take the visible area into account
 * pigment preloads all profiles (startup hit)
-* gradients are calculated on load, instead of being associated with a png preview image that is cheap to load
+* gradients are calculated on load, instead of being associated with a PNG preview image that is cheap to load
 
 Tools
 -----

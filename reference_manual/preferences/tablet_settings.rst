@@ -88,4 +88,4 @@ When you draw a line, the output on the right will show all sorts of text output
 External Links
 --------------
 
-`David Revoy wrote an indepth guide on using this feature to maximum advantage. <https://www.davidrevoy.com/article182/calibrating-wacom-stylus-pressure-on-krita>`_
+`David Revoy wrote an indepth guide on using this feature to maximum advantage <https://www.davidrevoy.com/article182/calibrating-wacom-stylus-pressure-on-krita>`_.

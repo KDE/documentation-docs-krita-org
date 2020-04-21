@@ -36,7 +36,7 @@ How to Enable the Scripter Plugin
 
 The scripter plugin is not necessary to use python, but it is very useful for testing and playing around with python. It is a python console, written in python, which can be used to write small scripts and execute them on the fly.
 
-To open the scripter, navigate to :menuselection:`Tools --> Scripts --> Scripter`. If you don't see it listed, go to :menuselection:`Settings --> Configure Krita --> Python Plugin Manager` and toggle "Scripter" in the list to enable it. If you don't see the scripter plugin, make sure you are using an up-to-date version of Krita. 
+To open the scripter, navigate to :menuselection:`Tools --> Scripts --> Scripter`. If you don't see it listed, go to :menuselection:`Settings --> Configure Krita... --> Python Plugin Manager` and toggle "Scripter" in the list to enable it. If you don't see the scripter plugin, make sure you are using an up-to-date version of Krita.
 
 The scripter will pop up with a text editor window on top and an output window below. Input the following in the text area:
 

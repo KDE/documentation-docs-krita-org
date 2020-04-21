@@ -174,6 +174,32 @@ Combines :ref:`bm_linear_dodge` and :ref:`bm_linear_burn`. When the lightness of
 
    Left: **Normal**. Right: **Linear Light**.
    
+
+.. _bm_luminosity_shine_sai:
+
+Luminosity/Shine (SAI)
+~~~~~~~~~~~~~~~~~~~~~~
+
+Similar to :ref:`bm_addition`.
+
+Takes the opacity of the new color (combined opacity of the layer, the brush, any used transparency masks etc.) and multiples the color by the opacity, then adds to the original/previous color.
+
+.. math::
+
+   c_{new} = c_{above}*{\alpha}_{above} + c_{below}
+
+The result of this operation is the same as combining the new pixels with a fully opaque black layer in a :ref:`bm_normal` mode and then combining the result with the original layer using :ref:`bm_addition` mode. It should be also the same as the results of "Luminosity" blending mode in SAI1 or "Shine" blending mode in SAI2.
+
+
+
+.. figure:: /images/blending_modes/lighten/Blending_modes_Luminosity_Shine_SAI_Sample_image_with_dots.png
+   :align: center
+
+   Left: **Normal**. Right: **Luminosity/Shine (SAI)**.
+
+
+
+
 .. _bm_p-norm_a:
 
 P-Norm A

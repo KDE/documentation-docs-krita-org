@@ -1,6 +1,6 @@
 .. meta::
    :description:
-        Detailed steps on how to install Krita
+        Detailed steps on how to install Krita.
 
 .. metadata-placeholder
 
@@ -31,8 +31,8 @@ Website:
     The latest version is always on our `website <https://krita.org/download/>`_.
 
     The page will try to automatically recommend the correct architecture (64- or 32-bit), but you can select "All Download Versions" to get more choices. To determine your computer architecture manually, go to :menuselection:`Settings --> About`. Your architecture will be listed as the :guilabel:`System Type` in the :guilabel:`Device Specifications` section.
-        
-    Krita by default downloads an **installer EXE**, but you can also download a **portable zip-file** version instead. Unlike the installer version, this portable version does not show previews in Windows Explorer automatically. To get these previews with the portable version, also install Krita's **Windows Shell Extension** extension (available on the download page).
+
+    Krita by default downloads an **installer EXE**, but you can also download a **portable ZIP file** version instead. Unlike the installer version, this portable version does not show previews in Windows Explorer automatically. To get these previews with the portable version, also install Krita's **Windows Shell Extension** extension (available on the download page).
 
     These files are also available from the `KDE download directory <https://download.kde.org/stable/krita/>`_.
 Windows Store:
@@ -42,7 +42,7 @@ Steam:
 
 
 To download a portable version of Krita go to the `KDE <https://download.kde.org/stable/krita/>`_ download directory
-and get the zip-file instead of the setup.exe installer.
+and get the ZIP file instead of the setup.exe installer.
 
 .. note::
    Krita requires Windows 7 or newer. The Store version requires Windows 10.
@@ -55,12 +55,12 @@ you will have to enable an extra repository. Krita runs fine under most
 desktop enviroments such as KDE, Gnome, LXDE, Xfce etc. -- even though it
 is a KDE application and needs the KDE libraries. You might also want to
 install the KDE system settings module and tweak the gui theme and fonts used,
-depending on your distributions
+depending on your distributions.
 
 Nautilus/Nemo file extensions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Since April 2016, KDE's Dolphin file manager shows kra and ora thumbnails by
+Since April 2016, KDE's Dolphin file manager shows KRA and ORA thumbnails by
 default, but Nautilus and it's derivatives need an extension. `We
 recommend Moritz Molch's extensions for XCF, KRA, ORA and PSD
 thumbnails <https://moritzmolch.com/1749>`__.
@@ -90,7 +90,7 @@ Double click it, and enjoy Krita. (Or run it in the terminal with
 
 Appimages are ISOs with all the necessary libraries bundled inside, that means no
 fiddling with repositories and dependencies, at the cost of a slight bit
-more diskspace taken up (And this size would only be bigger if you were
+more disk space taken up (And this size would only be bigger if you were
 using Plasma to begin with).
 
 Ubuntu and Kubuntu
@@ -138,8 +138,46 @@ install Krita by using the following command:
 
 ``pacman -S krita``
 
-You can also find Krita pkgbuild in arch user repositories but it is not guaranteed to contain 
-the latest git version.
+You can also find Krita pkgbuild in arch user repositories but it is not guaranteed to contain the latest git version.
+
+Flatpak
+~~~~~~~
+We also have Flatpak for nightlies and stable builds, these builds are not maintained by the core developers themselves. You can either get the builds from the `KDE community website <https://binary-factory.kde.org>`_ or from the `Flathub Maintainers <https://flathub.org/apps/details/org.kde.krita>`_.
+
+To install flatpak build from the software centre just open the flatpakrepo files with Discover or the software center provided by your distribution:
+
+    `Flathub Repo <https://flathub.org/repo/flathub.flatpakrepo>`_
+
+    `KDE Flatpak Repo <https://distribute.kde.org/kdeapps.flatpakrepo>`_
+
+After adding one of the above repos you can then search for Krita and the software center will show you the flatpak version for installation.
+
+If you prefer doing it from terminal you can use the following commands to install Krita's flatpak build
+
+    For KDE Flatpak Repo:
+
+    ``flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo``
+
+    ``flatpak install kdeapps org.kde.krita``
+
+    For installing it from Flathub Repo:
+
+    ``flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo``
+
+    ``flatpak install kdeapps org.kde.krita``
+
+Snaps
+~~~~~
+There are snap packages provided by the ubuntu snap developers, these are generally not up to date. The Krita Developers do not provide or build the snap packages themselves.
+To install Krita as a snap package, first install snapd application. Snapd is installed by default on ubuntu distributions.
+
+If you are on ubuntu distribution then Krita's snap package may show up in the software center or you can run the following command in terminal
+
+    ``sudo snap install krita``
+
+
+.. note::
+   The Flatpak and Snap builds are not tested by the core developers of Krita, so you may encounter some bugs while running Krita installed from them.
 
 OS X
 ----

@@ -7,7 +7,7 @@
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
    :license: GNU free documentation license 1.3 or later.
 
-.. index:: EXR, HDR Fileformat, OpenEXR, *.exr
+.. index:: *.exr, EXR, HDR Fileformat, OpenEXR
 .. _file_exr:
 
 ======

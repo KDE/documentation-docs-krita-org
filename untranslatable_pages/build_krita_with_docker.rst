@@ -85,7 +85,7 @@ Enter the container and build Krita
     make -j8 install
 
     # start Krita
-    krita
+    ../appimage-workspace/krita-inst/bin/krita
 
 
 Extra developer tools
@@ -96,7 +96,7 @@ To install QtCreator, enter the container and start the installer, downloaded wh
 .. code::
 
     # inside the container
-    ./persistent/qt-creator-opensource-linux-x86_64-4.6.2.run
+    ./persistent/qt-creator-opensource-linux-x86_64.run
 
 
 To start QtCreator:

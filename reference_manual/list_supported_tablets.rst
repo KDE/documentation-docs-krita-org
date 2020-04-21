@@ -763,6 +763,6 @@ This is specifically about support on Windows, not Linux or OSX.
 .. seealso::
     Pages you might want to check :
 
-     `Huion's krita support topic on deviant art. <https://huion.deviantart.com/journal/Problem-with-Krita-Come-On-In-439442607>`_
+     `Huion's krita support topic on deviant art <https://huion.deviantart.com/journal/Problem-with-Krita-Come-On-In-439442607>`_.
 
-     `List of tablets models and branding. <https://digimend.github.io/tablets/>`_
+     `List of tablets models and branding <https://digimend.github.io/tablets/>`_.

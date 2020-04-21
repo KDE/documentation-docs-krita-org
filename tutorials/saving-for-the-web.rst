@@ -1,6 +1,6 @@
 .. meta::
    :description lang=en:
-        Tutorial for saving images for the web
+        Tutorial for saving images for the web.
 
 .. metadata-placeholder
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
@@ -20,11 +20,13 @@ There are a few steps involved:
 
 2. Flatten all layers. This turns all your layers into a single one. Just go to :menuselection:`Layer --> Flatten Image` or press the :kbd:`Ctrl + Shift + E` shortcut. Flattening can take a while, so if you have a big image, don't be scared if Krita freezes for a few seconds. It'll become responsive soon enough.
 
-3. Convert the color space to 8bit sRGB (if it isn't yet). This is important to lower the filesize, and PNG for example can't take higher than 16bit. :menuselection:`Image --> Convert Image Color Space` and set the options to **RGB**, **8bit** and **sRGB-elle-v2-srgbtrc.icc** respectively. If you are coming from a linear space, uncheck **little CMS** optimisations
+3. Convert the color space to 8bit sRGB (if it isn't yet). This is important to lower the filesize, and PNG for example can't take higher than 16bit. :menuselection:`Image --> Convert Image Color Space...` and set the options to **RGB**, **8bit** and **sRGB-elle-v2-srgbtrc.icc** respectively. If you are coming from a linear space, uncheck **little CMS** optimisations
 
-4. Resize! Go to :menuselection:`Image --> Scale Image To New Size` or use the :kbd:`Ctrl + Alt + I` shortcut. This calls up the resize menu. A good rule of thumb for resizing is that you try to get both sizes to be less than 1200 pixels. (This being the size of HD formats). You can easily get there by setting the **Resolution** under **Print Size** to **72** dots per inch. Then press **OK** to have everything resized.
+4. Resize! Go to :menuselection:`Image --> Scale Image To New Size...` or use the :kbd:`Ctrl + Alt + I` shortcut. This calls up the resize menu. A good rule of thumb for resizing is that you try to get both sizes to be less than 1200 pixels. (This being the size of HD formats). You can easily get there by setting the **Resolution** under **Print Size** to **72** dots per inch. Then press **OK** to have everything resized.
 
-5. Save as a web-safe image format. There's three that are especially recommended:
+5. Sharpen the image a little. This is especially necessary for social media. Social media websites often scale and convert your image in such a way that it gets a little blurry, because they optimize towards photos and not paintings. To have your images stay sharp, it is worth it to run a sharpen filter beforehand. Because the sharpen filter is quite powerful, you are best off adding a sharpen filter mask on top of the stack and lowering it's opacity till you feel the sharpness is appropriate.
+
+6. Save as a web-safe image format. There's three that are especially recommended:
 
 JPG
 """
@@ -46,6 +48,6 @@ Saving with Transparency
 
 .. image:: /images/Save_with_transparency.png
 
-Saving with transparency is only possible with gif and png. First, make sure you see the transparency checkers (this can be done by simply hiding the bottom layers, changing the projection color in :menuselection:`Image --> Image Background Color and Transparency`, or by using :menuselection:`Filters --> Colors --> Color to Alpha`). Then, save as PNG and tick **Store alpha channel (transparency)**
+Saving with transparency is only possible with GIF and PNG. First, make sure you see the transparency checkers (this can be done by simply hiding the bottom layers, changing the projection color in :menuselection:`Image --> Image Background Color and Transparency...`, or by using :menuselection:`Filters --> Colors --> Color to Alpha...`). Then, save as PNG and tick **Store alpha channel (transparency)**
 
 Save your image, upload, and show it off!

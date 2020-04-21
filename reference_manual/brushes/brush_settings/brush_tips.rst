@@ -123,11 +123,11 @@ Predefined Brushes
 If you have used other applications like :program:`GIMP` or :program:`Photoshop`, you will have used this kind of brush. :program:`Krita` is (mostly) compatible with the brush tip definitions files of these applications:
 
 abr
-    GIMP autobrush tip definitions.
+    Gimp autobrush tip definitions.
 :ref:`file_gbr`
-    GIMP single bitmap brush tip. Can be black and white or colored.
+    Gimp single bitmap brush tip. Can be black and white or colored.
 :ref:`file_gih`
-    GIMP Image Hose brush tip: contains a series of brush tips that are painted randomly or in order after each other. Can be black and white or colored. :program:`Krita` does not yet support all the parameters yet.
+    Gimp Image Hose brush tip: contains a series of brush tips that are painted randomly or in order after each other. Can be black and white or colored. :program:`Krita` does not yet support all the parameters yet.
 abr
     Photoshop brush tip collections. We support many of the features of these brush files, though some advanced features are not supported yet.
 

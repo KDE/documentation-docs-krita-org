@@ -32,8 +32,8 @@ The freehand brush tool's hotkey is :kbd:`B`.
 * The Primary setting is "size" (standardly invoked by the :kbd:`Shift` key). Press the :kbd:`Shift` key and drag outward to increase brush size. Drag inward to decrease it.
 * You can also press the :kbd:`V` key as a stickykey for the straight-line tool.
 
-The hotkey can be edited in :menuselection:`Settings --> Configure Krita --> Configure Shortcuts`.
-The sticky-keys can be edited in :menuselection:`Settings --> Configure Krita --> Canvas Input Settings`.
+The hotkey can be edited in :menuselection:`Settings --> Configure Krita... --> Shortcuts`.
+The sticky-keys can be edited in :menuselection:`Settings --> Configure Krita... --> Canvas Input Settings`.
 
 Tool Options
 ------------

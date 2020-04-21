@@ -45,5 +45,6 @@ The contents of the toolbox docker.
    tools/contiguous_select
    tools/path_select
    tools/similar_select
+   tools/magnetic_select
    tools/zoom
    tools/pan

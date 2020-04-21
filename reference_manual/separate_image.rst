@@ -1,6 +1,6 @@
 .. meta::
    :description:
-        The channel separation dialog in Krita
+        The channel separation dialog in Krita.
 
 .. metadata-placeholder
 
@@ -38,3 +38,5 @@ Downscale to 8bit before separating.
     Convert the image to 8bit before doing the separation.
 Output to color, not grayscale.
     This results in the Red separation using black to red instead of black to white. This can make it easier to recombine using certain methods.
+Activate the current channel
+    If the separated layers are in color, activate only the channel that was the origin of this separation layer.

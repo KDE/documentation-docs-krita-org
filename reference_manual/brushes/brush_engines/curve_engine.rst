@@ -26,7 +26,7 @@ Settings
 
 First off, the line produced by the Curve brush is made up of 2 sections:
 
-* The connection line, which is the main line drawn by your mouse
+* The connection line, which is the main line drawn by your mouse.
 
 * The curve lines I think, which are the extra fancy lines that form at curves. The curve lines are formed by connecting one point of the curve to a point earlier on the curve. This also means that if you are drawing a straight line, these lines won't be visible, since they'll overlap with the connection line. Drawing faster gives you wider curves areas.
 
@@ -51,7 +51,7 @@ You have access to 3 settings from the Lines tab, as well as 2 corresponding dyn
 
 In addition, you have access to two checkboxes:
 
-* Paint connection line, which toggles the visibility of the connection line
+* Paint connection line, which toggles the visibility of the connection line.
 * Smoothing, which... I have no idea actually. I don't see any differences with or without it. Maybe it's for tablets?
 
 .. image:: /images/brushes/Krita-tutorial6-I.1-2.png

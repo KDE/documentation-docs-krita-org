@@ -180,6 +180,8 @@ rst_epilog = """
 
 .. |toolselectpolygon| image:: /images/icons/polygonal_select_tool.svg
 
+.. |toolselectmagnetic| image:: /images/icons/magnetic_select_tool.svg
+
 .. |toolselectpath| image:: /images/icons/path_select_tool.svg
 
 .. |toolselectoutline| image:: /images/icons/outline_select_tool.svg

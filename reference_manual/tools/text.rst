@@ -36,7 +36,7 @@ Create new texts with...
     Size in pt
         The letter-size used by newly created texts. It is in pts (points), which is a common standard for fonts that is measured 72 points per inch. It therefore will stay proportionally the same size if you increase or decrease canvas dpi.
     Anchor/Align text to the left/middle/right
-        Text alignment. This allows you to align text to the left, center it, or to the right. This is called text-anchor because svg 1.1's multiline text only uses text-anchor, and this is a slight bit different than text-align (and also the reason justify isn't available at the moment).
+        Text alignment. This allows you to align text to the left, center it, or to the right. This is called text-anchor because SVG 1.1's multiline text only uses text-anchor, and this is a slight bit different than text-align (and also the reason justify isn't available at the moment).
 Edit Text
     This will summon the text editor for the currently selected shape. This can be quickly invoked with either pressing the :kbd:`Enter` key or :kbd:`double-click +` |mouseleft| shortcut on the shape.
 
@@ -55,9 +55,9 @@ Activating
     #. Select the text with the shape selection tool (first tool). Then click the Text tool. In the tool options there is an :guilabel:`Edit Text` button. When you click that the text editor window will appear. 
 
 Editing
-    If you are unfamiliar with the way svg text works, use the rich text tab, it will allow you to edit the text as you see it, at the cost of not having all functionality.
+    If you are unfamiliar with the way SVG text works, use the rich text tab, it will allow you to edit the text as you see it, at the cost of not having all functionality.
 
-If you are a little bit more familiar with svg text, you can directly edit the SVG source. Do note that certain things, like stroke, fill, letter-spacing don't convert back to the rich text editor, so do be careful when switching back.
+If you are a little bit more familiar with SVG text, you can directly edit the SVG source. Do note that certain things, like stroke, fill, letter-spacing don't convert back to the rich text editor, so do be careful when switching back.
 
 Press :guilabel:`Save` as you're done with your edits to preview them on canvas.
 
@@ -153,7 +153,7 @@ Colors
     Value
         The format for highlighting value of attributes.
     Comment
-        This highlights xml comments, which are written as following: ``<!-- This is an xml comment -->``. Comments are pieces of text that never get interpreted.
+        This highlights XML comments, which are written as following: ``<!-- This is an XML comment -->``. Comments are pieces of text that never get interpreted.
     Editor Text Color
         The main color of the editor.
     Editor background color

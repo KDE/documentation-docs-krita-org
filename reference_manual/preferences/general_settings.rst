@@ -16,7 +16,7 @@
 General Settings
 ================
 
-You can access the General Category of the preferences by first going to  :menuselection:`Settings --> Configure Krita`.
+You can access the General Category of the preferences by first going to :menuselection:`Settings --> Configure Krita...` menu item.
 
     .. image:: /images/preferences/Krita_Preferences_General.png
 
@@ -208,13 +208,13 @@ Backup File Location
         This stored the file in the temp folder. Temp folders are special folders of which the contents are emptied when you shut down your computer. If you don't particularly care about your backup files and want them to be 'cleaned' automatically, this is the best place. If you want your backup files to be kept indefinitely, this is a wrong choice.
     
 Backup File Suffix
-    The suffix that will be placed after the full filename. 'filename.kra' will then be saved as 'filename.kra~', ensuring the files won't show up in Krita's open file dialog.
+    The suffix that will be placed after the full filename. '*filename.kra*' will then be saved as '*filename.kra~*', ensuring the files won't show up in Krita's open file dialog.
 Number of Backup Files Kept
     Number of backup files Krita keeps, by default this is only one, but this can be up to 99. Krita will then number the backup files.
-Compress \*.kra files more.
-    This increases the zip compression on the saved Krita files, which makes them lighter on disk, but this takes longer to load.
+Compress \*.kra files more (slows loading/saving)
+    This increases the ZIP compression on the saved Krita files, which makes them lighter on disk, but this takes longer to load.
 Use Zip64
-    Kra files are zip files. Zip64 allows you to use
+    KRA files are ZIP files. Zip64 allows you to use.
 
 
 .. _misc_settings:

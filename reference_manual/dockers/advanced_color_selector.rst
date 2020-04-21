@@ -173,4 +173,4 @@ In the gamut masking toolbar at the top of the selector you can toggle the selec
 External Info
 -------------
 
-`HSI and HSY for Krita’s advanced color selector. <https://wolthera.info/?p=726>`_
+`HSI and HSY for Krita’s advanced color selector <https://wolthera.info/?p=726>`_.

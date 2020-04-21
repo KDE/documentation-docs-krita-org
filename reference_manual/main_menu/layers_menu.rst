@@ -6,6 +6,7 @@
 
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - Scott Petrovic
+             - Raghavendra Kamath <raghu@raghukamath.com>
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Layers, Cut Layer, Copy Layer, Paste Layer, Convert, Import, Export, Transform, Metadata, Histogram, Flatten, Layer Style
@@ -50,7 +51,7 @@ Import/Export
         Import an image as a layer into the current file.
     Import as...
         Import an image as a specific layer type. The following layer types are supported:
-                
+
             * Paint layer
             * Transparency Mask
             * Filter Mask
@@ -69,6 +70,8 @@ Convert
             Convert a layer to a filter mask. The image will be converted to grayscale first, and these grayscale values are used to drive the filter effect area.
         Selection Mask
             Convert a layer to a selection mask. The image will be converted to grayscale first, and these grayscale values are used to drive the selected area.
+        File Layer
+            Convert the selected layer in to a file layer. This will open a dialog box, which will ask the user for a location to save the layer as file layer and reference it in place of the original layer. This feature cannot be used if the selected layer is either a clone layer or a file layer.
         Convert Group to Animated Layer
             This takes the images in the group layer and makes them into frames of an animated layer.
         Convert Layer Color Space
@@ -114,7 +117,7 @@ Transform
     Offset Layer
         Offset the layer pixels by a given amount.
 
-Split...
+Split
     Organizes the following actions:
 
     Split Alpha
@@ -124,7 +127,7 @@ Split...
     Clones Array
         A complex bit of functionality to generate clone-layers for quick sprite making. See :ref:`clones_array` for more details.
 
-Edit Metadata
+Edit Metadata...
     Each layer can have its own metadata.
 Histogram
     Shows a histogram.
@@ -133,13 +136,13 @@ Histogram
 
        Removed. Use the :ref:`histogram_docker` instead.
 
-Merge With Layer Below
+Merge with Layer Below
     Merge a layer down.
 Flatten Layer
     Flatten a Group Layer or flatten the masks into any other layer.
 Rasterize Layer
     For making vectors into raster layers.
 Flatten Image
-    Flatten all layers into one.
-Layerstyle (2.9.5+)
+    Flatten all layers into one. Shortcut :kbd:`Ctrl + Shift + E`
+Layerstyle... (2.9.5+)
     Set the PS-style layerstyle.

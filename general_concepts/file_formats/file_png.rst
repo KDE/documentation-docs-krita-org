@@ -8,7 +8,7 @@
              - Boudewijn Rempt
    :license: GNU free documentation license 1.3 or later.
 
-.. index:: *.png, png, portable network graphics
+.. index:: *.png, PNG, portable network graphics
 
 .. _file_png:
 

@@ -21,7 +21,7 @@ Activating Instant Preview
 
 .. warning::
     
-    Instant Preview requires OpenGL 3.0 support at minimum. So if you don't have :guilabel:`high-quality` scaling available in :menuselection:`Settings --> Configure Krita --> Display --> Display scaling filter`, then you won't be able to use Instant Preview either.
+    Instant Preview requires OpenGL 3.0 support at minimum. So if you don't have :guilabel:`high-quality` scaling available in :menuselection:`Settings --> Configure Krita... --> Display --> Display scaling filter`, then you won't be able to use Instant Preview either.
     
 .. figure:: /images/brushes/Lod_position.png
    :align: right

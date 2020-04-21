@@ -77,5 +77,5 @@ This allows you to set the texture to Sensors. It will use the cutoff to continu
 
 .. seealso::
 
-    `David Revoy describing the texture feature (old). <https://www.davidrevoy.com/article107/textured-brush-in-floss-digital-painting>`_
+    `David Revoy describing the texture feature (old) <https://www.davidrevoy.com/article107/textured-brush-in-floss-digital-painting>`_.
 

@@ -1,6 +1,6 @@
 .. meta::
    :description:
-       The Pop-up Palette in Krita
+       The Pop-up Palette in Krita.
 
 .. metadata-placeholder
 
@@ -17,7 +17,7 @@ The Pop-up Palette is a feature unique to Krita amongst the digital painting app
 
 .. image:: /images/popup-palette-detail.svg
 
-As shown in the image above, the pop-up palette has the following tools and quick access shortcuts integrated into it
+As shown in the image above, the pop-up palette has the following tools and quick access shortcuts integrated into it.
 
 - Foreground color and Background color indicators on the top left of the palette.
 - A canvas rotation circular slider, which can help the artist quickly rotate the canvas while painting.

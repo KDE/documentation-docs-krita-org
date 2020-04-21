@@ -1,6 +1,6 @@
 .. meta::
    :description:
-        How AutoSave and Backup Files Work in Krita
+        How AutoSave and Backup Files Work in Krita.
 
 .. metadata-placeholder
 
@@ -26,11 +26,11 @@ Additionally, you can export your work to other formats, for compatibility with 
 
 If you save your work, Krita will ask you where it should save on your computer. By default, this is the Pictures folder in your User folder: this is true for all operating systems.
 
-If you use "Save As" your image will be saved under a new name. The original file under its own name will not be deleted. From now on, your file will be saved under the new name.
+If you use :guilabel:`Save As...` your image will be saved under a new name. The original file under its own name will not be deleted. From now on, your file will be saved under the new name.
 
-If you use "Export" using a new filename, a new file will be created with a new name. The file you have open will keep the new name, and the next time you save it, it will be saved under the old name.
+If you use :guilabel:`Export...` using a new filename, a new file will be created with a new name. The file you have open will keep the old name, and the next time you save it, it will be saved under the old name.
 
-You can Save, Save As and Export to any file format.
+You can :guilabel:`Save`, :guilabel:`Save As...` and :guilabel:`Export...` to any file format.
 
 
 See also
@@ -42,7 +42,7 @@ See also
 AutoSave
 --------
 
-AutoSave is what happens when you've worked for a bit and not saved your work yourself: Krita will save your work for you. Autosave files are by default hidden in your file manager. You can configure Krita 4.2 and up to create autosave files that are visible in your file manager. By default, Krita autosaves every fifteen minutes; you can configure that in the File tab of the General Settings page of the Configure Krita dialog, which is in the Settings menu (Linux, Windows) or in the Application menu (macOS).
+AutoSave is what happens when you've worked for a bit and not saved your work yourself: Krita will save your work for you. Autosave files are by default hidden in your file manager. You can configure Krita 4.2 and up to create autosave files that are visible in your file manager. By default, Krita autosaves every fifteen minutes; you can configure that in the File tab of the General Settings page of the :guilabel:`Configure Krita` dialog, which is in the Settings menu (Linux, Windows) or in the Application menu (macOS).
 
 If you close Krita without saving, your unsaved work is lost and cannot be retrieved. Closing Krita normally also means that autosave files are removed.
 
@@ -89,9 +89,9 @@ If you choose "no", the AutoSave file will be removed. The work that has been do
 
 If you choose "yes", the AutoSave file will be opened, then removed. The file you have open will have the name of your original file. The file will be set to Modified, so the next time you try to close Krita, Krita will ask you whether you want to save the file. If you choose No, your work is irretrievably gone. It cannot be restored.
 
-If you use "Save As" your image will be saved under a new name. The original file under its own name and its AutoSave file are not deleted. From now on, your file will be saved under the new name; if you save again, an AutoSave file will be created using the new filename.
+If you use :guilabel:`Save As...` your image will be saved under a new name. The original file under its own name and its AutoSave file are not deleted. From now on, your file will be saved under the new name; if you save again, an AutoSave file will be created using the new filename.
 
-If you use "Export" using a new filename, a new file will be created with a new name. The file you have open will keep the new name, and the next time you save it, the AutoSave file will be created from the last file saved with the current name, that is, not the name you choose for "Export".
+If you use :guilabel:`Export...` using a new filename, a new file will be created with a new name. The file you have open will keep the new name, and the next time you save it, the AutoSave file will be created from the last file saved with the current name, that is, not the name you choose for :guilabel:`Export...`.
 
 
 Backup Files
@@ -109,7 +109,7 @@ Ordinary Backup Files
 
 If you have opened a file, made changes, then save it, or save a new file after the first time you've saved it, Krita will save a backup of your file. 
 
-You can disable this mechanism in the File tab of the General Settings page of the Configure Krita dialog, which is in the Settings menu (Linux, Windows) or in the Application menu (macOS). By default, Backup files are enabled. 
+You can disable this mechanism in the File tab of the General Settings page of the :guilabel:`Configure Krita` dialog, which is in the Settings menu (Linux, Windows) or in the Application menu (macOS). By default, Backup files are enabled.
 
 .. image:: /images/file_config_page.png
 

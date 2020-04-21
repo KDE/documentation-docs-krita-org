@@ -1,6 +1,6 @@
 .. meta::
    :description lang=en:
-        A tutorial about making rainbow brush in krita
+        A tutorial about making rainbow brush in krita.
 
 .. metadata-placeholder
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
@@ -22,12 +22,12 @@ Yes there is.
 First, select the fill_circle:
 
 .. image:: /images/brush-tips/Brushtip-Rainbow.png
-    :alt: selecting fill circle for brush tip
+    :alt: Selecting fill circle for brush tip.
 
 Then, press the :kbd:`F5` key to open the brush editor, and toggle **Hue**.
 
 .. image:: /images/brush-tips/Brushtip-Rainbow_2.png
-    :alt: toggle hue in the brush parameter
+    :alt: Toggle hue in the brush parameter.
 
 This should allow you to change the color depending on the pressure.
 
@@ -36,6 +36,6 @@ This should allow you to change the color depending on the pressure.
 Uncheck **Pressure** and check **Distance** to make the rainbow paint itself over distance. The slider below can be |mouseright| to change the value with keyboard input.
 
 .. image:: /images/brush-tips/Brushtip-Rainbow_3.png
-    :alt: select distance parameter for the hue
+    :alt: Select distance parameter for the hue.
 
 When you are satisfied, give the brush a new name and save it.

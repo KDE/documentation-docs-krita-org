@@ -302,8 +302,8 @@ Suppose you want more or less smooth color transitions. You can either:
 * :guilabel:`Color Rate` as low as 0.10 for round brushes, higher with non fully opaque brush tips.
 * Or set the :guilabel:`Smudge Rate` as low as 0.10 instead. 
 * Or a combination of the two. Please try yourself for the output you like best.
-* Optional: turn on :guilabel:`Rotation` for smoother blending
-* Optional: turn on :guilabel:`Scatter` for certain effects
+* Optional: turn on :guilabel:`Rotation` for smoother blending.
+* Optional: turn on :guilabel:`Scatter` for certain effects.
 * Optional: fiddle with :guilabel:`Size` and :guilabel:`Opacity` dynamics as necessary.
 
 .. image:: /images/brushes/Krita-tutorial5-III.2-1.png

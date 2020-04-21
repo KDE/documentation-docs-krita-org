@@ -39,9 +39,9 @@ ImageMagick
 
         import -depth 8 -dither <filename.png>
 
-While we should minimize the amount of gifs in the manual for a variety of accessibility reasons, you sometimes still need to make gifs and short videos. Furthermore, gifs are quite nice to show off features with release notes.
+While we should minimize the amount of GIFs in the manual for a variety of accessibility reasons, you sometimes still need to make GIFs and short videos. Furthermore, GIFs are quite nice to show off features with release notes.
 
-For making short gifs, you can use the following programs:
+For making short GIFs, you can use the following programs:
 
 * `Peek <https://github.com/phw/peek>`_ -- This one has an appimage and a very easy user-interface. Like many screenrecording programs it does show trouble on Wayland.
 
@@ -56,19 +56,19 @@ The appropriate file format for the job
 Different file formats are better for certain types of images. In the end, we want to have images that look nice and have a low filesize, because that makes the manual easier to download or browse on the internet.
 
 GUI screenshots
-    This should use png, and if possible, in gif.
+    This should use PNG, and if possible, in GIF.
 Images that have a lot of flat colors.
-    This should use png.
+    This should use PNG.
 Grayscale images
-    These should be gif or png.
+    These should be GIF or PNG.
 Images with a lot of gradients
     These should be JPG.
 Images with a lot of transparency.
     These should use PNG.
 
-The logic is the way how each of these saves colors. Jpeg is ideal for photos and images with a lot of gradients because it :ref:`compresses differently <lossy_compression>`. However, contrasts don't do well in jpeg. PNG does a lot better with images with sharp contrasts, while in some cases we can even have less than 256 colors, so gif might be better.
+The logic is the way how each of these saves colors. JPEG is ideal for photos and images with a lot of gradients because it :ref:`compresses differently <lossy_compression>`. However, contrasts don't do well in JPEG. PNG does a lot better with images with sharp contrasts, while in some cases we can even have less than 256 colors, so GIF might be better.
 
-Grayscale images, even when they have a lot of gradients variation, should be PNG. The reason is that when we use full color images, we are, depending on the image, using 3 to 5 numbers to describe those values, with each of those values having a possibility to contain any of 256 values. JPEG and other 'lossy' file formats use clever psychological tricks to cut back on the amount of values an image needs to show its contents. However, when we make grayscale images, we only keep track of the lightness. The lightness is only one number, that can have 256 values, making it much easier to just use gif or PNG, instead of jpeg which could have nasty artifacts. (And, it is also a bit smaller)
+Grayscale images, even when they have a lot of gradients variation, should be PNG. The reason is that when we use full color images, we are, depending on the image, using 3 to 5 numbers to describe those values, with each of those values having a possibility to contain any of 256 values. JPEG and other 'lossy' file formats use clever psychological tricks to cut back on the amount of values an image needs to show its contents. However, when we make grayscale images, we only keep track of the lightness. The lightness is only one number, that can have 256 values, making it much easier to just use GIF or PNG, instead of JPEG which could have nasty artifacts. (And, it is also a bit smaller)
 
 **When in doubt, use PNG.**
 
@@ -113,7 +113,7 @@ There is a whole laundry list of `PNG optimisation tools <https://css-ig.net/png
 
         optipng image.png
 
-    where image is the filename. OptiPNG will then proceed to test several compression algorithms and **overwrite** the image.png file with the optimised version. You can avoid overwriting with the ``--out imageout.png`` command.    
+    where image is the filename. OptiPNG will then proceed to test several compression algorithms and **overwrite** the *image.png* file with the optimised version. You can avoid overwriting with the ``--out imageout.png`` command.    
 
 Optimising GIF
 ^^^^^^^^^^^^^^
@@ -190,7 +190,7 @@ OptiPNG
 Extracting metadata
 ~~~~~~~~~~~~~~~~~~~
 
-Sometimes we want to extract metadata, like an icc profile, before stripping everything. This is done by converting the image to the profile type:
+Sometimes we want to extract metadata, like an ICC profile, before stripping everything. This is done by converting the image to the profile type:
 
 `ImageMagick's Convert <https://imagemagick.org/script/command-line-options.php#profile>`_
     First extract the metadata to a profile by converting::

@@ -16,9 +16,9 @@
 Render Animation
 ================ 
 
-Render animation allows you to render your animation to an image sequence, gif, mp4, mkv, or ogg file. It replaces :guilabel:`Export Animation`.
+Render animation allows you to render your animation to an image sequence, ``.gif``, ``.mp4``, ``.mkv``, or ``.ogg`` file. It replaces :guilabel:`Export Animation`.
 
-For rendering to an animated file format, Krita will first render to a png sequence and then use FFmpeg, which is really good at encoding into video files, to render that sequence to an animated file format. The reason for this two-step process is that animation files can be really complex and really big, and this is the best way to allow you to keep control over the export process. For example, if your computer has a hiccup, and one frame saves out weird, first saving the image sequence allows you to only resave that one weird frame before rendering.
+For rendering to an animated file format, Krita will first render to a PNG sequence and then use FFmpeg, which is really good at encoding into video files, to render that sequence to an animated file format. The reason for this two-step process is that animation files can be really complex and really big, and this is the best way to allow you to keep control over the export process. For example, if your computer has a hiccup, and one frame saves out weird, first saving the image sequence allows you to only resave that one weird frame before rendering.
 
 This means that you will need to find a good place to stick your frames before you can start rendering. If you only do throwaway animations, you can use a spot on your hard-drive with enough room and select :guilabel:`Delete Sequence After Rendering`.
 
@@ -28,7 +28,7 @@ Image Sequence
 Base Name
     The base name of your image sequence. This will get suffixed with a number depending on the frame.
 File Format
-    The file format to export the sequence to. When rendering we enforce png. The usual export options can be modified with :guilabel:`...`.
+    The file format to export the sequence to. When rendering we enforce PNG. The usual export options can be modified with :guilabel:`...`.
 Render Location
     Where you render the image sequence to. Some people prefer to use a flash-drive or perhaps a harddrive that is fast.
 First Frame
@@ -42,11 +42,11 @@ Render Animation
 ----------------
 
 Render As
-    The file format to render to. All except gif have extra options that can be manipulated via :guilabel:`...`.
+    The file format to render to. All except GIF have extra options that can be manipulated via :guilabel:`...`.
 File
     Location and name of the rendered animation.
 FFmpeg
-    The location where your have FFmpeg. If you don't have this, Krita cannot render an animation. For proper gif support, you will need FFmpeg 2.6, as we use its palettegen functionality.
+    The location where your have FFmpeg. If you don't have this, Krita cannot render an animation. For proper GIF support, you will need FFmpeg 2.6, as we use its palettegen functionality.
 Delete Sequence After Rendering
     Delete the prerendered image sequence after done rendering. This allows you to choose whether to try and save some space, or to save the sequence for when encoding fails.
 
@@ -77,7 +77,7 @@ Please see the section above. However, FFmpeg is obtained from `here <https://ev
 For Linux
 ^^^^^^^^^
 
-FFmpeg can be installed from the repositories on most Linux systems. Version 2.6 is required for proper gif support, as we use the palettegen functionality.
+FFmpeg can be installed from the repositories on most Linux systems. Version 2.6 is required for proper GIF support, as we use the palettegen functionality.
 
 Step 2 - Unzipping and Linking to Krita
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,7 +104,7 @@ Step 3 - Testing out an animation
 
 ffmpeg.exe is what Krita uses to do all of its animation export magic. Now that it is hooked up, let us test it out.
 
-Let's make an animated GIF. In the Render Animation dialog, change the :guilabel:`Render As`  field to "GIF image". Choose the file location where it will save with the "File" menu below. I just saved it to my desktop and called it "export.gif". When it is done, you should be able to open it up and see the animation. 
+Let's make an animated GIF. In the Render Animation dialog, change the :guilabel:`Render As`  field to "GIF image". Choose the file location where it will save with the "File" menu below. I just saved it to my desktop and called it "*export.gif*". When it is done, you should be able to open it up and see the animation. 
 
 .. warning::
 

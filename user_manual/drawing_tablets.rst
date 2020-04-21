@@ -100,9 +100,9 @@ Surface pro tablets need two drivers
 Certain tablets using n-trig, like the Surface Pro, have two types of
 drivers. One is native, n-trig and the other one is called wintab.
 Since 3.3, Krita can use Windows Ink style drivers, just go to 
-:menuselection:`Settings --> Configure Krita --> Tablet Settings` and 
-toggle the :guilabel:`Windows 8+ Pointer Input` there. You don't need to install
-the wintab drivers anymore for n-trig based pens.
+:menuselection:`Settings --> Configure Krita... --> Tablet Settings` and
+toggle the :guilabel:`Windows 8+ Pointer Input (Windows Ink)` there. You
+don't need to install the wintab drivers anymore for n-trig based pens.
 
 Windows 10 updates
 ~~~~~~~~~~~~~~~~~~
@@ -153,7 +153,7 @@ Sometimes, there's software that tries to make a security layer between
 Krita and the operating system. Sandboxie is an example of this.
 However, Krita cannot always connect to certain parts of the operating
 system while sandboxed, so it will often break in programs like
-sandboxie. Similarly, certain mouse software, like Razer utilities can
+Sandboxie. Similarly, certain mouse software, like Razer utilities can
 also affect whether Krita can talk to the operating system, converting
 tablet information to mouse information. This type of software should be
 configured to leave Krita alone, or be deinstalled.
@@ -163,7 +163,7 @@ to Krita:
 
 #. Sandboxie
 #. Razer mouse utilities
-#. AMD catalyst “game mode” (this broke the right click for someone)
+#. AMD Catalyst:sup:`TM` “game mode” (this broke the right click for someone)
 
 Flicks (Wait circle showing up and then calling the popup palette)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -171,7 +171,7 @@ Now then...
 .. figure:: /images/animation/Introduction_to_animation_13.png
    :width: 580
 
-   squashed the timeline docker a bit to save space
+   Squashed the timeline docker a bit to save space.
 
 #. Copy frame 0 to frame 2.
 #. Copy frame 1 to frame 3.
@@ -216,8 +216,10 @@ timeline docker. So you manually have to add them.
 
 .. image:: /images/animation/Introduction_to_animation_18.png
 
-You can show any given layer in the timeline by doing |mouseright| on the layer in
-the layer docker, and toggling :guilabel:`Show in Timeline`.
+To show a layer whether it's active or not, you can "pin" it to the 
+timeline by right-clicking |mouseright| on the layer in the layer docker, 
+and toggling :guilabel:`Pin to Timeline`. We recommend pinning any layers
+that you're currently animating on.
 
 .. image:: /images/animation/Introduction_to_animation_19.png
 
@@ -242,7 +244,7 @@ The images should be saved out as filenameXXX.png, giving their frame
 number.
 
 Then use something like Gimp (Linux, OSX, Windows), ImageMagick (Linux,
-OSX, Windows), or any other gif creator to make a gif out of your image
+OSX, Windows), or any other GIF creator to make a ``.gif`` out of your image
 sequence:
 
 .. image:: /images/animation/Introduction_to_animation_walkcycle_02.gif

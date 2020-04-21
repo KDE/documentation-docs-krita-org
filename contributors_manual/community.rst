@@ -1,6 +1,6 @@
 .. meta::
     :description:
-        Guide to the Krita community
+        Guide to the Krita community.
 
 .. metadata-placeholder
 
@@ -31,11 +31,13 @@ There are also the:
 You’ll find that there are a number of people are almost always around: the core team.
 
 * Boudewijn (irc: boud): project maintainer, lead developer. Works full-time on Krita. Manages the Krita Foundation, triages bugs, does social media and admin stuff. Boudewijn is also on Reddit as boudewijnrempt.
-* Dmitry (irc: dmitryk_log): lead developer. Works full-time on Krita.
-* Wolthera (irc: wolthera_laptop): developer, writes the manual and tutorials, triages bugs, helps people out
-* Scott Petrovic (irc: scottyp): UX designer, developer, webmaster
+* Dmitry (irc: dmitryK|log): lead developer. Works full-time on Krita.
+* Wolthera (irc: Wolthera_laptop): developer, writes the manual and tutorials, triages bugs, helps people out. Works full-time on Krita.
+* Ivan Yossi (irc: ivanyossi|log): developer. Works full-time on Krita.
+* Agata Cacko (irc: tiar): developer, user supporter. Works full-time on Krita. Also on reddit as u/-tiar- .
+* Scott Petrovic (irc: scottyp): UX designer, developer, webmaster.
 * David Revoy (irc: deevad): expert user, creates Pepper & Carrot, maintains the preset bundle.
-* Alvin Wong (irc: windragon): windows guru
+* Alvin Wong (irc: windragon): windows guru.
 * Ben Cooksley (irc: bcooksley): KDE system administrator. 
 
 Krita’s team spans the globe, but most development happens in Europe and Russia.

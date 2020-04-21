@@ -91,5 +91,5 @@ Default Selector Steps Settings
 
 External Info
 -------------
-- `HSI and HSY for Krita’s advanced colour selector by Wolthera van Hövell tot Westerflier. <https://wolthera.info/?p=726>`_
-- `The Color Wheel, Part 7 by James Gurney. <https://gurneyjourney.blogspot.com/2010/02/color-wheel-part-7.html>`_
+- `HSI and HSY for Krita’s advanced colour selector by Wolthera van Hövell tot Westerflier <https://wolthera.info/?p=726>`_.
+- `The Color Wheel, Part 7 by James Gurney <https://gurneyjourney.blogspot.com/2010/02/color-wheel-part-7.html>`_.

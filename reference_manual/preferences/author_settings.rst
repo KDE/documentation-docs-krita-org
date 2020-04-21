@@ -17,7 +17,7 @@ Author Profile Settings
 
 Krita allows creating an author profile that you can use to store contact info into your images.
 
-The main element is the author page. This page was overhauled massively in 4.0.
+The main element is the Author page. This page was overhauled massively in 4.0.
 
 By default, it will use the "Anonymous" profile, which contains nothing. To create a new profile, press the "+" button, and write up a name for the author profile.
 
@@ -38,11 +38,11 @@ Using the new profile
 
 To use a profile for your current drawing, go to :menuselection:`Settings --> Active Author Profile` and select the name you gave your profile. Then, when pressing :guilabel:`Save` on your current document, you will be able to see your last author profile as the last person who saved it in :menuselection:`File --> Document Information --> Author`.
 
-Exporting author metadata to Jpeg and Png
+Exporting author metadata to JPEG and PNG
 -----------------------------------------
 
 .. versionadded:: 4.0
 
-    The jpeg and png export both have :guilabel:`Sign with author data` options. Toggling these will store the Nickname and the *first entry in the contact info* into the metadata of png or jpeg.
+    The JPEG and PNG export both have :guilabel:`Sign with author data` options. Toggling these will store the Nickname and the *first entry in the contact info* into the metadata of PNG or JPEG.
 
     For the above example in the screenshot, that would result in: ``ExampleMan (http://example.com)`` being stored in the metadata.

@@ -54,7 +54,7 @@ Building Krita
 
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_intro_by-deevad.jpg
 
-To get started, all you need to do is get a copy of Krita and build it! This is not all that much much different from building something off GitHub... except that Krita is a very large compared to most software.  There are :ref:`build guides <building_krita>` to get you going on various platforms, but of course Linux is easiest.
+To get started, all you need to do is get a copy of Krita and build it! This is not all that much much different from building something off GitHub... except that Krita is very large compared to most software.  There are :ref:`build guides <building_krita>` to get you going on various platforms, but of course Linux is easiest.
 
 Working with the Krita codebase
 -------------------------------
@@ -161,9 +161,9 @@ Your fork will probably be located here:
     .. code-block:: bash
 
         # for ssh access
-        git clone git@invent.kde.org:<username>/krita.git
+        git clone git@invent.kde.org:<username>/docs-krita-org.git
         # for https access
-        git clone https://invent.kde.org/<username>/krita.git
+        git clone https://invent.kde.org/<username>/docs-krita-org.git
 
     You can also use the :guilabel:`Web IDE` to make your changes directly on invent.kde.org, but because Krita is a c++ program, we don't recommend this outside of typo fixes and doxygen documentation strings. You wouldn't be able to see the effect of your changes, after all!
 
@@ -172,9 +172,9 @@ Your fork will probably be located here:
     .. code-block:: bash
 
         # for ssh access
-        git remote add upstream git@invent.kde.org:kde/krita.git
+        git remote add upstream git@invent.kde.org:websites/docs-krita-org.git
         # for https access
-        git remote add upstream https://invent.kde.org/kde/krita.git
+        git remote add upstream https://invent.kde.org/websites/docs-krita-org.git
 
     After that, you can see all of your urls using:
 

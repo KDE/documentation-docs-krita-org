@@ -25,7 +25,7 @@ Brushes are ordered alphabetically. The brush that is selected by default when y
 Let's first review these mechanics:
 
 #. Select a brush tip. This can be a generated brush tip (round, square, star-shaped), a predefined bitmap brush tip, a custom brush tip or a text.
-#. Select the spacing: this determines how many impressions of the tip will be made along your stroke
+#. Select the spacing: this determines how many impressions of the tip will be made along your stroke.
 #. Select the effects: the pressure of your stylus, your speed of painting or other inputs can change the size, the color, the opacity or other aspects of the currently painted brush tip instance -- some applications call that a "dab".
 #. Depending on the brush mode, the previously painted brush tip instance is mixed with the current one, causing a darker, more painterly stroke, or the complete stroke is computed and put on your layer. You will see the stroke grow while painting in both cases, of course!
 

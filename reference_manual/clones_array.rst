@@ -1,6 +1,6 @@
 .. meta::
    :description:
-        The Clones Array functionality in Krita
+        The Clones Array functionality in Krita.
 
 .. metadata-placeholder
 

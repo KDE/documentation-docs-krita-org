@@ -20,7 +20,7 @@ This is part of Krita's python support.
    :width: 800
    :align: center
 
-The python plugin manager can be accessed from :menuselection:`Settings --> Configure Krita --> Python Plugin Manager`. It allows you decide which of the Python Plugins are active.
+The python plugin manager can be accessed from :menuselection:`Settings --> Configure Krita... --> Python Plugin Manager`. It allows you decide which of the Python Plugins are active.
 
 It will show you a list of python plugins Krita has found, as well as their description. By default, Python Plugins are disabled, because many python scripts are autostarted, so this ensures only the ones you want to run are being run.
 

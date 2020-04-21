@@ -1,13 +1,13 @@
 .. meta::
    :description:
-        The Gimp Brush file format as used in Krita.
+        The GIMP Brush file format as used in Krita.
 
 .. metadata-placeholder
 
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
    :license: GNU free documentation license 1.3 or later.
 
-.. index:: Gimp Brush, GBR, *.gbr
+.. index:: *.gbr, GBR, Gimp Brush
 .. _file_gbr:
 
 ======

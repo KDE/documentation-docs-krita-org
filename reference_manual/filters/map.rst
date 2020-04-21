@@ -55,3 +55,44 @@ Gradient Map
 Maps the lightness of the input to the selected gradient. Useful for fancy artistic effects.
 
 In 3.x you could only select predefined gradients. In 4.0, you can select gradients and change them on the fly, as well as use the gradient map filter as a filter layer or filter brush.
+
+Color Modes
+~~~~~~~~~~~
+
+* **Blend:** smoothly blend colors between stops
+* **Nearest:** selects color from nearest stops
+* **Dither:** dithers between stop colors as per `Dithering Threshold Modes`_.
+
+.. index:: Palette, Palettize
+
+Palettize
+---------
+
+Maps the color of the input to the nearest color in the selected palette. Useful for limiting color in pixel art and for artistic effects.
+
+Optional dithering may be applied with the covered value range controlled by the spread value.
+
+Colorspace Modes
+~~~~~~~~~~~~~~~~
+
+* **Lab:** finds nearest colors in Lab colorspace
+* **RGB:** finds nearest colors in RGB colorspace
+
+Dithering Threshold Modes
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* **Pattern:** uses the lightness or alpha value of the selected pattern to threshold the input color between palette colors
+* **Noise:** uses a randomly generated value per pixel to threshold the input color between palette colors
+
+Dithering Color Modes
+~~~~~~~~~~~~~~~~~~~~~
+
+* **Per-Component Offset:** independently offsets each color channel by the threshold amount, scaled by the offset scale value
+* **Nearest Colors:** finds the two nearest colors then applies the threshold amount to the relative distances of the two color to find the resulting color
+
+Dithering Alpha Modes
+~~~~~~~~~~~~~~~~~~~~~
+
+* **Clip:** thresholds alpha at the clip position
+* **Index:** uses the selected palette index as the transparent color
+* **Dither:** applies dither to the alpha value as per `Dithering Threshold Modes`_

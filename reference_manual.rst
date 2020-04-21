@@ -4,7 +4,7 @@
 Reference Manual
 ################
 
-A quick run-down of all of the tools that are available
+A quick run-down of all of the tools that are available.
 
 .. toctree::
    :maxdepth: 1

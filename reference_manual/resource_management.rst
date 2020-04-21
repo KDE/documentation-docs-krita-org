@@ -15,7 +15,7 @@
 Resource Management
 ===================
 
-Resources are pluggable bits of data, like brush presets or patterns. Krita has variety of resources and also has a good resource management starting from 2.9, making it really easy for artists to share and collate all the resources together
+Resources are pluggable bits of data, like brush presets or patterns. Krita has variety of resources and also has a good resource management starting from 2.9, making it really easy for artists to share and collate all the resources together.
 
 Bundles
 -------
@@ -62,9 +62,9 @@ Resource Zooming
 Managing Resources
 ------------------
 
-As mentioned earlier Krita has a flexible resource management system. Starting from version 2.9 you can share various resources mentioned above by sharing a single compressed zip file created within Krita.
+As mentioned earlier Krita has a flexible resource management system. Starting from version 2.9 you can share various resources mentioned above by sharing a single compressed ZIP file created within Krita.
 
-The manage resources section in the settings was also revamped for making it easy for the artists to prepare these bundle files. You can open manage resource section by going to :menuselection:`Settings`   then :menuselection:`Manage Resources`.
+The manage resources section in the settings was also revamped for making it easy for the artists to prepare these bundle files. You can open manage resource section by going to :menuselection:`Settings --> Manage Resources...` menu item.
 
 .. image:: /images/resources/Manageresources.png
    :align: center

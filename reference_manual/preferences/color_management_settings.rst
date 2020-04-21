@@ -57,6 +57,14 @@ Allow LittleCMS optimizations
 
 Uncheck this option when using Linear Light RGB or XYZ.
 
+
+Enforce palette colors: always select the nearest color from the active palette
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By default, palette selection widgets take the current foreground color, compare it to the swatches in it’s active palette and highlight the swatch that is nearest to the current foreground color.
+
+When ‘Enforce palette colors’ option is checked, it switches the internal color selector into a mode in which, instead of just highlighting the swatch, the current foreground color is replaced with the color of the nearest swatch.
+
+
 Display
 -------
 

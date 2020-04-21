@@ -20,10 +20,10 @@ Krita has had G'Mic integration for a long time, but this is its most stable inc
 
 You set it up as following:
 
-#. Download the gmic-krita appimage
-#. Make it executable
-#. Go to :menuselection:`Settings --> Configure Krita --> G'Mic plugin` and set G'MIC to the filepath there.
-#. Then restart Krita. 
+#. Download the gmic-krita appimage.
+#. Make it executable.
+#. Go to :menuselection:`Settings --> Configure Krita... --> G'Mic plugin` and set G'MIC to the filepath there.
+#. Then restart Krita.
 
 
 Updates to G'Mic
@@ -31,7 +31,7 @@ Updates to G'Mic
 
 There is a refresh button at the bottom of the G'Mic window that will update your version. You will need an internet connection to download the latest version.
 
-If you have issues downloading the update through the plugin, you can also do it manually. If you are trying to update and get an error, copy the URL that is displayed in the error dialog. It will be to a ".gmic" file. Download it from from your web browser and place the file in one of the following directories. 
+If you have issues downloading the update through the plugin, you can also do it manually. If you are trying to update and get an error, copy the URL that is displayed in the error dialog. It will be to a ".gmic" file. Download it from from your web browser and place the file in one of the following directories.
 
 - Windows : %APPDATA%/gmic/update2XX.gmic
 - Linux : $HOME/.config/gmic/update2XX.gmic

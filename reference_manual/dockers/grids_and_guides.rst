@@ -30,7 +30,7 @@ Show Grid
 Snap to Grid
     Toggles grid snapping on or off. This can also be achieved with the :kbd:`Shift + S` shortcut.
 Type
-    The type of Grid
+    The type of Grid.
 
     Rectangle
         An orthogonal grid.

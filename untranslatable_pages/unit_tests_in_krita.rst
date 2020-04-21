@@ -252,7 +252,7 @@ There are two helper functions to compare a given QImage against an image saved 
                                        const QString &prefix, const QString &name,
                                        int fuzzy = 0, int fuzzyAlpha = -1, int maxNumFailingPixels = 0);
 
-The functions search for a png file with path
+The functions search for a PNG file with path
 
 .. code::
 

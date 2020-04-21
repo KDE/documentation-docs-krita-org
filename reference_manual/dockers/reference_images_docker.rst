@@ -18,7 +18,7 @@ Reference Images Docker
 
 .. deprecated:: 4.0
     
-    This docker was removed in Krita 4.0 due to crashes on Windows. :ref:`The reference images tool in 4.1 replaces it. <reference_images_tool>`
+    This docker was removed in Krita 4.0 due to crashes on Windows. :ref:`The reference images tool in 4.1 replaces it. <reference_images_tool>`.
 
 .. image:: /images/dockers/400px-Krita_Reference_Images_Browse_Docker.png
 

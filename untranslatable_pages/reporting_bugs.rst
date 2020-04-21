@@ -91,11 +91,11 @@ Give all information. That means that you should give information about your ope
 
 - Operating system: fill in the requisite field in the bug tracker's form
 - Version: fill in the requisite field in the bug tracker's form
-- Hardware information: copy the information from the :menuselection:`Help --> System information` for Bug Reports window into your report. Note how many displays you have.
+- Hardware information: copy the information from the :menuselection:`Help --> Show System Information for Bug Reports` or Bug Reports window into your report. Note how many displays you have.
 - If you are using a drawing tablet, tell us the brand and type.
 - Tell us what kind of image you were working on: the size, the resolution, the color model and channel depth.
 - If you are reporting a crash, attach a crash log. Follow `this link <https://docs.krita.org/en/reference_manual/dr_minw_debugger.html#dr-minw>`_ to learn how to get a crash log on Windows. On Linux, follow your distribution's instructions to install debug symbols if you have installed Krita from a distribution package. It is not possible to create a useful crash log with Linux appimages.
-- Attach the contents of the Help->Show system information for bug reports dialog to the bug report.
+- Attach the contents of the :menuselection:`Help --> Show System Information for Bug Reports` dialog to the bug report.
 
 
 The problem needs to be clearly stated:
@@ -105,7 +105,7 @@ The problem needs to be clearly stated:
 
 Give a concise and short description, then enumerate the steps needed to reproduce the problem. If you cannot reproduce the problem, and it isn't a crash, think twice before making the report: the developers likely cannot reproduce it either.
 
-If at all possible, attach your original Krita file (the one that ends in .kra) to the bug report, or if it's too big, add a link for download. If you do that, make sure the file will be there for **years** to come: do not remove it.
+If at all possible, attach your original Krita file (the one that ends in ``.kra``) to the bug report, or if it's too big, add a link for download. If you do that, make sure the file will be there for **years** to come: do not remove it.
 
 If you think it would be useful, you can also attach or link to a video. Note that the Krita developers and bug triagers are extremely busy, and that it takes less time to read a good description and a set of steps to reproduce than it takes to watch a video for clues for what is going on.
 

@@ -1,6 +1,6 @@
 .. meta::
    :description:
-        The reference images tool
+        The reference images tool.
 
 .. metadata-placeholder
 
@@ -23,14 +23,16 @@ The reference images tool is a replacement for the reference images docker. You 
 Tool Options
 ------------
 
-Add reference image
+Add Reference Image
     Load a single image to display on the canvas.
+Paste Reference Image
+    Load an image from the system clipboard and add it as a reference image.
 Load Set
     Load a set of reference images.
 Save Set
     Save a set of reference images.
 Delete all reference images
-    Delete all the reference images
+    Delete all the reference images.
 Keep aspect ratio
     When toggled this will force the image to not get distorted.
 Opacity
@@ -41,10 +43,10 @@ Storage mode
     How is the reference image stored.
 
     Embed to \*.kra
-        Store this reference image into the kra file. This is recommended for small vital files you'd easily lose track of otherwise.
+        Store this reference image into the KRA file. This is recommended for small vital files you'd easily lose track of otherwise.
     Link to external file.
-        Only link to the reference image, krita will open it from the disk everytime it loads this file. This is recommended for big files, or files that change a lot.
-        
-You can move around reference images by selecting them with |mouseleft|, and dragging them. You can rotate reference images by holding the cursor close to the outside of the corners till the rotate cursor appears, while tilting is done by holding the cursor close to the outside of the middle nodes. Resizing can be done by dragging the nodes. You can delete a single reference image by clicking it and pressing the :kbd:`Del` key. You can select multiple reference images with the :kbd:`Shift` key and perform all of these actions.
+        Only link to the reference image, krita will open it from the disk everytime it loads this file. This is recommended for big files, or files that change a lot. This option is only available when reference images are loaded from a local path.
+
+You can move around reference images by selecting them with |mouseleft|, and dragging them. You can rotate reference images by holding the cursor close to the outside of the corners till the rotate cursor appears, while tilting is done by holding the cursor close to the outside of the middle nodes. Resizing can be done by dragging the nodes. You can delete a single reference image by clicking it and pressing :kbd:`Del`. You can select multiple reference images with :kbd:`Shift` and perform all of these actions.
 
 To hide all reference images temporarily use :menuselection:`View --> Show Reference Images`.

@@ -90,4 +90,4 @@ However, when we start projecting, the lights of the room aren't dimmed, which m
 
 In both cases, you can use Krita's color management a little to help you, but mostly, you just need to be ''aware'' of it, as Krita can hardly fix that you are looking at colors at night, or the fact that the presentation hall owner refuses to turn off the lights.
 
-That said, unless you have a display profile that uses LUTs, such as an OCIO LUT or a cLUT icc profile, white point won't matter much when choosing a working space, due to weirdness in the icc v4 workflow which always converts matrix profiles with relative colorimetric, meaning the white points are matched up.
+That said, unless you have a display profile that uses LUTs, such as an OCIO LUT or a cLUT ICC profile, white point won't matter much when choosing a working space, due to weirdness in the ICC v4 workflow which always converts matrix profiles with relative colorimetric, meaning the white points are matched up.

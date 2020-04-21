@@ -101,7 +101,7 @@ In-memory
 
         Please make sure your computer has enough RAM *above* the amount you requested in the :guilabel:`General` tab. Otherwise you might face system freezes.
 
-        * For 1 second of FullHD @ 25 FPS you will need 200 extra MiB of Memory
+        * For 1 second of FullHD @ 25 FPS you will need 200 extra MiB of Memory.
         * For 1 second of 4K UltraHD@ 25 FPS, you will need 800 extra MiB of Memory.
 
 On-disk

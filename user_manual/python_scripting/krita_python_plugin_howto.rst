@@ -27,7 +27,7 @@ These mini-tutorials are written for people with a basic understanding of python
 Getting Krita to recognize your plugin
 --------------------------------------
 
-A script in Krita has two components - the script directory (holding your script's Python files) and a ".desktop" file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the pykrita subdirectory of your Krita resources folder (on Linux  ~/.local/share/krita/pykrita). To find your resources folder start Krita and click the :menuselection:`Settings --> Manage Resources` menu item. This will open a dialog box. Click the :guilabel:`Open Resources Folder` button. This should open a file manager on your system at your Krita resources folder. See the `API <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html>`_ docs under "Auto starting scripts".  If there is no pykrita subfolder in the Krita resources directory use your file manager to create one. 
+A script in Krita has two components - the script directory (holding your script's Python files) and a ".desktop" file that Krita uses to load and register your script. For Krita to load your script both of these must put be in the pykrita subdirectory of your Krita resources folder (on Linux  ~/.local/share/krita/pykrita). To find your resources folder start Krita and click the :menuselection:`Settings --> Manage Resources...` menu item. This will open a dialog box. Click the :guilabel:`Open Resources Folder` button. This should open a file manager on your system at your Krita resources folder. See the `API <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html>`_ docs under "Auto starting scripts".  If there is no pykrita subfolder in the Krita resources directory use your file manager to create one.
 
 Scripts are identified by a file that ends in a .desktop extension that contain information about the script itself.
 
@@ -68,7 +68,7 @@ Krita python plugins need to be python modules, so make sure there's an __init__
 
 Where .myplugin is the name of the main file of your plugin. If you restart Krita, it now should show this in the Python Plugin Manager in the settings, but it will be grayed out, because there's no myplugin.py. If you hover over disabled plugins, you can see the error with them.
 
-.. note:: You need to explicitly enable your plugin. Go to the Settings menu, open the Configure Krita dialog and go to the Python Plugin Manager page and enable your plugin.
+.. note:: You need to explicitly enable your plugin. Go to the Settings menu, open the :guilabel:`Configure Krita` dialog and go to the Python Plugin Manager page and enable your plugin.
 
 Summary
 ^^^^^^^
@@ -329,7 +329,7 @@ Then, you need to add a PyQt slot definition before your function:
         print("The checkbox is"+enabledString)
 
 
-Then, when you have created your checkbox, you can do something like myCheckbox.toggled.connect(self.myFunction)
+Then, when you have created your checkbox, you can do something like myCheckbox.toggled.connect(self.myFunction).
 
 Similarly, to make your own PyQt signals, you do the following:
 

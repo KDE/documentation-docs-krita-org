@@ -15,7 +15,7 @@
 Brush Preset
 ============
 
-Paint Op presets store the preview thumbnail, brush-engine, the parameters, the brush tip, and, if possible, the texture. They are saved as .kpp files
+Paint Op presets store the preview thumbnail, brush-engine, the parameters, the brush tip, and, if possible, the texture. They are saved as .kpp files.
 
 For information regarding the brush system, see :ref:`Brushes <loading_saving_brushes>`.
 

@@ -42,10 +42,10 @@ Edit Menu
         Pastes the copied buffer into the image as a new layer. Shortcut: :kbd:`Ctrl + V`
 
     Paste at Cursor
-        Same as :term:`paste`, but aligns the image to the cursor.
+        Same as :term:`paste`, but aligns the image to the cursor. Shortcut: :kbd:`Ctrl + Alt + V`
 
-    Paste into new image
-        Pastes the copied buffer into a new image. 
+    Paste into New Image
+        Pastes the copied buffer into a new image. Shortcut: :kbd:`Ctrl + Shift + N`
 
     Clear
         Clear the current layer. Shortcut: :kbd:`Del`
@@ -56,7 +56,7 @@ Edit Menu
     Fill with Background Color
         Fills the layer or selection with the background color. Shortcut: :kbd:`Backspace`
 
-    Fill with pattern
+    Fill with Pattern
         Fills the layer or selection with the active pattern.
         
     Stroke Selected Shapes

@@ -57,7 +57,7 @@ Aims to solve issues with Color Burn blending mode by using a formula which fall
 .. figure:: /images/blending_modes/darken/Blending_modes_Easy_Burn_Sample_image_with_dots.png
    :align: center
 
-   Left: **Normal**. Right: **Easy Burn**
+   Left: **Normal**. Right: **Easy Burn**.
    
 .. index:: ! Fog Darken
 .. _bm_fog_darken:

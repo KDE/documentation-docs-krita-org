@@ -4,9 +4,8 @@
 
 .. metadata-placeholder
 
-   :authors:
-                - Agata Cacko <cacko.azh@gmail.com>
-   :license: GNU free documentation license 1.3 or later.
+   :authors:   Agata Cacko <cacko.azh@gmail.com>
+   :license:   GNU free documentation license 1.3 or later.
 
 .. index:: Backtrace, Debug, Log
 .. _sharing_logs:
@@ -69,7 +68,6 @@ The easiest way to get Krita Usage Log is through Krita's GUI. Go to  :menuselec
 
         In versions 4.2.0-4.2.9, Krita Usage Log is accessible through :menuselection:`Help --> Show system information for bug reports`. Note that for Krita versions 4.1.7 and below, no usage log is available and the menu entry only contains system information.
 
-
 From the file system
 ====================
 
@@ -106,29 +104,23 @@ The easiest way to get system information related to Krita is through Krita's GU
 
         In versions 4.2.0-4.2.8, this menu entry contains both system information and Krita Usage Log.
 
-
 From the file system
 ====================
 
 Sometimes however it is not possible to use Krita's GUI, for example when it doesn't even open. Since logs are regular text files, you can get them from your file system by yourself.
 
-The file is called :file:`krita.log`. Location of the file:
+The file is called :file:`krita-sysinfo.log`. Location of the file:
 
     Linux
-        :file:`$HOME/.local/share/krita-syslog.log`
+        :file:`$HOME/.local/share/krita-sysinfo.log`
     Windows
-        :file:`%LOCALAPPDATA%\\krita-syslog.log`
+        :file:`%LOCALAPPDATA%\\krita-sysinfo.log`
     MacOS X
-        :file:`$HOME/Library/Application Support/krita-syslog.log`
+        :file:`$HOME/Library/Application Support/krita-sysinfo.log`
 
 .. note::
 
     In Windows you can simply paste this path into the file browser textbox on the top bar and it will find you the file.
-    
-    .. versionchanged:: 4.2.9
-
-        Before version 4.2.9, this file is not created. To find the system information, you need to look for the file mentioned in :ref:`Krita Usage Log <krita_usage_log>`
-    
 
 .. _getting_backtrace:
 
@@ -187,7 +179,7 @@ On Linux it's recommended to use :literal:`gdb`.
         thread apply all bt full
 
 #. Short and long backtraces save to separate text files.
-#. From the short backtrace, it's recommended to cut out all threads that are identical to some others or don't seem to hold any additional information.
+#. From the short backtrace, it's recommended to cut out all threads that are identical to some others or don't seem to hold any additional information. 
 
     If you feel like you know which part of the backtrace is the most important (it's usually the longest thread), then cut it out and put this fragment in the bug report in a comment. Both backtraces still will be needed: attach them to the bug report as well.
 

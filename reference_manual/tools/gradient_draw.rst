@@ -6,6 +6,8 @@
 
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - Scott Petrovic
+             - Miguel Lopez <reptillia39@live.com>
+
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Tools, Gradient
@@ -26,14 +28,61 @@ Shape:
 
     Linear
         This will draw the gradient straight.
+
+        .. figure:: /images/gradients/gradient_painter/linear.png
+           :alt: Linear Gradient.
+
+           Left: **None**. Middle: **Forwards**. Right: **Alternating**.
+
+    Bilinear
+       This will draw the gradient straight, and mirrored along the axis.
+
+       .. figure:: /images/gradients/gradient_painter/bilinear.png
+
+          Left: **None**. Middle: **Forwards**. Right: **Alternating**.
+
     Radial
-        This will draw the gradient from a center, defined by where you start the stroke.
+       This will draw the gradient from a center, defined by where you start the stroke.
+
+       .. figure:: /images/gradients/gradient_painter/radial.png
+
+          Left: **None**. Middle: **Forwards**. Right: **Alternating**.
+
     Square
         This will draw the gradient from a center in a square shape, defined by where you start the stroke.
+
+        .. figure:: /images/gradients/gradient_painter/square.png
+
+           Left: **None**. Middle: **Forwards**. Right: **Alternating**.
+
     Conical
         This will wrap the gradient around a center, defined by where you start the stroke.
+
+        .. figure:: /images/gradients/gradient_painter/conical.png
+
+           Left: **None**. Middle: **Forwards**. Right: **Alternating**.
+
     Conical-symmetric
         This will wrap the gradient around a center, defined by where you start the stroke, but will mirror the wrap once.
+
+        .. figure:: /images/gradients/gradient_painter/conical_symmetric.png
+
+           Left: **None**. Middle: **Forwards**. Right: **Alternating**.
+
+    Spiral
+        This will draw the gradient spiral from a center, defined by where you start the stroke.
+
+        .. figure:: /images/gradients/gradient_painter/spiral.png
+
+           Left: **None**. Middle: **Forwards**. Right: **Alternating**.
+
+    Reverse Spiral
+        This will draw the gradient spiral from a center, defined by where you start the stroke, but direction is flipped perpendicular to the direction of stroke.
+
+        .. figure:: /images/gradients/gradient_painter/reverse_spiral.png
+
+           Left: **None**. Middle: **Forwards**. Right: **Alternating**.
+
     Shaped
         This will shape the gradient depending on the selection or layer.
 

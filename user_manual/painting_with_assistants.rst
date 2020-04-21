@@ -24,10 +24,10 @@ freehand brush tool. In the tool options of free hand brush, you can
 toggle :guilabel:`Snap to Assistants` to turn on snapping.
 
 .. figure:: /images/assistants/Krita_basic_assistants.png
-   :alt: Krita's vanishing point assistants in action
+   :alt: Krita's vanishing point assistants in action.
    :width: 800
 
-   Krita's vanishing point assistants in action
+   Krita's vanishing point assistants in action.
 
 The following assistants are available in Krita:
 

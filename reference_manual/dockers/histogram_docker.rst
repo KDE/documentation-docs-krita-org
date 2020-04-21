@@ -23,4 +23,4 @@ The histogram docker was already available via :menuselection:`Layers --> Histog
 
 External Links:
 
-* `Wikipedia's entry on image histograms. <https://en.wikipedia.org/wiki/Image_histogram>`_
+* `Wikipedia's entry on image histograms <https://en.wikipedia.org/wiki/Image_histogram>`_.

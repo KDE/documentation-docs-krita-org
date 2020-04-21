@@ -1,6 +1,6 @@
 .. meta::
    :description lang=en:
-        Common workflows used in Krita
+        Common workflows used in Krita.
 
 .. metadata-placeholder
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
@@ -21,12 +21,12 @@ Speed Painting and Conceptualizing
 
 Some artists work only on the digital medium, sketching and visualizing concepts in Krita from scratch. As the name suggests a technique of painting done within a matter of hours to quickly visualize the basic scene, character, look and feel of the environment or to denote the general mood and overall concept is called a **speed painting**. Finishing and finer details are not the main goals of this type of painting, but the representation of form value and layout is the main goal.
 
-Some artists set a time limit to complete the painting while some paint casually. Speed painting then can be taken forward by adding finer details and polish to create a final piece. Generally, artists first block in the composition by adding patches and blobs of flat colors, defining the silhouette, etc. Krita has some efficient brushes for this situation, for example, the brush under **Block Tag** like Block fuzzy, Block basic, layout_block, etc.
+Some artists set a time limit to complete the painting while some paint casually. Speed painting then can be taken forward by adding finer details and polish to create a final piece. Generally, artists first block in the composition by adding patches and blobs of flat colors, defining the silhouette, etc. Krita has some efficient brushes for this situation, for example, the brushes under **Block Tag** like Block fuzzy, Block basic, layout_block, etc.
 
 After the composition and a basic layout has been laid out the artists add as many details as possible in the given limited time, this requires a decent knowledge of forms, value perspective and proportions of the objects. Below is an example of speed paint done by `David Revoy <https://www.davidrevoy.com/>`_ in an hours time.
 
 .. image:: /images/Pepper-speedpaint-deevad.jpg
-    :alt: speedpaint of pepper and carrot by deevad (David Revoy)
+    :alt: Speedpaint of Pepper & Carrot by deevad (David Revoy).
     :width: 800
 
 Artwork by David Revoy, license : `CC-BY <https://creativecommons.org/licenses/by/3.0/>`_
@@ -36,50 +36,50 @@ You can view the recorded speed painting demo for the above image `on Youtube <h
 Colorizing Line Art
 -------------------
 
-Often an artist, for example, a comic book colorist will need to take a pencil sketch or other line art of some sort and use Krita to paint underneath it. This can be either an image created digitally or something that was done outside the computer and has been scanned.
+Often an artist, for example a comic book colorist, will need to take a pencil sketch or other line art of some sort and use Krita to paint underneath it. This can be either an image created digitally or something that was done outside the computer and has been scanned.
 
 Preparing the line art
 ^^^^^^^^^^^^^^^^^^^^^^
 
 If your images have a white or other single-tone background, you can use either of the following methods to prepare the art for coloring:
 
-Place the line art at the top of the layer stack and set its layer blending mode to :guilabel:`Multiply`
+Place the line art at the top of the layer stack and set its layer blending mode to :guilabel:`Multiply`.
 
-If you want to clean the line art a bit you can press the :kbd:`Ctrl + L` shortcut or go to :menuselection:`Filters --> Adjust --> Levels`
+If you want to clean the line art a bit you can press the :kbd:`Ctrl + L` shortcut or go to :menuselection:`Filters --> Adjust --> Levels`.
 
 .. image:: /images/filters/Levels-filter.png
-    :alt: level filter dialog
+    :alt: Level filter dialog.
 
 You can clean the unwanted grays by moving the white triangle in the input levels section to left and darken the black by moving the black triangle to right.
 
-If you draw in blue pencils and then ink your line art you may need to remove the blue lines first to do that go to :menuselection:`Filters --> Adjust --> Color adjustment` curves or press the :kbd:`Ctrl + M` shortcut.
+If you draw in blue pencils and then ink your line art you may need to remove the blue lines first to do that go to :menuselection:`Filters --> Adjust --> Color adjustment curves` or press the :kbd:`Ctrl + M` shortcut.
 
 .. image:: /images/common-workflows/Color-adjustment-cw.png
-    :alt: remove blue lines from image step 1
+    :alt: Remove blue lines from image step 1.
 
 Now select **Red** from the drop-down, click on the top right node on the graph and slide it all the way down. Or you can click on the top right node and enter **0** in the input field. Repeat this step for **Green** too.
 
 .. image:: /images/common-workflows/Color-adjustment-02.png
-    :alt: removing blue lines from scan step 2
+    :alt: Removing blue lines from scan step 2.
 
 Now the whole drawing will have a blue overlay, zoom in and check if the blue pencil lines are still visible slightly. If you still see them, then go to **Blue** Channel in the color adjustment and shift the top right node towards left a bit, Or enter a value around 190 (one that removes the remaining rough lines) in the input box.
 
 .. image:: /images/common-workflows/Color-adjustment-03.png
-    :alt: remove blue lines from scans step 3
+    :alt: Remove blue lines from scans step 3.
 
 Now apply the color adjustment filter, yes we still have lots of blue on the artwork. Be patient and move on to the next step. Go to :menuselection:`Filters --> Adjust --> Desaturate` or press the :kbd:`Ctrl + Shift + U` shortcut. Now select :guilabel:`Max` from the list.
 
 .. image:: /images/common-workflows/Color-adjustment-04.png
-    :alt: remove blue lines from scans step 4
+    :alt: Remove blue lines from scans step 4.
 
 .. hint:: It is good to use non-photo-blue pencils to create the blue lines as those are easy to remove. If you are drawing digitally in blue lines use #A4DDED color as this is closer to non-photo-blue color.
 
 You can learn more about doing a sketch from blue sketch to digital painting `here in a tutorial by David Revoy <https://www.davidrevoy.com/article239/clean-blue-sketch-traditional-line-art-to-color-it-digital-with-in-krita>`_.
 
-After you have a clean black and white line art you may need to erase the white color and keep only black line art, to achieve that go to :menuselection:`Filters --> Color --> Color to Alpha`. Use the dialog box to turn all the white areas of the image transparent. The Color Picker is set to White by default. If you have imported scanned art and need to select another color for the paper color then you would do it here.
+After you have a clean black and white line art you may need to erase the white color and keep only black line art, to achieve that go to :menuselection:`Filters --> Colors --> Color to Alpha...` menu item. Use the dialog box to turn all the white areas of the image transparent. The Color Picker is set to White by default. If you have imported scanned art and need to select another color for the paper color then you would do it here.
 
 .. image:: /images/filters/Color-to-alpha.png
-    :alt: color to alpha dialog box
+    :alt: Color to alpha dialog box.
 
 This will convert the white color in your line art to alpha i.e. it will make the white transparent leaving only the line art. Your line art can be in grayscale color space, this is a unique feature in Krita which allows you to keep a layer in a color-space independent from the image.
 
@@ -105,49 +105,48 @@ Filling with Flood Fill tool
 The second method is to use the Flood fill tool to fill large parts of your line art quickly. This method generally requires closed gaps in the line art. To begin with this method place your line art on a separate layer. Then activate the flood fill tool and set the :guilabel:`Grow selection` to 2px, uncheck :guilabel:`Limit to current layer` if previously checked.
 
 .. image:: /images/common-workflows/Floodfill-krita.png
-    :alt: flood fill in krita
+    :alt: Flood fill in krita.
 
 Choose a color from color selector and just click on the area you want to fill the color. As we have expanded the fill with grow selection the color will be filled slightly underneath the line art thus giving us a clean fill.
 
-GMIC Colorize [Interactive]
-"""""""""""""""""""""""""""
 
-The third method is to use take advantage of the integrated G'Mic filters. These are powerful filters that can dramatically improve your workflow and cut you down on your production time.
-To begin coloring with the G'MIC colorize interactive, go to :menuselection:`Filters --> G'MIC`. Choose :menuselection:`Filters --> G'MIC --> Black & white --> Colorize[interactive]` from the list of filters. Then select Line art for :menuselection:`Input type, Image + Colors (2 Layers)` for output type, set the view resolution according to your need. If you have any specific color palette to use for coloring add the path for it in an additional color palette. The example of the filter window with the required inputs is shown below.
+Colorize Mask
+"""""""""""""
 
-.. image:: /images/common-workflows/GMIC-colorize-interactive-krita.png
-    :alt: G'MIC window in Krita
+The third method is to take advantage of the built-in :ref:`colorize_mask`. This is a powerful tool that can dramatically improve your workflow and cut you down on your production time. To begin coloring with the Colorize Mask, select your line art layer and click the :guilabel:`Colorize Mask Editing Tool` icon in the toolbar.
 
-Press **Apply** to begin the coloring, this will open a color selector **palette** window and a window showing your line art. Choose the color from the palette and click on the areas that need to be filled with color like the example shown below.
+.. image:: /images/common-workflows/krita-colorize-mask-01.png
+    :alt: Colorize Mask Editing Tool in the toolbar.
+    :width: 300
 
-.. image:: /images/common-workflows/Krita-GMIC-colorize-interactive.png
-    :alt: G'MIC colorize interactive window
+With the Colorize Mask Editing Tool enabled, click on the canvas—this will add a Colorize Mask layer to your document and make your lineart look a little blurry. You can now lay down solid brush strokes to indicate which areas should be colored in what colors:
 
-If you feel that the dots are a bit distracting you can press the :kbd:`Tab` key to reduce the size or hide the dots. To zoom out you can press :kbd:`Ctrl + ↓` and :kbd:`Ctrl + ↑` shortcuts and vice versa. Panning is done by |mousemiddle| :kbd:`+ drag`. Press the :kbd:`Spacebar` key to generate the colors. If you want to replace a color select the color by |mousemiddle| and pressing the :kbd:`R` key then you can select an alternate color from the palette.
+.. image:: /images/common-workflows/krita-colorize-mask-02.png
+    :alt: Colorize Mask with brush strokes
 
-Once you have finished adding the desired flat colors you can press the :kbd:`Enter` key to apply the filter. Then don't forget to press **Ok** in the G'MIC dialog box.
+Whenever you press the :guilabel:`Update` button in the Tool Options, you will see which colors will fill which areas. You can continue to edit your brush strokes until you are happy with the result. To get a clean look of your painting, disable the "Edit key strokes" checkbox:
 
-The flats colors will be placed on a separate layer. You can check `this <https://www.davidrevoy.com/article240/gmic-line-art-colorization>`_ tutorial by David Revoy to know more about this technique.
+.. image:: /images/common-workflows/krita-colorize-mask-03.png
+    :alt: Colorize Mask result
 
-GMIC Colorize [comics]
-""""""""""""""""""""""
+Once you are done, you can convert the Colorize Mask layer into a paint layer in the Layers docker. Have a look at the :ref:`colorize_mask` manual to learn more about this tool.
 
-Krita provides one more option to prepare flat colors through G'MIC colorize comics filter. This technique needs some preparations before you run the G'MIC filter. This layer extrapolates the color spots that you input below the line art
+Changing Line Art Color
+^^^^^^^^^^^^^^^^^^^^^^^
 
-You have to create two layers below the line art, one for the color spots indicating which color you need to be filled in the region and one for the final extrapolated output of the filter. Mark some colors spots in the layer beneath the line art. The layer setup can be seen in the image below.
+To change the color of your line art, you can use the Alpha Lock feature. In the layer docker, click on the rightmost icon of your line art layer. It's the icon that looks like a little checker board:
 
-.. image:: /images/common-workflows/Colorize-krita.png
-    :alt: G'MIC colorize comics layer setup
+.. image:: /images/common-workflows/layer-alpha-lock.png
+    :alt: Alpha lock button
+    :width: 400
 
-The colors spots are marked in red in the image
+When Alpha Lock is enabled, you can only change the *color* of the pixels, not their opacity—meaning that everything you paint will only change the colors of your existing lines, not add new lines.
 
-Now go to :menuselection:`Filters --> G'MIC --> Black & white --> Colorize[comics]`. In the G'MIC dialog box, select :guilabel:`All` for input and :guilabel:`In place (default)` for output, select :guilabel:`Lineart + color spots + extrapolated layers` for both input and output layers on the right-hand side. Smoothness is for filling gap tolerance and details the default is 0.5 you can adjust it according to your line art.
+If you want to change the color of your line art to one solid color, you can now use the bucket fill tool and it will only apply to your existing lines. Or if you want to apply several different colors to specific areas of your line art, you can quickly paint over your line art with a broad brush:
 
-.. image:: /images/common-workflows/Colorise-comics-setting.png
-    :alt: Colorize Interactive dialog and settings
+.. image:: /images/common-workflows/color-lineart.png
+    :alt: Changing Line Art Color
 
-Press **Apply** and **Ok** to apply and exit the G'MIC dialog. You'll now have flat colors beneath your line art.
-More details about this technique can be found in the tutorial `at Timothée Giet's blog <https://timotheegiet.com/blog/comics/gmic-colorize-comics-working-in-krita.html>`_.
 
 Painting
 --------
@@ -160,7 +159,7 @@ Here, you start by making a mess through random shapes and texture, then taking 
 You can use brushes like the shape brush, or the spray brush to paint a lot of different shapes, and from the resulting noise, you let your brain pick out shapes and compositions.
 
 .. image:: /images/common-workflows/Chaos2.jpg
-    :alt: Starting a painting from chaotic sketch
+    :alt: Starting a painting from chaotic sketch.
 
 You then refine these shapes to look more like shapes you think they look, and paint them over with a normal paintbrush. This method is best done in a painting environment.
 
@@ -176,9 +175,9 @@ You can find more about this technique `here <https://www.davidrevoy.com/article
 Preparing Tiles and Textures
 ----------------------------
 
-Many artists use Krita to create textures for 3d assets used for games animation etc. Krita has many texture templates for you to choose and get started with creating textures. These templates have common sizes, bit depth and color profiles that are used for texturing workflow.
+Many artists use Krita to create textures for 3d assets used for games animation, etc. Krita has many texture templates for you to choose and get started with creating textures. These templates have common sizes, bit depth and color profiles that are used for texturing workflow.
 
-Krita also has a real-time seamless tile mode to help texture artist prepare tiles and texture easily and check if it is seamless on the fly. The tiled mode is called wrap-around mode, to activate this mode you have press the :kbd:`W` key. Now when you paint the canvas is tiled in real-time allowing you to create seamless pattern and texture, it is also easy to prepare interlocking patterns and motifs in this mode.
+Krita also has a real-time seamless tile mode to help texture artist prepare tiles and texture easily and check if it is seamless on the fly. The tiled mode is called wrap-around mode, to activate this mode  got to :menuselection:`View --> Wrap Around Mode`. Now when you paint the canvas is tiled in real-time allowing you to create seamless pattern and texture, it is also easy to prepare interlocking patterns and motifs in this mode.
 
 Creating Pixel Art
 ------------------
@@ -186,17 +185,17 @@ Creating Pixel Art
 Krita can also be used to create a high definition pixel painting. The pixel art look can be achieved by using Index color filter layer and overlaying dithering patterns. The general layer stack arrangement is as shown below.
 
 .. image:: /images/common-workflows/Layer-docker-pixelart.png
-    :alt: Layer stack setup for pixel art
+    :alt: Layer stack setup for pixel art.
 
 The index color filter maps specific user-selected colors to the grayscale value of the artwork. You can see the example below, the strip below the black and white gradient has an index color applied to it so that the black and white gradient gets the color selected to different values.
 
 .. image:: /images/common-workflows/Gradient-pixelart.png
-    :alt: color mapping in index color to grayscale
+    :alt: Color mapping in index color to grayscale.
 
 You can choose the required colors and ramps in the index color filter dialog as shown below.
 
 .. image:: /images/common-workflows/Index-color-filter.png
-    :alt: index color filter dialog
+    :alt: Index color filter dialog.
 
 Dithering can be used to enhance the look of the art and to ease the banding occurred by the index color filter. Krita has a variety of dithering patterns by default, these can be found in pattern docker. You can use these patterns as fill layer, then set the blend mode to **overlay** and adjust the opacity according to your liking. Generally, an opacity range of 10% - 25% is ideal.
 
@@ -207,4 +206,4 @@ You can add different groups for different colors and add different dithering pa
 Below is an example painted with this layer arrangement.
 
 .. image:: /images/common-workflows/Kiki-pixel-art.png
-    :alt: Pixel art done in Krita
+    :alt: Pixel art done in Krita.

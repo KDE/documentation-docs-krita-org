@@ -55,7 +55,7 @@ On the vector layer, we select the straight line tool, start a line and then hol
 
 We then import some of the frames from the animation via :menuselection:`Layers --> Import/Export --> Import layer`.
 
-Then crop it by setting the crop tool to :guilabel:`Layer`, and use :menuselection:`Filters --> Colors --> Color to alpha` to remove any background. I also set the layers to 50% opacity. We then align the vectors to them:
+Then crop it by setting the crop tool to :guilabel:`Layer`, and use :menuselection:`Filters --> Colors --> Color to alpha...` to remove any background. I also set the layers to 50% opacity. We then align the vectors to them:
 
 .. image:: /images/category_projection/projection_image_16.png 
    :align: center

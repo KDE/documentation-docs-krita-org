@@ -128,7 +128,7 @@ Undo
 
 .. figure:: /images/tools/Krita_transforms_liquefy.png 
 
-   Liquify used to turn an apple into a pear
+   Liquify used to turn an apple into a pear.
 
 In the options for each brush there are:
 

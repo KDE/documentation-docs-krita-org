@@ -115,7 +115,7 @@ Multiply
 Multiplies the two colors with each other, but does not go beyond the upper limit.
 
 This is often used to color in a black and white lineart.
-One puts the black and white lineart on top, and sets the layer to 'Multiply', and then draw in color on a layer beneath. Multiply will all the color to go through.
+One puts the black and white lineart on top, sets the layer to 'Multiply', and then draws in color on a layer beneath. Multiply will allow all the color to go through.
 
 White(1,1,1) x White(1, 1, 1) = White(1, 1, 1)
 

@@ -24,7 +24,7 @@ The **Timeline Docker** works in tandem with the :ref:`animation_docker` at the 
 Legend:
 -------
 
-**A. Layer List --** This area contains some subset of the layers of your current document. The currently active layer is always shown and can be "pinned" to the timeline using the :guilabel:`Show in Timeline` menu action. Also, Layers that are created via the Timeline or added using the :guilabel:`Add Existing Layer` submenu are automatically pinned to the timeline. Each layer has properties that can also be toggled here (visible, locked, show onion skins, etc.). 
+**A. Layer List --** This area contains some subset of the layers of your current document. Similar to the Layers Docker, each layer has various properties that can also be toggled here (visibility, locking, onion skins, etc.).  While the currently active layer is always shown here, layers can also be "pinned" to the timeline using the :guilabel:`Pin to Timeline` menu action or the :guilabel:`Pin Existing Layer` submenu so they will be visible even when inactive. Layers that are created via the Timeline are pinned automatically and by checking the :guilabel:`Automatically pin new layers to timeline` option in :guilabel:`Configure Krita > General > Miscellaneous` all new paint layers can be pinned automatically.
 
     * **Active Layer**
         A highlighted row in the table shows the current active layer. One can change which layer is active by clicking on the layer's name within the left header. It is *not* possible to change the active layer by clicking inside the table in order to not disturb the user when scrubbing and editing frame positions on the timeline.
@@ -38,7 +38,7 @@ Legend:
  
         .. warning::
 
-         Painting always happens only in the *active frame* (represented by a small dot), which is not necessarily part of your current selection.
+         Painting always happens only in the *active frame* (represented by a small dot), which is not necessarily part of your current selection!
 
     * **Keys, Blanks, and Holds:**
         The Timeline Docker now shows us even more useful information about both what is there as well as what is not. **Key frames** which contain drawings are still displayed as *filled blocks* within a cell, while **blank** or empty key frames are shown as a *hollow outline*. In Krita, every drawn frame is automatically held until the next frame; these **holds** are now clearly shown with a *colored line* across all held frames. The color of frames can be set per-frame by the animator using the right-click menu, and is a matter of personal workflow. 
@@ -57,7 +57,7 @@ Legend:
 
          Don't mix the active frame up with the current selection!
 
-**E. Layer Menu --** A small menu for manipulating animation layers. You can create new layers, add or remove existing ones, and you can set 'Show in Timeline' here to pin the active layer to the Timeline. (This menu also shows up when right-clicking on layers inside of the Layer List.)
+**E. Layer Menu --** A small menu for manipulating animation layers. You can create new layers, remove existing ones, as well as pin or unpin the active layer. (This menu also shows up when right-clicking on layer headers inside of the Layer List.)
 
 **F. Audio Menu:** Another small menu for animating along with audio sources. This is where you can open or close audio sources and control output volume/muting.
 
@@ -70,19 +70,15 @@ How to use the Timeline Docker is not immediately obvious because :program:`Krit
 
 So, to make our first *animated layer*, we need to make a key frame!
 
-|mouseright| any square on the timeline docker and select :guilabel:`Create Blank Frame`. A blank frame (one that you haven't yet drawn anything in) appears as a *hollow outline* instead of a solid box, making that frame active and drawing on the canvas will make it appear as a *solid, colored rectangle*.
+|mouseright| any square on the timeline docker and select :guilabel:`Create Blank Frame`. A blank frame (one that you haven't yet drawn anything in) appears as a *hollow outline* instead of a solid box, making that frame active and drawing on the canvas will make it appear as a *solid, colored rectangle*. To move a frame around, you can drag and drop it into another empty frame slot.
 
-To keep a layer visible in the Timeline Docker regardless of which layer is selected, select the layer in the Layers Docker so it shows up in the docker, then |mouseright| it within the Timeline Docker's Layer List and select :guilabel:`Show in Timeline`. This way you can choose which layers are important and which are only minor.
+While animating you may find that you want to keep a layer "pinned", making it visible in the Timeline Docker regardless of which layer is selected. There are a few ways to do this in Krita. By |mouseright| clicking on any layer in the Layers Docker, you can pin it by activating the :guilabel:`Pin to Timeline` menu item. This allows you to decide which layers are important to see in your timeline (i.e. those which contain keyframe drawings) and which layers are not (i.e. a static layout drawing or background painting). Alternatively, you can open the Timeline Docker's Layer Menu and select a layer from the :guilabel:`Pin Existing Layer` submenu. Finally, you can enable the :guilabel:`Automatically pin new layers to timeline` option from the :guilabel:`Configure Krita > General > Miscellaneous` dialog.
 
-You can drag and drop the frame around to a different empty frame slot.
-
-To add a single new frame, either right-click on an empty frame slot and select :guilabel:`Create Blank Frame` to create a fresh blank frame, or select :guilabel:`Create Duplicate Frame` to create a new copy of the previous frame. 
+To add a new frame, either right-click on an empty frame slot and select :guilabel:`Create Blank Frame` to create a fresh blank frame, or select :guilabel:`Create Duplicate Frame` to create a new copy of the previous frame. It's also possible to add multiple key frames by right-clicking inside the Frame Table and selecting :menuselection:`Keyframes --> Insert Multiple Keyframes`. With this option you can specify a number of frames to add with the option of built in timing for quickly creating a series of 1s, 2s, 3s, etc. These settings are saved between uses.
 
 You can also change the color of frames so that you can easily identify important frames or distinguish between different sections of your animation. The current color selection is remembered for new frames so that you can easily make a set of colored frames and then switch to another color.
 
-It's also possible to add multiple key frames by right-clicking inside the Frame Table and selecting :menuselection:`Keyframes --> Insert Multiple Keyframes`. With this option you can specify a number of frames to add with the option of built in timing for quickly creating a series of 1s, 2s, 3s, etc. These settings are saved between uses.
-
-Instead of the Frame Table, right-clicking within the Frame Timing Header gives you access to a few more options which allow you to add or remove entire columns of frames or holds at a time. For example, selecting :menuselection:`Keyframe Columns --> Insert Keyframe Column Left` will add new frames to each layer that's currently visible in the Timeline Docker.
+Clicking with |mouseright| within the Frame Timing Header instead of the Frame Table gives you access to a few more options which allow you to add or remove entire columns of frames or holds at a time. For example, selecting :menuselection:`Keyframe Columns --> Insert Keyframe Column Left` will add new frames to each layer that's currently visible in the Timeline Docker.
 
 .. image:: /images/dockers/Timeline_insertkeys.png
    :align: center
@@ -91,7 +87,7 @@ Instead of the Frame Table, right-clicking within the Frame Timing Header gives 
 
 To delete frames, |mouseright| the frame and press :guilabel:`Remove Keyframe`. This will delete all selected frames. Similarly, selecting :guilabel:`Remove Frame and Pull` will delete the selected frames and pull or shift all subsequent frames back/left as much as possible.
 
-To manually play your animation back and forward using your mouse, a concept called *scrubbing*, you click-drag within the Frame Timing Header.
+To manually play your animation back and forward using your mouse, an important technique that's known as *scrubbing*, click-drag within the Frame Timing Header.
 
 GUI Actions:
 ------------

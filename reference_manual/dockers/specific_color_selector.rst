@@ -22,7 +22,7 @@ The specific color selector allows you to choose specific colors within a color 
 Color Space Chooser
 -------------------
 
-Fairly straightforward. This color space chooser allows you to pick the color space, the bit depth and the icc profile in which you are going to pick your color.
+Fairly straightforward. This color space chooser allows you to pick the color space, the bit depth and the ICC profile in which you are going to pick your color.
 Use the checkbox 'show color space selector' to hide this feature.
 
 Sliders

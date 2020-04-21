@@ -37,7 +37,7 @@ Then, there's proper working file formats like Krita's ``KRA``, Gimp's ``XCF``, 
 Metadata
 --------
 
-Metadata is the ability of a file format to contain information outside of the actual image contents. This can be human readable data, like the date of creation, the name of the author, a description of the image, but also computer readable data, like an icc-profile which tells the computer about the qualities of how the colors inside the file should be read.
+Metadata is the ability of a file format to contain information outside of the actual image contents. This can be human readable data, like the date of creation, the name of the author, a description of the image, but also computer readable data, like an ICC profile which tells the computer about the qualities of how the colors inside the file should be read.
 
 Openness
 --------

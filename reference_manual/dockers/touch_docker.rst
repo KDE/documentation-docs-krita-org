@@ -19,7 +19,7 @@ The Touch Docker is a QML docker with several convenient actions on it. Its purp
 Its actions are... 
 
 +------------------------------+-----------------------+----------------------+
-|         Open File            |       Save File       |        Save As       |
+|         Open File            |       Save File       |        Save As...    |
 +------------------------------+-----------+-----------+----------------------+
 |                 Undo                     |               Redo               |
 +------------------------------------------+----------------------------------+

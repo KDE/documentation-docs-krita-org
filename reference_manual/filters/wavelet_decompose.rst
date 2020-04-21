@@ -17,7 +17,7 @@ Wavelet Decompose
 
 Wavelet decompose uses wavelet scales to turn the current layer into a set of layers with each holding a different type of pattern that is visible within the image. This is used in texture and pattern making to remove unwanted noise quickly from a texture.
 
-You can find it under :menuselection:`Layers`.
+You can find it under :menuselection:`Image`.
 
 When you select it, it will ask for the amount of wavelet scales. More scales, more different layers. Press :guilabel:`OK`, and it will generate a group layer containing the layers with their proper blending modes:
 

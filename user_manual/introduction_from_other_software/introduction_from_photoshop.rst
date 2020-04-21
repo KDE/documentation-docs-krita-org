@@ -10,6 +10,7 @@
              - JakeD
              - Radianart
              - Raghavendra Kamath <raghu@raghukamath.com>
+             - Sean Castillo <hydroneart@gmail.com>
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Photoshop
@@ -121,7 +122,7 @@ Note for Gimp user: Krita auto-expands and auto defloats new layers created from
 Layer Handling
 ~~~~~~~~~~~~~~
 
-The most common shortcuts are very similar in PS and Krita:
+The most common default shortcuts are very similar in PS and Krita:
 
 * :kbd:`Ctrl + J`: duplicate
 * :kbd:`Ctrl + E`: merge down
@@ -143,7 +144,7 @@ You can select multiple layers on the stack by holding down the :kbd:`Shift` key
 Clipping Masks
 ^^^^^^^^^^^^^^
 
-Krita has no clipping mask, but there is a workaround involving layer groups and :guilabel:`Inherit alpha` (see the alpha icon). Place a layer with the shape you want to clip the other with at the bottom of a group and layers above with the :guilabel:`Inherit alpha` option. This will create the same effect as the “clipping mask” PS feature.
+Krita has no clipping mask, but there is a simpler workaround involving layer groups and :guilabel:`Inherit alpha` (see the alpha icon). Place a layer with the shape you want to clip the other with at the bottom of a group and layers above with the :guilabel:`Inherit alpha` option. This will create the same effect as the “clipping mask” PS feature, and also keeps the layer stack cleaner than the clipping mask implementation does.
 
 This process of arranging groups for inherit alpha can be done automatically by :kbd:`Ctrl + Shift + G` shortcut. It creates a group with base layer and a layer above it with inherit alpha option checked by default.
 
@@ -158,7 +159,7 @@ Smart Layers
 Instead of having smart layers that you can do non-destructive transforms on, Krita has the following set of functionality:
 
 File Layers
-    These are layers which point to an outside file, and will get automatically updated if the outside file changes.
+    These are layers which point to an outside file, and will get automatically updated if the outside file changes. Starting from version 4.0 users can convert an existing layer into a file layer by |mouseright| clicking on it and doing :menuselection:`Convert --> to File Layer` or by going to :menuselection:`Layer --> Convert --> to File Layer`. It will then open a save prompt for the file location and when done will save the file and replace the layer with a file layer pointing at that file.
 Clone Layers
     These are layers that are an ‘instance’ of the layer you had selected when creating them. They get updated automatically when the original layer updates.
 Transform Masks
@@ -191,7 +192,7 @@ In Krita, there is a totally different paradigm for defining what ‘tools’ ar
 Erasing
 ^^^^^^^
 
-In Krita, the eraser is not a tool, it is a Blending mode (or Composite mode). You can change each brush you have to erase by pressing the :kbd:`E` key. By pressing the :kbd:`E` key again you’ll be back to the last blending mode you had selected before pressing the :kbd:`E` key the first time.
+In Krita, the eraser is not its own tool; it is a Blending mode (or Composite mode). You can toggle between erase mode and paint mode by pressing the :kbd:`E` key, individually for each of your brushes.
 
 Useful shortcuts
 ^^^^^^^^^^^^^^^^
@@ -206,7 +207,7 @@ Useful shortcuts
 
 .. note::
 
-    Some people regard these shortcuts as somewhat unfortunate. The reason is that they are meant to be used during painting and the left :kbd:`Shift` key is at the opposite end of the keyboard from the :kbd:`I`, :kbd:`M` and :kbd:`N` keys. So for a right-handed painter, this is very difficult to do while using the stylus with a right hand. Note that you can reassign any shortcut by using the shortcut configuration in :menuselection:`Settings --> Configure Shortcuts`.
+    Some people regard these shortcuts as somewhat unfortunate. The reason is that they are meant to be used during painting and the left :kbd:`Shift` key is at the opposite end of the keyboard from the :kbd:`I`, :kbd:`M` and :kbd:`N` keys. So for a right-handed painter, this is very difficult to do while using the stylus with a right hand. Note that you can reassign any shortcut by using the shortcut configuration in :menuselection:`Settings --> Configure Krita... --> Shortcuts`.
 
 Stabilization / Path Smoothing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -216,7 +217,7 @@ Using the freehand ‘paint with brush’ tool that you can find on the Tool Opt
 Global pressure curve
 ^^^^^^^^^^^^^^^^^^^^^
 
-If you find the feeling of Krita too hard or too soft regarding the pressure when you paint, you can set a softer or harder curve here: :menuselection:`Settings --> Configure Krita --> Tablet settings`
+If you find the feeling of Krita too hard or too soft regarding the pressure when you paint, you can set a softer or harder curve here: :menuselection:`Settings --> Configure Krita... --> Tablet settings`
 
 Adjustment
 ^^^^^^^^^^
@@ -235,12 +236,12 @@ Unlike Photoshop, where these are separate tools, in Krita, they are available v
 Themes
 ^^^^^^
 If you don’t like the dark default theme of Krita go to: :menuselection:`Settings --> Themes`, and choose a brighter or darker theme.
-If you don’t like the color outside your viewport go to: :menuselection:`Settings --> Configure Krita --> Display`, and change the Canvas border color.
+If you don’t like the color outside your viewport go to: :menuselection:`Settings --> Configure Krita... --> Display`, and change the Canvas border color.
 
 What Krita Has Over Photoshop
 -----------------------------
 
-As mentioned in the introduction, Krita is a specialized paint application. Thus, it also has specialized tools for painting. Similar tools are not found in more generalized image manipulation applications such as PS. Here is a short list of the most important ones.
+As mentioned in the introduction, Krita is a specialized paint application. Thus, it has specialized tools for painting. Similar tools are not found in more generalized image manipulation applications such as PS. Here is a short list of the most important ones.
 
 Brush Engines
 ~~~~~~~~~~~~~
@@ -283,15 +284,15 @@ Furthermore, you can use transformation masks to apply transforms non-destructiv
 Incremental Save
 ~~~~~~~~~~~~~~~~
 
-You can save your artwork with the pattern : myartworksname_001.kra , myartworksname_002.kra, myartworksname_003.kra  etc, by pressing a single key on the keyboard. Krita will increment the final number if the pattern "_XXX" is recognized at the end of the file's name.
+You can save your artwork with the pattern : *myartworksname_001.kra*, *myartworksname_002.kra*, *myartworksname_003.kra* etc., by pressing a single key on the keyboard. Krita will increment the final number if the pattern "_XXX" is recognized at the end of the file's name.
 
 .. image:: /images/Krita-incremental-saves.png
    :align: center
 
 This feature allows you to avoid overwriting your files, and keep track to your older version and work in progress steps.
 
-Color to alpha Filter
-~~~~~~~~~~~~~~~~~~~~~
+Filter: Color to alpha
+~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to delete the white of the paper from a scanned artwork, you can use this filter. It takes a color and turns it into pure transparency. 
 
@@ -307,7 +308,7 @@ A special system of favorite blending modes has been created to let you have fas
 Painting Assistants
 ~~~~~~~~~~~~~~~~~~~
 
-Krita has many painting assistants. This is a special type vector shapes with a magnetic influence on your brush strokes. You can use them as rulers, but with other shapes than just straight.
+Krita has many painting assistants. This is a special type vector shapes with a magnetic influence on your brush strokes. You can use them as rulers, including with shapes other than just straight.
 
 .. figure:: /images/assistants/Krita_basic_assistants.png
    :align: center
@@ -318,7 +319,7 @@ Krita has many painting assistants. This is a special type vector shapes with a 
 Multibrushes: Symmetry / Parallel / Mirrored / Snowflake
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Krita's Multibrush tool allows you to paint with multiple brushes at the same time. Movements of the brushes other than the main brush is created by mirroring what you paint, or duplicating it by any number around any axis. They can also be used in parallel mode.
+Krita's Multibrush tool allows you to paint with multiple brushes at the same time. Movements of the brushes other than the main brush is created by mirroring what you paint, or by duplicating it by any number around any axis. They can also be used in parallel mode.
 
 .. image:: /images/tools/Krita-multibrush.png
    :align: center
@@ -344,7 +345,7 @@ Using the LUT docker, Krita allows you to have a separate color correction filte
 HDR color painting
 ~~~~~~~~~~~~~~~~~~
 
-This same LUT docker is the controller for painting with HDR colors. Using the LUT docker to change the exposure on the view, Krita allows you to paint with HDR colors, and has native open exr support!
+This same LUT docker is the controller for painting with HDR colors. Using the LUT docker to change the exposure on the view, Krita allows you to paint with HDR colors, and has native OpenEXR support!
 
 .. figure:: /images/Krita-hdr-painting.png
    :align: center
@@ -382,10 +383,18 @@ Blending Modes While Transforming
 
 When you transform a layer or a selection in Krita, the transformation appears on the top of your layer stack ignoring the layer blending mode. 
 
+Photomerge
+~~~~~~~~~~
+You may have used this tool in Photoshop to seamlessly and automatically stitch together a drawing that was scanned in segments. Krita does not have an equivalent, though an alternative is to use Hugin, which is cross-platform and free, just like Krita.
+
+`Hugin Website <http://hugin.sourceforge.net>`_
+
+`Tutorial for Using Scans in Hugin <https://www.davidrevoy.com/article314/autostiching-scan-with-hugin>`_
+
 Other
 ~~~~~
 
-Also, you cannot ‘Export for web’, ‘Image Ready’ for Gif frame or slicing web image, etc.
+Also, you cannot ‘Export for web’, ‘Image Ready’ for GIF frame or slicing web image, etc.
 
 Conclusion
 ----------

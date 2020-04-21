@@ -90,3 +90,4 @@ Hot keys and Sticky Keys
 * :kbd:`Page Up` and :kbd:`Page Down` keys for switching between layers.
 * :kbd:`Ctrl + Page Up` and :kbd:`Ctrl + Page Down` shortcuts will move the selected layers up and down.
 
+

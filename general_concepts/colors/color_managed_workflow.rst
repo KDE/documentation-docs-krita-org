@@ -231,7 +231,7 @@ LUT docker manipulations are per view, so you can create a new view and set it t
 
 Another example is to carefully watch the gradients in a certain section.
 
-Like ICC, the LUT Docker allows you to create a profile of sorts for your device. In this case it's the 'LUT', which stands for 'Look Up Table', and which can be added to OCIO by modifying the configuration file. When OCIO is turned on, the configuration in :menuselection:`Settings --> Configure Krita --> Color Management` is turned off, unless you are using the :guilabel:`Internal` color engine.
+Like ICC, the LUT Docker allows you to create a profile of sorts for your device. In this case it's the 'LUT', which stands for 'Look Up Table', and which can be added to OCIO by modifying the configuration file. When OCIO is turned on, the configuration in :menuselection:`Settings --> Configure Krita... --> Color Management` is turned off, unless you are using the :guilabel:`Internal` color engine.
 
 In summary
 ----------
@@ -242,7 +242,7 @@ Krita has two modes of color management:
 * OCIO works in terms of interpretation, and makes use of LUTs.
 * both can be made with a colorimeter.
 * If you want to have a properly color managed workflow, you have one made customary for the input device (your screen) and the output devices (your printer, or target screen). For web the output is always sRGB.
-* Set up your screen profiles under :menuselection:`Settings --> Configure Krita --> Color management`.
+* Set up your screen profiles under :menuselection:`Settings --> Configure Krita... --> Color management`.
 * Do NOT use screen profiles or other device profiles to draw in. Use a working space profile such as any of the 'elle' profiles for this, as the color maths will be much more predictable and pleasant. Krita will convert between your screen and working space on the fly, allowing you to pick the correct colors. This turns your screen into binoculars to view the image.
 * Use the appropriate color management for the appropriate workflow. If you are working with Blender, you will be better off using OCIO, than ICC. If you are working with Scribus or Photoshop, use ICC.
 
@@ -304,7 +304,7 @@ Example workflows
 
 Here are some example workflows to get a feeling of how your color management workflow may look like.
 
-As mentioned before, input for your screen is set via :menuselection:`Settings --> Configure Krita --> Color management`, or via the LUT docker's 'screen space'. Working space is set via new file per document, or in the LUT docker via 'input space'.
+As mentioned before, input for your screen is set via :menuselection:`Settings --> Configure Krita... --> Color management`, or via the LUT docker's 'screen space'. Working space is set via new file per document, or in the LUT docker via 'input space'.
 
 Webcomic
 ~~~~~~~~
@@ -345,7 +345,7 @@ Output
 
 The CMYK profiles are different per printer, and even per paper or ink-type so don't be presumptuous and ask ahead for them, instead of doing something like trying to paint in any random CMYK profile. As mentioned in the viewing conditions section, you want to keep your options open.
 
-You can set the advanced color selector to transform to a given profile via :menuselection:`Settings --> Configure Krita --> Color Selector Settings`. There, tick :guilabel:`Color Selector Uses Different Color Space than Image` and select the CMYK profile you are aiming for. This will limit your colors a little bit, but keep all the nice filter and blending options from RGB.
+You can set the advanced color selector to transform to a given profile via :menuselection:`Settings --> Configure Krita... --> Color Selector Settings`. There, tick :guilabel:`Color Selector Uses Different Color Space than Image` and select the CMYK profile you are aiming for. This will limit your colors a little bit, but keep all the nice filter and blending options from RGB.
 
 Games
 ~~~~~

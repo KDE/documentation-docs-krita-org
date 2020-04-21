@@ -1,6 +1,6 @@
 .. meta::
    :description:
-        Split Alpha: how to work with color and alpha channels of the layer separately
+        Split Alpha: how to work with color and alpha channels of the layer separately.
 
 .. metadata-placeholder
 
@@ -33,4 +33,4 @@ Normally, when saving an image to a file, all fully transparent areas of the ima
 
 #. |mouseright| the layer in the layers docker.
 #. Choose :menuselection:`Split Alpha --> Alpha into Mask`.
-#. |mouseright| on the created mask and select :menuselection:`Split Alpha --> Save Merged...`
+#. |mouseright| on the created mask and select :menuselection:`Split Alpha --> Save Merged...`.

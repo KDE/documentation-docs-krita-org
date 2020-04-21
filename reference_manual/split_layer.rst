@@ -1,6 +1,6 @@
 .. meta::
    :description:
-        The Split Layer functionality in Krita
+        The Split Layer functionality in Krita.
 
 .. metadata-placeholder
 

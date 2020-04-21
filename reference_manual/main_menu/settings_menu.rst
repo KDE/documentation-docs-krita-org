@@ -12,9 +12,9 @@
 
 .. _settings_menu:
 
-============
-Setting Menu
-============
+=============
+Settings Menu
+=============
 
 The Settings Menu houses the configurable options in Krita and where you determine most of the "look and feel" of the application.
 
@@ -54,7 +54,7 @@ There is no easy way to create and share themes. The color themes are defined in
 Configure Shortcuts
 -------------------
 
-Configuring shortcuts is another way to customize the application to fit you.  Whether you are transitioning from another app, like Photoshop or MyPaint, or you think your own shortcut keys make more sense for you then Krita has got you covered.  You get to the shortcuts interface through :menuselection:`Settings --> Configure Krita`  and by choosing the :menuselection:`Keyboard Shortcuts`  tab.
+Configuring shortcuts is another way to customize the application to fit you.  Whether you are transitioning from another app, like Photoshop or MyPaint, or you think your own shortcut keys make more sense for you then Krita has got you covered.  You get to the shortcuts interface through :menuselection:`Settings --> Configure Krita...` and by choosing the :menuselection:`Keyboard Shortcuts` tab.
 
 To use, just type the :guilabel:`Action` into the Search box you want to assign/reassign the shortcut for.  Suppose we wanted to assign the shortcut :kbd:`Ctrl + G` to the :guilabel:`Action` of Group Layers so that every time we pressed the :kbd:`Ctrl + G` shortcut a new Layer Group would be created.  Use the following steps to do this:
 
@@ -69,26 +69,26 @@ From this point on, whenever you press the :kbd:`Ctrl + G` shortcut you'll get a
 .. tip::
     Smart use of shortcuts can save you significant time and further streamline your workflow.
 
-Manage Resources
-----------------
+Manage Resources...
+-------------------
 
 Manage the resources. You can read more about it :ref:`here <resource_management>`.
 
 .. index:: Language
 .. _switch_application_language:
 
-Switch Application Language
----------------------------
+Switch Application Language...
+------------------------------
 
 If you wish to use Krita in a different translation.
 
 .. index:: ! Toolbar
 .. _configure_toolbars:
 
-Configure Toolbars
-------------------
+Configure Toolbars...
+---------------------
 
-Krita allows you to highly customize the Toolbar interface.  You can add, remove and change the order of nearly everything to fit your style of work.  To get started, choose :menuselection:`Settings --> Configure Toolbars`.
+Krita allows you to highly customize the Toolbar interface.  You can add, remove and change the order of nearly everything to fit your style of work.  To get started, choose :menuselection:`Settings --> Configure Toolbars...` menu item.
 
 .. image:: /images/preferences/Configure_Toolbars_Krita.png 
    :align: center
@@ -96,15 +96,15 @@ Krita allows you to highly customize the Toolbar interface.  You can add, remove
 The dialog is broken down into three main sections:
 
 The Toolbar
-    Choose to either modify the "File" or "Brushes and Stuff" toolbars.
+    Choose to either modify the "Main" or "Brushes and Stuff" toolbars.
 Available Actions:
     All the options that can be added to a toolbar.
 Current Actions:
     All the actions currently assigned and the order they are in.
 
-Use the arrows between the *Available* and *Current* actions sections to move items back and forth and up and down in the hierarchy.  This type of inclusion/exclusion interface has been around on PCs for decades so we don't need to go into great detail regarding its use.  What is important though is selecting the correct Toolbar to work on.  The :guilabel:`File` Toolbar allows you to add items between the :menuselection:`New` , :menuselection:`Open`  and :menuselection:`Save`  buttons as well as to the right of the :menuselection:`Save`  button.  The :guilabel:`Brushes and Stuff` Toolbar, lets you modify anything from the Gradients button over to the right.  This is probably where you'll do most of your editing.
+Use the arrows between the *Available* and *Current* actions sections to move items back and forth and up and down in the hierarchy. This type of inclusion/exclusion interface has been around on PCs for decades so we don't need to go into great detail regarding its use. What is important though is selecting the correct Toolbar to work on. The Main Toolbar allows you to add items between the :guilabel:`New`, :guilabel:`Open` and :guilabel:`Save` buttons as well as to the right of the :guilabel:`Save` button. The Brushes and Stuff Toolbar, lets you modify anything from the Gradients button over to the right. This is probably where you'll do most of your editing.
 
-Here we've added :menuselection:`Select Opaque` , :menuselection:`Local Selection` ,  :menuselection:`Transparency Mask` , :guilabel:`Isolate Layer` , :menuselection:`Show Assistant Previews` .  This is just an example of a couple of options that are used frequently and might trim your workflow.   This is what it looks like in the configuration tool:
+Here we've added :menuselection:`Select Opaque`, :menuselection:`Local Selection`, :menuselection:`Transparency Mask`, :menuselection:`Isolate Layer`, :menuselection:`Show Assistant Previews`. This is just an example of a couple of options that are used frequently and might trim your workflow. This is what it looks like in the configuration tool:
 
 .. image:: /images/preferences/Configure_Toolbars_Brushes_and_Stuff_Custom.png 
    :align: center

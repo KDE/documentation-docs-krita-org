@@ -27,7 +27,7 @@ which will have option to create a new file or open existing document.
 To create a new canvas you have to create a new document from the
 :guilabel:`File` menu or by clicking on :guilabel:`New File`  under start
 section of the welcome screen. This will open the new file dialog box. If you
-want to open an existing image, either use :menuselection:`File --> Open` or
+want to open an existing image, either use :menuselection:`File --> Open...` or
 drag the image from your computer into Krita's window.
 
 .. image:: /images/Starting-krita.png
@@ -45,7 +45,7 @@ A new document can be created as follows.
 .. image:: /images/Krita_newfile.png
 
 Click on the :guilabel:`Custom Document` section and in the :guilabel:`Dimensions`
-tab choose A4 (300ppi) or any size that you prefer from the :guilabel:`predefined` drop down
+tab choose A4 (300ppi) or any size that you prefer from the :guilabel:`Predefined` drop down
 To know more about the other sections such as create document from clipboard and
 templates see :ref:`create_new_document`.
 
@@ -88,7 +88,7 @@ Now, once you have figured out how to draw something in Krita, you may want to
 save it. The save option is in the same place as it is in all other computer
 programs: the top-menu of :guilabel:`File`, and then :guilabel:`Save`. Select
 the folder you want to have your drawing, and select the file format you want
-to use ('.kra' is Krita's default format, and will save everything). And then
+to use (``.kra`` is Krita's default format, and will save everything). And then
 hit :guilabel:`Save`. Some older versions of Krita have a bug and require you
 to manually type the extension.
 

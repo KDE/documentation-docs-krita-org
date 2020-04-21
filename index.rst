@@ -41,7 +41,7 @@ You can download this manual as an epub `here <https://docs.krita.org/en/epub/Kr
 |:ref:`getting_started`                                  |:ref:`reference_manual`                           |
 |                                                        |                                                  |
 |New to Krita and don't know where to start?             |A quick run-down of all of the tools that         |
-|                                                        |are available                                     |
+|                                                        |are available.                                    |
 +--------------------------------------------------------+--------------------------------------------------+
 | .. image:: /images/intro_page/Hero_general.jpg         | .. image:: /images/intro_page/Hero_faq.jpg       |
 |                                                        |                                                  |

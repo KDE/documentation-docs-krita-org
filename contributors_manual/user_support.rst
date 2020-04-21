@@ -47,9 +47,9 @@ Quick solutions
 
 #. Change API in :menuselection:`Settings --> Configure Krita... --> Tablet Settings`.
 
-      #. Wintab: older standard; it supports multiple buttons and high number of pressure levels high. If it works fine for you, don't change to Windows Ink. 2-in-1 devices by default use Windows Ink, you can get a Wintab driver but you need to install it separately. 
-      
-      #. Windows Ink: newer standard; it cuts the pressure levels to 1024. It is more suitable for 2-in-1 devices like Surfacce Pro and Yoga. Some less known brands might not have this standard implemented.
+      #. Wintab: older standard; it supports multiple buttons and high number of pressure levels. If it works fine for you, don't change to Windows Ink. 2-in-1 devices by default use Windows Ink, you can get a Wintab driver but you need to install it separately. 
+
+      #. Windows 8+ Pointer (Windows Ink): newer standard; it cuts the pressure levels to 1024. It is more suitable for 2-in-1 devices like Surface Pro and Yoga. Some less known brands might not have this standard implemented.
 
 *For Windows, tablet/digitizer devices (not convertible/2-in-1 ones):*
 
@@ -57,8 +57,7 @@ Quick solutions
 
 #. *Wacom tablets:* if you get straight lines at the beginnings of the strokes, first try to update your driver: it should be fixed in 6.3.34-3. If it doesn't work, disable/minimize "double-click distance" in Wacom settings.
 
-#. *XP-Pen tablets, pressure being uneven:* either switch to Windows 8+ Pointer, or disable Windows Ink in XP-Pen settings.
-
+#. *XP-Pen tablets, pressure being uneven:* either switch to Windows 8+ Pointer (Windows Ink) in :menuselection:`Settings --> Configure Krita... --> Tablet Settings`, or disable Windows Ink in XP-Pen settings.
 
 
 Gathering information
@@ -75,23 +74,23 @@ Gathering information
 #. More detailed Tablet Events log:
 
     1. Go to :menuselection:`Settings --> Dockers --> Log Viewer` docker, make sure it's checked.
-	
+
     #. In the Log Viewer docker, make sure the first button is pressed (which means the logging is turned on).
-	
-    #. Press :kbd:`Ctlr + Shift + T` to turn on tablet events logging.
-	
+
+    #. Press :kbd:`Ctrl + Shift + T` to turn on tablet events logging.
+
     #. Make a few strokes (depending on the situation, the user supporter or developer can ask you for specific series of strokes).
-	
-    #. Press :kbd:`Ctlr + Shift + T` to turn off the logging of the tablet events.
+
+    #. Press :kbd:`Ctrl + Shift + T` to turn off the logging of the tablet events.
+
 
     #. Press the third button in the Log Viewer to save the output into a file.
-	
+
     #. Share the file or share the content of the file: :ref:`intro_user_support_sharing_files`.
-	
+
     On Linux, you can just use a console instead of Log Viewer -- then you'd only need to enable tablet events logging, not logging in general.
 
 
-	
 
 Additional information for supporters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,7 +99,7 @@ Additional information for supporters
 
 #. Huion tablets should work on Windows and on Linux, on Mac there might be issues.
 
-#. XP-Pen tablets and other brands can have issues everywhere.
+#. XP-Pen tablets and the rest of brands can have issues everywhere (on all systems).
 
 #. If someone asks about a tablet to buy, generally a cheaper Wacom or a Huion are the best options as of 2019, if they want to work with Krita. :ref:`list_supported_tablets`.
 
@@ -133,7 +132,7 @@ In case of crash try to determine if the problem is known, if not, instruct user
 
 #. Is it possible to reproduce (repeat)? If yes, provide a step-by-step instruction to get the crash.
 
-#. Backtrace (crashlog) -- the instruction is here: :ref:`dr_minw`, and the debug symbols can be found in the annoucement of the version of Krita that the user has. But it could be easier to just point the user to `https://download.kde.org/stable/krita <https://download.kde.org/stable/krita>`_.
+#. Backtrace (crashlog) -- the instruction for Windows is here: :ref:`dr_minw`, and the debug symbols can be found in the annoucement of the version of Krita that the user has. But it could be easier to just point the user to `https://download.kde.org/stable/krita <https://download.kde.org/stable/krita>`_.
 
 
 Other possible questions with quick solutions
@@ -145,7 +144,7 @@ Other possible questions with quick solutions
 #. When the user has trouble with anything related to preview or display, ask them to change :guilabel:`Canvas Graphics Acceleration` in :menuselection:`Settings --> Configure Krita... --> Display`.
 
     .. note::
-    
+
          Telling people to disable canvas acceleration to get better performance is something we shouldn't do, ever.
 
 
@@ -175,19 +174,19 @@ How to share a file
 
 
 * Images (e.g. screenshots): `Imgur <https://imgur.com>`_ [*], `Pasteboard <https://pasteboard.co>`_
-   
+
 * Text only: `Pastebin <https://pastebin.com>`_ [*], `BPaste <https://bpaste.net>`_, `paste.ubuntu.org.cn <https://paste.ubuntu.org.cn>`_, `FedoraProject's Paste <https://paste.fedoraproject.org/>`_ or `KDE Snippets (needs KDE Identity) <https://invent.kde.org/dashboard/snippets>`_.
-   
+
 * ``.kra`` and other formats: by mail? Or encode the file using *base64* command on Linux, send by mail or on Pastebin, then decode using the same command.
 
 
 
   .. attention::
-      
-      
+
       If you ask user to store their log or other data on a website, make sure it stays there long enough for you to get it -- for example bpaste.net stores files by default only for a day! And you can extend it only to one week.
-      
-	  
+
+
+
   .. admonition:: Blocked websites
-      
+
       If the user is behind a firewall of some sorts (for example lives in China), websites with [*] will probably be blocked; please use the alternatives.

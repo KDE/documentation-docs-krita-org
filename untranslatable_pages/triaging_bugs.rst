@@ -200,4 +200,4 @@ The user probably created, accidentally, a tiny selection, and saved that with t
 
 .. admonition:: Ask the user:
 
-     Do you have a selection saved with that document? Use select/deselect on your image and check whether you can paint again. If not, please attach the .kra document to this bug report or make it available.
+     Do you have a selection saved with that document? Use select/deselect on your image and check whether you can paint again. If not, please attach the ``.kra`` document to this bug report or make it available.

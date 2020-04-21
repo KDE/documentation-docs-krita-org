@@ -17,7 +17,7 @@ Undo History
 
 .. image:: /images/dockers/Krita_Undo_History_Docker.png
 
-This docker allows you to quickly shift between undo states, and even go back in time far more quickly that rapidly reusing the :kbd:`Ctrl + Z` shortcut.
+This docker allows you to quickly shift between undo states, and even go back in time far more quickly than rapidly reusing the :kbd:`Ctrl + Z` shortcut.
 
 .. index:: Cumulate Undo
 
@@ -29,6 +29,6 @@ Cumulative Undo
 Start merging time
     The amount of seconds required to consider a group of strokes to be worth one undo step.
 Group time
-    According to this parameter -- groups are made. Every stroke is put into the same group till two consecutive strokes have a time gap of more than T seconds. Then a new group is started. 
+    According to this parameter -- groups are made. Every stroke is put into the same group until two consecutive strokes have a time gap of more than T seconds. Then a new group is started. 
 Split strokes.
-    A user may want to keep the ability of Undoing/Redoing his last N strokes. Once N is crossed -- the earlier strokes are merged into the group's first stroke.
+    A user may want to keep the ability of Undoing/Redoing his/her last N strokes. Once N is crossed -- the earlier strokes are merged into the group's first stroke.

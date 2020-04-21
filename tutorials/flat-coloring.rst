@@ -1,6 +1,6 @@
 .. meta::
    :description lang=en:
-        Common workflows used in Krita
+        Common workflows used in Krita.
 
 .. metadata-placeholder
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
@@ -37,7 +37,7 @@ Preparing your line art
 Put the new layer underneath the layer containing the line art (drag and drop or use the up/down arrows for that), and draw on it.
 
 .. image:: /images/flat-coloring/Krita_filling_lineart14.png
-    :alt: layer structure for flatting in krita
+    :alt: Layer structure for flatting in krita.
 
 …And notice nothing happening. This is because the white isn’t transparent. You wouldn’t really want it to either, how else would you make convincing highlights? So what we first need to do to color in our drawing is prepare our line art. There’s several methods of doing so, each with varying qualities.
 
@@ -47,14 +47,14 @@ The Multiply Blending Mode
 So, typically, to get a black and white line art usable for coloring, you can set the blending mode of the line art layer to Multiply. You do this by selecting the layer and going to the drop-down that says **Normal** and setting that to **Multiply**.
 
 .. image:: /images/flat-coloring/Krita_filling_lineart1.png
-   :alt: blend mode setup of line art flat coloring
+   :alt: Blend mode setup of line art flat coloring.
 
 And then you should be able to see your colors!
 
 Multiply is not a perfect solution however. For example, if through some image editing magic I make the line art blue, it results into this:
 
 .. image:: /images/flat-coloring/Krita_filling_lineart2.png
-    :alt: effects of multiply blend mode
+    :alt: Effects of multiply blend mode.
 
 This is because multiply literally multiplies the colors. So it uses maths!
 
@@ -146,7 +146,7 @@ This is a simpler variation of the above.
 
     .. image:: /images/flat-coloring/Krita_filling_lineart_mask_2.png
 
-3. Invert the transparency mask by going to :menuselection:`Filter --> Adjust --> Invert`
+3. Invert the transparency mask by going to :menuselection:`Filter --> Adjust --> Invert`.
 
     .. image:: /images/flat-coloring/Krita_filling_lineart_mask_3.png
 
@@ -165,7 +165,7 @@ Using Color to Alpha
 
 By far the fastest way to get transparent line art.
 
-1. Select the line art layer and apply the color to alpha filter. :menuselection:`Filter --> Colors --> Color to Alpha`. The default values should be sufficient for line art.
+1. Select the line art layer and apply the :guilabel:`Filter: Color to Alpha` dialog under :menuselection:`Filters --> Colors --> Color to Alpha...` menu item. The default values should be sufficient for line art.
 
 .. image:: /images/flat-coloring/Krita_filling_lineart_color_to_alpha.png
 
@@ -191,7 +191,7 @@ Fill Tool
 ---------
 
 .. image:: /images/icons/fill_tool.svg
-    :alt: fill-tool icon
+    :alt: Fill-tool icon.
 
 In most cases the fill-tool can’t deal with the anti-aliasing (the soft edge in your line art to make it more smooth when zoomed out) In Krita you have the grow-shrink option. Setting that to say… 2 expands the color two pixels.
 
@@ -202,7 +202,7 @@ Now, if you click on a gapless-part of the image with your preferred color… (R
 Depending on your line art, you can do flats pretty quickly. But setting the threshold low can result in little artifacts around where lines meet:
 
 .. image:: /images/flat-coloring/Krita_filling_lineart7.png
-    :alt: colors filled with fill tool
+    :alt: Colors filled with fill tool.
 
 However, setting the threshold high can end with the fill not recognizing some of the lighter lines. Besides these little artifacts can be removed with the brush easily.
 
@@ -222,26 +222,26 @@ Selections
 Selections work using the selection tools.
 
 .. image:: /images/flat-coloring/Krita_filling_lineart15.png
-    :alt: selecting with selection tools for filling color
+    :alt: Selecting with selection tools for filling color.
 
 For example with the :ref:`bezier_curve_selection_tool` you can easily select a curved area, and the with :kbd:`Shift +` |mouseleft| (not |mouseleft| :kbd:`+ Shift`, there's a difference!) you can easily add to an existing selection.
 
 .. image:: /images/flat-coloring/Krita_filling_lineart16.png
-    :alt: selection mask in Krita
+    :alt: Selection mask in Krita.
 
 You can also edit the selection if you have :menuselection:`Select --> Show Global Selection Mask` turned on. Then you can select the global selection mask, and paint on it. (Above with the alternative selection mode, activated in the lower-left corner of the stats bar)
 
 When done, select the color you want to fill it with and press the :kbd:`Shift + Backspace` shortcut.
 
 .. image:: /images/flat-coloring/Krita_filling_lineart17.png
-    :alt: filling color in selection
+    :alt: Filling color in selection.
 
 You can save selections in selection masks by |mouseright| a layer, and then going to :menuselection:`Add --> Local Selection`. You first need to deactivate a selection by pressing the circle before adding a new selection.
 
 This can serve as an alternative way to split out different parts of the image, which is good for more painterly pieces:
 
 .. image:: /images/flat-coloring/Krita_filling_lineart18.png
-    :alt: result of coloring made with the help of selection tools
+    :alt: Result of coloring made with the help of selection tools.
 
 Advantages
 """"""""""
@@ -264,12 +264,12 @@ Select the path tool (|path tool|), and set the tool options to fill=foreground 
 By clicking and holding, you can influence how curvy a line draw with the path tool is going to be. Letting go of the mouse button confirms the action, and then you’re free to draw the next point.
 
 .. image:: /images/flat-coloring/Krita_filling_lineart8.png
-    :alt: filling color in line art using path tool
+    :alt: Filling color in line art using path tool.
 
 You can also erase with a geometric tool. Just press the :kbd:`E` key or the eraser button.
 
 .. image:: /images/flat-coloring/Krita_filling_lineart9.png
-    :alt: erasing with path tool
+    :alt: Erasing with path tool.
 
 Advantages
 """"""""""
@@ -292,26 +292,26 @@ So it works like this:
 
 1. Select the colorize mask tool.
 2. Tick the layer you're using.
-3. Paint the colors you want to use on the colorize mask
+3. Paint the colors you want to use on the colorize mask.
 4. Click update to see the results:
 
 .. image:: /images/flat-coloring/Krita_filling_lineart10.png
-    :alt: coloring with colorize mask
+    :alt: Coloring with colorize mask.
 
 When you are satisfied, |mouseright| the colorize mask, and go to :menuselection:`Convert --> Paint Layer`. This will turn the colorize mask to a generic paint layer. Then, you can fix the last issues by making the line art semi-transparent and painting the flaws away with a pixel art brush.
 
 .. image:: /images/flat-coloring/Krita_filling_lineart11.png
-    :alt: result from the colorize mask
+    :alt: Result from the colorize mask.
 
 Then, when you are done, split the layers via :menuselection:`Layer --> Split --> Split Layer`. There are a few options you can choose, but the following should be fine:
 
 .. image:: /images/flat-coloring/Krita_filling_lineart12.png
-    :alt: slitting colors into islands
+    :alt: Slitting colors into islands.
 
 Finally, press **Ok** and you should get the following. Each color patch it on a different layer, named by the palette in the menu and alpha locked, so you can start painting right away!
 
 .. image:: /images/flat-coloring/Krita_filling_lineart13.png
-    :alt: resulting color islands from split layers
+    :alt: Resulting color islands from split layers.
 
 Advantages
 """"""""""

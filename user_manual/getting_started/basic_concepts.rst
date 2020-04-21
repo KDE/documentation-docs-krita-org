@@ -56,13 +56,13 @@ Because the image is a working copy of the image on the hard drive, you can do a
 
 New
  Makes a new image. When you press :menuselection:`Save`, you make a new file on the hard drive.
-Open
+Open...
  Makes an internal copy of an existing image. When you press :menuselection:`Save`, you will overwrite the original existing image with your working copy.
-Open the existing Document as Untitled Document
- Similar to :menuselection:`Open`, however, :menuselection:`Save` will request you to specify a saving location: you're making a new copy. This is similar to :menuselection:`Import` in other programs.
+Open existing Document as Untitled Document...
+ Similar to :menuselection:`Open...`, however, :menuselection:`Save` will request you to specify a saving location: you're making a new copy. This is similar to :menuselection:`Import...` in other programs.
 Create Copy From Current Image
- Similar to :menuselection:`Open existing Document as Untitled Document` but with the currently selected image.
-Save incremental
+ Similar to :menuselection:`Open existing Document as Untitled Document...` but with the currently selected image.
+Save Incremental Version
  Allows you to quickly make a snapshot of the current image by making a new file with a version number added to it.
 
 These options are great for people doing production work, who need to switch between files quickly or have backup files in case they do something extreme. Krita also has a file backup system in the form of auto-saves, backup files and crash recovery. You can configure the option for these features in the general settings.
@@ -115,7 +115,7 @@ When you create a new document in Krita for the first time you will see a rectan
 .. image:: /images/Canvas-krita.png
    :align: center
 
-When you save the painting as jpg, png et cetera or take a print out of the painting, only the content inside this area is taken into consideration. Anything beyond it is ignored. Krita does store information beyond this area, you just won't be able to see it.
+When you save the painting as JPG, PNG et cetera or take a print out of the painting, only the content inside this area is taken into consideration. Anything beyond it is ignored. Krita does store information beyond this area, you just won't be able to see it.
 This data is stored in the **Layers**.
 
 Layers and Compositing
@@ -176,7 +176,7 @@ Krita has :ref:`a LOT of different brush engines <category_brush_engines>`, all 
 .. figure:: /images/brushes/Krita_example_differentbrushengines.png
    :align: center
 
-   **Left:** pixel brush, **Center:** color smudge brush, **Right:** sketch brush
+   **Left:** pixel brush, **Center:** color smudge brush, **Right:** sketch brush.
 
 For example, the pixel-brush engine is simple and allows you to do most of your basic work, but if you do a lot of painting, the color smudge brush engine might be more useful. Even though it's slower to use than the Pixel Brush engine, its mixing of colors allows you to work faster when you need to blend and mix colors.
 
@@ -194,7 +194,7 @@ Humans can see a few million colors, which are combinations of electromagnetic w
 .. figure:: /images/Krita_basics_primaries.png
    :align: center
 
-   Subtractive CMY colors on the left and additive RGB colors on the right.  This difference means that printers benefit from color conversion before printing
+   Subtractive CMY colors on the left and additive RGB colors on the right.  This difference means that printers benefit from color conversion before printing.
 
 When painting traditionally, we use pigments which also absorb the right light-waves for the color we want it to have, but the more pigments you combine, the more light is absorbed, leading to a kind of murky black. This is why we call the mixing of paints **subtractive**, as it subtracts light the more pigments you put together. Because of that, in traditional pigment mixing, our most efficient primaries are three fairly light colors: Cyan blue and Magenta red and Yellow (CMY).
 
@@ -350,7 +350,7 @@ You can use transform masks to deform clone and file layers as well.
 .. image:: /images/animation/Introduction_to_animation_walkcycle_02.gif
    :align: center
 
-From version 3.0 onwards, Krita got raster animation support. You can use the timeline, animation and onionskin dockers, plus Krita's amazing variety of brushes to do raster based animations, export those, and then turn them into movies or gifs.
+From version 3.0 onwards, Krita got raster animation support. You can use the timeline, animation and onionskin dockers, plus Krita's amazing variety of brushes to do raster based animations, export those, and then turn them into movies or GIFs.
 
 Assistants, Grids and Guides
 ----------------------------
@@ -360,7 +360,7 @@ With all this technical stuff, you might forget that Krita is a painting program
 .. figure:: /images/assistants/Krita_basic_assistants.png
    :align: center
 
-   Krita's vanishing point assistants in action
+   Krita's vanishing point assistants in action.
 
 :ref:`grids_and_guides_docker`
  A very straightforward guiding tool which shows grids or guiding lines that can be configured.
@@ -378,4 +378,4 @@ This leads to the final concept: customization.
 
 In addition to rearranging the dockers according to your preferences, Krita provides and saves your configurations as :ref:`resource_workspaces`. This is the button at the top right.
 
-You can also configure the toolbar via :menuselection:`Settings --> Configure Toolbars`, as well as the shortcuts under both :menuselection:`Settings --> Configure Krita --> Configure Shortcuts` and :menuselection:`Settings --> Configure Krita --> Canvas Input Settings`.
+You can also configure the toolbar via :menuselection:`Settings --> Configure Toolbars...`, as well as the shortcuts under both :menuselection:`Settings --> Configure Krita... --> Shortcuts` and :menuselection:`Settings --> Configure Krita... --> Canvas Input Settings`.

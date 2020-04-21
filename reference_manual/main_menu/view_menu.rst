@@ -16,24 +16,24 @@ View Menu
 =========
 
 Show Canvas Only
-    Only shows the canvas and what you have configured to show in :guilabel:`Canvas Only` settings.
+    Only shows the canvas and what you have configured to show in :guilabel:`Canvas Only` settings. Shortcut :kbd:`Tab`
 Fullscreen mode
-    This will hide the system bar.
+    This will hide the system bar. Shortcut :kbd:`Ctrl + Shift + F`
 Wrap Around Mode
-    This will show the image as if tiled orthographically. Very useful for tiling 3d textures. Hit the :kbd:`W` key to quickly activate it.
-Instant Preview
-    Toggle :ref:`instant_preview` globally.
+    This will show the image as if tiled orthographically. Very useful for tiling 3d textures.
+Instant Preview Mode
+    Toggle :ref:`instant_preview` globally. Shortcut :kbd:`Shift + L`
 Soft Proofing
-    Activate :ref:`soft_proofing`.
+    Activate :ref:`soft_proofing`. Shortcut :kbd:`Ctrl + Y`
 Out of Gamut Warnings
-    See the :ref:`soft_proofing` page for details.
+    See the :ref:`soft_proofing` page for details. Shortcut :kbd:`Ctrl + Shift + Y`
 Canvas
     Contains view manipulation actions.
 Mirror View
     This will mirror the view. Hit the :kbd:`M` key to quickly activate it. Very useful during painting.
 Show Rulers
     This will display a set of rulers. |mouseright| the rulers after showing them, to change the units.
-Rulers track pointer
+Rulers Track Pointer
     This adds a little marker to the ruler to show where the mouse is in relation to them.
 Show Guides
     Show or hide the guides.

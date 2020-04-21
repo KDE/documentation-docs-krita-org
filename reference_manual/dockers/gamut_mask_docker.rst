@@ -73,6 +73,6 @@ Description
 External Info
 -------------
 
-- `Color Wheel Masking, Part 1 by James Gurney. <https://gurneyjourney.blogspot.com/2008/01/color-wheel-masking-part-1.html>`_
-- `The Shapes of Color Schemes by James Gurney. <https://gurneyjourney.blogspot.com/2008/02/shapes-of-color-schemes.html>`_
-- `Gamut Masking Demonstration by James Gourney (YouTube). <https://youtu.be/qfE4E5goEIc>`_
+- `Color Wheel Masking, Part 1 by James Gurney <https://gurneyjourney.blogspot.com/2008/01/color-wheel-masking-part-1.html>`_.
+- `The Shapes of Color Schemes by James Gurney <https://gurneyjourney.blogspot.com/2008/02/shapes-of-color-schemes.html>`_.
+- `Gamut Masking Demonstration by James Gourney (YouTube) <https://youtu.be/qfE4E5goEIc>`_.
