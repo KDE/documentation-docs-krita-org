@@ -6,7 +6,7 @@
 
     :authors: - Dmitry Kazakov <dimula73@gmail.com>
     :license: GNU free documentation license 1.3 or later.
-    
+
 .. _release_krita:
 
 ==========================
@@ -69,6 +69,7 @@ Create the tarball
 2. Go into the createtarball folder, update the information in the 'config.ini' file to reflect the right tag and version number. It should look like that:
 
 .. code::
+
     [krita]
     gitModule   = yes
     gitTag      = v4.2.9
@@ -86,15 +87,16 @@ Create the tarball
 5. The scripts creates an .xz tarball, but our AppImage builder requires a traditional .gz tarball, so you need to create a .gz version of the tarball manually:
 
 .. code::
-    tar cfz krita-4.2.9-beta1.tar.gz --group=root --owner=root krita-4.2.9-beta1
+
+   tar cfz krita-4.2.9-beta1.tar.gz --group=root --owner=root krita-4.2.9-beta1
 
 
 6. Sign both tarballs:
 
 .. code::
+
     gpg --output krita-4.2.9-beta1.tar.gz.sig --detach-sign krita-4.2.9-beta1.tar.gz
     gpg --output krita-4.2.9-beta1.tar.xz.sig --detach-sign krita-4.2.9-beta1.tar.xz
-
 
 7. Upload tarballs to files.kde.org, where builders can fpick them up:
 
@@ -123,6 +125,7 @@ Make Windows, Linux and OSX packages
 10. Sign both AppImages:
 
 .. code::
+
     gpg --detach-sign --output krita-4.2.9-beta-x86_64.appimage.sig krita-4.2.9-beta-x86_64.appimage
     gpg --detach-sign --output gmic_krita_qt-x86_64.appimage.sig gmic_krita_qt-x86_64.appimage
 

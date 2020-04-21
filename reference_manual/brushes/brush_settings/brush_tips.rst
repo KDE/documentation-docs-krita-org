@@ -145,22 +145,19 @@ Spacing
 Brush Mode
 ''''''''''
 
-
 Mask
     For colored brushes, don't paint the actual colors, but make a grayscale brush tip that will be colored by your selected foreground/background color. Lighter areas will be interpreted as more transparent.
 Color
     Use the fully colored brush tip.
 Lightness
+   .. versionadded:: 4.3
+        Similar to mask, except maintaining the lightness differences in the brush tip. Transparency stays the same as it does in colored mode, but darker tones will be in the tone of the current foreground color. There are three sliders here, to control the exact feel of the current brush tip in this mode:
 
-    .. versionadded:: 4.3
-
-    Similar to mask, except maintaining the lightness differences in the brush tip. Transparency stays the same as it does in colored mode, but darker tones will be in the tone of the current foreground color. There are three sliders here, to control the exact feel of the current brush tip in this mode:
-    
     Neutral point
         This is the lightness level that will be the same as your current foreground color. Higher values than this will be lighter versions of the current foreground color, and lower, darker versions of the current color.
     Brightness
         Makes the tip as a whole brighter or darker.
     Contrast
         Increase the contrast between dark and light areas in the tip.
-        
+
     These features can be used to mimic the feeling of impasto, or to create a variety of sparkle effects.
