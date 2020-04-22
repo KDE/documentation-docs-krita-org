@@ -25,7 +25,7 @@ Tool Options
 
 Add Reference Image
     Load a single image to display on the canvas.
-Paste Reference Image
+Paste as Reference Image
     Load an image from the system clipboard and add it as a reference image.
 Load Set
     Load a set of reference images.

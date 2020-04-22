@@ -24,7 +24,7 @@ There are a few steps involved:
 
 4. Resize! Go to :menuselection:`Image --> Scale Image To New Size...` or use the :kbd:`Ctrl + Alt + I` shortcut. This calls up the resize menu. A good rule of thumb for resizing is that you try to get both sizes to be less than 1200 pixels. (This being the size of HD formats). You can easily get there by setting the **Resolution** under **Print Size** to **72** dots per inch. Then press **OK** to have everything resized.
 
-5. Sharpen the image a little. This is especially necessary for social media. Social media websites often scale and convert your image in such a way that it gets a little blurry, because they optimize towards photos and not paintings. To have your images stay sharp, it is worth it to run a sharpen filter beforehand. Because the sharpen filter is quite powerful, you are best off adding a sharpen filter mask on top of the stack and lowering it's opacity till you feel the sharpness is appropriate.
+5. Sharpen the image a little. This is especially necessary for social media. Social media websites often scale and convert your image in such a way that it gets a little blurry, because they optimize towards photos and not paintings. To have your images stay sharp, it is worth it to run a sharpen filter beforehand. Because the sharpen filter is quite powerful, you are best off adding a sharpen filter mask on top of the stack and lowering its opacity till you feel the sharpness is appropriate.
 
 6. Save as a web-safe image format. There's three that are especially recommended:
 

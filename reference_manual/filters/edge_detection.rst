@@ -81,7 +81,7 @@ To use this as a sharpen filter, create a filter layer with this filter, and the
 
    **Top left**: Original, **top right**: Gaussian Highpass Result with radius 3, **bottom left**: Gaussian High Pass Result with radius 3 blended over the original with to Linear Light, **bottom right**: Gaussian High Pass result with radius 3 blended over the original with Soft Light.
 
-To remove local gradients from a texture, create a clone layer, and apply this filter as a filter mask. Then, put a filter layer with gaussian blur set to the full amount in between the clone layer and the original. Finally, set the clone layer to luminosity or multiply(in this case an extra filter mask needs to be added to reduce the levels so that the multiplication result will not be as strong).
+To remove local gradients from a texture, create a clone layer, and apply this filter as a filter mask. Then, put a filter layer with gaussian blur set to the full amount in between the clone layer and the original. Finally, set the clone layer to luminosity or multiply (in this case an extra filter mask needs to be added to reduce the levels so that the multiplication result will not be as strong).
 
 .. figure:: /images/filters/highpass_filter_local_gradient_removal.png
    :align: center

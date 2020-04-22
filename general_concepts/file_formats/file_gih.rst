@@ -35,7 +35,7 @@ So, the following image has a table where dimension 1 is unique in one of 4 numb
    :figwidth: 800px
    :align: center
 
-See `the GIMP documentation <https://docs.gimp.org/2.8/en/gimp-using-animated-brushes.html>`_ for a more thorough explaination.
+See `the GIMP documentation <https://docs.gimp.org/2.8/en/gimp-using-animated-brushes.html>`_ for a more thorough explanation.
 
 GIMP image hose format options:
 -------------------------------

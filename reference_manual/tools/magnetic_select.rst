@@ -90,13 +90,13 @@ Action
 Anti-aliasing
     This toggles whether or not to give selections feathered edges. Some people prefer hard-jagged edges for their selections.
 Filter Radius:
-    Determine the radius of the edge detection kernel. This determines how agressively the tool will interpret contrasts. Low values mean only the sharpest of contrast will be a seen as an edge. High values will pick up on subtle contrasts. The range of which is from 2.5 to 100.
+    Determine the radius of the edge detection kernel. This determines how aggressively the tool will interpret contrasts. Low values mean only the sharpest of contrast will be a seen as an edge. High values will pick up on subtle contrasts. The range of which is from 2.5 to 100.
 Threshold:
     From 0 to 255, how sharp your edge is, 0 is least while 255 is the most. Used in the interactive mode only.
 Search Radius:
     The area in which the tool will search for a sharp contrast within an image. More pixels means less precision is needed when placing the points, but this will require Krita to do more work, and thus slows down the tool.
 Anchor Gap:
-    When using |mouseleft| :kbd:`+ drag` to place points automatically, this value determines the average gap between 2 anchors. Low values give high precision by placing many nodes, but this is also harder to edit afterwards. The pixels are in screen dimensions and not image dimensions, meaning it is affect by zoom.
+    When using |mouseleft| :kbd:`+ drag` to place points automatically, this value determines the average gap between 2 anchors. Low values give high precision by placing many nodes, but this is also harder to edit afterwards. The pixels are in screen dimensions and not image dimensions, meaning it is affected by zoom.
     
     .. figure:: /images/tools/magnetic_selection_anchor_gap.png
        :width: 640

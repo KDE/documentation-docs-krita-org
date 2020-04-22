@@ -59,7 +59,7 @@ If this doesn't work, you might have to add a fall-back language as well. This i
 I have a problem, how to get support for Krita?
 -----------------------------------------------
 
-#. Ask your question on one of the user support forums. It can be `Krita Artists forum <https://krita-artists.org/>`_ (recommended), `Krita KDE forum <https://forum.kde.org/viewforum.php?f=136>`_ or alternatively `Krita subreddit <https://forum.kde.org/viewforum.php?f=136>`_ .
+#. Ask your question on one of the user support forums. It can be `Krita Artists forum <https://krita-artists.org/>`_ (recommended), `Krita KDE forum <https://forum.kde.org/viewforum.php?f=136>`_ or alternatively `Krita subreddit <https://www.reddit.com/r/krita/>`_ .
 
 #. Remember -- most probably the person you're interacting with is a volunteer, and even if not, it's not someone actually paid for doing user support. Treat them nicely and respect their time! They will for sure reciprocate that.
 
@@ -67,7 +67,7 @@ I have a problem, how to get support for Krita?
 
 #. Describe your issue. You can add screenshots and videos, but even if you do that, write a few words what the video shows and what the issue is.
 
-#. State all relevant details: most importantly your operating system (Windows, MacOS, Linux...), which version of Krita you use (go to :menuselection:`Help -> About Krita` to find out) and what kind of tablet you have (if your issue is related to a tablet driver).
+#. State all relevant details: most importantly your operating system (Windows, MacOS, Linux...), which version of Krita you use (go to :menuselection:`Help --> About Krita` to find out) and what kind of tablet you have (if your issue is related to a tablet driver).
 
 #. Answer all questions your supporter asks, even if you don't think they're relevant. They probably have a reason to ask about that.
 
@@ -144,7 +144,7 @@ This is most probable if you are on Windows and you have either a display with a
 
 - You close your computer using the power button.
 
-If you are on Windows and you use power button instead of a standard procedure to close or restart your computer, it might happen that Krita's configuration file gets corrupted. To solve this, just use the correct way of closing your system: either :menuselection:`Start -> Restart` or :menuselection:`Start -> Shutdown`.
+If you are on Windows and you use power button instead of a standard procedure to close or restart your computer, it might happen that Krita's configuration file gets corrupted. To solve this, just use the correct way of closing your system: either :menuselection:`Start --> Restart` or :menuselection:`Start --> Shutdown`.
 
 Where are my resources stored?
 ------------------------------

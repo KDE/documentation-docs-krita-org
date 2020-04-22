@@ -53,7 +53,7 @@ Hotkeys and Stickykeys
 
     To subtract a perfect circle, you can follow two different methods:
 
-    1. Press :kbd:`S` to substract then |mouseleft| to select and press :kbd:`Shift` while dragging to constrain to a perfect circle.
+    1. Press :kbd:`S` to subtract then |mouseleft| to select and press :kbd:`Shift` while dragging to constrain to a perfect circle.
 
     2. Press :kbd:`Alt +` |mouseleft|, then release the :kbd:`Alt` key while dragging and press :kbd:`Shift` to constrain.   
 
