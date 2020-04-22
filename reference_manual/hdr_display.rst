@@ -49,7 +49,7 @@ For sharing with other image editors, :ref:`file_exr` is recommended. For sharin
 
 For exporting HDR animations, we support saving HDR to the new codec for mp4 and mkv: H.265. To use these options...
 
-* Get a version of FFmpeg that supports H.256.
+* Get a version of FFmpeg that supports H.265.
 * Have an animation open.
 * :menuselection:`File --> Render Animation`.
 * Select :guilabel:`Video`.
