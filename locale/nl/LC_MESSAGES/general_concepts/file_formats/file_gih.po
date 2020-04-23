@@ -4,26 +4,40 @@
 # This file is distributed under the same license as the Krita Manual package.
 #
 # Automatically generated, 2019.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020.
 # Ronald Stroethoff <stroet43@zonnet.nl>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-12 03:44+0200\n"
-"PO-Revision-Date: 2020-03-01 14:50+0100\n"
-"Last-Translator: Ronald Stroethoff <stroet43@zonnet.nl>\n"
+"POT-Creation-Date: 2020-04-22 03:51+0200\n"
+"PO-Revision-Date: 2020-04-22 14:11+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: ../../general_concepts/file_formats/file_gih.rst:None
+msgid ""
+".. image:: images/category_filetypes/gih_multi_dimension_explaination.png"
+msgstr ""
 
 #: ../../general_concepts/file_formats/file_gih.rst:1
-msgid "The Gimp Image Hose file format in Krita."
-msgstr "Het bestandsformaat Gimp Image Hose in Krita."
+#| msgid "The Gimp Image Hose file format in Krita."
+msgid "The GIMP Image Hose file format in Krita."
+msgstr "Het bestandsformaat GIMP Image Hose in Krita."
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "*.gih"
+msgstr "*.gih"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "GIH"
+msgstr "GIH"
 
 #: ../../general_concepts/file_formats/file_gih.rst:10
 msgid "Image Hose"
@@ -32,14 +46,6 @@ msgstr "Image Hose"
 #: ../../general_concepts/file_formats/file_gih.rst:10
 msgid "Gimp Image Hose"
 msgstr "Gimp Image Hose"
-
-#: ../../general_concepts/file_formats/file_gih.rst:10
-msgid "GIH"
-msgstr "GIH"
-
-#: ../../general_concepts/file_formats/file_gih.rst:10
-msgid "*.gih"
-msgstr "*.gih"
 
 #: ../../general_concepts/file_formats/file_gih.rst:15
 msgid "\\*.gih"
@@ -72,23 +78,59 @@ msgstr ".. image:: images/brushes/Gih-examples.png"
 msgid "From top to bottom: Incremental, Pressure and Random"
 msgstr "Van boven naar beneden: Incrementeel, Druk en Willekeurig"
 
-#: ../../general_concepts/file_formats/file_gih.rst:27
-msgid "Gimp image hose format options:"
-msgstr "Opties van Gimp image hose formaat:"
+#: ../../general_concepts/file_formats/file_gih.rst:28
+msgid "Dimension and ranks."
+msgstr ""
 
-#: ../../general_concepts/file_formats/file_gih.rst:29
+#: ../../general_concepts/file_formats/file_gih.rst:30
+msgid ""
+"The GIMP image hose format allows multiple dimensions for a given brush. You "
+"could for example have a dimension that updates incrementally, and one that "
+"updates on pressure, or updates randomly. Upon export, Krita will use the "
+"ranks to subdivide the layers per dimension. If you have a 24 layer image "
+"and three ranks, and the first dimension is set to 2, the second to 4 and "
+"the third to 3, then Krita will divide 24 into 2 groups of 12, each of which "
+"have unique images for the 2 parts of the first dimension. Then those 2 "
+"groups of 12 get divided into 8 groups of 4, each of which have unique brush "
+"tips for the four parts of the second dimension, and finally, the grouped "
+"three images have each a unique brush for the final dimension."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:32
+msgid ""
+"So, the following image has a table where dimension 1 is unique in one of 4 "
+"numbers, while dimension 2 is unique in one of 3 shapes. So our ranks for "
+"dimension 1 and dimension 2 need to be 4 and 3 respectively. Now, to order "
+"the layers, you need to subdivide the table first by the first dimension, "
+"and then by the second. So we end up with three layers each for a shape in "
+"the second dimension but for the first number, then another three layers, "
+"each for a shape, but then for the second number, and so forth."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:38
+msgid ""
+"See `the GIMP documentation <https://docs.gimp.org/2.8/en/gimp-using-"
+"animated-brushes.html>`_ for a more thorough explaination."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:41
+#| msgid "Gimp image hose format options:"
+msgid "GIMP image hose format options:"
+msgstr "Opties van GIMP image hose formaat:"
+
+#: ../../general_concepts/file_formats/file_gih.rst:43
 msgid "Constant"
 msgstr "Constant"
 
-#: ../../general_concepts/file_formats/file_gih.rst:30
+#: ../../general_concepts/file_formats/file_gih.rst:44
 msgid "This'll use the first image, no matter what."
 msgstr "Dit zal de eerste afbeelding gebruiken, wat er ook gebeurt."
 
-#: ../../general_concepts/file_formats/file_gih.rst:31
+#: ../../general_concepts/file_formats/file_gih.rst:45
 msgid "Incremental"
 msgstr "Incrementeel"
 
-#: ../../general_concepts/file_formats/file_gih.rst:32
+#: ../../general_concepts/file_formats/file_gih.rst:46
 msgid ""
 "This'll paint the image layers in sequence. This is good for images that can "
 "be strung together to create a pattern."
@@ -96,11 +138,11 @@ msgstr ""
 "Dit zal de lagen met afbeeldingen achter elkaar tonen. Dit is handig voor "
 "afbeeldingen die in een patroon aan elkaar geregen kunnen worden."
 
-#: ../../general_concepts/file_formats/file_gih.rst:33
+#: ../../general_concepts/file_formats/file_gih.rst:47
 msgid "Pressure"
 msgstr "Druk"
 
-#: ../../general_concepts/file_formats/file_gih.rst:34
+#: ../../general_concepts/file_formats/file_gih.rst:48
 msgid ""
 "This'll paint the images depending on pressure. This is good for brushes "
 "imitating the hairs of a natural brush."
@@ -108,11 +150,11 @@ msgstr ""
 "Dit zal de afbeeldingen afhankelijk van de druk tekenen. Dit is handig bij "
 "penselen die de haren van een echte penseel imiteren."
 
-#: ../../general_concepts/file_formats/file_gih.rst:35
+#: ../../general_concepts/file_formats/file_gih.rst:49
 msgid "Random"
 msgstr "Willekeurig"
 
-#: ../../general_concepts/file_formats/file_gih.rst:36
+#: ../../general_concepts/file_formats/file_gih.rst:50
 msgid ""
 "This'll draw the images randomly. This is good for image-collections used in "
 "speedpainting as well as images that generate texture. Or perhaps more "
@@ -122,16 +164,16 @@ msgstr ""
 "verzamelingen van afbeeldingen die u gebruikt bij snel schilderen en bij "
 "afbeeldingen die textuur genereren. Of misschien meer grafische symbolen."
 
-#: ../../general_concepts/file_formats/file_gih.rst:38
+#: ../../general_concepts/file_formats/file_gih.rst:52
 msgid "Angle"
 msgstr "Hoek"
 
-#: ../../general_concepts/file_formats/file_gih.rst:38
+#: ../../general_concepts/file_formats/file_gih.rst:52
 msgid "This'll use the dragging angle to determine with image to draw."
 msgstr ""
 "De hoek waarmee u versleepte wordt gebruikt om de afbeelding te tekenen."
 
-#: ../../general_concepts/file_formats/file_gih.rst:40
+#: ../../general_concepts/file_formats/file_gih.rst:54
 msgid ""
 "When exporting a Krita file as a ``.gih``, you will also get the option to "
 "set the default spacing, the option to set the name (very important for "
@@ -143,11 +185,11 @@ msgstr ""
 "naam in te stellen (belangrijk om het op te zoeken in de "
 "gebruikersinterface) en de keuze om van de kleuren maskers af te leiden."
 
-#: ../../general_concepts/file_formats/file_gih.rst:43
+#: ../../general_concepts/file_formats/file_gih.rst:57
 msgid "Use Color as Mask"
 msgstr "Kleur als masker gebruiken"
 
-#: ../../general_concepts/file_formats/file_gih.rst:43
+#: ../../general_concepts/file_formats/file_gih.rst:57
 msgid ""
 "This'll turn the darkest values of the image as the ones that paint, and the "
 "whitest as transparent. Untick this if you are using colored images for the "
@@ -157,10 +199,13 @@ msgstr ""
 "schilderen, en de lichtste als transparant. Schakel dit uit als u de penseel "
 "gebruikt bij een gekleurde afbeelding."
 
-#: ../../general_concepts/file_formats/file_gih.rst:45
+#: ../../general_concepts/file_formats/file_gih.rst:59
+#| msgid ""
+#| "We have a :ref:`Krita Brush tip page <brush_tip_animated_brush>` on how "
+#| "to create your own gih brush."
 msgid ""
 "We have a :ref:`Krita Brush tip page <brush_tip_animated_brush>` on how to "
-"create your own gih brush."
+"create your own GIH brush."
 msgstr ""
 "We hebben een :ref:`Krita Penseel pagina <brush_tip_animated_brush>` waarop "
-"we beschrijven hoe u uw eigen gih penseel creëert."
+"we beschrijven hoe u uw eigen GIH penseel creëert."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: reference_manual\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-12 03:44+0200\n"
+"POT-Creation-Date: 2020-04-22 03:51+0200\n"
 "PO-Revision-Date: 2019-12-27 12:11+0100\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -87,21 +87,16 @@ msgstr "Llegenda:"
 #: ../../reference_manual/dockers/timeline.rst:27
 msgid ""
 "**A. Layer List --** This area contains some subset of the layers of your "
-"current document. The currently active layer is always shown and can be "
-"\"pinned\" to the timeline using the :guilabel:`Show in Timeline` menu "
-"action. Also, Layers that are created via the Timeline or added using the :"
-"guilabel:`Add Existing Layer` submenu are automatically pinned to the "
-"timeline. Each layer has properties that can also be toggled here (visible, "
-"locked, show onion skins, etc.)."
+"current document. Similar to the Layers Docker, each layer has various "
+"properties that can also be toggled here (visibility, locking, onion skins, "
+"etc.).  While the currently active layer is always shown here, layers can "
+"also be \"pinned\" to the timeline using the :guilabel:`Pin to Timeline` "
+"menu action or the :guilabel:`Pin Existing Layer` submenu so they will be "
+"visible even when inactive. Layers that are created via the Timeline are "
+"pinned automatically and by checking the :guilabel:`Automatically pin new "
+"layers to timeline` option in :guilabel:`Configure Krita > General > "
+"Miscellaneous` all new paint layers can be pinned automatically."
 msgstr ""
-"**A. Llista de capes:** aquesta àrea conté algun subconjunt de les capes del "
-"document actual. Sempre es mostrarà la capa activa actual i es podrà «fixar» "
-"a la línia de temps mitjançant l'acció del menú :guilabel:`Mostra a la línia "
-"de temps`. A més, les capes que es creïn a través de la línia de temps o que "
-"s'afegeixin mitjançant el submenú :guilabel:`Afegeix una capa existent` es "
-"fixaran automàticament a la línia de temps. Cada capa tindrà propietats que "
-"també es podran canviar des d'aquí (visible, bloquejada, mostra les pells de "
-"ceba, etc.)."
 
 #: ../../reference_manual/dockers/timeline.rst:30
 msgid "**Active Layer**"
@@ -179,9 +174,13 @@ msgid "**Current Selection:**"
 msgstr "**Selecció actual:**"
 
 #: ../../reference_manual/dockers/timeline.rst:41
+#, fuzzy
+#| msgid ""
+#| "Painting always happens only in the *active frame* (represented by a "
+#| "small dot), which is not necessarily part of your current selection."
 msgid ""
 "Painting always happens only in the *active frame* (represented by a small "
-"dot), which is not necessarily part of your current selection."
+"dot), which is not necessarily part of your current selection!"
 msgstr ""
 "La pintura sempre succeeix sobre el *fotograma actiu* (representat per un "
 "petit punt), el qual no formarà necessàriament part de la vostra selecció "
@@ -286,11 +285,17 @@ msgid "Don't mix the active frame up with the current selection!"
 msgstr "No mescleu el fotograma actiu amb la selecció actual!"
 
 #: ../../reference_manual/dockers/timeline.rst:60
+#, fuzzy
+#| msgid ""
+#| "**E. Layer Menu --** A small menu for manipulating animation layers. You "
+#| "can create new layers, add or remove existing ones, and you can set 'Show "
+#| "in Timeline' here to pin the active layer to the Timeline. (This menu "
+#| "also shows up when right-clicking on layers inside of the Layer List.)"
 msgid ""
 "**E. Layer Menu --** A small menu for manipulating animation layers. You can "
-"create new layers, add or remove existing ones, and you can set 'Show in "
-"Timeline' here to pin the active layer to the Timeline. (This menu also "
-"shows up when right-clicking on layers inside of the Layer List.)"
+"create new layers, remove existing ones, as well as pin or unpin the active "
+"layer. (This menu also shows up when right-clicking on layer headers inside "
+"of the Layer List.)"
 msgstr ""
 "**E. Menú Capa:** un petit menú per a manipular les capes d'animació. Podreu "
 "crear capes noves, afegir-ne o eliminar-ne, i aquí podreu establir «Mostra a "
@@ -343,12 +348,20 @@ msgstr ""
 "un fotograma clau!"
 
 #: ../../reference_manual/dockers/timeline.rst:73
+#, fuzzy
+#| msgid ""
+#| "|mouseright| any square on the timeline docker and select :guilabel:"
+#| "`Create Blank Frame`. A blank frame (one that you haven't yet drawn "
+#| "anything in) appears as a *hollow outline* instead of a solid box, making "
+#| "that frame active and drawing on the canvas will make it appear as a "
+#| "*solid, colored rectangle*."
 msgid ""
 "|mouseright| any square on the timeline docker and select :guilabel:`Create "
 "Blank Frame`. A blank frame (one that you haven't yet drawn anything in) "
 "appears as a *hollow outline* instead of a solid box, making that frame "
 "active and drawing on the canvas will make it appear as a *solid, colored "
-"rectangle*."
+"rectangle*. To move a frame around, you can drag and drop it into another "
+"empty frame slot."
 msgstr ""
 "Feu |mouseright| sobre qualsevol quadrat a l'acoblador Línia de temps i "
 "seleccioneu :guilabel:`Crea un fotograma en blanc`. Un fotograma en blanc "
@@ -358,36 +371,46 @@ msgstr ""
 
 #: ../../reference_manual/dockers/timeline.rst:75
 msgid ""
-"To keep a layer visible in the Timeline Docker regardless of which layer is "
-"selected, select the layer in the Layers Docker so it shows up in the "
-"docker, then |mouseright| it within the Timeline Docker's Layer List and "
-"select :guilabel:`Show in Timeline`. This way you can choose which layers "
-"are important and which are only minor."
+"While animating you may find that you want to keep a layer \"pinned\", "
+"making it visible in the Timeline Docker regardless of which layer is "
+"selected. There are a few ways to do this in Krita. By |mouseright| clicking "
+"on any layer in the Layers Docker, you can pin it by activating the :"
+"guilabel:`Pin to Timeline` menu item. This allows you to decide which layers "
+"are important to see in your timeline (i.e. those which contain keyframe "
+"drawings) and which layers are not (i.e. a static layout drawing or "
+"background painting). Alternatively, you can open the Timeline Docker's "
+"Layer Menu and select a layer from the :guilabel:`Pin Existing Layer` "
+"submenu. Finally, you can enable the :guilabel:`Automatically pin new layers "
+"to timeline` option from the :guilabel:`Configure Krita > General > "
+"Miscellaneous` dialog."
 msgstr ""
-"Per mantenir visible una capa a l'acoblador Línia de temps independentment "
-"de quina capa s'ha seleccionat, seleccioneu la capa a l'acoblador Línia de "
-"temps perquè aparegui i, després feu |mouseright| dins de la llista de capes "
-"de l'acoblador Línia de temps i seleccioneu :guilabel:`Mostra a la línia de "
-"temps`. D'aquesta manera podreu escollir quines capes són importants i "
-"quines ho són menys."
 
 #: ../../reference_manual/dockers/timeline.rst:77
-msgid "You can drag and drop the frame around to a different empty frame slot."
-msgstr "Podeu arrossegar i deixar anar el fotograma a una altra ranura buida."
+#, fuzzy
+#| msgid ""
+#| "It's also possible to add multiple key frames by right-clicking inside "
+#| "the Frame Table and selecting :menuselection:`Keyframes --> Insert "
+#| "Multiple Keyframes`. With this option you can specify a number of frames "
+#| "to add with the option of built in timing for quickly creating a series "
+#| "of 1s, 2s, 3s, etc. These settings are saved between uses."
+msgid ""
+"To add a new frame, either right-click on an empty frame slot and select :"
+"guilabel:`Create Blank Frame` to create a fresh blank frame, or select :"
+"guilabel:`Create Duplicate Frame` to create a new copy of the previous "
+"frame. It's also possible to add multiple key frames by right-clicking "
+"inside the Frame Table and selecting :menuselection:`Keyframes --> Insert "
+"Multiple Keyframes`. With this option you can specify a number of frames to "
+"add with the option of built in timing for quickly creating a series of 1s, "
+"2s, 3s, etc. These settings are saved between uses."
+msgstr ""
+"També és possible afegir múltiples fotogrames clau fent clic dret dins de la "
+"Taula de fotogrames i seleccionant :menuselection:`Fotogrames clau --> "
+"Insereix múltiples fotogrames clau`. Amb aquesta opció podreu especificar un "
+"nombre de fotogrames a afegir amb l'opció de temps integrada per a crear "
+"ràpidament una sèrie d'1 s, 2 s, 3 s, etc. Aquests ajustaments es desaran "
+"entre els usos."
 
 #: ../../reference_manual/dockers/timeline.rst:79
-msgid ""
-"To add a single new frame, either right-click on an empty frame slot and "
-"select :guilabel:`Create Blank Frame` to create a fresh blank frame, or "
-"select :guilabel:`Create Duplicate Frame` to create a new copy of the "
-"previous frame."
-msgstr ""
-"Per afegir un fotograma únic nou, feu clic dret sobre una ranura buida i "
-"seleccioneu :guilabel:`Crea un fotograma en blanc` per a crear un fotograma "
-"en blanc nou o seleccioneu :guilabel:`Crea un fotograma duplicat` per a "
-"crear una còpia nova del fotograma anterior."
-
-#: ../../reference_manual/dockers/timeline.rst:81
 msgid ""
 "You can also change the color of frames so that you can easily identify "
 "important frames or distinguish between different sections of your "
@@ -400,26 +423,18 @@ msgstr ""
 "per als fotogrames nous de manera que pugueu crear amb facilitat un conjunt "
 "de fotogrames de colors i després canviar a un altre color."
 
-#: ../../reference_manual/dockers/timeline.rst:83
+#: ../../reference_manual/dockers/timeline.rst:81
+#, fuzzy
+#| msgid ""
+#| "Instead of the Frame Table, right-clicking within the Frame Timing Header "
+#| "gives you access to a few more options which allow you to add or remove "
+#| "entire columns of frames or holds at a time. For example, selecting :"
+#| "menuselection:`Keyframe Columns --> Insert Keyframe Column Left` will add "
+#| "new frames to each layer that's currently visible in the Timeline Docker."
 msgid ""
-"It's also possible to add multiple key frames by right-clicking inside the "
-"Frame Table and selecting :menuselection:`Keyframes --> Insert Multiple "
-"Keyframes`. With this option you can specify a number of frames to add with "
-"the option of built in timing for quickly creating a series of 1s, 2s, 3s, "
-"etc. These settings are saved between uses."
-msgstr ""
-"També és possible afegir múltiples fotogrames clau fent clic dret dins de la "
-"Taula de fotogrames i seleccionant :menuselection:`Fotogrames clau --> "
-"Insereix múltiples fotogrames clau`. Amb aquesta opció podreu especificar un "
-"nombre de fotogrames a afegir amb l'opció de temps integrada per a crear "
-"ràpidament una sèrie d'1 s, 2 s, 3 s, etc. Aquests ajustaments es desaran "
-"entre els usos."
-
-#: ../../reference_manual/dockers/timeline.rst:85
-msgid ""
-"Instead of the Frame Table, right-clicking within the Frame Timing Header "
-"gives you access to a few more options which allow you to add or remove "
-"entire columns of frames or holds at a time. For example, selecting :"
+"Clicking with |mouseright| within the Frame Timing Header instead of the "
+"Frame Table gives you access to a few more options which allow you to add or "
+"remove entire columns of frames or holds at a time. For example, selecting :"
 "menuselection:`Keyframe Columns --> Insert Keyframe Column Left` will add "
 "new frames to each layer that's currently visible in the Timeline Docker."
 msgstr ""
@@ -430,7 +445,7 @@ msgstr ""
 "Insereix una columna de fotograma clau a l'esquerra` afegirà fotogrames nous "
 "a cada capa que estigui actualment visible a l'acoblador Línia de temps."
 
-#: ../../reference_manual/dockers/timeline.rst:90
+#: ../../reference_manual/dockers/timeline.rst:86
 msgid ""
 ":program:`Krita` only tracks key frame changes. This is unlike :program:"
 "`Flash` where you have to manually indicate how long a key frame will hold. "
@@ -447,7 +462,7 @@ msgstr ""
 "d'aquesta manera (també anomenats «retencions») es mostraran com una línia "
 "contínua a la Taula de fotogrames."
 
-#: ../../reference_manual/dockers/timeline.rst:92
+#: ../../reference_manual/dockers/timeline.rst:88
 msgid ""
 "To delete frames, |mouseright| the frame and press :guilabel:`Remove "
 "Keyframe`. This will delete all selected frames. Similarly, selecting :"
@@ -461,43 +476,48 @@ msgstr ""
 "o desplaçaran tots els fotogrames posteriors enrere/esquerre tant com sigui "
 "possible."
 
-#: ../../reference_manual/dockers/timeline.rst:94
+#: ../../reference_manual/dockers/timeline.rst:90
+#, fuzzy
+#| msgid ""
+#| "To manually play your animation back and forward using your mouse, a "
+#| "concept called *scrubbing*, you click-drag within the Frame Timing Header."
 msgid ""
-"To manually play your animation back and forward using your mouse, a concept "
-"called *scrubbing*, you click-drag within the Frame Timing Header."
+"To manually play your animation back and forward using your mouse, an "
+"important technique that's known as *scrubbing*, click-drag within the Frame "
+"Timing Header."
 msgstr ""
 "Per a reproduir manualment l'animació cap endavant i enrere emprant el "
 "ratolí, un concepte anomenat *rastrejat*, feu clic dret i arrossegueu la "
 "capçalera de temps del fotograma."
 
-#: ../../reference_manual/dockers/timeline.rst:97
+#: ../../reference_manual/dockers/timeline.rst:93
 msgid "GUI Actions:"
 msgstr "Accions de la IGU:"
 
-#: ../../reference_manual/dockers/timeline.rst:99
+#: ../../reference_manual/dockers/timeline.rst:95
 msgid "**Layer List**"
 msgstr "**Llista de capes**"
 
-#: ../../reference_manual/dockers/timeline.rst:101
+#: ../../reference_manual/dockers/timeline.rst:97
 msgid "|mouseleft| : Select active layer."
 msgstr ":kbd:`Feu` |mouseleft|: selecciona la capa activa."
 
-#: ../../reference_manual/dockers/timeline.rst:102
+#: ../../reference_manual/dockers/timeline.rst:98
 msgid "|mouseright| : Layers Menu (add/remove/show layers, etc.)."
 msgstr ""
 ":kbd:`Feu` |mouseright|: menú Capes (afegeix/elimina/mostra les capes, etc.)."
 
-#: ../../reference_manual/dockers/timeline.rst:104
+#: ../../reference_manual/dockers/timeline.rst:100
 msgid "**Frame Timing Header**"
 msgstr "**Capçalera de la Temporització dels fotogrames**"
 
-#: ../../reference_manual/dockers/timeline.rst:106
+#: ../../reference_manual/dockers/timeline.rst:102
 msgid "|mouseleft| : Move to time and select frame of the active layer."
 msgstr ""
 ":kbd:`Feu` |mouseleft|: moveu el temps i seleccioneu el fotograma de la capa "
 "activa."
 
-#: ../../reference_manual/dockers/timeline.rst:107
+#: ../../reference_manual/dockers/timeline.rst:103
 msgid ""
 "|mouseleft| :kbd:`+ drag` : Scrub through time and select frame of the "
 "active layer."
@@ -505,7 +525,7 @@ msgstr ""
 ":kbd:`Feu` |mouseleft| :kbd:`+ arrossega`: aneu a través del temps i "
 "seleccioneu el fotograma de la capa activa."
 
-#: ../../reference_manual/dockers/timeline.rst:108
+#: ../../reference_manual/dockers/timeline.rst:104
 msgid ""
 "|mouseright| : Frame Columns Menu (insert/remove/copy/paste columns and hold "
 "columns)."
@@ -513,11 +533,11 @@ msgstr ""
 ":kbd:`Feu` |mouseright|: menú de les columnes del fotograma (insereix/"
 "elimina/copia/enganxa columnes i retenir columnes)."
 
-#: ../../reference_manual/dockers/timeline.rst:110
+#: ../../reference_manual/dockers/timeline.rst:106
 msgid "**Frames Table: all**"
 msgstr "**Taula dels fotogrames: tots**"
 
-#: ../../reference_manual/dockers/timeline.rst:112
+#: ../../reference_manual/dockers/timeline.rst:108
 msgid ""
 "|mouseleft| : Selects a single frame or slot and switches time, but *does "
 "not switch active layer*."
@@ -525,19 +545,19 @@ msgstr ""
 ":kbd:`Feu` |mouseleft|: selecciona un únic fotograma o ranura i canvia el "
 "temps, però *no canvia la capa activa*."
 
-#: ../../reference_manual/dockers/timeline.rst:113
+#: ../../reference_manual/dockers/timeline.rst:109
 msgid ":kbd:`Space +` |mouseleft| : Pan."
 msgstr ":kbd:`Espai + feu` |mouseleft|: desplaça."
 
-#: ../../reference_manual/dockers/timeline.rst:114
+#: ../../reference_manual/dockers/timeline.rst:110
 msgid ":kbd:`Space +` |mouseright| : Zoom."
 msgstr ":kbd:`Espai + feu` |mouseright|: zoom."
 
-#: ../../reference_manual/dockers/timeline.rst:116
+#: ../../reference_manual/dockers/timeline.rst:112
 msgid "**Frames Table (On Empty Slot).**"
 msgstr "**Taula dels fotogrames (en una ranura buida)**"
 
-#: ../../reference_manual/dockers/timeline.rst:118
+#: ../../reference_manual/dockers/timeline.rst:114
 msgid ""
 "|mouseright| : Frames menu (insert/copy/paste frames and insert/remove "
 "holds)."
@@ -545,7 +565,7 @@ msgstr ""
 ":kbd:`Feu` |mouseright|: menú fotogrames (insereix/copia/enganxa fotogrames "
 "i insereix/elimina retencions)."
 
-#: ../../reference_manual/dockers/timeline.rst:119
+#: ../../reference_manual/dockers/timeline.rst:115
 msgid ""
 "|mouseleft| :kbd:`+ drag` : Select multiple frames and switch time to the "
 "last selected, but *does not switch active layer*."
@@ -554,7 +574,7 @@ msgstr ""
 "canvia el temps a l'últim que heu seleccionat, però *no canviarà la capa "
 "activa*."
 
-#: ../../reference_manual/dockers/timeline.rst:120
+#: ../../reference_manual/dockers/timeline.rst:116
 msgid ""
 ":kbd:`Shift +` |mouseleft| : Select all frames between the active and the "
 "clicked frame."
@@ -562,7 +582,7 @@ msgstr ""
 ":kbd:`Majús. + feu` |mouseleft|: selecciona tots els fotogrames entre el "
 "fotograma actiu i en el qual s'ha fet clic."
 
-#: ../../reference_manual/dockers/timeline.rst:121
+#: ../../reference_manual/dockers/timeline.rst:117
 msgid ""
 ":kbd:`Ctrl +` |mouseleft| : Select individual frames together. :kbd:`click + "
 "drag` them into place."
@@ -570,11 +590,11 @@ msgstr ""
 ":kbd:`Ctrl + feu` |mouseleft|: selecciona els fotogrames individuals. :kbd:"
 "`Feu` |mouseright| :kbd:`+ arrossega` per a deixar-los al lloc."
 
-#: ../../reference_manual/dockers/timeline.rst:123
+#: ../../reference_manual/dockers/timeline.rst:119
 msgid "**Frames Table (On Existing Frame)**"
 msgstr "**Taula dels fotogrames (en un fotograma existent)**"
 
-#: ../../reference_manual/dockers/timeline.rst:125
+#: ../../reference_manual/dockers/timeline.rst:121
 msgid ""
 "|mouseright| : Frames menu (remove/copy/paste frames and insert/remove "
 "holds)."
@@ -582,13 +602,13 @@ msgstr ""
 ":kbd:`Feu` |mouseright|: menú fotogrames (elimina/copia/enganxa fotogrames i "
 "insereix/elimina retencions)."
 
-#: ../../reference_manual/dockers/timeline.rst:126
+#: ../../reference_manual/dockers/timeline.rst:122
 msgid "|mouseleft| :kbd:`+ drag` : *Move* a frame or multiple frames."
 msgstr ""
 ":kbd:`Feu` |mouseleft| :kbd:`+ arrossega`: *mou* un fotograma o múltiples "
 "fotogrames."
 
-#: ../../reference_manual/dockers/timeline.rst:127
+#: ../../reference_manual/dockers/timeline.rst:123
 msgid ""
 ":kbd:`Ctrl +` |mouseleft| :kbd:`+ drag` : Copy a frame or multiple frames."
 msgstr ""
@@ -596,7 +616,7 @@ msgstr ""
 "múltiples fotogrames."
 
 # skip-rule: common-es_s
-#: ../../reference_manual/dockers/timeline.rst:128
+#: ../../reference_manual/dockers/timeline.rst:124
 msgid ""
 ":kbd:`Alt + drag` : Move selected frame(s) and *all* the frames to the right "
 "of it. (This is useful for when you need to clear up some space in your "
@@ -607,3 +627,51 @@ msgstr ""
 "fotogrames que hi ha a la dreta. (Això és útil per a quan necessiteu aclarir "
 "algun espai a la vostra animació, però no voleu seleccionar tots els "
 "fotogrames de la dreta d'un fotograma en concret!)"
+
+#~ msgid ""
+#~ "**A. Layer List --** This area contains some subset of the layers of your "
+#~ "current document. The currently active layer is always shown and can be "
+#~ "\"pinned\" to the timeline using the :guilabel:`Show in Timeline` menu "
+#~ "action. Also, Layers that are created via the Timeline or added using "
+#~ "the :guilabel:`Add Existing Layer` submenu are automatically pinned to "
+#~ "the timeline. Each layer has properties that can also be toggled here "
+#~ "(visible, locked, show onion skins, etc.)."
+#~ msgstr ""
+#~ "**A. Llista de capes:** aquesta àrea conté algun subconjunt de les capes "
+#~ "del document actual. Sempre es mostrarà la capa activa actual i es podrà "
+#~ "«fixar» a la línia de temps mitjançant l'acció del menú :guilabel:`Mostra "
+#~ "a la línia de temps`. A més, les capes que es creïn a través de la línia "
+#~ "de temps o que s'afegeixin mitjançant el submenú :guilabel:`Afegeix una "
+#~ "capa existent` es fixaran automàticament a la línia de temps. Cada capa "
+#~ "tindrà propietats que també es podran canviar des d'aquí (visible, "
+#~ "bloquejada, mostra les pells de ceba, etc.)."
+
+#~ msgid ""
+#~ "To keep a layer visible in the Timeline Docker regardless of which layer "
+#~ "is selected, select the layer in the Layers Docker so it shows up in the "
+#~ "docker, then |mouseright| it within the Timeline Docker's Layer List and "
+#~ "select :guilabel:`Show in Timeline`. This way you can choose which layers "
+#~ "are important and which are only minor."
+#~ msgstr ""
+#~ "Per mantenir visible una capa a l'acoblador Línia de temps "
+#~ "independentment de quina capa s'ha seleccionat, seleccioneu la capa a "
+#~ "l'acoblador Línia de temps perquè aparegui i, després feu |mouseright| "
+#~ "dins de la llista de capes de l'acoblador Línia de temps i seleccioneu :"
+#~ "guilabel:`Mostra a la línia de temps`. D'aquesta manera podreu escollir "
+#~ "quines capes són importants i quines ho són menys."
+
+#~ msgid ""
+#~ "You can drag and drop the frame around to a different empty frame slot."
+#~ msgstr ""
+#~ "Podeu arrossegar i deixar anar el fotograma a una altra ranura buida."
+
+#~ msgid ""
+#~ "To add a single new frame, either right-click on an empty frame slot and "
+#~ "select :guilabel:`Create Blank Frame` to create a fresh blank frame, or "
+#~ "select :guilabel:`Create Duplicate Frame` to create a new copy of the "
+#~ "previous frame."
+#~ msgstr ""
+#~ "Per afegir un fotograma únic nou, feu clic dret sobre una ranura buida i "
+#~ "seleccioneu :guilabel:`Crea un fotograma en blanc` per a crear un "
+#~ "fotograma en blanc nou o seleccioneu :guilabel:`Crea un fotograma "
+#~ "duplicat` per a crear una còpia nova del fotograma anterior."

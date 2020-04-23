@@ -3,14 +3,14 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2019.
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020.
 msgid ""
 msgstr ""
-"Project-Id-Version: "
-"docs_krita_org_reference_manual___layers_and_masks___fill_layers\n"
+"Project-Id-Version: docs_krita_org_reference_manual___layers_and_masks___fill_"
+"layers\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-12 03:44+0200\n"
-"PO-Revision-Date: 2019-06-11 08:50+0300\n"
+"POT-Creation-Date: 2020-04-22 03:51+0200\n"
+"PO-Revision-Date: 2020-04-22 15:42+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.04.0\n"
+"X-Generator: Lokalize 20.07.70\n"
 
 #: ../../reference_manual/layers_and_masks/fill_layers.rst:0
 msgid ".. image:: images/layers/fill_layer_simplex_noise.png"
@@ -58,12 +58,36 @@ msgid ".. image:: images/layers/Fill_Layer.png"
 msgstr ".. image:: images/layers/Fill_Layer.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layers.rst:24
+msgid "Color"
+msgstr "Колір"
+
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:24
+msgid ""
+"Fills the layer with a singular color. Since version 4.2, newly created "
+"colored fill layers will be assigned to the currently active foreground "
+"color."
+msgstr ""
+"Заповнює шар однорідним кольором. Починаючи з версії 4.2, новостворені шари"
+" заповнення буде пов'язано із поточним активним кольором переднього плану."
+
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:27
+#| msgid ""
+#| "This fills the layer with a predefined pattern or texture that has been "
+#| "loaded into Krita through the Resource Management interface.  Patterns "
+#| "can be a simple and interesting way to add texture to your drawing or "
+#| "painting, helping to recreate the look of watercolor paper, linen, "
+#| "canvas, hardboard, stone or an infinite other number of options.  For "
+#| "example if you want to take a digital painting and finish it off with the "
+#| "appearance of it being on canvas you can add a Fill Layer with the Canvas "
+#| "texture from the texture pack below and set the opacity very low so the "
+#| "\"threads\" of the pattern are just barley visible.  The effect is quite "
+#| "convincing."
 msgid ""
 "This fills the layer with a predefined pattern or texture that has been "
-"loaded into Krita through the Resource Management interface.  Patterns can "
-"be a simple and interesting way to add texture to your drawing or painting, "
+"loaded into Krita through the Resource Management interface. Patterns can be "
+"a simple and interesting way to add texture to your drawing or painting, "
 "helping to recreate the look of watercolor paper, linen, canvas, hardboard, "
-"stone or an infinite other number of options.  For example if you want to "
+"stone or an infinite other number of options. For example if you want to "
 "take a digital painting and finish it off with the appearance of it being on "
 "canvas you can add a Fill Layer with the Canvas texture from the texture "
 "pack below and set the opacity very low so the \"threads\" of the pattern "
@@ -80,11 +104,11 @@ msgstr ""
 "малювання і встановити дуже низьке значення непрозорості так, щоб «волокна» "
 "візерунка були ледве видимими. Ефект буде доволі переконливим."
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:26
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:29
 msgid "Pattern"
 msgstr "Візерунок"
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:26
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:29
 msgid ""
 "You can create your own and use those as well.  For a great set of well "
 "designed and useful patterns check out one of our favorite artists and a "
@@ -97,41 +121,64 @@ msgstr ""
 "безкоштовний пакунок текстур: https://www.davidrevoy.com/article156/texture-"
 "pack-1"
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:29
-msgid "Color"
-msgstr "Колір"
-
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:29
-msgid ""
-"The second option is not quite as exciting, but does the job. Fill the layer "
-"with a selected color."
-msgstr ""
-"Другий варіант не такий творчий, але виконує своє завдання. Заповнення шару "
-"вибраним кольором."
-
 #: ../../reference_manual/layers_and_masks/fill_layers.rst:36
 msgid ""
-"A noise generator that isn't Perline Noise (which is what typical 'clouds' "
-"generation is), but it looks similar and can actually loop. Uses the "
-"OpenSimplex code."
+"This fills the layer with generated OpenSimplex noise. OpenSimplex is "
+"different from the more common Perlin noise (often named 'clouds' in other "
+"software) and also different from Improved Perlin noise. OpenSimplex has "
+"less dimensional artifacts (the subtle \"checker\" texture often found high "
+"frequency Perlin noise) and is a ubiquitous open standard. Since OpenSimplex "
+"noise is important to texture generation, this fill layer has the option to "
+"loop around the canvas edge. You can read more about OpenSimplex `here "
+"<https://en.wikipedia.org/wiki/OpenSimplex_noise>`_."
 msgstr ""
-"Генератор шуму, який не є шумом Перліна (шумом, який є типовим у «хмарах»), "
-"але виглядає подібно і може породжувати циклічні структури. Використовує код "
-"OpenSimplex."
+"Заповнює шера створеним шумом OpenSimplex. Шум OpenSimplex відрізняється від"
+" поширенішого шуму Перліна (який часто називають «хмарами» в іншому"
+" програмному забезпеченні) і також відрізняється від поліпшеного шуму"
+" Перліна. OpenSimplex має менше розмірнісних артефактів (майже непомітної"
+" текстури «шахівниці», яку можна часто знайти у високочастотному шумі"
+" Перліна). Цей алгоритм є повсюдним відкритим стандартом. Оскільки шум"
+" OpenSimplex є важливим для створення текстур, для цього шару заповнення"
+" передбачено можливість циклічного переходу за краями полотна. Докладніший"
+" опис OpenSimplex можна знайти `тут <https://en.wikipedia.org/wiki/OpenSimplex"
+"_noise>`_."
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:38
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:40
+msgid ""
+"There are a few different use cases for simplex noise. One of these is to "
+"create interesting looping patterns, achieved by stacking multiple simplex "
+"noise fills with different blending modes. It becomes even more expressive "
+"when combined with the levels adjustment layers. For texture artists, this "
+"can be a useful utility when combined with a gradient map filter layer to "
+"provide color diversity to a looping texture. For traditional artists, "
+"simplex noise layers can be converted to selection masks to create brush "
+"transparency dynamics and masking effects. Experimenting with different "
+"combinations can be fun and produce interesting results!"
+msgstr ""
+"У симплексного шуму є декілька різних використань. Одним з них є створення"
+" цікавих регулярних візерунків. Це досягається накладанням стосу декількох"
+" заповнень симплексним шумом із різними режимами змішування. Виразність"
+" заповнення можна підвищити його поєднанням із шарами коригування рівнів. Для"
+" художників-текстуристів цей шум може бути корисним інструментом у поєднанні"
+" із фільтром карти градієнтів з метою урізноманітнення кольорів у регулярній"
+" текстурі. Традиційні художники можуть перетворювати шари симплексного шуму"
+" на маски вибору для створення динаміки прозорості пензля і ефектів"
+" маскування. Експериментування із різними комбінаціями може принести багато"
+" задоволення і цікаві результати!"
+
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:43
 msgid "Looping"
 msgstr "Цикл"
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:39
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:44
 msgid "Whether or not to force the pattern to loop."
 msgstr "Визначає, чи слід примусово циклічно повторювати візерунок."
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:40
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:45
 msgid "Frequency"
 msgstr "Частота"
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:41
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:46
 msgid ""
 "The frequency of the waves used to generate the pattern. Higher frequency "
 "results in a finer noise pattern."
@@ -139,41 +186,47 @@ msgstr ""
 "Частота хвиль для створення візерунка. Вища частота дає тендітнішу структуру "
 "шуму."
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:42
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:47
 msgid "Ratio"
 msgstr "Пропорція"
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:43
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:48
 msgid ""
 "The ratio of the waves in the x and y dimensions. This makes the noise have "
 "a rectangular appearance."
 msgstr ""
 "Співвідношення хвиль у напрямках x та y. Надає шуму прямокутної структури."
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:45
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:50
 msgid "Simplex Noise"
 msgstr "Симплекс-шум"
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:45
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:50
 msgid "Use Custom Seed"
 msgstr "Використати нетиповий ініціатор"
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:45
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:50
+#| msgid ""
+#| "The seed for the random component. You can input any value or text here, "
+#| "and it will always try to use this value to generate the random values "
+#| "with (which then are always the same for a given seed)."
 msgid ""
 "The seed for the random component. You can input any value or text here, and "
 "it will always try to use this value to generate the random values with "
-"(which then are always the same for a given seed)."
+"(which then are always the same for a given seed). Leaving the value empty "
+"will use the randomly-assigned seed value on layer creation."
 msgstr ""
 "Початкове число для компоненти випадкових чисел. У це поле ви можете ввести "
 "будь-яке значення або текст. Програма скористається цим значенням для "
 "створення послідовності псевдовипадкових чисел (яка завжди є однаковою для "
-"того самого початкового числа)."
+"того самого початкового числа). Якщо базу випадковості не буде вказано,"
+" програма використає випадкове значення при створенні шару."
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:48
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:53
 msgid "Painting on a fill layer"
 msgstr "Малювання на шарі заповнення"
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:50
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:55
 msgid ""
 "A fill-layer is a single-channel layer, meaning it only has transparency. "
 "Therefore, you can erase and paint on fill-layers to make them semi-opaque, "
@@ -186,3 +239,19 @@ msgstr ""
 "заповнення, щоб зробити їх напівпрозорими або заповненими лише одним "
 "кольором. Оскільки ці шари є одноканальними, на зберігання їхніх даних "
 "витрачається дещо менше пам'яті, ніж на звичайні 4-канальні шари малювання."
+
+#~ msgid ""
+#~ "The second option is not quite as exciting, but does the job. Fill the "
+#~ "layer with a selected color."
+#~ msgstr ""
+#~ "Другий варіант не такий творчий, але виконує своє завдання. Заповнення "
+#~ "шару вибраним кольором."
+
+#~ msgid ""
+#~ "A noise generator that isn't Perline Noise (which is what typical "
+#~ "'clouds' generation is), but it looks similar and can actually loop. Uses "
+#~ "the OpenSimplex code."
+#~ msgstr ""
+#~ "Генератор шуму, який не є шумом Перліна (шумом, який є типовим у "
+#~ "«хмарах»), але виглядає подібно і може породжувати циклічні структури. "
+#~ "Використовує код OpenSimplex."

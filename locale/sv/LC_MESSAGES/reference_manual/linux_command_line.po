@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-12 03:44+0200\n"
+"POT-Creation-Date: 2020-04-22 03:51+0200\n"
 "PO-Revision-Date: 2019-08-05 12:35+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -44,9 +44,13 @@ msgstr ""
 "Windows och OSX, men med 3.3 är det aktiverat för dem."
 
 #: ../../reference_manual/linux_command_line.rst:22
+#, fuzzy
+#| msgid ""
+#| "This is primarily used in bash or shell scripts, for example, to mass "
+#| "convert kra files into pngs."
 msgid ""
 "This is primarily used in bash or shell scripts, for example, to mass "
-"convert kra files into pngs."
+"convert KRA files into PNGs."
 msgstr ""
 "Det används i huvudsak med bash och skalskript, exempelvis för att "
 "konvertera många kra-filer till png:er."
@@ -96,6 +100,7 @@ msgstr ""
 "ändra filformatet."
 
 #: ../../reference_manual/linux_command_line.rst:47
+#: ../../reference_manual/linux_command_line.rst:147
 msgid "Example:"
 msgstr "Exempel:"
 
@@ -108,7 +113,9 @@ msgid "This line takes the file ``file.png`` and saves it as ``file.jpg``."
 msgstr "Raden tar filen ``fil.png`` och sparar den som ``slutresultat.jpg``."
 
 #: ../../reference_manual/linux_command_line.rst:57
-msgid "Export animation to the given filename and exit"
+#, fuzzy
+#| msgid "Export animation to the given filename and exit"
+msgid "Export animation to the given filename and exit."
 msgstr "Exportera animering till angivet filnamn och avsluta"
 
 #: ../../reference_manual/linux_command_line.rst:59
@@ -124,9 +131,14 @@ msgid "``krita --export-sequence --export-filename file.png test.kra``"
 msgstr "``krita --export-sequence --export-filename fil.png test.kra``"
 
 #: ../../reference_manual/linux_command_line.rst:63
+#, fuzzy
+#| msgid ""
+#| "This line takes the animation in test.kra, and uses the value of --export-"
+#| "filename (file.png), to determine the sequence fileformat('png') and the "
+#| "frame prefix ('file')."
 msgid ""
-"This line takes the animation in test.kra, and uses the value of --export-"
-"filename (file.png), to determine the sequence fileformat('png') and the "
+"This line takes the animation in *test.kra*, and uses the value of --export-"
+"filename (*file.png*), to determine the sequence fileformat('png') and the "
 "frame prefix ('file')."
 msgstr ""
 "Raden tar animeringen i test.kra och använder värdet på --export-filename "
@@ -138,7 +150,9 @@ msgid "PDF export"
 msgstr "PDF-export"
 
 #: ../../reference_manual/linux_command_line.rst:69
-msgid "Pdf export looks a bit different, using the ``--export-pdf`` option."
+#, fuzzy
+#| msgid "Pdf export looks a bit different, using the ``--export-pdf`` option."
+msgid "PDF export looks a bit different, using the ``--export-pdf`` option."
 msgstr ""
 "PDF-export ser lita annorlunda ut, genom att väljaren ``--export-pdf`` "
 "används."
@@ -148,7 +162,9 @@ msgid "``krita file.png --export-pdf --export-filename final.pdf``"
 msgstr "``krita fil.png --export-pdf --export-filename slutresultat.pdf``"
 
 #: ../../reference_manual/linux_command_line.rst:73
-msgid "export-pdf exports the file ``file.png`` as a pdf file."
+#, fuzzy
+#| msgid "export-pdf exports the file ``file.png`` as a pdf file."
+msgid "This option exports the file ``file.png`` as a PDF file."
 msgstr "export-pdf exporterar filen ``fil.png`` som en PDF-fil."
 
 #: ../../reference_manual/linux_command_line.rst:77
@@ -245,3 +261,31 @@ msgstr "``krita --workspace Animering``"
 #: ../../reference_manual/linux_command_line.rst:142
 msgid "Starts Krita in the Animation workspace."
 msgstr "Startar Krita med arbetsrymden Animering."
+
+#: ../../reference_manual/linux_command_line.rst:145
+msgid ""
+"Starts krita with ``filename`` added as a file-layer. Note that you must "
+"either open an existing file or create a new file using the ``new-image`` "
+"argument."
+msgstr ""
+
+#: ../../reference_manual/linux_command_line.rst:149
+#, fuzzy
+#| msgid "``krita file.png --export --export-filename final.jpg``"
+msgid "``krita file.kra --file-layer image.png``"
+msgstr "``krita fil.png --export --export-filename slutresultat.jpg``"
+
+#: ../../reference_manual/linux_command_line.rst:151
+msgid "``krita --new-image RGBA,U8,1000,1000 --file-layer image.jpg``"
+msgstr ""
+
+#: ../../reference_manual/linux_command_line.rst:153
+msgid ""
+"If an instance of Krita is already running and Multiple :ref:`instances "
+"<window_settings>` are disabled, then this option can be used alone to add a "
+"file-layer to the running krita document."
+msgstr ""
+
+#: ../../reference_manual/linux_command_line.rst:155
+msgid "Example:  ``krita --file-layer image.png``"
+msgstr ""

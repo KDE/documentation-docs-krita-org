@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: "
 "docs_krita_org_reference_manual___layers_and_masks___fill_layers\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-12 03:44+0200\n"
+"POT-Creation-Date: 2020-04-22 03:51+0200\n"
 "PO-Revision-Date: 2019-04-02 10:37+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -55,23 +55,34 @@ msgid ".. image:: images/layers/Fill_Layer.png"
 msgstr ".. image:: images/en/Fill_Layer.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layers.rst:24
+msgid "Color"
+msgstr "Farba"
+
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:24
+msgid ""
+"Fills the layer with a singular color. Since version 4.2, newly created "
+"colored fill layers will be assigned to the currently active foreground "
+"color."
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:27
 msgid ""
 "This fills the layer with a predefined pattern or texture that has been "
-"loaded into Krita through the Resource Management interface.  Patterns can "
-"be a simple and interesting way to add texture to your drawing or painting, "
+"loaded into Krita through the Resource Management interface. Patterns can be "
+"a simple and interesting way to add texture to your drawing or painting, "
 "helping to recreate the look of watercolor paper, linen, canvas, hardboard, "
-"stone or an infinite other number of options.  For example if you want to "
+"stone or an infinite other number of options. For example if you want to "
 "take a digital painting and finish it off with the appearance of it being on "
 "canvas you can add a Fill Layer with the Canvas texture from the texture "
 "pack below and set the opacity very low so the \"threads\" of the pattern "
 "are just barley visible.  The effect is quite convincing."
 msgstr ""
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:26
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:29
 msgid "Pattern"
 msgstr "Vzorka"
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:26
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:29
 msgid ""
 "You can create your own and use those as well.  For a great set of well "
 "designed and useful patterns check out one of our favorite artists and a "
@@ -79,71 +90,80 @@ msgid ""
 "davidrevoy.com/article156/texture-pack-1)."
 msgstr ""
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:29
-msgid "Color"
-msgstr "Farba"
-
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:29
-msgid ""
-"The second option is not quite as exciting, but does the job. Fill the layer "
-"with a selected color."
-msgstr ""
-
 #: ../../reference_manual/layers_and_masks/fill_layers.rst:36
 msgid ""
-"A noise generator that isn't Perline Noise (which is what typical 'clouds' "
-"generation is), but it looks similar and can actually loop. Uses the "
-"OpenSimplex code."
-msgstr ""
-
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:38
-msgid "Looping"
-msgstr ""
-
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:39
-msgid "Whether or not to force the pattern to loop."
+"This fills the layer with generated OpenSimplex noise. OpenSimplex is "
+"different from the more common Perlin noise (often named 'clouds' in other "
+"software) and also different from Improved Perlin noise. OpenSimplex has "
+"less dimensional artifacts (the subtle \"checker\" texture often found high "
+"frequency Perlin noise) and is a ubiquitous open standard. Since OpenSimplex "
+"noise is important to texture generation, this fill layer has the option to "
+"loop around the canvas edge. You can read more about OpenSimplex `here "
+"<https://en.wikipedia.org/wiki/OpenSimplex_noise>`_."
 msgstr ""
 
 #: ../../reference_manual/layers_and_masks/fill_layers.rst:40
+msgid ""
+"There are a few different use cases for simplex noise. One of these is to "
+"create interesting looping patterns, achieved by stacking multiple simplex "
+"noise fills with different blending modes. It becomes even more expressive "
+"when combined with the levels adjustment layers. For texture artists, this "
+"can be a useful utility when combined with a gradient map filter layer to "
+"provide color diversity to a looping texture. For traditional artists, "
+"simplex noise layers can be converted to selection masks to create brush "
+"transparency dynamics and masking effects. Experimenting with different "
+"combinations can be fun and produce interesting results!"
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:43
+msgid "Looping"
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:44
+msgid "Whether or not to force the pattern to loop."
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:45
 msgid "Frequency"
 msgstr ""
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:41
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:46
 msgid ""
 "The frequency of the waves used to generate the pattern. Higher frequency "
 "results in a finer noise pattern."
 msgstr ""
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:42
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:47
 msgid "Ratio"
 msgstr ""
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:43
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:48
 msgid ""
 "The ratio of the waves in the x and y dimensions. This makes the noise have "
 "a rectangular appearance."
 msgstr ""
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:45
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:50
 msgid "Simplex Noise"
 msgstr ""
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:45
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:50
 msgid "Use Custom Seed"
 msgstr ""
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:45
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:50
 msgid ""
 "The seed for the random component. You can input any value or text here, and "
 "it will always try to use this value to generate the random values with "
-"(which then are always the same for a given seed)."
+"(which then are always the same for a given seed). Leaving the value empty "
+"will use the randomly-assigned seed value on layer creation."
 msgstr ""
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:48
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:53
 msgid "Painting on a fill layer"
 msgstr ""
 
-#: ../../reference_manual/layers_and_masks/fill_layers.rst:50
+#: ../../reference_manual/layers_and_masks/fill_layers.rst:55
 msgid ""
 "A fill-layer is a single-channel layer, meaning it only has transparency. "
 "Therefore, you can erase and paint on fill-layers to make them semi-opaque, "

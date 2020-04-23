@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-12 03:44+0200\n"
+"POT-Creation-Date: 2020-04-22 03:51+0200\n"
 "PO-Revision-Date: 2020-03-25 19:54\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
@@ -16,9 +16,24 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/www/"
 "docs_krita_org_general_concepts___file_formats___file_gih.pot\n"
 
+#: ../../general_concepts/file_formats/file_gih.rst:None
+msgid ""
+".. image:: images/category_filetypes/gih_multi_dimension_explaination.png"
+msgstr ""
+
 #: ../../general_concepts/file_formats/file_gih.rst:1
-msgid "The Gimp Image Hose file format in Krita."
+#, fuzzy
+#| msgid "The Gimp Image Hose file format in Krita."
+msgid "The GIMP Image Hose file format in Krita."
 msgstr "Krita 中的 GIMP 图像管道文件格式。"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "*.gih"
+msgstr "*.gih"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "GIH"
+msgstr "GIH"
 
 #: ../../general_concepts/file_formats/file_gih.rst:10
 msgid "Image Hose"
@@ -27,14 +42,6 @@ msgstr "图像管道"
 #: ../../general_concepts/file_formats/file_gih.rst:10
 msgid "Gimp Image Hose"
 msgstr "GIMP 图像管道"
-
-#: ../../general_concepts/file_formats/file_gih.rst:10
-msgid "GIH"
-msgstr "GIH"
-
-#: ../../general_concepts/file_formats/file_gih.rst:10
-msgid "*.gih"
-msgstr "*.gih"
 
 #: ../../general_concepts/file_formats/file_gih.rst:15
 msgid "\\*.gih"
@@ -65,43 +72,80 @@ msgstr ".. image:: images/brushes/Gih-examples.png"
 msgid "From top to bottom: Incremental, Pressure and Random"
 msgstr "从上到下：增量、压力和随机模式"
 
-#: ../../general_concepts/file_formats/file_gih.rst:27
-msgid "Gimp image hose format options:"
+#: ../../general_concepts/file_formats/file_gih.rst:28
+msgid "Dimension and ranks."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:30
+msgid ""
+"The GIMP image hose format allows multiple dimensions for a given brush. You "
+"could for example have a dimension that updates incrementally, and one that "
+"updates on pressure, or updates randomly. Upon export, Krita will use the "
+"ranks to subdivide the layers per dimension. If you have a 24 layer image "
+"and three ranks, and the first dimension is set to 2, the second to 4 and "
+"the third to 3, then Krita will divide 24 into 2 groups of 12, each of which "
+"have unique images for the 2 parts of the first dimension. Then those 2 "
+"groups of 12 get divided into 8 groups of 4, each of which have unique brush "
+"tips for the four parts of the second dimension, and finally, the grouped "
+"three images have each a unique brush for the final dimension."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:32
+msgid ""
+"So, the following image has a table where dimension 1 is unique in one of 4 "
+"numbers, while dimension 2 is unique in one of 3 shapes. So our ranks for "
+"dimension 1 and dimension 2 need to be 4 and 3 respectively. Now, to order "
+"the layers, you need to subdivide the table first by the first dimension, "
+"and then by the second. So we end up with three layers each for a shape in "
+"the second dimension but for the first number, then another three layers, "
+"each for a shape, but then for the second number, and so forth."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:38
+msgid ""
+"See `the GIMP documentation <https://docs.gimp.org/2.8/en/gimp-using-"
+"animated-brushes.html>`_ for a more thorough explaination."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_gih.rst:41
+#, fuzzy
+#| msgid "Gimp image hose format options:"
+msgid "GIMP image hose format options:"
 msgstr "GIMP 图像管道格式选项："
 
-#: ../../general_concepts/file_formats/file_gih.rst:29
+#: ../../general_concepts/file_formats/file_gih.rst:43
 msgid "Constant"
 msgstr "常量"
 
-#: ../../general_concepts/file_formats/file_gih.rst:30
+#: ../../general_concepts/file_formats/file_gih.rst:44
 msgid "This'll use the first image, no matter what."
 msgstr "在任何情况下均使用第一张图像。"
 
-#: ../../general_concepts/file_formats/file_gih.rst:31
+#: ../../general_concepts/file_formats/file_gih.rst:45
 msgid "Incremental"
 msgstr "增量"
 
-#: ../../general_concepts/file_formats/file_gih.rst:32
+#: ../../general_concepts/file_formats/file_gih.rst:46
 msgid ""
 "This'll paint the image layers in sequence. This is good for images that can "
 "be strung together to create a pattern."
 msgstr "按图层顺序依次绘制各个图像。可以用几个图像配合创造出一组图案。"
 
-#: ../../general_concepts/file_formats/file_gih.rst:33
+#: ../../general_concepts/file_formats/file_gih.rst:47
 msgid "Pressure"
 msgstr "压力"
 
-#: ../../general_concepts/file_formats/file_gih.rst:34
+#: ../../general_concepts/file_formats/file_gih.rst:48
 msgid ""
 "This'll paint the images depending on pressure. This is good for brushes "
 "imitating the hairs of a natural brush."
 msgstr "按压力绘制图像，适用于模拟真实笔刷刷毛的笔刷图案。"
 
-#: ../../general_concepts/file_formats/file_gih.rst:35
+#: ../../general_concepts/file_formats/file_gih.rst:49
 msgid "Random"
 msgstr "随机"
 
-#: ../../general_concepts/file_formats/file_gih.rst:36
+#: ../../general_concepts/file_formats/file_gih.rst:50
 msgid ""
 "This'll draw the images randomly. This is good for image-collections used in "
 "speedpainting as well as images that generate texture. Or perhaps more "
@@ -109,15 +153,15 @@ msgid ""
 msgstr ""
 "随机绘制图像。适合用于快速绘制一组图像集合和生成材质。配合图形符号使用更佳。"
 
-#: ../../general_concepts/file_formats/file_gih.rst:38
+#: ../../general_concepts/file_formats/file_gih.rst:52
 msgid "Angle"
 msgstr "角度"
 
-#: ../../general_concepts/file_formats/file_gih.rst:38
+#: ../../general_concepts/file_formats/file_gih.rst:52
 msgid "This'll use the dragging angle to determine with image to draw."
 msgstr "使用拖动的角度来决定绘制的图像。"
 
-#: ../../general_concepts/file_formats/file_gih.rst:40
+#: ../../general_concepts/file_formats/file_gih.rst:54
 msgid ""
 "When exporting a Krita file as a ``.gih``, you will also get the option to "
 "set the default spacing, the option to set the name (very important for "
@@ -127,11 +171,11 @@ msgstr ""
 "把 Krita 文件导出为 ``.gih`` 文件时，你可以选择默认间距、名称 (起个方便在列表"
 "中发现的名字) 和是否用图像颜色生成蒙版。"
 
-#: ../../general_concepts/file_formats/file_gih.rst:43
+#: ../../general_concepts/file_formats/file_gih.rst:57
 msgid "Use Color as Mask"
 msgstr "把颜色用作蒙版"
 
-#: ../../general_concepts/file_formats/file_gih.rst:43
+#: ../../general_concepts/file_formats/file_gih.rst:57
 msgid ""
 "This'll turn the darkest values of the image as the ones that paint, and the "
 "whitest as transparent. Untick this if you are using colored images for the "
@@ -140,10 +184,14 @@ msgstr ""
 "该选项把图像的最黑值视作绘制区域，把最白值视作透明区域。如果你要把彩色图像用"
 "作笔刷，则取消勾选此项。"
 
-#: ../../general_concepts/file_formats/file_gih.rst:45
+#: ../../general_concepts/file_formats/file_gih.rst:59
+#, fuzzy
+#| msgid ""
+#| "We have a :ref:`Krita Brush tip page <brush_tip_animated_brush>` on how "
+#| "to create your own gih brush."
 msgid ""
 "We have a :ref:`Krita Brush tip page <brush_tip_animated_brush>` on how to "
-"create your own gih brush."
+"create your own GIH brush."
 msgstr ""
 "我们准备了一个 :ref:`Krita 笔尖页面 <brush_tip_animated_brush>` 来介绍如何制"
 "作 gih 笔刷。"
