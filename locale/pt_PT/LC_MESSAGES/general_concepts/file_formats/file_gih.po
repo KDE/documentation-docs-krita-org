@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-23 03:53+0200\n"
-"PO-Revision-Date: 2019-07-22 00:16+0100\n"
+"PO-Revision-Date: 2020-04-26 17:34+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -17,18 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: Hose Krita Image hose en examples images Gih ref\n"
-"X-POFile-SpellExtra: image gih brushes GIH\n"
+"X-POFile-SpellExtra: image gih brushes GIH gihmultidimensionexplaination\n"
+"X-POFile-SpellExtra: categoryfiletypes\n"
 
 #: ../../general_concepts/file_formats/file_gih.rst:None
 msgid ""
 ".. image:: images/category_filetypes/gih_multi_dimension_explaination.png"
-msgstr ""
+msgstr ".. image:: images/category_filetypes/gih_multi_dimension_explaination.png"
 
 #: ../../general_concepts/file_formats/file_gih.rst:1
-#, fuzzy
-#| msgid "The Gimp Image Hose file format in Krita."
 msgid "The GIMP Image Hose file format in Krita."
-msgstr "O formato de ficheiros Gimp Image Hose no Krita."
+msgstr "O formato de ficheiros GIMP Image Hose no Krita."
 
 #: ../../general_concepts/file_formats/file_gih.rst:10
 msgid "*.gih"
@@ -79,7 +78,7 @@ msgstr "De cima para baixo: Incremental, Pressão e Aleatório"
 
 #: ../../general_concepts/file_formats/file_gih.rst:28
 msgid "Dimension and ranks."
-msgstr ""
+msgstr "Dimensões e classificações."
 
 #: ../../general_concepts/file_formats/file_gih.rst:30
 msgid ""
@@ -93,7 +92,7 @@ msgid ""
 "groups of 12 get divided into 8 groups of 4, each of which have unique brush "
 "tips for the four parts of the second dimension, and finally, the grouped "
 "three images have each a unique brush for the final dimension."
-msgstr ""
+msgstr "O formato Image Hose do GIMP permite várias dimensões para um dado pincel. Poderá por exemplo ter uma dimensão que se actualiza incrementalmente e outra que se actualiza de acordo com a pressão ou aleatoriamente. Na altura da exportação, o  Krita irá usar as classificações para sub-dividir as camadas por cada dimensão. Se tiver uma imagem com 24 camadas e três posições de classificação, e se a primeira dimensão estiver configurada como 2, a segunda como 4 e a terceira como 3, então o Krita irá dividir o 24 em 2 grupos de 12, sendo que cada um terá imagens únicas para as 2 partes da primeira dimensão. Depois, esses 2 grupos de 12 serão divididos em 8 grupos de 4, tendo cada um pontas de pincel únicas para as quatro partes da segunda dimensão e, finalmente, as três imagens agrupadas terão cada uma um pincel único para a dimensão final."
 
 #: ../../general_concepts/file_formats/file_gih.rst:32
 msgid ""
@@ -104,19 +103,17 @@ msgid ""
 "and then by the second. So we end up with three layers each for a shape in "
 "the second dimension but for the first number, then another three layers, "
 "each for a shape, but then for the second number, and so forth."
-msgstr ""
+msgstr "Como tal, a seguinte imagem tem uma tabela onde a dimensão 1 é única para um de 4 números, enquanto a dimensão 2 é única em uma de 3 formas. Como tal, as nossas classificações para a dimensão 1 e 2 têm de ser 4 e 3, respectivamente. Agora, para ordenar as camadas, tem de sub-dividir a tabela primeiro pela primeira dimensão, seguida da segunda dimensão. Assim, terminamos com três camadas, uma para cada forma na segunda dimensão mas para o primeiro número, depois outras três camadas, uma para cada forma e com o segundo número, e assim por diante."
 
 #: ../../general_concepts/file_formats/file_gih.rst:38
 msgid ""
 "See `the GIMP documentation <https://docs.gimp.org/2.8/en/gimp-using-"
 "animated-brushes.html>`_ for a more thorough explanation."
-msgstr ""
+msgstr "Veja a `documentação do GIMP <https://docs.gimp.org/2.8/en/gimp-using-animated-brushes.html>`_ para obter uma explicação mais detalhada."
 
 #: ../../general_concepts/file_formats/file_gih.rst:41
-#, fuzzy
-#| msgid "Gimp image hose format options:"
 msgid "GIMP image hose format options:"
-msgstr "Opções do formato Hose do Gimp:"
+msgstr "Opções do formato Image Hose do Gimp:"
 
 #: ../../general_concepts/file_formats/file_gih.rst:43
 msgid "Constant"
@@ -201,13 +198,7 @@ msgstr ""
 "coloridas para o pincel."
 
 #: ../../general_concepts/file_formats/file_gih.rst:59
-#, fuzzy
-#| msgid ""
-#| "We have a :ref:`Krita Brush tip page <brush_tip_animated_brush>` on how "
-#| "to create your own gih brush."
 msgid ""
 "We have a :ref:`Krita Brush tip page <brush_tip_animated_brush>` on how to "
 "create your own GIH brush."
-msgstr ""
-"Temos uma :ref:`página de pontas de pincéis do Krita "
-"<brush_tip_animated_brush>` sobre como criar o seu próprio pincel .gih."
+msgstr "Temos uma :ref:`página de pontas de pincéis do Krita <brush_tip_animated_brush>` sobre como criar o seu próprio pincel GIH."
