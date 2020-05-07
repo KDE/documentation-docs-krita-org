@@ -168,6 +168,11 @@ With this filter, you can adjust the Hue, Saturation, Value or Lightness, throug
 
 .. image:: /images/filters/Hue-saturation-filter.png
 
+Colorize
+    This is an option to have all the pixels have the same hue. It uses a HSL formula by default.
+Legacy Mode 
+    In the development of Krita 4.3, the HSV algorithm was adjusted to maintain the variation in brightness better. This is important because brightness contrast is the most important contrast, so you want to avoid losing variation in it. This option toggles the old behaviour for files made in previous versions.
+
 .. index:: Threshold, Black and White
 
 Threshold
