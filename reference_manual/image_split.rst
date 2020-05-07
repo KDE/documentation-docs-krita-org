@@ -16,10 +16,17 @@ Image Split
 
 Found under :menuselection:`Image --> Image Split`, the Image Split function allows you to evenly split a document up into several sections. This is useful for splitting up spritesheets for example.
 
+.. image:: /images/krita_4_3_image_split_dialog.png
+
 Horizontal Lines
     The amount of horizontal lines to split at. 4 lines will mean that the image is split into 5 horizontal stripes.
 Vertical Lines
     The amount of vertical lines to split at. 4 lines will mean that the image is split into 5 vertical stripes. 
+    
+.. versionadded:: 4.3
+
+    Use Guides
+        Instead of splitting the image up into even parts, you can choose to use the :ref:`image guides <grids_and_guides_docker>` to function as horizontal or vertical lines. This provides a little bit more control on how the image is split.
 
 Sort Direction
 
