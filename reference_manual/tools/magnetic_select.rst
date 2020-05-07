@@ -43,7 +43,7 @@ The second, interactive mode, is to |mouseleft| :kbd:`+ drag` over a portion of 
    
    The first and second mode can be mixed.
 
-You can edit previous points by |mouseleft| dragging them. You can remove points by double |mouseleft| the point, or dragging it out of the canvas area. After a path is closed, you can add points by clicking on nearby empty space. Points can be undone with :kbd:`Shift + Z`. A halfway done magnetic selection can be canceled with :kbd:`Esc`.
+You can edit previous points by |mouseleft| dragging them. You can remove points by dragging it out of the canvas area. After a path is closed. Points can be undone with :kbd:`Shift + Z`. A halfway done magnetic selection can be canceled with :kbd:`Esc`.
 
 .. important::
 
