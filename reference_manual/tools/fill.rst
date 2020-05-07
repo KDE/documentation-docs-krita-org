@@ -34,7 +34,21 @@ Feathering Radius
     This value will add a soft border to the filled-shape.
 Fill Entire Selection
     Activating this will result in the shape filling the whole of the active selection, regardless of threshold.
-Limit to current layer
-    Activating this will prevent the fill tool from taking other layers into account.
 Use Pattern
     Ticking this will result in the active pattern being used.
+Sample
+    .. versionadded:: 4.3
+    
+    Select which layers to use as a reference for the fill tool. The options are:
+    
+    Current Layer
+        Only use the currently selected layer.
+    All layers
+        Use all visible layers.
+    Color Labeled Layers
+        Use only the layers specified with a certain color label. This is useful for complex images, where you might have multiple lineart layers. Label them with the appropriate color label and use these labels to mark which layers to use as a reference.
+
+Labels Used
+    .. versionadded:: 4.3
+
+    Used with the 'Color Labeled Layers' option above.

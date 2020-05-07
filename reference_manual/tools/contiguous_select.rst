@@ -50,5 +50,19 @@ Grow/Shrink selection.
     This value extends/contracts the shape beyond its initial size.
 Feathering
     This value will add a soft border to the selection-shape.
-Limit to Current Layer
-    Activating this will prevent the fill tool from taking other layers into account.
+Sample
+    .. versionadded:: 4.3
+    
+    Select which layers to use as a reference for the contiguous select tool. The options are:
+    
+    Current Layer
+        Only use the currently selected layer.
+    All layers
+        Use all visible layers.
+    Color Labeled Layers
+        Use only the layers specified with a certain color label. This is useful for complex images, where you might have multiple lineart layers. Label them with the appropriate color label and use these labels to mark which layers to use as a reference.
+
+Labels Used
+    .. versionadded:: 4.3
+
+    Used with the 'Color Labeled Layers' option above.
