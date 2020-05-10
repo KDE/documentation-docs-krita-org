@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22 03:51+0200\n"
-"PO-Revision-Date: 2020-03-25 19:55\n"
+"PO-Revision-Date: 2020-05-09 13:50\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,6 +14,7 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-trunk/messages/www/"
 "docs_krita_org_reference_manual___instant_preview.pot\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -26,7 +26,7 @@ msgstr ""
 
 #: ../../reference_manual/instant_preview.rst:1
 msgid "How the Instant Preview technology in Krita works."
-msgstr "介绍 Krita 的即时预览技术的工作原理。"
+msgstr "介绍 Krita 的即时预览功能的工作方式。"
 
 #: ../../reference_manual/instant_preview.rst:10
 #: ../../reference_manual/instant_preview.rst:15
@@ -52,31 +52,22 @@ msgid ""
 "that if you have a 4k screen and are working on a 4k image at 100% zoom, you "
 "won't feel any speed up."
 msgstr ""
-"即时预览功能是 Krita 针对大型画面和大型笔刷的特殊加速功能。它的工作原理是先直"
-"接采样视图显示的画面，画出大致的预览效果，而与此同时在后台对实际的全尺寸图像"
-"进行处理，在处理完成后替换掉之前的预览效果。换句话说，如果视图正在按实际大小 "
-"(100% 缩放) 显示，这个功能不会带来任何加速效果。"
+"即时预览是 Krita 为了提高大尺寸图像和大尺寸笔刷的绘画性能而设计的特殊加速功"
+"能。它的工作原理是先直接把笔刷画到视图画面 (一般都是缩小显示) 上给画师“预"
+"览”绘制效果，同时在后台处理全尺寸图像，处理完成后替换掉之前的预览效果。换句话"
+"说，如果视图正在按实际大小 (100% 缩放) 显示，这个功能不会带来任何加速效果。"
 
 #: ../../reference_manual/instant_preview.rst:20
 msgid "Activating Instant Preview"
 msgstr "启用即时预览功能"
 
 #: ../../reference_manual/instant_preview.rst:24
-#, fuzzy
-#| msgid ""
-#| "Instant Preview requires OpenGL 3.0 support at minimum. So if you don't "
-#| "have :guilabel:`high-quality` scaling available in :menuselection:"
-#| "`Settings --> Configure Krita --> Display --> Display scaling filter`, "
-#| "then you won't be able to use Instant Preview either."
 msgid ""
 "Instant Preview requires OpenGL 3.0 support at minimum. So if you don't "
 "have :guilabel:`high-quality` scaling available in :menuselection:`Settings "
 "--> Configure Krita... --> Display --> Display scaling filter`, then you "
 "won't be able to use Instant Preview either."
 msgstr ""
-"即时预览功能需要显卡支持 OpenGL 3.0 以上。如果在菜单栏的 :menuselection:`设"
-"置 --> 配置 Krita --> 显示 --> 视图缩放算法` 选单中没有 :guilabel:`高质量` 选"
-"项，你将无法使用此功能。"
 
 #: ../../reference_manual/instant_preview.rst:29
 msgid ".. image:: images/brushes/Lod_position.png"
@@ -94,8 +85,8 @@ msgid ""
 msgstr ""
 "即时预览功能有两个开关，全局开关和笔刷开关，这两个开关必须同时打开才能启用即"
 "时预览。全局开关在“视图”菜单中，也可以通过 :kbd:`Shift + L` 快捷键进行切换。"
-"笔刷开关在笔刷选项控制面板 (F5) 的最底处可以找到。有些笔刷选项则会强制关闭该"
-"功能，这是因为它们并不适宜配合即时预览功能使用。"
+"笔刷开关在笔刷选项控制面板 (F5) 的最下面一排选框中。某些笔刷选项无法在即时预"
+"览模式下工作，使用它们的预设将无法打开即时预览功能的笔刷开关。"
 
 #: ../../reference_manual/instant_preview.rst:33
 msgid ""
@@ -103,8 +94,8 @@ msgid ""
 "ability to have Instant Preview on the brush, so does using 'fade' sensor "
 "for size."
 msgstr ""
-"例如，颜色涂抹笔刷引擎使用覆盖模式时、大小选项映射到淡化传感器时都会禁用笔刷"
-"的即时预览功能。"
+"例如，颜色涂抹笔刷引擎在使用覆盖模式时、大小选项在映射到淡化传感器时，笔刷的"
+"即时预览开关都会被关闭。"
 
 #: ../../reference_manual/instant_preview.rst:35
 msgid ""
@@ -113,10 +104,10 @@ msgid ""
 "a stroke, and thus will give a feeling of 'popping' when the stroke is "
 "finished."
 msgstr ""
-"有时即使该功能不被强制禁用，也会造成一些问题。例如使用笔尖自动间距时、大小映"
-"射到随机度传感器时、笔尖调整密度选项时、在笔刷引擎中使用纹理时，即时预览的效"
-"果均不理想，笔画渲染结束并切换的瞬间会明显察觉到预览效果和最终结果存在较大差"
-"别。"
+"某些笔刷选项虽能使用即时预览，但会造成一些问题。例如使用笔尖自动间距时、大小"
+"映射到随机度传感器时、笔尖调整密度选项时、在笔刷引擎中使用纹理时，即时预览的"
+"效果均不理想，后台处理结束并切换的瞬间会明显察觉到预览效果和最终结果有跳跃性"
+"的差别。"
 
 #: ../../reference_manual/instant_preview.rst:37
 msgid ""
@@ -154,11 +145,11 @@ msgstr ""
 
 #: ../../reference_manual/instant_preview.rst:50
 msgid "Tools that benefit from Instant Preview"
-msgstr "即时预览功能生效工具"
+msgstr "支持即时预览的工具"
 
 #: ../../reference_manual/instant_preview.rst:52
 msgid "The following tools benefit from Instant Preview:"
-msgstr "即使预览功能在下列工具中生效："
+msgstr "下列工具可配合即时预览功能使用："
 
 #: ../../reference_manual/instant_preview.rst:54
 msgid "The Freehand brush tool."

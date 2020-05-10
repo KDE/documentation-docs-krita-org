@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-12 03:44+0200\n"
-"PO-Revision-Date: 2020-03-25 19:54\n"
+"PO-Revision-Date: 2020-05-09 13:50\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,6 +14,7 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-trunk/messages/www/"
 "docs_krita_org_reference_manual___tools___multibrush.pot\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -22,7 +22,7 @@ msgid ""
 "   :alt: mouseleft"
 msgstr ""
 ".. image:: images/icons/Krita_mouse_left.png\n"
-"   :alt:鼠标左键"
+"   :alt: mouseleft"
 
 #: ../../<rst_epilog>:40
 msgid ""
@@ -38,12 +38,12 @@ msgstr ".. image:: images/tools/Krita-multibrush.png"
 
 #: ../../reference_manual/tools/multibrush.rst:1
 msgid "Krita's multibrush tool reference."
-msgstr "Krita的多重笔刷工具参考。"
+msgstr "介绍 Krita 的多重笔刷工具的使用方式。"
 
 #: ../../reference_manual/tools/multibrush.rst:11
 #: ../../reference_manual/tools/multibrush.rst:31
 msgid "Symmetry"
-msgstr "提示数对称分布"
+msgstr "旋转对称"
 
 #: ../../reference_manual/tools/multibrush.rst:11
 msgid "Tools"
@@ -51,19 +51,19 @@ msgstr "工具"
 
 #: ../../reference_manual/tools/multibrush.rst:11
 msgid "Multibrush"
-msgstr "多笔刷"
+msgstr "多路笔刷"
 
 #: ../../reference_manual/tools/multibrush.rst:11
 msgid "Mandala"
-msgstr "曼达拉"
+msgstr "万花筒"
 
 #: ../../reference_manual/tools/multibrush.rst:11
 msgid "Rotational Symmetry"
-msgstr "旋转符号"
+msgstr "旋转对称"
 
 #: ../../reference_manual/tools/multibrush.rst:16
 msgid "Multibrush Tool"
-msgstr "多重笔刷工具"
+msgstr "多路笔刷工具"
 
 #: ../../reference_manual/tools/multibrush.rst:18
 msgid "|toolmultibrush|"
@@ -77,10 +77,16 @@ msgid ""
 "toggling the :ref:`mirror_tools`, but the Multibrush is more sophisticated, "
 "for example it can mirror freehand brush strokes along a rotated axis."
 msgstr ""
+"此工具可以使用手绘笔刷在画布的不同位置同时绘制多个笔画。它的快捷键是 :kbd:"
+"`Q` 。它的效果一眼看上去有点像打开了 :ref:`mirror_tools` ，但功能更为完备。它"
+"可以使用任意数量的对称轴，允许移动轴心和旋转轴线，还有多种对称方式和平行笔刷"
+"模式可供选择。"
 
 #: ../../reference_manual/tools/multibrush.rst:22
 msgid "The settings for the tool will be found in the tool options dock."
-msgstr "工具的设置将在工具选项停靠栏中找到。"
+msgstr ""
+"你可以在工具选项面板调整此工具的设置。除了手绘笔刷工具已经具备的防抖和笔刷平"
+"滑、吸附辅助尺外，还可以指定多路工作模式、轴心、旋转和笔刷数量等。"
 
 #: ../../reference_manual/tools/multibrush.rst:24
 msgid ""
@@ -89,18 +95,20 @@ msgid ""
 "be set in the tool options dock. The default axis is the center of the "
 "canvas."
 msgstr ""
-"多笔刷工具有三个模式，每个选项的设置可以在工具选项停靠栏中找到。对称和镜像的"
-"反映射到一个轴，可以在工具选项停靠栏设置中。默认轴是画布中心。"
+"**类型** 选单提供了几种工作模式可供选择；**显示轴心/对称轴** 选框勾选后可显示"
+"轴心和对称轴；**移动** 按钮可以移动轴心；**重置** 按钮可以把轴心移回画面中"
+"心；**旋转** 滑动条可以旋转轴线；**笔刷数量** 滑动条可以增减笔刷 (轴线) 数"
+"量。"
 
 #: ../../reference_manual/tools/multibrush.rst:29
 msgid "The three modes are:"
-msgstr "这三种方式是："
+msgstr "**类型** 选单提供了下列工作模式："
 
 #: ../../reference_manual/tools/multibrush.rst:32
 msgid ""
 "Symmetry will reflect your brush around the axis at even intervals. The "
 "slider determines the number of instances which will be drawn on the canvas."
-msgstr "对称会在间隔内反映你围绕轴的画笔。滑块决定画布上绘制的实例数量。"
+msgstr "此模式将围绕轴心以轴线等距绘制多个笔刷。"
 
 #: ../../reference_manual/tools/multibrush.rst:33
 msgid "Mirror"
@@ -108,31 +116,38 @@ msgstr "镜像"
 
 #: ../../reference_manual/tools/multibrush.rst:34
 msgid "Mirror will reflect the brush across the X axis, the Y axis, or both."
-msgstr "镜像将反映横跨X轴、Y轴或二者的画笔。"
+msgstr ""
+"此模式将沿轴线左右和上下镜像笔刷。此模式只能使用水平、垂直镜像轴，但可以对轴"
+"线进行旋转。"
 
 #: ../../reference_manual/tools/multibrush.rst:35
 msgid "Translate"
-msgstr "平移"
+msgstr "平行"
 
 #: ../../reference_manual/tools/multibrush.rst:36
 msgid ""
 "Translate will paint the set number of instances around the cursor at the "
 "radius distance."
 msgstr ""
+"此模式将在光标周围平行绘制多个笔画。**半径** 滑动条可以调整各条笔画与光标的距"
+"离，但它们的具体位置是随机的。此模式下轴心和轴线不起作用，可以隐藏。"
 
 #: ../../reference_manual/tools/multibrush.rst:37
 msgid "Snowflake"
-msgstr "雪花型"
+msgstr "雪花"
 
 #: ../../reference_manual/tools/multibrush.rst:38
 msgid ""
 "This works as a mirrored symmetry, but is a bit slower than symmetry+toolbar "
 "mirror mode."
-msgstr "这是一个镜像对称函数，但比对称性+工具栏镜像模式稍慢。"
+msgstr ""
+"此模式在旋转对称的基础上又把每个象限的内部镜像对称一次。它允许任意数量的对称"
+"轴，也可以旋转轴线。它的处理速度要比联合使用旋转对称+工具栏显示的镜像绘画模式"
+"要慢一些。"
 
 #: ../../reference_manual/tools/multibrush.rst:40
 msgid "Copy Translate"
-msgstr "复制翻译"
+msgstr "指定相对位置平行"
 
 #: ../../reference_manual/tools/multibrush.rst:40
 msgid ""
@@ -142,11 +157,15 @@ msgid ""
 "origin. Finally, press :guilabel:`Add` again, and start drawing to see the "
 "copy translate in action."
 msgstr ""
+"此模式可以指定各个平行笔刷的相对位置。点击 :guilabel:`添加` 按钮，此时轴心反"
+"映实际绘制时的主笔刷位置，在画布上点击左键 |mouseleft| 可以指定平行笔刷相对于"
+"主笔刷 (轴心) 的位置。再点击一次 :guilabel:`添加` 按钮结束添加，即可开始绘"
+"制。绘制时轴心/对称轴不起作用，可以隐藏。"
 
 #: ../../reference_manual/tools/multibrush.rst:42
 msgid ""
 "The assistant and smoothing options work the same as in the :ref:"
 "`freehand_brush_tool`, though only on the real brush and not its copies."
 msgstr ""
-"助手和平滑选项与 :ref:`freehand_brush_tool` 相同，不过只是在真实笔刷上，而不"
-"是其副本。"
+"防抖和笔刷平滑、吸附到辅助尺等与 :ref:`freehand_brush_tool` 中的功能是一样"
+"的，但它们只对主笔刷生效，不对副本笔刷生效。"

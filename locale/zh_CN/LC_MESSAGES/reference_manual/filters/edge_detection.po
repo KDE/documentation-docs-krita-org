@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-23 03:53+0200\n"
-"PO-Revision-Date: 2020-03-25 19:55\n"
+"PO-Revision-Date: 2020-05-09 13:50\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,6 +14,7 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-trunk/messages/www/"
 "docs_krita_org_reference_manual___filters___edge_detection.pot\n"
+"Language: zh_CN\n"
 
 #: ../../<generated>:1
 msgid "XYZ"
@@ -22,11 +22,11 @@ msgstr "XYZ"
 
 #: ../../reference_manual/filters/edge_detection.rst:None
 msgid ".. image:: images/filters/Krita_4_0_height_to_normal_map.png"
-msgstr ""
+msgstr ".. image:: images/filters/Krita_4_0_height_to_normal_map.png"
 
 #: ../../reference_manual/filters/edge_detection.rst:1
 msgid "Overview of the edge detection filters."
-msgstr ""
+msgstr "介绍 Krita 的边缘检测类滤镜。"
 
 #: ../../reference_manual/filters/edge_detection.rst:11
 #: ../../reference_manual/filters/edge_detection.rst:16
@@ -44,17 +44,19 @@ msgstr "Prewitt"
 #: ../../reference_manual/filters/edge_detection.rst:43
 #: ../../reference_manual/filters/edge_detection.rst:113
 msgid "Sobel"
-msgstr ""
+msgstr "Sobel"
 
 #: ../../reference_manual/filters/edge_detection.rst:18
 msgid ""
 "Edge detection filters focus on finding sharp contrast or border between "
 "colors in an image to create edges or lines."
 msgstr ""
+"边缘检测滤镜用于找出图像中高反差的或者不同颜色之间的边缘，并对这些边缘进行强"
+"调或描线处理。"
 
 #: ../../reference_manual/filters/edge_detection.rst:20
 msgid "Since 4.0 there are only two edge detection filters."
-msgstr ""
+msgstr "4.0 版有两种边缘检测滤镜，后续版本增加到三种。"
 
 #: ../../reference_manual/filters/edge_detection.rst:27
 msgid ""
@@ -62,10 +64,12 @@ msgid ""
 "detection filters that were separate before 4.0 have been folded into this "
 "one. It is also available for filter layers and filter brushes."
 msgstr ""
+"这是一个常规的边缘检测滤镜，在 4.0 版前各自独立的同类滤镜已被整合到此滤镜。这"
+"个滤镜也可在滤镜图层和滤镜笔刷引擎中使用。"
 
 #: ../../reference_manual/filters/edge_detection.rst:33
 msgid ".. image:: images/filters/Krita_4_0_edge_detection.png"
-msgstr ""
+msgstr ".. image:: images/filters/Krita_4_0_edge_detection.png"
 
 #: ../../reference_manual/filters/edge_detection.rst:33
 msgid ""
@@ -80,12 +84,12 @@ msgstr ""
 msgid ""
 "The convolution kernel formula for the edge detection. The difference "
 "between these is subtle, but still worth experimenting with."
-msgstr ""
+msgstr "用于边缘检测的卷积核。不同卷积核的区别很微妙，可以通过试验来摸索。"
 
 #: ../../reference_manual/filters/edge_detection.rst:38
 #: ../../reference_manual/filters/edge_detection.rst:108
 msgid "Simple"
-msgstr "简洁"
+msgstr "简单"
 
 #: ../../reference_manual/filters/edge_detection.rst:39
 #: ../../reference_manual/filters/edge_detection.rst:109
@@ -93,6 +97,8 @@ msgid ""
 "A Kernel that is not square unlike the other two, and while this makes it "
 "fast, it doesn't take diagonal pixels into account."
 msgstr ""
+"这个卷积核并不是方形的，这是它跟其他两种卷积核最不一样的地方。这个特点使它的"
+"处理速度更快，但它不会把对角方向的像素纳入检测范围。"
 
 #: ../../reference_manual/filters/edge_detection.rst:41
 #: ../../reference_manual/filters/edge_detection.rst:111
@@ -100,6 +106,8 @@ msgid ""
 "A square kernel that includes the diagonal pixels just as strongly as the "
 "orthogonal pixels. Gives a very strong effect."
 msgstr ""
+"这是一个方形的卷积核，它会把对角方向和正交方向的像素纳入检测范围，能产生非常"
+"明显的效果。"
 
 #: ../../reference_manual/filters/edge_detection.rst:43
 #: ../../reference_manual/filters/edge_detection.rst:113
@@ -112,10 +120,12 @@ msgid ""
 "A square kernel that includes the diagonal pixels slightly less strong than "
 "the orthogonal pixels. Gives a more subtle effect than Prewitt."
 msgstr ""
+"这是一个方形的卷积核，与 Prewitt 相比，它更偏重对角方向的像素而不是正交方向的"
+"像素，产生的结果与 Prewitt 有微妙的差异。"
 
 #: ../../reference_manual/filters/edge_detection.rst:46
 msgid "The output."
-msgstr ""
+msgstr "输出方向。"
 
 #: ../../reference_manual/filters/edge_detection.rst:48
 msgid "All sides"
@@ -126,26 +136,28 @@ msgid ""
 "Convolves the edge detection into all directions and combines the result "
 "with the Pythagorean theorem. This will be good for most uses."
 msgstr ""
+"此模式会把边缘检测的结果卷积到所有方向，并通过勾股定理进行合并。一般情况下应"
+"该使用此项。"
 
 #: ../../reference_manual/filters/edge_detection.rst:50
 msgid "Top Edge"
-msgstr "顶部边缘"
+msgstr "上边缘"
 
 #: ../../reference_manual/filters/edge_detection.rst:51
 msgid ""
 "This only detects changes going from top to bottom and thus only has top "
 "lines."
-msgstr ""
+msgstr "此模式只检测从上到下的数值变化，因此它只会描绘上边缘线条。"
 
 #: ../../reference_manual/filters/edge_detection.rst:52
 msgid "Bottom Edge"
-msgstr "底部边缘"
+msgstr "下边缘"
 
 #: ../../reference_manual/filters/edge_detection.rst:53
 msgid ""
 "This only detects changes going from bottom to top and thus only has bottom "
 "lines."
-msgstr ""
+msgstr "此模式只检测从下到上的数值变化，因此它只会描绘下边缘线条。"
 
 #: ../../reference_manual/filters/edge_detection.rst:54
 msgid "Right Edge"
@@ -155,7 +167,7 @@ msgstr "右边缘"
 msgid ""
 "This only detects changes going from right to left and thus only has right "
 "lines."
-msgstr ""
+msgstr "此模式只检测从右到左的数值变化，因此它只会描绘右边缘线条。"
 
 #: ../../reference_manual/filters/edge_detection.rst:56
 msgid "Left Edge"
@@ -165,7 +177,7 @@ msgstr "左边缘"
 msgid ""
 "This only detects changes going from left to right and thus only has left "
 "lines."
-msgstr ""
+msgstr "此模式只检测从左到右的数值变化，因此它只会描绘左边缘线条。"
 
 #: ../../reference_manual/filters/edge_detection.rst:59
 msgid "Output"
@@ -173,28 +185,29 @@ msgstr "输出"
 
 #: ../../reference_manual/filters/edge_detection.rst:59
 msgid "Direction in Radians"
-msgstr "以弧度表示的方向"
+msgstr "弧度方向"
 
 #: ../../reference_manual/filters/edge_detection.rst:59
 msgid ""
 "This convolves into all directions and then tries to output the direction of "
 "the line in radians."
 msgstr ""
+"此模式会把边缘检测的结果卷积到所有方向，并尝试按照设定的弧度的方向输出线条。"
 
 #: ../../reference_manual/filters/edge_detection.rst:61
 #: ../../reference_manual/filters/edge_detection.rst:117
 msgid "Horizontal/Vertical radius"
-msgstr ""
+msgstr "水平/垂直半径"
 
 #: ../../reference_manual/filters/edge_detection.rst:62
 msgid ""
 "The radius of the edge detection. Default is 1 and going higher will "
 "increase the thickness of the lines."
-msgstr ""
+msgstr "边缘检测的半径。默认值为 1，增加该数值会让线条变得更粗。"
 
 #: ../../reference_manual/filters/edge_detection.rst:64
 msgid "Apply result to Alpha Channel."
-msgstr ""
+msgstr "将结果应用到透明度通道"
 
 #: ../../reference_manual/filters/edge_detection.rst:64
 msgid ""
@@ -202,6 +215,8 @@ msgid ""
 "output will be onto the alpha channel of the image, meaning it will output "
 "lines only."
 msgstr ""
+"边缘检测会被应用于图像的灰度副本，然后把处理结果输出到图像的透明度通道，这意"
+"味着它只会输出线条。"
 
 #: ../../reference_manual/filters/edge_detection.rst:66
 msgid "High Pass"
@@ -271,11 +286,11 @@ msgstr ""
 
 #: ../../reference_manual/filters/edge_detection.rst:93
 msgid "Height Map"
-msgstr ""
+msgstr "高度贴图"
 
 #: ../../reference_manual/filters/edge_detection.rst:93
 msgid "Normal Map"
-msgstr ""
+msgstr "法线贴图"
 
 #: ../../reference_manual/filters/edge_detection.rst:96
 msgid "Height to Normal Map"
@@ -286,15 +301,17 @@ msgid ""
 "A filter that converts Height maps to Normal maps through the power of edge "
 "detection. It is also available for the filter layer or filter brush."
 msgstr ""
+"这是一个通过边缘检测来把高度贴图转换为法线贴图的滤镜。这个滤镜也可以用于滤镜"
+"图层和滤镜笔刷引擎。"
 
 #: ../../reference_manual/filters/edge_detection.rst:115
 msgid "Channel"
-msgstr "声道"
+msgstr "通道"
 
 #: ../../reference_manual/filters/edge_detection.rst:116
 msgid ""
 "Which channel of the layer should be interpreted as the grayscale heightmap."
-msgstr ""
+msgstr "选择该图层被用作灰阶高度贴图的色彩通道。"
 
 #: ../../reference_manual/filters/edge_detection.rst:118
 msgid ""
@@ -302,6 +319,8 @@ msgid ""
 "increase the strength of the normal map. Adjust this if the effect of the "
 "resulting normal map is too weak."
 msgstr ""
+"边缘检测的半径。默认值是 1，增加此数值将提高法线贴图的强度。如果法线贴图的效"
+"果不够明显，可调整此数值。"
 
 #: ../../reference_manual/filters/edge_detection.rst:120
 msgid ""
@@ -310,3 +329,6 @@ msgid ""
 "between MikkT-space normal maps (+X, +Y, +Z) and the OpenGL standard normal "
 "map (+X, -Y, +Z)."
 msgstr ""
+"这是一组 XYZ 混合映射选单，你可以在这里把红、绿、蓝映射到不同的 3D 法线矢量坐"
+"标系。此功能主要是为了兼顾 MikkT-space 法线贴图 (+X, +Y, +Z) 和 OpenGL 标准法"
+"线贴图 (+X, -Y, +Z) 的区别而准备的。"

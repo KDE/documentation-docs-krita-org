@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22 03:51+0200\n"
-"PO-Revision-Date: 2020-03-25 19:55\n"
+"PO-Revision-Date: 2020-05-09 13:50\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,6 +14,7 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-trunk/messages/www/"
 "docs_krita_org_reference_manual___tools___rectangle.pot\n"
+"Language: zh_CN\n"
 
 #: ../../<generated>:1
 msgid "Ratio"
@@ -25,8 +25,8 @@ msgid ""
 ".. image:: images/icons/Krita_mouse_left.png\n"
 "   :alt: mouseleft"
 msgstr ""
-".. image:: images/icons/rectangle_tool.svg\n"
-"   :alt: toolrectangle"
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: mouseleft"
 
 #: ../../<rst_epilog>:26
 msgid ""
@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../reference_manual/tools/rectangle.rst:1
 msgid "Krita's rectangle tool reference."
-msgstr "Krita的矩形工具参考。"
+msgstr "介绍 Krita 的矩形工具的使用方式。"
 
 #: ../../reference_manual/tools/rectangle.rst:11
 msgid "Tools"
@@ -62,16 +62,20 @@ msgid ""
 "vector layer. Click and hold |mouseleft| to indicate one corner of the "
 "rectangle, drag to the opposite corner, and release the button."
 msgstr ""
-"这个工具可用来画矩形或创建向量图层的矩形状。点击并持有 |mouseleft| 来显示矩形"
-"的一个角落，拖拉到相反的角色，并释放按钮。"
+"你可以使用此工具绘制矩形。左键点击并拖拽， :program:`Krita` 会显示矩形的预览"
+"轮廓，松开鼠标键即可完成矩形的绘制。首次点击处将成为矩形的一角，放开左键处将"
+"成为它的对角。此工具使用当前笔刷对矩形的轮廓进行描边。在矢量图层上使用此工具"
+"时将建立 :ref:`vector_graphics` ，可以在绘制后编辑形状、填充和描边，也可以转"
+"换为路径或选区。"
 
 #: ../../reference_manual/tools/rectangle.rst:23
 msgid "Hotkeys and Sticky-keys"
-msgstr "快捷键和粘滞键"
+msgstr "快捷键和修饰键"
 
 #: ../../reference_manual/tools/rectangle.rst:25
 msgid "There's no default hotkey for switching to rectangle."
-msgstr "没有默认的热键来切换到矩形。"
+msgstr ""
+"和直线工具可以随时按 V 键临时使用不同，矩形工具并没有默认分配类似的快捷键。"
 
 #: ../../reference_manual/tools/rectangle.rst:27
 msgid ""
@@ -83,6 +87,13 @@ msgid ""
 "mouse position indicates a corner. You can press the :kbd:`Alt` key while "
 "still keeping |mouseleft| down to move the rectangle to a different location."
 msgstr ""
+"拖动矩形的过程中，你可以使用不同的修饰键来控制它的的大小和位置。要绘制正方"
+"形，请在拖动开始 **之后** 按住 :kbd:`Shift` 键。松开 :kbd:`Shift` 后如果移动"
+"了光标，将回到矩形模式。要在拖动中锁定矩形中心点位置，请在拖动开始 **之后** "
+"按住 :kbd:`Ctrl` 键，此时矩形将只能改变形状和大小，不能移动位置。要在拖动中锁"
+"定形状并移动矩形，请在拖动开始 **之后** 按住 :kbd:`Alt` 键。此时矩形将只能移"
+"动位置，不能改变形状。松开 :kbd:`Alt` 键后如果移动了光标，矩形的形状将被改"
+"变。"
 
 #: ../../reference_manual/tools/rectangle.rst:29
 msgid ""
@@ -92,6 +103,8 @@ msgid ""
 "movements will affect all four corners of the rectangle (relative to the "
 "center), without the :kbd:`Ctrl` key, one of the corners is unaffected."
 msgstr ""
+"在拖动的过程中只要保持左键按下 |mouseleft| 你可以多次按下或者松开 :kbd:"
+"`Ctrl、Shift、Alt` 等键，以便对形状进行精细调整。"
 
 #: ../../reference_manual/tools/rectangle.rst:33
 msgid "Tool Options"
@@ -103,11 +116,11 @@ msgstr "填充"
 
 #: ../../reference_manual/tools/rectangle.rst:38
 msgid "Not filled"
-msgstr "未填充"
+msgstr "不填充"
 
 #: ../../reference_manual/tools/rectangle.rst:39
 msgid "The rectangle will be transparent from the inside."
-msgstr ""
+msgstr "矩形的内部将不填充任何颜色，保持透明。"
 
 #: ../../reference_manual/tools/rectangle.rst:40
 msgid "Foreground color"
@@ -115,7 +128,7 @@ msgstr "前景色"
 
 #: ../../reference_manual/tools/rectangle.rst:41
 msgid "The rectangle will use the foreground color as fill."
-msgstr ""
+msgstr "矩形内部将填充前景色。"
 
 #: ../../reference_manual/tools/rectangle.rst:42
 msgid "Background color"
@@ -123,41 +136,42 @@ msgstr "背景色"
 
 #: ../../reference_manual/tools/rectangle.rst:43
 msgid "The rectangle will use the background color as fill."
-msgstr "矩形将使用背景颜色填充。"
+msgstr "矩形内部将填充背景色。"
 
 #: ../../reference_manual/tools/rectangle.rst:45
 msgid "Pattern"
-msgstr "花式"
+msgstr "图案"
 
 #: ../../reference_manual/tools/rectangle.rst:45
 msgid "The rectangle will use the active pattern as fill."
-msgstr "矩形将使用活动图样填充。"
+msgstr "矩形内部将填充当前图案。"
 
 #: ../../reference_manual/tools/rectangle.rst:48
 msgid "Outline"
-msgstr "轮廓"
+msgstr "描边"
 
 #: ../../reference_manual/tools/rectangle.rst:50
 msgid "No Outline"
-msgstr "无轮廓"
+msgstr "不描边"
 
 #: ../../reference_manual/tools/rectangle.rst:51
 msgid "The Rectangle will render without outline."
-msgstr "矩形将呈现无轮廓。"
+msgstr "矩形轮廓将不描边。"
 
 #: ../../reference_manual/tools/rectangle.rst:53
 msgid "Brush"
-msgstr "刷子"
+msgstr "笔刷"
 
 #: ../../reference_manual/tools/rectangle.rst:53
 msgid "The Rectangle will use the current selected brush to outline."
-msgstr ""
+msgstr "矩形轮廓将用当前笔刷进行描边。"
 
 #: ../../reference_manual/tools/rectangle.rst:56
 msgid ""
 "On vector layers, the rectangle will not render with a brush outline, but "
 "rather a vector outline."
-msgstr "在矢量图层，矩形不会用笔刷轮廓渲染，而是使用向量轮廓。"
+msgstr ""
+"如果矩形被绘制在一个矢量图层上，那么它的描边将不是当前笔刷而是矢量描边。"
 
 #: ../../reference_manual/tools/rectangle.rst:58
 msgid "Anti-aliasing"
@@ -167,7 +181,7 @@ msgstr "抗锯齿"
 msgid ""
 "This toggles whether or not to give selections feathered edges. Some people "
 "prefer hard-jagged edges for their selections."
-msgstr ""
+msgstr "勾选后将羽化选区边缘。如果需要选区边缘保持清晰锐利，请关闭抗锯齿。"
 
 #: ../../reference_manual/tools/rectangle.rst:60
 msgid "Width"
@@ -177,7 +191,8 @@ msgstr "宽度"
 msgid ""
 "Gives the current width. Use the lock to force the next selection made to "
 "this width."
-msgstr "提供当前的宽度。使用锁定强制下个选择，然后选择此宽高比。"
+msgstr ""
+"显示当前矩形的宽度。点击右边的锁定图标后，下一个新建矩形将被锁定为此宽度。"
 
 #: ../../reference_manual/tools/rectangle.rst:62
 msgid "Height"
@@ -187,26 +202,29 @@ msgstr "高度"
 msgid ""
 "Gives the current height. Use the lock to force the next selection made to "
 "this height."
-msgstr "提供当前的高度。使用锁定强制下个选择，然后选择此宽高比。"
+msgstr ""
+"显示当前矩形的高度。点击右边的锁定图标后，下一个新建矩形将被锁定为此高度。"
 
 #: ../../reference_manual/tools/rectangle.rst:67
 msgid ""
 "Gives the current ratio. Use the lock to force the next selection made to "
 "this ratio."
-msgstr "提供当前的宽高比。使用锁定强制下个选择，然后选择此宽高比。"
+msgstr ""
+"显示当前矩形的宽高比。点击右边的锁定图标后，下一个新建矩形将被锁定为此宽高"
+"比。"
 
 #: ../../reference_manual/tools/rectangle.rst:69
 msgid "Round X"
-msgstr "圆角 X"
+msgstr "圆角 X 半径"
 
 #: ../../reference_manual/tools/rectangle.rst:71
 msgid "The horizontal radius of the rectangle corners."
-msgstr "矩形四角水平半径."
+msgstr "矩形四角的圆角水平半径。"
 
 #: ../../reference_manual/tools/rectangle.rst:73
 msgid "Round Y"
-msgstr "圆角 Y"
+msgstr "圆角 Y 半径"
 
 #: ../../reference_manual/tools/rectangle.rst:75
 msgid "The vertical radius of the rectangle corners."
-msgstr "矩形四角垂直半径."
+msgstr "矩形四角的圆角垂直半径。"

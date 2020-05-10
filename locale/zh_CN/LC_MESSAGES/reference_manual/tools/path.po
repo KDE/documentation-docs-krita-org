@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-12 03:44+0200\n"
-"PO-Revision-Date: 2020-03-25 19:54\n"
+"PO-Revision-Date: 2020-05-09 13:50\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,10 +14,11 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-trunk/messages/www/"
 "docs_krita_org_reference_manual___tools___path.pot\n"
+"Language: zh_CN\n"
 
 #: ../../<generated>:1
 msgid "Activate Angle Snap"
-msgstr "激活角度捕捉："
+msgstr "启用角度吸附"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../../reference_manual/tools/path.rst:1
 msgid "Krita's path tool reference."
-msgstr "Krita的路径工具参考。"
+msgstr "介绍 Krita 的曲线工具 (钢笔) 的使用方式。"
 
 #: ../../reference_manual/tools/path.rst:11
 msgid "Tools"
@@ -66,15 +66,15 @@ msgstr "贝塞尔曲线"
 
 #: ../../reference_manual/tools/path.rst:11
 msgid "Pen"
-msgstr "画笔"
+msgstr "钢笔"
 
 #: ../../reference_manual/tools/path.rst:17
 msgid "Bezier Curve Tool"
-msgstr "贝塞尔曲线工具"
+msgstr "曲线工具"
 
 #: ../../reference_manual/tools/path.rst:19
 msgid "|toolbeziercurve|"
-msgstr "|toolgrid|"
+msgstr "|toolbeziercurve|"
 
 #: ../../reference_manual/tools/path.rst:21
 msgid ""
@@ -82,8 +82,9 @@ msgid ""
 "the starting point of the curve, then click again for consecutive control "
 "points of the curve."
 msgstr ""
-"您可以使用这个工具绘制曲线。点击|mouseleft|来显示曲线的起点，然后再次点击曲线"
-"的连续控制点。"
+"曲线工具，俗称钢笔工具。你可以使用此工具绘制直线和各种贝塞尔曲线。此工具使用"
+"当前笔刷对曲线的轮廓进行描边。在矢量图层上使用此工具时将建立矢量曲线，可以在"
+"绘制后编辑形状、填充和描边，也可以转换为路径或选区。"
 
 #: ../../reference_manual/tools/path.rst:23
 msgid ""
@@ -91,6 +92,11 @@ msgid ""
 "control point. You can drag these handles to change the direction of the "
 "curve in that point."
 msgstr ""
+"点击左键 |mouseleft| 指定曲线的起点，再次点击指定曲线的下一点。每建立一个新锚"
+"点，它和光标之间就会以一根蓝紫色线条相连，显示下一点的位置和曲线的预览。如果"
+"在点击的同时拖动，还可以拖动曲线的形状手柄。右键点击 |mouseright| 可以撤销最"
+"近添加的一个点。左键双击 |mouseleft| 或者按 :kbd:`回车` 键结束绘制。曲线首尾"
+"相接也可以完成绘制。按 :kbd:`Esc` 键取消绘制。"
 
 #: ../../reference_manual/tools/path.rst:25
 msgid ""
@@ -101,6 +107,11 @@ msgid ""
 "directions. After editing a point, you can just click on the canvas to "
 "continue adding points to the curve."
 msgstr ""
+"如果你在 :ref:`vector_layers` 上使用此工具，绘制的将是 :ref:"
+"`vector_graphics` 。对于已建立的矢量曲线，你还可以在曲线端点处悬浮光标，待其"
+"变成红色后点击一下，即可为它加入新的控制点。你还可以使用 :ref:"
+"`shape_selection_tool` 编辑矢量曲线的填充和描边，进行整体移动和旋转；你也可以"
+"使用 :ref:`shape_edit_tool` 来移动、增删、调整矢量曲线的控制点。"
 
 #: ../../reference_manual/tools/path.rst:27
 msgid ""
@@ -110,6 +121,13 @@ msgid ""
 "cancel the entire curve. You can use the :kbd:`Ctrl` key while keeping the |"
 "mouseleft| pressed to move the entire curve to a different position."
 msgstr ""
+"在使用锚点编辑工具时，首先选中一条曲线，然后光标悬浮在一点上，待其变成红色后"
+"双击，它就会变成蓝色并显示拖动手柄，这时可以移动该点或者调整曲线角度。也可以"
+"把光标悬浮在两点之间的一段曲线，待其显示虚线后双击，它的两个端点就会变成蓝"
+"色，接下来可以拖动该段曲线任意位置改变其形状，移动控制点时将两点同时移动。在"
+"蓝色状态的点的相邻曲线双击可以插入新点。选中一点后按 :kbd:`Del` 键可以删除。"
+"点或者线段处于蓝色状态时，工具选项面板和右键菜单还能进行点的插入、移除、断"
+"开、性质改变等操作。"
 
 #: ../../reference_manual/tools/path.rst:29
 msgid ""
@@ -118,6 +136,9 @@ msgid ""
 "key will allow you to make a handle while at the end of the curve. |"
 "mouseright| will undo the last added point."
 msgstr ""
+"此工具还有一些修饰键可以在绘制时进行精细操作。在绘制曲线途中按住 :kbd:`Alt` "
+"键后拖出下一点将切换至尖角模式。按住 :kbd:`Shift` 键可以为曲线的尾部拖出曲线"
+"手柄 (拖出最后一段曲线，然后在最后一个点处截断)。"
 
 #: ../../reference_manual/tools/path.rst:32
 msgid "Tool Options"
@@ -133,16 +154,16 @@ msgid ""
 "angles. Untoggle this if you want to create sharp angles for a node. This "
 "will not affect curve sharpness from dragging after clicking."
 msgstr ""
-"切换它将使用平滑曲线而不是角度初始化节点。如果要为节点创建锐角，请取消选中此"
-"项。这不会影响点击后拖动的曲线锐度。"
+"在默认状态下，只点击不拖动将绘制出尖角、直线的折线。勾选此项后将全部绘制为平"
+"滑曲线，除非途中按住 :kbd:`Alt` 键并 **拖动**。"
 
 #: ../../reference_manual/tools/path.rst:39
 msgid "Angle Snapping Delta"
-msgstr "角度捕捉增量："
+msgstr "吸附间隔角度"
 
 #: ../../reference_manual/tools/path.rst:40
 msgid "The angle to snap to."
-msgstr "要吸附的角度。"
+msgstr "用于控制吸附的角度数值。具体请见下文。"
 
 #: ../../reference_manual/tools/path.rst:42
 msgid ""
@@ -150,3 +171,6 @@ msgid ""
 "of the current. The angle is determined by the :guilabel:`Angle Snapping "
 "Delta`."
 msgstr ""
+"勾选后，前后两点之间的直线角度、拖动曲线时的手柄角度，都将吸附到上面指定的“吸"
+"附间隔角度”数值的整数倍角度上。当吸附生效时，直线或者手柄会显示为红色，否则将"
+"显示为蓝紫色。"
