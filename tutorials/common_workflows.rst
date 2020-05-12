@@ -89,8 +89,8 @@ Laying in Flat Colors
 There are many ways to color a line art in Krita, but generally, these three are common among the artists.
 
 1. Paint blocks of color directly with block brushes.
-2. Fill with Flood fill Tool.
-3. Use one of the G'MIC colorize comics filters.
+2. Fill with Flood Fill Tool.
+3. Use a Colorize Mask.
 
 Blocking with brush
 """""""""""""""""""
