@@ -52,7 +52,7 @@ Then clone the git repository:
 
 .. code:: console
 
-   git clone https://invent.kde.org/kde/krita.git
+   git clone https://invent.kde.org/graphics/krita.git.git
 
 Or:
 

@@ -196,7 +196,7 @@ Not recommended when you don't know what a branch is (see :ref:`merge-request-ed
 
         # for ssh access
         git clone git@invent.kde.org:<username>/docs-krita-org.git
-        git remote add upstream git@invent.kde.org:websites/docs-krita-org.git
+        git remote add upstream git@invent.kde.org:documentation/docs-krita-org.git.git
 
         # for https access
         git clone https://invent.kde.org/<username>/docs-krita-org.git

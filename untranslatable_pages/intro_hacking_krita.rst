@@ -11,7 +11,7 @@
     :license: GNU free documentation license 1.3 or later.
 
 .. _gitlab : https://invent.kde.org
-.. _repository : https://invent.kde.org/kde/krita
+.. _repository : https://invent.kde.org/graphics/krita.git
 .. _bugzilla : https://bugs.kde.org/
 .. _Krita developer IRC : https://krita.org/irc/
 .. _API guide : https://api.kde.org/extragear-api/graphics-apidocs/krita/html/index.html
@@ -172,7 +172,7 @@ Your fork will probably be located here:
     .. code-block:: bash
 
         # for ssh access
-        git remote add upstream git@invent.kde.org:websites/docs-krita-org.git
+        git remote add upstream git@invent.kde.org:documentation/docs-krita-org.git.git
         # for https access
         git remote add upstream https://invent.kde.org/websites/docs-krita-org.git
 

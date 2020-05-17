@@ -76,8 +76,8 @@ Gitlab (KDE Invent)
 
 Gitlab serves the following purposes for the Krita team:
 
-* Review volunteers' submissions: https://invent.kde.org/kde/krita/merge_requests for the code itself, https://invent.kde.org/websites/docs-krita-org/merge_requests for the content of the Krita Manual.
-* Host the code git repository: https://invent.kde.org/kde/krita . Note that while there are mirrors of our git repository on Github and Phabricator, we do not use them for Krita development.
+* Review volunteers' submissions: https://invent.kde.org/graphics/krita.git/merge_requests for the code itself, https://invent.kde.org/websites/docs-krita-org/merge_requests for the content of the Krita Manual.
+* Host the code git repository: https://invent.kde.org/graphics/krita.git . Note that while there are mirrors of our git repository on Github and Phabricator, we do not use them for Krita development.
 * Host the Krita Manual content repository: https://invent.kde.org/websites/docs-krita-org
 
 **Do not** make new issues on Gitlab or use it to make bug reports.
