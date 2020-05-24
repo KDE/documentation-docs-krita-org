@@ -171,11 +171,17 @@ QuickColor: shortcuts to get a color from a specified palette
 ThreeSlots plugin: creates three brushtool shortcuts that memorize last used brush preset for each slot independently from each other.
 
     https://github.com/DarkDefender/threeslots
-    
+
+Mirror Fix - Correct Symmetry Errors
+
+    https://github.com/EyeOdin/mirror_fix
+
 Timer Watch - Time Management Tool
+
     https://github.com/EyeOdin/timer_watch
     
 Pigment.O - Color Picker
+
     https://github.com/EyeOdin/Pigment.O
 
 ToggleRefLayer: enables you to assign a keyboard shortcut to toggle the visibility of a reference layer named "reference"
