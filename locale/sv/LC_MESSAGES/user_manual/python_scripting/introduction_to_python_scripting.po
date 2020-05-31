@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22 03:51+0200\n"
-"PO-Revision-Date: 2020-05-09 15:15+0200\n"
+"PO-Revision-Date: 2020-05-18 21:26+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -87,6 +87,9 @@ msgid ""
 "Krita. For that we'll first start with the basics: How to run Python "
 "commands in the scripter."
 msgstr ""
+"Handboken fokuserar istället på hur Python kan användas för att automatisera"
+" och utöka Krita. För att göra det börjar vi först med grunderna. Hur man kör"
+" Python-kommandon i skriptverktyget."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:35
 msgid "How to Enable the Scripter Plugin"
@@ -99,6 +102,10 @@ msgid ""
 "in python, which can be used to write small scripts and execute them on the "
 "fly."
 msgstr ""
+"Skriptinsticksprogrammet är inte nödvändigt för att använda Python, men det"
+" är mycket användbart för att testa och prova Python. Det är en"
+" Python-terminal, skriven i Python, som kan användas för att skriva små"
+" skript och köra dem i farten."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:39
 msgid ""
@@ -148,12 +155,16 @@ msgid ""
 "To allow Python to communicate with Krita, we will use the Krita module. At "
 "the top of every script, we will write: ``from krita import *``"
 msgstr ""
+"För att låta Python kommunicera med Krita använder vi modulen krita. Längst"
+" upp i varje skript skriver vi: ``from krita import *``"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:60
 msgid ""
 "This allows us to talk to Krita through ``Krita.instance()``. Let's try to "
 "double our coding abilities with Python."
 msgstr ""
+"Det låter oss kommunicera med Krita via ``Krita.instance()``. Låt oss försöka"
+" dubblera vår kodningsförmåga med Python."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:67
 msgid ""
@@ -161,6 +172,9 @@ msgid ""
 "\n"
 "Krita.instance().action('python_scripter').trigger()"
 msgstr ""
+"from krita import *\n"
+"\n"
+"Krita.instance().action('python_scripter').trigger()"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:68
 msgid ""
@@ -176,6 +190,11 @@ msgid ""
 "\"RGBA\", \"U8\", \"\", 120.0)\n"
 "Krita.instance().activeWindow().addView(d)"
 msgstr ""
+"from krita import *\n"
+"\n"
+"d = Krita.instance().createDocument(512, 512, \"Python test document\", "
+"\"RGBA\", \"U8\", \"\", 120.0)\n"
+"Krita.instance().activeWindow().addView(d)"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:77
 msgid ""
@@ -211,12 +230,17 @@ msgid ""
 "`LibKis API Overview <https://api.kde.org/extragear-api/graphics-apidocs/"
 "krita/libs/libkis/html/index.html>`_"
 msgstr ""
+"`Översikt av LibKis programmeringsgränssnitt <"
+"https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/inde"
+"x.html>`_"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:87
 msgid ""
 "`Krita class documentation <https://api.kde.org/extragear-api/graphics-"
 "apidocs/krita/libs/libkis/html/classKrita.html>`_"
 msgstr ""
+"`Krita klassdokumentation <https://api.kde.org/extragear-api/graphics-apidocs/"
+"krita/libs/libkis/html/classKrita.html>`_"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:89
 msgid ""
@@ -256,10 +280,13 @@ msgid ""
 "\n"
 "print(Krita.instance().filters())"
 msgstr ""
+"from krita import *\n"
+"\n"
+"print(Krita.instance().filters())"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:101
 msgid "Outputs as: ::"
-msgstr ""
+msgstr "Matas ut som:"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:103
 msgid ""
@@ -277,6 +304,19 @@ msgid ""
 "'sharpen', 'smalltiles', 'threshold', 'unsharp',\n"
 "'wave', 'waveletnoisereducer']"
 msgstr ""
+"['asc-cdl', 'autocontrast', 'blur', 'burn', 'colorbalance', 'colortoalpha',"
+" 'colortransfer',\n"
+"'desaturate', 'dodge', 'edge detection', 'emboss', 'emboss all directions',"
+" 'emboss horizontal and vertical',\n"
+"'emboss horizontal only', 'emboss laplascian', 'emboss vertical only',"
+" 'gaussian blur', 'gaussiannoisereducer',\n"
+"'gradientmap', 'halftone', 'height to normal', 'hsvadjustment',"
+" 'indexcolors', 'invert', 'lens blur', 'levels',\n"
+"'maximize', 'mean removal', 'minimize', 'motion blur', 'noise', 'normalize',"
+" 'oilpaint', 'perchannel', 'phongbumpmap',\n"
+"'pixelize', 'posterize', 'raindrops', 'randompick', 'roundcorners',"
+" 'sharpen', 'smalltiles', 'threshold', 'unsharp',\n"
+"'wave', 'waveletnoisereducer']"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:112
 msgid "However, sometimes the conversion doesn't go quite as smoothly."
@@ -288,10 +328,13 @@ msgid ""
 "\n"
 "print(Krita.instance().documents())"
 msgstr ""
+"from krita import *\n"
+"\n"
+"print(Krita.instance().documents())"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:120
 msgid "gives something like this::"
-msgstr ""
+msgstr "ger något som liknar det här:"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:123
 msgid ""
@@ -299,6 +342,9 @@ msgid ""
 "<PyKrita.krita.Document object at 0x7f72946309d8>,\n"
 "<PyKrita.krita.Document object at 0x7f7294630c18>]"
 msgstr ""
+"[<PyKrita.krita.Document object at 0x7f7294630b88>,\n"
+"<PyKrita.krita.Document object at 0x7f72946309d8>,\n"
+"<PyKrita.krita.Document object at 0x7f7294630c18>]"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:127
 msgid ""
@@ -320,10 +366,15 @@ msgid ""
 "    print(doc.name())\n"
 "    print(\" \"+str(doc.width())+\"x\"+str(doc.height()))"
 msgstr ""
+"from krita import *\n"
+"\n"
+"for doc in Krita.instance().documents():\n"
+"    print(doc.name())\n"
+"    print(\" \"+str(doc.width())+\"x\"+str(doc.height()))"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:137
 msgid "We get an output like::"
-msgstr ""
+msgstr "Vi får utmatning som liknar:"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:139
 msgid ""
@@ -335,11 +386,20 @@ msgid ""
 "Blue morning\n"
 " 1600x900"
 msgstr ""
+"==== Warning: Script not saved! ====\n"
+"Unnamed\n"
+" 2480x3508\n"
+"sketch21\n"
+" 3508x2480\n"
+"Blue morning\n"
+" 1600x900"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:147
 msgid ""
 "Hopefully this will give you an idea of how to navigate the API docs now."
 msgstr ""
+"Förhoppningsvis ger det nu en idé om hur man kan navigera i dokumentationen"
+" om programmeringsgränssnittet."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:149
 msgid ""
@@ -353,6 +413,7 @@ msgstr ""
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:154
 msgid "[print([a.objectName(), a.text()]) for a in Krita.instance().actions()]"
 msgstr ""
+"[print([a.objectName(), a.text()]) for a in Krita.instance().actions()]"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:155
 msgid ""
@@ -369,6 +430,12 @@ msgid ""
 "\n"
 "getInfo(Krita.instance())"
 msgstr ""
+"import inspect\n"
+"def getInfo(target):\n"
+"    [print(item) for item in inspect.getmembers(target) if not item[0]."
+"startswith('_')]\n"
+"\n"
+"getInfo(Krita.instance())"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:167
 msgid ""
