@@ -41,7 +41,7 @@ Then you need to download deps and Krita source tree. These steps are not includ
 .. code::
 
     # create directory structure for container control directory
-    git clone git://anongit.kde.org/scratch/dkazakov/krita-docker-env.git krita-auto-1
+    git clone https://invent.kde.org/dkazakov/krita-docker-env krita-auto-1
 
     cd krita-auto-1
     mkdir persistent
@@ -87,6 +87,26 @@ Enter the container and build Krita
     # start Krita
     ../appimage-workspace/krita-inst/bin/krita
 
+
+Building AppImage package for your version of Krita
+---------------------------------------------------
+
+If you want to build a portable package for your version of Krita, just enter
+the container and type:
+
+.. code::
+
+    ~/bin/build_krita_appimage.sh
+
+The built package will be copied to *./persistent/* folder.
+
+By default, the package will containt debugging symbols and will be
+about 450 MiB in size. If you want a smaller and more portable package
+without debigging information, add `STRIP_APPIMAGE=1` environment variable:
+
+.. code::
+
+    STRIP_APPIMAGE=1 ~/bin/build_krita_appimage.sh
 
 Extra developer tools
 ---------------------
