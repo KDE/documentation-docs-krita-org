@@ -174,7 +174,7 @@ Your fork will probably be located here:
         # for ssh access
         git remote add upstream git@invent.kde.org:documentation/docs-krita-org.git.git
         # for https access
-        git remote add upstream https://invent.kde.org/websites/docs-krita-org.git
+        git remote add upstream https://invent.kde.org/documentation/docs-krita-org.git
 
     After that, you can see all of your urls using:
 
