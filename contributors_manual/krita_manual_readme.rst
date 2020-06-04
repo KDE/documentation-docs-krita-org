@@ -16,7 +16,7 @@
 .. _phabricator : https://phabricator.kde.org
 .. _KDE_gitlab : https://invent.kde.org/
 .. _Manual Project Workboard : https://phabricator.kde.org/project/view/135/
-.. _repository : https://invent.kde.org/websites/docs-krita-org/tree/master
+.. _repository : https://invent.kde.org/documentation/docs-krita-org/tree/master
 .. _bugzilla : https://bugs.kde.org/
    
 .. _krita_manual_contributors_guide:
