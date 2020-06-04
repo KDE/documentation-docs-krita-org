@@ -114,7 +114,7 @@ If you have a lot of changes you want to contribute, we recommend trying to foll
 #. Go to the `repository`_ and press :guilabel:`fork`.
 #. You should be redirected to the fork of your repository now. Typically it's located at ``invent.kde.org/YOUR_KDE_LOGIN_NAME/docs-krita-org``.
 
-#. Come back to the official repository. Make sure you're browsing ``Websites/Krita Documentation``, not your own fork. Otherwise this method won't work correctly.
+#. Come back to the official repository. Make sure you're browsing ``Documentation > Krita.org Documentation``, not your own fork. Otherwise this method won't work correctly.
 
  #. Gitlab has an option to Edit files in the gitlab itself. To access this, go to :menuselection:`Repository --> Files`.
 
@@ -200,7 +200,7 @@ Not recommended when you don't know what a branch is (see :ref:`merge-request-ed
 
         # for https access
         git clone https://invent.kde.org/<username>/docs-krita-org.git
-        git remote add upstream https://invent.kde.org/websites/docs-krita-org.git
+        git remote add upstream https://invent.kde.org/documentation/docs-krita-org.git
 
 
 #. Remember to always pull changes from the official repository before making new changes:
