@@ -55,7 +55,7 @@ IRC is the main communication channel. There are IRC clients for every operating
 * Don’t ask to ask: if you’ve got a question, just ask it.
 * Don’t panic if several discussions happen at the same time. That’s normal in a busy channel.
 * Talk to an individual by typing their nick and a colon.
-* Almost every Monday, at 14:00 CET or CEST, we have a meeting where we discuss what happened in the past week, what we’re doing, and everything that’s relevant for the project. The meeting notes are kept in google docs.
+* Almost every Monday, at 16:00 CET or CEST, we have a meeting where we discuss what happened in the past week, what we’re doing, and everything that’s relevant for the project. The meeting notes are kept in google docs.
 * Activity is highest in CET or CEST daytime and evenings. US daytime and evenings are most quiet.
 * **IRC is not logged. If you close the channel, you will be gone, and you will not be able to read what happened when you join the channel again. If you ask a question, you have to stay around!**
 * It is really irritating for other users and disrupting to conversations if you keep connecting and disconnecting.
