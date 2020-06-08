@@ -1,6 +1,6 @@
 .. meta::
     :description:
-        Guide to building Krita with docker.
+        Guide to building Krita with docker on Linux.
 
 .. metadata-placeholder
 
@@ -9,9 +9,11 @@
     
 .. _building_krita_with_docker:
 
-==========================
-Building krita with Docker
-==========================
+===================================
+Building krita with Docker on Linux
+===================================
+
+This guide is useful when you are an advanced developer and want to build krita with the same patched dependencies that are used for the appimages. If you just want to hack on Krita, read the Build Krita from Source guide.
 
 The *Dockerfile* is based on the official KDE build environment
 that is used on KDE CI for building official AppImage packages. This guide is valid for Ubuntu and Ubuntu-based Linux distributions.
