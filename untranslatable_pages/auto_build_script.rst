@@ -31,11 +31,11 @@ Dependencies
 
 Most of the dependencies you will need to build Krita is available at `the KDE binary factory <https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/>`_. You will get a zip archive from that link. After downloading, unpack the archive to a place you like.
 
-Besides the dependencies you get from the binary factory, you will also need CMake, Python 3.6, and Boost (if your GCC version is not 7.3 -- it is highly probably the case if you have just downloaded installed MinGW).
+Besides the dependencies you get from the binary factory, you will also need CMake, Python 3.8, and Boost (if your GCC version is not 7.3 -- it is highly probably the case if you have just downloaded installed MinGW).
 
 To install CMake and Boost, open Msys shell and enter ``pacman -S mingw-w64-x86_64-cmake mingw-w64-x86_64-boost``.
 
-The Python installer can be downloaded from `its official website <https://www.python.org/downloads/release/python-369/>`_. It is important to use Python 3.6 and not 3.5 or 3.7 or other versions.
+The Python installer can be downloaded from `its official website <https://www.python.org/downloads/release/python-383/>`_. It is important to use Python 3.8 and not 3.5 or 3.7 or 3.9 or other versions.
 
 Fetch the sources
 -----------------
@@ -77,7 +77,7 @@ Before you invoke the script, it is necessary to edit the configuration part and
 
 * depsDir -- The absolute path to ``deps-install`` directory you have extracted from ``krita-deps.zip``.
 * mingwDir -- The path to MinGW installation. It is usually the ``mingw64`` directory under your Msys installation path.
-* pythonDir -- The path to your Python 3.6.
+* pythonDir -- The path to your Python 3.8.
 * kritaInstallDir -- Where you want to install Krita.
 * kritaSrcDir -- The source code directory we have set up before.
 * kritaBuildDir -- The build directory we have set up before.
