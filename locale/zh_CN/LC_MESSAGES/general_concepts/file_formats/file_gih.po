@@ -3,27 +3,28 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-23 03:53+0200\n"
-"PO-Revision-Date: 2020-05-09 13:50\n"
+"PO-Revision-Date: 2020-06-09 20:59\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/www/"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_general_concepts___file_formats___file_gih.pot\n"
+"Language: zh_CN\n"
 
 #: ../../general_concepts/file_formats/file_gih.rst:None
 msgid ""
 ".. image:: images/category_filetypes/gih_multi_dimension_explaination.png"
 msgstr ""
+".. image:: images/category_filetypes/gih_multi_dimension_explaination.png"
 
 #: ../../general_concepts/file_formats/file_gih.rst:1
 msgid "The GIMP Image Hose file format in Krita."
-msgstr ""
+msgstr "介绍 GIMP 图像管道文件格式在 Krita 中的使用方式和限制。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:10
 msgid "*.gih"
@@ -59,8 +60,8 @@ msgid ""
 "and then set some options to make it specify how to output the multiple "
 "images."
 msgstr ""
-"图像管道的意思是这种文件格式允许你保存多张图像，并通过一些选项来规定如何输出"
-"这几个图像。"
+"图像管道的意思是这种文件格式允许你保存多张图像作为笔尖，并通过一些选项控制这"
+"些图像在什么条件下会被调用。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:25
 msgid ".. image:: images/brushes/Gih-examples.png"
@@ -68,11 +69,11 @@ msgstr ".. image:: images/brushes/Gih-examples.png"
 
 #: ../../general_concepts/file_formats/file_gih.rst:25
 msgid "From top to bottom: Incremental, Pressure and Random"
-msgstr "从上到下：增量、压力和随机模式"
+msgstr "从上到下：递增、压力和随机模式"
 
 #: ../../general_concepts/file_formats/file_gih.rst:28
 msgid "Dimension and ranks."
-msgstr ""
+msgstr "维度和顺位"
 
 #: ../../general_concepts/file_formats/file_gih.rst:30
 msgid ""
@@ -87,6 +88,13 @@ msgid ""
 "tips for the four parts of the second dimension, and finally, the grouped "
 "three images have each a unique brush for the final dimension."
 msgstr ""
+"GIMP 图像管道格式允许一个笔刷具有多种不同大小的笔尖。你可以使笔尖图像按递增顺"
+"序更新，按压力更新，或者随机更新。 在导出时 Krita 需要根据顺位选项来将笔尖按"
+"照不同的维度细分笔尖图层。如果一个 GIH 图像有 24 个图层和 3 个顺位维度，第一"
+"维度有 2 个顺位，第二维度有 4 个顺位，第三维度有 3 个顺位。Krita 会先把 24 个"
+"图层分成每组 12 层的 2 组，然后在每组 12 层的 2 组的基础上细分为每组 4 层的 "
+"8 组，最后将这 8 组再细分为 3 组。(译者注：我并不是非常明白原文想要表达什么意"
+"思……)"
 
 #: ../../general_concepts/file_formats/file_gih.rst:32
 msgid ""
@@ -98,16 +106,23 @@ msgid ""
 "the second dimension but for the first number, then another three layers, "
 "each for a shape, but then for the second number, and so forth."
 msgstr ""
+"下面的图像列出了一个表格，一级维度有 4 张图，以 1/2/3/4 区分，二级维度有 3 张"
+"图，以方形/三角形/圆形区分。因此一级和二级维度的顺位必须设置为 4 和 3。图层在"
+"整理时先按照一级维度细分，然后按照二级维度细分。我们最后将得到下图右边所示的 "
+"3 个笔尖一组的 4 组，一级维度按数字 1/2/3/4 分，二级维度按照方形/三角形/圆形"
+"分。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:38
 msgid ""
 "See `the GIMP documentation <https://docs.gimp.org/2.8/en/gimp-using-"
 "animated-brushes.html>`_ for a more thorough explanation."
 msgstr ""
+"请阅读 `GIMP 的相关文档 <https://docs.gimp.org/2.8/en/gimp-using-animated-"
+"brushes.html>`_ 以获取更深入的解释。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:41
 msgid "GIMP image hose format options:"
-msgstr ""
+msgstr "GIMP 图像管道格式选项："
 
 #: ../../general_concepts/file_formats/file_gih.rst:43
 msgid "Constant"
@@ -185,3 +200,5 @@ msgid ""
 "We have a :ref:`Krita Brush tip page <brush_tip_animated_brush>` on how to "
 "create your own GIH brush."
 msgstr ""
+"我们准备了一个 :ref:`Krita 笔尖页面 <brush_tip_animated_brush>` 来介绍如何制"
+"作 GIH 笔刷。"

@@ -3,18 +3,18 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22 03:51+0200\n"
-"PO-Revision-Date: 2020-05-09 13:50\n"
+"PO-Revision-Date: 2020-06-09 20:59\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/www/"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_contributors_manual___optimising_images.pot\n"
+"Language: zh_CN\n"
 
 #: ../../contributors_manual/optimising_images.rst:1
 msgid "How to make and optimise images for use in the manual."
@@ -114,10 +114,12 @@ msgid ""
 "videos. Furthermore, GIFs are quite nice to show off features with release "
 "notes."
 msgstr ""
+"虽然我们出于无障碍原则应该尽量避免在手册中使用 GIF 动画，但有时也不得不用它制"
+"作短视频。GIF 动画在展现新软件特性时还是挺好用的，我们在发行日志里经常用到。"
 
 #: ../../contributors_manual/optimising_images.rst:44
 msgid "For making short GIFs, you can use the following programs:"
-msgstr ""
+msgstr "要制作 GIF 短视频，可以使用下列程序："
 
 #: ../../contributors_manual/optimising_images.rst:46
 msgid ""
@@ -160,7 +162,7 @@ msgstr "软件界面截图"
 
 #: ../../contributors_manual/optimising_images.rst:59
 msgid "This should use PNG, and if possible, in GIF."
-msgstr ""
+msgstr "应当使用 PNG，如果可能则使用 GIF。"
 
 #: ../../contributors_manual/optimising_images.rst:60
 msgid "Images that have a lot of flat colors."
@@ -168,7 +170,7 @@ msgstr "以非渐变色为主的图像。"
 
 #: ../../contributors_manual/optimising_images.rst:61
 msgid "This should use PNG."
-msgstr ""
+msgstr "应当使用 PNG。"
 
 #: ../../contributors_manual/optimising_images.rst:62
 msgid "Grayscale images"
@@ -176,7 +178,7 @@ msgstr "灰阶图像"
 
 #: ../../contributors_manual/optimising_images.rst:63
 msgid "These should be GIF or PNG."
-msgstr ""
+msgstr "应当使用 GIF 或 PNG。"
 
 #: ../../contributors_manual/optimising_images.rst:64
 msgid "Images with a lot of gradients"
@@ -202,6 +204,10 @@ msgid ""
 "PNG does a lot better with images with sharp contrasts, while in some cases "
 "we can even have less than 256 colors, so GIF might be better."
 msgstr ""
+"上述惯例是由每种文件格式保存颜色的方式决定的。JPEG 使用一种 :ref:`不同的压缩"
+"方式 <lossy_compression>` ，它适合照片和渐变色较多的图像，但不适合对比强烈的"
+"场景。PNG 在处理具有锐利对比的图像时效果远好于前者。如果图像的颜色数目少于 "
+"256 种，则 GIF 会更加经济。"
 
 #: ../../contributors_manual/optimising_images.rst:71
 msgid ""
@@ -216,6 +222,11 @@ msgid ""
 "GIF or PNG, instead of JPEG which could have nasty artifacts. (And, it is "
 "also a bit smaller)"
 msgstr ""
+"灰阶图像，不管渐变和颜色变化如何，都应使用 PNG。这是因为对于全彩图像而言，我"
+"们需要描述 3 到 5 种原色，而每种原色又有 256 种可能数值，这样一来图像会变得很"
+"大。JPEG 和其他有损格式通过心理学手段巧妙地削减了全彩图像展现内容所需的数据。"
+"但是灰阶图像只需描述亮度一组 256 个数值，特别适合 GIF 或 PNG，而 JPEG 此时反"
+"而容易产生伪像，文件体积也不具优势。"
 
 #: ../../contributors_manual/optimising_images.rst:73
 msgid "**When in doubt, use PNG.**"
@@ -334,6 +345,8 @@ msgid ""
 "optimised version. You can avoid overwriting with the ``--out imageout.png`` "
 "command."
 msgstr ""
+"把 image 字段换成图像文件名。OptiPNG 会试用几种压缩算法，然后用优化后的图像 "
+"**覆盖** 原图。要避免覆盖，可使用 ``--out imageout.png`` 命令。"
 
 #: ../../contributors_manual/optimising_images.rst:119
 msgid "Optimising GIF"
@@ -535,6 +548,8 @@ msgid ""
 "Sometimes we want to extract metadata, like an ICC profile, before stripping "
 "everything. This is done by converting the image to the profile type:"
 msgstr ""
+"我们有时需要把某些元数据提取出来，例如图像内嵌的 ICC 配置文件，然后才清空全部"
+"元数据。图像可被直接转换为配置文件："
 
 #: ../../contributors_manual/optimising_images.rst:196
 msgid "First extract the metadata to a profile by converting::"

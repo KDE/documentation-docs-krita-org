@@ -3,18 +3,18 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-23 03:53+0200\n"
-"PO-Revision-Date: 2020-05-09 13:50\n"
+"PO-Revision-Date: 2020-06-09 20:59\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/www/"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___filters___edge_detection.pot\n"
+"Language: zh_CN\n"
 
 #: ../../<generated>:1
 msgid "XYZ"
@@ -78,6 +78,9 @@ msgid ""
 "finally the original with an edge detection filter layer with the same "
 "settings as 3, and the filter layer blending mode set to multiply."
 msgstr ""
+"(左一) 原图；(左二) 应用 Prewitt 边缘检测；(左三) 把 Prewitt 边缘检测的结果应"
+"用到透明度通道；(左四) 在原图之上新建滤镜图层并应用左三设置，混色模式设为“相"
+"乘”。"
 
 #: ../../reference_manual/filters/edge_detection.rst:36
 #: ../../reference_manual/filters/edge_detection.rst:106
@@ -220,11 +223,11 @@ msgstr ""
 
 #: ../../reference_manual/filters/edge_detection.rst:66
 msgid "High Pass"
-msgstr ""
+msgstr "高通"
 
 #: ../../reference_manual/filters/edge_detection.rst:69
 msgid "Gaussian High Pass"
-msgstr ""
+msgstr "高斯高通"
 
 #: ../../reference_manual/filters/edge_detection.rst:71
 msgid ""
@@ -232,16 +235,18 @@ msgid ""
 "enhance contrasts, much like a sharpen filter, but within a texture editing "
 "workflow it is also used to remove local gradients."
 msgstr ""
+"高斯高通是边缘检测滤镜的一种。它通常用来增强图像的对比度，就像锐化滤镜那样。"
+"而在材质的制作流程中，它通常被用来消除材质局部的渐变效果。"
 
 #: ../../reference_manual/filters/edge_detection.rst:74
 msgid "Radius"
-msgstr ""
+msgstr "半径"
 
 #: ../../reference_manual/filters/edge_detection.rst:74
 msgid ""
 "The radius within the Gaussian High Pass filter is similar to the radius in "
 "the Edge Detection filter."
-msgstr ""
+msgstr "高斯高通滤镜中的半径参数与边缘检测滤镜中的类似。"
 
 #: ../../reference_manual/filters/edge_detection.rst:76
 msgid ""
@@ -249,10 +254,13 @@ msgid ""
 "then set the blending mode to modes like 'soft light', 'overlay', 'hard "
 "light', 'linear light'. Different blending modes give different results."
 msgstr ""
+"如果将高斯高通滤镜用于锐化，请建立一个滤镜图层并加载此滤镜，然后将它的混合模"
+"式设为“柔光”、“叠加”、“强光”、“线性光”之一，不同的混合模式的锐化效果会有微妙"
+"区别。"
 
 #: ../../reference_manual/filters/edge_detection.rst:82
 msgid ".. image:: images/filters/highpass_filter_sharpen.png"
-msgstr ""
+msgstr ".. image:: images/filters/highpass_filter_sharpen.png"
 
 #: ../../reference_manual/filters/edge_detection.rst:82
 msgid ""
@@ -261,6 +269,8 @@ msgid ""
 "original with to Linear Light, **bottom right**: Gaussian High Pass result "
 "with radius 3 blended over the original with Soft Light."
 msgstr ""
+"**左上**：原图；**右上**：高斯高通 - 半径 3；**左下**：高斯高通 - 半径 3 - 线"
+"性光模式与原图混合；**右下**：高斯高通 - 半径 3 - 柔光模式与原图混合。"
 
 #: ../../reference_manual/filters/edge_detection.rst:84
 msgid ""
@@ -271,10 +281,15 @@ msgid ""
 "mask needs to be added to reduce the levels so that the multiplication "
 "result will not be as strong)."
 msgstr ""
+"如果将高斯高通滤镜用于移除材质的局部渐变，请如下操作：1) 为材质图层创建一个克"
+"隆图层；2) 为该克隆图层建立一个滤镜蒙版，加载此滤镜；3) 在克隆图层和原始图层"
+"之间插入一个滤镜图层，加载高斯模糊滤镜，将半径设为最大；4) 将克隆图层的混合模"
+"式设为明度或者相乘 (本例添加了两个高斯高通滤镜蒙版，才能将亮度降低到使用相乘"
+"模式时不至于颜色太重)。"
 
 #: ../../reference_manual/filters/edge_detection.rst:90
 msgid ".. image:: images/filters/highpass_filter_local_gradient_removal.png"
-msgstr ""
+msgstr ".. image:: images/filters/highpass_filter_local_gradient_removal.png"
 
 #: ../../reference_manual/filters/edge_detection.rst:90
 msgid ""
@@ -283,6 +298,9 @@ msgid ""
 "specific example the lack of local gradients removes some character, but the "
 "gaussian high pass result could also be used to create a heightmap."
 msgstr ""
+"**左图**：原始图像；**右图**：高斯高通处理结果以明度模式混合 - 消除本地渐变，"
+"同时保留锐利细节。在本例中，虽然局部渐变的消除损失了图像的细节，但处理后的结"
+"果可被用于制作高度贴图。"
 
 #: ../../reference_manual/filters/edge_detection.rst:93
 msgid "Height Map"

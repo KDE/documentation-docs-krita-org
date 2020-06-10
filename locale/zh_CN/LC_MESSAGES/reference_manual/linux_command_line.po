@@ -3,18 +3,18 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22 03:51+0200\n"
-"PO-Revision-Date: 2020-05-09 13:50\n"
+"PO-Revision-Date: 2020-06-09 20:59\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/www/"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___linux_command_line.pot\n"
+"Language: zh_CN\n"
 
 #: ../../reference_manual/linux_command_line.rst:None
 msgid "New in version 3.3:"
@@ -47,6 +47,8 @@ msgid ""
 "This is primarily used in bash or shell scripts, for example, to mass "
 "convert KRA files into PNGs."
 msgstr ""
+"该功能主要用于 bash 或 shell 脚本，比如将大量 KRA 文件转换为 PNG 文件的批处理"
+"脚本。"
 
 #: ../../reference_manual/linux_command_line.rst:25
 msgid "Export"
@@ -103,7 +105,7 @@ msgstr "这条命令会把文件 ``file.png`` 另存为 ``file.jpg`` 。"
 
 #: ../../reference_manual/linux_command_line.rst:57
 msgid "Export animation to the given filename and exit."
-msgstr ""
+msgstr "用指定的文件名导出动画，然后退出。"
 
 #: ../../reference_manual/linux_command_line.rst:59
 msgid ""
@@ -123,6 +125,8 @@ msgid ""
 "filename (*file.png*), to determine the sequence fileformat('png') and the "
 "frame prefix ('file')."
 msgstr ""
+"这条命令会读取 *test.kra* 中的动画，并按照 --export-filename (*file.png*) 的"
+"值来确定导出的动画序列的文件格式为 PNG，每帧文件名的前缀为 (“file”)。"
 
 #: ../../reference_manual/linux_command_line.rst:67
 msgid "PDF export"
@@ -130,7 +134,7 @@ msgstr "PDF 导出指令"
 
 #: ../../reference_manual/linux_command_line.rst:69
 msgid "PDF export looks a bit different, using the ``--export-pdf`` option."
-msgstr ""
+msgstr "导出 PDF 的指令和导出普通文件的不一样，它的指令是 ``--export-pdf`` 。"
 
 #: ../../reference_manual/linux_command_line.rst:71
 msgid "``krita file.png --export-pdf --export-filename final.pdf``"
@@ -138,7 +142,7 @@ msgstr "``krita file.png --export-pdf --export-filename final.pdf``"
 
 #: ../../reference_manual/linux_command_line.rst:73
 msgid "This option exports the file ``file.png`` as a PDF file."
-msgstr ""
+msgstr "在上面的例子中，export-pdf 指令会把文件 ``file.png`` 导出成 PDF 文件。"
 
 #: ../../reference_manual/linux_command_line.rst:77
 msgid "This has been removed from 3.1 because the results were incorrect."
@@ -240,14 +244,16 @@ msgid ""
 "either open an existing file or create a new file using the ``new-image`` "
 "argument."
 msgstr ""
+"启动 Krita，并将 ``filename`` 为文件名的图像添加为一个文件图层。使用此指令参"
+"数时，你必须同时打开一个图像，或者使用 ``new-image`` 指令新建一个图像。"
 
 #: ../../reference_manual/linux_command_line.rst:149
 msgid "``krita file.kra --file-layer image.png``"
-msgstr ""
+msgstr "``krita file.kra --file-layer image.png``"
 
 #: ../../reference_manual/linux_command_line.rst:151
 msgid "``krita --new-image RGBA,U8,1000,1000 --file-layer image.jpg``"
-msgstr ""
+msgstr "``krita --new-image RGBA,U8,1000,1000 --file-layer image.jpg``"
 
 #: ../../reference_manual/linux_command_line.rst:153
 msgid ""
@@ -255,7 +261,10 @@ msgid ""
 "<window_settings>` are disabled, then this option can be used alone to add a "
 "file-layer to the running krita document."
 msgstr ""
+"如果已经有一个 Krita 实例正在运行，且 :ref:`只允许一个 Krita 实例 "
+"<window_settings>` 选框没有勾选，则此指令可被单独用于将文件图层添加到正在运行"
+"的 Krita 实例的当前图像中。"
 
 #: ../../reference_manual/linux_command_line.rst:155
 msgid "Example:  ``krita --file-layer image.png``"
-msgstr ""
+msgstr "例如： ``krita --file-layer image.png``"
