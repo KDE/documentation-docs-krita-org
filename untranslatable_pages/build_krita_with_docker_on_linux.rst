@@ -32,10 +32,33 @@ First make sure you have Docker installed
 Decide where you want to store your Docker images. All the docker images and containers are by default stored in a special docker-daemon controlled folder under */var* directory. You might not have enough space there for building Krita (it needs about 10 GiB). In such a case it is recommended to move the docker images
 folder into another location, where there is enough space.
 
-.. code::
+1) Stop docker service
+
+    .. code::
+
+        sudo systemctl stop docker
+
+2) Edit the config file:
+
+    On newer systems, like Ubuntu 18.04 and higher you need to open file */etc/docker/daemon.json* and add the following json config options:
+
+    .. code::
+
+        {
+            "data-root" : "/path/where/you/want/to/store/docker/images/"
+        }
+
+    If you have older version of Ubuntu, e.g. Ubuntu 16.04, then you need to do the following:
+
+    .. code::
     
-    # this step is optional
-    echo 'DOCKER_OPTS="-g /path/where/you/want/to/store/docker/images/"' >> /etc/default/docker
+        echo 'DOCKER_OPTS="-g /path/where/you/want/to/store/docker/images/"' >> /etc/default/docker
+
+3) Restart the docker service
+
+    .. code::
+
+        sudo systemctl start docker
 
 
 Then you need to download deps and Krita source tree. These steps are not included into the *Dockerfile* to save internal bandwidth 
@@ -87,7 +110,7 @@ Enter the container and build Krita
     make -j8 install
 
     # start Krita
-    ../appimage-workspace/krita-inst/bin/krita
+    ../appimage-workspace/krita.appdir/usr/bin/krita
 
 
 Building AppImage package for your version of Krita
