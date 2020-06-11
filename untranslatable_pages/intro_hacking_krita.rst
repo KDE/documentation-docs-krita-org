@@ -172,7 +172,7 @@ Your fork will probably be located here:
     .. code-block:: bash
 
         # for ssh access
-        git remote add upstream git@invent.kde.org:documentation/docs-krita-org.git.git
+        git remote add upstream git@invent.kde.org:documentation/docs-krita-org.git
         # for https access
         git remote add upstream https://invent.kde.org/documentation/docs-krita-org.git
 
