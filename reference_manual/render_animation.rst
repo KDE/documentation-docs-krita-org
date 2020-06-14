@@ -7,6 +7,7 @@
    :authors: - Scott Petrovic
              - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - Beelzy
+             - Lewis Fuller Hill
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Animation, Render Animation
@@ -52,7 +53,7 @@ Delete Sequence After Rendering
 
 .. warning::
 
-    None of the video formats support saving from images with a transparent background, so Krita will try to fill it with something. You should add a background color yourself to avoid it from using, say, black.
+    Krita currently does not support rendering video with transparent elements, and will instead render them as black. To combat this, you can add in a fully colored, opaque layer at the bottom of the file before rendering.
 
 Setting Up Krita for Exporting Animations
 -----------------------------------------
@@ -65,10 +66,27 @@ Step 1 - Downloading FFmpeg
 For Windows
 ^^^^^^^^^^^
 
-Go to the `FFmpeg website <https://ffmpeg.org/download.html>`_. The URL that had the link for me was `here... <https://ffmpeg.zeranoe.com/builds/>`_
+.. image:: /images/ffmpeg_screenshot_URL.png
+   :alt: FFmpeg URL.
 
-Watch out for the extremely annoying google and that looks like a download button! There is no big button for what we need. Either get the 64-bit STATIC version or 32-bit STATIC version that is shown later down the page. If you bought a computer in the past 5 years, you probably want the 64-bit version. Make sure you get a exe file, if you hover over the options they will give more information about what exactly you are downloading.
+Open the FFmpeg download page `here. <https://ffmpeg.zeranoe.com/builds/>`_
 
+The page features four headings. Each of these options can be changed using the relevant dropdowns on the left, and are specified below:
+
+- **Version:** Stable 4.2.2 is needed.
+- **Architecture:** 64-bit.
+- **Linking:** It is very important to get the ``Static`` version.
+- **Licence:** GPL 3.0
+
+.. image:: /images/ffmpeg_screenshot_specifications.png
+   :alt: FFmpeg specifications.
+
+Click ``Download Build`` at the bottom of the page. 
+
+.. warning::
+
+    By default, the file should be in .zip format. Do not change the file to any other format, or Krita won't cooperate with it. 
+    
 For OSX
 ^^^^^^^
 
@@ -85,10 +103,21 @@ Step 2 - Unzipping and Linking to Krita
 For Windows
 ^^^^^^^^^^^
 
-Unzip the package that was just downloaded. Rename the long folder name to just ffmpeg. Let's put this folder in a easy to find location. Go to your C:\ and place it there. You can put it wherever you want, but that is where I put it. 
+Once you've downloaded, go to the file location. Right click on the FFmpeg file, and select ``Extract All...``. Select the file destination, and rename the file to 'ffmpeg'. 
 
-Open Krita back up and go to :menuselection:`File --> Render Animation`. Click the :guilabel:`Browse` button on the last item called FFmpeg. Select this file ``C:/ffmpeg/bin/ffmpeg.exe`` and click :guilabel:`OK`.
+.. admonition:: Hint
 
+    It is easiest to save the file under C: drive, but any location is fine.
+
+Open Krita back up and go to :menuselection:`File --> Render Animation...`. Under ``Export > Video``, click the file icon next to FFmpeg. Select this file ``C:/ffmpeg/bin/ffmpeg.exe`` and click :guilabel:`OK`.
+
+.. image:: /images/ffmpeg_screenshot_path.png
+   :alt: FFmpeg path.
+
+.. admonition:: Tip
+
+    If you have saved FFmpeg to a different location, choose ``<ffmpeg location>/ffmpeg/bin/ffmpeg.exe``.
+    
 For OSX
 ^^^^^^^
 
