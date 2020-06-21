@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-19 01:57+0200\n"
-"PO-Revision-Date: 2020-06-16 21:37\n"
+"PO-Revision-Date: 2020-06-21 16:53\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_contributors_manual___krita_manual_conventions.pot\n"
 "X-Crowdin-File-ID: 9916\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -32,7 +32,7 @@ msgid ""
 "   :alt: mouseright"
 msgstr ""
 ".. image:: images/icons/Krita_mouse_right.png\n"
-"   :alt: 鼠标右键"
+"   :alt: mouseright"
 
 #: ../../<rst_epilog>:6
 msgid ""
@@ -40,7 +40,7 @@ msgid ""
 "   :alt: mousemiddle"
 msgstr ""
 ".. image:: images/icons/Krita_mouse_middle.png\n"
-"   :alt: 鼠标中间键"
+"   :alt: mousemiddle"
 
 #: ../../<rst_epilog>:8
 msgid ""
@@ -48,7 +48,7 @@ msgid ""
 "   :alt: mousescroll"
 msgstr ""
 ".. image:: images/icons/Krita_mouse_scroll.png\n"
-"   :alt: 鼠标滚轮滚动"
+"   :alt: mousescroll"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:None
 msgid "Horizontal Rulers"
@@ -64,11 +64,11 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:1
 msgid "reStructuredText conventions for the Krita Manual."
-msgstr "介绍 Krita 文档网站的 reStructuredText 使用惯例。"
+msgstr "介绍如何在 Krita 文档中使用 reStructuredText 标记。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:16
 msgid "Mark-up conventions for the Krita Manual"
-msgstr "Krita 文档 Sphinx 标记使用指引"
+msgstr "Krita 文档 Sphinx 标记使用指南"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:18
 msgid ""
@@ -153,9 +153,9 @@ msgid ""
 "sphinx directives and roles it uses to generate for example table of "
 "contents."
 msgstr ""
-"`Sphinx' 关于 restructured 文本的文档页面 <https://www.sphinx-doc.org/en/"
-"master/usage/restructuredtext/index.html>`_ -- 该文档有助于理解 Sphinx 用于生"
-"成如目录等元素的特定指令和角色。"
+"`Sphinx 的 restructured 标记用法说明文档 <https://www.sphinx-doc.org/en/"
+"master/usage/restructuredtext/index.html>`_ -- 该文档介绍了如何使用 Sphinx 标"
+"记生成诸如目录等元素的特定指令和角色。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:34
 msgid ""
@@ -163,8 +163,8 @@ msgid ""
 "docs multiple ways to do things. This document specifies the suggested "
 "conventions to go with."
 msgstr ""
-"由于官方版本的 reStructuredText 和 Sphinx 的文档描述的用法存在差异。本文档会"
-"统一介绍我们建议遵循的惯例。"
+"reStructuredText 的官方版本和 Sphinx 实际使用的标记略有差异。本页面将介绍 "
+"Krita 文档网站建议使用的规则。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:36
 msgid "Contents"
@@ -183,8 +183,8 @@ msgid ""
 "This is a general description of the page. It will be converted to an html "
 "meta tag which will be used by search engines::"
 msgstr ""
-"这是对于该页面内容的概述，它的内容会被转换成一组 html meta 标记，方便搜索引擎"
-"抓取::"
+"这是对于该页面内容的概述，它的内容会被转换成一组 html 元标记，以供搜索引擎抓"
+"取："
 
 #: ../../contributors_manual/krita_manual_conventions.rst:46
 msgid ""
@@ -207,9 +207,9 @@ msgid ""
 "machines. The license of the whole manual is GDL 1.3 and should also be "
 "mentioned here::"
 msgstr ""
-"用于记录哪些人编辑过该页面并对他们的贡献进行声明。最好把此处标记为注解文本，"
-"以免被机器轻易理解。我们的整个手册均使用 GDL 1.3 许可证，所以我们也要在这里对"
-"许可证进行声明::"
+"用于记录哪些人编辑过该页面并对他们的贡献进行声明。最好把它注释掉，以避免被机"
+"器人读取。Krita 文档网站的所有页面均使用 GFDL 1.3 许可证，所以我们也要在此对"
+"许可证进行声明："
 
 #: ../../contributors_manual/krita_manual_conventions.rst:54
 msgid ""
@@ -246,31 +246,31 @@ msgstr "索引关键词"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:63
 msgid ".. index:: Keyword, Keyword with Spaces, ! Main Definition Keyword"
-msgstr ".. index:: 关键词, 带有 空 格 的关键词, ! 主要定义关键词"
+msgstr ".. index:: 关键词, 含 空 格 关 键 词, ! 主要定义关键词"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:66
 msgid ""
 "This is so we can easily link to the page using ``:ref:`label_name```. Try "
 "to make this a nice variable name::"
 msgstr ""
-"标签变量会被 ``:ref:`label_name``` 标记生成的页面链接所使用。请尽量构思简明易"
-"懂的变量名::"
+"你可以在其他页面插入 ``:ref:`页面代号``` 标记，生成一个链接到此页面。请尽量使"
+"用易于理解的页面代号："
 
 #: ../../contributors_manual/krita_manual_conventions.rst:68
 msgid ".. _label_name:"
-msgstr ".. _标签名称 (英语):"
+msgstr ".. _页面代号 (必须以英语和下划线组成):"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:70
 msgid ""
 "After the label you will need to add a heading, as ``:ref:`label_name``` "
 "will refer to the heading to fill out its link-text."
 msgstr ""
-"在添加标签变量之后，你还要为页面添加一个标题， ``:ref:`label_name``` 将使用页"
-"面的标题文字作为链接显示的文字。"
+"除了页面代号外，你还要建立一个页面标题。使用 ``:ref:`页面代号``` 标记插入的链"
+"接将会使用页面标题显示链接文字。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:71
 msgid "A label."
-msgstr "标签变量"
+msgstr "页面代号"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:74
 msgid "Headings"
