@@ -155,7 +155,7 @@ Advices for supporters
 
 #. If you don't know the solution but you know what information will be needed to investigate the issue further, don't hesitate to ask. Other supporters may know the answer, but have too little time to move the user through the whole process, so you're helping a lot just by asking for additional information. This is very much true in case of tablet issues, for example.
 
-#. If you don't know the answer/solution and the question looks abandoned by other supporters, you can always ask for help on Krita IRC channel. It's #krita on freenote.net: :ref:`the_krita_community`.
+#. If you don't know the answer/solution and the question looks abandoned by other supporters, you can always ask for help on Krita IRC channel. It's #krita on freenode.net: :ref:`the_krita_community`.
 
 #. Explain steps the user needs to make clearly, for example if you need them to change something in settings, clearly state the whole path of buttons and tabs to get there.
 
@@ -175,7 +175,7 @@ How to share a file
 
 * Images (e.g. screenshots): `Imgur <https://imgur.com>`_ [*], `Pasteboard <https://pasteboard.co>`_
 
-* Text only: `Pastebin <https://pastebin.com>`_ [*], `BPaste <https://bpaste.net>`_, `paste.ubuntu.org.cn <https://paste.ubuntu.org.cn>`_, `FedoraProject's Paste <https://paste.fedoraproject.org/>`_ or `KDE Snippets (needs KDE Identity) <https://invent.kde.org/dashboard/snippets>`_.
+* Text only: `Pastebin <https://pastebin.com>`_ [*], `BPaste <https://bpaste.net>`_, `paste.ubuntu.org.cn <https://paste.ubuntu.org.cn>`_, `CentOS's Pastebin Service <https://paste.centos.org/>`_ or `KDE Snippets (needs KDE Identity) <https://invent.kde.org/dashboard/snippets>`_.
 
 * ``.kra`` and other formats: by mail? Or encode the file using *base64* command on Linux, send by mail or on Pastebin, then decode using the same command.
 

@@ -79,7 +79,7 @@ What is color management?
 
 Color management is, dryly put, a set of systems that tries to have the same color translate properly between color devices.
 
-It usually works by attempting to covert a color to the reference color space XYZ. XYZ is a coordinate system that has a spot for all colors that the average human eye can see.
+It usually works by attempting to convert a color to the reference color space XYZ. XYZ is a coordinate system that has a spot for all colors that the average human eye can see.
 
 From XYZ it can then be translated back into another device space, such as RGB (for screens), or CMYK (for printers).
 

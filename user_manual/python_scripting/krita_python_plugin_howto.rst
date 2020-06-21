@@ -111,7 +111,7 @@ Creating an extension
     class MyExtension(Extension):
 
         def __init__(self, parent):
-            #This is initialising the parent, always  important when subclassing.
+            # This is initialising the parent, always important when subclassing.
             super().__init__(parent)
 
         def setup(self):
@@ -269,7 +269,7 @@ MyDocker
 
 So, if we add our export document function we created in the extension section to this docker code, how do we allow the user to activate it? First, we'll need to do some Qt GUI coding: Let's add a button!
 
-By default, Krita uses PyQt, but its documentation is pretty bad, mostly because the regular Qt documentation is really good, and you'll often find that the PyQT documentation of a class, say, `QWidget <https://www.riverbankcomputing.com/static/Docs/PyQt4/qwidget.html>`_ is like a weird copy of the regular `Qt documentation <https://doc.qt.io/qt-5/qwidget.html>`_ for that class.
+By default, Krita uses PyQt, but its documentation is pretty bad, mostly because the regular Qt documentation is really good, and you'll often find that the PyQt documentation of a class, say, `QWidget <https://www.riverbankcomputing.com/static/Docs/PyQt5/api/qtwidgets/qwidget.html>`_ is like a weird copy of the regular `Qt documentation <https://doc.qt.io/qt-5/qwidget.html>`_ for that class.
 
 Anyway, what we need to do first is that we need to create a QWidget, it's not very complicated, under setWindowTitle, add:
 
@@ -307,7 +307,7 @@ PyQt Signals and Slots
 ----------------------
 
 We've already been using PyQt signals and slots already, but there are times where you want to create your own signals and slots.
-`As pyQt's documentation is pretty difficult to understand <https://www.riverbankcomputing.com/static/Docs/PyQt4/new_style_signals_slots.html>`_, and the way how signals and slots are created is very different from C++ Qt, we're explaining it here:
+`As PyQt's documentation is pretty difficult to understand <https://www.riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html>`_, and the way how signals and slots are created is very different from C++ Qt, we're explaining it here:
 
 All python functions you make in PyQt can be understood as slots, meaning that they can be connected to signals like Action.triggered or QPushButton.clicked. However, QCheckBox has a signal for toggled, which sends a boolean. How do we get our function to accept that boolean?
 
@@ -315,7 +315,7 @@ First, make sure you have the right import for making custom slots:
 
 ``from PyQt5.QtCore import pyqtSlot``
 
-(If there's from ``PyQt5.QtCore import *`` already in the list of imports, then you won't have to do this, of course.)
+(If there's ``from PyQt5.QtCore import *`` already in the list of imports, then you won't have to do this, of course.)
 
 Then, you need to add a PyQt slot definition before your function:
 

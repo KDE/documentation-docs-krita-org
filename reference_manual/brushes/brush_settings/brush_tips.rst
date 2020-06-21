@@ -103,7 +103,7 @@ Precision
     This changes how smooth the brush is rendered. The lower, the faster the brush, but the worse the rendering looks.
     You'd want an inking brush to have a precision of 5 at all times, but a big filling brush for painting doesn't require such precision, and can be easily sped up by setting precision to 1.
 Auto (precision)
-    This allows you to set the precision linked to the size. The first value is the brush size at which precision is last 5, and the second is the size-difference at which the precision will decrease.
+    This allows you to set the precision linked to the size. The first value is the brush size at which precision is at last 5, and the second is the size-difference at which the precision will decrease.
 
     For example: A brush with ''starting brush size'' 10 and ''delta'' 4, will have...
 
