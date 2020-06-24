@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-19 01:57+0200\n"
-"PO-Revision-Date: 2020-06-21 16:53\n"
+"PO-Revision-Date: 2020-06-24 08:01\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_contributors_manual___krita_manual_conventions.pot\n"
 "X-Crowdin-File-ID: 9916\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -184,7 +184,7 @@ msgid ""
 "meta tag which will be used by search engines::"
 msgstr ""
 "这是对于该页面内容的概述，它的内容会被转换成一组 html 元标记，以供搜索引擎抓"
-"取："
+"取::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:46
 msgid ""
@@ -209,7 +209,7 @@ msgid ""
 msgstr ""
 "用于记录哪些人编辑过该页面并对他们的贡献进行声明。最好把它注释掉，以避免被机"
 "器人读取。Krita 文档网站的所有页面均使用 GFDL 1.3 许可证，所以我们也要在此对"
-"许可证进行声明："
+"许可证进行声明::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:54
 msgid ""
@@ -238,7 +238,7 @@ msgid ""
 msgstr ""
 "关键词以半角逗号进行区分。页面会在 :ref:`genindex` 处按照这些关键词进行排列。"
 "手册自动生成的索引对于 PDF 和不了解内容关键词的人们来说非常有用。关键词的定义"
-"方式如下："
+"方式如下::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:63
 msgid "Indexing terms."
@@ -253,24 +253,24 @@ msgid ""
 "This is so we can easily link to the page using ``:ref:`label_name```. Try "
 "to make this a nice variable name::"
 msgstr ""
-"你可以在其他页面插入 ``:ref:`页面代号``` 标记，生成一个链接到此页面。请尽量使"
-"用易于理解的页面代号："
+"你可以在其他页面插入 ``:ref:`链接代号``` 标记，生成一个内部链接到此页面。请尽"
+"量使用易于理解的链接代号::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:68
 msgid ".. _label_name:"
-msgstr ".. _页面代号 (必须以英语和下划线组成):"
+msgstr ".. _链接代号 (必须以英语和下划线组成):"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:70
 msgid ""
 "After the label you will need to add a heading, as ``:ref:`label_name``` "
 "will refer to the heading to fill out its link-text."
 msgstr ""
-"除了页面代号外，你还要建立一个页面标题。使用 ``:ref:`页面代号``` 标记插入的链"
-"接将会使用页面标题显示链接文字。"
+"除链接代号外，你还要建立一个页面标题。使用 ``:ref:`链接代号``` 标记插入的链接"
+"将会使用页面标题显示链接文字。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:71
 msgid "A label."
-msgstr "页面代号"
+msgstr "链接代号"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:74
 msgid "Headings"
@@ -278,7 +278,7 @@ msgstr "标题"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:76
 msgid "Headings will be done in the following order::"
-msgstr "各个级别的标题通过以下顺序生成::"
+msgstr "各级标题可以使用下列标记生成::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:78
 msgid ""
@@ -310,16 +310,16 @@ msgid ""
 "\"\"\"\"\"\"\"\"\""
 msgstr ""
 "############\n"
-"部分/章节\n"
+"子页面标题\n"
 "############\n"
 "\n"
-"用于有许多子页面的页面。\n"
+"用于具有大量子页面的页面。\n"
 "\n"
 "=========\n"
 "一级标题\n"
 "=========\n"
 "\n"
-"绝大多数使用手册页面以此类标题开始。\n"
+"如无特殊情况，文档页面一律以一级标题开头。\n"
 "\n"
 "二级标题\n"
 "---------\n"
@@ -343,21 +343,21 @@ msgid ""
 "headings, ask yourself first if the page hasn't gotten too complicated and "
 "needs splitting up."
 msgstr ""
-"上述标题惯例参考了 `Pandoc <https://pandoc.org/>`_ 的 Mediakiwi 转 "
-"reStructuredText 处理方式。如果你打算使用超过四级的标题，最好先想清楚页面会不"
-"会因此变得太乱，考虑是否拆分这个页面的内容。"
+"上述标记参考了 `Pandoc <https://pandoc.org/>`_ 将 Mediakiwi 页面转换为 "
+"reStructuredText 时的处理方式。为避免页面排版混乱，不建议在同一页中使用超过四"
+"级标题。如果内容层级过于复杂，建议将页面拆分成多页。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:107
 msgid ""
 "Sometimes you need to link to a subsection of a page, add a label above the "
 "heading in that case."
-msgstr "如需创建链接到页面的内部章节，可在目标章节的标题前面添加一个标签变量。"
+msgstr "如需创建内部链接到页面的某个章节，请在该章节标题之前添加链接代号。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:109
 msgid ""
 "Headers should not end with punctuation, as the header will be used as the "
 "link name when linking to a label."
-msgstr "标题文字不应该以标点结尾，因为它会在生成链接时被用作链接文字。"
+msgstr "标题文字不应该以标点结尾，因为它会在生成内链时被用作链接文字。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:112
 msgid "Linking"
@@ -368,18 +368,21 @@ msgid ""
 "Linking is done with ``:ref:`label_name```. When you need an alternative "
 "link text, you use ``:ref:`actual text shown <label_name>```."
 msgstr ""
-"链接通过 ``:ref:`label_name``` 生成。如需把链接显示成自定义文字，则使用 ``:"
-"ref:`实际显示的文字 <label_name>``` 。务必在“label_name”括号的前面保留一个半"
-"角空格，否则会把整个页面的代码搞乱！"
+"内部链接通过 ``:ref:`链接代号``` 生成。如需获取某个页面的链接代号，请点击页面"
+"右上角的 ``</>`` 显示页面源代码，在开头附近找到以 ``_`` 作为开头和空格的一串"
+"文字，在第一个 ``_`` 和 ``:`` 之间的部分便是该页面的链接代号。如需把链接显示"
+"成自定义文字，则使用 ``:ref:`实际显示的文字 <链接代号>``` 。请留意：实际显示"
+"的文字和<链接代号>之间必须保留一个半角空格，否则内链将失效。这些标记和相邻文"
+"字必须以半角空格隔开，否则将会破坏排版。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:116
 msgid ""
 "Linking to external pages is done with ```url`_`` and ```link name "
 "<url>`_``, which'll become `link name <url>`_."
 msgstr ""
-"外部链接通过 ```url`_`` 和 ```链接名称 <url>`_`` 生成，它们会被如下显示： `链"
-"接名称 <url>`_ 。相邻文字和这些链接的代码之间必须保留一个空格，否则整个页面的"
-"代码会乱掉！"
+"外部链接通过 ```网址`_`` 和 ```链接名称 <网址>`_`` 生成，它们的显示效果如"
+"下： `链接名称 <url>`_ 。这些标记和相邻文字必须以半角空格隔开，否则将会破坏排"
+"版。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:118
 msgid ""
@@ -404,7 +407,10 @@ msgstr "脚注和延伸阅读"
 msgid ""
 "Footnotes can be made in 3 ways, the most common one is with autonumbering, "
 "as per reference:"
-msgstr "脚注可以通过三种方式生成，最常用的是自动编号的引用，示例如下："
+msgstr ""
+"脚注可以通过三种方式生成，最常用的是自动编号的引用标记，示例如下：``[#]_`` 可"
+"在文中插入脚注编号，``.. [#] 脚注内容`` 可在文中插入脚注的实际内容。实际显示"
+"效果如下："
 
 #: ../../contributors_manual/krita_manual_conventions.rst:125
 msgid ""
@@ -429,7 +435,9 @@ msgstr "[#]_ 是对脚注 3 的引用。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:134
 msgid "Here is a citation reference: [CIT2002]_ ."
-msgstr "这是一处引文：[CIT2002]_ 。"
+msgstr ""
+"``[引用标题]_`` 可以在文中插入带标题的引用， ``.. [引用标题] 引用文字内容`` "
+"可以在文中插入实际引用的内容。实际效果如下：这是一处引文：[CIT2002]_ 。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:136
 msgid ""
@@ -450,10 +458,10 @@ msgid ""
 "links, while reStructuredText suggests to use ``.. rubic:: Footnotes`` for "
 "specifically collecting footnotes as that plays nice with LaTeX."
 msgstr ""
-"我们在手册中并未使用脚注功能，因为我们觉得这太学术化了。不过我们依然会整理一"
-"些相关的文档和链接在页面的末尾列出，用于进一步介绍某些事物。Sphinx 用 ``.. "
-"seealso::`` 指令来生成外部链接，而 reStructuredText 为了兼容 LaTex 而建议使"
-"用 ``.. rubic:: Footnotes`` 来收集脚注。"
+"我们不在 Krita 文档中使用脚注，因为作为说明书，脚注不但没有意义，还造成阅读不"
+"便。我们可以在页面末尾插入一些相关的内部/外部链接，用于延伸介绍相关知识。"
+"Sphinx 用 ``.. seealso::`` 指令来生成外部链接，而 reStructuredText 为了兼容 "
+"LaTex 而建议使用 ``.. rubic:: Footnotes`` 来收集脚注。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:145
 msgid "Images"
@@ -492,13 +500,14 @@ msgstr ""
 ".. figure:: /images/sample.png\n"
 "   :figwidth: 800\n"
 "   :align: center\n"
-"   :alt: 此处填入图像替代文字。上面的 center 表示居中。\n"
+"   :alt: 此处填入图像替代文字。\n"
 "\n"
-"   说明文字 --  注意说明文字的第一个字母按照图像的 :figwidth: 选项数值对齐。"
+"   说明文字 --  注意：说明文字的第一个字母按照图像的 :figwidth: 选项数值对"
+"齐。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:163
 msgid "The latter gives:"
-msgstr "后一个标记生成的效果如下："
+msgstr "后者生成的图像/说明文字效果如下："
 
 #: ../../contributors_manual/krita_manual_conventions.rst:170
 msgid ""
@@ -512,12 +521,12 @@ msgid ""
 "Images should go into the ``/images`` folder. By using ``/images`` instead "
 "of ``images``, sphinx will know the filepath isn't relative."
 msgstr ""
-"图像应该上传到 ``/images`` 文件夹。使用 ``/images`` 而不是 ``images``，这样 "
-"Sphinx 就不会把它作为相对路径进行解释了。"
+"图像应该上传到 ``/images`` 文件夹。标记中的链接应使用 ``/images`` 而不是 "
+"``images``，这样 Sphinx 才会把它视作绝对路径。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:175
 msgid "In-text Markup"
-msgstr "文字标记"
+msgstr "文字格式标记"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:177
 msgid ""
@@ -525,9 +534,10 @@ msgid ""
 "double respectively::"
 msgstr ""
 "在一段文字前后各插入一个半角星号可以生成 *斜体* ，在一段文字的前后插入两个半"
-"角星号可以生成 **粗体** 。务必留意在星号和内部文字之间 **不可以** 插入空格，"
-"而星号和外部文字之间却 **一定要** 插入空格，否则整个页面的排版会乱掉。应尽量"
-"避免把中文标为斜体，如果原文使用了斜体，可以考虑使用中文引号或者粗体代替。 ::"
+"角星号可以生成 **粗体** 。请注意：**切勿** 在星号和内部文字之间插入半角空格，"
+"**务必** 在星号和外部文字之间插入半角空格，否则文字格式将不正常。在翻译时避免"
+"把中文标为斜体，如果原文使用了斜体，可以考虑使用中文引号或者粗体代替。标记用"
+"法如下::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:179
 msgid ""
@@ -539,16 +549,15 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:182
 msgid "You cannot do both ***emphasized and strong***, so take a pick."
-msgstr ""
-"在一段文本的前后插入三个半角星号是行不通的，你只能在斜体和粗体之间二选一。"
+msgstr "你只能在斜体和粗体之间二选一。三个星号不会生成加粗斜体。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:184
 msgid ""
 "You can :sub:`subscript text` and :sup:`superscript text` by using ``:sub:"
 "`text``` and ``:sup:`text```."
 msgstr ""
-"用 ``:sub:`text``` 可以生成 :sub:`下标文字` ，而用 ``:sup:`text``` 则可以生"
-"成 :sup:`上标文字` 。"
+"用 ``:sub:`下标文字``` 可以生成 :sub:`下标文字` ，而用 ``:sup:`上标文字``` 则"
+"可以生成 :sup:`上标文字` 。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:186
 msgid ""
@@ -556,8 +565,8 @@ msgid ""
 "semantic markup in sphinx in any case, because that makes it easier for "
 "translators to make decisions about the nature of the text::"
 msgstr ""
-"切勿滥用文字标记。尽量使用 Sphinx 提供的语义标记，因为它们可以帮助翻译人员理"
-"解文本的性质，这些标记包括::"
+"切勿滥用文字格式标记。尽量使用 Sphinx 提供的语义标记，因为它们可以帮助翻译人"
+"员理解文本的性质。常用语义标记有::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:188
 msgid ""
@@ -566,16 +575,16 @@ msgid ""
 ":kbd:`Ctrl + Z`\n"
 ":program:`Krita`"
 msgstr ""
-":menuselection:`设置 --> 配置 Krita`\n"
-":guilabel:`文件`\n"
-":kbd:`Ctrl + Z`\n"
-":program:`Krita`"
+":menuselection:`设置 --> 配置 Krita (菜单点击序列标记)`\n"
+":guilabel:`文件 (界面元素标记)`\n"
+":kbd:`Ctrl + Z (按键标记)`\n"
+":program:`Krita (程序名称标记)`"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:193
 msgid ""
 "Avoid randomly bolding words. It does *not* make the text easier or "
 "friendlier to read."
-msgstr "不要胡乱加粗文字。那样会把文字变得难以阅读。"
+msgstr "使用加粗应有所节制，否则会把排版变得乱七八糟。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:196
 msgid "Substitution References"
@@ -584,11 +593,11 @@ msgstr "置换标记"
 #: ../../contributors_manual/krita_manual_conventions.rst:198
 msgid ""
 "You can create a sort of shorthand for a piece of text or an image by doing::"
-msgstr "你可以用以下方式为文字或图像创建速记标签::"
+msgstr "你可以使用短代码标记来插入需要反复使用的复杂内容::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:200
 msgid ".. |shorthand| replace:: something or the other."
-msgstr ".. |速记标签| replace:: 被替换的内容。"
+msgstr ".. |短代码标记| replace:: 短代码标记的实际内容。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:202
 msgid ""
@@ -596,8 +605,8 @@ msgid ""
 "with 'something or the other'. This is useful for images and text that needs "
 "to be formatted in a complicated way, like in the case of \"LaTeX\"."
 msgstr ""
-"如果你在文字中插入 ``|速记标签|``，它会被显示成“该速记标签所代表的内容”。这对"
-"于那些会被反复使用的格式繁琐的图像和文字很有用，例如使用了 LaTeX 的情况。"
+"如果你在文字中插入 ``|短代码标记|``，它会被显示成“该短代码标记的实际内容”。这"
+"对于那些要反复插入而格式繁复的图像和文字很有用，例如使用了 LaTeX 的情况。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:204
 msgid ""
@@ -635,7 +644,7 @@ msgid ""
 msgstr ""
 "这样日后在需要插入链接的时候，你只需使用 ```bugzilla`_`` 即可生成一个文字显示"
 "为“bugzilla”，跳传到 bugzilla 的链接。```Krita 使用手册`_`` 则会生成一个叫做 "
-"“Krita 使用手册” 的超链接并跳传到 docs.krita.org 。"
+"“Krita 使用手册” 的超链接并跳传到 docs.krita.org 网站。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:214
 msgid "Lists"
@@ -691,7 +700,7 @@ msgstr "图拉真"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:234
 msgid "They can be defined as follows::"
-msgstr "它们的用法是::"
+msgstr "以上列表的对应标记如下::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:236
 msgid ""
@@ -735,7 +744,7 @@ msgstr ""
 "I. 奥古斯都\n"
 "#. 尼禄\n"
 "#. 卡利古拉\n"
-"#. 特洛伊"
+"#. 图拉真"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:258
 msgid "Unordered lists"
@@ -791,7 +800,7 @@ msgstr "蓝"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:273
 msgid "Defined as such::"
-msgstr "用法如下::"
+msgstr "上述列表的标记如下::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:275
 msgid ""
@@ -823,7 +832,7 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:289
 msgid "Definition Lists"
-msgstr "定义列表"
+msgstr "名词定义列表"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:291
 msgid ""
@@ -831,8 +840,7 @@ msgid ""
 "enumerating all the options in a docker and trying to add a simple "
 "explanation behind them."
 msgstr ""
-"它们在罗列某个工具面板的各个选项并逐个进行说明时特别好用。我们特别喜欢使用定"
-"义列表。"
+"名词定义列表适合罗列一系列相关选项，并逐个进行介绍。Krita 文档经常使用它们。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:293
 msgid "Definition"
@@ -849,7 +857,7 @@ msgstr "另一个定义名称"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:299
 msgid "You can make them like this::"
-msgstr "方法如下::"
+msgstr "上述名词定义列表的标记如下::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:301
 msgid ""
@@ -865,7 +873,7 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:304
 msgid "To make them."
-msgstr "如何生成定义列表。"
+msgstr "如何生成定义列表"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:307
 msgid "Tables"
@@ -905,7 +913,7 @@ msgstr "列表型"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:317
 msgid "Done as follows::"
-msgstr "用法如下::"
+msgstr "上述表格的简单型、网格型、列表型标记如下::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:319
 msgid ""
@@ -977,24 +985,24 @@ msgid ""
 "best done with a list directive because that is just much easier to write "
 "and maintain."
 msgstr ""
-"完整的网格型表格虽然可以应付复杂的跨行跨列，但却不好制作，所以小型表格最好使"
-"用简单型表格的句法。如果是非常长的单列表格，还不如直接用列表标记代替，这样编"
-"写和修改都省时省力。"
+"完整的网格型表格虽然可以应付复杂的跨行跨列，但制作起来相当费劲，所以小型表格"
+"最好使用简单型表格标记。如果是非常长的单列表格，还不如直接用列表标记代替，省"
+"时省力。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:352
 msgid "Admonishments and asides"
-msgstr "注解和警告信息框"
+msgstr "信息框"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:356
 msgid ""
 "Admonishments are sort of like a separate section that the reader needs to "
 "pay attention to."
-msgstr "“注解”是一种用来吸引读者注意的独立段落。"
+msgstr "需要引起读者注意的文字，可使用信息框。本信息框为“注解 (note 标记)”。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:358
 msgid ""
 "Admonishments that can be used are the following (in order of seriousness):"
-msgstr "我们可以使用下列警告文字 (按照严重程度排列)："
+msgstr "信息框有还下面几种 (按照严重程度排列)："
 
 #: ../../contributors_manual/krita_manual_conventions.rst:362
 msgid ""
@@ -1002,8 +1010,8 @@ msgid ""
 "useful in the main text. Like, \"These packages are named differently in "
 "openSuse versus Debian\"."
 msgstr ""
-"“提示”可以用来在正文之外补充少量信息。例如，提示：这些软件包在 OpenSUSE 和 "
-"Debian 中使用不同的名字。"
+"“提示 (hint 标记)”可以用来在正文之外补充少量信息。例如，提示：这些软件包在 "
+"OpenSUSE 和 Debian 中使用不同的名字。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:366
 msgid ""
@@ -1011,39 +1019,43 @@ msgid ""
 "your favourite document setup\", or \"Use m to mirror the canvas and see "
 "errors more easily in your drawing\"."
 msgstr ""
-"“小技巧”可以用来介绍一些额外的使用技巧，例如：“你可以为你习惯的文档设定制作一"
-"个模板”，或者“按下 M 可以水平翻转画布视图以便发现画面的问题”。"
+"“小技巧 (tip 标记)”可以用来介绍一些额外的使用技巧，例如：“你可以为你习惯的文"
+"档设定制作一个模板”，或者“按下 M 可以水平翻转画布视图以便发现画面的问题”。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:370
 msgid "Something that is important to note, but is not necessarily negative."
-msgstr "“重点”可以用来强调一些需要留意的信息，但并不一定是负面的信息。"
+msgstr ""
+"“重要 (important 标记)”可以用来强调一些需要留意的信息，但并不一定是负面的信"
+"息。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:374
 msgid "This is in general when something is negative."
-msgstr "“警告”一般在描述负面信息时使用。"
+msgstr "“警告 (warning 标记)”一般在描述负面信息时使用。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:378
 msgid ""
 "General attention grabber. Use this when the subject is more important than "
 "warning, but not as important that is could get a dataloss."
 msgstr ""
-"“注意”可以用来标注那些比“注解”更为重要，但又不至于造成数据损失的事项时使用。"
+"“注意 (attention 标记)”可以用来标注那些比“警告”更严重，但又不至于造成数据损失"
+"的事项时使用。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:382
 msgid ""
 "This is for things that could cause dataloss, like forgetting to save, or "
 "that Python currently has no undo functionality."
 msgstr ""
-"“警告”信息用于标注可能会造成数据损失的情况，例如提示读者不要忘记保存文件，或"
-"者让读者当心 Python 插件进行的操作目前无法撤销等事项。"
+"“小心 (caution 标记，Sphinx 的中文翻译误作‘警告’)”信息用于标注可能会造成数据"
+"损失的情况，例如提示读者不要忘记保存文件，或者让读者当心 Python 插件进行的操"
+"作目前无法撤销等事项。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:386
 msgid ""
 "This should be for things that are dangerous for the computer in general, "
 "this includes things that can cause out of memory style freezes."
 msgstr ""
-"“危险”信息用于标注那些危及计算机整体运行的情况，包括那些导致内存不足死机的操"
-"作等。"
+"“危险 (danger 标记)”信息用于标注那些危及计算机整体运行的情况，包括那些导致内"
+"存不足死机的操作等。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:390
 msgid ""
@@ -1051,20 +1063,20 @@ msgid ""
 "manually given some situations, but our configuration does not do so by "
 "default."
 msgstr ""
-"“错误”信息与手册本身内容无关，Sphinx 在某些情况下会生成这种信息，但我们的配置"
-"文件默认没有开启这一功能。"
+"“错误 (error 标记)”信息与手册本身内容无关，Sphinx 在某些情况下会生成这种信"
+"息，但我们的配置文件默认没有开启这一功能。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:392
 msgid "Generic admonition that can have any text"
-msgstr "你也可以用任意文字作为信息框标题"
+msgstr "自定义信息框"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:394
 msgid "Text."
-msgstr "文字。"
+msgstr "示例文字。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:396
 msgid "You can make it like this::"
-msgstr "方法如下::"
+msgstr "上述自定义信息框的标记如下::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:398
 msgid ""
@@ -1072,13 +1084,13 @@ msgid ""
 "\n"
 "    Text."
 msgstr ""
-".. admonition:: 可以包含任意文字的一般信息\n"
+".. admonition:: 自定义信息框\n"
 "\n"
-"    文字。"
+"    示例文字。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:404
 msgid "Sphinx also adds::"
-msgstr "Sphinx 还把“参见”信息作为为此类信息框的一种看待::"
+msgstr "在 Sphinx 中，“参见”信息也是信息框的一种::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:406
 msgid ""
@@ -1105,8 +1117,8 @@ msgstr ""
 "水平线通常用于正文话题发生突然变化的场合。它在叙述性的写作中较为常见，如纪实"
 "或小说等。Krita 的使用手册主要采用说明文的写作风格，不会为了介绍一项功能而长"
 "篇大论。但有的时候为了交待设计思路，我们可能会展开讲述事情的来龙去脉。在本文"
-"档中，如果话题需要发生切换，那么最好另起章节。我们建议尽量使用 ``.. Topic::"
-"`` 标记，它生成的标题也会让文章更易于阅读。"
+"档中，如果话题需要发生切换，那么最好另起章节。我们建议尽量使用一般章节标题： "
+"``.. 章节标题::`` 标记分隔话题。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:418
 msgid "That said, horizontal rulers can be made with ``----``."
@@ -1122,8 +1134,8 @@ msgid ""
 "\"topic\", but where the topic is over several paragraphs, rubric itself "
 "only deals with the header, like so::"
 msgstr ""
-"单独标题标记可以生成看上去和“章节标题”一样的标题文字。一个章节标题代表了整个"
-"章节和它里面的各个段落，而单独标题标记只管生成标题文字本身。它的用法如下::"
+"单独标题标记可以生成看上去和“章节标题”一样的标题文字。正常的章节标题代表了整"
+"个章节和它里面的各个段落，而单独标题标记只管生成标题文字本身，它的标记如下::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:424
 msgid ".. rubric:: The rubric directive"
@@ -1143,7 +1155,7 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:431
 msgid "Topic"
-msgstr "章节"
+msgstr "章节标题"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:432
 msgid ""
@@ -1166,7 +1178,7 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:436
 msgid "Admonishments"
-msgstr "注解信息框"
+msgstr "信息框"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:436
 msgid ""
@@ -1184,7 +1196,7 @@ msgstr "代码片段"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:441
 msgid "``Inline code snippets`` are done with ````backticks````."
-msgstr "``行内代码片段`` 可用 ````半角反引号```` 生成。"
+msgstr "正文中出现的代码片段可用 ````代码片段```` 标签生成。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:443
 msgid ""
@@ -1209,7 +1221,7 @@ msgid ""
 "after it, it'll do the appropriate syntax highlighting::"
 msgstr ""
 "你也可以使用 ``.. code::`` 标记。如果你在标记后面注明计算机语言名称，它还可以"
-"按此进行语法高亮::"
+"按此进行语法高亮："
 
 #: ../../contributors_manual/krita_manual_conventions.rst:451
 msgid ""
@@ -1231,7 +1243,7 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:459
 msgid "Becomes"
-msgstr "显示为"
+msgstr "显示为："
 
 #: ../../contributors_manual/krita_manual_conventions.rst:468
 msgid ""
@@ -1249,7 +1261,7 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:469
 msgid "some more..."
-msgstr "其他例子"
+msgstr "其他语言的语法高亮示例："
 
 #: ../../contributors_manual/krita_manual_conventions.rst:483
 msgid ""
@@ -1337,11 +1349,11 @@ msgstr "每行文字的前面"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:512
 msgid "with a pipe"
-msgstr "插入一个竖线"
+msgstr "加一条竖线"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:513
 msgid "symbol"
-msgstr "符号"
+msgstr "和一个空格"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:515
 msgid "Like so::"
@@ -1362,8 +1374,8 @@ msgstr ""
 "| 文本\n"
 "| 只需在\n"
 "| 每行之前\n"
-"| 加一个竖线\n"
-"| 符号"
+"| 加一条竖线\n"
+"| 和一个空格"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:525
 msgid "We don't actually use this anywhere in the manual."
