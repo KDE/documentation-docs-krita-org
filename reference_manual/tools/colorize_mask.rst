@@ -160,15 +160,25 @@ Transparent
 Layer properties
 ----------------
 
-The colorize mask layer has four properties. They are all the buttons on the right side of the layer:
+The colorize mask layer has four properties. They are all the buttons on the right side of the colorize mask layer:
 
 Show output
- The first button, it allows you to toggle whether you'll see the output from the colorize algorithm.
+ |show-output| The show output icon allows you to toggle whether you'll see the output from the colorize algorithm.
 Lock
- Stops the mask from being edited.
+ |lock-icon| This icon stops the mask from being edited.
 Edit key strokes
- Whether the colorize mask is in edit mode. In edit mode it'll show the strokes, and the output will be semi-transparent.
+ |edit-strokes| This icon shows whether the colorize mask is in edit mode. In edit mode it'll show the strokes, and the output will be semi-transparent.
 Update
- The last button will force the colorize mask to update, even when you're in a different tool.
+ |update-icon| This icon will force the colorize mask to update, even when you're in a different tool.
 
-Colorize masks cannot be animated.
+.. note:: Colorize masks cannot be animated.
+
+
+.. |show-output| image:: /images/tools/colorize-show-output-icons.png
+
+.. |lock-icon| image:: /images/tools/colorize-lock-icon.png
+
+.. |edit-strokes| image:: /images/tools/colorize-edit-key-strokes-icon.png
+
+.. |update-icon| image:: /images/tools/colorize-update-icon.png
+
