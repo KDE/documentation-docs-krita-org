@@ -18,7 +18,7 @@
 .. _Manual Project Workboard : https://phabricator.kde.org/project/view/135/
 .. _repository : https://invent.kde.org/documentation/docs-krita-org/tree/master
 .. _bugzilla : https://bugs.kde.org/
-   
+
 .. _krita_manual_contributors_guide:
 
 ===============================
@@ -166,13 +166,13 @@ Not recommended when you don't know what a branch is (see :ref:`merge-request-ed
 
 #. Fill all of the fields correctly: see :ref:`new-merge-request`.
 
-#. To create a new merge request manually, go to Krita Manual official repository (make sure the url *doesn't* contain your username now) and click :guilabel:`Create a new merge request` (bright green button at the left). Select your fork and select the branch that you've created in WebIDE. 
+#. To create a new merge request manually, go to Krita Manual official repository (make sure the url *doesn't* contain your username now) and click :guilabel:`Create a new merge request` (bright green button at the left). Select your fork and select the branch that you've created in WebIDE.
 
 .. .. image:: /images/gitlab/screenshot_webidemode.png
 ..   :width: 1000px
 
 .. note::
-   
+
    If you don't have a push access to the official repository, gitlab won't allow you to save your changes if you were editing the official repository by mistake (and :guilabel:`Create a merge request` won't help with that: you still need to commit your changes to your branch, but if you don't have push access, you can't do it). It will just show the message: *An error occurred whilst committing your changes. Please try again.*
 
    In this case, simply copy contents of all of the files you changed, go to your fork and paste them in the fork WebIDE.
@@ -196,12 +196,11 @@ Not recommended when you don't know what a branch is (see :ref:`merge-request-ed
 
         # for ssh access
         git clone git@invent.kde.org:<username>/docs-krita-org.git
-        git remote add upstream git@invent.kde.org:documentation/docs-krita-org.git.git
+        git remote add upstream git@invent.kde.org:documentation/docs-krita-org.git
 
         # for https access
         git clone https://invent.kde.org/<username>/docs-krita-org.git
         git remote add upstream https://invent.kde.org/documentation/docs-krita-org.git
-
 
 #. Remember to always pull changes from the official repository before making new changes:
 
@@ -256,15 +255,15 @@ Guidelines for new merge requests
 #. If you're sure the merge request will demand some changes later, start the title of your merge request with :code:`[WIP]`.
 
 #. Make sure you checked :guilabel:`Allow commits from members who can merge to the target branch.` -- it is often needed for technical reasons that merge request is rebased on master, which technically changes the merge request, but it doesn't change the actual content of it. Rebase can be done by you or by the reviewer -- if you don't want to be bothered later too much, better check this checkbox so the reviewer can do it themselves with only a few clicks.
-       
+
 #. You can safely check :guilabel:`Delete source branch when merge request is accepted` in most cases.
 
 #. Unless your reviewers tell you otherwise, check :guilabel:`Squash commits when merge request is accepted`. The first line of the commit message will come from the :guilabel:`Title` of your merge request and the rest of it will be taken from the :guilabel:`Description` of the merge request.
 
 #. When you finish creating your merge request, go to IRC and ask someone with push access to add the ``Needs Review`` label on your merge request.
-       
+
 #. You might get feedback on your merge request if it has mistakes. Just fix the mistakes in your branch in one of the following ways.
-     
+
     * If you want to use :guilabel:`Edit` mode, just go to :guilabel:`Changes` section of the merge request and click on the pencil icon (with a tooltip that says *Edit*) to use the Edit mode again.
 
     * If you want to use :guilabel:`WebIDE` mode, go to your fork, select the branch your changes are on and go to the WebIDE.
@@ -277,7 +276,7 @@ Guidelines for new merge requests
 For more detailed information, check out :ref:`forking_gitlab` in the technical section.
 
 .. note::
-   
+
     At the time of writing this guide setting labels on merge requests is only possible by contributors with write access to the official repository. (If you don't know what that means, you're most probably not one of them). Because of that, when you create or change your merge request you need to get on IRC (see :ref:`the_krita_community`) and ask someone to label it for you.
 
 

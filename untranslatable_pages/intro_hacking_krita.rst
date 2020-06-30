@@ -47,7 +47,7 @@ Here's some links to get your started.
 
 #. Set up your development environment and build Krita!
 #. Find a few bugs to fix in `KDE's Bugtracking system <https://bugs.kde.org/>`_. It's often a good idea to get some experience with the code through fixing bugs, to get familiar with the development process without being overwhelmed. Though there's nothing against working on that cool feature that scratches your itch!
-#. If you intend to be a regular contributor to Krita, even just for bugreports and feature discussion, the first thing you will want to do is register for a `KDE Identity account <https://identity.kde.org/>`_.  This serves as your mostly-universal login to KDE code repositories and websites. 
+#. If you intend to be a regular contributor to Krita, even just for bugreports and feature discussion, the first thing you will want to do is register for a `KDE Identity account <https://identity.kde.org/>`_.  This serves as your mostly-universal login to KDE code repositories and websites.
 
 Building Krita
 --------------
@@ -63,13 +63,13 @@ Here's some pointers for working with our codebase.
 
 Architecture
     The code base changes all the time with Krita, we're not afraid of big refactorings, so there is no up to date documentation on the code architecture. There have been some written in the past, but they quickly became outdated and of little use. There is a fairly up to date `API guide`_ if you want to look at how the code is structured.
-    
+
 Integrated Development Environment (IDE)
     The most popular IDEs that we use are Qt Creator, Emacs, KDevelop, or vim. Qt Creator has the advantage of the ctrl-k menu, which lets you leap to classes, lines, everywhere. You don't have to build with Qt Creator though! It can be easier to jump to the terminal, do a 'make', check what's up, and then jump back to the IDE.
-    
+
 Resources
     The most important step to learning the code is to really understand memory management: pointers, smart pointers and pointer arithmetic. This is something that Java and C# developers will need to spend a little more time understanding. Here are a couple resources to get you more familiar with C++ and Qt:
-    
+
         * `Qt Concepts <https://doc.qt.io/archives/qt-4.8/how-to-learn-qt.html>`_
         * `Design Patterns with Qt <https://www.ics.com/designpatterns/book/index.html>`_
         * C++ in a Nutshell by O'Reilly (book)
@@ -139,7 +139,7 @@ To push to invent.kde.org, you will not need to have SSH access setup, but you d
 
 .. attention::
 
-    Since moving to the gitlab instance, we don't use ``git@git.kde.org:krita`` but rather ``git@invent.kde.org:kde/krita``. Gitlab will not be able to see your commits if you push to the former. You can use ``git remote set-url origin git@invent.kde.org:kde/krita`` to get everything pointing correctly.
+    Since moving to the gitlab instance, we don't use ``git@git.kde.org:krita`` but rather ``git@invent.kde.org:graphics/krita``. Gitlab will not be able to see your commits if you push to the former. You can use ``git remote set-url origin git@invent.kde.org:graphics/krita`` to get everything pointing correctly.
 
 So then, how does an aspiring contributor submit patches?
 
@@ -161,9 +161,9 @@ Your fork will probably be located here:
     .. code-block:: bash
 
         # for ssh access
-        git clone git@invent.kde.org:<username>/docs-krita-org.git
+        git clone git@invent.kde.org:<username>/krita.git
         # for https access
-        git clone https://invent.kde.org/<username>/docs-krita-org.git
+        git clone https://invent.kde.org/<username>/krita.git
 
     You can also use the :guilabel:`Web IDE` to make your changes directly on invent.kde.org, but because Krita is a c++ program, we don't recommend this outside of typo fixes and doxygen documentation strings. You wouldn't be able to see the effect of your changes, after all!
 
@@ -172,9 +172,9 @@ Your fork will probably be located here:
     .. code-block:: bash
 
         # for ssh access
-        git remote add upstream git@invent.kde.org:documentation/docs-krita-org.git
+        git remote add upstream git@invent.kde.org:graphics/krita.git
         # for https access
-        git remote add upstream https://invent.kde.org/documentation/docs-krita-org.git
+        git remote add upstream https://invent.kde.org/graphics/krita.git
 
     After that, you can see all of your urls using:
 
@@ -216,7 +216,7 @@ Your fork will probably be located here:
 #. Write a detailed description about the changes that you are proposing with your merge request. If it is a change in the user interface, it would be good if you can provide screenshots through attachments.
 
     .. tip::
- 
+
         The Krita repository has a merge request template that labels your request appropriately and gives a checklist of common formalities that all patches should adhere to. You can select it from the :guilabel:`Template` drop down.
 
 The Krita developers will be notified of new merge requests, and they will try to review your request as soon as possible. If you suspect your patch slipped through the cracks, don't hesitate to contact us through the means described above.
@@ -276,8 +276,8 @@ Make sure the state of your merge request is labeled correctly. The picture belo
 
 
 .. note::
-    
-    In time of writing, setting labels on merge requests were only possible by contributors with write access to the official repository. (If you don't know what that means, that probably means you're not one of them). Because of that, when you create or change your merge request you need you get on IRC (see :ref:`the_krita_community`) and ask someone to label it for you. 
+
+    In time of writing, setting labels on merge requests were only possible by contributors with write access to the official repository. (If you don't know what that means, that probably means you're not one of them). Because of that, when you create or change your merge request you need you get on IRC (see :ref:`the_krita_community`) and ask someone to label it for you.
 
 
 How to prepare your commits for a merge request
@@ -287,7 +287,7 @@ After merging to master, your commits should fit nicely in the Krita git history
 
 * Commit messages should clearly and concisely state what changes you made with that particular commit and why -- see `How to Write a Git Commit Message <https://chris.beams.io/posts/git-commit/>`_.
 
-* Every commit should be compilable and follow the KDE commit guidelines -- see `KDE Commit Policy <https://community.kde.org/Policies/Commit_Policy>`_. 
+* Every commit should be compilable and follow the KDE commit guidelines -- see `KDE Commit Policy <https://community.kde.org/Policies/Commit_Policy>`_.
 
 * Commits should be self-contained: if you code a bigger feature, it's better if you divide the code into bits that can possibly exist independently.
 
