@@ -15,27 +15,23 @@
 Building Krita from Source
 ==========================
 
-If you want to help developing Krita, or if you want to run the latest version of Krita on macOS, you need to know how to build Krita yourself. If you merely want to run the latest version of Krita on Windows or Linux, to test a bug or play with, you can use the `nightly build for Windows <https://binary-factory.kde.org/job/Krita_Nightly_Windows_Build/>`_ or the `nightly build for Linux <https://binary-factory.kde.org/job/Krita_Nightly_Appimage_Build/>`_
+If you want to help developing Krita, you need to know how to build Krita yourself. If you merely want to run the latest version of Krita, to test a bug or play with, you can use the `nightly build for Windows <https://binary-factory.kde.org/job/Krita_Nightly_Windows_Build/>`_ the `nightly build for Linux <https://binary-factory.kde.org/job/Krita_Nightly_Appimage_Build/>`_, or the `nightly build for MacOS <https://binary-factory.kde.org/job/Krita_Nightly_MacOS_Build/>`_.
 
 .. contents::
 
 
-You can build Krita on Linux, Windows and OSX. The libraries Krita needs (for instance to load and save various image types) are called dependencies.
+You can build Krita on Linux, Windows, MacOS and on Linux for Android. The libraries Krita needs (for instance to load and save various image types) are called dependencies.
 
 Linux is the easiest operating system to build Krita on because all the libraries that Krita needs are available on most recent Linux distributions. For an easy guide to building Krita see `Building Krita on Linux for Cats <https://www.davidrevoy.com/article193/compil-krita-from-source-code-on-linux-for-cats>`_.
 
-On OSX you can use tools like homebrew to get the dependencies, or build the dependencies manually. Building the dependencies manually is recommended because we have a number of changes to the source for libraries to make them function better with Krita.
+On MacOS you can use tools like homebrew to get the dependencies, or build the dependencies manually. Building the dependencies manually is recommended because we have a number of changes to the source for libraries to make them function better with Krita.
 
 On Windows you will have to build the dependencies yourself. 
 
-The build instructions for OSX/macOS and Windows are maintained as part of `Krita's source code repository <https://phabricator.kde.org/source/krita/browse/master/3rdparty/README.md>`__. You will need to VERY carefully follow these instructions.
+On all operating systems, you need to be familiar with using a terminal. Building Krita is a technical task and demands accuracy in following instructions and intelligence in understanding what happens.
 
 Building on Linux
 -----------------
-
-This page only deals with building Krita on Linux. However, some remarks are the same for all operating systems, especially when it comes to running cmake and dealing with errors. You need to be familiar with using a terminal. 
-
-There are two options: you can either build Krita in your home directory, or use :ref:`Docker <building_krita_with_docker>`, which makes setting up a development environment easier.
 
 Preparing your development environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -54,6 +50,7 @@ Note: type in what's shown after '>' in the following commands
 
 .. code:: console
 
+    you@yourcomputer:~>cd
     you@yourcomputer:~>mkdir kritadev
     you@yourcomputer:~/>cd kritadev
     you@yourcomputer:~/kritadev> mkdir build
@@ -68,7 +65,7 @@ Open a terminal and enter the build root. Clone Krita from kde's git infrastruct
 
 .. code:: console
 
-    you@yourcomputer:~/kritadev> git clone git://anongit.kde.org/krita.git
+    you@yourcomputer:~/kritadev> git clone https://invent.kde.org/graphics/krita.git
 
 Configuring the Build
 ~~~~~~~~~~~~~~~~~~~~~
@@ -108,7 +105,7 @@ For example, for Ubuntu, you can start with:
 
     you@yourcomputer:~/kritadev/build>apt-get build-dep krita
     
-Which will install all the dependencies of the version of Krita in the repositories.
+Which will install all the dependencies of the version of Krita in the repositories. You might need to enable the deb-src repositories by eding /etc/apt/sources.list (see https://help.ubuntu.com/community/Repositories/CommandLine) or, if you're using the KDE Plasma desktop, enabling them in the the Settings of the Discover application.
 
 However, the development version might use different dependencies, to find these, you can use ``apt-cache search``:
 
@@ -169,21 +166,15 @@ And when that is complete, you can run Krita:
 
     you@yourcomputer:~/kritadev/build>../install/bin/krita
     
-Environment Variables
-~~~~~~~~~~~~~~~~~~~~~
+Running Krita
+~~~~~~~~~~~~~
 
-Now, to get Krita to work by just typing ``krita`` into the terminal, we'll need to set up some environment variables. This will allow your system to know where Krita is located.
-
-.. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_007-making-path_by-deevad.jpg
-
-Let's show to your system the right path, inside a terminal, copy line by line :
+You do not have to set environment variables in order to run Krita.
 
 .. code:: console
 
-    export KDEDIRS=$HOME/kritadev/install:$KDEDIRS
-    export PATH=$HOME/kritadev/install/bin:$PATH
-
-You will now be able to run Krita by typing ``krita`` into the terminal.
+    you@yourcomputer:~> cd ~/kritadev/
+    you@yourcomputer:~> ./i/bin/krita
 
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_008-running-success_by-deevad.jpg
 
@@ -279,3 +270,290 @@ Outside of the source being unstable, there's the following common problems:
 * You can also have a successful build, then update your linux installation, and then find that Krita no longer builds. A library got updated, and you need to remove the ``CMakeCache.txt`` file in your build dir and run cmake again.
 
 * Sometimes, changes in Krita's source code from git revision to git revision make it necessary to make your installation and/or build dir empty and build from scratch. One example is where a plugin is removed from Krita; the plugin will be in your install dir, and won't get updated when Krita's internals change.
+
+
+Building on Windows
+-------------------
+
+On Windows, you will have to build all the dependencies yourself. This will take a long time. Note that you will do all your work in a CMD command window.
+
+This is also more difficult than building Krita on Linux, so you need to pay attention to details. If you follow the guide closely, install correct dependencies and make sure your PATH doesn't contain anything unwanted, there should be no issues.
+
+Prerequisites
+~~~~~~~~~~~~~
+
+1. Git - https://git-scm.com/downloads
+2. CMake 3.3.2 or later - https://cmake.org/download/
+    - CMake 3.9 does not build Krita properly at the moment, please use 3.8 or 3.10 instead.
+3. Make sure you have a compiler - Only mingw-w64 7.3 (by mingw-builds) - https://files.kde.org/krita/build/x86_64-7.3.0-release-posix-seh-rt_v5-rev0.7z
+    - For threading, select posix.
+    - For exceptions, select seh (64-bit) or dwarf (32-bit).
+    - Unzip mingw with `7zip <https://www.7-zip.org/>`_ into a folder like C:\mingw-w64; the full path must not contain any spaces.
+    - MSVC is *not* supported at the moment.
+    - CLANG is *not* supported at the moment.
+    - MSYS is *not* supported at the moment.
+4. You will also need a release of Python 3.8 (not 3.7, not 3.9) - https://www.python.org.
+    - Make sure to have that version of python.exe in your path. This version of Python will be used for two things to configure Qt and to build the Python scripting module.  Do not set PYTHONHOME or PYTHONPATH.
+    - Make sure that your Python will have the correct architecture for the version you are trying to build. If building for 32-bit target, you need the 32-bit release of Python.
+5. Install the Windows 10 SDK - https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/
+6. It is useful to install Qt Creator - https://download.qt.io/official_releases/qtcreator/
+
+***MAKE DOUBLE PLUS SURE YOU DO NOT HAVE ANY OTHER COMPILER OR DEVELOPMENT ENVIRONMENT OR PYTHON INSTALLATION IN YOUR PATH***
+
+
+Preparation
+~~~~~~~~~~~
+
+.. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_001-init-dir_001_by-deevad.jpg
+
+After installing the Prerequisites, prepare your working directory. Keep this as short as possible. 
+        
+.. code:: console
+
+    cd  c:\
+    mkdir c:\dev
+    mkdir c:\d
+    mkdir c:\i
+    
+Then prepare a batch file to set the environment. Every time you want to build or run your home-grown Krita, open the CMD windows, go to the c:\dev folder and run the env.bat file. Read this example and ADJUST THE VERSION NUMBERS where necessary so the PATH is correct.
+
+.. code:: console
+
+    set DLLTOOL_EXE=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\bin\dlltool.exe
+    set MINGW_GCC_BIN=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\\bin
+    set MINGW_BIN_DIR=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\\bin
+    set BUILDROOT=c:\dev
+    set BUILDDIR_INSTALL=%BUILDROOT%\i
+    set PATH=%BUILDROOT%\i\bin;%BUILDROOT%\i\lib;c:\python38;c:\python38\scripts;%MINGW_GCC_BIN%;c:\git\cmd;C:\Program Files\CMake\bin;c:\qt\qtcreator-4.12.0\bin;%PATH%
+    set WindowsSdkDir=C:\Program Files (x86)\Windows Kits\10
+    
+.. code:: console
+
+    cd c:\dev 
+    env.bat
+
+Then get krita:
+
+.. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg
+
+.. code:: console
+
+    cd c:\dev
+    git clone https://invent.kde.org/graphics/krita.git
+    
+Building the dependencies
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg
+
+We will build everything on Windows with the same script that is used to make the nightly builds and the releases:
+
+.. code:: console
+
+    cd c:\dev
+    krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-krita --src-dir c:\dev\krita --download-dir c:\dev\d --deps-build-dir c:\dev\b --deps-install-dir c:\dev\i
+
+This will take several hours, but you only need to do it once. When it's ready, make a zip archive of the c:\dev\i folder. That's a backup because we will install krita into the same folder as the dependencies, and if you need to nuke your krita build (because you're switching between branches or for some other reason, you'll also nuke your built dependencies. You can also build the depedencies into another folder, like c:\dev\i_deps, BUT in that case you're going to have trouble running Krita without first packaging it.
+
+Building Krita
+~~~~~~~~~~~~~~
+
+
+.. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_005-build_001_by-deevad.jpg
+
+
+
+Again, on the command line, with the same script that is used to make the nightly builds and the releases:
+
+.. code:: console
+
+    cd c:\dev
+    krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-deps --src-dir c:\dev\krita --download-dir c:\dev\d --deps-build-dir c:\dev\b --deps-install-dir c:\dev\is --krita-build-dir c:\dev\b_krita --krita-install-dir c:\dev\i
+    
+If you are hacking on Krita, you can can rebuild Krita without running this script by entering the build directory and running mingw3-make install.
+
+.. code:: console
+
+    cd c:\dev\b_krita
+    mingw32-make install
+
+.. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_006-installing_by-deevad.jpg
+
+    
+Running Krita
+~~~~~~~~~~~~~
+
+You must start Krita from the command prompt, after having run env.bat:
+
+.. code:: console
+
+    cd c:\dev\b_krita
+    env.bat 
+    c:\dev\i\bin\krita.exe 
+    
+.. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_008-running-success_by-deevad.jpg
+
+Building on MacOS
+-----------------
+
+We will build Krita on MacOS with the same scripts that are used to build the nightly builds and the releases. We will *NOT* be building krita from within XCode, but from within the terminal.
+
+Prequisites
+~~~~~~~~~~~
+
+You will need to install:
+
+* CMake: https://cmake.org
+* XCode: get it from the app store
+* Qt Creator: https://download.qt.io/official_releases/qtcreator/
+
+Preparation
+~~~~~~~~~~~
+
+
+Open Terminal.app
+
+.. code:: console
+
+    cd
+    mkdir dev
+    cd dev 
+    git clone https://invent.kde.org/graphics/krita.git
+    
+.. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg
+
+    
+Create an env.sh file that should contain the following lines:
+
+.. code:: console
+
+    export BUILDROOT=$HOME/dev 
+    export PATH=/Applications/CMake.app/Contents/bin:$BUILDROOT/i/bin/:$PATH
+    
+Building the dependencies
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg
+
+
+It is possible to build Krita against dependencies installed through MacPorts or some similar packaging service. If you do that, you're on your own though.
+
+Open Terminal.app and source the env.sh file you just created:
+
+.. code:: console
+
+    cd ~/dev
+    . env.sh
+    ./krita/packaging/macos/osxbuild.sh builddeps
+    
+    
+This will complain several time that it cannot find the Java SDK: just click that away, and don't worry. Building the dependencies will take several hours.
+
+Building Krita
+~~~~~~~~~~~~~~
+
+In the same terminal window (if you open a new one, you will have to *source* the env.sh script again by running ". env.sh" -- that's a dot.
+
+.. code:: console
+
+     ./krita/packaging/macos/osxbuild.sh buildinstall
+     
+This will build and install Krita to $HOME/dev/i/krita.app
+
+.. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_006-installing_by-deevad.jpg
+
+
+Running Krita
+~~~~~~~~~~~~~
+
+You can run krita in the same terminal window:
+
+.. code:: console
+
+    ~/dev/i/krita.app/Contents/MacOS/krita
+    
+If you want to debug krita with lldb:
+
+.. code:: console
+
+    lldb ~/dev/i/krita.app/Contents/MacOS/krita
+    (lldb) target create "./i/bin/krita.app/Contents/MacOS/krita"
+    Current executable set to './i/bin/krita.app/Contents/MacOS/krita' (x86_64).
+    (lldb) r
+    
+.. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_008-running-success_by-deevad.jpg
+    
+Building on Android
+-------------------
+
+Use Linux to build Krita for Android. Building Krita for Android on another system is *NOT* supported.
+
+Setting up Android SDK and NDK
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We right now use Android NDK version ``r18b`` to do our builds. So, I would recommend to use that. Download it from `google's
+website <https://developer.android.com/ndk/downloads/older_releases.html>`__
+then extract it.
+
+Next, Android SDK. You can either download Android Studio or just the ``sdk-tools``. Both could be downloaded from `google's
+website <https://developer.android.com/studio>`__.
+
+If you downloaded Android Studio then open SDK manager and download ``Android SDK Build-Tools``. (more info:
+https://developer.android.com/studio/intro/update#sdk-manager)
+
+If you download just ``sdk-tools``, then, extract it and run:
+
+.. code:: shell
+
+    cd <extracted-android-sdk-tools>/tools/bin
+    ./sdkmanager --licenses
+    ./sdkmanager platform-tools
+    ./sdkmanager "platforms;android-21"
+    ./sdkmanager "platforms;android-28"    # for androiddeployqt
+    ./sdkmanager "build-tools;28.0.2"
+
+If you get some ``ClasNotFoundException`` it might be because ``java``
+version is set to ``11``. For ``sdkmanager`` to work, set it to ``8``
+and then run it again.
+
+That's the only dependency we have to manage manually!
+
+Building Krita
+--------------
+
+Now, to build krita, run
+``<krita-source>/packaging/android/androidbuild.sh --help`` and pass the required arguments.
+
+Example:
+
+.. code:: shell
+
+    ./androidbuild.sh -p=all --src=/home/sh_zam/workspace/krita --build-type=Debug --build-root=/home/sh_zam/workspace/build-krita-android --ndk-path=/home/sh_zam/Android/Sdk/ndk-bundle --sdk-path=/home/sh_zam/Android/Sdk --api-level=21 --android-abi=armeabi-v7a
+
+Installing Krita APK
+--------------------
+
+To install run
+``adb install -d -r <build-root>/krita_build_apk/build/outputs/apk/debug/krita_build_apk-debug.apk``.
+
+``adb`` should be in ``<sdk-root>/platform-tools/``
+
+Crash
+-----
+
+If Krita crashes you can look up the logs using ``adb logcat``
+
+
+
+Specialized Ways of Building Krita
+----------------------------------
+
+These are specialized ways of building Krita on Windows and Linux while re-using the dependencies built on KDE's binary factory. You only need to try this if you don't want to build Krita's dependencies yourself on Windows or use distribution dependencies on Linux.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+   :glob:
+
+   building/*
+   
