@@ -258,7 +258,7 @@ Settings curves
 
 You can set setting to pressure (speed/distance/tilt/random/etc.) relation for each brush setting.
 
-.. image:: /images/brushes/Settings-curves.png
+.. image:: /images/brushes/Settings-curves.jpg
    :align: center
 
 The Pop-up Palette
