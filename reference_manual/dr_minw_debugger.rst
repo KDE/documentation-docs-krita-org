@@ -19,7 +19,8 @@ Dr. MinGW Debugger
 
 .. note::
 
-    The information on this page applies only to the Windows release of Krita.
+    The information on this page applies only to the Windows release of Krita. Usually, the %LOCALAPPDATA%\kritacrash.log log file will contain enough information for the developers to get an idea of why Krita crashed. Using the debug package is
+    only needed when more precise information is needed.
 
 Using the Debug Package
 -----------------------
