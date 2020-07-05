@@ -136,14 +136,26 @@ Location and the way to get a backtrace is different on all systems.
 Windows
 =======
 
-Follow closely :ref:`Dr. Mingw debugger <dr_minw>` guide.
+Usually, it is sufficient to provide the %LOCALAPPDATA%\kritacrash.log. Sometimes more detailed information is needed, then you will be asked to closely follow
+
+ :ref:`Dr. Mingw debugger <dr_minw>` guide.
 
 .. _getting_backtrace_linux:
 
 Linux
 =====
 
-On Linux it's recommended to use :literal:`gdb`.
+On Linux, there are five ways of installing Krita.
+
+    * Using distribution packages
+    * Building Krita yourself from source
+    * Using a snap package
+    * Using a flatpak package
+    * Using the official appimage
+    
+Only distribution packages and built-from-source can produce usable crash logs/backtraces. For distribution packages, you will need to install the corresponding debug or dbg packages; the method for that is different from distribution to distribution. If you use distribution packages and the KDE Plasma Desktop, a crash dialog will be shown that has the backtrace in the "Developer" tab. 
+
+Otherwise, you have to use :literal:`gdb` in a terminal window.
 
 #. Open Krita in :literal:`gdb`:
 
