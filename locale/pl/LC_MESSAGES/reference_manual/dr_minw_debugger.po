@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-22 03:51+0200\n"
+"POT-Creation-Date: 2020-07-06 01:53+0200\n"
 "PO-Revision-Date: 2020-02-14 10:13+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -66,16 +66,17 @@ msgstr "Program diagnostyczny Dr. MinW."
 
 #: ../../reference_manual/dr_minw_debugger.rst:22
 msgid ""
-"The information on this page applies only to the Windows release of Krita."
+"The information on this page applies only to the Windows release of Krita. "
+"Usually, the %LOCALAPPDATA%\\kritacrash.log log file will contain enough "
+"information for the developers to get an idea of why Krita crashed. Using "
+"the debug package is only needed when more precise information is needed."
 msgstr ""
-"Informacje na tej stronie mają zastosowanie tylko dla wydania Krity na "
-"Windowsie."
 
-#: ../../reference_manual/dr_minw_debugger.rst:25
+#: ../../reference_manual/dr_minw_debugger.rst:26
 msgid "Using the Debug Package"
 msgstr "Używanie pakietu diagnostycznego"
 
-#: ../../reference_manual/dr_minw_debugger.rst:27
+#: ../../reference_manual/dr_minw_debugger.rst:28
 #, fuzzy
 #| msgid ""
 #| "If you have your Krita version installed and you want to get a backtrace, "
@@ -101,7 +102,7 @@ msgstr ""
 "miejscu co pobrana Krita. Można rozpoznać, który jest który, po końcówce "
 "pliku zip - pakiet symboli diagnostycznych kończy się zawsze na `-dbg.zip`."
 
-#: ../../reference_manual/dr_minw_debugger.rst:32
+#: ../../reference_manual/dr_minw_debugger.rst:33
 #, fuzzy
 #| msgid ""
 #| "Links to the debug packages should be available on the release "
@@ -125,7 +126,7 @@ msgstr ""
 "kde.org/unstable/krita dla wydań niestabilnych (np. beta). Przenośny zip lub "
 "diagnostyczny zip znajdują się obok siebie."
 
-#: ../../reference_manual/dr_minw_debugger.rst:33
+#: ../../reference_manual/dr_minw_debugger.rst:34
 msgid ""
 "Make sure you’ve downloaded the same version of debug package for the "
 "portable package you intend to debug / get a better backtrace."
@@ -133,11 +134,11 @@ msgstr ""
 "Upewnij się, że pobrałeś tę samą wersję pakietu diagnostycznego dla pakietu "
 "przenośnego, który masz zamiar zdiagnozować / otrzymać lepszy ślad stosu."
 
-#: ../../reference_manual/dr_minw_debugger.rst:34
+#: ../../reference_manual/dr_minw_debugger.rst:35
 msgid "Extract the portable Krita."
 msgstr "Wypakuj przenośną Kritę."
 
-#: ../../reference_manual/dr_minw_debugger.rst:35
+#: ../../reference_manual/dr_minw_debugger.rst:36
 #, fuzzy
 #| msgid ""
 #| "Extract the files from the debug symbols package inside the portable "
@@ -152,7 +153,7 @@ msgstr ""
 "przenośnej Krity, gdzie znajdują się podkatalogi `bin`, `lib` oraz `share`, "
 "tak jak na obrazach poniżej:"
 
-#: ../../reference_manual/dr_minw_debugger.rst:41
+#: ../../reference_manual/dr_minw_debugger.rst:42
 msgid ""
 "After extracting the files, check the ``bin`` dir and make sure you see the "
 "``.debug`` dir inside. If you don't see it, you probably extracted to the "
@@ -161,11 +162,11 @@ msgstr ""
 "Po wypakowaniu plików, sprawdź czy katalog ``bin`` zawiera katalog ``."
 "debug``. Jeśli go tam nie ma, to prawdopodobnie wypakowałeś do złego miejsca."
 
-#: ../../reference_manual/dr_minw_debugger.rst:45
+#: ../../reference_manual/dr_minw_debugger.rst:46
 msgid "Getting a Backtrace"
 msgstr "Uzyskiwanie śladu stosu"
 
-#: ../../reference_manual/dr_minw_debugger.rst:50
+#: ../../reference_manual/dr_minw_debugger.rst:51
 msgid ""
 "When there is a crash, Krita might appear to be unresponsive for a short "
 "time, ranging from a few seconds to a few minutes, before the crash dialog "
@@ -174,11 +175,11 @@ msgstr ""
 "W przypadku napotkania usterki, Krita może nie odpowiadać przez krótki czas, "
 "od kilku sekund do kilku minut, zanim pojaw się okno dialogowe usterki."
 
-#: ../../reference_manual/dr_minw_debugger.rst:54
+#: ../../reference_manual/dr_minw_debugger.rst:55
 msgid "An example of the crash dialog."
 msgstr "Przykład okna dialogowego usterki."
 
-#: ../../reference_manual/dr_minw_debugger.rst:56
+#: ../../reference_manual/dr_minw_debugger.rst:57
 msgid ""
 "If Krita keeps on being unresponsive for more than a few minutes, it might "
 "actually be locked up, which may not give a backtrace. In that situation, "
@@ -190,7 +191,7 @@ msgstr ""
 "przypadku, musisz ręcznie zamknąć Kritę. Kontynuuj tę instrukcję, aby "
 "sprawdzić, czy była to usterka, czy nie."
 
-#: ../../reference_manual/dr_minw_debugger.rst:58
+#: ../../reference_manual/dr_minw_debugger.rst:59
 msgid ""
 "Open Windows Explorer and type ``%LocalAppData%`` (without quotes) on the "
 "address bar and press the :kbd:`Enter` key."
@@ -198,7 +199,7 @@ msgstr ""
 "Otwórz Eksploratora Windows i wpisz ``%LocalAppData%`` (bez cudzysłowów) na "
 "pasku adresu i naciśnij klawisz :kbd:`Enter`."
 
-#: ../../reference_manual/dr_minw_debugger.rst:62
+#: ../../reference_manual/dr_minw_debugger.rst:63
 msgid ""
 "Find the file ``kritacrash.log`` (it might appear as simply ``kritacrash`` "
 "depending on your settings.)"
@@ -206,7 +207,7 @@ msgstr ""
 "Znajdź plik ``kritacrash.log`` (lub ``kritacrash`` w zależności od twoich "
 "ustawień.)"
 
-#: ../../reference_manual/dr_minw_debugger.rst:63
+#: ../../reference_manual/dr_minw_debugger.rst:64
 msgid ""
 "Open the file with Notepad and scroll to the bottom, then scroll up to the "
 "first occurrence of “Error occurred on <time>” or the dashes."
@@ -214,20 +215,20 @@ msgstr ""
 "Otwórz plik w Notatniku i przewiń na sam dół, następnie przewijaj do góry do "
 "pierwszego wystąpienia zdania “Error occurred on <time>” lub kresek."
 
-#: ../../reference_manual/dr_minw_debugger.rst:67
+#: ../../reference_manual/dr_minw_debugger.rst:68
 msgid "Start of backtrace."
 msgstr "Początek śladu stosu."
 
-#: ../../reference_manual/dr_minw_debugger.rst:69
+#: ../../reference_manual/dr_minw_debugger.rst:70
 msgid "Check the time and make sure it matches the time of the crash."
 msgstr ""
 "Odczytaj czas i upewnij się, że zgadza się on z czasem napotkania usterki."
 
-#: ../../reference_manual/dr_minw_debugger.rst:73
+#: ../../reference_manual/dr_minw_debugger.rst:74
 msgid "End of backtrace."
 msgstr "Koniec śladu stosu."
 
-#: ../../reference_manual/dr_minw_debugger.rst:75
+#: ../../reference_manual/dr_minw_debugger.rst:76
 msgid ""
 "The text starting from this line to the end of the file is the most recent "
 "backtrace."
@@ -235,7 +236,7 @@ msgstr ""
 "Tekst rozpoczynający się tym wierszem do końca pliku jest najświeższym "
 "śladem stosu."
 
-#: ../../reference_manual/dr_minw_debugger.rst:77
+#: ../../reference_manual/dr_minw_debugger.rst:78
 msgid ""
 "If ``kritacrash.log`` does not exist, or a backtrace with a matching time "
 "does not exist, then you don’t have a backtrace. This means Krita was very "
@@ -246,7 +247,7 @@ msgstr ""
 "czasu, to nie masz śladu sosu. Z dużym prawdopodobieństwem Krita zablokowała "
 "się, a usterka nie nastąpiła. W tym przypadku, także zgłoś błąd."
 
-#: ../../reference_manual/dr_minw_debugger.rst:78
+#: ../../reference_manual/dr_minw_debugger.rst:79
 msgid ""
 "If the backtrace looks truncated, or there is nothing after the time, it "
 "means there was a crash and the crash handler was creating the stack trace "
@@ -258,3 +259,9 @@ msgstr ""
 "ślad stosu do czasu jego ręcznego zamknięcia. W takim przypadku, spróbuj "
 "ponownie wywołać usterkę i poczekaj trochę dłużej na pojawienie się okna "
 "dialogowego usterki."
+
+#~ msgid ""
+#~ "The information on this page applies only to the Windows release of Krita."
+#~ msgstr ""
+#~ "Informacje na tej stronie mają zastosowanie tylko dla wydania Krity na "
+#~ "Windowsie."
