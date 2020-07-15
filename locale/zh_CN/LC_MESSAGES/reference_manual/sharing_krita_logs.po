@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-06 01:53+0200\n"
-"PO-Revision-Date: 2020-06-24 08:01\n"
+"PO-Revision-Date: 2020-07-14 08:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___sharing_krita_logs.pot\n"
 "X-Crowdin-File-ID: 12076\n"
+"Language: zh_CN\n"
 
 #: ../../reference_manual/sharing_krita_logs.rst:None
 msgid ""
@@ -350,36 +350,37 @@ msgid ""
 "Sometimes more detailed information is needed, then you will be asked to "
 "closely follow"
 msgstr ""
+"在一般情况下，你只需要提供位于 %LOCALAPPDATA%\\kritacrash.log 的日志文件。如"
+"果需要更详尽的崩溃数据，请按照下述指引进行操作："
 
 #: ../../reference_manual/sharing_krita_logs.rst:141
-#, fuzzy
-#| msgid "Follow closely :ref:`Dr. Mingw debugger <dr_minw>` guide."
 msgid ":ref:`Dr. Mingw debugger <dr_minw>` guide."
-msgstr "请按照 :ref:`Dr. MinGW 调试工具 <dr_minw>` 页面的指引进行操作。"
+msgstr ""
+"Windows 用户请按照 :ref:`Dr. Mingw 调试工具 <dr_minw>` 页面的指引进行操作。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:148
 msgid "On Linux, there are five ways of installing Krita."
-msgstr ""
+msgstr "在 Linux 下面，人们可以通过 5 种途径安装 Krita："
 
 #: ../../reference_manual/sharing_krita_logs.rst:150
 msgid "Using distribution packages"
-msgstr ""
+msgstr "从 Linux 发行版内建的软件库进行安装"
 
 #: ../../reference_manual/sharing_krita_logs.rst:151
 msgid "Building Krita yourself from source"
-msgstr ""
+msgstr "从源代码构建 Krita"
 
 #: ../../reference_manual/sharing_krita_logs.rst:152
 msgid "Using a snap package"
-msgstr ""
+msgstr "通过 Snap 安装"
 
 #: ../../reference_manual/sharing_krita_logs.rst:153
 msgid "Using a flatpak package"
-msgstr ""
+msgstr "通过 Flatpak 安装"
 
 #: ../../reference_manual/sharing_krita_logs.rst:154
 msgid "Using the official appimage"
-msgstr ""
+msgstr "使用官方 AppImage 软件包直接运行"
 
 #: ../../reference_manual/sharing_krita_logs.rst:156
 msgid ""
@@ -390,10 +391,18 @@ msgid ""
 "Plasma Desktop, a crash dialog will be shown that has the backtrace in the "
 "\"Developer\" tab."
 msgstr ""
+"只有前 2 种方式 (从发行版软件库安装/从源代码构建) 才能生成可用的崩溃日志/回溯"
+"数据。如果你从发行版软件库安装了 Krita，请额外安装同名但带有 -debug 或者 -"
+"dbg 后缀的调试包，具体的名称和安装方式因发行版而异。如果你从发行版软件库安装"
+"了 Krita 和它的调试包，而且你使用的是 KDE Plasma 桌面环境，Krita 在崩溃时会显"
+"示一个程序崩溃对话框，你可以在它的“Developer (开发者)”标签页中找到回溯跟踪数"
+"据。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:158
 msgid "Otherwise, you have to use :literal:`gdb` in a terminal window."
 msgstr ""
+"如果你的情况与上述不符，请在命令行终端使用 :literal:`gdb` 来获取回溯跟踪数"
+"据。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:160
 msgid "Open Krita in :literal:`gdb`:"
@@ -625,6 +634,3 @@ msgid ""
 msgstr ""
 "切换到 DebugView 工具的窗口，从中复制它生成的内容，保存为文本文件并作为附件上"
 "传到缺陷报告中。"
-
-#~ msgid "On Linux it's recommended to use :literal:`gdb`."
-#~ msgstr "请使用 :literal:`gdb` ，按照以下说明操作："
