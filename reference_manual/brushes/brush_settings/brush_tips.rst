@@ -7,6 +7,7 @@
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - PMoonen
              - Scott Petrovic
+			 - Peter Schatz
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Brush tip, Brush Mask
@@ -145,13 +146,15 @@ Spacing
 Brush Mode
 ''''''''''
 
-Mask
+Alpha Mask
     For colored brushes, don't paint the actual colors, but make a grayscale brush tip that will be colored by your selected foreground/background color. Lighter areas will be interpreted as more transparent.
-Color
-    Use the fully colored brush tip.
-Lightness
-   .. versionadded:: 4.3
-        Similar to mask, except maintaining the lightness differences in the brush tip. Transparency stays the same as it does in colored mode, but darker tones will be in the tone of the current foreground color. There are three sliders here, to control the exact feel of the current brush tip in this mode:
+Color Image
+    Use the brush tip image exactly as it is.  Especially useful for image stamps.
+Lightness Map
+    .. versionadded:: 4.3    
+        Combines the features of Alpha Mask and Image Stamp modes. Transparency is preserved as it is in Image Stamp mode, but colors or gray tones in the brush are replaced by the foreground color.  The Lightness values of the brush tip image (if thinking in HSL mode) are preserved, so dark parts of the image are dark, and bright parts are bright.  This allows image stamps where you can choose the color, but preserve highlights and shadows, and can even create an effect of thick paint in a brush stroke by simulating the highlights and shadows caused by the texture of the paint and brush stroke (sometimes called an "impasto" effect).
+
+    There are three sliders here, to control the exact feel of the current brush tip in Lightness or Gradient mode:
 
     Neutral point
         This is the lightness level that will be the same as your current foreground color. Higher values than this will be lighter versions of the current foreground color, and lower, darker versions of the current color.
@@ -159,5 +162,6 @@ Lightness
         Makes the tip as a whole brighter or darker.
     Contrast
         Increase the contrast between dark and light areas in the tip.
-
-    These features can be used to mimic the feeling of impasto, or to create a variety of sparkle effects.
+Gradient Map
+    .. versionadded:: 4.4    
+        Use the lightness values of the brush tip image as a map to a gradient.  Black maps to the left side of the gradient, and white to the right side of the gradient.  The gradient used is the currently selected gradient in the main window, so you can change the gradient quickly and easily while painting.  This mode allows image stamps with multiple colors that can be changed (great for flowers or other colorful vegetation), and can allow paint brushes that have multiple colors.  Image adjustment sliders for Lightness Map mode can be used for this mode too.

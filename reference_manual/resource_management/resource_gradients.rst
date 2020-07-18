@@ -6,6 +6,7 @@
 
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - Scott Petrovic
+             - Peter Schatz
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Resources, Gradients
@@ -69,6 +70,11 @@ A selected stop can have its color and transparency changed using the color butt
 
 As per SVG spec, you can make a sudden change between stops by moving them close together. The stops will overlap, but you can still drag them around.
 
+.. versionadded:: 4.4
+    Gradients can have stops that use the currently selected Foreground or Background colors
+
+.. image:: /images/gradients/Krita_Stop_Gradient_Editor_Popup.png
+
 Segmented Gradients
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -116,3 +122,8 @@ HSV clockwise
     Blends the two colors using the HSV model, and follows the hue clockwise (red-yellow-green-cyan-blue-purple). The above screenshot is an example of this.
 HSV counter-clock wise.
     Blends the color as the previous options, but then counter-clockwise.
+    
+.. versionadded:: 4.4
+    Gradients can have segment endpoints that use the currently selected Foreground or Background colors, and those endpoints can be transparent.  These features allow full compatibility with GIMP gradients.
+
+.. image:: /images/gradients/Krita_Segment_Gradient_Editor_Popup.png

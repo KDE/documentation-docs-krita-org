@@ -9,6 +9,7 @@
              - Scott Petrovic
              - Hulmanen
              - Nmaghrufusman
+             - Peter Schatz
    :license: GNU free documentation license 1.3 or later.
 
 .. _brush_options:
@@ -64,6 +65,17 @@ In the above example, several applications of the parameter.
 #. Distance -- With careful editing of the Sensor curve, you can create nice patterns.
 #. Fade -- This slowly fades the rotation from one into another.
 #. Pressure -- An interesting one that can create an alternative looking line.
+
+.. _option_lightness_strength:
+
+Lightness Strength
+------------------
+.. versionadded:: 4.4
+    This allows you to affect the Lightness Strength of your brush-tip with Sensors. Only available with brush-tips in Lightness Map mode.
+
+.. image:: /images/brushes/lightness_strength_demo.png
+
+This changes the contrast of the brushtip, so that at 100%, the full effect of the lightness variation is visible in the brush, while at 0% the brush paints without any lightness variation.  This allows a variable impasto effect with lightness brushes, and for variation in texture stamp brushes that use a lightness-enabled brush-tip.
 
 .. _option_scatter:
 
