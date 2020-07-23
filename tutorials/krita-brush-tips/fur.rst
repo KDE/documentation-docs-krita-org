@@ -9,7 +9,7 @@
 .. _Fur:
 
 ==============
-Brush-tips:Fur
+Painting fur
 ==============
 
 Question
@@ -24,10 +24,15 @@ So typically, you see the same logic applied on fur as on regular :ref:`hair`.
 
 However, you can make a brush a little easier by using the Gradient, Mix and HSV options in the :ref:`pixel and color smudge brushes <pixel_brush_engine>`. Basically, what we want to do is have a stroke start dark and then become lighter as we draw with it, to simulate how hair-tips catch more light and look lighter due to being thinner at the ends, while at the base they are frequently more dark.
 
+.. note::
+    
+    This tutorial contains outdated screenshots, but you should be able to follow along if you ignore a bit different look of the brush editor. Originally it also used brush preset and brush tip from the older resources set (:guilabel:`ink_brush_25` and :guilabel:`A - 2 Dirty Brush`), but you should be able to get similar results with brush preset :guilabel:`b) Basic-5 Size` and brush tip :guilabel:`sparkle` or other similar brush preset (based on Pixel Engine) and similar brush tip (multiple dots). 
+
+
 .. image:: /images/brush-tips/Krita-brushtips-fur_02.png
     :alt: Brush setting dialog for fur brush.
 
-Take the :guilabel:`ink_brush_25` and choose under :menuselection:`Brush Tip --> Predefined “A-2 dirty brush”`. Set the spacing to :guilabel:`Auto` and right-click the spacing bar to type in a value between 0.25 and 0.8. Also turn on the :guilabel:`Enable Pen Settings` on flow. Replicate the pressure curve above on the size option. We don’t want the hairs to collapse to a point, hence why the curve starts so high.
+Take the :guilabel:`b) Basic-5 Size` and choose under :menuselection:`Brush Tip --> Predefined “sparkle”`. Set the spacing to :guilabel:`Auto` and right-click the spacing bar to type in a value between 0.25 and 0.4. Also turn on the :guilabel:`Enable Pen Settings` on flow. Replicate the pressure curve above on the size option. We don’t want the hairs to collapse to a point, hence why the curve starts so high.
 
 .. image:: /images/brush-tips/Krita-brushtips-fur_03.png
     :alt: Brush setting dialog for fur.
@@ -52,4 +57,4 @@ For example, if you use the mix option in the pixel brush, it’ll mix between t
 .. image:: /images/brush-tips/Krita-brushtips-fur_07.png
     :alt: Fur brush with the color source to gradient and mix option.
 
-On tumblr it was suggested this could be used to do `this tutorial <https://vimeo.com/78183651>`_. Basically, you can also combine this with the lighter color blending mode and wraparound mode to make making grass-textures really easy!
+You can also combine this with the lighter color blending mode and wraparound mode to make making grass-textures really easy!
