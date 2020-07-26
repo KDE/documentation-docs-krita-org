@@ -47,8 +47,10 @@ SeExpr
         - `Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_
         - `The Book of Shaders <https://thebookofshaders.com/>`_
 
-    SeExpr is a language that enables you to program shader-like scripts.
-    This 
+    SeExpr is an embeddable, arithmetic expression language that enables you to
+    write shader-like scripts. Through this language, Krita can add dynamically 
+    generated textures like lava (example above), force fields, wood, marble, 
+    etc. to your layers.
 
     As with Patterns, you can create your own and use those as well.
     For some examples, please check out the thread `"Procedural texture generator (example and wishes)" on Krita Artists <https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/7638>`_.
