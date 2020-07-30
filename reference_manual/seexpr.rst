@@ -29,11 +29,12 @@ It is a heavily edited version of the official `user documentation <https://wdas
 Variables
 *********
 
-System variables
-================
+External variables
+==================
 
-These variables are provided by Krita. They are registered with SeExpr's
-autocomplete help, which can be accessed by :kbd:`Ctrl+Space`.
+These variables are provided by host applications, in this case Krita.
+They are registered with SeExpr's autocomplete help, which can be
+accessed by :kbd:`Ctrl+Space`.
 
 .. glossary::
 
@@ -56,6 +57,167 @@ External variables can also be overridden by local assignment. This can be usef
 
     $P = $P * 10; # increase noise frequency
     fbm(vnoise($P) + $P/4)
+
+
+******************
+Control Structures
+******************
+
+SeExpr, unlike many languages, provides **no control structures** except
+conditionals. These are known as the *ternary operator*::
+
+    $u = $i < .5 ? 0.0 : 10.0
+
+*******************************************
+Operators (listed in decreasing precedence)
+*******************************************
+
+.. glossary::
+
+    [ a, b, c ]
+        vector constructor
+
+    $P[ n ]
+        vector component access
+
+        .. hint:: ``n`` must be 0, 1, or 2, e.g.::
+
+            $P[0]
+
+    ^
+        exponentiation
+
+        .. note:: Same as the ``pow`` function.
+
+    !
+        logical NOT
+
+    ~
+        inversion
+        
+        .. hint::
+            ::
+
+                ~$A
+
+            gives the same result as::
+
+                1 - $A
+
+    * /  %
+        multiply, divide, modulus
+
+        .. note:: ``%`` is the same as the ``fmod`` function.
+
+    + -
+        add, subtract
+
+    < >  <=  >=
+        comparison: less than, greater than, less or equal than, greater or equal than
+
+        .. note:: Only uses the first component of a vector.
+
+    ==  !=
+        equality, inequality
+
+    &&
+        logical AND
+
+    ||
+        logical OR
+
+    ? :
+        ternary ``if`` operator
+
+        .. hint:: Example::
+
+            $u < .5 ? 0 : 1
+
+    ->
+        apply - The function on the right of the arrow is applied to the expression on the left.
+
+        .. hint:: Examples::
+
+            $Cs -> contrast(.7) -> clamp(0.2, 0.8)
+            $u -> hsi(20, 1.2, 1, $Cs -> gamma(1.2))
+
+********************
+Assignment Operators
+********************
+
+Besides the basic assignment statement::
+
+    $foo = $bar
+
+you can also do operator assignments such as::
+
+    $foo += $bar;
+
+which is equivalent to::
+
+    $foo = $foo + $bar;
+
+Additionally, there are:
+
+- ``+=``
+- ``-=``
+- ``/=``
+- ``%=``
+- ``*=``
+- ``^=``
+
+********
+Comments
+********
+
+You can add comments to your script by using the ``#`` character.
+SeExpr will then skip the rest of the line for rendering purposes.
+However, they are not ignored; comments can still be used to declare
+the valid value range of integer, float, and vector variables.
+This enables you to manage them using widgets that will accept the
+specified range.
+
+.. hint::
+    ``$var0`` is an integer variable that ranges between 0 and 10 inclusive::
+
+        $var0 = 0; # 0, 10
+
+    ``$var1`` is a floating point variable with the same range::
+
+        $var1 = 0; # 0.000, 10.000
+
+    ``$var2`` is a vector variable::
+
+        $var2 = [0, 0, 0] # 0.000, 10.000
+
+    The latter is very helpful; SeExpr considers vectors with range :math:`[0, 1]` as colors::
+
+        # this is a dark red
+        $color = [0.5, 0, 0] # 0.000, 1.000
+
+    In all cases, if not specified, the associated widgets' range will go from 0 to 1.
+
+For a multi-line expression, each line may have its own comment.
+
+*****************
+Logging Functions
+*****************
+
+.. glossary::
+
+    void **printf** ( string format, [param0, param1, ...] )
+        Prints a string to stdout that is formatted as given. Formatting
+        parameters possible are ``%f`` for float (takes first component of vector
+        argument) or ``%v`` for vector.
+
+        .. hint::
+            For example, if you wrote::
+
+                printf("test %f %v",[1,2,3],[4,5,6]);
+
+            you would get::
+
+                test 1 [4,5,6]
 
 ***************************************
 Color, Masking, and Remapping Functions
@@ -137,11 +299,13 @@ Color, Masking, and Remapping Functions
         General remapping function.  When :math:`x` is within :math:`\pm range` of source,
         the result is one.  The result falls to zero beyond that range over
         ``falloff`` distance.  The falloff shape is controlled by ``interp``.
-        Numeric values or named constants may be used:
 
-        - int **linear** = 0
-        - int **smooth** = 1
-        - int **gaussian** = 2
+        .. note::
+            Numeric values or named constants may be used:
+
+            - int **linear** = 0
+            - int **smooth** = 1
+            - int **gaussian** = 2
 
 ***************
 Noise Functions
@@ -250,9 +414,11 @@ Noise Functions
         default), there is no distortion.  The remaining params are the same
         as for the ``fbm`` function.
 
-        Voronoi types 1 through 5:
+        .. hint::
 
-        |image0|  |image1|  |image2|  |image3|  |image4| 
+            Voronoi types 1 through 5:
+
+            |image0|  |image1|  |image2|  |image3|  |image4| 
 
         .. note::
             ``cvoronoi`` returns a random color for each cell and
@@ -504,152 +670,34 @@ by the following functions.
     color **curve** ( float param, float pos0, color val0, int interp0, float pos1, color val1, int interp1, [...] )
         Interpolates color ramp given by control points at ``param``. Control
         points are specified by triples of parameters ``pos_i``, ``val_i``, and
-        ``interp_i``. Interpolation codes are:
+        ``interp_i``.
+        
+        .. hint::
+            Interpolation codes are:
 
-        - 0 - none
-        - 1 - linear
-        - 2 - smooth
-        - 3 - spline
-        - 4 - monotone (non-oscillating) spline
+            - 0 - none
+            - 1 - linear
+            - 2 - smooth
+            - 3 - spline
+            - 4 - monotone (non-oscillating) spline
 
     float **curve** ( float param, float pos0, float val0, int interp0, float pos1, float val1, int interp1, [...] )
         Interpolates a 1D ramp defined by control points at ``param``. Control
         points are specified by triples of parameters ``pos_i``, ``val_i``, and
-        ``interp_i``. Interpolation codes are:
+        ``interp_i``.
+        
+        .. hint::
+            Interpolation codes are:
 
-        - 0 - none
-        - 1 - linear
-        - 2 - smooth
-        - 3 - spline
-        - 4 - monotone (non-oscillating) spline
+            - 0 - none
+            - 1 - linear
+            - 2 - smooth
+            - 3 - spline
+            - 4 - monotone (non-oscillating) spline
 
     float **spline** ( float param, float y1, float y2, float y3, float y4, [...] )
         Interpolates a set of values to the parameter specified where
         ``y1``, ..., ``yn`` are distributed evenly from :math:`[0, 1]`.
-
-**************
-Misc Functions
-**************
-
-.. glossary::
-
-    void **printf** ( string format, [param0, param1, ...] )
-        Prints a string to stdout that is formatted as given. Formatting
-        parameters possible are ``%f`` for float (takes first component of vector
-        argument) or ``%v`` for vector. For example, if you wrote::
-
-            printf("test %f %v",[1,2,3],[4,5,6]);
-
-        you would get::
-
-            test 1 [4,5,6]
-
-*******************************************
-Operators (listed in decreasing precedence)
-*******************************************
-
-.. glossary::
-
-    [ a, b, c ]
-        vector constructor
-
-    $P[ n ]
-        vector component access - ``n`` must be 0, 1, or 2, e.g.::
-
-            $P[0]
-
-    ^
-        exponentiation
-
-        .. note:: Same as the ``pow`` function.
-
-    !
-        logical NOT
-
-    ~
-        inversion, i.e.::
-
-            ~$A
-
-        gives the same result as::
-
-            1 - $A
-
-    * /  %
-        multiply, divide, modulus
-
-        .. note:: ``%`` is the same as the ``fmod`` function.
-
-    + -
-        add, subtract
-
-    < >  <=  >=
-        comparison: less than, greater than, less or equal than, greater or equal than
-
-        .. note:: Only uses the first component of a vector.
-
-    ==  !=
-        equality, inequality
-
-    &&
-        logical AND
-
-    ||
-        logical OR
-
-    ? :
-        ternary ``if`` operator, e.g.::
-
-            $u < .5 ? 0 : 1
-
-    ->
-        apply - The function on the right of the arrow is applied to the expression on the left.
-
-        Examples::
-
-            $Cs -> contrast(.7) -> clamp(0.2, 0.8)
-
-            $u -> hsi(20, 1.2, 1, $Cs -> gamma(1.2))
-
-
-
-
-
-
-
-********************
-Assignment Operators
-********************
-
-Besides the basic assignment statement::
-
-    $foo = $bar
-
-you can also do operator assignments such as::
-
-    $foo += $bar;
-
-which is equivalent to::
-
-    $foo = $foo + $bar;
-
-Additionally, there are:
-
-- ``+=``
-- ``-=``
-- ``/=``
-- ``%=``
-- ``*=``
-- ``^=``
-
-********
-Comments
-********
-
-Any characters following a ``#`` to the end of the line are ignored and
-may be used as a comment, or for "commenting out" part of the
-expression.  For a multi-line expression, each line may have its own
-comment.
 
 **************
 Custom Plugins
