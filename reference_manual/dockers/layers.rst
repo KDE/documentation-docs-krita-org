@@ -20,6 +20,8 @@ Layers
 
 The Layers docker is for one of the core concepts of Krita: :ref:`Layer Management <layers_and_masks>`. You can add, delete, rename, duplicate and do many other things to layers here.
 
+At the top there are four controls. Two of them are layer properties, the blending mode and the opacity. But there are also two smaller buttons. One is the filter option. This allows you to filter all existing layers by either color label, or since Krita 5.0 by layer name. The second button allows you to control the thumbnail size of the layers. Some people prefer large thumbnails, others want them really small.
+
 The Layer Stack
 ---------------
 
