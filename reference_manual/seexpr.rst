@@ -375,22 +375,6 @@ Noise Functions
 
             ``vnoise`` outputs signed vector noise.
 
-
-    float **perlin** ( vector v )
-    color **cperlin** ( vector v)
-    float **sperlin** ( vector v)
-    vector **vperlin** (vector v )
-        "Improved Perlin Noise", based on Ken Perlin's 2002 Java reference
-        code.
-
-        .. note::
-
-            ``cperlin`` outputs color noise.
-
-            ``sperlin`` outputs signed noise with range :math:`[-1, 1]`.
-
-            ``vperlin`` outputs signed vector noise.
-
     float **rand** ( [float min, float max], [float seed] )
         Random number between *[min, max]* (or *[0, 1]* if unspecified).
         If a seed is supplied, it will be used in addition to the internal
