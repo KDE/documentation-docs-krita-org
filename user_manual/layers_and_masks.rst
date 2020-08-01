@@ -83,6 +83,10 @@ from the drop-down situated at the top-right corner of the layer docker.
 
 .. image:: /images/layers/Layer-color-filters-menu.png
    :width:  600
+   
+.. versionadded:: 5.0
+
+    You can also use this dropdown to filter the layers by layer name.
 
 Types of Layers
 ---------------

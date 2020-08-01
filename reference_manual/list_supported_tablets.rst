@@ -180,6 +180,9 @@ This is specifically about support on Windows, not Linux or OSX.
    * - Genius 
      - EasyPen M610XA
      - ❓ Unknown
+   * - Gaoman
+     - M6
+     - ✔️ Supported
    * - Genius 
      - G-Pen 340
      - ❓ Unknown

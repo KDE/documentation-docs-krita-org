@@ -34,7 +34,7 @@ Tool Options
 .. versionadded:: 4.1.3
 
    Autosmooth Curve
-        Toggling this will have nodes initialize with smooth curves instead of angles. Untoggle this if you want to create sharp angles for a node. This will not affect curve sharpness from dragging after clicking.
+        Toggling this will have nodes initialize with smooth curves instead of angles. Untoggle this if you want to create sharp angles for a node. This will affect curve sharpness from dragging after clicking.
 
 Angle Snapping Delta
     The angle to snap to.

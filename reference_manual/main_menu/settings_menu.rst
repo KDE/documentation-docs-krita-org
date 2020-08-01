@@ -24,7 +24,7 @@ Show Dockers
 ------------
 
 Show Dockers
-    Determines whether or not the dockers are visible.  This is a nice aid to cleaning up the interface and removing unnecessary "eye-ball clutter" when you are painting.  If you've got your brush and you know you're just going to be painting for awhile why not flip the dockers off?  You'd be amazed what a difference it makes while you're working.  However, if you know you're swapping out tools or working with layer or any of the other myriad things Krita lets you do then there's no point getting caught up in flipping the docks on and off.  Use you time wisely!
+    Determines whether or not the dockers are visible.  This is a nice aid to cleaning up the interface and removing unnecessary "eye-ball clutter" when you are painting.  If you've got your brush and you know you're just going to be painting for awhile why not flip the dockers off?  You'd be amazed what a difference it makes while you're working.  However, if you know you're swapping out tools or working with layer or any of the other myriad things Krita lets you do then there's no point getting caught up in flipping the docks on and off.  Use your time wisely!
 
  .. tip::
     
@@ -124,4 +124,4 @@ At this time Krita does not support the ability to create additional toolbars. T
 Although not really advisable, you can turn them off (but why would you..really?)
 
 .. versionadded:: 4.2
-    Finally, Toolbars also can be moved. You can do this by |mouseright| and dragging the handler at the left side of the toolbar.
+    Krita's toolbars are now movable. You can move a toolbar by |mouseleft| dragging its left handle.

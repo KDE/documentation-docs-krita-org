@@ -73,7 +73,7 @@ Geometry
 
 Geometry is the first section in the tool options. This section allows you to set precisely the 'x' and 'y' coordinates, and also the width and height of the shape.
 
-Uniform scaling
+Scale Styles
     Enabled: when scaling, it will scale the stroke width with the shape.
     
     Not enabled: when scaling, the stroke width will stay the same.

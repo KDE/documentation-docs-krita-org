@@ -56,10 +56,10 @@ For exporting HDR animations, we support saving HDR to the new codec for mp4 and
 * Select for :guilabel:`Render as`, 'MPEG-4 video' or 'Matroska'.
 * Press the configure button next to the file format dropdown.
 * Select at the top 'H.265, MPEG-H Part 2 (HEVC)'.
-* Select for the :guilabel:`Profile`, 'main10'.
+* Select for the :guilabel:`Profile`, 'main10 (HDR)'.
 * :guilabel:`HDR Mode` should now enable. Toggle it.
 * click :guilabel:`HDR Metadata` to configure the HDR metadata (options described below).
-* finally, when done, click 'render'.
+* finally, when done, click 'OK'.
 
 HDR Metadata
 ~~~~~~~~~~~~

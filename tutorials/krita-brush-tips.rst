@@ -9,6 +9,9 @@
 
 .. _krita_brush_tips:
 
+================
+Krita Brush Tips
+================
 
 Krita Brush-tips is an archive of brush-modification tutorials done by the krita-foundation.tumblr.com account based on user requests.
 

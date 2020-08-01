@@ -34,7 +34,7 @@ HSV
 ~~~
 
 HSV, occasionally called HSB, is a color coordinate system. It measures colors in Hue, Saturation, and Value (also called Brightness).
-Value or Brightness specifically refers to strength at which the pixel-lights on your monitor have to shine. It sets Yellow (rgb:1,1,0), Blue (rgb:0,0,1) and White (rgb:1,1,0) at the same Value (100%).
+Value or Brightness specifically refers to strength at which the pixel-lights on your monitor have to shine. It sets Yellow (rgb:1,1,0), Blue (rgb:0,0,1) and White (rgb:1,1,1) at the same Value (100%).
 
 HSY
 ~~~

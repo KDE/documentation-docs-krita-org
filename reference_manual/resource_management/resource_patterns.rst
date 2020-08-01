@@ -31,7 +31,7 @@ Adding new patterns
 You can add new patterns via the pattern docker, or the pattern-quick-access menu in the toolbar.
 At the bottom of the docker, beneath the resource-filter input field, there are the :guilabel:`Import resource` and :guilabel:`Delete resource` buttons. Select the former to add png or JPG files to the pattern list.
 
-Similarly, removing patterns can be done by pressing the :guilabel::`Delete resource` button. Krita will not delete the actual file then, but rather black list it, and thus not load it.
+Similarly, removing patterns can be done by pressing the :guilabel:`Delete resource` button. Krita will not delete the actual file then, but rather black list it, and thus not load it.
 
 Temporary patterns and generating patterns from the canvas
 ----------------------------------------------------------

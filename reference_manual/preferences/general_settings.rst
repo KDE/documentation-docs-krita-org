@@ -105,10 +105,7 @@ Show Outline
         Used to be called "Show Outline When Painting".
 
 Use effective outline size
-
-    .. versionadded:: 4.1
-
-    This makes sure that the outline size will always be the maximum possible brush diameter, and not the current one as affected by sensors such as pressure. This makes the cursor a little less noisy to use.
+    .. versionadded:: 4.1 This makes sure that the outline size will always be the maximum possible brush diameter, and not the current one as affected by sensors such as pressure. This makes the cursor a little less noisy to use.
 
 Cursor Color:
     The default cursor color. This is mixed with the canvas image so that it will usually have a contrasting color, but sometimes this mixing does not work. This is usually due driver problems. When that happens, you can configure a more pleasant color here.
@@ -139,6 +136,9 @@ Allow only one instance of Krita
 Tools Settings
 --------------
 
+Tool Options Location
+~~~~~~~~~~~~~~~~~~~~~
+
 In docker (default)
     Gives you the tool options in a docker.
 In toolbar
@@ -154,10 +154,7 @@ Enable Touchpainting
     This allows finger painting with capacitive screens. Some devices have both capacitive touch and a stylus, and then this can interfere. In that case, just toggle this.
 
 Activate transform tool after pasting
-
-    .. versionadded:: 4.2
-
-    A convenience feature. When enabling this, the transform tool will activate after pasting for quick moving or rotating.
+    .. versionadded:: 4.2 A convenience feature. When enabling this, the transform tool will activate after pasting for quick moving or rotating.
 
 Kinetic Scrolling (Needs Restart)
     This enables kinetic scrolling for scrollable areas.

@@ -77,8 +77,11 @@ Brush Packs
                :target: https://www.deviantart.com/iforce73/art/Environments-2-0-759523252
 
                IForce73
-          -
 
+          - .. figure:: /images/resource_packs/Resources-wojtrybBrushes.png
+               :target: https://www.dropbox.com/s/i1rt7f0qc77nc4m/wont_teach_you_to_draw_brushpack_v5.0.zip?dl=1
+
+               wojtryb
         * -
 
           -
@@ -185,6 +188,10 @@ Pigment.O - Color Picker
 ToggleRefLayer: enables you to assign a keyboard shortcut to toggle the visibility of a reference layer named "reference"
 
     https://drive.google.com/file/d/11O8FiejleajsT_uHd4Q4VBrCrYX9Rh5v/view?usp=sharing
+
+Subwindow organizer: split screen, adjusting to window size changes, snapping to workspace borders and more.
+
+    https://github.com/wojtryb/kritaSubwindowOrganizer
 
 See Something We Missed?
 ------------------------

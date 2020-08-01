@@ -125,13 +125,68 @@ the container and type:
 
 The built package will be copied to *./persistent/* folder.
 
-By default, the package will containt debugging symbols and will be
-about 450 MiB in size. If you want a smaller and more portable package
-without debigging information, add `STRIP_APPIMAGE=1` environment variable:
+By default, the package will be built in release mode. If you want to
+add debugging information, add *--debug* option to the command line:
 
 .. code::
 
-    STRIP_APPIMAGE=1 ~/bin/build_krita_appimage.sh
+    ~/bin/build_krita_appimage.sh --debug
+
+Creating a full clone of the container
+--------------------------------------
+
+It is possible to copy the container with the entire environment, sources,
+build directory and QtCreator installation and configuration. After cloning,
+no rebuild of Krita is needed!
+
+To copy container to *../krita-auto-2*, just type in the host system
+
+.. code::
+
+    ./bin/spawn-clone -d ../krita-auto-2
+
+*spawn-clone* will make an image from the current container and create a
+new one out of it. This image will be cached for further usages. If you need
+to flush the cache, pass *-f* option to *spawn-clone*:
+
+.. code::
+
+    ./bin/spawn-clone -f -d ../krita-auto-2
+
+You can start several instances of *spawn-clone* on the same container
+concurrently (e.g. for building multiple merge requests). It has internal
+locking mechanism for resolving concurrency problems    
+
+Testing merge requests using container clones
+---------------------------------------------
+
+To quickly build a merge request '123' basing on the current state of the
+container type in the host system
+
+.. code::
+
+    ./bin/spawn-clone -m 123 -be
+
+The script will clone the container, checkout the merge request branch,
+build it and provide you a terminal for running Krita. The container
+will be created at *./clones/clone-mr-123* subfolder of the current container.
+
+If you also want to build an AppImage, add *--release-appimage* option:
+
+.. code::
+
+    ./bin/spawn-clone -m 123 --release-appimage -be
+
+AppImage will be places at *./persistent* subfolder of the clone.
+When finished with testing the merge request, you can remove the clone
+completely by running
+
+.. code::
+
+    ./bin/discard-clone /clones/clone-mr-123
+
+You can build multiple merge requests at once!
+
 
 Extra developer tools
 ---------------------

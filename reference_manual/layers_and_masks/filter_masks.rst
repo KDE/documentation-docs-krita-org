@@ -15,7 +15,7 @@
 Filter Masks
 ============
 
-Filter masks show an area of their layer with a filter (such as blur, levels, brightness / contrast etc.). For example, if you select an area of a paint layer and add a Filter Layer, you will be asked to choose a filter. If you choose the blur filter, you will see the area you selected blurred.
+Filter masks show an area of their layer with a filter (such as blur, levels, brightness / contrast etc.). For example, if you select an area of a paint layer and add a Filter Mask, you will be asked to choose a filter. If you choose the blur filter, you will see the area you selected blurred.
 
 .. image:: /images/Krita_ghostlady_2.png
    :width: 800

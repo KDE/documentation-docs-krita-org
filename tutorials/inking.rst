@@ -68,7 +68,7 @@ Bezier curves and other tools
 
 So, you may have heard of a French curve. If not, it’s a piece of plastic representing a stencil. These curves are used to make perfectly smooth curves on the basis of a sketch.
 
-In digital painting, we don’t have the luxury of being able to use two hands, so you can’t hold a ruler with one hand and adjust it while inking with the other. For this purpose, we have instead Bezier curves, which can be made with the :ref:`path_selection_tool`.
+In digital painting, we don’t have the luxury of being able to use two hands, so you can’t hold a ruler with one hand and adjust it while inking with the other. For this purpose, we have instead Bezier curves, which can be made with the :ref:`path_tool`.
 
 You can even make these on a vector layer, so they can be modified on the fly.
 

@@ -54,11 +54,11 @@ You can add and remove side handles from a selected node with the |mouseleft| :k
 Krita has several node-types that allow you control the side handles more efficiently. These are the corner, smooth and symmetric modes.
 
  Corner
-     Represented by a circle, the corner type allows you to have handles that can point in different directions and have different lengths.
+     Represented by a diamond, the corner type allows you to have handles that can point in different directions and have different lengths.
  Smooth
-     Represented by a square, the smooth type will ensure a smooth transition by always pointing the handles into opposite directions, but they can still have different lengths.
+     Represented by a circle, the smooth type will ensure a smooth transition by always pointing the handles into opposite directions, but they can still have different lengths.
  Symmetric
-     Represented by a diamond, the symmetric node will force handles to always point in opposite directions and have the same length.
+     Represented by a square, the symmetric node will force handles to always point in opposite directions and have the same length.
 
 |mouseleft| :kbd:`+ Ctrl` on a selected node will cycle between the node-types.
 
@@ -108,7 +108,7 @@ Node Editing
     Smooth Point
         Make the selected node smooth. The two side handles will always point in opposite directions, but their length can be different.
     Symmetric Point
-        Make the selected node smooth. The two side handles will always point in opposite directions, and their length will stay the same.
+        Make the selected node symmetric. The two side handles will always point in opposite directions, and their length will stay the same.
     Insert Point
         Insert a new node into the middle of the selected segment.
     Remove Point
@@ -160,7 +160,7 @@ Type
         An arc shape will keep the path open when it isn't fully circular.
     Pie
         A pie shape will add two extra lines to the center when the shape isn't fully circular, like how one cuts out a piece from a pie.
-    Cord
+    Chord
         A cord shape will add a straight line between the two ends if the path isn't fully circular, as if a cord is being strung between the two points. 
 
 Start Angle
