@@ -67,13 +67,17 @@ Size  Memory needed
 4096  64 MB
 ===== ==============
 
-Procedural textures are a whole different thing. In practical terms, the only
-storage needed is for its *script* - a text file of a few KB.
-Load the script, and you can render your texture at whatever resolution you
-need.
+An alternative is to use :ref:`vector_graphics`. Vector graphics, for instance 
+SVGs, employ mathematic formulae like splines and Bézier curves to describe a
+shape. As they are mathematically defined, they can be resized to suit your 
+needs without losing resolution.
 
-SeExpr fulfills just this purpose. With some short lines of code, you can
-render complex patterns in your layers at completely arbitrary resolution.
+SeExpr belongs to a different class, *procedural graphics*. Similarly to vector
+graphics, procedural graphics only need a few KBs of secondary storage for
+their definition. But they are not defined by mathematical formulae; you
+actually *code* how the color is calculated at each point of the texture.
+And, because it is not limited in its precision, you can render complex
+patterns in your layers at completely arbitrary resolution.
 
 ****************
 Writing a script
