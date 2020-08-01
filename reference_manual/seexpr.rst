@@ -651,7 +651,7 @@ by the following functions.
 
 .. glossary::
 
-    color **curve** ( float param, float pos0, color val0, int interp0, float pos1, color val1, int interp1, [...] )
+    color **ccurve** ( float param, float pos0, color val0, int interp0, float pos1, color val1, int interp1, [...] )
         Interpolates color ramp given by control points at ``param``. Control
         points are specified by triples of parameters ``pos_i``, ``val_i``, and
         ``interp_i``.

@@ -157,11 +157,12 @@ This dialog shows you all the types of variables that SeExpr accepts:
 
 .. glossary ::
 
-   Curve
-      A sampleable curve of floating-point numbers.
+   Curve and Color curve
+      They are the SeExpr version of :ref:`Stop Gradients <resource_gradients>`: they interpolate a ramp given by a set of values.
 
-   Color curve
-      A sampleable curve of colors.
+      Curves represent 1D gradients, returning a single float at each evaluation point.
+
+      Color curves represent RGB gradients, returning a Color at each point.
 
    Integers and Floats
       Numbers.
