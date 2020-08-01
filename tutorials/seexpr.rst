@@ -15,6 +15,17 @@ Introduction to SeExpr
 
    This document will introduce you to the SeExpr expression language.
 
+****************
+What is SeExpr?
+****************
+
+SeExpr is an embeddable expression language, designed by Disney Animation,
+that allows host applications to render dynamically generated content.
+Pixar calls it `in its documentation <https://renderman.pixar.com/resources/RenderMan_20/PxrSeExpr.html>`_ a "scriptable pattern generator and
+combiner".
+
+SeExpr is available within Krita as a Fill Layer.
+
 **********
 Background
 **********
@@ -33,12 +44,12 @@ And if you need to change them, either you go back to the source and sample it
 again (which is sometimes impossible), or edit it with a raster graphics
 program, like Krita.
 
-One of the biggest problems, however, is that we are always limited by the 
-**space** our programs can use; either secondary storage, like SD cards, or 
-RAM. Unless compressed, image memory needs are `quadratic in the size of the 
+One of the biggest problems, however, is that we are always limited by the
+**space** our programs can use; either secondary storage, like SD cards, or
+RAM. Unless compressed, image memory needs are `quadratic in the size of the
 image <https://blender.stackexchange.com/questions/112505/why-is-my-half-resolution-render-taking-a-quarter-of-the-time-of-the-full-one>`_.
-For a quick example, the :ref:`create_new_document` dialog of Krita tells 
-you three bits of information: its size in pixels, the size of the pixel 
+For a quick example, the :ref:`create_new_document` dialog of Krita tells
+you three bits of information: its size in pixels, the size of the pixel
 itself, and *the total memory needed*.
 
 .. image:: /images/Krita_newfile.png
@@ -61,22 +72,115 @@ storage needed is for its *script* - a text file of a few KB.
 Load the script, and you can render your texture at whatever resolution you
 need.
 
-****************
-What is SeExpr?
-****************
-
-SeExpr is an embeddable expression language, designed by Disney Animation,
-that allows host applications to render dynamically generated content.
-Pixar calls it `in its documentation <https://renderman.pixar.com/resources/RenderMan_20/PxrSeExpr.html>`_ a "scriptable pattern generator and
-combiner".
-
-SeExpr is available within Krita as a Fill Layer.
+SeExpr fulfills just this purpose. With some short lines of code, you can
+render complex patterns in your layers at completely arbitrary resolution.
 
 ****************
 Writing a script
 ****************
 
+In this tutorial, we'll show you how to write a script in SeExpr, render it to
+a layer, and then save it as a preset.
 
+We'll start by going to the :ref:`layer_docker`, and adding a new Fill Layer.
+Then select the SeExpr generator from the list. You'll be greeted by this
+window:
+
+   .. image:: /images/seexpr/SeExpr_editor.png
+
+The SeExpr generator dialog is divided in two tabs. For now, we'll stay on
+:guilabel:`Options`.
+
+.. note::
+   :ref:`fill_layers` describes these tabs in more detail.
+
+Let's start by painting a layer in light blue.
+
+First, SeExpr scripts must define an output variable, let's call it ``$color``.
+As SeExpr thinks of colors in the :ref:`RGB color space<model_rgb>`,
+color variables are defined by a triplet of numbers known as a *vector*.
+We'll start by defining the ``$color`` variable and giving it a value.
+
+Go to the text box, and clear it if it has any text.
+Then, define and set ``$color`` to something like :math:`[0.5, 0.5, 1]`
+(half lit red, half lit green, fully lit blue)::
+
+   $color = [0.5, 0.5, 1];
+
+SeExpr needs to know which variable holds the final color value. This
+is done by writing at the end, on its own line, the name of the variable::
+
+   $color
+
+The script should now look like this::
+
+   $color = [0.5, 0.5, 1];
+   $color
+
+Click :guilabel:`OK`, and you'll render your first script!
+
+   .. image:: /images/seexpr/SeExpr_first_render.png
+
+.. warning::
+   To be absolutely precise, SeExpr **has no color management**.
+   It always renders textures as :ref:`32-bit float <bit_depth>`,
+   :ref:`gamma corrected <linear_and_gamma>`,
+   sRGB images. Krita transforms them to your document's color space
+   using the sRGB-elle-V2-srgbtrc.icc profile.
+
+   See :ref:`color_managed_workflow` for what this means.
+
+**********************************
+Managing your script using widgets
+**********************************
+
+There is also another way to define and edit your variables.
+Open the fill layer's properties by right clicking on :guilabel:`Fill Layer 1`,
+and selecting :guilabel:`Layer Properties...`.
+
+.. image:: /images/seexpr/SeExpr_prop_1.png
+
+Notice the middle box? Once it detects a syntactically correct script,
+SeExpr enables a whole chunk of knobs to manage individual variables.
+In our example above, you can change ``$color``'s in three ways:
+
+- enter the red, green, or blue channel's value in the input fields
+- move the little colored sliders to change the respective channel
+- click on the preview square to the left of the boxes, to select a completely new color.
+
+The last button on the middle box is always :guilabel:`Add new variable`.
+Click it and this dialog will open:
+
+.. image:: /images/seexpr/SeExpr_add_variable.png
+
+This dialog shows you all the types of variables that SeExpr accepts:
+
+.. glossary ::
+
+   Curve
+      A sampleable curve of floating-point numbers.
+
+   Color curve
+      A sampleable curve of colors.
+
+   Integers and Floats
+      Numbers.
+
+   Vector
+      A triplet of floats.
+
+   Color
+      A vector representing a RGB color.
+
+   Swatch
+      A list of Colors.
+
+   String
+      Usually single words.
+
+For instance, you could replicate ``$color`` in the :guilabel:`Vector` tab:
+
+.. image:: /images/seexpr/SeExpr_add_variable_vector.png
 
 **************************
 Creating your first preset
@@ -103,13 +207,13 @@ The dialog provides the following choices for setting a thumbnail:
 
    Load Existing Thumbnail
       If the preset already has a thumbnail (for instance, if you created it from an existing preset), this button will load and apply it.
-   
+
    Load Image
       Applies an image from the filesystem as a thumbnail.
-   
+
    Render Script to Thumbnail
       Renders your script to a 256x256 texture, and applies the latter as a thumbnail.
-   
+
    Clear Thumbnail
       Deletes the thumbnail. Note that, if the preset is a copy of an existing one, this can be reverted by clicking :guilabel:`Load Existing Thumbnail`.
 
@@ -133,6 +237,13 @@ entering the new name, and clicking on :guilabel:`Save`:
 Bundling your presets
 *********************
 
-Sharing your scripts is easy! SeExpr script presets are just like any other 
-resource in Krita. Follow the instructions in :ref:`resource_management` to 
+Sharing your scripts is easy! SeExpr script presets are just like any other
+resource in Krita. Follow the instructions in :ref:`resource_management` to
 create your own bundles.
+
+.. seealso::
+
+   - `"Procedural texture generator (example and wishes)" on Krita Artists <https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/7638>`_
+   - :ref:`seexpr`
+   - `Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_
+   - `The Book of Shaders <https://thebookofshaders.com/>`_
