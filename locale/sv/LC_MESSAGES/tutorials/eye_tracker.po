@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-12 03:44+0200\n"
-"PO-Revision-Date: 2019-05-27 20:29+0100\n"
+"PO-Revision-Date: 2020-07-31 20:05+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,29 +15,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 19.04.3\n"
 
 #: ../../tutorials/eye_tracker.rst:None
 msgid ""
 ".. image:: images/eyetracker_layout_screenshot.png\n"
 "   :alt: Screenshot of Krita when used with an eye tracker."
 msgstr ""
+".. image:: images/eyetracker_layout_screenshot.png\n"
+"   :alt: Skärmbild av Krita vid användning med blickspårning."
 
 #: ../../tutorials/eye_tracker.rst:1
 msgid "Setting up Krita to use with an eye tracker. "
-msgstr ""
+msgstr "Ställa in Krita för att använda med blickspårning. "
 
 #: ../../tutorials/eye_tracker.rst:1
 msgid "- H. Turgut Uyar <hturgut@uyar.info> "
-msgstr ""
+msgstr "- H. Turgut Uyar <hturgut@uyar.info> "
 
 #: ../../tutorials/eye_tracker.rst:1
 msgid "GNU free documentation license 1.3 or later."
-msgstr ""
+msgstr "GNU fri dokumentationslicens 1.3 eller senare."
 
 #: ../../tutorials/eye_tracker.rst:10
 msgid "Eye Tracker"
-msgstr ""
+msgstr "Blickspårning"
 
 #: ../../tutorials/eye_tracker.rst:10
 msgid "User Interface"
@@ -49,11 +51,11 @@ msgstr "Handikappstöd"
 
 #: ../../tutorials/eye_tracker.rst:10
 msgid "Physical Disability"
-msgstr ""
+msgstr "Invaliditet"
 
 #: ../../tutorials/eye_tracker.rst:17
 msgid "An Example Setup for Using Krita with an Eye Tracker"
-msgstr ""
+msgstr "Ett exempel på inställning för användning av Krita med blickspårning"
 
 #: ../../tutorials/eye_tracker.rst:21
 msgid ""
@@ -61,6 +63,9 @@ msgid ""
 "user. The information might not be as applicable when using different eye "
 "tracker devices or different control software."
 msgstr ""
+"Detta är inte ett referensdokument. Det är enbart baserat på en användares"
+" erfarenheter. Informationen kanske inte är lika tillämplig vid användning av"
+" andra blickspårningsenheter eller annan kontrollprogramvara."
 
 #: ../../tutorials/eye_tracker.rst:25
 msgid ""
@@ -190,6 +195,17 @@ msgid ""
 "copy \"C:\\Users\\USERNAME\\Pictures\\blank.kra\" \"%filename%\"\n"
 "start \"C:\\Program Files\\Krita (x64)\\bin\\krita.exe\" \"%filename%\""
 msgstr ""
+"@echo off\n"
+"for /f \"tokens=2 delims==\" %%a in ('wmic OS Get localdatetime /value') do "
+"set \"dt=%%a\"\n"
+"set \"YY=%dt:~2,2%\" & set \"YYYY=%dt:~0,4%\" & set \"MM=%dt:~4,2%\" & set "
+"\"DD=%dt:~6,2%\"\n"
+"set \"HH=%dt:~8,2%\" & set \"Min=%dt:~10,2%\" & set \"Sec=%dt:~12,2%\"\n"
+"set \"datestamp=%YYYY%%MM%%DD%\" & set \"timestamp=%HH%%Min%%Sec%\"\n"
+"set \"fullstamp=%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%\"\n"
+"set filename=USERNAME_%fullstamp%.kra\n"
+"copy \"C:\\Users\\USERNAME\\Pictures\\blank.kra\" \"%filename%\"\n"
+"start \"C:\\Program Files\\Krita (x64)\\bin\\krita.exe\" \"%filename%\""
 
 #: ../../tutorials/eye_tracker.rst:109
 msgid ""
@@ -275,7 +291,7 @@ msgstr ""
 
 #: ../../tutorials/eye_tracker.rst:164
 msgid "LockAllDockerPanels=true"
-msgstr ""
+msgstr "LockAllDockerPanels=true"
 
 #: ../../tutorials/eye_tracker.rst:166
 msgid ""
