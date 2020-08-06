@@ -26,6 +26,14 @@ combiner".
 
 SeExpr is available within Krita as a Fill Layer.
 
+.. seealso::
+    - :ref:`seexpr`
+    - :ref:`seexpr_fill_layer`
+    - :ref:`resource_seexpr_scripts`
+    - `"Procedural texture generator (example and wishes)" on Krita Artists <https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/7638>`_
+    - `Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_
+    - `The Book of Shaders <https://thebookofshaders.com/>`_
+
 **********
 Background
 **********
@@ -245,10 +253,3 @@ Bundling your presets
 Sharing your scripts is easy! SeExpr script presets are just like any other
 resource in Krita. Follow the instructions in :ref:`resource_management` to
 create your own bundles.
-
-.. seealso::
-
-   - `"Procedural texture generator (example and wishes)" on Krita Artists <https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/7638>`_
-   - :ref:`seexpr`
-   - `Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_
-   - `The Book of Shaders <https://thebookofshaders.com/>`_

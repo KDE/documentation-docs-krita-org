@@ -20,7 +20,13 @@ SeExpr scripts allow you to render dynamically generated textures.
 They are saved as .se files.
 They can be used as fill for generated layers.
 
-.. seealso:: :ref:`seexpr_tut_intro`
+.. seealso::
+    - :ref:`seexpr_tut_intro`
+    - :ref:`seexpr`
+    - :ref:`seexpr_fill_layer`
+    - `"Procedural texture generator (example and wishes)" on Krita Artists <https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/7638>`_
+    - `Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_
+    - `The Book of Shaders <https://thebookofshaders.com/>`_
 
 Adding new scripts
 ------------------

@@ -23,6 +23,14 @@ It is a heavily edited version of the official `user documentation <https://wdas
     - Source code at `KDE Invent <https://invent.kde.org/lsegovia/seexpr>`_
     - Disney's SeExpr `API Documentation <http://wdas.github.io/SeExpr/doxygen/>`_
 
+.. seealso::
+    - :ref:`seexpr_tut_intro`
+    - :ref:`seexpr_fill_layer`
+    - :ref:`resource_seexpr_scripts`
+    - `"Procedural texture generator (example and wishes)" on Krita Artists <https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/7638>`_
+    - `Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_
+    - `The Book of Shaders <https://thebookofshaders.com/>`_
+
 .. contents::
 
 *********

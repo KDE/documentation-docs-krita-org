@@ -23,6 +23,8 @@ Fills the layer with a pattern specified through Disney Animation's
 .. seealso::
     - :ref:`seexpr_tut_intro`
     - :ref:`seexpr`
+    - :ref:`resource_seexpr_scripts`
+    - `"Procedural texture generator (example and wishes)" on Krita Artists <https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/7638>`_
     - `Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_
     - `The Book of Shaders <https://thebookofshaders.com/>`_
 
