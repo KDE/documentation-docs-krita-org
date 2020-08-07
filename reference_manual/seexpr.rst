@@ -72,7 +72,7 @@ Control Structures
 ******************
 
 SeExpr, unlike many languages, provides **no control structures** except
-conditionals. These are known as the *ternary operator*::
+a form of `if` statements, known as the *ternary operator*::
 
     $u = $i < .5 ? 0.0 : 10.0
 
