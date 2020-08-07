@@ -50,7 +50,7 @@ accessed by :kbd:`Ctrl+Space`.
         Pixel position in normalized coordinates.
 
     $w, $h
-        Image's width and height.
+        Image's width and height in pixels.
 
 Local Variables
 ===============
