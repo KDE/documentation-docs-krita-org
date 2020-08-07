@@ -114,7 +114,7 @@ color variables are defined by a triplet of numbers known as a *vector*.
 We'll start by defining the ``$color`` variable and giving it a value.
 
 Go to the text box, and clear it if it has any text.
-Then, define and set ``$color`` to something like :math:`[0.5, 0.5, 1]`
+Then, define and set ``$color`` to something like ``[0.5, 0.5, 1]``
 (half lit red, half lit green, fully lit blue)::
 
    $color = [0.5, 0.5, 1];

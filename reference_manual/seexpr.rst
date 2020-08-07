@@ -198,7 +198,7 @@ specified range.
 
         $var2 = [0, 0, 0] # 0.000, 10.000
 
-    The latter is very helpful; SeExpr considers vectors with range :math:`[0, 1]` as colors::
+    The latter is very helpful; SeExpr considers vectors with range ``[0, 1]`` as colors::
 
         # this is a dark red
         $color = [0.5, 0, 0] # 0.000, 1.000
@@ -234,15 +234,15 @@ Color, Masking, and Remapping Functions
 .. glossary::
 
     float **bias** ( float x, float b)
-        Variation of gamma where control parameter goes from :math:`0` to :math:`1` with
-        values :math:`\gt 0.5` pulling the curve up and values :math:`\lt 0.5` pulling the curve
-        down.  Defined as :math:`pow(x, log(b)/log(0.5))`.
+        Variation of gamma where control parameter goes from ``0`` to ``1`` with
+        values ``> 0.5`` pulling the curve up and values ``< 0.5`` pulling the curve
+        down.  Defined as ``pow(x, log(b)/log(0.5))``.
 
     float **boxstep** ( float x, float a )
     float **gaussstep** ( float x, float a, float b )
     float **linearstep** ( float x, float a, float b )
     float **smoothstep** ( float x, float a, float b )
-        The step functions are zero for :math:`x \lt a` and one for :math:`x \gt b` (or :math:`x \gt a` in
+        The step functions are zero for ``x < a`` and one for ``x > b`` (or ``x > a`` in
         the case of boxstep).  Between ``a`` and ``b``, the value changes
         continuously between zero and one.  The ``gausstep`` function uses the
         standard Gaussian "bell" curve which is based on an exponential
@@ -252,30 +252,30 @@ Color, Masking, and Remapping Functions
         and zero.
 
     float **clamp** ( float x, float lo, float hi )
-        Constrain :math:`x` to range :math:`[lo, hi]`.
+        Constrain ``x`` to range ``[lo, hi]``.
 
     float **compress** ( float x, float lo, float hi ) 
-        Compress the dynamic range from :math:`[0, 1]` to :math:`[lo, hi]`.
+        Compress the dynamic range from ``[0, 1]`` to ``[lo, hi]``.
 
     float **contrast** ( float x, float c )
-        Adjust the contrast.  For :math:`c` from :math:`0` to :math:`0.5`, the contrast
-        is decreased.  For :math:`c \gt 0.5`, the contrast is increased.
+        Adjust the contrast.  For ``c`` from ``0`` to ``0.5``, the contrast
+        is decreased.  For ``c > 0.5``, the contrast is increased.
 
     float **expand** ( float x, float lo, float hi )
-        Expand the dynamic range from :math:`[lo, hi]` to :math:`[0, 1]`.
+        Expand the dynamic range from ``[lo, hi]`` to ``[0, 1]``.
 
     float **fit** ( float x, float a1, float b1, float a2, float b2 )
-        Linear remapping of :math:`[a1..x..b1]` to :math:`[a2..x..b2]`
+        Linear remapping of ``[a1..x..b1]`` to ``[a2..x..b2]``
 
     float **gamma** ( float x, float g)
-        :math:`pow(x, 1/g)`
+        ``pow(x, 1/g)``
 
     float **invert** ( float x )
-        Invert the value.  Defined as :math:`1 - x`.
+        Invert the value.  Defined as ``1 - x``.
 
     color **hsi** ( color x, float h, float s, float i, float map=1 )
-        The ``hsi``  function shifts the hue by :math:`h` (in degrees) and
-        scales thesaturation and intensity by :math:`s` and :math:`i`
+        The ``hsi``  function shifts the hue by ``h`` (in degrees) and
+        scales thesaturation and intensity by ``s`` and ``i``
         respectively.  A map may be
         supplied which will control the shift - the full shift will happen
         when the map is one and no shift will happen when the map is zero. 
@@ -284,27 +284,27 @@ Color, Masking, and Remapping Functions
     color **hsltorgb** ( color hsl )
     color **rgbtohsl** ( color rgb )
         RGB to HSL color space conversion. 
-        HSL is Hue, Saturation, Lightness (all in range :math:`[0, 1]`).
+        HSL is Hue, Saturation, Lightness (all in range ``[0, 1]``).
         These functions have also been extended to support RGB and HSL values
-        outside of the range *[0, 1]* in a reasonable way.  For any RGB or HSL
+        outside of the range ``[0, 1]`` in a reasonable way.  For any RGB or HSL
         value (except for negative values), the conversion is well-defined
         and reversible.
 
     color **midhsi** ( color x, float h, float s, float i, float map, float falloff=1, int interp=0 )
         The ``midhsi`` function is just like the ``hsi`` function except that the
-        control map is centered around the mid point (value of :math:`0.5`) and can
+        control map is centered around the mid point (value of ``0.5``) and can
         scale the shift in both directions. At the mid point, no shift
-        happens.  At :math:`1.0`, the full shift happens, and at :math:`0.0`, the full
+        happens.  At *1.0*, the full shift happens, and at ``0.0``, the full
         inverse shift happens.  Additional ``falloff`` and ``interp`` controls are
         provided to adjust the map using the ``remap`` function.  The default
         ``falloff`` and ``interp`` values result in no remapping.
 
     float **mix** ( float a, float b, float alpha )
         Blend of a and b according to alpha.  Defined as
-        :math:`a*(1-alpha) +b*alpha`.
+        ``a*(1-alpha) +b*alpha``.
 
     float **remap** ( float x, float source, float range, float falloff, int interp )
-        General remapping function.  When :math:`x` is within :math:`\pm range` of source,
+        General remapping function.  When ``x`` is within ``± range`` of source,
         the result is one.  The result falls to zero beyond that range over
         ``falloff`` distance.  The falloff shape is controlled by ``interp``.
 
@@ -379,12 +379,12 @@ Noise Functions
 
             ``pnoise`` outputs periodic noise.
 
-            ``snoise`` and ``snoise4`` output signed noise with range :math:`[-1, 1]`.
+            ``snoise`` and ``snoise4`` output signed noise with range ``[-1, 1]``.
 
             ``vnoise`` outputs signed vector noise.
 
     float **rand** ( [float min, float max], [float seed] )
-        Random number between *[min, max]* (or *[0, 1]* if unspecified).
+        Random number between ``[min, max]`` (or ``[0, 1]`` if unspecified).
         If a seed is supplied, it will be used in addition to the internal
         seeds and may be used to create multiple distinct generators.
 
@@ -425,12 +425,12 @@ Selection Functions
 
     float **choose** ( float index, float choice1, float choice2, [...] )
         Chooses one of the supplied choices based on the index (assumed to be
-        in range :math:`[0, 1]`).
+        in range ``[0, 1]``).
 
     int **cycle** ( int index, int loRange, int hiRange )
         Cycles through values between loRange and hiRange based on supplied
         index.  This is an offset ``mod`` function.  The result is computed as
-        :math:`loRange + value % (hiRange-loRange+1)`.
+        ``loRange + value % (hiRange-loRange+1)``.
 
     int **pick** ( float index, int loRange, int hiRange, [ float weights, ... ] )
         Picks values randomly between loRange and hiRange based on supplied
@@ -440,7 +440,7 @@ Selection Functions
 
     float **wchoose** ( float index, float choice1, float weight1, float choice2, float weight2, [...] )
         Chooses one of the supplied choices based on the index (assumed to be
-        in range :math:`[0, 1]`). The values will be distributed according to
+        in range ``[0, 1]``). The values will be distributed according to
         the supplied weights.
 
 .. hint::
@@ -493,7 +493,7 @@ General Mathematical Constants and Functions
         Next lower integer.
 
     float **fmod** ( float x, float y )
-        Remainder of :math:`x / y`.
+        Remainder of ``x / y``.
 
         .. note:: Also available as the ``%`` operator.
 
@@ -554,10 +554,10 @@ Trigonometry Functions
         Arc tangent in degrees.
 
     float **atan2** ( float y, float x)
-        Arc tangent of :math:`y/x` between :math:`-\pi` and :math:`\pi`.
+        Arc tangent of ``y/x`` between ``-PI`` and ``PI``.
 
     float **atan2d** ( float y, float x )
-        Arc tangent in degrees of :math:`y/x` between :math:`-180º` and :math:`180º`.
+        Arc tangent in degrees of ``y/x`` between ``-180º`` and ``180º``.
 
     float **atanh** ( float x )
         Hyperbolic arc tangent.
@@ -575,7 +575,7 @@ Trigonometry Functions
         Radians to degrees.
 
     float **hypot** ( float x, float y )
-        Length of 2D vector :math:`[x, y]`.
+        Length of 2D vector ``[x, y]``.
 
     float **rad** ( float x )
         Degrees to radians.
@@ -638,7 +638,7 @@ Vector Support
 
 *Vectors* (points, colors, or 3D vectors) may be intermixed with *scalars*
 (simple floating point values).  If a scalar is used in a vector context, it is
-replicated into the three components, e.g. :math:`0.5` becomes :math:`[0.5, 0.5, 0.5]`. 
+replicated into the three components, e.g. ``0.5`` becomes ``[0.5, 0.5, 0.5]``. 
 
 If a vector is used in a scalar context, only the first component is used.
 One of the benefits of this is that all the functions that are defined
@@ -689,7 +689,7 @@ by the following functions.
 
     float **spline** ( float param, float y1, float y2, float y3, float y4, [...] )
         Interpolates a set of values to the parameter specified where
-        ``y1``, ..., ``yn`` are distributed evenly from :math:`[0, 1]`.
+        ``y1``, ..., ``yn`` are distributed evenly from ``[0, 1]``.
 
 **************
 Custom Plugins
