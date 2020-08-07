@@ -7,6 +7,7 @@
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - Scott Petrovic
              - Alan
+             - L. E. Segovia <amy@amyspark.me>
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Layers, Fill, Generator
