@@ -32,13 +32,13 @@ Screentone Type
 
         From left to right, top to bottom: 
         dot pattern with round shape, dot pattern with ellipse shape, 
-        dot pattern with diamond shape, dot pattern with square shape, 
+        dot pattern with a diamond shape, dot pattern with a square shape, 
         line pattern with straight shape, line pattern with sine wave shape, line pattern with triangular wave shape, 
-        line pattern with sawtooth wave shape and line pattern with curtain shape.
+        line pattern with sawtooth wave shape and line pattern with a curtain shape.
 
 Transformation
     Select how the pattern is arranged geometrically in the image (position, size, rotation, shear).  
-    Some patterns benefit from the capability of choosing horizontal and vertical sizes separatelly. For example, the sin wave lines pattern has a small period by default and by choosing a large horizontal size the period will look also larger.
+    Some patterns benefit from the capability of choosing horizontal and vertical sizes separately. For example, the sin wave lines pattern has a small period by default and by choosing a large horizontal size the period will look also larger.
 
     .. figure:: /images/layers/fill_layer_screentone_transformation.png
 
@@ -53,10 +53,10 @@ Postprocessing
     Invert
         This flips what is treated as foreground and background.
     Brightness & Contrast
-        The brightness controls how close to the foreground or background color the pattern apperars (how *dark* or *light* in the case of black foreground and white background). 
+        The brightness controls how close to the foreground or background color the pattern appears (how *dark* or *light* in the case of black foreground and white background). 
         So if you want to simulate small dots, for example, set the brightness to a high value and to obtain big dots set it to a low value.
         
-        The contrast controls how smooth or sharp is the transition between the foreground and background colors. By default the contrast is set to 50% (smooth). 
+        The contrast controls how smooth or sharp is the transition between the foreground and background colors. By default, the contrast is set to 50% (smooth).
         To achieve the typical sharp borders the contrast must be set to a higher value.
 
     .. figure:: /images/layers/fill_layer_screentone_postprocessing.png

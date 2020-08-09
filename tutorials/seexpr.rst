@@ -42,7 +42,7 @@ To understand what SeExpr is about, we need to differentiate between two types
 of graphics, *raster* and *procedural*.
 
 The vast majority of the computer-generated stuff you see every day belong to
-the first type-- images like photos, your favourite anime screenshots, memes,
+the first type-- images like photos, your favorite anime screenshots, memes,
 are all a multitude of tiny little dots of color, or *pixels*, arranged into a
 grid.
 
@@ -80,7 +80,7 @@ SVGs, employ mathematic formulae like splines and Bézier curves to describe a
 shape. As they are mathematically defined, they can be resized to suit your 
 needs without losing resolution.
 
-SeExpr belongs to a different class, *procedural graphics*. Similarly to vector
+SeExpr belongs to a different class, *procedural graphics*. Similar to vector
 graphics, procedural graphics only need a few KBs of secondary storage for
 their definition. But they are not defined by mathematical formulae; you
 actually *code* how the color is calculated at each point of the texture.
@@ -100,7 +100,7 @@ window:
 
    .. image:: /images/seexpr/SeExpr_editor.png
 
-The SeExpr generator dialog is divided in two tabs. For now, we'll stay on
+The SeExpr generator dialog is divided into two tabs. For now, we'll stay on
 :guilabel:`Options`.
 
 .. note::
@@ -137,7 +137,7 @@ Click :guilabel:`OK`, and you'll render your first script!
    To be absolutely precise, SeExpr **has no color management**.
    It always renders textures as :ref:`32-bit float <bit_depth>`,
    :ref:`gamma corrected <linear_and_gamma>`,
-   sRGB images. Krita transforms them to your document's color space
+   sRGB images. Krita transforms them into your document's color space
    using the sRGB-elle-V2-srgbtrc.icc profile.
 
    See :ref:`color_managed_workflow` for what this means.
@@ -147,7 +147,7 @@ Managing your script using widgets
 **********************************
 
 There is also another way to define and edit your variables.
-Open the fill layer's properties by right clicking on :guilabel:`Fill Layer 1`,
+Open the fill layer's properties by right-clicking on :guilabel:`Fill Layer 1`,
 and selecting :guilabel:`Layer Properties...`.
 
 .. image:: /images/seexpr/SeExpr_prop_1.png
@@ -183,7 +183,7 @@ This dialog shows you all the types of variables that SeExpr accepts:
       A triplet of floats.
 
    Color
-      A vector representing a RGB color.
+      A vector representing an RGB color.
 
    Swatch
       A list of Colors.
@@ -201,7 +201,7 @@ Creating your first preset
 
 Once your script is ready, you can reuse it by making a preset.
 
-You can create one through the top bar of the Options tab:
+You can create one through the top bar of the :guilabel:`Options` tab:
 
    .. image:: /images/seexpr/SeExpr_editor.png
 

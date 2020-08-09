@@ -7,7 +7,7 @@
    :authors: - L. E. Segovia <amy@amyspark.me>
    :license: GNU free documentation license 1.3 or later.
 
-.. index:: Resources, SeExor
+.. index:: Resources, SeExpr
 .. _resource_seexpr_scripts:
 
 SeExpr Scripts

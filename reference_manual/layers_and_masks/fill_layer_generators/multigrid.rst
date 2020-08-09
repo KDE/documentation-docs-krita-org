@@ -48,7 +48,7 @@ Lines
 ~~~~~
 
 Line Width
-    The width of the outlines of the rhombs in image pixels. Due the way the rhombs are drawn, there is still a hairfine line visible at 0 px.
+    The width of the outlines of the rhombs in image pixels. Due to the way the rhombs are drawn, there is still a hairfine line visible at 0 px.
 Connector Lines
     This optionally draws lines between the different sides of the shape. This is typically used to show that a specific tiling has certain matching rules, but it also gives cool looking results.
     
@@ -67,14 +67,14 @@ Colors
 
    Image showing the Star Penrose Tiling with 29 divisions and connector lines at the acute angles. The complex gradient and the combination of ratio and index to color the image results in some of the more impressive results that can be gotten from this fill layer.
 
-This section controls all the colors, all grouped together because krita's color buttons allow drag and dropping colors to one another. You can change the color for the outlines and the connector lines, and there is a gradient for coloring the individuals rhombs.
+This section controls all the colors, all grouped together because Krita's color buttons allow drag and dropping colors to one another. You can change the color for the outlines and the connector lines, and there is a gradient for coloring the individual rhombs.
 
 The color factors determine which properties of each rhomb is used to determine it's coloring. This value is used as a multiplier, to finally result in a value that can be used to get the value from the gradient.
 
 Ratio
     This colors the rhombs based on their ratio. Thin rhombs have a low ratio, thick rhombs have a high ratio, and perfect squares have the largest ratio.
 Intersect
-    This colors the thombs based on which intersecting lines resulted in this rhomb. In effect, this colors the rhomb depending on which side of the hyperlattice the rhomb is on, as is especially clear when setting the dimension to 3.
+    This colors the rhombs based on which intersecting lines resulted in this rhomb. In effect, this colors the rhomb depending on which side of the hyperlattice the rhomb is on, as is especially clear when setting the dimension to 3.
 Index
     This colors the rhombs based on the index of the intersecting lines from the center. In effect, rhombs closer to the center will have a lower value, while rhombs further from the center will have a higher value.
     

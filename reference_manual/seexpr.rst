@@ -215,7 +215,7 @@ Logging Functions
 
     void **printf** ( string format, [param0, param1, ...] )
         Prints a string to stdout that is formatted as given. Formatting
-        parameters possible are ``%f`` for float (takes first component of vector
+        parameters possible are ``%f`` for float (takes the first component of vector
         argument) or ``%v`` for vector.
 
         .. hint::
@@ -275,7 +275,7 @@ Color, Masking, and Remapping Functions
 
     color **hsi** ( color x, float h, float s, float i, float map=1 )
         The ``hsi``  function shifts the hue by ``h`` (in degrees) and
-        scales thesaturation and intensity by ``s`` and ``i``
+        scales the saturation and intensity by ``s`` and ``i``
         respectively.  A map may be
         supplied which will control the shift - the full shift will happen
         when the map is one and no shift will happen when the map is zero. 
@@ -284,7 +284,7 @@ Color, Masking, and Remapping Functions
     color **hsltorgb** ( color hsl )
     color **rgbtohsl** ( color rgb )
         RGB to HSL color space conversion. 
-        HSL is Hue, Saturation, Lightness (all in range ``[0, 1]``).
+        HSL is Hue, Saturation, Lightness (all in the range ``[0, 1]``).
         These functions have also been extended to support RGB and HSL values
         outside of the range ``[0, 1]`` in a reasonable way.  For any RGB or HSL
         value (except for negative values), the conversion is well-defined
@@ -425,7 +425,7 @@ Selection Functions
 
     float **choose** ( float index, float choice1, float choice2, [...] )
         Chooses one of the supplied choices based on the index (assumed to be
-        in range ``[0, 1]``).
+        in the range ``[0, 1]``).
 
     int **cycle** ( int index, int loRange, int hiRange )
         Cycles through values between loRange and hiRange based on supplied
@@ -626,7 +626,7 @@ Vector Functions
         Vector orthographic to two vectors.
 
     vector **rotate** ( vector v, vector axis, float angle )
-        Rotates ``v`` around axis by given ``angle`` (in radians).
+        Rotates ``v`` around axis by the given ``angle`` (in radians).
 
     vector **up** ( vector v, vector up )
         Rotates ``v`` such that the Y axis points in the given ``up`` direction.
