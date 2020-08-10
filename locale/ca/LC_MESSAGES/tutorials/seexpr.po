@@ -10,13 +10,13 @@ msgstr ""
 "Project-Id-Version: tutorials\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-08 02:00+0200\n"
-"PO-Revision-Date: 2020-08-08 23:15+0100\n"
+"PO-Revision-Date: 2020-08-09 22:45+0100\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ca\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 2.0\n"
 
@@ -46,24 +46,26 @@ msgstr "Introducció al SeExpr"
 
 #: ../../tutorials/seexpr.rst:16
 msgid "This document will introduce you to the SeExpr expression language."
-msgstr "Aquest document us introduirà en el llenguatge d'expressions SeExpr."
+msgstr "Aquest document presentarà el llenguatge d'expressions SeExpr."
 
 #: ../../tutorials/seexpr.rst:20
 msgid "What is SeExpr?"
 msgstr "Què és SeExpr?"
 
+# skip-rule: t-acc_obe
 #: ../../tutorials/seexpr.rst:22
 msgid ""
-"SeExpr is an embeddable expression language, designed by Disney Animation,"
-" that allows host applications to render dynamically generated content. Pixar"
-" calls it `in its documentation <https://renderman.pixar.com/resources/RenderM"
-"an_20/PxrSeExpr.html>`_ a \"scriptable pattern generator and combiner\"."
+"SeExpr is an embeddable expression language, designed by Disney Animation, "
+"that allows host applications to render dynamically generated content. Pixar "
+"calls it `in its documentation <https://renderman.pixar.com/resources/"
+"RenderMan_20/PxrSeExpr.html>`_ a \"scriptable pattern generator and combiner"
+"\"."
 msgstr ""
-"El SeExpr és un llenguatge d'expressions incrustable, dissenyat per la Disney"
-" Animation, que permet a les aplicacions amfitriones que renderitzin"
-" contingut generat dinàmicament. Pixar l'anomena `a la seva documentació <"
-"https://renderman.pixar.com/resources/RenderMan_20/PxrSeExpr.html>`_ un"
-" «generador i combinador de patrons que es pot fer amb scripts\"."
+"El SeExpr és un llenguatge d'expressions incrustable, dissenyat per la "
+"Disney Animation, que permet a les aplicacions amfitriones que renderitzin "
+"contingut generat dinàmicament. Pixar l'anomena `a la seva documentació "
+"<https://renderman.pixar.com/resources/RenderMan_20/PxrSeExpr.html>`_ un "
+"«generador i combinador de patrons que es pot fer amb scripts\"."
 
 #: ../../tutorials/seexpr.rst:27
 msgid "SeExpr is available within Krita as a Fill Layer."
@@ -81,20 +83,23 @@ msgstr ":ref:`seexpr_fill_layer`"
 msgid ":ref:`resource_seexpr_scripts`"
 msgstr ":ref:`resource_seexpr_scripts`"
 
+# skip-rule: t-acc_obe
 #: ../../tutorials/seexpr.rst:33
 msgid ""
-"`\"Procedural texture generator (example and wishes)\" on Krita Artists <"
-"https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/76"
-"38>`_"
+"`\"Procedural texture generator (example and wishes)\" on Krita Artists "
+"<https://krita-artists.org/t/procedural-texture-generator-example-and-"
+"wishes/7638>`_"
 msgstr ""
-"`«Generador de textures procedimental (exemple i desitjos)» al Krita "
-"Artists <https://krita-artists.org/t/procedural-texture-generator-example-and"
-"-wishes/7638>`_"
+"`«Generador de textures procedimental (exemple i desitjos)» al Krita Artists "
+"<https://krita-artists.org/t/procedural-texture-generator-example-and-"
+"wishes/7638>`_"
 
+# skip-rule: t-acc_obe
 #: ../../tutorials/seexpr.rst:34
 msgid "`Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_"
 msgstr "`Articles de l'Inigo Quilez <https://iquilezles.org/www/index.htm>`_"
 
+# skip-rule: t-acc_obe
 #: ../../tutorials/seexpr.rst:35
 msgid "`The Book of Shaders <https://thebookofshaders.com/>`_"
 msgstr ""
@@ -107,58 +112,57 @@ msgstr "Rerefons"
 
 #: ../../tutorials/seexpr.rst:41
 msgid ""
-"To understand what SeExpr is about, we need to differentiate between two"
-" types of graphics, *raster* and *procedural*."
+"To understand what SeExpr is about, we need to differentiate between two "
+"types of graphics, *raster* and *procedural*."
 msgstr ""
-"Per entendre què és el SeExpr, cal diferenciar entre dos tipus de gràfics,"
-" *ràster* i *procedimental*."
+"Per entendre què és el SeExpr, cal diferenciar entre dos tipus de gràfics, "
+"*ràster* i *procedimental*."
 
 #: ../../tutorials/seexpr.rst:44
 msgid ""
-"The vast majority of the computer-generated stuff you see every day belong to"
-" the first type-- images like photos, your favourite anime screenshots,"
-" memes, are all a multitude of tiny little dots of color, or *pixels*,"
-" arranged into a grid."
+"The vast majority of the computer-generated stuff you see every day belong "
+"to the first type-- images like photos, your favourite anime screenshots, "
+"memes, are all a multitude of tiny little dots of color, or *pixels*, "
+"arranged into a grid."
 msgstr ""
-"La gran majoria dels elements generats per ordinador que es veuen cada dia"
-" pertanyen al primer tipus: imatges com fotos, les captures de pantalla"
-" d'anime preferides, els mems, tots són una multitud de punts petits de"
-" color, o *píxels*, arranjats en una quadrícula."
+"La gran majoria dels elements generats per ordinador que es veuen cada dia "
+"pertanyen al primer tipus: imatges com fotos, les captures de pantalla "
+"d'anime preferides, els mems, tots són una multitud de punts petits de "
+"color, o *píxels*, arranjats en una quadrícula."
 
 #: ../../tutorials/seexpr.rst:49
 msgid ""
-"Raster graphics have two drawbacks. First, once you create them, their"
-" resolution is **fixed**. You cannot zoom in and magically get any more"
-" detail. And if you need to change them, either you go back to the source and"
-" sample it again (which is sometimes impossible), or edit it with a raster"
-" graphics program, like Krita."
+"Raster graphics have two drawbacks. First, once you create them, their "
+"resolution is **fixed**. You cannot zoom in and magically get any more "
+"detail. And if you need to change them, either you go back to the source and "
+"sample it again (which is sometimes impossible), or edit it with a raster "
+"graphics program, like Krita."
 msgstr ""
-"Els gràfics ràster tenen dos inconvenients. Primer, una vegada creats, la"
-" seva resolution és **fixa**. No es pot fer zoom i màgicament aconseguir més"
-" detall. I si cal canviar-los, o es torna a l'origen i es trona a mostrejar"
-" (que a vegades és impossible), o s'edita amb un programa de gràfics ràster,"
-" com el Krita."
+"Els gràfics ràster tenen dos inconvenients. Primer, una vegada creats, la "
+"seva resolution és **fixa**. No es pot fer zoom i màgicament aconseguir més "
+"detall. I si cal canviar-los, o es torna a l'origen i es trona a mostrejar "
+"(que a vegades és impossible), o s'edita amb un programa de gràfics ràster, "
+"com el Krita."
 
 #: ../../tutorials/seexpr.rst:55
 msgid ""
-"One of the biggest problems, however, is that we are always limited by the"
-" **space** our programs can use; either secondary storage, like SD cards, or"
-" RAM. Unless compressed, image memory needs are `quadratic in the size of the"
-" image <https://blender.stackexchange.com/questions/112505/why-is-my-half-reso"
-"lution-render-taking-a-quarter-of-the-time-of-the-full-one>`_. For a quick"
-" example, the :ref:`create_new_document` dialog of Krita tells you three bits"
-" of information: its size in pixels, the size of the pixel itself, and *the"
-" total memory needed*."
+"One of the biggest problems, however, is that we are always limited by the "
+"**space** our programs can use; either secondary storage, like SD cards, or "
+"RAM. Unless compressed, image memory needs are `quadratic in the size of the "
+"image <https://blender.stackexchange.com/questions/112505/why-is-my-half-"
+"resolution-render-taking-a-quarter-of-the-time-of-the-full-one>`_. For a "
+"quick example, the :ref:`create_new_document` dialog of Krita tells you "
+"three bits of information: its size in pixels, the size of the pixel itself, "
+"and *the total memory needed*."
 msgstr ""
-"Tanmateix, un dels problems més grans és que sempre s'està limitat per"
-" l'**espai** que els programes poden usar; sigui l'emmagatzematge secundari,"
-" com les targetes SD, o la RAM. Llevat que estigui comprimida, la memòria de"
-" la imatge necessita el `quadrat de la mida de la imatge <"
-"https://blender.stackexchange.com/questions/112505/why-is-my-half-resolution-r"
-"ender-taking-a-quarter-of-the-time-of-the-full-one>`_. Per a un exemple"
-" ràpid, el diàleg del Krita :ref:`create_new_document` dóna tres dades"
-" d'informació: la seva mida en píxels, la mida del propi píxel, i *la memòria"
-" total necessària*."
+"Tanmateix, un dels problems més grans és que sempre s'està limitat per "
+"l'**espai** que els programes poden usar; sigui l'emmagatzematge secundari, "
+"com les targetes SD, o la RAM. Llevat que estigui comprimida, la memòria de "
+"la imatge necessita el `quadrat de la mida de la imatge <https://blender."
+"stackexchange.com/questions/112505/why-is-my-half-resolution-render-taking-a-"
+"quarter-of-the-time-of-the-full-one>`_. Per a un exemple ràpid, el diàleg "
+"del Krita :ref:`create_new_document` dóna tres dades d'informació: la seva "
+"mida en píxels, la mida del propi píxel, i *la memòria total necessària*."
 
 #: ../../tutorials/seexpr.rst:64
 msgid ".. image:: images/Krita_newfile.png"
@@ -166,11 +170,11 @@ msgstr ".. image:: images/Krita_newfile.png"
 
 #: ../../tutorials/seexpr.rst:65
 msgid ""
-"Here's a summary for square textures. Note that the memory needed is for *one"
-" layer only*:"
+"Here's a summary for square textures. Note that the memory needed is for "
+"*one layer only*:"
 msgstr ""
-"Aquí hi ha un resum per a textures quadrades. Tingueu en compte que la"
-" memòria necessària és per *només una capa*:"
+"Aquí hi ha un resum per a textures quadrades. Tingueu en compte que la "
+"memòria necessària és per *només una capa*:"
 
 #: ../../tutorials/seexpr.rst:69
 msgid "Size"
@@ -222,33 +226,33 @@ msgstr "64 MB"
 
 #: ../../tutorials/seexpr.rst:78
 msgid ""
-"An alternative is to use :ref:`vector_graphics`. Vector graphics, for"
-" instance SVGs, employ mathematic formulae like splines and Bézier curves to"
-" describe a shape. As they are mathematically defined, they can be resized to"
-" suit your needs without losing resolution."
+"An alternative is to use :ref:`vector_graphics`. Vector graphics, for "
+"instance SVGs, employ mathematic formulae like splines and Bézier curves to "
+"describe a shape. As they are mathematically defined, they can be resized to "
+"suit your needs without losing resolution."
 msgstr ""
-"Una alternativa és usar :ref:`vector_graphics`. Els gràfics vectorials, per"
-" exemple els SVG, fan servir fórmules matemàtiques com «splines» i corbes de"
-" Bézier per a descriure una forma. Com que estan definides matemàticament, es"
-" poden redimensionar per ajustar-les a les vostres necessitats sense perdre"
-" resolució."
+"Una alternativa és usar :ref:`vector_graphics`. Els gràfics vectorials, per "
+"exemple els SVG, fan servir fórmules matemàtiques com «splines» i corbes de "
+"Bézier per a descriure una forma. Com que estan definides matemàticament, es "
+"poden redimensionar per ajustar-les a les vostres necessitats sense perdre "
+"resolució."
 
 #: ../../tutorials/seexpr.rst:83
 msgid ""
-"SeExpr belongs to a different class, *procedural graphics*. Similarly to"
-" vector graphics, procedural graphics only need a few KBs of secondary"
-" storage for their definition. But they are not defined by mathematical"
-" formulae; you actually *code* how the color is calculated at each point of"
-" the texture. And, because it is not limited in its precision, you can render"
-" complex patterns in your layers at completely arbitrary resolution."
+"SeExpr belongs to a different class, *procedural graphics*. Similarly to "
+"vector graphics, procedural graphics only need a few KBs of secondary "
+"storage for their definition. But they are not defined by mathematical "
+"formulae; you actually *code* how the color is calculated at each point of "
+"the texture. And, because it is not limited in its precision, you can render "
+"complex patterns in your layers at completely arbitrary resolution."
 msgstr ""
-"El SeExpr pertany a una classe diferent, *gràfics procedimentals*. De manera"
-" similar als gràfics vectorials, els gràfics procedimentals només necessiten"
-" pocs KB d'emmagatzematge secundari per a la seva definició. Però no es"
-" defineixen amb fórmules matemàtiques; realment es pot *codificar* com es"
-" calcula el color en cada punt de la textura. I com que no hi ha límit en la"
-" seva precisió, es poden renderitzar patrons complexos a les capes en"
-" resolucions completament arbitraries."
+"El SeExpr pertany a una classe diferent, *gràfics procedimentals*. De manera "
+"similar als gràfics vectorials, els gràfics procedimentals només necessiten "
+"pocs KB d'emmagatzematge secundari per a la seva definició. Però no es "
+"defineixen amb fórmules matemàtiques; realment es pot *codificar* com es "
+"calcula el color en cada punt de la textura. I com que no hi ha límit en la "
+"seva precisió, es poden renderitzar patrons complexos a les capes en "
+"resolucions completament arbitraries."
 
 #: ../../tutorials/seexpr.rst:92
 msgid "Writing a script"
@@ -256,29 +260,29 @@ msgstr "Escriure un script"
 
 #: ../../tutorials/seexpr.rst:94
 msgid ""
-"In this tutorial, we'll show you how to write a script in SeExpr, render it"
-" to a layer, and then save it as a preset."
+"In this tutorial, we'll show you how to write a script in SeExpr, render it "
+"to a layer, and then save it as a preset."
 msgstr ""
-"En aquesta guia d'aprenentatge, veurem com escriure un script en SeExpr,"
-" renderitzar-lo a una capa, i després desar-lo com una predefinició."
+"En aquesta guia d'aprenentatge, veurem com escriure un script en SeExpr, "
+"renderitzar-lo a una capa, i després desar-lo com una predefinició."
 
 #: ../../tutorials/seexpr.rst:97
 msgid ""
-"We'll start by going to the :ref:`layer_docker`, and adding a new Fill Layer."
-" Then select the SeExpr generator from the list. You'll be greeted by this"
-" window:"
+"We'll start by going to the :ref:`layer_docker`, and adding a new Fill "
+"Layer. Then select the SeExpr generator from the list. You'll be greeted by "
+"this window:"
 msgstr ""
-"Començarem per anar a :ref:`layer_docker`, i afegir una Capa d'emplenat nova."
-" Després se selecciona el generador de SeExpr de la llista. S'obrirà aquesta"
-" finestra:"
+"Començarem per anar a :ref:`layer_docker`, i afegir una Capa d'emplenat "
+"nova. Després se selecciona el generador de SeExpr de la llista. S'obrirà "
+"aquesta finestra:"
 
 #: ../../tutorials/seexpr.rst:103
 msgid ""
-"The SeExpr generator dialog is divided in two tabs. For now, we'll stay on"
-" :guilabel:`Options`."
+"The SeExpr generator dialog is divided in two tabs. For now, we'll stay on :"
+"guilabel:`Options`."
 msgstr ""
-"El diàleg del generador de SeExpr es divideix en dues pestanyes. Per ara,"
-" romandrem a :guilabel:`Opcions`."
+"El diàleg del generador de SeExpr es divideix en dues pestanyes. Per ara, "
+"romandrem a :guilabel:`Opcions`."
 
 #: ../../tutorials/seexpr.rst:107
 msgid ":ref:`fill_layers` describes these tabs in more detail."
@@ -290,27 +294,28 @@ msgstr "Comencem pintant una capa amb blau clar."
 
 #: ../../tutorials/seexpr.rst:111
 msgid ""
-"First, SeExpr scripts must define an output variable, let's call it"
-" ``$color``. As SeExpr thinks of colors in the :ref:`RGB color space<"
-"model_rgb>`, color variables are defined by a triplet of numbers known as a"
-" *vector*. We'll start by defining the ``$color`` variable and giving it a"
-" value."
+"First, SeExpr scripts must define an output variable, let's call it ``"
+"$color``. As SeExpr thinks of colors in the :ref:`RGB color "
+"space<model_rgb>`, color variables are defined by a triplet of numbers known "
+"as a *vector*. We'll start by defining the ``$color`` variable and giving it "
+"a value."
 msgstr ""
-"Primer, els scripts SeExpr cal que defineixin una variable de sortida,"
-" anomenem-la ``$color``. Com que SeExpr pensa els colors segons el :ref:`RGB"
-" color space<model_rgb>`, les variables de color es defineixen amb un trio de"
-" nombres conegut com un *vector*. Començarem definint la variable ``$color``"
-" i donant-li un valor."
+"Primer, els scripts SeExpr cal que defineixin una variable de sortida, "
+"anomenem-la ``$color``. Com que SeExpr pensa els colors segons el :ref:`espai"
+" de color RGB<model_rgb>`, les variables de color es defineixen amb un"
+" triplet de nombres conegut com a *vector*. Començarem definint la variable"
+" ``$color`` i donant-li un valor."
 
+# skip-rule: t-acc_obe
 #: ../../tutorials/seexpr.rst:116
 msgid ""
-"Go to the text box, and clear it if it has any text. Then, define and set"
-" ``$color`` to something like ``[0.5, 0.5, 1]`` (half lit red, half lit"
-" green, fully lit blue)::"
+"Go to the text box, and clear it if it has any text. Then, define and set ``"
+"$color`` to something like ``[0.5, 0.5, 1]`` (half lit red, half lit green, "
+"fully lit blue)::"
 msgstr ""
-"Anem al quadre de text i el netegem si hi ha qualsevol text. Després, definim"
-" i assignem ``$color`` a quelcom semblant a ``[0.5, 0.5, 1]`` (mig vermell,"
-" mig verd, blau sencer)::"
+"Anem al quadre de text i el netegem si hi ha qualsevol text. Després, "
+"definim i assignem ``$color`` a quelcom semblant a ``[0.5, 0.5, 1]`` (mig "
+"vermell, mig verd, blau sencer)::"
 
 #: ../../tutorials/seexpr.rst:120
 msgid "$color = [0.5, 0.5, 1];"
@@ -318,9 +323,12 @@ msgstr "$color = [0.5, 0.5, 1];"
 
 #: ../../tutorials/seexpr.rst:122
 msgid ""
-"SeExpr needs to know which variable holds the final color value. This is done"
-" by writing at the end, on its own line, the name of the variable::"
+"SeExpr needs to know which variable holds the final color value. This is "
+"done by writing at the end, on its own line, the name of the variable::"
 msgstr ""
+"El SeExpr necessita conèixer quina variable contindrà el valor final del"
+" color. Això es fa escrivint al final, a la seva pròpia línia, el nom de la"
+" variable::"
 
 #: ../../tutorials/seexpr.rst:125
 msgid "$color"
@@ -328,7 +336,7 @@ msgstr "$color"
 
 #: ../../tutorials/seexpr.rst:127
 msgid "The script should now look like this::"
-msgstr ""
+msgstr "Ara, l'script hauria de tenir aquest aspecte::"
 
 #: ../../tutorials/seexpr.rst:129
 msgid ""
@@ -340,61 +348,80 @@ msgstr ""
 
 #: ../../tutorials/seexpr.rst:132
 msgid "Click :guilabel:`OK`, and you'll render your first script!"
-msgstr ""
+msgstr "Feu clic a :guilabel:`D'acord`, i es renderitzarà el primer script!"
 
 #: ../../tutorials/seexpr.rst:137
 msgid ""
-"To be absolutely precise, SeExpr **has no color management**. It always"
-" renders textures as :ref:`32-bit float <bit_depth>`, :ref:`gamma corrected <"
-"linear_and_gamma>`, sRGB images. Krita transforms them to your document's"
-" color space using the sRGB-elle-V2-srgbtrc.icc profile."
+"To be absolutely precise, SeExpr **has no color management**. It always "
+"renders textures as :ref:`32-bit float <bit_depth>`, :ref:`gamma corrected "
+"<linear_and_gamma>`, sRGB images. Krita transforms them to your document's "
+"color space using the sRGB-elle-V2-srgbtrc.icc profile."
 msgstr ""
+"Per a ser absolutament precís, el SeExpr **no té gestió de color**. sempre "
+"renderitza les textures com a imatges RGB de :ref:`coma flotant de 32 bits <"
+"bit_depth>`, amb :ref:`correcció de la gamma <linear_and_gamma>`. El Krita"
+" les transforma a l'espai de color del document usant el perfil"
+" «sRGB-elle-V2-srgbtrc.icc»."
 
 #: ../../tutorials/seexpr.rst:143
 msgid "See :ref:`color_managed_workflow` for what this means."
-msgstr ""
+msgstr "Vegeu :ref:`color_managed_workflow` per al seu significat."
 
 #: ../../tutorials/seexpr.rst:147
 msgid "Managing your script using widgets"
-msgstr ""
+msgstr "Gestionar els scripts usant estris"
 
 #: ../../tutorials/seexpr.rst:149
 msgid ""
-"There is also another way to define and edit your variables. Open the fill"
-" layer's properties by right clicking on :guilabel:`Fill Layer 1`, and"
-" selecting :guilabel:`Layer Properties...`."
+"There is also another way to define and edit your variables. Open the fill "
+"layer's properties by right clicking on :guilabel:`Fill Layer 1`, and "
+"selecting :guilabel:`Layer Properties...`."
 msgstr ""
+"També hi ha una altra manera de definir i editar les variables. Obrir les"
+" propietats de la capa d'emplenat fent clic dreta a :guilabel:`Capa"
+" d'emplenat 1`, i seleccionar :guilabel:`Propietats de la capa...`."
 
 #: ../../tutorials/seexpr.rst:154
 msgid ".. image:: images/seexpr/SeExpr_prop_1.png"
 msgstr ".. image:: images/seexpr/SeExpr_prop_1.png"
 
+# skip-rule: t-acc_obe
 #: ../../tutorials/seexpr.rst:155
 msgid ""
-"Notice the middle box? Once it detects a syntactically correct script, SeExpr"
-" enables a whole chunk of knobs to manage individual variables. In our"
-" example above, you can change ``$color``'s in three ways:"
+"Notice the middle box? Once it detects a syntactically correct script, "
+"SeExpr enables a whole chunk of knobs to manage individual variables. In our "
+"example above, you can change ``$color``'s in three ways:"
 msgstr ""
+"Heu vist el quadre del mig? Un cop es detecta un script sintàcticament"
+" correcte, el SeExpr activa un conjunt de control per a gestionar variables"
+" individuals. A l'exemple de més amunt, es pot canviar la variable ``$color``"
+" de tres maneres:"
 
 #: ../../tutorials/seexpr.rst:159
 msgid "enter the red, green, or blue channel's value in the input fields"
 msgstr ""
+"introduïu el valor dels canals vermell, verd, o blau als camps d'entrada"
 
 #: ../../tutorials/seexpr.rst:160
 msgid "move the little colored sliders to change the respective channel"
 msgstr ""
+"moveu els petits controls lliscants acolorits per a canviar el canal respectiu"
 
 #: ../../tutorials/seexpr.rst:161
 msgid ""
-"click on the preview square to the left of the boxes, to select a completely"
-" new color."
+"click on the preview square to the left of the boxes, to select a completely "
+"new color."
 msgstr ""
+"feu clic al quadrat de la vista prèvia a l'esquerra dels quadres, per a"
+" seleccionar un color completament nou."
 
 #: ../../tutorials/seexpr.rst:163
 msgid ""
-"The last button on the middle box is always :guilabel:`Add new variable`."
-" Click it and this dialog will open:"
+"The last button on the middle box is always :guilabel:`Add new variable`. "
+"Click it and this dialog will open:"
 msgstr ""
+"El darrer botó del quadre del mig sempre és :guilabel:`Afegeix una variable"
+" nova`. Feu-hi clic i s'obrirà aquest diàleg:"
 
 #: ../../tutorials/seexpr.rst:167
 msgid ".. image:: images/seexpr/SeExpr_add_variable.png"
@@ -403,6 +430,7 @@ msgstr ".. image:: images/seexpr/SeExpr_add_variable.png"
 #: ../../tutorials/seexpr.rst:168
 msgid "This dialog shows you all the types of variables that SeExpr accepts:"
 msgstr ""
+"Aquest diàleg mostra tots els tipus de variables que accepta el SeExpr:"
 
 #: ../../tutorials/seexpr.rst:171
 msgid "Curve and Color curve"
@@ -410,19 +438,24 @@ msgstr "Corba i Corba de color"
 
 #: ../../tutorials/seexpr.rst:173
 msgid ""
-"They are the SeExpr version of :ref:`Stop Gradients <resource_gradients>`:"
-" they interpolate a ramp given by a set of values."
+"They are the SeExpr version of :ref:`Stop Gradients <resource_gradients>`: "
+"they interpolate a ramp given by a set of values."
 msgstr ""
+"Són la versió del SeExpr de :ref:`Degradats amb aturades <resource_gradients"
+">`: interpolen una rampa indicada per un conjunt de valors."
 
 #: ../../tutorials/seexpr.rst:175
 msgid ""
-"Curves represent 1D gradients, returning a single float at each evaluation"
-" point."
+"Curves represent 1D gradients, returning a single float at each evaluation "
+"point."
 msgstr ""
+"Les corbes representen degradats en 1D, retornen un flotant senzill en cada"
+" punt d'avaluació."
 
 #: ../../tutorials/seexpr.rst:177
 msgid "Color curves represent RGB gradients, returning a Color at each point."
 msgstr ""
+"Les corbes de color representen degradats RGB, retornen un color en cada punt."
 
 #: ../../tutorials/seexpr.rst:178
 msgid "Integers and Floats"
@@ -438,7 +471,7 @@ msgstr "Vector"
 
 #: ../../tutorials/seexpr.rst:183
 msgid "A triplet of floats."
-msgstr ""
+msgstr "Un triplet de flotants."
 
 #: ../../tutorials/seexpr.rst:184
 msgid "Color"
@@ -446,11 +479,11 @@ msgstr "Color"
 
 #: ../../tutorials/seexpr.rst:186
 msgid "A vector representing a RGB color."
-msgstr ""
+msgstr "Un vector que representa un color RGB."
 
 #: ../../tutorials/seexpr.rst:187
 msgid "Swatch"
-msgstr ""
+msgstr "Mostra"
 
 #: ../../tutorials/seexpr.rst:189
 msgid "A list of Colors."
@@ -462,12 +495,13 @@ msgstr "Cadena"
 
 #: ../../tutorials/seexpr.rst:192
 msgid "Usually single words."
-msgstr ""
+msgstr "Normalment paraules úniques."
 
 #: ../../tutorials/seexpr.rst:194
 msgid ""
 "For instance, you could replicate ``$color`` in the :guilabel:`Vector` tab:"
 msgstr ""
+"Per exemple, es pot replicar ``$color`` a la pestanya :guilabel:`Vector`:"
 
 #: ../../tutorials/seexpr.rst:197
 msgid ".. image:: images/seexpr/SeExpr_add_variable_vector.png"
@@ -480,32 +514,41 @@ msgstr "Crear la vostra primera predefinició"
 #: ../../tutorials/seexpr.rst:202
 msgid "Once your script is ready, you can reuse it by making a preset."
 msgstr ""
+"Un cop l'script estigui llest, es pot reutilitzar fent-lo com a predefinició."
 
 #: ../../tutorials/seexpr.rst:204
 msgid "You can create one through the top bar of the Options tab:"
 msgstr ""
+"Se'n pot crear un a través de la barra superior de la pestanya Opcions:"
 
 #: ../../tutorials/seexpr.rst:208
 msgid ""
-"Select :guilabel:`Save New SeExpr Preset...` and the following dialog will"
-" open:"
+"Select :guilabel:`Save New SeExpr Preset...` and the following dialog will "
+"open:"
 msgstr ""
+"En seleccionar :guilabel:`Desa la predefinició nova del SeExpr...` s'obrirà"
+" el diàleg següent:"
 
 #: ../../tutorials/seexpr.rst:213
 msgid ""
-"You can edit the name of the preset in the top line edit box, and set a "
-" thumbnail for easy identification."
+"You can edit the name of the preset in the top line edit box, and set a  "
+"thumbnail for easy identification."
 msgstr ""
+"Es pot editar el nom de la predefinició al quadre d'edició de la línia"
+" superior, i establir una miniatura per a una identificació fàcil."
 
 #: ../../tutorials/seexpr.rst:215
 msgid ""
-"The dialog will append \"Copy\" to the preset's name if it is a copy of an"
-" existing one. You can change it at will."
+"The dialog will append \"Copy\" to the preset's name if it is a copy of an "
+"existing one. You can change it at will."
 msgstr ""
+"El diàleg afegirà «Copia» al nom de la predefinició si era una còpia d'una"
+" existent. Es pot canviar segons es desitgi."
 
 #: ../../tutorials/seexpr.rst:217
 msgid "The dialog provides the following choices for setting a thumbnail:"
 msgstr ""
+"El diàleg proporciona les possibilitats següents per a establir una miniatura:"
 
 #: ../../tutorials/seexpr.rst:220
 msgid "Load Existing Thumbnail"
@@ -513,9 +556,11 @@ msgstr "Carrega la miniatura existent"
 
 #: ../../tutorials/seexpr.rst:222
 msgid ""
-"If the preset already has a thumbnail (for instance, if you created it from"
-" an existing preset), this button will load and apply it."
+"If the preset already has a thumbnail (for instance, if you created it from "
+"an existing preset), this button will load and apply it."
 msgstr ""
+"Si la predefinició ja té una miniatura (per exemple, si s'ha creat a partir"
+" d'una predefinició existent), aquest botó el carregarà i l'aplicarà."
 
 #: ../../tutorials/seexpr.rst:223
 msgid "Load Image"
@@ -523,7 +568,7 @@ msgstr "Carrega una imatge"
 
 #: ../../tutorials/seexpr.rst:225
 msgid "Applies an image from the filesystem as a thumbnail."
-msgstr ""
+msgstr "Aplica una imatge des del sistema de fitxers com a miniatura."
 
 #: ../../tutorials/seexpr.rst:226
 msgid "Render Script to Thumbnail"
@@ -531,9 +576,11 @@ msgstr "Renderitza l'script a la miniatura"
 
 #: ../../tutorials/seexpr.rst:228
 msgid ""
-"Renders your script to a 256x256 texture, and applies the latter as a"
-" thumbnail."
+"Renders your script to a 256x256 texture, and applies the latter as a "
+"thumbnail."
 msgstr ""
+"Renderitza l'script a una textura de 256x256, i aquesta l'aplica com a"
+" miniatura."
 
 #: ../../tutorials/seexpr.rst:229
 msgid "Clear Thumbnail"
@@ -541,9 +588,12 @@ msgstr "Neteja la miniatura"
 
 #: ../../tutorials/seexpr.rst:231
 msgid ""
-"Deletes the thumbnail. Note that, if the preset is a copy of an existing one,"
-" this can be reverted by clicking :guilabel:`Load Existing Thumbnail`."
+"Deletes the thumbnail. Note that, if the preset is a copy of an existing "
+"one, this can be reverted by clicking :guilabel:`Load Existing Thumbnail`."
 msgstr ""
+"Suprimeix la miniatura. Tingueu en compte que si la predefinició és una còpia"
+" d'una existent, això es pot revertir fent clic a :guilabel:`Carrega la"
+" miniatura existent`."
 
 #: ../../tutorials/seexpr.rst:235
 msgid "Changing existing presets"
@@ -551,21 +601,28 @@ msgstr "Canviar les predefinicions existents"
 
 #: ../../tutorials/seexpr.rst:237
 msgid ""
-"If you change a preset's script, you will notice two new buttons in the top"
-" bar of the :guilabel:`Options` tab:"
+"If you change a preset's script, you will notice two new buttons in the top "
+"bar of the :guilabel:`Options` tab:"
 msgstr ""
+"Si es canvia l'script d'una predefinició, veureu dos botons nous a la barra"
+" superior de la pestanya :guilabel:`Opcions`:"
 
 #: ../../tutorials/seexpr.rst:241
 msgid ""
-"The reload button will restore the preset to its original properties, while"
-" clicking on :guilabel:`Overwrite Preset` will save your changes."
+"The reload button will restore the preset to its original properties, while "
+"clicking on :guilabel:`Overwrite Preset` will save your changes."
 msgstr ""
+"El botó de recarregar restaurarà la predefinició a les seves propietats"
+" originals, mentre que en fer clic a :guilabel:`Sobreescriu la predefinició`"
+" desarà el canvis."
 
 #: ../../tutorials/seexpr.rst:243
 msgid ""
-"Additionally, you can edit the preset's name by clicking on the rename"
-" button, entering the new name, and clicking on :guilabel:`Save`:"
+"Additionally, you can edit the preset's name by clicking on the rename "
+"button, entering the new name, and clicking on :guilabel:`Save`:"
 msgstr ""
+"Addicionalment, es pot editar el nom de la predefinició fen clic al botó"
+" reanomena, introduint el nom nou, i fent clic a :guilabel:`Desa`:"
 
 #: ../../tutorials/seexpr.rst:251
 msgid "Bundling your presets"
@@ -573,9 +630,13 @@ msgstr "Agrupar les vostres predefinicions"
 
 #: ../../tutorials/seexpr.rst:253
 msgid ""
-"Sharing your scripts is easy! SeExpr script presets are just like any other"
-" resource in Krita. Follow the instructions in :ref:`resource_management` to"
-" create your own bundles."
+"Sharing your scripts is easy! SeExpr script presets are just like any other "
+"resource in Krita. Follow the instructions in :ref:`resource_management` to "
+"create your own bundles."
 msgstr ""
+"És fàcil compartir els vostres scripts! Els script del SeExpr de"
+" predefinicions són com qualsevol altre recurs del Krita. Seguiu les"
+" instruccions de :ref:`resource_management` per a crear els vostres propis"
+" paquets."
 
 
