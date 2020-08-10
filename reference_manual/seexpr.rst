@@ -61,7 +61,7 @@ Local variables can be defined at the start of the expression::
     $b = noise($a * 1);
     pow($a, 0.5) + $b
 
-External variables can also be overridden by local assignment. This can be useful to scale the noise frequency for instance::
+External variables can also be overridden by local assignment. This can be useful to scale the noise frequency for instance::
 
     $P = $P * 10; # increase noise frequency
     fbm(vnoise($P) + $P/4)
@@ -82,7 +82,7 @@ Operators (listed in decreasing precedence)
 
 .. glossary::
 
-    [ a, b, c ]
+    [a,b,c]
         vector constructor
 
     $P[ n ]
@@ -112,20 +112,20 @@ Operators (listed in decreasing precedence)
 
                 1 - $A
 
-    * /  %
+    */ %
         multiply, divide, modulus
 
         .. note:: ``%`` is the same as the ``fmod`` function.
 
-    + -
+    +-
         add, subtract
 
-    < >  <=  >=
+    <> <= >=
         comparison: less than, greater than, less or equal than, greater or equal than
 
         .. note:: Only uses the first component of a vector.
 
-    ==  !=
+    == !=
         equality, inequality
 
     &&
@@ -134,7 +134,7 @@ Operators (listed in decreasing precedence)
     ||
         logical OR
 
-    ? :
+    ?:
         ternary ``if`` operator
 
         .. hint:: Example::
@@ -146,8 +146,8 @@ Operators (listed in decreasing precedence)
 
         .. hint:: Examples::
 
-            $Cs -> contrast(.7) -> clamp(0.2, 0.8)
-            $u -> hsi(20, 1.2, 1, $Cs -> gamma(1.2))
+            $Cs->contrast(.7) -> clamp(0.2,0.8)
+            $u->hsi(20,1.2,1,$Cs->gamma(1.2))
 
 ********************
 Assignment Operators
@@ -236,30 +236,30 @@ Color, Masking, and Remapping Functions
     float **bias** ( float x, float b)
         Variation of gamma where control parameter goes from ``0`` to ``1`` with
         values ``> 0.5`` pulling the curve up and values ``< 0.5`` pulling the curve
-        down.  Defined as ``pow(x, log(b)/log(0.5))``.
+        down. Defined as ``pow(x, log(b)/log(0.5))``.
 
     float **boxstep** ( float x, float a )
     float **gaussstep** ( float x, float a, float b )
     float **linearstep** ( float x, float a, float b )
     float **smoothstep** ( float x, float a, float b )
         The step functions are zero for ``x < a`` and one for ``x > b`` (or ``x > a`` in
-        the case of boxstep).  Between ``a`` and ``b``, the value changes
-        continuously between zero and one.  The ``gausstep`` function uses the
+        the case of boxstep). Between ``a`` and ``b``, the value changes
+        continuously between zero and one. The ``gausstep`` function uses the
         standard Gaussian "bell" curve which is based on an exponential
-        curve.  The ``smoothstep`` function uses a cubic curve.  Intuitively,
-        ``gausstep`` is has a sharper transition near one and a softer transition
-        near zero whereas ``smoothstep`` is has a medium softness near both one
+        curve. The ``smoothstep`` function uses a cubic curve. Intuitively,
+        ``gausstep`` has a sharper transition near one and a softer transition
+        near zero whereas ``smoothstep`` has a medium softness near both one
         and zero.
 
     float **clamp** ( float x, float lo, float hi )
         Constrain ``x`` to range ``[lo, hi]``.
 
-    float **compress** ( float x, float lo, float hi ) 
+    float **compress** ( float x, float lo, float hi )
         Compress the dynamic range from ``[0, 1]`` to ``[lo, hi]``.
 
     float **contrast** ( float x, float c )
-        Adjust the contrast.  For ``c`` from ``0`` to ``0.5``, the contrast
-        is decreased.  For ``c > 0.5``, the contrast is increased.
+        Adjust the contrast. For ``c`` from ``0`` to ``0.5``, the contrast
+        is decreased. For ``c > 0.5``, the contrast is increased.
 
     float **expand** ( float x, float lo, float hi )
         Expand the dynamic range from ``[lo, hi]`` to ``[0, 1]``.
@@ -271,42 +271,42 @@ Color, Masking, and Remapping Functions
         ``pow(x, 1/g)``
 
     float **invert** ( float x )
-        Invert the value.  Defined as ``1 - x``.
+        Invert the value. Defined as ``1 - x``.
 
     color **hsi** ( color x, float h, float s, float i, float map=1 )
-        The ``hsi``  function shifts the hue by ``h`` (in degrees) and
+        The ``hsi`` function shifts the hue by ``h`` (in degrees) and
         scales the saturation and intensity by ``s`` and ``i``
-        respectively.  A map may be
+        respectively. A map may be
         supplied which will control the shift - the full shift will happen
-        when the map is one and no shift will happen when the map is zero. 
+        when the map is one and no shift will happen when the map is zero.
         The shift will be scaled back for values between zero and one.
 
     color **hsltorgb** ( color hsl )
     color **rgbtohsl** ( color rgb )
-        RGB to HSL color space conversion. 
+        RGB to HSL color space conversion.
         HSL is Hue, Saturation, Lightness (all in the range ``[0, 1]``).
         These functions have also been extended to support RGB and HSL values
-        outside of the range ``[0, 1]`` in a reasonable way.  For any RGB or HSL
+        outside of the range ``[0, 1]`` in a reasonable way. For any RGB or HSL
         value (except for negative values), the conversion is well-defined
         and reversible.
 
     color **midhsi** ( color x, float h, float s, float i, float map, float falloff=1, int interp=0 )
         The ``midhsi`` function is just like the ``hsi`` function except that the
         control map is centered around the mid point (value of ``0.5``) and can
-        scale the shift in both directions. At the mid point, no shift
-        happens.  At *1.0*, the full shift happens, and at ``0.0``, the full
-        inverse shift happens.  Additional ``falloff`` and ``interp`` controls are
-        provided to adjust the map using the ``remap`` function.  The default
+        scale the shift in both directions. At the mid point, no shift
+        happens. At *1.0*, the full shift happens, and at ``0.0``, the full
+        inverse shift happens. Additional ``falloff`` and ``interp`` controls are
+        provided to adjust the map using the ``remap`` function. The default
         ``falloff`` and ``interp`` values result in no remapping.
 
     float **mix** ( float a, float b, float alpha )
-        Blend of a and b according to alpha.  Defined as
+        Blend of a and b according to alpha. Defined as
         ``a*(1-alpha) +b*alpha``.
 
     float **remap** ( float x, float source, float range, float falloff, int interp )
-        General remapping function.  When ``x`` is within ``± range`` of source,
-        the result is one.  The result falls to zero beyond that range over
-        ``falloff`` distance.  The falloff shape is controlled by ``interp``.
+        General remapping function. When ``x`` is within ``± range`` of source,
+        the result is one. The result falls to zero beyond that range over
+        ``falloff`` distance. The falloff shape is controlled by ``interp``.
 
         .. note::
             Numeric values or named constants may be used:
@@ -327,23 +327,23 @@ Noise Functions
     float **cellnoise3** ( float x, float y, float z )
     color **ccellnoise** ( vector v )
         ``cellnoise`` generates a field of constant colored cubes based on the
-        integer location.  This is the same as the `PRMan cellnoise function <https://renderman.pixar.com/resources/RenderMan_20/cellnoise.html>`_.
+        integer location. This is the same as the `PRMan cellnoise function <https://renderman.pixar.com/resources/RenderMan_20/cellnoise.html>`_.
 
         .. note::
             ``ccellnoise`` outputs color cellnoise.
 
 
-    float **fbm** ( vector v, int octaves = 6, float lacunarity = 2, float gain = 0.5 )
-    color **cfbm** ( vector v, int octaves = 6, float lacunarity = 2, float gain = 0.5 )
-    vector **vfbm** ( vector v, int octaves = 6, float lacunarity = 2, float gain = 0.5 )
-    float **fbm4** ( vector v, float time, int octaves = 6, float lacunarity = 2, float gain = 0.5 )
-    color **cfbm4** ( vector v, float time, int octaves = 6, float lacunarity = 2, float gain = 0.5 )
-    vector **vfbm4** ( vector v, float time, int octaves = 6, float lacunarity = 2, float gain = 0.5 )
-        ``fbm`` (Fractal Brownian Motion) is a multi-frequency noise function. 
-        The base frequency is the same as the ``noise`` function.  The total
-        number of frequencies is controlled by ``octaves``.  The ``lacunarity``
+    float **fbm** ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )
+    color **cfbm** ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )
+    vector **vfbm** ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )
+    float **fbm4** ( vector v, float time, int octaves=6, float lacunarity=2, float gain=0.5 )
+    color **cfbm4** ( vector v, float time, int octaves=6, float lacunarity=2, float gain=0.5 )
+    vector **vfbm4** ( vector v, float time, int octaves=6, float lacunarity=2, float gain=0.5 )
+        ``fbm`` (Fractal Brownian Motion) is a multi-frequency noise function.
+        The base frequency is the same as the ``noise`` function. The total
+        number of frequencies is controlled by ``octaves``. The ``lacunarity``
         is the spacing between the frequencies - a value of 2 means each
-        octave is twice the previous frequency.  The ``gain`` controls how much
+        octave is twice the previous frequency. The ``gain`` controls how much
         each frequency is scaled relative to the previous frequency.
 
         .. note::
@@ -353,7 +353,7 @@ Noise Functions
             ``vfbm`` and ``vfbm4`` outputs vector noise.
 
     float **hash** ( float seed1, [float seed2, ...] )
-        Like ``rand``, but with no internal seeds.  Any number of seeds may be
+        Like ``rand``, but with no internal seeds. Any number of seeds may be
         given and the result will be a random function based on all the
         seeds.
 
@@ -369,7 +369,7 @@ Noise Functions
     vector **vnoise** (vector v )
     vector **vnoise4** (vector v, float t )
         ``noise`` is a random function that smoothly blends between samples at
-        integer locations.  This is Ken Perlin's original noise function.
+        integer locations. This is Ken Perlin's original noise function.
 
         .. note::
 
@@ -388,29 +388,29 @@ Noise Functions
         If a seed is supplied, it will be used in addition to the internal
         seeds and may be used to create multiple distinct generators.
 
-    float **turbulence** ( vector v, int octaves = 6, float lacunarity = 2, float gain = 0.5 )
-    color **cturbulence** ( vector v, int octaves = 6, float lacunarity = 2, float gain = 0.5 )
-    vector **vturbulence** ( vector v, int octaves = 6, float lacunarity = 2, float gain = 0.5 )
+    float **turbulence** ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )
+    color **cturbulence** ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )
+    vector **vturbulence** ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )
         ``turbulence`` is a variant of ``fbm`` where the absolute value of each
-        noise term is taken.  This gives a more billowy appearance.
+        noise term is taken. This gives a more billowy appearance.
 
-    float **voronoi** ( vector v, int type = 1, float jitter = 0.5, float fbmScale = 0, int fbmOctaves = 4, float fbmLacunarity = 2, float fbmGain = 0.5)
-    color **cvoronoi** ( vector v, int type = 1, float jitter = 0.5, float fbmScale = 0, int fbmOctaves = 4, float fbmLacunarity = 2, float fbmGain = 0.5)
-    vector **pvoronoi** ( vector v, float jitter = 0.5, float fbmScale = 0, int fbmOctaves = 4, float fbmLacunarity = 2, float fbmGain = 0.5)
+    float **voronoi** ( vector v, int type=1, float jitter=0.5, float fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)
+    color **cvoronoi** ( vector v, int type=1, float jitter=0.5, float fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)
+    vector **pvoronoi** ( vector v, float jitter=0.5, float fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)
         ``voronoi`` is a cellular noise pattern. It is a jittered variant of
         ``cellnoise``.
         The type parameter describes different variants of the noise
-        function.  The ``jitter`` param controls how irregular the pattern is
-        (0 is like ordinary cellnoise).  The ``fbm...`` params can be
-        used to distort the noise field.  When ``fbmScale`` is zero (the
-        default), there is no distortion.  The remaining params are the same
+        function. The ``jitter`` param controls how irregular the pattern is
+        (0 is like ordinary cellnoise). The ``fbm...`` params can be
+        used to distort the noise field. When ``fbmScale`` is zero (the
+        default), there is no distortion. The remaining params are the same
         as for the ``fbm`` function.
 
         .. hint::
 
             Voronoi types 1 through 5:
 
-            |image0|  |image1|  |image2|  |image3|  |image4| 
+            |image0| |image1| |image2| |image3| |image4|
 
         .. note::
             ``cvoronoi`` returns a random color for each cell and
@@ -429,13 +429,13 @@ Selection Functions
 
     int **cycle** ( int index, int loRange, int hiRange )
         Cycles through values between loRange and hiRange based on supplied
-        index.  This is an offset ``mod`` function.  The result is computed as
+        index. This is an offset ``mod`` function. The result is computed as
         ``loRange + value % (hiRange-loRange+1)``.
 
     int **pick** ( float index, int loRange, int hiRange, [ float weights, ... ] )
         Picks values randomly between loRange and hiRange based on supplied
-        index (which is automatically hashed).  The values will be
-        distributed according to the supplied weights.  Any weights not
+        index (which is automatically hashed). The values will be
+        distributed according to the supplied weights. Any weights not
         supplied are assumed to be 1.0.
 
     float **wchoose** ( float index, float choice1, float weight1, float choice2, float weight2, [...] )
@@ -637,17 +637,17 @@ Vector Support
 **************
 
 *Vectors* (points, colors, or 3D vectors) may be intermixed with *scalars*
-(simple floating point values).  If a scalar is used in a vector context, it is
-replicated into the three components, e.g. ``0.5`` becomes ``[0.5, 0.5, 0.5]``. 
+(simple floating point values). If a scalar is used in a vector context, it is
+replicated into the three components, e.g. ``0.5`` becomes ``[0.5, 0.5, 0.5]``.
 
 If a vector is used in a scalar context, only the first component is used.
 One of the benefits of this is that all the functions that are defined
-to work with scalars automatically extend to vectors.  For instance,
+to work with scalars automatically extend to vectors. For instance,
 ``pick``, ``choose``, ``cycle``, ``spline``, etc., will work just fine
 with vectors.
 
 Arithmetic operators such as ``+``, ``*``, etc., and scalar functions are
-applied component-wise to vectors.  For example, applying the ``gamma``
+applied component-wise to vectors. For example, applying the ``gamma``
 function to a map adjusts the gamma of all three color channels.
 
 ***************

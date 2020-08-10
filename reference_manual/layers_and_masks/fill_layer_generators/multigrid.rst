@@ -69,7 +69,7 @@ Colors
 
 This section controls all the colors, all grouped together because Krita's color buttons allow drag and dropping colors to one another. You can change the color for the outlines and the connector lines, and there is a gradient for coloring the individual rhombs.
 
-The color factors determine which properties of each rhomb is used to determine it's coloring. This value is used as a multiplier, to finally result in a value that can be used to get the value from the gradient.
+The color factors determine which properties of each rhomb is used to determine its coloring. This value is used as a multiplier, to finally result in a value that can be used to get the value from the gradient.
 
 Ratio
     This colors the rhombs based on their ratio. Thin rhombs have a low ratio, thick rhombs have a high ratio, and perfect squares have the largest ratio.
