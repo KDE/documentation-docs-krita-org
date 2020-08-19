@@ -50,7 +50,12 @@ msgid "What is SeExpr?"
 msgstr "Che cos'è SeExpr?"
 
 #: ../../tutorials/seexpr.rst:22
-msgid "SeExpr is an embeddable expression language, designed by Disney Animation, that allows host applications to render dynamically generated content. Pixar calls it `in its documentation <https://renderman.pixar.com/resources/RenderMan_20/PxrSeExpr.html>`_ a \"scriptable pattern generator and combiner\"."
+msgid ""
+"SeExpr is an embeddable expression language, designed by Disney Animation, "
+"that allows host applications to render dynamically generated content. Pixar "
+"calls it `in its documentation <https://renderman.pixar.com/resources/"
+"RenderMan_20/PxrSeExpr.html>`_ a \"scriptable pattern generator and combiner"
+"\"."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:27
@@ -70,11 +75,14 @@ msgid ":ref:`resource_seexpr_scripts`"
 msgstr ":ref:`resource_seexpr_scripts`"
 
 #: ../../tutorials/seexpr.rst:33
-msgid "`\"Procedural texture generator (example and wishes)\" on Krita Artists <https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/7638>`_"
+msgid ""
+"`\"Procedural texture generator (example and wishes)\" on Krita Artists "
+"<https://krita-artists.org/t/procedural-texture-generator-example-and-"
+"wishes/7638>`_"
 msgstr ""
 "`\"Generatore di trame procedurale (esempio e desideri) \"su Krita Artists "
-"<https://krita-artists.org/t/procedural-texture-generator-example-and-wishes/"
-"7638>`_"
+"<https://krita-artists.org/t/procedural-texture-generator-example-and-"
+"wishes/7638>`_"
 
 #: ../../tutorials/seexpr.rst:34
 msgid "`Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_"
@@ -89,19 +97,38 @@ msgid "Background"
 msgstr "Sfondo"
 
 #: ../../tutorials/seexpr.rst:41
-msgid "To understand what SeExpr is about, we need to differentiate between two types of graphics, *raster* and *procedural*."
+msgid ""
+"To understand what SeExpr is about, we need to differentiate between two "
+"types of graphics, *raster* and *procedural*."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:44
-msgid "The vast majority of the computer-generated stuff you see every day belong to the first type-- images like photos, your favorite anime screenshots, memes, are all a multitude of tiny little dots of color, or *pixels*, arranged into a grid."
+msgid ""
+"The vast majority of the computer-generated stuff you see every day belong "
+"to the first type-- images like photos, your favorite anime screenshots, "
+"memes, are all a multitude of tiny little dots of color, or *pixels*, "
+"arranged into a grid."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:49
-msgid "Raster graphics have two drawbacks. First, once you create them, their resolution is **fixed**. You cannot zoom in and magically get any more detail. And if you need to change them, either you go back to the source and sample it again (which is sometimes impossible), or edit it with a raster graphics program, like Krita."
+msgid ""
+"Raster graphics have two drawbacks. First, once you create them, their "
+"resolution is **fixed**. You cannot zoom in and magically get any more "
+"detail. And if you need to change them, either you go back to the source and "
+"sample it again (which is sometimes impossible), or edit it with a raster "
+"graphics program, like Krita."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:55
-msgid "One of the biggest problems, however, is that we are always limited by the **space** our programs can use; either secondary storage, like SD cards, or RAM. Unless compressed, image memory needs are `quadratic in the size of the image <https://blender.stackexchange.com/questions/112505/why-is-my-half-resolution-render-taking-a-quarter-of-the-time-of-the-full-one>`_. For a quick example, the :ref:`create_new_document` dialog of Krita tells you three bits of information: its size in pixels, the size of the pixel itself, and *the total memory needed*."
+msgid ""
+"One of the biggest problems, however, is that we are always limited by the "
+"**space** our programs can use; either secondary storage, like SD cards, or "
+"RAM. Unless compressed, image memory needs are `quadratic in the size of the "
+"image <https://blender.stackexchange.com/questions/112505/why-is-my-half-"
+"resolution-render-taking-a-quarter-of-the-time-of-the-full-one>`_. For a "
+"quick example, the :ref:`create_new_document` dialog of Krita tells you "
+"three bits of information: its size in pixels, the size of the pixel itself, "
+"and *the total memory needed*."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:64
@@ -109,7 +136,9 @@ msgid ".. image:: images/Krita_newfile.png"
 msgstr ".. image:: images/Krita_newfile.png"
 
 #: ../../tutorials/seexpr.rst:65
-msgid "Here's a summary for square textures. Note that the memory needed is for *one layer only*:"
+msgid ""
+"Here's a summary for square textures. Note that the memory needed is for "
+"*one layer only*:"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:69
@@ -161,11 +190,21 @@ msgid "64 MB"
 msgstr "64 MB"
 
 #: ../../tutorials/seexpr.rst:78
-msgid "An alternative is to use :ref:`vector_graphics`. Vector graphics, for instance SVGs, employ mathematic formulae like splines and Bézier curves to describe a shape. As they are mathematically defined, they can be resized to suit your needs without losing resolution."
+msgid ""
+"An alternative is to use :ref:`vector_graphics`. Vector graphics, for "
+"instance SVGs, employ mathematic formulae like splines and Bézier curves to "
+"describe a shape. As they are mathematically defined, they can be resized to "
+"suit your needs without losing resolution."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:83
-msgid "SeExpr belongs to a different class, *procedural graphics*. Similar to vector graphics, procedural graphics only need a few KBs of secondary storage for their definition. But they are not defined by mathematical formulae; you actually *code* how the color is calculated at each point of the texture. And, because it is not limited in its precision, you can render complex patterns in your layers at completely arbitrary resolution."
+msgid ""
+"SeExpr belongs to a different class, *procedural graphics*. Similar to "
+"vector graphics, procedural graphics only need a few KBs of secondary "
+"storage for their definition. But they are not defined by mathematical "
+"formulae; you actually *code* how the color is calculated at each point of "
+"the texture. And, because it is not limited in its precision, you can render "
+"complex patterns in your layers at completely arbitrary resolution."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:92
@@ -173,15 +212,22 @@ msgid "Writing a script"
 msgstr "Scrivere uno script"
 
 #: ../../tutorials/seexpr.rst:94
-msgid "In this tutorial, we'll show you how to write a script in SeExpr, render it to a layer, and then save it as a preset."
+msgid ""
+"In this tutorial, we'll show you how to write a script in SeExpr, render it "
+"to a layer, and then save it as a preset."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:97
-msgid "We'll start by going to the :ref:`layer_docker`, and adding a new Fill Layer. Then select the SeExpr generator from the list. You'll be greeted by this window:"
+msgid ""
+"We'll start by going to the :ref:`layer_docker`, and adding a new Fill "
+"Layer. Then select the SeExpr generator from the list. You'll be greeted by "
+"this window:"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:103
-msgid "The SeExpr generator dialog is divided into two tabs. For now, we'll stay on :guilabel:`Options`."
+msgid ""
+"The SeExpr generator dialog is divided into two tabs. For now, we'll stay "
+"on :guilabel:`Options`."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:107
@@ -193,11 +239,19 @@ msgid "Let's start by painting a layer in light blue."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:111
-msgid "First, SeExpr scripts must define an output variable, let's call it ``$color``. As SeExpr thinks of colors in the :ref:`RGB color space<model_rgb>`, color variables are defined by a triplet of numbers known as a *vector*. We'll start by defining the ``$color`` variable and giving it a value."
+msgid ""
+"First, SeExpr scripts must define an output variable, let's call it ``"
+"$color``. As SeExpr thinks of colors in the :ref:`RGB color "
+"space<model_rgb>`, color variables are defined by a triplet of numbers known "
+"as a *vector*. We'll start by defining the ``$color`` variable and giving it "
+"a value."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:116
-msgid "Go to the text box, and clear it if it has any text. Then, define and set ``$color`` to something like ``[0.5, 0.5, 1]`` (half lit red, half lit green, fully lit blue)::"
+msgid ""
+"Go to the text box, and clear it if it has any text. Then, define and set ``"
+"$color`` to something like ``[0.5, 0.5, 1]`` (half lit red, half lit green, "
+"fully lit blue)::"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:120
@@ -205,7 +259,9 @@ msgid "$color = [0.5, 0.5, 1];"
 msgstr "$color = [0.5, 0.5, 1];"
 
 #: ../../tutorials/seexpr.rst:122
-msgid "SeExpr needs to know which variable holds the final color value. This is done by writing at the end, on its own line, the name of the variable::"
+msgid ""
+"SeExpr needs to know which variable holds the final color value. This is "
+"done by writing at the end, on its own line, the name of the variable::"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:125
@@ -217,7 +273,8 @@ msgid "The script should now look like this::"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:129
-msgid "$color = [0.5, 0.5, 1];\n"
+msgid ""
+"$color = [0.5, 0.5, 1];\n"
 "$color"
 msgstr ""
 "$color = [0.5, 0.5, 1];\n"
@@ -228,7 +285,11 @@ msgid "Click :guilabel:`OK`, and you'll render your first script!"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:137
-msgid "To be absolutely precise, SeExpr **has no color management**. It always renders textures as :ref:`32-bit float <bit_depth>`, :ref:`gamma corrected <linear_and_gamma>`, sRGB images. Krita transforms them into your document's color space using the sRGB-elle-V2-srgbtrc.icc profile."
+msgid ""
+"To be absolutely precise, SeExpr **has no color management**. It always "
+"renders textures as :ref:`32-bit float <bit_depth>`, :ref:`gamma corrected "
+"<linear_and_gamma>`, sRGB images. Krita transforms them into your document's "
+"color space using the sRGB-elle-V2-srgbtrc.icc profile."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:143
@@ -240,7 +301,10 @@ msgid "Managing your script using widgets"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:149
-msgid "There is also another way to define and edit your variables. Open the fill layer's properties by right-clicking on :guilabel:`Fill Layer 1`, and selecting :guilabel:`Layer Properties...`."
+msgid ""
+"There is also another way to define and edit your variables. Open the fill "
+"layer's properties by right-clicking on :guilabel:`Fill Layer 1`, and "
+"selecting :guilabel:`Layer Properties...`."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:154
@@ -248,7 +312,10 @@ msgid ".. image:: images/seexpr/SeExpr_prop_1.png"
 msgstr ".. image:: images/seexpr/SeExpr_prop_1.png"
 
 #: ../../tutorials/seexpr.rst:155
-msgid "Notice the middle box? Once it detects a syntactically correct script, SeExpr enables a whole chunk of knobs to manage individual variables. In our example above, you can change ``$color``'s in three ways:"
+msgid ""
+"Notice the middle box? Once it detects a syntactically correct script, "
+"SeExpr enables a whole chunk of knobs to manage individual variables. In our "
+"example above, you can change ``$color``'s in three ways:"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:159
@@ -260,11 +327,15 @@ msgid "move the little colored sliders to change the respective channel"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:161
-msgid "click on the preview square to the left of the boxes, to select a completely new color."
+msgid ""
+"click on the preview square to the left of the boxes, to select a completely "
+"new color."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:163
-msgid "The last button on the middle box is always :guilabel:`Add new variable`. Click it and this dialog will open:"
+msgid ""
+"The last button on the middle box is always :guilabel:`Add new variable`. "
+"Click it and this dialog will open:"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:167
@@ -280,11 +351,15 @@ msgid "Curve and Color curve"
 msgstr "Curva e curva di colore"
 
 #: ../../tutorials/seexpr.rst:173
-msgid "They are the SeExpr version of :ref:`Stop Gradients <resource_gradients>`: they interpolate a ramp given by a set of values."
+msgid ""
+"They are the SeExpr version of :ref:`Stop Gradients <resource_gradients>`: "
+"they interpolate a ramp given by a set of values."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:175
-msgid "Curves represent 1D gradients, returning a single float at each evaluation point."
+msgid ""
+"Curves represent 1D gradients, returning a single float at each evaluation "
+"point."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:177
@@ -332,7 +407,8 @@ msgid "Usually single words."
 msgstr "Normalmente parole singole."
 
 #: ../../tutorials/seexpr.rst:194
-msgid "For instance, you could replicate ``$color`` in the :guilabel:`Vector` tab:"
+msgid ""
+"For instance, you could replicate ``$color`` in the :guilabel:`Vector` tab:"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:197
@@ -352,15 +428,21 @@ msgid "You can create one through the top bar of the :guilabel:`Options` tab:"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:208
-msgid "Select :guilabel:`Save New SeExpr Preset...` and the following dialog will open:"
+msgid ""
+"Select :guilabel:`Save New SeExpr Preset...` and the following dialog will "
+"open:"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:213
-msgid "You can edit the name of the preset in the top line edit box, and set a  thumbnail for easy identification."
+msgid ""
+"You can edit the name of the preset in the top line edit box, and set a  "
+"thumbnail for easy identification."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:215
-msgid "The dialog will append \"Copy\" to the preset's name if it is a copy of an existing one. You can change it at will."
+msgid ""
+"The dialog will append \"Copy\" to the preset's name if it is a copy of an "
+"existing one. You can change it at will."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:217
@@ -372,7 +454,9 @@ msgid "Load Existing Thumbnail"
 msgstr "Carica miniatura esistente"
 
 #: ../../tutorials/seexpr.rst:222
-msgid "If the preset already has a thumbnail (for instance, if you created it from an existing preset), this button will load and apply it."
+msgid ""
+"If the preset already has a thumbnail (for instance, if you created it from "
+"an existing preset), this button will load and apply it."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:223
@@ -388,7 +472,9 @@ msgid "Render Script to Thumbnail"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:228
-msgid "Renders your script to a 256x256 texture, and applies the latter as a thumbnail."
+msgid ""
+"Renders your script to a 256x256 texture, and applies the latter as a "
+"thumbnail."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:229
@@ -396,7 +482,9 @@ msgid "Clear Thumbnail"
 msgstr "Pulisci miniatura"
 
 #: ../../tutorials/seexpr.rst:231
-msgid "Deletes the thumbnail. Note that, if the preset is a copy of an existing one, this can be reverted by clicking :guilabel:`Load Existing Thumbnail`."
+msgid ""
+"Deletes the thumbnail. Note that, if the preset is a copy of an existing "
+"one, this can be reverted by clicking :guilabel:`Load Existing Thumbnail`."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:235
@@ -404,15 +492,21 @@ msgid "Changing existing presets"
 msgstr "Cambiare le preimpostazioni esistenti"
 
 #: ../../tutorials/seexpr.rst:237
-msgid "If you change a preset's script, you will notice two new buttons in the top bar of the :guilabel:`Options` tab:"
+msgid ""
+"If you change a preset's script, you will notice two new buttons in the top "
+"bar of the :guilabel:`Options` tab:"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:241
-msgid "The reload button will restore the preset to its original properties, while clicking on :guilabel:`Overwrite Preset` will save your changes."
+msgid ""
+"The reload button will restore the preset to its original properties, while "
+"clicking on :guilabel:`Overwrite Preset` will save your changes."
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:243
-msgid "Additionally, you can edit the preset's name by clicking on the rename button, entering the new name, and clicking on :guilabel:`Save`:"
+msgid ""
+"Additionally, you can edit the preset's name by clicking on the rename "
+"button, entering the new name, and clicking on :guilabel:`Save`:"
 msgstr ""
 
 #: ../../tutorials/seexpr.rst:251
@@ -420,5 +514,8 @@ msgid "Bundling your presets"
 msgstr "Creare le proprie preimpostazioni"
 
 #: ../../tutorials/seexpr.rst:253
-msgid "Sharing your scripts is easy! SeExpr script presets are just like any other resource in Krita. Follow the instructions in :ref:`resource_management` to create your own bundles."
+msgid ""
+"Sharing your scripts is easy! SeExpr script presets are just like any other "
+"resource in Krita. Follow the instructions in :ref:`resource_management` to "
+"create your own bundles."
 msgstr ""
