@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-28 01:55+0200\n"
-"PO-Revision-Date: 2020-05-09 18:32+0200\n"
+"PO-Revision-Date: 2020-08-21 21:15+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -20,6 +20,7 @@ msgstr ""
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:1
 msgid "Guide on all the specifics of creating Krita python plugins."
 msgstr ""
+"Handledning med alla detaljer om hur Krita Python-insticksprogram skapas."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:14
 msgid "Python"
@@ -48,6 +49,11 @@ msgid ""
 "instance. Wrapping your script in a plugin can give you much more "
 "flexibility and power than running scripts from the Scripter editor."
 msgstr ""
+"Man kanske har några nätta skript som man har skrivit i"
+" Python-skriptgeneratorn, men vill kanske göra mer med dem och exempelvis"
+" köra dem automatiskt. Genom att omge skriptet med ett insticksprogram får"
+" man mycket större flexibilitet och kraftfullhet än att köra skript från"
+" skripteditorn."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:23
 msgid ""
@@ -55,6 +61,9 @@ msgid ""
 "to getting Krita to recognize a python plugin. So this page will give an "
 "overview how to create the various types of python script unique to Krita."
 msgstr ""
+"Nå, även om man kan Python riktigt bra, finns en del detaljer när det gäller"
+" att få Krita att känna igen ett Python-insticksprogram. Den här sidan ger en"
+" översikt av hur de olika sorternas Python-skript unika för Krita skapas."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:25
 msgid ""
@@ -62,6 +71,9 @@ msgid ""
 "python, and in such a way to encourage experimentation instead of plainly "
 "copy and pasting code, so read the text carefully."
 msgstr ""
+"Dessa minihandledningar är skrivna för folk med en grundförståelse av Python,"
+" och på ett sådant sätt att de uppmuntrar till experimenterande istället för"
+" att bara kopiera och klistra in kod, så läs texten noggrant."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:28
 msgid "Getting Krita to recognize your plugin"
@@ -88,12 +100,16 @@ msgid ""
 "Scripts are identified by a file that ends in a .desktop extension that "
 "contain information about the script itself."
 msgstr ""
+"Skript identifieras av en fil som slutar med filändelsen .desktop, som"
+" innehåller information om själva skriptet."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:34
 msgid ""
 "Therefore, for each proper plugin you will need to create a folder, and a "
 "desktop file."
 msgstr ""
+"Därför måste man skapa en katalog och en skrivbordsfil för varje riktigt"
+" insticksprogram."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:36
 msgid "The desktop file should look as follows::"
@@ -110,6 +126,14 @@ msgid ""
 "Name=My Own Plugin\n"
 "Comment=Our very own plugin."
 msgstr ""
+"[Desktop Entry]\n"
+"Type=Service\n"
+"ServiceTypes=Krita/PythonPlugin\n"
+"X-KDE-Library=myplugin\n"
+"X-Python-2-Compatible=false\n"
+"X-Krita-Manual=myPluginManual.html\n"
+"Name=Mitt eget insticksprogram\n"
+"Comment=Vårt alldeles egna insticksprogram."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:47
 msgid "Type"
@@ -146,6 +170,9 @@ msgid ""
 "of 3 (``-DENABLE_PYTHON_2=ON`` in the cmake configuration), then this plugin "
 "will not show up in the list."
 msgstr ""
+"Om det är kompatibelt med Python 2. Om Krita byggdes med Python 2 istället"
+" för 3 (``-DENABLE_PYTHON_2=ON`` i cmake-konfigurationen), så visas inte"
+" detta insticksprogram i listan."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:55
 msgid "X-Krita-Manual"
@@ -158,6 +185,9 @@ msgid ""
 "<https://doc.qt.io/qt-5/richtext-html-subset.html>`_, if not, it'll be shown "
 "as plain text."
 msgstr ""
+"Ett valfritt värde som pekar på manualsidan. Den visas i"
+" Python-instickshanteraren. Om det är en HTML-fil visas den som rich text <"
+"https://doc.qt.io/qt-5/richtext-html-subset.html>`_, annars som vanlig text."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:57
 msgid "Name"
@@ -180,11 +210,13 @@ msgid ""
 "Krita python plugins need to be python modules, so make sure there's an "
 "__init__.py script, containing something like..."
 msgstr ""
+"Krita Python-insticksprogram måste vara Python-moduler, så säkerställ att det"
+" finns ett __init__.py skript, som innehåller något i stil med ..."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:68
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:89
 msgid "from .myplugin import *"
-msgstr ""
+msgstr "from .mitt_insticksprogram import *"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:69
 msgid ""
@@ -193,6 +225,11 @@ msgid ""
 "but it will be grayed out, because there's no myplugin.py. If you hover over "
 "disabled plugins, you can see the error with them."
 msgstr ""
+"Där .mitt_insticksprogram är namnet på insticksprogrammets huvudfil. Om Krita"
+" startas om, ska det nu visas i Python-instickshanteraren under"
+" inställningarna, men det är grått, eftersom det inte finns någon"
+" mitt_insticksprogram.py. Om man håller musen över inaktiverade"
+" insticksprogram kan man se felet i dem."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:71
 msgid ""
@@ -200,6 +237,9 @@ msgid ""
 "the :guilabel:`Configure Krita` dialog and go to the Python Plugin Manager "
 "page and enable your plugin."
 msgstr ""
+"Insticksprogrammet måste explicit aktiveras. Gå till menyn Inställningar,"
+" öppna dialogrutan :guilabel:`Anpassa Krita` och gå till sidan"
+" Python-instickshanterare och aktivera insticksprogrammet."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:74
 msgid "Summary"
@@ -252,6 +292,13 @@ msgid ""
 "Name=My Own Plugin\n"
 "Comment=Our very own plugin."
 msgstr ""
+"[Desktop Entry]\n"
+"Type=Service\n"
+"ServiceTypes=Krita/PythonPlugin\n"
+"X-KDE-Library=myplugin\n"
+"X-Python-2-Compatible=false\n"
+"Name=Mitt eget insticksprogram\n"
+"Comment=Vårt alldeles egna insticksprogram."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:100
 msgid "write your script in the ''myplugin/myplugin.py'' file."
@@ -318,16 +365,22 @@ msgid ""
 "    action = window.createAction(\"myAction\", \"My Script\", \"tools/scripts"
 "\")"
 msgstr ""
+"def createActions(self, window):\n"
+"    action = window.createAction(\"myAction\", \"Mitt skript\","
+" \"tools/scripts"
+"\")"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:138
 msgid "\"myAction\""
-msgstr "\"mitt_alternativ\""
+msgstr "\"myAction\""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:139
 msgid ""
 "This should be replaced with a unique id that Krita will use to find the "
 "action."
 msgstr ""
+"Ska ersättas med en unik identifierare som Krita använder för att hitta"
+" åtgärden."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:141
 msgid "\"My Script\""
@@ -342,12 +395,17 @@ msgid ""
 "If you now restart Krita, you will have an action called \"My Script\". It "
 "still doesn't do anything, because we haven't connected it to a script."
 msgstr ""
+"Om man nu startar om Krita, finns en åtgärd som kallas \"Mitt skript\". Den"
+" gör fortfarande ingenting, eftersom vi inte har anslutit den till ett skript."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:145
 msgid ""
 "So, let's make a simple export document script. Add the following to the "
 "extension class, make sure it is above where you add the extension to Krita:"
 msgstr ""
+"Så låt oss skapa ett enkelt skript för dokumentexport. Lägg till följande i"
+" utökningsklassen, och säkerställ att det är ovanför där utökningen lades"
+" till i Krita:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:160
 msgid ""
@@ -364,20 +422,35 @@ msgid ""
 "we make an empty one Krita will use the export defaults.\n"
 "        doc.exportImage(fileName, InfoObject())"
 msgstr ""
+"def exportDocument(self):\n"
+"    # Hämta dokumentet:\n"
+"    doc =  Krita.instance().activeDocument()\n"
+"    # Att spara ett dokument som inte finns orsakar krascher, så låt oss"
+" först kolla det.\n"
+"    if doc is not None:\n"
+"        # Anropar dialogrutan för att spara. Dialogrutan för att spara"
+" returnerar en tuple.\n"
+"        fileName = QFileDialog.getSaveFileName()[0]\n"
+"        # Och exportera dokumentet till platsen fileName.\n"
+"        # InfoObject är en dictionary med specifika exportalternativ, men när"
+" vi skapar en tom använder Krita förvalda exportvärden.\n"
+"        doc.exportImage(fileName, InfoObject())"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:161
 msgid "And add the import for QFileDialog above with the imports:"
-msgstr ""
+msgstr "Och lägg till import för QFileDialog ovanför med andra importer:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:167
 msgid ""
 "from krita import *\n"
 "from PyQt5.QtWidgets import QFileDialog"
 msgstr ""
+"from krita import *\n"
+"from PyQt5.QtWidgets import QFileDialog"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:168
 msgid "Then, to connect the action to the new export document:"
-msgstr ""
+msgstr "För att därefter ansluta åtgärden till den nya exportera dokument:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:176
 msgid ""
@@ -385,6 +458,9 @@ msgid ""
 "    action = window.createAction(\"myAction\", \"My Script\")\n"
 "    action.triggered.connect(self.exportDocument)"
 msgstr ""
+"def createActions(self, window):\n"
+"    action = window.createAction(\"myAction\", \"Mitt skript\")\n"
+"    action.triggered.connect(self.exportDocument)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:177
 msgid ""
@@ -395,17 +471,19 @@ msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:179
 msgid "Restart Krita and your new action ought to now export the document."
-msgstr ""
+msgstr "Starta om Krita så ska den nya åtgärden ny exportera dokumentet."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:182
 msgid "Creating configurable keyboard shortcuts"
-msgstr ""
+msgstr "Skapa inställningsbara snabbtangenter"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:184
 msgid ""
 "Now, your new action doesn't show up in :menuselection:`Settings --> "
 "Configure Krita --> Keyboard Shortcuts`."
 msgstr ""
+"Nu är det så att den nya åtgärden inte visas i :menuselection:`Inställningar"
+" --> Anpassa Krita --> Snabbtangenter`."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:186
 msgid ""
@@ -413,6 +491,9 @@ msgid ""
 "they are present in an .action file. The action file to get our action to be "
 "added to shortcuts should look like this:"
 msgstr ""
+"Av olika orsakar lägger Krita bara till åtgärder i genvägsmenyn när de finns"
+" i en .action-fil. Filen för att få vår åtgärd tillagt som genväg ska se ut"
+" så här:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:210
 msgid ""
@@ -436,6 +517,25 @@ msgid ""
 "    </Actions>\n"
 "</ActionCollection>"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+"<ActionCollection version=\"2\" name=\"Scripts\">\n"
+"    <Actions category=\"Scripts\">\n"
+"        <text>Mina skript</text>\n"
+"\n"
+"        <Action name=\"myAction\">\n"
+"        <icon></icon>\n"
+"        <text>Mitt skript</text>\n"
+"        <whatsThis></whatsThis>\n"
+"        <toolTip></toolTip>\n"
+"        <iconText></iconText>\n"
+"        <activationFlags>10000</activationFlags>\n"
+"        <activationConditions>0</activationConditions>\n"
+"        <shortcut>ctrl+alt+shift+p</shortcut>\n"
+"        <isCheckable>false</isCheckable>\n"
+"        <statusTip></statusTip>\n"
+"        </Action>\n"
+"    </Actions>\n"
+"</ActionCollection>"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:211
 msgid "<text>My Scripts</text>"
@@ -446,6 +546,8 @@ msgid ""
 "This will create a sub-category under scripts called \"My Scripts\" to add "
 "your shortcuts to."
 msgstr ""
+"Skapar en delkategori under skript som heter \"Mina skript\" för att lägga"
+" till genvägar."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:213
 msgid "name"
@@ -473,7 +575,7 @@ msgstr "text"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:218
 msgid "The text that it will show in the shortcut editor."
-msgstr ""
+msgstr "Texten som visas i genvägseditorn."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:219
 msgid "whatsThis"
