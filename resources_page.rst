@@ -119,9 +119,25 @@ User-made Python Plugins
 ------------------------
 To install and manage your plugins, visit the :ref:`krita_python_plugin_howto` area. See the second area on how to get Krita to recognize your plugin.
 
+
+
+Usability
+~~~~~~~~~
 Direct Eraser Plugin
 
     https://www.mediafire.com/file/sotzc2keogz0bor/Krita+Direct+Eraser+Plugin.zip
+
+ThreeSlots plugin: creates three brushtool shortcuts that memorize last used brush preset for each slot independently from each other.
+
+    https://github.com/DarkDefender/threeslots
+
+QuickColor: shortcuts to get a color from a specified palette
+
+    https://github.com/JonasLW/QuickColor
+
+BrushColorSwitch: switches brush and foreground/background color with the same action/shortcut.
+
+    https://github.com/rkspsm/BrushColorSwitch
 
 Tablet Controls Docker
 
@@ -131,69 +147,106 @@ On-screen Canvas Shortcuts
 
     https://github.com/qeshi/henriks-onscreen-krita-shortcut-buttons/tree/master/henriks_krita_buttons
 
-Spine File Format Export
 
-    https://github.com/chartinger/krita-unofficial-spine-export
 
-GDQuest - Designer Tools
 
-    https://github.com/GDquest/Krita-designer-tools
+Workflow improvements
+~~~~~~~~~~~~~~~~~~~~~
 
 AnimLayers (Animate with Layers)
 
     https://github.com/thomaslynge/krita-plugins
 
-Art Revision Control (using GIT)
-
-    https://github.com/abeimler/krita-plugin-durra
-
-Krita Plugin generator
-
-    https://github.com/cg-cnu/vscode-krita-plugin-generator
-
-Bash Action (works with OSX and Linux)
-
-    https://github.com/juancarlospaco/krita-plugin-bashactions#krita-plugin-bashactions
-
 Reference Image Docker (old style)
 
     https://github.com/antoine-roux/krita-plugin-reference
-
-Post images on Mastadon
-
-    https://github.com/spaceottercode/kritatoot
-
-Python auto-complete for text editors
-
-    https://github.com/scottpetrovic/krita-python-auto-complete
     
-QuickColor: shortcuts to get a color from a specified palette
-
-    https://github.com/JonasLW/QuickColor
-    
-ThreeSlots plugin: creates three brushtool shortcuts that memorize last used brush preset for each slot independently from each other.
-
-    https://github.com/DarkDefender/threeslots
-
 Mirror Fix - Correct Symmetry Errors
 
     https://github.com/EyeOdin/mirror_fix
-
-Timer Watch - Time Management Tool
-
-    https://github.com/EyeOdin/timer_watch
-    
-Pigment.O - Color Picker
-
-    https://github.com/EyeOdin/Pigment.O
 
 ToggleRefLayer: enables you to assign a keyboard shortcut to toggle the visibility of a reference layer named "reference"
 
     https://drive.google.com/file/d/11O8FiejleajsT_uHd4Q4VBrCrYX9Rh5v/view?usp=sharing
 
+Shotgun Toolkit Engine for Krita: allows working in a managed way, loading/saving/publishing artwork, keeping it up to date and publishing your projects and layers into Shotgun
+
+    https://github.com/diegogarciahuerta/tk-krita
+
+
+File management
+~~~~~~~~~~~~~~~~
+
+Art Revision Control (using GIT)
+
+    https://github.com/abeimler/krita-plugin-durra
+    
+.. GDQuest - Designer Tools
+..
+..    https://github.com/GDquest/Krita-designer-tools
+
+
+Spine File Format Export
+
+    https://github.com/chartinger/krita-unofficial-spine-export
+
+
+
+Color selectors
+~~~~~~~~~~~~~~~
+
+Pigment.O - Color Picker
+
+    https://github.com/EyeOdin/Pigment.O
+    
+    
+Interface
+~~~~~~~~~
 Subwindow organizer: split screen, adjusting to window size changes, snapping to workspace borders and more.
 
     https://github.com/wojtryb/kritaSubwindowOrganizer
+    
+    
+KanvasBuddy: a small dialog that floats on top of the canvas packed with enough features to let you spend as much time in Canvas-Only mode as possible. 
+The idea behind KB was to provide the 20% of tools used 80% of the time in the most out-of-the-way GUI possible.
+
+    Source, main page and download link: https://github.com/Kapyia/KanvasBuddy
+    
+    Krita-artists thread: https://krita-artists.org/t/kanvasbuddy-a-minimalist-toolbar/549
+
+
+
+
+Python plugins development
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Krita Plugin generator
+
+    https://github.com/cg-cnu/vscode-krita-plugin-generator
+    
+Python auto-complete for text editors
+
+    https://github.com/scottpetrovic/krita-python-auto-complete
+    
+    
+
+
+
+Miscellaneous
+~~~~~~~~~~~~~~~~~~~~~
+Timer Watch - Time Management Tool
+
+    https://github.com/EyeOdin/timer_watch
+
+Post images on Mastodon
+
+    https://github.com/spaceottercode/kritatoot
+
+Bash Action (works with OSX and Linux)
+
+    https://github.com/juancarlospaco/krita-plugin-bashactions#krita-plugin-bashactions
+
+
+
 
 See Something We Missed?
 ------------------------
