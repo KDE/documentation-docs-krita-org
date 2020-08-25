@@ -36,6 +36,17 @@ Fill Entire Selection
     Activating this will result in the shape filling the whole of the active selection, regardless of threshold.
 Use Pattern
     Ticking this will result in the active pattern being used.
+
+
+    Rotation
+        .. versionadded:: 4.4
+        
+        This allows you to rotate the pattern used in the fill.
+    Scale
+        .. versionadded:: 4.4
+
+        This allows you to scale the pattern used in the fill.
+
 Sample
     .. versionadded:: 4.3
     

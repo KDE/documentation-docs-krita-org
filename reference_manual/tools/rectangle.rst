@@ -43,6 +43,16 @@ Background color
     The rectangle will use the background color as fill.
 Pattern
     The rectangle will use the active pattern as fill.
+Pattern Transform
+
+    .. versionadded:: 4.4
+
+    This enables upon using pattern as the fill, and has options for changing the pattern transformation a little.
+
+    Rotation
+        This allows you to rotate the pattern used in the fill.
+    Scale
+        This allows you to scale the pattern used in the fill.
 
 Outline
 ~~~~~~~

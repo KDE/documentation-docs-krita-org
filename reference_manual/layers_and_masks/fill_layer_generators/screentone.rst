@@ -14,7 +14,7 @@
 Screentone
 ----------
 
-.. versionadded:: 4.3.1
+.. versionadded:: 4.4
 
 Fills the layer with simple regular patterns like dots and lines like the ones used in traditional `screentone <https://en.wikipedia.org/wiki/Screentone>`_ or `halftone <https://en.wikipedia.org/wiki/Halftone>`_ techniques.
 

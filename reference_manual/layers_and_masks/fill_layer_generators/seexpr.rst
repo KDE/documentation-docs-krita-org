@@ -13,7 +13,7 @@
 SeExpr
 ------
 
-.. versionadded:: 4.3.1
+.. versionadded:: 4.4
 
 .. image:: /images/layers/SeExpr-David-Revoy.jpg
 

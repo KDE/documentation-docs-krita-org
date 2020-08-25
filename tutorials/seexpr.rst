@@ -11,7 +11,7 @@
 Introduction to SeExpr
 ======================
 
-.. versionadded:: 4.3.1
+.. versionadded:: 4.4
 
    This document will introduce you to the SeExpr expression language.
 
