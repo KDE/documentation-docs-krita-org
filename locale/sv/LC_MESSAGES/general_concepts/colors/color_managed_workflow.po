@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-23 02:01+0200\n"
-"PO-Revision-Date: 2020-06-28 07:22+0200\n"
+"PO-Revision-Date: 2020-08-27 21:05+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -276,6 +276,9 @@ msgid ""
 "have **lcms2**, which deal with ICC profiles, and on the other, we have "
 "**OCIO**, which deal with LUT color management."
 msgstr ""
+"Krita har två system tillägnade till färghantering. Å ena sidan har vi"
+" **lcms2**, som hanterar ICC-profiler, och å den andra har vi **OCIO**, som"
+" hanterar LUT-färghantering."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:88
 msgid ""
@@ -284,6 +287,10 @@ msgid ""
 "reference space, and OCIO deals with manipulating the interpretation of said "
 "colors."
 msgstr ""
+"För att ge en grov uppskattning, tar ICC-profiler hand om att hålla färger"
+" överensstämmande vid många tolkningar av enheter (skärmar, skrivare) genom"
+" att använda en referensrymd, och OCIO tar om hand att manipulera tolkningen"
+" av nämnda färger."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:90
 msgid "Within both we can identify the following color spaces:"
@@ -305,6 +312,19 @@ msgid ""
 "themselves. You can read more about colorimeter usage :ref:`here "
 "<profiling_and_calibration>`."
 msgstr ""
+"Enhetsrymder är de som beskriver bildskärmar, och de måste skapas genom att"
+" använda en liten apparat som kallas \"kolorimeter\". Apparaten, kombinerad"
+" med rätt programvara, mäter den starkaste röda, gröna och blåa färg som"
+" skärmen kan producera, samt de vita, svarta och gråa färger den producerar."
+" Genom att använda dessa och flera andra mätningar skapar den en ICC-profil"
+" unik för skärmen. Man ställer in den under Kritas färghanteringsflik."
+" Normalt antar vi sRGB för skärmar, men det är mycket troligt att en skärm"
+" inte exakt motsvarar sRGB, i synnerhet om man har en högkvalitativ skärm,"
+" där det kan vara en större rymd istället. Enhetsrymder är också anledningen"
+" att man först ska konsultera skrivaren om vilken profil den förväntar sig."
+" Många tryckerier har egna enhetsprofiler för sina skrivare, eller kan"
+" föredra att göra färgkonvertering själva. Man kan läsa mer om användning av"
+" en kolorimeter :ref:`här <profiling_and_calibration>`."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:94
 msgid "Device spaces"
@@ -321,10 +341,14 @@ msgid ""
 "calculations in, which programs like Krita do often. It's therefore "
 "recommended to have a working space profile for your image."
 msgstr ""
+"De levereras tillsammans med Krita för ICC, och för OCIO är de"
+" nerladdningsbara från OCIO:s webbplats. Arbetsrymder är särskilt trevliga"
+" att göra färgberäkningar med, vilket program som Krita ofta gör. Det"
+" rekommenderas därför att ha en arbetsrymdsprofil för bilder."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:99
 msgid "Aesthetic or Look spaces"
-msgstr ""
+msgstr "Estetiska eller utseenderymder"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:99
 msgid ""
@@ -332,10 +356,13 @@ msgid ""
 "an image. Krita doesn't deliver Look profiles for ICC, nor does it yet "
 "support Look spaces for OCIO."
 msgstr ""
+"De är särskilda rymder som har deformerats för att ge en bild ett visst"
+" utseende. Krita levererar inte utseendeprofiler för ICC, och stöder inte"
+" utseenderymder för OCIO ännu."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:102
 msgid "Color managed workflow"
-msgstr "Färghanterande arbetsflöde"
+msgstr "Färghanterat arbetsflöde"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:104
 msgid ""
@@ -343,6 +370,9 @@ msgid ""
 "use them, but it does make it easier to explain how to use them. So let us "
 "look at a typical color management workflow:"
 msgstr ""
+"Att känna till de här rymderna ger förstås inte någon idé om hur de används,"
+" men det gör det enklare att förklara hur man använder dem. Låt oss alltså"
+" titta på ett typiskt färghanterat arbetsflöde:"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:110
 msgid ".. image:: images/color_category/Krita-colormanaged-workflow_text.svg"
@@ -355,6 +385,10 @@ msgid ""
 "different editing software, and is converted to an output space for viewing "
 "on screen or printing."
 msgstr ""
+"Ett typiskt exempel på ett färghanterat arbetsflöde. Vi har indata från"
+" bildläsare och kameror, som vi konverterar till en arbetsrymd som kan"
+" användas av olika redigeringsprogramvara, och konverteras till en utdatarymd"
+" för att visa på skärmen eller skriva ut."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:112
 msgid ""
@@ -364,6 +398,11 @@ msgid ""
 "device space of such a device, we first assign said device space to the "
 "image, and then convert it to a working space."
 msgstr ""
+"I ett traditionellt färghanterat arbetsflöde tänker vi ofta i termer av att"
+" verkliga färger konverteras till datorfärger och omvänt. Alltså exempelvis"
+" foton från en kamera eller inlästa bilder. Om man har en enhetsrymd för en"
+" sådan apparat, tilldelar vi först nämnd enhetsrymd till bilden, och"
+" konverterar därefter den till en arbetsrymd."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:114
 msgid ""
@@ -373,6 +412,11 @@ msgid ""
 "2.9+, Inkscape, digiKam and Scribus, and OCIO configuration between Blender "
 "and Natron."
 msgstr ""
+"Därefter gör vi all vår redigering i arbetsrymden och använder arbetsrymden"
+" för att kommunicera med redigeringsprogram. I fallet med Krita, eftersom det"
+" har två färghanteringssystem, använder vi ICC-profiler mellan program som"
+" Gimp 2.9+, Inkscape, Digikam och Sribus, och OCIO-konfiguration mellan"
+" Blender och Natron."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:116
 msgid ""
@@ -380,6 +424,8 @@ msgid ""
 "have the layers unmerged in the working file, or have it at a very high "
 "resolution."
 msgstr ""
+"Man lagrar alltså arbetsfiler i arbetsrymden, precis som man inte har lager"
+" sammanfogade i en arbetsfil, eller har den med mycket hög upplösning."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:118
 msgid ""
@@ -387,6 +433,9 @@ msgid ""
 "editing process. This is rather advanced, and probably not something to "
 "worry about in Krita's case."
 msgstr ""
+"Ibland inför vi estetiska eller 'utseenderymder' i en bild som en del av"
+" redigeringsprocessen. Det är ganska avancerat, och troligen ingenting att"
+" oroa sig för i fallet med Krita."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:120
 msgid ""
@@ -397,6 +446,12 @@ msgid ""
 "the best conversion, and may prefer to do the conversion from your working "
 "space to the device space of their printers."
 msgstr ""
+"Därefter, när vi är klara med redigeringen, försöker vi konvertera till en"
+" utdatarymd, som är en annan enhetsrymd. Det kan vara CMYK för skrivare eller"
+" en speciell RGB-skärmprofil. När man har att göra med professionella"
+" tryckerier är det bäst att fråga dem om det här steget. De har stor"
+" erfarenhet med att göra den bästa konverteringen, och kan föredra att göra"
+" konverteringen från din arbetsrymd till sina skrivares enhetsrymd."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:122
 msgid ""
@@ -407,6 +462,12 @@ msgid ""
 "you can see your screen as a set of binoculars you have to look through to "
 "see your image at all."
 msgstr ""
+"En annan sorts utmatning är sättet som skärmar visar färgerna. I motsats till"
+" vanlig utmatning görs den hela tiden under redigering. Man måste trots allt"
+" kunna se vad man gör, men skärmen är fortfarande en enhet med en enhetsrymd,"
+" så att den inte förvränger hur bilden ser ut. På så sätt kan man se sin"
+" skärm som en kikare man måste titta med för att överhuvudtaget kunna se"
+" bilden."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:124
 msgid ""
@@ -417,10 +478,15 @@ msgid ""
 "to draw in, you are for the first time seeing the actual colors of the sRGB "
 "space."
 msgstr ""
+"Därför vet man i själva verket inte hur de verkliga färgerna som man arbetar"
+" med ser ut utan en profilerad bildskärm, eftersom datorn inte känner till"
+" skärmens relevanta egenskaperna. Så om bildskärmen är profilerad, ange"
+" profilen för Krita i inställningarna, och välj att rita i sRGB-rymden, så"
+" ser man för första gången sRGB-rymdens verkliga färger."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:127
 msgid "So what does this mean?"
-msgstr "Så vad betyder det här?"
+msgstr "Så vad betyder det?"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:133
 msgid ""
@@ -435,6 +501,10 @@ msgid ""
 "simplifies the workflow, but makes the screen profile and viewing conditions "
 "more important."
 msgstr ""
+"När vi målar från början kan man se skärmprofilen som indatarymden, eftersom"
+" vi använder den för att avgöra vilka färger som vi väljer. Det förenklar"
+" arbetsflödet i viss mån, men gör skärmprofilen och visningsförhållanden"
+" viktigare."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:135
 msgid ""
@@ -638,6 +708,8 @@ msgid ""
 "Component, exposure, gamma, whitepoint and blackpoint are knobs which allows "
 "you to modify the display filter."
 msgstr ""
+"Komponent, exponering, gamma, vitpunkt och svartpunkt är knappar som gör det"
+" möjligt att ändra visningsfiltret."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:208
 msgid ""
@@ -661,6 +733,8 @@ msgid ""
 "Black similarly, is brighter on a LCD display than a LED one, and "
 "incomparable with the black of a carefully sealed room."
 msgstr ""
+"Svart är på liknande sätt ljusstarkare på en LCD-skärm än en LED-skärm, och"
+" inte kompatibel med svart i ett noggrant isolerat rum."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:214
 msgid ""
@@ -684,6 +758,8 @@ msgid ""
 "So, for example, we can choose to scale whiter-than-screen-white to our "
 "screen-white so we can see the contrasts there."
 msgstr ""
+"Vi kan alltså exempelvis välja att skala vitare än skärmens vita färg till"
+" vår skärmvita färg så att vi kan se kontrasten där."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:226
 msgid ""
@@ -780,6 +856,9 @@ msgid ""
 "are working with Blender, you will be better off using OCIO, than ICC. If "
 "you are working with Scribus or Photoshop, use ICC."
 msgstr ""
+"Använder lämplig färghantering för lämpligt arbetsflöde. Om man arbetar med"
+" Blender är det bättre att använda OCIO, och sedan ICC. Om man arbetar med"
+" Scribus eller Photoshop, använda då ICC."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:249
 msgid ""
@@ -810,6 +889,8 @@ msgid ""
 "No amount of color management in the world can make the image on your screen "
 "and the image out of the printer have 100% the same color."
 msgstr ""
+"Ingen färghantering i världen kan få bilden på skärmen och den som kommer ut"
+" ur skrivaren att ha 100 % samma färg."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:263
 msgid "Exporting"
@@ -882,6 +963,8 @@ msgid ""
 "Check with the printer what kind of image they expect. Maybe they expect "
 "sRGB color space, or perhaps they have their own profile."
 msgstr ""
+"Kolla med tryckeriet vilken sorts bild de förväntar sig. Kanske förväntar de"
+" sig en sRGB färgrymd, eller kanske har de sin egen profil."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:287
 msgid "Interaction with other applications"
@@ -960,13 +1043,15 @@ msgstr "Bildskärmsprofilen (man väljer färger via skärmen)."
 #: ../../general_concepts/colors/color_managed_workflow.rst:341
 #: ../../general_concepts/colors/color_managed_workflow.rst:359
 msgid "Workingspace"
-msgstr "Arbetsyta"
+msgstr "Arbetsrymd"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:320
 msgid ""
 "sRGB (the default screen profile) or any larger profile if you can spare the "
 "bit depth and like working in them."
 msgstr ""
+"sRGB (skärmens standardprofil) eller någon annan större profil om du kan leva"
+" med bitdjupet och tycker om att arbeta i den."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:322
 #: ../../general_concepts/colors/color_managed_workflow.rst:344
@@ -979,6 +1064,8 @@ msgid ""
 "sRGB, ICC version 2, sRGB TRC for the internet, and a specialized CMYK "
 "profile from the printing house for the printed images."
 msgstr ""
+"sRGB, ICC-version 2, sRGB TRC för Internet, och en specialiserad CMYK-profil"
+" från tryckeriet för de utskrivna bilderna."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:324
 msgid ""
@@ -994,6 +1081,9 @@ msgid ""
 "and Scribus. All others assume sRGB for your space, no matter what, because "
 "they don't have color management."
 msgstr ""
+"Om man använder en större rymd via ICC, så kan man bara utbyta den mellan"
+" Krita, Illustrator, Gimp 2.9, Manga Studio and Scribus. Alla andra antar"
+" oberoende sRGB som färgrymd, eftersom de inte har färghantering."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:328
 msgid ""
