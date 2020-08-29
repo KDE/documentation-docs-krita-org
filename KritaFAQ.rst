@@ -245,49 +245,6 @@ The possible workarounds for this is to do either of the following:
 
 You might also be able to work around the problem by using the ANGLE renderer instead of native OpenGL.
 
-Can krita work with 8 bit (indexed) images?
--------------------------------------------
-
-No. Krita has been designed from the ground up to use real colors, not indexed palettes. There are no plans to support indexed color images, although Krita can export to some indexed color image formats, such as GIF. However, it does not offer detailed control over pixel values.
-
-
-Where can I find older versions of Krita?
------------------------------------------
-
-All the older versions of Krita that are still available can be found here:
-
--  `Very old builds <https://download.kde.org/Attic/krita/>`_
-
-On Windows, the Krita User Interface is too big on my screen
-------------------------------------------------------------
-
-If you're using Windows, you can set the display scaling to 150% or 200%. Krita comes with HiDPI enabled by default, so if you do that, the Krita UI might be too big for your screen. You can turn it off using the following steps:
-
-- On the menu, select :menuselection:`Settings --> Configure Krita`
-- On :guilabel:`General` page, switch to :guilabel:`Window` tab.
-- Uncheck :guilabel:`Enable Hi-DPI support` (or check if you wish to enable it)
-- Press :guilabel:`OK`, if the settings screen is too big, :kbd:`Alt + O` will trigger the OK button too.
-- Restart Krita
-
-You can also change the toolbox icon size by right-clicking on the toolbox and selecting a size.
-
-Windows: In fullscreen mode, why is there a thin gap at the bottom of the window?
----------------------------------------------------------------------------------
-
-When :ref:`Canvas Graphics Acceleration <display_settings>` is set to OpenGL, you may see a thin gap at the bottom of the window which you can see through. This is done deliberately to work around a bug causing menus and dropdowns to be unusable. If you find it distracting, you can consider changing the Renderer to Direct3D 11 which doesn't require this workaround.
-
-Windows: OBS can't record the Krita OpenGL canvas
--------------------------------------------------
-
-The possible workarounds for this is to do either of the following:
-
-#. Turn off OpenGL in :menuselection:`Settings --> Configure Krita --> Display`.
-#. Or don't use the hardware accelerated mode (game recording mode) in
-   OBS, thus capturing the whole desktop instead of attempting to capture
-   only Krita.
-
-You might also be able to work around the problem by using the ANGLE renderer instead of native OpenGL.
-
 Windows: Can I use Krita with Sandboxie?
 ----------------------------------------
 
