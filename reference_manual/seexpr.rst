@@ -112,7 +112,7 @@ Operators (listed in decreasing precedence)
 
                 1 - $A
 
-    */ %
+    \*/ %
         multiply, divide, modulus
 
         .. note:: ``%`` is the same as the ``fmod`` function.
