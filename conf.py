@@ -234,7 +234,7 @@ html_static_path = ['theme/static']
 #
 # html_sidebars = {}
 
-html_title = project + " version " + release
+# html_title = project + " version " + release
 
 html_context = {
     'build_id': os.getenv('BUILD_NUMBER', None),
