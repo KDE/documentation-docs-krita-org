@@ -57,7 +57,7 @@ Stop gradients are very straight forward:
 
 * |mouseleft| on the gradient to add a stop.
 * |mouseleft| on the stops to select them, and drag to move them.
-* |mouseright| on the stops to remove them. A stop gradient will not allow you to remove stops if there's only two left.
+* Drag stops outside of the bar (further than the way to the left or right) to remove them.
 
 .. image:: /images/gradients/Krita_move_stop.png
    :align: center
