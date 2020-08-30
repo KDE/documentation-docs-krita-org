@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-25 02:03+0200\n"
-"PO-Revision-Date: 2020-08-22 20:53+0200\n"
+"POT-Creation-Date: 2020-08-29 02:02+0200\n"
+"PO-Revision-Date: 2020-08-29 20:09+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -49,10 +49,6 @@ msgstr ""
 ".. image:: images/icons/Krita_mouse_scroll.png\n"
 "   :alt: mushjul"
 
-#: ../../contributors_manual/krita_manual_conventions.rst:None
-msgid "Horizontal Rulers"
-msgstr "Horisontella linjaler"
-
 #: ../../contributors_manual/krita_manual_conventions.rst:0
 msgid ""
 ".. image:: images/sample.png\n"
@@ -60,6 +56,10 @@ msgid ""
 msgstr ""
 ".. image:: images/sample.png\n"
 "   :alt: en bild."
+
+#: ../../contributors_manual/krita_manual_conventions.rst:None
+msgid "Horizontal Rulers"
+msgstr "Horisontella linjaler"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:1
 msgid "reStructuredText conventions for the Krita Manual."
@@ -470,6 +470,12 @@ msgid ""
 "links, while reStructuredText suggests to use ``.. rubic:: Footnotes`` for "
 "specifically collecting footnotes as that plays nice with LaTeX."
 msgstr ""
+"Vi använder i själva verket inte fotnoter i handboken på grund av det faktum"
+" att det är litet för akademiskt för våra läsare. Dock samlar vi dokument och"
+" länkar som ger en del ytterligare information om ett ämne i slutet på en"
+" sida. Sphinx har direktivet ``.. seealso::`` för att hänvisa till externa"
+" länkar, medan reStructuredText föreslår att använda ``.. rubic:: Footnotes``"
+" för att specifikt samla fotnoter som fungerar bra med Latex."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:145
 msgid "Images"
@@ -609,7 +615,7 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:200
 msgid ".. |shorthand| replace:: something or the other."
-msgstr ".. |shorthand| replace:: någonting eller något annat."
+msgstr ".. |stenografi| replace:: någonting eller något annat."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:202
 msgid ""
@@ -617,6 +623,9 @@ msgid ""
 "with 'something or the other'. This is useful for images and text that needs "
 "to be formatted in a complicated way, like in the case of \"LaTeX\"."
 msgstr ""
+"vilket betyder att om man använder  ``|stenografi|`` i texten ersätts det med"
+" 'någonting eller något annat'. Det är användbart för bilder och text som"
+" behöver formateras på ett komplicerat sätt, som i fallet med \"LaTeX\"."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:204
 msgid ""
@@ -625,12 +634,18 @@ msgid ""
 "mousemiddle|, |mousescroll| and |mouseright| respectively. These are defined "
 "in the sphinx conf.py, and are appended to each rst file."
 msgstr ""
+"På engelska har Kritas dokumentation ``|mouseleft|``, ``|mousemiddle|``,"
+" ``|mousescroll|`` och ``|mouseright|``, vilka omvandlas till |mouseleft|,"
+" |mousemiddle|, |mousescroll| och |mouseright|. De definieras i Sphinx"
+" conf.py, och läggs till sist i varje rst-fil."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:206
 msgid ""
 "For links, if you reuse the same link over and over, you can write something "
 "like the following at the end of the file::"
 msgstr ""
+"För länkar, om man återanvänder samma länk om och om igen, kan man skriva"
+" något som liknar följande i slutet av filen:"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:208
 msgid ""
@@ -646,6 +661,9 @@ msgid ""
 "bugzilla with \"bugzilla\" used as the text of the link. ```Krita Manual`_`` "
 "will in turn link to docs.krita.org with the text \"Krita Manual\"."
 msgstr ""
+"Därefter, när man skriver en link kan man bara använda ```bugzilla`_`` för"
+" att länka till bugzilla med \"bugzilla\" använt som länktext. ```Krita"
+" Manual`_`` länkar i sin tur till docs.krita.org med texten \"Krita Manual\"."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:214
 msgid "Lists"
@@ -876,7 +894,7 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:304
 msgid "To make them."
-msgstr ""
+msgstr "För att skapa dem."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:307
 msgid "Tables"
@@ -892,19 +910,19 @@ msgstr "Tabelltyp"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:312
 msgid "listing shortcuts"
-msgstr ""
+msgstr "lista genvägar"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:312
 msgid "Simple table"
-msgstr ""
+msgstr "Enkel tabell"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:313
 msgid "lots of colspans"
-msgstr ""
+msgstr "många kolumner"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:313
 msgid "Grid table"
-msgstr ""
+msgstr "Rutnätstabell"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:314
 msgid "Simple but long"
@@ -912,11 +930,11 @@ msgstr "Enkel men lång"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:314
 msgid "List Table"
-msgstr ""
+msgstr "Listtabell"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:317
 msgid "Done as follows::"
-msgstr ""
+msgstr "Görs på följande sätt:"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:319
 msgid ""
@@ -950,6 +968,35 @@ msgid ""
 "   - * simple but long\n"
 "     * list table"
 msgstr ""
+"================== ============\n"
+"Syfte              Tabelltyp\n"
+"================== ============\n"
+"lista genvägar     Enkel tabell\n"
+"många kolumner     Rutnätstabell\n"
+"Enkel men lång     Listtabell\n"
+"================== ============\n"
+"\n"
+"+-----------------+-------------+\n"
+"|Syfte            |Tabelltyp    |\n"
+"+=================+=============+\n"
+"|lista genvägar   |Enkel tabell |\n"
+"+-----------------+-------------+\n"
+"|många kolumner   |Rutnätstabell|\n"
+"+-----------------+-------------+\n"
+"|Enkel med låmg   |Listtabell   |\n"
+"+-----------------+-------------+\n"
+"\n"
+".. list-table::\n"
+"   :header-rows: 1\n"
+"\n"
+"   - * Syfte\n"
+"     * Tabelltyp\n"
+"   - * lista genvägar\n"
+"     * enkel tabell\n"
+"   - * många kolumner\n"
+"     * rutnätstabell\n"
+"   - * enkel men lång\n"
+"     * listtabell"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:349
 msgid ""
@@ -959,21 +1006,28 @@ msgid ""
 "best done with a list directive because that is just much easier to write "
 "and maintain."
 msgstr ""
+"Fullständiga rutnätstabeller är bäst när man behöver alla funktioner som"
+" komplexa kolumn- och radspann, men de är knepiga att skapa. Av den"
+" anledningen, görs små tabeller bäst med den enkla syntaxen, medan mycket"
+" långa tabeller görs bäst med ett listdirektiv eftersom det helt enkelt är"
+" mycket enklare att skriva och underhålla."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:352
 msgid "Admonishments and asides"
-msgstr ""
+msgstr "Förmaningar och sidoanmärkningar"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:356
 msgid ""
 "Admonishments are sort of like a separate section that the reader needs to "
 "pay attention to."
 msgstr ""
+"Förmaningar är på sätt och viss ett separat avsnitt som läsaren behöver vara"
+" uppmärksam på."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:358
 msgid ""
 "Admonishments that can be used are the following (in order of seriousness):"
-msgstr ""
+msgstr "Förmaningar som kan användas är följande (i svårighetsordning):"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:362
 msgid ""
@@ -981,6 +1035,9 @@ msgid ""
 "useful in the main text. Like, \"These packages are named differently in "
 "openSuse versus Debian\"."
 msgstr ""
+"Tips är användbara för att ge lite mer information om ett ämne som är"
+" användbart i huvudtexten, som, \"Paketen namnges olika i openSuse och"
+" Debian\"."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:366
 msgid ""
@@ -988,32 +1045,42 @@ msgid ""
 "your favourite document setup\", or \"Use m to mirror the canvas and see "
 "errors more easily in your drawing\"."
 msgstr ""
+"Extra information om hur man gör någonting, som, \"Man kan skapa en mall av"
+" favoritinställningen av ett dokument\", eller \"Använd m för att spegla"
+" duken och lättare se fel i teckningen\"."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:370
 msgid "Something that is important to note, but is not necessarily negative."
 msgstr ""
+"Någonting som är viktigt att notera, men som inte nödvändigtvis är negativt."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:374
 msgid "This is in general when something is negative."
-msgstr ""
+msgstr "Den är i allmänhet när någonting är negativt."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:378
 msgid ""
 "General attention grabber. Use this when the subject is more important than "
 "warning, but not as important that is could get a dataloss."
 msgstr ""
+"Allmän uppmärksamhetsfångare. Använd det när ämnet är viktigare än en"
+" varning, men inte så viktigt att det kan orsaka dataförlust."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:382
 msgid ""
 "This is for things that could cause dataloss, like forgetting to save, or "
 "that Python currently has no undo functionality."
 msgstr ""
+"Den är till för saker som kan orsaka dataförlust, såsom glömma att spara,"
+" eller att Python för närvarande inte har någon funktion för att ångra sig."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:386
 msgid ""
 "This should be for things that are dangerous for the computer in general, "
 "this includes things that can cause out of memory style freezes."
 msgstr ""
+"Den ska vara för saker som är farliga för datorn i allmänhet. Det omfattar"
+" saker som kan frysningar på grund av att minnet tar slut."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:390
 msgid ""
@@ -1021,18 +1088,20 @@ msgid ""
 "manually given some situations, but our configuration does not do so by "
 "default."
 msgstr ""
+"Detta är troligen inte relevant för en handbok. Sphinx kan skapa dem manuellt"
+" under vissa förutsättningar, men vår inställning gör det inte normalt."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:392
 msgid "Generic admonition that can have any text"
-msgstr ""
+msgstr "Generell förmaning som kan ha vilken text som helst"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:394
 msgid "Text."
-msgstr ""
+msgstr "Text."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:396
 msgid "You can make it like this::"
-msgstr ""
+msgstr "Man kan göra dem så här:"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:398
 msgid ""
@@ -1040,10 +1109,13 @@ msgid ""
 "\n"
 "    Text."
 msgstr ""
+".. admonition:: Generell förmaning som kan ha vilken text som helst\n"
+"\n"
+"    Text."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:404
 msgid "Sphinx also adds::"
-msgstr ""
+msgstr "Sphinx lägger också till:"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:406
 msgid ""
@@ -1051,6 +1123,9 @@ msgid ""
 "\n"
 "    Which is useful to collect external links and references."
 msgstr ""
+".. seealso::\n"
+"\n"
+"    Vilket är användbart för att samla externa länkar och referenser."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:414
 msgid ""
@@ -1064,14 +1139,23 @@ msgid ""
 "section. It is therefore better to use headings or the ``.. Topic::`` "
 "directive. Headings also make it easier to read."
 msgstr ""
+"Horisontella linjer är oftast använda när ämnet direkt ändras. Det är mycket"
+" vanligt i mer berättelsebaserade verk, såsom historia eller skönlitteratur."
+" Kritas handbok är mycket mer lik verk med instruktions- och referensstil,"
+" det vill säga, vi berättar inte oftast en lång historia för att ange hur"
+" olika element passar ihop, utan långa historier finns istället där för att"
+" motivera varför olika steg tas på ett visst sätt. Byte av ämnet sker då"
+" oftast eftersom vi går till ett nytt avsnitt, istället för att gå till ett"
+" relaterat avsnitt. Därför är det bättre att använda rubriker eller"
+" direktivet ``.. Topic::``. Rubriker gör det också lättare att läsa."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:418
 msgid "That said, horizontal rulers can be made with ``----``."
-msgstr ""
+msgstr "Det sagt, kan man göra horisontella linjer med ``----``."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:421
 msgid "The rubric directive"
-msgstr ""
+msgstr "Direktivet rubric"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:422
 msgid ""
@@ -1079,20 +1163,24 @@ msgid ""
 "\"topic\", but where the topic is over several paragraphs, rubric itself "
 "only deals with the header, like so::"
 msgstr ""
+"Direktivet rubric är ett rubrikdirektiv som vid första påseende ser ut som"
+" \"ämne\", men där ämnet fördelas mellan flera stycken, själva rubric tar"
+" bara omhand rubriken, på detta sätt:"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:424
 msgid ".. rubric:: The rubric directive"
-msgstr ""
+msgstr ".. rubric:: Direktivet rubric"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:428
 msgid "So, when to use these?"
-msgstr ""
+msgstr "Så när använder man dem?"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:429
 msgid ""
 "Only use them when you think the subject is too minor to have a proper "
 "heading."
 msgstr ""
+"Använd dem bara när ämnet verkar för litet för att ha en riktig rubrik."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:431
 msgid "Topic"
@@ -1103,20 +1191,23 @@ msgid ""
 "When the text is separated from the flow, so it goes into a different "
 "subject than the text itself is naturally going to."
 msgstr ""
+"När texten är separerad från flödet, så att den hamnar i ett annat ämne än"
+" texten själv naturligt hör hemma i."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:433
 msgid "Rubric"
-msgstr "Rubrik"
+msgstr "Rubric"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:434
 msgid ""
 "When the text isn't separated from the flow, but it does not need a header "
 "either."
 msgstr ""
+"När texten inte är separat från flödet, men inte heller kräver en titel."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:436
 msgid "Admonishments"
-msgstr ""
+msgstr "Förmaningar"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:436
 msgid ""
@@ -1124,6 +1215,9 @@ msgid ""
 "and warning admonishments, as seeing them too often can make users blind to "
 "them."
 msgstr ""
+"Bara när de passar in semantiskt. Det är särskilt nödvändigt för faro- och"
+" varningsförmaningar, eftersom om de syns för ofta kan användare bli blinda"
+" för dem."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:439
 msgid "Code Snippets"
@@ -1131,13 +1225,15 @@ msgstr "Kodsnuttar"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:441
 msgid "``Inline code snippets`` are done with ````backticks````."
-msgstr ""
+msgstr "``kodsnuttar på plats`` görs med ````grav accent````."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:443
 msgid ""
 "Multi-line code snippets are done by ending the previous section with ``::"
 "``, which'll look like this::"
 msgstr ""
+"Flerraders kodsnuttar gör genom att sluta föregående avsnitt med ``::"
+"``, som ser ut så här:"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:445
 msgid ""
@@ -1146,12 +1242,19 @@ msgid ""
 "    Be sure to add a white space and a tab afterwards before starting the "
 "snippet."
 msgstr ""
+"Detta är ett stycke, och vi definierar förformaterade textsnuttar på följande"
+" sätt:\n"
+"\n"
+"    Säkerställ att lägga till ett blanktecken och ett tabulatortecken innan"
+" textsnutten börjar."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:449
 msgid ""
 "You can also use the ``.. code::`` directive. If you add the language name "
 "after it, it'll do the appropriate syntax highlighting::"
 msgstr ""
+"Man kan också använda direktivet ``.. code::``, om man lägger till"
+" språknamnet efter det, görs lämplig syntaxfärgläggning:"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:451
 msgid ""
@@ -1324,6 +1427,8 @@ msgid ""
 "Index is used in the top section, right now only single index entries are "
 "used."
 msgstr ""
+"Index används i det översta avsnittet, för närvarande används bara enkla"
+" indexposter."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:534
 msgid ""
@@ -1351,17 +1456,19 @@ msgstr ""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:545
 msgid "This becomes a blockquote."
-msgstr ""
+msgstr "Det blir ett blockcitat."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:547
 msgid "I am not sure why you'd need quotes in a user manual..."
-msgstr ""
+msgstr "Jag är inte säker på varför man behöver citat i en användarhandbok..."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:551
 msgid ""
 "We do actually use quotes in some places. Try to add a link to the name to "
 "define where it came from."
 msgstr ""
+"Vi använder faktiskt citat på vissa ställen. Försök att lägga till en länk"
+" till namnet för att definiera var det kommer ifrån."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:552
 msgid "Wolthera"
