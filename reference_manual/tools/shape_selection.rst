@@ -153,6 +153,46 @@ Gradient
     You can edit the gradient in two ways. The first one is the actual gradient in the docker that you can manipulate. Vectors always use stop-gradients.
     The other way to edit gradients is editing their position on the canvas.
 
+Mesh Gradient
+    Fills the shape with a Mesh Gradient. It has following options:
+
+    Stop
+        Change the color of the selected stop. Only the color of a Corner can be changed (rectangle), changing the color of Bezier handle (circle) is not possible.
+    Rows
+        Change the number of rows in a Mesh Gradient.
+    Columns
+        Change the number of columns in a Mesh Gradient.
+    Smoothing
+        There are two possible values, *Bilinear* (default) and *Bicubic*. *Bilinear* is the linear interpolation of the color of stops, however it may create `Mach Banding effect <https://en.wikipedia.org/wiki/Mach_bands>`_. *Bicubic* is the bicubic interpolation of the color stops, this should produce smoother gradient.
+
+.. note::
+
+   Mesh Gradients follow `SVG draft 2 <https://svgwg.org/svg-next/pservers.html#MeshGradients>`_ for the rendering.
+
+Creating Mesh Gradients
+^^^^^^^^^^^^^^^^^^^^^^
+
+When Mesh Gradients option is selected for a shape, Krita fills it with default mesh gradient, which is an alternating color (it alternates between background color and white). Changing number of rows and columns from Tool Options, will add more patches to the Mesh Gradient and corners can be changed individually.
+
+Editing Mesh Gradients
+^^^^^^^^^^^^^^^^^^^^^^
+
+The way to edit Mesh Gradients is pretty straight forward. Each curve is an individual Bezier Curve. There are two ways to change the structure, one is by dragging the corner (rectangle) and other is by dragging the handle (circle).
+
+.. figure:: /images/tools/MeshGradients-corner-moving.png
+   :align: center
+   :alt: Left to right: Normal, Corner Hovered, Corner Moved and Selected.
+
+   Left to right: Normal, Corner Hovered, Corner Moved and Selected.
+
+To change the color, a corner has to be selected and then Tool Options can be used to change the color of the selected corner.
+
+.. note::
+
+   When importing from Inkscape, shapes may be grouped, which may not allow Krita to edit Mesh Gradients. To fix this, first ungroup (via |mouseright|) them.
+
+
+
 Right-click menu
 ----------------
 
