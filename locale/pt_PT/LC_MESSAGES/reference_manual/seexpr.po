@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-10 01:58+0200\n"
-"PO-Revision-Date: 2020-08-10 16:47+0100\n"
+"POT-Creation-Date: 2020-08-30 02:02+0200\n"
+"PO-Revision-Date: 2020-08-30 17:08+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -164,7 +164,7 @@ msgstr ""
 
 #: ../../reference_manual/seexpr.rst:64
 msgid ""
-"External variables can also be overridden by local assignment. This can be "
+"External variables can also be overridden by local assignment. This can be "
 "useful to scale the noise frequency for instance::"
 msgstr ""
 "As variáveis externas também podem ser sobrepostas com atribuições locais. "
@@ -201,8 +201,8 @@ msgid "Operators (listed in decreasing precedence)"
 msgstr "Operadores (apresentados por prioridade decrescente)"
 
 #: ../../reference_manual/seexpr.rst:84
-msgid "[ a, b, c ]"
-msgstr "[ a, b, c ]"
+msgid "[a,b,c]"
+msgstr "[a,b,c]"
 
 #: ../../reference_manual/seexpr.rst:86
 msgid "vector constructor"
@@ -265,8 +265,8 @@ msgid "1 - $A"
 msgstr "1 - $A"
 
 #: ../../reference_manual/seexpr.rst:114
-msgid "* /  %"
-msgstr "* /  %"
+msgid "\\*/ %"
+msgstr "\\*/ %"
 
 #: ../../reference_manual/seexpr.rst:116
 msgid "multiply, divide, modulus"
@@ -277,16 +277,16 @@ msgid "``%`` is the same as the ``fmod`` function."
 msgstr "O ``%`` é igual à função ``fmod``."
 
 #: ../../reference_manual/seexpr.rst:119
-msgid "+ -"
-msgstr "+ -"
+msgid "+-"
+msgstr "+-"
 
 #: ../../reference_manual/seexpr.rst:121
 msgid "add, subtract"
 msgstr "adição, subtracção"
 
 #: ../../reference_manual/seexpr.rst:122
-msgid "< >  <=  >="
-msgstr "< >  <=  >="
+msgid "<> <= >="
+msgstr "<> <= >="
 
 #: ../../reference_manual/seexpr.rst:124
 msgid ""
@@ -299,8 +299,8 @@ msgid "Only uses the first component of a vector."
 msgstr "Só usa o primeiro componente de um vector."
 
 #: ../../reference_manual/seexpr.rst:127
-msgid "==  !="
-msgstr "==  !="
+msgid "== !="
+msgstr "== !="
 
 #: ../../reference_manual/seexpr.rst:129
 msgid "equality, inequality"
@@ -323,8 +323,9 @@ msgid "logical OR"
 msgstr "OU lógico"
 
 #: ../../reference_manual/seexpr.rst:136
-msgid "? :"
-msgstr "? :"
+#| msgid "? :"
+msgid "?:"
+msgstr "?:"
 
 #: ../../reference_manual/seexpr.rst:138
 msgid "ternary ``if`` operator"
@@ -355,11 +356,11 @@ msgstr "Exemplos::"
 
 #: ../../reference_manual/seexpr.rst:149
 msgid ""
-"$Cs -> contrast(.7) -> clamp(0.2, 0.8)\n"
-"$u -> hsi(20, 1.2, 1, $Cs -> gamma(1.2))"
+"$Cs->contrast(.7) -> clamp(0.2,0.8)\n"
+"$u->hsi(20,1.2,1,$Cs->gamma(1.2))"
 msgstr ""
-"$Cs -> contrast(.7) -> clamp(0.2, 0.8)\n"
-"$u -> hsi(20, 1.2, 1, $Cs -> gamma(1.2))"
+"$Cs->contrast(.7) -> clamp(0.2,0.8)\n"
+"$u->hsi(20,1.2,1,$Cs->gamma(1.2))"
 
 #: ../../reference_manual/seexpr.rst:154
 msgid "Assignment Operators"
@@ -537,11 +538,8 @@ msgstr "float **bias** ( float x, float b)"
 msgid ""
 "Variation of gamma where control parameter goes from ``0`` to ``1`` with "
 "values ``> 0.5`` pulling the curve up and values ``< 0.5`` pulling the curve "
-"down.  Defined as ``pow(x, log(b)/log(0.5))``."
-msgstr ""
-"A variação do gama, onde o parâmetro de controlo vai de ``0`` a ``1`` com os "
-"valores ``> 0.5`` a elevar a curva e os valores ``< 0.5`` a baixar a curva.  "
-"Definido como ``pow(x, log(b)/log(0.5))``."
+"down. Defined as ``pow(x, log(b)/log(0.5))``."
+msgstr "A variação do gama, onde o parâmetro de controlo vai de ``0`` a ``1`` com os valores ``> 0.5`` a elevar a curva e os valores ``< 0.5`` a baixar a curva. Definido como ``pow(x, log(b)/log(0.5))``."
 
 #: ../../reference_manual/seexpr.rst:240
 msgid "float **boxstep** ( float x, float a )"
@@ -562,12 +560,12 @@ msgstr "float **smoothstep** ( float x, float a, float b )"
 #: ../../reference_manual/seexpr.rst:245
 msgid ""
 "The step functions are zero for ``x < a`` and one for ``x > b`` (or ``x > "
-"a`` in the case of boxstep).  Between ``a`` and ``b``, the value changes "
-"continuously between zero and one.  The ``gausstep`` function uses the "
-"standard Gaussian \"bell\" curve which is based on an exponential curve.  "
-"The ``smoothstep`` function uses a cubic curve.  Intuitively, ``gausstep`` "
-"is has a sharper transition near one and a softer transition near zero "
-"whereas ``smoothstep`` is has a medium softness near both one and zero."
+"a`` in the case of boxstep). Between ``a`` and ``b``, the value changes "
+"continuously between zero and one. The ``gausstep`` function uses the "
+"standard Gaussian \"bell\" curve which is based on an exponential curve. The "
+"``smoothstep`` function uses a cubic curve. Intuitively, ``gausstep`` has a "
+"sharper transition near one and a softer transition near zero whereas "
+"``smoothstep`` has a medium softness near both one and zero."
 msgstr ""
 "As funções de passo são iguais a zero para ``x < a`` e um para ``x > b`` (ou "
 "``x > a`` no caso do 'boxstep').  Entre ``a`` e ``b``, o valor varia de "
@@ -599,11 +597,9 @@ msgstr "float **contrast** ( float x, float c )"
 
 #: ../../reference_manual/seexpr.rst:261
 msgid ""
-"Adjust the contrast.  For ``c`` from ``0`` to ``0.5``, the contrast is "
-"decreased.  For ``c > 0.5``, the contrast is increased."
-msgstr ""
-"Ajusta o contraste.  Para um ``c`` de ``0`` a ``0.5``, o contraste é "
-"diminuído.  Para o ``c > 0.5``, o contraste é aumentado."
+"Adjust the contrast. For ``c`` from ``0`` to ``0.5``, the contrast is "
+"decreased. For ``c > 0.5``, the contrast is increased."
+msgstr "Ajusta o contraste. Para um ``c`` de ``0`` a ``0.5``, o contraste é diminuído. Para o ``c > 0.5``, o contraste é aumentado."
 
 #: ../../reference_manual/seexpr.rst:263
 msgid "float **expand** ( float x, float lo, float hi )"
@@ -634,8 +630,8 @@ msgid "float **invert** ( float x )"
 msgstr "float **invert** ( float x )"
 
 #: ../../reference_manual/seexpr.rst:274
-msgid "Invert the value.  Defined as ``1 - x``."
-msgstr "Inverte o valor.  Definido como ``1 - x``."
+msgid "Invert the value. Defined as ``1 - x``."
+msgstr "Inverte o valor. Definido como ``1 - x``."
 
 #: ../../reference_manual/seexpr.rst:275
 msgid "color **hsi** ( color x, float h, float s, float i, float map=1 )"
@@ -643,18 +639,12 @@ msgstr "color **hsi** ( color x, float h, float s, float i, float mapa=1 )"
 
 #: ../../reference_manual/seexpr.rst:277
 msgid ""
-"The ``hsi``  function shifts the hue by ``h`` (in degrees) and scales the "
-"saturation and intensity by ``s`` and ``i`` respectively.  A map may be "
+"The ``hsi`` function shifts the hue by ``h`` (in degrees) and scales the "
+"saturation and intensity by ``s`` and ``i`` respectively. A map may be "
 "supplied which will control the shift - the full shift will happen when the "
 "map is one and no shift will happen when the map is zero. The shift will be "
 "scaled back for values between zero and one."
-msgstr ""
-"A função ``hsi``  desvia a matiz em ``h`` (em graus) e ajusta a escala da "
-"saturação e intensidade em ``s`` e ``i`` respectivamente.  Poderá ser "
-"indicado um mapa que irá controlar o desvio - o desvio completo irá "
-"acontecer quando o mapa for igual a 1 e não ocorrerá nenhum desvio quando o "
-"mapa for zero. O desvio será ajustado à escala para os valores entre zero e "
-"um."
+msgstr "A função ``hsi``  desvia a matiz em ``h`` (em graus) e ajusta a escala da saturação e intensidade em ``s`` e ``i`` respectivamente. Poderá ser indicado um mapa que irá controlar o desvio - o desvio completo irá acontecer quando o mapa for igual a 1 e não ocorrerá nenhum desvio quando o mapa for zero. O desvio será ajustado à escala para os valores entre zero e um."
 
 #: ../../reference_manual/seexpr.rst:283
 msgid "color **hsltorgb** ( color hsl )"
@@ -668,15 +658,10 @@ msgstr "color **rgbtohsl** ( color rgb )"
 msgid ""
 "RGB to HSL color space conversion. HSL is Hue, Saturation, Lightness (all in "
 "the range ``[0, 1]``). These functions have also been extended to support "
-"RGB and HSL values outside of the range ``[0, 1]`` in a reasonable way.  For "
+"RGB and HSL values outside of the range ``[0, 1]`` in a reasonable way. For "
 "any RGB or HSL value (except for negative values), the conversion is well-"
 "defined and reversible."
-msgstr ""
-"Conversão do espaço de cores RGB para HSL. O HSL corresponde a Matiz, "
-"Saturação e Luminosidade (todos no intervalo ``[0, 1]``). Estas funções "
-"também foram estendidas para suportar os valores de RGB e HSL fora do "
-"intervalo ``[0, 1]`` de forma razoável.  Para qualquer valor de RGB ou HSL "
-"(excepto os valores negativos), a conversão está bem-definida e é reversível."
+msgstr "Conversão do espaço de cores RGB para HSL. O HSL corresponde a Matiz, Saturação e Luminosidade (todos no intervalo ``[0, 1]``). Estas funções também foram estendidas para suportar os valores de RGB e HSL fora do intervalo ``[0, 1]`` de forma razoável. Para qualquer valor de RGB ou HSL (excepto os valores negativos), a conversão está bem-definida e é reversível."
 
 #: ../../reference_manual/seexpr.rst:292
 msgid ""
@@ -690,20 +675,12 @@ msgstr ""
 msgid ""
 "The ``midhsi`` function is just like the ``hsi`` function except that the "
 "control map is centered around the mid point (value of ``0.5``) and can "
-"scale the shift in both directions. At the mid point, no shift happens.  At "
+"scale the shift in both directions. At the mid point, no shift happens. At "
 "*1.0*, the full shift happens, and at ``0.0``, the full inverse shift "
-"happens.  Additional ``falloff`` and ``interp`` controls are provided to "
-"adjust the map using the ``remap`` function.  The default ``falloff`` and "
+"happens. Additional ``falloff`` and ``interp`` controls are provided to "
+"adjust the map using the ``remap`` function. The default ``falloff`` and "
 "``interp`` values result in no remapping."
-msgstr ""
-"A função ``midhsi`` é igual à ``hsi``, excepto que o mapa de controlo está "
-"centrado em torno do ponto médio (valor igual a ``0.5``) e pode ajustar a "
-"escala do desvio em ambas as direcções. No ponto médio, não existe qualquer "
-"desvio.  Em *1.0* ocorre o desvio total e, em ``0.0``, ocorre o desvio "
-"inverso na totalidade.  Os controlos de ``corte`` e ``interp`` são "
-"fornecidos para ajustar o mapa com a função ``remap``.  Os valores "
-"predefinidos de ``corte`` e ``interp`` resultam em não ser aplicado o "
-"mapeamento."
+msgstr "A função ``midhsi`` é igual à ``hsi``, excepto que o mapa de controlo está centrado em torno do ponto médio (valor igual a ``0.5``) e pode ajustar a escala do desvio em ambas as direcções. No ponto médio, não existe qualquer desvio. Em *1.0* ocorre o desvio total e, em ``0.0``, ocorre o desvio inverso na totalidade. Os controlos de ``corte`` e ``interp`` são fornecidos para ajustar o mapa com a função ``remap``. Os valores predefinidos de ``corte`` e ``interp`` resultam em não ser aplicado o mapeamento."
 
 #: ../../reference_manual/seexpr.rst:301
 msgid "float **mix** ( float a, float b, float alpha )"
@@ -711,10 +688,8 @@ msgstr "float **mix** ( float a, float b, float alfa )"
 
 #: ../../reference_manual/seexpr.rst:303
 msgid ""
-"Blend of a and b according to alpha.  Defined as ``a*(1-alpha) +b*alpha``."
-msgstr ""
-"Mistura do 'a' e do 'b' de acordo com o alfa.  Definido como ``a*(1-alfa) "
-"+b*alfa``."
+"Blend of a and b according to alpha. Defined as ``a*(1-alpha) +b*alpha``."
+msgstr "Mistura do 'a' e do 'b' de acordo com o alfa. Definido como ``a*(1-alfa) +b*alfa``."
 
 #: ../../reference_manual/seexpr.rst:305
 msgid ""
@@ -726,14 +701,10 @@ msgstr ""
 
 #: ../../reference_manual/seexpr.rst:307
 msgid ""
-"General remapping function.  When ``x`` is within ``± range`` of source, the "
-"result is one.  The result falls to zero beyond that range over ``falloff`` "
-"distance.  The falloff shape is controlled by ``interp``."
-msgstr ""
-"Função geral de mapeamento.  Quando o ``x`` se encontra no ``± intervalo`` "
-"da origem, o resultado é um.  O resultado é igual a zero para além de uma "
-"distância de ``corte`` desse intervalo.  A forma de corte é controlada pela "
-"``interp``."
+"General remapping function. When ``x`` is within ``± range`` of source, the "
+"result is one. The result falls to zero beyond that range over ``falloff`` "
+"distance. The falloff shape is controlled by ``interp``."
+msgstr "Função geral de mapeamento. Quando o ``x`` se encontra no ``± intervalo`` da origem, o resultado é um. O resultado é igual a zero para além de uma distância de ``corte`` desse intervalo. A forma de corte é controlada pela ``interp``."
 
 #: ../../reference_manual/seexpr.rst:312
 msgid "Numeric values or named constants may be used:"
@@ -778,12 +749,9 @@ msgstr "color **ccellnoise** ( vector v )"
 #: ../../reference_manual/seexpr.rst:329
 msgid ""
 "``cellnoise`` generates a field of constant colored cubes based on the "
-"integer location.  This is the same as the `PRMan cellnoise function "
-"<https://renderman.pixar.com/resources/RenderMan_20/cellnoise.html>`_."
-msgstr ""
-"O ``cellnoise`` gera um campo de cubos coloridos constantes com base na "
-"localização inteira._ Isto é igual à `função 'cellnoise' do PRMan <https://"
+"integer location. This is the same as the `PRMan cellnoise function <https://"
 "renderman.pixar.com/resources/RenderMan_20/cellnoise.html>`_."
+msgstr "O ``cellnoise`` gera um campo de cubos coloridos constantes com base na localização inteira. Isto é igual à `função 'cellnoise' do PRMan <https://renderman.pixar.com/resources/RenderMan_20/cellnoise.html>`_."
 
 #: ../../reference_manual/seexpr.rst:333
 msgid "``ccellnoise`` outputs color cellnoise."
@@ -791,67 +759,48 @@ msgstr "O ``ccellnoise`` devolve o ruído em células de cores."
 
 #: ../../reference_manual/seexpr.rst:335
 msgid ""
-"float **fbm** ( vector v, int octaves = 6, float lacunarity = 2, float "
-"gain = 0.5 )"
-msgstr ""
-"float **fbm** ( vector v, int oitavas = 6, float lacunas = 2, float "
-"ganho = 0.5 )"
+"float **fbm** ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )"
+msgstr "float **fbm** ( vector v, int oitavas=6, float lacunas=2, float ganho=0.5 )"
 
 #: ../../reference_manual/seexpr.rst:336
 msgid ""
-"color **cfbm** ( vector v, int octaves = 6, float lacunarity = 2, float "
-"gain = 0.5 )"
-msgstr ""
-"float **cfbm** ( vector v, int oitavas = 6, float lacunas = 2, float "
-"ganho = 0.5 )"
+"color **cfbm** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr "float **cfbm** ( vector v, int oitavas=6, float lacunas=2, float ganho=0.5 )"
 
 #: ../../reference_manual/seexpr.rst:337
 msgid ""
-"vector **vfbm** ( vector v, int octaves = 6, float lacunarity = 2, float "
-"gain = 0.5 )"
-msgstr ""
-"float **vfbm** ( vector v, int oitavas = 6, float lacunas = 2, float "
-"ganho = 0.5 )"
+"vector **vfbm** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr "float **vfbm** ( vector v, int oitavas=6, float lacunas=2, float ganho=0.5 )"
 
 #: ../../reference_manual/seexpr.rst:338
 msgid ""
-"float **fbm4** ( vector v, float time, int octaves = 6, float "
-"lacunarity = 2, float gain = 0.5 )"
-msgstr ""
-"float **fbm4** ( vector v, int oitavas = 6, float lacunas = 2, float "
-"ganho = 0.5 )"
+"float **fbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+msgstr "float **fbm4** ( vector v, int oitavas=6, float lacunas=2, float ganho=0.5 )"
 
 #: ../../reference_manual/seexpr.rst:339
 msgid ""
-"color **cfbm4** ( vector v, float time, int octaves = 6, float "
-"lacunarity = 2, float gain = 0.5 )"
-msgstr ""
-"float **cfbm4** ( vector v, int oitavas = 6, float lacunas = 2, float "
-"ganho = 0.5 )"
+"color **cfbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+msgstr "float **cfbm4** ( vector v, int oitavas=6, float lacunas=2, float ganho=0.5 )"
 
 #: ../../reference_manual/seexpr.rst:340
 msgid ""
-"vector **vfbm4** ( vector v, float time, int octaves = 6, float "
-"lacunarity = 2, float gain = 0.5 )"
-msgstr ""
-"float **cfbm4** ( vector v, int oitavas = 6, float lacunas = 2, float "
-"ganho = 0.5 )"
+"vector **vfbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+msgstr "float **cfbm4** ( vector v, int oitavas=6, float lacunas=2, float ganho=0.5 )"
 
 #: ../../reference_manual/seexpr.rst:342
 msgid ""
 "``fbm`` (Fractal Brownian Motion) is a multi-frequency noise function. The "
-"base frequency is the same as the ``noise`` function.  The total number of "
-"frequencies is controlled by ``octaves``.  The ``lacunarity`` is the spacing "
+"base frequency is the same as the ``noise`` function. The total number of "
+"frequencies is controlled by ``octaves``. The ``lacunarity`` is the spacing "
 "between the frequencies - a value of 2 means each octave is twice the "
-"previous frequency.  The ``gain`` controls how much each frequency is scaled "
+"previous frequency. The ``gain`` controls how much each frequency is scaled "
 "relative to the previous frequency."
-msgstr ""
-"O ``fbm`` (Fractal Brownian Motion - Movimento Fractal de Brown) é uma "
-"função de ruído multi-frequências. A frequência de base é igual à da função "
-"``noise``.  O número total de frequências é controlado pelas ``oitavas``.  "
-"As ``lacunas`` é o intervalo entre as frequências - um valor de 2 significa "
-"que cada oitava é duas vezes a frequência anterior.  O ``ganho`` controla "
-"qual o ajuste da escala de cada frequência face à frequência anterior."
+msgstr "O ``fbm`` (Fractal Brownian Motion - Movimento Fractal de Brown) é uma função de ruído multi-frequências. A frequência de base é igual à da função ``noise``. O número total de frequências é controlado pelas ``oitavas``. As ``lacunas`` é o intervalo entre as frequências - um valor de 2 significa que cada oitava é duas vezes a frequência anterior. O ``ganho`` controla qual o ajuste da escala de cada frequência face à frequência anterior."
 
 #: ../../reference_manual/seexpr.rst:351
 msgid "``cfbm`` and ``cfbm4`` outputs color noise."
@@ -867,12 +816,9 @@ msgstr "float **hash** ( float base1, [float base2, ...] )"
 
 #: ../../reference_manual/seexpr.rst:356
 msgid ""
-"Like ``rand``, but with no internal seeds.  Any number of seeds may be given "
+"Like ``rand``, but with no internal seeds. Any number of seeds may be given "
 "and the result will be a random function based on all the seeds."
-msgstr ""
-"Como o ``rand``, mas sem valores de base internos.  Poderá indicar qualquer "
-"número de valores de base e o resultado será uma função aleatória com base "
-"em todos os valores de base."
+msgstr "Como o ``rand``, mas sem valores de base internos. Poderá indicar qualquer número de valores de base e o resultado será uma função aleatória com base em todos os valores de base."
 
 #: ../../reference_manual/seexpr.rst:359
 msgid "float **noise** ( vector v )"
@@ -921,10 +867,8 @@ msgstr "vector **vnoise4** (vector v, float t )"
 #: ../../reference_manual/seexpr.rst:371
 msgid ""
 "``noise`` is a random function that smoothly blends between samples at "
-"integer locations.  This is Ken Perlin's original noise function."
-msgstr ""
-"O ``noise`` é uma função aleatório que mistura suavemente amostras em "
-"localizações inteiras.  Esta é a função de ruído original de Ken Perlin."
+"integer locations. This is Ken Perlin's original noise function."
+msgstr "O ``noise`` é uma função aleatório que mistura suavemente amostras em localizações inteiras. Esta é a função de ruído original de Ken Perlin."
 
 #: ../../reference_manual/seexpr.rst:376
 msgid "``cnoise`` and ``cnoise4`` output color noise."
@@ -964,89 +908,63 @@ msgstr ""
 
 #: ../../reference_manual/seexpr.rst:390
 msgid ""
-"float **turbulence** ( vector v, int octaves = 6, float lacunarity = 2, "
-"float gain = 0.5 )"
-msgstr ""
-"float **turbulence** ( vector v, int oitavas = 6, float lacunas = 2, float "
-"ganho = 0.5 )"
+"float **turbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr "float **turbulence** ( vector v, int oitavas=6, float lacunas=2, float ganho=0.5 )"
 
 #: ../../reference_manual/seexpr.rst:391
 msgid ""
-"color **cturbulence** ( vector v, int octaves = 6, float lacunarity = 2, "
-"float gain = 0.5 )"
-msgstr ""
-"float **cturbulence** ( vector v, int oitavas = 6, float lacunas = 2, float "
-"ganho = 0.5 )"
+"color **cturbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr "float **cturbulence** ( vector v, int oitavas=6, float lacunas=2, float ganho=0.5 )"
 
 #: ../../reference_manual/seexpr.rst:392
 msgid ""
-"vector **vturbulence** ( vector v, int octaves = 6, float lacunarity = 2, "
-"float gain = 0.5 )"
-msgstr ""
-"float **vturbulence** ( vector v, int oitavas = 6, float lacunas = 2, float "
-"ganho = 0.5 )"
+"vector **vturbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr "float **vturbulence** ( vector v, int oitavas=6, float lacunas=2, float ganho=0.5 )"
 
 #: ../../reference_manual/seexpr.rst:394
 msgid ""
 "``turbulence`` is a variant of ``fbm`` where the absolute value of each "
-"noise term is taken.  This gives a more billowy appearance."
-msgstr ""
-"O ``turbulence`` é uma variante do ``fbm`` em que é retirado o valor "
-"absoluto de cada termo do ruído.  Isto gera uma aparência mais ondulada."
+"noise term is taken. This gives a more billowy appearance."
+msgstr "O ``turbulence`` é uma variante do ``fbm`` em que é retirado o valor absoluto de cada termo do ruído. Isto gera uma aparência mais ondulada."
 
 #: ../../reference_manual/seexpr.rst:396
 msgid ""
-"float **voronoi** ( vector v, int type = 1, float jitter = 0.5, float "
-"fbmScale = 0, int fbmOctaves = 4, float fbmLacunarity = 2, float "
-"fbmGain = 0.5)"
-msgstr ""
-"float **voronoi** ( vector v, int tipo = 1, float desvio = 0.5, float "
-"fbmEscala = 0, int fbmOitavas = 4, float fbmLacunas = 2, float "
-"fbmGanho = 0.5)"
+"float **voronoi** ( vector v, int type=1, float jitter=0.5, float "
+"fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+msgstr "float **voronoi** ( vector v, int tipo=1, float desvio=0.5, float fbmEscala=0, int fbmOitavas=4, float fbmLacunas=2, float fbmGanho=0.5)"
 
 #: ../../reference_manual/seexpr.rst:397
 msgid ""
-"color **cvoronoi** ( vector v, int type = 1, float jitter = 0.5, float "
-"fbmScale = 0, int fbmOctaves = 4, float fbmLacunarity = 2, float "
-"fbmGain = 0.5)"
-msgstr ""
-"float **cvoronoi** ( vector v, int tipo = 1, float desvio = 0.5, float "
-"fbmEscala = 0, int fbmOitavas = 4, float fbmLacunas = 2, float "
-"fbmGanho = 0.5)"
+"color **cvoronoi** ( vector v, int type=1, float jitter=0.5, float "
+"fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+msgstr "float **cvoronoi** ( vector v, int tipo=1, float desvio=0.5, float fbmEscala=0, int fbmOitavas=4, float fbmLacunas=2, float fbmGanho=0.5)"
 
 #: ../../reference_manual/seexpr.rst:398
 msgid ""
-"vector **pvoronoi** ( vector v, float jitter = 0.5, float fbmScale = 0, int "
-"fbmOctaves = 4, float fbmLacunarity = 2, float fbmGain = 0.5)"
-msgstr ""
-"float **pvoronoi** ( vector v, int tipo = 1, float desvio = 0.5, float "
-"fbmEscala = 0, int fbmOitavas = 4, float fbmLacunas = 2, float "
-"fbmGanho = 0.5)"
+"vector **pvoronoi** ( vector v, float jitter=0.5, float fbmScale=0, int "
+"fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+msgstr "float **pvoronoi** ( vector v, int tipo=1, float desvio=0.5, float fbmEscala=0, int fbmOitavas=4, float fbmLacunas=2, float fbmGanho=0.5)"
 
 #: ../../reference_manual/seexpr.rst:400
 msgid ""
 "``voronoi`` is a cellular noise pattern. It is a jittered variant of "
 "``cellnoise``. The type parameter describes different variants of the noise "
-"function.  The ``jitter`` param controls how irregular the pattern is (0 is "
-"like ordinary cellnoise).  The ``fbm...`` params can be used to distort the "
-"noise field.  When ``fbmScale`` is zero (the default), there is no "
-"distortion.  The remaining params are the same as for the ``fbm`` function."
-msgstr ""
-"O ``voronoi`` é um padrão de ruído celular. É uma variante com desvio do "
-"``cellnoise``. O parâmetro 'tipo' descreve diferentes variantes da função de "
-"ruído.  O parâmetro ``desvio`` controla quão irregular é o padrão (0 é como "
-"o 'cellnoise' normal).  Os parâmetros do ``fbm...`` podem ser usados para "
-"distorcer o campo do ruído.  Quando o ``fbmEscal`` é zero (por omissão), não "
-"há qualquer distorção.  Os restantes parâmetros são os mesmos da função "
-"``fbm``."
+"function. The ``jitter`` param controls how irregular the pattern is (0 is "
+"like ordinary cellnoise). The ``fbm...`` params can be used to distort the "
+"noise field. When ``fbmScale`` is zero (the default), there is no "
+"distortion. The remaining params are the same as for the ``fbm`` function."
+msgstr "O ``voronoi`` é um padrão de ruído celular. É uma variante com desvio do ``cellnoise``. O parâmetro 'tipo' descreve diferentes variantes da função de ruído. O parâmetro ``desvio`` controla quão irregular é o padrão (0 é como o 'cellnoise' normal). Os parâmetros do ``fbm...`` podem ser usados para distorcer o campo do ruído. Quando o ``fbmEscala`` é zero (por omissão), não há qualquer distorção. Os restantes parâmetros são os mesmos da função ``fbm``."
 
 #: ../../reference_manual/seexpr.rst:411
 msgid "Voronoi types 1 through 5:"
 msgstr "Tipos de Voronoi de 1 a 5:"
 
 #: ../../reference_manual/seexpr.rst:413
-msgid "|image0|  |image1|  |image2|  |image3|  |image4|"
-msgstr "|imagem0|  |imagem1|  |imagem2|  |imagem3|  |imagem4|"
+msgid "|image0| |image1| |image2| |image3| |image4|"
+msgstr "|imagem0| |imagem1| |imagem2| |imagem3| |imagem4|"
 
 #: ../../reference_manual/seexpr.rst:416
 msgid ""
@@ -1078,13 +996,10 @@ msgstr "int **cycle** ( int indice, int intervaloInf, int intervaloSup )"
 
 #: ../../reference_manual/seexpr.rst:431
 msgid ""
-"Cycles through values between loRange and hiRange based on supplied index.  "
-"This is an offset ``mod`` function.  The result is computed as ``loRange + "
+"Cycles through values between loRange and hiRange based on supplied index. "
+"This is an offset ``mod`` function. The result is computed as ``loRange + "
 "value % (hiRange-loRange+1)``."
-msgstr ""
-"Circula pelos valores entre 'intervaloInf' e 'intervaloSup' com base no "
-"índice fornecido.  Esta é uma função ``mod`` do deslocamento.  O resultado é "
-"calculado como ``intervaloInf + valor % (intervaloSup-intervaloInf+1)``."
+msgstr "Circula pelos valores entre 'intervaloInf' e 'intervaloSup' com base no índice fornecido. Esta é uma função ``mod`` do deslocamento. O resultado é calculado como ``intervaloInf + valor % (intervaloSup-intervaloInf+1)``."
 
 #: ../../reference_manual/seexpr.rst:434
 msgid ""
@@ -1097,13 +1012,9 @@ msgstr ""
 #: ../../reference_manual/seexpr.rst:436
 msgid ""
 "Picks values randomly between loRange and hiRange based on supplied index "
-"(which is automatically hashed).  The values will be distributed according "
-"to the supplied weights.  Any weights not supplied are assumed to be 1.0."
-msgstr ""
-"Escolhe os valores aleatoriamente entre 'intervaloInf' e 'intervaloSup' com "
-"base no índice fornecido (que é disperso de forma automática).  Os valores "
-"serão distribuídos de acordo com os pesos indicados.  Todos os pesos não "
-"indicados assumem-se como sendo iguais a 1.0."
+"(which is automatically hashed). The values will be distributed according to "
+"the supplied weights. Any weights not supplied are assumed to be 1.0."
+msgstr "Escolhe os valores aleatoriamente entre 'intervaloInf' e 'intervaloSup' com base no índice fornecido (que é disperso de forma automática). Os valores serão distribuídos de acordo com os pesos indicados. Todos os pesos não indicados assumem-se como sendo iguais a 1.0."
 
 #: ../../reference_manual/seexpr.rst:440
 msgid ""
@@ -1569,38 +1480,25 @@ msgstr "Suporte Vectorial"
 #: ../../reference_manual/seexpr.rst:639
 msgid ""
 "*Vectors* (points, colors, or 3D vectors) may be intermixed with *scalars* "
-"(simple floating point values).  If a scalar is used in a vector context, it "
+"(simple floating point values). If a scalar is used in a vector context, it "
 "is replicated into the three components, e.g. ``0.5`` becomes ``[0.5, 0.5, "
 "0.5]``."
-msgstr ""
-"Os *Vectores* (pontos, cores ou vectores 3D) podem ser associados a "
-"*escalares* (valores símples de vírgula flutuante).  Se for usado um valor "
-"escalar num contexto vectorial, será replicado nos três componentes, p.ex. "
-"``0.5`` transforma-se em ``[0.5, 0.5, 0.5]``."
+msgstr "Os *Vectores* (pontos, cores ou vectores 3D) podem ser associados a *escalares* (valores símples de vírgula flutuante). Se for usado um valor escalar num contexto vectorial, será replicado nos três componentes, p.ex. ``0.5`` transforma-se em ``[0.5, 0.5, 0.5]``."
 
 #: ../../reference_manual/seexpr.rst:643
 msgid ""
 "If a vector is used in a scalar context, only the first component is used. "
 "One of the benefits of this is that all the functions that are defined to "
-"work with scalars automatically extend to vectors.  For instance, ``pick``, "
+"work with scalars automatically extend to vectors. For instance, ``pick``, "
 "``choose``, ``cycle``, ``spline``, etc., will work just fine with vectors."
-msgstr ""
-"Se for usado um vector num contexto escalar, só é usado o primeiro "
-"componente. Um dos benefícios disto é que todas as funções que são definidas "
-"para funcionar com valores escalares estendem-se automaticamente aos "
-"vectores.  Por exemplo, o ``pick``, ``choose``, ``cycle``, ``spline``, etc., "
-"irão funcionar bem com vectores."
+msgstr "Se for usado um vector num contexto escalar, só é usado o primeiro componente. Um dos benefícios disto é que todas as funções que são definidas para funcionar com valores escalares estendem-se automaticamente aos vectores. Por exemplo, o ``pick``, ``choose``, ``cycle``, ``spline``, etc., irão funcionar bem com vectores."
 
 #: ../../reference_manual/seexpr.rst:649
 msgid ""
 "Arithmetic operators such as ``+``, ``*``, etc., and scalar functions are "
-"applied component-wise to vectors.  For example, applying the ``gamma`` "
+"applied component-wise to vectors. For example, applying the ``gamma`` "
 "function to a map adjusts the gamma of all three color channels."
-msgstr ""
-"Os operadores aritméticos como o ``+``, ``*``, etc., e as funções escalares "
-"são aplicados componente a componente de cada vector.  Por exemplo, se "
-"aplicar a função ``gamma`` a um mapa, ajusta o gama de todos os três canais "
-"de cores."
+msgstr "Os operadores aritméticos como o ``+``, ``*``, etc., e as funções escalares são aplicados componente a componente de cada vector. Por exemplo, se aplicar a função ``gamma`` a um mapa, ajusta o gama de todos os três canais de cores."
 
 #: ../../reference_manual/seexpr.rst:655
 msgid "Curve Functions"
@@ -1749,3 +1647,4 @@ msgid ""
 msgstr ""
 ".. image:: images/seexpr/Se_voronoi_5.png\n"
 "   :alt: imagem4"
+
