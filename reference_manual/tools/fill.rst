@@ -34,6 +34,16 @@ Feathering Radius
     This value will add a soft border to the filled-shape.
 Fill Entire Selection
     Activating this will result in the shape filling the whole of the active selection, regardless of threshold.
+
+    .. versionadded:: 4.4
+    
+        Use selection as boundary
+            When checked, this will count the borders of the selection as an extra boundary on top of the pixel difference.
+            
+            .. figure:: /images/tools/fill_selection_boundary.png
+            
+               Left: Original selection with a line. Middle: Filled with 'use selection as boundary' off. Right: Filled with 'use selection as boundary' on.
+
 Use Pattern
     Ticking this will result in the active pattern being used.
 
