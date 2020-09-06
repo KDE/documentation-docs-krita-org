@@ -22,3 +22,7 @@ Transform
     .. versionadded:: 4.4
 
     This allows setting a number of transformation options on the pattern, such as scaling or rotating it.
+    
+    .. figure:: /images/layers/pattern_fill_transform.png
+    
+       Image showing several transforms applied to a single texture.
