@@ -25,10 +25,21 @@ Adding new compositions
     If you had a word in the text-box to the left, this will be the name of your new composition.
 Activating composition
     Double-click the composition name to switch to that composition.
+    
+..versionadded::4.4
+
+    Rearranging compositions
+        You can rearrange compositions by using the up/down buttons.
+    
 Removing compositions
     The minus sign. Select a composition, and hit this button to remove it.
 Exporting compositions
     The file sign. Will export all checked compositions.
+    
+    .. versionadded:: 4.4
+    
+        It is also possible to render animations for each selected composition. This will use the settings last used in the render animatiion dialog, simplifying the export process.
+
 Updating compositions
     |mouseright| a composition to overwrite it with the current configuration.
 Rename composition
