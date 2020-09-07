@@ -38,7 +38,7 @@ Exporting compositions
     
     .. versionadded:: 4.4
     
-        It is also possible to render animations for each selected composition. This will use the settings last used in the render animatiion dialog, simplifying the export process.
+        It is also possible to render animations for each selected composition. This will use the settings last used in the render animation dialog, simplifying the export process.
 
 Updating compositions
     |mouseright| a composition to overwrite it with the current configuration.

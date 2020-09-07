@@ -43,7 +43,7 @@ Texturing mode
     Lightness Map
         Applies lightness values of the texture to the paint.  Can be used to simulate paper/canvas, or for painting a texture, like reptile skin or tree bark.
     Gradient Map
-        Maps gray/lightness values of the texture to the currently selected gradient.   Useful for painting textures with multiple colors, like reptile skin, tree bark, stars, etc.
+        Maps gray/lightness values of the texture to the currently selected gradient.  Useful for painting textures with multiple colors, like reptile skin, tree bark, stars, etc.
         
     .. image:: /images/brushes/Krita_2_9_brushengine_texture_01.png
     .. image:: /images/brushes/Krita_4_4_brushengine_texture_lightness_gradient_demo.png
@@ -56,7 +56,7 @@ Cutoff policy
     Pattern
         Cuts the pattern off.
     Brush
-        Cuts the brush-tip off.
+        Cuts the brush tip off.
 
     .. image:: /images/brushes/Krita_2_9_brushengine_texture_02.png
 
@@ -90,7 +90,7 @@ Strength
 This allows you to set the texture to Sensors. It will use the cutoff to continuously draw lighter values of the texture (making the result darker).   
 
 .. versionadded:: 4.4
-    For Lightness Map and Gradient Map modes, Strength controls how much of the texture is applied compared to how much of the selected paint color comes through.
+    For Lightness Map and Gradient Map modes, :guilabel:`Strength` controls how much of the texture is applied compared to how much of the selected paint color comes through.
 
 .. image:: /images/brushes/Krita_2_9_brushengine_texture_03.png
 

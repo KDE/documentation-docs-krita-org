@@ -36,7 +36,7 @@ Mirror
 
 .. image:: /images/brushes/Krita_Pixel_Brush_Settings_Mirror.png
 
-This allows you to mirror the Brush-tip with Sensors.
+This allows you to mirror the Brush tip with Sensors.
 
 Horizontal
     Mirrors the mask horizontally.
@@ -52,7 +52,7 @@ Some examples of mirroring and using it in combination with :ref:`option_rotatio
 Rotation
 --------
 
-This allows you to affect Angle of your brush-tip with Sensors.
+This allows you to affect Angle of your brush tip with Sensors.
 
 .. image:: /images/brushes/Krita_2_9_brushengine_rotation.png
 
@@ -71,11 +71,11 @@ In the above example, several applications of the parameter.
 Lightness Strength
 ------------------
 .. versionadded:: 4.4
-    This allows you to affect the Lightness Strength of your brush-tip with Sensors. Only available with brush-tips in Lightness Map mode.
+    This allows you to affect the Lightness Strength of your brush tip with Sensors. Only available with brush tips in Lightness Map mode.
 
 .. image:: /images/brushes/lightness_strength_demo.png
 
-This changes the contrast of the brushtip, so that at 100%, the full effect of the lightness variation is visible in the brush, while at 0% the brush paints without any lightness variation.  This allows a variable impasto effect with lightness brushes, and for variation in texture stamp brushes that use a lightness-enabled brush-tip.
+This changes the contrast of the brush tip, so that at 100%, the full effect of the lightness variation is visible in the brush, while at 0% the brush paints without any lightness variation.  This allows a variable impasto effect with lightness brushes, and for variation in texture stamp brushes that use a lightness-enabled brush tip.
 
 .. _option_scatter:
 
@@ -118,7 +118,7 @@ Size
 
 This parameter is not the diameter itself, but rather the curve for how it's affected.
 
-So, if you want to lock the diameter of the brush, lock the Brush-tip. Locking the size parameter will only lock this curve. Allowing this curve to be affected by the Sensors can be very useful to get the right kind of brush. For example, if you have trouble drawing fine lines, try to use a concave curve set to pressure. That way you'll have to press hard for thick lines.
+So, if you want to lock the diameter of the brush, lock the Brush tip. Locking the size parameter will only lock this curve. Allowing this curve to be affected by the Sensors can be very useful to get the right kind of brush. For example, if you have trouble drawing fine lines, try to use a concave curve set to pressure. That way you'll have to press hard for thick lines.
 
 .. image:: /images/brushes/Krita_2_9_brushengine_size_01.png
 
