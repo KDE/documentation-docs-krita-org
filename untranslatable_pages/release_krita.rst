@@ -33,6 +33,8 @@ Update version in source code
 4. update the snapcraft.yaml file
 5. update the appstream screenshots
 6. update org.kde.krita.appdata.xml 's release tag
+7. update create_tarball's config.ini
+8. update download_release_artifacts.sh
 
 Create the tarball
 ------------------
@@ -40,7 +42,7 @@ Create the tarball
 Create and push the tag
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-. Set the tag: `git tag -a v4.2.9-beta1 -m "Krita 4.2.9 Beta1"`
+1. Set the tag: `git tag -a v4.2.9-beta1 -m "Krita 4.2.9 Beta1"`
 
 2. Push the tag: `git push origin refs/tags/v4.2.9-beta1:refs/tags/v4.2.9-beta1`
 
@@ -109,13 +111,16 @@ Create the tarball
 Make Windows, Linux and OSX packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-8. Request three release builds on binary-factory.kde.org, after starting each build,go to "Console Output" section, click on "Input Requested" and choose a tarball version to build.
+8. Request four release builds on binary-factory.kde.org, after starting each build,go to "Console Output" section, click on "Input Requested" and choose a tarball version to build.
 
 * https://binary-factory.kde.org/job/Krita_Release_Windows32_Build/
 * https://binary-factory.kde.org/job/Krita_Release_Windows64_Build/
 * https://binary-factory.kde.org/job/Krita_Release_Appimage_Build/
+* https://binary-factory.kde.org/job/Krita_Release_MacOS_Build/
 
-9. When builds are ready, downloads them and check:
+9. Download all built artifacts using `download_release_artifacts.sh` script. Open the script and modify `KRITA_VERSION` variable to correspond to the version string.
+
+9. For each build check:
 
 * Krita starts
 * Localization works
@@ -130,18 +135,16 @@ Make Windows, Linux and OSX packages
     gpg --detach-sign --output gmic_krita_qt-x86_64.appimage.sig gmic_krita_qt-x86_64.appimage
 
 
-11. Build an OSX package
+11. Now you should have 15(!) files in your release folder
 
-12. Now you should have 15(!) files in your release folder
-
-13 Generate an md5sum.txt file for all of them:
+12 Generate an md5sum.txt file for all of them:
 
 .. code::
 
     md5sum ./* > md5sum.txt
 
 
-12. Upload 15(!) files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
+13. Upload 16(!) files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
 
 * krita-4.2.9-beta1.tar.gz
 * krita-4.2.9-beta1.tar.gz.sig
@@ -158,9 +161,29 @@ Make Windows, Linux and OSX packages
 * krita-x86-4.2.9-beta1-setup.exe
 * krita-x86-4.2.9-beta1.zip
 * krita-4.2.9-beta1.dmg
+* md5sum.txt
 
-12. Now the folder on download.kde.org should have 15(!) files. Check if you missed something (and you surely did! :) ).
+14. Template ticket for sysadmins:
 
+.. code::
+
+    Hi, sysadmins!
+
+    Could you please do the final steps for publishing Krita release?
+
+    There are two tasks:
+
+    1) Upload release artifacts (16 files) to download.kde.org:
+
+       * Source link: https://files.kde.org/krita/release-4.2.9-beta1/
+       * Destination link: https://download.kde.org/unstable/krita/krita-4.2.9-beta1/
+       * There should be 16 files including `md5sum.txt`
+
+    2) Add `Krita 4.2.9 Beta1` bugzilla version 
+
+15. Now the folder on download.kde.org should have 16(!) files. Check if you missed something (and you surely did! :) ).
+
+    
 Release coordination
 ~~~~~~~~~~~~~~~~~~~~
 
