@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-10 01:58+0200\n"
-"PO-Revision-Date: 2020-09-15 09:26+0200\n"
+"PO-Revision-Date: 2020-09-17 08:03+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128@baslug.org>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -57,6 +57,11 @@ msgid ""
 "RenderMan_20/PxrSeExpr.html>`_ a \"scriptable pattern generator and combiner"
 "\"."
 msgstr ""
+"SeExpr è un linguaggio di espressione incorporabile, progettato da Disney "
+"Animation, che consente alle applicazioni host di eseguire il rendering di "
+"contenuto generato dinamicamente. Pixar lo chiama `nella sua documentazione "
+"<https://renderman.pixar.com/resources/RenderMan_20/PxrSeExpr.html>`_ un "
+"«generatore e combinatore di modelli con script\"."
 
 #: ../../tutorials/seexpr.rst:27
 msgid "SeExpr is available within Krita as a Fill Layer."
@@ -233,6 +238,13 @@ msgid ""
 "the texture. And, because it is not limited in its precision, you can render "
 "complex patterns in your layers at completely arbitrary resolution."
 msgstr ""
+"SeExpr appartiene a una classe diversa, *grafica procedurale*. In modo "
+"simile alla grafica vettoriale, la grafica procedurale richiede solo pochi "
+"KB di archiviazione secondaria per la sua definizione. Ma non è definiti da "
+"formule matematiche; in realtà *codifichi* come viene calcolato il colore in "
+"ogni punto della trama. E, poiché non è limitato nella sua precisione, puoi "
+"eseguire il rendering di modelli complessi nei livelli con una risoluzione "
+"completamente arbitraria."
 
 #: ../../tutorials/seexpr.rst:92
 msgid "Writing a script"
@@ -280,6 +292,11 @@ msgid ""
 "as a *vector*. We'll start by defining the ``$color`` variable and giving it "
 "a value."
 msgstr ""
+"Innanzitutto, gli script SeExpr devono definire una variabile di uscita, "
+"chiamiamola ``$color``. Come SeExpr pensa ai colori in :ref:`spazio dei "
+"colori RGB<model_rgb>`, le variabili di colore sono definite da una "
+"tripletta di numeri noti come *vettore*. Inizieremo definendo la variabile "
+"``$color`` e assegnandole un valore."
 
 #: ../../tutorials/seexpr.rst:116
 msgid ""
@@ -332,6 +349,11 @@ msgid ""
 "<linear_and_gamma>`, sRGB images. Krita transforms them into your document's "
 "color space using the sRGB-elle-V2-srgbtrc.icc profile."
 msgstr ""
+"Per essere assolutamente precisi, SeExpr **non ha gestione del colore**. "
+"Esegue sempre il rendering delle trame come :ref:`float di 32 "
+"bit<bit_depth>`, :ref:`gamma corretta <linear_and_gamma> \", immagini sRGB. "
+"Krita li trasforma nello spazio dei colori del tuo documento utilizzando il "
+"profilo sRGB-elle-V2-srgbtrc.icc."
 
 #: ../../tutorials/seexpr.rst:143
 msgid "See :ref:`color_managed_workflow` for what this means."
@@ -347,6 +369,10 @@ msgid ""
 "layer's properties by right-clicking on :guilabel:`Fill Layer 1`, and "
 "selecting :guilabel:`Layer Properties...`."
 msgstr ""
+"C'è anche un altro modo per definire e modificare le tue variabili. Apri le "
+"proprietà del livello di riempimento facendo clic con il pulsante destro del "
+"mouse su :guilabel:`Livello di riempimento 1`, e selezionando "
+":guilabel:`Proprietà del livello...`."
 
 #: ../../tutorials/seexpr.rst:154
 msgid ".. image:: images/seexpr/SeExpr_prop_1.png"
@@ -404,6 +430,8 @@ msgid ""
 "They are the SeExpr version of :ref:`Stop Gradients <resource_gradients>`: "
 "they interpolate a ramp given by a set of values."
 msgstr ""
+"Sono la versione SeExpr di :ref:`Sfumature con  stop <resource_gradients>`: "
+"interpolano una rampa data da un insieme di valori."
 
 #: ../../tutorials/seexpr.rst:175
 msgid ""
@@ -506,6 +534,8 @@ msgid ""
 "The dialog will append \"Copy\" to the preset's name if it is a copy of an "
 "existing one. You can change it at will."
 msgstr ""
+"La finestra aggiungerà «Copia» al nome della preimpostazione se è una copia "
+"di una esistente. Puoi cambiarlo a piacimento."
 
 #: ../../tutorials/seexpr.rst:217
 msgid "The dialog provides the following choices for setting a thumbnail:"
@@ -520,6 +550,8 @@ msgid ""
 "If the preset already has a thumbnail (for instance, if you created it from "
 "an existing preset), this button will load and apply it."
 msgstr ""
+"Se la preimpostazione ha già una miniatura (ad esempio, se l'hai creata da "
+"una preimpostazione esistente), questo pulsante la caricherà e la applicherà."
 
 #: ../../tutorials/seexpr.rst:223
 msgid "Load Image"
@@ -531,13 +563,15 @@ msgstr "Si applica a un'immagine dal filesystem come una miniatura."
 
 #: ../../tutorials/seexpr.rst:226
 msgid "Render Script to Thumbnail"
-msgstr ""
+msgstr "Rendering dello script in miniatura"
 
 #: ../../tutorials/seexpr.rst:228
 msgid ""
 "Renders your script to a 256x256 texture, and applies the latter as a "
 "thumbnail."
 msgstr ""
+"Esegue il rendering del tuo script in una trama 256x256 e applica "
+"quest'ultima come una miniatura."
 
 #: ../../tutorials/seexpr.rst:229
 msgid "Clear Thumbnail"
