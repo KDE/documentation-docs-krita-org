@@ -120,14 +120,14 @@ Make Windows, Linux and OSX packages
 
 9. Download all built artifacts using `download_release_artifacts.sh` script. Open the script and modify `KRITA_VERSION` variable to correspond to the version string.
 
-9. For each build check:
+10. For each build check:
 
 * Krita starts
 * Localization works
 * Python plugins are available
 * Basic painting and most recently fixed bugs are fixed
 
-10. Sign both AppImages:
+11. Sign both AppImages:
 
 .. code::
 
@@ -135,16 +135,16 @@ Make Windows, Linux and OSX packages
     gpg --detach-sign --output gmic_krita_qt-x86_64.appimage.sig gmic_krita_qt-x86_64.appimage
 
 
-11. Now you should have 15(!) files in your release folder
+12. Now you should have 15(!) files in your release folder
 
-12 Generate an md5sum.txt file for all of them:
+13. Generate an md5sum.txt file for all of them:
 
 .. code::
 
     md5sum ./* > md5sum.txt
 
 
-13. Upload 16(!) files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
+14. Upload 16(!) files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
 
 * krita-4.2.9-beta1.tar.gz
 * krita-4.2.9-beta1.tar.gz.sig
@@ -163,7 +163,7 @@ Make Windows, Linux and OSX packages
 * krita-4.2.9-beta1.dmg
 * md5sum.txt
 
-14. Template ticket for sysadmins:
+15. Template ticket for sysadmins:
 
 .. code::
 
@@ -181,7 +181,7 @@ Make Windows, Linux and OSX packages
 
     2) Add `Krita 4.2.9 Beta1` bugzilla version 
 
-15. Now the folder on download.kde.org should have 16(!) files. Check if you missed something (and you surely did! :) ).
+16. Now the folder on download.kde.org should have 16(!) files. Check if you missed something (and you surely did! :) ).
 
     
 Release coordination
