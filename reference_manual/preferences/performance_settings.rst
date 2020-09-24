@@ -30,7 +30,7 @@ Memory Limit
     This is the maximum space :program:`Krita` will reserve on your RAM on startup. It's both available in percentages and Bytes, so you can specify precisely. :program:`Krita` will not take up more space than this, making it safe for you to run an internet browser or music on the background.
 Internal Pool
     A feature for advanced computer users. This allows :program:`Krita` to organize the area it takes up on the virtual working desk before putting its data on there. Like how a painter has a standard spot for their canvas, :program:`Krita` also benefits from giving certain data it uses its place (a memory pool), so that it can find them easily, and it doesn't get lost among the other data (memory fragmentation). It will then also not have to spend time finding a spot for this data.
-
+   
     Increasing this, of course, means there's more space for this type of data, but like how filling up your working desk with only one big canvas will make it difficult to find room for your paints and brushes, having a large internal pool will result in :program:`Krita` not knowing where to put the other non-specific data.
 
     On the opposite end, not giving your canvas a spot at all, will result in you spending more time looking for a place where you will put the new layer or that reference you just took out of the storage. This happens for :program:`Krita` as well, making it slower.
@@ -38,6 +38,10 @@ Internal Pool
     This is recommended to be a size of one layer of your image, e.g. if you usually paint on the image of 3000x3000x8bit-ARGB, the pool should be something like 36 MiB.
 
     As :program:`Krita` does this on start-up, you will need to restart :program:`Krita` to have this change affect anything.
+
+    .. deprecated:: 4.4
+       This setting was not needed from user side and is deprecated starting from 4.4.
+ 
 Swap Undo After
     :program:`Krita` also needs to keep all the Undo states on the virtual desk (RAM). Swapping means that parts of the files on the virtual desk get sent to the virtual archive room. This allows :program:`Krita` to dedicate more RAM space to new actions, by sending old Undo states to the archive room once it hits this limit. This will make undoing a little slower, but this can be desirable for the performance of :program:`Krita` overall.
     This too needs :program:`Krita` to be restarted.
