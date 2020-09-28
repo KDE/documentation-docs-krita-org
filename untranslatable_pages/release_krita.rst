@@ -112,7 +112,7 @@ Create the tarball
 * https://files.kde.org/krita/.release/$version/krita-$version.tar.xz.sig
 
 
-Make Windows, Linux and OSX packages
+Make Windows, Linux, OSX and Android packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 8. Request four release builds on binary-factory.kde.org, after starting each build,go to "Console Output" section, click on "Input Requested" and choose a tarball version to build.
@@ -121,6 +121,10 @@ Make Windows, Linux and OSX packages
 * https://binary-factory.kde.org/job/Krita_Release_Windows64_Build/
 * https://binary-factory.kde.org/job/Krita_Release_Appimage_Build/
 * https://binary-factory.kde.org/job/Krita_Release_MacOS_Build/
+* https://binary-factory.kde.org/job/Krita_Release_Android_arm64-v8a_Build/
+* https://binary-factory.kde.org/job/Krita_Release_Android_armeabi-v7a_Build/
+* https://binary-factory.kde.org/job/Krita_Release_Android_x86_64_Build/
+* https://binary-factory.kde.org/job/Krita_Release_Android_x86_Build/
 
 9. Download all built artifacts using `download_release_artifacts.sh` script. Open the script and modify `KRITA_VERSION` variable to correspond to the version string.
 
@@ -139,16 +143,29 @@ Make Windows, Linux and OSX packages
     gpg --detach-sign --output gmic_krita_qt-x86_64.appimage.sig gmic_krita_qt-x86_64.appimage
 
 
-12. Now you should have 15(!) files in your release folder
+12. Sign four Android packages (or send them to Boud for signing)
 
-13. Generate an md5sum.txt file for all of them:
+* krita-arm64-4.2.9-beta1-unsigned.apk
+* krita-arm32-4.2.9-beta1-unsigned.apk
+* krita-x86-4.2.9-beta1-unsigned.apk
+* krita-x86_64-4.2.9-beta1-unsigned.apk
+
+After signing, remove "-unsigned" suffix, so the signed packages would look like that:
+
+* krita-arm64-4.2.9-beta1.apk
+* krita-arm32-4.2.9-beta1.apk
+* krita-x86-4.2.9-beta1.apk
+* krita-x86_64-4.2.9-beta1.apk
+  
+13. Now you should have 19(!) files in your release folder
+
+14. Generate an md5sum.txt file for all of them:
 
 .. code::
 
     md5sum ./* > md5sum.txt
 
-
-14. Upload 16(!) files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
+15. Upload 20(!) files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
 
 * krita-4.2.9-beta1.tar.gz
 * krita-4.2.9-beta1.tar.gz.sig
@@ -165,9 +182,13 @@ Make Windows, Linux and OSX packages
 * krita-x86-4.2.9-beta1-setup.exe
 * krita-x86-4.2.9-beta1.zip
 * krita-4.2.9-beta1.dmg
+* krita-arm64-4.2.9-beta1.apk
+* krita-arm32-4.2.9-beta1.apk
+* krita-x86-4.2.9-beta1.apk
+* krita-x86_64-4.2.9-beta1.apk
 * md5sum.txt
 
-15. Template ticket for sysadmins:
+16. Template ticket for sysadmins:
 
 .. code::
 
@@ -177,7 +198,7 @@ Make Windows, Linux and OSX packages
 
     There are two tasks:
 
-    1) Upload release artifacts (16 files) to download.kde.org:
+    1) Upload release artifacts (20 files) to download.kde.org:
 
        * Source link: https://files.kde.org/krita/release-4.2.9-beta1/
        * Destination link: https://download.kde.org/unstable/krita/4.2.9-beta1/
@@ -185,7 +206,7 @@ Make Windows, Linux and OSX packages
 
     2) Add `Krita 4.2.9 Beta1` bugzilla version 
 
-16. Now the folder on download.kde.org should have 16(!) files. Check if you missed something (and you surely did! :) ).
+17. Now the folder on download.kde.org should have 20(!) files. Check if you missed something (and you surely did! :) ).
 
     
 Release coordination
