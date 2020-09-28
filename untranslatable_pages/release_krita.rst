@@ -35,6 +35,10 @@ Update version in source code
 6. update org.kde.krita.appdata.xml 's release tag
 7. update create_tarball's config.ini
 8. update download_release_artifacts.sh
+9. update Android version (keep in mind that *all* Krita releases on Android are marked as Beta at the moment):
+
+    * packaging/android/apk/AndroidManifest.xml 
+    * packaging/android/apk/build.gradle
 
 Create the tarball
 ------------------
