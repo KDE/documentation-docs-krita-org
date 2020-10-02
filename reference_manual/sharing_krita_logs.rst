@@ -136,9 +136,9 @@ Location and the way to get a backtrace is different on all systems.
 Windows
 =======
 
-Usually, it is sufficient to provide the %LOCALAPPDATA%\kritacrash.log. Sometimes more detailed information is needed, then you will be asked to closely follow
+Usually, it is sufficient to share the content of :menuselection:`Help --> Show Krita Log for bug reports` as it contains the backtrace.
 
- :ref:`Dr. Mingw debugger <dr_minw>` guide.
+If you cannot open Krita because it crashes on startup, please provide the :file:`%LOCALAPPDATA%\\kritacrash.log`. Sometimes more detailed information is needed, then you will be asked to closely follow :ref:`Dr. Mingw debugger <dr_minw>` guide.
 
 .. _getting_backtrace_linux:
 
