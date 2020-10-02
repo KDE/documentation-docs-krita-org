@@ -67,40 +67,15 @@ Making changes
 Because we use Git, there's only a few people who can put things into the version control system, so if you want to make changes you will need to put it up for review.
 
 
-.. _merge-request-diff:
-
-Sending patches to Phabricator
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Recommended for users without a technical knowledge who don't plan on contributing more to the project.
-
-Not recommended when you plan to contribute more in the future. (See :ref:`merge-request-edit` if you don't have technical knowledge and want to contribute to Krita Manual more than once).
-
-1. Get the source text from the `repository`_.
-
-    Save a copy of the text as it existed originally.
-
-2. Modify it.
-3. Tools to check whether your modifications work.
-
-    You can use the `Online Sphinx Editor <https://livesphinx.herokuapp.com/>`_ to check if your changes don't break the manual.
-
-4. Bundle up the items into a ZIP.
-
-    Put all the files you changed into a ZIP file. This also includes the images if you're changing them.
-    Try to keep the filenames the same, that's easier for us to copy over.
-5. Upload the ZIP on Phabricator.
-
-    1. First, go to phabricator.kde.org and log in with your identity account.
-    2. Go to the `Manual Project Workboard`_ and there create a new task.
-    3. Explain what you did and use drag and drop to move the ZIP file to the input textbox. That should upload it. We will also need the email address you associate with your kde identity account.
-    4. Then, if the changes are accepted, someone with commit access will unpack those files into the manual folder and push the differences using the mail address.
-
-
 .. _merge-request-edit:
 
 Creating merge requests using Edit mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note::
+
+    This method is only suitable if you have no push access to KDE repositories. Otherwise it would commit your changes directly to the repository, which is against the current guidelines.
+
 
 Recommended for users without a technical knowledge.
 
@@ -167,9 +142,6 @@ Not recommended when you don't know what a branch is (see :ref:`merge-request-ed
 #. Fill all of the fields correctly: see :ref:`new-merge-request`.
 
 #. To create a new merge request manually, go to Krita Manual official repository (make sure the url *doesn't* contain your username now) and click :guilabel:`Create a new merge request` (bright green button at the left). Select your fork and select the branch that you've created in WebIDE.
-
-.. .. image:: /images/gitlab/screenshot_webidemode.png
-..   :width: 1000px
 
 .. note::
 
