@@ -66,31 +66,23 @@ Step 1 - Downloading FFmpeg
 For Windows
 ^^^^^^^^^^^
 
-.. image:: /images/ffmpeg_screenshot_URL.png
-   :alt: FFmpeg URL.
+Open the FFmpeg `download page. <https://www.gyan.dev/ffmpeg/builds/>`_
 
-Open the FFmpeg download page `here. <https://ffmpeg.zeranoe.com/builds/>`_
+Go to :guilabel:`release` section and choose the download link that says ``ffmpeg-release-essentials.zip``.
 
-The page features four headings. Each of these options can be changed using the relevant dropdowns on the left, and are specified below:
+.. note::
 
-- **Version:** Stable 4.2.2 is needed.
-- **Architecture:** 64-bit.
-- **Linking:** It is very important to get the ``Static`` version.
-- **Licence:** GPL 3.0
+    **Don't** download the file which filename contains the word ``shared``. It won't work with Krita.
 
-.. image:: /images/ffmpeg_screenshot_specifications.png
-   :alt: FFmpeg specifications.
+    If the filename ends with ``.7z``, you can still use it, but then you need to have a program that can open 7zip archives (for example `7zip itself <https://www.gyan.dev/ffmpeg/builds/>`_). In case of a ``.zip`` file, you can open it just using the Windows file browser.
 
-Click ``Download Build`` at the bottom of the page. 
-
-.. warning::
-
-    By default, the file should be in .zip format. Do not change the file to any other format, or Krita won't cooperate with it. 
     
 For OSX
 ^^^^^^^
 
 Please see the section above. However, FFmpeg is obtained from `here <https://evermeet.cx/ffmpeg/>`_ instead. Just pick the big green button on the left under the FFmpeg heading. You will also need an archiving utility that supports .7z, since FFmpeg provides their OSX builds in .7z format. If you don't have one, try something like `Keka <https://www.kekaosx.com>`_.
+
+Alternatively you can find the smaller text under the big green button that says :guilabel:`Download as ZIP`. Then you should be able to extract it just using Finder.
 
 For Linux
 ^^^^^^^^^
