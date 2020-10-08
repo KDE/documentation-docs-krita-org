@@ -60,13 +60,15 @@ third handle, and it'll snap to a perfect circle.
 Perspective
 ~~~~~~~~~~~
 
-This ruler takes four points and creates a perspective grid.
+This ruler allows you to draw and manipulate grids on the canvas that can serve as perspective guides for your painting. A grid can be added to your canvas by first clicking the tool in the tool bar and then clicking four points on the canvas which will serve as the four corners of your grid.
+
+.. image:: /images/tools/Perspectivegrid.png
 
 This grid can be used with the 'perspective' sensor, which can influence
 brushes.
 
-If you press the :kbd:`Shift` key while holding any of the corner handles, they'll snap
-to one of the other corner handles, in sets.
+The grid can be manipulated by pulling on any of its four corners. The grid can be extended by clicking and dragging a midpoint of one of its edges. This will allow you to expand the grid at other angles. This process can be repeated on any subsequent grid or grid section.If you press the :kbd:`Shift` key while holding any of the corner handles, they'll snap
+to one of the other corner handles, in sets. You can delete any grid by clicking on the cancel button at its center. This tool can be used to build reference for complex scenes.
 
 .. _assistant_ruler:
 

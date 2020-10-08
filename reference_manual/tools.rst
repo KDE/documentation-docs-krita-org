@@ -32,8 +32,6 @@ The contents of the toolbox docker.
    tools/gradient_draw
    tools/color_selector
    tools/colorize_mask
-   tools/grid_tool
-   tools/perspective_grid
    tools/smart_patch
    tools/assistant
    tools/reference_images_tool

@@ -16,8 +16,6 @@
 Grids and Guides Docker
 =======================
 
-The grids and guides docker replaces the :ref:`grid_tool` in Krita 3.0.
-
 This docker controls the look and the visibility of both the Grid and the Guides decorations. It also features a checkbox to quickly toggle snapping on or off.
 
 Grids
