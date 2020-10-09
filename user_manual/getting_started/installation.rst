@@ -38,7 +38,7 @@ Website:
 Windows Store:
     For a small fee, you can download Krita `from the Windows Store <https://www.microsoft.com/store/productId/9N6X57ZGRW96>`_. This version requires Windows 10.
 Steam:
-    For a small fee, you can also download Krita `from Steam <https://store.steampowered.com/app/280680/Krita/>`_. 
+    For a small fee, you can also download Krita `from Steam <https://store.steampowered.com/app/280680/Krita/>`_.
 
 
 To download a portable version of Krita go to the `KDE <https://download.kde.org/stable/krita/>`_ download directory
@@ -218,6 +218,6 @@ If you encounter any problems, or if you are new to compiling software,
 don't hesitate to contact the Krita developers. There are three main
 communication channels:
 
--  irc: irc.freenode.net, channel #krita
+-  irc: webchat.freenode.net, channel #krita
 -  `mailing list <https://mail.kde.org/mailman/listinfo/kimageshop>`__
 -  `forums <https://forum.kde.org/viewforum.php?f=136>`__

@@ -53,7 +53,7 @@ Ask on Krita's Forum or IRC Chat Channel
 
 If uncertain, ask on `Krita's IRC chat channel <https://krita.org/en/irc/>`_ or the `Krita Forum <https://forum.kde.org/krita>`_.
 
-Krita's chat channel is maintained on irc.freenode.net. Developers and users hang out to discuss Krita's development and help people who have questions.
+Krita's chat channel is maintained on webchat.freenode.net. Developers and users hang out to discuss Krita's development and help people who have questions.
 
 .. important::
     Most Krita developers live in Europe, and the channel is very quiet when it's night in Europe. You also have to be patient: it may take some time for people to notice your question even if they are awake.
