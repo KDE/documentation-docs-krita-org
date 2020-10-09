@@ -66,15 +66,32 @@ External variables can also be overridden by local assignment. This can be usefu
     $P = $P * 10; # increase noise frequency
     fbm(vnoise($P) + $P/4)
 
+You can also define namespaced variables, e.g.::
+
+    $A::a = $u * 10;
 
 ******************
 Control Structures
 ******************
 
-SeExpr, unlike many languages, provides **no control structures** except
-a form of `if` statements, known as the *ternary operator*::
+SeExpr provides the well-known `if` conditional structure::
+
+    if ($ u > 0.5) {
+        $color = [0, 0, 1];
+    }
+    else {
+        $color = [1, 0, 0];
+    }
+
+
+And the *ternary operator*::
 
     $u = $i < .5 ? 0.0 : 10.0
+
+Please be aware that you can freely nest ternary operators, e.g.::
+
+    $color = $u < .5 ? ($v < 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];
+    $color
 
 *******************************************
 Operators (listed in decreasing precedence)
@@ -213,7 +230,7 @@ Logging Functions
 
 .. glossary::
 
-    void **printf** ( string format, [param0, param1, ...] )
+    float **printf** ( string format, [param0, param1, ...] )
         Prints a string to stdout that is formatted as given. Formatting
         parameters possible are ``%f`` for float (takes the first component of vector
         argument) or ``%v`` for vector.
@@ -221,11 +238,14 @@ Logging Functions
         .. hint::
             For example, if you wrote::
 
-                printf("test %f %v",[1,2,3],[4,5,6]);
+                $u = printf("test %f %v",[1,2,3],[4,5,6]);
 
-            you would get::
+            you would get in your console::
 
                 test 1 [4,5,6]
+    
+    string **sprintf** ( string format, [double|string, double|string, ...] )
+        Returns a string formatted from the given values.  See ``man sprintf`` for format details.
 
 ***************************************
 Color, Masking, and Remapping Functions
