@@ -17,7 +17,7 @@
 Animation with Krita
 ====================
 
-Thanks to the 2015 Kickstarter, :program:`Krita 3.0` now has animation. In
+Thanks to the 2015 Kickstarter, :program:`Krita` has animation. In
 specific, :program:`Krita` has frame-by-frame raster animation. There's still a
 lot of elements missing from it, like tweening, but the basic workflow
 is there.
@@ -25,6 +25,12 @@ is there.
 To access the animation features, the easiest way is to change your
 workspace to Animation. This will make the animation dockers and
 workflow appear.
+
+.. note::
+
+    .. versionadded:: 4.1
+
+        The Timeline docker looks a bit different from the screenshots shown in this tutorial, however you should be able to follow it if you take care to select options mentioned in text.
 
 Animation curves
 ----------------
@@ -50,7 +56,7 @@ For this workflow, there are three important dockers:
    functions to manage your layers. The layer that are created in the
    timeline docker also appear on the normal Layer docker.
 #. The :ref:`animation_docker`. This docker contains the
-   play buttons as the ability to change the frame-rate, playback speed
+   play buttons as well as the ability to change the frame-rate, playback speed
    and useful little options like :guilabel:`auto-key framing`.
 #. The :ref:`onion_skin_docker`. This docker controls
    the look of the onion skin, which in turn is useful for seeing the
@@ -122,7 +128,12 @@ all!
 .. image:: /images/animation/Introduction_to_animation_06.png
 
 We can make it animatable by adding a frame to the timeline. |mouseright| a frame in
-the timeline to get a context menu. Choose :guilabel:`New Frame`.
+the timeline to get a context menu. Choose :guilabel:`Create Duplicate Frame`.
+
+.. attention::
+
+     If you select :guilabel:`Create Blank Frame`, the content of the layer will be dropped and a new blank frame will appear; since you want to preserve the image, you need to use :guilabel:`Create Duplicate Frame`.
+
 
 .. image:: /images/animation/Introduction_to_animation_07.png
 
@@ -131,8 +142,8 @@ icon showing up in the timeline docker.
 
 .. image:: /images/animation/Introduction_to_animation_08.png
 
-Use the :guilabel:`Copy Frame` button to copy the first frame onto the second. 
-Then, use the with the :kbd:`Shift + ↑` shortcut to move the frame contents up.
+Use the :guilabel:`Create Duplicate Frame` button to copy the first frame onto the second.
+Then, use the ``Move Tool`` (switch to it using the :kbd:`T` shortcut) with the :kbd:`Shift + ↑` shortcut to move the frame contents up.
 
 We can see the difference by turning on the onionskinning:
 
@@ -214,6 +225,10 @@ actually. A full animation can have so many little parts that an
 animator might want to remove the layers they're not working on from the
 timeline docker. So you manually have to add them.
 
+.. versionadded:: 4.3.0
+
+     In :program:`Krita 4.3.0` and later, all new layers are pinned to the timeline by default.
+
 .. image:: /images/animation/Introduction_to_animation_18.png
 
 To show a layer whether it's active or not, you can "pin" it to the 
@@ -226,48 +241,25 @@ that you're currently animating on.
 Exporting
 ~~~~~~~~~
 
-When you are done, select :menuselection:`File --> Render Animation`.
+When you are done, select :menuselection:`File --> Render Animation`. To render to a video file, you'll need a program called ``FFmpeg``. To learn more, please read :ref:`render_animation`.
 
 .. image:: /images/animation/Introduction_to_animation_20.png
 
-It's recommended to save out your file as a png, and preferably in its
-own folder. Krita can currently only export png sequences.
-
-.. image:: /images/animation/Introduction_to_animation_21.png
-
-When pressing done, you can see the status of the export in the status
-bar below.
-
-.. image:: /images/animation/Introduction_to_animation_22.png
-
-The images should be saved out as filenameXXX.png, giving their frame
-number.
-
-Then use something like Gimp (Linux, OSX, Windows), ImageMagick (Linux,
-OSX, Windows), or any other GIF creator to make a ``.gif`` out of your image
-sequence:
+Enjoy your walkcycle!
 
 .. image:: /images/animation/Introduction_to_animation_walkcycle_02.gif
 
-For example, you can use
-`VirtualDub <http://www.virtualdub.org/>`_\ (Windows) and open all the
-frames and then go to :menuselection:`File --> Export --> GIF`.
 
-Enjoy your walkcycle!
-
-.. note::
-
-   Krita 3.1 has a render animation feature. If you're using the 3.1 beta, check out the :ref:`render_animation` page for more information!
 
 Importing animation frames
 --------------------------
 
-You can import animation frames in Krita 3.0.
+In Krita you can import animation frames.
 
 First let us take a sprite sheet from Open Game Art. (This is the Libre
-Pixel Cup male walkcycle)
+Pixel Cup male walkcycle).
 
-And we'll use :menuselection:`Image --> Split Image` to split up the sprite sheet.
+We'll use :menuselection:`Image --> Split Image` to split up the sprite sheet.
 
 .. image:: /images/animation/Animation_split_spritesheet.png
 
