@@ -83,14 +83,31 @@ SeExpr provides the well-known `if` conditional structure::
         $color = [1, 0, 0];
     }
 
+    $color
 
 And the *ternary operator*::
 
     $u = $i < .5 ? 0.0 : 10.0
 
-Please be aware that you can freely nest ternary operators, e.g.::
+You can freely nest ternary operators, e.g.::
 
     $color = $u < .5 ? ($v < 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];
+    $color
+
+You can also achieve the same with `if` structures::
+
+    if ($ u > 0.5) {
+        if ($v < 0.5) {
+            $color = [0, 0, 1];
+        }
+        else {
+            $color = [1, 0, 0];
+        }
+    }
+    else {
+        $color = [1, 0, 0];
+    }
+
     $color
 
 *******************************************
