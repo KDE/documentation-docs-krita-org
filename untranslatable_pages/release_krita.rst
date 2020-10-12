@@ -78,49 +78,38 @@ Create and push the tag
 
 Create the tarball
 ~~~~~~~~~~~~~~~~~~
-1. Check out kde-dev-scripts:
-    
-    .. code::
-    
-        git clone kde:kde-dev-scripts
 
-2. Go into the createtarball folder, update the information in the 'config.ini' file to reflect the right tag and version number. It should look like that:
+1. Go into the `./packaging/` folder, check that the version in 'config.ini' file reflects the right tag and version number. It should look like that:
 
     .. code::
 
         [krita]
         gitModule   = yes
         gitTag      = v4.2.9
-        mainmodule  = extragear-graphics
-        submodule   = krita
+        category    = graphics
+        mainmodule  = branches/stable
+        l10nmodule  = krita
         version     = 4.2.9
         translations= yes
         docs        = no
         kde_release = no
 
-3. Create the tarball: 
+2. Create the tarball: 
 
     .. code::
     
         ./create_tarball_kf5.rb -n -a krita
 
-4. Check that created archive has 'po' folder and it actually has translations
+3. Check that created archive has 'po' folder and it actually has translations
 
-5. The scripts creates an .xz tarball, but our AppImage builder requires a traditional .gz tarball, so you need to create a .gz version of the tarball manually:
-
-    .. code::
-
-        tar cfz krita-4.2.9-beta1.tar.gz --group=root --owner=root krita-4.2.9-beta1
-
-
-6. Sign both tarballs:
+4. Sign both tarballs:
 
     .. code::
 
         gpg --output krita-4.2.9-beta1.tar.gz.sig --detach-sign krita-4.2.9-beta1.tar.gz
         gpg --output krita-4.2.9-beta1.tar.xz.sig --detach-sign krita-4.2.9-beta1.tar.xz
 
-7. Upload tarballs to files.kde.org, where builders can fpick them up:
+5. Upload tarballs to files.kde.org, where builders can fpick them up:
 
     * https://files.kde.org/krita/.release/$version/krita-$version.tar.gz
     * https://files.kde.org/krita/.release/$version/krita-$version.tar.xz
