@@ -43,6 +43,10 @@ The majority of help requests are about pen pressure and tablet support in gener
 Quick solutions
 ~~~~~~~~~~~~~~~
 
+.. note::
+      
+     With every change mentioned below you might need to restart your PC to see the effect.
+
 *For Windows, all devices:*
 
 #. Change API in :menuselection:`Settings --> Configure Krita... --> Tablet Settings`.
