@@ -5,24 +5,25 @@
 #
 # Automatically generated, 2019.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020.
+# Ronald Stroethoff <stroe43@zonnet.nl>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22 03:51+0200\n"
-"PO-Revision-Date: 2020-04-23 11:14+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"PO-Revision-Date: 2020-10-11 12:19+0200\n"
+"Last-Translator: Ronald Stroethoff <stroet43@zonnet.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 20.04.2\n"
 
 #: ../../reference_manual/filters/map.rst:1
 msgid "Overview of the map filters."
-msgstr "Overzicht van de kaart makende filters."
+msgstr "Overzicht van de filters voor koppelen."
 
 #: ../../reference_manual/filters/map.rst:11
 msgid "Filters"
@@ -30,24 +31,27 @@ msgstr "Filters"
 
 #: ../../reference_manual/filters/map.rst:16
 msgid "Map"
-msgstr "Kaart"
+msgstr "Koppeling"
 
 #: ../../reference_manual/filters/map.rst:18
 msgid "Filters that are signified by them mapping the input image."
 msgstr ""
+"filters die bedoelt zijn om de ingevoerde afbeelding in kaart te brengen."
 
 #: ../../reference_manual/filters/map.rst:20
 #: ../../reference_manual/filters/map.rst:23
 msgid "Small Tiles"
-msgstr "Kleine stenen"
+msgstr "Kleine tegels"
 
 #: ../../reference_manual/filters/map.rst:20
 msgid "Tiles"
-msgstr "Stenen"
+msgstr " Tegels"
 
 #: ../../reference_manual/filters/map.rst:25
 msgid "Tiles the input image, using its own layer as output."
 msgstr ""
+"Verdeelt de ingevoerde afbeelding in tegels, gebruikt zijn laag voor het"
+" resultaat."
 
 #: ../../reference_manual/filters/map.rst:27
 msgid "Height Map"
@@ -59,7 +63,7 @@ msgstr "Bumpmap"
 
 #: ../../reference_manual/filters/map.rst:27
 msgid "Normal Map"
-msgstr "Normale kaart"
+msgstr "Normaal kaart"
 
 #: ../../reference_manual/filters/map.rst:30
 msgid "Phong Bumpmap"
@@ -76,6 +80,13 @@ msgid ""
 "game texturing. Checking the :guilabel:`Normal Map` box will make it use all "
 "channels and interpret them as a normal map."
 msgstr ""
+"Gebruikt de ingevoerde afbeelding als hoogtekaart om iets 3d-achtig te"
+" krijgen, waarbij het "
+"phong-lambert shading model wordt gebruikt. Handig voor controles van een"
+" hoogtekaart tijdens de creatie van "
+"game texturing. Als u het vakje :guilabel:`Normaalkaart` aanvinkt dan wordt"
+" alle kanalen gebruikt die vervolgens als een normaalkaart worden"
+" geïnterpreteerd"
 
 #: ../../reference_manual/filters/map.rst:37
 msgid "Round Corners"
@@ -83,7 +94,7 @@ msgstr "Hoeken afronden"
 
 #: ../../reference_manual/filters/map.rst:39
 msgid "Adds little corners to the input image."
-msgstr "Voegt kleine hoekjes toe aan de invoerafbeelding."
+msgstr "Voegt kleine hoekjes toe aan de ingevoerde afbeelding."
 
 #: ../../reference_manual/filters/map.rst:41
 #: ../../reference_manual/filters/map.rst:44
@@ -96,6 +107,9 @@ msgid ""
 "normalizes (makes the vector size exactly 1) the values. This is helpful for "
 "normal maps and some minor image-editing functions."
 msgstr ""
+"Dit filter neemt de ingevoerde pixels, plaatst ze in een 3d vector,"
+" normaliseert vervolgens (maakt de lengte van de vector exact 1) de waarden."
+" Dit is handig bij normaalkaarten en kleinschalige bewerkingen."
 
 #: ../../reference_manual/filters/map.rst:48
 #: ../../reference_manual/filters/map.rst:51
@@ -115,6 +129,8 @@ msgid ""
 "Maps the lightness of the input to the selected gradient. Useful for fancy "
 "artistic effects."
 msgstr ""
+"Koppelt de helderheid van de invoer aan de geselecteerde kleurverloop. Dit is"
+" handig voor aparte artistieke effecten."
 
 #: ../../reference_manual/filters/map.rst:57
 msgid ""
@@ -122,23 +138,28 @@ msgid ""
 "gradients and change them on the fly, as well as use the gradient map filter "
 "as a filter layer or filter brush."
 msgstr ""
+"In 3.x kon u alleen de voorgedefinieerde kleurverlopen selecteren. In 4.0,"
+" kunt u kleurverlopen selecteren en deze a la minuut wijzigen, maar ook het"
+" kleurverloop filter gebruiken als filterlaag of filter-penseel."
 
 #: ../../reference_manual/filters/map.rst:60
 msgid "Color Modes"
-msgstr ""
+msgstr "Kleurmodus"
 
 #: ../../reference_manual/filters/map.rst:62
 msgid "**Blend:** smoothly blend colors between stops"
-msgstr ""
+msgstr "**Vermengen:** voor kleuren glad laten overlopen tussen stops"
 
 #: ../../reference_manual/filters/map.rst:63
 msgid "**Nearest:** selects color from nearest stops"
-msgstr ""
+msgstr "**Naaste:** neemt kleur van dichtstbijzijnde stops"
 
 #: ../../reference_manual/filters/map.rst:64
 msgid ""
 "**Dither:** dithers between stop colors as per `Dithering Threshold Modes`_."
 msgstr ""
+"**Dither:** dithers tussen kleuren zoals ingesteld in `Dithering drempel"
+" mode`_."
 
 #: ../../reference_manual/filters/map.rst:66
 #: ../../reference_manual/filters/map.rst:69
@@ -154,71 +175,87 @@ msgid ""
 "Maps the color of the input to the nearest color in the selected palette. "
 "Useful for limiting color in pixel art and for artistic effects."
 msgstr ""
+"Koppelt de kleur van de invoer met de dichtstbijzijnde kleur in de"
+" geselecteerde palet. "
+"Handig voor het beperken van kleuren in pixel art en voor artistieke effecten."
 
 #: ../../reference_manual/filters/map.rst:73
 msgid ""
 "Optional dithering may be applied with the covered value range controlled by "
 "the spread value."
 msgstr ""
+"Optioneel kunt u dithering toepassen met de waarde ingesteld in spread. "
 
 #: ../../reference_manual/filters/map.rst:76
 msgid "Colorspace Modes"
-msgstr ""
+msgstr "Kleurruimte modus"
 
 #: ../../reference_manual/filters/map.rst:78
 msgid "**Lab:** finds nearest colors in Lab colorspace"
-msgstr ""
+msgstr "**Lab:** zoekt de dichtstbijzijnde kleuren in de Lab kleurruimte"
 
 #: ../../reference_manual/filters/map.rst:79
 msgid "**RGB:** finds nearest colors in RGB colorspace"
-msgstr ""
+msgstr "**RGB:** zoekt de dichtstbijzijnde kleuren in de RGB kleurruimte"
 
 #: ../../reference_manual/filters/map.rst:82
 msgid "Dithering Threshold Modes"
-msgstr ""
+msgstr "Dithering drempelwaarde Modus"
 
 #: ../../reference_manual/filters/map.rst:84
 msgid ""
 "**Pattern:** uses the lightness or alpha value of the selected pattern to "
 "threshold the input color between palette colors"
 msgstr ""
+"**Patroon:** gebruikt de helderheid of alfawaarde van het geselecteerde"
+" patroon om de ingevoerde kleur om te zetten naar kleuren uit het palet"
 
 #: ../../reference_manual/filters/map.rst:85
 msgid ""
 "**Noise:** uses a randomly generated value per pixel to threshold the input "
 "color between palette colors"
 msgstr ""
+"**Ruis:** gebruikt per pixel een willekeurig gegenereerde waarde om de"
+" ingevoerde kleur om te zetten naar kleuren uit het palet"
 
 #: ../../reference_manual/filters/map.rst:88
 msgid "Dithering Color Modes"
-msgstr ""
+msgstr "Dithering kleurmodus"
 
 #: ../../reference_manual/filters/map.rst:90
 msgid ""
 "**Per-Component Offset:** independently offsets each color channel by the "
 "threshold amount, scaled by the offset scale value"
 msgstr ""
+"**Per-Component Offset:** verschuift elk kleurkanaal apart met de"
+" drempelwaarde, vermenigvuldigt met de offsetschaal"
 
 #: ../../reference_manual/filters/map.rst:91
 msgid ""
 "**Nearest Colors:** finds the two nearest colors then applies the threshold "
 "amount to the relative distances of the two color to find the resulting color"
 msgstr ""
+"**Dichtstbijzijnde kleuren:** zoekt de twee dichtstbijzijnde kleuren op, past"
+" de drempelwaarde toe op de relatieve afstanden van de twee kleuren om de"
+" resulterende kleur te vinden"
 
 #: ../../reference_manual/filters/map.rst:94
 msgid "Dithering Alpha Modes"
-msgstr ""
+msgstr "Dithering Alpha modus"
 
 #: ../../reference_manual/filters/map.rst:96
 msgid "**Clip:** thresholds alpha at the clip position"
-msgstr ""
+msgstr "**Clip:** begrenst de alpha op de clip positie"
 
 #: ../../reference_manual/filters/map.rst:97
 msgid "**Index:** uses the selected palette index as the transparent color"
 msgstr ""
+"**Index:** gebruikt de geselecteerde kleur in de palet als transparante kleur"
 
 #: ../../reference_manual/filters/map.rst:98
 msgid ""
 "**Dither:** applies dither to the alpha value as per `Dithering Threshold "
 "Modes`_"
 msgstr ""
+"**Dither:** past dithering toe op de alpha waarde overeenkomstig `Dithering"
+" drempelwaarde Modus`_"
