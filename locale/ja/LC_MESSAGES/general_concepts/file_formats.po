@@ -1,10 +1,11 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-22 03:51+0200\n"
-"PO-Revision-Date: 2019-03-02 16:12-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2020-10-11 16:48-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +21,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats.rst:14
 msgid "File Formats"
-msgstr ""
+msgstr "ファイルフォーマット"
 
 #: ../../general_concepts/file_formats.rst:16
 msgid ""
@@ -28,22 +29,24 @@ msgid ""
 "looked up on wikipedia, this doesn't always explain what the format can be "
 "used for and what its strengths and weaknesses are."
 msgstr ""
+"画像ファイル形式を扱うカテゴリです。多くの形式が Wikipedia で見つかりますが、"
+"必ずしもどの形式が使えるのか、強みや弱みは説明されてはいません。"
 
 #: ../../general_concepts/file_formats.rst:18
 msgid ""
 "In this category we try to describe these in a manner that can be read by "
 "beginners."
-msgstr ""
+msgstr "このカテゴリではできるだけ初心者にも読めるように説明します。"
 
 #: ../../general_concepts/file_formats.rst:20
 msgid ""
 "Generally, there are the following features that people pay attention to in "
 "regards to file formats:"
-msgstr ""
+msgstr "一般的に、多くの人がファイル形式について気にする機能は次のとおりです:"
 
 #: ../../general_concepts/file_formats.rst:23
 msgid "Compression"
-msgstr ""
+msgstr "圧縮"
 
 #: ../../general_concepts/file_formats.rst:25
 msgid ""
@@ -51,6 +54,8 @@ msgid ""
 "little data as possible, so that the resulting file is as small as it can "
 "get without losing quality."
 msgstr ""
+"圧縮はファイル形式がどのように画像のデータを少なくし、品質を失うことなく小さ"
+"くできるかということです。"
 
 #: ../../general_concepts/file_formats.rst:27
 msgid ""
@@ -58,6 +63,9 @@ msgid ""
 "image quality, or require the computer to spend a lot of time thinking about "
 "how the image should look."
 msgstr ""
+"我々が一般に見るものは品質を落としながらもディスク上は小さくて済むものか、コ"
+"ンピュータがどのように表示すべきかに大変な時間を必要とする形式かのいずれかで"
+"す。"
 
 #: ../../general_concepts/file_formats.rst:29
 msgid ""
@@ -70,6 +78,12 @@ msgid ""
 "imply vector graphics, which is a very different way of working than Krita "
 "is specialized in."
 msgstr ""
+"``SVG`` のようなベクターファイル形式は後者の典型例です。これらは数学に基づく"
+"技術により本当に小さく、数式しか格納しないためにクオリティはとても良いです。"
+"ただよくないのはどのように見えるかをコンピュータが考えるのに多くの時間を必要"
+"とし、時々プログラムによっても値の解釈に違いが生じます。さらに、ベクターファ"
+"イル形式はベクター画像を意味し、これは Krita が特化しているものとは全く異なり"
+"ます。"
 
 #: ../../general_concepts/file_formats.rst:31
 msgid ""
@@ -78,6 +92,10 @@ msgid ""
 "very particular types of images. Lossy thus means that the file format plays "
 "fast and loose with describing your image to reduce filesize."
 msgstr ""
+"``JPG`` や ``WebP`` に代表される :ref:`非可逆圧縮形式 <lossy_compression>` は"
+"データが小さくて済みますが、品質は低めで、特定の用途に向いています。非可逆す"
+"なわちファイル形式がファイルサイズを小さくするために画像を劣化させ高速にして"
+"います。"
 
 #: ../../general_concepts/file_formats.rst:33
 msgid ""
@@ -85,6 +103,9 @@ msgid ""
 "``GIF`` or ``BMP`` are in contrast, much heavier on disk, but much more "
 "likely to retain quality."
 msgstr ""
+"``PNG`` や ``GIF``、``BMP`` のような :ref:`可逆圧縮形式 "
+"<lossless_compression>` は対照的でディスク上はかなり大きいですが、品質を維持"
+"するのに向いています。"
 
 #: ../../general_concepts/file_formats.rst:35
 msgid ""
@@ -94,10 +115,15 @@ msgid ""
 "programs to open them up, but on the other hand these are meant to keep your "
 "working environment intact, and keep all the layers and guides in them."
 msgstr ""
+"それから、作業用に使うファイル形式である、Krita の ``KRA``、GIMP の ``XCF``、"
+"Photoshop の ``PSD``、汎用ファイル形式である ``ORA`` と ``EXR`` があります。"
+"これらはハードドライブ上で最も重く開くのに特別なプログラムを必要とすることも"
+"しばしばですが、言い換えれば作業環境をそのままに、レイヤーやガイドのすべてを"
+"保存するようにできています。"
 
 #: ../../general_concepts/file_formats.rst:38
 msgid "Metadata"
-msgstr ""
+msgstr "メタデータ"
 
 #: ../../general_concepts/file_formats.rst:40
 msgid ""
@@ -107,16 +133,22 @@ msgid ""
 "computer readable data, like an ICC profile which tells the computer about "
 "the qualities of how the colors inside the file should be read."
 msgstr ""
+"メタデータは実際の画像以外の情報を格納できるファイル形式の能力のことです。こ"
+"れは作成日時や製作者、画像の説明など人間が読めるデータであることも、ファイル"
+"内の色をどのように読むべきかという ICC プロファイルのような、コンピュータ向け"
+"のデータも含まれています。"
 
 #: ../../general_concepts/file_formats.rst:43
 msgid "Openness"
-msgstr ""
+msgstr "互換性"
 
 #: ../../general_concepts/file_formats.rst:45
 msgid ""
 "This is a bit of an odd quality, but it's about how easy it to open or "
 "recover the file, and how widely it's supported."
 msgstr ""
+"これはちょっと変ですが、開きやすさやファイルの復元のしやすさ、どれだけ広くサ"
+"ポートされているかということです。"
 
 #: ../../general_concepts/file_formats.rst:47
 msgid ""
@@ -125,12 +157,17 @@ msgid ""
 "Photoshop. Other examples are camera raw files which have different "
 "properties per camera manufacturer."
 msgstr ""
+"多くの内部ファイル形式、例えば PSD は完全に閉ざされていて、Photoshop を使わず"
+"に外部の人間が内部のデータを復元することは大変困難です。他の例ではカメラの "
+"raw ファイルはカメラのメーカーごとに違いがあります。"
 
 #: ../../general_concepts/file_formats.rst:49
 msgid ""
 "SVG, as a vector file format, is on the other end of the spectrum, and can "
 "be opened with any text-editor and edited."
 msgstr ""
+"ベクターファイル形式としての SVG はそのような多様性の端にいて、どのテキストエ"
+"ディタでも開くことができます。"
 
 #: ../../general_concepts/file_formats.rst:51
 msgid ""
@@ -139,7 +176,10 @@ msgid ""
 "but the vast majority of programs can open them, meaning the owner has easy "
 "access to them."
 msgstr ""
+"ほとんどのファイル形式が中間に位置し、それ故に形式の互換性が問題になります。"
+"JPG と PNG は人の目には読んだり編集したりできませんが、多くのプログラムで開く"
+"ことができ、すなわちファイルの所有者は簡単にアクセスできます。"
 
 #: ../../general_concepts/file_formats.rst:53
 msgid "Contents:"
-msgstr ""
+msgstr "コンテンツ:"

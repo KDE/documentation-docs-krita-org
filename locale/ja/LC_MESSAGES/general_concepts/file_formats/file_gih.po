@@ -1,10 +1,11 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-23 03:53+0200\n"
-"PO-Revision-Date: 2019-03-02 16:12-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2020-10-11 15:32-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -48,6 +49,8 @@ msgid ""
 "The GIMP image hose format. Krita can open and save these, as well as import "
 "via the :ref:`predefined brush tab <predefined_brush_tip>`."
 msgstr ""
+"GIMP イメージホースの形式です。Krita は開いたり保存することも、:ref:`定義済み"
+"ブラシタブ <predefined_brush_tip>` からインポートすることもできます。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:19
 msgid ""
@@ -55,6 +58,8 @@ msgid ""
 "and then set some options to make it specify how to output the multiple "
 "images."
 msgstr ""
+"イメージホースとは、このファイル形式を使うことで複数の画像を格納でき、それら"
+"がどのように出力されるのかを設定することができます。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:25
 msgid ".. image:: images/brushes/Gih-examples.png"
@@ -62,7 +67,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_gih.rst:25
 msgid "From top to bottom: Incremental, Pressure and Random"
-msgstr ""
+msgstr "上から下へ: インクリメンタル、筆圧とランダム"
 
 #: ../../general_concepts/file_formats/file_gih.rst:28
 msgid "Dimension and ranks."
@@ -81,6 +86,14 @@ msgid ""
 "tips for the four parts of the second dimension, and finally, the grouped "
 "three images have each a unique brush for the final dimension."
 msgstr ""
+"GIMP イメージホースは与えられたブラシに対して複数の次元に対応しています。例え"
+"ば増加する次元を持つことも、筆圧によるものも、ランダムに変わるものです。エク"
+"スポートで言えば、Krita は次元ごとにレイヤーを細分化するのにランクを使用しま"
+"す。もし24レイヤーの画像とランクは3、最初の次元が2、二つ目が4で三つめが3に設"
+"定されていた場合、Krita は最初の次元のそれぞれがユニークな画像を持つような、"
+"24を12ずつの二つのグループに分けます。そしてこの二つのグループを4ずつの8つに"
+"細分化し、その4つそれぞれにブラシ形状を適用します。そして最後に、三つ目の次元"
+"としてグループになっている3つの画像がそれぞれユニークなブラシを持ちます。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:32
 msgid ""
@@ -92,48 +105,58 @@ msgid ""
 "the second dimension but for the first number, then another three layers, "
 "each for a shape, but then for the second number, and so forth."
 msgstr ""
+"下の画像の表は1つめの次元が4つの数を、2つ目の次元が3つの形を表しています。つ"
+"まり1つ目と2つ目の次元のランクは4と3でなければなりません。それからレイヤーを"
+"並べるには表を最初の次元、2つ目の次元と細分化する必要があります。そうすれば2"
+"つ目の次元で3つのレイヤーそれぞれに形を持つことができそれからレイヤー、形とい"
+"う風で進んでいきます。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:38
 msgid ""
 "See `the GIMP documentation <https://docs.gimp.org/2.8/en/gimp-using-"
 "animated-brushes.html>`_ for a more thorough explanation."
 msgstr ""
+"さらに詳しい説明は `GIMP のドキュメント <https://docs.gimp.org/2.8/en/gimp-"
+"using-animated-brushes.html>`_ を参照してください。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:41
 msgid "GIMP image hose format options:"
-msgstr ""
+msgstr "GIMP イメージホース形式オプション:"
 
 #: ../../general_concepts/file_formats/file_gih.rst:43
 msgid "Constant"
-msgstr ""
+msgstr "固定"
 
 #: ../../general_concepts/file_formats/file_gih.rst:44
 msgid "This'll use the first image, no matter what."
-msgstr ""
+msgstr "どんな場合でも必ず最初の画像を使用します。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:45
 msgid "Incremental"
-msgstr ""
+msgstr "インクリメンタル"
 
 #: ../../general_concepts/file_formats/file_gih.rst:46
 msgid ""
 "This'll paint the image layers in sequence. This is good for images that can "
 "be strung together to create a pattern."
 msgstr ""
+"画像レイヤーを順に使います。つなぎ合わせてパターンを作れる画像には良いです。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:47
 msgid "Pressure"
-msgstr ""
+msgstr "筆圧"
 
 #: ../../general_concepts/file_formats/file_gih.rst:48
 msgid ""
 "This'll paint the images depending on pressure. This is good for brushes "
 "imitating the hairs of a natural brush."
 msgstr ""
+"筆圧によって塗る画像を使い分けます。現実にある筆の毛を再現するには良いでしょ"
+"う。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:49
 msgid "Random"
-msgstr ""
+msgstr "ランダム"
 
 #: ../../general_concepts/file_formats/file_gih.rst:50
 msgid ""
@@ -141,14 +164,16 @@ msgid ""
 "speedpainting as well as images that generate texture. Or perhaps more "
 "graphical symbols."
 msgstr ""
+"ランダムに描写します。テクスチャを生成する画像や、スピードペイントで使う画像"
+"の集まり、さらにはマーク/記号なんかにも良いです。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:52
 msgid "Angle"
-msgstr ""
+msgstr "アングル"
 
 #: ../../general_concepts/file_formats/file_gih.rst:52
 msgid "This'll use the dragging angle to determine with image to draw."
-msgstr ""
+msgstr "描写する画像を角度を使用して選びます。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:54
 msgid ""
@@ -157,10 +182,13 @@ msgid ""
 "looking it up in the UI) and the ability to choose whether or not to "
 "generate the mask from the colors."
 msgstr ""
+"Krita ファイルを ``.gih`` としてエクスポートするとき、既定の描点間隔、名前(UI"
+"上ではとても重要です)、色からマスクを生成するかどうかのオプションが表示されま"
+"す。"
 
 #: ../../general_concepts/file_formats/file_gih.rst:57
 msgid "Use Color as Mask"
-msgstr ""
+msgstr "マスクとして使う"
 
 #: ../../general_concepts/file_formats/file_gih.rst:57
 msgid ""

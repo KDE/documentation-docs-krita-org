@@ -1,10 +1,11 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-12 03:44+0200\n"
-"PO-Revision-Date: 2019-03-02 16:12-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2020-10-11 15:10-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +29,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_csv.rst:10
 msgid "Comma Separated Values"
-msgstr ""
+msgstr "コンマ区切り値"
 
 #: ../../general_concepts/file_formats/file_csv.rst:15
 msgid "\\*.csv"
@@ -41,6 +42,10 @@ msgid ""
 "it is possible to use a spreadsheet program or even a text editor to edit "
 "the ``*.csv`` file."
 msgstr ""
+"``.csv`` はコンマ区切り値(Comma Separated Values)の略語です。とてもオープン"
+"で、プレーンテキストでできた表計算の形式です。CSV 形式がプレーンテキストその"
+"ものであるため、表計算ソフトのみならずテキストエディタでも ``*.csv`` ファイル"
+"を編集することができます。"
 
 #: ../../general_concepts/file_formats/file_csv.rst:19
 msgid ""
@@ -50,6 +55,11 @@ msgid ""
 "and saving functions in Krita instead of the :guilabel:`Import animation "
 "frames` and :guilabel:`Render Animation` menu items."
 msgstr ""
+"Krita は TVPaint で使われる CSV バージョンをサポートし、レイヤーアニメーショ"
+"ンをそのソフトや、Blender などでもやり取りすることができます。これは連続した"
+"画像用の形式ではないので、メニューにある :guilabel:`アニメーションフレームを"
+"インポート` や :guilabel:`アニメーションを出力` を使わずに Krita のドキュメン"
+"トの読み込みと保存機能を使います。"
 
 #: ../../general_concepts/file_formats/file_csv.rst:21
 msgid ""
@@ -62,6 +72,13 @@ msgid ""
 "only a single file and the exposure sheet links it to one or more frames on "
 "the timeline."
 msgstr ""
+"この形式は ``.csv`` 拡張のついたテキストファイルで構成されていて、同名のフォ"
+"ルダ内に配置した ``.frames`` 拡張とセットにします。CSV ファイルとフォルダーは"
+"同じ場所になければなりません。テキストファイルがフィールド解像度やフレーム"
+"レート、レイヤーのエクスポージャーシートといったシーンのパラメーターが格納さ"
+"れます。フォルダーには :ref:`file_png` 画像ファイルが格納されます。画像の連続"
+"と違うのは、キーフレームインスタンスのファイルは一つだけで、エクスポージャー"
+"シートがタイムライン上の1つ以上のフレームとリンクさせます。"
 
 #: ../../general_concepts/file_formats/file_csv.rst:26
 msgid ".. image:: images/Csv_spreadsheet.png"
@@ -69,7 +86,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_csv.rst:26
 msgid "A ``.csv`` file as a spreadsheet in :program:`LibreOffice Calc`."
-msgstr ""
+msgstr ":program:`LibreOffice Calc`で表計算として開いた``.csv``ファイル"
 
 #: ../../general_concepts/file_formats/file_csv.rst:28
 msgid ""
@@ -77,6 +94,9 @@ msgid ""
 "sRGB color space because that's the only color space for :program:`TVPaint`. "
 "Layer groups and layer masks are also not supported."
 msgstr ""
+"Krita はこの形式のエクスポートにもインポートにも対応しています。:program:"
+"`TVPaint` で唯一使える8ビット sRGB 色空間を使用することが推奨されます。レイ"
+"ヤーグループやレイヤーマスクもサポートされていません。"
 
 #: ../../general_concepts/file_formats/file_csv.rst:30
 msgid ""
@@ -85,6 +105,10 @@ msgid ""
 "upcoming :guilabel:`Export footage` window, use the :guilabel:`Clip: Layers "
 "structure` tab."
 msgstr ""
+"TVPaint 単独ではこの形式のエクスポートのみしかサポートされていません。:"
+"program:`TVPaint 11` では、:guilabel:`ファイル` メニューの :guilabel:`書き出"
+"し` オプションを選択し、表示される :guilabel:`ファイル出力` ウインドウの :"
+"guilabel:`クリップ: レイヤーの構造ごと` タブを仕様します。"
 
 #: ../../general_concepts/file_formats/file_csv.rst:35
 msgid ".. image:: images/Csv_tvp_csvexport.png"
@@ -92,7 +116,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_csv.rst:35
 msgid "Exporting into ``.csv`` in TVPaint."
-msgstr ""
+msgstr "TVPaint で ``.csv`` にエクスポートする"
 
 #: ../../general_concepts/file_formats/file_csv.rst:37
 msgid ""
@@ -102,20 +126,30 @@ msgid ""
 "softwares. Moho/Anime Studio and Blender also have plugins to import this "
 "format."
 msgstr ""
+"この形式を TVPaint にインポートし直すには、George 言語スクリプト拡張がありま"
+"す。TVPaint コミュニティフォーラムの \"Packs, Plugins, Third party\" のセク"
+"ションに詳細と、他のソフトウェアに関するサポートがあります。Moho/Anime "
+"Studio と Blender もこの形式のインポートをするためのプラグインがあります。"
 
 #: ../../general_concepts/file_formats/file_csv.rst:42
 msgid ""
 "`CSV import script for TVPaint <https://forum.tvpaint.com/viewtopic.php?"
 "f=26&t=9759>`_."
 msgstr ""
+"`TVPaint 用の CSV インポートスクリプト <https://forum.tvpaint.com/viewtopic."
+"php?f=26&t=9759>`_."
 
 #: ../../general_concepts/file_formats/file_csv.rst:43
 msgid ""
 "`CSV import script for Moho/Anime Studio <https://forum.tvpaint.com/"
 "viewtopic.php?f=26&t=10050>`_."
 msgstr ""
+"`Moho/Anime Studio 用の CSV インポートスクリプト <https://forum.tvpaint.com/"
+"viewtopic.php?f=26&t=10050>`_."
 
 #: ../../general_concepts/file_formats/file_csv.rst:44
 msgid ""
 "`CSV import script for Blender <https://developer.blender.org/T47462>`_."
 msgstr ""
+"`Blender 用の CSV インポートスクリプト <https://developer.blender.org/"
+"T47462>`_."
