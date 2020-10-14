@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-22 03:51+0200\n"
+"POT-Creation-Date: 2020-10-13 02:04+0200\n"
 "PO-Revision-Date: 2020-10-08 19:22\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -32,7 +32,7 @@ msgid "RAM"
 msgstr "内存"
 
 #: ../../reference_manual/preferences/performance_settings.rst:11
-#: ../../reference_manual/preferences/performance_settings.rst:57
+#: ../../reference_manual/preferences/performance_settings.rst:61
 msgid "Multithreading"
 msgstr "多线程"
 
@@ -169,10 +169,6 @@ msgstr ""
 "建议值：设为常用图像的一个图层所需的内存大小。例如一个 3000x3000 大小的 8 位 "
 "RGBA 图像大概需要 36 MiB。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:39
-msgid "Internal Pool"
-msgstr "内部保留上限"
-
 #: ../../reference_manual/preferences/performance_settings.rst:40
 msgid ""
 "As :program:`Krita` does this on start-up, you will need to restart :program:"
@@ -182,6 +178,16 @@ msgstr ""
 "动 Krita 后才能生效。"
 
 #: ../../reference_manual/preferences/performance_settings.rst:42
+msgid ""
+"This setting was not needed from user side and is deprecated starting from "
+"4.4."
+msgstr ""
+
+#: ../../reference_manual/preferences/performance_settings.rst:43
+msgid "Internal Pool"
+msgstr "内部保留上限"
+
+#: ../../reference_manual/preferences/performance_settings.rst:46
 msgid ""
 ":program:`Krita` also needs to keep all the Undo states on the virtual desk "
 "(RAM). Swapping means that parts of the files on the virtual desk get sent "
@@ -195,19 +201,19 @@ msgstr ""
 "写入硬盘。如果你的可用内存不足，降低此数值可以将更多内存留给当前操作。如果此"
 "数值设得太低，在多次撤销时可能造成拖慢。更改此数值后必须重启 Krita 才能生效。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:43
+#: ../../reference_manual/preferences/performance_settings.rst:47
 msgid "Swap Undo After"
 msgstr "撤销数据上限"
 
-#: ../../reference_manual/preferences/performance_settings.rst:46
+#: ../../reference_manual/preferences/performance_settings.rst:50
 msgid "Swapping"
 msgstr "交换文件"
 
-#: ../../reference_manual/preferences/performance_settings.rst:48
+#: ../../reference_manual/preferences/performance_settings.rst:52
 msgid "File Size Limit"
 msgstr "文件大小上限"
 
-#: ../../reference_manual/preferences/performance_settings.rst:49
+#: ../../reference_manual/preferences/performance_settings.rst:53
 msgid ""
 "This determines the limit of the total space :program:`Krita` can take up in "
 "the virtual archive room. If :program:`Krita` hits the limit of both the "
@@ -217,11 +223,11 @@ msgstr ""
 "指定 Krita 可以使用的交换文件的最大体积。如果 Krita 的数据量同时突破此页面设"
 "置的内存和交换文件上限，它的程序将无法继续工作而锁死。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:51
+#: ../../reference_manual/preferences/performance_settings.rst:55
 msgid "Swap File Location"
 msgstr "交换文件位置"
 
-#: ../../reference_manual/preferences/performance_settings.rst:51
+#: ../../reference_manual/preferences/performance_settings.rst:55
 msgid ""
 "This determines where the Swap File will be stored on your hard-drive. "
 "Location can make a difference, for example, Solid State Drives (SSD) are "
@@ -234,11 +240,11 @@ msgstr ""
 "差，使用的格式可能也不适合交换文件，许多较新的计算机已经使用了性能更好的固态"
 "硬盘，请谨慎操作。)"
 
-#: ../../reference_manual/preferences/performance_settings.rst:54
+#: ../../reference_manual/preferences/performance_settings.rst:58
 msgid "Advanced"
 msgstr "高级选项卡"
 
-#: ../../reference_manual/preferences/performance_settings.rst:59
+#: ../../reference_manual/preferences/performance_settings.rst:63
 msgid ""
 "Since 4.0, Krita supports multithreading for the animation cache and "
 "handling the drawing of brush tips when using the pixel brush."
@@ -246,19 +252,19 @@ msgstr ""
 "现代 CPU 具备多个核心，可以同时进行多个线程的程序操作。自 4.0 版起，Krita 的"
 "动画缓存、像素笔刷引擎的笔尖图像等功能已经为多线程进行了优化。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:61
+#: ../../reference_manual/preferences/performance_settings.rst:65
 msgid "CPU Limit"
 msgstr "CPU 可用线程上限"
 
-#: ../../reference_manual/preferences/performance_settings.rst:62
+#: ../../reference_manual/preferences/performance_settings.rst:66
 msgid "The number of cores you want to allow Krita to use when multithreading."
 msgstr "指定 Krita 可以使用的 CPU 线程数量上限。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:64
+#: ../../reference_manual/preferences/performance_settings.rst:68
 msgid "Frame Rendering Clones Limit"
 msgstr "动画处理线程上限"
 
-#: ../../reference_manual/preferences/performance_settings.rst:64
+#: ../../reference_manual/preferences/performance_settings.rst:68
 msgid ""
 "When rendering animations to frames, Krita multithreads by keeping a few "
 "copies of the image, with a maximum determined by the number of cores your "
@@ -271,15 +277,15 @@ msgstr ""
 "复杂，而 CPU 核心数量又特别多，为了不耗尽内存，你可能需要限制动画处理线程的数"
 "目。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:67
+#: ../../reference_manual/preferences/performance_settings.rst:71
 msgid "Other"
 msgstr "其他"
 
-#: ../../reference_manual/preferences/performance_settings.rst:68
+#: ../../reference_manual/preferences/performance_settings.rst:72
 msgid "Limit frames per second while painting."
 msgstr "笔刷帧速上限"
 
-#: ../../reference_manual/preferences/performance_settings.rst:69
+#: ../../reference_manual/preferences/performance_settings.rst:73
 msgid ""
 "This makes the canvas update less often, which means Krita can spend more "
 "time calculating other things. Some people find fewer updates unnerving to "
@@ -288,28 +294,28 @@ msgstr ""
 "降低笔刷绘制时的画布视图帧率可以为 Krita 留出处理其他操作的资源，但有些人对于"
 "笔刷帧率很敏感，因此我们让用户可以自行配置此项。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:70
+#: ../../reference_manual/preferences/performance_settings.rst:74
 msgid "Debug logging of OpenGL framerate"
 msgstr "显示并记录 OpenGL 帧率"
 
-#: ../../reference_manual/preferences/performance_settings.rst:71
+#: ../../reference_manual/preferences/performance_settings.rst:75
 msgid "Will show the canvas framerate on the canvas when active."
 msgstr "勾选后将在画布视图中显示视图帧率。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:72
+#: ../../reference_manual/preferences/performance_settings.rst:76
 msgid "Debug logging for brush rendering speed."
 msgstr "显示并记录笔刷渲染速度"
 
-#: ../../reference_manual/preferences/performance_settings.rst:73
+#: ../../reference_manual/preferences/performance_settings.rst:77
 msgid ""
 "Will show numbers indicating how fast the last brush stroke was on canvas."
 msgstr "勾选后将在画布视图中显示上一笔的笔刷绘制速度。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:74
+#: ../../reference_manual/preferences/performance_settings.rst:78
 msgid "Disable vector optimizations (for AMD CPUs)"
 msgstr "禁用矢量优化"
 
-#: ../../reference_manual/preferences/performance_settings.rst:75
+#: ../../reference_manual/preferences/performance_settings.rst:79
 msgid ""
 "Vector optimizations are a special way of asking the CPU to do maths, these "
 "have names such as SIMD and AVX. These optimizations can make Krita a lot "
@@ -321,11 +327,11 @@ msgstr ""
 "化。(译者注：关于哪些 CPU 受影响一直没有准确的说法。据报告自 Ryzen/锐龙 1 代"
 "起 AMD CPU 不再有矢量优化缺陷，但我只在 2 代上确认过，请亲自测试确认)"
 
-#: ../../reference_manual/preferences/performance_settings.rst:76
+#: ../../reference_manual/preferences/performance_settings.rst:80
 msgid "Enable progress reporting"
 msgstr "显示状态栏进度条"
 
-#: ../../reference_manual/preferences/performance_settings.rst:77
+#: ../../reference_manual/preferences/performance_settings.rst:81
 msgid ""
 "This allows you to toggle the progress reporter, which is a little feedback "
 "progress bar that shows up in the status bar when you let Krita do heavy "
@@ -338,7 +344,7 @@ msgstr ""
 "处理过程中点击进度条旁边的红色停止按钮可以终止操作。此选项默认打开，但关闭它"
 "可以让处理时间快一点点，请自行判断是否关闭它。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:79
+#: ../../reference_manual/preferences/performance_settings.rst:83
 msgid ""
 "This enables performance logging, which is then saved to the ``Log`` folder "
 "in your ``working directory``. Your working directory is where the autosave "
@@ -347,11 +353,11 @@ msgstr ""
 "勾选后，Krita 将把程序性能日志写入到 ``当前图像文件所在目录`` 中的 ``Log`` 文"
 "件夹。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:81
+#: ../../reference_manual/preferences/performance_settings.rst:85
 msgid "Performance logging"
 msgstr "记录程序性能日志"
 
-#: ../../reference_manual/preferences/performance_settings.rst:81
+#: ../../reference_manual/preferences/performance_settings.rst:85
 msgid ""
 "So for unnamed files, this is the ``$HOME`` folder in Linux, and the ``%TEMP"
 "%`` folder in Windows."
@@ -359,17 +365,17 @@ msgstr ""
 "如果图像文件未命名，在 Linux 环境下日志将被写入 ``$HOME`` 文件夹，在 Windows "
 "环境下则会写入 ``%TEMP%`` 文件夹。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:84
+#: ../../reference_manual/preferences/performance_settings.rst:88
 msgid "Animation Cache"
 msgstr "动画缓存选项卡"
 
-#: ../../reference_manual/preferences/performance_settings.rst:88
+#: ../../reference_manual/preferences/performance_settings.rst:92
 msgid ""
 "The animation cache is the space taken up by animation frames in the memory "
 "of the computer. A cache in this sense is a cache of precalculated images."
 msgstr "动画缓存是动画帧被预渲染后在内存中占用的空间。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:90
+#: ../../reference_manual/preferences/performance_settings.rst:94
 msgid ""
 "Playing back a video at 25 FPS means that the computer has to precalculate "
 "25 images per second of video. Now, video playing software is able to do "
@@ -382,7 +388,7 @@ msgstr ""
 "像。视频播放器可以做大量的优化以提高效率，但 Krita 必须允许用户编辑图像，因此"
 "无法做同等的优化，因此速度更慢，资源消耗也大得多。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:92
+#: ../../reference_manual/preferences/performance_settings.rst:96
 msgid ""
 "Still, an animator does need to be able to see what kind of animation they "
 "are making. To do this properly, we need to decide how Krita will regenerate "
@@ -396,11 +402,11 @@ msgstr ""
 "Krita 必须一直在后台生成动画的预渲染缓存，使得预览回放及时流畅。此选项卡可以"
 "进行相关的性能配置，请根据动画作品的特性和计算机配置的具体情况进行调整。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:95
+#: ../../reference_manual/preferences/performance_settings.rst:99
 msgid "Cache Storage Backend"
 msgstr "缓存位置"
 
-#: ../../reference_manual/preferences/performance_settings.rst:98
+#: ../../reference_manual/preferences/performance_settings.rst:102
 msgid ""
 "Animation frame cache will be stored in RAM, completely without any "
 "limitations. This is also the way it was handled before 4.1. This is only "
@@ -414,7 +420,7 @@ msgstr ""
 "全屏工作，那么你的计算机最好具备 64 GiB 的内存，否则 **切勿** 使用此项，还应"
 "该考虑将动画的分辨率降低。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:102
+#: ../../reference_manual/preferences/performance_settings.rst:106
 msgid ""
 "Please make sure your computer has enough RAM *above* the amount you "
 "requested in the :guilabel:`General` tab. Otherwise you might face system "
@@ -423,20 +429,20 @@ msgstr ""
 "确保你的计算机具备足够的空闲内存，大于 :guilabel:`常规` 选项卡中指定的内存上"
 "限，否则你很可能会遇到系统锁死。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:104
+#: ../../reference_manual/preferences/performance_settings.rst:108
 msgid "For 1 second of FullHD @ 25 FPS you will need 200 extra MiB of Memory."
 msgstr "每 1 秒的全高清 (1080P) 25 FPS 动画需要 200 MiB 内存。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:105
+#: ../../reference_manual/preferences/performance_settings.rst:109
 msgid "In-memory"
 msgstr "内存空间"
 
-#: ../../reference_manual/preferences/performance_settings.rst:105
+#: ../../reference_manual/preferences/performance_settings.rst:109
 msgid ""
 "For 1 second of 4K UltraHD@ 25 FPS, you will need 800 extra MiB of Memory."
 msgstr "每 1 秒的超高清 (4K) 25 FPS 动画需要 800 MiB 内存。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:108
+#: ../../reference_manual/preferences/performance_settings.rst:112
 msgid ""
 "Animation frames are stored in the hard disk in the same folder as the swap "
 "file. The cache is stored in a compressed way. A little amount of extra RAM "
@@ -445,11 +451,11 @@ msgstr ""
 "选中此项，则动画帧缓存将被作为交换文件存储到硬盘中。缓存将被压缩后写入硬盘，"
 "这个过程也会使用一些内存。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:110
+#: ../../reference_manual/preferences/performance_settings.rst:114
 msgid "On-disk"
 msgstr "硬盘空间"
 
-#: ../../reference_manual/preferences/performance_settings.rst:110
+#: ../../reference_manual/preferences/performance_settings.rst:114
 msgid ""
 "Since data transfer speed of the hard drive is slow, you might want to limit "
 "the :guilabel:`Cached Frame Size` to be able to play your video at 25 fps. A "
@@ -458,15 +464,15 @@ msgstr ""
 "硬盘的数据传输速度比内存要慢得多。要流畅播放 25 FPS 的动画，建议将 :guilabel:"
 "`缓存帧大小上限` 设为 2500px。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:113
+#: ../../reference_manual/preferences/performance_settings.rst:117
 msgid "Cache Generation Options"
 msgstr "缓存生成选项"
 
-#: ../../reference_manual/preferences/performance_settings.rst:115
+#: ../../reference_manual/preferences/performance_settings.rst:119
 msgid "Limit Cached Frame Size"
 msgstr "缓存帧大小上限"
 
-#: ../../reference_manual/preferences/performance_settings.rst:116
+#: ../../reference_manual/preferences/performance_settings.rst:120
 msgid ""
 "Render scaled down version of the frame if the image is bigger than the "
 "provided limit. Make sure you enable this option when using On-Disk storage "
@@ -479,11 +485,11 @@ msgstr ""
 "空间进行缓存时请确保勾选了此选项，并将数值调低到至少 2500px。尽管这会牺牲回放"
 "的画质，但有助于保持回放的流畅度。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:117
+#: ../../reference_manual/preferences/performance_settings.rst:121
 msgid "Use Region Of Interest"
 msgstr "仅渲染视图区域"
 
-#: ../../reference_manual/preferences/performance_settings.rst:118
+#: ../../reference_manual/preferences/performance_settings.rst:122
 msgid ""
 "We technically only need to use the section of the image that is in view. "
 "Region of interest represents that section. When the image is above the "
@@ -492,7 +498,7 @@ msgstr ""
 "一般来说我们只需要观察视图区域附近的动画内容。勾选此项后，Krita 将在视图区域"
 "的基础上向各个方向额外渲染指定比例的区域。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:120
+#: ../../reference_manual/preferences/performance_settings.rst:124
 msgid ""
 "This allows you to set whether the animation is cached for playback in the "
 "background (that is, when you're not using the computer). Then, when "
