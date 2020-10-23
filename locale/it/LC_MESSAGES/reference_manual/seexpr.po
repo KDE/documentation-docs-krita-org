@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-19 02:02+0200\n"
-"PO-Revision-Date: 2020-09-13 07:10+0200\n"
+"PO-Revision-Date: 2020-10-12 09:28+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128@baslug.org>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -40,6 +40,10 @@ msgid ""
 "<https://wdas.github.io/SeExpr/doxygen/userdoc.html>`_, adapted for usage "
 "with Krita."
 msgstr ""
+"Questa pagina descrive in dettaglio tutte le variabili, le funzioni e gli "
+"operatori disponibili inSeExpr. È una versione pesantemente modificata della "
+"`documentazione ufficiale dell'utente <https://wdas.github.io/SeExpr/doxygen/"
+"userdoc.html>`_, adattata per l'utilizzo con Krita."
 
 #: ../../reference_manual/seexpr.rst:23
 msgid "Source code at `KDE Invent <https://invent.kde.org/lsegovia/seexpr>`_"
@@ -145,6 +149,9 @@ msgid ""
 "External variables can also be overridden by local assignment. This can be "
 "useful to scale the noise frequency for instance::"
 msgstr ""
+"Le variabili esterne possono anche essere sovrascritte dall'assegnazione "
+"locale. Questo può essere utile per scalare la frequenza del rumore, ad "
+"esempio:"
 
 #: ../../reference_manual/seexpr.rst:66
 msgid ""
@@ -163,6 +170,9 @@ msgid ""
 "SeExpr, unlike many languages, provides **no control structures** except a "
 "form of `if` statements, known as the *ternary operator*::"
 msgstr ""
+"SeExpr, a differenza di molti linguaggi, non fornisce **nessuna struttura di "
+"controllo** eccetto una forma di istruzioni `if`, nota come *operatore "
+"ternario*::"
 
 #: ../../reference_manual/seexpr.rst:77
 msgid "$u = $i < .5 ? 0.0 : 10.0"
@@ -320,6 +330,8 @@ msgid ""
 "apply - The function on the right of the arrow is applied to the expression "
 "on the left."
 msgstr ""
+"applica - la funzione a destra della freccia viene applicata all'espressione "
+"a sinistra."
 
 #: ../../reference_manual/seexpr.rst:147
 msgid "Examples::"
@@ -401,6 +413,12 @@ msgid ""
 "of integer, float, and vector variables. This enables you to manage them "
 "using widgets that will accept the specified range."
 msgstr ""
+"Puoi aggiungere commenti al tuo script usando il carattere ``#``. SeExpr "
+"salterà quindi il resto della riga per scopi di rendering. Tuttavia, non "
+"vengono ignorati; i commenti possono ancora essere utilizzati per dichiarare "
+"l'intervallo di valori valido delle variabili intere, float e vector. Ciò "
+"consente di gestirli utilizzando oggetti che accetteranno l'intervallo "
+"specificato."
 
 #: ../../reference_manual/seexpr.rst:189
 msgid ""
@@ -413,7 +431,7 @@ msgstr "$var0 = 0; # 0, 10"
 
 #: ../../reference_manual/seexpr.rst:193
 msgid "``$var1`` is a floating point variable with the same range::"
-msgstr ""
+msgstr "``$var1`` è una variabile in virgola mobile con lo stesso intervallo::"
 
 #: ../../reference_manual/seexpr.rst:195
 msgid "$var1 = 0; # 0.000, 10.000"
@@ -432,6 +450,8 @@ msgid ""
 "The latter is very helpful; SeExpr considers vectors with range ``[0, 1]`` "
 "as colors::"
 msgstr ""
+"Quest'ultimo è molto utile; SeExpr considera i vettori con intervallo ``[0, "
+"1]` come colori::"
 
 #: ../../reference_manual/seexpr.rst:203
 msgid ""
@@ -446,6 +466,8 @@ msgid ""
 "In all cases, if not specified, the associated widgets' range will go from 0 "
 "to 1."
 msgstr ""
+"In tutti i casi, se non specificato, l'intervallo degli oggetti associati "
+"andrà da 0 a 1."
 
 #: ../../reference_manual/seexpr.rst:208
 msgid "For a multi-line expression, each line may have its own comment."
@@ -466,6 +488,9 @@ msgid ""
 "possible are ``%f`` for float (takes the first component of vector argument) "
 "or ``%v`` for vector."
 msgstr ""
+"Stampa una stringa su stdout formattata come indicato. Parametri di "
+"formattazione possibili sono ``%f`` per float (accetta il primo componente "
+"dell'argomento del vettore) o ``%v`` per il vettore."
 
 #: ../../reference_manual/seexpr.rst:222
 msgid "For example, if you wrote::"
@@ -497,6 +522,9 @@ msgid ""
 "values ``> 0.5`` pulling the curve up and values ``< 0.5`` pulling the curve "
 "down. Defined as ``pow(x, log(b)/log(0.5))``."
 msgstr ""
+"Variazione della gamma dove il parametro di controllo va da ``0`` a ``1`` "
+"con valori ``>0,5`` che sollevano la curva e valori ``<0,5`` che abbassano "
+"la curva. Definita come ``pow (x, log(b)/log(0.5))``."
 
 #: ../../reference_manual/seexpr.rst:240
 msgid "float **boxstep** ( float x, float a )"
@@ -524,6 +552,14 @@ msgid ""
 "sharper transition near one and a softer transition near zero whereas "
 "``smoothstep`` has a medium softness near both one and zero."
 msgstr ""
+"Le funzioni a gradino sono zero per `x < a`` e uno per ``x > b`` (or ``x > "
+"a`` nel caso di boxstep). Tra ``a`` e ``b``, il valore cambia continuamente "
+"tra zero e uno. La funzione ``gausstep`` utilizza l'estensione curva a "
+"«campana» gaussiana standard basata su una curva esponenziale. La funzione "
+"``smoothstep`` utilizza una curva cubica. Intuitivamente, ``gausstep`` ha "
+"una transizione più netta vicino a uno e una transizione più morbida vicino "
+"a zero, mentre``smoothstep`` ha una morbidezza media vicina sia all'uno che "
+"allo zero."
 
 #: ../../reference_manual/seexpr.rst:253
 msgid "float **clamp** ( float x, float lo, float hi )"
@@ -550,6 +586,8 @@ msgid ""
 "Adjust the contrast. For ``c`` from ``0`` to ``0.5``, the contrast is "
 "decreased. For ``c > 0.5``, the contrast is increased."
 msgstr ""
+"Regola il contrasto. Per ``c`` da ``0`` a ``0,5``, il contrasto viene "
+"diminuito. Per ``c > 0,5``, il contrasto viene aumentato."
 
 #: ../../reference_manual/seexpr.rst:263
 msgid "float **expand** ( float x, float lo, float hi )"
@@ -557,7 +595,7 @@ msgstr "float **expand** ( float x, float lo, float hi )"
 
 #: ../../reference_manual/seexpr.rst:265
 msgid "Expand the dynamic range from ``[lo, hi]`` to ``[0, 1]``."
-msgstr ""
+msgstr "Espandi l'intervallo dinamico da ``[lo, hi]`` a ``[0, 1]``."
 
 #: ../../reference_manual/seexpr.rst:266
 msgid "float **fit** ( float x, float a1, float b1, float a2, float b2 )"
@@ -565,7 +603,7 @@ msgstr "float **fit** ( float x, float a1, float b1, float a2, float b2 )"
 
 #: ../../reference_manual/seexpr.rst:268
 msgid "Linear remapping of ``[a1..x..b1]`` to ``[a2..x..b2]``"
-msgstr ""
+msgstr "Rimappatura lineare di ``[a1..x..b1]`` a ``[a2..x..b2]``"
 
 #: ../../reference_manual/seexpr.rst:269
 msgid "float **gamma** ( float x, float g)"
@@ -581,7 +619,7 @@ msgstr "float **invert** ( float x )"
 
 #: ../../reference_manual/seexpr.rst:274
 msgid "Invert the value. Defined as ``1 - x``."
-msgstr ""
+msgstr "Inverti il valore. Definito come ``1 - x``."
 
 #: ../../reference_manual/seexpr.rst:275
 msgid "color **hsi** ( color x, float h, float s, float i, float map=1 )"
@@ -595,6 +633,12 @@ msgid ""
 "map is one and no shift will happen when the map is zero. The shift will be "
 "scaled back for values between zero and one."
 msgstr ""
+"La funzione ``hsi`` sposta la tonalità di ``h`` (in gradi) e scala la "
+"saturazione e l'intensità rispettivamente di ``s`` e ``i``. Può essere "
+"fornita una mappa che controllerà lo spostamento - lo spostamento completo "
+"si verificherà quando la mappa è una e nessuno spostamento avverrà quando la "
+"mappa è zero. Lo spostamento sarà ridimensionato per valori compresi tra "
+"zero e uno."
 
 #: ../../reference_manual/seexpr.rst:283
 msgid "color **hsltorgb** ( color hsl )"
@@ -612,6 +656,11 @@ msgid ""
 "any RGB or HSL value (except for negative values), the conversion is well-"
 "defined and reversible."
 msgstr ""
+"Conversione dello spazio colore da RGB a HSL. HSL è Tonalità, Saturazione, "
+"Luminosità (tutto nell'intervallo ``[0, 1]``). Queste funzioni sono state "
+"estese anche per supportare valori RGB e HSL al di fuori dell'intervallo ``"
+"[0, 1]`` in modo ragionevole. Per qualsiasi valore RGB o HSL (ad eccezione "
+"dei valori negativi), la conversione è ben definita e reversibile."
 
 #: ../../reference_manual/seexpr.rst:292
 msgid ""
@@ -631,6 +680,14 @@ msgid ""
 "adjust the map using the ``remap`` function. The default ``falloff`` and "
 "``interp`` values result in no remapping."
 msgstr ""
+"La funzione ``midhsi`` è proprio come la funzione ``hsi`` tranne per il "
+"fatto che la mappa di controllo è centrata attorno al punto medio (valore di "
+"``0,5``) e può scalare lo spostamento in entrambe le direzioni. A metà, non "
+"avviene alcun cambiamento. A *1,0*, si verifica lo spostamento completo e "
+"con ``0,0`` si verifica lo spostamento inverso completo. Vengono forniti "
+"ulteriori controlli ``falloff`` e ``interp`` per regolare la mappa "
+"utilizzando la funzione ``remap``. I valori predefiniti di ``falloff`` e "
+"``interp`` non producono la rimappatura."
 
 #: ../../reference_manual/seexpr.rst:301
 msgid "float **mix** ( float a, float b, float alpha )"
@@ -655,6 +712,10 @@ msgid ""
 "result is one. The result falls to zero beyond that range over ``falloff`` "
 "distance. The falloff shape is controlled by ``interp``."
 msgstr ""
+"Funzione generale di rimappatura. Quando ``x``  si trova all'interno di "
+"``±intervallo`` della sorgente, il risultato è uno. Il risultato scende a "
+"zero oltre tale intervallo sulla distanza di ``decadimento``. La forma del "
+"decadimento è controllata da ``interp``."
 
 #: ../../reference_manual/seexpr.rst:312
 msgid "Numeric values or named constants may be used:"
@@ -702,10 +763,13 @@ msgid ""
 "integer location. This is the same as the `PRMan cellnoise function <https://"
 "renderman.pixar.com/resources/RenderMan_20/cellnoise.html>`_."
 msgstr ""
+"``cellnoise`` genera un campo di cubi colorati costanti in base alla "
+"posizione intera. È lo stesso della funzione `PRMan cellnoise <https: //"
+"renderman.pixar.com/resources/RenderMan_20/cellnoise.html>`_."
 
 #: ../../reference_manual/seexpr.rst:333
 msgid "``ccellnoise`` outputs color cellnoise."
-msgstr ""
+msgstr "``ccellnoise`` restituisce cellnoise a colori."
 
 #: ../../reference_manual/seexpr.rst:335
 msgid ""
@@ -838,6 +902,8 @@ msgid ""
 "``noise`` is a random function that smoothly blends between samples at "
 "integer locations. This is Ken Perlin's original noise function."
 msgstr ""
+"``noise`` è una funzione casuale che miscela uniformemente campioni a "
+"posizioni intera. Questa è la funzione di rumore originale di Ken Perlin."
 
 #: ../../reference_manual/seexpr.rst:376
 msgid "``cnoise`` and ``cnoise4`` output color noise."
@@ -871,6 +937,9 @@ msgid ""
 "seed is supplied, it will be used in addition to the internal seeds and may "
 "be used to create multiple distinct generators."
 msgstr ""
+"Numero casuale compreso tra ``[min, max]`` (o ``[0, 1]`` se non "
+"specificato). Se un seme è fornito, sarà utilizzato in aggiunta ai semi "
+"interni e può essere utilizzato per creare più generatori distinti."
 
 #: ../../reference_manual/seexpr.rst:390
 msgid ""
@@ -901,6 +970,8 @@ msgid ""
 "``turbulence`` is a variant of ``fbm`` where the absolute value of each "
 "noise term is taken. This gives a more billowy appearance."
 msgstr ""
+"``turbulence`` è una variante di ``fbm`` dove viene preso il valore assoluto "
+"di ogni termine di rumore. Questo conferisce un aspetto più ondoso."
 
 #: ../../reference_manual/seexpr.rst:396
 msgid ""
@@ -935,6 +1006,13 @@ msgid ""
 "noise field. When ``fbmScale`` is zero (the default), there is no "
 "distortion. The remaining params are the same as for the ``fbm`` function."
 msgstr ""
+"``voronoi`` è un modello di rumore cellulare. È una variante con jitter di "
+"``cellnoise``. Il parametro tipo descrive diverse varianti della funzione di "
+"rumore. Il parametro ``jitter`` controlla quanto sia irregolare il pattern "
+"(0 è come cellnoise ordinaria). I parametri ``fbm...`` possono essere usati "
+"per distorcere il campo di rumore. Quando ``fbmScale`` è zero (impostazione "
+"predefinita), non è presente alcuna distorsione. I restanti parametri sono "
+"gli stessi della funzione ``fbm``."
 
 #: ../../reference_manual/seexpr.rst:411
 msgid "Voronoi types 1 through 5:"
@@ -949,6 +1027,8 @@ msgid ""
 "``cvoronoi`` returns a random color for each cell and ``pvoronoi`` returns "
 "the point location of the center of the cell."
 msgstr ""
+"``cvoronoi``' restituisce un colore casuale per ogni cella e ``pvoronoi`` "
+"restituisce la posizione del punto del centro della cella."
 
 #: ../../reference_manual/seexpr.rst:422
 msgid "Selection Functions"
@@ -976,6 +1056,9 @@ msgid ""
 "This is an offset ``mod`` function. The result is computed as ``loRange + "
 "value % (hiRange-loRange+1)``."
 msgstr ""
+"Passa attraverso i valori tra loRange e hiRange in base all'indice fornito. "
+"Questa è una funzione ``mod`` di scostamento. Il risultato viene calcolato "
+"come ``loRange + valore % (hiRange-loRange+1)``."
 
 #: ../../reference_manual/seexpr.rst:434
 msgid ""
@@ -991,6 +1074,10 @@ msgid ""
 "(which is automatically hashed). The values will be distributed according to "
 "the supplied weights. Any weights not supplied are assumed to be 1.0."
 msgstr ""
+"Seleziona i valori in modo casuale tra loRange e hiRange in base all'indice "
+"fornito (per cui viene generato automaticamente un hash). I valori saranno "
+"distribuiti in base ai pesi forniti. Si assume che i pesi non forniti siano "
+"1.0."
 
 #: ../../reference_manual/seexpr.rst:440
 msgid ""
@@ -1006,6 +1093,9 @@ msgid ""
 "range ``[0, 1]``). The values will be distributed according to the supplied "
 "weights."
 msgstr ""
+"Seleziona una delle scelte fornite in base all'indice (che si presume sia "
+"nell'intervallo ``[0, 1]``). I valori saranno distribuiti in base ai pesi "
+"forniti."
 
 #: ../../reference_manual/seexpr.rst:448
 msgid "This example returns integer values between 1 and 10::"
@@ -1020,6 +1110,8 @@ msgid ""
 "This example returns the values 1 and 2 twice and 2.5 times as often "
 "respectively as compared to the other values (3-10)::"
 msgstr ""
+"Questo esempio restituisce i valori 1 e 2 due volte e 2,5 volte più spesso "
+"rispetto agli altri valori (3-10)::"
 
 #: ../../reference_manual/seexpr.rst:455
 msgid "pick(value, 1, 10, 2, 2.5)"
@@ -1030,6 +1122,8 @@ msgid ""
 "This example returns 10, 11, and 13 through 20 (12 is skipped due to zero "
 "weight)::"
 msgstr ""
+"Questo esempio restituisce 10, 11 e da 13 a 20 (12 viene ignorato a causa "
+"del peso zero)::"
 
 #: ../../reference_manual/seexpr.rst:459
 msgid "pick(value, 10, 20, 1, 1, 0)"
@@ -1173,7 +1267,7 @@ msgstr "float **trunc** ( float x )"
 
 #: ../../reference_manual/seexpr.rst:524
 msgid "Nearest integer towards zero."
-msgstr ""
+msgstr "Numero intero più vicino verso zero."
 
 #: ../../reference_manual/seexpr.rst:528
 msgid "Trigonometry Functions"
@@ -1249,7 +1343,7 @@ msgstr "float **atan2** ( float y, float x)"
 
 #: ../../reference_manual/seexpr.rst:557
 msgid "Arc tangent of ``y/x`` between ``-PI`` and ``PI``."
-msgstr ""
+msgstr "Arcotangente di ``y/x`` tra ``-PI`` e ``PI``."
 
 #: ../../reference_manual/seexpr.rst:558
 msgid "float **atan2d** ( float y, float x )"
@@ -1257,7 +1351,7 @@ msgstr "float **atan2d** ( float y, float x )"
 
 #: ../../reference_manual/seexpr.rst:560
 msgid "Arc tangent in degrees of ``y/x`` between ``-180º`` and ``180º``."
-msgstr ""
+msgstr "Arcotangente in gradi di ``y/x`` tra ``-180º`` e ``180º``."
 
 #: ../../reference_manual/seexpr.rst:561
 msgid "float **atanh** ( float x )"
@@ -1373,7 +1467,7 @@ msgstr "float angle ( vector a, vector b )"
 
 #: ../../reference_manual/seexpr.rst:608
 msgid "Angle between two vectors (in radians)."
-msgstr ""
+msgstr "Angolo tra due vettori (in radianti)."
 
 #: ../../reference_manual/seexpr.rst:609
 msgid "vector **cross** ( vector a, vector b )"
@@ -1391,7 +1485,7 @@ msgstr "float **dist** ( vector a, vector b )"
 
 #: ../../reference_manual/seexpr.rst:614
 msgid "Distance between two points."
-msgstr ""
+msgstr "Distanza tra due punti."
 
 #: ../../reference_manual/seexpr.rst:615
 msgid "float **dot** ( vector a, vector b)"
@@ -1415,7 +1509,7 @@ msgstr "vector **vnoise** (vector v )"
 
 #: ../../reference_manual/seexpr.rst:623
 msgid "Vector scaled to unit length."
-msgstr ""
+msgstr "Vettore scalato alla lunghezza unitaria."
 
 #: ../../reference_manual/seexpr.rst:624
 msgid "vector **ortho** ( vector a, vector b )"
@@ -1423,7 +1517,7 @@ msgstr "vector **ortho** ( vector a, vector b )"
 
 #: ../../reference_manual/seexpr.rst:626
 msgid "Vector orthographic to two vectors."
-msgstr ""
+msgstr "Vettore ortografico a due vettori."
 
 #: ../../reference_manual/seexpr.rst:627
 msgid "vector **rotate** ( vector v, vector axis, float angle )"
@@ -1432,6 +1526,7 @@ msgstr "vector **rotate** ( vector v, vector axis, float angolo )"
 #: ../../reference_manual/seexpr.rst:629
 msgid "Rotates ``v`` around axis by the given ``angle`` (in radians)."
 msgstr ""
+"Ruota ``v`` attorno all'asse dell'``angolo`` specificato (in radianti)."
 
 #: ../../reference_manual/seexpr.rst:630
 msgid "vector **up** ( vector v, vector up )"
@@ -1441,6 +1536,8 @@ msgstr "vector **up** ( vector v, vector up )"
 msgid ""
 "Rotates ``v`` such that the Y axis points in the given ``up`` direction."
 msgstr ""
+"Ruota ``v`` in modo tale che l'asse Y punti nella direzione ``su`` "
+"specificata."
 
 #: ../../reference_manual/seexpr.rst:637
 msgid "Vector Support"
@@ -1453,6 +1550,10 @@ msgid ""
 "is replicated into the three components, e.g. ``0.5`` becomes ``[0.5, 0.5, "
 "0.5]``."
 msgstr ""
+"I *vettori* (punti, colori o vettori 3D) possono essere mescolati con "
+"*scalari*(valori in virgola mobile semplici). Se uno scalare viene "
+"utilizzato in un contesto vettoriale, esso viene replicato nei tre "
+"componenti, ad es. ``0,5`` diventa ``[0,5, 0,5,0,5]``."
 
 #: ../../reference_manual/seexpr.rst:643
 msgid ""
@@ -1461,6 +1562,11 @@ msgid ""
 "work with scalars automatically extend to vectors. For instance, ``pick``, "
 "``choose``, ``cycle``, ``spline``, etc., will work just fine with vectors."
 msgstr ""
+"Se un vettore viene utilizzato in un contesto scalare, viene utilizzato solo "
+"il primo componente. Uno dei vantaggi di questo è che tutte le funzioni a "
+"cui sono definite per lavorare con gli scalari si estendono automaticamente "
+"ai vettori. Ad esempio, ``pick``, ``choose``, ``cycle``, ``spline``, ecc. "
+"funzioneranno perfettamente con i vettori."
 
 #: ../../reference_manual/seexpr.rst:649
 msgid ""
@@ -1468,6 +1574,10 @@ msgid ""
 "applied component-wise to vectors. For example, applying the ``gamma`` "
 "function to a map adjusts the gamma of all three color channels."
 msgstr ""
+"Gli operatori aritmetici come ``+ ``, ``*``, ecc., e le funzioni scalari "
+"vengono applicati per componenti ai vettori. Ad esempio, l'applicazione "
+"della funzione ``gamma`` a una mappa regola la gamma di tutti e tre i canali "
+"di colore."
 
 #: ../../reference_manual/seexpr.rst:655
 msgid "Curve Functions"
@@ -1478,6 +1588,8 @@ msgid ""
 "Interpolation of parameter values to a set of control points is governed by "
 "the following functions."
 msgstr ""
+"L'interpolazione dei valori dei parametri in un insieme di punti di "
+"controllo è regolata dalle seguenti funzioni."
 
 #: ../../reference_manual/seexpr.rst:661
 msgid ""
@@ -1493,6 +1605,9 @@ msgid ""
 "are specified by triples of parameters ``pos_i``, ``val_i``, and "
 "``interp_i``."
 msgstr ""
+"Interpola la scala di colori data dai punti di controllo in ``param``. I "
+"punti di controllo sono specificati da triple di parametri ``pos_i``, "
+"``val_i`` e ``interp_i``."
 
 #: ../../reference_manual/seexpr.rst:668 ../../reference_manual/seexpr.rst:682
 msgid "Interpolation codes are:"
@@ -1516,7 +1631,7 @@ msgstr "3 - spline"
 
 #: ../../reference_manual/seexpr.rst:674 ../../reference_manual/seexpr.rst:688
 msgid "4 - monotone (non-oscillating) spline"
-msgstr ""
+msgstr "4 - spline monotona (non oscillante)"
 
 #: ../../reference_manual/seexpr.rst:675
 msgid ""
@@ -1532,6 +1647,9 @@ msgid ""
 "points are specified by triples of parameters ``pos_i``, ``val_i``, and "
 "``interp_i``."
 msgstr ""
+"Interpola una rampa 1D definita dai punti di controllo in ``param``. I punti "
+"di controllo sono specificati da triple di parametri ``pos_i``, ``val_i`` e "
+"``interp_i``."
 
 #: ../../reference_manual/seexpr.rst:689
 msgid ""
@@ -1546,6 +1664,8 @@ msgid ""
 "Interpolates a set of values to the parameter specified where ``y1``, ..., "
 "``yn`` are distributed evenly from ``[0, 1]``."
 msgstr ""
+"Interpola un insieme di valori nel parametro specificato dove ``y1'', ..., "
+"``yn`` sono distribuiti uniformemente da ``[0, 1]``."
 
 #: ../../reference_manual/seexpr.rst:696
 msgid "Custom Plugins"
@@ -1557,10 +1677,13 @@ msgid ""
 "plugins.  See `Writing Custom Expression Plugins <https://wdas.github.io/"
 "SeExpr/doxygen/plugins.html>`_ for more details."
 msgstr ""
+"Le funzioni personalizzate possono essere scritte in C ++ e caricate come "
+"una o più estensioni dinamiche. Vedere `Writing Custom Expression Plugins "
+"<https://wdas.github.io/SeExpr/doxygen/plugins.html>`_ per maggiori dettagli."
 
 #: ../../reference_manual/seexpr.rst:700
 msgid "This functionality is not supported in Krita."
-msgstr ""
+msgstr "Questa funzionalità non è supportata in Krita."
 
 #: ../../reference_manual/seexpr.rst:702
 msgid ""
