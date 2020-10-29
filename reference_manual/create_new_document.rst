@@ -65,6 +65,9 @@ This section allows you to create a document from an image that is in your
 clipboard, like a screenshot. It will have all the fields set to match the
 clipboard image.
 
+
+.. _create_new_document_from_template:
+
 Templates:
 ~~~~~~~~~~
 

@@ -32,7 +32,7 @@ Brush Packs
                Ramon Miranda
 
           - .. figure:: /images/resource_packs/Resources-conceptBrushes.jpg
-               :target: https://forum.kde.org/viewtopic.php?f=274&t=127423
+               :target: https://drive.google.com/file/d/1sl8sW7pu7QtGxunLeZapksU1u6Uc9VF5/view?usp=sharing
 
                Concept art & Illustration Pack
                
@@ -111,6 +111,37 @@ External tutorials
 
                Simón Sanchez' "Learn to Create Pixel Art from Zero" course on Udemy
 
+
+Vector libraries
+================
+
+Composition templates
+---------------------
+
+Inside the zip archive you'll find all composition templates separate and in a form of a vector library, so all the shapes are easy to access after the import.
+
+The composition templates include: rule of thirds, golden ratio, golden spiral, golden triangle 1, golden triangle 2, harmonious triangle, film safe area template, baroque diagonal and centre.
+
+Link: https://gumroad.com/l/CHhlx
+
+Feather icons
+-------------
+
+A set of open source icons from https://feathericons.com but in a Vector Library form, so it can be easily accessed from inside Krita after the import. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency, and flexibility.
+
+Link: https://github.com/MiAlmeida/krita-feather
+
+
+Templates
+=========
+Templates are .kra files that you can base your new documents on. To learn more see :ref:`create_new_document_from_template`.
+
+Storyboard template
+-------------------
+
+The layout and layer setup is inspired by traditional Studio Ghibli storyboards, and Tony Gaddis’ storyboarding process.
+
+Link: https://gumroad.com/l/PtMtm
 
 Pre-installed Python Plugins
 ============================
