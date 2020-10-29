@@ -238,6 +238,7 @@ Release
 
 1. Update download page
 2. Publish the announcement and release notes
+3. Add release links to Release History section of the site: https://krita.org/en/about/krita-releases-overview/ 
 
 Post-release
 ~~~~~~~~~~~~
