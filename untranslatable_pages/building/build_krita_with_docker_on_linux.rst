@@ -188,6 +188,34 @@ completely by running
 You can build multiple merge requests at once!
 
 
+Updating dependencies in the docker
+-----------------------------------
+
+Sometimes dependencies in Krita change and building Krita or making the appimage fails. To fix that, you need to update the dependencies.
+
+.. note::
+
+    This method is slow, because you need to rebuild the whole docker, which includes rebuilding whole Krita.
+
+Run those commands in the console in the host system. If you want to update the dependencies in a clone docker, just go to the clone directory where you see ``bin`` and ``persistent`` directories and run those commands there.
+
+.. code::
+
+    # download new deps
+    ./bin/bootstrap-deps.sh
+
+    # build image
+    ./bin/build_image krita-deps
+
+    # remove the current container
+    ./bin/remove_container krita-auto-1
+
+    # run the container (it will create one)
+    ./bin/run_container krita-deps krita-auto-1
+
+After that you need to build Krita in the docker as usual.
+
+
 Extra developer tools
 ---------------------
 
