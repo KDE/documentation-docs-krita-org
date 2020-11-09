@@ -78,7 +78,7 @@ Brush Packs
                IForce73
 
           - .. figure:: /images/resource_packs/Resources-wojtrybBrushes.png
-               :target: https://www.dropbox.com/s/i1rt7f0qc77nc4m/wont_teach_you_to_draw_brushpack_v5.0.zip?dl=1
+               :target: https://www.dropbox.com/s/nconrhjb6ltai8f/wont_teach_you_to_draw_brushpack_v6.0.zip?dl=1
 
                wojtryb
 
@@ -365,6 +365,13 @@ Spine File Format Export
     Inspired by the official Photoshop Plugin, it works nearly the same. Click on :menuselection:`Tools --> Scripts --> Export to Spine`, select a folder and all your images will be exported into it as well as :file:`spine.json`.
 
     Available here: https://github.com/chartinger/krita-unofficial-spine-export
+
+Subwindow Organizer
+------------------------
+
+    Helps with handling multiple documents in subwindow mode. Introduces responsive fullscreen with other subwindows opened, dynamic snapping of subwindows to canvas borders, drag and drop switching between subwindows, and more.
+
+    Available here: https://github.com/wojtryb/kritaSubwindowOrganizer 
 
 Tablet Controls Docker
 ----------------------
