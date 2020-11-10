@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-19 02:02+0200\n"
-"PO-Revision-Date: 2020-10-24 21:00+0200\n"
+"PO-Revision-Date: 2020-11-09 20:16+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -342,6 +342,11 @@ msgid ""
 "<linear_and_gamma>`, sRGB images. Krita transforms them into your document's "
 "color space using the sRGB-elle-V2-srgbtrc.icc profile."
 msgstr ""
+"För att vara helt exakt, **har SeExpr ingen färghantering**. Strukturer"
+" återges alltid som :ref:`32-bitars flyttal <bit_depth>`,"
+" :ref:`gammakorrigerade <linear_and_gamma>`, sRGB-bilder. Krita omvandlar dem"
+" till dokumentets färgrymd med användning av profilen"
+" sRGB-elle-V2-srgbtrc.icc."
 
 #: ../../tutorials/seexpr.rst:143
 msgid "See :ref:`color_managed_workflow` for what this means."
@@ -357,6 +362,9 @@ msgid ""
 "layer's properties by right-clicking on :guilabel:`Fill Layer 1`, and "
 "selecting :guilabel:`Layer Properties...`."
 msgstr ""
+"Det finns också ett annat sätt att definiera och redigera variabler. Öppna"
+" fyllagrets egenskaper genom att högerklicka på :guilabel:`Fyllager 1`, och"
+" välja :guilabel:`Lageregenskaper...`."
 
 #: ../../tutorials/seexpr.rst:154
 msgid ".. image:: images/seexpr/SeExpr_prop_1.png"
@@ -368,6 +376,9 @@ msgid ""
 "SeExpr enables a whole chunk of knobs to manage individual variables. In our "
 "example above, you can change ``$color``'s in three ways:"
 msgstr ""
+"Observera mittenrutan. När den väl detekterar ett syntaktiskt korrekt skript,"
+" aktiverar SeExpr en hel mängd knappar för att hantera individuella"
+" variabler. I vårt exempel ovan, kan man ändra ``$color`` på tre sätt:"
 
 #: ../../tutorials/seexpr.rst:159
 msgid "enter the red, green, or blue channel's value in the input fields"
@@ -410,6 +421,8 @@ msgid ""
 "They are the SeExpr version of :ref:`Stop Gradients <resource_gradients>`: "
 "they interpolate a ramp given by a set of values."
 msgstr ""
+"De är versionen av :ref:`Stopptoning <resource_gradients>` i SeExpr: de"
+" interpolerar en ramp given av en uppsättning värden."
 
 #: ../../tutorials/seexpr.rst:175
 msgid ""
@@ -422,6 +435,7 @@ msgstr ""
 #: ../../tutorials/seexpr.rst:177
 msgid "Color curves represent RGB gradients, returning a Color at each point."
 msgstr ""
+"Färgkurvor representerar RGB-toningar, och returnerar en färg för varje punkt."
 
 #: ../../tutorials/seexpr.rst:178
 msgid "Integers and Floats"
@@ -467,6 +481,8 @@ msgstr "Oftast enstaka ord."
 msgid ""
 "For instance, you could replicate ``$color`` in the :guilabel:`Vector` tab:"
 msgstr ""
+"Man skulle exempelvis kunna replikera ``$color`` under fliken"
+" :guilabel:`Vektor`:"
 
 #: ../../tutorials/seexpr.rst:197
 msgid ".. image:: images/seexpr/SeExpr_add_variable_vector.png"
@@ -484,29 +500,35 @@ msgstr ""
 
 #: ../../tutorials/seexpr.rst:204
 msgid "You can create one through the top bar of the :guilabel:`Options` tab:"
-msgstr ""
+msgstr "Du kan skapa en via toppraden i fliken :guilabel:`Alternativ`:"
 
 #: ../../tutorials/seexpr.rst:208
 msgid ""
 "Select :guilabel:`Save New SeExpr Preset...` and the following dialog will "
 "open:"
 msgstr ""
+"Välj :guilabel:`Spara ny SeExpr-förinställning...` så visas följande"
+" dialogruta:"
 
 #: ../../tutorials/seexpr.rst:213
 msgid ""
 "You can edit the name of the preset in the top line edit box, and set a  "
 "thumbnail for easy identification."
 msgstr ""
+"Man kan redigera förinställningens namn i den övre radredigeringsrutan, och"
+" ställa in en miniatyrbild för enkel identifiering."
 
 #: ../../tutorials/seexpr.rst:215
 msgid ""
 "The dialog will append \"Copy\" to the preset's name if it is a copy of an "
 "existing one. You can change it at will."
 msgstr ""
+"Dialogrutan lägger till \"Kopia\" i förinställningens namn om den är en kopia"
+" av en befintlig. Man kan ändra den som man vill."
 
 #: ../../tutorials/seexpr.rst:217
 msgid "The dialog provides the following choices for setting a thumbnail:"
-msgstr ""
+msgstr "Dialogrutan tillhandahåller följande val för att ange en miniatyrbild:"
 
 #: ../../tutorials/seexpr.rst:220
 msgid "Load Existing Thumbnail"
@@ -517,6 +539,9 @@ msgid ""
 "If the preset already has a thumbnail (for instance, if you created it from "
 "an existing preset), this button will load and apply it."
 msgstr ""
+"Om förinställningen redan har en miniatyrbild (om man exempelvis skapade den"
+" från en befintlig förinställning), läser den här knappen in och applicerar"
+" den."
 
 #: ../../tutorials/seexpr.rst:223
 msgid "Load Image"
@@ -524,7 +549,7 @@ msgstr "Läs in bild"
 
 #: ../../tutorials/seexpr.rst:225
 msgid "Applies an image from the filesystem as a thumbnail."
-msgstr ""
+msgstr "Applicerar en bild från filsystemet som miniatyrbild."
 
 #: ../../tutorials/seexpr.rst:226
 msgid "Render Script to Thumbnail"
@@ -535,6 +560,8 @@ msgid ""
 "Renders your script to a 256x256 texture, and applies the latter as a "
 "thumbnail."
 msgstr ""
+"Återger skriptet som en 256 x 256 struktur, och applicerar den senare som en"
+" miniatyrbild."
 
 #: ../../tutorials/seexpr.rst:229
 msgid "Clear Thumbnail"
@@ -545,6 +572,9 @@ msgid ""
 "Deletes the thumbnail. Note that, if the preset is a copy of an existing "
 "one, this can be reverted by clicking :guilabel:`Load Existing Thumbnail`."
 msgstr ""
+"Tar bor miniatyrbilden. Observera att om förinställningen är en kopia av en"
+" befintlig, kan den återställas genom att klicka på :guilabel:`Läs in"
+" befintlig miniatyrbild`."
 
 #: ../../tutorials/seexpr.rst:235
 msgid "Changing existing presets"
@@ -555,22 +585,30 @@ msgid ""
 "If you change a preset's script, you will notice two new buttons in the top "
 "bar of the :guilabel:`Options` tab:"
 msgstr ""
+"Om man ändrar en förinställnings skript, märker man två nya knappar i den"
+" övre raden i fliken :guilabel:`Alternativ`:"
 
 #: ../../tutorials/seexpr.rst:241
 msgid ""
 "The reload button will restore the preset to its original properties, while "
 "clicking on :guilabel:`Overwrite Preset` will save your changes."
 msgstr ""
+"Uppdateringsknappen återställer förinställningen till sina ursprungliga"
+" egenskaper, medan om man klickar på :guilabel:`Skriv över förinställning`"
+" sparas ändringarna."
 
 #: ../../tutorials/seexpr.rst:243
 msgid ""
 "Additionally, you can edit the preset's name by clicking on the rename "
 "button, entering the new name, and clicking on :guilabel:`Save`:"
 msgstr ""
+"Dessutom kan man redigera förinställningens namn genom att klicka på"
+" namnändringsknappen, skriva in det nya namnet, och klicka på"
+" :guilabel:`Spara`:"
 
 #: ../../tutorials/seexpr.rst:251
 msgid "Bundling your presets"
-msgstr ""
+msgstr "Packa ihop förinställningar"
 
 #: ../../tutorials/seexpr.rst:253
 msgid ""
@@ -578,3 +616,6 @@ msgid ""
 "resource in Krita. Follow the instructions in :ref:`resource_management` to "
 "create your own bundles."
 msgstr ""
+"Dela med sig av skript är enkelt! SeExpr skriptförinställningar är precis som"
+" alla andra resurser i Krita. Följ instruktionerna i"
+" :ref:`resource_management` för att skapa egna packar."
