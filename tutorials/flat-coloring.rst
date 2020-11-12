@@ -1,4 +1,4 @@
-tatus.. meta::
+.. meta::
    :description lang=en:
         Common workflows used in Krita.
 
