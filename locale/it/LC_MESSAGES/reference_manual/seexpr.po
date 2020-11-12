@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-10 02:06+0100\n"
-"PO-Revision-Date: 2020-10-12 09:28+0200\n"
+"PO-Revision-Date: 2020-11-11 14:26+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128@baslug.org>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 20.08.3\n"
 
 #: ../../reference_manual/seexpr.rst:1
 msgid "SeExpr Quick Reference for Krita"
@@ -163,11 +163,11 @@ msgstr ""
 
 #: ../../reference_manual/seexpr.rst:69
 msgid "You can also define namespaced variables, e.g.::"
-msgstr ""
+msgstr "Puoi anche definire variabili con spazio dei nomi, ad es.::"
 
 #: ../../reference_manual/seexpr.rst:71
 msgid "$A::a = $u * 10;"
-msgstr ""
+msgstr "$A::a = $u * 10;"
 
 #: ../../reference_manual/seexpr.rst:75
 msgid "Control Structures"
@@ -175,7 +175,7 @@ msgstr "Strutture di controllo"
 
 #: ../../reference_manual/seexpr.rst:77
 msgid "SeExpr provides the well-known `if` conditional structure::"
-msgstr ""
+msgstr "SeExpr fornisce la ben nota struttura condizionale `if`::"
 
 #: ../../reference_manual/seexpr.rst:79
 msgid ""
@@ -188,12 +188,18 @@ msgid ""
 "\n"
 "$color"
 msgstr ""
+"if ($ u > 0.5) {\n"
+"    $color = [0, 0, 1];\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
 
 #: ../../reference_manual/seexpr.rst:88
-#, fuzzy
-#| msgid "ternary ``if`` operator"
 msgid "And the *ternary operator*::"
-msgstr "operatore ``if`` ternario"
+msgstr "E l'*operatore ternario*::"
 
 #: ../../reference_manual/seexpr.rst:90
 msgid "$u = $i < .5 ? 0.0 : 10.0"
@@ -201,17 +207,19 @@ msgstr "$u = $i < .5 ? 0.0 : 10.0"
 
 #: ../../reference_manual/seexpr.rst:92
 msgid "You can freely nest ternary operators, e.g.::"
-msgstr ""
+msgstr "Puoi nidificare liberamente operatori ternari, ad es.::"
 
 #: ../../reference_manual/seexpr.rst:94
 msgid ""
 "$color = $u < .5 ? ($v < 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];\n"
 "$color"
 msgstr ""
+"$color = $u < .5 ? ($v < 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];\n"
+"$color"
 
 #: ../../reference_manual/seexpr.rst:97
 msgid "You can also achieve the same with `if` structures::"
-msgstr ""
+msgstr "Puoi ottenere lo stesso risultato anche con le strutture `if`::"
 
 #: ../../reference_manual/seexpr.rst:99
 msgid ""
@@ -229,6 +237,19 @@ msgid ""
 "\n"
 "$color"
 msgstr ""
+"if ($ u > 0.5) {\n"
+"    if ($v < 0.5) {\n"
+"        $color = [0, 0, 1];\n"
+"    }\n"
+"    else {\n"
+"        $color = [1, 0, 0];\n"
+"    }\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
 
 #: ../../reference_manual/seexpr.rst:115
 msgid "Operators (listed in decreasing precedence)"
@@ -531,10 +552,8 @@ msgid "Logging Functions"
 msgstr "Funzioni di registrazione"
 
 #: ../../reference_manual/seexpr.rst:249
-#, fuzzy
-#| msgid "void **printf** ( string format, [param0, param1, ...] )"
 msgid "float **printf** ( string format, [param0, param1, ...] )"
-msgstr "void **printf** ( formato stringa, [param0, param1, ...] )"
+msgstr "float **printf** ( formato stringa, [param0, param1, ...] )"
 
 #: ../../reference_manual/seexpr.rst:251
 msgid ""
@@ -551,33 +570,30 @@ msgid "For example, if you wrote::"
 msgstr "Ad esempio, se hai scritto:"
 
 #: ../../reference_manual/seexpr.rst:258
-#, fuzzy
-#| msgid "printf(\"test %f %v\",[1,2,3],[4,5,6]);"
 msgid "$u = printf(\"test %f %v\",[1,2,3],[4,5,6]);"
-msgstr "printf(\"test %f %v\",[1,2,3],[4,5,6]);"
+msgstr "$u = printf(\"test %f %v\",[1,2,3],[4,5,6]);"
 
 #: ../../reference_manual/seexpr.rst:260
-#, fuzzy
-#| msgid "you would get::"
 msgid "you would get in your console::"
-msgstr "otterresti::"
+msgstr "dovresti ottenere nella tua console::"
 
 #: ../../reference_manual/seexpr.rst:262
 msgid "test 1 [4,5,6]"
 msgstr "test 1 [4,5,6]"
 
 #: ../../reference_manual/seexpr.rst:263
-#, fuzzy
-#| msgid "void **printf** ( string format, [param0, param1, ...] )"
 msgid ""
 "string **sprintf** ( string format, [double|string, double|string, ...] )"
-msgstr "void **printf** ( formato stringa, [param0, param1, ...] )"
+msgstr ""
+"string **sprintf** ( formato stringa, [double|string, double|string, ...] )"
 
 #: ../../reference_manual/seexpr.rst:265
 msgid ""
 "Returns a string formatted from the given values.  See ``man sprintf`` for "
 "format details."
 msgstr ""
+"Restituisce una stringa formattata dai valori forniti. Vedi ``man sprintf`` "
+"per i dettagli del formato."
 
 #: ../../reference_manual/seexpr.rst:269
 msgid "Color, Masking, and Remapping Functions"
