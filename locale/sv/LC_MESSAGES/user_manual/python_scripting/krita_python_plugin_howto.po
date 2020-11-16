@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-19 02:02+0200\n"
-"PO-Revision-Date: 2020-08-21 21:15+0200\n"
+"PO-Revision-Date: 2020-11-15 15:32+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -93,6 +93,18 @@ msgid ""
 "If there is no pykrita subfolder in the Krita resources directory use your "
 "file manager to create one."
 msgstr ""
+"Ett skript i Krita har två komponenter: skriptkatalogen (som innehåller"
+" skriptets Python-filer) och en \".desktop\"-fil som Krita använder för att"
+" läsa in och registrera skriptet. För att Krita ska läsa in skriptet måste"
+" båda dessa finnas i underkatalogen pykrita i Kritas resurskatalog (på Linux"
+" ~/.local/share/krita/pykrita). För att hitta resurskatalogen, starta Krita"
+" och klicka på menyalternativet :menuselection:`Inställningar --> Hantera"
+" resurser...`. Det visar en dialogruta. Klicka på knappen :guilabel:`Öppna"
+" resurskatalog`. Det ska öppna en filhanterare på systemet med Kritas"
+" resurskatalog. Se dokumentationen av `programmeringsgränssnittet <"
+"https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/inde"
+"x.html>`_ under \"Auto starting scripts\".  Om det inte finns någon pykrita"
+" underkatalog i Kritas resurskatalog, använd filhanteraren för att skapa en."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:32
 msgid ""
@@ -314,6 +326,10 @@ msgid ""
 "run on Krita start. They are made by extending the Extension class, and the "
 "most barebones extension looks like this:"
 msgstr ""
+"`Utökningar <https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/"
+"libkis/html/classExtension.html>`_ är relativt enkla Python-skript som körs"
+" när Krita startar. De skapas genom att utöka klassen Extensions, och den"
+" mest avskalade utökningen ser ut så här:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:125
 msgid ""
@@ -335,6 +351,23 @@ msgid ""
 "# And add the extension to Krita's list of extensions:\n"
 "Krita.instance().addExtension(MyExtension(Krita.instance()))"
 msgstr ""
+"from krita import *\n"
+"\n"
+"class MyExtension(Extension):\n"
+"\n"
+"    def __init__(self, parent):\n"
+"        # Initierar överliggande klass, alltid viktigt vid användning av"
+" delklasser.\n"
+"        super().__init__(parent)\n"
+"\n"
+"    def setup(self):\n"
+"        pass\n"
+"\n"
+"    def createActions(self, window):\n"
+"        pass\n"
+"\n"
+"# Lägg till utökningen i Kritas lista över utökningar:\n"
+"Krita.instance().addExtension(MyExtension(Krita.instance()))"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:126
 msgid ""
@@ -342,6 +375,9 @@ msgid ""
 "actions to Krita, so we can access our script from the :guilabel:`Tools` "
 "menu."
 msgstr ""
+"Koden gör förstås ingenting. Vi lägger typiskt till åtgärder för Krita i"
+" createActions, så att vi kan komma åt våra skript från menyn"
+" :guilabel:`Verktyg`."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:128
 msgid ""
@@ -353,6 +389,12 @@ msgid ""
 "every Window that is created and pass the right window object that we have "
 "to use."
 msgstr ""
+"Låt oss först skapa en `åtgärd <https://api.kde.org/extragear-api/graphics-api"
+"docs/krita/libs/libkis/html/classAction.html>`_. Vi kan enkelt göra det med"
+" `Window.createAction() <https://api.kde.org/extragear-api/graphics-apidocs/kr"
+"ita/libs/libkis/html/classWindow.html#a72ec58e53844076c1461966c34a9115c>`_."
+" Krita anropar createActions för varje Window skapas och skickar med rätt"
+" fönsterobjekt som vi måste använda."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:130
 msgid "So..."
@@ -466,6 +508,10 @@ msgid ""
 "signalsandslots.html>`_, which Qt applications like Krita use a lot. We'll "
 "go over how to make our own signals and slots a bit later."
 msgstr ""
+"Det är ett exempel på en `signal/slot anslutning <"
+"https://doc.qt.io/qt-5/signalsandslots.html>`_, som Qt-program som Krita"
+" använder en hel del. Vi går igenom hur vi skapar våra egna signaler och"
+" slots lite senare."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:179
 msgid "Restart Krita and your new action ought to now export the document."
@@ -556,6 +602,8 @@ msgid ""
 "This should be the unique id you made for your action when creating it in "
 "the setup of the extension."
 msgstr ""
+"Ska vara den unika identifieraren som användes för åtgärden när den skapades"
+" i utökningen."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:215
 msgid "icon"
@@ -566,6 +614,8 @@ msgid ""
 "the name of a possible icon. These will only show up on KDE plasma, because "
 "Gnome and Windows users complained they look ugly."
 msgstr ""
+"Namnet på en möjlig ikon. De visas bara i KDE Plasma, eftersom Gnome- och"
+" Windows-användare klagade på att de ser fula ut."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:217
 msgid "text"
@@ -584,6 +634,8 @@ msgid ""
 "The text it will show when a Qt application specifically calls for 'what is "
 "this', which is a help action."
 msgstr ""
+"Texten visas när ett Qt-program specifikt frågar efter 'vad är det här', som"
+" är en hjälpåtgärd."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:221
 msgid "toolTip"
@@ -591,7 +643,7 @@ msgstr "toolTip"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:222
 msgid "The tool tip, this will show up on hover-over."
-msgstr ""
+msgstr "Verktygstipset, det visas när musen hålls över det."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:223
 msgid "iconText"
@@ -603,6 +655,9 @@ msgid ""
 "Image to New Size\" could be shortened to \"Resize Image\" to save space, so "
 "we'd put that in here."
 msgstr ""
+"Texten den visar när den finns i en verktygsrad. Så \"Ändra storlek på bilden"
+" till ny storlek\" skulle exempelvis kunna avkortas till \"Ändra"
+" bildstorlek\" för att spara utrymme, så vi skriver in det."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:225
 msgid "activationFlags"
@@ -610,7 +665,7 @@ msgstr "activationFlags"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:226
 msgid "This determines when an action is disabled or not."
-msgstr ""
+msgstr "Bestämmer om en åtgärd är inaktiverad eller inte."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:227
 msgid "activationConditions"
@@ -622,6 +677,9 @@ msgid ""
 "editable). See `the code <https://cgit.kde.org/krita.git/tree/libs/ui/"
 "kis_action.h#n76>`_ for examples."
 msgstr ""
+"Bestämmer aktiveringsvillkor (t.ex. aktivera bara när markeringen är"
+" redigerbar). Se `koden <https://cgit.kde.org/krita.git/tree/libs/ui/kis_actio"
+"n.h#n76>`_ för exempel."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:229
 msgid "shortcut"
@@ -637,7 +695,7 @@ msgstr "isCheckable"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:232
 msgid "Whether it is a checkbox or not."
-msgstr ""
+msgstr "Om det är en kryssruta eller inte."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:234
 msgid "statusTip"
@@ -645,7 +703,7 @@ msgstr "statusTip"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:234
 msgid "The status tip that is displayed on a status bar."
-msgstr ""
+msgstr "Statustipset som visas i en statusrad."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:236
 msgid ""
@@ -656,6 +714,12 @@ msgid ""
 "is where the action files go) Restart Krita. The shortcut should now show up "
 "in the shortcut action list."
 msgstr ""
+"Spara filen som \"mitt_insticksprogram.action\", där mitt_insticksprogram är"
+" namnet på insticksprogrammet. Åtgärdsfilen ska sparas i en resurskatalog som"
+" heter \"actions\", inte i resurskatalogen för pykrita (så share/pykrita är"
+" platsen där Python-insticksprogram och skrivbordsfiler ska finnas, och"
+" share/actions är platsen för åtgärdsfiler). Starta om Krita. Genvägen ska nu"
+" dyka upp i listan över genvägsåtgärder."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:239
 msgid "Creating a docker"
@@ -668,6 +732,10 @@ msgid ""
 "an extension. Dockers are in some ways a little easier, but they also "
 "require more use of widgets. This is the barebones docker code:"
 msgstr ""
+"Att skapa en egen `panel <https://api.kde.org/extragear-api/graphics-apidocs/k"
+"rita/libs/libkis/html/classDockWidget.html>`_ liknar på många sätt att skapa"
+" en utökning. Paneler är på vissa sätt lite enklare, men de kräver också mer"
+" användning av grafiska komponenter. Här är den avskalade panelkoden:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:258
 msgid ""
@@ -686,6 +754,20 @@ msgid ""
 "Krita.instance().addDockWidgetFactory(DockWidgetFactory(\"myDocker\", "
 "DockWidgetFactoryBase.DockRight, MyDocker))"
 msgstr ""
+"from PyQt5.QtWidgets import *\n"
+"from krita import *\n"
+"\n"
+"class MyDocker(DockWidget):\n"
+"\n"
+"    def __init__(self):\n"
+"        super().__init__()\n"
+"        self.setWindowTitle(\"Min panel\")\n"
+"\n"
+"    def canvasChanged(self, canvas):\n"
+"        pass\n"
+"\n"
+"Krita.instance().addDockWidgetFactory(DockWidgetFactory(\"myDocker\", "
+"DockWidgetFactoryBase.DockRight, MyDocker))"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:259
 msgid ""
@@ -693,10 +775,13 @@ msgid ""
 "canvasChanged always needs to be present, but you don't have to do anything "
 "with it, so hence just 'pass'."
 msgstr ""
+"Fönsterrubriken är hur den visas i panellistan i Krita. canvasChanged måste"
+" alltid finnas, men man behöver inte göra något med den, alltså bara 'skicka"
+" vidare'."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:261
 msgid "For the addDockWidgetFactory..."
-msgstr ""
+msgstr "För addDockWidgetFactory ..."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:263
 msgid "\"myDocker\""
@@ -707,6 +792,8 @@ msgid ""
 "Replace this with an unique ID for your docker that Krita uses to keep track "
 "of it."
 msgstr ""
+"Ersätt det med en unik identifierare för din panel som Krita använder för att"
+" hålla reda på den."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:265
 msgid "DockWidgetFactoryBase.DockRight"
@@ -717,14 +804,16 @@ msgid ""
 "The location. These can be DockTornOff, DockTop, DockBottom, DockRight, "
 "DockLeft, or DockMinimized"
 msgstr ""
+"Platsen. Den kan vara DockTornOff, DockTop, DockBottom, DockRight, DockLeft"
+" eller DockMinimized."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:268
 msgid "MyDocker"
-msgstr "MinPanel"
+msgstr "MyDocker"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:268
 msgid "Replace this with the class name of the docker you want to add."
-msgstr ""
+msgstr "Ersätt det med klassnamnet på panelen som du vill skapa."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:270
 msgid ""
@@ -732,6 +821,10 @@ msgid ""
 "section to this docker code, how do we allow the user to activate it? First, "
 "we'll need to do some Qt GUI coding: Let's add a button!"
 msgstr ""
+"Så om vi har lagt till vår dokumentexportfunktion som vi skapade i"
+" panelkodens utökningssektion, hur gör vi för att låta användaren aktivera"
+" den? Först måste vi göra en del kod för Qt:s användargränssnitt: låt oss"
+" lägga till en knapp!"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:272
 msgid ""
@@ -742,18 +835,28 @@ msgid ""
 "like a weird copy of the regular `Qt documentation <https://doc.qt.io/qt-5/"
 "qwidget.html>`_ for that class."
 msgstr ""
+"Normalt använder Krita PyQt, men dess dokumentation är ganska dålig, i"
+" huvudsak på grund av att den vanliga Qt-dokumentationen är mycket bra, och"
+" man märker ofta att PyQt-dokumentationen av en klass, exempelvis `QWidget <"
+"https://www.riverbankcomputing.com/static/Docs/PyQt5/api/qtwidgets/qwidget.htm"
+"l>`_ är som en underlig kopia av den vanliga `Qt-dokumentationen <"
+"https://doc.qt.io/qt-5/qwidget.html>`_ av klassen."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:274
 msgid ""
 "Anyway, what we need to do first is that we need to create a QWidget, it's "
 "not very complicated, under setWindowTitle, add:"
 msgstr ""
+"Hur som helst, vad vi måste göra först är att skapa en QWidget. Det är inte"
+" särskilt komplicerat. Lägg till följande under setWindowTitle:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:280
 msgid ""
 "mainWidget = QWidget(self)\n"
 "self.setWidget(mainWidget)"
 msgstr ""
+"mainWidget = QWidget(self)\n"
+"self.setWidget(mainWidget)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:281
 msgid "Then, we create a button:"
@@ -761,7 +864,7 @@ msgstr "Därefter skapar vi en knapp:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:286
 msgid "buttonExportDocument = QPushButton(\"Export Document\", mainWidget)"
-msgstr ""
+msgstr "buttonExportDocument = QPushButton(\"Exportera dokument\", mainWidget)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:287
 msgid ""
@@ -772,28 +875,40 @@ msgid ""
 "qabstractbutton.html#signals>`_, which means that we can use those too. In "
 "our case, we want clicked."
 msgstr ""
+"För att nu ansluta knappen till vår funktion, måste vi titta på signalerna i"
+" dokumentationen. `QPushButton <https://doc.qt.io/qt-5/qpushbutton.html>`_"
+" har inga egna unika signaler, men den säger att den ärver fyra signaler från"
+" `QAbstractButton <https://doc.qt.io/qt-5/qabstractbutton.html#signals>`_,"
+" vilket betyder att vi också kan använda dem. I vårt fall vill vi använda"
+" clicked."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:292
 msgid "buttonExportDocument.clicked.connect(self.exportDocument)"
-msgstr ""
+msgstr "buttonExportDocument.clicked.connect(self.exportDocument)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:293
 msgid ""
 "If we now restart Krita, we'll have a new docker and in that docker there's "
 "a button. Clicking on the button will call up the export function."
 msgstr ""
+"Om vi nu startar om Krita har vi en ny panel, och i den panelen finns en"
+" knapp. Klickar man på knappen så anropas exportfunktionen."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:295
 msgid ""
 "However, the button looks aligned a bit oddly. That's because our mainWidget "
 "has no layout. Let's quickly do that:"
 msgstr ""
+"Dock ser knappen lite konstigt placerad. Det beror på att vår mainWidget"
+" saknar layout. Låt oss snabbt göra en sådan:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:301
 msgid ""
 "mainWidget.setLayout(QVBoxLayout())\n"
 "mainWidget.layout().addWidget(buttonExportDocument)"
 msgstr ""
+"mainWidget.setLayout(QVBoxLayout())\n"
+"mainWidget.layout().addWidget(buttonExportDocument)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:302
 msgid ""
@@ -801,10 +916,14 @@ msgid ""
 "`QHBoxLayout and the QVBoxLayout <https://doc.qt.io/qt-5/qboxlayout.html>`_ "
 "are the easiest to use, they just arrange widgets horizontally or vertically."
 msgstr ""
+"Qt har flera `layouter <https://doc.qt.io/qt-5/qlayout.html>`_, men"
+" `QHBoxLayout och QVBoxLayout <https://doc.qt.io/qt-5/qboxlayout.html>`_ är"
+" enklast att använda, de arrangerar bara komponenter horisontellt eller"
+" vertikalt."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:304
 msgid "Restart Krita and the button should now be laid out nicely."
-msgstr ""
+msgstr "Starta om Krita så ska knappen placeras ut snyggt."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:307
 msgid "PyQt Signals and Slots"
@@ -819,6 +938,11 @@ msgid ""
 "how signals and slots are created is very different from C++ Qt, we're "
 "explaining it here:"
 msgstr ""
+"Vi har redan använda signaler och slots i PyQt, men det finns tillfällen då"
+" man vill skapa sina egna signaler och slots.  `Eftersom dokumentationen av"
+" PyQt's är ganska svår att förstå <https://www.riverbankcomputing.com/static/D"
+"ocs/PyQt5/signals_slots.html>`_, och sättet som signaler och slots skapas"
+" skiljer sig mycket från C++ Qt, förklarar vi det här:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:312
 msgid ""
@@ -827,10 +951,14 @@ msgid ""
 "clicked. However, QCheckBox has a signal for toggled, which sends a boolean. "
 "How do we get our function to accept that boolean?"
 msgstr ""
+"Alla Python-funktioner som skapas i PyQt kan anses vara slots, vilket betyder"
+" att de kan anslutas till signaler som Action.triggered eller"
+" QPushButton.clicked. Dock har QCheckBox en signal för toggled, vilket"
+" skickar en boolean. Hur får vi vår funktion att acceptera en sådan boolean?"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:314
 msgid "First, make sure you have the right import for making custom slots:"
-msgstr ""
+msgstr "Säkerställ först att rätt import används för att skapa egna slots:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:316
 msgid "``from PyQt5.QtCore import pyqtSlot``"
@@ -841,10 +969,13 @@ msgid ""
 "(If there's ``from PyQt5.QtCore import *`` already in the list of imports, "
 "then you won't have to do this, of course.)"
 msgstr ""
+"(Om ``from PyQt5.QtCore import *`` redan finns i listan med importer, behöver"
+" man förstås inte göra det.)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:320
 msgid "Then, you need to add a PyQt slot definition before your function:"
 msgstr ""
+"Därefter måste definitionen av en PyQt-slot läggas till innan funktionen:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:331
 msgid ""
@@ -855,16 +986,24 @@ msgid ""
 "        enabledString = \"enabled\"\n"
 "    print(\"The checkbox is\"+enabledString)"
 msgstr ""
+"@pyqtSlot(bool)\n"
+"def myFunction(self, enabled):\n"
+"    enabledString = \"inaktiverad\"\n"
+"    if (enabled == True):\n"
+"        enabledString = \"aktiverad\"\n"
+"    print(\"Kryssrutan är \"+enabledString)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:332
 msgid ""
 "Then, when you have created your checkbox, you can do something like "
 "myCheckbox.toggled.connect(self.myFunction)."
 msgstr ""
+"Sedan, när man har skapat sin kryssruta, kan man använda något som liknar"
+" myCheckbox.toggled.connect(self.myFunction)."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:334
 msgid "Similarly, to make your own PyQt signals, you do the following:"
-msgstr ""
+msgstr "På liknade sätt, för att skapa egna PyQt-signaler, gör man följande:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:345
 msgid ""
@@ -875,10 +1014,16 @@ msgid ""
 "    # And this is how you trigger the signal to be emitted.\n"
 "    self.signal_name.emit(True)"
 msgstr ""
+"# signal_name läggs till i klassens medlemsvariabler\n"
+"signal_name = pyqtSignal(bool, name='signalName')\n"
+"\n"
+"def emitMySignal(self):\n"
+"    # Och så här får man signalen att genereras.\n"
+"    self.signal_name.emit(True)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:346
 msgid "And use the right import:"
-msgstr ""
+msgstr "Och använd rätt import."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:348
 msgid "``from PyQt5.QtCore import pyqtSignal``"
@@ -889,16 +1034,20 @@ msgid ""
 "To emit or create slots for objects that aren't standard python objects, you "
 "only have to put their names between quotation marks."
 msgstr ""
+"För att generera eller skapa slots för objekt som inte är vanliga"
+" Python-objekt, måste man bara lägga till deras namn mellan citationstecken."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:353
 msgid "A note on unit tests"
-msgstr ""
+msgstr "En anmärkning om enhetstester"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:355
 msgid ""
 "If you want to write unit tests for your plugin, have a look at the `mock "
 "krita module <https://github.com/rbreu/krita-python-mock>`_."
 msgstr ""
+"Om du vill skriva enhetstester för dina insticksprogram, ta en titt på `mock"
+" krita module <https://github.com/rbreu/krita-python-mock>`_."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:359
 msgid "Conclusion"
@@ -911,12 +1060,19 @@ msgid ""
 "with documents, but if you have a little bit of experience with python you "
 "should be able to start creating your own plugins."
 msgstr ""
+"Så det täcker all specifik detaljinformation för Krita om hur"
+" Python-insticksprogram skapas. Det hanterar inte hur man tolkar"
+" bildpunktsdata, eller bästa praxis med dokument, men om du har en del"
+" erfarenhet av Python bör du kunna börja skapa sina egna insticksprogram."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:363
 msgid ""
 "As always, read the code carefully and read the API docs for python, Krita "
 "and Qt carefully to see what is possible, and you'll get pretty far."
 msgstr ""
+"Som alltid, läs koden noggrant och läs dokumentationen av"
+" programmeringsgränssnittet för Python, Krita och Qt noggrant för att se vad"
+" som är möjligt, så kommer du långt."
 
 #~ msgid "No clue"
 #~ msgstr "Ingen aning"
