@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Krita Manual package.
 #
 # Sofía Priego <spriego@darksylvania.net>, %Y.
+# Sofia Priego <spriego@darksylvania.net>, %Y.
 # Automatically generated, 2020.
 # Eloy Cuadra <ecuadra@eloihr.net>, 2020.
-# Sofia Priego <spriego@darksylvania.net>, %Y.
 msgid ""
 msgstr ""
 "Project-Id-Version: docs_krita_org_reference_manual___seexpr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-10 02:06+0100\n"
-"PO-Revision-Date: 2020-10-17 14:17+0100\n"
+"PO-Revision-Date: 2020-11-16 20:29+0100\n"
 "Last-Translator: Sofia Priego <spriego@darksylvania.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.2\n"
+"X-Generator: Lokalize 20.08.3\n"
 
 #: ../../reference_manual/seexpr.rst:1
 msgid "SeExpr Quick Reference for Krita"
@@ -170,7 +170,7 @@ msgstr ""
 
 #: ../../reference_manual/seexpr.rst:71
 msgid "$A::a = $u * 10;"
-msgstr ""
+msgstr "$A::a = $u * 10;"
 
 #: ../../reference_manual/seexpr.rst:75
 msgid "Control Structures"
@@ -191,12 +191,19 @@ msgid ""
 "\n"
 "$color"
 msgstr ""
+"if ($ u > 0.5) {\n"
+"    $color = [0, 0, 1];\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
 
 #: ../../reference_manual/seexpr.rst:88
-#, fuzzy
 #| msgid "ternary ``if`` operator"
 msgid "And the *ternary operator*::"
-msgstr "operador ``if`` ternario"
+msgstr "Y el *operador ternario*::"
 
 #: ../../reference_manual/seexpr.rst:90
 msgid "$u = $i < .5 ? 0.0 : 10.0"
@@ -204,17 +211,19 @@ msgstr "$u = $i < .5 ? 0.0 : 10.0"
 
 #: ../../reference_manual/seexpr.rst:92
 msgid "You can freely nest ternary operators, e.g.::"
-msgstr ""
+msgstr "Los operadores ternarios se pueden anidar libremente, como en::"
 
 #: ../../reference_manual/seexpr.rst:94
 msgid ""
 "$color = $u < .5 ? ($v < 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];\n"
 "$color"
 msgstr ""
+"$color = $u < .5 ? ($v < 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];\n"
+"$color"
 
 #: ../../reference_manual/seexpr.rst:97
 msgid "You can also achieve the same with `if` structures::"
-msgstr ""
+msgstr "También se puede conseguir lo mismo con estructuras `if`::"
 
 #: ../../reference_manual/seexpr.rst:99
 msgid ""
@@ -232,6 +241,19 @@ msgid ""
 "\n"
 "$color"
 msgstr ""
+"if ($ u > 0.5) {\n"
+"    if ($v < 0.5) {\n"
+"        $color = [0, 0, 1];\n"
+"    }\n"
+"    else {\n"
+"        $color = [1, 0, 0];\n"
+"    }\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
 
 #: ../../reference_manual/seexpr.rst:115
 msgid "Operators (listed in decreasing precedence)"
@@ -255,7 +277,7 @@ msgstr ""
 
 #: ../../reference_manual/seexpr.rst:125
 msgid "``n`` must be 0, 1, or 2, e.g.::"
-msgstr ""
+msgstr "``n`` debe ser 0, 1 o 2. Por ejemplo::"
 
 #: ../../reference_manual/seexpr.rst:127
 msgid "$P[0]"
@@ -295,7 +317,7 @@ msgstr "~$A"
 
 #: ../../reference_manual/seexpr.rst:145
 msgid "gives the same result as::"
-msgstr ""
+msgstr "proporciona el mismo resultado que::"
 
 #: ../../reference_manual/seexpr.rst:147
 msgid "1 - $A"
@@ -334,7 +356,7 @@ msgstr ""
 
 #: ../../reference_manual/seexpr.rst:160
 msgid "Only uses the first component of a vector."
-msgstr ""
+msgstr "Solo usa el primer componente de un vector."
 
 #: ../../reference_manual/seexpr.rst:161
 msgid "== !="
@@ -534,16 +556,14 @@ msgid "For example, if you wrote::"
 msgstr "Por ejemplo, si escribe::"
 
 #: ../../reference_manual/seexpr.rst:258
-#, fuzzy
 #| msgid "printf(\"test %f %v\",[1,2,3],[4,5,6]);"
 msgid "$u = printf(\"test %f %v\",[1,2,3],[4,5,6]);"
-msgstr "printf(\"test %f %v\",[1,2,3],[4,5,6]);"
+msgstr "$u = printf(\"test %f %v\",[1,2,3],[4,5,6]);"
 
 #: ../../reference_manual/seexpr.rst:260
-#, fuzzy
 #| msgid "you would get::"
 msgid "you would get in your console::"
-msgstr "obtendrá::"
+msgstr "obtendría en la consola::"
 
 #: ../../reference_manual/seexpr.rst:262
 msgid "test 1 [4,5,6]"
