@@ -10,7 +10,7 @@
              - Nathan Lovato
              - Pedro Reis <pedroreis.ad@protonmail.com>
              - Agata Cacko <tamtamy.tymona@gmail.com>
-             
+
    :license: GNU free documentation license 1.3 or later.
 
 
@@ -35,7 +35,7 @@ Brush Packs
                :target: https://drive.google.com/file/d/1sl8sW7pu7QtGxunLeZapksU1u6Uc9VF5/view?usp=sharing
 
                Concept art & Illustration Pack
-               
+
           - .. figure:: /images/resource_packs/Resources-aldyBrushes.jpg
                :target: https://www.deviantart.com/al-dy/art/Aldys-Brush-Pack-for-Krita-2-3-1-196128561
 
@@ -88,7 +88,7 @@ Brush Packs
                Rakurri
 
 
-         
+
 Texture Packs
 =============
 
@@ -99,6 +99,198 @@ Texture Packs
                :width: 300
 
                David Revoy
+
+
+
+.. _custom_python_plugins:
+
+User-made Python Plugins
+========================
+
+This list describes only plugins that are **not** available in Krita, so you need to download and install the ones you'd like to use.
+
+.. seealso::
+
+    If you want to check descriptions of a plugin available in Krita by default (without a need to download), see :ref:`default_python_plugins`.
+
+
+To learn how to install and manage your plugins, see :ref:`install_custom_python_plugins`.
+
+If you want to know more about an individual plugin, you can access the plugin's manual by going to :menuselection:`Settings --> Configure Krita...` menu, and then choosing the ``Python Plugin Manager`` tab. Then you can click on a specific plugin and the manual will appear in the bottom text area.
+
+.. caution::
+
+    Custom Python plugins are made by users of Krita and the Krita team does not guarantee that they work, that they are useful or that they are *safe*. Note that a Python plugin can do everything that Krita can do, which means for example access to your files. Krita team isn't responsible for any damage you might suffer from a custom plugin, this list is informational purposes only and you install any of the custom plugins on your own risk.
+
+    If you have information that any of the plugins below is dangerous for the user, please contact Krita team on `kimageshop@kde.org`.
+
+
+Usability
+~~~~~~~~~
+Direct Eraser
+
+    Plugin to switch to an eraser preset and back using one shortcut.
+
+    https://www.mediafire.com/file/sotzc2keogz0bor/Krita+Direct+Eraser+Plugin.zip
+
+ThreeSlots
+
+    This plugin creates three brushtool shortcuts that remembers last used brush preset for each slot independently from each other. It also remembers the size of the brush. One of the slots is for the eraser and it has the eraser mode permanently turned on, while the other two slots have it turned off.
+
+    https://github.com/DarkDefender/threeslots
+
+QuickColor
+
+    Plugin that adds actions to switch the foreground color to a desired color from a specified palette. The number of actions, which means colors as well, is limited.
+
+    https://github.com/JonasLW/QuickColor
+
+BrushColorSwitch
+
+    This plugin adds an action/shortcut to switch both a brush and foreground/background color at once.
+
+    https://github.com/rkspsm/BrushColorSwitch
+
+Tablet Controls Docker (TabUI)
+
+    https://github.com/tokyogeometry/tabui
+
+On-screen Canvas Shortcuts
+
+    Plugin that adds an onscreen button bar with shortcuts for Krita.
+
+    https://github.com/qeshi/henriks-onscreen-krita-shortcut-buttons/tree/master/henriks_krita_buttons
+
+
+Workflow improvements
+~~~~~~~~~~~~~~~~~~~~~
+
+AnimLayers (Animate with Layers)
+
+    With this plugin you can animate a specific range of layers by prefixing the layer name with the same letters.
+    Then in the AnimLayers dialog you can enter the prefix in the `Key` field.
+
+    https://github.com/thomaslynge/krita-plugins
+
+Reference Image Docker (old style)
+
+    Docker for reference images, modeled after the old Reference Images Docker in Krita. Alternative to Reference Images Tool.
+
+    https://github.com/antoine-roux/krita-plugin-reference
+
+Mirror Fix
+
+    This plugin allows you to correct symmetry errors for example after a transformation of a part of the image.
+
+    https://github.com/EyeOdin/mirror_fix
+
+ToggleRefLayer
+
+    This plugin lets you assign a keyboard shortcut to toggle the visibility of a reference layer named "reference".
+
+    https://drive.google.com/file/d/11O8FiejleajsT_uHd4Q4VBrCrYX9Rh5v/view?usp=sharing
+
+Shotgun Toolkit Engine for Krita
+
+    This plugin allows working in a managed way, loading/saving/publishing artwork, keeping it up to date and publishing your projects and layers into Shotgun Toolkit Engine.
+
+    https://github.com/diegogarciahuerta/tk-krita
+
+
+Photobash Images Docker
+
+    Simple Krita Plugin that lists the images you have on a folder you specify, with the ability to filter by words in the path. After setting the references directory in `Photobash Images` docker you can:
+
+    - Filter images by words. Using multiple words like "rock marble" will show all the images that have rock OR marble in the name.
+    - Scroll the pages to access more results.
+    - Click on an image to create a layer, with the scale that you specify.
+
+    https://github.com/veryprofessionaldodo/Krita-Photobash-Images-Plugin
+
+File management
+~~~~~~~~~~~~~~~~
+
+Art Revision Control (using GIT)
+
+    This plugin helps managing multiple versions of the artwork.
+
+    https://github.com/abeimler/krita-plugin-durra
+
+
+Spine File Format Export
+
+    This plugin exports the document in a format compatible with Spine. The README describes what kind of structure the document needs to have to be exported properly. Besides exported images, the plugin creates :file:`spine.json` file.
+
+    https://github.com/chartinger/krita-unofficial-spine-export
+
+Color selectors
+~~~~~~~~~~~~~~~
+
+Pigment.O - Color Picker
+
+    Universal advanced color picker.
+
+    https://github.com/EyeOdin/Pigment.O
+
+
+Interface
+~~~~~~~~~
+
+Subwindow Organizer
+
+    Helps with handling multiple documents in subwindow mode. Introduces responsive fullscreen with other subwindows opened, dynamic snapping of subwindows to canvas borders, drag and drop switching between subwindows, and more.
+
+    https://github.com/wojtryb/kritaSubwindowOrganizer 
+
+
+KanvasBuddy
+
+    This is a small dialog that floats on top of the canvas packed with enough features to let you spend as much time in Canvas-Only mode as possible. 
+    The idea behind KB was to provide the 20% of tools used 80% of the time in the most out-of-the-way GUI possible.
+
+    Source, main page and download link: https://github.com/Kapyia/KanvasBuddy
+
+    Krita-artists thread: https://krita-artists.org/t/kanvasbuddy-a-minimalist-toolbar/549
+
+
+Miscellaneous
+~~~~~~~~~~~~~
+Timer Watch - Time Management Tool
+
+    This plugin adds a timer. You can start it, stop, pause when you want to take a break and restart afterwards. You can set up an alarm to remind you to take a break.
+
+    https://github.com/EyeOdin/timer_watch
+
+Post images on Mastodon
+
+    With this plugin you can post images on Mastodon from inside of Krita.
+
+    https://github.com/spaceottercode/kritatoot
+
+Bash Action (works with OSX and Linux)
+
+    Plugin that allows you execute Bash commands and programs as actions on your current Krita images.
+
+    https://github.com/juancarlospaco/krita-plugin-bashactions#krita-plugin-bashactions
+
+
+
+Other resources
+===============
+
+Krita Plugin Generator
+
+    An extension to VSCode that generates a Plugin Template for Krita (like `Krita Script Starter`, but directly in VSCode).
+
+    Available here: https://github.com/cg-cnu/vscode-krita-plugin-generator
+
+Python auto-complete for text editors
+
+    If you have the Krita source code, you can use this  Python script to generate the auto-complete file for Python. Many Python editors need a :file:`.py` file to read for auto-complete information. This script reads the C++ header files from Krita's source code and creates a Python file that can be used for auto-completion.
+
+    Available here: https://github.com/scottpetrovic/krita-python-auto-complete
+
+
 
 External tutorials
 ==================
@@ -112,292 +304,6 @@ External tutorials
                Simón Sanchez' "Learn to Create Pixel Art from Zero" course on Udemy
 
 
-Vector libraries
-================
-
-Composition templates
----------------------
-
-Inside the zip archive you'll find all composition templates separate and in a form of a vector library, so all the shapes are easy to access after the import.
-
-The composition templates include: rule of thirds, golden ratio, golden spiral, golden triangle 1, golden triangle 2, harmonious triangle, film safe area template, baroque diagonal and centre.
-
-Link: https://gumroad.com/l/CHhlx
-
-Feather icons
--------------
-
-A set of open source icons from https://feathericons.com but in a Vector Library form, so it can be easily accessed from inside Krita after the import. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency, and flexibility.
-
-Link: https://github.com/MiAlmeida/krita-feather
-
-
-Templates
-=========
-Templates are .kra files that you can base your new documents on. To learn more see :ref:`create_new_document_from_template`.
-
-Storyboard template
--------------------
-
-The layout and layer setup is inspired by traditional Studio Ghibli storyboards, and Tony Gaddis’ storyboarding process.
-
-Link: https://gumroad.com/l/PtMtm
-
-Pre-installed Python Plugins
-============================
-
-Krita's capabilities can be enhanced by using specific plugins. This list will present the plugins that come with Krita by default, as well as other plugins made by the community. If you would like to learn more about how you can make your own plugin, visit the :ref:`krita_python_plugin_howto` area.
-
-If you want to know more about an individual plugin, you can access the plugin's manual by going to :menuselection:`Settings --> Configure Krita...` menu, and then choosing the Python Plugin Manager Tab. There, you can click on a specific plugin, and the manual will appear in the bottom text area. 
-
-Assign Profile Dialog:
-----------------------
-
-    Allows you to assign a profile to an image instead of converting it to that profile. The difference is that it allows only interpreting the colors by the new profile, but not change any of the values. It can be found in :menuselection:`Tools --> Assign Profile to Image...`, and will present a list of profiles for the current image's color model.
-
-Batch Exporter
---------------
-
-    Plugin for Game Developers and Graphic Designers.
-    
-    - Allows batch export of assets to multiple sizes, file types and custom paths;
-    - Renames layers quickly with the smart rename tool;
-    - Export all layers or only selected layers;
-
-    By default, the plugin exports the images in an :file:`export` folder next to the Krita document, and follows the structure of your layer stack.
-
-
-Channels to Layers
-------------------
-    Splits channels from a layer to sub-layers. To use, select the layer to convert, click on :menuselection:`Tools --> Scripts --> Channels to Layers...`, and choose options from the user interface. 
-
-Color Space
------------
-
-    Allows you to select a document and convert it's colors to a new color space, like RGBA, CMYKA, L*a*b, etc.
-
-Comics Project Management Tools 
--------------------------------
-
-    Aims to simplify comics creation by: 
-
-    - Giving the artist a way to organize and quickly access their pages;
-    - Helping the artist(s) deal with the boring bits meta data bits of a comic project by giving a meta-data editor that gives suggestions, explanation and occasionally a dab of humor;
-    - Making export set-and-forget type of affair where a single click can export to multiple formats with proper meta-data.
-
-    Also features options to to assist exporting to specific formats, like "Advanced Comic Book Format", CBZ or Epub. 
-
-    To use this plugin, activate the "Comics Manager" Docker.
-
-Document Tools
---------------
-
-    Allows you to select a document and scale, crop and rotate in one action.
-
-Export Layers
--------------
-
-    Allows you to select a document and export it’s layers in an ordered and sensible manner.
-
-Filter Manager 
---------------
-
-    A plugin to enable you to select a document or one of it's layers and quickly apply a filter.
-
-High Pass
----------
-
-    Performs a high pass filter on the active document.
-
-Krita Script Starter
---------------------
-
-    A script that helps set up the various files that Krita expects to see when it runs a script, namely:
-
-    - The .desktop meta data file;
-    - The package directory;
-    - The __init__.py file;
-    - The main python file for your package;
-    - The Manual.html file for your documentation;
-
-Last Documents Docker
----------------------
-
-    Script that shows the recently opened documents as a thumbnail image. To use this, activate the "Last Documents" docker.
-
-Mixer Slider Docker
--------------------
-
-    Docker that allows you to choose from the gradients between two colors. 
-
-Palette Docker
---------------
-
-    A Docker that allows you to control palettes more easily. You can add swatches, groups and export the palette settings, or even the palette itself as a GIMP Palette or Inkscape SVG.
-
-Photobash Images Docker
------------------------
-
-    Simple Krita Plugin that lists the images you have on a folder you specify, with the ability to filter by words in the path. To use, activate the "Photobash Images" docker, and set the references directory. After that, you can:
-
-    - Filter images by words. Using multiple words like "rock marble" will show all the images that have rock OR marble in the name;
-    - Scroll the pages to access more results;
-    - Click on an image to create a layer, with the scale that you specify.
-
-Python Plugin Importer
-----------------------
-
-    Imports Python plugins from zip files.
-
-Quick Settings Docker 
----------------------
-
-    A Docker that allows you to quickly set the opacity, flow and size from a predefined list. Now, when you have a document open, and a brush selected, select any of the entries in the "Quick Settings" docker to change them. The docker doesn’t update when changing brush size any other way, so it will always show the last selected change.
-
-Scripter
---------
-
-    A small Python scripting console, allows to write code in an editor and run it, with feedback related to the output of the execution. You can also debug your code using the "Debug" button. 
-
-Ten Brushes 
------------
-
-    A Script to assign presets to one of ten configurable hotkeys. To use, go to :menuselection:`Tools --> Scripts --> Ten Brushes`, and a window will pop up with a preset chooser and ten boxes above it. Underneath the boxes is the hotkey the box is associated with. 
-
-    Customize your shortcuts by editing the configurations in :menuselection:`Settings --> Configure Krita --> Keyboard Shortcuts`, and then change the "Activate Brush Preset" actions under "Ten Brushes".
-
-Ten Scripts
------------
-
-    Similar to Ten Brushes, allows the assign of Python scripts to one of ten configurable hotkeys. 
-
-User-made Python Plugins
-========================
-
-To install and manage your plugins, see the second area of the :ref:`krita_python_plugin_howto` page to know how to get Krita to recognize your plugin.
-
-
-AnimLayers (Animate with Layers)
---------------------------------
-
-    Animate specific layers. You animate a specific range of layers by prefixing the layer name with the same letters. For example *PL* then all the layers where the name starts with *PL* will be part of the animation. In the AnimLayers window you enter PL in the Key field. You can also select a layer with the wanted key and press the Get key button.
-
-    Available here: https://github.com/thomaslynge/krita-plugins
-
-Art Revision Control (using GIT)
---------------------------------
-
-    Way to use Version Control systems for artwork. 
-
-    Available here: https://github.com/abeimler/krita-plugin-durra
-
-Bash Action (works with OSX and Linux)
---------------------------------------
-
-    Plugin to execute Bash commands and programs as Actions on your current Images from Krita.
-
-    Available here: https://github.com/juancarlospaco/krita-plugin-bashactions#krita-plugin-bashactions
-
-Direct Eraser Plugin
---------------------
-
-    Lets you create a shortcut for the eraser and brush that doesn't depend on state. In other words, pressing the eraser shortcut always sets you up with the brush in eraser mode, no toggling, no selecting the brush first. 
-
-    Available here: https://www.mediafire.com/file/sotzc2keogz0bor/Krita+Direct+Eraser+Plugin.zip
-
-Krita Plugin Generator
-----------------------
-    Generates a Plugin Template for Krita.
-
-    Available here: https://github.com/cg-cnu/vscode-krita-plugin-generator
-
-Mirror Fix
-----------
-
-    Allows more flexibility when mirroring, with different orientations, and selections. 
-
-    Available here: https://github.com/EyeOdin/mirror_fix
-
-On-screen Canvas Shortcuts
---------------------------
-
-    An onscreen button bar with shortcuts for Krita.
-
-    Available here: https://github.com/qeshi/henriks-onscreen-krita-shortcut-buttons/tree/master/henriks_krita_buttons
-
-Pigment.O
----------
-
-    Available here: https://github.com/EyeOdin/Pigment.O
-
-Post images on Mastodon
------------------------
-
-    A plugin that lets you post a copy of your current document directly to Mastodon.
-
-    Available here: https://github.com/spaceottercode/kritatoot
-
-Python auto-complete for text editors
--------------------------------------
-
-    If you have the Krita source code, you can use this to generate the auto-complete file for Python. Many Python editors need a :file:`.PY` file to read for auto-complete information. This script reads the C++ header files and creates a Python file that can be used for auto-completion.
-
-    Available here: https://github.com/scottpetrovic/krita-python-auto-complete
-
-
-QuickColor
-----------
-    
-    Enables the user to swap between predefined colors by using hotkeys.
-
-    Available here: https://github.com/JonasLW/QuickColor
-
-
-Reference Image Docker (old style)
-----------------------------------
-    After activating the docker, click on Open and choose an image. Beware, no verification is done on the format... You've been warned! After that you can move the reference, zoom or pick a color. 
-
-    Available here: https://github.com/antoine-roux/krita-plugin-reference
-
-Spine File Format Export
-------------------------
-
-    Inspired by the official Photoshop Plugin, it works nearly the same. Click on :menuselection:`Tools --> Scripts --> Export to Spine`, select a folder and all your images will be exported into it as well as :file:`spine.json`.
-
-    Available here: https://github.com/chartinger/krita-unofficial-spine-export
-
-Subwindow Organizer
-------------------------
-
-    Helps with handling multiple documents in subwindow mode. Introduces responsive fullscreen with other subwindows opened, dynamic snapping of subwindows to canvas borders, drag and drop switching between subwindows, and more.
-
-    Available here: https://github.com/wojtryb/kritaSubwindowOrganizer 
-
-Tablet Controls Docker
-----------------------
-
-    Available Here: https://github.com/tokyogeometry/tabui
-    
-ThreeSlots
-----------
-
-    Creates three brush tool shortcuts that memorize last used brush preset for each slot independently from each other.
-
-    Available here: https://github.com/DarkDefender/threeslots
-
-Timer Watch
------------
-
-    Allows you to check the time progress, start and pause if you want to take a break, and even do alarms.
-
-    Available here: https://github.com/EyeOdin/timer_watch
-    
-
-ToggleRefLayer 
---------------
-    Enables you to assign a keyboard shortcut to toggle the visibility of a reference layer named "reference".
-
-    Available here: https://drive.google.com/file/d/11O8FiejleajsT_uHd4Q4VBrCrYX9Rh5v/view?usp=sharing
 
 
 See Something We Missed?
