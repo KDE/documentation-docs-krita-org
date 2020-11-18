@@ -34,9 +34,9 @@ Using Python plugin importer
 
 You need to ensure that you have the plugin in a :file:`*.zip` file. Inside the zip file there should be a file :file:`pluginname.desktop` and a folder :file:`pluginname` (instead of `pluginname` there should be an actual unique name of the plugin).
 
-Go to :menuselection:`Tools -> Scripts -> Import Python Plugin...`, find the :file:`*.zip` file and press :guilabel:`OK`. Restart Krita. 
+Go to :menuselection:`Tools --> Scripts --> Import Python Plugin...`, find the :file:`*.zip` file and press :guilabel:`OK`. Restart Krita.
 
-Go to :menuselection:`Configure Krita -> Python Plugins Manager`, find the plugin and enable it. Restart Krita.
+Go to :menuselection:`Configure Krita --> Python Plugins Manager`, find the plugin and enable it. Restart Krita.
 
 Now the plugin should be available.
 
@@ -45,7 +45,7 @@ Manually
 
 If the plugin is inside a :file:`*.zip` archive, you need to extract it first.
 
-Go to :menuselection:`Settings -> Manage Resources -> Open Resource Folder`. Put file :file:`pluginname.desktop` and folder :file:`pluginname`  (instead of `pluginname` there should be an actual unique name of the plugin) inside the :file:`pykrita` folder. Put file :file:`pluginname.action` into the :file:`actions` folder. Restart Krita.
+Go to :menuselection:`Settings --> Manage Resources --> Open Resource Folder`. Put file :file:`pluginname.desktop` and folder :file:`pluginname`  (instead of `pluginname` there should be an actual unique name of the plugin) inside the :file:`pykrita` folder. Put file :file:`pluginname.action` into the :file:`actions` folder. Restart Krita.
 
 Now the plugin should be available.
 
@@ -55,17 +55,17 @@ How to get to the plugin?
 
 Plugins in Krita are either dockers or extensions. 
 
-If it's an extension, it will be available in the menu :menuselection:`Tools -> Scripts`.
+If it's an extension, it will be available in the menu :menuselection:`Tools --> Scripts`.
 
-If it's a docker, you can find it in :menuselection:`Settings -> Dockers`.
+If it's a docker, you can find it in :menuselection:`Settings --> Dockers`.
 
-If the plugin has any shortcuts and you imported the action file properly, you can change the shortcuts in :menuselection:`Configure Krita -> Keyboard Shortcuts`.
+If the plugin has any shortcuts and you imported the action file properly, you can change the shortcuts in :menuselection:`Configure Krita --> Keyboard Shortcuts`.
 
 
 
 How to enable and disable a plugin?
 -----------------------------------
-You can enable and disable all plugins (no matter if they're pre-installed or custom) in :menuselection:`Configure Krita -> Python Plugins Manager`.
+You can enable and disable all plugins (no matter if they're pre-installed or custom) in :menuselection:`Configure Krita --> Python Plugins Manager`.
 
 
 

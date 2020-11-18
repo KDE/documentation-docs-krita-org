@@ -318,7 +318,7 @@ Krita Plugin Generator
 
 Python auto-complete for text editors
 
-    If you have the Krita source code, you can use this  Python script to generate the auto-complete file for Python. Many Python editors need a :file:`.py` file to read for auto-complete information. This script reads the C++ header files from Krita's source code and creates a Python file that can be used for auto-completion.
+    If you have the Krita source code, you can use this Python script to generate the auto-complete file for Python. Many Python editors need a :file:`.py` file to read for auto-complete information. This script reads the C++ header files from Krita's source code and creates a Python file that can be used for auto-completion.
 
     Available here: https://github.com/scottpetrovic/krita-python-auto-complete
 
