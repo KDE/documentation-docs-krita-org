@@ -105,8 +105,8 @@ Enter the container and build Krita
 .. code::
 
     # build Krita as usual
-    cd appimage-workspace/krita-build/
-    run_cmake.sh ~/persistent/krita
+    # you should be in ~/appimage-workspace/krita-build/
+    ~/bin/run_cmake.sh ~/persistent/krita
     make -j8 install
 
     # start Krita
