@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-19 02:02+0200\n"
-"PO-Revision-Date: 2020-11-16 19:45+0100\n"
+"PO-Revision-Date: 2020-11-17 20:21+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -130,9 +130,9 @@ msgid ""
 "Unlike overlay, if the pixel is lighter than 0.5, it is blended like in "
 "Multiply mode, if not the pixel is blended like in Screen mode."
 msgstr ""
-"Hårt ljus kontrollerar om färgen på det övre lagret har en ljushet över 0,5."
-" I motsats till överlagring, om bildpunkten är ljusare än 0,5 blandas den som"
-" i läget Multiplikation, annars blandas bildpunkten som i läget Skärm."
+"Hårt ljus kontrollerar om färgen på det övre lagret har en ljushet över 0,5. "
+"I motsats till överlagring, om bildpunkten är ljusare än 0,5 blandas den som "
+"i läget Multiplikation, annars blandas bildpunkten som i läget Skärm."
 
 #: ../../reference_manual/blending_modes/lighten.rst:73
 msgid "Effectively, this decreases contrast."
@@ -212,8 +212,8 @@ msgstr ""
 msgid ""
 "Left: **Normal**. Right: **Linear Dodge** (exactly the same as Addition)."
 msgstr ""
-"Vänster: **Normal**. Höger: **Linjär blekning** (exakt samma sak som"
-" addition)."
+"Vänster: **Normal**. Höger: **Linjär blekning** (exakt samma sak som "
+"addition)."
 
 #: ../../reference_manual/blending_modes/lighten.rst:120
 msgid "Easy Dodge"
@@ -250,6 +250,8 @@ msgid ""
 "The spreadout variation of Vivid Light mode which range is between 0.0f and "
 "1.0f."
 msgstr ""
+"Den utspridda variationen av läget Intensivt ljus, vars intervall är mellan"
+" 0,0f och 1,0f."
 
 #: ../../reference_manual/blending_modes/lighten.rst:139
 msgid ""
@@ -303,6 +305,9 @@ msgid ""
 "lightness of the upper-pixel is higher than 0.5, it uses Linear dodge, if "
 "not, Linear burn to blend the pixels."
 msgstr ""
+"Kombinerar :ref:`bm_linear_dodge` och :ref:`bm_linear_burn`. När den övre"
+" bildpunktens ljushet är större än 0,5 använder det Linjär blekning, om inte"
+" blandas bildpunkterna med Linjär bränning."
 
 #: ../../reference_manual/blending_modes/lighten.rst:165
 msgid ""
@@ -348,10 +353,14 @@ msgid ""
 "brush, any used transparency masks etc.) and multiples the color by the "
 "opacity, then adds to the original/previous color."
 msgstr ""
+"Tar den nya färgens ogenomskinlighet (kombinerad ogenomskinlighet av lagret,"
+" penseln, eventuella använda genomskinlighetsmasker, etc.) och multiplicerar"
+" färgen med ogenomskinligheten, och lägger sedan till den ursprungliga eller"
+" föregående färgen."
 
 #: ../../reference_manual/blending_modes/lighten.rst:187
 msgid "c_{new} = c_{above}*{\\alpha}_{above} + c_{below}"
-msgstr ""
+msgstr "c_{ny} = c_{ovanför}*{\\alfha}_{ovanför} + c_{nedanför}"
 
 #: ../../reference_manual/blending_modes/lighten.rst:191
 msgid ""
@@ -361,6 +370,11 @@ msgid ""
 "also the same as the results of \"Luminosity\" blending mode in SAI1 or "
 "\"Shine\" blending mode in SAI2."
 msgstr ""
+"Resultatet av operationen är samma som att kombinera nya bildpunkter med ett"
+" fullständigt ogenomskinligt svart lager med :ref:`bm_normal` och sedan"
+" kombinera resultatet med originallagret genom att använda"
+" :ref:`bm_addition`. Det ska också vara samma sak som resultatet av"
+" blandningsläget \"Luminans\" i SAI1 eller \"Sken\" i SAI2."
 
 #: ../../reference_manual/blending_modes/lighten.rst:198
 msgid ""
@@ -384,6 +398,9 @@ msgid ""
 "and the falloff is more consistent all-around in terms of outline of values. "
 "Can be used an alternative to screen blending mode at times."
 msgstr ""
+"P-Norm A liknar blandningsläget Skärm, som gör bilder något mörkare, och"
+" minskningen är övergripande mer konsekvent när det gäller värdekontur. Kan"
+" användas som ett alternativ till blandningsläget Skärm vid vissa tillfällen."
 
 #: ../../reference_manual/blending_modes/lighten.rst:213
 msgid ""
@@ -408,6 +425,10 @@ msgid ""
 "The falloff is sharper in P-Norm B than in P-Norm A. Can be used an "
 "alternative to screen blending mode at times."
 msgstr ""
+"P-Norm B liknar blandningsläget Skärm, som gör bilder något mörkare, och"
+" minskningen är övergripande mer konsekvent när det gäller värdekontur."
+" Minskningen är skarpare för P-Norm B än i P-Norm A. Kan användas som ett"
+" alternativ till blandningsläget Skärm vid vissa tillfällen."
 
 #: ../../reference_manual/blending_modes/lighten.rst:225
 msgid ""
@@ -431,6 +452,9 @@ msgid ""
 "so bright. Then checks which is brighter of that result or the inversion of "
 "the doubled lower layer."
 msgstr ""
+"Kontrollerar vilket som är mörkare, det undre lagrets bildpunkt eller det"
+" övre lagrets dubbelt så ljust. Kontrollerar därefter vilket som är ljusare"
+" av det resultatet eller inverteringen av det dubblerade under lagret."
 
 #: ../../reference_manual/blending_modes/lighten.rst:238
 msgid ""
@@ -468,18 +492,22 @@ msgstr "Skärm"
 
 #: ../../reference_manual/blending_modes/lighten.rst:255
 msgid "Perceptually the opposite of :ref:`bm_multiply`."
-msgstr ""
+msgstr "Perceptuellt motsatsen till :ref:`bm_multiply`."
 
 #: ../../reference_manual/blending_modes/lighten.rst:257
 msgid ""
 "Mathematically, Screen takes both layers, inverts them, then multiplies "
 "them, and finally inverts them again."
 msgstr ""
+"Matematiskt tar Skärm båda lagren, inverterar dem, sedan multiplicerar dem,"
+" och slutligen inverterar dem igen."
 
 #: ../../reference_manual/blending_modes/lighten.rst:259
 msgid ""
 "This results in light tones being more opaque and dark tones transparent."
 msgstr ""
+"Det resulterar i att ljusa toner blir mer ogenomskinliga och mörka toner mer"
+" genomskinliga."
 
 #: ../../reference_manual/blending_modes/lighten.rst:264
 msgid ""
@@ -493,7 +521,7 @@ msgstr ""
 #: ../../reference_manual/blending_modes/lighten.rst:269
 #: ../../reference_manual/blending_modes/lighten.rst:274
 msgid "Left: **Normal**. Right: **Screen**."
-msgstr ""
+msgstr "Vänster: **Normal**. Höger: **Skärm**."
 
 #: ../../reference_manual/blending_modes/lighten.rst:269
 msgid ""
@@ -513,13 +541,15 @@ msgstr ""
 
 #: ../../reference_manual/blending_modes/lighten.rst:279
 msgid "Soft Light (Photoshop) & Soft Light SVG"
-msgstr ""
+msgstr "Diffust ljus (Photoshop) och Diffust ljus SVG"
 
 #: ../../reference_manual/blending_modes/lighten.rst:281
 msgid ""
 "These are less harsh versions of Hard Light, not resulting in full black or "
 "full white."
 msgstr ""
+"De är mindre hårda versioner av Hårt ljus, som inte resulterar i fullständigt"
+" svart eller vitt."
 
 #: ../../reference_manual/blending_modes/lighten.rst:283
 msgid ""
@@ -528,6 +558,9 @@ msgid ""
 "pixel is lower than 25%, this prevents the strength of the brightness "
 "increase."
 msgstr ""
+"SVG-versionen är något annorlunda jämfört med Photoshop-versionen på det sätt"
+" att det använder en något annorlunda delformel när den undre bildpunktens"
+" ljushet är mindre än 25 %. Det förhindrar att ljusstyrkans ökar."
 
 #: ../../reference_manual/blending_modes/lighten.rst:288
 msgid ""
@@ -539,7 +572,7 @@ msgstr ""
 
 #: ../../reference_manual/blending_modes/lighten.rst:288
 msgid "Left: **Normal**. Right: **Soft Light (Photoshop)**."
-msgstr ""
+msgstr "Vänster: **Normal**. Höger: **Diffust ljus (Photoshop)**."
 
 #: ../../reference_manual/blending_modes/lighten.rst:294
 msgid ""
@@ -551,11 +584,11 @@ msgstr ""
 
 #: ../../reference_manual/blending_modes/lighten.rst:294
 msgid "Left: **Normal**. Right: **Soft Light (SVG)**."
-msgstr ""
+msgstr "Vänster: **Normal**. Höger: **Diffust ljus (SVG)**."
 
 #: ../../reference_manual/blending_modes/lighten.rst:297
 msgid "Soft Light (IFS Illusions) & Soft Light (Pegtop-Delphi)"
-msgstr ""
+msgstr "Diffust ljus (IFS Illusions) och Diffust ljus (Pegtop-Delphi)"
 
 #: ../../reference_manual/blending_modes/lighten.rst:299
 msgid ""
@@ -565,6 +598,11 @@ msgid ""
 "and these advantages are more or less noticeable within different color "
 "spaces and depth."
 msgstr ""
+"Alternativa versioner av vanliga lägen med mjukt ljus, som är gjorda för att"
+" lösa diskontinuiteter som syns med de vanliga blandningslägena. Ibland ger"
+" dessa lägen subtila fördelar genom att erbjuda mer kontrast inom vissa"
+" områden, och fördelarna är mer eller mindre märkbara inom olika färgrymder"
+" och färgdjup."
 
 #: ../../reference_manual/blending_modes/lighten.rst:304
 msgid ""
@@ -576,7 +614,7 @@ msgstr ""
 
 #: ../../reference_manual/blending_modes/lighten.rst:304
 msgid "Left: **Normal**. Right: **Soft Light (IFS Illusions)**."
-msgstr ""
+msgstr "Vänster: **Normal**. Höger: **Diffust ljus (IFS Illusions)**."
 
 #: ../../reference_manual/blending_modes/lighten.rst:310
 msgid ""
@@ -588,7 +626,7 @@ msgstr ""
 
 #: ../../reference_manual/blending_modes/lighten.rst:310
 msgid "Left: **Normal**. Right: **Soft Light (Pegtop-Delphi)**."
-msgstr ""
+msgstr "Vänster: **Normal**. Höger: **Diffust ljus (Pegtop-Delphi)**."
 
 #: ../../reference_manual/blending_modes/lighten.rst:315
 msgid "Super Light"
@@ -598,6 +636,7 @@ msgstr "Superljus"
 msgid ""
 "Smoother variation of Hard Light blending mode with more contrast in it."
 msgstr ""
+"Jämnare variation av blandningsläget Hårt ljus med mer ingående kontrast."
 
 #: ../../reference_manual/blending_modes/lighten.rst:322
 msgid ""
@@ -609,17 +648,20 @@ msgstr ""
 
 #: ../../reference_manual/blending_modes/lighten.rst:322
 msgid "Left: **Normal**. Right: **Super Light**."
-msgstr ""
+msgstr "Vänster: **Normal**. Höger: **Superljus**."
 
 #: ../../reference_manual/blending_modes/lighten.rst:327
 msgid "Tint (IFS Illusions)"
-msgstr ""
+msgstr "Nyans (IFS Illusions)"
 
 #: ../../reference_manual/blending_modes/lighten.rst:329
 msgid ""
 "Basically, the blending mode only ends in shades of tints. This means that "
 "it's very useful for painting light colors while still in the range of tints."
 msgstr ""
+"Egentligen slutar blandningsläget bara i skuggor av nyanser. Det betyder att"
+" det är mycket användbart för att måla ljusa färger medan intervallet"
+" fortfarande är inom nyanserna."
 
 #: ../../reference_manual/blending_modes/lighten.rst:334
 msgid ""
@@ -631,7 +673,7 @@ msgstr ""
 
 #: ../../reference_manual/blending_modes/lighten.rst:334
 msgid "Left: **Normal**. Right: **Tint**."
-msgstr ""
+msgstr "Vänster: **Normal**. Höger: **Nyans**."
 
 #: ../../reference_manual/blending_modes/lighten.rst:339
 msgid "Vivid Light"
@@ -639,7 +681,7 @@ msgstr "Intensivt ljus"
 
 #: ../../reference_manual/blending_modes/lighten.rst:341
 msgid "Similar to Overlay."
-msgstr ""
+msgstr "Liknar Överlagra."
 
 #: ../../reference_manual/blending_modes/lighten.rst:343
 msgid ""
@@ -647,12 +689,17 @@ msgid ""
 "layer is darker than 50%, the blending mode will be Burn, if not the "
 "blending mode will be Color Dodge."
 msgstr ""
+"Blandar båda blandningslägen färgblekning och bränn. Om färgen på det övre"
+" lagret är mörkare än 50 %, är blandningsläget bränn, om inte är"
+" blandningsläget färgblekning."
 
 #: ../../reference_manual/blending_modes/lighten.rst:347
 msgid ""
 "This algorithm doesn't use color dodge and burn, we don't know WHAT it does "
 "do but for Color Dodge and Burn you need to use :ref:`bm_hard_mix`."
 msgstr ""
+"Algoritmen använder inte färgblekning och bränn, vi vet inte VAD den gör men"
+" för färgblekning och bränn måste man använda :ref:`bm_hard_mix`."
 
 #: ../../reference_manual/blending_modes/lighten.rst:352
 msgid ""
@@ -664,4 +711,4 @@ msgstr ""
 
 #: ../../reference_manual/blending_modes/lighten.rst:352
 msgid "Left: **Normal**. Right: **Vivid Light**."
-msgstr ""
+msgstr "Vänster: **Normal**. Höger: **Intensivt ljus**."
