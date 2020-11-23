@@ -201,6 +201,9 @@ Run those commands in the console in the host system. If you want to update the 
 
 .. code::
 
+    # remove old dependencies
+    rm ./persistent/krita-appimage-deps.tar
+
     # download new deps
     ./bin/bootstrap-deps.sh
 
