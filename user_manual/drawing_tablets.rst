@@ -113,7 +113,7 @@ reinstalling the drivers should work.
 Wacom Tablets
 -------------
 
-There are two known problems with Wacom tablets and Windows. 
+There are three known problems with Wacom tablets and Windows. 
 
 The first is that if you have customized the driver settings, then sometimes,
 often after a driver update, but that is not necessary, the driver breaks.
@@ -125,6 +125,9 @@ priority order. You might have to make your Cintiq screen your primary screen,
 or, on the other hand, make it the secondary screen. Double check in the Wacom
 settings utility that the tablet in the Cintiq is associated with the Cintiq
 screen.
+
+The third is that if you have a display tablet like a cintiq and a wacom expresskeys remote, and you have disabled Windows Ink in the calibration page of the stylus settings dialog so you have the full set of Wintab features, the cintiq needs to be the first item in Wacom's desktop application list. Otherwise you will have an offset between stylus and mouse that will get worse the more displays there are to the left of the cintiq display.
+
 
 Broken Drivers
 ~~~~~~~~~~~~~~
