@@ -268,6 +268,17 @@ Pigment.O - Color Picker
 Interface
 ~~~~~~~~~
 
+UI Redesign
+
+    Plugin that modifies the overall look and feel of the Krita UI Interface. Enables the Toolbox and Tool Options to be toggled, similarly to Blender's UI.
+
+    Features a flat theme that can be seen in the repository's READ.ME section. To give feedback, either create an issue, or join the discussion the thread on Krita Artists! 
+
+    Krita Artists Thread: https://krita-artists.org/t/call-for-krita-ui-redesign-plugin-testers/9604
+
+    Repository Link: https://github.com/veryprofessionaldodo/Krita-UI-Redesign
+
+
 Subwindow Organizer
 
     Helps with handling multiple documents in subwindow mode. Introduces responsive fullscreen with other subwindows opened, dynamic snapping of subwindows to canvas borders, drag and drop switching between subwindows, and more.
