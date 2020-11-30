@@ -272,7 +272,7 @@ UI Redesign
 
     Plugin that modifies the overall look and feel of the Krita UI Interface. Enables the Toolbox and Tool Options to be toggled, similarly to Blender's UI.
 
-    Features a flat theme that can be seen in the repository's READ.ME section. To give feedback, either create an issue, or join the discussion the thread on Krita Artists! 
+    Features a flat theme that can be seen in the repository's README.md section. To give feedback, either create an issue, or join the discussion the thread on Krita Artists.
 
     Krita Artists Thread: https://krita-artists.org/t/call-for-krita-ui-redesign-plugin-testers/9604
 
