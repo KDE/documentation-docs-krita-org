@@ -5,24 +5,25 @@
 #
 # Automatically generated, 2019.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
+# Ronald Stroethoff <stroe43@zonnet.nl>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-19 02:02+0200\n"
-"PO-Revision-Date: 2019-12-08 12:57+0100\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"PO-Revision-Date: 2020-11-29 18:04+0100\n"
+"Last-Translator: Ronald Stroethoff <stroet43@zonnet.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 20.04.2\n"
 
 #: ../../<generated>:1
 msgid "Hide Layer thumbnail popup"
-msgstr "Verberg de popup van de miniatuurlaag"
+msgstr "Verbergt de popup van de miniatuurlaag"
 
 #: ../../reference_manual/preferences/display_settings.rst:1
 msgid "Display settings in Krita."
@@ -86,6 +87,10 @@ msgid ""
 "calculations, which Krita uses a lot. All modern computer have graphics "
 "cards."
 msgstr ""
+"OpenGL is een stuk softwarecode speciaal voor de aansturing van grafische"
+" kaarten. Grafische kaarten zijn een speciaal stuk hardware die uw uw"
+" computer helpen bij grafische berekeningen, die Krita veel gebruikt. Alle"
+" moderne computers hebben grafische kaarten."
 
 #: ../../reference_manual/preferences/display_settings.rst:30
 msgid ""
@@ -95,12 +100,21 @@ msgid ""
 "may (or may not) be slower than native OpenGL, but it has better "
 "compatibility with typical Windows graphics drivers."
 msgstr ""
+"**Voor Krita 3.3 of later:** Bij Windows ondersteunt Krita in plaats daarvan"
+" ook het directe gebruik van Direct3D met de hulp van de ANGLE"
+" bibliotheek. ANGLE functioneert door de OpenGL functies die Krita gebruikt"
+" naar het equivalent in Direct3D omzet. Het kan (maar hoeft niet) langzamer"
+" te zijn"
+" dan native OpenGL, maar het heeft betere compatibiliteit met standaard"
+" Windows grafische drivers."
 
 #: ../../reference_manual/preferences/display_settings.rst:32
 msgid ""
 "Enable OpenGL **(For Krita 3.3 or later: Reworded as *Canvas Graphics "
 "Acceleration*)**"
 msgstr ""
+"OpenGL inschakelen **(Voor Krita 3.3 of later: Verwoord als \"*Grafische"
+" versnelling van werkveld*)** "
 
 #: ../../reference_manual/preferences/display_settings.rst:33
 msgid ""
@@ -109,10 +123,15 @@ msgid ""
 "tools. Also the canvas operations like Rotate, Zoom and Pan should be "
 "considerably faster."
 msgstr ""
+"Als u dit keuzevakje selecteert dan schakelt u de OpenGL / ANGLE canvas"
+" tekenmodus in. "
+"Met een moderne video-kaard zou dit bij penselen en andere onderdelen"
+" snellere reactie moeten geven. Ook bij bewerkingen van het werkvlak zoals"
+" roteren, inzoomen en verschuiven zouden merkbaar sneller moeten zijn."
 
 #: ../../reference_manual/preferences/display_settings.rst:35
 msgid "For Krita 3.3 or later:"
-msgstr ""
+msgstr "Voor Krita 3.3 of nieuwer:"
 
 #: ../../reference_manual/preferences/display_settings.rst:35
 msgid "Renderer"
@@ -125,6 +144,12 @@ msgid ""
 "will decide the best to use based on some internal compatibility checking. "
 "Changes to this option require a restart of Krita to take effect."
 msgstr ""
+"*Bij Windows:* kunt u kiezen tussen native OpenGL en ANGLE Direct3D 11 "
+"rendering. Meestal is de aanbeveling om de instelling te laten op \"Auto\","
+" zodat Krita zelf beslist wat het beste is om te gebruiken gebaseerd "
+"op enkele interne compatibiliteit controles. "
+"Als u deze keuzemogelijkheid selecteert dan moet Krita opnieuw gestart worden"
+" voordat dit effect heeft. "
 
 #: ../../reference_manual/preferences/display_settings.rst:37
 msgid "Use Texture Buffer"
@@ -136,6 +161,10 @@ msgid ""
 "things up a bit. Although for now, this feature may be broken on some AMD/"
 "Radeon cards and may work fine on some Intel graphics cards."
 msgstr ""
+"Deze instelling gebruikt de buffering-mogelijkheid van de grafische kaard om"
+" het een beetje sneller te maken. Op dit moment lijkt het erop dat dit bij"
+" sommige AMD/Radeon kaarten niet functioneert en "
+"dat het bij sommige Intel grafische kaarten wel goed werkt."
 
 #: ../../reference_manual/preferences/display_settings.rst:40
 msgid ""
@@ -144,6 +173,11 @@ msgid ""
 "operations and has no effect on how Krita scales an image when a "
 "transformation is applied."
 msgstr ""
+"De gebruiker kan hier instellen welke verschalingsmethode wordt gebruikt bij"
+" het inzoomen op het werkveld. De hier gemaakte keuze beïnvloedt alleen de"
+" manier waarop de afbeelding wordt getoond tijdens bewerkingen van het"
+" werkvlak en heeft geen invloed op hoe Krita een afbeelding verschaalt als"
+" een transformatie wordt toegepast."
 
 #: ../../reference_manual/preferences/display_settings.rst:42
 msgid "Nearest Neighbour"
@@ -155,6 +189,9 @@ msgid ""
 "in a large number of artifacts - 'blockiness' during magnification, and "
 "aliasing and shimmering during minification."
 msgstr ""
+"Dit is de snelste maar ook de ruwste filtermethode. Al hoe het wel snel is,"
+" resulteert dit ook in een groot aantal artefacten - 'blokkerigheid' tijdens"
+" het inzoomen, en zaagtanden en vertekeningen tijdens het minimaliseren."
 
 #: ../../reference_manual/preferences/display_settings.rst:44
 msgid "Bilinear Filtering"
@@ -166,6 +203,9 @@ msgid ""
 "magnification and gives a smooth looking result. For most purposes this "
 "should be a good trade-off between speed and quality."
 msgstr ""
+"dit is een treetje hoger. Dit verwijdert de 'blokkerigheid' die u bij het"
+" vergroten te zien krijgt en geeft een gladder resultaat. Voor het meeste"
+" gebruik zal dit een goede balans geven tussen snelheid en kwaliteit."
 
 #: ../../reference_manual/preferences/display_settings.rst:46
 msgid "Trilinear Filtering"
@@ -173,7 +213,7 @@ msgstr "Tri-lineaire filtering"
 
 #: ../../reference_manual/preferences/display_settings.rst:47
 msgid "This should give a little better result than Bilinear Filtering."
-msgstr ""
+msgstr "Dit zou een beetje beter resultaat geven dan het Bi-lineaire Filter."
 
 #: ../../reference_manual/preferences/display_settings.rst:49
 msgid "Scaling Mode"
@@ -189,6 +229,9 @@ msgid ""
 "suggests, this setting provides the best looking image during canvas "
 "operations."
 msgstr ""
+"Alleen beschikbaar als uw grafische kaard OpenGL 3.0 ondersteunt. Zoals de"
+" naam al aangeeft, geeft deze instelling de mooiste afbeelding tijdens"
+" bewerkingen van het werkvlak."
 
 #: ../../reference_manual/preferences/display_settings.rst:54
 msgid "HDR"
@@ -196,7 +239,7 @@ msgstr "HDR"
 
 #: ../../reference_manual/preferences/display_settings.rst:58
 msgid "These settings are only available when using Windows."
-msgstr ""
+msgstr "Deze instellingen zijn alleen beschikbaar bij gebruik van Windows."
 
 #: ../../reference_manual/preferences/display_settings.rst:60
 msgid ""
@@ -204,6 +247,9 @@ msgid ""
 "them on screen in a way that an HDR capable setup can show them as HDR "
 "images."
 msgstr ""
+"Vanaf 4.2 kan Krita niet alleen afbeeldingen met drijvende komma bewerken,"
+" maar deze ook op een manier op het scherm tonen dat een HDR capabele setup"
+" ze daadwerkelijk als een HDR-afbeelding kan tonen."
 
 #: ../../reference_manual/preferences/display_settings.rst:62
 msgid ""
@@ -211,6 +257,10 @@ msgid ""
 "the current output format. You will want to set the preferred output format "
 "to the one closest to what your display can handle to make full use of it."
 msgstr ""
+"De HDR instellingen tonen u het beeldschermformaat dat Krita kan hanteren, en"
+" het huidige uitvoerformaat. U zal waarschijnlijk de gewenste uitvoerformaat"
+" zo dicht mogelijk willen instellen bij wat uw beeldscherm aankan om daar"
+" volledig gebruik van te maken."
 
 #: ../../reference_manual/preferences/display_settings.rst:64
 msgid "Display Format"
@@ -224,18 +274,25 @@ msgid ""
 "if other HDR applications, or the system HDR settings are configured "
 "correctly."
 msgstr ""
+"Standaard is dit het formaat waarin uw beeldscherm weergeeft. Als dit niet"
+" groter is dan 8bit, dan is er een grote kans dat uw monitor wat Krita"
+" betreft geen HDR monitor is. Dit kan een hardware probleem zijn, maar ook"
+" een probleem in de grafische driver. Controleer ook bij andere HDR"
+" programma's,"
+" of de systeem HDR instellingen correct zijn ingesteld."
 
 #: ../../reference_manual/preferences/display_settings.rst:66
 msgid "Current Output format"
-msgstr ""
+msgstr "Huidig uitvoerformaat"
 
 #: ../../reference_manual/preferences/display_settings.rst:67
 msgid "What Krita is rendering the canvas to currently."
-msgstr ""
+msgstr "Welk gedeelte van het werkvlak Krita op dit moment toont."
 
+# Voorkeurs uitvoerformaat
 #: ../../reference_manual/preferences/display_settings.rst:69
 msgid "Preferred Output Format"
-msgstr ""
+msgstr "Voorkeurs uitvoerformaat"
 
 #: ../../reference_manual/preferences/display_settings.rst:69
 msgid ""
@@ -243,10 +300,15 @@ msgid ""
 "display format, but perhaps due to driver issues you might want to try other "
 "formats. This requires a restart."
 msgstr ""
+"Aan welk uitvoerformaat u de voorkeur geeft. Ideaalliter zou dit zo dicht"
+" mogelijk bij het beeldschermformaat moeten liggen, maar wellicht wilt u"
+" vanwege problemen met drivers een ander formaat proberen. Hiervoor is wel"
+" een herstart nodig."
 
+# "Transparantie van dambordpatroon:" is niet goed, dambordpatroon is niet transparant. transparante gedeelten krijgt een danbordpatroon
 #: ../../reference_manual/preferences/display_settings.rst:72
 msgid "Transparency Checkboxes"
-msgstr ""
+msgstr "Dambordpatroon voor transparante gedeeltes"
 
 #: ../../reference_manual/preferences/display_settings.rst:74
 msgid ""
@@ -254,6 +316,9 @@ msgid ""
 "transparency can't be seen. So to indicate transparency at the lowest layer, "
 "we use a checker pattern. This part allows you to configure it."
 msgstr ""
+"Krita kan overweg met transparante-lagen. Het vervelende is natuurlijk dat u"
+" transparantie niet kan zien. Om dus transparantie op de laagste laag aan te"
+" geven, gebruiken we een dambordpatroon. Hier kunt u deze instellen."
 
 #: ../../reference_manual/preferences/display_settings.rst:76
 msgid "Size"
@@ -264,6 +329,8 @@ msgid ""
 "This sets the size of the checkers which show up in transparent parts of an "
 "image."
 msgstr ""
+"Hiermee stelt u het dambordpatroon mee in dat u ziet in transparante"
+" gedeelten van een afbeelding."
 
 #: ../../reference_manual/preferences/display_settings.rst:78
 #: ../../reference_manual/preferences/display_settings.rst:86
@@ -273,7 +340,7 @@ msgstr "Kleur"
 
 #: ../../reference_manual/preferences/display_settings.rst:79
 msgid "The user can set the colors for the checkers over here."
-msgstr ""
+msgstr "De gebruiker kan de kleuren voor het dambordpatroon hier instellen."
 
 #: ../../reference_manual/preferences/display_settings.rst:81
 msgid "Move Checkers When Scrolling"
@@ -285,12 +352,18 @@ msgid ""
 "during canvas Panning, Zooming, etc.  Otherwise the checkers remain "
 "stationary and only the opaque parts of an image will move."
 msgstr ""
+"Indien ingeschakeld zal het dambordpatroon mee bewegen met de transparante"
+" gedeeltes van een afbeelding tijdens het pannen en inzoomen enz. van het"
+" werkvlak. Anders blijft het dambordpatroon stationair en verplaatst alleen"
+" de transparante gedeeltes van de afbeelding."
 
 #: ../../reference_manual/preferences/display_settings.rst:87
 msgid ""
 "The user can select the color for the canvas i.e. the space beyond a "
 "document's boundaries."
 msgstr ""
+"De gebruiker kan de kleur instellen voor het werkvlak d.w.z. de ruimte achter"
+" het document."
 
 #: ../../reference_manual/preferences/display_settings.rst:89
 msgid "Hide Scrollbars"
@@ -299,6 +372,8 @@ msgstr "Schuifbalken verbergen"
 #: ../../reference_manual/preferences/display_settings.rst:89
 msgid "Selecting this will hide the scrollbars in all view modes."
 msgstr ""
+"Als u dit selecteert dan worden de schuifbalken in alle weergavemodus"
+" verborgen."
 
 #: ../../reference_manual/preferences/display_settings.rst:92
 msgid "Pixel Grid"
@@ -309,10 +384,12 @@ msgid ""
 "This allows configuring an automatic pixel-by-pixel grid, which is very "
 "useful for doing pixel art."
 msgstr ""
+"Hiermee stelt u een automatisch pixel-bij-pixel raster in, wat erg handig is"
+" bij het maken van pixel-art."
 
 #: ../../reference_manual/preferences/display_settings.rst:99
 msgid "The color of the grid."
-msgstr ""
+msgstr "De kleur van het rooster."
 
 #: ../../reference_manual/preferences/display_settings.rst:101
 msgid "Start Showing at"
@@ -324,6 +401,9 @@ msgid ""
 "showing it when the image is zoomed out a lot will make the grid overwhelm "
 "the image, and is thus counter productive."
 msgstr ""
+"Dit bepaalt bij welk zoom level het pixelraster zichtbaar wordt, omdat als"
+" het getoond wordt nadat er uitgezoomt is, het raster de afbeelding zal"
+" overheersen wat dan contraproductief is."
 
 #: ../../reference_manual/preferences/display_settings.rst:104
 msgid "Miscellaneous"
@@ -338,6 +418,8 @@ msgid ""
 "This is supposed to determine what to do when only a single channel is "
 "selected in the channels docker, but it doesn't seem to work."
 msgstr ""
+"Dit wordt verondersteld te bepalen wat er gebeurt als er maar een enkel"
+" kanaal is geselecteerd in het kanalen-paneel, maar het lijkt niets te doen.."
 
 #: ../../reference_manual/preferences/display_settings.rst:108
 msgid "Enable Curve Anti-Aliasing"
@@ -348,6 +430,8 @@ msgid ""
 "This allows anti-aliasing on previewing curves, like the ones for the circle "
 "tool, or the path tool."
 msgstr ""
+"Dit schakelt anti-aliasing in bij het voorbeeld van een krommen zoals die bij"
+" cirkels of een pad."
 
 #: ../../reference_manual/preferences/display_settings.rst:110
 msgid "Enable Selection Outline Anti-Aliasing"
@@ -358,15 +442,17 @@ msgid ""
 "This allows automatic anti-aliasing on selection. It makes the selection "
 "feel less jaggy and more precise."
 msgstr ""
+"Dit schakelt anti-aliasing in bij een selectie. Het zorgt ervoor dat de"
+" selectie er minder een zaagtand-effect heeft en nauwkeuriger is."
 
 #: ../../reference_manual/preferences/display_settings.rst:112
 msgid "Hide window scrollbars."
-msgstr "Schuifbalken van venter verbergen."
+msgstr "Schuifbalken van venster verbergen."
 
 #: ../../reference_manual/preferences/display_settings.rst:113
 msgid "Hides the scrollbars on the canvas."
-msgstr ""
+msgstr "Verbergt de schuifbalken op het werkvlak."
 
 #: ../../reference_manual/preferences/display_settings.rst:115
 msgid "This disables the thumbnail that you get when hovering over a layer."
-msgstr ""
+msgstr "Dit schakel het miniatuur uit dat u ziet als u boven een laag zweeft."
