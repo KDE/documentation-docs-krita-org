@@ -21,8 +21,23 @@ Before the release
 1. Coordinate with #kde-promo
 2. Notify translators of string freeze!
 3. Verify that the release notes page is done, like https://krita.org/en/krita-4-2-release-notes/
+4. Verify that all 8 (eight!) dependency builds are up to date. Remember that these builds are built from **master**, not from the stable branch.
 
-
+    * https://binary-factory.kde.org/job/Krita_Android_arm64-v8a_Dependency_Build/
+    * https://binary-factory.kde.org/job/Krita_Android_armeabi-v7a_Dependency_Build/
+    * https://binary-factory.kde.org/job/Krita_Android_x86_64_Dependency_Build/
+    * https://binary-factory.kde.org/job/Krita_Android_x86_Dependency_Build/
+    * https://binary-factory.kde.org/job/Krita_Nightly_Appimage_Dependency_Build/
+    * https://binary-factory.kde.org/job/Krita_Nightly_MacOS_Dependency_Build/
+    * https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/
+    * https://binary-factory.kde.org/job/Krita_Release_Windows32_Dependency_Build/
+    
+    Compare the build date and included commits to the commit in 3rdparty directory in master:
+    
+    .. code::
+    
+        git fetch origin && git log origin/master 3rdparty
+    
 
 Update version in source code
 -----------------------------
@@ -39,6 +54,7 @@ Update version in source code
 
     * packaging/android/apk/AndroidManifest.xml 
     * packaging/android/apk/build.gradle
+10. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
 
 Create the tarball
 ------------------
