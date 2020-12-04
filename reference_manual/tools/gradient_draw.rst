@@ -26,7 +26,7 @@ Tool Options
 
 Shape:
     Linear
-        This will draw the gradient straight.
+        This will draw a straight gradient.
 
         .. figure:: /images/gradients/gradient_painter/linear.png
            :alt: Linear Gradient.
@@ -34,7 +34,7 @@ Shape:
            Left: **None**. Middle: **Forwards**. Right: **Alternating**.
 
     Bilinear
-       This will draw the gradient straight, and mirrored along the axis.
+       This will draw a straight gradient, mirrored along the axis.
 
        .. figure:: /images/gradients/gradient_painter/bilinear.png
 
@@ -100,7 +100,7 @@ Antialias threshold
     Controls how smooth is the border between repetitions.
 
     * A value equal to 0 means there is no smoothing. The border is aliased.
-    * A value greater than 0 teels Krita how much pixels to each side of the border should be smoothed.
+    * A value greater than 0 tells Krita how many pixels to each side of the border should be smoothed.
 
     .. figure:: /images/gradients/gradient_painter/antialias_threshold.png
 
