@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-10 02:06+0100\n"
-"PO-Revision-Date: 2020-11-10 15:01\n"
+"PO-Revision-Date: 2020-12-06 15:33\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___seexpr.pot\n"
 "X-Crowdin-File-ID: 24448\n"
+"Language: zh_CN\n"
 
 #: ../../reference_manual/seexpr.rst:1
 msgid "SeExpr Quick Reference for Krita"
@@ -157,11 +157,11 @@ msgstr ""
 
 #: ../../reference_manual/seexpr.rst:69
 msgid "You can also define namespaced variables, e.g.::"
-msgstr ""
+msgstr "你也可以定义命名空间变量，例如::"
 
 #: ../../reference_manual/seexpr.rst:71
 msgid "$A::a = $u * 10;"
-msgstr ""
+msgstr "$A::a = $u * 10;"
 
 #: ../../reference_manual/seexpr.rst:75
 msgid "Control Structures"
@@ -169,7 +169,7 @@ msgstr "Control Structures (控制结构)"
 
 #: ../../reference_manual/seexpr.rst:77
 msgid "SeExpr provides the well-known `if` conditional structure::"
-msgstr ""
+msgstr "SeExpr 提供了常见的 `if` 条件结构::"
 
 #: ../../reference_manual/seexpr.rst:79
 msgid ""
@@ -182,12 +182,18 @@ msgid ""
 "\n"
 "$color"
 msgstr ""
+"if ($ u > 0.5) {\n"
+"    $color = [0, 0, 1];\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
 
 #: ../../reference_manual/seexpr.rst:88
-#, fuzzy
-#| msgid "ternary ``if`` operator"
 msgid "And the *ternary operator*::"
-msgstr "ternary ``if`` operator (三元 ``if`` 运算符)"
+msgstr "它也提供了 **ternary operator (三元运算符)**::"
 
 #: ../../reference_manual/seexpr.rst:90
 msgid "$u = $i < .5 ? 0.0 : 10.0"
@@ -195,17 +201,19 @@ msgstr "$u = $i < .5 ? 0.0 : 10.0"
 
 #: ../../reference_manual/seexpr.rst:92
 msgid "You can freely nest ternary operators, e.g.::"
-msgstr ""
+msgstr "你可以任意嵌套三元运算符，例如::"
 
 #: ../../reference_manual/seexpr.rst:94
 msgid ""
 "$color = $u < .5 ? ($v < 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];\n"
 "$color"
 msgstr ""
+"$color = $u < .5 ? ($v < 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];\n"
+"$color"
 
 #: ../../reference_manual/seexpr.rst:97
 msgid "You can also achieve the same with `if` structures::"
-msgstr ""
+msgstr "你也可以通过 `if` 结构来实现三元运算符的嵌套::"
 
 #: ../../reference_manual/seexpr.rst:99
 msgid ""
@@ -223,6 +231,19 @@ msgid ""
 "\n"
 "$color"
 msgstr ""
+"if ($ u > 0.5) {\n"
+"    if ($v < 0.5) {\n"
+"        $color = [0, 0, 1];\n"
+"    }\n"
+"    else {\n"
+"        $color = [1, 0, 0];\n"
+"    }\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
 
 #: ../../reference_manual/seexpr.rst:115
 msgid "Operators (listed in decreasing precedence)"
@@ -520,10 +541,8 @@ msgid "Logging Functions"
 msgstr "Logging Functions (日志函数)"
 
 #: ../../reference_manual/seexpr.rst:249
-#, fuzzy
-#| msgid "void **printf** ( string format, [param0, param1, ...] )"
 msgid "float **printf** ( string format, [param0, param1, ...] )"
-msgstr "void **printf** ( string format, [param0, param1, ...] )"
+msgstr "float **printf** ( string format, [param0, param1, ...] )"
 
 #: ../../reference_manual/seexpr.rst:251
 msgid ""
@@ -539,33 +558,30 @@ msgid "For example, if you wrote::"
 msgstr "输入以下代码::"
 
 #: ../../reference_manual/seexpr.rst:258
-#, fuzzy
-#| msgid "printf(\"test %f %v\",[1,2,3],[4,5,6]);"
 msgid "$u = printf(\"test %f %v\",[1,2,3],[4,5,6]);"
-msgstr "printf(\"test %f %v\",[1,2,3],[4,5,6]);"
+msgstr "$u = printf(\"test %f %v\",[1,2,3],[4,5,6]);"
 
 #: ../../reference_manual/seexpr.rst:260
-#, fuzzy
-#| msgid "you would get::"
 msgid "you would get in your console::"
-msgstr "将输出以下结果::"
+msgstr "命令行控制台将返回::"
 
 #: ../../reference_manual/seexpr.rst:262
 msgid "test 1 [4,5,6]"
 msgstr "test 1 [4,5,6]"
 
 #: ../../reference_manual/seexpr.rst:263
-#, fuzzy
-#| msgid "void **printf** ( string format, [param0, param1, ...] )"
 msgid ""
 "string **sprintf** ( string format, [double|string, double|string, ...] )"
-msgstr "void **printf** ( string format, [param0, param1, ...] )"
+msgstr ""
+"string **sprintf** ( string format, [double|string, double|string, ...] )"
 
 #: ../../reference_manual/seexpr.rst:265
 msgid ""
 "Returns a string formatted from the given values.  See ``man sprintf`` for "
 "format details."
 msgstr ""
+"返回一组按照给定值进行格式化的字符串。请在命令行控制台输入 ``man sprintf`` 查"
+"看格式的相关细节。"
 
 #: ../../reference_manual/seexpr.rst:269
 msgid "Color, Masking, and Remapping Functions"
@@ -1750,10 +1766,3 @@ msgid ""
 msgstr ""
 ".. image:: images/seexpr/Se_voronoi_5.png\n"
 "   :alt: image4"
-
-#~ msgid ""
-#~ "SeExpr, unlike many languages, provides **no control structures** except "
-#~ "a form of `if` statements, known as the *ternary operator*::"
-#~ msgstr ""
-#~ "SeExpr 和许多计算机语言不同，**它不提供控制结构** ，除了一种形式的“if”语"
-#~ "句，它叫做 **ternary operator (三元运算符)**::"
