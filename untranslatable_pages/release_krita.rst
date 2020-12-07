@@ -56,6 +56,14 @@ Update version in source code
     * packaging/android/apk/build.gradle
 10. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
 
+Update versions in the stable branch to avoid XMLGUI conflicts
+--------------------------------------------------------------
+1. stable branch is always marked as "alpha" (without a number in the end)
+2. update the version of krita.xmlgui; it should be `$(( $VERSION_IN_RELEASE_BRANCH + 1 ))`
+3. update the CMakeLists.txt version
+4. update org.kde.krita.appdata.xml 's release tag
+5. packaging/android/apk/AndroidManifest.xml 
+
 Create the tarball
 ------------------
 
