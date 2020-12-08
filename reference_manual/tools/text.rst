@@ -169,7 +169,7 @@ So, the rich text editor cannot control all functionality that SVG text allows f
 Word-spacing, Letter-spacing and Kerning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-These three are written and read from the rich text tab, but have no sliders associated with them, because there was no time.
+These three are written and read from the rich text tab, but only two of them can be controlled from Rich Text tab.
 
 Kerning
     `Kerning, in SVG 1.1 <https://www.w3.org/TR/SVG/text.html#KerningProperty>`_ behaves slightly differently than font-kerning in css. Krita by default uses the auto property for this, which means it is on. To turn it off use kerning:0 in the style section of the text.
