@@ -60,12 +60,11 @@ Activating
 Editing
     If you are unfamiliar with the way SVG text works, use the rich text tab, it will allow you to edit the text as you see it, at the cost of not having all functionality.
 
-If you are a little bit more familiar with SVG text, you can directly edit the SVG source. Do note that certain things, like stroke, fill, letter-spacing don't convert back to the rich text editor, so do be careful when switching back.
+    If you are a little bit more familiar with SVG text, you can directly edit the SVG source. Do note that not all attributes and properties are converted back to the rich text editor, so do be careful when switching back.
 
-Press :guilabel:`Save` as you're done with your edits to preview them on canvas.
+    Press :guilabel:`Save` as you're done with your edits to preview them on canvas.
 
 File
-
     Save :kbd:`Ctrl + S`
         Save current edits to the text on canvas.
     Close :kbd:`Ctrl + W`
