@@ -172,7 +172,7 @@ Word-spacing, Letter-spacing and Kerning
 These three are written and read from the rich text tab, but only two of them can be controlled from Rich Text tab.
 
 Kerning
-    `Kerning, in SVG 1.1 <https://www.w3.org/TR/SVG/text.html#KerningProperty>`_ behaves slightly differently than font-kerning in css. Krita by default uses the auto property for this, which means it is on. To turn it off use kerning:0 in the style section of the text.
+    `Kerning, in SVG 1.1 <https://www.w3.org/TR/SVG/text.html#KerningProperty>`_ behaves slightly differently than font-kerning in CSS. Krita by default uses the auto property for this, which means it is on. To turn it off use kerning:0 in the style section of the text. Any other numeric value will be added to current letter-spacing.
 
     .. image:: /images/tools/Krita_4_0_text_kerning.png
        :align: center
