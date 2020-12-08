@@ -37,6 +37,9 @@ Create new texts with...
         The letter-size used by newly created texts. It is in pts (points), which is a common standard for fonts that is measured 72 points per inch. It therefore will stay proportionally the same size if you increase or decrease canvas dpi.
     Anchor/Align text to the left/middle/right
         Text alignment. This allows you to align text to the left, center it, or to the right. This is called text-anchor because SVG 1.1's multiline text only uses text-anchor, and this is a slight bit different than text-align (and also the reason justify isn't available at the moment).
+    Letter Spacing
+        The letter spacing used by newly created texts.
+
 Edit Text
     This will summon the text editor for the currently selected shape. This can be quickly invoked with either pressing the :kbd:`Enter` key or :kbd:`double-click +` |mouseleft| shortcut on the shape.
 
