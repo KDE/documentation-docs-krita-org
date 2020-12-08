@@ -131,6 +131,8 @@ Format
         Center the selected paragraph.
     Align Right :kbd:`Ctrl + Alt + R`
         Align the selected paragraph to the right.
+    Kerning
+        Toggles kerning for selected text.
 
 Settings
 
