@@ -164,7 +164,7 @@ Fonts
 Fine typographic control with the SVG Source tab
 ------------------------------------------------
 
-So, the rich text editor cannot control all functionality that SVG text allows for. For that, you will need to touch the SVG source directly. But to do that, you will first need to go to the text editor settings and enable either :guilabel:`SVG Source` or :guilabel:`Both`. The Rich Text editor will lose some information, so if you go all out, use :guilabel:`SVG Source`.
+So, the rich text editor cannot control all functionality that SVG text allows for. For that, you will need to touch the SVG source directly. But to do that, you will first need to go to the text editor settings and enable either :guilabel:`SVG Source` or :guilabel:`Both` editor mode. The Rich Text editor will lose some information, so if you go all out, use :guilabel:`SVG Source`.
 
 Word-spacing, Letter-spacing and Kerning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
