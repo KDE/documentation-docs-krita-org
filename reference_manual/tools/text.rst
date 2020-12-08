@@ -148,7 +148,7 @@ Colors
     Element
         The format for highlighting the element tag name. **text** and **tspan** are examples of element names.
     Attribute
-        The format for highlighting the attributes of the tag. For example, font-family, when it isn't in the style tag is usually written as an attribute.
+        The format for highlighting the attributes of the tag. For example, ``font-family``, when it isn't in the ``style`` tag is usually written as an attribute.
     Value
         The format for highlighting value of attributes.
     Comment
@@ -172,7 +172,7 @@ Word-spacing, Letter-spacing and Kerning
 These three are written and read from the rich text tab, but only two of them can be controlled from Rich Text tab.
 
 Kerning
-    `Kerning, in SVG 1.1 <https://www.w3.org/TR/SVG/text.html#KerningProperty>`_ behaves slightly differently than font-kerning in CSS. Krita by default uses the auto property for this, which means it is on. To turn it off use kerning:0 in the style section of the text. Any other numeric value will be added to current letter-spacing.
+    `Kerning, in SVG 1.1 <https://www.w3.org/TR/SVG/text.html#KerningProperty>`_ behaves slightly differently than ``font-kerning`` in CSS. Krita by default uses the ``auto`` property for this, which means it is on. To turn it off use ``kerning: 0;`` in the ``style`` section of the text. Any other numeric value will be added to current ``letter-spacing``.
 
     .. image:: /images/tools/Krita_4_0_text_kerning.png
        :align: center
@@ -184,7 +184,8 @@ Kerning
         </text>
 
 Letter-spacing
-    This is the distance between letters in pts, usually. Just write ``letter-spacing`` in the style and add a distance in pts behind it. A negative value will decrease the value between letters.
+    This is the distance between letters in pts, usually. Just write ``letter-spacing`` in the ``style`` and add a distance in pts behind it. A negative value will decrease the value between letters.
+
 Word-spacing
     This is the extra distance between words, defaulting to pts. By default, ``word-spacing: 0;`` will have it use only the width of the space character for that font. A negative value will decrease the amount of space between words:
 
@@ -222,4 +223,4 @@ Dominant Baseline, Alignment baseline, Font-size-adjust, Writing mode, Glyph-ori
 
 These are not stored in the rich text right now, and while they can be written into the SVG text, the SVG text-shape doesn't do anything with them. 
 
-Krita generates font-size-adjust for the font when coming from rich text, as this can help designers when they want to use the SVG source as a basis for later adjustments.
+Krita generates ``font-size-adjust`` for the font when coming from rich text, as this can help designers when they want to use the SVG source as a basis for later adjustments.
