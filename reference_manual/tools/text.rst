@@ -51,7 +51,6 @@ A small window for all your text editing needs. The Text Editor has two tabs: Ri
 .. image:: /images/tools/Text-editor-example.png
 
 Activating
-
     You can use the Text tool to first create a text box. There are a few options in the tool options if you want to customize how the text will be adding. You will need to drag a rectangle on the canvas to create the text area. Once your text is created, you can edit the text from two ways:
     
     #. Select the text with the shape selection tool (first tool). Press the :kbd:`Enter` key. The text editor will appear.
@@ -97,19 +96,16 @@ Edit
         Pops up a dialog with two inputs: The string you wish to find, and the string you wish to replace it with. Will always replace ALL found instances.
 
 View
-
     Zoom Out :kbd:`Ctrl + -`
         Zoom out the text.
     Zoom In :kbd:`Ctrl + +`
         Zoom in the text.
 
 Insert
-
     Special Character... :kbd:`Alt + Shift + C`
         Pops up a dialog that allows you to search for special characters that are difficult to type in with your keyboard.
 
 Format
- 
     Bold :kbd:`Ctrl + B`
         Set the font-weight to **bold**.
     Italic :kbd:`Ctrl + I`
@@ -134,7 +130,6 @@ Format
         Toggles kerning for selected text.
 
 Settings
-
     Settings...
         Calls up the text-editor settings dialog.
 
