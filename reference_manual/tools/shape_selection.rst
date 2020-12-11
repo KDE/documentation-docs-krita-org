@@ -170,7 +170,7 @@ Mesh Gradient
    Mesh Gradients follow `SVG draft 2 <https://svgwg.org/svg-next/pservers.html#MeshGradients>`_ for the rendering.
 
 Creating Mesh Gradients
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 When Mesh Gradients option is selected for a shape, Krita fills it with default mesh gradient, which is an alternating color (it alternates between background color and white). Changing number of rows and columns from Tool Options, will add more patches to the Mesh Gradient and corners can be changed individually.
 
