@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-11 02:13+0100\n"
-"PO-Revision-Date: 2020-12-06 15:33\n"
+"PO-Revision-Date: 2020-12-12 17:39\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___tools___shape_selection.pot\n"
 "X-Crowdin-File-ID: 9884\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -27,16 +27,12 @@ msgstr ""
 "   :alt: mouseleft"
 
 #: ../../<rst_epilog>:4
-#, fuzzy
-#| msgid ""
-#| ".. image:: images/icons/Krita_mouse_left.png\n"
-#| "   :alt: mouseleft"
 msgid ""
 ".. image:: images/icons/Krita_mouse_right.png\n"
 "   :alt: mouseright"
 msgstr ""
-".. image:: images/icons/Krita_mouse_left.png\n"
-"   :alt: mouseleft"
+".. image:: images/icons/Krita_mouse_right.png\n"
+"   :alt: mouseright"
 
 #: ../../<rst_epilog>:10
 msgid ""
@@ -506,12 +502,8 @@ msgstr ""
 "第二种是在画布上拖动黄色的渐变锚点。两者会同时影响渐变的效果。"
 
 #: ../../reference_manual/tools/shape_selection.rst:157
-#, fuzzy
-#| msgid ""
-#| "As the name implies this type fills the shape with a gradient. It has the "
-#| "following options:"
 msgid "Fills the shape with a Mesh Gradient. It has following options:"
-msgstr "描边 / 填充渐变。它包含下列选项："
+msgstr "以曲线网格渐变填充矢量形状。它包含下列选项："
 
 #: ../../reference_manual/tools/shape_selection.rst:160
 msgid ""
@@ -519,32 +511,32 @@ msgid ""
 "changed (rectangle), changing the color of Bezier handle (circle) is not "
 "possible."
 msgstr ""
+"更改选中色标的颜色。你只能更改网格交点 (方点) 的颜色，无法更改控制点 (圆点) "
+"的颜色。"
 
 #: ../../reference_manual/tools/shape_selection.rst:161
 msgid "Rows"
-msgstr ""
+msgstr "行数"
 
 #: ../../reference_manual/tools/shape_selection.rst:162
 msgid "Change the number of rows in a Mesh Gradient."
-msgstr ""
+msgstr "更改曲线网格的网格行数。"
 
 #: ../../reference_manual/tools/shape_selection.rst:163
 msgid "Columns"
-msgstr ""
+msgstr "列数"
 
 #: ../../reference_manual/tools/shape_selection.rst:164
 msgid "Change the number of columns in a Mesh Gradient."
-msgstr ""
+msgstr "更改曲线网格的网格列数。"
 
 #: ../../reference_manual/tools/shape_selection.rst:166
-#, fuzzy
-#| msgid "Save Gradient"
 msgid "Mesh Gradient"
-msgstr "保存渐变预设"
+msgstr "曲线网格渐变"
 
 #: ../../reference_manual/tools/shape_selection.rst:166
 msgid "Smoothing"
-msgstr ""
+msgstr "平滑方式"
 
 #: ../../reference_manual/tools/shape_selection.rst:166
 msgid ""
@@ -554,18 +546,22 @@ msgid ""
 "*Bicubic* is the bicubic interpolation of the color stops, this should "
 "produce smoother gradient."
 msgstr ""
+"你可以使用两种模式来对色标之间的颜色过渡进行平滑处理，它们分别是： **双线性"
+"** (默认值) 和 **双立方** 。双线性方式按照线性算法进行插值，可能造成 `带状色"
+"块现象 <https://en.wikipedia.org/wiki/Mach_bands>`_ 。双立方方式则是通过双立"
+"方算法进行插值，能产生更平滑的渐变效果。"
 
 #: ../../reference_manual/tools/shape_selection.rst:170
 msgid ""
 "Mesh Gradients follow `SVG draft 2 <https://svgwg.org/svg-next/pservers."
 "html#MeshGradients>`_ for the rendering."
 msgstr ""
+"曲线网格渐变按照 `SVG 第 2 版草案 <https://svgwg.org/svg-next/pservers."
+"html#MeshGradients>`_ 来进行图形绘制。"
 
 #: ../../reference_manual/tools/shape_selection.rst:173
-#, fuzzy
-#| msgid "Save Gradient"
 msgid "Creating Mesh Gradients"
-msgstr "保存渐变预设"
+msgstr "新建曲线网格渐变"
 
 #: ../../reference_manual/tools/shape_selection.rst:175
 msgid ""
@@ -575,10 +571,14 @@ msgid ""
 "Options, will add more patches to the Mesh Gradient and corners can be "
 "changed individually."
 msgstr ""
+"当你将一个矢量形状的渐变色设为曲线网格渐变时，Krita 会用默认曲线网格渐变进行"
+"填充 (在前景色和白色之间交替过渡)。你可以在工具选项面板中调整网格的行数和列"
+"数，这样可以增加网眼数量，每一个网眼的四角可以单独设置颜色，网眼之间的颜色过"
+"渡不会相互干扰。"
 
 #: ../../reference_manual/tools/shape_selection.rst:178
 msgid "Editing Mesh Gradients"
-msgstr ""
+msgstr "编辑曲线网格渐变"
 
 #: ../../reference_manual/tools/shape_selection.rst:180
 msgid ""
@@ -587,28 +587,28 @@ msgid ""
 "by dragging the corner (rectangle) and other is by dragging the handle "
 "(circle)."
 msgstr ""
+"构成网格的每一条线都是贝塞尔曲线。要改变网格的形状，你可以拖动网格的交点 (方"
+"点)，也可以拖动曲线的控制点 (圆点)。"
 
 #: ../../reference_manual/tools/shape_selection.rst:186
-#, fuzzy
-#| msgid ""
-#| ".. image:: images/tools/shapes-selection-properties.png\n"
-#| "   :alt: Left to right: Placement, Scale, Angle and Distortion."
 msgid ""
 ".. image:: images/tools/MeshGradients-corner-moving.png\n"
 "   :alt: Left to right: Normal, Corner Hovered, Corner Moved and Selected."
 msgstr ""
-".. image:: images/tools/shapes-selection-properties.png\n"
-"   :alt: Left to right: Placement, Scale, Angle and Distortion."
+".. image:: images/tools/MeshGradients-corner-moving.png\n"
+"   :alt: 从左到右：正常状态、鼠标悬停在网格角点、鼠标选中并拖动该角点。"
 
 #: ../../reference_manual/tools/shape_selection.rst:186
 msgid "Left to right: Normal, Corner Hovered, Corner Moved and Selected."
-msgstr ""
+msgstr "从左到右：正常状态、鼠标悬停在网格角点、鼠标选中并拖动该角点。"
 
 #: ../../reference_manual/tools/shape_selection.rst:188
 msgid ""
 "To change the color, a corner has to be selected and then Tool Options can "
 "be used to change the color of the selected corner."
 msgstr ""
+"要更改网格交点的颜色，首先选中一个交点，然后在工具选项面板中即可对此交点的色"
+"标进行更改。"
 
 #: ../../reference_manual/tools/shape_selection.rst:192
 msgid ""
@@ -616,6 +616,9 @@ msgid ""
 "Krita to edit Mesh Gradients. To fix this, first ungroup (via |mouseright|) "
 "them."
 msgstr ""
+"如果矢量形状是从 Inkscape 导入的，那么形状可能处于群组状态，这时 Krita 将无法"
+"编辑曲线网格渐变。要解决此问题，右键点击 |mouseright| 该群组并选择：解除群"
+"组。"
 
 #: ../../reference_manual/tools/shape_selection.rst:197
 msgid "Right-click menu"
