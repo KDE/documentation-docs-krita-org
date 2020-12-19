@@ -158,7 +158,7 @@ Mesh
 
 .. versionadded:: 4.4.2
 
-The mesh transform is similar to the warp and the cage transform, except that it's interface uses patches comprised of bezier curve segments. This transform mode is particularly useful for placing images and textures on curved surfaces:
+The mesh transform is similar to the warp and the cage transform, except that its interface uses patches comprised of bezier curve segments. This transform mode is particularly useful for placing images and textures on curved surfaces:
 
 .. figure:: /images/tools/Krita_transforms_mesh.png 
 
@@ -166,19 +166,21 @@ The mesh transform is similar to the warp and the cage transform, except that it
 
 This is a very keyboard shortcut heavy transform mode. When you start the transform you will see the overlay, which consists of several nodes that can be dragged around. You can drag on the segments between the nodes to curve them precisely, or drag on patches themselves to freely transform them. :kbd:`Ctrl` + :kbd:`Alt` + |mouseleft| + drag on nodes and segments will allow you to subdivide the mesh. For more precision, enable the control points in the tool options, so each bezier segment can be finetuned to your content.
 
-To assist in maintaining the curvature of a mesh, this tool has a concept of 'locked' transform. This mode is signalled by the lock icon in the cursor, and on by default. When this is enabled, adjusting one segment will also adjust it's neighbouring segment in another patch. You can press :kbd:`Shift` while dragging a segment or control point to turn this feature off, allowing for sharp angles in the mesh. After a sharp angle has been created, the locked mode will try to keep this as well.
+To assist in maintaining the curvature of a mesh, this tool has a concept of 'locked' transform. This mode is signalled by the lock icon in the cursor, and on by default. When this is enabled, adjusting one segment will also adjust its neighbouring segment in another patch. You can press :kbd:`Shift` while dragging a segment or control point to turn this feature off, allowing for sharp angles in the mesh. After a sharp angle has been created, the locked mode will try to keep this as well.
 
 Shortcuts
 ~~~~~~~~~
 
 Node or control point move
     |mouseleft| + drag any of the round points. The big ones are the 'nodes' which determine the corners of a patch, and the small ones are the 'control points', which determine the curvature for their associated segment.
+Unlocked node or control point move
+    :kbd:`Shift` +  |mouseleft| + drag on a node or control point.
 Locked segment move:
     |mouseleft| + drag on a segment. As explained above, this will adjust neighbouring segments as well, to keep the curvature of the node intact.
 Segment move
     :kbd:`Shift` +  |mouseleft| + drag on a segment of the mesh.
 Free patch deform:
-    |mouseleft| + drag on empty area inside the mesh. This will allow you to intuitively adjust a segment by just cliking anywhere and dragging. The whole segment will then adjust all its control points around the point of the cursor.
+    |mouseleft| + drag on an empty area inside the mesh. This will allow you to intuitively adjust a segment by just cliking anywhere and dragging. The whole segment will then adjust all its control points around the point of the cursor.
 Split mesh or Move/Delete split:
   - :kbd:`Ctrl` + :kbd:`Alt` + |mouseleft| + drag on a border segment to split the mesh
   - :kbd:`Ctrl` + :kbd:`Alt` + |mouseleft| + drag on a node to change the split
