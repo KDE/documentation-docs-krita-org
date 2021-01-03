@@ -1,0 +1,377 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"PO-Revision-Date: 2021-01-01 14:22\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
+"docs_krita_org_reference_manual___blending_modes___darken.pot\n"
+"X-Crowdin-File-ID: 9846\n"
+
+#: ../../reference_manual/blending_modes/darken.rst:1
+msgid ""
+"Page about the darken blending modes in Krita: Darken, Burn, Easy Burn, Fog "
+"Darken, Darker Color, Gamma Dark, Linear Burn and Shade."
+msgstr ""
+"本页面介绍了 Krita 的“变暗”混色模式分类，它包括了：变暗、加深、柔和加深、朦胧"
+"变暗、取较暗色、Gamma 变暗、线性加深和深色调等模式。"
+
+#: ../../reference_manual/blending_modes/darken.rst:16
+#: ../../reference_manual/blending_modes/darken.rst:75
+#: ../../reference_manual/blending_modes/darken.rst:79
+msgid "Darken"
+msgstr "变暗"
+
+#: ../../reference_manual/blending_modes/darken.rst:18
+msgid "Color Burn"
+msgstr "颜色加深"
+
+#: ../../reference_manual/blending_modes/darken.rst:18
+msgid "burn"
+msgstr "加深"
+
+#: ../../reference_manual/blending_modes/darken.rst:23
+msgid "Burn"
+msgstr "加深"
+
+#: ../../reference_manual/blending_modes/darken.rst:25
+msgid "A variation on Divide, sometimes called 'Color Burn' in some programs."
+msgstr ""
+"原名“加深”，中文版翻译为“颜色加深 (Photoshop)”，因为 Krita 的加深模式与 "
+"Photoshop 等软件的颜色加深模式等效。它是 :ref:`bm_divide` 的变种。"
+
+#: ../../reference_manual/blending_modes/darken.rst:27
+msgid ""
+"This inverts the bottom layer, then divides it by the top layer, and inverts "
+"the result. This results in a darkened effect that takes the colors of the "
+"lower layer into account, similar to the burn technique used in traditional "
+"darkroom photography."
+msgstr ""
+"将下层颜色数值反相，然后用上层颜色数值从结果中除去，最后把得到的结果反相。这"
+"会得到一种受下层颜色影响的变暗效果，类似于传统摄影暗房的加深技术。"
+
+#: ../../reference_manual/blending_modes/darken.rst:30
+msgid ""
+"1_{[1_Darker Gray(0.4, 0.4, 0.4)] / Lighter Gray(0.5, 0.5, 0.5)} = (-0.2, "
+"-0.2, -0.2) → Black(0, 0, 0)"
+msgstr ""
+"1 - {[1 - 深灰(0.4, 0.4, 0.4)] / 中间灰 (0.5, 0.5, 0.5)} = (-0.2, -0.2, "
+"-0.2) → 最小值为 0 → 黑 (0, 0, 0)"
+
+#: ../../reference_manual/blending_modes/darken.rst:35
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Burn_Gray_0.4_and_Gray_0.5_n.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Burn_Gray_0.4_and_Gray_0.5_n.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:35
+#: ../../reference_manual/blending_modes/darken.rst:42
+#: ../../reference_manual/blending_modes/darken.rst:47
+msgid "Left: **Normal**. Right: **Burn**."
+msgstr "左： **正常** ；右： **加深** 。"
+
+#: ../../reference_manual/blending_modes/darken.rst:37
+msgid ""
+"1_{[1_Light Blue(0.1608, 0.6274, 0.8274)] / Orange(1, 0.5961, 0.0706)} = "
+"(0.1608, 0.3749, -1.4448) → Green(0.1608, 0.3749, 0)"
+msgstr ""
+"1 - {[1 - 浅蓝 (0.1608, 0.6274, 0.8274)] / 橙 (1, 0.5961, 0.0706)} = "
+"(0.1608, 0.3749, -1.4448) → 最小值为 0 → 绿 (0.1608, 0.3749, 0)"
+
+#: ../../reference_manual/blending_modes/darken.rst:42
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Burn_Light_blue_and_Orange.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Burn_Light_blue_and_Orange.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:47
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Burn_Sample_image_with_dots.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Burn_Sample_image_with_dots.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:49
+#: ../../reference_manual/blending_modes/darken.rst:53
+msgid "Easy Burn"
+msgstr "柔和加深"
+
+#: ../../reference_manual/blending_modes/darken.rst:55
+msgid ""
+"Aims to solve issues with Color Burn blending mode by using a formula which "
+"falloff is similar to Dodge, but the falloff rate is softer. It is within "
+"the range of 0.0f and 1.0f unlike Color Burn mode."
+msgstr ""
+"本混色模式针对颜色加深模式的缺点进行了调整。它的公式中的光线衰减的工作模式类"
+"似于减淡模式，但衰减率更为柔和，在 0.0f 和 1.0f 的范围内，与颜色加深模式有区"
+"别。"
+
+#: ../../reference_manual/blending_modes/darken.rst:60
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Easy_Burn_Sample_image_with_dots.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Easy_Burn_Sample_image_with_dots.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:60
+msgid "Left: **Normal**. Right: **Easy Burn**."
+msgstr "左： **正常** ；右： **柔和加深** 。"
+
+#: ../../reference_manual/blending_modes/darken.rst:62
+msgid "Fog Darken"
+msgstr "朦胧变暗"
+
+#: ../../reference_manual/blending_modes/darken.rst:66
+msgid "Fog Darken (IFS Illusions)"
+msgstr "朦胧变暗 (IFS Illusions)"
+
+#: ../../reference_manual/blending_modes/darken.rst:68
+msgid ""
+"Darken the image in a way that there is a 'fog' in the end result. This is "
+"due to the unique property of fog darken in which midtones combined are "
+"lighter than non-midtones blend."
+msgstr ""
+"使图像变暗，且结果呈现出一种雾中的朦胧感。这是因为在本模式下中间色调合并后的"
+"数值比非中间色调混色后更浅。"
+
+#: ../../reference_manual/blending_modes/darken.rst:73
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Fog_Darken_Sample_image_with_dots.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Fog_Darken_Sample_image_with_dots.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:73
+msgid "Left: **Normal**. Right: **Fog Darken** (exactly the same as Addition)."
+msgstr "左： **正常** ； 右： **朦胧变暗**  (与相加模式完全一致)。"
+
+#: ../../reference_manual/blending_modes/darken.rst:81
+msgid ""
+"With the darken, the upper layer's colors are checked for their lightness. "
+"Only if they are darker than the underlying color on the lower layer, will "
+"they be visible."
+msgstr "比较上下两层的颜色数值的亮度，上层颜色只有在比下层颜色暗时才会显示。"
+
+#: ../../reference_manual/blending_modes/darken.rst:83
+msgid ""
+"Is Lighter Gray(0.5, 0.5, 0.5) darker than Darker Gray(0.4, 0.4, 0.4)? = "
+"(no, no, no) → Darker Gray(0.4, 0.4, 0.4)"
+msgstr ""
+"中间灰 (0.5, 0.5, 0.5) 比深灰暗吗 (0.4, 0.4, 0.4)? = (否, 否, 否) → 深灰 "
+"(0.4, 0.4, 0.4)"
+
+#: ../../reference_manual/blending_modes/darken.rst:88
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Darken_Gray_0.4_and_Gray_0.5_n.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Darken_Gray_0.4_and_Gray_0.5_n.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:88
+#: ../../reference_manual/blending_modes/darken.rst:95
+#: ../../reference_manual/blending_modes/darken.rst:100
+msgid "Left: **Normal**. Right: **Darken**."
+msgstr "左： **正常** ；右： **变暗** 。"
+
+#: ../../reference_manual/blending_modes/darken.rst:90
+msgid ""
+"Is Orange(1, 0.5961, 0.0706) darker than Light Blue(0.1608, 0.6274, 0.8274)? "
+"= (no, yes, yes) → Green(0.1608, 0.5961, 0.0706)"
+msgstr ""
+"橙 (1, 0.5961, 0.0706) 比浅蓝暗吗 (0.1608, 0.6274, 0.8274)? = (否, 是, 是) → "
+"绿 (0.1608, 0.5961, 0.0706)"
+
+#: ../../reference_manual/blending_modes/darken.rst:95
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Darken_Light_blue_and_Orange.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Darken_Light_blue_and_Orange.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:100
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Darken_Sample_image_with_dots.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Darken_Sample_image_with_dots.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:102
+#: ../../reference_manual/blending_modes/darken.rst:106
+msgid "Darker Color"
+msgstr "取较暗色"
+
+#: ../../reference_manual/blending_modes/darken.rst:111
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Darker_Color_Sample_image_with_dots.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Darker_Color_Sample_image_with_dots.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:111
+msgid "Left: **Normal**. Right: **Darker Color**."
+msgstr "左： **正常** ； 右 **较暗颜色** 。"
+
+#: ../../reference_manual/blending_modes/darken.rst:113
+#: ../../reference_manual/blending_modes/darken.rst:117
+msgid "Gamma Dark"
+msgstr "Gamma 变暗"
+
+#: ../../reference_manual/blending_modes/darken.rst:119
+msgid ""
+"Divides 1 by the upper layer, and calculates the end result using that as "
+"the power of the lower layer."
+msgstr "从 1 中除去上层颜色数值，然后把结果作为下层颜色数值的乘方。"
+
+#: ../../reference_manual/blending_modes/darken.rst:121
+msgid ""
+"Darker Gray(0.4, 0.4, 0.4)^[1 / Lighter Gray(0.5, 0.5, 0.5)] = Even Darker "
+"Gray(0.1600, 0.1600, 0.1600)"
+msgstr ""
+"深灰 (0.4, 0.4, 0.4) ^ [1 / 中间灰 (0.5, 0.5, 0.5)] = 极深灰 (0.1600, "
+"0.1600, 0.1600)"
+
+#: ../../reference_manual/blending_modes/darken.rst:126
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Gamma_Dark_Gray_0.4_and_Gray_0.5_n.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Gamma_Dark_Gray_0.4_and_Gray_0.5_n.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:126
+#: ../../reference_manual/blending_modes/darken.rst:133
+#: ../../reference_manual/blending_modes/darken.rst:138
+msgid "Left: **Normal**. Right: **Gamma Dark**."
+msgstr "左： **正常** ； 右： **Gamma 变暗** 。"
+
+#: ../../reference_manual/blending_modes/darken.rst:128
+msgid ""
+"Light Blue(0.1608, 0.6274, 0.8274)^[1 / Orange(1, 0.5961, 0.0706)] = "
+"Green(0.1608, 0.4575, 0.0683)"
+msgstr ""
+"浅蓝 (0.1608, 0.6274, 0.8274) ^ [1 / 橙 (1, 0.5961, 0.0706)] = 绿 (0.1608, "
+"0.4575, 0.0683)"
+
+#: ../../reference_manual/blending_modes/darken.rst:133
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Gamma_Dark_Light_blue_and_Orange.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Gamma_Dark_Light_blue_and_Orange.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:138
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Gamma_Dark_Sample_image_with_dots.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Gamma_Dark_Sample_image_with_dots.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:140
+#: ../../reference_manual/blending_modes/darken.rst:144
+msgid "Linear Burn"
+msgstr "线性加深"
+
+#: ../../reference_manual/blending_modes/darken.rst:146
+msgid ""
+"Adds the values of the two layers together and then subtracts 1. Seems to "
+"produce the same result as :ref:`bm_inverse_subtract`."
+msgstr ""
+"把上下两层的颜色数值相加后减去 1，效果和 :ref:`bm_inverse_subtract` 类似。"
+
+#: ../../reference_manual/blending_modes/darken.rst:148
+msgid ""
+"[Darker Gray(0.4, 0.4, 0.4) + Lighter Gray(0.5, 0.5, 0.5)]_1 = (-0.1000, "
+"-0.1000, -0.1000)  → Black(0, 0, 0)"
+msgstr ""
+"[深灰 (0.4, 0.4, 0.4) + 中间灰 (0.5, 0.5, 0.5)] - 1 = (-0.1000, -0.1000, "
+"-0.1000)  → 最小值为 0 → 黑 (0, 0, 0)"
+
+#: ../../reference_manual/blending_modes/darken.rst:153
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Linear_Burn_Gray_0.4_and_Gray_0.5.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Linear_Burn_Gray_0.4_and_Gray_0.5.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:153
+#: ../../reference_manual/blending_modes/darken.rst:160
+#: ../../reference_manual/blending_modes/darken.rst:165
+msgid "Left: **Normal**. Right: **Linear Burn**."
+msgstr "左： **正常** ； 右： **线性加深** 。"
+
+#: ../../reference_manual/blending_modes/darken.rst:155
+msgid ""
+"[Light Blue(0.1608, 0.6274, 0.8274) + Orange(1, 0.5961, 0.0706)]_1 = "
+"(0.1608, 0.2235, -0.1020) → Dark Green(0.1608, 0.2235, 0)"
+msgstr ""
+"[浅蓝 (0.1608, 0.6274, 0.8274) + 橙 (1, 0.5961, 0.0706)] - 1 = (0.1608, "
+"0.2235, -0.1020) → 最小值为 0 → 墨绿 (0.1608, 0.2235, 0)"
+
+#: ../../reference_manual/blending_modes/darken.rst:160
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Linear_Burn_Light_blue_and_Orange.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Linear_Burn_Light_blue_and_Orange.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:165
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Linear_Burn_Sample_image_with_dots.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Linear_Burn_Sample_image_with_dots.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:167
+msgid "Shade"
+msgstr "深色调"
+
+#: ../../reference_manual/blending_modes/darken.rst:171
+msgid "Shade (IFS Illusions)"
+msgstr "深色调 (IFS Illusions)"
+
+#: ../../reference_manual/blending_modes/darken.rst:173
+msgid ""
+"Basically, the blending mode only ends in shades of shades. This means that "
+"it's very useful for painting shading colors while still in the range of "
+"shades."
+msgstr ""
+"本混色模式混出的颜色大致上与基底色的色调保持一致，很适合为平涂的底色进行打"
+"影。"
+
+#: ../../reference_manual/blending_modes/darken.rst:179
+msgid ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Shade_Sample_image_with_dots.png"
+msgstr ""
+".. image:: images/blending_modes/darken/"
+"Blending_modes_Shade_Sample_image_with_dots.png"
+
+#: ../../reference_manual/blending_modes/darken.rst:179
+msgid "Left: **Normal**. Right: **Shade**."
+msgstr "左： **正常** ； 右： **深色调** 。"

@@ -1,0 +1,77 @@
+Useful Regexp when converting:
+
+----------
+menuchoice
+----------
+
+
+<span class="menuchoice">([\w\s]+)<\/span>
+
+\{\{Menuchoice\|([\w\s]+)\}\}
+
+to
+
+:guilabel:`\1`
+
+<span class="menuchoice">([\w\s]+)<\/span>
+
+to
+
+:menuselection:`\1`
+
+(When using menu selections, replace --> and -> to look like -->)
+
+---
+kbd
+---
+<kbd>([\w\s->]+)<\/kbd>
+
+to
+
+:kbd:`\1`
+
+
+--------------------------------
+inline references(internal links
+--------------------------------
+
+\[\[([\w\s->]+)\|[\w\s->]+\]\] 
+
+to
+
+:ref:`\1`
+
+------------------------------------
+quickly change file links to figures:
+------------------------------------
+
+\[\[File:([\w\s\.]+)\|([\w\s\.]+)\]\]
+
+.. figure:: /images/en/\1 \n\n   \2
+
+For blending modes:
+
+\[\[File\:([\w\s->.]+)\|thumb\|305px\|center\|([\w\s\:\.\'\*]+)]]
+
+{\|[\w\s\d\-\;\:\=\#\"]+\n\|\[\[File\:([\w\s.-]+)\]\]\n\|\-\n\|([\w\s\:\.\*\']+)\|\}
+
+.. figure:: /images/blending_modes/\1\n   :align: center\n\n   \2
+
+
+------------------------------------
+quickly change file links to images:
+------------------------------------
+
+\[\[File:([\d-\w\.]+)\]\]
+
+.. image:: /images/en/\1
+
+-----
+Bold
+-----
+
+'''([\w\s]+)'''
+
+to
+
+**\1**

@@ -1,0 +1,462 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"PO-Revision-Date: 2020-10-09 10:16+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: FFMpeg Chrome guilabel Flash menuselection high MKV\n"
+"X-POFile-SpellExtra: palettegen export baseline OSX FFMPeg VLC gif usr bin\n"
+"X-POFile-SpellExtra: Keka FFMPEG exe ffmpeg Krita FFmpeg Player mkv mp\n"
+"X-POFile-SpellExtra: ffmpegscreenshotURL ffmpegscreenshotspecifications\n"
+"X-POFile-SpellExtra: image ffmpegscreenshotpath images alt release shared\n"
+"X-POFile-SpellExtra: essentials Finder\n"
+
+#: ../../reference_manual/render_animation.rst:None
+msgid ""
+".. image:: images/ffmpeg_screenshot_path.png\n"
+"   :alt: FFmpeg path."
+msgstr ""
+".. image:: images/ffmpeg_screenshot_path.png\n"
+"   :alt: Localização do FFmpeg."
+
+#: ../../reference_manual/render_animation.rst:1
+msgid "How to use the render animation command in Krita."
+msgstr "Como usar o comando para desenhar uma animação no Krita."
+
+#: ../../reference_manual/render_animation.rst:13
+#: ../../reference_manual/render_animation.rst:18
+#: ../../reference_manual/render_animation.rst:43
+msgid "Render Animation"
+msgstr "Desenhar a Animação"
+
+#: ../../reference_manual/render_animation.rst:13
+msgid "Animation"
+msgstr "Animação"
+
+#: ../../reference_manual/render_animation.rst:20
+msgid ""
+"Render animation allows you to render your animation to an image sequence, "
+"``.gif``, ``.mp4``, ``.mkv``, or ``.ogg`` file. It replaces :guilabel:"
+"`Export Animation`."
+msgstr ""
+"O desenho da animação permite-lhe gerar uma sequência de imagens da sua "
+"animação para um ficheiro ``.gif``, ``.mp4``, ``.mkv`` ou ``.ogg``. "
+"Substitui a opção :guilabel:`Exportar a Animação`."
+
+#: ../../reference_manual/render_animation.rst:22
+msgid ""
+"For rendering to an animated file format, Krita will first render to a PNG "
+"sequence and then use FFmpeg, which is really good at encoding into video "
+"files, to render that sequence to an animated file format. The reason for "
+"this two-step process is that animation files can be really complex and "
+"really big, and this is the best way to allow you to keep control over the "
+"export process. For example, if your computer has a hiccup, and one frame "
+"saves out weird, first saving the image sequence allows you to only resave "
+"that one weird frame before rendering."
+msgstr ""
+"Para desenhar num formato de ficheiro animado, o Krita irá primeiro desenhar "
+"uma sequência de PNG's e depois irá usar o FFmpeg, que já é realmente bom na "
+"codificação de ficheiros de vídeo, para representar essa sequência num "
+"formato de ficheiros animado. A razão para esse processo em dois passos é "
+"que os ficheiros da animação podem ser realmente complexos e realmente "
+"grandes, sendo esta forma a que lhe permite manter melhor o controlo sobre o "
+"processo de exportação. Por exemplo, se o seu computador tiver um problema e "
+"uma imagem sair estranha, a gravação em primeiro lugar da sequência de "
+"imagens permite-lhe gravar de novo apenas essa imagem estragada antes de "
+"gerar a animação."
+
+#: ../../reference_manual/render_animation.rst:24
+msgid ""
+"This means that you will need to find a good place to stick your frames "
+"before you can start rendering. If you only do throwaway animations, you can "
+"use a spot on your hard-drive with enough room and select :guilabel:`Delete "
+"Sequence After Rendering`."
+msgstr ""
+"Isto significa que terá de encontrar um bom local onde colocar as suas "
+"imagens antes de iniciar o desenho. Se só cria animações descartáveis, "
+"poderá usar um local no seu disco rígido com bastante espaço e seleccionar a "
+"opção :guilabel:`Apagar a Sequência Após o Desenho`."
+
+#: ../../reference_manual/render_animation.rst:27
+msgid "Image Sequence"
+msgstr "Sequência de Imagens"
+
+#: ../../reference_manual/render_animation.rst:29
+msgid "Base Name"
+msgstr "Nome de Base"
+
+#: ../../reference_manual/render_animation.rst:30
+msgid ""
+"The base name of your image sequence. This will get suffixed with a number "
+"depending on the frame."
+msgstr ""
+"O nome de base da sua sequência de imagens. Isto irá obter um sufixo com um "
+"número que depende da imagem."
+
+#: ../../reference_manual/render_animation.rst:31
+msgid "File Format"
+msgstr "Formato do Ficheiro"
+
+#: ../../reference_manual/render_animation.rst:32
+msgid ""
+"The file format to export the sequence to. When rendering we enforce PNG. "
+"The usual export options can be modified with :guilabel:`...`."
+msgstr ""
+"O formato do ficheiro para o qual exportar a sequência. Ao desenhar, será "
+"forçado o uso do PNG. Podem-se modificar as opções de exportação normais com "
+"o :guilabel:`...`."
+
+#: ../../reference_manual/render_animation.rst:33
+msgid "Render Location"
+msgstr "Localização do Desenho"
+
+#: ../../reference_manual/render_animation.rst:34
+msgid ""
+"Where you render the image sequence to. Some people prefer to use a flash-"
+"drive or perhaps a harddrive that is fast."
+msgstr ""
+"Para onde será gravada a sequência de imagens. Algumas pessoas preferem usar "
+"um disco Flash ou um disco rígido que seja rápido."
+
+#: ../../reference_manual/render_animation.rst:35
+msgid "First Frame"
+msgstr "Primeira Imagem"
+
+#: ../../reference_manual/render_animation.rst:36
+msgid ""
+"The first frame of the range of frames you wish to adjust. Automatically set "
+"to the first frame of your current selection in the timeline. This is useful "
+"when you only want to re-render a little part."
+msgstr ""
+"A primeira imagem da gama de imagens que pretende ajustar. Configurada "
+"automaticamente com a primeira imagem da sua selecção actual na linha "
+"temporal. Isto é útil quando só pretende desenhar de novo uma pequena parte."
+
+#: ../../reference_manual/render_animation.rst:37
+msgid "Last Frame"
+msgstr "Última Imagem"
+
+#: ../../reference_manual/render_animation.rst:38
+msgid ""
+"As above, the last frame of the range of frames you wish to adjust. "
+"Automatically set to the last frame of your current selection in the "
+"timeline."
+msgstr ""
+"Como acontece acima, a última imagem da gama de imagens que pretende "
+"ajustar. Configurada automaticamente com a última imagem da sua selecção "
+"actual na linha temporal."
+
+#: ../../reference_manual/render_animation.rst:40
+msgid "Naming Sequence starts with"
+msgstr "A Sequência de Nomes começa em"
+
+#: ../../reference_manual/render_animation.rst:40
+msgid ""
+"The frames are named by using :guilabel:`Base Name`  above and adding a "
+"number for the frame. This allows you to set where the frame number starts, "
+"so rendering from 8 to 10 with starting point 3 will give you images named "
+"11 and 15. Useful for programs that don't understand sequences starting with "
+"0, or for precision output."
+msgstr ""
+"As imagens terão um nome baseado no :guilabel:`Nome de Base`  acima e "
+"adicionando o número da imagem. Isto permite-lhe definir onde começa o "
+"número da imagem, pelo que se desejar exportar a imagem 8 à 10, com um ponto "
+"inicial igual 3, irá ter as imagens de 11 a 13. É útil para os programas que "
+"não compreendam as sequências que comecem em 0 ou para resultados com "
+"precisão."
+
+#: ../../reference_manual/render_animation.rst:45
+msgid "Render As"
+msgstr "Desenhar Como"
+
+#: ../../reference_manual/render_animation.rst:46
+msgid ""
+"The file format to render to. All except GIF have extra options that can be "
+"manipulated via :guilabel:`...`."
+msgstr ""
+"O formato do ficheiro que será gerado. Todos os formatos, excepto o GIF, têm "
+"opções extra que poderão ser manipuladas com o :guilabel:`...`."
+
+#: ../../reference_manual/render_animation.rst:47
+msgid "File"
+msgstr "Ficheiro"
+
+#: ../../reference_manual/render_animation.rst:48
+msgid "Location and name of the rendered animation."
+msgstr "A localização e o nome da animação desenhada."
+
+#: ../../reference_manual/render_animation.rst:49
+msgid "FFmpeg"
+msgstr "FFmpeg"
+
+#: ../../reference_manual/render_animation.rst:50
+msgid ""
+"The location where your have FFmpeg. If you don't have this, Krita cannot "
+"render an animation. For proper GIF support, you will need FFmpeg 2.6, as we "
+"use its palettegen functionality."
+msgstr ""
+"A localização onde se encontra o FFmpeg. Se não o tiver, o Krita não "
+"conseguirá desenhar uma animação. Para o suporte adequado para GIF, será "
+"necessário o FFmpeg 2.6, já que é usada a sua função 'palettegen'."
+
+#: ../../reference_manual/render_animation.rst:52
+msgid "Delete Sequence After Rendering"
+msgstr "Apagar a Sequência Após o Desenho"
+
+#: ../../reference_manual/render_animation.rst:52
+msgid ""
+"Delete the prerendered image sequence after done rendering. This allows you "
+"to choose whether to try and save some space, or to save the sequence for "
+"when encoding fails."
+msgstr ""
+"Apaga a sequência de imagens pré-desenhada após o desenho. Isto permite-lhe "
+"escolher se deseja experimentar e poupar algum espaço ou gravar a sequência "
+"quando a codificação falha."
+
+#: ../../reference_manual/render_animation.rst:56
+msgid ""
+"Krita currently does not support rendering video with transparent elements, "
+"and will instead render them as black. To combat this, you can add in a "
+"fully colored, opaque layer at the bottom of the file before rendering."
+msgstr ""
+"O Krita não suporta de momento a geração de vídeos com elementos "
+"transparentes, representando-os como pretos. Para combater isto, poderá "
+"adicionar uma camada opaca colorida no fundo do ficheiro antes de desenhar."
+
+#: ../../reference_manual/render_animation.rst:59
+msgid "Setting Up Krita for Exporting Animations"
+msgstr "Configuração do Krita para Exportar as Animações"
+
+#: ../../reference_manual/render_animation.rst:61
+msgid ""
+"You will need to download an extra application and link it in Krita for it "
+"to work. The application is pretty big (50MB), so the Krita developers "
+"didn't want to bundle it with the normal application. The software that we "
+"will use is free and called FFmpeg. The following instructions will explain "
+"how to get it and set it up. The setup is a one-time thing so you won't have "
+"to do it again."
+msgstr ""
+"Terá de obter uma aplicação extra e associá-la ao Krita para funcionar. A "
+"aplicação é relativamente grande (50MB), sendo por isso que os programadores "
+"do Krita não o incluem com a aplicação normal. A aplicação que será usada é "
+"gratuita e chama-se FFmpeg. As seguintes instruções irão explicar como obtê-"
+"la e configurá-la. A configuração é algo que é feito uma única vez, sendo "
+"que não terá de o fazer de novo."
+
+#: ../../reference_manual/render_animation.rst:64
+msgid "Step 1 - Downloading FFmpeg"
+msgstr "Passo 1 - Obter o FFmpeg"
+
+#: ../../reference_manual/render_animation.rst:67
+#: ../../reference_manual/render_animation.rst:96
+msgid "For Windows"
+msgstr "Para o Windows"
+
+#: ../../reference_manual/render_animation.rst:69
+msgid "Open the FFmpeg `download page. <https://www.gyan.dev/ffmpeg/builds/>`_"
+msgstr ""
+"Abra a página de transferências do FFmpeg `aqui. <https://www.gyan.dev/"
+"ffmpeg/builds/>`_"
+
+#: ../../reference_manual/render_animation.rst:71
+msgid ""
+"Go to :guilabel:`release` section and choose the download link that says "
+"``ffmpeg-release-essentials.zip``."
+msgstr ""
+"Vá à secção :guilabel:`release` e escolha a ligação de transferência que diz "
+"``ffmpeg-release-essentials.zip``."
+
+#: ../../reference_manual/render_animation.rst:75
+msgid ""
+"**Don't** download the file which filename contains the word ``shared``. It "
+"won't work with Krita."
+msgstr ""
+"**Não** transfira o ficheiro cujo nome contém a palavra ``shared``. Não irá "
+"funcionar com o Krita."
+
+#: ../../reference_manual/render_animation.rst:77
+msgid ""
+"If the filename ends with ``.7z``, you can still use it, but then you need "
+"to have a program that can open 7zip archives (for example `7zip itself "
+"<https://www.gyan.dev/ffmpeg/builds/>`_). In case of a ``.zip`` file, you "
+"can open it just using the Windows file browser."
+msgstr ""
+"Se o nome do ficheiro terminar em ``.7z``, poderá usá-lo à mesma, só que irá "
+"necessitar de um programa que consiga abrir os pacotes do '7zip' (como por "
+"exemplo `próprio 7zip <https://www.gyan.dev/ffmpeg/builds/>`_). No caso de "
+"ser um ficheiro ``.zip``, poderá abrir o mesmo apenas com o explorador de "
+"ficheiros do Windows."
+
+#: ../../reference_manual/render_animation.rst:81
+#: ../../reference_manual/render_animation.rst:114
+msgid "For OSX"
+msgstr "Para o OSX"
+
+#: ../../reference_manual/render_animation.rst:83
+msgid ""
+"Please see the section above. However, FFmpeg is obtained from `here "
+"<https://evermeet.cx/ffmpeg/>`_ instead. Just pick the big green button on "
+"the left under the FFmpeg heading. You will also need an archiving utility "
+"that supports .7z, since FFmpeg provides their OSX builds in .7z format. If "
+"you don't have one, try something like `Keka <https://www.kekaosx.com>`_."
+msgstr ""
+"Por favor, veja a secção acima. Contudo, o FFmpeg é obtido a partir de `aqui "
+"<https://evermeet.cx/ffmpeg/>`_ em alternativa. Basta escolher o pequeno "
+"botão verde à esquerda debaixo do cabeçalho do FFmpeg. Irá também necessitar "
+"de um utilitário de descompressão de pacotes que suporte o .7z, dado que o "
+"'ffmpeg' oferece as suas versões para OSX no formato .7z. Se não tiver um "
+"utilitário desses, experimente algum como o `Keka <https://www.kekaosx."
+"com>`_."
+
+#: ../../reference_manual/render_animation.rst:85
+msgid ""
+"Alternatively you can find the smaller text under the big green button that "
+"says :guilabel:`Download as ZIP`. Then you should be able to extract it just "
+"using Finder."
+msgstr ""
+"Em alternativa, poderá encontrar o texto mais pequeno no botão verde grande "
+"que diz :guilabel:`Transferir como ZIP`. Depois deverá conseguir extraí-lo "
+"com o Finder."
+
+#: ../../reference_manual/render_animation.rst:88
+#: ../../reference_manual/render_animation.rst:119
+msgid "For Linux"
+msgstr "Para o Linux"
+
+#: ../../reference_manual/render_animation.rst:90
+msgid ""
+"FFmpeg can be installed from the repositories on most Linux systems. Version "
+"2.6 is required for proper GIF support, as we use the palettegen "
+"functionality."
+msgstr ""
+"O FFmpeg pode ser instalado a partir dos repositórios das maior parte dos "
+"sistemas Linux. É necessária a versão 2.6 para o suporte adequado para "
+"GIF's, dado que é usada a funcionalidade 'palettegen'."
+
+#: ../../reference_manual/render_animation.rst:93
+msgid "Step 2 - Unzipping and Linking to Krita"
+msgstr "Passo 2 - Descomprimir e Associar ao Krita"
+
+#: ../../reference_manual/render_animation.rst:98
+msgid ""
+"Once you've downloaded, go to the file location. Right click on the FFmpeg "
+"file, and select ``Extract All...``. Select the file destination, and rename "
+"the file to 'ffmpeg'."
+msgstr ""
+"Assim que tiver transferido, vá para a localização do ficheiro. Carregue com "
+"o botão direito sobre o ficheiro do FFmpeg e seleccione ``Extrair Tudo...``. "
+"Seleccione o destino do ficheiro, mudando o nome do ficheiro para 'ffmpeg'."
+
+#: ../../reference_manual/render_animation.rst:100
+msgid "Hint"
+msgstr "Sugestão"
+
+#: ../../reference_manual/render_animation.rst:102
+msgid ""
+"It is easiest to save the file under C: drive, but any location is fine."
+msgstr ""
+"É mais fácil gravar o ficheiro na unidade C:, mas qualquer local serve."
+
+#: ../../reference_manual/render_animation.rst:104
+msgid ""
+"Open Krita back up and go to :menuselection:`File --> Render Animation...`. "
+"Under ``Export > Video``, click the file icon next to FFmpeg. Select this "
+"file ``C:/ffmpeg/bin/ffmpeg.exe`` and click :guilabel:`OK`."
+msgstr ""
+"Abra o Krita de novo e vá a :menuselection:`Ficheiro --> Desenhar a "
+"Animação...`. Em ``Exportar > Vídeo``, carregue no ícone do ficheiro a "
+"seguir ao FFmpeg. Seleccione este ficheiro ``C:/ffmpeg/bin/ffmpeg.exe``  e "
+"carregue em :guilabel:`OK`."
+
+#: ../../reference_manual/render_animation.rst:109
+msgid "Tip"
+msgstr "Sugestão"
+
+#: ../../reference_manual/render_animation.rst:111
+msgid ""
+"If you have saved FFmpeg to a different location, choose ``<ffmpeg location>/"
+"ffmpeg/bin/ffmpeg.exe``."
+msgstr ""
+"Se tiver gravado o FFmpeg num local diferente, escolha ``<localização do "
+"ffmpeg>/ffmpeg/bin/ffmpeg.exe``."
+
+#: ../../reference_manual/render_animation.rst:116
+msgid ""
+"After downloading FFmpeg, you just need to extract it and then simply point "
+"to it in the FFmpeg location in Krita like ``/Users/user/Downloads/ffmpeg`` "
+"(assuming you downloaded and extracted the .7z file to /Users/user/"
+"Downloads)."
+msgstr ""
+"Depois de obter o FFmpeg, só precisa de o extrair e apontar para ele na "
+"localização do FFmpeg no Krita, como por exemplo ``/Utilizadores/utilizador/"
+"Transferências/ffmpeg`` (assumindo que transferiu e extraiu o ficheiro .7z "
+"para /Utilizadores/utilizador/Transferências)."
+
+#: ../../reference_manual/render_animation.rst:121
+msgid ""
+"FFmpeg is, if installed from the repositories, usually found in ``/usr/bin/"
+"ffmpeg``."
+msgstr ""
+"O FFmpeg está, se tiver sido instalado a partir dos repositórios, localizado "
+"normalmente em ``/usr/bin/ffmpeg``."
+
+#: ../../reference_manual/render_animation.rst:124
+msgid "Step 3 - Testing out an animation"
+msgstr "Passo 3 - Experimentar uma animação"
+
+#: ../../reference_manual/render_animation.rst:126
+msgid ""
+"ffmpeg.exe is what Krita uses to do all of its animation export magic. Now "
+"that it is hooked up, let us test it out."
+msgstr ""
+"O 'ffmpeg.exe' é o que o Krita usa para fazer toda a sua magia de exportação "
+"de animações. Agora que isso está tudo configurado, vamos experimentar."
+
+#: ../../reference_manual/render_animation.rst:128
+msgid ""
+"Let's make an animated GIF. In the Render Animation dialog, change the :"
+"guilabel:`Render As`  field to \"GIF image\". Choose the file location where "
+"it will save with the \"File\" menu below. I just saved it to my desktop and "
+"called it \"*export.gif*\". When it is done, you should be able to open it "
+"up and see the animation."
+msgstr ""
+"Vamos criar um GIF animado. Na janela para Desenhar a Animação, mude o "
+"campo :guilabel:`Desenhar Como` como \"imagem GIF\". Escolha a localização "
+"do ficheiro onde será gravada com o menu \"Ficheiro\" abaixo. No caso do "
+"autor, foi gravado no ecrã e atribuiu-se o nome \"*export.gif*\". Quando "
+"terminar, deverá ser possível abri-lo e ver a animação."
+
+#: ../../reference_manual/render_animation.rst:132
+msgid ""
+"By default, FFmpeg will render MP4 files with a too new codec, which means "
+"that Windows Media Player won't be able to play it. So for Windows, select "
+"\"baseline\" for the profile instead of \"high422\" before rendering."
+msgstr ""
+"Por omissão, o FFmpeg irá desenhar os ficheiros MP4 com um codificador "
+"bastante recente, o que significa que provavelmente o Windows Media Player "
+"não o conseguirá abrir. Por isso, no caso do Windows, seleccione o perfil "
+"\"baseline\" em vez do \"high422\" antes de o desenhar."
+
+#: ../../reference_manual/render_animation.rst:136
+msgid ""
+"OSX does not come with any software to play MP4 and MKV files. If you use "
+"Chrome for your web browser, you can drag the video file into that and the "
+"video should play. Otherwise you will need to get a program like VLC to see "
+"the video."
+msgstr ""
+"O OSX não vem com qualquer aplicação para ler ficheiros MP4 e MKV. Se usar o "
+"Chrome como navegador Web, poderá arrastar o ficheiro do vídeo para dentro "
+"dele e o vídeo deverá começar a reproduzir. Caso contrário, irá precisar de "
+"um programa como o VLC para ver o vídeo."
