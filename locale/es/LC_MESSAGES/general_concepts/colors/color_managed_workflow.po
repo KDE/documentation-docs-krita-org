@@ -4,14 +4,14 @@
 #
 # Sofia Priego <spriego@darksylvania.net>, %Y.
 # Automatically generated, 2019.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: "
-"docs_krita_org_general_concepts___colors___color_managed_workflow\n"
+"Project-Id-Version: docs_krita_org_general_concepts___colors___color_managed_w"
+"orkflow\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-08 02:28+0100\n"
-"PO-Revision-Date: 2020-10-06 21:18+0100\n"
+"PO-Revision-Date: 2021-01-09 21:49+0100\n"
 "Last-Translator: Sofia Priego <spriego@darksylvania.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 20.12.1\n"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:None
 msgid ".. image:: images/color_category/Krita_2_9_colormanagement_group1.png"
@@ -73,7 +73,7 @@ msgstr ".. image:: images/color_category/Kiki_cLUTprofiles.png"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:1
 msgid "How a color managed workflow works."
-msgstr ""
+msgstr "Cómo funciona un flujo de trabajo con gestión del color."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:12
 msgid "Color"
@@ -93,7 +93,7 @@ msgstr "OCIO"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:17
 msgid "Color Managed Workflow"
-msgstr ""
+msgstr "Flujo de trabajo con gestión del color"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:19
 msgid ""
@@ -212,17 +212,20 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:75
 msgid "For this purpose, we invented color management."
-msgstr ""
+msgstr "Para ello, inventamos la gestión del color."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:78
 msgid "What is color management?"
-msgstr "¿Qué es la gestión de colores?"
+msgstr "¿Qué es la gestión de color?"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:80
 msgid ""
 "Color management is, dryly put, a set of systems that tries to have the same "
 "color translate properly between color devices."
 msgstr ""
+"La gestión del color es, en pocas palabras, un conjunto de sistemas que"
+" intenta "
+"que el mismo color se traduzca correctamente entre dispositivos de color."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:82
 msgid ""
@@ -230,12 +233,17 @@ msgid ""
 "space XYZ. XYZ is a coordinate system that has a spot for all colors that "
 "the average human eye can see."
 msgstr ""
+"Por lo general, funciona tratando de convertir un color al espacio de color "
+"de referencia XYZ. XYZ es un sistema de coordenadas que tiene un lugar "
+"para todos los colores que el ojo humano promedio puede ver."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:84
 msgid ""
 "From XYZ it can then be translated back into another device space, such as "
 "RGB (for screens), or CMYK (for printers)."
 msgstr ""
+"Desde XYZ se puede volver a traducir a otro espacio de dispositivo, como "
+"RGB (para pantallas) o CMYK (para impresoras)."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:86
 msgid ""
@@ -243,6 +251,9 @@ msgid ""
 "have **lcms2**, which deal with ICC profiles, and on the other, we have "
 "**OCIO**, which deal with LUT color management."
 msgstr ""
+"Krita dispone de dos sistemas dedicados a la gestión de color. Por un lado "
+"tenemos **lcms2**, que trata con perfiles ICC. Por otro, **OCIO**, que "
+"trata con la gestión de color LUT."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:88
 msgid ""
@@ -254,7 +265,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:90
 msgid "Within both we can identify the following color spaces:"
-msgstr ""
+msgstr "Dentro de ambos podemos identificar los siguientes espacios de color:"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:93
 msgid ""
@@ -275,11 +286,11 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:94
 msgid "Device spaces"
-msgstr ""
+msgstr "Espacios de dispositivo"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:96
 msgid "Working spaces"
-msgstr ""
+msgstr "Espacios de trabajo"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:97
 msgid ""
@@ -288,10 +299,15 @@ msgid ""
 "calculations in, which programs like Krita do often. It's therefore "
 "recommended to have a working space profile for your image."
 msgstr ""
+"Estos se proporcionan junto a Krita para ICC, y se pueden descargar del "
+"sitio web de OCIO para OCIO. Los espacios de trabajo son particularmente "
+"interesantes para hacer cálculos de color en ellos, lo que suelen hacer "
+"programas como Krita. Por ello se recomienda disponer de un perfil de "
+"trabajo para las imágenes."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:99
 msgid "Aesthetic or Look spaces"
-msgstr ""
+msgstr "Espacios estéticos o de aspecto"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:99
 msgid ""
@@ -299,10 +315,13 @@ msgid ""
 "an image. Krita doesn't deliver Look profiles for ICC, nor does it yet "
 "support Look spaces for OCIO."
 msgstr ""
+"Estos son espacios especiales que se han deformado para dar un cierto "
+"aspecto a una imagen. Krita no distribuye perfiles de aspecto para ICC, "
+"ni tampoco permite todavía espacios de aspecto para OCIO."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:102
 msgid "Color managed workflow"
-msgstr ""
+msgstr "Flujo de trabajo con gestión del color"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:104
 msgid ""
@@ -313,7 +332,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:110
 msgid ".. image:: images/color_category/Krita-colormanaged-workflow_text.svg"
-msgstr ""
+msgstr ".. image:: images/color_category/Krita-colormanaged-workflow_text.svg"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:110
 msgid ""
@@ -387,12 +406,13 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:127
 msgid "So what does this mean?"
-msgstr ""
+msgstr "Entonces, ¿qué significa esto?"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:133
 msgid ""
 ".. image:: images/color_category/Krita-colormanaged-workflow_krita_text.svg"
 msgstr ""
+".. image:: images/color_category/Krita-colormanaged-workflow_krita_text.svg"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:133
 msgid ""
@@ -511,7 +531,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:169
 msgid "cLUT profiles"
-msgstr ""
+msgstr "Perfiles cLUT"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:171
 msgid ""
@@ -523,7 +543,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:174
 msgid "Perceptual"
-msgstr ""
+msgstr "Perceptivo"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:174
 msgid ""
@@ -536,7 +556,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:177
 msgid "Absolute Colorimetric"
-msgstr ""
+msgstr "Colorimétrico absoluto"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:177
 msgid ""
@@ -548,7 +568,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:180
 msgid "Relative Colorimetric"
-msgstr ""
+msgstr "Colorimétrico relativo"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:180
 msgid ""
@@ -562,7 +582,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:183
 msgid "Saturation"
-msgstr ""
+msgstr "Saturación"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:183
 msgid ""
@@ -692,7 +712,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:237
 msgid "In summary"
-msgstr ""
+msgstr "En resumen"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:239
 msgid "Krita has two modes of color management:"
@@ -703,14 +723,16 @@ msgid ""
 "ICC works in terms of spaces relative to the CIEXYZ space, and requires an "
 "ICC profile."
 msgstr ""
+"ICC trabaja en términos de espacios relativos al espacio CIEXYZ y requiere "
+"un perfil ICC."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:242
 msgid "OCIO works in terms of interpretation, and makes use of LUTs."
-msgstr ""
+msgstr "OCIO trabaja en términos de interpretación y hace uso de LUT."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:243
 msgid "both can be made with a colorimeter."
-msgstr ""
+msgstr "Ambas cosas se pueden hacer con un colorímetro."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:244
 msgid ""
@@ -770,6 +792,9 @@ msgid ""
 "No amount of color management in the world can make the image on your screen "
 "and the image out of the printer have 100% the same color."
 msgstr ""
+"Ninguna gestión del color del mundo puede hacer que la imagen en la pantalla"
+" y la "
+"imagen que sale de la impresora tengan el mismo color al 100%."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:263
 msgid "Exporting"
@@ -780,16 +805,21 @@ msgid ""
 "When you have finished your image and are ready to export it, you can modify "
 "the color space to optimize it:"
 msgstr ""
+"Cuando haya terminado la imagen y esté listo para exportarla, puede modificar "
+"el espacio de color para optimizarlo:"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:267
 msgid "If you are preparing an image for the web:"
-msgstr ""
+msgstr "Si está preparando una imagen para la web:"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:269
 msgid ""
 "If you use 16bit color depth or higher, convert the image to 8bit color "
 "depth. This will make the image much smaller."
 msgstr ""
+"Si usa una profundidad de color de 16 bits o superior, convierta la imagen "
+"a una profundidad de color de 8 bits. Esto hará que la imagen sea mucho "
+"menor."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:271
 msgid ""
@@ -802,7 +832,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:273
 msgid "If it's a gray-scale image, convert it to gray-scale."
-msgstr ""
+msgstr "Si es una imagen en escala de grises, conviértala a escala de grises."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:274
 msgid ""
@@ -824,7 +854,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:281
 msgid "If you are preparing for print:"
-msgstr ""
+msgstr "Si la está preparando para imprimir:"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:283
 msgid ""
@@ -832,12 +862,17 @@ msgid ""
 "actual custom profile of your screen, if not, convert it to something like "
 "Adobe RGB, sRGB or Rec. 2020."
 msgstr ""
+"Es de esperar que haya creado la imagen en un perfil de espacio de trabajo "
+"en lugar del perfil personalizado real de la pantalla. En caso contrario, "
+"conviértala a algo similar a Adobe RGB, sRGB o Rec. 2020."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:284
 msgid ""
 "Check with the printer what kind of image they expect. Maybe they expect "
 "sRGB color space, or perhaps they have their own profile."
 msgstr ""
+"Compruebe qué tipo de imagen espera la impresora. Quizá espera un espacio "
+"de color sRGB, o quizá disponga de su propio perfil."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:287
 msgid "Interaction with other applications"
@@ -853,6 +888,9 @@ msgid ""
 "combination with Blender's color management, you can try to have it use "
 "Blender's OCIO config."
 msgstr ""
+"Si desea usar la funcionalidad OCIO de Krita, en particular en combinación "
+"con la gestión de color de Blender, puede intentar que use la configuración "
+"OCIO de Blender."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:294
 msgid ""
@@ -878,13 +916,16 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:303
 msgid "Example workflows"
-msgstr ""
+msgstr "Flujos de trabajo de ejemplo"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:305
 msgid ""
 "Here are some example workflows to get a feeling of how your color "
 "management workflow may look like."
 msgstr ""
+"A continuación se muestran algunos ejemplos de flujos de trabajo para "
+"que se haga una idea de cómo podrías ser su flujo de trabajo de gestión "
+"de color."
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:307
 msgid ""
@@ -896,7 +937,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:310
 msgid "Webcomic"
-msgstr ""
+msgstr "Cómic web"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:317
 #: ../../general_concepts/colors/color_managed_workflow.rst:339
@@ -914,7 +955,7 @@ msgstr "El perfil de su pantalla (se escogen los colores de la pantalla)."
 #: ../../general_concepts/colors/color_managed_workflow.rst:341
 #: ../../general_concepts/colors/color_managed_workflow.rst:359
 msgid "Workingspace"
-msgstr ""
+msgstr "Espacio de trabajo"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:320
 msgid ""
@@ -968,7 +1009,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:333
 msgid "Print"
-msgstr ""
+msgstr "Imprimir"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:342
 msgid "sRGB or Rec. 2020 if you can afford the bit-depth being 16bit."
@@ -1081,3 +1122,6 @@ msgid ""
 "`Basic overview of color management from ArgyllCMS manual <https://www."
 "argyllcms.com/doc/ColorManagement.html>`_."
 msgstr ""
+"`Descripción general básica de la gestión del color del manual ArgyllCMS <"
+"https://www."
+"argyllcms.com/doc/ColorManagement.html>`_."
