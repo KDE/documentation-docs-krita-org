@@ -20,7 +20,7 @@ Drawing Tablets
 This page is about drawing tablets, what they are, how they work, and
 where things can go wrong.
 
-What are tablets?
+What are Tablets?
 -----------------
 
 Drawing with a mouse can be unintuitive and difficult compared to pencil
@@ -46,6 +46,13 @@ more interesting strokes.
     Sometimes, people confuse finger-touch styluses with a proper tablet. You can tell the difference because a drawing tablet stylus usually has a pointy nib, while a stylus made for finger-touch has a big rubbery round nib, like a finger. These tablets may not give good results and a pressure-sensitive tablet is recommended.
     
     .. image:: /images/Krita_tablet_stylus.png
+
+Supported Tablets
+-----------------
+
+Supported tablets are owned by Krita developers themselves so they can reliably diagnose and fix bugs. :ref:`We maintain a list of those here <list_supported_tablets>`.
+
+If you're looking for information about iPad or Android tablets, :ref:`look here <krita_android>`.
 
 Drivers and Pressure Sensitivity
 --------------------------------
