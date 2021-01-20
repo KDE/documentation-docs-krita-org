@@ -557,6 +557,8 @@ Can I use Krita commercially?
 
 Yes. What you create with Krita is your sole property. You own your work and can license your art however you want. Krita’s GPL license applies to Krita’s source code. Krita can be used commercially by artists for any purpose, by studios to make concept art, textures, or vfx, by game artists to work on commercial games, by scientists for research, and by students in educational institutions.
 
+You can also make videos or stream your desktop with Krita's interface visible (which can be used to make art tutorials or timelapses).
+
 If you modify Krita itself, and distribute the result, you have to share your modifications with us. Krita’s GNU GPL license guarantees you this freedom. Nobody is ever permitted to take it away.
 
 .. _krita_android:
