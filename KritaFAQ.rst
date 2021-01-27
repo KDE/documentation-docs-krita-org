@@ -565,7 +565,7 @@ If you modify Krita itself, and distribute the result, you have to share your mo
 Can I get Krita for iPad? for Android?
 --------------------------------------
 
-Not for iOS or iPadOS at this point in time. Android is being worked on, but it will not have a phone or tablet, but the same desktop ui as always.
+    Not for iOS or iPadOS at this point in time: there are `problems in any case with putting an application licensed under the GNU Public License V3 in the iOS App Store https://www.fsf.org/news/2010-05-app-store-compliance`_. Krita for Android is currently in beta `in the Google Play Store https://play.google.com/store/apps/details?id=org.krita`_ F-Droid is coming.
 
 Who translates Krita
 --------------------
