@@ -182,8 +182,6 @@ You do not have to set environment variables in order to run Krita.
 
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_008-running-success_by-deevad.jpg
 
-Environment variables are never permanent. So we need to configure the system to set them each time you login. To set them at any login, write them with your favorite text editor at the end of your :file:`~/.profile` file (on certain distributions, the profile is named xprofile, check the hidden files in your :file:`home/{your-user-name}` folder).
-
 Updating
 ~~~~~~~~
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_009-want-update_by-deevad.jpg
