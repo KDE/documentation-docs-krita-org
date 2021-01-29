@@ -1,5 +1,5 @@
 .. meta::
-   :description:
+   :description property=og\:description:
         How AutoSave and Backup Files Work in Krita.
 
 .. metadata-placeholder

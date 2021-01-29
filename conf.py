@@ -242,6 +242,8 @@ html_context = {
     'commit' : gitcommitfriendly
 }
 
+html_last_updated_fmt = '%Y-%m-%dT%H:%M:%S'
+
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
