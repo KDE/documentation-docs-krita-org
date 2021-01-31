@@ -14,7 +14,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:url" content="{{ theme_canonical_url }}{{ pagename }}.html" />
   <meta property="og:title" name="title" content="{{title}}" />
   <meta property="og:site-name" content="{{project}}" />
   <meta property="og:type" content="article" />
@@ -39,10 +38,13 @@
   {# FAVICON #}
   {% if favicon %}
     <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
+    
   {% endif %}
   {# CANONICAL URL #}
   {% if theme_canonical_url %}
     <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
+    <meta property="og:url" content="{{ theme_canonical_url }}{{ pagename }}.html" />
+    <meta property="og:image" content="{{ theme_canonical_url }}{{ pathto('_static/' + logo, 1) }}" />
   {% endif %}
 
   {# CSS #}
@@ -113,7 +115,7 @@
        
            <a href="{{ pathto(master_doc) }}" class="icon icon-home">
 
-			<img src="{{ pathto('_static/images/sidebar-logo.png' , 1) }}" class="logo" alt="Logo"/>
+			<img src="{{ pathto('_static/' + logo, 1) }}" class="logo" alt="Logo"/>
            	
            <!--	{{  project  }} -->
 
