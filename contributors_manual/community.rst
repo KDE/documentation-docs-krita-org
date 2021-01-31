@@ -46,6 +46,8 @@ Krita is part of the larger KDE community. The KDE® Community is a free softwar
 
 The Krita Foundation was created to support development of Krita. The Krita Foundation has sponsored Dmitry’s work on Krita since 2013.
 
+.. _internet_relay_chat:
+
 Internet Relay Chat
 -------------------
 

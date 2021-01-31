@@ -522,7 +522,9 @@ Like so::
     | with a pipe
     | symbol
 
-We don't actually use this anywhere in the manual.
+This is generally not used in the manual, and should only be used where it is
+absolutely required to represent content that needs exact formatting, but never
+merely for aesthetic reasons.
 
 Glossaries, Terms and Index
 ---------------------------

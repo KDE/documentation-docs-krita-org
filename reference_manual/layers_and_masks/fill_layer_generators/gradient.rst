@@ -16,7 +16,7 @@
 Gradient Fill
 -------------
 
-.. versionadded:: 4.4
+.. versionadded:: 4.4.2
 
 Fills the layer with a gradient in the same way as the gradient tool does.
 

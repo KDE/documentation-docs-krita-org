@@ -199,8 +199,9 @@ Not recommended when you don't know what a branch is (see :ref:`merge-request-ed
 
         # install the python3-sphinx package for your system. For example for Ubuntu:
         sudo apt install python3-sphinx
-        # make sure everything is correct
+        # build the manual (reports potential errors, allows to inspect changes in the browser)
         make html
+        # make sure everything is correct
         git status
         git diff
         # add all of the files
@@ -232,7 +233,7 @@ Guidelines for new merge requests
 
 #. Unless your reviewers tell you otherwise, check :guilabel:`Squash commits when merge request is accepted`. The first line of the commit message will come from the :guilabel:`Title` of your merge request and the rest of it will be taken from the :guilabel:`Description` of the merge request.
 
-#. When you finish creating your merge request, go to IRC and ask someone with push access to add the ``Needs Review`` label on your merge request.
+#. When you finish creating your merge request, go to IRC (see :ref:`internet_relay_chat`) and ask someone with push access to add the ``Needs Review`` label on your merge request.
 
 #. You might get feedback on your merge request if it has mistakes. Just fix the mistakes in your branch in one of the following ways.
 
@@ -250,6 +251,13 @@ For more detailed information, check out :ref:`forking_gitlab` in the technical 
 .. note::
 
     At the time of writing this guide setting labels on merge requests is only possible by contributors with write access to the official repository. (If you don't know what that means, you're most probably not one of them). Because of that, when you create or change your merge request you need to get on IRC (see :ref:`the_krita_community`) and ask someone to label it for you.
+
+Building the manual in the command line
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For those that first want to try out some changes before embarking on a merge
+request right away (and already know how to use git and the command line) this
+is described as part of step 5. in :ref:`merge-request-terminal`.
 
 
 General philosophy

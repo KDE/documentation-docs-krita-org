@@ -336,6 +336,20 @@ Windows: Krita's window is semi-transparent
 
 Chances are you are using an NVidia GPU. Due to a bug in Nvidia's driver that we haven't been able to workaround yet, sometimes Krita's window will be transparent or semi-transparent. The solution is to enable the Angle renderer in Krita's Settings dialog. Open the :menuselection:`Settings` menu (Press Alt-N if the menubar is not visible and your system is in English), then open the :guilabel:`Configure Krita` dialog. In the dialog window select the :guilabel:`Display` page and select the Angle renderer in the :guilabel:`Preferred Renderer` combobox. Restart Krita.
 
+Why are there ampersand (&) characters in some docker titles?
+-------------------------------------------------------------
+
+This is a bug in one of the third party libraries Krita uses (and consequently
+has no direct influence over), where letters that should actually be underlined
+(they point out keyboard shortcuts that can be used when the
+:menuselection:`Settings --> Docker` menu is open) are instead prepended with an
+ampersand (&).
+
+This bug only occurs with specific system configurations (it's related to the "Fusion" style)
+and/or in Krita packages obtained from third parties (e.g. in some Linux distributions).
+
+If you are on Linux the best way to resolve this is to use an official package from `krita.org <https://krita.org>`_, such as the
+AppImage, Snap/Flatpak or PPA releases that are officially provided on the `download page <https://krita.org/download/krita-desktop/>`_.
 
 Tablets
 =======
