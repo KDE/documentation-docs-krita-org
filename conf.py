@@ -213,7 +213,7 @@ html_logo = './theme/static/images/sidebar-logo.png'
 
 # html canonical value:
 
-html_baseurl = os.getenv('SITE_HOST', '')+"/"+language
+html_baseurl = os.getenv('SITE_HOST', '')+language
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
