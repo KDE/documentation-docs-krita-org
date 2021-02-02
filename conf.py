@@ -211,6 +211,9 @@ html_favicon = './theme/static/images/favicon.ico'
 
 html_logo = './theme/static/images/sidebar-logo.png'
 
+# html canonical value:
+
+html_baseurl = os.getenv('SITE_HOST', '')+"/"+language
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -218,7 +221,8 @@ html_logo = './theme/static/images/sidebar-logo.png'
 html_theme_options = {
 	'sticky_navigation': True,
 	'collapse_navigation': True,
-	'prev_next_buttons_location': 'bottom'
+	'prev_next_buttons_location': 'bottom',
+    'canonical_url': html_baseurl
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
