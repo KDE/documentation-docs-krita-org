@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"POT-Creation-Date: 2021-02-03 02:33+0100\n"
 "PO-Revision-Date: 2020-04-19 16:14-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -619,8 +619,10 @@ msgid ""
 "# install the python3-sphinx package for your system. For example for "
 "Ubuntu:\n"
 "sudo apt install python3-sphinx\n"
-"# make sure everything is correct\n"
+"# build the manual (reports potential errors, allows to inspect changes in "
+"the browser)\n"
 "make html\n"
+"# make sure everything is correct\n"
 "git status\n"
 "git diff\n"
 "# add all of the files\n"
@@ -641,7 +643,7 @@ msgstr ""
 "# あなたのリモートブランチに変更を反映する\n"
 "git push"
 
-#: ../../contributors_manual/krita_manual_readme.rst:213
+#: ../../contributors_manual/krita_manual_readme.rst:214
 #, fuzzy
 #| msgid ""
 #| "Finally, go to the website of the original repository (make sure you're "
@@ -659,11 +661,11 @@ msgstr ""
 "ます。フォークリポジトリと正しいブランチを選択し、新しいマージリクエストを作"
 "成します。入力項目については ref:`new-merge-request` を参照してください。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:219
+#: ../../contributors_manual/krita_manual_readme.rst:220
 msgid "Guidelines for new merge requests"
 msgstr "新しいマージリクエスト提出のガイドライン"
 
-#: ../../contributors_manual/krita_manual_readme.rst:221
+#: ../../contributors_manual/krita_manual_readme.rst:222
 msgid ""
 "Your commit messages should conform to standards explained here: `How to "
 "Write a Git Commit Message <https://chris.beams.io/posts/git-commit/>`_"
@@ -671,7 +673,7 @@ msgstr ""
 "コミットメッセージは、次に説明する標準に従ってください: `How to Write a Git "
 "Commit Message <https://chris.beams.io/posts/git-commit/>`_"
 
-#: ../../contributors_manual/krita_manual_readme.rst:223
+#: ../../contributors_manual/krita_manual_readme.rst:224
 msgid ""
 ":guilabel:`Title` and :guilabel:`Description` should explain what changes "
 "did you make and why did you make them, just like a commit message, so "
@@ -681,7 +683,7 @@ msgstr ""
 "なたが行った変更とその理由を説明すべきですので、上記リンクのガイドラインに"
 "従ってください。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:225
+#: ../../contributors_manual/krita_manual_readme.rst:226
 #, fuzzy
 #| msgid ""
 #| ":guilabel:`Target` should point to ``draft``, unless your changes contain "
@@ -691,7 +693,7 @@ msgstr ""
 "あなたの変更がタイプミスの修正だけでない限り、:guilabel:`Target` は「draft」"
 "を選択するべきです。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:227
+#: ../../contributors_manual/krita_manual_readme.rst:228
 msgid ""
 "If you're sure the merge request will demand some changes later, start the "
 "title of your merge request with :code:`[WIP]`."
@@ -699,7 +701,7 @@ msgstr ""
 "マージリクエストの内容が、後で変更を必要とすることが確実な場合は、マージリク"
 "エストのメッセージタイトルを :code:`[WIP]` で始めます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:229
+#: ../../contributors_manual/krita_manual_readme.rst:230
 msgid ""
 "Make sure you checked :guilabel:`Allow commits from members who can merge to "
 "the target branch.` -- it is often needed for technical reasons that merge "
@@ -718,7 +720,7 @@ msgstr ""
 "チェックボックスをオンにして、レビュー担当者が Rebase を行えるようにしてくだ"
 "さい。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:231
+#: ../../contributors_manual/krita_manual_readme.rst:232
 msgid ""
 "You can safely check :guilabel:`Delete source branch when merge request is "
 "accepted` in most cases."
@@ -726,7 +728,7 @@ msgstr ""
 "多くの場合、:guilabel:`Delete source branch when merge request is accepted`  "
 "をチェックしても大丈夫です。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:233
+#: ../../contributors_manual/krita_manual_readme.rst:234
 msgid ""
 "Unless your reviewers tell you otherwise, check :guilabel:`Squash commits "
 "when merge request is accepted`. The first line of the commit message will "
@@ -738,16 +740,21 @@ msgstr ""
 "なたのマージリクエストの :guilabel:`Title` から文章がコピーされ、残りはマージ"
 "リクエストの :guilabel:`Description` からコピーされます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:235
+#: ../../contributors_manual/krita_manual_readme.rst:236
+#, fuzzy
+#| msgid ""
+#| "When you finish creating your merge request, go to IRC and ask someone "
+#| "with push access to add the ``Needs Review`` label on your merge request."
 msgid ""
-"When you finish creating your merge request, go to IRC and ask someone with "
-"push access to add the ``Needs Review`` label on your merge request."
+"When you finish creating your merge request, go to IRC (see :ref:"
+"`internet_relay_chat`) and ask someone with push access to add the ``Needs "
+"Review`` label on your merge request."
 msgstr ""
 "マージリクエストの作成が完了したら IRC にアクセスして、プッシュ権限を持つユー"
 "ザに「Needs Review(レビューが必要)」というラベルをマージリクエストに追加する"
 "ように依頼します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:237
+#: ../../contributors_manual/krita_manual_readme.rst:238
 msgid ""
 "You might get feedback on your merge request if it has mistakes. Just fix "
 "the mistakes in your branch in one of the following ways."
@@ -755,7 +762,7 @@ msgstr ""
 "マージリクエストに誤りがある場合は、フィードバックを受けることがあります。以"
 "下のいずれかの方法で、あなたのブランチの誤りを修正してください。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:239
+#: ../../contributors_manual/krita_manual_readme.rst:240
 #, fuzzy
 #| msgid ""
 #| "If you want to use :guilabel:`Edit` mode, just go to :guilabel:`Changes` "
@@ -770,7 +777,7 @@ msgstr ""
 "`Changes` 項目に移動し、鉛筆のアイコン( `Edit` と書かれたツールチップがある)"
 "をクリックして、もう一度 Edit モードを使用します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:241
+#: ../../contributors_manual/krita_manual_readme.rst:242
 msgid ""
 "If you want to use :guilabel:`WebIDE` mode, go to your fork, select the "
 "branch your changes are on and go to the WebIDE."
@@ -778,7 +785,7 @@ msgstr ""
 ":guilabel:`WebIDE` モードを使用したい場合は、あなたのフォークリポジトリに移動"
 "し、変更したブランチを選択して WebIDE を選択します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:243
+#: ../../contributors_manual/krita_manual_readme.rst:244
 msgid ""
 "If you edit files on your computer and work with terminal, make sure you're "
 "on the correct branch and push your changes - gitlab will update your merge "
@@ -788,7 +795,7 @@ msgstr ""
 "ンチにいることを確認して、変更をリポジトリにプッシュしてください。Gitlab は公"
 "式リポジトリへのマージリクエストを自動的に更新します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:245
+#: ../../contributors_manual/krita_manual_readme.rst:246
 msgid ""
 "After making changes, make sure you ask someone to change the label to "
 "``Needs Review`` again."
@@ -796,14 +803,14 @@ msgstr ""
 "変更後はラベルをもう一度「Needs Review」(レビューが必要)に変更するように依頼"
 "してください。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:248
+#: ../../contributors_manual/krita_manual_readme.rst:249
 msgid ""
 "For more detailed information, check out :ref:`forking_gitlab` in the "
 "technical section."
 msgstr ""
 "詳細については、技術編である :ref:`forking_gitlab` を確認してください。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:252
+#: ../../contributors_manual/krita_manual_readme.rst:253
 msgid ""
 "At the time of writing this guide setting labels on merge requests is only "
 "possible by contributors with write access to the official repository. (If "
@@ -819,10 +826,21 @@ msgstr ""
 "セスして、誰かにラベルを付けてもらう必要があります。"
 
 #: ../../contributors_manual/krita_manual_readme.rst:256
+msgid "Building the manual in the command line"
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_readme.rst:258
+msgid ""
+"For those that first want to try out some changes before embarking on a "
+"merge request right away (and already know how to use git and the command "
+"line) this is described as part of step 5. in :ref:`merge-request-terminal`."
+msgstr ""
+
+#: ../../contributors_manual/krita_manual_readme.rst:264
 msgid "General philosophy"
 msgstr "全体的な指針"
 
-#: ../../contributors_manual/krita_manual_readme.rst:258
+#: ../../contributors_manual/krita_manual_readme.rst:266
 msgid ""
 "This is for determining what is an appropriate writing style. A writing "
 "style, whether we consider its practical or aesthetic qualities, is usually "
@@ -833,11 +851,11 @@ msgstr ""
 "のであれ、通常は目標や一般的な哲学によって支えられています。マニュアルで何を"
 "達成したいのでしょうか、誰を対象としているのでしょうか。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:261
+#: ../../contributors_manual/krita_manual_readme.rst:269
 msgid "Demographics and target audience(s)"
 msgstr "人口構成と対象読者"
 
-#: ../../contributors_manual/krita_manual_readme.rst:263
+#: ../../contributors_manual/krita_manual_readme.rst:271
 msgid ""
 "We cannot talk about a demographic in the sense that we know all Krita users "
 "are 55 year old men. Krita is used by a hugely different amount of people, "
@@ -847,27 +865,27 @@ msgstr ""
 "人口統計について話すことはできません。Krita は非常に多くの人に使われています"
 "が、私たちはユーザ層が多様であることを誇りに思っています。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:265
+#: ../../contributors_manual/krita_manual_readme.rst:273
 msgid "Despite that, we know a couple of things about our users:"
 msgstr "それにも関わらず、私たちはユーザについていくつかのことを知っています。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:267
+#: ../../contributors_manual/krita_manual_readme.rst:275
 msgid "They are artists. This is explicitly the type of users that we target."
 msgstr "彼らはアーティストです。これは対象とするユーザの明確な特徴です。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:269
+#: ../../contributors_manual/krita_manual_readme.rst:277
 msgid "Therefore, we know they prefer pretty pictures."
 msgstr "アーティストですから、きれいな画像を好みます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:270
+#: ../../contributors_manual/krita_manual_readme.rst:278
 msgid "They are visual."
 msgstr ""
 
-#: ../../contributors_manual/krita_manual_readme.rst:271
+#: ../../contributors_manual/krita_manual_readme.rst:279
 msgid "They are trying to achieve pretty pictures."
 msgstr "彼らはきれいな絵を表現したいと思っています。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:273
+#: ../../contributors_manual/krita_manual_readme.rst:281
 msgid ""
 "Therefore, the implicit goal of each page would be to get the feature used "
 "for pretty pictures."
@@ -875,11 +893,11 @@ msgstr ""
 "したがって、各ページの暗黙の目標はきれいな画像に使用される機能を知ってもらう"
 "ことです。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:275
+#: ../../contributors_manual/krita_manual_readme.rst:283
 msgid "Other than that, we've observed the following groups:"
 msgstr "それ以外に、次のようなグループが見られました:"
 
-#: ../../contributors_manual/krita_manual_readme.rst:277
+#: ../../contributors_manual/krita_manual_readme.rst:285
 msgid ""
 "High-school and college students trying out drawing software for "
 "illustrations. These usually have some previous experience with drawing "
@@ -892,7 +910,7 @@ msgstr ""
 "有用性を紹介する必要があるでしょう。このグループの強みは、使用のヒントやコ"
 "ツ、チュートリアルなど、多くの情報を互いに共有することです。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:278
+#: ../../contributors_manual/krita_manual_readme.rst:286
 msgid ""
 "Professionals, people who earn their money with digital drawing software. "
 "The strength of this group is that they have a lot of know-how and are "
@@ -902,7 +920,7 @@ msgstr ""
 "改善するために提供する方法や意思が様々にあることです。次の2パターンがありま"
 "す:"
 
-#: ../../contributors_manual/krita_manual_readme.rst:280
+#: ../../contributors_manual/krita_manual_readme.rst:288
 msgid ""
 "Non technical professionals. These are people who do not really grasp the "
 "more mathematical bits of a piece of software, but have developed solid "
@@ -915,7 +933,7 @@ msgstr ""
 "フトウェアでの作業を行っています。これらはイラストレーター、画家、印刷職の関"
 "係者であることが多いです。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:281
+#: ../../contributors_manual/krita_manual_readme.rst:289
 msgid ""
 "Technical professionals. These are people who use :program:`Krita` as part "
 "of a pipeline, and care about the precise maths and pixel pushing. These "
@@ -926,7 +944,7 @@ msgstr ""
 "ルの配置に注意を払う人々です。ゲームや VFX の業界で働く人が多いですが、科学者"
 "もいます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:283
+#: ../../contributors_manual/krita_manual_readme.rst:291
 msgid ""
 "Adult and elderly hobbyists. This group doesn't know much about computers, "
 "and they always seem to get snagged on that one little step missing from a "
@@ -936,11 +954,11 @@ msgid ""
 "that they have a tempering effect on the first group in the larger community."
 msgstr ""
 
-#: ../../contributors_manual/krita_manual_readme.rst:285
+#: ../../contributors_manual/krita_manual_readme.rst:293
 msgid "From these four groups..."
 msgstr "これら4つのグループから..."
 
-#: ../../contributors_manual/krita_manual_readme.rst:287
+#: ../../contributors_manual/krita_manual_readme.rst:295
 msgid ""
 "there's only one that is technical. Which is why we need the concept pages, "
 "so that we can create a solid base to write our manual texts on top of."
@@ -948,7 +966,7 @@ msgstr ""
 "技術的なことが分かるのは１グループだけです。そのため、マニュアルテキストを作"
 "成する上で根幹をなすコンセプトページが必要です。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:288
+#: ../../contributors_manual/krita_manual_readme.rst:296
 msgid ""
 "three of them likely have previous experience with software and may need "
 "migration guides and be told how."
@@ -956,13 +974,13 @@ msgstr ""
 "そのうち3人は、以前に他のソフトウェアの使用経験があって、そこからの移行方法を"
 "必要としています。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:289
+#: ../../contributors_manual/krita_manual_readme.rst:297
 msgid ""
 "two of them need to know how to get Krita to cooperate with other software."
 msgstr ""
 "そのうち2人は、Krita と他のソフトウェアを連携させる方法を知る必要があります。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:290
+#: ../../contributors_manual/krita_manual_readme.rst:298
 msgid ""
 "two of them have no clue what they are doing and may need to be guided "
 "through the most basic of steps."
@@ -970,19 +988,19 @@ msgstr ""
 "そのうちの2人は自分が何をしているのかまったく分かっておらず、最も基本的な手順"
 "を示す必要があるかもしれません。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:292
+#: ../../contributors_manual/krita_manual_readme.rst:300
 msgid "From that we can get the following rules:"
 msgstr "そこで次のようなルールとなります:"
 
-#: ../../contributors_manual/krita_manual_readme.rst:295
+#: ../../contributors_manual/krita_manual_readme.rst:303
 msgid "General Writing"
 msgstr "全体的な記述"
 
-#: ../../contributors_manual/krita_manual_readme.rst:297
+#: ../../contributors_manual/krita_manual_readme.rst:305
 msgid "Use American English if possible."
 msgstr "可能であれば、アメリカ英語( American English )を使用してください。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:298
+#: ../../contributors_manual/krita_manual_readme.rst:306
 msgid ""
 "We use American English in the manual, in accordance to Krita's UI being "
 "American English by default."
@@ -990,11 +1008,11 @@ msgstr ""
 "Krita の UI がデフォルトでアメリカ英語( American English )になっているので、"
 "マニュアルではアメリカ英語を使用しています。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:299
+#: ../../contributors_manual/krita_manual_readme.rst:307
 msgid "Keep the language polite, but do not use academic language."
 msgstr "言葉遣いは丁寧にしてください。ただし学術用語は使わないでください。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:300
+#: ../../contributors_manual/krita_manual_readme.rst:308
 msgid ""
 "As a community, we want to be welcoming to the users, so we try to avoid "
 "language that is unwelcoming. Swearing is already not condoned by KDE, but "
@@ -1007,13 +1025,13 @@ msgstr ""
 " では汚い言葉遣いは認められません。が、逆に書き手も読み手も拒絶するような学問"
 "的なテキストでは、必要以上に複雑で、ユーザをひるませるかもしれません。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:301
+#: ../../contributors_manual/krita_manual_readme.rst:309
 #, fuzzy
 #| msgid "Avoid using gifs (open for debate)"
 msgid "Avoid using GIFs (open for debate)"
 msgstr "Gif 画像の使用を避ける（議論中）"
 
-#: ../../contributors_manual/krita_manual_readme.rst:302
+#: ../../contributors_manual/krita_manual_readme.rst:310
 #, fuzzy
 #| msgid ""
 #| "The reason is that people with epilepsy may be affected by fast moving "
@@ -1030,11 +1048,11 @@ msgstr ""
 "明の負担が大きすぎる場合があります。GIF を使わざるを得ない場合は、少なくとも"
 "ページの冒頭で GIF を使用することを記載してください。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:304
+#: ../../contributors_manual/krita_manual_readme.rst:312
 msgid "Keep it translation compatible"
 msgstr "翻訳との互換性を保つ"
 
-#: ../../contributors_manual/krita_manual_readme.rst:304
+#: ../../contributors_manual/krita_manual_readme.rst:312
 #, fuzzy
 #| msgid ""
 #| "This consists of using svg for infographics, and using the appropriate "
@@ -1046,11 +1064,11 @@ msgstr ""
 "これは説明画像に SVG 画像を使い、与えられたテキストに適切なマークアップを使用"
 "することで構成されます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:307
+#: ../../contributors_manual/krita_manual_readme.rst:315
 msgid "Regarding photos and paintings"
 msgstr "写真とイラストについて"
 
-#: ../../contributors_manual/krita_manual_readme.rst:309
+#: ../../contributors_manual/krita_manual_readme.rst:317
 msgid ""
 "I would like to discourage photos and traditional paintings in the manual if "
 "they are not illustrating a concept. The reason is that it is very silly and "
@@ -1071,7 +1089,7 @@ msgstr ""
 "基本、絵を描くソフトなので、写真も避けるべきです。写真ばかりだと、 Krita は"
 "フォトレタッチの手段を提供することに集中している印象を与えてしまいます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:310
+#: ../../contributors_manual/krita_manual_readme.rst:318
 msgid ""
 "Of course, we still want to show certain concepts in play in photos and "
 "master paintings, such as glossing or indirect light. In this case, add a "
@@ -1082,7 +1100,7 @@ msgstr ""
 "ティングの中にある種の概念を示したいと思っています。この場合は、絵や画家の名"
 "前、または写真であることを示す見出しを追加します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:311
+#: ../../contributors_manual/krita_manual_readme.rst:319
 msgid ""
 "Photos can still be used for photobashing and the like, but only if it's "
 "obviously used in the context of photobashing."
@@ -1090,11 +1108,11 @@ msgstr ""
 "Photobashing を使用してもよいですが、 Photobashing の話題に限ります。（訳注: "
 "Photobashing :写真をイラストのように編集した作品のこと"
 
-#: ../../contributors_manual/krita_manual_readme.rst:314
+#: ../../contributors_manual/krita_manual_readme.rst:322
 msgid "Regarding images in general"
 msgstr "画像全般について"
 
-#: ../../contributors_manual/krita_manual_readme.rst:316
+#: ../../contributors_manual/krita_manual_readme.rst:324
 msgid ""
 "Avoid text in the images and use the caption instead. You can do this with "
 "the figure directive."
@@ -1102,7 +1120,7 @@ msgstr ""
 "画像内へのテキスト挿入は避け、代わりに見出しを使用します。これを行うには "
 "figure コマンドを使用します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:317
+#: ../../contributors_manual/krita_manual_readme.rst:325
 msgid ""
 "If you do need to use text, make either an SVG, so the text inside can be "
 "manipulated easier, or try to minimize the amount of text."
@@ -1110,7 +1128,7 @@ msgstr ""
 "テキストを使用する必要がある場合は、テキストデータを簡単に差し替えできるよう"
 "に SVG で挿入するか、最小限のテキストを使用します"
 
-#: ../../contributors_manual/krita_manual_readme.rst:318
+#: ../../contributors_manual/krita_manual_readme.rst:326
 msgid ""
 "Try to make your images high quality/cute. Let's give people the idea that "
 "they are using a program for drawing!"
@@ -1118,7 +1136,7 @@ msgstr ""
 "高品質で魅力的な画像を作ってみましょう。みんなに Krita でお絵描きをする発想を"
 "与えましょう！"
 
-#: ../../contributors_manual/krita_manual_readme.rst:319
+#: ../../contributors_manual/krita_manual_readme.rst:327
 msgid ""
 "Remember that the manual is licensed under GDPL 1.3, so images submitted "
 "will be licensed under that. In the case of CC-By-Sa/CC-By ensure that the "
@@ -1130,23 +1148,23 @@ msgstr ""
 "ファイルにライセンス表示が適切に行われているか確認してください。もちろん、ど"
 "ちらのライセンスでも使用できない画像は提出しないでください。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:322
+#: ../../contributors_manual/krita_manual_readme.rst:330
 msgid "Protocol"
 msgstr "規約"
 
-#: ../../contributors_manual/krita_manual_readme.rst:324
+#: ../../contributors_manual/krita_manual_readme.rst:332
 msgid "So here we line out all the boring workflows."
 msgstr "よって、ここで退屈なワークフローをすべて説明します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:327
+#: ../../contributors_manual/krita_manual_readme.rst:335
 msgid "Tagging and Branches"
 msgstr "タグ(tag)とブランチ(branch)"
 
-#: ../../contributors_manual/krita_manual_readme.rst:329
+#: ../../contributors_manual/krita_manual_readme.rst:337
 msgid "Adding and removing text will be done in the ``draft`` branch."
 msgstr "テキストの追加と削除は「draft」ブランチで行います。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:331
+#: ../../contributors_manual/krita_manual_readme.rst:339
 msgid ""
 "Proofreading results for old pages will be considered as bugfixes and thus "
 "will go into the ``master`` branch and merged into the ``draft`` branch as "
@@ -1155,15 +1173,15 @@ msgstr ""
 "古いページの見直しはバグ修正と見なされるため、「master」ブランチに取り込ま"
 "れ、必要に応じて「draft」ブランチにマージされます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:333
+#: ../../contributors_manual/krita_manual_readme.rst:341
 msgid "Before the ``draft`` branch is merged for a given release:"
 msgstr "「draft」ブランチをマージする前に、次の操作を行います:"
 
-#: ../../contributors_manual/krita_manual_readme.rst:335
+#: ../../contributors_manual/krita_manual_readme.rst:343
 msgid "The master branch will be tagged with the old version."
 msgstr "master ブランチに古いバージョンのタグが付けられます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:336
+#: ../../contributors_manual/krita_manual_readme.rst:344
 msgid ""
 "The draft branch is first double checked that it has updated version number "
 "and updated epub cover."
@@ -1171,7 +1189,7 @@ msgstr ""
 "draft ブランチは初めにバージョン番号が更新されたことと、epub cover が更新され"
 "たことをチェックします。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:338
+#: ../../contributors_manual/krita_manual_readme.rst:346
 msgid ""
 "The ``draft`` branch will not be merged until the day before a release to "
 "keep the pages intact for long enough."
@@ -1179,40 +1197,40 @@ msgstr ""
 "「draft」ブランチは、リリースの前日までマージされず、元のページを長く保ちま"
 "す。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:340
+#: ../../contributors_manual/krita_manual_readme.rst:348
 msgid ""
 "Each release will have a version of the epub uploaded as part of the release "
 "process. .. Where do we get the POT files from? Even the translated versions?"
 msgstr ""
 
-#: ../../contributors_manual/krita_manual_readme.rst:344
+#: ../../contributors_manual/krita_manual_readme.rst:352
 msgid "Removing Pages"
 msgstr "ページを削除"
 
-#: ../../contributors_manual/krita_manual_readme.rst:346
+#: ../../contributors_manual/krita_manual_readme.rst:354
 msgid "If a feature is removed in a certain version, the corresponding pages:"
 msgstr "特定のバージョンで機能が削除された場合、対応するページについて:"
 
-#: ../../contributors_manual/krita_manual_readme.rst:348
+#: ../../contributors_manual/krita_manual_readme.rst:356
 msgid "Will first be marked deprecated."
 msgstr "最初に非推奨とマークされます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:350
+#: ../../contributors_manual/krita_manual_readme.rst:358
 msgid "This can be done as so::"
 msgstr "これは次のように実行できます::"
 
-#: ../../contributors_manual/krita_manual_readme.rst:352
+#: ../../contributors_manual/krita_manual_readme.rst:360
 msgid ""
 ".. deprecated:: version number\n"
 "\n"
 "    Text to indicate what the user should do without this feature."
 msgstr ""
 
-#: ../../contributors_manual/krita_manual_readme.rst:356
+#: ../../contributors_manual/krita_manual_readme.rst:364
 msgid "Will be linked on a page called 'deprecated'"
 msgstr "'deprecated'というページにリンクされます"
 
-#: ../../contributors_manual/krita_manual_readme.rst:357
+#: ../../contributors_manual/krita_manual_readme.rst:365
 msgid ""
 "If the next version rolls around, all the pages linked in the deprecated "
 "section will be removed."
@@ -1220,15 +1238,15 @@ msgstr ""
 "次のバージョンに移行すると、非推奨項目としてリンクされているすべてのページが"
 "削除されます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:360
+#: ../../contributors_manual/krita_manual_readme.rst:368
 msgid "Adding Pages"
 msgstr "ページ追加"
 
-#: ../../contributors_manual/krita_manual_readme.rst:362
+#: ../../contributors_manual/krita_manual_readme.rst:370
 msgid "Ensure that it is located in the right place."
 msgstr "正しい位置であることを確認します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:363
+#: ../../contributors_manual/krita_manual_readme.rst:371
 msgid ""
 "Follow the :ref:`krita_markup_conventions` to ensure the page is formatted "
 "correctly."
@@ -1236,22 +1254,22 @@ msgstr ""
 ":ref:`krita_markup_conventions` に従って、ページが正しく構成されていることを"
 "確認してください。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:364
+#: ../../contributors_manual/krita_manual_readme.rst:372
 msgid "Add the page to the TOC."
 msgstr "目次へページを追加します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:365
+#: ../../contributors_manual/krita_manual_readme.rst:373
 msgid "If the feature is new, add in versionadded::"
 msgstr "新機能は versionadded:: で追加します"
 
-#: ../../contributors_manual/krita_manual_readme.rst:367
+#: ../../contributors_manual/krita_manual_readme.rst:375
 msgid ""
 ".. versionadded:: version number\n"
 "\n"
 "    optional something or the other."
 msgstr ""
 
-#: ../../contributors_manual/krita_manual_readme.rst:371
+#: ../../contributors_manual/krita_manual_readme.rst:379
 msgid ""
 "As with images, don't add text that you do not have permission to add. This "
 "means that text is either written by you, or you have permission to port it "
@@ -1262,11 +1280,11 @@ msgstr ""
 "トは自分が作成したものか、テキスト作成者の許可が必要です。マニュアルは "
 "GDPL1.3+ ライセンスなので、追加されたテキストは再ライセンスされます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:375
+#: ../../contributors_manual/krita_manual_readme.rst:383
 msgid "Changing Pages"
 msgstr "ページの変更"
 
-#: ../../contributors_manual/krita_manual_readme.rst:377
+#: ../../contributors_manual/krita_manual_readme.rst:385
 msgid ""
 "If you fully rewrite a page, as opposed to proofreading it, the resulting "
 "page should be reviewed."
@@ -1274,7 +1292,7 @@ msgstr ""
 "ページを校正するのではなく、完全に書き直した場合は、ウェブサイトのページ表示"
 "を確認する必要があります。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:379
+#: ../../contributors_manual/krita_manual_readme.rst:387
 msgid ""
 "If you change a page because a feature has changed, and you have commit "
 "access, the change can be pushed without review (unless you feel more "
@@ -1284,14 +1302,14 @@ msgstr ""
 "更をプッシュできますが(レビューがないと不安な場合は除きます)、 add:: を使用す"
 "るべきです。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:381
+#: ../../contributors_manual/krita_manual_readme.rst:389
 msgid ""
 ".. versionchanged:: version number\n"
 "\n"
 "    This and that changed."
 msgstr ""
 
-#: ../../contributors_manual/krita_manual_readme.rst:385
+#: ../../contributors_manual/krita_manual_readme.rst:393
 msgid ""
 "In all cases, check if you want to add yourself to the author field in the "
 "metadata section on top."
@@ -1299,7 +1317,7 @@ msgstr ""
 "いずれの場合も、上部の metadata の項目で著者として自分を追加するかどうかを確"
 "認します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:387
+#: ../../contributors_manual/krita_manual_readme.rst:395
 msgid ""
 "Using deprecated, versionadded and versionchanged with the version number "
 "allows us to easily search the manual for these terms with grep:"
@@ -1307,42 +1325,42 @@ msgstr ""
 "（非推奨の方法です）バージョン番号として versionadded と versionchanged を使"
 "用すると、マニュアル内で grep を使って次の用語を簡単に検索できます:"
 
-#: ../../contributors_manual/krita_manual_readme.rst:392
+#: ../../contributors_manual/krita_manual_readme.rst:400
 msgid "grep -d recurse versionadded * --exclude-dir={_build,locale}"
 msgstr ""
 
-#: ../../contributors_manual/krita_manual_readme.rst:394
+#: ../../contributors_manual/krita_manual_readme.rst:402
 msgid "Faulty pages"
 msgstr "不完全なページ"
 
-#: ../../contributors_manual/krita_manual_readme.rst:396
+#: ../../contributors_manual/krita_manual_readme.rst:404
 msgid "If a page slips through the cracks, either..."
 msgstr "ページが抜け落ちた場合..."
 
-#: ../../contributors_manual/krita_manual_readme.rst:398
+#: ../../contributors_manual/krita_manual_readme.rst:406
 msgid "Make a merge request per the :ref:`making_changes_sphinx` section."
 msgstr ""
 ":ref:`making_changes_sphinx` の項目に従って、マージリクエストを作成します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:399
+#: ../../contributors_manual/krita_manual_readme.rst:407
 msgid "Make a task at the `Manual Project Workboard`_."
 msgstr "`Manual Project Workboard`_ でタスクを作成します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:400
+#: ../../contributors_manual/krita_manual_readme.rst:408
 msgid ""
 "Make a bug at `bugzilla`_ under the project Krita in the section "
 "'documentation'."
 msgstr "Krita の 'documentation' 内にある `bugzilla`_ でバグを報告します。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:403
+#: ../../contributors_manual/krita_manual_readme.rst:411
 msgid "Proofreading"
 msgstr "校正"
 
-#: ../../contributors_manual/krita_manual_readme.rst:405
+#: ../../contributors_manual/krita_manual_readme.rst:413
 msgid "There are two types of proofreading that needs to be done."
 msgstr "必要な校正には2種類あります。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:407
+#: ../../contributors_manual/krita_manual_readme.rst:415
 msgid ""
 "The most important one is **reviewing changes people make**. You can do this "
 "on `KDE_gitlab`_ in two ways:"
@@ -1350,11 +1368,11 @@ msgstr ""
 "最も重要なのは、”人が行った変更をレビューすること”です。これを `KDE_gitlab`_ "
 "で行うには2つの方法があります:"
 
-#: ../../contributors_manual/krita_manual_readme.rst:409
+#: ../../contributors_manual/krita_manual_readme.rst:417
 msgid "Reviewing merge requests"
 msgstr "マージリクエストをレビュー"
 
-#: ../../contributors_manual/krita_manual_readme.rst:411
+#: ../../contributors_manual/krita_manual_readme.rst:419
 msgid ""
 "You can help review merge requests. Request reviewing is usually done by "
 "programmers to find mistakes in each other's code, but because programming "
@@ -1365,7 +1383,7 @@ msgstr ""
 "互いのソースコードの間違いを見つけるために行いますが、コードは普通のテキスト"
 "ファイルと同様にテキスト形式なので、タイプミスをチェックすることもできます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:413
+#: ../../contributors_manual/krita_manual_readme.rst:421
 msgid ""
 "A merge request, is an amount of changes done in a document (added, removed) "
 "put into a machine readable file. When someone submits a review request (on "
@@ -1384,11 +1402,11 @@ msgstr ""
 "く、間違っている点についてもコメントできます。リクエストが受け入れられると、"
 "文書変更が反映されます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:415
+#: ../../contributors_manual/krita_manual_readme.rst:423
 msgid "Commenting on changes in the manual."
 msgstr "マニュアルへの変更に対してコメントする。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:417
+#: ../../contributors_manual/krita_manual_readme.rst:425
 msgid ""
 "Commenting changes happens after the fact. You can comment on a change by "
 "going to the commit message (from the repository page, go to history and "
@@ -1399,7 +1417,7 @@ msgstr ""
 "message に移動します(リポジトリページから history に移動し、コメントしたい項"
 "目をクリック)。このページでは、行った変更にコメントすることができます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:419
+#: ../../contributors_manual/krita_manual_readme.rst:427
 msgid ""
 "In both cases, the interface consists of the difference being shown, with on "
 "the left the old version, and on the right the new version. Lines that have "
@@ -1411,14 +1429,14 @@ msgstr ""
 "が表示されます。追加された行は緑色で表示され、削除された行は赤色で表示されま"
 "す。吹き出しアイコンをクリックすると、インラインコメントを追加できます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:421
+#: ../../contributors_manual/krita_manual_readme.rst:429
 msgid ""
 "The second major way the manual needs to be proofread is **over the whole "
 "file**. Many of the pages have only been checked for correctness but not for "
 "style and grammar."
 msgstr ""
 
-#: ../../contributors_manual/krita_manual_readme.rst:423
+#: ../../contributors_manual/krita_manual_readme.rst:431
 msgid ""
 "For this you will need to follow the :ref:`making_changes_sphinx` section, "
 "so that you can have full access to the pages and edit them."
@@ -1426,11 +1444,11 @@ msgstr ""
 ":ref:`making_changes_sphinx` に従って、ページのアクセス権を得て編集できるよう"
 "にします。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:426
+#: ../../contributors_manual/krita_manual_readme.rst:434
 msgid "Translating"
 msgstr "翻訳する"
 
-#: ../../contributors_manual/krita_manual_readme.rst:428
+#: ../../contributors_manual/krita_manual_readme.rst:436
 msgid ""
 "Translation of the manual is handled by the `KDE localization community "
 "<https://l10n.kde.org/>`_. To join the translation effort, go to the "
@@ -1444,7 +1462,7 @@ msgstr ""
 "`translation teams <https://l10n.kde.org/teams-list.php>`_ のリストから翻訳し"
 "たい言語を選択し、表示されたページの指示に従って他の翻訳者と連絡を取ります。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:430
+#: ../../contributors_manual/krita_manual_readme.rst:438
 msgid ""
 "The localization team has access to the PO files for this manual, which is a "
 "file type used by translation programs like POEdit and Lokalize. A "
@@ -1459,7 +1477,7 @@ msgstr ""
 "できます。そこから特殊なスクリプトが SVN から翻訳を受け取り、マニュアルデータ"
 "の配置場所に持ってきて、毎日反映させます。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:432
+#: ../../contributors_manual/krita_manual_readme.rst:440
 msgid ""
 "Images can be translated if a translation team wants to provide their own "
 "images. All images in the image folder are by default for 'en'. When you "
@@ -1479,7 +1497,7 @@ msgstr ""
 "は、 :file:`/images/dockers/Krita-tutorial2-I.1-2.png` → :file:`/images/"
 "dockers/nl/Krita-tutorial2-I.1-2.png`"
 
-#: ../../contributors_manual/krita_manual_readme.rst:434
+#: ../../contributors_manual/krita_manual_readme.rst:442
 msgid ""
 "Finished translations also need to be added to the build script to show up "
 "online. Translator teams which are confident in the state of their "
@@ -1491,11 +1509,11 @@ msgstr ""
 "kimageshop のメーリングリスト( kimageshop@kde.org )または foundation@krita."
 "org を通じて主要な Krita 開発チームに連絡し、翻訳を完了する必要があります。"
 
-#: ../../contributors_manual/krita_manual_readme.rst:437
+#: ../../contributors_manual/krita_manual_readme.rst:445
 msgid "Other"
 msgstr "その他"
 
-#: ../../contributors_manual/krita_manual_readme.rst:439
+#: ../../contributors_manual/krita_manual_readme.rst:447
 msgid ""
 "For restructured text conventions, check :ref:`krita_markup_conventions`."
 msgstr ""
