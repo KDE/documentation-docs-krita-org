@@ -320,10 +320,10 @@ Krita crashes on Windows 7 on start-up
 Starting with Krita 4.2.0, Krita uses version 5.12 of the Qt toolkit. This needs to have access to Direct3D 11 or OpenGL ES 2.0 or higher. You might need to install drivers appropriate to your GPU (Nvidia, AMD/ATI, Intel). This also makes it hard to run Krita in a virtual environment: in Virtual Box you need to install the guest addition in safe mode, and enable the experimental Direct3D support. 
 
 
-Krita crashes randomly on my Windows system
+Krita freezes randomly on my Windows system
 -------------------------------------------
 
-Are you using a dictionary application (e.g. Youdao Dictionary for Chinese users) that can read words from other app's windows and show popup translations in real time? It has been reported that such apps tend to cause Krita to crash randomly. If you are using one of those, make sure to QUIT them (no notification icon) when using Krita. Some of those apps keep running in the background even after being closed. In that case, you will have to uninstall them.
+Are you using a dictionary app (e.g. Youdao Dictionary for Chinese users)? Some dictionary apps can read words from other app's windows and show popup translations in real time. However, it has been reported that such apps tend to cause Krita to freeze randomly. If you are using one of those, make sure to QUIT them (no notification icon) when using Krita. Some of those apps keep running in the background even after being closed. In such case, you will have to uninstall them.
 
 
 Windows: How can I produce a backtrace?
