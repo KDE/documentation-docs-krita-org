@@ -320,6 +320,12 @@ Krita crashes on Windows 7 on start-up
 Starting with Krita 4.2.0, Krita uses version 5.12 of the Qt toolkit. This needs to have access to Direct3D 11 or OpenGL ES 2.0 or higher. You might need to install drivers appropriate to your GPU (Nvidia, AMD/ATI, Intel). This also makes it hard to run Krita in a virtual environment: in Virtual Box you need to install the guest addition in safe mode, and enable the experimental Direct3D support. 
 
 
+Krita crashes randomly on my Windows system
+-------------------------------------------
+
+Are you using a dictionary application (e.g. Youdao Dictionary for Chinese users) that can read words from other app's windows and show popup translations in real time? It has been reported that such apps tend to cause Krita to crash randomly. If you are using one of those, make sure to QUIT them (no notification icon) when using Krita. Some of those apps keep running in the background even after being closed. In that case, you will have to uninstall them.
+
+
 Windows: How can I produce a backtrace?
 -----------------------------------------
 
@@ -540,6 +546,15 @@ Why does the Transform Tool give a good result and then get blurry upon finalizi
 -----------------------------------------------------------------------------------
 
 The transform tool makes a preview that you edit before computing the finalized version. As this preview is using the screen resolution rather than the image resolution, it may feel that the result is blurry compared to the preview. See `this page <https://forum.kde.org/viewtopic.php?f=139&t=127269>`__ for more info.
+
+
+Shortcuts
+=========
+
+Some shortcuts become useless after drawing for a while
+-------------------------------------------
+
+Have you loaded any Keyboard or Canvas Shortcut Schemes (e.g. Photoshop/SAI compatible schemes) other than the Default one? If that's the case, make sure you have loaded the same scheme for both Keyboard and Canvas Shortcuts (e.g. Photoshop Compatible for both Keyboard and Canvas shortcuts). If the schemes on both sides are not matching, you might run into shortcut conflicts, like: middle-click zooming/panning/rotation of canvas become unresponsive, even the brush becomes unable to paint sometimes.
 
 
 License, rights and the Krita Foundation
