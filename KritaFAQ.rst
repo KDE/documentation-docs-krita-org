@@ -552,7 +552,7 @@ Shortcuts
 =========
 
 Some shortcuts become useless after drawing for a while
--------------------------------------------
+-------------------------------------------------------
 
 Have you loaded any Keyboard or Canvas Shortcut Schemes (e.g. Photoshop/SAI compatible schemes) other than the Default one? If that's the case, make sure you have loaded the same scheme for both Keyboard and Canvas Shortcuts (e.g. Photoshop Compatible for both Keyboard and Canvas shortcuts). If the schemes on both sides are not matching, you might run into shortcut conflicts, like: middle-click zooming/panning/rotation of canvas become unresponsive, even the brush becomes unable to paint sometimes.
 
