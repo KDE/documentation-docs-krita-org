@@ -73,15 +73,7 @@ Use the Latest Version of Krita
 Check Krita's website to see whether you are using the latest version of Krita. There are two "latest" versions:
 
 - Latest stable: check the `Download page <https://krita.org/download/>`_. Always try to reproduce your bug with this version.
-- Stable and Unstable Nightly builds. The stable nightly build is built from the last release plus all bug fixes done since the last release. This is called **Krita Plus*** The unstable nightly build contains new features and is straight from the development branch of Krita. This is called **Krita Next**. You can download these builds from the `Download page <https://krita.org/download/>`_.
-
-
-Check The Bug Tracker for Duplicates
-------------------------------------
-
-This can be tricky: many bug reports are very unclear, have misleading subjects or are assigned to the wrong component. The Krita team tries to triage incoming bugs, fixing the subject, the component and asking for more information in case the bug is not clear.
-
-But please do try to check whether a problem has already been reported. If it is, please add your report as a comment to that bug ticket.
+- Stable and Unstable Nightly builds. The stable nightly build is built from the last release plus all bug fixes done since the last release. This is called **Krita Plus** The unstable nightly build contains new features and is straight from the development branch of Krita. This is called **Krita Next**. You can download these builds from the `Download page <https://krita.org/download/>`_.
 
 
 Be Complete and Be Completely Clear
@@ -89,33 +81,55 @@ Be Complete and Be Completely Clear
 
 Give all information. That means that you should give information about your operating system, hardware, the version of Krita you're using and, of course about the problem.
 
-- Operating system: fill in the requisite field in the bug tracker's form
-- Version: fill in the requisite field in the bug tracker's form
-- Hardware information: copy the information from the :menuselection:`Help --> Show System Information for Bug Reports` or Bug Reports window into your report. Note how many displays you have.
-- If you are using a drawing tablet, tell us the brand and type.
-- Tell us what kind of image you were working on: the size, the resolution, the color model and channel depth.
-- If you are reporting a crash, attach a crash log. Follow `this link <https://docs.krita.org/en/reference_manual/dr_minw_debugger.html#dr-minw>`_ to learn how to get a crash log on Windows. On Linux, follow your distribution's instructions to install debug symbols if you have installed Krita from a distribution package. It is not possible to create a useful crash log with Linux appimages.
-- Attach the contents of the :menuselection:`Help --> Show System Information for Bug Reports` dialog to the bug report.
+- Open the `the bug tracker <https://bugs.kde.org/enter_bug.cgi?product=krita?>`_.
+- If you do not have an account yet, create one.
+
+.. image:: bugzilla_simple.png
+   :width: 800
+   :align: center
+   :alt: the bug tracker's new bug form, advanced fields hidden
+
+In the New Bug form, fill in the following fields:   
+
+- Component: if you experience an issue when running a filter, select Filters. If you don't know the component, select "* Unknown"
+- Version: select the correct version. You can find the version of Krita in :menuselection:`Help-->About Krita.`
+- Severity: if you have experienced a crash, select "crash". If you are making a feature request, select "wish". Otherwise, "normal" is correct. Do not select "major" or "grave", not even if you feel the issue you are reporting is really important.
+- Platform: select the from the combobox the platform you run Krita on, for instance "Microsoft Windows"
+- OS: this probably already correctly preselected. (If you're wondering why there are two fields that have more or less the same meaning, it's because "Platform" should allow you to select between Windows Installer, Windows Portable Zip File, Windows Store or Steam", it's a bug in bugzilla that it doesn't have those options.)
+- Summary: a one line statement of what happened, like "Krita crashes when opening the attached PSD file".
+- Description: this is the most important field.
+
+    Here you need to state very clearly:
+
+    - what happened,
+    - what had you expected to happen instead,
+    - how the problem can be reproduced.
+
+    Give a concise and short description, then enumerate the steps needed to reproduce the problem. If you cannot reproduce the problem, and it isn't a crash, think twice before making the report: the developers likely cannot reproduce it either.
+
+    The template here is used for all projects in the KDE community and isn't especially suitable for Krita.
+
+- Attachments
+
+    - In all cases, attach the contents of the :menuselection:`Help --> Show system information for bug teports` dialog to the bug report.
+    - In all cases, attach the contents of the :menuselection:`Help --> Show krita log for nug reports` dialog to the bug report.
+
+    - Your file
+    
+        If at all possible, attach your original Krita file (the one that ends in ``.kra``) to the bug report, or if it's too big, add a link for download. If you do that, make sure the file will be there for **years** to come: do not remove it. If the problem is with loading or saving a file in another format, please attach that file.
+
+    - A video
+    
+        If you think it would be useful, you can also attach or link to a video. Note that the Krita developers and bug triagers are extremely busy, and that it takes less time to read a good description and a set of steps to reproduce than it takes to watch a video for clues for what is going on.
+
+        When making a video or a screenshot, include the whole Krita window, including the titlebar and the statusbar.
+
+    - If you are reporting a crash, attach a crash log. On Windows, you will find a kritacrash.log file in the local AppData folder. On Linux, follow your distribution's instructions to install debug symbols if you have installed Krita from a distribution package. It is not possible to create a useful crash log with Linux appimages.
 
 
-The problem needs to be clearly stated:
-- what happened,
-- what had you expected to happen instead,
-- how the problem can be reproduced.
 
-Give a concise and short description, then enumerate the steps needed to reproduce the problem. If you cannot reproduce the problem, and it isn't a crash, think twice before making the report: the developers likely cannot reproduce it either.
-
-If at all possible, attach your original Krita file (the one that ends in ``.kra``) to the bug report, or if it's too big, add a link for download. If you do that, make sure the file will be there for **years** to come: do not remove it.
-
-If you think it would be useful, you can also attach or link to a video. Note that the Krita developers and bug triagers are extremely busy, and that it takes less time to read a good description and a set of steps to reproduce than it takes to watch a video for clues for what is going on.
-
-When making a video or a screenshot, include the whole Krita window, including the titlebar and the statusbar.
-
-
-
-
-You're Not Done After You Have Filed the Report
------------------------------------------------
+After You Have Filed the Report
+-------------------------------
 
 After you have filed your bug, mail will be sent out to all Krita developers and bug triagers. You do not have to go to the chat channel and tell us you created a bug.
 
@@ -127,11 +141,11 @@ These are the most used statuses:
 
 - Unconfirmed: your bug has not been investigated yet, or nobody can reproduce your bug.
 - Confirmed: your bug is a bug, but there is no solution yet.
-- Assigned: your bug is a bug, someone is going to work on it. There probably will be a corresponding task on the https://phabricator.kde.org/project/view/8/ developer workboard.
+- Assigned: your bug is a bug, someone is going to work on it.
 - Resolved/Fixed: your bug was a genuine problem in Krita's code. The developer has fixed the issue and the solution will be in the next release.
 - Duplicate: your bug has been reported before.
-- Needinfo/WaitingForInfo. You need to provide more information. If you do not reply within a reasonable amount of time the bug will be closed.
-- Resolved/Invalid: your report was not about a bug.
+- Needinfo/WaitingForInfo. You need to provide more information. If you do not reply within a reasonable amount of time the bug will be closed automatically.
+- Resolved/Not a Bug: your report was not about a bug: that is, it did not report something that can be fixed in Krita's code.
 - Resolved/Upstream: the issue you observed is because of a bug in a library Krita uses, or a hardware driver, or your operating system. We cannot do anything about it.
 - Resolved/Downstream: Only on Linux. The issue you observed happens because your Linux distribution packages Krita in a way that causes problems.
 
