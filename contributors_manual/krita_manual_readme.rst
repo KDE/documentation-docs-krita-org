@@ -55,9 +55,7 @@ For first timers
 
 Unlike Mediawiki, Sphinx works more like how we write code for Krita.
 
-First things first, you will want to talk to us! For this you can either go to the `IRC on krita.org (#krita on freenode.org) <https://krita.org/en/irc/>`_, or, more importantly, make an account at `identity.kde.org <https://identity.kde.org/>`_. The account you make at identity can be used to both access the forum as well as the `phabricator`_, where we organise Krita development.
-
-If you have no idea where to begin, make a Kde identity account and make a post on `the forum <https://forum.kde.org/viewforum.php?f=136>`_.
+First things first, you will want to talk to us! For this you can either go to the `IRC on krita.org (#krita on freenode.org) <https://krita.org/en/irc/>`_, or, more importantly, make an account at `identity.kde.org <https://identity.kde.org/>`_. The account you make at identity can be used to both access invent.kde.org as well as the `phabricator`_, where we organise Krita development.
 
 Sphinx works by writing simple text files with reStructuredText mark up, and then it takes those text files and turns them into the manual. We keep track of changes in the manual by putting them into a version control system called :program:`Git`.
 

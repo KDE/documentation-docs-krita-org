@@ -59,7 +59,7 @@ If this doesn't work, you might have to add a fall-back language as well. This i
 I have a problem, how to get support for Krita?
 -----------------------------------------------
 
-#. Ask your question on one of the user support forums. It can be `Krita Artists forum <https://krita-artists.org/>`_ (recommended), `Krita KDE forum <https://forum.kde.org/viewforum.php?f=136>`_ or alternatively `Krita subreddit <https://www.reddit.com/r/krita/>`_ .
+#. Ask your question on `Krita Artists <https://krita-artists.org/>`_.
 
 #. Remember -- most probably the person you're interacting with is a volunteer, and even if not, it's not someone actually paid for doing user support. Treat them nicely and respect their time! They will for sure reciprocate that.
 
@@ -531,7 +531,7 @@ Slow Brushes
 -  Check that Instant Preview is enabled if you're using bigger brushes (but for very small brushes, make sure is disabled).
 -  Set brush precision to 3 or auto.
 -  Use a larger value for brush spacing.
--  If all of this fails, record a video and post a link and description on the Krita forum.
+-  If all of this fails, record a video and post a link and description on the Krita Artists.
 -  Check whether OpenGL is enabled, and if it isn't, enable it. If it is enabled, and you are on Windows, try the Angle renderer. Or disable it.
 
 Slowdown after a been working for a while
@@ -550,12 +550,6 @@ You did not render the animation using the "baseline" option and you are using t
 
 Tools
 =====
-
-Why does the Transform Tool give a good result and then get blurry upon finalizing?
------------------------------------------------------------------------------------
-
-The transform tool makes a preview that you edit before computing the finalized version. As this preview is using the screen resolution rather than the image resolution, it may feel that the result is blurry compared to the preview. See `this page <https://forum.kde.org/viewtopic.php?f=139&t=127269>`__ for more info.
-
 
 Shortcuts
 =========

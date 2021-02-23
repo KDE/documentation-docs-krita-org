@@ -353,6 +353,6 @@ External tutorials
 
 See Something We Missed?
 ========================
-Have a resource you made and want to share it with other artists? Let us know in the forum or visit our chat room to discuss getting the resource added to here.
+Have a resource you made and want to share it with other artists? Let us know on Krita Artists or visit our chat channel to discuss getting the resource added to here.
 
 .. note:: We have curated a list of community created resources for Krita. These resources will be hosted on external website, which is not under the control of Krita or KDE. Please report any error or corrections in the content to the Krita developers.
