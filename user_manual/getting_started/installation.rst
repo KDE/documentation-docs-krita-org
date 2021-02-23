@@ -220,4 +220,4 @@ communication channels:
 
 -  irc: webchat.freenode.net, channel #krita
 -  `mailing list <https://mail.kde.org/mailman/listinfo/kimageshop>`__
--  `forums <https://forum.kde.org/viewforum.php?f=136>`__
+-  `Krita Artists <https://krita-artists.org>`__

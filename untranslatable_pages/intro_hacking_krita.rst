@@ -319,4 +319,3 @@ After merging to master, your commits should fit nicely in the Krita git history
 
 * Your commits will be rebased and put in master using fast-forward merge. If you need a manual merge (if, for example, you're working on a big feature) and you don't have the commit access, please contact a Krita developer.
 
-.. https://forum.kde.org/viewtopic.php?f=288&t=125955
