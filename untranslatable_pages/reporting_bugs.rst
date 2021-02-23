@@ -46,7 +46,7 @@ A bug is a problem in Krita's code.
 Check the FAQ
 -------------
 
-If you've got a problem with Krita, first check the `FAQ <https://docs.krita.org/en/KritaFAQ.html>`_. See whether your problem is mentioned there. If it is, apply the solution. If that doesn't work for you, do not report a bug. Ask for help on `Krita's Forum <https://forums.kde.org>`_.
+If you've got a problem with Krita, first check the `FAQ <https://docs.krita.org/en/KritaFAQ.html>`_. See whether your problem is mentioned there. If it is, apply the solution. If that doesn't work for you, do not report a bug. Ask for help on `Krita Artists <https://krita-artists.org/c/support/6>`_.
 
 Ask on Krita's Forum or IRC Chat Channel
 -------------------------------------------------------
