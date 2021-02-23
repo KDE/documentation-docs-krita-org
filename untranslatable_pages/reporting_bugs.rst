@@ -51,7 +51,7 @@ If you've got a problem with Krita, first check the `FAQ <https://docs.krita.org
 Ask on Krita Artists or IRC Chat Channel
 -------------------------------------------------------
 
-If uncertain, ask on `Krita's IRC chat channel <https://krita.org/en/irc/>`_ or `Krita Artists `Krita Artists <https://krita-artists.org/c/support/6>`_.
+If uncertain, ask us in the chatroom "#krita" via matrix. A introduction about Matrix is given `here <https://community.kde.org/Matrix>`_. Create a matrix on webchat.kde.org account and join the #krita:kde.org channel. Or ask a question on `Krita Artists <https://krita-artists.org/c/support/6>`_ forum.
 
 Krita's chat channel is maintained on webchat.freenode.net. Developers and users hang out to discuss Krita's development and help people who have questions.
 
@@ -73,7 +73,7 @@ Use the Latest Version of Krita
 Check Krita's website to see whether you are using the latest version of Krita. There are two "latest" versions:
 
 - Latest stable: check the `Download page <https://krita.org/download/>`_. Always try to reproduce your bug with this version.
-- Stable and Unstable Nightly builds. The stable nightly build is built from the last release plus all bug fixes done since the last release. This is called **Krita Plus** The unstable nightly build contains new features and is straight from the development branch of Krita. This is called **Krita Next**. You can download these builds from the `Download page <https://krita.org/download/>`_.
+- Stable and Unstable Nightly builds: The stable nightly build is built from the last release plus all bug fixes done since the last release. This is called **Krita Plus** The unstable nightly build contains new features and is straight from the development branch of Krita. This is called **Krita Next**. You can download these builds from the `Download page <https://krita.org/download/>`_.
 
 
 Be Complete and Be Completely Clear
