@@ -326,7 +326,7 @@ Then prepare a batch file to set the environment. Every time you want to build o
     set MINGW_BIN_DIR=C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\\bin
     set BUILDROOT=c:\dev
     set BUILDDIR_INSTALL=%BUILDROOT%\i
-    set PATH=%BUILDROOT%\i\bin;%BUILDROOT%\i\lib;c:\python38;c:\python38\scripts;%MINGW_GCC_BIN%;c:\git\cmd;C:\Program Files\CMake\bin;c:\qt\qtcreator-4.12.0\bin;%PATH%
+    set PATH=%BUILDROOT%\i\bin;%BUILDROOT%\i\lib;%MINGW_GCC_BIN%;C:\Program Files\CMake\bin;c:\qt\qtcreator-4.12.0\bin;%PATH%
     set WindowsSdkDir=C:\Program Files (x86)\Windows Kits\10
     
 .. code:: console
