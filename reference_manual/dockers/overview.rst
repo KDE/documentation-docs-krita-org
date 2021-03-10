@@ -24,3 +24,7 @@ There are furthermore basic navigation functions: Dragging the zoom-slider allow
 .. versionadded:: 4.2
     
     Toggling the mirror button will allow you to mirror the view of the canvas (but not the full image itself) and dragging the rotate slider allows you to adjust the rotation of the viewport. To reset the rotation, |mouseright| the slider to edit the number, and type '0'.
+
+.. versionadded:: 4.4.3
+
+    Starting with version 4.4.3 the rotation can be set by manipulating the angle selector, either through the circular gauge or the spin box, and can be reset by double-clicking the circular gauge.
