@@ -73,7 +73,7 @@ Use the Latest Version of Krita
 Check Krita's website to see whether you are using the latest version of Krita. There are two "latest" versions:
 
 - Latest stable: check the `Download page <https://krita.org/download/>`_. Always try to reproduce your bug with this version.
-- Stable and Unstable Nightly builds. The stable nightly build is built from the last release plus all bug fixes done since the last release. This is called **Krita Plus** The unstable nightly build contains new features and is straight from the development branch of Krita. This is called **Krita Next**. You can download these builds from the `Download page <https://krita.org/download/>`_.
+- Stable and Unstable Nightly builds: The stable nightly build is built from the last release plus all bug fixes done since the last release. This is called **Krita Plus** The unstable nightly build contains new features and is straight from the development branch of Krita. This is called **Krita Next**. You can download these builds from the `Download page <https://krita.org/download/>`_.
 
 
 Be Complete and Be Completely Clear
