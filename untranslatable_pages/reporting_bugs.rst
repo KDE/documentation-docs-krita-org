@@ -51,7 +51,7 @@ If you've got a problem with Krita, first check the `FAQ <https://docs.krita.org
 Ask on Krita Artists or IRC Chat Channel
 -------------------------------------------------------
 
-If uncertain, ask on `Krita's IRC chat channel <https://krita.org/en/irc/>`_ or `Krita Artists `Krita Artists <https://krita-artists.org/c/support/6>`_.
+If uncertain, ask us in the chatroom "#krita" via matrix. A introduction about Matrix is given `here <https://community.kde.org/Matrix>`_. Create a matrix on webchat.kde.org account and join the #krita:kde.org channel. Or ask a question on `Krita Artists <https://krita-artists.org/c/support/6>`_ forum.
 
 Krita's chat channel is maintained on webchat.freenode.net. Developers and users hang out to discuss Krita's development and help people who have questions.
 
