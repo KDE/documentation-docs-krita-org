@@ -5,6 +5,7 @@
 .. metadata-placeholder
 
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
+             - Raghavendra Kamath <raghu@raghukamath.com>
              - Scott Petrovic
    :license: GNU free documentation license 1.3 or later.
 
@@ -19,17 +20,16 @@ Specific Color Selector
 
 The specific color selector allows you to choose specific colors within a color space.
 
-Color Space Chooser
--------------------
+Color Space Chooser Dropdown
+----------------------------
 
-Fairly straightforward. This color space chooser allows you to pick the color space, the bit depth and the ICC profile in which you are going to pick your color.
-Use the checkbox 'show color space selector' to hide this feature.
+Fairly straightforward. This color space chooser dropdown allows you to pick the color space, the bit depth and the ICC profile in which you are going to pick your color.
 
 Sliders
 -------
 
 These change per color space.
-If you chose 16bit float or 32 bit float, these will go from 0 to 1.0, with the decimals deciding the difference between colors.
+If you chose 16bit float or 32 bit float, these will go from 0 to 1.0, with the decimals deciding the difference between colors. When you choose 8 bit integer or 16 bit integer, a button with percentage sign (%) will appear besides the dropdown, which will allow you to input values in percentages.
 
 Hex Color Selector
 ------------------

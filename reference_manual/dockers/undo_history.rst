@@ -5,6 +5,7 @@
 .. metadata-placeholder
 
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
+             - Raghavendra Kamath <raghu@raghukamath.com>
              - Scott Petrovic
    :license: GNU free documentation license 1.3 or later.
 
@@ -24,7 +25,7 @@ This docker allows you to quickly shift between undo states, and even go back in
 Cumulative Undo
 ---------------
 
-|mouseright| an item in the undo-history docker to enable cumulative undo. |mouseright| again to change the parameters:
+Click on the settings icon at the bottom of the Undo History docker, It will show you a dialog box to enable cumulative undo. You can change these parameters:
 
 Start merging time
     The amount of seconds required to consider a group of strokes to be worth one undo step.

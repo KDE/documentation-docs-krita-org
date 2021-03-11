@@ -62,7 +62,7 @@ Guides
 
 Guides are horizontal and vertical reference lines. You can use them to place and align layers accurately on the canvas.
 
-.. image:: /images/dockers/Guides.jpg
+.. image:: /images/dockers/guides.png
 
 Creating Guides
 ~~~~~~~~~~~~~~~
