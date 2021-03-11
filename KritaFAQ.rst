@@ -531,7 +531,7 @@ Slow Brushes
 -  Check that Instant Preview is enabled if you're using bigger brushes (but for very small brushes, make sure is disabled).
 -  Set brush precision to 3 or auto.
 -  Use a larger value for brush spacing.
--  If all of this fails, record a video and post a link and description on the Krita Artists.
+-  If all of this fails, record a video and post a link and description on the `Krita Artists <https://krita-artists.org>`_ in appropirate category.
 -  Check whether OpenGL is enabled, and if it isn't, enable it. If it is enabled, and you are on Windows, try the Angle renderer. Or disable it.
 
 Slowdown after a been working for a while
