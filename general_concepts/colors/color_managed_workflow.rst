@@ -268,7 +268,7 @@ If you are preparing an image for the web:
 
 * If you use 16bit color depth or higher, convert the image to 8bit color depth. This will make the image much smaller.
 
-    * Krita doesn't have built-in dithering currently, which means that 16 to 18bit conversions can come out a bit banded. But you can simulate it by adding a fill layer with a pattern, set this fill layer to overlay, and to 5% opacity. Then flatten the whole image and convert it to 8bit. The pattern will function as dithering giving a smoother look to gradients.
+    * Krita doesn't have built-in dithering currently, which means that 16 to 8bit conversions can come out a bit banded. But you can simulate it by adding a fill layer with a pattern, set this fill layer to overlay, and to 5% opacity. Then flatten the whole image and convert it to 8bit. The pattern will function as dithering giving a smoother look to gradients.
 
 * If it's a gray-scale image, convert it to gray-scale.
 * If it's a color image, keep it in the working space profile: Many web browsers these days support color profiles embedded into images. Firefox, for example, will try to convert your image to fit the color profile of the other monitor (if they have one). That way, the image will look almost exactly the same on your screen and on other profiled monitors.
