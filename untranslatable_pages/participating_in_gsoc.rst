@@ -20,7 +20,7 @@ How to participate as a student?
 +++++++++++++++++++++++++++++++++
 Submitting a resumé or CV isn’t how this program works. For you to be picked, you need to be involved with the Krita 
 community early and show you have some capacity to do programming. The summer program involves focusing on one project. 
-You will have a mentor assigned to help learn the ropes. `Here <https://community.kde.org/GSoC/2020/Ideas#Krita>`_ are some potential project ideas. If there is another project 
+You will have a mentor assigned to help learn the ropes. `Here <https://community.kde.org/GSoC/2021/Ideas#Krita>`_ are some potential project ideas for 2021, for other years you can find them `here <https://community.kde.org/GSoC>`_ (navigate to the specific year and find Krita). If there is another project 
 that you want to see, you can also propose your own. Use these `guidelines <https://community.kde.org/GSoC#Student_proposal_guidelines>`_ to help formulate ideas.
 We've mentored around half a dozen students every year year since GSoC started. Many students enjoyed their work and continue to be involved; perhaps your mentor will be a past GSoC student.
 
@@ -28,8 +28,7 @@ We've mentored around half a dozen students every year year since GSoC started. 
 What is expected from you before participating
 ++++++++++++++++++++++++++++++++++++++++++++++
 * A basic understanding of `git`, which would include pulling and pushing code, create branches and rebase commits.
-* A fair understanding of `c++` and its ecosystem.
-* Ecosystem here would mean tools like cmake, make, gcc, gdb and valgrind.
+* A fair understanding of `c++` and its ecosystem. (Ecosystem here means tools like `cmake`, `make`, `gcc`, `gdb` and `valgrind`).
 * Knowing how to work with Qt is not mandatory but would be helpful.
 * You should be able to navigate the codebase, using an IDE like Qt Creator is preferred.
 
@@ -66,7 +65,6 @@ How do I ensure that I get selected?
 * Communicate, GSoC is half communication.
 * Show that you can code independently by fixing bugs or implementing wishes.
 * Know whom to ask for help and when to ask, neither everyone knows everything nor everyone is available all the time.
-* Plus points if you can propose an unique idea of your own.
 * Even if you do all of them we can't exactly ensure that you will be selected, it all depends on how many slots Google allocates for KDE.
 
 +++++++++++++++++++++++++++++++++++++++++++++
