@@ -66,7 +66,7 @@ If Krita crashes before you had saved your file, then the next time you start Kr
 
 .. image:: /images/autosave_unnamed_restore.png
 
-If Krita crashed, and you're on Windows and your ``%TEMP%`` folder gets cleared, you will have lost your work. Windows does not clear the ``%TEMP%`` folder by default, but you can enable this feature in Settings. Applications like Disk Cleanup or cCleaner will also clear the ``%TEMP%`` folder. Again, if Krita crashes, and you haven't saved your work, and you have something enabled that clear your ``%TEMP%`` folder, you will have lost your work.
+If Krita crashed, and you're on Windows and your ``%TEMP%`` folder gets cleared, you will have lost your work. Windows does not clear the ``%TEMP%`` folder by default, but you can enable this feature in Settings. Applications like Disk Cleanup or CCleaner will also clear the ``%TEMP%`` folder. Again, if Krita crashes, and you haven't saved your work, and you have something enabled that clear your ``%TEMP%`` folder, you will have lost your work.
 
 If Krita doesn't crash, and you close Krita without saving your work, Krita will remove the AutoSave file: your work will be gone and cannot be retrieved.
 

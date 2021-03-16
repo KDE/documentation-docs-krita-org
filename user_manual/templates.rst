@@ -18,7 +18,7 @@ Templates
 
 .. image:: /images/Krita_New_File_Template_A.png
 
-Templates are just ``.kra`` files which are saved in a special location so it can be pulled up by Krita quickly. This is like the :guilabel:`Open Existing Document as Untitled Document...` but then with a nicer place in the UI.
+Templates are just ``.kra`` files which are saved in a special location, so it can be pulled up by Krita quickly. This is like the :guilabel:`Open Existing Document as Untitled Document...` but then with a nicer place in the UI.
 
 You can make your own template file from any ``.kra`` file, by using :menuselection:`File --> Create Template from Image...` menu item. This will add your current document as a new template, including all its properties along with the layers and layer contents.
 
@@ -32,7 +32,7 @@ These templates are specifically designed for you to just get started with drawi
 European Bande Desinée Template.
  This one is reminiscent of the system used by for example TinTin or Spirou et Fantasio. These panels focus on wide images, and horizontal cuts.
 US-style comics Template.
- This one is reminiscent of old DC and Marvel comics, such as Batman or Captain America. Nine images for quick story progression.
+ This one is reminiscent of old DC and Marvel Comics, such as Batman or Captain America. Nine images for quick story progression.
 Manga Template.
  This one is based on Japanese comics, and focuses on a thin vertical gutter and a thick horizontal gutter, ensuring that the reader finished the previous row before heading to the next.
 Waffle Iron Grid
@@ -41,7 +41,7 @@ Waffle Iron Grid
 Design Templates
 ~~~~~~~~~~~~~~~~
 
-These are templates for design and have various defaults with proper ppi at your disposal:
+These are templates for design and have various defaults with proper PPI at your disposal:
 
 * Cinema 16:10
 * Cinema 2.93:1

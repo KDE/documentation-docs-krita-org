@@ -29,7 +29,7 @@ Raster Data
 ~~~~~~~~~~~
 
 This is the main data on the paint layers you make. So these are the
-strokes with the paint brush and look pixely up close. A multi-layer
+strokes with the paint brush and look pixelated up close. A multi-layer
 file will contain several of such layers, that get overlaid on top of
 each other so make the final image.
 
@@ -87,7 +87,7 @@ Some standards:
 72 PPI
     This is the default PPI of monitors as assumed by all programs. It
     is not fully correct, as most monitors these days have 125 PPI or
-    even 300 PPI for the retina devices. None the less, when making an
+    even 300 PPI for the retina devices. Nonetheless, when making an
     image for computer consumption, this is the default.
 120 PPI
     This is often used as a standard for low-quality posters.
@@ -139,7 +139,7 @@ formats which force a background color instead of transparency. PNG and
 JPG export use this color as the default color to fill in transparency
 if you do not want to export transparency.
 
-If you come in from a program like :program:`Paint Tool Sai`, then using this
+If you come in from a program like :program:`Paint Tool SAI`, then using this
 option, or using :guilabel:`As canvas color` radio button at :guilabel:`Background:`
 section in the new file options, will allow you to work in a slightly more comfortable
 environment, where transparency isn't depicted with checkered boxes.
@@ -174,7 +174,7 @@ of this layer.
 
 :menuselection:`Image --> Trim to Selection` is a faster cousin to the crop
 tool. This helps us to resize the canvas to the dimension of any active selection.
-This is especially useful with right clicking the layer on the layer stack and
+This is especially useful with right-clicking the layer on the layer stack and
 choosing :guilabel:`Select Opaque`. :menuselection:`Image --> Trim to Selection`
 will then crop the canvas to the selection bounding box.
 
@@ -274,7 +274,7 @@ Save Incremental Version
     Saves the current image as *'filename'\_XXX.kra* and switches the
     current document to it.
 Save Incremental Backup
-    Copies and renames the last saved version of your file to a back-up file and saves your document under the original name.
+    Copies and renames the last saved version of your file to a backup file and saves your document under the original name.
     
 
 .. note::

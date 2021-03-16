@@ -36,7 +36,7 @@ In digital imaging, a pixel (Picture Element) is a basic and lowest element of a
 .. image:: /images/Pixels-brushstroke.png
    :align: center
 
-In contrast to raster images, vector graphic images are based on mathematical expressions. They are independent of the pixels. For example, when you draw a rectangle on a :ref:`vector layer <vector_layers>` in Krita you are actually drawing paths passing through points that are called nodes, which are located on specific coordinates on the 'x' and 'y' axes. When you re-size or move these points the computer calculates and redraws the path and displays the newly formed shape to you. Hence you can re-size the vector shape to any extent without any loss in quality. In Krita, everything which is not on a vector layer is raster based.
+In contrast to raster images, vector graphic images are based on mathematical expressions. They are independent of the pixels. For example, when you draw a rectangle on a :ref:`vector layer <vector_layers>` in Krita you are actually drawing paths passing through points that are called nodes, which are located on specific coordinates on the 'x' and 'y' axes. When you re-size or move these points the computer calculates and redraws the path and displays the newly formed shape to you. Hence, you can re-size the vector shape to any extent without any loss in quality. In Krita, everything which is not on a vector layer is raster based.
 
 Images, Views and Windows
 -------------------------
@@ -127,7 +127,7 @@ The layer stack is a way for you to separate elements of a drawing and manipulat
 
 This allows you to have line art above the colors, or trees before the mountains, and edit each without affecting the other.
 
-Krita has many layer-types, each layer type is unique and has its own usecase:
+Krita has many layer-types, each layer type is unique and has its own use case:
 
 :ref:`paint_layers`
  These are raster layers, and the most common and default layer type in Krita, you will be painting on these.
@@ -138,7 +138,7 @@ Krita has many layer-types, each layer type is unique and has its own usecase:
 :ref:`clone_layers`
  These are copies of the layer you selected when making them. They get updated automatically when changing the original.
 :ref:`file_layers`
- These refer to an existing image outside of Krita and update as soon as the outside image updates. Useful for logos and emblems that change a lot.
+ These refer to an existing image outside Krita and update as soon as the outside image updates. Useful for logos and emblems that change a lot.
 :ref:`fill_layers`
  These layers are filled with something that Krita can make up on the fly, like colors or patterns.
 :ref:`filter_layers`
@@ -200,7 +200,7 @@ When painting traditionally, we use pigments which also absorb the right light-w
 
 A computer also uses three primaries and uses a specific amount of each primary in a color as the way it stores color. However, a computer is a screen that emits light. So it makes more light, which means it needs to do **additive** mixing, where adding more and more colored lights result in white. This is why the three most efficient primaries, as used by computers are Red, Green and Blue (RGB).
 
-Per pixel, a computer then stores the value of each of these primaries, with the maximum depending on the bit-depth. These are called the **components** or **channels** depending on who you talk to.
+Per pixel, a computer then stores the value of each of these primaries, with the maximum depending on the bit-depth. These are called the **components** or **channels** depending on whom you talk to.
 
 .. figure:: /images/Krita_basic_channel_rose.png
    :align: left
@@ -225,7 +225,7 @@ Some older programs don't always have transparency by default. Krita is the oppo
 Blending modes
 ~~~~~~~~~~~~~~
 
-Because colors are stored as numbers you can do maths with them. We call this **Blending Modes** or **Compositing Modes**.
+Because colors are stored as numbers you can do math with them. We call this **Blending Modes** or **Compositing Modes**.
 
 Blending modes can be done per layer or per brush stroke, and thus are also part of the compositing of layers.
 
@@ -270,7 +270,7 @@ The name mask comes from traditional masking fluid and film. You may recall the 
 Filters
 -------
 
-We mentioned earlier that you can do maths with colors. But you can also do maths with pixels, or groups of pixels or whole layers. In fact, you can make Krita do all sorts of little operations on layers. We call these operations **Filters**.
+We mentioned earlier that you can do math with colors. But you can also do math with pixels, or groups of pixels or whole layers. In fact, you can make Krita do all sorts of little operations on layers. We call these operations **Filters**.
 
 Examples of such operations are:
 
@@ -306,12 +306,12 @@ Krita also allows you to let the Filters be part of the layer stack, via :ref:`f
 
 Masks, on the other hand, can affect one single layer and are driven by a grayscale image. They will also affect all layers in a group, much like a transparency mask.
 
-We can use these filters to make our ghost lady look even more ethereal, by selecting the ghost lady's layer, and then creating a clone layer. We then right click and add a filter mask and use gaussian blur set to 10 or so pixels.  The clone layer is then put behind the original layer, and set to the blending mode '**Color Dodge**', giving her a definite spooky glow. You can keep on painting on the original layer and everything will get updated automatically!
+We can use these filters to make our ghost lady look even more ethereal, by selecting the ghost lady's layer, and then creating a clone layer. We then right-click and add a filter mask and use Gaussian blur set to 10 or so pixels.  The clone layer is then put behind the original layer, and set to the blending mode '**Color Dodge**', giving her a definite spooky glow. You can keep on painting on the original layer and everything will get updated automatically!
 
 .. image:: /images/Krita_ghostlady_3.png
    :align: center
 
-Layer Effects or Layer Styles are filter masks popularised by :program:`Photoshop's` that are a little faster than regular masks, but not as versatile. They are available by right clicking a layer and selecting 'layer style'.
+Layer Effects or Layer Styles are filter masks popularized by :program:`Photoshop's` that are a little faster than regular masks, but not as versatile. They are available by right-clicking a layer and selecting 'layer style'.
 
 Transformations
 ---------------

@@ -50,14 +50,14 @@ more interesting strokes.
 Supported Tablets
 -----------------
 
-Supported tablets are owned by Krita developers themselves so they can reliably diagnose and fix bugs. :ref:`We maintain a list of those here <list_supported_tablets>`.
+Supported tablets are owned by Krita developers themselves, so they can reliably diagnose and fix bugs. :ref:`We maintain a list of those here <list_supported_tablets>`.
 
 If you're looking for information about iPad or Android tablets, :ref:`look here <krita_android>`.
 
 Drivers and Pressure Sensitivity
 --------------------------------
 
-So you have bought a tablet, a real drawing tablet. And you wanna get it
+So you have bought a tablet, a real drawing tablet. And you want to get it
 to work with Krita! So you plug in the USB cable, start up Krita and...
 It doesn’t work! Or well, you can make strokes, but that pressure
 sensitivity you heard so much about doesn’t seem to work.
@@ -70,7 +70,7 @@ you wait, we’ll go into the details of what it is!
 Running on your computer is a basic system doing all the tricky bits of
 running a computer for you. This is the operating system, or OS. Most
 people use an operating system called Windows, but people on an Apple
-device have an operating system called MacOS, and some people, including
+device have an operating system called macOS, and some people, including
 many of the developers use a system called Linux.
 
 The base principle of all of these systems is the same though. You would
@@ -88,12 +88,12 @@ it would like to get information from the tablet!
 
 But it can’t! Turns out your operating system doesn’t know much about
 tablets. That’s what drivers are for. Installing a driver gives the
-operating system enough information so the OS can provide Krita with the
+operating system enough information, so the OS can provide Krita with the
 right information about the tablet. The hardware manufacturer's job is
 to write a proper driver for each operating system.
 
 .. warning::
-    Because drivers modify the operating system a little, you will always need to restart your computer when installing or deinstalling a driver, so don’t forget to do this! Conversely, because Krita isn’t a driver, you don’t need to even deinstall it to reset the configuration, just rename or delete the configuration file.
+    Because drivers modify the operating system a little, you will always need to restart your computer when installing or uninstalling a driver, so don’t forget to do this! Conversely, because Krita isn’t a driver, you don’t need to even uninstall it to reset the configuration, just rename or delete the configuration file.
 
 Where it can go wrong: Windows
 ------------------------------
@@ -101,15 +101,15 @@ Where it can go wrong: Windows
 Krita automatically connects to your tablet if the drivers are
 installed. When things go wrong, usually the problem isn't with Krita.
 
-Surface pro tablets need two drivers
+Surface Pro tablets need two drivers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Certain tablets using n-trig, like the Surface Pro, have two types of
-drivers. One is native, n-trig and the other one is called wintab.
+drivers. One is native, n-trig and the other one is called Wintab.
 Since 3.3, Krita can use Windows Ink style drivers, just go to 
 :menuselection:`Settings --> Configure Krita... --> Tablet Settings` and
 toggle the :guilabel:`Windows 8+ Pointer Input (Windows Ink)` there. You
-don't need to install the wintab drivers anymore for n-trig based pens.
+don't need to install the Wintab drivers anymore for n-trig based pens.
 
 Windows 10 updates
 ~~~~~~~~~~~~~~~~~~
@@ -133,7 +133,7 @@ or, on the other hand, make it the secondary screen. Double check in the Wacom
 settings utility that the tablet in the Cintiq is associated with the Cintiq
 screen.
 
-The third is that if you have a display tablet like a cintiq and a wacom expresskeys remote, and you have disabled Windows Ink in the calibration page of the stylus settings dialog so you have the full set of Wintab features, the cintiq needs to be the first item in Wacom's desktop application list. Otherwise you will have an offset between stylus and mouse that will get worse the more displays there are to the left of the cintiq display.
+The third is that if you have a display tablet like a Cintiq and a Wacom ExpressKeys remote, and you have disabled Windows Ink in the calibration page of the stylus settings dialog, so you have the full set of Wintab features, the Cintiq needs to be the first item in Wacom's desktop application list. Otherwise, you will have an offset between stylus and mouse that will get worse the more displays there are to the left of the Cintiq display.
 
 
 Broken Drivers
@@ -149,8 +149,8 @@ drivers.
 Conflicting Drivers
 ~~~~~~~~~~~~~~~~~~~
 
-On Windows, you can only have a single wintab-style driver installed at
-a time. So be sure to deinstall the previous driver before installing
+On Windows, you can only have a single Wintab-style driver installed at
+a time. So be sure to uninstall the previous driver before installing
 the one that comes with the tablet you want to use. Other operating
 systems are a bit better about this, but even Linux, where the drivers
 are often preinstalled, can't run two tablets with different drivers at
@@ -166,7 +166,7 @@ system while sandboxed, so it will often break in programs like
 Sandboxie. Similarly, certain mouse software, like Razer utilities can
 also affect whether Krita can talk to the operating system, converting
 tablet information to mouse information. This type of software should be
-configured to leave Krita alone, or be deinstalled.
+configured to leave Krita alone, or be uninstalled.
 
 The following software has been reported to interfere with tablet events
 to Krita:
@@ -190,7 +190,7 @@ Wacom Double Click Sensitivity (Straight starts of lines)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you experience an issue where the start of the stroke is straight,
-and have a wacom tablet, it could be caused by the Wacom driver
+and have a Wacom tablet, it could be caused by the Wacom driver
 double-click detection.
 
 To fix this, go to the Wacom settings utility and lower the double click

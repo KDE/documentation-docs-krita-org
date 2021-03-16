@@ -107,7 +107,7 @@ Pop-up Palette
 
 :ref:`Pop-up Palette <pop-up_palette>` is a feature unique to Krita, designed to increase the productivity of the artist. It is a circular menu for quickly choosing brushes, foreground and background colors, recent colors while painting. To access the palette you have to just |mouseright| on the canvas. The palette will spawn at the position of the brush tip or cursor.
 
-By tagging your brush presets you can add particular sets of brushes to this palette. For example, if you add some inking brush presets to inking tag you can change the tags to inking in the pop-up palette and you'll get all the inking brushes in the palette.
+By tagging your brush presets you can add particular sets of brushes to this palette. For example, if you add some inking brush presets to inking tag you can change the tags to inking in the pop-up palette, and you'll get all the inking brushes in the palette.
 
 You can :ref:`tag <tag_management>` brush presets via the :ref:`brush_preset_docker`, check out the :ref:`resource overview page <resource_management>` to know more about tagging in general.
 

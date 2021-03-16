@@ -60,14 +60,14 @@ third handle, and it'll snap to a perfect circle.
 Perspective
 ~~~~~~~~~~~
 
-This ruler allows you to draw and manipulate grids on the canvas that can serve as perspective guides for your painting. A grid can be added to your canvas by first clicking the tool in the tool bar and then clicking four points on the canvas which will serve as the four corners of your grid.
+This ruler allows you to draw and manipulate grids on the canvas that can serve as perspective guides for your painting. A grid can be added to your canvas by first clicking the tool in the toolbar and then clicking four points on the canvas which will serve as the four corners of your grid.
 
 .. image:: /images/tools/Perspectivegrid.png
 
 This grid can be used with the 'perspective' sensor, which can influence
 brushes.
 
-The grid can be manipulated by pulling on any of its four corners. The grid can be extended by clicking and dragging a midpoint of one of its edges. This will allow you to expand the grid at other angles. This process can be repeated on any subsequent grid or grid section.If you press the :kbd:`Shift` key while holding any of the corner handles, they'll snap
+The grid can be manipulated by pulling on any of its four corners. The grid can be extended by clicking and dragging a midpoint of one of its edges. This will allow you to expand the grid at other angles. This process can be repeated on any subsequent grid or grid section. If you press the :kbd:`Shift` key while holding any of the corner handles, they'll snap
 to one of the other corner handles, in sets. You can delete any grid by clicking on the cancel button at its center. This tool can be used to build reference for complex scenes.
 
 .. _assistant_ruler:
@@ -251,7 +251,7 @@ beams:
 
 .. image:: /images/assistants/Assistants_vanishing_point_logic_03.png
 
-Because any given set of lines has a vanishing point (outside of the ones flat on the view-plane), there can be an infinite amount of vanishing points in a linear perspective. Therefore, Krita allows you to set vanishing points yourself instead of forcing you to only use a few.
+Because any given set of lines has a vanishing point (outside the ones flat on the view-plane), there can be an infinite amount of vanishing points in a linear perspective. Therefore, Krita allows you to set vanishing points yourself instead of forcing you to only use a few.
 
 Fish Eye perspective
 ~~~~~~~~~~~~~~~~~~~~

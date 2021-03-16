@@ -82,7 +82,7 @@ The engine of a brush is the underlying programming that generates the
 stroke from a brush. What that means is that different brush engines
 have different options and different results. You can see this as the
 difference between using crayons, pencils and inks, but because
-computers are maths devices, most of our brush engines produce different
+computers are math devices, most of our brush engines produce different
 things in a more mathematical way.
 
 For most artists the mathematical nature doesn't matter as much as the
@@ -151,7 +151,7 @@ scratch pad and you can draw in the stroke.
 If you go to your resources folder, there's a folder there called
 "preset\_icons", and in this folder there are "tool\_icons" and
 "emblem\_icons". You can add semi-transparent PNGs here and Krita will
-load those into the icon library as well so you can customize your icons
+load those into the icon library as well, so you can customize your icons
 even more!
 
 At the top right of the icon library, there are three sliders. They allow
@@ -215,7 +215,7 @@ Section D - The Options List
 The options, as stated above, are different per brush engine. These
 represent the different parameters, toggles and knobs that you can turn
 to make a brush preset unique. For a couple of options, the main things
-to change are sliders and check boxes, but for a lot of them, they use
+to change are sliders and checkboxes, but for a lot of them, they use
 curves instead.
 
 Some options can be toggled, as noted by the little check boxes next to
@@ -357,7 +357,7 @@ First, open the settings with the :kbd:`F5` key.
 
 Then, press the arrow on the upper left to open the preset chooser.
 There, press the “+” icon to get a list of engines. For this brush we're
-gonna make a pixel brush.
+going to make a pixel brush.
 
 Example: Making an inking brush
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -413,7 +413,7 @@ The icon will be loaded into the mini scratch pad on the left. Now
 doodle a nice stroke next to it. If you feel you messed up, just go back
 to the icon library to load a new icon.
 
-Finally press :guilabel:`Save`, and your brush should be done.
+Finally, press :guilabel:`Save`, and your brush should be done.
 
 You can further modify your inking brush by...
 

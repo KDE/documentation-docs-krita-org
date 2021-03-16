@@ -113,11 +113,11 @@ If you enable :guilabel:`Show Global Selection Mask` (:guilabel:`Select` menu) y
 * :kbd:`Ctrl + A`: Select All
 * :kbd:`Ctrl + Shift + A`: deselect All (and not the :kbd:`Ctrl + D` shortcut as in PS)
 
-Note for Gimp user: Krita auto-expands and auto defloats new layers created from a selection after pressing the :kbd:`Ctrl + C`, :kbd:`Ctrl + V` shortcuts so you do not have to worry about not being able to paint outside the pasted element.
+Note for Gimp user: Krita auto-expands and auto defloats new layers created from a selection after pressing the :kbd:`Ctrl + C` and :kbd:`Ctrl + V` shortcuts, so you do not have to worry about not being able to paint outside the pasted element.
 
 .. note::
 
-    This doesn't work as intended right now. Intersect is a selection mode which use the :kbd:`T` key as the shortcut. However the :kbd:`T` key is also used to switch to the :guilabel:`Move tool` so this shortcut is not functional right now. You have to use the button on the :guilabel:`Tool Options`.
+    This doesn't work as intended right now. Intersect is a selection mode which uses the :kbd:`T` key as the shortcut. However, the :kbd:`T` key is also used to switch to the :guilabel:`Move tool`, so this shortcut is not functional right now. You have to use the button on the :guilabel:`Tool Options`.
 
 Layer Handling
 ~~~~~~~~~~~~~~
@@ -146,7 +146,7 @@ Clipping Masks
 
 Krita has no clipping mask, but there is a simpler workaround involving layer groups and :guilabel:`Inherit alpha` (see the alpha icon). Place a layer with the shape you want to clip the other with at the bottom of a group and layers above with the :guilabel:`Inherit alpha` option. This will create the same effect as the “clipping mask” PS feature, and also keeps the layer stack cleaner than the clipping mask implementation does.
 
-This process of arranging groups for inherit alpha can be done automatically by :kbd:`Ctrl + Shift + G` shortcut. It creates a group with base layer and a layer above it with inherit alpha option checked by default.
+This process of arranging groups for inherit alpha can be done automatically by :kbd:`Ctrl + Shift + G` shortcut. It creates a group with base layer and a layer above it with the Inherit alpha option checked by default.
 
 Pass-through mode
 ^^^^^^^^^^^^^^^^^
@@ -170,7 +170,7 @@ Filter Masks
 Layer styles
 ^^^^^^^^^^^^
 
-You can apply Photoshop layerstyles in Krita by right clicking any given layer type and selecting ‘layer style’ from the context menu. Krita can open and save ASL files, but not all layer style functionality is there yet.
+You can apply Photoshop layer-styles in Krita by right-clicking any given layer type and selecting ‘layer style’ from the context menu. Krita can open and save ASL files, but not all layer style functionality is there yet.
 
 Other
 ^^^^^
@@ -182,12 +182,12 @@ Layers and groups can be exported. See the :guilabel:`Layer` top menu for this a
 Paint tools
 ~~~~~~~~~~~
 
-This is Krita's strong point. There are many paint tools and they have a lot of options.
+This is Krita's strong point. There are many paint tools, and they have a lot of options.
 
 Tools
 ^^^^^
 
-In Krita, there is a totally different paradigm for defining what ‘tools’ are compared to PS. Unlike in PS, you will not find the brush, eraser, clone, blur tool, etc. Instead, you will find a *way to trace* your strokes on the canvas: freehand, line, rectangle, circle, multiple brush, etc. When you have selected the ‘way to trace’ you can choose the *way to paint*: erasing / cloning / blurring, etc are all part of  *way it paint* managed by the brush-engines options. These brush engine options are saved into so-called *presets*, which you can find on :guilabel:`Brush presets`.  You can fine tune, and build your own presets using the :guilabel:`Edit Brush Settings` icon on the top tool bar. 
+In Krita, there is a totally different paradigm for defining what ‘tools’ are compared to PS. Unlike in PS, you will not find the brush, eraser, clone, blur tool, etc. Instead, you will find a *way to trace* your strokes on the canvas: freehand, line, rectangle, circle, multiple brush, etc. When you have selected the ‘way to trace’ you can choose the *way to paint*: erasing / cloning / blurring, etc are all part of  *way it paint* managed by the brush-engines options. These brush engine options are saved into so-called *presets*, which you can find on :guilabel:`Brush presets`.  You can fine tune, and build your own presets using the :guilabel:`Edit Brush Settings` icon on the top toolbar. 
 
 Erasing
 ^^^^^^^
@@ -279,7 +279,7 @@ Furthermore, you can use transformation masks to apply transforms non-destructiv
    :align: center
    :figwidth: 800
 
-   Transform masks allows non-destructive transforms
+   Transform masks allow non-destructive transforms
 
 Incremental Save
 ~~~~~~~~~~~~~~~~

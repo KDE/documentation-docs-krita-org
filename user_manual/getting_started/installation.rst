@@ -32,7 +32,7 @@ Website:
 
     The page will try to automatically recommend the correct architecture (64- or 32-bit), but you can select "All Download Versions" to get more choices. To determine your computer architecture manually, go to :menuselection:`Settings --> About`. Your architecture will be listed as the :guilabel:`System Type` in the :guilabel:`Device Specifications` section.
 
-    Krita by default downloads an **installer EXE**, but you can also download a **portable ZIP file** version instead. Unlike the installer version, this portable version does not show previews in Windows Explorer automatically. To get these previews with the portable version, also install Krita's **Windows Shell Extension** extension (available on the download page).
+    Krita by default downloads an **installer EXE**, but you can also download a **portable ZIP file** version instead. Unlike the installer version, this portable version does not show previews in Windows Explorer automatically. To get these previews with the portable version, also install Krita's **Windows Shell Extension** (available on the download page).
 
     These files are also available from the `KDE download directory <https://download.kde.org/stable/krita/>`_.
 Windows Store:
@@ -52,16 +52,16 @@ Linux
 
 Many Linux distributions package the latest version of Krita. Sometimes
 you will have to enable an extra repository. Krita runs fine under most
-desktop enviroments such as KDE, Gnome, LXDE, Xfce etc. -- even though it
+desktop environments such as KDE, Gnome, LXDE, Xfce etc. -- even though it
 is a KDE application and needs the KDE libraries. You might also want to
-install the KDE system settings module and tweak the gui theme and fonts used,
+install the KDE system settings module and tweak the GUI theme and fonts used,
 depending on your distributions.
 
 Nautilus/Nemo file extensions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Since April 2016, KDE's Dolphin file manager shows KRA and ORA thumbnails by
-default, but Nautilus and it's derivatives need an extension. `We
+default, but Nautilus and its derivatives need an extension. `We
 recommend Moritz Molch's extensions for XCF, KRA, ORA and PSD
 thumbnails <https://moritzmolch.com/1749>`__.
 
@@ -99,7 +99,7 @@ Ubuntu and Kubuntu
 It does not matter which version of Ubuntu you use, Krita will run just
 fine. However, by default, only a very old version of Krita is
 available. You should either use the appimage, flatpak or the snap available
-from Ubuntu's app store. We also maintain a ppa for getting latest builds of Krita,
+from Ubuntu's app store. We also maintain a ppa for getting the latest builds of Krita,
 you can read more about the ppa and install instructions `here <https://launchpad.net/~kritalime/+archive/ubuntu/ppa>`_.
 
 OpenSUSE
@@ -138,13 +138,13 @@ install Krita by using the following command:
 
 ``pacman -S krita``
 
-You can also find Krita pkgbuild in arch user repositories but it is not guaranteed to contain the latest git version.
+You can also find Krita pkgbuild in arch user repositories, but it is not guaranteed to contain the latest git version.
 
 Flatpak
 ~~~~~~~
 We also have Flatpak for nightlies and stable builds, these builds are not maintained by the core developers themselves. You can either get the builds from the `KDE community website <https://binary-factory.kde.org>`_ or from the `Flathub Maintainers <https://flathub.org/apps/details/org.kde.krita>`_.
 
-To install flatpak build from the software centre just open the flatpakrepo files with Discover or the software center provided by your distribution:
+To install flatpak build from the software center just open the flatpakrepo files with Discover or the software center provided by your distribution:
 
     `Flathub Repo <https://flathub.org/repo/flathub.flatpakrepo>`_
 
@@ -168,10 +168,10 @@ If you prefer doing it from terminal you can use the following commands to insta
 
 Snaps
 ~~~~~
-There are snap packages provided by the ubuntu snap developers, these are generally not up to date. The Krita Developers do not provide or build the snap packages themselves.
-To install Krita as a snap package, first install snapd application. Snapd is installed by default on ubuntu distributions.
+There are snap packages provided by the Ubuntu snap developers, these are generally not up to date. The Krita Developers do not provide or build the snap packages themselves.
+To install Krita as a snap package, first install snapd application. Snapd is installed by default on Ubuntu distributions.
 
-If you are on ubuntu distribution then Krita's snap package may show up in the software center or you can run the following command in terminal
+If you are on Ubuntu distribution then Krita's snap package may show up in the software center, or you can run the following command in terminal
 
     ``sudo snap install krita``
 
@@ -200,7 +200,7 @@ that might make the effort worth it:
    are built for the lowest-common denominator.
 -  You will be getting all the bug fixes as soon as possible as well.
 -  You can help the developers by giving us your feedback on features as
-   they are being developed and you can test bug fixes for us. This is
+   they are being developed, and you can test bug fixes for us. This is
    hugely important, which is why our regular testers get their name in
    the about box just like developers.
 

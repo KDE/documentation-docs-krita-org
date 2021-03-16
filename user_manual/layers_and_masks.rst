@@ -54,7 +54,7 @@ Some artists draw with limited number of layers but some prefer to have
 different elements of the artwork on separate layer. Krita has some good
 layer management features which make the layer management task easy.
 
-You can :ref:`group layers <group_layers>` and organise
+You can :ref:`group layers <group_layers>` and organize
 the elements of your artwork.
 
 The layer order can be changed or layers can be moved in and out of a
@@ -164,7 +164,7 @@ layer which will affect the whole image. Layers can also be transformed non-dest
 .. note::
     You can merge all visible layers by selecting everything first :menuselection:`Layer --> Select --> Visible Layers`. Then Combine them all by merging :menuselection:`Layer --> Merge with Layer Below`.
 
-These filters and masks are accessible through the right click menu (as
+These filters and masks are accessible through the right-click menu (as
 shown in the image below) and the Plus icon on the layer docker.
 
 .. image:: /images/layers/Layer-right-click.png
