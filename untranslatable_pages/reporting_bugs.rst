@@ -84,7 +84,7 @@ Give all information. That means that you should give information about your ope
 - Open the `the bug tracker <https://bugs.kde.org/enter_bug.cgi?product=krita?>`_.
 - If you do not have an account yet, create one.
 
-.. image:: bugzilla_simple.png
+.. image:: /images/untranslatable/bugzilla_simple.png
    :width: 800
    :align: center
    :alt: the bug tracker's new bug form, advanced fields hidden
