@@ -521,7 +521,7 @@ and then run it again.
 That's the only dependency we have to manage manually!
 
 Building Krita
---------------
+~~~~~~~~~~~~~~
 
 Now, to build krita, run
 ``<krita-source>/packaging/android/androidbuild.sh --help`` and pass the required arguments.
@@ -533,7 +533,7 @@ Example:
     ./androidbuild.sh -p=all --src=/home/sh_zam/workspace/krita --build-type=Debug --build-root=/home/sh_zam/workspace/build-krita-android --ndk-path=/home/sh_zam/Android/Sdk/ndk-bundle --sdk-path=/home/sh_zam/Android/Sdk --api-level=21 --android-abi=armeabi-v7a
 
 Installing Krita APK
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 To install run
 ``adb install -d -r <build-root>/krita_build_apk/build/outputs/apk/debug/krita_build_apk-debug.apk``.
@@ -541,7 +541,7 @@ To install run
 ``adb`` should be in ``<sdk-root>/platform-tools/``
 
 Crash
------
+~~~~~
 
 If Krita crashes you can look up the logs using ``adb logcat``
 
