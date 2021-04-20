@@ -343,10 +343,31 @@ Then get krita:
     cd c:\dev
     git clone https://invent.kde.org/graphics/krita.git
     
-Building the dependencies
+Getting the dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg
+
+
+Here we have two options. The quick one is to reuse prebuilt dependencies from the binary factory (you need to have the same version of the compiler locally as the one used on the binary factory). And the slow one is to build everything ourselves.
+
+Using prebuilt dependencies from the binary factory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To fetch prebuilt dependencies just run the embedded cmake script: 
+
+.. code:: console
+
+    cd c:\dev
+    mkdir b
+    cd b
+    cmake ..\krita\build-tools\ci-deps -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=..\i
+    cmake --build .
+    
+
+Building dependencies yourself
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 We will build everything on Windows with the same script that is used to make the nightly builds and the releases:
 
