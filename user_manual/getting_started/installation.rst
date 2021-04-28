@@ -20,7 +20,6 @@ Installation
 Windows
 -------
 Windows users can download Krita from the website, the Windows Store, or Steam.
-
 The versions on the Store and Steam cost money, but are `functionally identical
 <https://krita.org/en/item/krita-available-from-the-windows-store/>`_ to the
 (free) website version. Unlike the website version, however, both paid versions

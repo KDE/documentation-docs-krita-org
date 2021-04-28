@@ -35,8 +35,6 @@ This chapter covers how you use Krita in the basic operations compared to PS.
 View and Display
 ~~~~~~~~~~~~~~~~
 
-|
-
 Navigation
 ^^^^^^^^^^
 
