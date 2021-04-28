@@ -142,7 +142,7 @@ You can also find Krita pkgbuild in arch user repositories, but it is not guaran
 
 Flatpak
 ~~~~~~~
-We also have Flatpak for nightlies and stable builds, these builds are not maintained by the core developers themselves. You can either get the builds from the `KDE community website <https://binary-factory.kde.org>`_ or from the `Flathub Maintainers <https://flathub.org/apps/details/org.kde.krita>`_.
+We also have Flatpak for nightlies and stable builds, these builds are not maintained by the core developers themselves. You can either get the builds from the `KDE community website <https://binary-factory.kde.org>`_ or from the `Flathub Maintainers <https://flathub.org/apps/details/org.kde.krita>`_. The KDE community website only offers nightly builds of flatpak.
 
 To install flatpak build from the software center just open the flatpakrepo files with Discover or the software center provided by your distribution:
 
@@ -156,15 +156,15 @@ If you prefer doing it from terminal you can use the following commands to insta
 
     For KDE Flatpak Repo:
 
-    ``flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo``
+    ``flatpak --user remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo``
 
-    ``flatpak install kdeapps org.kde.krita``
+    ``flatpak --user install kdeapps org.kde.krita-nightly``
 
     For installing it from Flathub Repo:
 
-    ``flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo``
+    ``flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo``
 
-    ``flatpak install kdeapps org.kde.krita``
+    ``flatpak --user install kdeapps org.kde.krita``
 
 Snaps
 ~~~~~
