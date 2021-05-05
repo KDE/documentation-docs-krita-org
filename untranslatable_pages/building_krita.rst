@@ -327,7 +327,8 @@ Then prepare a batch file to set the environment. Every time you want to build o
     set BUILDROOT=c:\dev
     set BUILDDIR_INSTALL=%BUILDROOT%\i
     set PATH=%BUILDROOT%\i\bin;%BUILDROOT%\i\lib;%MINGW_GCC_BIN%;C:\Program Files\CMake\bin;c:\qt\qtcreator-4.12.0\bin;%PATH%
-    set WindowsSdkDir=C:\Program Files (x86)\Windows Kits\10
+    set "WindowsSdkDir=%ProgramFiles(x86)%\Windows Kits\10"
+    set "WindowsSdkVerBinPath=%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.17763.0"
     
 .. code:: console
 
