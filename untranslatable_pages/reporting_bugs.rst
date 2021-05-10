@@ -81,7 +81,7 @@ Be Complete and Be Completely Clear
 
 Give all information. That means that you should give information about your operating system, hardware, the version of Krita you're using and, of course about the problem.
 
-- Open the `the bug tracker <https://bugs.kde.org/enter_bug.cgi?product=krita?>`_.
+- Open the `the bug tracker <https://bugs.kde.org/enter_bug.cgi?product=krita>`_.
 - If you do not have an account yet, create one.
 
 .. image:: /images/untranslatable/bugzilla_simple.png
