@@ -133,8 +133,8 @@ Windows users have a habit of uninstalling and reinstalling applications to solv
 
 
 
-Why my configuration resets on its own?
----------------------------------------
+Why does Krita's configuration reset on its own?
+------------------------------------------------
 
 There are two possible reasons:
 
