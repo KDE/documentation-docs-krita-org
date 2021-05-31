@@ -348,6 +348,9 @@ This is specifically about support on Windows, not Linux or OSX.
    * - Huion / Turcom 
      - Inspiroy Q11K  
      - ✔️ Supported
+   * - Huion / Turcom
+     - HS611
+     - ✔️ Supported
    * - KB Gear 
      - JamStudio
      - ❓ Unknown
