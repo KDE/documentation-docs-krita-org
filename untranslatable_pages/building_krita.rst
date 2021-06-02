@@ -330,6 +330,9 @@ Then prepare a batch file to set the environment. Every time you want to build o
     set "WindowsSdkDir=%ProgramFiles(x86)%\Windows Kits\10"
     set "WindowsSdkVerBinPath=%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.17763.0"
     
+    :: Since Krita 5.1 when using SIP5+ you also need to set up PYTHONPATH manually
+    set PYTHONPATH=%BUILDROOT%\i\lib\site-packages;%PYTHONPATH%
+
 .. code:: console
 
     cd c:\dev 
