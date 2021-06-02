@@ -92,10 +92,10 @@ Adjust Granularity
 
 .. versionadded:: 4.2
 
-This adjusts the precision of the cage transform grid. Lower precision gives more speed but also gives less precise results.
+This adjusts the precision of the cage transform grid. The lower the value, the higher is the quality of the transformation (and therefore the speep is lower). When the granularity is too high, the result starts to look "blocky".
 
 Preview
-    Adjusts the granularity of the preview. It is recommended to have this lower than the :guilabel:`Real` value, as it speeds up adjusting.
+    Adjusts the granularity of the preview. It is recommended to have it higher than the :guilabel:`Real` value, as it speeds up adjusting.
 Real
     Adjusts the granularity of the final result.
 
