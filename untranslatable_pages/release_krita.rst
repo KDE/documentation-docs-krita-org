@@ -30,7 +30,6 @@ Before the release
     * https://binary-factory.kde.org/job/Krita_Nightly_Appimage_Dependency_Build/
     * https://binary-factory.kde.org/job/Krita_Nightly_MacOS_Dependency_Build/
     * https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/
-    * https://binary-factory.kde.org/job/Krita_Release_Windows32_Dependency_Build/
     
     Compare the build date and included commits to the commit in 3rdparty directory in master:
     
@@ -146,7 +145,6 @@ Make Windows, Linux, OSX and Android packages
 
 8. Request four release builds on binary-factory.kde.org, after starting each build,go to "Console Output" section, click on "Input Requested" and choose a tarball version to build.
 
-    * https://binary-factory.kde.org/job/Krita_Release_Windows32_Build/
     * https://binary-factory.kde.org/job/Krita_Release_Windows64_Build/
     * https://binary-factory.kde.org/job/Krita_Release_Appimage_Build/
     * https://binary-factory.kde.org/job/Krita_Release_MacOS_Build/
@@ -194,7 +192,7 @@ Make Windows, Linux, OSX and Android packages
 
         md5sum ./* > md5sum.txt
 
-15. Upload 20(!) files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
+15. Upload these files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
 
     * krita-4.2.9-beta1.tar.gz
     * krita-4.2.9-beta1.tar.gz.sig
@@ -207,9 +205,6 @@ Make Windows, Linux, OSX and Android packages
     * krita-x64-4.2.9-beta1-dbg.zip
     * krita-x64-4.2.9-beta1-setup.exe
     * krita-x64-4.2.9-beta1.zip
-    * krita-x86-4.2.9-beta1-dbg.zip
-    * krita-x86-4.2.9-beta1-setup.exe
-    * krita-x86-4.2.9-beta1.zip
     * krita-4.2.9-beta1.dmg
     * krita-arm64-4.2.9-beta1.apk
     * krita-arm32-4.2.9-beta1.apk
