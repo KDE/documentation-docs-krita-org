@@ -4,7 +4,7 @@
 
 .. metadata-placeholder
 
-    :authors: - Boudewijn Rempt <boud@valdyas.org>
+    :authors: - Halla Rempt <halla@valdyas.org>
     :license: GNU free documentation license 1.3 or later.
 
 .. _cmake_settings_for_developers:

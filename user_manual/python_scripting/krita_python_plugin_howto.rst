@@ -7,7 +7,7 @@
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - BrendanD
              - Scott Petrovic
-             - Boudewijn Rempt <boud@valdyas.org>
+             - Halla Rempt <halla@valdyas.org>
              - TPaulssen
    :license: GNU free documentation license 1.3 or later.
 

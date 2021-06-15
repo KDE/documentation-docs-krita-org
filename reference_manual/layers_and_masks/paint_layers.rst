@@ -8,7 +8,7 @@
              - Scott Petrovic
              - Raghavendra Kamath
              - Bugsbane
-             - Boudewijn Rempt
+             - Halla Rempt
              - Alan
    :license: GNU free documentation license 1.3 or later.
 

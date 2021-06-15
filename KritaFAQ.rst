@@ -7,7 +7,7 @@
    :authors: - Scott Petrovic
              - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - Raghavendra Kamath <raghu@raghukamath.com>
-             - Boudewijn Rempt <boud@valdyas.org>
+             - Halla Rempt <halla@valdyas.org>
              - Alvin Wong
              - Dmitry Kazakov
              - Timothée Giet

@@ -4,7 +4,7 @@
 
 .. metadata-placeholder
 
-   :authors: - Boudewijn Rempt
+   :authors: - Halla Rempt
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: ! Saving, Autosave, Backup

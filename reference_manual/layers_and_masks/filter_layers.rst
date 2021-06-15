@@ -8,7 +8,7 @@
              - Scott Petrovic
              - Alan
              - Bugsbane
-             - Boudewijn Rempt
+             - Halla Rempt
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Layers, Filters

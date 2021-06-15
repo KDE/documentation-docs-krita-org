@@ -5,7 +5,7 @@
 .. metadata-placeholder:
 
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
-             - Boudewijn Rempt <boud@valdyas.org>
+             - Halla Rempt <halla@valdyas.org>
 
    :license: GNU free documentation license 1.3 or later.
 

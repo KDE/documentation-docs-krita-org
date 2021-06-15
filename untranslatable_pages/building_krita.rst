@@ -4,7 +4,7 @@
 
 .. metadata-placeholder
 
-    :authors: - Boudewijn Rempt <boud@valdyas.org>
+    :authors: - Halla Rempt <halla@valdyas.org>
               - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
               - images and latter parts by David Revoy <info@davidrevoy.com>
     :license: GNU free documentation license 1.3 or later.
@@ -128,7 +128,7 @@ If all dependencies have been installed, cmake will output something like this:
 
     -- Configuring done
     -- Generating done
-    -- Build files have been written to: /home/boud/dev/b-krita
+    -- Build files have been written to: /home/halla/dev/b-krita
     
 .. warning::
     There is one run-time package that you need to install. CMake will not warn about it missing. That is the Qt5 SQLite database driver package. On Ubuntu this is named libqt5sql5-sqlite, the name might be different on other distributions. You need this to be able to start Krita after you have built and installed Krita! This is only needed if you build the master (5.0) branch of Krita.

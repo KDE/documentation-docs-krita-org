@@ -9,7 +9,7 @@
              - Raghavendra Kamath <raghavendr.raghu@gmail.com>
              - Alan
              - Bugsbane
-             - Boudewijn
+             - Halla
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Layers, Masks, Transparency

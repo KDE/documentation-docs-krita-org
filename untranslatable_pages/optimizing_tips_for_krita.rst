@@ -5,7 +5,7 @@
 .. metadata-placeholder
 
     :authors: - Michael Abrahams <miabraha@gmail.com>
-              - Boudewijn Rempt <boud@valdyas.org>
+              - Halla Rempt <halla@valdyas.org>
               - Timotimo
               - Lukáš Tvrdý <lukast.dev@gmail.com>
               - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>

@@ -4,7 +4,7 @@
 
 .. metadata-placeholder
 
-    :authors: - Boudewijn Rempt <boud@valdyas.org>
+    :authors: - Halla Rempt <halla@valdyas.org>
     :license: GNU free documentation license 1.3 or later.
 
 .. index:: community, communication
@@ -30,7 +30,7 @@ There are also the:
 
 You’ll find that there are a number of people are almost always around: the core team.
 
-* Boudewijn (irc: boud): project maintainer, lead developer. Works full-time on Krita. Manages the Krita Foundation, triages bugs, does social media and admin stuff. Boudewijn is also on Reddit as boudewijnrempt.
+* Halla (irc: halla): project maintainer, lead developer. Works full-time on Krita. Manages the Krita Foundation, triages bugs, does social media and admin stuff. Halla is also on Reddit as hallaewijnrempt.
 * Dmitry (irc: dmitryK|log): lead developer. Works full-time on Krita.
 * Wolthera (irc: Wolthera_laptop): developer, writes the manual and tutorials, triages bugs, helps people out. Works full-time on Krita.
 * Ivan Yossi (irc: ivanyossi|log): developer. Works full-time on Krita.
