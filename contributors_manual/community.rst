@@ -53,7 +53,7 @@ Internet Relay Chat
 
 IRC is the main communication channel. There are IRC clients for every operating system out there, as well as a web client on the krita website.
 
-* Joining IRC: connect to https://webchat.freenode.net, select a unique nickname and join the #krita and ##krita-chat channels. #krita is for on-topic talk, ##krita-chat for off-topic chat.
+* Joining IRC: connect to libera.chat, select a unique nickname and join the #krita and ##krita-chat channels. #krita is for on-topic talk, ##krita-chat for off-topic chat.
 * Don’t ask to ask: if you’ve got a question, just ask it.
 * Don’t panic if several discussions happen at the same time. That’s normal in a busy channel.
 * Talk to an individual by typing their nick and a colon.
