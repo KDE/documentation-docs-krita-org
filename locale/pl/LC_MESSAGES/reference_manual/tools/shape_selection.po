@@ -1,22 +1,22 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2020.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-11 02:13+0100\n"
-"PO-Revision-Date: 2020-07-11 07:50+0200\n"
+"PO-Revision-Date: 2021-06-15 17:06+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 20.07.70\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10"
+" || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.12.1\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -27,7 +27,6 @@ msgstr ""
 "   :alt: mouseleft"
 
 #: ../../<rst_epilog>:4
-#, fuzzy
 #| msgid ""
 #| ".. image:: images/icons/Krita_mouse_left.png\n"
 #| "   :alt: mouseleft"
@@ -35,8 +34,8 @@ msgid ""
 ".. image:: images/icons/Krita_mouse_right.png\n"
 "   :alt: mouseright"
 msgstr ""
-".. image:: images/icons/Krita_mouse_left.png\n"
-"   :alt: mouseleft"
+".. image:: images/icons/Krita_mouse_right.png\n"
+"   :alt: mouseright"
 
 #: ../../<rst_epilog>:10
 msgid ""
@@ -533,13 +532,12 @@ msgstr ""
 "sposobem jest zmiana gradientów poprzez zmianę ich położenia na płótnie."
 
 #: ../../reference_manual/tools/shape_selection.rst:157
-#, fuzzy
 #| msgid ""
 #| "As the name implies this type fills the shape with a gradient. It has the "
 #| "following options:"
 msgid "Fills the shape with a Mesh Gradient. It has following options:"
 msgstr ""
-"Jak nazwa mówi, wypełnia to kształt gradientem. Zawiera następujące "
+"Wypełnia to kształt gradientem siatkowym. Zawiera następujące "
 "ustawienia:"
 
 #: ../../reference_manual/tools/shape_selection.rst:160
@@ -548,32 +546,33 @@ msgid ""
 "changed (rectangle), changing the color of Bezier handle (circle) is not "
 "possible."
 msgstr ""
+"Zmień barwę zaznaczonego przystanku. Można zmienić tylko barwę narożnika"
+" (prostokąt), zmiana barwy uchwytu Beziera (okrąg) jest niemożliwa."
 
 #: ../../reference_manual/tools/shape_selection.rst:161
 msgid "Rows"
-msgstr ""
+msgstr "Wiersze"
 
 #: ../../reference_manual/tools/shape_selection.rst:162
 msgid "Change the number of rows in a Mesh Gradient."
-msgstr ""
+msgstr "Zmień liczbę wierszy w gradiencie siatkowym."
 
 #: ../../reference_manual/tools/shape_selection.rst:163
 msgid "Columns"
-msgstr ""
+msgstr "Kolumny"
 
 #: ../../reference_manual/tools/shape_selection.rst:164
 msgid "Change the number of columns in a Mesh Gradient."
-msgstr ""
+msgstr "Zmień liczbę kolumn w gradiencie siatkowym."
 
 #: ../../reference_manual/tools/shape_selection.rst:166
-#, fuzzy
 #| msgid "Save Gradient"
 msgid "Mesh Gradient"
-msgstr "Zapisz gradient"
+msgstr "Siatka gradientu"
 
 #: ../../reference_manual/tools/shape_selection.rst:166
 msgid "Smoothing"
-msgstr ""
+msgstr "Wygładzanie"
 
 #: ../../reference_manual/tools/shape_selection.rst:166
 msgid ""
@@ -583,18 +582,26 @@ msgid ""
 "*Bicubic* is the bicubic interpolation of the color stops, this should "
 "produce smoother gradient."
 msgstr ""
+"Istnieją dwie możliwe wartości, *Dwulinowo* (domyślnie) oraz"
+" *Dwusześciennie*. *Dwulinowo* jest linową interpolacją barw przystanków,"
+" jednak może wywołać `Efekt pasków mach <https://en.wikipedia.org/wiki/Mach_ba"
+"nds>`_. "
+"*Dwusześciennie* jest dwusześcienną interpolacją barw przystanków, która"
+" powinna dać gładsze gradienty."
 
 #: ../../reference_manual/tools/shape_selection.rst:170
 msgid ""
 "Mesh Gradients follow `SVG draft 2 <https://svgwg.org/svg-next/pservers."
 "html#MeshGradients>`_ for the rendering."
 msgstr ""
+"Gradienty siatkowe przestrzegają `Szkicu SVG 2 <"
+"https://svgwg.org/svg-next/pservers."
+"html#MeshGradients>`_ przy wyświetlaniu."
 
 #: ../../reference_manual/tools/shape_selection.rst:173
-#, fuzzy
 #| msgid "Save Gradient"
 msgid "Creating Mesh Gradients"
-msgstr "Zapisz gradient"
+msgstr "Tworzenie gradientów siatkowych"
 
 #: ../../reference_manual/tools/shape_selection.rst:175
 msgid ""
@@ -604,10 +611,15 @@ msgid ""
 "Options, will add more patches to the Mesh Gradient and corners can be "
 "changed individually."
 msgstr ""
+"Gdy zaznaczono ustawienie gradientów siatkowych dla kształtu, to Krita"
+" domyślnie wypełnia wtedy gradientem siatkowym, który jest złożony z"
+" naprzemiennych barw (zmienia się pomiędzy barwą tła i białą). Zmiana liczby"
+" wierszy i kolumn z ustawień narzędzia doda więcej łatek do gradientu"
+" siatkowego, a narożniki będą zmieniane każdy osobno."
 
 #: ../../reference_manual/tools/shape_selection.rst:178
 msgid "Editing Mesh Gradients"
-msgstr ""
+msgstr "Zmiana gradientów siatkowych"
 
 #: ../../reference_manual/tools/shape_selection.rst:180
 msgid ""
@@ -616,9 +628,12 @@ msgid ""
 "by dragging the corner (rectangle) and other is by dragging the handle "
 "(circle)."
 msgstr ""
+"Sposób zmiany gradientów siatkowych jest całkiem prosty. Każda krzywa jest"
+" osobną krzywą Beziera. Istnieją dwa sposoby na zmianę ich struktury, jeden"
+" to przeciąganie narożnika (prostokąt), a drugi do przeciąganie uchwytu"
+" (okrąg)."
 
 #: ../../reference_manual/tools/shape_selection.rst:186
-#, fuzzy
 #| msgid ""
 #| ".. image:: images/tools/shapes-selection-properties.png\n"
 #| "   :alt: Left to right: Placement, Scale, Angle and Distortion."
@@ -626,19 +641,23 @@ msgid ""
 ".. image:: images/tools/MeshGradients-corner-moving.png\n"
 "   :alt: Left to right: Normal, Corner Hovered, Corner Moved and Selected."
 msgstr ""
-".. image:: images/tools/shapes-selection-properties.png\n"
-"   :alt: Od lewej do prawej: umieszczenie, podziałka, kąt oraz "
-"zniekształcenie."
+".. image:: images/tools/MeshGradients-corner-moving.png\n"
+"   :alt: Od lewej do prawej: normalny, najechano na narożnik, przesunięto"
+" narożnik i zaznaczono."
 
 #: ../../reference_manual/tools/shape_selection.rst:186
 msgid "Left to right: Normal, Corner Hovered, Corner Moved and Selected."
 msgstr ""
+"Od lewej do prawej: normalny, najechano na narożnik, przesunięto narożnik i"
+" zaznaczono."
 
 #: ../../reference_manual/tools/shape_selection.rst:188
 msgid ""
 "To change the color, a corner has to be selected and then Tool Options can "
 "be used to change the color of the selected corner."
 msgstr ""
+"Aby zmienić barwę, narożnik musi być zaznaczony, a następnie można użyć"
+" ustawień narzędzia, aby zmienić barwę zaznaczonego narożnika."
 
 #: ../../reference_manual/tools/shape_selection.rst:192
 msgid ""
@@ -646,6 +665,9 @@ msgid ""
 "Krita to edit Mesh Gradients. To fix this, first ungroup (via |mouseright|) "
 "them."
 msgstr ""
+"Kształty zaimportowane z Inkscape mogą być pogrupowane, co może uniemożliwić"
+" Kricie zmianę gradientów siatkowych. Aby temu zaradzić, najpierw je"
+" rozgrupuj (poprzez |mouseright|) ."
 
 #: ../../reference_manual/tools/shape_selection.rst:197
 msgid "Right-click menu"
