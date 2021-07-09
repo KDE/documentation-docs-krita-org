@@ -12,7 +12,7 @@
 {% set script_files = script_files + ['_static/searchtools.js'] %}
 {% block footer %}
   <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("{{ pathto('searchindex.js', 1) }}"); });
+    jQuery(function() { Search.loadIndex("{{ theme_canonical_url }}/{{ pathto('searchindex.js', 1) }}"); });
   </script>
   {# this is used when loading the search index using $.ajax fails,
      such as on Chrome for documents on localhost #}
@@ -40,7 +40,7 @@
     <ul>
     {% for href, caption, context in search_results %}
       <li>
-        <a href="{{ pathto(item.href) }}">{{ caption }}</a>
+        <a href="{{ theme_canonical_url }}/{{ pathto(item.href) }}">{{ caption }}</a>
         <p class="context">{{ context|e }}</p>
       </li>
     {% endfor %}

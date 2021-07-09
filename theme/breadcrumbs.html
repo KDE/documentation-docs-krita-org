@@ -28,7 +28,7 @@
 
   <ul class="wy-breadcrumbs">
     {% block breadcrumbs %}
-      <li><a href="{{ pathto(master_doc) }}">{{ _('Docs') }}</a> &raquo;</li>
+      <li><a href="{{ theme_canonical_url }}/{{ pathto(master_doc) }}">{{ _('Docs') }}</a> &raquo;</li>
         {% for doc in parents %}
           <li><a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;</li>
         {% endfor %}
@@ -62,14 +62,14 @@
             <a href="{{ source_url_prefix }}{{ pagename }}{{ suffix }}">
                 <!-- {{ _('View page source') }} -->
 
-                <img src="{{ pathto('_static/images/source-code.png', true)|e }}" />
+                <img src="{{ theme_canonical_url }}/{{ pathto('_static/images/source-code.png', true)|e }}" />
 
 
             </a>
           {% elif show_source and has_source and sourcename %}
-            <a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow"> 
+            <a href="{{ theme_canonical_url }}/{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow"> 
              
-              <img src="{{ pathto('_static/images/source-code.png', true)|e }}" />
+              <img src="{{ theme_canonical_url }}/{{ pathto('_static/images/source-code.png', true)|e }}" />
              <!-- {{ _('View page source') }} -->
 
           </a>
