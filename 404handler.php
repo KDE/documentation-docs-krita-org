@@ -344,6 +344,10 @@ function determine_appropriate_language( $request, $browser_languages, $supporte
         $components = explode(";", $language);
         $language = $components[0];
 
+        // Browsers use dashes to seperate language variants
+        // But KDE translation systems use underscores for this so ensure we are consistent here
+        $language = str_replace("-", "_", $language);
+
         // Is this one of our supported languages?
         if( in_array($language, $supported_languages) ) {
             // Then we have a winner!
