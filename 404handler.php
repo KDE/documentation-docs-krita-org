@@ -24,6 +24,9 @@ $supported_languages = array(
 // List of page redirect rules
 // These should always be free of the language code, as this will be automatically added on when formulating the URL to forward the user on to
 $redirect_rules = array(
+    // Default front page
+    "" => "index.html",
+
     // Old mediawiki pages redirects.
     "^Main_Page" => "index.html",
     "^KritaFAQ$" => "KritaFAQ.html",
