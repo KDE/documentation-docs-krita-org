@@ -16,7 +16,7 @@
     <p>
     {%- if show_copyright %}
       {%- if hasdoc('copyright') %}
-        {% trans path=theme_canonical_url + '/' + pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
       {%- else %}
         {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
       {%- endif %}
