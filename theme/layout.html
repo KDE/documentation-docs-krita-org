@@ -36,6 +36,11 @@
   <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
   {% endblock %}
 
+  {# Make resources work on the 404 page #}
+  {% if pagename == "404" %}
+    <base href="/{{ language }}/" />
+  {% endif %}
+
   {# FAVICON #}
   {% if favicon %}
     <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
