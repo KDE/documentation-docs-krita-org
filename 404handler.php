@@ -374,12 +374,21 @@ if( !preg_match( '/^([a-z][a-z](_[A-Z][A-Z])?\/)?(.*)/', $requested_url, $result
     // This shouldn't happen...
     // But in case it does, serve a 404 and bail
     http_response_code(404);
-    include('404.html');
+    include("../$language/404.html");
     exit();
 }
 
 // Save our result...
 $requested_page = $result[3];
+
+// First do a local check and see if $language/$requested_page exists..
+// This allows for urls such as https://docs.krita.org/user_manual/getting_started/starting_krita.html to work
+if( file_exists("../$language/$requested_page") ) {
+    // Then redirect them there
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: /$language/$requested_page");
+    exit();
+}
 
 // Go across all of our redirect rules now and see if we have any matches
 foreach( $redirect_rules as $rule => $replacement ) {
@@ -399,7 +408,7 @@ foreach( $redirect_rules as $rule => $replacement ) {
 // Alas it looks like we have no match :(
 // Send a 404
 http_response_code(404);
-include('404.html');
+include("../$language/404.html");
 exit();
 
 ?>
