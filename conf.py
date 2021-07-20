@@ -55,7 +55,7 @@ def get_override_language() -> Optional[str]:
 
 def get_override_language_or_en() -> str:
     """Tries to detect the override language from `argv`, returns `"en"` if not available."""
-    return get_override_language() or "em"
+    return get_override_language() or "en"
 
 
 # Get the git description if possible, to put it in the footer.
