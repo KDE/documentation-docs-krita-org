@@ -25,8 +25,38 @@ description = 'The official Krita Documentation'
 copyright = 'licensed under the GNU Free Documentation License 1.3+ unless stated otherwise'
 author = 'Krita Foundation'
 
+import functools
 import os
+import re
 import subprocess
+import sys
+from collections import deque
+from typing import Optional
+
+
+@functools.lru_cache(maxsize=None)
+def get_override_language() -> Optional[str]:
+    """Tries to detect the override language from `argv`, returns `None` if not available."""
+    override_lang = None
+    args = deque(sys.argv)
+    args.popleft()
+    while len(args) > 0:
+        if args.popleft() != '-D':
+            continue
+        override_var = args.popleft()
+        m = re.search('^language=([A-Za-z_]+)$', override_var)
+        if not m:
+            continue
+        if override_lang:
+            raise ValueError("`language` override found more than once, don't know how to handle this!")
+        override_lang = m.group(1)
+    return override_lang
+
+
+def get_override_language_or_en() -> str:
+    """Tries to detect the override language from `argv`, returns `"en"` if not available."""
+    return get_override_language() or "em"
+
 
 # Get the git description if possible, to put it in the footer.
 
@@ -88,7 +118,7 @@ language = 'en'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path .
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.venv*']
 html_extra_path = ['404handler.php'] # bring our 404 handler in
 
 # The name of the Pygments (syntax highlighting) style to use.
@@ -213,7 +243,7 @@ html_logo = './theme/static/images/sidebar-logo.png'
 
 # html canonical value:
 
-html_baseurl = os.getenv('SITE_HOST', '')+language
+html_baseurl = os.getenv('SITE_HOST', '') + get_override_language_or_en()
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
