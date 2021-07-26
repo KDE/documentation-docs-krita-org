@@ -335,7 +335,7 @@ latex_additional_files = [
 
 locale_dirs = ['locale/']   # Where the PO files will be stored at
 gettext_compact = False     # optional.
-gettext_additional_targets = ['image', 'index', 'literal-block'] # allows images to be translatable
+gettext_additional_targets = ['index', 'literal-block']
 figure_language_filename = "{path}{language}/{basename}{ext}"
 
 
