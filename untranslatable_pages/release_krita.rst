@@ -47,9 +47,8 @@ Update version in source code
 4. update the snapcraft.yaml file
 5. update the appstream screenshots
 6. update org.kde.krita.appdata.xml 's release tag in the BRANCH
-7. update create_tarball's config.ini
-8. update download_release_artifacts.sh
-9. update Android version (keep in mind that *all* Krita releases on Android are marked as Beta at the moment):
+7. update download_release_artifacts.sh
+8. update Android version (keep in mind that *all* Krita releases on Android are marked as Beta at the moment):
 
     * packaging/android/apk/AndroidManifest.xml 
     * packaging/android/apk/build.gradle
@@ -107,28 +106,10 @@ Create and push the tag
 Create the tarball
 ~~~~~~~~~~~~~~~~~~
 
-1. Go into the `./packaging/` folder, check that the version in 'config.ini' file reflects the right tag and version number. It should look like that:
-
-    .. code::
-
-        [krita]
-        gitModule   = yes
-        gitTag      = v4.2.9
-        category    = graphics
-        mainmodule  = branches/stable
-        l10nmodule  = krita
-        version     = 4.2.9
-        translations= yes
-        docs        = no
-        kde_release = no
-
-2. Create the tarball: 
-
-    .. code::
-    
-        ./create_tarball_kf5.rb -n -a krita
-
-3. Check that created archive has 'po' folder and it actually has translations
+1. Get the tarball from gitlab: https://invent.kde.org/graphics/krita/-/tags
+2. Unpack the tarball
+3. Run build-tools/copy_po.py in the unpacked folder
+4. Package the tarball as .gz and .xz
 
 4. Sign both tarballs:
 
@@ -137,7 +118,7 @@ Create the tarball
         gpg --output krita-4.2.9-beta1.tar.gz.sig --detach-sign krita-4.2.9-beta1.tar.gz
         gpg --output krita-4.2.9-beta1.tar.xz.sig --detach-sign krita-4.2.9-beta1.tar.xz
 
-5. Upload tarballs to files.kde.org, where builders can fpick them up:
+5. Upload tarballs to files.kde.org, where builders can pick them up:
 
     * https://files.kde.org/krita/.release/$version/krita-$version.tar.gz
     * https://files.kde.org/krita/.release/$version/krita-$version.tar.xz
