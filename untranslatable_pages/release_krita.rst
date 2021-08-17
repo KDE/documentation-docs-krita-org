@@ -46,7 +46,7 @@ Update version in source code
 3. update the CMakeLists.txt version
 4. update the snapcraft.yaml file
 5. update the appstream screenshots
-6. update org.kde.krita.appdata.xml 's release tag
+6. update org.kde.krita.appdata.xml 's release tag in the BRANCH
 7. update create_tarball's config.ini
 8. update download_release_artifacts.sh
 9. update Android version (keep in mind that *all* Krita releases on Android are marked as Beta at the moment):
@@ -263,6 +263,7 @@ Release
 1. Update download page
 2. Publish the announcement and release notes
 3. Add release links to Release History section of the site: https://krita.org/en/about/krita-releases-overview/ 
+4. Add the release to the org.krita.org.appdata.xml file in MASTER.
 
 Post-release
 ~~~~~~~~~~~~
