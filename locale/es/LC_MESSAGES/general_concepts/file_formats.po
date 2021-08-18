@@ -4,21 +4,22 @@
 #
 # Sofia Priego <spriego@darksylvania.net>, %Y.
 # Automatically generated, 2019.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2021.
+# Sofía Priego <spriego@darksylvania.net>, %Y.
 msgid ""
 msgstr ""
 "Project-Id-Version: docs_krita_org_general_concepts___file_formats\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-19 02:02+0200\n"
-"PO-Revision-Date: 2020-08-18 13:28+0100\n"
-"Last-Translator: Sofia Priego <spriego@darksylvania.net>\n"
+"PO-Revision-Date: 2021-08-17 20:43+0100\n"
+"Last-Translator: Sofía Priego <spriego@darksylvania.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.0\n"
+"X-Generator: Lokalize 21.08.0\n"
 
 #: ../../general_concepts/file_formats.rst:1
 msgid "The file formats category."
@@ -34,18 +35,29 @@ msgid ""
 "looked up on wikipedia, this doesn't always explain what the format can be "
 "used for and what its strengths and weaknesses are."
 msgstr ""
+"Esta categoría es para formatos de archivos gráficos. Si bien la mayoría de"
+" los "
+"formatos de archivos se pueden buscar en la Wikipedia, esto no siempre"
+" explica "
+"para qué se puede usar el formato y cuáles son sus fortalezas y sus"
+" debilidades."
 
 #: ../../general_concepts/file_formats.rst:18
 msgid ""
 "In this category we try to describe these in a manner that can be read by "
 "beginners."
 msgstr ""
+"En esta categoría tratamos de describirlos de una manera que los"
+" principiantes "
+"puedan leer."
 
 #: ../../general_concepts/file_formats.rst:20
 msgid ""
 "Generally, there are the following features that people pay attention to in "
 "regards to file formats:"
 msgstr ""
+"Generalmente, existen las siguientes características a las que las personas "
+"prestan atención con respecto a los formatos de archivo:"
 
 #: ../../general_concepts/file_formats.rst:23
 msgid "Compression"
@@ -57,6 +69,9 @@ msgid ""
 "little data as possible, so that the resulting file is as small as it can "
 "get without losing quality."
 msgstr ""
+"La compresión es la forma en que el formato de archivo intenta describir "
+"la imagen con la menor cantidad de datos posible, de modo que el archivo "
+"resultante sea lo más pequeño posible sin perder calidad."
 
 #: ../../general_concepts/file_formats.rst:27
 msgid ""
@@ -64,6 +79,9 @@ msgid ""
 "image quality, or require the computer to spend a lot of time thinking about "
 "how the image should look."
 msgstr ""
+"Lo que generalmente vemos es que los formatos que son pequeños en el disco "
+"pierden calidad de imagen o requieren que la computadora dedique mucho "
+"tiempo a pensar en cómo debería verse la imagen."
 
 #: ../../general_concepts/file_formats.rst:29
 msgid ""
@@ -76,6 +94,15 @@ msgid ""
 "imply vector graphics, which is a very different way of working than Krita "
 "is specialized in."
 msgstr ""
+"Los formatos de archivos vectoriales, como ``SVG``, son un ejemplo típico de "
+"esto último. Son realmente pequeños porque la tecnología que se usa para "
+"crearlos se basa en las matemáticas, por lo que solo se almacenan variables "
+"matemáticas y se puede lograr una calidad muy alta. La desventaja es que la "
+"computadora necesita dedicar mucho tiempo a pensar cómo debería verse "
+"y, a veces, diferentes programas tienen distintas formas de interpretar estos "
+"valores. Además, los formatos de archivo vectoriales implican gráficos "
+"vectoriales, que es una forma de trabajo muy diferente a la que Krita está "
+"especializada."
 
 #: ../../general_concepts/file_formats.rst:31
 msgid ""
@@ -84,6 +111,12 @@ msgid ""
 "very particular types of images. Lossy thus means that the file format plays "
 "fast and loose with describing your image to reduce filesize."
 msgstr ""
+"Los :ref:`formatos de archivos con pérdida <lossy_compression>`, como "
+"``JPG`` o ``WebP``, son un ejemplo de un pequeño tamaño en disco a costa "
+"de disminuir la calidad, por lo que se usan mejor en ciertos tipos de "
+"imágenes. Con pérdida, pues, significa que el formato de archivo se "
+"reproduce más rápidamente y con cierta imprecisión al describir la imagen "
+"para reducir el tamaño del archivo."
 
 #: ../../general_concepts/file_formats.rst:33
 msgid ""
@@ -91,6 +124,9 @@ msgid ""
 "``GIF`` or ``BMP`` are in contrast, much heavier on disk, but much more "
 "likely to retain quality."
 msgstr ""
+"Los :ref:`formatos sin pérdida <lossless_compression>`, como ``PNG``, "
+"``GIF`` o ``BMP``, por el contrario, son mucho más pesados en el disco, "
+"aunque es mucho más probable que conserven la calidad."
 
 #: ../../general_concepts/file_formats.rst:35
 msgid ""
@@ -100,6 +136,13 @@ msgid ""
 "programs to open them up, but on the other hand these are meant to keep your "
 "working environment intact, and keep all the layers and guides in them."
 msgstr ""
+"Y luego están los formatos de archivo de trabajo adecuados, como ``KRA`` de "
+"Krita, ``XCF`` de Gimp o ``PSD`` de Photoshop, así como los formatos de "
+"intercambio, como ``ORA`` y ``EXR``. Estos son los más pesados en el disco"
+" duro "
+"y, a menudo, requieren programas especiales para abrirlos. Por otro lado, "
+"están destinados a mantener intacto su entorno de trabajo y conservar en "
+"su interior todas las capas y guías."
 
 #: ../../general_concepts/file_formats.rst:38
 msgid "Metadata"
@@ -113,16 +156,24 @@ msgid ""
 "computer readable data, like an ICC profile which tells the computer about "
 "the qualities of how the colors inside the file should be read."
 msgstr ""
+"Los metadatos son la capacidad de un formato de archivo para contener "
+"información fuera del contenido real de la imagen. Pueden ser datos legibles "
+"por humanos, como la fecha de creación, el nombre del autor o una descripción "
+"de la imagen; aunque también pueden ser datos legibles por la computadora, "
+"como un perfil ICC, que le indica a la computadora las cualidades de cómo se "
+"deben leer los colores que contiene el archivo."
 
 #: ../../general_concepts/file_formats.rst:43
 msgid "Openness"
-msgstr ""
+msgstr "Apertura"
 
 #: ../../general_concepts/file_formats.rst:45
 msgid ""
 "This is a bit of an odd quality, but it's about how easy it to open or "
 "recover the file, and how widely it's supported."
 msgstr ""
+"Esta es una calidad un poco extraña, pero se trata de lo fácil que "
+"resulta abrir o recuperar el archivo y de si está ampliamente admitido."
 
 #: ../../general_concepts/file_formats.rst:47
 msgid ""
@@ -131,12 +182,19 @@ msgid ""
 "Photoshop. Other examples are camera raw files which have different "
 "properties per camera manufacturer."
 msgstr ""
+"La mayoría de los formatos de archivo internos, como PSD, son "
+"completamente cerrados, y resulta realmente difícil para las personas "
+"ajenas recuperar los datos internos sin usar Photoshop. Otros ejemplos "
+"son los archivos RAW de las cámaras, que tienen propiedades diferentes "
+"según el fabricante de la cámara."
 
 #: ../../general_concepts/file_formats.rst:49
 msgid ""
 "SVG, as a vector file format, is on the other end of the spectrum, and can "
 "be opened with any text-editor and edited."
 msgstr ""
+"SVG, como formato de archivo vectorial, está en el otro extremo del "
+"espectro, ya que se puede abrir y editar con cualquier editor de texto."
 
 #: ../../general_concepts/file_formats.rst:51
 msgid ""
@@ -145,6 +203,12 @@ msgid ""
 "but the vast majority of programs can open them, meaning the owner has easy "
 "access to them."
 msgstr ""
+"La mayoría de los formatos están en un punto intermedio y, por lo tanto, "
+"también existe una cuestión sobre si el formato está ampliamente admitido o"
+" no. "
+"JPG y PNG no se pueden leer ni editar a los ojos de un humano, pero la gran "
+"mayoría de los programas pueden abrirlos, lo que significa que su propietario "
+"tiene fácil acceso a ellos."
 
 #: ../../general_concepts/file_formats.rst:53
 msgid "Contents:"
