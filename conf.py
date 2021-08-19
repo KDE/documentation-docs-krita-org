@@ -58,6 +58,25 @@ def get_override_language_or_en() -> str:
     return get_override_language() or "en"
 
 
+@functools.lru_cache(maxsize=None)
+def get_is_building_epub() -> bool:
+    """Tries to detect the output format from `argv`."""
+    # override_lang = None
+    target_builder = None
+    args = deque(sys.argv)
+    args.popleft()
+    while len(args) > 0:
+        # if args.popleft() != '-M':
+        #     continue
+        thisarg = args.popleft()
+        if thisarg != '-M' and thisarg != '-b':
+            continue
+        if target_builder:
+            raise ValueError("Target builder arg found more than once, don't know how to handle this!")
+        target_builder = args.popleft()
+    return target_builder == "epub"
+
+
 # Get the git description if possible, to put it in the footer.
 
 try:
@@ -96,8 +115,11 @@ extensions = [
     'sphinx.ext.githubpages',
 ]
 
-# Add any paths that contain templates here, relative to this directory.
-templates_path = [ 'theme' ]
+if get_is_building_epub():
+    templates_path = []
+else:
+    # Add any paths that contain templates here, relative to this directory.
+    templates_path = [ 'theme' ]
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
