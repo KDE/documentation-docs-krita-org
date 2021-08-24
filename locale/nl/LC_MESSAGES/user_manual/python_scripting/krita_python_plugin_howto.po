@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the Krita Manual package.
 #
 # Automatically generated, 2019.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-12 03:19+0200\n"
-"PO-Revision-Date: 2019-03-01 11:23+0100\n"
+"POT-Creation-Date: 2021-05-15 00:13+0000\n"
+"PO-Revision-Date: 2020-04-29 11:06+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 18.12.2\n"
+"X-Generator: Lokalize 19.12.3\n"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:1
 msgid "Guide on all the specifics of creating Krita python plugins."
@@ -26,23 +26,23 @@ msgstr "Gids over alle details van Python-plug-ins maken voor Krita."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:14
 msgid "Python"
-msgstr ""
+msgstr "Python"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:14
 msgid "Python Scripting"
-msgstr ""
+msgstr "Scripts maken in Python"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:14
 msgid "Scripting"
-msgstr ""
+msgstr "Scripts maken"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:14
 msgid "Plugin"
-msgstr ""
+msgstr "Plug-in"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:19
 msgid "How to make a Krita Python plugin"
-msgstr ""
+msgstr "Hoe een Python plug-in maken in Krita"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:21
 msgid ""
@@ -68,7 +68,7 @@ msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:28
 msgid "Getting Krita to recognize your plugin"
-msgstr ""
+msgstr "Zorgen dat Krita uw plug-in herkent"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:30
 msgid ""
@@ -77,7 +77,7 @@ msgid ""
 "register your script. For Krita to load your script both of these must put "
 "be in the pykrita subdirectory of your Krita resources folder (on Linux  ~/."
 "local/share/krita/pykrita). To find your resources folder start Krita and "
-"click the :menuselection:`Settings --> Manage Resources` menu item. This "
+"click the :menuselection:`Settings --> Manage Resources...` menu item. This "
 "will open a dialog box. Click the :guilabel:`Open Resources Folder` button. "
 "This should open a file manager on your system at your Krita resources "
 "folder. See the `API <https://api.kde.org/extragear-api/graphics-apidocs/"
@@ -91,12 +91,16 @@ msgid ""
 "Scripts are identified by a file that ends in a .desktop extension that "
 "contain information about the script itself."
 msgstr ""
+"Scripts worden geïdentificeerd door een bestand dat eindigt op een extensie ."
+"desktop die informatie bevat over het script zelf."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:34
 msgid ""
 "Therefore, for each proper plugin you will need to create a folder, and a "
 "desktop file."
 msgstr ""
+"Voor elke juiste plug-in is het nodig dat u een map aanmaakt en een .desktop-"
+"bestand."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:36
 msgid "The desktop file should look as follows::"
@@ -198,9 +202,9 @@ msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:71
 msgid ""
-"You need to explicitly enable your plugin. Go to the Settings menu, open the "
-"Configure Krita dialog and go to the Python Plugin Manager page and enable "
-"your plugin."
+"You need to explicitly enable your plugin. Go to the Settings menu, open "
+"the :guilabel:`Configure Krita` dialog and go to the Python Plugin Manager "
+"page and enable your plugin."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:74
@@ -277,7 +281,7 @@ msgid ""
 "class MyExtension(Extension):\n"
 "\n"
 "    def __init__(self, parent):\n"
-"        #This is initialising the parent, always  important when "
+"        # This is initialising the parent, always important when "
 "subclassing.\n"
 "        super().__init__(parent)\n"
 "\n"
@@ -470,7 +474,7 @@ msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:217
 msgid "text"
-msgstr ""
+msgstr "tekst"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:218
 msgid "The text that it will show in the shortcut editor."
@@ -520,8 +524,8 @@ msgstr ""
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:228
 msgid ""
 "This determines activation conditions (e.g. activate only when selection is "
-"editable). See `the code <https://cgit.kde.org/krita.git/tree/libs/ui/"
-"kis_action.h#n76>`_ for examples."
+"editable). See `the code <https://invent.kde.org/graphics/krita/-/blob/"
+"master/libs/ui/kis_action.h#L41>`_ for examples."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:229
@@ -638,10 +642,10 @@ msgstr ""
 msgid ""
 "By default, Krita uses PyQt, but its documentation is pretty bad, mostly "
 "because the regular Qt documentation is really good, and you'll often find "
-"that the PyQT documentation of a class, say, `QWidget <https://www."
-"riverbankcomputing.com/static/Docs/PyQt4/qwidget.html>`_ is like a weird "
-"copy of the regular `Qt documentation <https://doc.qt.io/qt-5/qwidget."
-"html>`_ for that class."
+"that the PyQt documentation of a class, say, `QWidget <https://www."
+"riverbankcomputing.com/static/Docs/PyQt5/api/qtwidgets/qwidget.html>`_ is "
+"like a weird copy of the regular `Qt documentation <https://doc.qt.io/qt-5/"
+"qwidget.html>`_ for that class."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:274
@@ -714,11 +718,11 @@ msgstr ""
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:309
 msgid ""
 "We've already been using PyQt signals and slots already, but there are times "
-"where you want to create your own signals and slots. `As pyQt's "
+"where you want to create your own signals and slots. `As PyQt's "
 "documentation is pretty difficult to understand <https://www."
-"riverbankcomputing.com/static/Docs/PyQt4/new_style_signals_slots.html>`_, "
-"and the way how signals and slots are created is very different from C++ Qt, "
-"we're explaining it here:"
+"riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html>`_, and the way "
+"how signals and slots are created is very different from C++ Qt, we're "
+"explaining it here:"
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:312
@@ -739,7 +743,7 @@ msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:318
 msgid ""
-"(If there's from ``PyQt5.QtCore import *`` already in the list of imports, "
+"(If there's ``from PyQt5.QtCore import *`` already in the list of imports, "
 "then you won't have to do this, of course.)"
 msgstr ""
 
@@ -760,7 +764,7 @@ msgstr ""
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:332
 msgid ""
 "Then, when you have created your checkbox, you can do something like "
-"myCheckbox.toggled.connect(self.myFunction)"
+"myCheckbox.toggled.connect(self.myFunction)."
 msgstr ""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:334

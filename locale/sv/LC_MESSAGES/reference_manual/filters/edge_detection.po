@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-11 03:18+0200\n"
-"PO-Revision-Date: 2019-06-15 17:51+0100\n"
+"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"PO-Revision-Date: 2020-04-26 19:38+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 19.04.3\n"
 
 #: ../../<generated>:1
 msgid "XYZ"
@@ -37,13 +37,13 @@ msgstr "Kantdetektering"
 
 #: ../../reference_manual/filters/edge_detection.rst:11
 #: ../../reference_manual/filters/edge_detection.rst:40
-#: ../../reference_manual/filters/edge_detection.rst:83
+#: ../../reference_manual/filters/edge_detection.rst:110
 msgid "Prewitt"
 msgstr "Prewitt"
 
 #: ../../reference_manual/filters/edge_detection.rst:11
 #: ../../reference_manual/filters/edge_detection.rst:43
-#: ../../reference_manual/filters/edge_detection.rst:86
+#: ../../reference_manual/filters/edge_detection.rst:113
 msgid "Sobel"
 msgstr "Sobel"
 
@@ -78,7 +78,7 @@ msgid ""
 "From left to right: Original, with Prewitt edge detection applied, with "
 "Prewitt edge detection applied and result applied to alpha channel, and "
 "finally the original with an edge detection filter layer with the same "
-"settings as 3, and the filter layer blending mode set to multiply"
+"settings as 3, and the filter layer blending mode set to multiply."
 msgstr ""
 "Från vänster till höger: Originalet, med Prewitt kantdetektering införd, med "
 "Prewitt kantdetektering och resultatet infört i alfakanalen, och till sist "
@@ -86,7 +86,7 @@ msgstr ""
 "men med filterlagrets blandningsläge inställt till multiplicera."
 
 #: ../../reference_manual/filters/edge_detection.rst:36
-#: ../../reference_manual/filters/edge_detection.rst:79
+#: ../../reference_manual/filters/edge_detection.rst:106
 msgid ""
 "The convolution kernel formula for the edge detection. The difference "
 "between these is subtle, but still worth experimenting with."
@@ -95,12 +95,12 @@ msgstr ""
 "subtil, men ändå värd att experimentera med."
 
 #: ../../reference_manual/filters/edge_detection.rst:38
-#: ../../reference_manual/filters/edge_detection.rst:81
+#: ../../reference_manual/filters/edge_detection.rst:108
 msgid "Simple"
 msgstr "Enkel"
 
 #: ../../reference_manual/filters/edge_detection.rst:39
-#: ../../reference_manual/filters/edge_detection.rst:82
+#: ../../reference_manual/filters/edge_detection.rst:109
 msgid ""
 "A Kernel that is not square unlike the other two, and while this makes it "
 "fast, it doesn't take diagonal pixels into account."
@@ -109,7 +109,7 @@ msgstr ""
 "tar den inte hänsyn till diagonala bildpunkter."
 
 #: ../../reference_manual/filters/edge_detection.rst:41
-#: ../../reference_manual/filters/edge_detection.rst:84
+#: ../../reference_manual/filters/edge_detection.rst:111
 msgid ""
 "A square kernel that includes the diagonal pixels just as strongly as the "
 "orthogonal pixels. Gives a very strong effect."
@@ -118,12 +118,12 @@ msgstr ""
 "som de ortogonala bildpunkterna. Ger en mycket stark effekt."
 
 #: ../../reference_manual/filters/edge_detection.rst:43
-#: ../../reference_manual/filters/edge_detection.rst:86
+#: ../../reference_manual/filters/edge_detection.rst:113
 msgid "Formula"
 msgstr "Formel"
 
 #: ../../reference_manual/filters/edge_detection.rst:43
-#: ../../reference_manual/filters/edge_detection.rst:86
+#: ../../reference_manual/filters/edge_detection.rst:113
 msgid ""
 "A square kernel that includes the diagonal pixels slightly less strong than "
 "the orthogonal pixels. Gives a more subtle effect than Prewitt."
@@ -212,7 +212,7 @@ msgstr ""
 "i radianer."
 
 #: ../../reference_manual/filters/edge_detection.rst:61
-#: ../../reference_manual/filters/edge_detection.rst:90
+#: ../../reference_manual/filters/edge_detection.rst:117
 msgid "Horizontal/Vertical radius"
 msgstr "Horisontell och vertikal radie"
 
@@ -238,18 +238,109 @@ msgstr ""
 "placeras i bildens alfakanalen, vilket betyder att den bara matar ut linjer."
 
 #: ../../reference_manual/filters/edge_detection.rst:66
+msgid "High Pass"
+msgstr "Högpass"
+
+#: ../../reference_manual/filters/edge_detection.rst:69
+msgid "Gaussian High Pass"
+msgstr "Gaussiskt högpass"
+
+#: ../../reference_manual/filters/edge_detection.rst:71
+msgid ""
+"A High Pass filter is a type of edge detection filter. It is usually used to "
+"enhance contrasts, much like a sharpen filter, but within a texture editing "
+"workflow it is also used to remove local gradients."
+msgstr ""
+"Ett högpassfilter är en sorts kantdetekteringsfilter. Det används oftast för "
+"att förbättra kontraster, i likhet med skärpefilter, men med ett arbetsflöde "
+"för strukturredigering används det också för att ta bort lokala toningar."
+
+#: ../../reference_manual/filters/edge_detection.rst:74
+msgid "Radius"
+msgstr "Radie"
+
+#: ../../reference_manual/filters/edge_detection.rst:74
+msgid ""
+"The radius within the Gaussian High Pass filter is similar to the radius in "
+"the Edge Detection filter."
+msgstr ""
+"Radien i det Gaussiska högpassfiltret liknar radien i "
+"kantdetekteringsfiltret."
+
+#: ../../reference_manual/filters/edge_detection.rst:76
+msgid ""
+"To use this as a sharpen filter, create a filter layer with this filter, and "
+"then set the blending mode to modes like 'soft light', 'overlay', 'hard "
+"light', 'linear light'. Different blending modes give different results."
+msgstr ""
+"För att använda det som ett skärpefilter, skapa ett filterlager med filtret "
+"och ställ därefter in blandningsläget till lägen såsom \"diffust ljus\", "
+"\"överlagring\", \"hårt ljus\", \"linjärt ljus\". Olika blandningslägen ger "
+"olika resultat."
+
+#: ../../reference_manual/filters/edge_detection.rst:82
+msgid ".. image:: images/filters/highpass_filter_sharpen.png"
+msgstr ".. image:: images/filters/highpass_filter_sharpen.png"
+
+#: ../../reference_manual/filters/edge_detection.rst:82
+msgid ""
+"**Top left**: Original, **top right**: Gaussian Highpass Result with radius "
+"3, **bottom left**: Gaussian High Pass Result with radius 3 blended over the "
+"original with to Linear Light, **bottom right**: Gaussian High Pass result "
+"with radius 3 blended over the original with Soft Light."
+msgstr ""
+"**Överst till vänster**: Original, **överst till höger**: Gaussiskt "
+"högpassresultat med radie 3, **underst till vänster**: Gaussiskt "
+"högpassresultat med radie 3 blandat med originalet med linjärt ljus, "
+"**underst till höger**: Gaussiskt högpassresultat med radie 3 blandat med "
+"originalet med diffust ljus."
+
+#: ../../reference_manual/filters/edge_detection.rst:84
+msgid ""
+"To remove local gradients from a texture, create a clone layer, and apply "
+"this filter as a filter mask. Then, put a filter layer with gaussian blur "
+"set to the full amount in between the clone layer and the original. Finally, "
+"set the clone layer to luminosity or multiply (in this case an extra filter "
+"mask needs to be added to reduce the levels so that the multiplication "
+"result will not be as strong)."
+msgstr ""
+"För att ta bort toningar från en struktur, skapade ett dupliceringslager, "
+"och använda filtret som en filtermask. Lägg där efter till ett filterlager "
+"med Gaussisk oskärpa inställt till största värde mellan dupliceringslagret "
+"och originalet. Ställ slutligen in dupliceringslagret till luminans eller "
+"multiplicera (i detta fall måste en extra filtermask läggas till för att "
+"reducera nivåerna så att multiplikationsresultatet inte blir så starkt)."
+
+#: ../../reference_manual/filters/edge_detection.rst:90
+msgid ".. image:: images/filters/highpass_filter_local_gradient_removal.png"
+msgstr ".. image:: images/filters/highpass_filter_local_gradient_removal.png"
+
+#: ../../reference_manual/filters/edge_detection.rst:90
+msgid ""
+"**Left**: Original, **top right**: Gaussian High Pass Result blended with "
+"luminosity to remove the local gradients but keep the sharp details. In this "
+"specific example the lack of local gradients removes some character, but the "
+"gaussian high pass result could also be used to create a heightmap."
+msgstr ""
+"**Vänster**: Original, **överst till höger**: Gaussiskt högpassresultat "
+"blandat med luminans för att ta bort de lokala toningarna men behåller "
+"skarpa detaljer. I det här specifika exemplet tas en del karaktär bort på "
+"grund av avsaknad av lokala toningar, men det Gaussiska högpassresultatet "
+"skulle också kunna användas för att skapa en höjdavbildning."
+
+#: ../../reference_manual/filters/edge_detection.rst:93
 msgid "Height Map"
 msgstr "Höjdavbildning"
 
-#: ../../reference_manual/filters/edge_detection.rst:66
+#: ../../reference_manual/filters/edge_detection.rst:93
 msgid "Normal Map"
 msgstr "Normal avbildning"
 
-#: ../../reference_manual/filters/edge_detection.rst:69
+#: ../../reference_manual/filters/edge_detection.rst:96
 msgid "Height to Normal Map"
 msgstr "Höjd till normal avbildning"
 
-#: ../../reference_manual/filters/edge_detection.rst:76
+#: ../../reference_manual/filters/edge_detection.rst:103
 msgid ""
 "A filter that converts Height maps to Normal maps through the power of edge "
 "detection. It is also available for the filter layer or filter brush."
@@ -258,16 +349,16 @@ msgstr ""
 "kantdetektering. Det är också tillgängligt för filterlagret eller "
 "filterpenseln."
 
-#: ../../reference_manual/filters/edge_detection.rst:88
+#: ../../reference_manual/filters/edge_detection.rst:115
 msgid "Channel"
 msgstr "Kanal"
 
-#: ../../reference_manual/filters/edge_detection.rst:89
+#: ../../reference_manual/filters/edge_detection.rst:116
 msgid ""
 "Which channel of the layer should be interpreted as the grayscale heightmap."
 msgstr "Vilka av lagrets kanaler som ska tolkas som gråskalans höjdavbildning."
 
-#: ../../reference_manual/filters/edge_detection.rst:91
+#: ../../reference_manual/filters/edge_detection.rst:118
 msgid ""
 "The radius of the edge detection. Default is 1 and going higher will "
 "increase the strength of the normal map. Adjust this if the effect of the "
@@ -277,7 +368,7 @@ msgstr ""
 "ökar styrkan på normalavbildningen. Justera den om effekterna av den "
 "resulterande normalavbildningen är för svaga."
 
-#: ../../reference_manual/filters/edge_detection.rst:93
+#: ../../reference_manual/filters/edge_detection.rst:120
 msgid ""
 "An XYZ swizzle, that allows you to map Red, Green and Blue to different 3d "
 "normal vector coordinates. This is necessary mostly for the difference "

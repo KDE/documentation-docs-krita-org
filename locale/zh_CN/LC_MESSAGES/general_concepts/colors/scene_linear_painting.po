@@ -2,20 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-08-16 17:04\n"
-"Last-Translator: Guo Yunhe (guoyunhe)\n"
+"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"PO-Revision-Date: 2021-08-22 15:30\n"
+"Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/www/"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_general_concepts___colors___scene_linear_painting.pot\n"
+"X-Crowdin-File-ID: 9774\n"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:1
 msgid "Scene Linear painting in Krita"
@@ -33,19 +34,19 @@ msgstr "颜色"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:10
 msgid "HDR"
-msgstr ""
+msgstr "HDR"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:10
 msgid "High Dynamic Range"
-msgstr ""
+msgstr "高动态范围"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:10
 msgid "Scene Linear"
-msgstr ""
+msgstr "场景线性"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:10
 msgid "Scene Referred"
-msgstr ""
+msgstr "场景光参考"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:17
 msgid ""
@@ -53,8 +54,8 @@ msgid ""
 "Linear Painting is doing digital painting in a peculiar type of colorspace. "
 "It is painting in a color space that is..."
 msgstr ""
-"场景线性绘画和我们之前提过的 HDR 绘画和场景参照绘画是一回事。场景线性绘画是在"
-"一种特定色彩空间下的数字绘画作业方式。该色彩空间必须满足下面的条件："
+"场景光线性绘画和我们之前提过的 HDR 绘画和场景光参考绘画是一回事。场景光线性绘"
+"画是在一种特定色彩空间下的数字绘画作业方式。该色彩空间必须满足下面的条件："
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:19
 msgid ""
@@ -87,6 +88,9 @@ msgid ""
 "colorants, or one that uses adobeRGB, or maybe one that uses Rec. 2020, as "
 "long as it is *linear* and in a *floating point bit depth*."
 msgstr ""
+"因此，场景线性并不是一个特定的色彩空间，而是指 **一类** 具有某些特性的色彩空"
+"间。你使用的场景线性空间的色域可以是 sRGB/Rec. 709 的，也可以是 AdobeRGB 的，"
+"甚至是 Rec. 2020 的，只要它是 **线性的** 并且 **使用浮点位深度的通道** 即可。"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:28
 msgid ""
@@ -94,6 +98,8 @@ msgid ""
 "select the Rec. 2020 space profile with a linear gamma. The default profile "
 "in Krita for that is :guilabel:`Rec2020-elle-V4-g10.icc`."
 msgstr ""
+"如果你要为 HDR 画布空间创建图像，应选用具有线性 gamma 的 Rec. 2020 空间特性文"
+"件。Krita 为此默认的特性文件是：:guilabel:`Rec2020-elle-V4-g10.icc`。"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:30
 msgid ""
@@ -164,7 +170,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:42
 msgid ".. image:: images/color_category/Krita_scenelinear_cat_01.png"
-msgstr ""
+msgstr ".. image:: images/color_category/Krita_scenelinear_cat_01.png"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:42
 msgid ""
@@ -299,11 +305,11 @@ msgstr "颜色加深 (下层颜色的反相与上层颜色相除)"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:72
 msgid "Hardlight (a different way of doing overlay, including the inversion)"
-msgstr ""
+msgstr "强光 (也是一种进行叠加的算法，它也用到了反相)"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:73
 msgid "Softlight (uses several inversions along the way)"
-msgstr ""
+msgstr "柔光 (在运算过程中用了好几次反相)"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:75
 msgid ""
@@ -335,6 +341,10 @@ msgid ""
 "about black and white, not with scene linear painting. The following "
 "blending modes use them:"
 msgstr ""
+"使用 HSY 的混色模式一直有着硬性规定使用 sRGB/Rec. 709 明度值的毛病。虽然除此"
+"之外问题不大 (实际上它们在线性空间里能给出准确得多的结果)，但它们并不适合用于"
+"宽色域的色彩空间。也因为它们硬性规定了白和黑，所以也不适合用于场景线性绘画。"
+"使用 HSY 的混色模式如下："
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:82
 msgid "Luminosity"
@@ -475,6 +485,8 @@ msgid ""
 "the web, you make a copy of the image that goes through a display conversion "
 "or view transform that then gets saved to PNG, JPEG or TIFF."
 msgstr ""
+"要想查看这样的图像，你要使用视图色彩转换，也叫做显示器转换。在为互联网输出图"
+"像时，你必须把视图转换显示的图像结果保存成 PNG 或 JPEG 或 TIFF 格式。"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:120
 msgid "Getting to actual painting"
@@ -499,12 +511,16 @@ msgid ""
 "is much larger than sRGB in size, so this ensures you've got access to all "
 "the colors."
 msgstr ""
+"在选择创建一张 16 位或者 32 位的图像时，Krita 会默认选中一个线性 sRGB 特性文"
+"件。如果你要为 HDR 显示环境创建图像，你要确保选中的特性文件是 :guilabel:"
+"`Rec2020-elle-V4-g10.icc`。HDR 图像规定使用 Rec. 2020 色域，它的色域体积要远"
+"大于 sRGB，因此可以确保你能够使用全部颜色。"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:129
 msgid ""
 "If you're working on a non-HDR enabled monitor, you should enable OCIO in "
 "the LUT docker."
-msgstr ""
+msgstr "如果你使用非 HDR 显示器工作，应在 LUT 工具面板中启用 OCIO。"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:131
 msgid ""
@@ -540,13 +556,13 @@ msgstr ""
 msgid ""
 "By setting the nits slider in the :ref:`small_color_selector` higher than "
 "100."
-msgstr ""
+msgstr "把 :ref:`small_color_selector` 的 nits 滑动条拉到 100 以上。"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:140
 msgid ""
 "Or simply by opening the internal color selector by double clicking the dual "
 "color button and typing in values higher than 1 into the input field."
-msgstr ""
+msgstr "或者通过双击双重颜色按钮打开内部拾色器，在明度框输入大于 1 的数值。"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:141
 msgid ""
@@ -560,6 +576,8 @@ msgid ""
 "the least, until Krita’s new Palette docker allows you to save the values "
 "properly."
 msgstr ""
+"接下来就可以使用拾取到的颜色绘画了。在 Krita 的全新色板面板就位之前，请先在画"
+"布上的一角留存所用颜色以代替目前无法正常保存该颜色的色板。"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:146
 msgid "Lighting based workflow"
@@ -585,10 +603,16 @@ msgid ""
 "separate layer and just use the Multiply blending mode to get the right "
 "colors."
 msgstr ""
+"在基于明度的绘画流程里绘制明度图层就像是在画一张灰度图，所画的部分都会让混合"
+"后的颜色变深。而在基于光照的绘画流程里光照图层的光是可以有颜色的，对象的固有"
+"色和光色相乘后得出混色结果。你可以先在光照图层中把对象的底色想象成白色，分析"
+"带有颜色的主光源和环境光在这个白色对象上的受光情况，然后这种带有色调光照的受"
+"光图给画出来。在另一个图层上绘制对象的固有色，最后使用相乘混色模式就可以得到"
+"正确的颜色了。"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:156
 msgid ".. image:: images/color_category/Krita_scenelinear_cat_02.png"
-msgstr ""
+msgstr ".. image:: images/color_category/Krita_scenelinear_cat_02.png"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:156
 msgid ""
@@ -635,10 +659,14 @@ msgid ""
 "Blender or Natron. Then, in Blender it is enough to just use the same OCIO "
 "config, select the right values and save the result as a PNG."
 msgstr ""
+"在你画完之后，你要把施加在图像上的视图色彩转换进行应用 (如果你需要把图像发表"
+"到互联网上的话)。这个过程叫做 LUT Baking (烘焙)，目前 Krita 还不能做到。因此"
+"你要将图像另存为 EXR 文件，然后用 Blender 或者 Natron 打开。在 Blender 里面加"
+"载相同的 OCIO 配置，选择正确的参数并把结果保存为 PNG 图像。"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:167
 msgid "For saving HDR images, check the :ref:`hdr_display` page."
-msgstr ""
+msgstr "关于 HDR 图像的保存，参见 :ref:`hdr_display` 页面。"
 
 #: ../../general_concepts/colors/scene_linear_painting.rst:169
 msgid ""

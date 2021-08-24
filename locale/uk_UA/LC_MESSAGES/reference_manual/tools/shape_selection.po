@@ -1,16 +1,16 @@
 # Translation of docs_krita_org_reference_manual___tools___shape_selection.po to Ukrainian
-# Copyright (C) 2019 This_file_is_part_of_KDE
+# Copyright (C) 2019-2020 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2019.
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: "
 "docs_krita_org_reference_manual___tools___shape_selection\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-09 03:41+0200\n"
-"PO-Revision-Date: 2019-05-09 07:33+0300\n"
+"POT-Creation-Date: 2020-12-11 02:13+0100\n"
+"PO-Revision-Date: 2020-12-11 08:46+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.03.70\n"
+"X-Generator: Lokalize 20.11.70\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -28,6 +28,14 @@ msgid ""
 msgstr ""
 ".. image:: images/icons/Krita_mouse_left.png\n"
 "   :alt: mouseleft"
+
+#: ../../<rst_epilog>:4
+msgid ""
+".. image:: images/icons/Krita_mouse_right.png\n"
+"   :alt: mouseright"
+msgstr ""
+".. image:: images/icons/Krita_mouse_right.png\n"
+"   :alt: mouseright"
 
 #: ../../<rst_epilog>:10
 msgid ""
@@ -489,6 +497,7 @@ msgid "A quick way to invert the order of the gradient."
 msgstr "Швидкий спосіб обернути порядок градієнта."
 
 #: ../../reference_manual/tools/shape_selection.rst:142
+#: ../../reference_manual/tools/shape_selection.rst:159
 msgid "Stop"
 msgstr "Зупинка"
 
@@ -527,10 +536,137 @@ msgstr ""
 "редагування градієнтів є редагування їхнього розташування на полотні."
 
 #: ../../reference_manual/tools/shape_selection.rst:157
+msgid "Fills the shape with a Mesh Gradient. It has following options:"
+msgstr "Заповнює форму сітковим градієнтом. Передбачено такі параметри:"
+
+#: ../../reference_manual/tools/shape_selection.rst:160
+msgid ""
+"Change the color of the selected stop. Only the color of a Corner can be "
+"changed (rectangle), changing the color of Bezier handle (circle) is not "
+"possible."
+msgstr ""
+"Змінити колір поточної позиції. Змінити можна лише колір кута (прямокутник). "
+"Можливості зміни кольору елемента керування кривою Безьє (кола) не "
+"передбачено."
+
+#: ../../reference_manual/tools/shape_selection.rst:161
+msgid "Rows"
+msgstr "Рядки"
+
+#: ../../reference_manual/tools/shape_selection.rst:162
+msgid "Change the number of rows in a Mesh Gradient."
+msgstr "Змінити кількість рядків у сітковому градієнті."
+
+#: ../../reference_manual/tools/shape_selection.rst:163
+msgid "Columns"
+msgstr "Стовпчики"
+
+#: ../../reference_manual/tools/shape_selection.rst:164
+msgid "Change the number of columns in a Mesh Gradient."
+msgstr "Змінити кількість стовпчиків у сітковому градієнті."
+
+#: ../../reference_manual/tools/shape_selection.rst:166
+msgid "Mesh Gradient"
+msgstr "Сітковий градієнт"
+
+#: ../../reference_manual/tools/shape_selection.rst:166
+msgid "Smoothing"
+msgstr "Згладжування"
+
+#: ../../reference_manual/tools/shape_selection.rst:166
+msgid ""
+"There are two possible values, *Bilinear* (default) and *Bicubic*. "
+"*Bilinear* is the linear interpolation of the color of stops, however it may "
+"create `Mach Banding effect <https://en.wikipedia.org/wiki/Mach_bands>`_. "
+"*Bicubic* is the bicubic interpolation of the color stops, this should "
+"produce smoother gradient."
+msgstr ""
+"Передбачено два можливих значення: *Білінійний* (типовий) і *Бікубічний*. "
+"*Білінійний* відповідає лінійній інтерполяції кольорів контрольних точок, "
+"втім може призвести до `ефекту смуг Маха <https://en.wikipedia.org/wiki/"
+"Mach_bands>`_. *Бікубічний* відповідає бікубічній інтерполяції кольорів "
+"контрольних точок, має створити плавніший перехід у градієнті."
+
+#: ../../reference_manual/tools/shape_selection.rst:170
+msgid ""
+"Mesh Gradients follow `SVG draft 2 <https://svgwg.org/svg-next/pservers."
+"html#MeshGradients>`_ for the rendering."
+msgstr ""
+"Обробка параметрів сіткових градієнтів виконується відповідно до `Чернетки "
+"стандарту SVG 2 <https://svgwg.org/svg-next/pservers.html#MeshGradients>`_."
+
+#: ../../reference_manual/tools/shape_selection.rst:173
+msgid "Creating Mesh Gradients"
+msgstr "Створення сіткових градієнтів"
+
+#: ../../reference_manual/tools/shape_selection.rst:175
+msgid ""
+"When Mesh Gradients option is selected for a shape, Krita fills it with "
+"default mesh gradient, which is an alternating color (it alternates between "
+"background color and white). Changing number of rows and columns from Tool "
+"Options, will add more patches to the Mesh Gradient and corners can be "
+"changed individually."
+msgstr ""
+"Якщо для форми вибрано варіант сіткового градієнта, Krita заповнить її "
+"типовим сітковим градієнтом, тобто смугастим візерунком (зміна "
+"відбуватиметься між кольором тла і білим кольором). Зміна кількості рядків і "
+"стовпчиків у параметрах інструменту може збільшити кількість елементів "
+"градієнта, також можна окремо змінювати параметри кутів."
+
+#: ../../reference_manual/tools/shape_selection.rst:178
+msgid "Editing Mesh Gradients"
+msgstr "Редагування сіткових градієнтів"
+
+#: ../../reference_manual/tools/shape_selection.rst:180
+msgid ""
+"The way to edit Mesh Gradients is pretty straight forward. Each curve is an "
+"individual Bezier Curve. There are two ways to change the structure, one is "
+"by dragging the corner (rectangle) and other is by dragging the handle "
+"(circle)."
+msgstr ""
+"Спосіб редагування сіткових градієнтів є доволі очевидним. Кожна крива є "
+"окремою кривою Безьє. Існує два способи змінити структуру: один з них "
+"полягає у перетягуванні кута (прямокутника), а інший полягає у перетягуванні "
+"елемента керування (кола)."
+
+#: ../../reference_manual/tools/shape_selection.rst:186
+msgid ""
+".. image:: images/tools/MeshGradients-corner-moving.png\n"
+"   :alt: Left to right: Normal, Corner Hovered, Corner Moved and Selected."
+msgstr ""
+".. image:: images/tools/MeshGradients-corner-moving.png\n"
+"   :alt: Зліва праворуч: звичайний, з наведенням на кут, пересування кута та "
+"позначений."
+
+#: ../../reference_manual/tools/shape_selection.rst:186
+msgid "Left to right: Normal, Corner Hovered, Corner Moved and Selected."
+msgstr ""
+"Зліва праворуч: звичайний, з наведенням на кут, пересування кута та "
+"позначений."
+
+#: ../../reference_manual/tools/shape_selection.rst:188
+msgid ""
+"To change the color, a corner has to be selected and then Tool Options can "
+"be used to change the color of the selected corner."
+msgstr ""
+"Щоб змінити колір, слід позначити кут, а потім скористатися панеллю "
+"параметрів інструменту для зміни кольору позначеного кута."
+
+#: ../../reference_manual/tools/shape_selection.rst:192
+msgid ""
+"When importing from Inkscape, shapes may be grouped, which may not allow "
+"Krita to edit Mesh Gradients. To fix this, first ungroup (via |mouseright|) "
+"them."
+msgstr ""
+"При імпортуванні даних з Inkscape форми може бути згруповано, що може "
+"призвести до неможливості редагування сіткових градієнтів у Krita. Щоб "
+"виправити це, спочатку розгрупуйте форми (за допомогою |mouseright|)."
+
+#: ../../reference_manual/tools/shape_selection.rst:197
 msgid "Right-click menu"
 msgstr "Контекстне меню"
 
-#: ../../reference_manual/tools/shape_selection.rst:159
+#: ../../reference_manual/tools/shape_selection.rst:199
 msgid ""
 "The shape selection tool has a nice right click menu that gives you several "
 "features. If you have an object selected, you can perform various functions "
@@ -542,11 +678,11 @@ msgstr ""
 "зокрема копіювання, вирізання та пересування об'єкта на передній чи задній "
 "план."
 
-#: ../../reference_manual/tools/shape_selection.rst:162
+#: ../../reference_manual/tools/shape_selection.rst:202
 msgid ".. image:: images/vector/Vector-right-click-menu.png"
 msgstr ".. image:: images/vector/Vector-right-click-menu.png"
 
-#: ../../reference_manual/tools/shape_selection.rst:163
+#: ../../reference_manual/tools/shape_selection.rst:203
 msgid ""
 "If you have multiple objects selected you can perform \"Logical Operators\" "
 "on them, or boolean operations as they are commonly called. It will be the "

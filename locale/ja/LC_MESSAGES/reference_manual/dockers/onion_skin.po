@@ -1,10 +1,11 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-11 03:18+0200\n"
-"PO-Revision-Date: 2019-03-02 16:12-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"PO-Revision-Date: 2021-05-08 21:14-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -16,19 +17,19 @@ msgstr ""
 
 #: ../../reference_manual/dockers/onion_skin.rst:1
 msgid "Overview of the onion skin docker."
-msgstr ""
+msgstr "オニオンスキンドッカーの概要。"
 
 #: ../../reference_manual/dockers/onion_skin.rst:10
 msgid "Animation"
-msgstr ""
+msgstr "アニメーション"
 
 #: ../../reference_manual/dockers/onion_skin.rst:10
 msgid "Onion Skin"
-msgstr ""
+msgstr "オニオンスキン"
 
 #: ../../reference_manual/dockers/onion_skin.rst:15
 msgid "Onion Skin Docker"
-msgstr ""
+msgstr "オニオンスキンドッカー"
 
 #: ../../reference_manual/dockers/onion_skin.rst:18
 msgid ".. image:: images/dockers/Onion_skin_docker.png"
@@ -40,6 +41,8 @@ msgid ""
 "previous frame sort of layered on top of the current. This is called *onion-"
 "skinning*."
 msgstr ""
+"アニメーションをより簡単に作るには、現在のフレームの上に次のフレームや前のフ"
+"レームを重ね合わせるのが便利です。これを *オニオンスキン* と呼びます。"
 
 #: ../../reference_manual/dockers/onion_skin.rst:22
 msgid ".. image:: images/dockers/Onion_skin_01.png"
@@ -50,6 +53,7 @@ msgid ""
 "Basically, they are images that represent the frames before and after the "
 "current frame, usually colored or tinted."
 msgstr ""
+"基本的に、現在のフレームの前後を表現する画像で、通常は色を着けるか変えます。"
 
 #: ../../reference_manual/dockers/onion_skin.rst:25
 msgid ""
@@ -58,6 +62,10 @@ msgid ""
 "white to be white, not transparent, so don’t animated on an opaque layer if "
 "you want onion skins.)"
 msgstr ""
+"アニメーションの(つまり、フレームを持つ)レイヤーの電球アイコンをクリックする"
+"ことで切り替えることができ、完全な不透明ではありません。(Krita は白を透明では"
+"なく白と認識するため、オニオンスキンを使用するなら不透明レイヤーをアニメー"
+"ションにしないでください。)"
 
 #: ../../reference_manual/dockers/onion_skin.rst:29
 msgid ""
@@ -67,6 +75,11 @@ msgid ""
 "image dialog. Just don't try to animate on a layer like this if you rely on "
 "onion skins, instead make a new one."
 msgstr ""
+"4.2からオニオンスキンは既定ピクセルが完全に不透明であるレイヤーでは無効になっ"
+"ています。こうしたレイヤーは新しい画像ダイアログの :guilabel:`内容` セクショ"
+"ンにある :guilabel:`ラスターレイヤー背景` を使用した場合のみ作ることができま"
+"す。なので新しく作り直さずにオニオンスキンに頼りたい場合はこのようなレイヤー"
+"をアニメーションにしようとしないでください。"
 
 #: ../../reference_manual/dockers/onion_skin.rst:31
 msgid ""
@@ -78,12 +91,20 @@ msgid ""
 "working on, and the light table would make the lines of the keyframes shine "
 "through, so they could reference them."
 msgstr ""
+"オニオンスキンという語は実際タマネギが半透明であるところからきています。昔な"
+"がらのアニメーションのアニメーターは最初のアニメーションを半透明の紙を光る"
+"テーブル(アニメーターが使う特別な道具の一つ)の上で作って、キーフレームと呼ば"
+"れるものから始まり、それから中間のフレームを描いていきます。それで作業中のフ"
+"レームの下にキーフレームと呼ばれるものを置き、ライトテーブルがキーフレームを"
+"キーフレームの線を透かして光らせることで見本として使います。"
 
 #: ../../reference_manual/dockers/onion_skin.rst:33
 msgid ""
 "Onion-skinning is a digital implementation of such a workflow, and it’s very "
 "useful when trying to animate."
 msgstr ""
+"オニオンスキンとはそのような作業をデジタルに実装したものであり、アニメーショ"
+"ンを作る際にとても有用です。"
 
 #: ../../reference_manual/dockers/onion_skin.rst:36
 msgid ".. image:: images/dockers/Onion_skin_02.png"
@@ -97,6 +118,10 @@ msgid ""
 "transparency’ while the sliders to the side allow you to control the "
 "transparency per keyframe offset."
 msgstr ""
+"0のスライダーとボタンが全オニオンスキンの不透明度と表示を操作します。上のボッ"
+"クスで素早くオンオフを切り替えられ、両側にあるスライダーがキーフレームのオフ"
+"セットごとに透過を操作するのに対し、真ん中のメインのスライダーは‘マスター透"
+"過’のようになっています。"
 
 #: ../../reference_manual/dockers/onion_skin.rst:39
 msgid ""
@@ -104,9 +129,12 @@ msgid ""
 "which creates a silhouette, while below you can still see a bit of the "
 "original colors at 50%."
 msgstr ""
+"不透明度の操作はフレームがどれだけ着色されるかを操作でき、最初の画面は100%の"
+"シルエットで、それ以下は元の色が50%になり少しだけ見えるようになります。"
 
 #: ../../reference_manual/dockers/onion_skin.rst:41
 msgid ""
 "The :guilabel:`Previous Frame` and :guilabel:`Next Frame` color labels "
 "allows you set the colors."
 msgstr ""
+":guilabel:`前のフレーム` と :guilabel:`後のフレーム` では色を設定できます。"

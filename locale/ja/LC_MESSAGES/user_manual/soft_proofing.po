@@ -1,10 +1,11 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-03-02 16:12-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"PO-Revision-Date: 2020-12-05 19:49-0800\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -42,6 +43,11 @@ msgid ""
 "documents, this isn’t much of a problem, but for professional prints, this "
 "can be very sad, as it can change the look and feel of an image drastically."
 msgstr ""
+"Krita で画像を作って、プリンタで印刷すると、画像の見た目は少し異なります。色"
+"は暗く、または期待どおりに暗くなかったり、赤がより強く出るかもしれませんし、"
+"コントラストが失われます。単純な文書ではそんなに問題にはなりませんが、プロの"
+"印刷においては、これはとても悲しむべきことで、画像の見た目と印象が劇的に変わ"
+"ります。"
 
 #: ../../user_manual/soft_proofing.rst:20
 msgid ""
@@ -49,12 +55,16 @@ msgid ""
 "model (CMYK) and it has often access to a lower range of colors (called a "
 "gamut)."
 msgstr ""
+"これが起こる理由は単純でプリンタが色の範囲(色域と言います)に乏しい異なるカ"
+"ラーモデル(CMYK)を使用することによるものです。"
 
 #: ../../user_manual/soft_proofing.rst:22
 msgid ""
 "A naive person would suggest the following solution: do your work within the "
 "CMYK color model! But there are three problems with that:"
 msgstr ""
+"鈍感な人はこう言うでしょう: CMYK カラーモデルで作業をしよう！でもそれには3つ"
+"の問題があります:"
 
 #: ../../user_manual/soft_proofing.rst:24
 msgid ""
@@ -63,6 +73,9 @@ msgid ""
 "resulting gamut of colors you can use is different. Which means that each of "
 "these could have a different profile associated with them."
 msgstr ""
+"CMYK 空間で塗ることはプリンタで同じ色になることを保証するものではありません。"
+"それぞれのインクの組み合わせ、紙と印刷機械、結果の色域は異なります。つまりそ"
+"れぞれの物に関連付けた異なるプロファイルが必要になります。"
 
 #: ../../user_manual/soft_proofing.rst:25
 msgid ""
@@ -71,6 +84,9 @@ msgid ""
 "meaning that the color maths isn’t as nice as in other spaces. Blending "
 "modes are different in CMYK as well."
 msgstr ""
+"さらに、プロファイルがあってプリンタが出せる色空間そのもので作業をしていたと"
+"しても、CMYK 色空間はまるで一般的ではなく、色の計算は他の空間に比べると良いも"
+"のではありません。合成モードも CMYK では異なります。"
 
 #: ../../user_manual/soft_proofing.rst:26
 msgid ""
@@ -79,6 +95,9 @@ msgid ""
 "due to the paper, printer or ink being different, you might have a bigger "
 "gamut with more bright colors that you would like to take advantage of."
 msgstr ""
+"最後に、CMYK 空間で作業をするということは画像がその空間に捕らわれてしまうこと"
+"です。もし紙やプリンタ、インクが違って異なる CMYK プロファイルで作業をするこ"
+"とになった場合、より明るい色のある広い色域の方がメリットが大きいでしょう。"
 
 #: ../../user_manual/soft_proofing.rst:28
 msgid ""
@@ -87,6 +106,9 @@ msgid ""
 "fly, just for preview. This is possible, and is what we call ''Soft "
 "Proofing''."
 msgstr ""
+"理想的には、RGB で作業して、お気に入りの RGB ツールを使い、CMYK 空間への変換"
+"はコンピュータにプレビューだけをワンタッチで任せる事です。これは可能で、私た"
+"ちが「ソフトプルーフ」と呼んでいるものです。"
 
 #: ../../user_manual/soft_proofing.rst:34
 msgid ".. image:: images/softproofing/Softproofing_regularsoftproof.png"
@@ -99,23 +121,31 @@ msgid ""
 "but the soft proofed version is slightly less blueish in the whites of the "
 "flowers and slightly less saturated in the greens of the leaves."
 msgstr ""
+"左はオリジナル、右はソフトプルーフをオンにしたビューです。明るい色が欠けてい"
+"るため違いは僅かですが、ソフトプルーフの方が花の白さから青がわずかに欠け、葉"
+"の緑からわずかに彩度が欠けています。"
 
 #: ../../user_manual/soft_proofing.rst:36
 msgid ""
 "You can toggle soft proofing on any image using the :kbd:`Ctrl + Y` "
 "shortcut. Unlike other programs, this is per-view, so that you can look at "
 "your image non-proofed and proofed, side by side. The settings are also per "
-"image, and saved into the .kra file. You can set the proofing options in :"
-"menuselection:`Image --> Image Properties --> Soft Proofing`."
+"image, and saved into the ``.kra`` file. You can set the proofing options "
+"in :menuselection:`Image --> Image Properties --> Soft Proofing`."
 msgstr ""
+":kbd:`Ctrl + Y` ショートカットを使うことでどの画像でもソフトプルーフを切り替"
+"えることができます。他のプログラムとは違いビューごとなので、ソフトプルーフし"
+"てあるのとないのを隣り合わせにして見ることができます。設定も画像ごとで ``."
+"kra`` ファイルに保存されます。オプションは :menuselection:`画像 --> プロパ"
+"ティ --> ソフトプルーフ` から設定できます。"
 
 #: ../../user_manual/soft_proofing.rst:38
 msgid "There you can set the following options:"
-msgstr ""
+msgstr "以下のオプションを設定できます:"
 
 #: ../../user_manual/soft_proofing.rst:40
 msgid "Profile, Depth, Space"
-msgstr ""
+msgstr "プロファイル、深度、色域"
 
 #: ../../user_manual/soft_proofing.rst:41
 msgid ""
@@ -123,12 +153,17 @@ msgid ""
 "profile you are proofing to. In a professional print workflow, this profile "
 "should be determined by the printing house."
 msgstr ""
+"これらの中で、プロファイルだけが本当に重要です。ソフトプルーフするものはプロ"
+"ファイルとして提供されます。プロのプリント工程では、このプロファイルは印刷業"
+"者によって決められます。"
 
 #: ../../user_manual/soft_proofing.rst:43
 msgid ""
 "Set the proofing Intent. It uses the same intents as the intents mentioned "
 "in the :ref:`color managed workflow <color_managed_workflow>`."
 msgstr ""
+"Intent に設定します。これは :ref:`カラーマネジメント作業工程 "
+"<color_managed_workflow>` の Intent と同じものを使用します。"
 
 #: ../../user_manual/soft_proofing.rst:48
 msgid "Intent"
@@ -137,12 +172,14 @@ msgstr ""
 #: ../../user_manual/soft_proofing.rst:49
 msgid ""
 "Left: Soft proofed image with Adaptation state slider set to max. Right: "
-"Soft proofed image with Adaptation State set to minimum"
+"Soft proofed image with Adaptation State set to minimum."
 msgstr ""
+"左: 順応状態スライダーを最大にしたソフトプルーフ画像。右:順応状態を最低にした"
+"ソフトプルーフ画像。"
 
 #: ../../user_manual/soft_proofing.rst:50
 msgid "Adaptation State"
-msgstr ""
+msgstr "順応状態"
 
 #: ../../user_manual/soft_proofing.rst:51
 msgid ""
@@ -152,6 +189,10 @@ msgid ""
 "slider set to minimum). Often CMYK profiles have a different white as the "
 "screen, or amongst one another due to the paper color being different."
 msgstr ""
+"ソフトプルーフで画像の白を画面の白に合わせるか(スライダーを最大に)、プロファ"
+"イルの白を使うか(スライダーを最低に)を決める :guilabel:`Absolute "
+"Colorimetric` を設定する機能です。紙の色が違うことによりしばしば CMYK プロ"
+"ファイルは画面とは違った白を持っています。"
 
 #: ../../user_manual/soft_proofing.rst:52
 msgid "Black Point Compensation"
@@ -167,17 +208,19 @@ msgstr ""
 
 #: ../../user_manual/soft_proofing.rst:55
 msgid "Gamut Warning"
-msgstr ""
+msgstr "色域外警告"
 
 #: ../../user_manual/soft_proofing.rst:55
 msgid "Set the color of the out-of-gamut warning."
-msgstr ""
+msgstr "色域の外にある色の警告設定です。"
 
 #: ../../user_manual/soft_proofing.rst:57
 msgid ""
 "You can set the defaults that Krita uses in :menuselection:`Settings --> "
-"Configure Krita --> Color Management`."
+"Configure Krita... --> Color Management`."
 msgstr ""
+":menuselection:`設定 --> Krita の設定を変更... --> カラーマネジメント` から "
+"Krita が使う規定を設定できます。"
 
 #: ../../user_manual/soft_proofing.rst:59
 msgid ""
@@ -186,10 +229,13 @@ msgid ""
 "then approximate in the proofing options how the image looks compared to the "
 "real-life copy you have made."
 msgstr ""
+"正しく設定するために、印刷するテスト画像を作って(正しく設定されたプリンタで印"
+"刷し)比べ、現実のコピーと画像がどう違うかを見てからプルーフオプションを近づけ"
+"ることが推奨されます。"
 
 #: ../../user_manual/soft_proofing.rst:62
 msgid "Out of Gamut Warning"
-msgstr ""
+msgstr "色域外警告"
 
 #: ../../user_manual/soft_proofing.rst:64
 msgid ""
@@ -197,12 +243,16 @@ msgid ""
 "Proofing: It allows you to see which colors are being clipped, by replacing "
 "the resulting color with the set alarm color."
 msgstr ""
+"色域外警告、またが色域警告はソフトプルーフの一番上に来るオプションです: どの"
+"色が欠けるかを見え、その色を設定した警告色で置き換えます。"
 
 #: ../../user_manual/soft_proofing.rst:66
 msgid ""
 "This can be useful to determine where certain contrasts are being lost, and "
 "to allow you to change it slowly to a less contrasted image."
 msgstr ""
+"どの部分のコントラストが失われるのかを知るのに有用で、よりコントラストの少な"
+"い画像にゆっくり変更する事ができます。"
 
 #: ../../user_manual/soft_proofing.rst:72
 msgid ".. image:: images/softproofing/Softproofing_gamutwarnings.png"
@@ -212,21 +262,28 @@ msgstr ""
 msgid ""
 "Left: View with original image, Right: View with soft proofing and gamut "
 "warnings turned on. Krita will save the gamut warning color alongside the "
-"proofing options into the Kra file, so pick a color that you think will "
+"proofing options into the KRA file, so pick a color that you think will "
 "stand out for your current image."
 msgstr ""
+"左: 元の画像、右: ソフトプルーフし色域外警告をオンにした状態。Krita は警告色"
+"を KRA ファイルのソフトプルーフオプションと一緒に保存し、選んだ警告色は現在の"
+"画像でのみ表示されることになります。"
 
 #: ../../user_manual/soft_proofing.rst:74
 msgid ""
 "You can activate Gamut Warnings with the :kbd:`Ctrl + Shift + Y` shortcut, "
 "but it needs soft proofing activated to work fully."
 msgstr ""
+"色域外警告は :kbd:`Ctrl + Shift + Y` ショートカットで有効にできますが、完全に"
+"機能させるにはソフトプルーフが有効になっている必要があります。"
 
 #: ../../user_manual/soft_proofing.rst:77
 msgid ""
 "Soft Proofing doesn’t work properly in floating-point spaces, and attempting "
 "to force it will cause incorrect gamut alarms. It is therefore disabled."
 msgstr ""
+"ソフトプルーフは浮動小数点色空間では正しく動きませんし、無理にやろうとしても"
+"間違った色域外警告が発生します。それゆえに無効になっています。"
 
 #: ../../user_manual/soft_proofing.rst:80
 msgid ""
@@ -234,3 +291,6 @@ msgid ""
 "shadows. This is a bug in LCMS, see `here <https://ninedegreesbelow.com/bug-"
 "reports/soft-proofing-problems.html>`_ for more info."
 msgstr ""
+"色域警告は時々リニアプロファイルで妙な警告を発生させることがあります。これは"
+"LCMSのバグで、詳しい情報は`ここ <https://ninedegreesbelow.com/bug-reports/"
+"soft-proofing-problems.html>`_ にあります。"

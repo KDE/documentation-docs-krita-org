@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-19 03:24+0200\n"
-"PO-Revision-Date: 2019-07-22 00:16+0100\n"
+"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"PO-Revision-Date: 2020-04-26 17:34+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -17,11 +17,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: Hose Krita Image hose en examples images Gih ref\n"
-"X-POFile-SpellExtra: image gih brushes GIH\n"
+"X-POFile-SpellExtra: image gih brushes GIH gihmultidimensionexplaination\n"
+"X-POFile-SpellExtra: categoryfiletypes\n"
+
+#: ../../general_concepts/file_formats/file_gih.rst:None
+msgid ""
+".. image:: images/category_filetypes/gih_multi_dimension_explaination.png"
+msgstr ""
+".. image:: images/category_filetypes/gih_multi_dimension_explaination.png"
 
 #: ../../general_concepts/file_formats/file_gih.rst:1
-msgid "The Gimp Image Hose file format in Krita."
-msgstr "O formato de ficheiros Gimp Image Hose no Krita."
+msgid "The GIMP Image Hose file format in Krita."
+msgstr "O formato de ficheiros GIMP Image Hose no Krita."
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "*.gih"
+msgstr "*.gih"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "GIH"
+msgstr "GIH"
 
 #: ../../general_concepts/file_formats/file_gih.rst:10
 msgid "Image Hose"
@@ -30,14 +45,6 @@ msgstr "Image Hose"
 #: ../../general_concepts/file_formats/file_gih.rst:10
 msgid "Gimp Image Hose"
 msgstr "'Image Hose' do Gimp"
-
-#: ../../general_concepts/file_formats/file_gih.rst:10
-msgid "GIH"
-msgstr "GIH"
-
-#: ../../general_concepts/file_formats/file_gih.rst:10
-msgid "*.gih"
-msgstr "*.gih"
 
 #: ../../general_concepts/file_formats/file_gih.rst:15
 msgid "\\*.gih"
@@ -70,23 +77,80 @@ msgstr ".. image:: images/brushes/Gih-examples.png"
 msgid "From top to bottom: Incremental, Pressure and Random"
 msgstr "De cima para baixo: Incremental, Pressão e Aleatório"
 
-#: ../../general_concepts/file_formats/file_gih.rst:27
-msgid "Gimp image hose format options:"
-msgstr "Opções do formato Hose do Gimp:"
+#: ../../general_concepts/file_formats/file_gih.rst:28
+msgid "Dimension and ranks."
+msgstr "Dimensões e classificações."
 
-#: ../../general_concepts/file_formats/file_gih.rst:29
+#: ../../general_concepts/file_formats/file_gih.rst:30
+msgid ""
+"The GIMP image hose format allows multiple dimensions for a given brush. You "
+"could for example have a dimension that updates incrementally, and one that "
+"updates on pressure, or updates randomly. Upon export, Krita will use the "
+"ranks to subdivide the layers per dimension. If you have a 24 layer image "
+"and three ranks, and the first dimension is set to 2, the second to 4 and "
+"the third to 3, then Krita will divide 24 into 2 groups of 12, each of which "
+"have unique images for the 2 parts of the first dimension. Then those 2 "
+"groups of 12 get divided into 8 groups of 4, each of which have unique brush "
+"tips for the four parts of the second dimension, and finally, the grouped "
+"three images have each a unique brush for the final dimension."
+msgstr ""
+"O formato Image Hose do GIMP permite várias dimensões para um dado pincel. "
+"Poderá por exemplo ter uma dimensão que se actualiza incrementalmente e "
+"outra que se actualiza de acordo com a pressão ou aleatoriamente. Na altura "
+"da exportação, o  Krita irá usar as classificações para sub-dividir as "
+"camadas por cada dimensão. Se tiver uma imagem com 24 camadas e três "
+"posições de classificação, e se a primeira dimensão estiver configurada como "
+"2, a segunda como 4 e a terceira como 3, então o Krita irá dividir o 24 em 2 "
+"grupos de 12, sendo que cada um terá imagens únicas para as 2 partes da "
+"primeira dimensão. Depois, esses 2 grupos de 12 serão divididos em 8 grupos "
+"de 4, tendo cada um pontas de pincel únicas para as quatro partes da segunda "
+"dimensão e, finalmente, as três imagens agrupadas terão cada uma um pincel "
+"único para a dimensão final."
+
+#: ../../general_concepts/file_formats/file_gih.rst:32
+msgid ""
+"So, the following image has a table where dimension 1 is unique in one of 4 "
+"numbers, while dimension 2 is unique in one of 3 shapes. So our ranks for "
+"dimension 1 and dimension 2 need to be 4 and 3 respectively. Now, to order "
+"the layers, you need to subdivide the table first by the first dimension, "
+"and then by the second. So we end up with three layers each for a shape in "
+"the second dimension but for the first number, then another three layers, "
+"each for a shape, but then for the second number, and so forth."
+msgstr ""
+"Como tal, a seguinte imagem tem uma tabela onde a dimensão 1 é única para um "
+"de 4 números, enquanto a dimensão 2 é única em uma de 3 formas. Como tal, as "
+"nossas classificações para a dimensão 1 e 2 têm de ser 4 e 3, "
+"respectivamente. Agora, para ordenar as camadas, tem de sub-dividir a tabela "
+"primeiro pela primeira dimensão, seguida da segunda dimensão. Assim, "
+"terminamos com três camadas, uma para cada forma na segunda dimensão mas "
+"para o primeiro número, depois outras três camadas, uma para cada forma e "
+"com o segundo número, e assim por diante."
+
+#: ../../general_concepts/file_formats/file_gih.rst:38
+msgid ""
+"See `the GIMP documentation <https://docs.gimp.org/2.8/en/gimp-using-"
+"animated-brushes.html>`_ for a more thorough explanation."
+msgstr ""
+"Veja a `documentação do GIMP <https://docs.gimp.org/2.8/en/gimp-using-"
+"animated-brushes.html>`_ para obter uma explicação mais detalhada."
+
+#: ../../general_concepts/file_formats/file_gih.rst:41
+msgid "GIMP image hose format options:"
+msgstr "Opções do formato Image Hose do Gimp:"
+
+#: ../../general_concepts/file_formats/file_gih.rst:43
 msgid "Constant"
 msgstr "Constante"
 
-#: ../../general_concepts/file_formats/file_gih.rst:30
+#: ../../general_concepts/file_formats/file_gih.rst:44
 msgid "This'll use the first image, no matter what."
 msgstr "Isto irá usar a primeira imagem, independentemente de tudo."
 
-#: ../../general_concepts/file_formats/file_gih.rst:31
+#: ../../general_concepts/file_formats/file_gih.rst:45
 msgid "Incremental"
 msgstr "Incremental"
 
-#: ../../general_concepts/file_formats/file_gih.rst:32
+#: ../../general_concepts/file_formats/file_gih.rst:46
 msgid ""
 "This'll paint the image layers in sequence. This is good for images that can "
 "be strung together to create a pattern."
@@ -94,11 +158,11 @@ msgstr ""
 "Isto irá pintar as camadas da imagem em sequência. Isto é bom para as "
 "imagens que possam ser associadas em conjunto para criar um padrão."
 
-#: ../../general_concepts/file_formats/file_gih.rst:33
+#: ../../general_concepts/file_formats/file_gih.rst:47
 msgid "Pressure"
 msgstr "Pressão"
 
-#: ../../general_concepts/file_formats/file_gih.rst:34
+#: ../../general_concepts/file_formats/file_gih.rst:48
 msgid ""
 "This'll paint the images depending on pressure. This is good for brushes "
 "imitating the hairs of a natural brush."
@@ -106,11 +170,11 @@ msgstr ""
 "Isto irá pintar as imagens dependendo da pressão. Isto é bom para os pincéis "
 "que imitam os pêlos de um pincel natural."
 
-#: ../../general_concepts/file_formats/file_gih.rst:35
+#: ../../general_concepts/file_formats/file_gih.rst:49
 msgid "Random"
 msgstr "Aleatório"
 
-#: ../../general_concepts/file_formats/file_gih.rst:36
+#: ../../general_concepts/file_formats/file_gih.rst:50
 msgid ""
 "This'll draw the images randomly. This is good for image-collections used in "
 "speedpainting as well as images that generate texture. Or perhaps more "
@@ -120,17 +184,17 @@ msgstr ""
 "colecções de imagens usadas na pintura rápida, assim como as imagens que "
 "poderão gerar texturas. Ou talvez mais símbolos gráficos."
 
-#: ../../general_concepts/file_formats/file_gih.rst:38
+#: ../../general_concepts/file_formats/file_gih.rst:52
 msgid "Angle"
 msgstr "Ângulo"
 
-#: ../../general_concepts/file_formats/file_gih.rst:38
+#: ../../general_concepts/file_formats/file_gih.rst:52
 msgid "This'll use the dragging angle to determine with image to draw."
 msgstr ""
 "Isto irá usar o ângulo de arrastamento para determinar qual a imagem a "
 "desenhar."
 
-#: ../../general_concepts/file_formats/file_gih.rst:40
+#: ../../general_concepts/file_formats/file_gih.rst:54
 msgid ""
 "When exporting a Krita file as a ``.gih``, you will also get the option to "
 "set the default spacing, the option to set the name (very important for "
@@ -142,11 +206,11 @@ msgstr ""
 "importante para o encontrar na GUI) e a capacidade de escolher se deve ou "
 "não gerar a máscara a partir das cores."
 
-#: ../../general_concepts/file_formats/file_gih.rst:43
+#: ../../general_concepts/file_formats/file_gih.rst:57
 msgid "Use Color as Mask"
 msgstr "Usar a Cor como Máscara"
 
-#: ../../general_concepts/file_formats/file_gih.rst:43
+#: ../../general_concepts/file_formats/file_gih.rst:57
 msgid ""
 "This'll turn the darkest values of the image as the ones that paint, and the "
 "whitest as transparent. Untick this if you are using colored images for the "
@@ -156,10 +220,10 @@ msgstr ""
 "mais claros em transparentes. Desligue isto se estiver a usar imagens "
 "coloridas para o pincel."
 
-#: ../../general_concepts/file_formats/file_gih.rst:45
+#: ../../general_concepts/file_formats/file_gih.rst:59
 msgid ""
 "We have a :ref:`Krita Brush tip page <brush_tip_animated_brush>` on how to "
-"create your own gih brush."
+"create your own GIH brush."
 msgstr ""
 "Temos uma :ref:`página de pontas de pincéis do Krita "
-"<brush_tip_animated_brush>` sobre como criar o seu próprio pincel .gih."
+"<brush_tip_animated_brush>` sobre como criar o seu próprio pincel GIH."

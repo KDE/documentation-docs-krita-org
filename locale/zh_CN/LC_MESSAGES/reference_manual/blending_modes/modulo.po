@@ -2,31 +2,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-09 03:41+0200\n"
-"PO-Revision-Date: 2019-08-16 17:05\n"
-"Last-Translator: Guo Yunhe (guoyunhe)\n"
+"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"PO-Revision-Date: 2021-08-22 15:30\n"
+"Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/www/"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___blending_modes___modulo.pot\n"
+"X-Crowdin-File-ID: 10512\n"
 
 #: ../../reference_manual/blending_modes/modulo.rst:1
 msgid "Page about the modulo blending modes in Krita:"
-msgstr ""
+msgstr "本页面介绍的是 Krita 的取模运算类混色模式："
 
 #: ../../reference_manual/blending_modes/modulo.rst:10
 #: ../../reference_manual/blending_modes/modulo.rst:14
 #: ../../reference_manual/blending_modes/modulo.rst:47
 #: ../../reference_manual/blending_modes/modulo.rst:51
 msgid "Modulo"
-msgstr ""
+msgstr "取模运算"
 
 #: ../../reference_manual/blending_modes/modulo.rst:16
 msgid ""
@@ -39,17 +40,24 @@ msgid ""
 "values are inverted in the end result, so values are perceived to be wave-"
 "like."
 msgstr ""
+"取模运算是一类特殊的混色模式。如果混色图层的某通道颜色数值小于基底图层，混色"
+"后得到的颜色数值会呈现出周期性变化。每一种取模运算混色模式都会在余数大于最大"
+"值或者小于最小值时保留余数的绝对值。对于连续性的取模运算模式，如果在取模运算"
+"之前算出的数值在奇数和偶数之间，则把结果数值进行反相，使得数值呈现出波状循"
+"环。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:18
 msgid ""
 "Furthermore, this would imply that modulo modes are beneficial for abstract "
 "art, and manipulation of gradients."
 msgstr ""
+"由于取模运算类混色模式的上述特征，它们在营造抽象效果和演绎特殊渐变方面有独特"
+"的应用价值。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:20
 #: ../../reference_manual/blending_modes/modulo.rst:24
 msgid "Divisive Modulo"
-msgstr ""
+msgstr "取余运算"
 
 #: ../../reference_manual/blending_modes/modulo.rst:26
 msgid ""
@@ -58,22 +66,26 @@ msgid ""
 "value found with the sum of blend layer and the minimum possible value after "
 "zero."
 msgstr ""
+"首先把基底图层数值除以混色图层数值与大于零的最小可能数值的和。然后把该结果与"
+"混色图层数值与大于零的最小可能数值的和进行取模运算。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:31
 msgid ""
 ".. image:: images/blending_modes/modulo/"
 "Blending_modes_Divisive_Modulo_Gradient_Comparison.png"
 msgstr ""
+".. image:: images/blending_modes/modulo/"
+"Blending_modes_Divisive_Modulo_Gradient_Comparison.png"
 
 #: ../../reference_manual/blending_modes/modulo.rst:31
 msgid ""
 "Left: **Base Layer**. Middle: **Blend Layer**. Right: **Divisive Modulo**."
-msgstr ""
+msgstr "左图：**基底图层**，中图：**混色图层**，右图：**取余运算混色结果**。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:33
 #: ../../reference_manual/blending_modes/modulo.rst:38
 msgid "Divisive Modulo - Continuous"
-msgstr ""
+msgstr "取余运算 - 连续"
 
 #: ../../reference_manual/blending_modes/modulo.rst:40
 msgid ""
@@ -83,39 +95,46 @@ msgid ""
 "zero. As this is a continuous mode, anything between odd to even numbers are "
 "inverted."
 msgstr ""
+"首先把基底图层数值除以混色图层数值与大于零的最小可能数值的和。然后把该结果与"
+"混色图层数值与大于零的最小可能数值的和进行取模运算。最后把任何在奇数和偶数之"
+"间的结果进行反相处理，产生连续循环。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:45
 msgid ""
 ".. image:: images/blending_modes/modulo/"
 "Blending_modes_Divisive_Modulo_Continuous_Gradient_Comparison.png"
 msgstr ""
+".. image:: images/blending_modes/modulo/"
+"Blending_modes_Divisive_Modulo_Continuous_Gradient_Comparison.png"
 
 #: ../../reference_manual/blending_modes/modulo.rst:45
 msgid ""
 "Left: **Base Layer**. Middle: **Blend Layer**. Right: **Divisive Modulo - "
 "Continuous**."
-msgstr ""
+msgstr "左图：**基底图层**，中图：**混色图层**，右图：**取余连续混色结果**。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:53
 msgid ""
 "Performs a modulo calculation using the sum of blend layer and the minimum "
 "possible value after zero."
-msgstr ""
+msgstr "用混色图层数值与大于零的最小可能数值的和进行取模运算。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:58
 msgid ""
 ".. image:: images/blending_modes/modulo/"
 "Blending_modes_Modulo_Gradient_Comparison.png"
 msgstr ""
+".. image:: images/blending_modes/modulo/"
+"Blending_modes_Modulo_Gradient_Comparison.png"
 
 #: ../../reference_manual/blending_modes/modulo.rst:58
 msgid "Left: **Base Layer**. Middle: **Blend Layer**. Right: **Modulo**."
-msgstr ""
+msgstr "左图：**基底图层**，中图：**混色图层**，右图：**取模运算混色结果**。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:60
 #: ../../reference_manual/blending_modes/modulo.rst:64
 msgid "Modulo - Continuous"
-msgstr ""
+msgstr "取模运算 - 连续"
 
 #: ../../reference_manual/blending_modes/modulo.rst:66
 msgid ""
@@ -123,44 +142,52 @@ msgid ""
 "possible value after zero. As this is a continuous mode, anything between "
 "odd to even numbers are inverted."
 msgstr ""
+"用混色图层数值与大于零的最小可能数值的和进行取模运算。然后把任何在奇数和偶数"
+"之间的结果进行反相处理，产生连续循环。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:71
 msgid ""
 ".. image:: images/blending_modes/modulo/"
 "Blending_modes_Modulo_Continuous_Gradient_Comparison.png"
 msgstr ""
+".. image:: images/blending_modes/modulo/"
+"Blending_modes_Modulo_Continuous_Gradient_Comparison.png"
 
 #: ../../reference_manual/blending_modes/modulo.rst:71
 msgid ""
 "Left: **Base Layer**. Middle: **Blend Layer**. Right: **Modulo - "
 "Continuous**."
-msgstr ""
+msgstr "左图：**基底图层**，中图：**混色图层**，右图：**取模连续混色结果**。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:73
 #: ../../reference_manual/blending_modes/modulo.rst:77
 msgid "Modulo Shift"
-msgstr ""
+msgstr "取模运算偏移"
 
 #: ../../reference_manual/blending_modes/modulo.rst:79
 msgid ""
 "Performs a modulo calculation with the result of the sum of base and blend "
 "layer by the sum of blend layer with the minimum possible value after zero."
 msgstr ""
+"用基底图层数值与混色图层数值的和乘以混色图层数值与大于零的最小可能数值的和的"
+"结果进行取模运算。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:85
 msgid ""
 ".. image:: images/blending_modes/modulo/"
 "Blending_modes_Modulo_Shift_Gradient_Comparison.png"
 msgstr ""
+".. image:: images/blending_modes/modulo/"
+"Blending_modes_Modulo_Shift_Gradient_Comparison.png"
 
 #: ../../reference_manual/blending_modes/modulo.rst:85
 msgid "Left: **Base Layer**. Middle: **Blend Layer**. Right: **Modulo Shift**."
-msgstr ""
+msgstr "左图：**基底图层**，中图：**混色图层**，右图：**取模偏移混色结果**。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:87
 #: ../../reference_manual/blending_modes/modulo.rst:91
 msgid "Modulo Shift - Continuous"
-msgstr ""
+msgstr "取模运算偏移 - 连续"
 
 #: ../../reference_manual/blending_modes/modulo.rst:93
 msgid ""
@@ -169,15 +196,21 @@ msgid ""
 "As this is a continuous mode, anything between odd to even numbers are "
 "inverted."
 msgstr ""
+"用基底图层数值与混色图层数值的和乘以混色图层数值与大于零的最小可能数值的和的"
+"结果进行取模运算。然后把任何在奇数和偶数之间的结果进行反相处理，产生连续循"
+"环。"
 
 #: ../../reference_manual/blending_modes/modulo.rst:98
 msgid ""
 ".. image:: images/blending_modes/modulo/"
 "Blending_modes_Modulo_Shift_Continuous_Gradient_Comparison.png"
 msgstr ""
+".. image:: images/blending_modes/modulo/"
+"Blending_modes_Modulo_Shift_Continuous_Gradient_Comparison.png"
 
 #: ../../reference_manual/blending_modes/modulo.rst:98
 msgid ""
 "Left: **Base Layer**. Middle: **Blend Layer**. Right: **Modulo Shift - "
 "Continuous**."
 msgstr ""
+"左图：**基底图层**，中图：**混色图层**，右图：**取模偏移连续混色结果**。"

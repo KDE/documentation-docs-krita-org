@@ -1,10 +1,11 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-03-02 16:12-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"PO-Revision-Date: 2021-02-07 16:17-0800\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -15,12 +16,12 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 
 #: ../../tutorials/saving-for-the-web.rst:1
-msgid "Tutorial for saving images for the web"
-msgstr ""
+msgid "Tutorial for saving images for the web."
+msgstr "ウェブ用に画像を保存するチュートリアルです。"
 
 #: ../../tutorials/saving-for-the-web.rst:13
 msgid "Saving For The Web"
-msgstr ""
+msgstr "ウェブ用に保存する"
 
 #: ../../tutorials/saving-for-the-web.rst:15
 msgid ""
@@ -32,16 +33,24 @@ msgid ""
 "only could look at ``*.kra`` files! So instead, we optimise our images for "
 "the web."
 msgstr ""
+"Krita 既定の保存形式は :ref:`file_kra` です。この形式は Krita で扱うことので"
+"きる画像の: レイヤー、フィルタ、補助線、マスク、色空間、など。しかしそれはた"
+"くさんのデータになり、``*.kra`` ファイルはとても大きいです。これはインター"
+"ネットにアップロードするのにはとても良いものではありません。多くの人のデータ"
+"量が ``*.kra`` ファイルを見るだけで超過してしまうのを想像してください！なので"
+"代わりに、画像をウェブ用に最適化します。"
 
 #: ../../tutorials/saving-for-the-web.rst:17
 msgid "There are a few steps involved:"
-msgstr ""
+msgstr "関連するいくつかの手順があります:"
 
 #: ../../tutorials/saving-for-the-web.rst:19
 msgid ""
 "Save as a ``.kra``. This is your working file and serves as a backup if you "
 "make any mistakes."
 msgstr ""
+"``.kra`` として保存します。これは作業ファイルで間違いが起こった時のバックアッ"
+"プとして機能します。"
 
 #: ../../tutorials/saving-for-the-web.rst:21
 msgid ""
@@ -51,79 +60,121 @@ msgid ""
 "don't be scared if Krita freezes for a few seconds. It'll become responsive "
 "soon enough."
 msgstr ""
+"すべてのレイヤーを統合し、一つにします。:menuselection:`レイヤー --> 画像を統"
+"合` か、:kbd:`Ctrl + Shift + E` ショートカットを押します。統合にはしばらくか"
+"かりますので、もし画像が大きければ、Krita が数秒フリーズしても驚かないでくだ"
+"さい。すぐに応答するはずです。"
 
 #: ../../tutorials/saving-for-the-web.rst:23
 msgid ""
 "Convert the color space to 8bit sRGB (if it isn't yet). This is important to "
 "lower the filesize, and PNG for example can't take higher than 16bit. :"
-"menuselection:`Image --> Convert Image Color Space` and set the options to "
-"**RGB**, **8bit** and **sRGB-elle-v2-srgbtrc.icc** respectively. If you are "
-"coming from a linear space, uncheck **little CMS** optimisations"
+"menuselection:`Image --> Convert Image Color Space...` and set the options "
+"to **RGB**, **8bit** and **sRGB-elle-v2-srgbtrc.icc** respectively. If you "
+"are coming from a linear space, uncheck **little CMS** optimisations"
 msgstr ""
+"色空間を 8bit sRGB に(もしなっていなければ)変換します。これはファイルサイズを"
+"下げるのに重要で、PNG は例えば 16bit を超えるものを扱えません。:"
+"menuselection:`画像 --> 画像の色空間を変換...` でオプションを **RGB**、"
+"**8bit**、**sRGB-elle-v2-srgbtrc.icc** にします。もしリニア空間からであれば、"
+"**little CMS** 最適化のチェックを外してください。"
 
 #: ../../tutorials/saving-for-the-web.rst:25
 msgid ""
-"Resize! Go to :menuselection:`Image --> Scale Image To New Size` or use the :"
-"kbd:`Ctrl + Alt + I` shortcut. This calls up the resize menu. A good rule of "
-"thumb for resizing is that you try to get both sizes to be less than 1200 "
-"pixels. (This being the size of HD formats). You can easily get there by "
-"setting the **Resolution** under **Print Size** to **72** dots per inch. "
+"Resize! Go to :menuselection:`Image --> Scale Image To New Size...` or use "
+"the :kbd:`Ctrl + Alt + I` shortcut. This calls up the resize menu. A good "
+"rule of thumb for resizing is that you try to get both sizes to be less than "
+"1200 pixels. (This being the size of HD formats). You can easily get there "
+"by setting the **Resolution** under **Print Size** to **72** dots per inch. "
 "Then press **OK** to have everything resized."
 msgstr ""
+"リサイズします！ :menuselection:`画像 --> 画像を新しいサイズにスケール...` "
+"か :kbd:`Ctrl + Alt + I` ショートカットを使います。これでリサイズメニューが呼"
+"び出されます。サムネイル用のリサイズに良いルールはどちらのサイズも 1200 ピク"
+"セル未満にすることです(これが HD 形式のサイズであることによるものです)。**印"
+"刷サイズ** の **解像度** を **72** dpi にすることで簡単にできます。それから "
+"**OK** を押せばすべてがリサイズされます。"
 
 #: ../../tutorials/saving-for-the-web.rst:27
 msgid ""
+"Sharpen the image a little. This is especially necessary for social media. "
+"Social media websites often scale and convert your image in such a way that "
+"it gets a little blurry, because they optimize towards photos and not "
+"paintings. To have your images stay sharp, it is worth it to run a sharpen "
+"filter beforehand. Because the sharpen filter is quite powerful, you are "
+"best off adding a sharpen filter mask on top of the stack and lowering its "
+"opacity till you feel the sharpness is appropriate."
+msgstr ""
+"画像を少しシャープにします。ソーシャルメディアでは特に必要です。ソーシャルメ"
+"ディアウェブサイトでは画像の最適化をイラストではなく写真用にしているため、し"
+"ばしばぼけるように画像をリサイズ、変換します。画像をシャープなまま保つには、"
+"事前にシャープ化フィルタを適用させておく価値はあるでしょう。シャープ化フィル"
+"タはそこそこ強力で、シャープ化フィルタマスクを一番上に追加し気が向く程度まで"
+"不透明度を下げていくことから始めるのが一番良いです。"
+
+#: ../../tutorials/saving-for-the-web.rst:29
+msgid ""
 "Save as a web-safe image format. There's three that are especially "
 "recommended:"
-msgstr ""
+msgstr "ウェブ向け画像形式に保存します。特に推奨される3つの形式があります:"
 
-#: ../../tutorials/saving-for-the-web.rst:30
+#: ../../tutorials/saving-for-the-web.rst:32
 msgid "JPG"
 msgstr ""
 
-#: ../../tutorials/saving-for-the-web.rst:32
+#: ../../tutorials/saving-for-the-web.rst:34
 msgid "Use this for images with a lot of different colors, like paintings."
-msgstr ""
+msgstr "絵のようなたくさんの異なる色を含む画像に使います。"
 
-#: ../../tutorials/saving-for-the-web.rst:35
+#: ../../tutorials/saving-for-the-web.rst:37
 msgid "PNG"
 msgstr ""
 
-#: ../../tutorials/saving-for-the-web.rst:37
+#: ../../tutorials/saving-for-the-web.rst:39
 msgid ""
 "Use this for images with few colors or which are black and white, like "
 "comics and pixel-art. Select :guilabel:`Save as indexed PNG, if possible` to "
 "optimise even more."
 msgstr ""
+"漫画やピクセルアートといった、色の数が少ない場合や白と黒のみである画像にこれ"
+"を使います。:guilabel:`可能ならインデックス PNG として保存` を選択すればより"
+"最適化されます。"
 
-#: ../../tutorials/saving-for-the-web.rst:40
+#: ../../tutorials/saving-for-the-web.rst:42
 msgid "GIF"
 msgstr ""
 
-#: ../../tutorials/saving-for-the-web.rst:42
+#: ../../tutorials/saving-for-the-web.rst:44
 msgid ""
 "Only use this for animation (will be supported this year) or images with a "
 "super low color count, because they will get indexed."
 msgstr ""
+"アニメーション(今年からサポートします)か色数がものすごく少ない画像にのみ使用"
+"します。インデックス化されます。"
 
-#: ../../tutorials/saving-for-the-web.rst:45
+#: ../../tutorials/saving-for-the-web.rst:47
 msgid "Saving with Transparency"
-msgstr ""
+msgstr "透過情報を保存"
 
-#: ../../tutorials/saving-for-the-web.rst:48
+#: ../../tutorials/saving-for-the-web.rst:50
 msgid ".. image:: images/Save_with_transparency.png"
 msgstr ""
 
-#: ../../tutorials/saving-for-the-web.rst:49
+#: ../../tutorials/saving-for-the-web.rst:51
 msgid ""
-"Saving with transparency is only possible with gif and png. First, make sure "
+"Saving with transparency is only possible with GIF and PNG. First, make sure "
 "you see the transparency checkers (this can be done by simply hiding the "
 "bottom layers, changing the projection color in :menuselection:`Image --> "
-"Image Background Color and Transparency`, or by using :menuselection:"
-"`Filters --> Colors --> Color to Alpha`). Then, save as PNG and tick **Store "
-"alpha channel (transparency)**"
+"Image Background Color and Transparency...`, or by using :menuselection:"
+"`Filters --> Colors --> Color to Alpha...`). Then, save as PNG and tick "
+"**Store alpha channel (transparency)**"
 msgstr ""
+"透過情報を保存するのは GIF と PNG でのみ可能です。まず、透過のチェッカー模様"
+"が見えるようにし(これは下のレイヤーを隠すことででき、:menuselection:`画像 --"
+"> 画像の背景色と透過度...` か、:menuselection:`フィルタ --> 色 --> 色をアル"
+"ファに...` を使うことで変更できます)、それから PNG として保存し **アルファ"
+"チャネル(透過)を格納** にチェックをします。"
 
-#: ../../tutorials/saving-for-the-web.rst:51
+#: ../../tutorials/saving-for-the-web.rst:53
 msgid "Save your image, upload, and show it off!"
-msgstr ""
+msgstr "画像を保存し、アップロードして、見せましょう！"

@@ -4,21 +4,22 @@
 # This file is distributed under the same license as the Krita Manual package.
 #
 # Automatically generated, 2019.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020.
+# Ronald Stroethoff <stroe43@zonnet.nl>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-05-06 12:31+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"PO-Revision-Date: 2021-06-13 08:21+0200\n"
+"Last-Translator: Ronald Stroethoff <stroe43@zonnet.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.0\n"
+"X-Generator: Lokalize 20.04.2\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -26,7 +27,7 @@ msgid ""
 "   :alt: mouseleft"
 msgstr ""
 ".. image:: images/icons/Krita_mouse_left.png\n"
-"   :alt: muislinks"
+"   :alt: linkermuisknop"
 
 #: ../../<rst_epilog>:4
 msgid ""
@@ -34,11 +35,11 @@ msgid ""
 "   :alt: mouseright"
 msgstr ""
 ".. image:: images/icons/Krita_mouse_right.png\n"
-"   :alt: muisrechts"
+"   :alt: rechtermuisknop"
 
 #: ../../user_manual/animation.rst:1
 msgid "Detailed guide on the animation workflow in Krita."
-msgstr "Gedetailleerde gids over de animatieworlflow in Krita."
+msgstr "Gedetailleerde gids over de werkmethodiek voor animatie in Krita."
 
 #: ../../user_manual/animation.rst:13
 msgid "Animation"
@@ -50,11 +51,14 @@ msgstr "Animatie met Krita"
 
 #: ../../user_manual/animation.rst:20
 msgid ""
-"Thanks to the 2015 Kickstarter, :program:`Krita 3.0` now has animation. In "
+"Thanks to the 2015 Kickstarter, :program:`Krita` has animation. In "
 "specific, :program:`Krita` has frame-by-frame raster animation. There's "
 "still a lot of elements missing from it, like tweening, but the basic "
 "workflow is there."
 msgstr ""
+"Dankzij de 2015 Kickstarter, heeft :program:`Krita` animatie. Om precies te "
+"zijn, :program:`Krita` heeft frame-by-frame raster animatie. Er ontbreken "
+"nog veel onderdelen, zoals tweening, maar de basis is er."
 
 #: ../../user_manual/animation.rst:25
 msgid ""
@@ -62,12 +66,27 @@ msgid ""
 "workspace to Animation. This will make the animation dockers and workflow "
 "appear."
 msgstr ""
+"Om toegang te krijgen tot de onderdelen voor animatie, is de makkelijkste "
+"manier het wijzigen van de werkruimte naar Animatie. Hierdoor zullen de "
+"animatie-vastzet-panelen tevoorschijn komen."
 
-#: ../../user_manual/animation.rst:30
+#: ../../user_manual/animation.rst:33
+msgid ""
+"The Timeline docker looks a bit different from the screenshots shown in this "
+"tutorial, however you should be able to follow it if you take care to select "
+"options mentioned in text."
+msgstr ""
+"Het paneel voor de tijdlijn ziet er een beetje anders uit dan op de "
+"schermafdrukken in deze handleiding, maar u zou in staat moeten zijn om het "
+"te volgen als u er op let dat u de in de tekst genoemde keuzes selecteert."
+
+#: ../../user_manual/animation.rst:36
 msgid "Animation curves"
 msgstr "Animatiekrommen"
 
-#: ../../user_manual/animation.rst:32
+# "new frame" komt niet voor in menu,
+# "Add Opacity Keyframe" komt niet voor in menu
+#: ../../user_manual/animation.rst:38
 msgid ""
 "To create an animation curve (currently only for opacity) expand the :"
 "guilabel:`New Frame` button in the :guilabel:`Animation` dock and click :"
@@ -77,74 +96,103 @@ msgid ""
 "frames between them. See :ref:`animation curves <animation_curves_docker>` "
 "for details."
 msgstr ""
+"Om een animatiekromme (op dit moment alleen voor dekking) te creëren, opent "
+"u de :guilabel:`Nieuw Frame` knop in het :guilabel:`Animatie` paneel en "
+"klikt u op :guilabel:`Dekking Keyframe toevoegen`. U kunt nu de waarde voor "
+"de dekking van de keyframe direct bewerken in het lagen-paneel, meer "
+"keyframes zullen standaard in de tijdlijn overgaan van de laatste naar de "
+"eerst volgende keyframe over de frames daartussen. Lees :ref:"
+"`animatiekrommen <animation_curves_docker>` voor meer details."
 
-#: ../../user_manual/animation.rst:40
+#: ../../user_manual/animation.rst:46
 msgid "Workflow"
-msgstr "Workflow"
+msgstr "werkmethodiek"
 
-#: ../../user_manual/animation.rst:42
+#: ../../user_manual/animation.rst:48
 msgid ""
 "In traditional animation workflow, what you do is that you make *key "
 "frames*, which contain the important poses, and then draw frames in between "
 "(\\ *tweening* in highly sophisticated animator's jargon)."
 msgstr ""
+"Bij een traditionele werkmethodiek, maakt u *key frames*, waarop de "
+"belangrijkste poses voorkomen, en tekent u vervolgens de frames daar tussen "
+"(\\ *tweening* in vakjargon)."
 
-#: ../../user_manual/animation.rst:46
+#: ../../user_manual/animation.rst:52
 msgid "For this workflow, there are three important dockers:"
-msgstr ""
+msgstr "Voor deze workflow zijn er drie belangrijke vastzet-panelen:"
 
-#: ../../user_manual/animation.rst:48
+#: ../../user_manual/animation.rst:54
 msgid ""
 "The :ref:`timeline_docker`. View and control all of the frames in your "
 "animation. The timeline docker also contains functions to manage your "
 "layers. The layer that are created in the timeline docker also appear on the "
 "normal Layer docker."
 msgstr ""
+"De :ref:`timeline_docker`. toont en beheert alle frames in uw animatie. In "
+"het tijdlijn-paneel zijn ook de functionaliteiten aanwezig voor het beheer "
+"van uw lagen. De lagen die u creëert in het tijdlijn-paneel verschijnen ook "
+"in het normale paneel-lagen."
 
-#: ../../user_manual/animation.rst:52
+# "auto-key framing" komt niet voor in menu
+#: ../../user_manual/animation.rst:58
 msgid ""
-"The :ref:`animation_docker`. This docker contains the play buttons as the "
-"ability to change the frame-rate, playback speed and useful little options "
-"like :guilabel:`auto-key framing`."
+"The :ref:`animation_docker`. This docker contains the play buttons as well "
+"as the ability to change the frame-rate, playback speed and useful little "
+"options like :guilabel:`auto-key framing`."
 msgstr ""
+"Het :ref:`animation_docker`. In dit paneel zitten de afspeelknoppen met "
+"daarnaast de mogelijkheden voor het wijzigen van de Framesnelheid, "
+"afspeelsnelheid en andere handige kleine functies zoals :guilabel:`auto-key "
+"framing`."
 
-#: ../../user_manual/animation.rst:55
+#: ../../user_manual/animation.rst:61
 msgid ""
 "The :ref:`onion_skin_docker`. This docker controls the look of the onion "
 "skin, which in turn is useful for seeing the previous frame."
 msgstr ""
+"Het :ref:`onion_skin_docker`. Dit paneel regelt het uiterlijk van de onion "
+"skin, die op zijn beurt handig is voor het bekijken van de vorige frames."
 
-#: ../../user_manual/animation.rst:60
+#: ../../user_manual/animation.rst:66
 msgid "Introduction to animation: How to make a walkcycle"
-msgstr ""
+msgstr "Inleiding tot animatie: Hoe een loopcyclus te maken"
 
-#: ../../user_manual/animation.rst:62
+#: ../../user_manual/animation.rst:68
 msgid ""
 "The best way to get to understand all these different parts is to actually "
 "use them. Walk cycles are considered the most basic form of a full "
 "animation, because of all the different parts involved with them. Therefore, "
 "going over how one makes a walkcycle should serve as a good introduction."
 msgstr ""
+"De beste manier om al deze verschillende onderdelen te leren kennen is door "
+"ze te gebruiken. Loopcycli worden beschouwd als de meest eenvoudige vorm van "
+"een complete animatie, omdat alle verschillende onderdelen ermee te maken "
+"hebben. Daarom is de beschrijving van hoe u een loopcyclus maakt een een "
+"goede introductie."
 
-#: ../../user_manual/animation.rst:69
+#: ../../user_manual/animation.rst:75
 msgid "Setup"
 msgstr "Instellingen"
 
-#: ../../user_manual/animation.rst:71
+#: ../../user_manual/animation.rst:77
 msgid "First, we make a new file:"
-msgstr ""
+msgstr "Eerst, we maken een nieuw bestand:"
 
-#: ../../user_manual/animation.rst:74
+#: ../../user_manual/animation.rst:80
 msgid ".. image:: images/animation/Introduction_to_animation_01.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_01.png"
 
-#: ../../user_manual/animation.rst:75
+#: ../../user_manual/animation.rst:81
 msgid ""
 "On the first tab, we type in a nice ratio like 1280x1024, set the dpi to 72 "
 "(we're making this for screens after all) and title the document 'walkcycle'."
 msgstr ""
+"Op de eerste tab, stellen we een mooie verhouding op zoals 1280x1024, en "
+"stellen we de dpi in op 72 (we willen dit tenslotte maken voor een "
+"beeldscherm) en geven als titel voor het document op 'walkcycle'."
 
-#: ../../user_manual/animation.rst:79
+#: ../../user_manual/animation.rst:85
 msgid ""
 "In the second tab, we choose a nice background color, and set the background "
 "to canvas-color. This means that Krita will automatically fill in any "
@@ -153,8 +201,15 @@ msgid ""
 "people doing animation, as the layer you do animation on MUST be semi-"
 "transparent to get onion skinning working."
 msgstr ""
+"In de tweede tab, kiezen we een mooie achtergrondkleur, en stellen de "
+"achtergrond in op de kleur canvas. Dit houd in dat Krita automatisch alle "
+"transparante stukken in zal vullen met de achtergrondkleur. U kunt dit "
+"wijzigen in :menuselection:`Afbeelding --> Afbeeldingseigenschappen`. Dit "
+"lijkt het meest bruikbaar te zijn voor mensen die aan animatie doen, omdat "
+"de laag waarop u de animatie uitvoert, half-transparant MOET zijn omdat "
+"anders onion skinning niet werkt."
 
-#: ../../user_manual/animation.rst:82
+#: ../../user_manual/animation.rst:88
 msgid ""
 "Krita has a bunch of functionality for meta-data, starting at the :guilabel:"
 "`Create Document` screen. The title will be automatically used as a "
@@ -162,417 +217,482 @@ msgid ""
 "you to leave comments behind. Not many people use it individually, but it "
 "can be useful for working in larger groups."
 msgstr ""
+"Krita heeft een lading functionaliteit voor meta-data, beginnend met het :"
+"guilabel:`Creëer Document` scherm. De titel zal automatisch als suggestie "
+"voor het opslaan worden gebruikt en de beschrijving kan in databases worden "
+"gebruikt, of om commentaar aan toe te voegen. Weinig mensen gebruiken het "
+"individueel, maar het kan handig zijn als u in een grotere groep werkt."
 
-#: ../../user_manual/animation.rst:84
+#: ../../user_manual/animation.rst:90
 msgid "Then hit :guilabel:`Create`!"
-msgstr ""
+msgstr "Klik op :guilabel:`Aanmaken`!"
 
-#: ../../user_manual/animation.rst:86
+#: ../../user_manual/animation.rst:92
 msgid ""
 "Then, to get all the necessary tools for animation, select the workspace "
 "switcher:"
 msgstr ""
+"Om dan alle voor animatie noodzakelijke hulpmiddelen te krijgen, selecteert "
+"u de workspace switcher:"
 
-#: ../../user_manual/animation.rst:91
+#: ../../user_manual/animation.rst:97
 msgid ".. image:: images/animation/Introduction_to_animation_02.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_02.png"
 
-#: ../../user_manual/animation.rst:91
+#: ../../user_manual/animation.rst:97
 msgid "The red arrow points at the workspace switcher."
-msgstr ""
+msgstr "De rode pijl wijst naar de workspace switcher."
 
-#: ../../user_manual/animation.rst:93
+#: ../../user_manual/animation.rst:99
 msgid "And select the animation workspace."
-msgstr ""
+msgstr "En selecteert u de animatie-werkruimte."
 
-#: ../../user_manual/animation.rst:95
+#: ../../user_manual/animation.rst:101
 msgid "Which should result in this:"
-msgstr ""
+msgstr "Wat zou moeten resulteren in dit:"
 
-#: ../../user_manual/animation.rst:98
+#: ../../user_manual/animation.rst:104
 msgid ".. image:: images/animation/Introduction_to_animation_03.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_03.png"
 
-#: ../../user_manual/animation.rst:99
+#: ../../user_manual/animation.rst:105
 msgid ""
 "The animation workspace adds the timeline, animation and onion skin dockers "
 "at the bottom."
 msgstr ""
+"De animatie-werkruimte voegt onderaan een tijdlijn, animatie-panelen en een "
+"onion skin paneel toe."
 
-#: ../../user_manual/animation.rst:103
+#: ../../user_manual/animation.rst:109
 msgid "Animating"
-msgstr ""
+msgstr "Animeren"
 
-#: ../../user_manual/animation.rst:105
+#: ../../user_manual/animation.rst:111
 msgid ""
 "We have two transparent layers set up. Let's name the bottom one "
 "'environment' and the top 'walkcycle' by double clicking their names in the "
 "layer docker."
 msgstr ""
+"We hebben twee transparent lagen opgezet. Laten we de onderste 'environment' "
+"noemen en de bovenste 'walkcycle' door in het lagenvak op hun te "
+"dubbelklikken."
 
-#: ../../user_manual/animation.rst:110
+#: ../../user_manual/animation.rst:116
 msgid ".. image:: images/animation/Introduction_to_animation_04.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_04.png"
 
-#: ../../user_manual/animation.rst:111
+#: ../../user_manual/animation.rst:117
 msgid ""
 "Use the straight line tool to draw a single horizontal line. This is the "
 "ground."
 msgstr ""
+"Gebruik de liniaal om een enkele rechte lijn te trekken. Dit is de grond."
 
-#: ../../user_manual/animation.rst:115
+#: ../../user_manual/animation.rst:121
 msgid ".. image:: images/animation/Introduction_to_animation_05.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_05.png"
 
-#: ../../user_manual/animation.rst:116
+#: ../../user_manual/animation.rst:122
 msgid ""
 "Then, select the 'walkcycle' layer and draw a head and torso (you can use "
 "any brush for this)."
 msgstr ""
+"Selecteer dan de 'walkcycle' laag en teken een hoofd en een torso (u kunt "
+"hiervoor elk penseel voor gebruiken)."
 
-#: ../../user_manual/animation.rst:118
+#: ../../user_manual/animation.rst:124
 msgid ""
 "Now, selecting a new frame will not make a new frame automatically. Krita "
 "doesn't actually see the 'walkcycle' layer as an animated layer at all!"
 msgstr ""
+"Als u nu een nieuwe frame selecteert dan wordt niet automatisch een nieuw "
+"frame aangemaakt. Eigenlijk ziet Krita de 'walkcycle' laag helemaal niet als "
+"animatielaag!"
 
-#: ../../user_manual/animation.rst:123
+#: ../../user_manual/animation.rst:129
 msgid ".. image:: images/animation/Introduction_to_animation_06.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_06.png"
 
-#: ../../user_manual/animation.rst:124
+#: ../../user_manual/animation.rst:130
 msgid ""
 "We can make it animatable by adding a frame to the timeline. |mouseright| a "
-"frame in the timeline to get a context menu. Choose :guilabel:`New Frame`."
+"frame in the timeline to get a context menu. Choose :guilabel:`Create "
+"Duplicate Frame`."
 msgstr ""
+"We kunnen het animeerbaar maken door een frame aan de tijdlijn toe te "
+"voegen. Klik met |mouseright| op een frame in de tijdlijn om een contextmenu "
+"te openen. Selecteer :guilabel:`Gedupliceerd frame aanmaken`."
 
-#: ../../user_manual/animation.rst:128
+#: ../../user_manual/animation.rst:135
+msgid ""
+"If you select :guilabel:`Create Blank Frame`, the content of the layer will "
+"be dropped and a new blank frame will appear; since you want to preserve the "
+"image, you need to use :guilabel:`Create Duplicate Frame`."
+msgstr ""
+"Als u :guilabel:`Blanco frame aanmaken` selecteert, dan zal de inhoud van de "
+"laag worden verwijderd en een nieuwe blanco frame zal verschijnen; omdat u "
+"de afbeelding wilt bewaren, zal u :guilabel:`Gedupliceerd frame aanmaken` "
+"moeten gebruiken."
+
+#: ../../user_manual/animation.rst:139
 msgid ".. image:: images/animation/Introduction_to_animation_07.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_07.png"
 
-#: ../../user_manual/animation.rst:129
+#: ../../user_manual/animation.rst:140
 msgid ""
 "You can see it has become an animated layer because of the onion skin icon "
 "showing up in the timeline docker."
 msgstr ""
+"U kunt zien dat het een animatie-laag is geworden omdat in het paneel met de "
+"tijdlijn het pictogram voor de onion skin tevoorschijn is gekomen."
 
-#: ../../user_manual/animation.rst:133
+#: ../../user_manual/animation.rst:144
 msgid ".. image:: images/animation/Introduction_to_animation_08.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_08.png"
 
-#: ../../user_manual/animation.rst:134
+#: ../../user_manual/animation.rst:145
 msgid ""
-"Use the :guilabel:`Copy Frame` button to copy the first frame onto the "
-"second. Then, use the with the :kbd:`Shift + ↑` shortcut to move the frame "
-"contents up."
+"Use the :guilabel:`Create Duplicate Frame` button to copy the first frame "
+"onto the second. Then, use the ``Move Tool`` (switch to it using the :kbd:"
+"`T` shortcut) with the :kbd:`Shift + ↑` shortcut to move the frame contents "
+"up."
 msgstr ""
+"Gebruik de knop :guilabel:`Gedupliceerd frame aanmaken` om het eerste frame "
+"te kopiëren naar de tweede. Gebruik dan de ``Verplaatsingshulpmiddel`` "
+"(schakel daar naar toe om met de sneltoets :kbd:`T`) om met de sneltoets :"
+"kbd:`Shift + ↑` de inhoud van het frame omhoog te verplaatsen."
 
-#: ../../user_manual/animation.rst:137
+#: ../../user_manual/animation.rst:148
 msgid "We can see the difference by turning on the onionskinning:"
-msgstr ""
+msgstr "We kunnen het verschil zien door de onion skin in te schakelen:"
 
-#: ../../user_manual/animation.rst:140
+#: ../../user_manual/animation.rst:151
 msgid ".. image:: images/animation/Introduction_to_animation_09.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_09.png"
 
-#: ../../user_manual/animation.rst:141
+#: ../../user_manual/animation.rst:152
 msgid "Now, you should see the previous frame as red."
-msgstr ""
+msgstr "U zou nu het vorige frame als rood moeten zien."
 
-#: ../../user_manual/animation.rst:144
+#: ../../user_manual/animation.rst:155
 msgid ""
 "Krita sees white as a color, not as transparent, so make sure the animation "
 "layer you are working on is transparent in the bits where there's no "
 "drawing. You can fix the situation by use the :ref:`filter_color_to_alpha` "
 "filter, but prevention is best."
 msgstr ""
+"Krita ziet wit als een kleur, niet als transparent, zorg er daarom voor dat "
+"de animatie-laag waarop u werkt op die plaatsen waar geen tekening is in de "
+"bits transparant is. U kunt de situatie herstellen door de :ref:"
+"`filter_color_to_alpha` filter te gebruiken, maar voorkomen is beter. "
 
-#: ../../user_manual/animation.rst:147
+#: ../../user_manual/animation.rst:158
 msgid ".. image:: images/animation/Introduction_to_animation_10.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_10.png"
 
-#: ../../user_manual/animation.rst:148
+#: ../../user_manual/animation.rst:159
 msgid ""
 "Future frames are drawn in green, and both colors can be configured in the "
 "onion skin docker."
 msgstr ""
+"Toekomstige frames worden groen afgebeeld, en beide kleuren zijn instelbaar "
+"in het paneel voor de onion skin."
 
-#: ../../user_manual/animation.rst:152
+#: ../../user_manual/animation.rst:163
 msgid ".. image:: images/animation/Introduction_to_animation_11.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_11.png"
 
-#: ../../user_manual/animation.rst:153
+#: ../../user_manual/animation.rst:164
 msgid ""
 "Now, we're gonna draw the two extremes of the walkcycle. These are the pose "
 "where both legs are as far apart as possible, and the pose where one leg is "
 "full stretched and the other pulled in, ready to take the next step."
 msgstr ""
+"Nu gaan we de twee extremen van de loopcyclus tekenen. Dit is waarbij de ene "
+"pose waarin beide benen zover mogelijk van elkaar verwijdert zijn, en de "
+"andere pose waarbij een been volledig gestrekt is  en de andere opgetrokken "
+"is, klaar voor de volgende stap."
 
-#: ../../user_manual/animation.rst:158
+#: ../../user_manual/animation.rst:169
 msgid ""
 "Now, let's copy these two... We could do that with the :kbd:`Ctrl + drag` "
 "shortcut, but here comes a tricky bit:"
 msgstr ""
+"Laten we deze twee gaan kopiëren... We zouden dat kunnen doen met de "
+"sneltoets :kbd:`Ctrl + drag`, maar hier komt een ingewikkeld stukje:"
 
-#: ../../user_manual/animation.rst:162
+#: ../../user_manual/animation.rst:173
 msgid ".. image:: images/animation/Introduction_to_animation_12.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_12.png"
 
-#: ../../user_manual/animation.rst:163
+#: ../../user_manual/animation.rst:174
 msgid ""
 ":kbd:`Ctrl +` |mouseleft| also selects and deselects frames, so to copy..."
 msgstr ""
+":kbd:`Ctrl +` |mouseleft| selecteert en deselecteerd ook frames, om dus te "
+"kopiëren..."
 
-#: ../../user_manual/animation.rst:165
+#: ../../user_manual/animation.rst:176
 msgid ":kbd:`Ctrl +` |mouseleft| to select all the frames you want to select."
-msgstr ""
+msgstr ":kbd:`Ctrl +` |mouseleft| om alle gewenste frames te selecteren."
 
-#: ../../user_manual/animation.rst:166
+#: ../../user_manual/animation.rst:177
 msgid ""
 ":kbd:`Ctrl + drag`. You need to make sure the first frame is 'orange', "
 "otherwise it won't be copied along."
 msgstr ""
+":kbd:`Ctrl + drag`. U moet er op letten dat het eerste frame 'oranje' is, "
+"anders wordt het niet mee gekopieerd."
 
-#: ../../user_manual/animation.rst:169
+#: ../../user_manual/animation.rst:180
 msgid "Now then..."
-msgstr ""
+msgstr "En dan..."
 
-#: ../../user_manual/animation.rst:174
+#: ../../user_manual/animation.rst:185
 msgid ".. image:: images/animation/Introduction_to_animation_13.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_13.png"
 
-#: ../../user_manual/animation.rst:174
-msgid "squashed the timeline docker a bit to save space"
-msgstr ""
-
-#: ../../user_manual/animation.rst:176
-msgid "Copy frame 0 to frame 2."
-msgstr ""
-
-#: ../../user_manual/animation.rst:177
-msgid "Copy frame 1 to frame 3."
-msgstr ""
-
-#: ../../user_manual/animation.rst:178
-msgid "In the animation docker, set the frame-rate to 4."
-msgstr ""
-
-#: ../../user_manual/animation.rst:179
-msgid "Select all frames in the timeline docker by dragging-selecting them."
-msgstr ""
-
-#: ../../user_manual/animation.rst:180
-msgid "Press play in the animation docker."
-msgstr ""
-
-#: ../../user_manual/animation.rst:181
-msgid "Enjoy your first animation!"
-msgstr ""
-
-#: ../../user_manual/animation.rst:184
-msgid "Expanding upon your rough walkcycle"
-msgstr ""
+#: ../../user_manual/animation.rst:185
+msgid "Squashed the timeline docker a bit to save space."
+msgstr "Pers de tijdlijn-paneel een beetje samen om wat ruimte te winnen."
 
 #: ../../user_manual/animation.rst:187
+msgid "Copy frame 0 to frame 2."
+msgstr "kopieer frame 0 naar frame 2."
+
+#: ../../user_manual/animation.rst:188
+msgid "Copy frame 1 to frame 3."
+msgstr "kopieer frame 1 naar frame 3."
+
+#: ../../user_manual/animation.rst:189
+msgid "In the animation docker, set the frame-rate to 4."
+msgstr "Stel de framesnelheid in het animatie-paneel in op 4."
+
+#: ../../user_manual/animation.rst:190
+msgid "Select all frames in the timeline docker by dragging-selecting them."
+msgstr "Selecteer alle frames in het tijdpaneel door ze te verslepen."
+
+#: ../../user_manual/animation.rst:191
+msgid "Press play in the animation docker."
+msgstr "Druk op afspelen in het tijdlijn-paneel."
+
+#: ../../user_manual/animation.rst:192
+msgid "Enjoy your first animation!"
+msgstr "Geniet van uw eerste animatie!"
+
+#: ../../user_manual/animation.rst:195
+msgid "Expanding upon your rough walkcycle"
+msgstr "Uw ruwe loopcyclus uitbreiden"
+
+#: ../../user_manual/animation.rst:198
 msgid ".. image:: images/animation/Introduction_to_animation_14.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_14.png"
 
-#: ../../user_manual/animation.rst:188
+#: ../../user_manual/animation.rst:199
 msgid ""
 "You can quickly make some space by the :kbd:`Alt + drag` shortcut on any "
 "frame. This'll move that frame and all others after it in one go."
 msgstr ""
+"U kunt makkelijk wat extra ruimte maken door met de sneltoets :kbd:`Alt + "
+"drag` op enig frame te klikken. Dit zal dat frame en alle volgende in een "
+"handeling verplaatsen."
 
-#: ../../user_manual/animation.rst:191
+#: ../../user_manual/animation.rst:202
 msgid "Then draw inbetweens on each frame that you add."
-msgstr ""
+msgstr "Teken vervolgens de inbetweens op elk frame die u heeft toegevoegd."
 
-#: ../../user_manual/animation.rst:194
+#: ../../user_manual/animation.rst:205
 msgid ".. image:: images/animation/Introduction_to_animation_16.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_16.png"
 
-#: ../../user_manual/animation.rst:195
+#: ../../user_manual/animation.rst:206
 msgid ""
 "You'll find that the more frames you add, the more difficult it becomes to "
 "keep track of the onion skins."
 msgstr ""
+"U zal merken dat hoe meer frames u toevoegt, hoe moeilijker het wordt om "
+"controle te houden over de onion skins."
 
-#: ../../user_manual/animation.rst:197
+#: ../../user_manual/animation.rst:208
 msgid ""
 "You can modify the onion skin by using the onion skin docker, where you can "
 "change how many frames are visible at once, by toggling them on the top row. "
 "The bottom row is for controlling transparency, while below there you can "
 "modify the colors and extremity of the coloring."
 msgstr ""
+"U kunt de onion skin wijzigen in het onion skin paneel, waar u kunt "
+"instellen hoeveel frames tegelijk zichtbaar, door ze in de bovenste rij om "
+"te schakelen. De onderste rij is voor het instellen van de transparantie, "
+"terwijl eronder u de kleuren en de intensiteit van de kleuren kunt instellen."
 
-#: ../../user_manual/animation.rst:203
+#: ../../user_manual/animation.rst:214
 msgid ".. image:: images/animation/Introduction_to_animation_15.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_15.png"
 
-#: ../../user_manual/animation.rst:205
+#: ../../user_manual/animation.rst:216
 msgid "Animating with multiple layers"
-msgstr ""
+msgstr "Met meerdere lagen animeren"
 
-#: ../../user_manual/animation.rst:207
+#: ../../user_manual/animation.rst:218
 msgid ""
 "Okay, our walkcycle is missing some hands, let's add them on a separate "
 "layer. So we make a new layer, and name it hands and..."
 msgstr ""
+"Okay, onze loopcyclus mist nog wat handen, laten we die op een aparte laag "
+"gaan toevoegen. Daarom maken we een nieuwe laag, en geven die de naam hands "
+"en..."
 
-#: ../../user_manual/animation.rst:211
+#: ../../user_manual/animation.rst:222
 msgid ".. image:: images/animation/Introduction_to_animation_17.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_17.png"
 
-#: ../../user_manual/animation.rst:212
+#: ../../user_manual/animation.rst:223
 msgid ""
 "Our walkcycle is gone from the timeline docker! This is a feature actually. "
 "A full animation can have so many little parts that an animator might want "
 "to remove the layers they're not working on from the timeline docker. So you "
 "manually have to add them."
 msgstr ""
+"Onze loopcyclus is verdwenen uit het tijdlijn-paneel! Dit is echt de "
+"bedoeling. Een complete animatie kan zoveel kleine delen hebben dat een "
+"animator van de tijdlijn lagen wil verwijderen waaraan op dat moment niet "
+"wordt gewerkt . Daarom moet u ze handmatig toevoegen. "
 
-#: ../../user_manual/animation.rst:218
+#: ../../user_manual/animation.rst:230
+msgid ""
+"In :program:`Krita 4.3.0` and later, all new layers are pinned to the "
+"timeline by default."
+msgstr ""
+"In :program:`Krita 4.3.0` en nieuwer, zijn alle nieuwe lagen standaard "
+"vastgepind op de tijdlijn."
+
+#: ../../user_manual/animation.rst:233
 msgid ".. image:: images/animation/Introduction_to_animation_18.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_18.png"
 
-#: ../../user_manual/animation.rst:219
+# controleer "Besturingstoetsen van pin" in menu
+#: ../../user_manual/animation.rst:234
 msgid ""
-"You can show any given layer in the timeline by doing |mouseright| on the "
-"layer in the layer docker, and toggling :guilabel:`Show in Timeline`."
+"To show a layer whether it's active or not, you can \"pin\" it to the "
+"timeline by right-clicking |mouseright| on the layer in the layer docker, "
+"and toggling :guilabel:`Pin to Timeline`. We recommend pinning any layers "
+"that you're currently animating on."
 msgstr ""
+"Om een laag altijd zichtbaar te houden onafhankelijk van of het actief is of "
+"niet, kunt u het \"vastpinnen\" in de tijdlijn door met |mouseright| op de "
+"laag in lagenpaneel rechts te klikken, en vervolgens :guilabel:`Op tijdlijn "
+"vastzetten` om te schakelen. We adviseren om alle lagen vast te pinnen die u "
+"op dit moment aan het animeren bent."
 
-#: ../../user_manual/animation.rst:223
+#: ../../user_manual/animation.rst:240
 msgid ".. image:: images/animation/Introduction_to_animation_19.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_19.png"
 
-#: ../../user_manual/animation.rst:225
+#: ../../user_manual/animation.rst:242
 msgid "Exporting"
 msgstr "Exporteren"
 
-#: ../../user_manual/animation.rst:227
-msgid "When you are done, select :menuselection:`File --> Render Animation`."
+#: ../../user_manual/animation.rst:244
+msgid ""
+"When you are done, select :menuselection:`File --> Render Animation`. To "
+"render to a video file, you'll need a program called ``FFmpeg``. To learn "
+"more, please read :ref:`render_animation`."
 msgstr ""
+"Als u helemaal klaar bent, dan selecteert u :menuselection:`Bestand --> "
+"Animatie renderen`. Om naar een videobestand te renderen, heeft u een "
+"programma genaamd ``FFmpeg`` nodig. Om meer te weten te komen over renderen, "
+"leest u :ref:`render_animation`."
 
-#: ../../user_manual/animation.rst:230
+#: ../../user_manual/animation.rst:247
 msgid ".. image:: images/animation/Introduction_to_animation_20.png"
 msgstr ".. image:: images/animation/Introduction_to_animation_20.png"
 
-#: ../../user_manual/animation.rst:231
-msgid ""
-"It's recommended to save out your file as a png, and preferably in its own "
-"folder. Krita can currently only export png sequences."
-msgstr ""
+#: ../../user_manual/animation.rst:248
+msgid "Enjoy your walkcycle!"
+msgstr "Veel plezier met uw loopcyclus!"
 
-#: ../../user_manual/animation.rst:235
-msgid ".. image:: images/animation/Introduction_to_animation_21.png"
-msgstr ".. image:: images/animation/Introduction_to_animation_21.png"
-
-#: ../../user_manual/animation.rst:236
-msgid ""
-"When pressing done, you can see the status of the export in the status bar "
-"below."
-msgstr ""
-
-#: ../../user_manual/animation.rst:240
-msgid ".. image:: images/animation/Introduction_to_animation_22.png"
-msgstr ".. image:: images/animation/Introduction_to_animation_22.png"
-
-#: ../../user_manual/animation.rst:241
-msgid ""
-"The images should be saved out as filenameXXX.png, giving their frame number."
-msgstr ""
-
-#: ../../user_manual/animation.rst:244
-msgid ""
-"Then use something like Gimp (Linux, OSX, Windows), ImageMagick (Linux, OSX, "
-"Windows), or any other gif creator to make a gif out of your image sequence:"
-msgstr ""
-
-#: ../../user_manual/animation.rst:249
+#: ../../user_manual/animation.rst:253
 msgid ".. image:: images/animation/Introduction_to_animation_walkcycle_02.gif"
 msgstr ".. image:: images/animation/Introduction_to_animation_walkcycle_02.gif"
 
-#: ../../user_manual/animation.rst:250
-msgid ""
-"For example, you can use `VirtualDub <http://www.virtualdub.org/>`_\\ "
-"(Windows) and open all the frames and then go to :menuselection:`File --> "
-"Export --> GIF`."
-msgstr ""
-
-#: ../../user_manual/animation.rst:254
-msgid "Enjoy your walkcycle!"
-msgstr ""
-
-#: ../../user_manual/animation.rst:258
-msgid ""
-"Krita 3.1 has a render animation feature. If you're using the 3.1 beta, "
-"check out the :ref:`render_animation` page for more information!"
-msgstr ""
-
-#: ../../user_manual/animation.rst:261
+#: ../../user_manual/animation.rst:255
 msgid "Importing animation frames"
-msgstr ""
+msgstr "Animatieframes importeren"
 
-#: ../../user_manual/animation.rst:263
-msgid "You can import animation frames in Krita 3.0."
-msgstr ""
+#: ../../user_manual/animation.rst:257
+msgid "In Krita you can import animation frames."
+msgstr "In Krita kunt u animatieframes ook importeren."
 
-#: ../../user_manual/animation.rst:265
+#: ../../user_manual/animation.rst:259
 msgid ""
 "First let us take a sprite sheet from Open Game Art. (This is the Libre "
-"Pixel Cup male walkcycle)"
+"Pixel Cup male walkcycle)."
 msgstr ""
+"Laten we een spritesheet nemen van Open Game Art. (Dit is de Libre Pixel Cup "
+"male walkcycle)."
 
-#: ../../user_manual/animation.rst:268
+#: ../../user_manual/animation.rst:262
 msgid ""
-"And we'll use :menuselection:`Image --> Split Image` to split up the sprite "
+"We'll use :menuselection:`Image --> Split Image` to split up the sprite "
 "sheet."
 msgstr ""
+"We zullen daarvoor :menuselection:`Afbeelding --> Splitsen van Afbeelding` "
+"gebruiken om de spritesheet te splitsen."
 
-#: ../../user_manual/animation.rst:271
+#: ../../user_manual/animation.rst:265
 msgid ".. image:: images/animation/Animation_split_spritesheet.png"
 msgstr ".. image:: images/animation/Animation_split_spritesheet.png"
 
-#: ../../user_manual/animation.rst:272
+#: ../../user_manual/animation.rst:266
 msgid ""
 "The slices are even, so for a sprite sheet of 9 sprites, use 8 vertical "
 "slices and 0 horizontal slices. Give it a proper name and save it as png."
 msgstr ""
+"De stroken zijn een even aantal, voor een spritesheet van 9 sprites, "
+"gebruikt u 8 verticale stroken en 0 horizontale stroken. Geef het een "
+"toepasselijke naam en sla het op als png."
 
-#: ../../user_manual/animation.rst:274
+#: ../../user_manual/animation.rst:268
 msgid ""
 "Then, make a new canvas, and select :menuselection:`File --> Import "
 "Animation Frames`. This will give you a little window. Select :guilabel:`Add "
 "images`. This should get you a file browser where you can select your images."
 msgstr ""
+"Maak vervolgens een nieuw werkvlak en selecteer :menuselection:`Bestand --> "
+"Animatieframes importeren`. Er opent dan een klein venstertje. Selecteer :"
+"guilabel:`Afbeeldingen toevoegen`. U krijgt een bestandsbeheerder waarin u "
+"uw afbeeldingen kunt selecteren."
 
-#: ../../user_manual/animation.rst:277
+#: ../../user_manual/animation.rst:271
 msgid ".. image:: images/animation/Animation_import_sprites.png"
 msgstr ".. image:: images/animation/Animation_import_sprites.png"
 
-#: ../../user_manual/animation.rst:278
+#: ../../user_manual/animation.rst:272
 msgid "You can select multiple images at once."
-msgstr ""
+msgstr "U kunt meerdere afbeeldingen tegelijk selecteren."
 
-#: ../../user_manual/animation.rst:281
+#: ../../user_manual/animation.rst:275
 msgid ".. image:: images/animation/Animation_set_everything.png"
 msgstr ".. image:: images/animation/Animation_set_everything.png"
 
-#: ../../user_manual/animation.rst:282
+# is niet "top-left drop-down boxes" maar "top-right drop-down boxes"
+#: ../../user_manual/animation.rst:276
 msgid ""
 "The frames are currently automatically ordered. You can set the ordering "
 "with the top-left two drop-down boxes."
 msgstr ""
+"De frames zijn op dit moment automatisch geordend. U kunt de volgorde "
+"instellen in de twee keuzevakken rechtsboven."
 
-#: ../../user_manual/animation.rst:285
+#: ../../user_manual/animation.rst:279
 msgid "Start"
 msgstr "Starten"
 
-#: ../../user_manual/animation.rst:286
+#: ../../user_manual/animation.rst:280
 msgid "Indicates at which point the animation should be imported."
-msgstr ""
+msgstr "Geeft aan op welk punt de animatie geïmporteerd moet worden."
 
-#: ../../user_manual/animation.rst:288
+#: ../../user_manual/animation.rst:282
 msgid ""
 "Indicates the difference between the imported animation and the document "
 "frame rate. This animation is 8 frames big, and the fps of the document is "
@@ -580,31 +700,47 @@ msgid ""
 "the window gives feedback on how much fps the imported animation would be "
 "with the currently given step."
 msgstr ""
+"Geeft het verschil aan in framesnelheid tussen de geïmporteerde animatie en "
+"het document. Deze animatie is 8 frames groot, en de fps van het document is "
+"24 frames, er moet daarom dus een stap van 3 zijn om ze gelijk te houden. "
+"Zoals u kunt zien meldt het venster hoeveel fps de geïmporteerde animatie "
+"zal zijn bij de opgegeven stap."
 
-#: ../../user_manual/animation.rst:292
+#: ../../user_manual/animation.rst:286
 msgid "Step"
 msgstr "Stap"
 
-#: ../../user_manual/animation.rst:294
+#: ../../user_manual/animation.rst:288
 msgid ""
 "Press :guilabel:`OK`, and your animation should be imported as a new layer."
 msgstr ""
+"Druk op :guilabel:`OK`, en uw animatie zou nu als een nieuwe laag "
+"geïmporteerd moeten zijn."
 
-#: ../../user_manual/animation.rst:297
+#: ../../user_manual/animation.rst:291
 msgid ".. image:: images/animation/Animation_import_done.png"
 msgstr ".. image:: images/animation/Animation_import_done.png"
 
-#: ../../user_manual/animation.rst:299
+#: ../../user_manual/animation.rst:293
 msgid "Reference"
 msgstr "Referentie"
 
-#: ../../user_manual/animation.rst:301
+#: ../../user_manual/animation.rst:295
 msgid "https://community.kde.org/Krita/Docs/AnimationGuiFeaturesList"
 msgstr "https://community.kde.org/Krita/Docs/AnimationGuiFeaturesList"
 
-#: ../../user_manual/animation.rst:302
+#: ../../user_manual/animation.rst:296
 msgid ""
 "`The source for the libre pixel cup male walkmediawiki cycle <https://"
 "opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-"
 "tiles>`_"
 msgstr ""
+"`De broncode voor de libre pixel cup male walkmediawiki cycle <https://"
+"opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-"
+"tiles>`_"
+
+#~ msgid ".. image:: images/animation/Introduction_to_animation_21.png"
+#~ msgstr ".. image:: images/animation/Introduction_to_animation_21.png"
+
+#~ msgid ".. image:: images/animation/Introduction_to_animation_22.png"
+#~ msgstr ".. image:: images/animation/Introduction_to_animation_22.png"

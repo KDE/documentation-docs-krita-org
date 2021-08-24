@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-15 03:16+0200\n"
-"PO-Revision-Date: 2019-06-17 15:09+0100\n"
+"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"PO-Revision-Date: 2020-04-26 19:43+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: OSX workspace EuroTemplate Krita jpg filename krita\n"
 "X-POFile-SpellExtra: export dpi template desktop kra bash KRA sequence\n"
+"X-POFile-SpellExtra: layer image RGBA new ref\n"
 
 #: ../../reference_manual/linux_command_line.rst:None
 msgid "New in version 3.3:"
@@ -49,10 +50,10 @@ msgstr ""
 #: ../../reference_manual/linux_command_line.rst:22
 msgid ""
 "This is primarily used in bash or shell scripts, for example, to mass "
-"convert kra files into pngs."
+"convert KRA files into PNGs."
 msgstr ""
 "Isto é principalmente usado nos programas de 'bash' ou de outras linhas de "
-"comandos, por exemplo para converter em massa os ficheiros .kra para .png."
+"comandos, por exemplo para converter em massa os ficheiros KRA para PNG."
 
 #: ../../reference_manual/linux_command_line.rst:25
 msgid "Export"
@@ -100,6 +101,7 @@ msgstr ""
 "para mudar o formato do ficheiro."
 
 #: ../../reference_manual/linux_command_line.rst:47
+#: ../../reference_manual/linux_command_line.rst:147
 msgid "Example:"
 msgstr "Exemplo:"
 
@@ -114,8 +116,8 @@ msgstr ""
 "``final.jpg``."
 
 #: ../../reference_manual/linux_command_line.rst:57
-msgid "Export animation to the given filename and exit"
-msgstr "Exportar a animação para o nome de ficheiro indicado e sair"
+msgid "Export animation to the given filename and exit."
+msgstr "Exportar a animação para o nome de ficheiro indicado e sair."
 
 #: ../../reference_manual/linux_command_line.rst:59
 msgid ""
@@ -131,20 +133,20 @@ msgstr "``krita --export-sequence --export-filename ficheiro.png teste.kra``"
 
 #: ../../reference_manual/linux_command_line.rst:63
 msgid ""
-"This line takes the animation in test.kra, and uses the value of --export-"
-"filename (file.png), to determine the sequence fileformat('png') and the "
+"This line takes the animation in *test.kra*, and uses the value of --export-"
+"filename (*file.png*), to determine the sequence fileformat('png') and the "
 "frame prefix ('file')."
 msgstr ""
-"Esta linha usa a animação no teste.kra e usa o valor de --export-filename "
-"(ficheiro.png) para definir o formato de ficheiros da sequência ('png') e o "
-"prefixo das imagens ('ficheiro')."
+"Esta linha usa a animação no *teste.kra* e usa o valor de --export-filename "
+"(*ficheiro.png*) para definir o formato de ficheiros da sequência ('png') e "
+"o prefixo das imagens ('ficheiro')."
 
 #: ../../reference_manual/linux_command_line.rst:67
 msgid "PDF export"
 msgstr "Exportação para PDF"
 
 #: ../../reference_manual/linux_command_line.rst:69
-msgid "Pdf export looks a bit different, using the ``--export-pdf`` option."
+msgid "PDF export looks a bit different, using the ``--export-pdf`` option."
 msgstr ""
 "A exportação para PDF parece um pouco diferente, usando a opção ``--export-"
 "pdf``."
@@ -154,9 +156,8 @@ msgid "``krita file.png --export-pdf --export-filename final.pdf``"
 msgstr "``krita ficheiro.png --export-pdf --export-filename final.pdf``"
 
 #: ../../reference_manual/linux_command_line.rst:73
-msgid "export-pdf exports the file ``file.png`` as a pdf file."
-msgstr ""
-"O 'export-pdf' exporta o ficheiro ``ficheiro.png`` como um ficheiro PDF."
+msgid "This option exports the file ``file.png`` as a PDF file."
+msgstr "Esta opção exporta o ficheiro ``ficheiro.png`` como um ficheiro PDF."
 
 #: ../../reference_manual/linux_command_line.rst:77
 msgid "This has been removed from 3.1 because the results were incorrect."
@@ -253,3 +254,36 @@ msgstr "``krita --workspace Animação``"
 #: ../../reference_manual/linux_command_line.rst:142
 msgid "Starts Krita in the Animation workspace."
 msgstr "Inicia o Krita com o espaço de trabalho Animação."
+
+#: ../../reference_manual/linux_command_line.rst:145
+msgid ""
+"Starts krita with ``filename`` added as a file-layer. Note that you must "
+"either open an existing file or create a new file using the ``new-image`` "
+"argument."
+msgstr ""
+"Inicia o Krita com o ``nome-ficheiro`` adicionado como uma camada de "
+"ficheiro. Lembre-se que deverá abrir um ficheiro existente ou criar um novo "
+"com o argumento do ``new-image``."
+
+#: ../../reference_manual/linux_command_line.rst:149
+msgid "``krita file.kra --file-layer image.png``"
+msgstr "``krita ficheiro.kra --file-layer imagem.png``"
+
+#: ../../reference_manual/linux_command_line.rst:151
+msgid "``krita --new-image RGBA,U8,1000,1000 --file-layer image.jpg``"
+msgstr "``krita --new-image RGBA,U8,1000,1000 --file-layer imagem.jpg``"
+
+#: ../../reference_manual/linux_command_line.rst:153
+msgid ""
+"If an instance of Krita is already running and Multiple :ref:`instances "
+"<window_settings>` are disabled, then this option can be used alone to add a "
+"file-layer to the running krita document."
+msgstr ""
+"Se já estiver uma instầncia do Krita em execução e a opção de :ref:"
+"`Múltiplas instâncias <window_settings>` estiver desactivada, então esta "
+"opção poderá ser usada em separado para adicionar uma camada de ficheiro ao "
+"documento do Krita em curso."
+
+#: ../../reference_manual/linux_command_line.rst:155
+msgid "Example:  ``krita --file-layer image.png``"
+msgstr "Exemplo:  ``krita --file-layer imagem.png``"
