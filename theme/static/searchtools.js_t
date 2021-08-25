@@ -155,6 +155,41 @@ var Search = {
   },
 
   /**
+   * Split the search term according to available terms in the search index.
+   * For example, "笔刷预设介绍" will get split into "笔刷", "预设" and "介绍"
+   * assuming these three terms all exist in the search index.
+   * "笔刷预设道路", however, would not be split assuming that "道路" is not a
+   * valid term in the search index.
+   */
+  trySplitChineseTerm : function(term) {
+    var termExists = function(t) {
+      return this._index.terms.hasOwnProperty(t) || this._index.titleterms.hasOwnProperty(t);
+    }.bind(this);
+    if (termExists(term)) {
+      console.log("Term exists:", term);
+      return [ term ];
+    } else {
+      // XXX: This isn't really correct with non-BMP codepoints, but good enough for our use case.
+      var partIdx = term.length - 1;
+      while (partIdx >= 1) {
+        var partA = term.substring(0, partIdx);
+        var partB = term.substring(partIdx);
+        if (termExists(partA)) {
+          var remaining = this.trySplitChineseTerm(partB);
+          if (remaining) {
+            remaining.unshift(partA);
+            console.log("Split into", remaining);
+            return remaining;
+          }
+        }
+        partIdx--;
+      }
+      console.log("Couldn't split term", term);
+      return null;
+    }
+  },
+
+  /**
    * execute search (requires search index to be loaded)
    */
   query : function(query) {
@@ -198,6 +233,23 @@ var Search = {
       if (!$u.contains(toAppend, word))
         toAppend.push(word);
     }
+
+    if (DOCUMENTATION_OPTIONS.LANGUAGE === "ja" || DOCUMENTATION_OPTIONS.LANGUAGE.startsWith("zh_")) {
+      // Attempt to further split terms for Chinese and Japanese.
+      // We don't touch hlterms because I feel that keeping the original hlterms
+      // can be more helpful.
+      var origTerms = searchterms;
+      searchterms = [];
+      for (i = 0; i < origTerms.length; i++) {
+        var trySplitResult = this.trySplitChineseTerm(origTerms[i]);
+        if (trySplitResult) {
+          searchterms = searchterms.concat(trySplitResult);
+        } else {
+          searchterms.push(origTerms[i]);
+        }
+      }
+    }
+
     var highlightstring = '?highlight=' + $.urlencode(hlterms.join(" "));
 
     // console.debug('SEARCH: searching for:');
