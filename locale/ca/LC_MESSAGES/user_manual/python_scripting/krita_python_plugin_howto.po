@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: websites-docs-krita-org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-15 00:13+0000\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
 "PO-Revision-Date: 2021-05-15 08:27+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -85,19 +85,33 @@ msgid "Getting Krita to recognize your plugin"
 msgstr "Aconseguir que el Krita reconegui el vostre connector"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:30
+#, fuzzy
+#| msgid ""
+#| "A script in Krita has two components - the script directory (holding your "
+#| "script's Python files) and a \".desktop\" file that Krita uses to load "
+#| "and register your script. For Krita to load your script both of these "
+#| "must put be in the pykrita subdirectory of your Krita resources folder "
+#| "(on Linux  ~/.local/share/krita/pykrita). To find your resources folder "
+#| "start Krita and click the :menuselection:`Settings --> Manage Resources..."
+#| "` menu item. This will open a dialog box. Click the :guilabel:`Open "
+#| "Resources Folder` button. This should open a file manager on your system "
+#| "at your Krita resources folder. See the `API <https://api.kde.org/"
+#| "extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html>`_ docs "
+#| "under \"Auto starting scripts\".  If there is no pykrita subfolder in the "
+#| "Krita resources directory use your file manager to create one."
 msgid ""
-"A script in Krita has two components - the script directory (holding your "
+"A script in Krita has two components -- the script directory (holding your "
 "script's Python files) and a \".desktop\" file that Krita uses to load and "
 "register your script. For Krita to load your script both of these must put "
-"be in the pykrita subdirectory of your Krita resources folder (on Linux  ~/."
-"local/share/krita/pykrita). To find your resources folder start Krita and "
-"click the :menuselection:`Settings --> Manage Resources...` menu item. This "
-"will open a dialog box. Click the :guilabel:`Open Resources Folder` button. "
-"This should open a file manager on your system at your Krita resources "
-"folder. See the `API <https://api.kde.org/extragear-api/graphics-apidocs/"
-"krita/libs/libkis/html/index.html>`_ docs under \"Auto starting scripts\".  "
-"If there is no pykrita subfolder in the Krita resources directory use your "
-"file manager to create one."
+"be in the :file:`pykrita` subdirectory of your Krita resources folder (See :"
+"ref:`resource_management` for the paths per operating system). To find your "
+"resources folder start Krita and click the :menuselection:`Settings --> "
+"Manage Resources...` menu item. This will open a dialog box. Click the :"
+"guilabel:`Open Resources Folder` button. This should open a file manager on "
+"your system at your Krita resources folder. See the `API <https://api.kde."
+"org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html>`_ docs "
+"under \"Auto starting scripts\". If there is no :file:`pykrita` subfolder in "
+"the Krita resources directory use your file manager to create one."
 msgstr ""
 "Un script al Krita té dos components: directori de l'script (conté els "
 "fitxers en Python per al vostre script) i un fitxer «.desktop» que el Krita "
@@ -115,8 +129,12 @@ msgstr ""
 "fitxers per a crear-la."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:32
+#, fuzzy
+#| msgid ""
+#| "Scripts are identified by a file that ends in a .desktop extension that "
+#| "contain information about the script itself."
 msgid ""
-"Scripts are identified by a file that ends in a .desktop extension that "
+"Scripts are identified by a file that ends in a ``.desktop`` extension that "
 "contain information about the script itself."
 msgstr ""
 "Els scripts s'identifiquen per un fitxer que acaba amb una extensió ."
@@ -167,7 +185,9 @@ msgid "ServiceTypes"
 msgstr "ServiceTypes"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:50
-msgid "This should always be Krita/PythonPlugin for python plugins."
+#, fuzzy
+#| msgid "This should always be Krita/PythonPlugin for python plugins."
+msgid "This should always be ``Krita/PythonPlugin`` for python plugins."
 msgstr ""
 "Aquest sempre haurà de ser «Krita/PythonPlugin» per als connectors en Python."
 
@@ -229,9 +249,13 @@ msgid "The description that will show up in the Python Plugin Manager."
 msgstr "La descripció que es mostrarà al gestor de connectors en Python."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:62
+#, fuzzy
+#| msgid ""
+#| "Krita python plugins need to be python modules, so make sure there's an "
+#| "__init__.py script, containing something like..."
 msgid ""
 "Krita python plugins need to be python modules, so make sure there's an "
-"__init__.py script, containing something like..."
+"``__init__.py`` script, containing something like..."
 msgstr ""
 "Els connectors en Python del Krita hauran de ser mòduls de Python, així que "
 "assegureu-vos que hi hagi un script __init__.py que contingui quelcom com..."
@@ -268,35 +292,51 @@ msgid "Summary"
 msgstr "Resum"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:76
-msgid "In summary, if you want to create a script called *myplugin*:"
+#, fuzzy
+#| msgid "In summary, if you want to create a script called *myplugin*:"
+msgid "In summary, if you want to create a script called ``myplugin``:"
 msgstr "En resum, si voleu crear un script anomenat *myplugin*:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:79
-msgid "in your Krita *resources/pykrita* directory create"
+#, fuzzy
+#| msgid "in your Krita *resources/pykrita* directory create"
+msgid "in your Krita :file:`resources/pykrita` directory create"
 msgstr "al directori *resources/pykrita* del Krita creareu"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:79
-msgid "a folder called *myplugin*"
+#, fuzzy
+#| msgid "a folder called *myplugin*"
+msgid "a folder called :file:`myplugin`"
 msgstr "una carpeta anomenada *myplugin*"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:80
-msgid "a file called *myplugin.desktop*"
+#, fuzzy
+#| msgid "a file called *myplugin.desktop*"
+msgid "a file called :file:`myplugin.desktop`"
 msgstr "un fitxer anomenat *myplugin.desktop*"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:82
-msgid "in the *myplugin* folder create"
+#, fuzzy
+#| msgid "in the *myplugin* folder create"
+msgid "in the :file:`myplugin` folder create"
 msgstr "a la carpeta *myplugin* creareu"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:82
-msgid "a file called *__init__.py*"
+#, fuzzy
+#| msgid "a file called *__init__.py*"
+msgid "a file called :file:`__init__.py`"
 msgstr "un fitxer anomenat *__init__.py*"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:83
-msgid "a file called *myplugin.py*"
+#, fuzzy
+#| msgid "a file called *myplugin.py*"
+msgid "a file called :file:`myplugin.py`"
 msgstr "un fitxer anomenat *myplugin.py*"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:84
-msgid "in the *__init__.py* file put this code:"
+#, fuzzy
+#| msgid "in the *__init__.py* file put this code:"
+msgid "in the :file:`__init__.py` file put this code:"
 msgstr "al fitxer *__init__.py* introduïu aquest codi:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:90
@@ -322,7 +362,9 @@ msgstr ""
 "Comment=Our very own plugin."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:100
-msgid "write your script in the ''myplugin/myplugin.py'' file."
+#, fuzzy
+#| msgid "write your script in the ''myplugin/myplugin.py'' file."
+msgid "write your script in the :file:`myplugin/myplugin.py` file."
 msgstr "escriviu el vostre script al fitxer «myplugin/myplugin.py»."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:103
@@ -428,8 +470,12 @@ msgid "\"myAction\""
 msgstr "«myAction»"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:139
+#, fuzzy
+#| msgid ""
+#| "This should be replaced with a unique id that Krita will use to find the "
+#| "action."
 msgid ""
-"This should be replaced with a unique id that Krita will use to find the "
+"This should be replaced with a unique ID that Krita will use to find the "
 "action."
 msgstr ""
 "Això haurà de ser substituït amb un ID únic que el Krita utilitzarà per a "
@@ -440,7 +486,9 @@ msgid "\"My Script\""
 msgstr "«El meu script»"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:141
-msgid "This is what will be visible in the tools menu."
+#, fuzzy
+#| msgid "This is what will be visible in the tools menu."
+msgid "This is what will be visible in the :ref:`tools_menu`."
 msgstr "Això és el que serà visible al menú d'eines."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:143
@@ -547,10 +595,15 @@ msgstr ""
 "Configura el Krita... --> Dreceres de teclat`."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:186
+#, fuzzy
+#| msgid ""
+#| "Krita, for various reasons, only adds actions to the shortcuts menu when "
+#| "they are present in an .action file. The action file to get our action to "
+#| "be added to shortcuts should look like this:"
 msgid ""
-"Krita, for various reasons, only adds actions to the shortcuts menu when "
-"they are present in an .action file. The action file to get our action to be "
-"added to shortcuts should look like this:"
+"Krita, for various reasons, only adds actions to the :ref:"
+"`shortcut_settings` when they are present in an ``.action`` file. The action "
+"file to get our action to be added to the shortcuts should look like this:"
 msgstr ""
 "Per diverses raons, el Krita només afegeix accions al menú de dreceres quan "
 "estan presents en un fitxer «.action». El fitxer d'acció perquè la nostra "
@@ -615,8 +668,12 @@ msgid "name"
 msgstr "name"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:214
+#, fuzzy
+#| msgid ""
+#| "This should be the unique id you made for your action when creating it in "
+#| "the setup of the extension."
 msgid ""
-"This should be the unique id you made for your action when creating it in "
+"This should be the unique ID you made for your action when creating it in "
 "the setup of the extension."
 msgstr ""
 "Aquest haurà de ser l'ID exclusiu que vàreu crear per a la vostra acció en "
@@ -627,8 +684,12 @@ msgid "icon"
 msgstr "icon"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:216
+#, fuzzy
+#| msgid ""
+#| "the name of a possible icon. These will only show up on KDE plasma, "
+#| "because Gnome and Windows users complained they look ugly."
 msgid ""
-"the name of a possible icon. These will only show up on KDE plasma, because "
+"The name of a possible icon. These will only show up on KDE plasma, because "
 "Gnome and Windows users complained they look ugly."
 msgstr ""
 "El nom d'una possible icona. Aquesta només es mostrarà al Plasma del KDE, "
@@ -727,13 +788,21 @@ msgid "The status tip that is displayed on a status bar."
 msgstr "El consell d'estat que es mostra en una barra d'estat."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:236
+#, fuzzy
+#| msgid ""
+#| "Save this file as \"myplugin.action\" where myplugin is the name of your "
+#| "plugin. The action file should be saved, not in the pykrita resources "
+#| "folder, but rather in a resources folder named \"actions\". (So, share/"
+#| "pykrita is where the python plugins and desktop files go, and share/"
+#| "actions is where the action files go) Restart Krita. The shortcut should "
+#| "now show up in the shortcut action list."
 msgid ""
-"Save this file as \"myplugin.action\" where myplugin is the name of your "
+"Save this file as ``myplugin.action`` where myplugin is the name of your "
 "plugin. The action file should be saved, not in the pykrita resources "
-"folder, but rather in a resources folder named \"actions\". (So, share/"
-"pykrita is where the python plugins and desktop files go, and share/actions "
-"is where the action files go) Restart Krita. The shortcut should now show up "
-"in the shortcut action list."
+"folder, but rather in a resources folder named \"actions\". (So, ``share/"
+"pykrita`` is where the python plugins and desktop files go, and ``share/"
+"actions`` is where the action files go) Restart Krita. The shortcut should "
+"now show up in the shortcut action list."
 msgstr ""
 "Deseu aquest fitxer com a «myplugin.action» on «myplugin» serà el nom del "
 "vostre connector. Ara s'haurà de desar el fitxer d'acció, no a la carpeta de "
@@ -812,8 +881,12 @@ msgid "\"myDocker\""
 msgstr "«myDocker»"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:264
+#, fuzzy
+#| msgid ""
+#| "Replace this with an unique ID for your docker that Krita uses to keep "
+#| "track of it."
 msgid ""
-"Replace this with an unique ID for your docker that Krita uses to keep track "
+"Replace this with a unique ID for your docker that Krita uses to keep track "
 "of it."
 msgstr ""
 "Substituïu això amb un ID únic per al vostre acoblador que utilitza el Krita "
@@ -824,9 +897,13 @@ msgid "DockWidgetFactoryBase.DockRight"
 msgstr "DockWidgetFactoryBase.DockRight"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:266
+#, fuzzy
+#| msgid ""
+#| "The location. These can be DockTornOff, DockTop, DockBottom, DockRight, "
+#| "DockLeft, or DockMinimized"
 msgid ""
-"The location. These can be DockTornOff, DockTop, DockBottom, DockRight, "
-"DockLeft, or DockMinimized"
+"The location. These can be ``DockTornOff``, ``DockTop``, ``DockBottom``, "
+"``DockRight``, ``DockLeft``, or ``DockMinimized``"
 msgstr ""
 "La ubicació. Aquesta pot ser DockTornOff, DockTop, DockBottom, DockRight, "
 "DockLeft o DockMinimized"
@@ -870,9 +947,13 @@ msgstr ""
 "aquesta classe."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:274
+#, fuzzy
+#| msgid ""
+#| "Anyway, what we need to do first is that we need to create a QWidget, "
+#| "it's not very complicated, under setWindowTitle, add:"
 msgid ""
-"Anyway, what we need to do first is that we need to create a QWidget, it's "
-"not very complicated, under setWindowTitle, add:"
+"Anyway, what we need to do first is that we need to create a ``QWidget``, "
+"it's not very complicated, under ``setWindowTitle``, add:"
 msgstr ""
 "De totes maneres, el primer que hem de fer és crear un «QWidget», no és molt "
 "complicat, a sota de «setWindowTitle», afegiu:"
@@ -923,9 +1004,13 @@ msgstr ""
 "botó. En fer-hi clic s'activarà la funció d'exportació."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:295
+#, fuzzy
+#| msgid ""
+#| "However, the button looks aligned a bit oddly. That's because our "
+#| "mainWidget has no layout. Let's quickly do that:"
 msgid ""
-"However, the button looks aligned a bit oddly. That's because our mainWidget "
-"has no layout. Let's quickly do that:"
+"However, the button looks aligned a bit oddly. That's because our "
+"``mainWidget`` has no layout. Let's quickly do that:"
 msgstr ""
 "No obstant això, el botó es veu alineat de manera una mica estranya. Això és "
 "perquè el nostre «mainWidget» no té disposició. Fem-ho ràpidament:"
@@ -960,13 +1045,20 @@ msgstr "Senyals i ranures de PyQt"
 
 # skip-rule: t-acc_obe
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:309
+#, fuzzy
+#| msgid ""
+#| "We've already been using PyQt signals and slots already, but there are "
+#| "times where you want to create your own signals and slots. `As PyQt's "
+#| "documentation is pretty difficult to understand <https://www."
+#| "riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html>`_, and the "
+#| "way how signals and slots are created is very different from C++ Qt, "
+#| "we're explaining it here:"
 msgid ""
 "We've already been using PyQt signals and slots already, but there are times "
-"where you want to create your own signals and slots. `As PyQt's "
-"documentation is pretty difficult to understand <https://www."
-"riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html>`_, and the way "
-"how signals and slots are created is very different from C++ Qt, we're "
-"explaining it here:"
+"when you want to create your own signals and slots. `As PyQt's documentation "
+"is pretty difficult to understand <https://www.riverbankcomputing.com/static/"
+"Docs/PyQt5/signals_slots.html>`_, and the way how signals and slots are "
+"created is very different from C++ Qt, we're explaining it here:"
 msgstr ""
 "Ja hem estat emprant senyals i ranures de PyQt, però hi ha ocasions en les "
 "quals voldreu crear les vostres pròpies senyals i ranures. `Com la "
@@ -976,11 +1068,17 @@ msgstr ""
 "ho expliquem aquí:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:312
+#, fuzzy
+#| msgid ""
+#| "All python functions you make in PyQt can be understood as slots, meaning "
+#| "that they can be connected to signals like Action.triggered or "
+#| "QPushButton.clicked. However, QCheckBox has a signal for toggled, which "
+#| "sends a boolean. How do we get our function to accept that boolean?"
 msgid ""
 "All python functions you make in PyQt can be understood as slots, meaning "
-"that they can be connected to signals like Action.triggered or QPushButton."
-"clicked. However, QCheckBox has a signal for toggled, which sends a boolean. "
-"How do we get our function to accept that boolean?"
+"that they can be connected to signals like ``Action.triggered`` or "
+"``QPushButton.clicked``. However, ``QCheckBox`` has a signal for toggled, "
+"which sends a boolean. How do we get our function to accept that boolean?"
 msgstr ""
 "Totes les funcions de Python que realitzeu al PyQt es poden entendre com "
 "ranures, el qual vol dir que poden connectar-se a senyals com «Action."

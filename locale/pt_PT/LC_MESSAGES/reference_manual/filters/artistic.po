@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-19 02:02+0200\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
 "PO-Revision-Date: 2019-06-17 14:54+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -50,83 +50,123 @@ msgstr ""
 "uma deformação sobre os mesmos."
 
 #: ../../reference_manual/filters/artistic.rst:24
-msgid ".. image:: images/filters/Krita_halftone_filter.png"
+#, fuzzy
+#| msgid ".. image:: images/filters/Krita_halftone_filter.png"
+msgid ".. image:: images/filters/Krita_halftone_filter.jpg"
 msgstr ".. image:: images/filters/Krita_halftone_filter.png"
 
 #: ../../reference_manual/filters/artistic.rst:25
 msgid ""
-"The halftone filter is a filter that converts the colors to a halftone dot "
-"pattern."
+"The `halftone <https://en.wikipedia.org/wiki/Halftone>`_ filter tries to "
+"replicate the continuous-tone of the original image through the use of "
+"simple shapes that vary in size."
 msgstr ""
-"O filtro de meios-tons é um filtro que converte as cores para um padrão com "
-"pontos em meios-tons."
-
-#: ../../reference_manual/filters/artistic.rst:27
-msgid "Colors"
-msgstr "Cores"
 
 #: ../../reference_manual/filters/artistic.rst:28
-msgid ""
-"The colors used to paint the pattern. The first is the color of the dots, "
-"the second the color of the background."
-msgstr ""
-"As cores usadas para pintar o padrão. A primeira é a cor dos pontos, "
-"enquanto a segunda é a cor do fundo."
+msgid "Intensity"
+msgstr "Intensidade"
 
 #: ../../reference_manual/filters/artistic.rst:29
-msgid "Size"
-msgstr "Tamanho"
+msgid ""
+"In this mode the image is first converted to grayscale and then the "
+"halftoning is applied. The resulting effect is like the one used in black "
+"and white newspaper images."
+msgstr ""
 
 #: ../../reference_manual/filters/artistic.rst:30
-msgid ""
-"The size of the cell in pixels. The maximum dot size will be using the "
-"diagonal as the cell size to make sure you can have pure black."
-msgstr ""
-"O tamanho da célula em pixels. O tamanho máximo do ponto irá usar a diagonal "
-"como tamanho da célula para se certificar que consegue ter um preto puro."
+msgid "Independent Channels"
+msgstr "Canais Independentes"
 
 #: ../../reference_manual/filters/artistic.rst:31
-msgid "Angle"
-msgstr "Ângulo"
-
-#: ../../reference_manual/filters/artistic.rst:32
-msgid "The angle of the dot pattern."
-msgstr "O ângulo do padrão por pontos."
+msgid ""
+"This allows applying the halftoning to each channel of the image "
+"independently, potentially with different parameters, giving an effect "
+"similar to the one in colored magazine images."
+msgstr ""
 
 #: ../../reference_manual/filters/artistic.rst:33
+msgid "Mode"
+msgstr "Modo"
+
+#: ../../reference_manual/filters/artistic.rst:33
+msgid "Alpha"
+msgstr "Alfa"
+
+#: ../../reference_manual/filters/artistic.rst:33
+msgid ""
+"With this option the halftoning is applied only to the alpha channel (you "
+"may see no change when all the pixels of the image are fully opaque). This "
+"is useful to add texture to the smooth semi-transparent borders of a layer."
+msgstr ""
+
+#: ../../reference_manual/filters/artistic.rst:36
+msgid ""
+"When the selected mode is *Independent Channels*, multiple tabs for the "
+"different channels appear to let the user choose different options for each "
+"one; otherwise no tabs for the channels appear and there is only one set of "
+"options. The halftoning process works by making a pattern image (commonly "
+"named *screen*) that is combined with the original image in a specific way."
+msgstr ""
+
+#: ../../reference_manual/filters/artistic.rst:40
+msgid "Screen Generator"
+msgstr "Gerador do Ecrã"
+
+#: ../../reference_manual/filters/artistic.rst:40
+msgid ""
+"The filter uses the *fill layer generators* to create the screen (pattern) "
+"image instead of using a predefined set of patterns and options. This way "
+"the range of possible results can grow as new generators are added to Krita. "
+"Also the user can make his own patterns by using the pattern generator and "
+"custom pattern images. For more information see :ref:`this page on fill "
+"layer generators and their options <fill_layers>`."
+msgstr ""
+
+#: ../../reference_manual/filters/artistic.rst:43
+msgid ""
+"These options apply to the result of combining the screen image with the "
+"original image."
+msgstr ""
+
+#: ../../reference_manual/filters/artistic.rst:45
+msgid "Hardness"
+msgstr "Potência"
+
+#: ../../reference_manual/filters/artistic.rst:46
+msgid "Controls how hard or soft are the borders of the halftone shapes."
+msgstr ""
+
+#: ../../reference_manual/filters/artistic.rst:47
 msgid "Invert"
 msgstr "Inverter"
 
-#: ../../reference_manual/filters/artistic.rst:34
-msgid ""
-"This inverts the intensity calculated per dot. Thus, dark colors will give "
-"tiny dots, and light colors big dots. This is useful in combination with "
-"inverting the colors, and give a better pattern on glowy-effects."
+#: ../../reference_manual/filters/artistic.rst:48
+msgid "Invert the resulting image/channel."
 msgstr ""
-"Isto inverte a intensidade por cada ponto. Como tal, os pontos escuros terão "
-"pequenos pontos e as cores claras terão pontos grandes. Isto é útil em "
-"conjunto com a inversão das cores, dando um padrão melhor com efeitos "
-"brilhantes."
 
-#: ../../reference_manual/filters/artistic.rst:36
-msgid "Anti-aliasing"
-msgstr "Suavização"
-
-#: ../../reference_manual/filters/artistic.rst:36
+#: ../../reference_manual/filters/artistic.rst:50
 msgid ""
-"This makes the dots smooth, which is good for webgraphics. Sometimes, for "
-"print graphics, we want there to be no grays, so we turn off the anti-"
-"aliasing."
+"Change what color and opacity are used for the foreground (part of the image "
+"formed by the pattern shapes) and the background."
 msgstr ""
-"Isto torna os pontos mais suaves, o que é bom para gráficos na Web. Algumas "
-"vezes, para gráficos de impressão, queremos que não existam tons de "
-"cinzento, pelo que desligamos a suavização."
 
-#: ../../reference_manual/filters/artistic.rst:39
+#: ../../reference_manual/filters/artistic.rst:51
+msgid "Halftoning Options"
+msgstr ""
+
+#: ../../reference_manual/filters/artistic.rst:51
+msgid "Postprocessing"
+msgstr "Pós-processamento"
+
+#: ../../reference_manual/filters/artistic.rst:51
+msgid "Foreground & Background"
+msgstr ""
+
+#: ../../reference_manual/filters/artistic.rst:54
 msgid "Index Color"
 msgstr "Cor Indexada"
 
-#: ../../reference_manual/filters/artistic.rst:41
+#: ../../reference_manual/filters/artistic.rst:56
 msgid ""
 "The index color filter maps specific user selected colors to the grayscale "
 "value of the artwork. You can see the example below, the strip below the "
@@ -139,11 +179,11 @@ msgstr ""
 "indexadas aplicadas ao mesmo, para que o gradiente a preto-e-branco receba a "
 "cor seleccionada com valores diferentes."
 
-#: ../../reference_manual/filters/artistic.rst:44
+#: ../../reference_manual/filters/artistic.rst:59
 msgid ".. image:: images/common-workflows/Gradient-pixelart.png"
 msgstr ".. image:: images/common-workflows/Gradient-pixelart.png"
 
-#: ../../reference_manual/filters/artistic.rst:45
+#: ../../reference_manual/filters/artistic.rst:60
 msgid ""
 "You can choose the required colors and ramps in the index color filter "
 "dialog as shown below ."
@@ -151,11 +191,11 @@ msgstr ""
 "Poderá escolher as cores e rampas necessárias no filtro de cores indexadas, "
 "como aparece em baixo."
 
-#: ../../reference_manual/filters/artistic.rst:48
+#: ../../reference_manual/filters/artistic.rst:63
 msgid ".. image:: images/filters/Index-color-filter.png"
 msgstr ".. image:: images/filters/Index-color-filter.png"
 
-#: ../../reference_manual/filters/artistic.rst:49
+#: ../../reference_manual/filters/artistic.rst:64
 msgid ""
 "You can create index painting such as one shown below with the help of this "
 "filter."
@@ -163,15 +203,15 @@ msgstr ""
 "Poderá criar uma pintura indexada, como a apresentada abaixo, com a ajuda "
 "deste filtro."
 
-#: ../../reference_manual/filters/artistic.rst:52
+#: ../../reference_manual/filters/artistic.rst:67
 msgid ".. image:: images/common-workflows/Kiki-pixel-art.png"
 msgstr ".. image:: images/common-workflows/Kiki-pixel-art.png"
 
-#: ../../reference_manual/filters/artistic.rst:54
+#: ../../reference_manual/filters/artistic.rst:69
 msgid "Pixelize"
 msgstr "Pixelização"
 
-#: ../../reference_manual/filters/artistic.rst:56
+#: ../../reference_manual/filters/artistic.rst:71
 msgid ""
 "Makes the input-image pixely by creating small cells and inputting an "
 "average color."
@@ -179,24 +219,24 @@ msgstr ""
 "Torna a imagem de entrada 'pixelizada', criando pequenas células e aplicando "
 "à entrada uma cor média."
 
-#: ../../reference_manual/filters/artistic.rst:59
+#: ../../reference_manual/filters/artistic.rst:74
 msgid ".. image:: images/filters/Pixelize-filter.png"
 msgstr ".. image:: images/filters/Pixelize-filter.png"
 
-#: ../../reference_manual/filters/artistic.rst:61
+#: ../../reference_manual/filters/artistic.rst:76
 msgid "Raindrops"
 msgstr "Pingos de Chuva"
 
-#: ../../reference_manual/filters/artistic.rst:63
+#: ../../reference_manual/filters/artistic.rst:78
 msgid "Adds random raindrop-deformations to the input-image."
 msgstr ""
 "Adiciona deformações em pingos-de-chuva aleatórias na imagem de entrada."
 
-#: ../../reference_manual/filters/artistic.rst:66
+#: ../../reference_manual/filters/artistic.rst:81
 msgid "Oilpaint"
 msgstr "Pintura a Óleo"
 
-#: ../../reference_manual/filters/artistic.rst:68
+#: ../../reference_manual/filters/artistic.rst:83
 msgid ""
 "Does semi-posterisation to the input-image, with the 'brush-size' "
 "determining the size of the fields."
@@ -204,15 +244,15 @@ msgstr ""
 "Cria um efeito semi-poster sobre a imagem de entrada, com o 'tamanho-pincel' "
 "a definir o tamanho dos campos."
 
-#: ../../reference_manual/filters/artistic.rst:71
+#: ../../reference_manual/filters/artistic.rst:86
 msgid ".. image:: images/filters/Oilpaint-filter.png"
 msgstr ".. image:: images/filters/Oilpaint-filter.png"
 
-#: ../../reference_manual/filters/artistic.rst:72
+#: ../../reference_manual/filters/artistic.rst:87
 msgid "Brush-size"
 msgstr "Tamanho do pincel"
 
-#: ../../reference_manual/filters/artistic.rst:73
+#: ../../reference_manual/filters/artistic.rst:88
 msgid ""
 "Determines how large the individual patches are. The lower, the more "
 "detailed."
@@ -220,19 +260,19 @@ msgstr ""
 "Define quão grandes são os padrões individuais. Quanto menores, mais "
 "detalhado fica."
 
-#: ../../reference_manual/filters/artistic.rst:75
+#: ../../reference_manual/filters/artistic.rst:90
 msgid "Smoothness"
 msgstr "Suavidade"
 
-#: ../../reference_manual/filters/artistic.rst:75
+#: ../../reference_manual/filters/artistic.rst:90
 msgid "Determines how much each patch's outline is smoothed out."
 msgstr "Define quão suavizado fica o contorno de cada padrão."
 
-#: ../../reference_manual/filters/artistic.rst:78
+#: ../../reference_manual/filters/artistic.rst:93
 msgid "Posterize"
 msgstr "'Poster'"
 
-#: ../../reference_manual/filters/artistic.rst:80
+#: ../../reference_manual/filters/artistic.rst:95
 msgid ""
 "This filter decreases the amount of colors in an image. It does this per "
 "component (channel)."
@@ -240,14 +280,70 @@ msgstr ""
 "Este filtro diminui a quantidade de cores de uma imagem. Ele faz isso por "
 "cada componente (canal)."
 
-#: ../../reference_manual/filters/artistic.rst:83
+#: ../../reference_manual/filters/artistic.rst:98
 msgid ".. image:: images/filters/Posterize-filter.png"
 msgstr ".. image:: images/filters/Posterize-filter.png"
 
-#: ../../reference_manual/filters/artistic.rst:84
+#: ../../reference_manual/filters/artistic.rst:99
 msgid ""
 "The :guilabel:`Steps` parameter determines how many colors are allowed per "
 "component."
 msgstr ""
 "O parâmetro :guilabel:`Passos` define quantas cores são permitidas por "
 "componente."
+
+#~ msgid ""
+#~ "The halftone filter is a filter that converts the colors to a halftone "
+#~ "dot pattern."
+#~ msgstr ""
+#~ "O filtro de meios-tons é um filtro que converte as cores para um padrão "
+#~ "com pontos em meios-tons."
+
+#~ msgid "Colors"
+#~ msgstr "Cores"
+
+#~ msgid ""
+#~ "The colors used to paint the pattern. The first is the color of the dots, "
+#~ "the second the color of the background."
+#~ msgstr ""
+#~ "As cores usadas para pintar o padrão. A primeira é a cor dos pontos, "
+#~ "enquanto a segunda é a cor do fundo."
+
+#~ msgid "Size"
+#~ msgstr "Tamanho"
+
+#~ msgid ""
+#~ "The size of the cell in pixels. The maximum dot size will be using the "
+#~ "diagonal as the cell size to make sure you can have pure black."
+#~ msgstr ""
+#~ "O tamanho da célula em pixels. O tamanho máximo do ponto irá usar a "
+#~ "diagonal como tamanho da célula para se certificar que consegue ter um "
+#~ "preto puro."
+
+#~ msgid "Angle"
+#~ msgstr "Ângulo"
+
+#~ msgid "The angle of the dot pattern."
+#~ msgstr "O ângulo do padrão por pontos."
+
+#~ msgid ""
+#~ "This inverts the intensity calculated per dot. Thus, dark colors will "
+#~ "give tiny dots, and light colors big dots. This is useful in combination "
+#~ "with inverting the colors, and give a better pattern on glowy-effects."
+#~ msgstr ""
+#~ "Isto inverte a intensidade por cada ponto. Como tal, os pontos escuros "
+#~ "terão pequenos pontos e as cores claras terão pontos grandes. Isto é útil "
+#~ "em conjunto com a inversão das cores, dando um padrão melhor com efeitos "
+#~ "brilhantes."
+
+#~ msgid "Anti-aliasing"
+#~ msgstr "Suavização"
+
+#~ msgid ""
+#~ "This makes the dots smooth, which is good for webgraphics. Sometimes, for "
+#~ "print graphics, we want there to be no grays, so we turn off the anti-"
+#~ "aliasing."
+#~ msgstr ""
+#~ "Isto torna os pontos mais suaves, o que é bom para gráficos na Web. "
+#~ "Algumas vezes, para gráficos de impressão, queremos que não existam tons "
+#~ "de cinzento, pelo que desligamos a suavização."

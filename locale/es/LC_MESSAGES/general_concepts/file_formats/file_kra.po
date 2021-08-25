@@ -4,22 +4,23 @@
 #
 # Sofia Priego <spriego@darksylvania.net>, %Y.
 # Automatically generated, 2019.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2021.
+# Sofía Priego <spriego@darksylvania.net>, %Y.
 msgid ""
 msgstr ""
-"Project-Id-Version: "
-"docs_krita_org_general_concepts___file_formats___file_kra\n"
+"Project-Id-Version: docs_krita_org_general_concepts___file_formats___file_kra"
+"\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-19 02:02+0200\n"
-"PO-Revision-Date: 2020-12-11 14:16+0100\n"
-"Last-Translator: Sofia Priego <spriego@darksylvania.net>\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2021-08-24 12:21+0100\n"
+"Last-Translator: Sofía Priego <spriego@darksylvania.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.11.90\n"
+"X-Generator: Lokalize 21.08.0\n"
 
 #: ../../general_concepts/file_formats/file_kra.rst:1
 msgid "The Krita Raster Archive file format."
@@ -37,16 +38,35 @@ msgstr "KRA"
 msgid "Krita Archive"
 msgstr "Archivo de Krita"
 
+#: ../../general_concepts/file_formats/file_kra.rst:10
+#| msgid "KRA"
+msgid "KRZ"
+msgstr "KRZ"
+
+#: ../../general_concepts/file_formats/file_kra.rst:10
+#| msgid "*.kra"
+msgid "*.krz"
+msgstr "*.krz"
+
 #: ../../general_concepts/file_formats/file_kra.rst:15
 msgid "\\*.kra"
 msgstr "\\*.kra"
 
 #: ../../general_concepts/file_formats/file_kra.rst:17
+#, fuzzy
+#| msgid ""
+#| "``.kra`` is Krita's internal file-format, which means that it is the file "
+#| "format that saves all of the features Krita can handle. It's construction "
+#| "is vaguely based on the open document standard, which means that you can "
+#| "rename your ``.kra`` file to a ``.zip`` file and open it up to look at "
+#| "the insides."
 msgid ""
 "``.kra`` is Krita's internal file-format, which means that it is the file "
 "format that saves all of the features Krita can handle. It's construction is "
 "vaguely based on the open document standard, which means that you can rename "
-"your ``.kra`` file to a ``.zip`` file and open it up to look at the insides."
+"your ``.kra`` file to a ``.zip`` file and open it up to look at the insides. "
+"In Krita's settings dialog you can enable compression; with compression "
+"enabled the files will be smaller, but saving will take longer."
 msgstr ""
 "'``.kra`` es el formato de archivo interno de Krita, lo que significa que es "
 "el formato de archivo que guarda todas las funciones que Krita puede "
@@ -56,8 +76,30 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_kra.rst:19
 msgid ""
-"It is a format that you can expect to get very heavy, and isn't meant for "
-"sharing on the internet."
+"Other applications mostly cannot open ``.kra``  files, and you cannot upload "
+"``.kra`` as images on websites like twitter or deviantArt."
 msgstr ""
-"Es un formato del que puede esperar que sea muy pesado, por lo que no está "
-"diseñado para compartir en Internet."
+
+#: ../../general_concepts/file_formats/file_kra.rst:21
+msgid ""
+"A ``.kra`` file contains a file names ``mergedimage.png`` which is contains "
+"the rendered image as you see it on your canvas. Some applications, like "
+"Scribus, can use the ``mergedimage.png`` file to open ``.kra`` files. This "
+"file is always in the RGBA color model, or grayscale for files that are "
+"originally grayscale."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_kra.rst:23
+msgid ""
+"The ``.krz`` file format is a ``.kra`` file without ``mergedimage.png`` and "
+"with compression always enabled. You can use this format if you want to save "
+"disk space and do not care about interchange with those applications that "
+"load the ``mergedimage.png`` file."
+msgstr ""
+
+#~ msgid ""
+#~ "It is a format that you can expect to get very heavy, and isn't meant for "
+#~ "sharing on the internet."
+#~ msgstr ""
+#~ "Es un formato del que puede esperar que sea muy pesado, por lo que no "
+#~ "está diseñado para compartir en Internet."
