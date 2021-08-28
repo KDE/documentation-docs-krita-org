@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-08-26 19:50+0200\n"
+"PO-Revision-Date: 2021-08-27 22:19+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -24,7 +24,7 @@ msgstr "Översikt av de konstnärliga filtren."
 #: ../../reference_manual/filters/artistic.rst:11
 #: ../../reference_manual/filters/artistic.rst:21
 msgid "Halftone"
-msgstr "Halvton"
+msgstr "Rastrering"
 
 #: ../../reference_manual/filters/artistic.rst:11
 msgid "Filters"
@@ -47,7 +47,6 @@ msgstr ""
 "deformering av det."
 
 #: ../../reference_manual/filters/artistic.rst:24
-#| msgid ".. image:: images/filters/Krita_halftone_filter.png"
 msgid ".. image:: images/filters/Krita_halftone_filter.jpg"
 msgstr ".. image:: images/filters/Krita_halftone_filter.jpg"
 
@@ -57,10 +56,13 @@ msgid ""
 "replicate the continuous-tone of the original image through the use of "
 "simple shapes that vary in size."
 msgstr ""
+"Filtret `rastrering <https://sv.wikipedia.org/wiki/Rasterbild>`_ försöker"
+" reproducera originalbildens kontinuerliga ton genom användning av enkla"
+" former som varierar i storlek."
 
 #: ../../reference_manual/filters/artistic.rst:28
 msgid "Intensity"
-msgstr ""
+msgstr "Intensitet"
 
 #: ../../reference_manual/filters/artistic.rst:29
 msgid ""
@@ -68,10 +70,13 @@ msgid ""
 "halftoning is applied. The resulting effect is like the one used in black "
 "and white newspaper images."
 msgstr ""
+"Med den här metoden konverteras bilden först till gråskala och sedan utförs"
+" rastrering. Den resulterande effekten liknar den som används för svartvita"
+" tidningsbilder."
 
 #: ../../reference_manual/filters/artistic.rst:30
 msgid "Independent Channels"
-msgstr ""
+msgstr "Oberoende kanaler"
 
 #: ../../reference_manual/filters/artistic.rst:31
 msgid ""
@@ -79,14 +84,17 @@ msgid ""
 "independently, potentially with different parameters, giving an effect "
 "similar to the one in colored magazine images."
 msgstr ""
+"Gör det möjligt att utföra rastrering på varje kanal i bilden oberoende,"
+" potentiellt med olika parametrar, vilket ger en effekt som liknar den använd"
+" för färgbilder i tidskrifter."
 
 #: ../../reference_manual/filters/artistic.rst:33
 msgid "Mode"
-msgstr ""
+msgstr "Läge"
 
 #: ../../reference_manual/filters/artistic.rst:33
 msgid "Alpha"
-msgstr ""
+msgstr "Alfa"
 
 #: ../../reference_manual/filters/artistic.rst:33
 msgid ""
@@ -94,6 +102,10 @@ msgid ""
 "may see no change when all the pixels of the image are fully opaque). This "
 "is useful to add texture to the smooth semi-transparent borders of a layer."
 msgstr ""
+"Med alternativet appliceras rastreringen bara för alfakanalen (man ser kanske"
+" ingen ändring när alla bildens bildpunkter är helt ogenomskinliga). Det är"
+" användbart för att lägga till struktur på ett lagers jämna halvgenomskinliga"
+" kant."
 
 #: ../../reference_manual/filters/artistic.rst:36
 msgid ""
@@ -103,10 +115,16 @@ msgid ""
 "options. The halftoning process works by making a pattern image (commonly "
 "named *screen*) that is combined with the original image in a specific way."
 msgstr ""
+"När den valda metoden är *Oberoende kanaler*, visas flera flikar för de olika"
+" kanalerna som låter användaren välja olika alternativ för var och en. Annars"
+" visas inga flikar för kanalerna och det finns bara en uppsättning"
+" alternativ. Rastreringsprocessen fungerar genom att skapa en mönsterbild"
+" (vanligen benämnd *skärm*) som kombineras med originalbilden på ett visst"
+" sätt."
 
 #: ../../reference_manual/filters/artistic.rst:40
 msgid "Screen Generator"
-msgstr ""
+msgstr "Skärmgenerering"
 
 #: ../../reference_manual/filters/artistic.rst:40
 msgid ""
@@ -117,20 +135,29 @@ msgid ""
 "custom pattern images. For more information see :ref:`this page on fill "
 "layer generators and their options <fill_layers>`."
 msgstr ""
+"Filtret använder *generatorer av fyllnadslager* för att skapa skärmbilden"
+" (mönsterbilden) istället för att använda en fördefinierad uppsättning"
+" mönster och alternativ. På så sätt kan omfattningen av möjliga resultat växa"
+" när nya generatorer läggs till i Krita. Dessutom kan användaren skapa sina"
+" egna mönster genom att använda mönstergeneratorn och egna mönsterbilder. För"
+" mer information se :ref:`den här sidan om generatorer av fyllnadslager och"
+" deras alternativ <fill_layers>`."
 
 #: ../../reference_manual/filters/artistic.rst:43
 msgid ""
 "These options apply to the result of combining the screen image with the "
 "original image."
 msgstr ""
+"Alternativen gäller resultatet av att kombinera skärmbilden med"
+" originalbilden."
 
 #: ../../reference_manual/filters/artistic.rst:45
 msgid "Hardness"
-msgstr ""
+msgstr "Hårdhet"
 
 #: ../../reference_manual/filters/artistic.rst:46
 msgid "Controls how hard or soft are the borders of the halftone shapes."
-msgstr ""
+msgstr "Bestämmer hur hårda eller mjuka rastreringsformernas kanter är."
 
 #: ../../reference_manual/filters/artistic.rst:47
 msgid "Invert"
@@ -138,25 +165,27 @@ msgstr "Invertera"
 
 #: ../../reference_manual/filters/artistic.rst:48
 msgid "Invert the resulting image/channel."
-msgstr ""
+msgstr "Invertera resulterande bild eller kanal."
 
 #: ../../reference_manual/filters/artistic.rst:50
 msgid ""
 "Change what color and opacity are used for the foreground (part of the image "
 "formed by the pattern shapes) and the background."
 msgstr ""
+"Ändra vilken färg och ogenomskinlighet som används för förgrunden (delen av"
+" bilden som formas av mönsterformerna) och bakgrunden."
 
 #: ../../reference_manual/filters/artistic.rst:51
 msgid "Halftoning Options"
-msgstr ""
+msgstr "Halvtonsalternativ"
 
 #: ../../reference_manual/filters/artistic.rst:51
 msgid "Postprocessing"
-msgstr ""
+msgstr "Efterbehandling"
 
 #: ../../reference_manual/filters/artistic.rst:51
 msgid "Foreground & Background"
-msgstr ""
+msgstr "Förgrund och bakgrund"
 
 #: ../../reference_manual/filters/artistic.rst:54
 msgid "Index Color"

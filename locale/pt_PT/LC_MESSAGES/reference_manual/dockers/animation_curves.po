@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-08-24 02:44+0000\n"
+"PO-Revision-Date: 2021-08-27 17:37+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: image images icons Kritamouseleft alt Kritamouseright\n"
+"X-POFile-SpellExtra: Tweening dfn program Krita dockers\n"
+"X-POFile-SpellExtra: AnimationCurvesDocker term guilabel imagemchave ref\n"
+"X-POFile-SpellExtra: transformationmasks mouseleft kbd mouseright\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -35,7 +39,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/animation_curves.rst:1
 msgid "Overview of the Animation Curves docker."
-msgstr ""
+msgstr "Introdução à área de Curvas da Animação."
 
 #: ../../reference_manual/dockers/animation_curves.rst:11
 msgid "Animation"
@@ -61,7 +65,7 @@ msgstr "Área de Curvas da Animação"
 msgid ""
 ":program:`Krita`'s :dfn:`Animation Curves Docker` allows artists to animate "
 "the values of some properties over time."
-msgstr ""
+msgstr "A :dfn:`Área de Curvas da Animação` do :program:`Krita` permite aos artistas animar os valores de algumas propriedades ao longo do tempo."
 
 #: ../../reference_manual/dockers/animation_curves.rst:20
 msgid ""
@@ -73,7 +77,7 @@ msgid ""
 "Animation Curves docker allows us to animate more than just the lines on "
 "your canvas, such as a layer's opacity or the position, rotation and scale "
 "of a :ref:`Transform Mask <transformation_masks>`."
-msgstr ""
+msgstr "Ao animar um corte complexo, é normal querer animar as coisas que seriam difíceis ou ineficientes de fazer se fosse apenas com desenhos. Nas animações clássicas de papel-e-caneta que remontam à década de 1920, diversos dispositivos de iluminação e para outros fins, como as câmaras multiplanos, foram usados para obter alguns efeitos especiais que mudaram a animação para sempre! Do mesmo modo, a área de Curvas de Animação do Krita permite-nos animar mais do que apenas as linhas na sua área de desenho, como também a opacidade ou a posição de uma camada, a sua rotação e ajuste de escala com uma :ref:`Máscara de Transformação <transformation_masks>`."
 
 #: ../../reference_manual/dockers/animation_curves.rst:22
 msgid ""
@@ -84,11 +88,11 @@ msgid ""
 "draw lines and curves that show the computer how we want it to calculate the "
 "values in between each of our plotted keyframe values; a technique known as "
 "interpolation or :dfn:`tweening`."
-msgstr ""
+msgstr "Dado que a maioria das coisas pode ser reduzida a valores numéricos (por exemplo, a opacidade como uma percentagem ou a posição de uma Máscara de Transformação), e como os computadores são óptimos com cálculos e automatizações, podemos desenhar e visualizar a mudança de valores ao longo do tempo com um gráfico simples em 2D. Melhor ainda, podemos desenhar linhas e curvas que mostrem ao computador como desejamos que ele calcule os valores intermédios para as nossas imagens-chave desenhadas; uma técnica conhecida por interpolação ou :dfn:`tweening`."
 
 #: ../../reference_manual/dockers/animation_curves.rst:26
 msgid ".. image:: images/dockers/Animation_Curves_Docker.png"
-msgstr ""
+msgstr ".. image:: images/dockers/Animation_Curves_Docker.png"
 
 #: ../../reference_manual/dockers/animation_curves.rst:28
 msgid "Overview"
@@ -98,7 +102,7 @@ msgstr "Introdução"
 msgid ""
 "As shown in the image above, Krita's Animation Curves Docker can be thought "
 "of as different sections:"
-msgstr ""
+msgstr "Como demonstrado na imagem acima, a Área de Curvas de Animação do Krita pode ser vista como outras secções diferentes:"
 
 #: ../../reference_manual/dockers/animation_curves.rst:32
 msgid ""
@@ -110,7 +114,7 @@ msgid ""
 "`interpolation mode` and :dfn:`tangent mode` of the selected keyframe, a box "
 "for setting the selected keyframe to a specific value, as well as buttons to "
 "help zoom and navigate the main graph view."
-msgstr ""
+msgstr ":dfn:`Utilitários` -- O lado esquerdo da barra de ferramentas dá aos animadores um acesso rápido a todos os elementos que são críticos para o seu processo; :dfn:`controlos de transporte` (anterior, reproduzir/pausa, parar e seguinte), um contador de imagens, controlos de antevisão (velocidade e perda de imagens), botões para adicionar e remover :dfn:`imagens-chave escalares`, botões para modificar o :dfn:`modo de interpolação` e o :dfn:`modo da tangente` da imagem-chave seleccionada, uma opção para mudar a imagem-chave seleccionada para um dado valor, assim como botões que ajudam na ampliação e navegação da área do gráfico principal."
 
 #: ../../reference_manual/dockers/animation_curves.rst:34
 msgid ""
@@ -119,7 +123,7 @@ msgid ""
 "submenus for things like onion skins and settings that you can generally set "
 "and forget (for example, :dfn:`playback range`, :dfn:`frame rate` and :dfn:"
 "`autokey mode`)."
-msgstr ""
+msgstr ":dfn:`Configuração` -- Embora todos os controlos de tráfego elevado estejam directamente presentes, o extremo direito da barra de ferramentas também contém botões para abrir submenus para opções e configurações que define de um modo geral e esquece-os depois (por exemplo:, o :dfn:`intervalo de reprodução`, a :dfn:`taxa de imagens` e o :dfn:`modo de auto-chave`)."
 
 #: ../../reference_manual/dockers/animation_curves.rst:36
 msgid ""
@@ -128,7 +132,7 @@ msgid ""
 "Each independent channel is associated with a unique color and its "
 "visibility within the graph view can be toggled by clicking on the eyeball "
 "icon."
-msgstr ""
+msgstr ":dfn:`Lista de Canais` -- Esta área mostra os vários canais da camada actualmente a ser animada dentro da Área de Curvas da Animação. Cada canal independente está associado a uma cor única e a sua visibilidade dentro da área do gráfico pode ser activada/desactivada se carregar no ícone do olho."
 
 #: ../../reference_manual/dockers/animation_curves.rst:38
 msgid ""
@@ -143,11 +147,11 @@ msgid ""
 "guilabel:`bezier curve interpolation`, selecting it will cause one or more :"
 "dfn:`curve handles` to appear, which can be used to change the shape of the "
 "interpolation curve over time."
-msgstr ""
+msgstr ":dfn:`Área do Gráfico` -- Por último, mas não menos importante, existe o :dfn:`gráfico`, que apresenta um gráfico grande com os valores e tempos que são usados para animar o valor dos parâmetrosao longo do tempo. Quando é adicionada uma :term:`imagem-chave` ao canal actual no tempo actual, irá aparecer como um círculo colorido dentro do gráfico. Depois de carregar na imagem-chave para a seleccionar, poderá modificar o valor se arrastar o círculo na vertical ou indicando um valor específico no campo respectivo na barra de ferramentas. De forma semelhante, poderá alterar o tempo da imagem seleccionada se a arrastar na horizontal. Finalmente, quando a imagem-chave estiver a usar uma :guilabel:`interpolação com curva bézier`, a selecção da mesma fará comm que uma ou mais :dfn:`pegas da curva` apareçam, as quais poderão ser usadas para mudar a forma da curva de interpolação ao longo do tempo."
 
 #: ../../reference_manual/dockers/animation_curves.rst:42
 msgid "Animating Opacity"
-msgstr ""
+msgstr "Animação da Opacidade"
 
 #: ../../reference_manual/dockers/animation_curves.rst:44
 msgid ""
@@ -155,18 +159,18 @@ msgid ""
 "animate a layer's :term:`opacity` and, with the help of a :ref:`Transform "
 "Mask <transformation_masks>`, its :dfn:`position`, :dfn:`rotation`, :dfn:"
 "`scale` and :dfn:`shear`."
-msgstr ""
+msgstr "Desde o :program:`Krita 5` que é possível usar a Área de Curvas da Animação para animar a :term:`opacidade` de uma camada e, com a ajuda de uma :ref:`Máscara de Transformação <transformation_masks>`, a sua :dfn:`posição`, :dfn:`rotação`, :dfn:`escala` e :dfn:`inclinação`."
 
 #: ../../reference_manual/dockers/animation_curves.rst:48
 msgid ""
 "Though the design is pretty similar to the :ref:`timeline_docker`, the "
 "Animation Curves Docker may be a bit confusing or intimidating when you "
 "first open it, especially if you haven't done digital animation before."
-msgstr ""
+msgstr "Ainda que o visual seja bastante parecido com a :ref:`timeline_docker`, a Área de Curvas da Animação poderá ser um bocado confusa ou intimidatória quando a abrir da primeira vez, especialmente se nunca tiver feito animação digital antes."
 
 #: ../../reference_manual/dockers/animation_curves.rst:50
 msgid "Let's look first at *animating a layer's opacity*:"
-msgstr ""
+msgstr "Vejamos primeiro como *animar a opacidade de uma camada*:"
 
 #: ../../reference_manual/dockers/animation_curves.rst:52
 msgid ""
@@ -175,7 +179,7 @@ msgid ""
 "ghost that seems to materialize out of thin air. These types of effects are "
 "pretty hard to get right by traditionally animated line drawings alone, and "
 "that's exactly where the Animation Curves Docker can step in."
-msgstr ""
+msgstr "Imageine que deseja animar algo como uma nuvem de pó em expansão, que se vai tornando cada vez mais transparente à medida que se dissipa, ou um fantasma que se parece materializar no ar do nada. Estes tipos de efeitos são difíceis de acertar se fizermos animações tradicionais, e é exactamente aqui que a Área de Curvas da Animação poderá ajudar."
 
 #: ../../reference_manual/dockers/animation_curves.rst:54
 msgid ""
@@ -185,13 +189,13 @@ msgid ""
 "graph view. Just like the :ref:`timeline_docker`, we can click and drag "
 "anywhere on the timing header to \"scrub\" across your animation and preview "
 "the results."
-msgstr ""
+msgstr "Depois de *seleccionar a camada* para a qual deseja animar a opacidade, tem de *seleccionar o tempo da imagem da opacidade com que deseja começar*, carregando em algum ponto do :term:`cabeçalho de tempo das imagens` no topo do gráfico. Tal como na :ref:`timeline_docker`, podemos carregar e arrastar para qualquer lado no cabeçalho de tempo para \"ajustar\" a sua animação e antever os resultados."
 
 #: ../../reference_manual/dockers/animation_curves.rst:56
 msgid ""
 "Next we create our first scalar :term:`keyframe` by clicking on the :"
 "guilabel:`add keyframe` button on the docker's titlebar."
-msgstr ""
+msgstr "De seguida iremos criar a nossa primeira:term:`imagem-chave` escalar, carregando no botão para :guilabel:`adicionar uma imagem-chave` na barra de título da área."
 
 #: ../../reference_manual/dockers/animation_curves.rst:58
 msgid ""
@@ -200,13 +204,13 @@ msgid ""
 "side, next to a colored mark that's associated with the color of the "
 "keyframes and curves in the :dfn:`graph view`. Second, a single keyframe "
 "will appear somewhere inside the graph view at the currently active time."
-msgstr ""
+msgstr "Quando fizer isto, irá reparar que acontecem duas coisas. Primeiro, irá aparecer um novo :guilabel:`canal de opacidade` na :dfn:`lista de canais` do lado esquerdo, a seguir a uma marca colorida que está associada à cor das imagens-chave e das curvas no :dfn:`gráfico`. Em segundo lugar, irá aparecer uma única imagem-chave algures dentro do gráfico no tempo activo de momento."
 
 #: ../../reference_manual/dockers/animation_curves.rst:60
 msgid ""
 "Of course it takes more than a single point to make a line or curve, so we "
 "have a little bit more work to do."
-msgstr ""
+msgstr "Obviamente, é necessário mais que um simples ponto para criar uma linha ou curva, pelo que teremos mais algum trabalho para fazer."
 
 #: ../../reference_manual/dockers/animation_curves.rst:62
 msgid ""
@@ -215,7 +219,7 @@ msgid ""
 "timing header) and add another keyframe at that new time (by clicking on "
 "the :guilabel:`add keyframe` button). As you'd expect, a second keyframe has "
 "appeared at the new time and a straight line has appeared between them."
-msgstr ""
+msgstr "Como na nossa primeira imagem-chave, é necessário criar uma segunda agoa. Vamos mudar o tempo da imagem activa de novo (carregando ou ajustando o valor no cabeçalho de tempo*) e adicionar outra imagemchave nesse novo tempo (carregando no botão :guilabel:`adicionar uma imagem-chave`. Como seria de esperar, apareceu uma segunda imagem-chave no novo tempo e uma linha recta a juntar as duas."
 
 #: ../../reference_manual/dockers/animation_curves.rst:64
 msgid ""
@@ -223,13 +227,13 @@ msgid ""
 "change the :dfn:`opacity slider` above the :ref:`layer_docker` the new "
 "keyframe that we've created will move up and down. Likewise, moving the "
 "keyframe up and down will cause the opacity *at that time* to change."
-msgstr ""
+msgstr "Com o tempo activo ainda sobre a nossa nova imagem-chave, irá reparar que à medida que muda a :dfn:`barra de opacidade` acima da :ref:`layer_docker`, a nova imagem-chave que criámos irá subir ou descer. Damesma forma, se mover a imagem-chave para cima e para baixo, fará com que a opacidade *nesse momento* mude."
 
 #: ../../reference_manual/dockers/animation_curves.rst:66
 msgid ""
 "And just like that, when you press the :guilabel:`play button` you'll see "
 "the opacity of the layer animate over time!"
-msgstr ""
+msgstr "E assim, quando carregar no :guilabel:`botão de reprodução`, irá ver a opacidade da camada a variar ao longo do tempo!"
 
 #: ../../reference_manual/dockers/animation_curves.rst:70
 msgid ""
@@ -237,13 +241,13 @@ msgid ""
 "across every frame of your animation. This can be more demanding on your "
 "machine and cause the caching process to take a little bit more time, as it "
 "calculates and stores each frame."
-msgstr ""
+msgstr "Ao contrário dos métodos tradicionais, a animação com curvas poderá fazer com que os valores mudem ao longo de cada imagem da sua animação. Isto poderá ser mais exigente para a sua máquina e poderá fazer com que o processo de 'caching' demore um pouco mais tempo, dado que está a calcular e a gravar cada uma das imagens."
 
 #: ../../reference_manual/dockers/animation_curves.rst:72
 msgid ""
 "*Before we move on*, let's use :dfn:`interpolation curves` instead of a "
 "straight line to change the timing and general feel of our opacity animation."
-msgstr ""
+msgstr "*Antes de prosseguirmos*, vamos usar as :dfn:`curvas de interpolação` em vez de uma linha recta para modificar o tempo e a aparência geral da nossa animação da opacidade."
 
 #: ../../reference_manual/dockers/animation_curves.rst:74
 msgid ""
@@ -253,7 +257,7 @@ msgid ""
 "will appear as a hollow circle on the graph view. That hollow circle is a :"
 "dfn:`handle`, and by clicking on it and dragging in different directions you "
 "can change the arc of the curve between your two keyframes."
-msgstr ""
+msgstr "Se seleccionar a primeira imagem-chave (a do lado esqquerdo) do seu segmento de recta e carregar o botão de :guilabel:`interpolação de curva bézier` na secção de utilitários da barra de título, irá reparar que a imagem-chave irá apareceer como uma circunferência no gráfico. Essa circunferência é uma :dfn:`pega`, e ao carregar nela e arrastar para as diferentes direcções, poderá alterar o arco da curva entre as suas duas imagens-chave."
 
 #: ../../reference_manual/dockers/animation_curves.rst:76
 msgid ""
@@ -261,7 +265,7 @@ msgid ""
 "change your curve back into a line, or the :guilabel:`constant` button to "
 "turn off interpolation altogether, causing values to jump suddenly between "
 "keyframes."
-msgstr ""
+msgstr "De forma semelhante, poderá olhar para o botão de :guilabel:`interpolação linear` para transformar a sua curva de novo numa linha, ou ainda o botão :guilabel:`constante` para eliminar por completo a interpolação, fazendo com que os valores saltem de repente entre imagens-chave."
 
 #: ../../reference_manual/dockers/animation_curves.rst:80
 msgid ""
@@ -269,24 +273,24 @@ msgid ""
 "as shown by the highlighted vertical line on the graph view. The keyframe "
 "that changes as you make adjustments elsewhere in the program will always be "
 "dependent on the active frame time!"
-msgstr ""
+msgstr "É importante estar ciente de qual a imagem da animação que está seleccionada e activa, como é demonstrado pela linha vertical na área do gráfico. A imagem-chave que muda à medida que vai fazendo ajustes noutro local do programa irá estar sempre dependente do tempo da imagem activa!"
 
 #: ../../reference_manual/dockers/animation_curves.rst:82
 msgid ""
 "*Ok, it's a bit tough to put in writing...* But it's not so bad once you get "
 "the hang of it!"
-msgstr ""
+msgstr "*Ok, é um bocado difícil de colocar isto por escrito...* Mas não é tão mau assim que se habituar a isto!"
 
 #: ../../reference_manual/dockers/animation_curves.rst:86
 msgid "Animating Transform Masks"
-msgstr ""
+msgstr "Animar as Máscaras de Transformação"
 
 #: ../../reference_manual/dockers/animation_curves.rst:88
 msgid ""
 "Now let's talk a bit about how we can use a :ref:`transformation_masks` to "
 "*animate our layer's position, rotation, scale and shear* for :dfn:`"
 "\"tweening\"` effects:"
-msgstr ""
+msgstr "Agora vamos ver como é que podemos usar uma :ref:`transformation_masks` para *animar a posição, rotação, escala e inclinação da nossa camada* para alguns efeitos:"
 
 #: ../../reference_manual/dockers/animation_curves.rst:90
 msgid ""
@@ -294,7 +298,7 @@ msgid ""
 "need to *add a Transform Mask*. (You can do this by |mouseright| on the "
 "layer that you want to animate, and then :menuselection:`Add --> Transform "
 "Mask`.)"
-msgstr ""
+msgstr "A animação de uma máscara de transformação é muito parecida com a animação da opacidade, mas primeiro é necessário *adicionar uma Máscara de Transformação*. (Poderá fazer isto se carregar com o |mouseright| na camada que deseja animar e depois :menuselection:`Adicionar --> Máscara de Transformação`.)"
 
 #: ../../reference_manual/dockers/animation_curves.rst:92
 msgid ""
@@ -302,7 +306,7 @@ msgid ""
 "shear) the layer that they are attached to, without affecting its original "
 "position. And (starting with Krita 5) they also allow us to animate a "
 "layer's transform!"
-msgstr ""
+msgstr "As Máscaras de Transformação permitem-nos :dfn:`transformar` (transladar, rodar, escalar ou incliar) a camada à qual está ligado, sem afectar a sua posição original. E (desde o Krita 5), também nospermitem animar a transformação de uma camada!"
 
 #: ../../reference_manual/dockers/animation_curves.rst:94
 msgid ""
@@ -310,14 +314,14 @@ msgid ""
 "transformation keyframe. To do this, *first make sure that you have your "
 "layer's Transform Mask selected*, and then click on the :guilabel:`add "
 "keyframe` button at the top of the docker."
-msgstr ""
+msgstr "Tal como animámos anteriormente a opacidade, é necessário adicionar a nossa primeira imagem-chave de transformação. Para o fazer, *certifique-se primeiro que tem a Máscara de Transformação da sua camada seleccionada* e depois carregue no botão :guilabel:`adicionar uma imagem-chave` no topo da área acoplável."
 
 #: ../../reference_manual/dockers/animation_curves.rst:98
 msgid ""
 "Remember (as of Krita 5.0) we can only *directly* animate the opacity curve "
 "of a layer. In order to animate a layer's position, rotation, scale and "
 "shear, we need to attach a Transform Mask and animate it instead."
-msgstr ""
+msgstr "Lembre-se que (desde o Krita 5.0) só podemos animar *directamente* a curva de opacidade de uma camada. Para animar a posição, rotação, escala e inclinação de uma camada, temos de associar uma Máscara de Transformação e animar a mesma em alternativa."
 
 #: ../../reference_manual/dockers/animation_curves.rst:100
 msgid ""
@@ -325,19 +329,19 @@ msgid ""
 "Docker will automatically add opacity keyframes, and *when you have a "
 "transform mask selected* the Animation Curves Docker will automatically add "
 "transformation keyframes."
-msgstr ""
+msgstr "Como tal, *quando tiver uma camada de pintura normal seleccionada*, a Área de Curvas da Animação irá adicionar automaticamente imagens-chave de opacidade e, *quando tiver uma máscara de transformação seleccionada*, a Área de Curvas da Animação irá adicionar automaticamente imagens-chave de transformação."
 
 #: ../../reference_manual/dockers/animation_curves.rst:102
 msgid ""
 "Try to always keep in mind what type of layer you have selected when "
 "animating curves in Krita!"
-msgstr ""
+msgstr "Tente manter sempre em mente qual o tipo de camada que seleccionou ao usar as curvas de animação no Krita!"
 
 #: ../../reference_manual/dockers/animation_curves.rst:104
 msgid ""
 "You should see a whole bunch of channels appear in the channels list, each "
 "with a unique name and color, as well as a number of corresponding keyframes."
-msgstr ""
+msgstr "Deverá agora ver um conjunto completo de canais a aparecer na lsita de canais, cada um com um nome e cor únicos, assim como um conjunto de imagens-chave correspondentes."
 
 #: ../../reference_manual/dockers/animation_curves.rst:106
 msgid ""
@@ -346,7 +350,7 @@ msgid ""
 "you use the :ref:`Transform Tool <transform_tool>` on your :ref:"
 "`transformation_masks`, you should see the various keyframes of each channel "
 "moving around in the graph view to reflect the changes."
-msgstr ""
+msgstr "Se quiser, poderá editar estas imagens-chave directamente na área do gráfico, mas provavelmente é mais intuitivo fazê-lo directamente na área de desenho. Por isso agora, quando usar a :ref:`Ferramenta de Transformação <transform_tool>` nas suas :ref:`transformation_masks`, deverá ver as diversas imagens-chave de cada canal a mover-se na area do gráfico para reflectir as alterações."
 
 #: ../../reference_manual/dockers/animation_curves.rst:110
 msgid ""
@@ -356,26 +360,26 @@ msgid ""
 "to see and edit curves, especially since you can use the :guilabel:`zoom to "
 "channel` and :guilabel:`zoom to curve` buttons at the top of the docker to "
 "fit the graph view to the currently visible channels."
-msgstr ""
+msgstr "A animação de uma Máscara de Transformação gera um conjunto grande de canais mas, dependendo dos seus objectivos, poderá só querer trabalhar com um pequeno conjunto deles de cada vez. *Esconder*  e *isolar* os canais na lista poderá tornar muito mais fácil ver e editar as curvas, especialmente porque pode usar os botões :guilabel:`ampliar para o canal` e :guilabel:`ampliar para a curva` no topo da área para ajustar o gráfico aos canais visíveis de momento."
 
 #: ../../reference_manual/dockers/animation_curves.rst:112
 msgid ""
 "Navigating by click-dragging on the zoomable scrollbars and and *values "
 "header* (on the left-hand side of the graph view) can also really help with "
 "editing curves!"
-msgstr ""
+msgstr "A navegação ao carregar e arrastar as barras de deslocamento ampliáveis e o *cabeçalho dos valores* (do lado esquerdo do gráfico) também poderá ajudar realmente na edição das curvas!"
 
 #: ../../reference_manual/dockers/animation_curves.rst:114
 msgid ""
 "Finally, click or scrub to a different frame time, add another keyframe, and "
 "use the Transform Tool on the same Transform Mask again."
-msgstr ""
+msgstr "Finalmente, carregue ou passe para um tempo de imagem diferente, adicione outra imagem-chave e use a Ferramenta de Transformação na mesma Máscara de Transformação de novo."
 
 #: ../../reference_manual/dockers/animation_curves.rst:116
 msgid ""
 "Press the :guilabel:`play button` and (after a little bit of caching) there "
 "you have it, a layer with an animated Transform Mask!"
-msgstr ""
+msgstr "Carregue no :guilabel:`botão de reprodução` e (ao fim de alguma 'cache') aí está, irá obter uma camada com uma Máscara de Transformação animada!"
 
 #: ../../reference_manual/dockers/animation_curves.rst:120
 msgid "Controls"
@@ -383,40 +387,40 @@ msgstr "Controlos"
 
 #: ../../reference_manual/dockers/animation_curves.rst:122
 msgid ":dfn:`Channels List`"
-msgstr ""
+msgstr ":dfn:`Lista de Canais`"
 
 #: ../../reference_manual/dockers/animation_curves.rst:124
 msgid "|mouseleft| on Eye Icon: Toggle show/hide channel."
-msgstr ""
+msgstr "|mouseleft| no Ícone do Olho: Comutar a activação/desactivação do canal."
 
 #: ../../reference_manual/dockers/animation_curves.rst:125
 msgid ":kbd:`Shift +` |mouseleft| on Eye Icon: Solo channel."
-msgstr ""
+msgstr ":kbd:`Shift +` |mouseleft| no Ícone do Olho: Canal isolado."
 
 #: ../../reference_manual/dockers/animation_curves.rst:126
 msgid "|mouseright| : Open layer or channel context menu. [Reset Channel(s)]"
-msgstr ""
+msgstr "|mouseright| : Abrir o menu de contexto da camada ou canal. [Repor os Canais]"
 
 #: ../../reference_manual/dockers/animation_curves.rst:128
 msgid ":dfn:`Graph View`"
-msgstr ""
+msgstr ":dfn:`Área do Gráfico`"
 
 #: ../../reference_manual/dockers/animation_curves.rst:130
 msgid "|mouseleft| : Select keyframe."
-msgstr ""
+msgstr "|mouseleft| : Seleccionar a imagem-chave."
 
 #: ../../reference_manual/dockers/animation_curves.rst:131
 msgid "|mouseleft| :kbd:`+ drag` : *Move* frame(s)."
-msgstr ""
+msgstr "|mouseleft| :kbd:`+ arrastamento` : *Mover* as imagens."
 
 #: ../../reference_manual/dockers/animation_curves.rst:132
 msgid "|mouseleft| double-click : Select all keyframes at time."
-msgstr ""
+msgstr "|mouseleft| em duplo-click : Seleccionar todas as imagens-chave no tempo indicado."
 
 #: ../../reference_manual/dockers/animation_curves.rst:133
 msgid ""
 ":kbd:`Alt +` |mouseleft| double-click : Select all keyframes of channel."
-msgstr ""
+msgstr ":kbd:`Alt +` |mouseleft| em duplo-click : Selecciona todas as imagens-chave do canal."
 
 #: ../../reference_manual/dockers/animation_curves.rst:134
 msgid ":kbd:`Space +` |mouseleft| : Pan."
@@ -428,7 +432,7 @@ msgstr ":kbd:`Espaço` + |mouseright| : Ampliação."
 
 #: ../../reference_manual/dockers/animation_curves.rst:137
 msgid ":dfn:`Frame Timing Header`"
-msgstr ""
+msgstr ":dfn:`Cabeçalho de Tempo da Imagem`"
 
 #: ../../reference_manual/dockers/animation_curves.rst:139
 msgid "|mouseleft| : Move to time and select frame of the active layer."
@@ -446,12 +450,12 @@ msgstr ""
 
 #: ../../reference_manual/dockers/animation_curves.rst:142
 msgid ":dfn:`Value Header`"
-msgstr ""
+msgstr ":dfn:`Cabeçalho do Valor`"
 
 #: ../../reference_manual/dockers/animation_curves.rst:144
 msgid "|mouseleft| :kbd:`+ drag` : Zoom graph view."
-msgstr ""
+msgstr "|mouseleft| :kbd:`+ arrastamento` : Ampliação da área do gráfico."
 
 #: ../../reference_manual/dockers/animation_curves.rst:145
 msgid ":kbd:`Space +` |mouseleft| :kbd:`+ drag` : Pan graph view."
-msgstr ""
+msgstr ":kbd:`Espaço +` |mouseleft| :kbd:`+ arrastamento` : Deslocamento da área do gráfico."

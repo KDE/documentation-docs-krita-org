@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: docs_krita_org_reference_manual___resource_management___paintoppresets\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-08-26 21:23+0300\n"
+"PO-Revision-Date: 2021-08-27 15:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -44,7 +44,6 @@ msgid "Brush Preset"
 msgstr "Набір пензлів"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:18
-#, fuzzy
 #| msgid ""
 #| "Paint Op presets store the preview thumbnail, brush-engine, the "
 #| "parameters, the brush tip, and, if possible, the texture. They are saved "
@@ -55,8 +54,8 @@ msgid ""
 "the texture. They are saved as ``.kpp`` files, except for :ref:`MyPaint "
 "brushes <mypaint_brush_engine>`, which are saved as ``.myb`` files."
 msgstr ""
-"У наборах дій з малювання зберігаються мініатюра, рушій пензля, параметри, "
-"кінчик пензля і, якщо можливо, текстура. Набори зберігаються у файлах .kpp."
+"У наборах пензлів, які у Krita мають внутрішню назву ``paintoppresets``, зберігаються мініатюра, рушій пензля, параметри, "
+"кінчик пензля і, якщо можливо, текстура. Набори зберігаються у файлах ``.kpp``, окрім :ref:`пензлів MyPaint <mypaint_brush_engine>`, які зберігаються у файлах ``.myb``."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:20
 msgid ""
@@ -71,9 +70,6 @@ msgid "The Docker"
 msgstr "Бічна панель"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:25
-#| msgid ""
-#| "The docker for Paint-op presets is the :ref:`brush_preset_docker`. Here "
-#| "you can tag, add, remove and search paint op presets."
 msgid ""
 "The docker for Paint-op presets is the :ref:`brush_preset_docker`. Here you "
 "can tag, add, remove and search brush presets."
@@ -87,7 +83,6 @@ msgid "Editing the preview thumbnail"
 msgstr "Редагування мініатюри для попереднього перегляду"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:30
-#, fuzzy
 #| msgid ""
 #| "You can edit the preview thumbnail in the brush-scratchpad, but you can "
 #| "also open the \\*.kpp file in Krita to get a 200x200 file to edit to your "
@@ -100,13 +95,12 @@ msgid ""
 "``_prev`` attached."
 msgstr ""
 "Редагувати мініатюру для попереднього перегляду можна за допомогою нотатника "
-"для пензлів. Крім того, ви можете просто відкрити файл \\*.kpp у Krita і "
-"змінити зображення 200x200 так, як ви цього хочете."
+"для пензлів. Крім того, ви можете просто відкрити файл ``\\*.kpp`` у Krita і "
+"змінити зображення 200x200 так, як ви цього хочете. Для :ref:`пензлів MyPaint <mypaint_brush_engine>` передбачено окремий файл PNG, який повинен мати таку саму назву, що і файл ``.myb``, але із додаванням ``_prev``."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:33
 msgid "Structure"
-msgstr ""
-"Структура"
+msgstr "Структура"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:35
 msgid ""
@@ -117,3 +111,4 @@ msgid ""
 "--> annotations`, or by using the :program:`ImageMagick` command ``identify -"
 "verbose {FILENAME}`` on the ``.kpp``."
 msgstr ""
+":ref:`Пензлі MyPaint <mypaint_brush_engine>` зберігаються у форматі файлів JSON із супутнім зображенням для попереднього перегляду, а файли ``.kpp`` є збіркою файлів PNG, яка містить анотацію у форматі даних XML для рушія пензлів. Ви можете переглянути ці дані, відкривши файл ``.kpp`` і скориставшись пунктами меню :menuselection:`Зображення --> Властивості --> Анотації` або програмою з комплекту :program:`ImageMagick` — ``identify -verbose {НАЗВА_ФАЙЛА}`` для відповідного файла ``.kpp``."
