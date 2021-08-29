@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2020.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2020-04-24 22:45+0200\n"
+"PO-Revision-Date: 2021-08-28 09:21+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 20.08.1\n"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:1
 msgid "The Brush Presets resource in Krita."
@@ -42,7 +42,6 @@ msgid "Brush Preset"
 msgstr "Penselförinställning"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:18
-#, fuzzy
 #| msgid ""
 #| "Paint Op presets store the preview thumbnail, brush-engine, the "
 #| "parameters, the brush tip, and, if possible, the texture. They are saved "
@@ -53,9 +52,11 @@ msgid ""
 "the texture. They are saved as ``.kpp`` files, except for :ref:`MyPaint "
 "brushes <mypaint_brush_engine>`, which are saved as ``.myb`` files."
 msgstr ""
-"Förinställda målaråtgärder lagrar förhandsgranskningsminiatyrbilden, "
-"penselgränssnittet, parametrarna, penselspetsen, och om möjligt, strukturen. "
-"De sparas som .kpp-filer."
+"Förinställda målaråtgärder, kända som ``paintoppresets`` internt i Krita,"
+" lagrar förhandsgranskningsminiatyrbilden, penselgränssnittet, parametrarna,"
+" penselspetsen, och om möjligt, strukturen. De sparas som ``.kpp``-filer,"
+" utom för :ref:`MyPaint-penslar <mypaint_brush_engine>`, som sparas som"
+" ``.myb``-filer."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:20
 msgid ""
@@ -70,7 +71,6 @@ msgid "The Docker"
 msgstr "Panelen"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:25
-#, fuzzy
 #| msgid ""
 #| "The docker for Paint-op presets is the :ref:`brush_preset_docker`. Here "
 #| "you can tag, add, remove and search paint op presets."
@@ -78,16 +78,14 @@ msgid ""
 "The docker for Paint-op presets is the :ref:`brush_preset_docker`. Here you "
 "can tag, add, remove and search brush presets."
 msgstr ""
-"Panelen med förinställda målaråtgärder är :ref:`brush_preset_docker`. Här "
-"kan förinställda målaråtgärder etiketteras, läggas till, tas bort och "
-"eftersökas."
+"Panelen med förinställda målaråtgärder är :ref:`brush_preset_docker`. Här kan"
+" penselförinställningar etiketteras, läggas till, tas bort och eftersökas."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:28
 msgid "Editing the preview thumbnail"
 msgstr "Redigera förhandsgranskningsminiatyrbilden"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:30
-#, fuzzy
 #| msgid ""
 #| "You can edit the preview thumbnail in the brush-scratchpad, but you can "
 #| "also open the \\*.kpp file in Krita to get a 200x200 file to edit to your "
@@ -99,13 +97,15 @@ msgid ""
 "seperate PNG file which is the same name as the ``.myb`` file, except with "
 "``_prev`` attached."
 msgstr ""
-"Förhandsgranskningsminiatyrbilden i penselns kladdblock kan redigeras, men "
-"det går också att öppna \\*.kpp-filen i Krita för att få en 200x200 fil att "
-"redigera efter behov."
+"Förhandsgranskningsminiatyrbilden i penselns kladdblock kan redigeras, men"
+" det går också att öppna ``\\*.kpp``-filen i Krita för att få en 200 x 200"
+" fil att redigera efter behov. För :ref:`MyPaint-penslar <"
+"mypaint_brush_engine>`, finns en separat PNG-fil som har samma namn som"
+" ``.myb``-filen, förutom att ``_prev`` är tillagt."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:33
 msgid "Structure"
-msgstr ""
+msgstr "Struktur"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:35
 msgid ""
@@ -116,3 +116,9 @@ msgid ""
 "--> annotations`, or by using the :program:`ImageMagick` command ``identify -"
 "verbose {FILENAME}`` on the ``.kpp``."
 msgstr ""
+":ref:`MyPaint-penslar <mypaint_brush_engine>` lagras som JSON-filer med en"
+" medföljande förhandsgranskningsbild, medan ``.kpp``-filer är PNG:er som"
+" innehåller kommentarer med XML-data för penselgränssnittet. Man kan visa"
+" data när ``.kpp``-filen är öppen, via :menuselection:`Bild --> Egenskaper --"
+"> Kommentarer`, eller genom att använda kommandot ``identify -verbose"
+" {FILNAMN}`` med ``.kpp``-filen i :program:`ImageMagick`."
