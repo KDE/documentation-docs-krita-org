@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: websites-docs-krita-org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-08-24 20:15+0200\n"
+"PO-Revision-Date: 2021-08-30 16:40+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -62,6 +62,7 @@ msgstr "HEIC"
 msgid "\\*.heif and \\*.avif"
 msgstr "\\*.heif i \\*.avif"
 
+# skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:18
 msgid ""
 "The High Efficiency Image Format (``*.heif``, ``*.heic``), and it's cousin, "
@@ -70,6 +71,12 @@ msgid ""
 "with mobile phones as their default image file format, and ``*.avif`` is to "
 "be natively supported by all web browsers within the next few years."
 msgstr ""
+"El format d'imatge d'alta eficiència (``*.heif``, ``*.heic``) i el seu cosí, "
+"el format d'imatge AV1 (``*.avif``) són formats que utilitzen còdecs de vídeo "
+"(``H264``, ``H265`` i ``AV1``) per a emmagatzemar les seves dades. Cada "
+"vegada són més populars amb els telèfons mòbils com el seu format de fitxer "
+"d'imatge predeterminat, i ``*.avif`` hauria de ser admès de forma nativa per "
+"tots els navegadors web en els propers anys."
 
 #: ../../general_concepts/file_formats/file_heif.rst:20
 msgid ""
@@ -77,6 +84,10 @@ msgid ""
 "formats. Furthermore, it can save 8 bit, will save 16 bit integer as 12 bit, "
 "and can save 16 and 32 bit float as 12 bit, with an HDR color space."
 msgstr ""
+"El Krita admet les imatges :ref:`model_gray` i :ref:`model_rgb` en aquests "
+"formats. A més, pot desar en 8 bits, desarà un enter de 16 bits com de 12 "
+"bits i pot desar un flotant de 16 i 32 bits com de 12 bits, amb un espai de "
+"color en HDR."
 
 #: ../../general_concepts/file_formats/file_heif.rst:22
 msgid ""
@@ -86,6 +97,12 @@ msgid ""
 "fine details may lose said detail (for example, cat whiskers seem to get "
 "lost), and thus :ref:`file_jpeg` might be better suited."
 msgstr ""
+"En comparació amb :ref:`file_png` i :ref:`file_jpeg`, aquests formats "
+"tendeixen a suavitzar les textures perquè siguin més fàcils de comprimir i, "
+"per tant, ideals per a imatges nítides amb molts degradats suaus. Les imatges "
+"amb molta textura o detalls fins poden perdre aquest detall (per exemple, els "
+"bigotis de gat semblen perdre), i per tant, el :ref:`file_jpeg` podria ser "
+"més adequat."
 
 #: ../../general_concepts/file_formats/file_heif.rst:25
 msgid "Import Options"
@@ -98,6 +115,10 @@ msgid ""
 "automated for the most part, with Krita selecting or generating the "
 "appropriate ICC profile where necessary."
 msgstr ""
+"El Krita admet tots els espais de color que poden gestionar aquests formats, "
+"i es convertiran en el cas dels pocs formats que no sap com gestionar. Això "
+"ha estat automatitzat en la seva major part, seleccionant o generant amb el "
+"Krita el perfil ICC apropiat quan sigui necessari."
 
 #: ../../general_concepts/file_formats/file_heif.rst:29
 msgid ""
@@ -105,6 +126,9 @@ msgid ""
 "Hybrid Log Gamma or SMPTE ST 428 transfer functions, will be converted to a "
 "linear 32 bit floating point version of that color space."
 msgstr ""
+"Les imatges que estan en HDR, de manera que les que tenen les funcions de "
+"transferència quantificació perceptiva, Hybrid Log Gamma o SMPTE ST 428, es "
+"convertiran a una versió de coma flotant de 32 bits en aquest espai de color."
 
 #: ../../general_concepts/file_formats/file_heif.rst:31
 msgid ""
@@ -117,6 +141,14 @@ msgid ""
 "this image with HLG, it's recommended to reuse the same values for the "
 "reverse OOTF there."
 msgstr ""
+"No obstant això, l'Hybrid Log Gamma necessita un pas de conversió addicional, "
+"ja que el Krita actualment no admet l'enviament de dades HLG a la pantalla. "
+"Per a aquesta conversió des de :dfn:`Escena lineal a mostrar lineal`, hauríeu "
+"de conèixer la vostra :dfn:`gamma de mostrar` i :dfn:`brillantor màxima`. Els "
+"valors de brillantor i gamma predeterminats són els utilitzats per a una "
+"conversió des de HLG a PQ, i probablement la vostra millor aposta quan el "
+"monitor pugui mostrar l'HDR del Krita. En exportar aquesta imatge amb HLG, es "
+"recomana reutilitzar els mateixos valors que per a l'OTF."
 
 #: ../../general_concepts/file_formats/file_heif.rst:33
 msgid "Apply Hybrid Log Gamma OOTF"
@@ -128,6 +160,9 @@ msgid ""
 "values to display linear, and thus it's necessity is completely dependant on "
 "your HDR workflow. If in doubt, apply."
 msgstr ""
+"Ja sigui per a aplicar el pas de conversió addicional. Això convertirà els "
+"valors lineals de l'escena a mostrar lineal, i per tant, depèn completament "
+"del vostre flux de treball en HDR. En cas de dubte, apliqueu."
 
 #: ../../general_concepts/file_formats/file_heif.rst:35
 #: ../../general_concepts/file_formats/file_heif.rst:82
@@ -138,6 +173,8 @@ msgstr "Gamma"
 #: ../../general_concepts/file_formats/file_heif.rst:83
 msgid "Approximate display gamma. Default value is 1.2 for conversion to PQ."
 msgstr ""
+"La gamma aproximada de visualització. El valor predeterminat és 1.2 per a la "
+"conversió a PQ."
 
 #: ../../general_concepts/file_formats/file_heif.rst:38
 #: ../../general_concepts/file_formats/file_heif.rst:85
@@ -150,6 +187,8 @@ msgid ""
 "Maximum display brightness. Default value is 10.000 cd/m² for conversion to "
 "PQ."
 msgstr ""
+"La brillantor màxima de visualització. El valor predeterminat és 10.000 cd/m² "
+"per a la conversió a PQ."
 
 #: ../../general_concepts/file_formats/file_heif.rst:41
 msgid "Export Options"
@@ -164,6 +203,8 @@ msgid ""
 "Use the lossless encoding options. Disables the :guilabel:`Lossy Advanced "
 "Settings`."
 msgstr ""
+"Utilitzeu les opcions de codificació sense pèrdua. Inhabiliteu "
+":guilabel:`Configuració avançada per a la pèrdua`."
 
 #: ../../general_concepts/file_formats/file_heif.rst:46
 msgid "Lossy Advanced Settings"
@@ -178,6 +219,9 @@ msgid ""
 "Determines how much the encoder should prioritize quality over compression. "
 "Higher values look better, but lower values have a lower file size."
 msgstr ""
+"Determina quant s'ha de prioritzar el codificador de qualitat sobre la "
+"compressió. Els valors més alts es veuen millor, però els valors més baixos "
+"tenen una mida menor de fitxer."
 
 #: ../../general_concepts/file_formats/file_heif.rst:49
 msgid ""
@@ -352,27 +396,40 @@ msgstr ""
 "`Format de fitxer d'imatge d'alta eficiència a la Wikipedia <https://en."
 "wikipedia.org/wiki/High_Efficiency_Image_File_Format>`_"
 
+# skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:91
 msgid ""
 "`H.273 : Coding-independent code points for video signal type identification "
 "<https://www.itu.int/rec/T-REC-H.273/en>`_"
 msgstr ""
+"`H.273: Punts de codi independents de la codificació per a la identificació "
+"del tipus de senyal de vídeo <https://www.itu.int/rec/T-REC-H.273/en>`_"
 
+# skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:93
 msgid ""
 "`BT.2100 : Image parameter values for high dynamic range television for use "
 "in production and international programme exchange <https://www.itu.int/rec/"
 "R-REC-BT.2100-2-201807-I/en>`_"
 msgstr ""
+"`BT.2100: Valors dels paràmetres d'imatge per a la televisió amb marge "
+"dinàmic elevat per al seu ús en la producció i l'intercanvi internacional de "
+"programes <https://www.itu.int/rec/R-REC-BT.2100-2-201807-I/en>`_"
 
+# skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:94
 msgid ""
 "`Perceptual Quantizer on Wikipedia <https://en.wikipedia.org/wiki/"
 "Perceptual_quantizer>`_"
 msgstr ""
+"`Quantificador perceptiu a la Wikipedia <https://en.wikipedia.org/wiki/"
+"Perceptual_quantizer>`_"
 
+# skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:95
 msgid ""
 "`Hybrid Log Gamma on Wikipedia <https://en.wikipedia.org/wiki/Hybrid_log"
 "%E2%80%93gamma>`_"
 msgstr ""
+"`Hybrid Log Gamma a la Wikipedia <https://en.wikipedia.org/wiki/"
+"Hybrid_log%E2%80%93gamma>`_"

@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-08-22 15:30\n"
+"PO-Revision-Date: 2021-08-30 11:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___dockers___layers.pot\n"
 "X-Crowdin-File-ID: 9764\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -46,7 +46,7 @@ msgstr "图层"
 #: ../../reference_manual/dockers/layers.rst:12
 #: ../../reference_manual/dockers/layers.rst:37
 msgid "Blending Mode"
-msgstr "混色模式"
+msgstr "混合模式"
 
 #: ../../reference_manual/dockers/layers.rst:12
 #: ../../reference_manual/dockers/layers.rst:49
@@ -87,8 +87,8 @@ msgid ""
 "do many other things to layers here."
 msgstr ""
 "图层面板是 Krita :ref:`图层管理功能 <layers_and_masks>` 的核心。你可以使用此"
-"面板新增、删除、重命名、复制图层，并对它们进行混色、分组、分配颜色标签、应用"
-"蒙版等各种相关操作。"
+"面板新增、删除、重命名、复制图层，设置混合模式、建立图层组、分配颜色标签、应"
+"用蒙版等各种相关操作。"
 
 #: ../../reference_manual/dockers/layers.rst:23
 msgid ""
@@ -99,6 +99,10 @@ msgid ""
 "allows you to control the thumbnail size of the layers. Some people prefer "
 "large thumbnails, others want them really small."
 msgstr ""
+"图层面板的顶部有四个控件。其中两个控制图层属性：混合模式和不透明度。另外还有"
+"两个较小的按钮，第一个按钮弹出筛选选项，用于对所有图层按照颜色标签或图层名称 "
+"(5.0 起) 进行筛选显示；第二个按钮弹出缩略图大小选项，可以调整图层缩略图的大"
+"小。"
 
 #: ../../reference_manual/dockers/layers.rst:26
 msgid "The Layer Stack"
@@ -114,8 +118,8 @@ msgid ""
 msgstr ""
 "在图层列表中点击可以选择活动图层，拖放可以改变图层顺序。按住 :kbd:`Shift` "
 "或 :kbd:`Ctrl` 可以进行多选，被选中的多个图层可以同时拖放。图层可以分组，每个"
-"分组可以随时展开和折叠。你还可以在这里重命名图层、更改图层可见性、锁定状态、"
-"继承透明度等属性。"
+"图层组可以随时展开和折叠。你还可以在这里重命名图层、更改图层可见性、锁定状"
+"态、继承透明度等属性。"
 
 #: ../../reference_manual/dockers/layers.rst:31
 msgid "Name"
@@ -130,10 +134,8 @@ msgstr ""
 "辑。"
 
 #: ../../reference_manual/dockers/layers.rst:34
-#, fuzzy
-#| msgid "Label"
 msgid "Color Label"
-msgstr "标签"
+msgstr "颜色标签"
 
 #: ../../reference_manual/dockers/layers.rst:36
 msgid ""
@@ -141,8 +143,8 @@ msgid ""
 "a context menu to assign a color to it. You can then later filter on these "
 "colors."
 msgstr ""
-"你可以给图层指定一个颜色标签，然后通过颜色标签对它们进行过滤。在图层上右键单"
-"击 |mouseright| 弹出菜单，从中可以选择需要的颜色。"
+"你可以给图层指定一个颜色标签，然后通过颜色标签对它们进行筛选显示。在图层上右"
+"键单击 |mouseright| 弹出菜单，从中可以选择需要的颜色。"
 
 #: ../../reference_manual/dockers/layers.rst:39
 msgid "This will set the :ref:`blending_modes` of the layer."
@@ -196,10 +198,10 @@ msgid ""
 "masks currently, therefore these have a strike-through on group layers set "
 "to pass-through."
 msgstr ""
-"分组图层最右边的“砖墙”图标，控制分组内部图层的混色模式能否穿透分组影响到外面"
-"的图层。启用时图标上会显示“穿透”箭头，分组的混色模式会自动停用，分组内部的混"
-"色模式将影响到分组下方的外部图层。此功能目前不兼容分组蒙版，如果分组启用了穿"
-"透模式，则该分组的蒙版名称会被划掉。"
+"图层组最右边有一个“砖墙”图标，用于控制图层组内部图层的混合模式能否穿透图层组"
+"影响到外面的图层。启用时图标上会显示“穿透”箭头，图层组的混合模式会自动停用，"
+"图层组内部的混合模式将影响到图层组下方的外部图层。此功能目前不兼容图层组蒙"
+"版，如果图层组启用了穿透模式，则该图层组的蒙版名称会被划掉。"
 
 #: ../../reference_manual/dockers/layers.rst:57
 msgid ""
@@ -208,8 +210,8 @@ msgid ""
 msgstr ""
 "图层右边的“Alpha 字母”图标，点击可以切换该图层的继承透明度选项。启用后图标会"
 "被点亮，该图层的不透明区域将被它下方所有图层合并后的不透明区域所限制。由于一"
-"般情况下图像都有一个完全填满画面的底色图层，此功能需要配合图层分组才能发挥价"
-"值。详情可参考  :ref:`layers_and_masks` 一节。"
+"般情况下图像都有一个完全填满画面的底色图层，此功能需要配合图层组才能发挥价"
+"值。详情可参考 :ref:`layers_and_masks` 一节。"
 
 #: ../../reference_manual/dockers/layers.rst:58
 msgid "Open or Close Layers"
@@ -257,6 +259,8 @@ msgid ""
 "By drag-and-dropping colors from the :ref:`palette <palette_docker>` onto "
 "the layer stack, you can quickly create a :ref:`fill layer <fill_layers>`."
 msgstr ""
+"从 :ref:`色板 <palette_docker>` 面板直接拖放一个颜色到图层面板，即可快速创建"
+"一个 :ref:`填充图层 <fill_layers>`\\ 。"
 
 #: ../../reference_manual/dockers/layers.rst:76
 msgid ".. image:: images/layers/Krita-multi-layer-edit.png"
@@ -303,7 +307,7 @@ msgid ""
 "Will move the active layer up. Will switch them out and in groups when "
 "coming across them."
 msgstr ""
-"将向上移动选定图层。遇到图层分组的上下边界时，将把图层移入或者移出分组。"
+"将向上移动选定图层。遇到图层组的上下边界时，将把图层移入或者移出图层组。"
 
 #: ../../reference_manual/dockers/layers.rst:88
 msgid "Move layer down."
@@ -314,7 +318,7 @@ msgid ""
 "Will move the active layer down. Will switch them out and in groups when "
 "coming across them."
 msgstr ""
-"将向下移动选定图层。遇到图层分组的上下边界时，将把图层移入或者移出分组。"
+"将向下移动选定图层。遇到图层组的上下边界时，将把图层移入或者移出图层组。"
 
 #: ../../reference_manual/dockers/layers.rst:90
 msgid "Layer properties."
@@ -391,7 +395,7 @@ msgid ""
 ":kbd:`Ctrl + G` shortcut will create a group layer. If multiple layers are "
 "selected, they are put into the group layer."
 msgstr ""
-"按 :kbd:`Ctrl + G` 将创建一个分组图层，并把当前选中的图层移进这个分组里。"
+"按 :kbd:`Ctrl + G` 将创建一个图层组，并把当前选中的图层移进这个图层组。"
 
 #: ../../reference_manual/dockers/layers.rst:106
 msgid ""
@@ -399,12 +403,12 @@ msgid ""
 "the selected layers added into the group, and a new layer added on top with "
 "alpha-inheritance turned on, ready for painting!"
 msgstr ""
-"按 :kbd:`Ctrl + Shift + G` 将新建一个剪贴分组。当前选中的图层会被移到分组内部"
-"作为最底层，然后在它上面新建一个颜料图层并启用继承透明度。"
+"按 :kbd:`Ctrl + Shift + G` 将新建一个剪贴图层组。当前选中的图层会被移到图层组"
+"内部作为最底层，然后在它上面新建一个颜料图层并启用继承透明度。"
 
 #: ../../reference_manual/dockers/layers.rst:107
 msgid ":kbd:`Ctrl + Alt + G` shortcut will ungroup layers inside a group."
-msgstr "按 :kbd:`Ctrl + Alt + G` 将把选中的图层移出分组。"
+msgstr "按 :kbd:`Ctrl + Alt + G` 将把选中的图层移出图层组。"
 
 #: ../../reference_manual/dockers/layers.rst:108
 msgid ""

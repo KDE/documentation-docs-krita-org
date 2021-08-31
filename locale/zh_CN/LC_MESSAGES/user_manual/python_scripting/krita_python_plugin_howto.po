@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-08-22 15:30\n"
+"PO-Revision-Date: 2021-08-30 11:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,6 +17,7 @@ msgstr ""
 "docs_krita_org_user_manual___python_scripting___krita_python_plugin_howto."
 "pot\n"
 "X-Crowdin-File-ID: 9806\n"
+"Language: zh_CN\n"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:1
 msgid "Guide on all the specifics of creating Krita python plugins."
@@ -78,20 +78,6 @@ msgid "Getting Krita to recognize your plugin"
 msgstr "创建 Krita 能够识别的插件"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:30
-#, fuzzy
-#| msgid ""
-#| "A script in Krita has two components - the script directory (holding your "
-#| "script's Python files) and a \".desktop\" file that Krita uses to load "
-#| "and register your script. For Krita to load your script both of these "
-#| "must put be in the pykrita subdirectory of your Krita resources folder "
-#| "(on Linux  ~/.local/share/krita/pykrita). To find your resources folder "
-#| "start Krita and click the :menuselection:`Settings --> Manage Resources..."
-#| "` menu item. This will open a dialog box. Click the :guilabel:`Open "
-#| "Resources Folder` button. This should open a file manager on your system "
-#| "at your Krita resources folder. See the `API <https://api.kde.org/"
-#| "extragear-api/graphics-apidocs/krita/libs/libkis/html/index.html>`_ docs "
-#| "under \"Auto starting scripts\".  If there is no pykrita subfolder in the "
-#| "Krita resources directory use your file manager to create one."
 msgid ""
 "A script in Krita has two components -- the script directory (holding your "
 "script's Python files) and a \".desktop\" file that Krita uses to load and "
@@ -108,23 +94,22 @@ msgid ""
 msgstr ""
 "Krita 的脚本由两部分组成：脚本的文件夹和脚本的\".desktop\" 文件。 脚本的文件"
 "夹保存了脚本的 Python 文件，而 desktop 文件则供 Krita 载入和注册该脚本使用。"
-"要让 Krita 载入你的脚本，两者必须同时被放置在 Krita 的资源文件夹的 pykrita 子"
-"文件夹里面 (Linux 环境下为 ~/.local/share/krita/pykrita)。要显示资源文件夹，"
-"可在菜单栏打开 :menuselection:`设置 --> 管理资源` 对话框。点击 :guilabel:`打"
-"开资源文件夹` 按钮后，系统自带的资源管理器将会显示 Krita 的资源文件夹。具体操"
-"作可参考 `API 文档 <https://api.kde.org/extragear-api/graphics-apidocs/krita/"
-"libs/libkis/html/index.html>`_ 的“Auto starting scripts”一节。如果 Krita 的资"
-"源文件夹里没有 pykrita 子文件夹，可以用资源管理器新建一个。"
+"要让 Krita 载入你的脚本，两者必须同时被放置在 Krita 的资源文件夹的 :file:"
+"`pykrita` 子文件夹里面 (不同操作系统的路径不同，请参见 :ref:"
+"`resource_management` 页面)。要显示资源文件夹，可在菜单栏打开 :menuselection:"
+"`设置 --> 管理资源` 对话框。点击 :guilabel:`打开资源文件夹` 按钮后，系统自带"
+"的资源管理器将会显示 Krita 的资源文件夹。具体操作可参考 `API 文档 <https://"
+"api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/index."
+"html>`_ 的“Auto starting scripts”一节。如果 Krita 的资源文件夹里没有 :file:"
+"`pykrita` 子文件夹，请使用系统的资源管理器新建一个。"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:32
-#, fuzzy
-#| msgid ""
-#| "Scripts are identified by a file that ends in a .desktop extension that "
-#| "contain information about the script itself."
 msgid ""
 "Scripts are identified by a file that ends in a ``.desktop`` extension that "
 "contain information about the script itself."
-msgstr "Krita 通过 .desktop 文件识别插件，该文件包含了脚本的基本信息。"
+msgstr ""
+"Krita 通过带有 ``.desktop`` 扩展名的文件识别插件，该文件包含了脚本的基本信"
+"息。"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:34
 msgid ""
@@ -169,10 +154,8 @@ msgid "ServiceTypes"
 msgstr "ServiceTypes"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:50
-#, fuzzy
-#| msgid "This should always be Krita/PythonPlugin for python plugins."
 msgid "This should always be ``Krita/PythonPlugin`` for python plugins."
-msgstr "对于 Krita 的 Python 插件，此项应总是被设为 Krita/PythonPlugin。"
+msgstr "对于 Krita 的 Python 插件，此项必须设为 ``Krita/PythonPlugin`` 。"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:51
 msgid "X-KDE-Library"
@@ -228,16 +211,12 @@ msgid "The description that will show up in the Python Plugin Manager."
 msgstr "插件在 Python 插件管理器中的描述。"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:62
-#, fuzzy
-#| msgid ""
-#| "Krita python plugins need to be python modules, so make sure there's an "
-#| "__init__.py script, containing something like..."
 msgid ""
 "Krita python plugins need to be python modules, so make sure there's an "
 "``__init__.py`` script, containing something like..."
 msgstr ""
-"Krita 的 Python 插件必须是 Python 模块，因此每个插件都要包含一个 __init__.py "
-"脚本，该脚本包含下面这行代码："
+"Krita 的 Python 插件必须是 Python 模块，因此每个插件都要包含一个 ``__init__."
+"py`` 脚本，该脚本包含下面这行代码："
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:68
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:89
@@ -271,52 +250,36 @@ msgid "Summary"
 msgstr "小结"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:76
-#, fuzzy
-#| msgid "In summary, if you want to create a script called *myplugin*:"
 msgid "In summary, if you want to create a script called ``myplugin``:"
-msgstr "总而言之，如果你想要创建一个叫做 *myplugin* 的脚本："
+msgstr "总而言之，如果你想要创建一个叫做 ``myplugin`` 的脚本："
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:79
-#, fuzzy
-#| msgid "in your Krita *resources/pykrita* directory create"
 msgid "in your Krita :file:`resources/pykrita` directory create"
-msgstr "在 Krita 的资源文件夹的 pykrita 子文件夹里面"
+msgstr "在 Krita 的 :file:`resources/pykrita` 子文件夹里面"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:79
-#, fuzzy
-#| msgid "a folder called *myplugin*"
 msgid "a folder called :file:`myplugin`"
-msgstr "创建一个名为 *myplugin* 的文件夹"
+msgstr "创建一个名为 :file:`myplugin` 的文件夹"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:80
-#, fuzzy
-#| msgid "a file called *myplugin.desktop*"
 msgid "a file called :file:`myplugin.desktop`"
-msgstr "创建一个名为 *myplugin.desktop* 的文件"
+msgstr "创建一个名为 :file:`myplugin.desktop` 的文件"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:82
-#, fuzzy
-#| msgid "in the *myplugin* folder create"
 msgid "in the :file:`myplugin` folder create"
-msgstr "在 *myplugin* 文件夹里面"
+msgstr "在 :file:`myplugin` 文件夹里面"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:82
-#, fuzzy
-#| msgid "a file called *__init__.py*"
 msgid "a file called :file:`__init__.py`"
-msgstr "创建一个名为 *__init__.py* 的文件"
+msgstr "创建一个名为 :file:`__init__.py` 的文件"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:83
-#, fuzzy
-#| msgid "a file called *myplugin.py*"
 msgid "a file called :file:`myplugin.py`"
-msgstr "创建一个名为 *myplugin.py* 的文件"
+msgstr "创建一个名为 :file:`myplugin.py` 的文件"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:84
-#, fuzzy
-#| msgid "in the *__init__.py* file put this code:"
 msgid "in the :file:`__init__.py` file put this code:"
-msgstr "在 *__init__.py* 文件里放置这行代码："
+msgstr "在 :file:`__init__.py` 文件里加入这行代码："
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:90
 msgid "in the desktop file put this code::"
@@ -341,10 +304,8 @@ msgstr ""
 "Comment=Our very own plugin."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:100
-#, fuzzy
-#| msgid "write your script in the ''myplugin/myplugin.py'' file."
 msgid "write your script in the :file:`myplugin/myplugin.py` file."
-msgstr "在 “myplugin/myplugin.py” 文件里编写脚本代码。"
+msgstr "在 :file:`myplugin/myplugin.py` 文件中编写脚本代码。"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:103
 msgid "Creating an extension"
@@ -444,10 +405,6 @@ msgid "\"myAction\""
 msgstr "\"myAction\""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:139
-#, fuzzy
-#| msgid ""
-#| "This should be replaced with a unique id that Krita will use to find the "
-#| "action."
 msgid ""
 "This should be replaced with a unique ID that Krita will use to find the "
 "action."
@@ -458,10 +415,8 @@ msgid "\"My Script\""
 msgstr "\"My Script\""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:141
-#, fuzzy
-#| msgid "This is what will be visible in the tools menu."
 msgid "This is what will be visible in the :ref:`tools_menu`."
-msgstr "此项为该脚本在工具菜单中的显示名称。"
+msgstr "此项将作为工具名称显示在\\ :ref:`tools_menu`\\ 。"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:143
 msgid ""
@@ -560,18 +515,14 @@ msgstr ""
 "--> 配置 Krita --> 键盘快捷键` 列表中列出。"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:186
-#, fuzzy
-#| msgid ""
-#| "Krita, for various reasons, only adds actions to the shortcuts menu when "
-#| "they are present in an .action file. The action file to get our action to "
-#| "be added to shortcuts should look like this:"
 msgid ""
 "Krita, for various reasons, only adds actions to the :ref:"
 "`shortcut_settings` when they are present in an ``.action`` file. The action "
 "file to get our action to be added to the shortcuts should look like this:"
 msgstr ""
-"Krita 出于某些考虑，只会把提供了 .action 文件的操作添加到快捷键列表。要把我们"
-"之前编写的操作添加到快捷键列表，我们需要编写一个 action 文件："
+"Krita 出于某些考虑，只会将 ``.action`` 文件中包含的操作添加到\\ :ref:"
+"`shortcut_settings`\\ 列表。为了将我们之前编写的操作添加到快捷键列表，我们需"
+"要如下编写 action 文件："
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:210
 msgid ""
@@ -632,10 +583,6 @@ msgid "name"
 msgstr "name"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:214
-#, fuzzy
-#| msgid ""
-#| "This should be the unique id you made for your action when creating it in "
-#| "the setup of the extension."
 msgid ""
 "This should be the unique ID you made for your action when creating it in "
 "the setup of the extension."
@@ -646,10 +593,6 @@ msgid "icon"
 msgstr "icon"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:216
-#, fuzzy
-#| msgid ""
-#| "the name of a possible icon. These will only show up on KDE plasma, "
-#| "because Gnome and Windows users complained they look ugly."
 msgid ""
 "The name of a possible icon. These will only show up on KDE plasma, because "
 "Gnome and Windows users complained they look ugly."
@@ -743,14 +686,6 @@ msgid "The status tip that is displayed on a status bar."
 msgstr "指定显示在状态栏的提示文字。"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:236
-#, fuzzy
-#| msgid ""
-#| "Save this file as \"myplugin.action\" where myplugin is the name of your "
-#| "plugin. The action file should be saved, not in the pykrita resources "
-#| "folder, but rather in a resources folder named \"actions\". (So, share/"
-#| "pykrita is where the python plugins and desktop files go, and share/"
-#| "actions is where the action files go) Restart Krita. The shortcut should "
-#| "now show up in the shortcut action list."
 msgid ""
 "Save this file as ``myplugin.action`` where myplugin is the name of your "
 "plugin. The action file should be saved, not in the pykrita resources "
@@ -759,11 +694,11 @@ msgid ""
 "actions`` is where the action files go) Restart Krita. The shortcut should "
 "now show up in the shortcut action list."
 msgstr ""
-"把该文件保存为“myplugin.action”，“myplugin”字串应与你的插件名称相同。要注意的"
-"是，action 文件不应该保存在资源文件夹的 pykrita 子文件夹，而应该保存在 "
-"actions 子文件夹。(把 Python 插件和 desktop 文件放在 share/pykrita 文件夹，"
-"把 action 文件放在 share/actions 文件夹) 重新启动 Krita。现在应该可以在快捷键"
-"列表找到该操作了。"
+"将该文件保存为 ``myplugin.action`` ，“myplugin”字串应与你的插件名称相同。要注"
+"意的是，action 文件不应该保存在资源文件夹的 pykrita 子文件夹，而应该保存在 "
+"actions 子文件夹。(把 Python 插件和 desktop 文件放在 ``share/pykrita`` 文件"
+"夹，把 action 文件放在 ``share/actions`` 文件夹) 重新启动 Krita。现在应该可以"
+"在快捷键列表找到该操作了。"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:239
 msgid "Creating a docker"
@@ -832,10 +767,6 @@ msgid "\"myDocker\""
 msgstr "\"myDocker\""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:264
-#, fuzzy
-#| msgid ""
-#| "Replace this with an unique ID for your docker that Krita uses to keep "
-#| "track of it."
 msgid ""
 "Replace this with a unique ID for your docker that Krita uses to keep track "
 "of it."
@@ -846,16 +777,13 @@ msgid "DockWidgetFactoryBase.DockRight"
 msgstr "DockWidgetFactoryBase.DockRight"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:266
-#, fuzzy
-#| msgid ""
-#| "The location. These can be DockTornOff, DockTop, DockBottom, DockRight, "
-#| "DockLeft, or DockMinimized"
 msgid ""
 "The location. These can be ``DockTornOff``, ``DockTop``, ``DockBottom``, "
 "``DockRight``, ``DockLeft``, or ``DockMinimized``"
 msgstr ""
-"此项指定面板的位置，可以是 DockTornOff、DockTop、DockBottom、DockRight、"
-"DockLeft 或者 DockMinimized。"
+"此项指定面板的位置，可以是\\ ``DockTornOff``\\ 、\\ ``DockTop``\\ 、\\ "
+"``DockBottom``\\ 、\\ ``DockRight``\\ 、\\ ``DockLeft``\\ 、\\ "
+"``DockMinimized``\\ 。"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:268
 msgid "MyDocker"
@@ -890,16 +818,12 @@ msgstr ""
 "io/qt-5/qwidget.html>`_ 给该程序类编写的文档的翻版。"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:274
-#, fuzzy
-#| msgid ""
-#| "Anyway, what we need to do first is that we need to create a QWidget, "
-#| "it's not very complicated, under setWindowTitle, add:"
 msgid ""
 "Anyway, what we need to do first is that we need to create a ``QWidget``, "
 "it's not very complicated, under ``setWindowTitle``, add:"
 msgstr ""
-"不管怎样，我们首先要做的是创建一个 QWidget，这并不是非常复杂，在 "
-"setWindowTitle 下面添加："
+"不管怎样，我们首先要做的是创建一个 ``QWidget`` ，这并不特别复杂，在 "
+"``setWindowTitle`` 下面添加："
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:280
 msgid ""
@@ -945,16 +869,12 @@ msgstr ""
 "用我们编写的导出功能。"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:295
-#, fuzzy
-#| msgid ""
-#| "However, the button looks aligned a bit oddly. That's because our "
-#| "mainWidget has no layout. Let's quickly do that:"
 msgid ""
 "However, the button looks aligned a bit oddly. That's because our "
 "``mainWidget`` has no layout. Let's quickly do that:"
 msgstr ""
-"不过这个按钮在界面里的位置有点不舒服。这是因为我们的 mainWidget 部件没有布"
-"局。让我们完成这一步："
+"不过这个按钮在界面里的位置有点不舒服。这是因为我们的 ``mainWidget`` 部件没有"
+"布局。让我们完成这一步："
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:301
 msgid ""
@@ -983,14 +903,6 @@ msgid "PyQt Signals and Slots"
 msgstr "创建 PyQt 信号和信号槽"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:309
-#, fuzzy
-#| msgid ""
-#| "We've already been using PyQt signals and slots already, but there are "
-#| "times where you want to create your own signals and slots. `As PyQt's "
-#| "documentation is pretty difficult to understand <https://www."
-#| "riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html>`_, and the "
-#| "way how signals and slots are created is very different from C++ Qt, "
-#| "we're explaining it here:"
 msgid ""
 "We've already been using PyQt signals and slots already, but there are times "
 "when you want to create your own signals and slots. `As PyQt's documentation "
@@ -1004,12 +916,6 @@ msgstr ""
 "C++ 下的 Qt 很不一样，因此我们在此展开说明一下："
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:312
-#, fuzzy
-#| msgid ""
-#| "All python functions you make in PyQt can be understood as slots, meaning "
-#| "that they can be connected to signals like Action.triggered or "
-#| "QPushButton.clicked. However, QCheckBox has a signal for toggled, which "
-#| "sends a boolean. How do we get our function to accept that boolean?"
 msgid ""
 "All python functions you make in PyQt can be understood as slots, meaning "
 "that they can be connected to signals like ``Action.triggered`` or "
@@ -1017,8 +923,9 @@ msgid ""
 "which sends a boolean. How do we get our function to accept that boolean?"
 msgstr ""
 "你使用 PyQt 制作的所有 Python 功能都可以被看作是信号槽。这意味着它们可以接受 "
-"Action.triggered 或者 QPushButton.clicked 这样的信号。但 QCheckBox 有一个开关"
-"信号，它发送的是布尔值。我们要怎样才能使功能的信号槽接受布尔值呢？"
+"``Action.triggered`` 或者 ``QPushButton.clicked`` 这样的信号。但 "
+"``QCheckBox`` 有一个开关信号，它发送的是布尔值。我们要怎样才能使功能的信号槽"
+"接受布尔值呢？"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:314
 msgid "First, make sure you have the right import for making custom slots:"

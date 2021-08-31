@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-26 00:12+0000\n"
-"PO-Revision-Date: 2021-08-22 15:30\n"
+"PO-Revision-Date: 2021-08-30 11:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_contributors_manual___krita_manual_conventions.pot\n"
 "X-Crowdin-File-ID: 9916\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -1445,7 +1445,7 @@ msgstr "Wolthera"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:556
 msgid "Text for Non-English Translations Only"
-msgstr ""
+msgstr "仅在非英语版本中显示的文本"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:558
 msgid ""
@@ -1453,6 +1453,8 @@ msgid ""
 "English translations of the manual, for example to provide non-English "
 "readers with the English names of an item for reference::"
 msgstr ""
+"您可以使用以下标记来编写仅需在非英语版本文档中显示的文本，例如为非英语版本提"
+"供名称注释等::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:562
 msgid ""
@@ -1461,10 +1463,14 @@ msgid ""
 "    This content is hidden for the English version, but translatable and\n"
 "    shows up in non-English versions."
 msgstr ""
+".. only:: non_english\n"
+"\n"
+"    此段文字在英语版本中隐藏，\n"
+"    但在非英语版本中显示。"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:568
 msgid "Notes for Translators"
-msgstr ""
+msgstr "Sphinx 标记语言翻译注意事项"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:570
 msgid ""
@@ -1473,23 +1479,29 @@ msgid ""
 "whitespace to separate markup and words. This is particularly useful for "
 "page links, like this::"
 msgstr ""
+"Krita 文档所使用的 Sphinx 标记默认每个单词前后都有空格。如果有其他字符紧邻 "
+"Sphinx 标记的前后，将损坏其功能。对于中文和日语等不用空格区分单词的语言，您可"
+"以在区隔 Sphinx 标记的空格前加上一个半角反斜杠号，对该空格进行转义，这样对读"
+"者显示的文本将不再出现该空格。以带文字的内链为例："
 
 #: ../../contributors_manual/krita_manual_conventions.rst:575
 msgid "床前\\ `明月 <https://krita.org/>`_\\ 光"
-msgstr ""
+msgstr "床前\\ `明月 <https://krita.org/>`_\\ 光"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:577
 msgid ""
 "Note that when translating from a PO file, you should escape the backslash "
 "with another backslash::"
-msgstr ""
+msgstr "请注意：如果您通过 PO 文件进行翻译，请输入两个反斜杠号::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:580
 msgid "床前\\\\ `明月 <https://krita.org/>`_\\\\ 光"
-msgstr ""
+msgstr "床前\\\\ `明月 <https://krita.org/>`_\\\\ 光"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:582
 msgid ""
 "The above produces \"床前\\ `明月 <https://krita.org/>`_\\ 光\", instead of "
 "\"床前 `明月 <https://krita.org/>`_ 光\"."
 msgstr ""
+"上面所示代码将生成“床前\\ `明月 <https://krita.org/>`_\\ 光”，而不是“床前 `明"
+"月 <https://krita.org/>`_ 光”。"
