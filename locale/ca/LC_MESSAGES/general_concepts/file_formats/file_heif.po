@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: websites-docs-krita-org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-01 00:13+0000\n"
-"PO-Revision-Date: 2021-08-30 16:40+0200\n"
+"PO-Revision-Date: 2021-09-02 20:26+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -64,7 +64,6 @@ msgstr "\\*.heif i \\*.avif"
 
 # skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:18
-#, fuzzy
 #| msgid ""
 #| "The High Efficiency Image Format (``*.heif``, ``*.heic``), and it's "
 #| "cousin, AV1 Image Format (``*.avif``) are formats which use video codecs "
@@ -138,6 +137,7 @@ msgstr ""
 "transferència quantificació perceptiva, Hybrid Log Gamma o SMPTE ST 428, es "
 "convertiran a una versió de coma flotant de 32 bits en aquest espai de color."
 
+# skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:31
 msgid ""
 "However, Hybrid Log Gamma needs an extra conversion step inbetween, as Krita "
@@ -164,7 +164,6 @@ msgid "Apply Hybrid Log Gamma OOTF"
 msgstr "Aplica Hybrid Log Gamma OOTF"
 
 #: ../../general_concepts/file_formats/file_heif.rst:34
-#, fuzzy
 #| msgid ""
 #| "Whether to apply the extra conversion step. This will convert scene "
 #| "linear values to display linear, and thus it's necessity is completely "
@@ -174,9 +173,9 @@ msgid ""
 "values to display linear, and thus it's necessity is completely dependent on "
 "your HDR workflow. If in doubt, apply."
 msgstr ""
-"Ja sigui per a aplicar el pas de conversió addicional. Això convertirà els "
-"valors lineals de l'escena a mostrar lineal, i per tant, depèn completament "
-"del vostre flux de treball en HDR. En cas de dubte, apliqueu."
+"Si cal aplicar el pas de conversió addicional. Això convertirà els valors "
+"lineals de l'escena a mostrar lineal, i per tant, la necessitat dependrà "
+"completament del vostre flux de treball en HDR. En cas de dubte, apliqueu-la."
 
 #: ../../general_concepts/file_formats/file_heif.rst:35
 #: ../../general_concepts/file_formats/file_heif.rst:82
@@ -245,6 +244,11 @@ msgid ""
 "have few sharp contrasts, as that is where the reduced resolution is most "
 "obvious."
 msgstr ""
+"Opcions de configuració del submostratge de la crominància. Els humans són "
+"més sensibles a la brillantor d'una imatge que del seu color, de manera que "
+"reduir els colors d'una imatge a la meitat pot ser una forma molt útil de "
+"comprimir una imatge. Això s'utilitza millor amb les imatges que tenen pocs "
+"contrastos més definits, ja que és on la resolució reduïda és més òbvia."
 
 #: ../../general_concepts/file_formats/file_heif.rst:51
 msgid "420"
@@ -287,15 +291,20 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_heif.rst:59
 msgid "Conversion Settings"
-msgstr "Configuració de la conversió"
+msgstr "Opcions de configuració de la conversió"
 
+# skip-rule: kct-encoding
 #: ../../general_concepts/file_formats/file_heif.rst:61
 msgid ""
 "These only appear on floating point images, and are used to store the images "
 "with values above 1.0 as HDR images by encoding them with a specific "
 "transfer function."
 msgstr ""
+"Aquestes només apareixen en les imatges de coma flotant, i s'utilitzen per a "
+"emmagatzemar les imatges amb valors per sobre de 1,0 com les imatges en HDR "
+"codificades amb una funció de transferència específica."
 
+# skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:64
 msgid ""
 "Encoding the right color space depends on how compatible the current color "
@@ -303,18 +312,28 @@ msgid ""
 "``PQ``, ``HLG`` and ``SMPTE ST 428`` are stored. ``Rec 2100 PQ`` or ``Rec "
 "2100 HLG`` are the expected values for HDR images [rec2100]_."
 msgstr ""
+"La codificació de l'espai de color correcte depèn de com de compatible sigui "
+"l'espai de color actual amb els valors ``ITU H.273 CICP`` [ituh273]_, ja són "
+"com s'emmagatzema en ``PQ``, ``HLG`` i ``SMPTE ST 428``. ``Rec. 2100 PQ`` o "
+"``Rec. 2100 HLG`` són els valors esperats per a les imatges en HDR "
+"[rec2100]_."
 
+# skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:66
 msgid ""
 "In all cases when we store ``CICP`` values instead of an ICC profile, the "
 "Matrix Coefficient value will be set to 0 (Identity Matrix), as Krita does "
 "no conversion to ``YUV``."
 msgstr ""
+"En tots els casos, quan emmagatzemem els valors ``CICP`` en lloc d'un perfil "
+"ICC, el valor Coeficient de la matriu s'establirà a 0 (Identitat de la "
+"matriu), ja que el Krita no té conversió a ``YUV``."
 
 #: ../../general_concepts/file_formats/file_heif.rst:68
 msgid "Rec 2100 PQ"
 msgstr "Rec. 2100 PQ"
 
+# skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:69
 msgid ""
 "Image will first be converted to Rec 2020 linear. Then encoded with the "
@@ -322,6 +341,10 @@ msgid ""
 "the most common HDR encoding, and useful for images where the relative "
 "brightness is important."
 msgstr ""
+"La imatge es convertirà primer a Rec. 2020 lineal. A continuació, es "
+"codificarà amb la funció Quantificadora de percepció (també coneguda com a "
+"corba ``SMPTE 2048``). Aquesta és la codificació en HDR més habitual i és "
+"útil per a les imatges on la brillantor relativa és important."
 
 #: ../../general_concepts/file_formats/file_heif.rst:70
 msgid "Rec 2100 HLG"
@@ -334,28 +357,40 @@ msgid ""
 "Gamma OOTF is applied. This is useful for images where the final display may "
 "not understand PQ."
 msgstr ""
+"La imatge es convertirà primer a Rec. 2020 lineal. A continuació, es "
+"codificarà amb la funció Hybrid Log Gamma, i finalment, si es tria, "
+"s'aplicarà el Hybrid Log Gamma OOTF invers. És útil per a les imatges on la "
+"visualització final pot no entendre PQ."
 
 #: ../../general_concepts/file_formats/file_heif.rst:72
 msgid "Keep Colorants, encode PQ"
 msgstr "Conserva els colorants, codifica en PQ"
 
+# skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:73
 msgid ""
 "Shows only for images with an ``ITU H.273`` compatible color space "
 "[ituh273]_. The image will be linearized first, and then encoded with a "
 "perceptual quantizer curve."
 msgstr ""
+"Només mostra les imatges amb un espai de color compatible amb ``ITU H.273`` "
+"[ituh273]_. La imatge primer es linealitzarà i després es codificarà amb una "
+"corba quantificadora de percepció."
 
 #: ../../general_concepts/file_formats/file_heif.rst:74
 msgid "Keep Colorants, encode HLG"
 msgstr "Conserva els colorants, codifica en HLG"
 
+# skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:75
 msgid ""
 "Shows only for images with an ``ITU H.273`` compatible color space "
 "[ituh273]_. The image will be linearized first, and then encoded with a "
 "Hybrid Log Gamma curve. Finally, the reverse HLG OOTF may be applied."
 msgstr ""
+"Només mostra les imatges amb un espai de color compatible amb ``ITU H.273`` "
+"[ituh273]_. La imatge primer es linealitzarà i després es codificarà amb una "
+"corba Hybrid Log Gamma. Finalment, es podrà aplicar el HLG OOTF invers."
 
 #: ../../general_concepts/file_formats/file_heif.rst:76
 msgid "Keep Colorants, encode SMPTE ST 428"
@@ -395,7 +430,6 @@ msgid "Apply reverse Hybrid Log Gamma OOTF"
 msgstr "Aplica a la inversa Hybrid Log Gamma OOTF"
 
 #: ../../general_concepts/file_formats/file_heif.rst:81
-#, fuzzy
 #| msgid ""
 #| "Whether to apply the extra conversion step. This will convert scene "
 #| "linear values to display linear, and thus it's necessity is completely "
@@ -405,9 +439,9 @@ msgid ""
 "dependent on your HDR workflow. If in doubt, apply, always apply when you've "
 "imported an image with OOTF option enabled."
 msgstr ""
-"Ja sigui per a aplicar el pas de conversió addicional. Això convertirà els "
-"valors lineals de l'escena a mostrar lineal, i per tant, depèn completament "
-"del vostre flux de treball en HDR. En cas de dubte, apliqueu."
+"Si cal aplicar el pas de conversió addicional. La necessitat dependrà "
+"completament del vostre flux de treball en HDR. En cas de dubte, apliqueu-lo, "
+"apliqueu sempre que hàgiu importat una imatge amb l'opció OOTF habilitada."
 
 # skip-rule: t-acc_obe
 #: ../../general_concepts/file_formats/file_heif.rst:89
