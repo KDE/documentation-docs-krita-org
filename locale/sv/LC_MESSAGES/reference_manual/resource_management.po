@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-08-28 12:40+0200\n"
+"PO-Revision-Date: 2021-09-05 19:11+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -59,11 +59,11 @@ msgstr "Resurscache"
 
 #: ../../reference_manual/resource_management.rst:11
 msgid "Tagging"
-msgstr ""
+msgstr "Etikettering"
 
 #: ../../reference_manual/resource_management.rst:11
 msgid "Mass Tagging"
-msgstr ""
+msgstr "Massetikettering"
 
 #: ../../reference_manual/resource_management.rst:16
 msgid "Resource Management"
@@ -86,6 +86,10 @@ msgid ""
 "track of all those resources can be a handful, Krita creates a SQLite cache "
 "in which it keeps the tags, names, version and other data about the resource."
 msgstr ""
+"Alla resurser lagras i resurskatalogen. Katalogen kan anpassas i :ref:`de"
+" allmänna inställningar <resource_settings>`. Eftersom det kan vara knepigt"
+" att hålla reda på alla resurserna, skapade Krita en SQLite-cache, där"
+" etiketter, namn, version och annan data om resursen lagras."
 
 #: ../../reference_manual/resource_management.rst:24
 msgid ""
@@ -94,48 +98,57 @@ msgid ""
 "Deleting the cache will delete the tags and relationships it keeps track of, "
 "so be careful."
 msgstr ""
+"Tack vare cachen, kan Krita undvika att läsa in en resurs till det är"
+" nödvändigt. Det gör Krita mycket lättviktigare än när cachen inte fanns. Att"
+" ta bort cachen tar bort etiketterna och förhållandena som den håller ordning"
+" på, så var försiktig."
 
 #: ../../reference_manual/resource_management.rst:26
 msgid ""
 "If you have not changed your resource folder location, the resources can be "
 "found at..."
 msgstr ""
+"Om man inte har ändrat platsen för resurskatalogen, finns resurserna ..."
 
 #: ../../reference_manual/resource_management.rst:28
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../reference_manual/resource_management.rst:29
 msgid ":file:`$HOME/.local/share/krita/`"
-msgstr ""
+msgstr ":file:`$HOME/.local/share/krita/`"
 
 #: ../../reference_manual/resource_management.rst:30
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../reference_manual/resource_management.rst:31
 msgid ":file:`%APPDATA%\\\\krita\\\\`"
-msgstr ""
+msgstr ":file:`%APPDATA%\\\\krita\\\\`"
 
 #: ../../reference_manual/resource_management.rst:33
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: ../../reference_manual/resource_management.rst:33
 msgid ":file:`~/Library/Application Support/Krita/`"
-msgstr ""
+msgstr ":file:`~/Library/Application Support/Krita/`"
 
 #: ../../reference_manual/resource_management.rst:36
 msgid ""
 "If you installed Krita in the Windows Store, your custom resources will be "
 "in a location like:"
 msgstr ""
+"Om Krita installerades från Windows butik, kommer egna resurser finnas på en "
+"plats såsom:"
 
 #: ../../reference_manual/resource_management.rst:36
 msgid ""
 ":file:`%LOCALAPPDATA%\\\\Packages\\\\49800Krita_{RANDOM STRING}\\\\LocalCache"
 "\\Roaming\\krita`"
 msgstr ""
+":file:`%LOCALAPPDATA%\\\\Packages\\\\49800Krita_{RANDOM STRING}\\\\LocalCache"
+"\\Roaming\\krita`"
 
 #: ../../reference_manual/resource_management.rst:41
 msgid "Resource Libraries"
@@ -143,7 +156,7 @@ msgstr "Resursbibliotek"
 
 #: ../../reference_manual/resource_management.rst:43
 msgid "Krita can load a variety of resource libraries."
-msgstr ""
+msgstr "Krita kan läsa in diverse olika resursbibliotek."
 
 #: ../../reference_manual/resource_management.rst:46
 msgid "Resource Folder"
@@ -155,6 +168,9 @@ msgid ""
 "resources, they will all end up here. You can configure its location in the :"
 "ref:`general preferences <resource_settings>`."
 msgstr ""
+"Resurskatalogen anses vara det huvudsakliga biblioteket. När nya resurser"
+" skapas, hamnar de här. Man kan ställa in dess plats under :ref:`allmänna"
+" inställningar <resource_settings>`."
 
 #: ../../reference_manual/resource_management.rst:49
 msgid "Resource Bundle"
@@ -167,10 +183,14 @@ msgid ""
 "other information like metadata and a manifest so Krita can check there's no "
 "errors in the file."
 msgstr ""
+"Det huvudsakliga formatet för att dela resurser är :dfn:`Resurspackar`, som"
+" är en komprimerad fil som innehåller alla resurser tillsammans. Den"
+" innehåller också viss annan information som metadata och ett manifest så att"
+" Krita kan kontrollera att det inte finns några fel i filen."
 
 #: ../../reference_manual/resource_management.rst:52
 msgid "Adobe Brush Library"
-msgstr ""
+msgstr "Adobe penselbibliotek"
 
 #: ../../reference_manual/resource_management.rst:54
 msgid ""
@@ -178,30 +198,37 @@ msgid ""
 "load this, but now Krita will load them as a library of :ref:`brushes "
 "<resource_brush_tips>`."
 msgstr ""
+"En ``ABR`` med flera bilder inuti. Tidigare versioner av Krita kunde inte"
+" läsa in den, men nu läser Krita in dem som penselbibliotek :ref:`penslar <"
+"resource_brush_tips>`."
 
 #: ../../reference_manual/resource_management.rst:55
 msgid "Adobe Style Library"
-msgstr ""
+msgstr "Adobe stilbibliotek"
 
 #: ../../reference_manual/resource_management.rst:57
 msgid ""
 "This is the :program:`Photoshop` ``ASL`` format, which stores :ref:"
 "`layer_style`."
 msgstr ""
+"Det här är formatet :program:`Photoshop` ``ASL``, som lagrar"
+" :ref:`layer_style`."
 
 #: ../../reference_manual/resource_management.rst:58
 msgid "Document Storage"
-msgstr ""
+msgstr "Dokumentlagring"
 
 #: ../../reference_manual/resource_management.rst:60
 msgid ""
 "Every Krita document can store resources and act as a resource library. This "
 "is currently only used for palettes."
 msgstr ""
+"Alla Krita-dokument kan lagra resurser och fungera som ett resursbibliotek."
+" Det används för närvarande bara för paletter."
 
 #: ../../reference_manual/resource_management.rst:61
 msgid "Memory Storage"
-msgstr ""
+msgstr "Minneslagring"
 
 #: ../../reference_manual/resource_management.rst:63
 msgid ""
@@ -209,6 +236,9 @@ msgid ""
 "generated by Krita and have no physical version on disk. This is currently "
 "used for the fore-to-background gradient."
 msgstr ""
+"Slutligen är minnesbiblioteket stället där tillfälliga resurser lagras, som"
+" skapas av Krita och inte har någon fysisk version på disk. Det används för"
+" närvarande för förgrunds- till bakgrundstoning."
 
 #: ../../reference_manual/resource_management.rst:65
 msgid ""
@@ -216,6 +246,10 @@ msgid ""
 "Manage Resource Libraries`. In this dialog, you can import resource "
 "libraries, deactivate them, and also :ref:`create_bundle`."
 msgstr ""
+"Man kan hantera resursbibliotek genom att gå till"
+" :menuselection:`Inställningar --> Hantera resursbibliotek`. I dialogrutan"
+" kan man importera resursbibliotek, inaktivera dem, och även"
+" :ref:`create_bundle`."
 
 #: ../../reference_manual/resource_management.rst:68
 msgid "Importing Bundles"
@@ -345,6 +379,9 @@ msgid ""
 "tagging, deleting/deactivating the resource itself, importing resources and "
 "open the create bundle dialog."
 msgstr ""
+"Man kan göra olika saker här, som ta bort säkerhetskopior, massetikettering,"
+" ta bort eller inaktivera själva resursen, importera resurser och öppna"
+" dialogrutan för att skapa en packe."
 
 #: ../../reference_manual/resource_management.rst:113
 msgid "Importing resources"
@@ -355,6 +392,8 @@ msgid ""
 "To import resources, select the :guilabel:`import` in the resource choosers "
 "or the resource manager."
 msgstr ""
+"Välj :guilabel:`importera` i resursväljaren eller resurshanteraren för att"
+" importera resurser."
 
 #: ../../reference_manual/resource_management.rst:117
 msgid ""
@@ -362,6 +401,9 @@ msgid ""
 "certain kinds of files, and all the files you can select are possible to "
 "import for that resource."
 msgstr ""
+"Resursväljaren för import är ganska rättfram. Man kan bara välja vissa"
+" sorters filer, och alla filer man kan välja är möjliga att importera för den"
+" resursen."
 
 #: ../../reference_manual/resource_management.rst:119
 msgid ""
@@ -371,16 +413,22 @@ msgid ""
 "resources, a window will pop up asking which resource type you intended to "
 "import the file for."
 msgstr ""
+"Importknappen i resurshanteraren behöver dock ibland välja om en importerad"
+" :ref:`file_png`-fil är en penselspets eller en struktur. Vid import av ett"
+" format som kan användas för flera olika typer av resurser, dyker ett fönster"
+" upp som frågar vilken resurstyp som filen avsågs importeras för."
 
 #: ../../reference_manual/resource_management.rst:125
 msgid "Activating and Deactivating"
-msgstr ""
+msgstr "Aktivera och inaktivera"
 
 #: ../../reference_manual/resource_management.rst:127
 msgid ""
 "Deactivating resources is done by selecting them in their respective "
 "resource chooser, and pressing the trashcan icon."
 msgstr ""
+"Att inaktivera resurser görs genom att välja dem i respektive resursväljare,"
+" och klicka på papperskorgsikonen."
 
 #: ../../reference_manual/resource_management.rst:129
 msgid ""
@@ -389,34 +437,43 @@ msgid ""
 "deactivated resources should now be visible, select them, and then press :"
 "guilabel:`Undelete Resource`."
 msgstr ""
+"Gå till :menuselection:`In&ställningar --> Hantera resurser...` för att"
+" aktivera en resurs, sätt sedan på :guilabel:`Vi&sa borttagna resurser`. De"
+" inaktiverade resurserna ska nu vara synliga, markera dem, och klicka sedan"
+" på :guilabel:`Återställ resurs`."
 
 #: ../../reference_manual/resource_management.rst:134
 msgid "Returning a resource to the previous version"
-msgstr ""
+msgstr "Returnera en resurs till föregående version."
 
 #: ../../reference_manual/resource_management.rst:136
 msgid ""
 "First go to the resource folder, :menuselection:`Settings --> Manage "
 "Resources... --> Open Resource Folder`."
 msgstr ""
+"Gå först till resurskatalogen, :menuselection:`Inställningar --> Hantera"
+" resurser... --> Öppna resurskatalog`."
 
 #: ../../reference_manual/resource_management.rst:137
 msgid "Then go into the ``paintoppresets`` folder."
-msgstr ""
+msgstr "Gå sedan till katalogen ``paintoppresets``."
 
 #: ../../reference_manual/resource_management.rst:138
 msgid ""
 "Backup (select and cut) all versions of the related resource into a place "
 "you can find them. Delete all these files from the ``paintoppresets`` folder."
 msgstr ""
+"Säkerhetskopiera (markera och klipp ut) alla versioner av den relaterade"
+" resursen på en plats där de kan hittas. Ta bort alla dessa filer från"
+" katalogen ``paintoppresets``."
 
 #: ../../reference_manual/resource_management.rst:139
 msgid "restart Krita."
-msgstr ""
+msgstr "starta om Krita."
 
 #: ../../reference_manual/resource_management.rst:140
 msgid "add only the desired version of the resource."
-msgstr ""
+msgstr "lägg bara till önskade versioner av resursen."
 
 #: ../../reference_manual/resource_management.rst:145
 msgid "Deleting Backup files"
@@ -483,6 +540,11 @@ msgid ""
 "plus icon next to the :guilabel:`tags` section to add a tag to every "
 "selected resource."
 msgstr ""
+"Man kan etikettera flera resurser samtidigt i resurshanteraren. För att lägga"
+" till flera resurser, använd :kbd:`Ctrl` för tillägg av individuella resurser"
+" i markeringen, eller :kbd:`Shift` för att lägga till alla resurser på en"
+" gång. Tryck sedan på plusikonen intill :guilabel:`etiketter` för att lägga"
+" till en etikett i alla markerade resurser."
 
 #: ../../reference_manual/resource_management.rst:164
 msgid ""
@@ -490,46 +552,49 @@ msgid ""
 "can be useful to ensure cross-language compatibility. The tags that get "
 "localized are..."
 msgstr ""
+"Några etiketter är översatta. Om packar skapas för andra, kan det vara"
+" användbart att använda sådana etiketter för att säkerställa kompatibilitet"
+" mellan språk. Etiketterna som översätts är ..."
 
 #: ../../reference_manual/resource_management.rst:166
 msgid "Digital"
-msgstr ""
+msgstr "Digitala"
 
 #: ../../reference_manual/resource_management.rst:167
 msgid "Erasers"
-msgstr ""
+msgstr "Radering"
 
 #: ../../reference_manual/resource_management.rst:168
 msgid "FX"
-msgstr ""
+msgstr "Effekter"
 
 #: ../../reference_manual/resource_management.rst:169
 msgid "Favorites"
-msgstr ""
+msgstr "Favoriter"
 
 #: ../../reference_manual/resource_management.rst:170
 msgid "Ink"
-msgstr ""
+msgstr "Bläck"
 
 #: ../../reference_manual/resource_management.rst:171
 msgid "Paint"
-msgstr ""
+msgstr "Måla"
 
 #: ../../reference_manual/resource_management.rst:172
 msgid "Pixel_Art"
-msgstr ""
+msgstr "Pixel art"
 
 #: ../../reference_manual/resource_management.rst:173
 msgid "Sketch"
-msgstr ""
+msgstr "Skiss"
 
 #: ../../reference_manual/resource_management.rst:174
 msgid "Textures"
-msgstr ""
+msgstr "Strukturer"
 
 #: ../../reference_manual/resource_management.rst:179
 msgid "Filtering"
-msgstr ""
+msgstr "Filtrering"
 
 #: ../../reference_manual/resource_management.rst:181
 msgid ""
