@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-08-30 11:44\n"
+"PO-Revision-Date: 2021-09-07 14:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___resource_management.pot\n"
 "X-Crowdin-File-ID: 10104\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -56,15 +56,15 @@ msgstr "资源包"
 
 #: ../../reference_manual/resource_management.rst:11
 msgid "Resource Cache"
-msgstr ""
+msgstr "资源缓存"
 
 #: ../../reference_manual/resource_management.rst:11
 msgid "Tagging"
-msgstr ""
+msgstr "标签管理"
 
 #: ../../reference_manual/resource_management.rst:11
 msgid "Mass Tagging"
-msgstr ""
+msgstr "批量标签"
 
 #: ../../reference_manual/resource_management.rst:16
 msgid "Resource Management"
@@ -76,6 +76,9 @@ msgid ""
 "has a sophisticated resource management system, which allows tagging, "
 "disabling, sharing and more."
 msgstr ""
+"资源是一种插件式数据包，用于存储笔刷、图案等各种预设。Krita 内建了一套功能强"
+"大的资源管理系统，你可以为各种资源指定标签、随时启用和禁用单个资源或资源包、"
+"导出资源和资源包与他人分享等。"
 
 #: ../../reference_manual/resource_management.rst:22
 msgid ""
@@ -84,6 +87,9 @@ msgid ""
 "track of all those resources can be a handful, Krita creates a SQLite cache "
 "in which it keeps the tags, names, version and other data about the resource."
 msgstr ""
+"所有资源都被保存在 Krita 的资源文件夹中。此文件夹的位置可在\\ :ref:`常规设置 "
+"<resource_settings>`\\ 的资源选项卡中进行配置。为了性能，Krita 通过内建的 "
+"SQLite 数据库管理资源。"
 
 #: ../../reference_manual/resource_management.rst:24
 msgid ""
@@ -92,60 +98,67 @@ msgid ""
 "Deleting the cache will delete the tags and relationships it keeps track of, "
 "so be careful."
 msgstr ""
+"新版 Krita 会为资源的标签、名称、版本和其他数据创建 SQLite 数据库缓存，从而避"
+"免加载那些暂不需要的资源。和不使用数据库的旧版相比，新版 Krita 的资源占用更"
+"低，资源调用速度更快。要注意的是，如果你删除了 Krita 的数据库，所有标签和它们"
+"关联的资源也会一并被删除。"
 
 #: ../../reference_manual/resource_management.rst:26
 msgid ""
 "If you have not changed your resource folder location, the resources can be "
 "found at..."
 msgstr ""
+"如果你没有更改过 Krita 的资源文件夹位置，它在不同系统下的默认位置如下："
 
 #: ../../reference_manual/resource_management.rst:28
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../reference_manual/resource_management.rst:29
 msgid ":file:`$HOME/.local/share/krita/`"
-msgstr ""
+msgstr ":file:`$HOME/.local/share/krita/`"
 
 #: ../../reference_manual/resource_management.rst:30
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../reference_manual/resource_management.rst:31
 msgid ":file:`%APPDATA%\\\\krita\\\\`"
-msgstr ""
+msgstr ":file:`%APPDATA%\\\\krita\\\\`"
 
 #: ../../reference_manual/resource_management.rst:33
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: ../../reference_manual/resource_management.rst:33
 msgid ":file:`~/Library/Application Support/Krita/`"
-msgstr ""
+msgstr ":file:`~/Library/Application Support/Krita/`"
 
 #: ../../reference_manual/resource_management.rst:36
 msgid ""
 "If you installed Krita in the Windows Store, your custom resources will be "
 "in a location like:"
-msgstr ""
+msgstr "Windows (Microsoft Store 版) 的自定义资源文件夹"
 
 #: ../../reference_manual/resource_management.rst:36
 msgid ""
 ":file:`%LOCALAPPDATA%\\\\Packages\\\\49800Krita_{RANDOM STRING}\\\\LocalCache"
 "\\Roaming\\krita`"
 msgstr ""
+":file:`%LOCALAPPDATA%\\\\Packages\\\\49800Krita_{RANDOM STRING}\\\\LocalCache"
+"\\Roaming\\krita`"
 
 #: ../../reference_manual/resource_management.rst:41
 msgid "Resource Libraries"
-msgstr ""
+msgstr "资源库"
 
 #: ../../reference_manual/resource_management.rst:43
 msgid "Krita can load a variety of resource libraries."
-msgstr ""
+msgstr "Krita 可以加载多种不同的资源库。"
 
 #: ../../reference_manual/resource_management.rst:46
 msgid "Resource Folder"
-msgstr ""
+msgstr "资源文件夹"
 
 #: ../../reference_manual/resource_management.rst:48
 msgid ""
@@ -153,10 +166,12 @@ msgid ""
 "resources, they will all end up here. You can configure its location in the :"
 "ref:`general preferences <resource_settings>`."
 msgstr ""
+"Krita 的资源文件夹可被视作底层资源库。新建的资源全部都会被保存到这里。你可以"
+"在\\ :ref:`常规设置 <resource_settings>`\\ 的资源选项卡配置它的位置。"
 
 #: ../../reference_manual/resource_management.rst:49
 msgid "Resource Bundle"
-msgstr ""
+msgstr "资源包"
 
 #: ../../reference_manual/resource_management.rst:51
 msgid ""
@@ -165,10 +180,13 @@ msgid ""
 "other information like metadata and a manifest so Krita can check there's no "
 "errors in the file."
 msgstr ""
+"Krita 主要通过\\ :dfn:`资源包`\\ 来安装和分享资源。资源包实际上是一种包含了各"
+"种资源数据的压缩包。它还包含了元数据和文件清单，Krita 可以通过它们来检查资源"
+"包的完整性。"
 
 #: ../../reference_manual/resource_management.rst:52
 msgid "Adobe Brush Library"
-msgstr ""
+msgstr "Adobe 笔刷库"
 
 #: ../../reference_manual/resource_management.rst:54
 msgid ""
@@ -176,30 +194,37 @@ msgid ""
 "load this, but now Krita will load them as a library of :ref:`brushes "
 "<resource_brush_tips>`."
 msgstr ""
+"Adobe Photoshop 笔刷库，也叫 ``ABR`` 格式。这种文件包含了多个图像。旧版的 "
+"Krita 无法正常加载这种格式，但新版 Krita 可以将它的内容加载为一组\\ :ref:`笔"
+"尖图像 <resource_brush_tips>`\\ 。"
 
 #: ../../reference_manual/resource_management.rst:55
 msgid "Adobe Style Library"
-msgstr ""
+msgstr "Adobe 样式库"
 
 #: ../../reference_manual/resource_management.rst:57
 msgid ""
 "This is the :program:`Photoshop` ``ASL`` format, which stores :ref:"
 "`layer_style`."
 msgstr ""
+"Adobe Photoshop 样式库，也叫 ``ASL`` 格式。这种文件专门用于保存\\ :ref:"
+"`layer_style`\\ 。"
 
 #: ../../reference_manual/resource_management.rst:58
 msgid "Document Storage"
-msgstr ""
+msgstr "Krita 图像内嵌资源库"
 
 #: ../../reference_manual/resource_management.rst:60
 msgid ""
 "Every Krita document can store resources and act as a resource library. This "
 "is currently only used for palettes."
 msgstr ""
+"Krita 图像文件 (KRA) 支持内嵌资源库，可以保存各种资源和操作。目前 KRA 的内嵌"
+"资源库仅用于将色板嵌入 KRA 文件。"
 
 #: ../../reference_manual/resource_management.rst:61
 msgid "Memory Storage"
-msgstr ""
+msgstr "内存临时资源库"
 
 #: ../../reference_manual/resource_management.rst:63
 msgid ""
@@ -207,6 +232,8 @@ msgid ""
 "generated by Krita and have no physical version on disk. This is currently "
 "used for the fore-to-background gradient."
 msgstr ""
+"Krita 会将当前使用的某些资源加载到内存资源库。内存资源库是临时性质的，它不会"
+"在硬盘上保存实际文件。目前只有前景色到背景色渐变会用到内存资源库。"
 
 #: ../../reference_manual/resource_management.rst:65
 msgid ""
@@ -214,6 +241,8 @@ msgid ""
 "Manage Resource Libraries`. In this dialog, you can import resource "
 "libraries, deactivate them, and also :ref:`create_bundle`."
 msgstr ""
+"你可以前往菜单栏的 :menuselection:`设置 --> 管理资源库` 对话框。你可以在此对"
+"话框导入、启用、禁用资源库，还可以\\ :ref:`create_bundle`\\ 。"
 
 #: ../../reference_manual/resource_management.rst:68
 msgid "Importing Bundles"
@@ -228,10 +257,14 @@ msgid ""
 "will be listed in the bundle view. To enable or disable a bundle, select the "
 "entry in the view, and then select :guilabel:`Deactivate`."
 msgstr ""
+"点击对话框右上角的 :guilabel:`导入` 按钮即可导入资源包。在弹出窗口的下拉选单"
+"中选择 ``.bundle`` 文件格式，选中需要导入的资源包文件，然后点击 :guilabel:`打"
+"开` 按钮。导入的资源包将显示到列表中。要启用/禁用一个资源包，首先选中它，然后"
+"点击 :guilabel:`启用` 或 :guilabel:`禁用` 按钮。"
 
 #: ../../reference_manual/resource_management.rst:76
 msgid "Creating your own Bundle"
-msgstr "新建自定义资源包"
+msgstr "创建自定义资源包"
 
 #: ../../reference_manual/resource_management.rst:78
 msgid ""
@@ -239,8 +272,8 @@ msgid ""
 "the :guilabel:`Create bundle` button. This will open a dialog box as shown "
 "below."
 msgstr ""
-"点击 :guilabel:`新建资源包` 按钮 (位于已启用资源包列表下方) 可以新建自定义的"
-"资源包，在其中添加任意你选中的资源。"
+"你可以创建自己的资源包，打包自己想要的资源。点击 :guilabel:`创建资源包` 按"
+"钮，这将打开下方所示的对话框。"
 
 #: ../../reference_manual/resource_management.rst:81
 msgid ".. image:: images/resources/Creating-bundle.png"
@@ -265,9 +298,9 @@ msgid ""
 "presets loaded from this bundle will have a 'X' mark on the thumbnail "
 "denoting that the texture is missing. And the brush preset won't be the same."
 msgstr ""
-"如果你添加到资源包的笔刷预设使用了自定义笔尖图像，你必须将这些自定义笔尖资源"
-"也添加到资源包中，否则笔刷预设的图标会显示一个“X”标记，表示笔刷所需的纹理未被"
-"包含，绘制效果将无法保证一致。"
+"如果添加到资源包的笔刷预设使用了笔尖图像，你必须将这些笔尖图像也添加到资源包"
+"中，否则笔刷预设的图标会显示一个“X”标记，表示笔刷无法找到所需的纹理，绘制效果"
+"将无法保证一致。"
 
 #: ../../reference_manual/resource_management.rst:89
 msgid ""
@@ -292,6 +325,10 @@ msgid ""
 "any more. The next time you start Krita the bundle and its associated "
 "resources will not be loaded."
 msgstr ""
+"要\\ **彻底删除**\\ 已导入的资源包，请点击 :guilabel:`管理资源` 对话框中的 :"
+"guilabel:`打开资源文件夹` 按钮，这将使用系统的文件资源管理器打开 Krita 的资源"
+"文件夹。进入 bundles 文件夹，删除你不想要的资源包。下次启动 Krita 时，程序将"
+"不再加载已删除的资源包和它们的相关资源。"
 
 #: ../../reference_manual/resource_management.rst:99
 msgid "Managing Resources"
@@ -303,8 +340,8 @@ msgid ""
 "Starting from version 2.9 you can share various resources mentioned above by "
 "sharing a single compressed ZIP file created within Krita."
 msgstr ""
-"自 2.9 版起，Krita 可以通过资源包来管理资源。资源包实际上是包含了一组预设的 "
-"ZIP 压缩包。可以在资源包管理对话框随时导入、导出、删除、启用或者停用。"
+"Krita 从 2.9 版起可以通过资源包来管理资源。资源包是打包了一组预设的 ZIP 压缩"
+"包，你可以在管理资源库对话框对它们进行导入、创建、启用/禁用等操作。"
 
 #: ../../reference_manual/resource_management.rst:103
 msgid ""
@@ -313,8 +350,7 @@ msgid ""
 "resource section by going to :menuselection:`Settings --> Manage Resources..."
 "` menu item."
 msgstr ""
-"请访问菜单栏的 :menuselection:`设置 --> 资源包管理...` 来打开下面所示的对话"
-"框："
+"请访问菜单栏的 :menuselection:`设置 --> 管理资源...` 来打开下面所示的对话框："
 
 #: ../../reference_manual/resource_management.rst:108
 msgid ""
@@ -322,16 +358,20 @@ msgid ""
 "tagging, deleting/deactivating the resource itself, importing resources and "
 "open the create bundle dialog."
 msgstr ""
+"你可以在此对话框进行许多管理操作，例如：删除备份文件、批量指定标签、删除或禁"
+"用单个资源、导入资源、打开资源文件夹、创建资源包、保存标签到文件夹等。"
 
 #: ../../reference_manual/resource_management.rst:113
 msgid "Importing resources"
-msgstr ""
+msgstr "导入资源"
 
 #: ../../reference_manual/resource_management.rst:115
 msgid ""
 "To import resources, select the :guilabel:`import` in the resource choosers "
 "or the resource manager."
 msgstr ""
+"要导入资源，你可以在\\ **管理资源库**\\ 对话框点击 :guilabel:`导入` 按钮，也"
+"可以在\\ **管理资源**\\ 对话框点击 :guilabel:`导入资源` 按钮。"
 
 #: ../../reference_manual/resource_management.rst:117
 msgid ""
@@ -339,6 +379,8 @@ msgid ""
 "certain kinds of files, and all the files you can select are possible to "
 "import for that resource."
 msgstr ""
+"\\ **管理资源库**\\ 对话框的导入比较直观，你可以在它的下拉菜单中选择想要导入"
+"的文件类型，然后选择想要导入的文件。"
 
 #: ../../reference_manual/resource_management.rst:119
 msgid ""
@@ -348,16 +390,21 @@ msgid ""
 "resources, a window will pop up asking which resource type you intended to "
 "import the file for."
 msgstr ""
+"\\ **管理资源**\\ 对话框的可导入类型更加丰富。导入 :ref:`file_png` 文件时，程"
+"序将询问你想要将它们导入为笔尖还是图像。如果导入的文件类型可以用作多种资源类"
+"型，程序会询问你想要将它们导入为何种资源类型。"
 
 #: ../../reference_manual/resource_management.rst:125
 msgid "Activating and Deactivating"
-msgstr ""
+msgstr "启用和禁用资源"
 
 #: ../../reference_manual/resource_management.rst:127
 msgid ""
 "Deactivating resources is done by selecting them in their respective "
 "resource chooser, and pressing the trashcan icon."
 msgstr ""
+"在\\ **资源库管理**\\ 对话框的列表中选择一个资源库，然后点击禁用按钮，即可禁"
+"用该资源库。选择一个已禁用的资源库，然后点击启用按钮，即可启用该资源库。"
 
 #: ../../reference_manual/resource_management.rst:129
 msgid ""
@@ -366,34 +413,40 @@ msgid ""
 "deactivated resources should now be visible, select them, and then press :"
 "guilabel:`Undelete Resource`."
 msgstr ""
+"要恢复在 Krita 资源列表中删除的单个资源，请前往菜单栏的 :menuselection:`设置 "
+"--> 管理资源` 对话框，勾选 :guilabel:`显示已删除资源` ，即可重新在列表中显示"
+"被删除 (实际上只是禁用)的单个资源。选择需要恢复的资源，然后点击 :guilabel:`取"
+"消删除资源` 按钮。"
 
 #: ../../reference_manual/resource_management.rst:134
 msgid "Returning a resource to the previous version"
-msgstr ""
+msgstr "恢复资源的过去版本"
 
 #: ../../reference_manual/resource_management.rst:136
 msgid ""
 "First go to the resource folder, :menuselection:`Settings --> Manage "
 "Resources... --> Open Resource Folder`."
-msgstr ""
+msgstr "前往菜单栏的 :menuselection:`设置 --> 管理资源 --> 打开资源文件夹`。"
 
 #: ../../reference_manual/resource_management.rst:137
 msgid "Then go into the ``paintoppresets`` folder."
-msgstr ""
+msgstr "进入 ``paintoppresets`` 文件夹。"
 
 #: ../../reference_manual/resource_management.rst:138
 msgid ""
 "Backup (select and cut) all versions of the related resource into a place "
 "you can find them. Delete all these files from the ``paintoppresets`` folder."
 msgstr ""
+"找到需要恢复的资源 (包括它们的所有版本)，将它们备份到其他位置，然后从 "
+"``paintoppresets`` 文件夹中删除这些文件。"
 
 #: ../../reference_manual/resource_management.rst:139
 msgid "restart Krita."
-msgstr ""
+msgstr "重新启动 Krita。"
 
 #: ../../reference_manual/resource_management.rst:140
 msgid "add only the desired version of the resource."
-msgstr ""
+msgstr "将需要恢复的版本的资源文件添加回去。"
 
 #: ../../reference_manual/resource_management.rst:145
 msgid "Deleting Backup files"
@@ -423,6 +476,10 @@ msgid ""
 "and add a tag name. In addition to adding you can rename and delete a tag as "
 "well."
 msgstr ""
+"Krita 支持通过标签来管理资源。你可以在资源管理对话框中添加/移除各种资源的标"
+"签，也可以在笔刷预设、图案预设等面板管理预设的标签。在预设面板左键点击 |"
+"mouseleft| 选中一个预设，然后点击面板的:guilabel:`标签` 按钮，即可添加、重命"
+"名或者删除标签。在预设上右键点击也进行类似操作。"
 
 #: ../../reference_manual/resource_management.rst:159
 msgid ""
@@ -430,12 +487,17 @@ msgid ""
 "Preset of a favorite :dfn:`Ink Pen` variant and have it tagged so it shows "
 "in up in your Inking, Painting, Comics and Favorites groups of brushes."
 msgstr ""
+"你可以为每个资源分配多个标签。假如你有一个 :dfn:`勾线` 标签中的笔刷预设需要在"
+"各种场合使用，你可以同时分配勾线、漫画、常用预设等标签到这个预设，让它同时出"
+"现在这些标签的预设列表中。"
 
 #: ../../reference_manual/resource_management.rst:160
 msgid ""
 "Every resource can be tagged, so brushes in the :guilabel:`Predefined` tab "
 "of the Brush Settings Editor can be also tagged and grouped for convenience."
 msgstr ""
+"所有的资源均可分配标签。就连笔刷选项面板 (F5) 中 :guilabel:`图像笔尖` 列表里"
+"的笔尖图像都可以分配标签，以便按组加载和显示。"
 
 #: ../../reference_manual/resource_management.rst:162
 msgid ""
@@ -445,6 +507,9 @@ msgid ""
 "plus icon next to the :guilabel:`tags` section to add a tag to every "
 "selected resource."
 msgstr ""
+"你可以在管理资源对话框中同时为多个预设分配标签。首先在资源列表中拖动、按住 :"
+"kbd:`Ctrl` 或 :kbd:`Shift` 点击，选择多个预设，然后点击 :guilabel:`标签` 分段"
+"的 :guilabel:`+` 按钮，从列表中选择一个标签，即可将它分配到多个预设。"
 
 #: ../../reference_manual/resource_management.rst:164
 msgid ""
@@ -452,46 +517,48 @@ msgid ""
 "can be useful to ensure cross-language compatibility. The tags that get "
 "localized are..."
 msgstr ""
+"Krita 的内建标签已经自带翻译。你可以在创建资源包时使用这些标签，以便在不同的"
+"语言中保持最佳的显示效果。自带翻译的标签如下："
 
 #: ../../reference_manual/resource_management.rst:166
 msgid "Digital"
-msgstr ""
+msgstr "数码绘画"
 
 #: ../../reference_manual/resource_management.rst:167
 msgid "Erasers"
-msgstr ""
+msgstr "橡皮擦"
 
 #: ../../reference_manual/resource_management.rst:168
 msgid "FX"
-msgstr ""
+msgstr "特效"
 
 #: ../../reference_manual/resource_management.rst:169
 msgid "Favorites"
-msgstr ""
+msgstr "常用预设"
 
 #: ../../reference_manual/resource_management.rst:170
 msgid "Ink"
-msgstr ""
+msgstr "勾线"
 
 #: ../../reference_manual/resource_management.rst:171
 msgid "Paint"
-msgstr ""
+msgstr "绘画"
 
 #: ../../reference_manual/resource_management.rst:172
 msgid "Pixel_Art"
-msgstr ""
+msgstr "像素画"
 
 #: ../../reference_manual/resource_management.rst:173
 msgid "Sketch"
-msgstr ""
+msgstr "草稿"
 
 #: ../../reference_manual/resource_management.rst:174
 msgid "Textures"
-msgstr ""
+msgstr "纹理"
 
 #: ../../reference_manual/resource_management.rst:179
 msgid "Filtering"
-msgstr "筛选"
+msgstr "搜索/筛选资源"
 
 #: ../../reference_manual/resource_management.rst:181
 msgid ""
@@ -499,6 +566,8 @@ msgid ""
 "resource filter, which functions like a search bar for the resource in "
 "question."
 msgstr ""
+"笔刷预设面板、图案预设面板等资源面板的底部有一个搜索框。你可以在搜索框中输入"
+"搜索条件，列表将自动筛选出匹配的项目。"
 
 #: ../../reference_manual/resource_management.rst:184
 msgid ".. image:: images/brushes/Brushpreset-filters.png"
@@ -511,41 +580,45 @@ msgid ""
 "include brush presets from other tags as well then you can add filters the "
 "following way:"
 msgstr ""
-"筛选框可以按照预设名称、标签名称等条件进行筛选。在选中 All (全部) **之外** 的"
-"任意标签时，筛选框将从 **全部预设** 中筛选预设，而 **不是** 当前标签。你还可"
-"以使用下列通配符精细化筛选结果："
+"你可以在搜索框中输入预设名称、标签名称等条件进行筛选。勾选搜索框右侧的\\ **仅"
+"在当前标签内搜索**\\ 后，搜索结果将只包括当前标签中的项目，否则将搜索全部项"
+"目。你还可以使用下列通配符精细化搜索结果："
 
 #: ../../reference_manual/resource_management.rst:187
 msgid ""
 "To filter based on the partial, case insensitive name of the resources you "
 "can add ``partialname`` or ``!partialname``."
 msgstr ""
-"筛选结果部分匹配资源名称： ``关键词`` ；部分排除资源名称： ``!关键词`` (不区"
-"分大小写)。"
+"资源名称必须包含“ABC”，输入 ``ABC`` ；资源名称不得包含ABC，输入 ``!ABC`` 。不"
+"区分大小写。"
 
 #: ../../reference_manual/resource_management.rst:188
 msgid ""
 "To include other Tags type the respective name of the tag in square brackets "
 "like this ``[Tagname]`` or to exclude a tag type ``![Tagname]``."
-msgstr "筛选结果包含标签： ``[标签]`` ；排除标签： ``![标签]`` 。"
+msgstr ""
+"额外包含标签“ABC”，输入 ``[ABC]`` ；不得包含标签“ABC”，输入 ``![ABC]`` 。"
 
 #: ../../reference_manual/resource_management.rst:189
 msgid ""
 "For case sensitive matching of preset name type ``\"Preset name\"`` or ``! "
 "\"Preset name\"`` to exclude."
 msgstr ""
-"筛选结果完全匹配资源名称： ``\"关键词\"`` ；完全排除资源名称： ``!\"关键词"
-"\"`` (区别大小写)。"
+"资源名称必须与“ABC”完全一致： ``\"关键词\"`` ；资源名称不得与“ABC”完全一致： "
+"``!\"关键词\"`` ，区分大小写。"
 
 #: ../../reference_manual/resource_management.rst:192
 msgid "An incredibly quick way to save a group or brushes into a tag is to:"
-msgstr "快速保存一组筛选结果到一个标签："
+msgstr "快速保存搜索结果到一个标签："
 
 #: ../../reference_manual/resource_management.rst:194
 msgid ""
 "Create a new tag by |mouseleft| on the :guilabel:`+`.  This will empty out "
 "the contents of the Brush Preset docker."
 msgstr ""
+"点击笔刷预设面板的“标签”按钮，输入一个新标签名称，然后点击 :guilabel:`+` 按钮"
+"创建这个标签。Krita 会自动切换到这个新标签，此时预设列表将被清空 (因为这是一"
+"个空标签)。"
 
 #: ../../reference_manual/resource_management.rst:195
 msgid ""
@@ -555,6 +628,10 @@ msgid ""
 "get all Brush Presets with ``Pencil`` somewhere in their name.  Now you have "
 "all the Pencil-related Brush Presets together in one place."
 msgstr ""
+"在 :guilabel:`笔刷预设面板` 或 :guilabel:`笔刷选项编辑器 (F5)` 底部的 :"
+"guilabel:`搜索栏` 输入条件，筛选出想要包含到标签中的项目。例如输入 "
+"``Pencil`` 即可列出所有名称中包含 ``Pencil`` (也就是铅笔) 的笔刷预设。注意："
+"请不要勾选“仅在当前标签内搜索”，否则将不会返回任何结果 (因为当前标签是空的)。"
 
 #: ../../reference_manual/resource_management.rst:196
 msgid ""
@@ -562,8 +639,8 @@ msgid ""
 "of the :guilabel:`Resource Filter` box) or press the :kbd:`Enter` key and "
 "all the items will be saved with the new tag you created."
 msgstr ""
-"点击筛选框右边的 :guilabel:`保存` 按钮或者在筛选框中按 :kbd:`回车` 键即可将列"
-"出的预设保存到“pencils”标签下面。"
+"点击搜索框右边的 :guilabel:`保存` 按钮，或者在搜索框中按\\ :kbd:`回车键`\\ ，"
+"即可将列出的全部预设分配到你刚才新建的标签。"
 
 #: ../../reference_manual/resource_management.rst:198
 msgid ""
@@ -572,8 +649,9 @@ msgid ""
 "guilabel:`Pencils`.  The Resource Filter works the same way in other parts "
 "of Krita so be on the lookout for it!"
 msgstr ""
-"从现在开始，只要从笔刷预设面板的下拉选单中选中“pencils”标签，面板就会列出所有"
-"铅笔类的预设。"
+"现在你可以从标签列表中选择刚才新建的标签，它将列出所有名称中包含 :guilabel:"
+"`Pencil` 的笔刷预设。你也可以在图案预设面板、图像笔尖列表等类似的资源列表中使"
+"用类似的方式管理标签。"
 
 #: ../../reference_manual/resource_management.rst:201
 msgid "Resource Zooming"
@@ -586,6 +664,9 @@ msgid ""
 "resource selectors can be zoomed in and out of, by hovering over the "
 "selector and using the :kbd:`Ctrl +` |mousescroll| shortcut."
 msgstr ""
+"如果你觉得资源列表的缩略图太大或者太小，你可以对它们进行\\ :dfn:`缩放`\\ 。"
+"Krita 各种资源列表的右上角都有一个按钮，点击后可在弹出菜单中拖动“图标大小”滑"
+"动条。你也可以按住 :kbd:`Ctrl +` 滚动鼠标滚轮 |mousescroll| 进行缩放。"
 
 #: ../../reference_manual/resource_management.rst:204
 msgid "Resource Types in Krita"
@@ -593,28 +674,28 @@ msgstr "Krita 的资源类型"
 
 #: ../../reference_manual/resource_management.rst:206
 msgid "Main Resource Types"
-msgstr ""
+msgstr "主要资源类型"
 
 #: ../../reference_manual/resource_management.rst:214
 msgid "Other Resource Types"
-msgstr ""
+msgstr "其他资源类型"
 
 #: ../../reference_manual/resource_management.rst:216
 msgid ":ref:`gamut_mask_docker`"
-msgstr ""
+msgstr ":ref:`gamut_mask_docker`"
 
 #: ../../reference_manual/resource_management.rst:217
 msgid ":ref:`layer_style`"
-msgstr ""
+msgstr ":ref:`layer_style`"
 
 #: ../../reference_manual/resource_management.rst:218
 msgid ":ref:`task_sets_docker`"
-msgstr ""
+msgstr ":ref:`task_sets_docker`"
 
 #: ../../reference_manual/resource_management.rst:219
 msgid ":ref:`vector_library_docker`"
-msgstr ""
+msgstr ":ref:`vector_library_docker`"
 
 #: ../../reference_manual/resource_management.rst:220
 msgid ":ref:`palette_docker`"
-msgstr ""
+msgstr ":ref:`palette_docker`"
