@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-08-28 18:21+0200\n"
+"PO-Revision-Date: 2021-09-11 15:34+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -76,6 +76,15 @@ msgid ""
 "your canvas, such as a layer's opacity or the position, rotation and scale "
 "of a :ref:`Transform Mask <transformation_masks>`."
 msgstr ""
+"När ett komplext klipp animeras, är det inte ovanligt att vilja animera saker"
+" som skulle vara svåra eller ineffektiva att göra bara genom att teckna. Med"
+" traditionell animering med papper och penna som går tillbaka till"
+" 1920-talet, användes särskilt byggda apparater som kameror med flera plan"
+" för att klara av specialeffekter som ändrade animering för alltid. På"
+" liknande sätt låter Kritas animeringskurvpanel oss att animera mer än bara"
+" linjerna på duken, såsom ett lagers ogenomskinlighet eller positionen,"
+" rotationen och skalningen av en :ref:`transformeringsmask <"
+"transformation_masks>`."
 
 #: ../../reference_manual/dockers/animation_curves.rst:22
 msgid ""
@@ -87,6 +96,14 @@ msgid ""
 "values in between each of our plotted keyframe values; a technique known as "
 "interpolation or :dfn:`tweening`."
 msgstr ""
+"Eftersom det mesta kan kokas ner till numeriska värden (exempelvis"
+" ogenomskinlighet som ett procentvärde eller positionen av en"
+" transformeringsmask), och eftersom datorer är utmärkta för matematik och"
+" automatisering, kan vi visa och åskådliggöra ändringarna i värde över tid på"
+" ett enkel tvådimensionellt diagram. Dessutom kan vi rita linjer och kurvor"
+" som visar för datorn hur vi vill att värden mellan var och en av våra"
+" uppritade värden för nyckelbilderna ska beräknas mellan dem: en teknik som"
+" kallas interpolering eller :dfn:`mellanteckning`."
 
 #: ../../reference_manual/dockers/animation_curves.rst:26
 msgid ".. image:: images/dockers/Animation_Curves_Docker.png"
@@ -101,6 +118,8 @@ msgid ""
 "As shown in the image above, Krita's Animation Curves Docker can be thought "
 "of as different sections:"
 msgstr ""
+"Som visas på bilden ovan, kan Kritas animeringskurvpanel betraktas som olika"
+" delar:"
 
 #: ../../reference_manual/dockers/animation_curves.rst:32
 msgid ""
@@ -113,6 +132,15 @@ msgid ""
 "for setting the selected keyframe to a specific value, as well as buttons to "
 "help zoom and navigate the main graph view."
 msgstr ""
+":dfn:`Verktyg`: Verktygsradens vänster sida ger animatörer snabb åtkomst till"
+" alla grafiska komponenter som är kritiska för deras arbetsflöde:"
+" :dfn:`förflyttningskontroller` (knapparna föregående, spela/paus, stoppa och"
+" nästa), en bildräknare, förhandsgranskningskontroller (hastighet och hoppa"
+" över bildrutor), knappar för att lägga till och ta bort :dfn:`skalära"
+" nyckelbilder`, knappar för att ändra :dfn:`interpolationsläge` och"
+" :dfn:`tangensläge` för den markerade nyckelbilden, en ruta för att ställa in"
+" den markerade nyckelbilden till ett visst värde, samt knappar för att hjälpa"
+" till att zooma och navigera i huvuddiagramvyn."
 
 #: ../../reference_manual/dockers/animation_curves.rst:34
 msgid ""
@@ -122,6 +150,11 @@ msgid ""
 "and forget (for example, :dfn:`playback range`, :dfn:`frame rate` and :dfn:"
 "`autokey mode`)."
 msgstr ""
+":dfn:`Inställningar`: Medan alla ofta använda kontroller presenteras direkt,"
+" innehåller verktygsradens högra del också knappar för att visa undermenyer"
+" för saker som rispapper och inställningar som man i allmänhet kan ange och"
+" sedan glömma (till exempel:  :dfn:`uppspelningsintervall`,"
+" :dfn:`bildhastighet` och :dfn:`automatisk nyckelbild`)."
 
 #: ../../reference_manual/dockers/animation_curves.rst:36
 msgid ""
@@ -131,6 +164,10 @@ msgid ""
 "visibility within the graph view can be toggled by clicking on the eyeball "
 "icon."
 msgstr ""
+":dfn:`Kanallista`: Området visar det aktuella lagrets olika kanaler som för"
+" närvarande animeras med animeringskurvpanelen. Varje oberoende kanal är"
+" kopplad till en unik färg och dess synlighet i diagramvyn kan ändras genom"
+" att klicka på ögonikonen."
 
 #: ../../reference_manual/dockers/animation_curves.rst:38
 msgid ""
@@ -146,6 +183,17 @@ msgid ""
 "dfn:`curve handles` to appear, which can be used to change the shape of the "
 "interpolation curve over time."
 msgstr ""
+":dfn:`Diagramvy`: Sist men inte minst, finns :dfn:`diagramvyn`, det stora"
+" diagrammet med värden och tider som vi använder för att animera parametrars"
+" värden över tiden. När en :term:`nyckelbild` läggs till i den aktuella"
+" kanalen vid aktuell tid, visas den som en färgad cirkel i diagramvyn. Efter"
+" att ha klickat på nyckelbilden för att markera den, kan man ändra värdet"
+" genom att dra cirkeln vertikalt eller genom att ange ett specifik värde i"
+" värderutan på verktygsraden. På liknande sätt kan man ändra tid för den"
+" markerade bildrutan genom att dra den horisontellt. Slutligen, när den"
+" markerade nyckelbilden använder :guilabel:`Bezier-kurvinterpolation`, dyker"
+" ett eller flera :dfn:`kurvgrepp` upp när den markeras, vilka kan användas"
+" för att ändra formen på interpolationskurvan över tid."
 
 #: ../../reference_manual/dockers/animation_curves.rst:42
 msgid "Animating Opacity"
@@ -158,6 +206,10 @@ msgid ""
 "Mask <transformation_masks>`, its :dfn:`position`, :dfn:`rotation`, :dfn:"
 "`scale` and :dfn:`shear`."
 msgstr ""
+"Med början på :program:`Krita 5`, kan vi använda animeringskurvpanelen för"
+" att animera ett lagers :term:`ogenomskinlighet` och, med hjälp av en"
+" :ref:`transformeringsmask <transformation_masks>`, dess :dfn:`position`,"
+" :dfn:`rotation`, :dfn:`skalning` och :dfn:`skjuvning`."
 
 #: ../../reference_manual/dockers/animation_curves.rst:48
 msgid ""
@@ -165,6 +217,10 @@ msgid ""
 "Animation Curves Docker may be a bit confusing or intimidating when you "
 "first open it, especially if you haven't done digital animation before."
 msgstr ""
+"Även om konstruktionen är ganska lik :ref:`timeline_docker`, kan"
+" animeringskurvpanelen vara något förvirrande eller skrämmande när man först"
+" öppnar den, i synnerhet om man inte har sysslat med digital animering"
+" tidigare."
 
 #: ../../reference_manual/dockers/animation_curves.rst:50
 msgid "Let's look first at *animating a layer's opacity*:"
@@ -179,6 +235,11 @@ msgid ""
 "pretty hard to get right by traditionally animated line drawings alone, and "
 "that's exactly where the Animation Curves Docker can step in."
 msgstr ""
+"Låt oss säga att vi vill animera någonting som ett expanderande dammoln som"
+" gradvis blir mer genomskinligt när det löser upp sig, eller kanske en"
+" spökande gast som verkar materialiseras ur tomma luften. Sådana sorters"
+" effekter är rätt svåra att få rätt enbart med traditionella animerade"
+" linjeteckningar, och det är exakt där animeringskurvpanelen kommer in."
 
 #: ../../reference_manual/dockers/animation_curves.rst:54
 msgid ""
@@ -189,12 +250,20 @@ msgid ""
 "anywhere on the timing header to \"scrub\" across your animation and preview "
 "the results."
 msgstr ""
+"Efter att ha *markerat lagret* som man vill animera ogenomskinligheten för,"
+" måste man *välja bildtid som ogenomskinligheten ska börja ändras* genom att"
+" klicka någonstans på :term:`bildtimingrubriken` längst upp i diagramvyn."
+" Precis som med :ref:`timeline_docker`, kan vi klicka och dra var som helst"
+" på timingrubriken för att \"svepa\" igenom vår animering och förhandsgranska"
+" resultatet."
 
 #: ../../reference_manual/dockers/animation_curves.rst:56
 msgid ""
 "Next we create our first scalar :term:`keyframe` by clicking on the :"
 "guilabel:`add keyframe` button on the docker's titlebar."
 msgstr ""
+"Därefter skapar vi vår första skalära :term:`nyckelbild` genom att klicka på"
+" knappen :guilabel:`lägg till nyckelbild` i panelens namnlist."
 
 #: ../../reference_manual/dockers/animation_curves.rst:58
 msgid ""
@@ -204,6 +273,11 @@ msgid ""
 "keyframes and curves in the :dfn:`graph view`. Second, a single keyframe "
 "will appear somewhere inside the graph view at the currently active time."
 msgstr ""
+"När man gör det ser man att två saker sker. För det första, dyker en ny"
+" :guilabel:`ogenomskinlighetskanal` upp i :dfn:`kanallistan` på vänster sida,"
+" intill en färgad markör som hör ihop med färgen på nyckelbilderna och"
+" kurvorna i :dfn:`diagramvyn`. För det andra, dyker en ensam nyckelbild upp"
+" någonstans inne i diagramvyn vid tiden som för närvarande är aktiv."
 
 #: ../../reference_manual/dockers/animation_curves.rst:60
 msgid ""
@@ -221,6 +295,12 @@ msgid ""
 "the :guilabel:`add keyframe` button). As you'd expect, a second keyframe has "
 "appeared at the new time and a straight line has appeared between them."
 msgstr ""
+"Precis som med vår första nyckelbild, måste vi skapa en andra nyckelbild. Låt"
+" oss ändra den aktiva bildrutans bildtid igen (genom att klicka eller svepa"
+" över timingrubriken) och lägga till en ny nyckelbild på den nya tiden (genom"
+" att klicka på knappen :guilabel:`lägg till nyckelbild`). Som man kan"
+" förvänta sig, dyker en andra nyckelbild upp vid den nya tiden och en rät"
+" linje har dykt upp mellan dem."
 
 #: ../../reference_manual/dockers/animation_curves.rst:64
 msgid ""
@@ -229,12 +309,19 @@ msgid ""
 "keyframe that we've created will move up and down. Likewise, moving the "
 "keyframe up and down will cause the opacity *at that time* to change."
 msgstr ""
+"Med den aktiva tiden fortfarande över vår nya nyckelbild, märks det att när"
+" man ändrar :dfn:`ogenomskinlighetsreglaget` ovanför :ref:`layer_docker`"
+" flyttas den nya nyckelbilden som vi skapat uppåt och neråt. På liknande sätt"
+" ändras ogenomskinligheten genom att flytta nyckelbilden uppåt och neråt *vid"
+" den tiden*."
 
 #: ../../reference_manual/dockers/animation_curves.rst:66
 msgid ""
 "And just like that, when you press the :guilabel:`play button` you'll see "
 "the opacity of the layer animate over time!"
 msgstr ""
+"Och precis så, när man trycker på :guilabel:`uppspelningsknappen` ser man hur"
+" lagrets ogenomskinlighet animeras under tiden."
 
 #: ../../reference_manual/dockers/animation_curves.rst:70
 msgid ""
@@ -243,12 +330,19 @@ msgid ""
 "machine and cause the caching process to take a little bit more time, as it "
 "calculates and stores each frame."
 msgstr ""
+"I motsats till traditionella metoder, kan animering med kurvor göra att"
+" värden ändras över alla bildrutor i animeringen. Det kan vara mer krävande"
+" för datorn och orsaka att cacheprocessen tar lite längre tid, eftersom den"
+" beräknar och lagrar varje bildruta."
 
 #: ../../reference_manual/dockers/animation_curves.rst:72
 msgid ""
 "*Before we move on*, let's use :dfn:`interpolation curves` instead of a "
 "straight line to change the timing and general feel of our opacity animation."
 msgstr ""
+"*Innan vi går vidare*, låt oss använda :dfn:`interpolationskurvor` istället"
+" för en rät linje för att ändra den allmänna känslan av vår"
+" ogenomskinlighetsanimering."
 
 #: ../../reference_manual/dockers/animation_curves.rst:74
 msgid ""
@@ -259,6 +353,12 @@ msgid ""
 "dfn:`handle`, and by clicking on it and dragging in different directions you "
 "can change the arc of the curve between your two keyframes."
 msgstr ""
+"Om man markerar linjesegmentens första nyckelbild (den på vänster sida) och"
+" klickar på knappen :guilabel:`Bezier-kurvinterpolation.` i namnlistens"
+" verktygssektion, märker man att nyckelbilden visas om en ihålig cirkel i"
+" diagramvyn. Den ihåliga cirkeln är ett :dfn:`grepp`, och genom att klicka på"
+" den och dra i olika riktningar kan man ändra kurvans böjning mellan de två"
+" nyckelbilderna."
 
 #: ../../reference_manual/dockers/animation_curves.rst:76
 msgid ""
@@ -267,6 +367,10 @@ msgid ""
 "turn off interpolation altogether, causing values to jump suddenly between "
 "keyframes."
 msgstr ""
+"På liknande sätt kan man klicka på knappen :guilabel:`linjär interpolering`"
+" för att ändra tillbaka kurvan till en linje, eller på knappen"
+" :guilabel:`konstant` för att stänga av interpolering helt och hållet, vilket"
+" gör att värden plötsligt hoppar mellan nyckelbilder."
 
 #: ../../reference_manual/dockers/animation_curves.rst:80
 msgid ""
@@ -275,16 +379,22 @@ msgid ""
 "that changes as you make adjustments elsewhere in the program will always be "
 "dependent on the active frame time!"
 msgstr ""
+"Det är viktigt att vara medveten om vilken animeringsbildruta som är markerad"
+" och aktiv, som visas av den färglagda vertikala linjen i diagramvyn."
+" Nyckelbilden som ändras när man gör justeringar på andra ställen i"
+" programmet beror alltid på den aktiva bildtiden."
 
 #: ../../reference_manual/dockers/animation_curves.rst:82
 msgid ""
 "*Ok, it's a bit tough to put in writing...* But it's not so bad once you get "
 "the hang of it!"
 msgstr ""
+"*Nåja, det är lite svårt att skriva ner ...* Men det är inte så illa när man"
+" väl får en känsla för det."
 
 #: ../../reference_manual/dockers/animation_curves.rst:86
 msgid "Animating Transform Masks"
-msgstr ""
+msgstr "Animering med transformeringsmasker"
 
 #: ../../reference_manual/dockers/animation_curves.rst:88
 msgid ""
@@ -292,6 +402,9 @@ msgid ""
 "*animate our layer's position, rotation, scale and shear* for :dfn:`"
 "\"tweening\"` effects:"
 msgstr ""
+"Låt oss nu tala en del om hur vi kan använda en :ref:`transformation_masks`"
+" för att *animera vårt lagers position, rotation, skalning och skjuvning* för"
+" :dfn:`\"mellanteckningseffekter\"`:"
 
 #: ../../reference_manual/dockers/animation_curves.rst:90
 msgid ""
@@ -300,6 +413,10 @@ msgid ""
 "layer that you want to animate, and then :menuselection:`Add --> Transform "
 "Mask`.)"
 msgstr ""
+"Animering av en transformeringsmask är mycket likt animering av"
+" ogenomskinlighet, men vi behöver först *lägga till en transformeringsmask*."
+" (Man kan göra det genom att högerklicka på lagret som man vill animera, och"
+" sedan använda :menuselection:`Lägg till --> Transformeringsmask`.)"
 
 #: ../../reference_manual/dockers/animation_curves.rst:92
 msgid ""
@@ -308,6 +425,10 @@ msgid ""
 "position. And (starting with Krita 5) they also allow us to animate a "
 "layer's transform!"
 msgstr ""
+"Transformeringsmasker låter oss :dfn:`transformera` (förflytta, rotera, skala"
+" eller skjuva) lagret som de är kopplade till, utan att påverka dess"
+" ursprungliga position. Och (med början på Krita 5) låter de oss också"
+" animera ett lagers transformering."
 
 #: ../../reference_manual/dockers/animation_curves.rst:94
 msgid ""
@@ -316,6 +437,10 @@ msgid ""
 "layer's Transform Mask selected*, and then click on the :guilabel:`add "
 "keyframe` button at the top of the docker."
 msgstr ""
+"I likhet med hur vi animerade ogenomskinlighet ovan, måste vi lägga till vår"
+" första nyckelbild för transformering. För att göra det, *säkerställ att"
+" lagrets transformeringsmask är markerad* och klicka sedan på knappen"
+" :guilabel:`lägg till nyckelbild` längst upp i panelen."
 
 #: ../../reference_manual/dockers/animation_curves.rst:98
 msgid ""
@@ -323,6 +448,10 @@ msgid ""
 "of a layer. In order to animate a layer's position, rotation, scale and "
 "shear, we need to attach a Transform Mask and animate it instead."
 msgstr ""
+"Kom ihåg att (från och med Krita 5.0) kan vi bara animera ett lagers"
+" ogenomskinlighetskurva *direkt*. För att animera ett lagers position,"
+" rotation, skalning och skjuvning, måste vi ansluta en transformeringsmask"
+" och animera den istället."
 
 #: ../../reference_manual/dockers/animation_curves.rst:100
 msgid ""
@@ -331,18 +460,26 @@ msgid ""
 "transform mask selected* the Animation Curves Docker will automatically add "
 "transformation keyframes."
 msgstr ""
+"Som sådan, lägger animeringskurvpanelen automatiskt till ogenomskinliga"
+" nyckelbilder *när man har ett vanligt målarlager markerad*, och"
+" animeringskurvpanelen lägger automatiskt till nyckelbilder för"
+" transformering *när man har en transformeringsmask markerad*."
 
 #: ../../reference_manual/dockers/animation_curves.rst:102
 msgid ""
 "Try to always keep in mind what type of layer you have selected when "
 "animating curves in Krita!"
 msgstr ""
+"Försök att alltid komma ihåg vilken typ av lager som är markerat när kurvor"
+" animeras i Krita."
 
 #: ../../reference_manual/dockers/animation_curves.rst:104
 msgid ""
 "You should see a whole bunch of channels appear in the channels list, each "
 "with a unique name and color, as well as a number of corresponding keyframes."
 msgstr ""
+"Man ska se en hel mängd kanaler dyka upp i kanallistan, var och en med ett"
+" unikt namn och en unik färg, samt ett antal motsvarande nyckelbilder."
 
 #: ../../reference_manual/dockers/animation_curves.rst:106
 msgid ""
@@ -352,6 +489,11 @@ msgid ""
 "`transformation_masks`, you should see the various keyframes of each channel "
 "moving around in the graph view to reflect the changes."
 msgstr ""
+"Om man vill går det att redigera de här nyckelbilderna direkt i diagramvyn,"
+" men det är troligen mer intuitivt att göra det direkt på duken. Så när"
+" :ref:`transformeringsverktyget <transform_tool>` nu används för din"
+" :ref:`transformeringsmask`, ska man se de olika nyckelbilderna för varje"
+" kanal flyttas omkring i diagramvyn för att motsvara ändringarna."
 
 #: ../../reference_manual/dockers/animation_curves.rst:110
 msgid ""
@@ -362,6 +504,13 @@ msgid ""
 "channel` and :guilabel:`zoom to curve` buttons at the top of the docker to "
 "fit the graph view to the currently visible channels."
 msgstr ""
+"Att animera en transformeringsmask ynglar av en mängd kanaler. Men, beroende"
+" på vilka mål man har, kanske man bara vill arbeta med ett litet antal av dem"
+" åt gången. *Dölja* kanaler och *ensam* kanal i kanallistan kan göra det"
+" mycket enklare att se och redigera kurvor, i synnerhet eftersom man kan"
+" använda knapparna :guilabel:`zooma till kanal` och :guilabel:`zooma till"
+" kurva` längst upp i panelen för att anpassa diagramvyn till kanalerna som"
+" för närvarande är synliga."
 
 #: ../../reference_manual/dockers/animation_curves.rst:112
 msgid ""
@@ -369,59 +518,71 @@ msgid ""
 "header* (on the left-hand side of the graph view) can also really help with "
 "editing curves!"
 msgstr ""
+"Att navigera genom att klicka och dra de zoomningsbara rullningslisterna och"
+" *värderubriken* (på vänster sida om diagramvyn) kan också verkligen hjälpa"
+" till vid redigering av kurvor."
 
 #: ../../reference_manual/dockers/animation_curves.rst:114
 msgid ""
 "Finally, click or scrub to a different frame time, add another keyframe, and "
 "use the Transform Tool on the same Transform Mask again."
 msgstr ""
+"Klicka eller svep slutligen till en annan bildtid, lägg till en annan"
+" nyckelbild, och använda transformeringsverktyget på samma"
+" transformeringsmask igen."
 
 #: ../../reference_manual/dockers/animation_curves.rst:116
 msgid ""
 "Press the :guilabel:`play button` and (after a little bit of caching) there "
 "you have it, a layer with an animated Transform Mask!"
 msgstr ""
+"Klicka på :guilabel:`uppspelningsknappen` och (efter en del lagring i cachen)"
+" finns det där, ett lager med alla animerad transformeringsmask."
 
 #: ../../reference_manual/dockers/animation_curves.rst:120
 msgid "Controls"
-msgstr ""
+msgstr "Kontroller"
 
 #: ../../reference_manual/dockers/animation_curves.rst:122
 msgid ":dfn:`Channels List`"
-msgstr ""
+msgstr ":dfn:`Kanallista`"
 
 #: ../../reference_manual/dockers/animation_curves.rst:124
 msgid "|mouseleft| on Eye Icon: Toggle show/hide channel."
-msgstr ""
+msgstr "Vänsterklick på ögonikonen: Visa eller dölj kanal."
 
 #: ../../reference_manual/dockers/animation_curves.rst:125
 msgid ":kbd:`Shift +` |mouseleft| on Eye Icon: Solo channel."
-msgstr ""
+msgstr ":kbd:`Skift +` vänster musknapp på ögonikonen: Ensam kanal."
 
 #: ../../reference_manual/dockers/animation_curves.rst:126
 msgid "|mouseright| : Open layer or channel context menu. [Reset Channel(s)]"
 msgstr ""
+"Höger musknapp: Öppna lagrets eller kanalens sammanhangsberoende meny."
+" [Återställ kanal(er)]"
 
 #: ../../reference_manual/dockers/animation_curves.rst:128
 msgid ":dfn:`Graph View`"
-msgstr ""
+msgstr ":dfn:`Diagramvisning`"
 
 #: ../../reference_manual/dockers/animation_curves.rst:130
 msgid "|mouseleft| : Select keyframe."
-msgstr ""
+msgstr "Vänster musknapp: Markera nyckelbild."
 
 #: ../../reference_manual/dockers/animation_curves.rst:131
 msgid "|mouseleft| :kbd:`+ drag` : *Move* frame(s)."
-msgstr ""
+msgstr "Vänster musknapp :kbd:`+ dra`: *Flytta* en eller flera bildrutor."
 
 #: ../../reference_manual/dockers/animation_curves.rst:132
 msgid "|mouseleft| double-click : Select all keyframes at time."
-msgstr ""
+msgstr "Dubbelklick med vänster musknapp: Markera alla nyckelbilder vid tiden."
 
 #: ../../reference_manual/dockers/animation_curves.rst:133
 msgid ""
 ":kbd:`Alt +` |mouseleft| double-click : Select all keyframes of channel."
 msgstr ""
+":kbd:`Alt +` dubbelklick med vänster musknapp: Markera alla kanalens"
+" nyckelbilder."
 
 #: ../../reference_manual/dockers/animation_curves.rst:134
 msgid ":kbd:`Space +` |mouseleft| : Pan."
@@ -433,7 +594,7 @@ msgstr ":kbd:`Mellanslag +` höger musknapp: Zooma."
 
 #: ../../reference_manual/dockers/animation_curves.rst:137
 msgid ":dfn:`Frame Timing Header`"
-msgstr ""
+msgstr ":dfn:`Bildtimingrubrik`"
 
 #: ../../reference_manual/dockers/animation_curves.rst:139
 msgid "|mouseleft| : Move to time and select frame of the active layer."
@@ -450,12 +611,13 @@ msgstr ""
 
 #: ../../reference_manual/dockers/animation_curves.rst:142
 msgid ":dfn:`Value Header`"
-msgstr ""
+msgstr ":dfn:`Värderubrik`"
 
 #: ../../reference_manual/dockers/animation_curves.rst:144
 msgid "|mouseleft| :kbd:`+ drag` : Zoom graph view."
-msgstr ""
+msgstr "Vänster musknapp :kbd:`+ dra` : Zooma diagramvy."
 
 #: ../../reference_manual/dockers/animation_curves.rst:145
 msgid ":kbd:`Space +` |mouseleft| :kbd:`+ drag` : Pan graph view."
 msgstr ""
+":kbd:`Mellanslag +` vänster musknapp :kbd:`+ dra` : Panorera diagramvy."
