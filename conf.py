@@ -303,6 +303,16 @@ html_context = {
 
 html_last_updated_fmt = '%Y-%m-%dT%H:%M:%S'
 
+# Search options. This varies depending on the language.
+if get_override_language_or_en() == 'zh_CN':
+    html_search_options = {
+        'dict': 'jieba-dict-zh_CN.txt',
+    }
+elif get_override_language_or_en() == 'zh_TW':
+    html_search_options = {
+        'dict': 'jieba-dict-zh_TW.txt',
+    }
+
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
