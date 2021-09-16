@@ -31,7 +31,11 @@ import re
 import subprocess
 import sys
 from collections import deque
+from pathlib import Path
 from typing import Optional
+
+
+THIS_DIR = Path(__file__).resolve().parent
 
 
 @functools.lru_cache(maxsize=None)
@@ -306,11 +310,11 @@ html_last_updated_fmt = '%Y-%m-%dT%H:%M:%S'
 # Search options. This varies depending on the language.
 if get_override_language_or_en() == 'zh_CN':
     html_search_options = {
-        'dict': 'jieba-dict-zh_CN.txt',
+        'dict': str(THIS_DIR.joinpath('jieba-dict-zh_CN.txt')),
     }
 elif get_override_language_or_en() == 'zh_TW':
     html_search_options = {
-        'dict': 'jieba-dict-zh_TW.txt',
+        'dict': str(THIS_DIR.joinpath('jieba-dict-zh_TW.txt')),
     }
 
 
