@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-09-07 14:57\n"
+"PO-Revision-Date: 2021-09-18 16:16\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___brushes___brush_settings___texture.pot\n"
 "X-Crowdin-File-ID: 9892\n"
+"Language: zh_CN\n"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:0
 msgid ".. image:: images/brushes/Krita_2_9_brushengine_texture_05.png"
@@ -147,7 +147,7 @@ msgstr "选择笔刷使用的图案。"
 #: ../../reference_manual/brushes/brush_settings/texture.rst:28
 msgid "The size of the pattern. 1.0 is 100%."
 msgstr ""
-"图案的缩放比例，1.0 为 100%。下图图例中，左边缩放比例为 1.0，右边为 2.0。"
+"调整图案的缩放比例，1.0 为 100%。下图图例中，左边缩放比例为 1.0，右边为 2.0。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:29
 msgid "Scale"
@@ -156,8 +156,8 @@ msgstr "缩放"
 #: ../../reference_manual/brushes/brush_settings/texture.rst:32
 msgid "How much a brush is offset, random offset sets a new per stroke."
 msgstr ""
-"笔刷的偏移量，如果映射到随机度传感器，则每一笔取得一次新的随机数据。下图图示"
-"中，左边为正常偏移，右边为随机偏移。"
+"笔刷的图案偏移量，如果映射到随机度传感器，则每画一笔取得一次新的随机偏移量。"
+"下图图示中，左边为正常偏移，右边为随机偏移。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:33
 msgid "Horizontal Offset & Vertical Offset"
@@ -168,8 +168,9 @@ msgid ""
 "All texture modes affect the alpha channel, with the exception of *lightness "
 "map* and *gradient map*, which affect the color channels."
 msgstr ""
-"所有纹理模式均影响透明度通道，只有 **亮度映射** 和 **渐变映射** 例外，它们影"
-"响颜色通道。下方图示从左到右分别为：相乘、减去、亮度映射、渐变映射。"
+"所有纹理模式均影响透明度通道，只有\\ **亮度图**\\ 和\\ **渐变映射**\\ 例外，"
+"它们影响色彩通道。下方图示从左到右分别为：正片叠底 (相乘)、减去、亮度图、渐变"
+"映射。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:42
 msgid ""
@@ -179,23 +180,24 @@ msgid ""
 "strokes there are two non-textured dots, just for comparison sake."
 msgstr ""
 "在下面的例图中，示例笔画从左向右绘制，效果强度数值 (默认映射到压力) 逐渐加"
-"大。上图使用硬笔尖，下图使用软笔尖。笔画的左侧为用于对比的两个无纹理圆点。"
+"大。上面一笔使用的是硬边笔尖，下面一笔使用的是软边笔尖，左侧显示了两个笔尖图"
+"像的示意图。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:47
 msgid ""
 "Uses alpha multiplication to determine the effect of the texture. Has a soft "
 "feel."
-msgstr "对透明度进行相乘计算来决定纹理的效果，肌理比较柔和。"
+msgstr "对透明度进行乘法运算来决定纹理的效果，肌理比较柔和。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:48
 msgid "Multiply"
-msgstr "相乘"
+msgstr "正片叠底 (相乘)"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:51
 msgid ""
 "Uses subtraction to determine the effect of the texture. Has a harsher, more "
 "texture feel."
-msgstr "使用减去计算来决定纹理的效果，肌理相对粗糙。"
+msgstr "对透明度进行减法运算来决定纹理的效果，肌理相对粗糙。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:52
 msgid "Subtract"
@@ -212,7 +214,7 @@ msgstr ""
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:58
 msgid "Lightness Map"
-msgstr "亮度映射"
+msgstr "亮度图"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:63
 msgid ""
@@ -246,8 +248,8 @@ msgid ""
 "tip. This mode produces a result similar to *multiply* but allowing for full "
 "coverage when high strength values are used."
 msgstr ""
-"纹理会被柔和地应用到笔尖的半透明区域。此模式能产生类似于\\ **相乘**\\ 模式的"
-"效果，但能够在效果强度数值较高时填满笔画的全部区域。"
+"纹理会被柔和地应用到笔尖的半透明区域。此模式能产生类似于\\ **正片叠底 (相"
+"乘)**\\ 模式的效果，但能够在效果强度数值较高时填满笔画的全部区域。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:78
 msgid "Overlay"
@@ -281,7 +283,7 @@ msgstr "加深"
 msgid ""
 "Similar to *color dodge* but the opacity of the brush tip is increased even "
 "more."
-msgstr "类似于 **颜色加深** ，但笔尖的不透明度进一步提高。"
+msgstr "类似于\\ **颜色加深**\\ ，但笔尖的不透明度进一步提高。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:98
 msgid "Linear Dodge"
@@ -317,8 +319,8 @@ msgid ""
 "This mode tries to emulate *hard mix (photoshop)* while producing softer, "
 "antialiased, edges."
 msgstr ""
-"此模式尝试模拟 **实色混合 (Photoshop)** 的效果，但在边缘处更加柔和，抗锯齿效"
-"果更明显。"
+"此模式尝试模拟\\ **实色混合 (Photoshop)**\\ 的效果，但在边缘处更加柔和，抗锯"
+"齿效果更明显。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:118
 msgid "Hard Mix Softer (Photoshop)"
@@ -340,7 +342,9 @@ msgstr "高度"
 #: ../../reference_manual/brushes/brush_settings/texture.rst:130
 msgid ""
 "Same as *height* but combined with *multiply* to achieve softer transitions."
-msgstr "与 **高度** 模式相同，但结合了 **相乘** 模式的特性以实现更柔和的过渡。"
+msgstr ""
+"与\\ **高度**\\ 模式相同，但结合了\\ **正片叠底 (相乘)**\\ 模式的特性以实现更"
+"柔和的过渡。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:131
 msgid "Linear Height"
@@ -360,7 +364,7 @@ msgstr ""
 "时笔尖的变化范围更加丰富。与\\ **减去**\\ 模式不同，它单笔即可达到完全填满笔"
 "尖的效果。此模式尝试模仿 Photoshop 中的高度模式，它与 Krita 原生的\\ **高度**"
 "\\ 模式的区别在于算法如何映射效果强度数值。当效果强度数值为 0.1 时，其效果基"
-"本与\\ **减去**\\ 模式下 效果强度数值为 1 时相同。"
+"本与\\ **减去**\\ 模式下效果强度数值为 1 时相同。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:141
 msgid "Height (Photoshop)"
@@ -371,8 +375,8 @@ msgid ""
 "Same as *height (photoshop)* but combined with *multiply* to achieve softer "
 "transitions."
 msgstr ""
-"与 **高度 (Photoship)** 模式相同，但结合了 **相乘** 模式的效果以实现更加柔和"
-"的过渡。"
+"与\\ **高度 (Photoshop)**\\ 模式相同，但结合了\\ **正片叠底 (相乘)**\\ 模式的"
+"效果以实现更加柔和的过渡。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:148
 msgid "Texturing mode"
@@ -386,19 +390,19 @@ msgstr "线性高度 (Photoshop)"
 msgid ""
 "Cutoff policy will determine what range and where the strength will affect "
 "the textured outcome."
-msgstr "截断策略将控制效果强度将在什么范围内、针对什么位置影响纹理效果。"
+msgstr "截断策略将控制效果强度通过何种方式影响纹理的亮度范围。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:153
 msgid "Disabled"
-msgstr "禁用"
+msgstr "禁用截断"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:154
 msgid "Doesn't cut off. Full range will be used."
-msgstr "不进行截断，将使用完整的范围。"
+msgstr "不进行截断，将使用完整的亮度范围。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:156
 msgid "Cuts the pattern off."
-msgstr "对纹理的深浅范围进行截断。"
+msgstr "对纹理的亮度范围进行截断。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:158
 msgid "Brush"
@@ -406,7 +410,9 @@ msgstr "笔刷"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:158
 msgid "Cuts the brush tip off."
-msgstr "对笔尖的不透明度范围进行截断。"
+msgstr ""
+"对笔尖图像的亮度范围进行截断。下图左边四笔为纹理模式为\\ **正片叠底 (相乘)** "
+"的截断效果，右边四笔为\\ **减去**\\ 的截断效果。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:160
 msgid "Cutoff policy"
@@ -422,11 +428,12 @@ msgid ""
 "darkest values being cut away, leaving only the lightest. The last example "
 "is the pattern without cutoff."
 msgstr ""
-"截断范围控制的是在纹理上使用的灰阶范围，同时还控制效果强度的输入范围。在下方"
-"的第一行的第一张图中，我们把右边的白色三角拖动到左边的黑色三角附近，所以只有"
-"明度最暗的部分被绘制了出来。接下来的三张图片的范围更宽一些。第二行的前面三张"
-"图的黑色三角被向右拖动，所以明度最暗的部分被忽略了，之后明度较亮的部分被绘制"
-"了出来。最后一张图并未使用截断功能。"
+"截断范围控制的是在纹理允许使用的亮度范围，当纹理图案的亮度数值超出此滑动条指"
+"定的范围时，将应用截断策略。效果强度的区间也受此范围的影响。下图的\\ **最后一"
+"张**\\ ：禁用截断时的绘制效果。\\ **第一行**\\ ：将白色色标向左拖动到黑色色标"
+"附近，因此只有明度最暗的部分才能被绘制出来。左一的范围最窄，其他图像的范围更"
+"宽一些。\\ **第二行**\\ ：左一左二左三的的黑色色标向右拖动，因此亮度最暗的部"
+"分被忽略了，只有较亮的部分才能被绘制出来。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:165
 msgid "Cutoff"
@@ -434,7 +441,7 @@ msgstr "截断范围"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:168
 msgid "Invert the pattern."
-msgstr "此选项将把图案进行反相。下面例图中，左图为正常图案，右图为反相图案。"
+msgstr "此选项将对图案进行反相处理。下面左图为正常图案，右图为反相图案。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:170
 msgid "Invert Pattern"
@@ -451,9 +458,10 @@ msgid ""
 "recommended to use different values with each:"
 msgstr ""
 "通过一对简单的亮度/对比度滤镜对图案进行调整，使得效果更容易控制。由于减去模式"
-"和相乘模式的工作原理存在差异，我们建议为它们使用不同的数值。下图列出了该组选"
-"项和两种纹理模式配合运用的效果。左边一组是减去模式，右边一组是相乘模式。横向"
-"为亮度变化，纵向为对比度变化。"
+"和正片叠底 (相乘) 模式的工作原理存在差异，在不同模式下应该使用不同的数值。下"
+"图列出了两种纹理模式下亮度和对比度变化的效果。\\ **左表**\\ ：减去模式，\\ **"
+"右表**\\ ：正片叠底 (相乘) 模式。\\ **横向**\\ ：亮度变化，\\ **纵向**\\ ：对"
+"比度变化。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:178
 msgid ".. image:: images/brushes/Krita_3_1_brushengine_texture_07.png"
@@ -476,9 +484,9 @@ msgid ""
 "Lightness Map and Gradient Map modes (though it can have applications with "
 "the other two modes)."
 msgstr ""
-"调整被视作中性点的灰阶值的位置。0.5 将保持原图效果不变。调高会让纹理变暗，调"
-"低会让纹理变亮，在亮度映射模式下的效果略有不同。它主要用来配合亮度映射和渐变"
-"映射模式使用，对纹理图像的效果进行微调。"
+"调整被视作中性点的灰阶亮度位置。0.5 将保持原图效果不变。调高会让纹理变暗，调"
+"低会让纹理变亮，但和亮度滑动条的效果不同。它在配合笔尖图像的\\ **亮度图**\\ "
+"和\\ **渐变映射**\\ 模式使用时效果最好。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:187
 msgid "Strength"
@@ -489,8 +497,8 @@ msgid ""
 "This allows you to set the texture to Sensors. It will use the cutoff to "
 "continuously draw lighter values of the texture (making the result darker)."
 msgstr ""
-"此项控制传感器对纹理的影响。它会使用截止值来使同一效果强度下被反复绘制的区域"
-"深浅保持一致，只在力度增大时加深颜色。"
+"此选项用于将纹理的效果强度映射到传感器。它会使用纹理的截断范围来反复对纹理亮"
+"度较浅的部分进行绘制，使得结果颜色更深。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:191
 msgid ""
@@ -498,8 +506,9 @@ msgid ""
 "much of the texture is applied compared to how much of the selected paint "
 "color comes through."
 msgstr ""
-"在亮度映射和渐变映射模式下面，\\ :guilabel:`效果强度`\\ 滑动条用于控制纹理在"
-"前景色上的应用比例。下面的例图中，左图为相乘模式，右图为减去模式的效果。"
+"在\\ **亮度图**\\ 和\\ **渐变映射**\\ 模式下面，\\ :guilabel:`效果强度`\\ 滑"
+"动条用于控制纹理和前景色在笔画中的比例。下面的例图应用了不同的纹理模式，\\ **"
+"左图**\\ 为正片叠底 (相乘) ，\\ **右图**\\ 为减去。"
 
 #: ../../reference_manual/brushes/brush_settings/texture.rst:195
 msgid ".. image:: images/brushes/Krita_2_9_brushengine_texture_03.png"

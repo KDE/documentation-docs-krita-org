@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-09-07 14:57\n"
+"PO-Revision-Date: 2021-09-18 16:16\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___tools___transform.pot\n"
 "X-Crowdin-File-ID: 9974\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -247,8 +247,8 @@ msgid ""
 "Draw the anchor points yourself. Locking the points will put you in "
 "transform mode. Unlocking the points back into edit mode."
 msgstr ""
-"自行绘制控制点。绘制完毕后点击锁定按钮即可开始变形，解除锁定可以返回编辑模"
-"式。"
+"自行绘制控制点。绘制完毕后点击\\ **变形模式**\\ 按钮即可开始变形，点击\\ **编"
+"辑点模式**\\ 按钮可以重新编辑控制点。"
 
 #: ../../reference_manual/tools/transform.rst:84
 msgid ""
@@ -280,8 +280,8 @@ msgid ""
 "\"blocky\"."
 msgstr ""
 "此项数值控制操控变形 - 外框的变形精度，它反映了变形处理时画面的每个处理单元的"
-"大小。数值越低则分得越细，因此变形品质越好，处理速度越慢。数值越高，变形结果"
-"的块状感就越明显。"
+"大小。颗粒度越小，意味着处理单元分得更细，因此变形精度也就越高，但处理速度也"
+"会因此变慢。颗粒度越大，变形结果的块状感就越明显。"
 
 #: ../../reference_manual/tools/transform.rst:97
 msgid "Preview"
@@ -293,7 +293,7 @@ msgid ""
 "higher than the :guilabel:`Real` value, as it speeds up adjusting."
 msgstr ""
 "指定预览时使用的颗粒度。建议设为高于 :guilabel:`真实颗粒度` 的数值，这样有助"
-"于提高处理速度。"
+"于提高预览时的处理速度。"
 
 #: ../../reference_manual/tools/transform.rst:100
 msgid "Real"
@@ -312,8 +312,8 @@ msgid ""
 "Both Cage and Warp use little nodes. These nodes can be selected and "
 "deselected together by pressing the :kbd:`Ctrl` key before clicking nodes."
 msgstr ""
-"操控变形 - 网格/外框模式都通过拖动控制点来进行变形。你可以按住 :kbd:`Ctrl` 键"
-"对控制点进行多选或者部分取消选择。"
+"操控变形的网格、外框模式都通过拖动控制点来进行变形。你可以按住 :kbd:`Ctrl` 键"
+"对控制点进行多选，或者部分取消选择。"
 
 #: ../../reference_manual/tools/transform.rst:107
 msgid ""
@@ -333,7 +333,10 @@ msgstr ".. image:: images/tools/Transform_Tool_Options_Liquify.png"
 msgid ""
 "Like our deform brush, the liquify brush allows you to draw the deformations "
 "straight on the canvas."
-msgstr "液化变形模式可以视作变形笔刷，你可以在画布上直接绘制来对图像进行变形。"
+msgstr ""
+"液化变形模式可以视作变形笔刷，你可以在画布上直接绘制来对图像进行变形。它有五"
+"种变形模式，可以在工具面板左边的一排按钮选择 (\\ **它们是液化变形模式的按钮，"
+"不是滑动条选项文字的图标！**\\ )。"
 
 #: ../../reference_manual/tools/transform.rst:118
 msgid "Move"
@@ -467,9 +470,10 @@ msgid ""
 "process, so working with liquify within a selection or using liquify on a "
 "separate layer with little on it will greatly enhance the speed."
 msgstr ""
-"液化变形的各种效果也可以通过 Krita 的 :ref:`deform_brush_engine` 实现，而且后"
-"者的处理速度更快，然而这种加速是通过牺牲品质实现的。你可以通过使用选区或者将"
-"需要变形的区域分离到单独图层来提高液化变形的速度。"
+"液化变形的各种效果也可以通过 Krita 的\\ :ref:`deform_brush_engine`\\ 实现，而"
+"且后者的处理速度更快，然而这种加速是通过牺牲品质实现的。如果想要提高液化变形"
+"速度，你可以使用选区限制液化变形的区域，也可以将需要变形的区域分离到一个单独"
+"的图层上。"
 
 #: ../../reference_manual/tools/transform.rst:161
 msgid ""
@@ -504,10 +508,10 @@ msgid ""
 "the tool options, so each Bezier segment can be fine-tuned to your content."
 msgstr ""
 "在曲线网格变形开始之后，曲线网格将被叠加显示在变形对象之上。你可以拖动网格线"
-"的节点、网格线上任意一点或者网眼内部任意一点，图像将会据此进行实时变形。按"
-"住 :kbd:`Ctrl` + :kbd:`Alt` 不放，并将鼠标悬停在网格线上，你会发现光标发生了"
-"改变，此时 |mouseleft| 左键点击 + 拖动即可新建一条网格线，对网格进一步细分。"
-"要对曲线进行精确调整，请在工具选项面板勾选“显示控制点”。"
+"的节点、网格线上任意一点、或者单元格内部任意一点，图像将会据此进行实时变形。"
+"按住 :kbd:`Ctrl` + :kbd:`Alt` 不放，并将鼠标悬停在网格线上，你会发现光标发生"
+"了改变，此时 |mouseleft| 左键点击 + 拖动即可新建一条网格线，对网格进一步细"
+"分。要对曲线进行精确调整，请在工具选项面板勾选“显示控制点”。"
 
 #: ../../reference_manual/tools/transform.rst:169
 msgid ""
@@ -521,9 +525,9 @@ msgid ""
 msgstr ""
 "曲线网格变形在默认情况下会锁定网格节点的位置，光标会显示“锁定”图标。在锁定状"
 "态下，调整一条曲线时也会影响到与它相邻的另一条曲线，这样可以保持在节点处的曲"
-"线过渡能保持效果一致。在拖动时按住 :kbd:`Shift` 键可以暂时停止锁定，这样会允"
-"许网眼交界处发生锐利的过渡。在锐利过渡出现后，返回到锁定模式也会维持之前的锐"
-"利过渡。"
+"线过渡能保持效果一致。在拖动时按住 :kbd:`Shift` 键可以暂时停止锁定，这样将允"
+"许单元格交界处发生锐利的过渡。在锐利的过渡出现后，返回到锁定模式也会维持之前"
+"的锐利过渡。"
 
 #: ../../reference_manual/tools/transform.rst:172
 msgid "Shortcuts"
@@ -572,7 +576,7 @@ msgstr ":kbd:`Shift` +  |mouseleft| 左键点击 + 拖动一段曲线。"
 
 #: ../../reference_manual/tools/transform.rst:182
 msgid "Free patch deform:"
-msgstr "网眼自由变形"
+msgstr "单元格自由变形"
 
 #: ../../reference_manual/tools/transform.rst:183
 msgid ""
@@ -581,8 +585,8 @@ msgid ""
 "whole segment will then adjust all its control points around the point of "
 "the cursor."
 msgstr ""
-"|mouseleft| 左键点击 + 拖动网格内的任意空白位置，即可直观地对一个网眼进行变"
-"形。网眼的各段曲线将按照光标的拖动情况进行自动调整。"
+"|mouseleft| 左键点击 + 拖动网格内的任意空白位置，即可直观地对一个单元格进行变"
+"形。单元格的各段曲线将按照光标的拖动情况进行自动调整。"
 
 #: ../../reference_manual/tools/transform.rst:185
 msgid ""
@@ -624,7 +628,7 @@ msgstr ""
 
 #: ../../reference_manual/tools/transform.rst:190
 msgid "Move selection or mesh"
-msgstr "移动选中的对象或者网眼"
+msgstr "移动选中的对象或者单元格"
 
 #: ../../reference_manual/tools/transform.rst:191
 msgid ":kbd:`Shift` + |mouseleft| + drag on empty area outside the mesh."
@@ -632,7 +636,7 @@ msgstr ":kbd:`Shift` + |mouseleft| 左键点击 + 拖动网格外部的空白区
 
 #: ../../reference_manual/tools/transform.rst:192
 msgid "Rotate selection or mesh"
-msgstr "旋转选中的对象或者网眼"
+msgstr "旋转选中的对象或者单元格"
 
 #: ../../reference_manual/tools/transform.rst:193
 msgid ""
@@ -645,7 +649,7 @@ msgstr ""
 
 #: ../../reference_manual/tools/transform.rst:195
 msgid "Scale selection or mesh"
-msgstr "缩放选中的对象或者网眼"
+msgstr "缩放选中的对象或者单元格"
 
 #: ../../reference_manual/tools/transform.rst:195
 msgid ""
@@ -739,5 +743,5 @@ msgid ""
 "These allow you to make non-destructive transforms, check :ref:`here "
 "<transformation_masks>` for more info."
 msgstr ""
-"Krita 可以通过变形蒙版来实现非破坏性变形。请参考 :ref:`变形蒙版 "
-"<transformation_masks>` 页面的介绍。"
+"Krita 可以通过变形蒙版来实现非破坏性变形。详情请见\\ :ref:`变形蒙版 "
+"<transformation_masks>`\\ 页面。"

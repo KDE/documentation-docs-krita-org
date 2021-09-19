@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-09-07 14:57\n"
+"PO-Revision-Date: 2021-09-18 16:16\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___import_animation.pot\n"
 "X-Crowdin-File-ID: 25635\n"
+"Language: zh_CN\n"
 
 #: ../../reference_manual/import_animation.rst:1
 msgid "Importing video frames."
@@ -44,11 +44,11 @@ msgstr "导入动画"
 
 #: ../../reference_manual/import_animation.rst:16
 msgid "Krita has several options for allowing you to import an animation."
-msgstr "Krita 支持几种不同的方式来导入动画。"
+msgstr "Krita 支持通过几种不同的方式来导入动画，导入时还可以设置一些相关选项。"
 
 #: ../../reference_manual/import_animation.rst:21
 msgid "Import Frames"
-msgstr "导入动画帧"
+msgstr "导入动画 - 逐帧"
 
 #: ../../reference_manual/import_animation.rst:23
 msgid ""
@@ -56,16 +56,18 @@ msgid ""
 "format that most other animation software can export, and thus very useful "
 "for interchange."
 msgstr ""
-"导入动画帧对话框会将一系列图像导入到一个动画图层中。多数动画制作软件都支持将"
-"动画导出为图像序列，方便不同程序之间的数据交换。"
+"你可以使用\\ **导入动画 - 逐帧**\\ 对话框将一系列图像作为动画帧导入到一个动画"
+"图层中。多数动画制作软件均支持将动画导出为图像序列，方便不同程序之间的数据交"
+"换。"
 
 #: ../../reference_manual/import_animation.rst:25
 msgid ""
 "First let us take a sprite sheet from Open Game Art. (This is the Libre "
 "Pixel Cup male walkcycle [1]_)."
 msgstr ""
-"首先，让我们从 Open Game Art 网站找一张像素拼合图 (以 Libre Pixel Cup male "
-"walkcycle 为例 [1]_)。"
+"首先，让我们先从\\ **将像素拼合图切割为单帧序列**\\ 开始介绍。如果你不需要做"
+"这一步，可以跳过此段。现在我们要 Open Game Art 网站找一张像素拼合图 (以 "
+"Libre Pixel Cup male walkcycle 为例 [1]_)。"
 
 #: ../../reference_manual/import_animation.rst:27
 msgid "We'll use :ref:`image_split` to split up the sprite sheet."
@@ -92,8 +94,8 @@ msgid ""
 "Animation Frames`. This will give you a little window. Select :guilabel:`Add "
 "images`. This should get you a file browser where you can select your images."
 msgstr ""
-"新建一个文档，点击菜单栏的 :menuselection:`文件 --> 导入动画帧` 。在弹出的对"
-"话框中点击 :guilabel:`添加图像` 按钮，从导入对话框中找到刚才分割的拼合图。"
+"新建一张图像，点击主菜单的 :menuselection:`文件 --> 导入动画 - 逐帧` 。在弹出"
+"的对话框中点击 :guilabel:`添加图像` 按钮，找到刚才分割的拼合图进行添加。"
 
 #: ../../reference_manual/import_animation.rst:36
 msgid ".. image:: images/animation/Animation_import_sprites.png"
@@ -221,13 +223,13 @@ msgstr ""
 
 #: ../../reference_manual/import_animation.rst:76
 msgid "Import video file"
-msgstr "导入视频动画"
+msgstr "导入动画 - 视频"
 
 #: ../../reference_manual/import_animation.rst:78
 msgid ""
 "Video import allows you to import a sample of a video file as an animated "
 "paint layer."
-msgstr "导入视频动画功能可以让你导入一段视频作为动画图层。"
+msgstr "你可以使用\\ **导入动画 - 视频**\\ 对话框导入一段视频作为动画图层。"
 
 #: ../../reference_manual/import_animation.rst:81
 msgid ".. image:: images/animation/import_video.png"
@@ -334,7 +336,7 @@ msgid ""
 "for the color profile with which the file imports. Only shows up on files "
 "where this data is detected."
 msgstr ""
-"Krita 检测到的视频文件的色彩空间名称。它将被用于导入视频时使用的色彩特性文"
+"Krita 检测到的视频文件的色彩空间名称。它将被用于确定被导入视频的色彩特性文"
 "件。此信息仅在检测到对应的元数据时才会显示。"
 
 #: ../../reference_manual/import_animation.rst:108
@@ -342,7 +344,7 @@ msgid ""
 "The name of the color space trc that Krita has found. This too will be used "
 "for the color profile. Only shows up on files where this data is detected."
 msgstr ""
-"Krita 检测到的视频文件的色彩空间阶调响应曲线名称。它将被用于导入视频时使用的"
+"Krita 检测到的视频文件的色彩空间阶调响应曲线名称。它将被用于确定被导入视频的"
 "色彩特性文件。此信息仅在检测到对应的元数据时才会显示。"
 
 #: ../../reference_manual/import_animation.rst:109
@@ -389,7 +391,7 @@ msgid ""
 "document. With new document, extra options become available on the second "
 "tab."
 msgstr ""
-"选择视频导入到的目标文件。可以选择当前文档或者新建文档。如果选择了新建文档，"
+"选择视频导入到的目标文件。可以选择当前图像或者新建图像。如果选择了新建图像，"
 "高级选项卡将解锁一些额外选项。"
 
 #: ../../reference_manual/import_animation.rst:125
@@ -412,19 +414,19 @@ msgstr "高级选项"
 
 #: ../../reference_manual/import_animation.rst:131
 msgid "Document Options"
-msgstr "新建文档选项"
+msgstr "新建图像选项"
 
 #: ../../reference_manual/import_animation.rst:132
 msgid "Only enabled when the import is into a new document."
-msgstr "仅在导入到新建文档时显示。"
+msgstr "仅在导入到新建图像时显示。"
 
 #: ../../reference_manual/import_animation.rst:135
 msgid "Width of the new document."
-msgstr "新建文档的宽度。"
+msgstr "新建图像的宽度。"
 
 #: ../../reference_manual/import_animation.rst:137
 msgid "Height of the new document."
-msgstr "新建文档的高度。"
+msgstr "新建图像的高度。"
 
 #: ../../reference_manual/import_animation.rst:140
 msgid "Import Video Scale"

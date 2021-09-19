@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-09-07 14:57\n"
+"PO-Revision-Date: 2021-09-18 16:16\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,10 +17,11 @@ msgstr ""
 "docs_krita_org_reference_manual___brushes___brush_engines___bristle_engine."
 "pot\n"
 "X-Crowdin-File-ID: 9714\n"
+"Language: zh_CN\n"
 
 #: ../../<generated>:1
 msgid "Weighted saturation"
-msgstr "饱和度权衡"
+msgstr "饱和度权重控制"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:0
 msgid ".. image:: images/brushes/Krita-tutorial7-B.I.3-1.png"
@@ -60,7 +60,7 @@ msgstr ".. image:: images/icons/bristlebrush.svg"
 msgid ""
 "A brush intended to mimic real-life brushes by drawing the trails of their "
 "lines or bristles."
-msgstr "这是一个模拟了现实笔刷效果的引擎，它可以在描绘路线上按照鬃毛留下痕迹。"
+msgstr "这是一个模拟现实笔刷效果的引擎，它可以在笔画路径上模仿鬃毛留下的痕迹。"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:25
 msgid "Brush Tip"
@@ -72,23 +72,23 @@ msgstr "基本原理："
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:29
 msgid "The brush tip defines the areas with bristles in them."
-msgstr "笔尖定义了笔刷含有鬃毛的区域。"
+msgstr "笔尖图像将被用于指定笔刷含有鬃毛的区域。"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:30
 msgid ""
 "Lower opacity areas have lower-opacity bristles. With this brush, this may "
 "give the illusion that lower-opacity areas have fewer bristles."
 msgstr ""
-"在不透明度较低的区域里的鬃毛的不透明度跟着降低。在这个笔刷引擎里面，不透明度"
-"较低的区域可能给人留下鬃毛较少的印象。"
+"笔尖图像中不透明度较低的区域代表了不透明度较低的鬃毛。在笔画中这些区域的鬃毛"
+"会显得比较稀疏。"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:31
 msgid ""
 "The :ref:`option_size` and :ref:`option_rotation` dynamics affect the brush "
 "tip, not the bristles."
 msgstr ""
-":ref:`option_size` 和 :ref:`option_rotation` 选项影响笔尖整体效果，但不控制鬃"
-"毛本身的大小和旋转。"
+"\\ :ref:`option_size`\\ 和\\ :ref:`option_rotation`\\ 选项仅影响笔尖图像的大"
+"小和旋转，它们不影响鬃毛效果的大小和旋转。"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:33
 msgid "You can:"
@@ -101,9 +101,9 @@ msgid ""
 "(since in the end, you're passing over an area with a certain number of "
 "bristles)."
 msgstr ""
-"你可以使用不同的笔尖形状来打造不同的效果，但笔刷形状越复杂，绘制速度就越慢，"
-"且效果不一定明显，因为一根鬃毛很容易就画到了别的鬃毛已经画过的位置，形成丰满"
-"的笔迹。"
+"你可以使用不同的笔尖图像来制作出不同的笔刷。笔刷形状越复杂，绘制速度就越慢，"
+"而且效果还不一定明显——这是因为一根鬃毛很容易画到了别的鬃毛已经画过的位置，最"
+"终将笔迹填满。"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:36
 msgid ""
@@ -183,15 +183,15 @@ msgstr "负值的效果和正值相同。"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:58
 msgid "Shear"
-msgstr "切变"
+msgstr "斜切"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:59
 msgid ""
 "Shear introduces an angle to your brush, as though you're drawing with an "
 "oval brush (or the side of a round brush)."
 msgstr ""
-"此数值会对笔刷的整体轮廓进行切变，把本来圆头的笔刷变成扁头，或者模仿使用圆头"
-"的一侧描绘的效果。"
+"此数值会对笔刷的整体轮廓进行斜切变形，把本来圆头的笔刷变成扁头，或者模仿使用"
+"圆头的一侧描绘的效果。"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:61
 msgid "Density"
@@ -204,7 +204,7 @@ msgid ""
 "area and determines the number of bristles in it. See the difference?"
 msgstr ""
 "控制鬃毛的密度。前面的缩放选项会把鬃毛集约或者分散到一定的区域内，而密度则决"
-"定某个固定区域内的鬃毛的多少。下图从上到下依次展示了缩放、随机偏移、切变、密"
+"定某个固定区域内的鬃毛的多少。下图从上到下依次展示了缩放、随机偏移、斜切、密"
 "度在不同数值下的效果。现在心里有数了吧？"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:64
@@ -219,7 +219,7 @@ msgstr "此选项会把“缩放”数值映射到鼠标速度，从而模拟数
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:68
 msgid "Mouse Pressure"
-msgstr "鼠标压力"
+msgstr "鼠标速度模仿压力"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:68
 msgid ""
@@ -266,7 +266,7 @@ msgstr "此选项会降低笔画轮廓的不规则感，缩小笔刷或者视图
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:77
 msgid "Composite Bristles"
-msgstr "鬃毛混色"
+msgstr "鬃毛间颜色混合"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:77
 msgid ""
@@ -274,7 +274,8 @@ msgid ""
 "effect is \"probably subtle\"."
 msgstr ""
 "此选项会把同一条笔画中的每根鬃毛的笔迹颜色进行混合，但因为笔刷的鬃毛一般都很"
-"密集，并不会有特别明显的效果。"
+"密集，并不会有特别明显的效果。下图为\\ **鼠标速度模仿压力**\\ 和\\ **鬃毛粘连"
+"**\\ 的示意图。"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:80
 msgid ".. image:: images/brushes/Krita-tutorial7-B.I.2-2.png"
@@ -317,8 +318,9 @@ msgid ""
 "brush is made up of independent bristles, you can basically take on several "
 "colors at the same time."
 msgstr ""
-"勾选此项后，笔刷的鬃毛将拾取笔画起点的画布已有颜色进行绘制。笔刷的不同鬃毛可"
-"以拾取到不同颜色并在同一笔画里绘制出来。"
+"勾选此项后，笔刷的鬃毛将汲取笔画起点处的画布颜色进行绘制。笔刷的不同鬃毛可以"
+"拾取到不同颜色，并在同一笔画里绘制出来。使用时无需勾选 :guilabel:`颜料消耗"
+"` ，只需勾选 :guilabel:`汲取画布颜色` 。"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:98
 msgid ""
@@ -335,7 +337,7 @@ msgstr "如果汲取的区域为透明，鬃毛将拾取到黑色。"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:104
 msgid "Soak Ink"
-msgstr "汲取颜色"
+msgstr "汲取画布颜色"
 
 #: ../../reference_manual/brushes/brush_engines/bristle_engine.rst:104
 msgid ""

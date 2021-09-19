@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-16 00:12+0000\n"
-"PO-Revision-Date: 2021-09-07 14:57\n"
+"PO-Revision-Date: 2021-09-18 16:16\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___tools___colorize_mask.pot\n"
 "X-Crowdin-File-ID: 10096\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -123,7 +123,7 @@ msgstr "介绍 Krita 的智能填色蒙版工具。"
 #: ../../reference_manual/tools/colorize_mask.rst:11
 #: ../../reference_manual/tools/colorize_mask.rst:16
 msgid "Colorize Mask"
-msgstr "智能填色蒙版"
+msgstr "智能填色蒙版工具"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Tools"
@@ -131,7 +131,7 @@ msgstr "工具"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Lazybrush"
-msgstr "懒人笔刷"
+msgstr "自动填色"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Masks"
@@ -153,9 +153,7 @@ msgstr "|toolcolorizemask|"
 msgid ""
 "A tool for quickly coloring line art, the Colorize Mask Editing tool can be "
 "found next to the gradient tool on your toolbox."
-msgstr ""
-"智能填色蒙版用于为线稿快速铺好底色。智能填色蒙版工具位于工具箱的渐变/填充工具"
-"附近。"
+msgstr "智能填色蒙版用于为线稿快速铺好底色，它位于工具箱的渐变/填充工具附近。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:22
 msgid ""
@@ -165,9 +163,9 @@ msgid ""
 "\"disableColorizeMaskFeature=false\" to the top. Then restart Krita. Its "
 "official incarnation is in 4.0."
 msgstr ""
-"此功能自 4.0 版起默认启用。它的代码在 3.1 版起已经存在，但因为填色算法没有优"
-"化好而默认禁用。如需在 3.1 版启用此功能，请在 kritarc 配置文件顶部插入一行参"
-"数：\"disableColorizeMaskFeature=false\"，重启 Krita 即可生效。"
+"此功能从 4.0 版起正式启用。它的代码在 3.1 版起已经存在，但因为填色算法尚未完"
+"成优化而默认禁用。如需在 3.1 版启用此功能，请打开 kritarc 配置文件，在它的顶"
+"部插入 disableColorizeMaskFeature=false，重启 Krita 即可生效。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:26
 msgid "Usage"
@@ -184,8 +182,8 @@ msgid ""
 "For this example, we'll be using the ghost lady also used to explain masks "
 "on :ref:`the basic concepts page <basic_concepts>`."
 msgstr ""
-"在此例子中，我们将继续请出在 :ref:`基础概念 <basic_concepts>` 章节用来解释蒙"
-"版概念的那位女鬼。"
+"在此例子中，我们将继续请出在\\ :ref:`基础概念 <basic_concepts>`\\ 章节用来解"
+"释蒙版概念的女鬼同志。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:36
 msgid ""
@@ -209,10 +207,10 @@ msgstr ""
 "首先切换到智能填色蒙版编辑工具，然后选中一个线稿图层，在画布上点击左键 |"
 "mouseleft| ，Krita 就会自动为该线稿图层添加一个智能填色蒙版。你也可以在图层面"
 "板中右键点击 |mouseright| 线稿图层，在右键菜单中选择 :menuselection:`添加 --"
-"> 智能填色蒙版` 。添加填色蒙版后，你会发现线稿的颜色变得怪怪的。这是因为编辑"
-"模式为了便于观察，会对最终填色效果进行预处理显示。要看到正常的颜色，你可以取"
-"消勾选工具面板的“编辑模式”选框，或者点击图层面板中该蒙版右起第二个“笔”图标退"
-"出编辑模式。"
+"> 智能填色蒙版`\\ 。添加填色蒙版后，你会发现线稿的颜色变得怪怪的。这是因为编"
+"辑模式为了便于观察，会对最终填色效果进行预处理显示。要看到正常的颜色，你可以"
+"取消勾选工具面板的“编辑模式”选框，或者点击图层面板中该蒙版右起第二个“笔”图标"
+"退出编辑模式。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:45
 msgid ""
@@ -344,8 +342,8 @@ msgid ""
 "taken quite a bit longer."
 msgstr ""
 "你可以先用智能填色蒙版快速铺好底色，转换为颜料图层，把每种颜色拆分成单独图"
-"层，在拆分后的每个图层上建立剪贴编组 (Ctrl + Shift +G)，然后在剪贴图层组内的"
-"继承透明度 (剪贴) 图层上绘制细节。这个工作流程可以大幅提升上色的效率。"
+"层，在拆分后的每个图层上建立剪贴编组 (Ctrl + Shift + G)，然后在剪贴图层组内的"
+"非底层图层上绘制细节。这个工作流程可以大幅提升上色的效率。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:111
 msgid ""
@@ -481,16 +479,16 @@ msgid ""
 "they shouldn't. At 0 no clean up is done, at 100% the clean-up is most "
 "aggressive."
 msgstr ""
-"清理越界的颜色标记笔画的力度。0 % 时不做任何清理，100% 时以最激进的标准进行清"
+"清理出界的颜色标记笔画的力度。0 % 时不做任何清理，100% 时以最激进的标准进行清"
 "理。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:153
 msgid "Clean up"
-msgstr "颜色笔画越界清理"
+msgstr "颜色标记笔画出界清理"
 
 #: ../../reference_manual/tools/colorize_mask.rst:155
 msgid "Key strokes"
-msgstr "颜色标记笔画"
+msgstr "颜色标记笔画调色板"
 
 #: ../../reference_manual/tools/colorize_mask.rst:156
 msgid ""
@@ -498,13 +496,13 @@ msgid ""
 "so you can switch back to colors easily. You can increase the swatch size by "
 "hovering over it with the mouse, and doing :kbd:`Ctrl +` |mousescroll|."
 msgstr ""
-"此色板显示了所有颜色标记笔画所用的颜色。你可以随时把一个色块的笔画换成别的颜"
-"色或者透明。要调整色块的显示大小，请将鼠标悬停在色板上，按 :kbd:`Ctrl +` 鼠标"
-"滚轮 |mousescroll| 调整。(译者注：我未能按照此说明调整色块大小。)"
+"此调色板显示了所有颜色标记笔画所用的颜色。你可以在此移除某种颜色的笔画，或者"
+"将它们设为透明。要调整色块的显示大小，请将鼠标悬停在色板上，按 :kbd:`Ctrl +` "
+"鼠标滚轮 |mousescroll| 进行调整。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:158
 msgid "Transparent"
-msgstr "透明"
+msgstr "设为透明"
 
 #: ../../reference_manual/tools/colorize_mask.rst:158
 msgid ""

@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-09-07 14:57\n"
+"PO-Revision-Date: 2021-09-18 16:16\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,6 +17,7 @@ msgstr ""
 "docs_krita_org_reference_manual___brushes___brush_engines___curve_engine."
 "pot\n"
 "X-Crowdin-File-ID: 10076\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:1
 msgid ".. image:: images/brushes/Krita-tutorial6-I.2-4.png"
@@ -47,7 +47,8 @@ msgid ""
 "pressure sensitive strokes in lieu of a tablet."
 msgstr ""
 "曲线笔刷引擎是通过无数微小等距曲线构成一条笔画的笔刷引擎。在没有数位板的条件"
-"下，它可以被用来模拟具有压力感应的曲线效果。"
+"下，它可以被用来模拟具有压力感应的曲线效果。注意：鼠标模拟压感曲线的方法在本"
+"文后半部分。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:25
 msgid "Settings"
@@ -60,7 +61,7 @@ msgstr "此笔刷引擎绘制的线条由两部分组成，要注意这两部分
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:29
 msgid "The connection line, which is the main line drawn by your mouse."
-msgstr "连接线，实际上是笔画两边的主干线，由鼠标绘制。"
+msgstr "\\ **连接线**\\ 是笔画的主干线，由鼠标直接绘制。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:31
 msgid ""
@@ -70,9 +71,10 @@ msgid ""
 "straight line, these lines won't be visible, since they'll overlap with the "
 "connection line. Drawing faster gives you wider curves areas."
 msgstr ""
-"曲线，是连接着两条主干线之间的网状曲线，每条曲线连接着两条主干线上的前后两"
-"点。如果你画出一条直线，这些曲线就看不到了，而整个笔画就会失去宽度。绘制转弯"
-"笔画时的速度越快，画出来的曲线区域就越宽。"
+"\\ **曲线*\\ ，它们是攀附在主干线上的网状曲线。每条曲线都从主干线较早绘制的点"
+"上伸出，然后折回到主干线更晚绘制的点。另外还有一条曲线连接着所有曲线折返时的"
+"点。如果你画的是一条直线，这些曲线就会与主干线重叠，分不清楚了。绘制转弯笔画"
+"时的速度越快，转弯处的曲线区域就越宽。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:35
 msgid ".. image:: images/brushes/Krita-tutorial6-I.1-1.png"
@@ -82,7 +84,9 @@ msgstr ".. image:: images/brushes/Krita-tutorial6-I.1-1.png"
 msgid ""
 "You have access to 3 settings from the Lines tab, as well as 2 corresponding "
 "dynamics:"
-msgstr "在曲线笔刷引擎的“参数”页面有三组选项，引擎可以使用 2 个动态："
+msgstr ""
+"曲线笔刷引擎的\\ **线条参数**\\ 选项包括线条宽度、历史大小、曲线不透明度三个"
+"属性。其中线条宽度和曲线不透明度可以映射到传感器。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:38
 msgid ""
@@ -92,24 +96,27 @@ msgstr "线条宽度：影响连接线和曲线的宽度。"
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:40
 msgid "Line width dynamics: use this to vary line width dynamically."
 msgstr ""
-"线条宽度动态：选项列表中的“线条宽度”页面可以用传感器控制线条宽度的动态变化。"
+"线条宽度动态：勾选笔刷选项列表中的\\ **线条宽度**\\ 将它映射到任意传感器，即"
+"可动态控制线条宽度。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:42
 msgid ""
 "History size: this determines the distance for the formation of curve lines."
-msgstr "历史大小：控制曲线的形成距离。"
+msgstr "曲线距离：控制在上一条曲线生成后多久才生成下一条曲线。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:44
 msgid ""
 "If you set this at low values, then the curve lines can only form over a "
 "small distances, so they won't be too visible."
-msgstr "如果此数值较低，则曲线只能在两条连接线相近的点处形成，曲线不会很明显。"
+msgstr "如果此数值较低，则曲线彼此之间的距离会很紧密，以至于每条曲线不易分辨。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:45
 msgid ""
 "On the other hand, if you set this value too high, the curve lines will only "
 "start forming relatively \"late\"."
-msgstr "而如果此数值较高，曲线的生成会有延迟。"
+msgstr ""
+"而如果此数值较高，上一条曲线形成后将需要经过更长的时间才会生成下一条曲线，导"
+"致曲线网较疏。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:46
 msgid ""
@@ -117,8 +124,8 @@ msgid ""
 "40~60, which is about the default value. Unless you're drawing at really "
 "high resolutions."
 msgstr ""
-"一般来说，要想得到最宽的笔画，可以将此数值设为 40 至 60，接近中间值。如果图像"
-"分辨率高，可以酌情调整。"
+"要想得到最宽的笔画，可以将此数值设为 40 至 60 (与默认值差不多)。如果图像分辨"
+"率非常高，可以酌情调整。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:48
 msgid ""
@@ -128,20 +135,22 @@ msgid ""
 "lines."
 msgstr ""
 "曲线不透明度：虽然你无法单独指定连接线和曲线的线条宽度，但你可以单独指定曲线"
-"的不透明度，从而营造曲线较细较淡的效果。"
+"的不透明度，使得曲线网给人一种比较细的错觉。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:50
 msgid "Curves opacity dynamics: use this to vary Curves opacity dynamically."
-msgstr "曲线不透明度动态：通过传感器来控制不透明度的动态变化。"
+msgstr ""
+"曲线不透明度动态：勾选笔刷选项列表中的\\ **曲线不透明度**\\ ，将它映射到任意"
+"传感器，即可动态控制曲线部分的不透明度。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:52
 msgid "In addition, you have access to two checkboxes:"
-msgstr "除此之外你还有两个选项可用："
+msgstr "\\ **线条参数**页面还有两个额外的可用选项："
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:54
 msgid ""
 "Paint connection line, which toggles the visibility of the connection line."
-msgstr "绘制连接线：控制连接线 (两条主干线) 的绘制与否。"
+msgstr "绘制连接线：是否绘制连接线 (主干线) 。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:55
 msgid ""
@@ -149,7 +158,7 @@ msgid ""
 "with or without it. Maybe it's for tablets?"
 msgstr ""
 "平滑：可以让曲线的效果更平滑，但效果并不明显。在下面的例子中从上到下依次展示"
-"了线条宽度、历史大小、曲线不透明度、关闭绘制连接线的效果。"
+"了线条宽度、曲线距离、曲线不透明度、不绘制连接线的效果。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:58
 msgid ".. image:: images/brushes/Krita-tutorial6-I.1-2.png"
@@ -170,8 +179,8 @@ msgid ""
 "Use the Draw Dynamically mode: I tend to increase drag to at least 50. Vary "
 "Mass and Drag until you get the feel that's most comfortable for you."
 msgstr ""
-"使用工具箱中的“力学笔刷工具”，至少把它工具选项中的“拽引”增加到 0.50，你可以对"
-"重量和拽引数值进行微调以适应你的习惯。"
+"选择工具箱中的\\ **力学笔刷工具**\\ ，建议将它工具选项中的\\ **拽引**\\ 数值"
+"调到至少 0.50。你也可以按照个人喜好对重量和拽引数值进行调整。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:67
 msgid ".. image:: images/brushes/Krita-tutorial6-I.2-1.png"
@@ -180,7 +189,9 @@ msgstr ".. image:: images/brushes/Krita-tutorial6-I.2-1.png"
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:68
 msgid ""
 "Set line width to a higher value (ex.: 5), then turn line width dynamics on:"
-msgstr "把线条宽度设为较高数值，如 5，然后勾选“线条宽度”的动态选项："
+msgstr ""
+"把线条宽度设为较高数值，如 5 (4K 分辨率则要 50 以上)，然后在笔刷选项列表勾选"
+"\\ **线条宽度**\\ 选项："
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:70
 msgid ""
@@ -189,14 +200,14 @@ msgid ""
 "but a tablet user confirmed to me that it works well enough with Draw "
 "Dynamically."
 msgstr ""
-"如果你使用数位板，可以把线条宽度映射到压力传感器，这也是勾选“线条宽度”时的默"
-"认值。"
+"如果你使用数位板，可以把线条宽度映射到\\ **压力**\\ 传感器，这也是\\ **线条宽"
+"度**\\ 选项的默认值。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:71
 msgid ""
 "If you're a mouse user hoping to get variable line width, set the Line Width "
 "dynamics to Speed."
-msgstr "如果你使用鼠标，可以把线条宽度映射到速度传感器。"
+msgstr "如果你使用鼠标，可以把线条宽度映射到\\ **速度**\\ 传感器。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:74
 msgid ".. image:: images/brushes/Krita-tutorial6-I.2-2.png"
@@ -207,8 +218,8 @@ msgid ""
 "Set Curves opacity to 0: This is the simplest way to turn off the Curve "
 "lines. That said, leaving them on will get you more \"expressive\" lines."
 msgstr ""
-"将曲线不透明度设为 0 可以提高线条轮廓的一致性。如果保持默认值，则可以画出更为"
-"有表现力的线条。"
+"将曲线不透明度设为 0 可以彻底不显示曲线网。如果保持默认值，线条的粗细变化会更"
+"加丰富。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:78
 msgid "Additional tips:"
@@ -216,7 +227,7 @@ msgstr "使用技巧："
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:80
 msgid "Zig-zag a lot if you want a lot of extra curves lines."
-msgstr "如果想要生成更多曲线，就多点扭动笔画。"
+msgstr "如果想要生成更明显的曲线部分，就让笔画多点转弯。"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:81
 msgid ""
@@ -260,9 +271,9 @@ msgid ""
 "line with variable widths. Anyway, here are some comparisons:"
 msgstr ""
 "这样曲线就会把它们覆盖的区域完全填充，画出一条带有宽度变化的实线。在下面的比"
-"较中，左一为线条宽度映射到速度、手绘笔刷、曲线不透明度 0；左二为线条宽度映射"
-"到速度、力学笔刷、曲线不透明度 0；左三为力学笔刷、默认曲线不透明度；下面为力"
-"学笔刷、曲线不透明度 100："
+"较图中，\\ **左一**\\ 为线条宽度映射到速度、手绘笔刷、曲线不透明度 0；\\ **左"
+"二**\\ 为线条宽度映射到速度、力学笔刷、曲线不透明度 0；\\ **左三**\\ 为力学笔"
+"刷、默认曲线不透明度；\\ **底部**\\ 为力学笔刷、曲线不透明度 100："
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:93
 msgid ".. image:: images/brushes/Krita-tutorial6-I.2-3.png"
@@ -270,4 +281,4 @@ msgstr ".. image:: images/brushes/Krita-tutorial6-I.2-3.png"
 
 #: ../../reference_manual/brushes/brush_engines/curve_engine.rst:94
 msgid "And here are examples of what you can do with this brush:"
-msgstr "下面是此笔刷引擎的实际使用效果："
+msgstr "下面是一些此笔刷引擎的实际使用案例："

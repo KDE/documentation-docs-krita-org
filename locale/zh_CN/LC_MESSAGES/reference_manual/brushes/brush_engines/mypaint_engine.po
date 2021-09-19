@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-09-07 14:57\n"
+"PO-Revision-Date: 2021-09-18 16:16\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,6 +17,7 @@ msgstr ""
 "docs_krita_org_reference_manual___brushes___brush_engines___mypaint_engine."
 "pot\n"
 "X-Crowdin-File-ID: 25649\n"
+"Language: zh_CN\n"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:1
 msgid "The MyPaint Brush Engine manual page."
@@ -44,7 +44,7 @@ msgid ""
 msgstr ""
 "`MyPaint <http://www.mypaint.org>`_ 是一款自由开源的免费绘画程序，它自带了一"
 "套专用的笔刷。Krita 从 5.0 版起内建了 MyPaint 的笔刷引擎程序库，因此也可以使"
-"用 MyPaint 的笔刷。"
+"用 MyPaint 的笔刷预设。"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:25
 msgid "Dynamic Inputs"
@@ -86,7 +86,7 @@ msgstr "粗略速度"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:38
 msgid "Similar to fine speed but it changes very slowly."
-msgstr "压感笔的移动速度，频繁缓慢，数值波动较小。"
+msgstr "压感笔的移动速度，更新缓慢，数值波动较小。"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:41
 msgid "Random"
@@ -111,7 +111,7 @@ msgstr ""
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:47
 msgid "Direction"
-msgstr "方向"
+msgstr "笔画方向"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:47
 msgid "This input defines the angle of a stroke, in degrees."
@@ -137,15 +137,15 @@ msgid ""
 "pen turns 90 degrees clockwise is +90. When it turns 90 degrees "
 "counterclockwise is -90. This is the same as tilt-direction in Krita."
 msgstr ""
-"此输入项定义压感笔的朝向角度。笔身向 12 点钟方向倾斜时 (笔尖指向执笔者) 为 "
-"0°，笔身顺时针旋转 90° 时为 +90，笔身逆时针旋转 90° 时为 -90，角度在 -180° "
-"到 +180° 的区间变化。它与 Krita 的“倾斜方向”传感器相同。"
+"此输入项定义压感笔的笔身指向角度。笔身向 12 点钟方向倾斜时 (笔尖指向执笔者) "
+"为 0°，笔身顺时针旋转 90° 时为 +90，笔身逆时针旋转 90° 时为 -90，角度在 "
+"-180° 到 +180° 的区间变化。它与 Krita 的笔身指向传感器相同。"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:56
 msgid ""
 "This is a user-defined input. It is related to the \"customized input\" "
 "setting."
-msgstr "此为用户自定义输入性，它与“自定义输入”设置有关。"
+msgstr "此输入项的实际功能由用户自定义，详情请见后文\\ **自定义输入**\\ 一节。"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:57
 msgid "Custom"
@@ -268,8 +268,8 @@ msgid ""
 "low ratio and a direction filter, and allows for strokes akin to a "
 "calligraphic pen."
 msgstr ""
-"设置笔尖印迹的角度。对于笔尖具有较小宽高比，并且应用了方向过滤选项的笔刷预设"
-"效果最明显，让笔画能够如同扁头笔一样绘制，例如西文书法笔刷等。"
+"设置笔尖印迹的角度。对于笔尖具有较小宽高比，并且应用了\\ **笔画方向过滤**\\ "
+"选项的笔刷预设效果最明显，让笔画能够如同扁头笔一样绘制，例如西文书法笔刷等。"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:108
 msgid "Elliptical Dab: Ratio"
@@ -285,7 +285,7 @@ msgstr ".. image:: images/brushes/mypaint/elliptical_dab_ratio.png"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:114
 msgid "Direction Filter"
-msgstr "方向过滤"
+msgstr "笔画方向过滤"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:115
 msgid ""
@@ -293,8 +293,8 @@ msgid ""
 "In simple words, at times you might find the dabs not following the vector "
 "path of your strokes, this setting helps us rectify that."
 msgstr ""
-"此选项用于强制笔尖印迹遵循一个特定的矢量方向。如果你感到笔尖印迹和你笔画的矢"
-"量走向不一致，可以使用此选项减轻此问题。"
+"此选项用于强制笔尖印迹遵循一个特定的矢量方向。如果你感到笔尖印迹和笔画的矢量"
+"方向不一致，可以使用此选项减轻此问题。"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:120
 msgid "Color"
@@ -302,7 +302,7 @@ msgstr "颜色"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:123
 msgid "Change color Hue"
-msgstr "更改颜色色相"
+msgstr "更改色相"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:124
 msgid ""
@@ -312,7 +312,7 @@ msgstr "此选项用于顺时针或逆时针旋转色相。"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:127
 msgid "Change color Lightness"
-msgstr "更改颜色亮度 (HSL)"
+msgstr "更改亮度 (HSL)"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:128
 msgid ""
@@ -321,7 +321,7 @@ msgstr "此选项将按照 HSL 色彩模型更改颜色的亮度。"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:131
 msgid "Change color Value"
-msgstr "更改颜色亮度 (HSV)"
+msgstr "更改亮度 (HSV)"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:132
 msgid ""
@@ -331,7 +331,7 @@ msgstr "此选项将按照 HSV 色彩模型更改颜色的亮度 (明度)。"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:135
 msgid "Change color Saturation HSL"
-msgstr "更改颜色饱和度 (HSL)"
+msgstr "更改饱和度 (HSL)"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:136
 msgid "This option is used to change color saturation using HSL color model."
@@ -339,7 +339,7 @@ msgstr "此选项将按照 HSL 色彩模型更改颜色的饱和度。"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:139
 msgid "Change color Saturation HSV"
-msgstr "更改颜色饱和度 (HSV)"
+msgstr "更改饱和度 (HSV)"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:140
 msgid "This option is used to change color saturation using HSV color model."
@@ -553,7 +553,7 @@ msgstr ""
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:249
 msgid "Stroke Threshold"
-msgstr "笔画行程启动压力阈值"
+msgstr "笔画行程启动压力"
 
 #: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:250
 msgid ""

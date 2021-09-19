@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-09-07 14:57\n"
+"PO-Revision-Date: 2021-09-18 16:16\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___tools___text.pot\n"
 "X-Crowdin-File-ID: 9792\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -112,13 +112,14 @@ msgstr "字体选单"
 #: ../../reference_manual/tools/text.rst:35
 msgid "The letter type used by newly created texts."
 msgstr ""
-"选择新建文字的字体。此下拉选单列出了所有可用字体以及它们的内置风格。建议在此"
-"处选择字体而不是在建立文字后才进行更改——因为 Krita 文字工具目前的缺陷，在编辑"
-"文字对话框中有许多字体无法选择包括加粗在内的风格。"
+"选择新建文字的字体。此下拉选单列出了所有的可用字体，字体自带的每种风格也被视"
+"作单独一项。\\ **注意：**\\ 建议在此处选择字体，而不是在建立文字后才进行更"
+"改。这是因为 Krita 的文字工具目前存在一处程序缺陷，导致在编辑文字对话框无法选"
+"择浓体 (Black) 等字体自带风格。"
 
 #: ../../reference_manual/tools/text.rst:36
 msgid "Size in pt"
-msgstr "大小 (单位为 pt)"
+msgstr "字体大小"
 
 #: ../../reference_manual/tools/text.rst:37
 msgid ""
@@ -127,9 +128,9 @@ msgid ""
 "therefore will stay proportionally the same size if you increase or decrease "
 "canvas dpi."
 msgstr ""
-"指定新建字体的大小，使用点 (point / pt) 作为单位。点是一种通用的字体大小单"
-"位，在此按照 72 点每英寸的标准计算大小。当你改变画布的 DPI (打印分辨率) 数值"
-"时，字体大小将保持相同比例。"
+"指定新建字体的大小，单位为点 (point / pt)。点是一种通用的字体大小单位，在此按"
+"照 72 点每英寸的标准计算大小。当你改变画布的 DPI (打印分辨率) 数值时，字体的"
+"实际大小将保持相同比例自动缩放。"
 
 #: ../../reference_manual/tools/text.rst:38
 msgid "Anchor/Align text to the left/middle/right"
@@ -142,9 +143,9 @@ msgid ""
 "uses text-anchor, and this is a slight bit different than text-align (and "
 "also the reason justify isn't available at the moment)."
 msgstr ""
-"指定文字的对齐方式。由于 Krita 的文字工具符合 SVG 1.1 规范，在该规范中多行文"
-"字通过锚定进行对齐。锚定和对齐严格来说存在一些区别。这也是 Krita 的文字工具目"
-"前不支持两端对齐的原因。"
+"指定文字的对齐方式。由于 Krita 的文字工具符合 SVG 1.1 规范，多行文字只能通过"
+"文字锚点 (text-anchor) 属性实现对齐。锚点和对齐的效果看起来差不多，但在实现原"
+"理上完全不同。这也导致了 Krita 的文字工具目前不支持两端对齐。"
 
 #: ../../reference_manual/tools/text.rst:41
 msgid "Create new texts with..."
@@ -168,8 +169,8 @@ msgid ""
 "be quickly invoked with either pressing the :kbd:`Enter` key or :kbd:`double-"
 "click +` |mouseleft| shortcut on the shape."
 msgstr ""
-"在选中一段文字后点击此按钮，即可弹出编辑文字对话框，对该段文字进行编辑。你也"
-"可以按 :kbd:`回车` 键、左键双击文字来进行编辑。"
+"在选中文字对象后点击此按钮，即可打开文字编辑器。你也可以在选中文字对象后按 :"
+"kbd:`回车键` 、或者 :kbd:`左键双击` |mouseleft| 文字对象来打开文字编辑器。"
 
 #: ../../reference_manual/tools/text.rst:47
 msgid "Text Editor"
@@ -193,21 +194,21 @@ msgid ""
 "adding. You will need to drag a rectangle on the canvas to create the text "
 "area. Once your text is created, you can edit the text from two ways:"
 msgstr ""
-"文字编辑对话框会在新建一段文字的同时打开。在新建文字之前你可以在工具面板选择"
-"字体、大小和对齐方式，然后在画布上的任意位置拖出一个矩形框，此对话框将会随之"
-"打开。在创建文字之后，你还可以通过下列方式重新编辑它们："
+"文字编辑器会在新建文字时自动打开。在新建文字之前你可以在工具面板选择字体、大"
+"小和对齐方式，然后在画布上的任意位置拖出一个矩形框，此对话框将随之打开，让你"
+"可以输入文字。在创建文字之后，你还可以通过以下方式重新编辑它们："
 
 #: ../../reference_manual/tools/text.rst:56
 msgid ""
 "Select the text with the shape selection tool (first tool). Press the :kbd:"
 "`Enter` key. The text editor will appear."
 msgstr ""
-"切换到形状选择工具 (工具箱第一个工具) ，选中一段文字，然后按 :kbd:`回车` 键，"
-"即可打开文字编辑对话框。"
+"切换到形状选择工具 (工具箱的第一个工具) ，单击选中一段文字，然后按 :kbd:`回车"
+"键` ，即可打开文字编辑器。"
 
 #: ../../reference_manual/tools/text.rst:57
 msgid "Activating"
-msgstr "弹出编辑对话框"
+msgstr "打开文字编辑器"
 
 #: ../../reference_manual/tools/text.rst:57
 msgid ""
@@ -215,8 +216,8 @@ msgid ""
 "Text tool. In the tool options there is an :guilabel:`Edit Text` button. "
 "When you click that the text editor window will appear."
 msgstr ""
-"切换到文字工具，选中一段文字，然后在工具选项面板点击 :guilabel:`编辑文字` 按"
-"钮、在文字上双击鼠标、或者按 :kbd:`回车` 键，即可打开文字编辑对话框。"
+"切换到文字工具，选中一段文字，然后在工具选项面板点击 :guilabel:`编辑选中文字"
+"` 按钮、在文字上双击鼠标、或者按 :kbd:`回车键` ，均可打开文字编辑器。"
 
 #: ../../reference_manual/tools/text.rst:60
 msgid ""
@@ -224,9 +225,8 @@ msgid ""
 "will allow you to edit the text as you see it, at the cost of not having all "
 "functionality."
 msgstr ""
-"一般用户请使用默认的“可视编辑器”选项卡编辑文字，它可以实时显示你对格式的更改"
-"效果，但它的功能较少。如果你熟悉 SVG，可以切换到“SVG 源代码”选项卡进行编辑，"
-"发挥更全面的 SVG 功能。"
+"一般用户请使用默认的“可视编辑器”选项卡编辑文字，它可以实时显示格式的预览效"
+"果，但它的功能较少。"
 
 #: ../../reference_manual/tools/text.rst:62
 msgid ""
@@ -234,8 +234,9 @@ msgid ""
 "the SVG source. Do note that not all attributes and properties are converted "
 "back to the rich text editor, so do be careful when switching back."
 msgstr ""
-"如果你对 SVG 文本熟悉的话，也可以直接编辑 SVG 源代码。请注意：可视编辑器无法"
-"识别 SVG 源代码所支持的全部特性，来回切换时可能丢失格式，请谨慎操作。"
+"如果你熟悉 SVG，可以切换到“SVG 源代码”选项卡进行编辑，发挥 SVG 的全部功能。请"
+"注意：可视编辑器无法识别 SVG 源代码所支持的全部特性，来回切换时可能丢失部分格"
+"式，请谨慎操作。"
 
 #: ../../reference_manual/tools/text.rst:64
 msgid "Editing"
@@ -246,12 +247,11 @@ msgid ""
 "Press :guilabel:`Save` as you're done with your edits to preview them on "
 "canvas."
 msgstr ""
-"完成编辑后点击 :guilabel:`Save / 保存` 按钮即可将编辑框中的更改反映到画布视"
-"图。"
+"完成编辑后点击 :guilabel:`保存` 按钮即可将编辑框中的更改反映到画布视图。"
 
 #: ../../reference_manual/tools/text.rst:67
 msgid "Save :kbd:`Ctrl + S`"
-msgstr "保存： :kbd:`Ctrl + S`"
+msgstr "保存：\\ :kbd:`Ctrl + S`"
 
 #: ../../reference_manual/tools/text.rst:68
 msgid "Save current edits to the text on canvas."
@@ -263,7 +263,7 @@ msgstr "文件菜单"
 
 #: ../../reference_manual/tools/text.rst:70
 msgid "Close :kbd:`Ctrl + W`"
-msgstr "关闭： :kbd:`Ctrl + W`"
+msgstr "关闭：\\ :kbd:`Ctrl + W`"
 
 #: ../../reference_manual/tools/text.rst:70
 msgid "Close the editor."
@@ -275,7 +275,7 @@ msgstr "你可以使用下列基本编辑操作："
 
 #: ../../reference_manual/tools/text.rst:75
 msgid "Undo :kbd:`Ctrl + Z`"
-msgstr "撤销： :kbd:`Ctrl + Z`"
+msgstr "撤销：\\ :kbd:`Ctrl + Z`"
 
 #: ../../reference_manual/tools/text.rst:76
 msgid "Undo the last action in the text editor."
@@ -283,7 +283,7 @@ msgstr "撤销在文字编辑器中的上一次操作。"
 
 #: ../../reference_manual/tools/text.rst:77
 msgid "Redo :kbd:`Ctrl + Shift + Z`"
-msgstr "重做： :kbd:`Ctrl + Shift + Z`"
+msgstr "重做：\\ :kbd:`Ctrl + Shift + Z`"
 
 #: ../../reference_manual/tools/text.rst:78
 msgid "Redo the last undone action in the text editor."
@@ -291,7 +291,7 @@ msgstr "重做在文字编辑器中的上一次撤销操作。"
 
 #: ../../reference_manual/tools/text.rst:79
 msgid "Cut :kbd:`Ctrl + X`"
-msgstr "剪切： :kbd:`Ctrl + X`"
+msgstr "剪切：\\ :kbd:`Ctrl + X`"
 
 #: ../../reference_manual/tools/text.rst:80
 msgid "Cut selected text to the clipboard."
@@ -299,7 +299,7 @@ msgstr "将选中文字剪切到剪贴板。"
 
 #: ../../reference_manual/tools/text.rst:81
 msgid "Copy :kbd:`Ctrl + C`"
-msgstr "复制： :kbd:`Ctrl + C`"
+msgstr "复制：\\ :kbd:`Ctrl + C`"
 
 #: ../../reference_manual/tools/text.rst:82
 msgid "Copy selected text to the clipboard."
@@ -307,7 +307,7 @@ msgstr "将选中的文字复制到剪贴板。"
 
 #: ../../reference_manual/tools/text.rst:83
 msgid "Paste :kbd:`Ctrl + V`"
-msgstr "粘贴： :kbd:`Ctrl + V`"
+msgstr "粘贴：\\ :kbd:`Ctrl + V`"
 
 #: ../../reference_manual/tools/text.rst:84
 msgid "Paste text from the clipboard."
@@ -315,7 +315,7 @@ msgstr "将文字从剪贴板粘贴到编辑器中。"
 
 #: ../../reference_manual/tools/text.rst:85
 msgid "Select all :kbd:`Ctrl + A`"
-msgstr "全部选择： :kbd:`Ctrl + A`"
+msgstr "全部选择：\\ :kbd:`Ctrl + A`"
 
 #: ../../reference_manual/tools/text.rst:86
 msgid "Select all text in the active editor."
@@ -323,7 +323,7 @@ msgstr "选择编辑器中的所有文字。"
 
 #: ../../reference_manual/tools/text.rst:87
 msgid "Deselect :kbd:`Ctrl + Shift + A`"
-msgstr "取消选择 :kbd:`Ctrl + Shift + A`"
+msgstr "取消选择：\\ :kbd:`Ctrl + Shift + A`"
 
 #: ../../reference_manual/tools/text.rst:88
 msgid "Deselect any selected text."
@@ -331,7 +331,7 @@ msgstr "取消选择所有已选中的文字。"
 
 #: ../../reference_manual/tools/text.rst:89
 msgid "Find :kbd:`Ctrl + F`"
-msgstr "查找： :kbd:`Ctrl + F`"
+msgstr "查找：\\ :kbd:`Ctrl + F`"
 
 #: ../../reference_manual/tools/text.rst:90
 msgid ""
@@ -342,7 +342,7 @@ msgstr ""
 
 #: ../../reference_manual/tools/text.rst:91
 msgid "Find Next :kbd:`F3`"
-msgstr "查找下一个： :kbd:`F3`"
+msgstr "查找下一个：\\ :kbd:`F3`"
 
 #: ../../reference_manual/tools/text.rst:92
 msgid "Searches for the next text using the last search key."
@@ -350,7 +350,7 @@ msgstr "用当前的查找条件查找下一段匹配的文字。"
 
 #: ../../reference_manual/tools/text.rst:93
 msgid "Find Previous :kbd:`Shift + F3`"
-msgstr "查找上一个： :kbd:`Shift + F3`"
+msgstr "查找上一个：\\ :kbd:`Shift + F3`"
 
 #: ../../reference_manual/tools/text.rst:94
 msgid "Searches for the last text using the last search key."
@@ -362,19 +362,19 @@ msgstr "编辑菜单"
 
 #: ../../reference_manual/tools/text.rst:96
 msgid "Replace... :kbd:`Ctrl + R`"
-msgstr "替换： :kbd:`Ctrl + R`"
+msgstr "替换：\\ :kbd:`Ctrl + R`"
 
 #: ../../reference_manual/tools/text.rst:96
 msgid ""
 "Pops up a dialog with two inputs: The string you wish to find, and the "
 "string you wish to replace it with. Will always replace ALL found instances."
 msgstr ""
-"打开替换对话框，输入你希望被替换的文字和用来替换它的文字，就可以将 **所有** "
-"符合条件的文字替换掉。"
+"打开替换对话框，输入你希望被替换的文字和用来替换它的文字，就可以将\\ **所有**"
+"\\ 符合条件的文字替换掉。"
 
 #: ../../reference_manual/tools/text.rst:99
 msgid "Zoom Out :kbd:`Ctrl + -`"
-msgstr "缩小： :kbd:`Ctrl + -`"
+msgstr "缩小：\\ :kbd:`Ctrl + -`"
 
 #: ../../reference_manual/tools/text.rst:100
 msgid "Zoom out the text."
@@ -386,7 +386,7 @@ msgstr "视图菜单"
 
 #: ../../reference_manual/tools/text.rst:102
 msgid "Zoom In :kbd:`Ctrl + +`"
-msgstr "放大： :kbd:`Ctrl + +`"
+msgstr "放大：\\ :kbd:`Ctrl + +`"
 
 #: ../../reference_manual/tools/text.rst:102
 msgid "Zoom in the text."
@@ -398,7 +398,7 @@ msgstr "插入菜单"
 
 #: ../../reference_manual/tools/text.rst:106
 msgid "Special Character... :kbd:`Alt + Shift + C`"
-msgstr "特殊字符： :kbd:`Alt + Shift + C`"
+msgstr "特殊字符：\\ :kbd:`Alt + Shift + C`"
 
 #: ../../reference_manual/tools/text.rst:106
 msgid ""
@@ -410,25 +410,27 @@ msgstr ""
 
 #: ../../reference_manual/tools/text.rst:109
 msgid "Bold :kbd:`Ctrl + B`"
-msgstr "粗体： :kbd:`Ctrl + B`"
+msgstr "粗体：\\ :kbd:`Ctrl + B`"
 
 #: ../../reference_manual/tools/text.rst:110
 msgid "Set the font-weight to **bold**."
 msgstr ""
-"将选中的文字设置为 **粗体** 。如果没有选中文字，则将所有文字设置为 **粗体**。"
+"将选中的文字设置为\\ **粗体** \\ 。如果没有选中文字，则将所有文字设置为\\ **"
+"粗体**\\ 。"
 
 #: ../../reference_manual/tools/text.rst:111
 msgid "Italic :kbd:`Ctrl + I`"
-msgstr "斜体： :kbd:`Ctrl + I`"
+msgstr "斜体：\\ :kbd:`Ctrl + I`"
 
 #: ../../reference_manual/tools/text.rst:112
 msgid "Sets the selected text *italic*."
 msgstr ""
-"将选中的文字设置为 *斜体* 。如果没有选中文字，则将所有文字设置为 *斜体*。"
+"将选中的文字设置为\\ *斜体*\\ 。如果没有选中文字，则将所有文字设置为\\ *斜体*"
+"\\ 。"
 
 #: ../../reference_manual/tools/text.rst:113
 msgid "Underline :kbd:`Ctrl + U`"
-msgstr "下划线： :kbd:`Ctrl + U`"
+msgstr "下划线：\\ :kbd:`Ctrl + U`"
 
 #: ../../reference_manual/tools/text.rst:114
 msgid "Underline the selected text."
@@ -444,7 +446,7 @@ msgstr "为选中的文字添加删除线。如果没有选中文字，则为所
 
 #: ../../reference_manual/tools/text.rst:117
 msgid "Superscript :kbd:`Ctrl + Shift + P`"
-msgstr "上标： :kbd:`Ctrl + Shift + P`"
+msgstr "上标：\\ :kbd:`Ctrl + Shift + P`"
 
 #: ../../reference_manual/tools/text.rst:118
 msgid "Sets the text to super-script baseline."
@@ -452,7 +454,7 @@ msgstr "将选中的文字设置为上标。"
 
 #: ../../reference_manual/tools/text.rst:119
 msgid "Subscript :kbd:`Ctrl + Shift + B`"
-msgstr "下标： :kbd:`Ctrl + Shift + P`"
+msgstr "下标：\\ :kbd:`Ctrl + Shift + P`"
 
 #: ../../reference_manual/tools/text.rst:120
 msgid "Sets the text to subscript baseline."
@@ -467,9 +469,10 @@ msgid ""
 "Sets the font weight a little more specifically. Possibilities are... Light, "
 "Normal, Bold, and Black."
 msgstr ""
-"你可以通过此子菜单更精细地设置字体的粗细。可以将字体设为：细体、正常、粗体和"
-"黑体。此功能与字体本身内建的风格有关，并非所有字体都能正常使用此子菜单切换风"
-"格。解决办法：在工具面板中选定需要的字体和风格，然后新建文字。"
+"你可以通过此子菜单更精细地设置字体的粗细。可以将字体设为：细体、标准、粗体和"
+"浓体。此功能与字体本身自带的风格有关，由于 Krita 的一个程序缺陷，并非所有字体"
+"都能正常使用此子菜单切换风格。解决办法：在工具面板中选定需要的字体和风格，然"
+"后新建文字。"
 
 #: ../../reference_manual/tools/text.rst:123
 msgid "Align Left"
@@ -481,7 +484,7 @@ msgstr "将选中的段落靠左对齐。"
 
 #: ../../reference_manual/tools/text.rst:125
 msgid "Align Center :kbd:`Ctrl + Alt + C`"
-msgstr "居中： :kbd:`Ctrl + Alt + C`"
+msgstr "居中：\\ :kbd:`Ctrl + Alt + C`"
 
 #: ../../reference_manual/tools/text.rst:126
 msgid "Center the selected paragraph."
@@ -489,7 +492,7 @@ msgstr "将选中的段落居中对齐。"
 
 #: ../../reference_manual/tools/text.rst:127
 msgid "Align Right :kbd:`Ctrl + Alt + R`"
-msgstr "右对齐： :kbd:`Ctrl + Alt + R`"
+msgstr "右对齐：\\ :kbd:`Ctrl + Alt + R`"
 
 #: ../../reference_manual/tools/text.rst:128
 msgid "Align the selected paragraph to the right."
@@ -671,7 +674,7 @@ msgid ""
 "value will be added to current ``letter-spacing``."
 msgstr ""
 "`字偶间距调整在 SVG 1.1 规范 <https://www.w3.org/TR/SVG/text."
-"html#KerningProperty>`_ 中的定义与 CSS 中的 ``font-kerning`` 属性略有不同。"
+"html#KerningProperty>`_\\ 中的定义与 CSS 中的 ``font-kerning`` 属性略有不同。"
 "Krita 默认将其设为 ``auto`` ，也就是启用字偶间距调整。要关闭此功能，请在文字"
 "代码的 ``style`` 部分使用 ``kerning: 0;`` ，它的数字数值将被加进当前的 "
 "``letter-spacing`` 属性中去。"
@@ -712,8 +715,8 @@ msgid ""
 msgstr ""
 "指定单词之间的额外距离，单位为 pt。默认间距为所用字体的空格符号宽度，它的SVG "
 "源代码为 ``word-spacing: 0;`` 。设为负值可以缩小单词之间的距离。在下方例图"
-"中，由上到下分别为：默认值、2、-2、5、-5 的效果，最后还附上了它们的 SVG 源代"
-"码："
+"中，由上到下分别为：默认值、字符间距 2、字符间距 -2、单词间距 5、单词间距 -5 "
+"的效果，最后还附上了它们的 SVG 源代码："
 
 #: ../../reference_manual/tools/text.rst:197
 msgid ""
@@ -732,14 +735,13 @@ msgid ""
 msgstr ""
 "<text style=\"font-family:Noto Serif; font-size:12pt; font-size-"
 "adjust:0.389915; text-anchor:middle\">\n"
-"    <tspan>No Adjustment.</tspan>\n"
-"    <tspan style=\"letter-spacing:2\" x=\"0\" dy=\"22pt\">Letter spacing: 2</"
+"    <tspan>无调整</tspan>\n"
+"    <tspan style=\"letter-spacing:2\" x=\"0\" dy=\"22pt\">字符间距：2</"
 "tspan>\n"
-"    <tspan style=\"letter-spacing:-2\" x=\"0\" dy=\"22pt\">Letter spacing: "
-"-2</tspan>\n"
-"    <tspan style=\"word-spacing:5\" x=\"0\" dy=\"22pt\">Word spacing: 5</"
+"    <tspan style=\"letter-spacing:-2\" x=\"0\" dy=\"22pt\">字符间距：-2</"
 "tspan>\n"
-"    <tspan style=\"word-spacing:-5\" x=\"0\" dy=\"22pt\">Word spacing: -5</"
+"    <tspan style=\"word-spacing:5\" x=\"0\" dy=\"22pt\">单词间距：5</tspan>\n"
+"    <tspan style=\"word-spacing:-5\" x=\"0\" dy=\"22pt\">单词间距：-5</"
 "tspan>\n"
 "</text>"
 

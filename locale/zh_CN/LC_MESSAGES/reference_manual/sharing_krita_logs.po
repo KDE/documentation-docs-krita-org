@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-09-07 14:57\n"
+"PO-Revision-Date: 2021-09-18 16:16\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___sharing_krita_logs.pot\n"
 "X-Crowdin-File-ID: 12076\n"
+"Language: zh_CN\n"
 
 #: ../../reference_manual/sharing_krita_logs.rst:None
 msgid ""
@@ -102,7 +102,7 @@ msgstr "介绍如何获取 Krita 程序日志、回溯跟踪和 Krita 的文本�
 
 #: ../../reference_manual/sharing_krita_logs.rst:11
 msgid "Backtrace"
-msgstr "回溯跟踪数据"
+msgstr "回溯跟踪"
 
 #: ../../reference_manual/sharing_krita_logs.rst:11
 msgid "Debug"
@@ -167,7 +167,7 @@ msgid ""
 "information that can help solving the issue."
 msgstr ""
 ":ref:`Krita 命令行输出信息/日志查看器输出信息/DebugView 输出信息 "
-"<krita_console_debugview>` -- 这些日志记录了所有 Krita 判断为有必要汇报的大小"
+"<krita_console_debugview>` -- 这些日志记录了所有 Krita 判断为有必要报告的大小"
 "事件。有时候这些信息里面会包含解决问题的重要线索。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:30
@@ -203,8 +203,8 @@ msgid ""
 "<krita_text_output_logviewer>`, :ref:`console <krita_text_output_console>` "
 "or :ref:`DebugView (external application) <using_debug_view>`"
 msgstr ""
-"使用 :ref:`日志查看器面板 <krita_text_output_logviewer>` 、 :ref:`命令行终端 "
-"<krita_text_output_console>` 或者 :ref:`DebugView (第三方软件) "
+"使用\\ :ref:`日志查看器面板 <krita_text_output_logviewer>`\\ 、\\ :ref:`命令"
+"行终端 <krita_text_output_console>`\\ 或者 :ref:`DebugView (第三方软件) "
 "<using_debug_view>` 获取 Krita 输出的文本信息。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:39
@@ -224,8 +224,8 @@ msgid ""
 "Krita text output from :ref:`Log Viewer (in GUI) "
 "<krita_text_output_logviewer>` or :ref:`console <krita_text_output_console>`"
 msgstr ""
-"使用 :ref:`日志查看器面板 <krita_text_output_logviewer>` 或者 :ref:`命令行终"
-"端 <krita_text_output_console>` 获取 Krita 输出的文本信息。"
+"使用\\ :ref:`日志查看器面板 <krita_text_output_logviewer>`\\ 或者\\ :ref:`命"
+"令行终端 <krita_text_output_console>`\\ 获取 Krita 输出的文本信息。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:46
 #: ../../reference_manual/sharing_krita_logs.rst:81
@@ -359,7 +359,7 @@ msgid ""
 msgstr ""
 "如果 Krita 在启动时崩溃因而无法访问上述菜单，请提供以下文件： :file:`"
 "%LOCALAPPDATA%\\\\kritacrash.log` 。如果我们需要获取更详尽的数据，我们会邀请"
-"你按照 :ref:`Dr. MinGW 调试工具 <dr_minw>` 页面的说明来获取调试数据。"
+"你按照 :ref:`Dr. MinGW 调试工具 <dr_minw>`\\ 页面的说明来获取调试数据。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:143
 msgid "On Linux, there are five ways of installing Krita."
@@ -557,11 +557,13 @@ msgid ""
 "Using the console is the most reliable way to get Krita's text output. This "
 "way is similar on macOS and Linux."
 msgstr ""
+"命令行终端是获取 Krita 的文本输出消息的最可靠手段。此方式在 Linux 和 macOS 下"
+"面的操作类似。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:263
 msgid ""
 "This is now also possible on Windows using the :file:`krita.com` executable."
-msgstr ""
+msgstr "Windows 也可以通过 :file:`krita.com` 可执行程序使用此方式。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:267
 msgid ""
@@ -571,6 +573,10 @@ msgid ""
 "program without a console window, see :ref:`DebugView guide "
 "<using_debug_view>`."
 msgstr ""
+":program:`krita.com` 可执行程序将使用命令行模式窗口启用 Krita。Krita 从 5.0 "
+"版起支持此功能。如果你正在使用旧版 Krita，或者希望不通过命令行模式直接使用 :"
+"program:`krita.exe` 可执行程序获取日志，请参见\\ :ref:`DebugView 使用指引 "
+"<using_debug_view>`\\ 。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:269
 msgid ""
@@ -578,6 +584,9 @@ msgid ""
 "or console application. On Windows, open a Command Prompt by typing :code:"
 "`cmd.exe` on the Start Menu and pressing :kbd:`Enter`."
 msgstr ""
+"Windows 用户请在开始菜单中输入 :code:`cmd.exe` 后按 :kbd:`回车键` 。macOS 用"
+"户下请打开 :program:`Terminal.app`\\ 。Linux 用户请打开你喜欢的任意一款终端程"
+"序。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:271
 msgid "Write the path to the Krita executable."
@@ -598,6 +607,9 @@ msgid ""
 "console, DebugView has the benefit of including timestamps to the log "
 "entries."
 msgstr ""
+"要在 Windows 下面使用 Krita 的图形界面获取程序的文本输出消息，你需要使用一款"
+"名为 :literal:`DebugView` 的外部程序。与命令行终端相比，DebugView 的优势在于"
+"能够记录日志事件的时间戳。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:307
 msgid ""
@@ -606,9 +618,9 @@ msgid ""
 "`Download DebugView` text with underline, downloading should start "
 "immediately."
 msgstr ""
-"从微软官方网站 `下载 DebugView 工具 <https://docs.microsoft.com/en-us/"
-"sysinternals/downloads/debugview>`_ 。点击 :guilabel:`Download DebugView` 链"
-"接 (深蓝加粗下划线) 即可下载。"
+"从微软官方网站\\ `下载 DebugView 工具 <https://docs.microsoft.com/en-us/"
+"sysinternals/downloads/debugview>`_\\ 。点击 :guilabel:`Download DebugView` "
+"链接即可下载。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:309
 msgid ""
@@ -618,8 +630,8 @@ msgid ""
 "microsoft.com/en-us/help/4028088/windows-zip-and-unzip-files>`_."
 msgstr ""
 "下载到的文件是一个 ZIP 压缩包，请将它的内容解压到任意位置。如果你不清楚如何解"
-"压缩，请查看微软的 `压缩和解压缩文件 <https://support.microsoft.com/zh-cn/"
-"help/4028088/windows-zip-and-unzip-files>`_ 指引页面。"
+"压缩，请查看微软的\\ `压缩和解压缩文件 <https://support.microsoft.com/zh-cn/"
+"help/4028088/windows-zip-and-unzip-files>`_\\ 指引页面。"
 
 #: ../../reference_manual/sharing_krita_logs.rst:311
 msgid ""
