@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: websites-docs-krita-org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2021-09-04 15:36+0200\n"
+"PO-Revision-Date: 2021-09-21 18:28+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.0\n"
+"X-Generator: Lokalize 21.08.1\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -58,7 +58,7 @@ msgstr "Paquets"
 
 #: ../../reference_manual/resource_management.rst:11
 msgid "Resource Cache"
-msgstr ""
+msgstr "Gestionar els recursos"
 
 #: ../../reference_manual/resource_management.rst:11
 msgid "Tagging"
@@ -78,6 +78,9 @@ msgid ""
 "has a sophisticated resource management system, which allows tagging, "
 "disabling, sharing and more."
 msgstr ""
+"Els recursos són trossos de dades endollables, com els pinzells predefinits o "
+"els patrons. El Krita té un sofisticat sistema de gestió de recursos, el qual "
+"permet etiquetar, inhabilitar, compartir i més."
 
 #: ../../reference_manual/resource_management.rst:22
 msgid ""
@@ -86,6 +89,11 @@ msgid ""
 "track of all those resources can be a handful, Krita creates a SQLite cache "
 "in which it keeps the tags, names, version and other data about the resource."
 msgstr ""
+"Tots els recursos s'emmagatzemen a la carpeta de recursos. Aquesta carpeta es "
+"pot configurar en :ref:`les preferències generals <resource_settings>`. Com "
+"mantenir un seguiment de tots aquests recursos pot ser un maldecap, el Krita "
+"crea una memòria cau SQLite en el qual manté les etiquetes, els noms, la "
+"versió i altres dades sobre el recurs."
 
 #: ../../reference_manual/resource_management.rst:24
 msgid ""
@@ -94,12 +102,18 @@ msgid ""
 "Deleting the cache will delete the tags and relationships it keeps track of, "
 "so be careful."
 msgstr ""
+"Gràcies a aquesta memòria cau, el Krita pot evitar carregar un recurs fins "
+"que sigui necessari. Això fa que el Krita sigui molt més lleuger que quan no "
+"el tenia. Suprimir la memòria cau suprimirà les etiquetes i les relacions que "
+"es mantenen, així que aneu amb compte."
 
 #: ../../reference_manual/resource_management.rst:26
 msgid ""
 "If you have not changed your resource folder location, the resources can be "
 "found at..."
 msgstr ""
+"Si no heu canviat la ubicació de la carpeta de recursos, els recursos es "
+"troben a..."
 
 #: ../../reference_manual/resource_management.rst:28
 msgid "Linux"
@@ -147,7 +161,7 @@ msgstr "Biblioteques de recursos"
 
 #: ../../reference_manual/resource_management.rst:43
 msgid "Krita can load a variety of resource libraries."
-msgstr ""
+msgstr "El Krita pot carregar una varietat de biblioteques de recursos."
 
 #: ../../reference_manual/resource_management.rst:46
 msgid "Resource Folder"
@@ -159,6 +173,9 @@ msgid ""
 "resources, they will all end up here. You can configure its location in the :"
 "ref:`general preferences <resource_settings>`."
 msgstr ""
+"La carpeta de recursos es considera la biblioteca central. Quan es creen "
+"recursos nous, tots ells acabaran aquí. Podeu configurar la seva ubicació en "
+"les :ref:`preferències generals <resource_settings>`."
 
 #: ../../reference_manual/resource_management.rst:49
 msgid "Resource Bundle"
@@ -171,6 +188,10 @@ msgid ""
 "other information like metadata and a manifest so Krita can check there's no "
 "errors in the file."
 msgstr ""
+"El format principal per a compartir els recursos és el :dfn:`Paquet de "
+"recursos`, el qual és un fitxer comprimit que conté tots els recursos junts. "
+"També conté alguna altra informació com metadades i un manifest, de manera "
+"que el Krita podrà comprovar que no hi ha errors en el fitxer."
 
 #: ../../reference_manual/resource_management.rst:52
 msgid "Adobe Brush Library"
@@ -182,6 +203,9 @@ msgid ""
 "load this, but now Krita will load them as a library of :ref:`brushes "
 "<resource_brush_tips>`."
 msgstr ""
+"Un ``ABR`` amb múltiples imatges a l'interior. Les versions anteriors del "
+"Krita no poden carregar-lo, però ara el Krita el carrega com una biblioteca "
+"de :ref:`pinzells <resource_brush_tips>`."
 
 #: ../../reference_manual/resource_management.rst:55
 msgid "Adobe Style Library"
@@ -192,20 +216,24 @@ msgid ""
 "This is the :program:`Photoshop` ``ASL`` format, which stores :ref:"
 "`layer_style`."
 msgstr ""
+"Aquest és el format ``ASL`` del :program:`Photoshop`, el qual emmagatzema "
+"els :ref:`layer_style`."
 
 #: ../../reference_manual/resource_management.rst:58
 msgid "Document Storage"
-msgstr ""
+msgstr "Emmagatzematge de documents"
 
 #: ../../reference_manual/resource_management.rst:60
 msgid ""
 "Every Krita document can store resources and act as a resource library. This "
 "is currently only used for palettes."
 msgstr ""
+"Cada document del Krita pot emmagatzemar recursos i actuar com una biblioteca "
+"de recursos. Això només s'usa actualment per a les paletes."
 
 #: ../../reference_manual/resource_management.rst:61
 msgid "Memory Storage"
-msgstr ""
+msgstr "Emmagatzematge en memòria"
 
 #: ../../reference_manual/resource_management.rst:63
 msgid ""
@@ -213,6 +241,9 @@ msgid ""
 "generated by Krita and have no physical version on disk. This is currently "
 "used for the fore-to-background gradient."
 msgstr ""
+"Finalment, la biblioteca en memòria és on es mantenen els recursos temporals, "
+"les quals són generades pel Krita i no tenen una versió física en el disc. "
+"Això s'utilitza actualment per al degradat abans del fons."
 
 #: ../../reference_manual/resource_management.rst:65
 msgid ""
@@ -220,6 +251,10 @@ msgid ""
 "Manage Resource Libraries`. In this dialog, you can import resource "
 "libraries, deactivate them, and also :ref:`create_bundle`."
 msgstr ""
+"Podreu gestionar les biblioteques de recursos, aneu a "
+"«:menuselection:`Arranjament --> Gestiona les biblioteques de recursos...`». "
+"En aquest diàleg, podreu importar les biblioteques de recursos, "
+"inhabilitar-les, així com també :ref:`create_bundle`."
 
 #: ../../reference_manual/resource_management.rst:68
 msgid "Importing Bundles"
@@ -272,7 +307,7 @@ msgstr ""
 "La secció que hi ha a mà esquerra serveix per a emplenar la informació sobre "
 "el paquet, com el nom de l'autor, lloc web, correu electrònic, la icona del "
 "paquet, etc. A mà dreta proporciona una llista dels recursos disponibles. "
-"Seleccioneu el tipus de recurs que voleu afegir al paquet des del menú "
+"Seleccioneu el tipus de recurs que voleu afegir al paquet des de la llista "
 "desplegable de dalt i afegiu-lo al paquet seleccionant un recurs i fent clic "
 "al botó de fletxa."
 
@@ -344,8 +379,8 @@ msgid ""
 msgstr ""
 "La secció Gestió dels recursos a la configuració també es va renovar per a "
 "facilitar als artistes la preparació d'aquests fitxers de paquet. Podeu "
-"obrir la secció Gestió dels recursos anant a l'element de menú :"
-"menuselection:`Arranjament --> Gestiona els recursos...`."
+"obrir la secció Gestió dels recursos anant a l'element de menú «:"
+"menuselection:`Arranjament --> Gestiona els recursos...`»."
 
 #: ../../reference_manual/resource_management.rst:108
 msgid ""
@@ -353,6 +388,9 @@ msgid ""
 "tagging, deleting/deactivating the resource itself, importing resources and "
 "open the create bundle dialog."
 msgstr ""
+"Aquí podreu fer una varietat de coses, com suprimir fitxers de còpia de "
+"seguretat, etiquetatge en massa, supressió/desactivant el recurs en si, "
+"importar recursos i obrir el diàleg per a crear un paquet."
 
 #: ../../reference_manual/resource_management.rst:113
 msgid "Importing resources"
@@ -363,6 +401,8 @@ msgid ""
 "To import resources, select the :guilabel:`import` in the resource choosers "
 "or the resource manager."
 msgstr ""
+"Per a importar recursos, seleccioneu :guilabel:`Importa` en els selectors de "
+"recursos o en el gestor de recursos."
 
 #: ../../reference_manual/resource_management.rst:117
 msgid ""
@@ -370,6 +410,9 @@ msgid ""
 "certain kinds of files, and all the files you can select are possible to "
 "import for that resource."
 msgstr ""
+"La importació en el selector de recursos és força senzilla. Només podreu "
+"seleccionar certs tipus de fitxer, i tots els que podeu seleccionar és "
+"possible importar-los per a aquest recurs."
 
 #: ../../reference_manual/resource_management.rst:119
 msgid ""
@@ -379,6 +422,11 @@ msgid ""
 "resources, a window will pop up asking which resource type you intended to "
 "import the file for."
 msgstr ""
+"No obstant això, el botó d'importació en el gestor de recursos, necessita de "
+"vegades que trieu si un fitxer :ref:`file_png` importat és una punta de "
+"pinzell o una textura. Quan s'importa un format que es pot emprar per a "
+"múltiples tipus de recursos, apareixerà una finestra demanant per a quin "
+"tipus de recurs voleu importar el fitxer."
 
 #: ../../reference_manual/resource_management.rst:125
 msgid "Activating and Deactivating"
@@ -389,6 +437,8 @@ msgid ""
 "Deactivating resources is done by selecting them in their respective "
 "resource chooser, and pressing the trashcan icon."
 msgstr ""
+"El desactivar els recursos es realitza seleccionant-ne un en el seu respectiu "
+"selector de recursos i prement la icona de la paperera."
 
 #: ../../reference_manual/resource_management.rst:129
 msgid ""
@@ -397,26 +447,35 @@ msgid ""
 "deactivated resources should now be visible, select them, and then press :"
 "guilabel:`Undelete Resource`."
 msgstr ""
+"Per a activar un recurs, aneu a a «:menuselection:`Arranjament --> Gestiona "
+"els recursos...`», després activeu :guilabel:`Mostra els recursos suprimits`. "
+"Els recursos desactivats ara seran visibles, seleccioneu i després premeu "
+":guilabel:`Recupera els recursos`."
 
 #: ../../reference_manual/resource_management.rst:134
 msgid "Returning a resource to the previous version"
-msgstr ""
+msgstr "Retornar un recurs a la versió anterior"
 
 #: ../../reference_manual/resource_management.rst:136
 msgid ""
 "First go to the resource folder, :menuselection:`Settings --> Manage "
 "Resources... --> Open Resource Folder`."
 msgstr ""
+"Primer aneu a la carpeta de recursos, «:menuselection:`Arranjament --> "
+"Gestiona els recursos... --> Obre la carpeta de recursos`»."
 
 #: ../../reference_manual/resource_management.rst:137
 msgid "Then go into the ``paintoppresets`` folder."
-msgstr ""
+msgstr "Després entreu a la carpeta ``paintoppresets``."
 
 #: ../../reference_manual/resource_management.rst:138
 msgid ""
 "Backup (select and cut) all versions of the related resource into a place "
 "you can find them. Delete all these files from the ``paintoppresets`` folder."
 msgstr ""
+"Feu una còpia de seguretat (seleccionant i retallant) totes les versions del "
+"recurs relacionat en un lloc on pugueu trobar-les. Suprimiu tots aquests "
+"fitxers de la carpeta ``paintoppresets``."
 
 #: ../../reference_manual/resource_management.rst:139
 msgid "restart Krita."
@@ -424,7 +483,7 @@ msgstr "Reinicieu el Krita."
 
 #: ../../reference_manual/resource_management.rst:140
 msgid "add only the desired version of the resource."
-msgstr ""
+msgstr "Afegiu només la versió desitjada del recurs."
 
 #: ../../reference_manual/resource_management.rst:145
 msgid "Deleting Backup files"
@@ -493,6 +552,11 @@ msgid ""
 "plus icon next to the :guilabel:`tags` section to add a tag to every "
 "selected resource."
 msgstr ""
+"En el gestor de recursos, podreu etiquetar múltiples recursos alhora. Per a "
+"seleccionar-los, utilitzeu la tecla :kbd:`Ctrl` per a afegir recursos "
+"individuals a la selecció o la tecla :kbd:`Majús.` per a afegir cada recurs. "
+"Després premeu la icona més que es troba al costat de la secció "
+":guilabel:`Etiquetes` per a afegir una etiqueta a cada recurs seleccionat."
 
 #: ../../reference_manual/resource_management.rst:164
 msgid ""
@@ -500,6 +564,9 @@ msgid ""
 "can be useful to ensure cross-language compatibility. The tags that get "
 "localized are..."
 msgstr ""
+"Algunes etiquetes estan traduïdes. Si creeu paquets per a altres, l'ús "
+"d'aquestes etiquetes podria ser útil per a garantir la compatibilitat creuada "
+"entre idiomes. Les etiquetes que es poden localitzar són..."
 
 #: ../../reference_manual/resource_management.rst:166
 msgid "Digital"
@@ -527,7 +594,7 @@ msgstr "Pintura"
 
 #: ../../reference_manual/resource_management.rst:172
 msgid "Pixel_Art"
-msgstr ""
+msgstr "Art de píxels"
 
 #: ../../reference_manual/resource_management.rst:173
 msgid "Sketch"
@@ -647,8 +714,8 @@ msgid ""
 msgstr ""
 "Ara, en qualsevol moment que vulgueu obrir el vostre «quadre de llapis "
 "digital» i veure amb quins treballareu, tot el que haureu de fer és "
-"utilitzar el desplegable i seleccionar :guilabel:`Llapis`. El Filtre de "
-"recursos funciona de la mateixa manera que en les altres parts del Krita, "
+"utilitzar la llista desplegable i seleccionar :guilabel:`Llapis`. El Filtre "
+"de recursos funciona de la mateixa manera que en les altres parts del Krita, "
 "així que esteu atent!"
 
 #: ../../reference_manual/resource_management.rst:201
