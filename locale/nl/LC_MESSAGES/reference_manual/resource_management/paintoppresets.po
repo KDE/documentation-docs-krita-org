@@ -5,14 +5,14 @@
 #
 # Automatically generated, 2019.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
-# Ronald Stroethoff <stroe43@zonnet.nl>, 2020.
+# Ronald Stroethoff <stroe43@zonnet.nl>, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-01 00:13+0000\n"
-"PO-Revision-Date: 2020-12-13 09:50+0100\n"
-"Last-Translator: Ronald Stroethoff <stroet43@zonnet.nl>\n"
+"PO-Revision-Date: 2021-11-06 10:44+0100\n"
+"Last-Translator: Ronald Stroethoff <stroe43@zonnet.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,6 @@ msgid "Brush Preset"
 msgstr "Penseelinstellingen"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:18
-#, fuzzy
 #| msgid ""
 #| "Paint Op presets store the preview thumbnail, brush-engine, the "
 #| "parameters, the brush tip, and, if possible, the texture. They are saved "
@@ -57,9 +56,11 @@ msgid ""
 "the texture. They are saved as ``.kpp`` files, except for :ref:`MyPaint "
 "brushes <mypaint_brush_engine>`, which are saved as ``.myb`` files."
 msgstr ""
-"De penseelinstellingen bewaart de thumbnail, de penseel-engine, de "
-"parameters, de penseel tip, en als het mogelijk is, de textuur.Ze worden "
-"opgeslagen in .kpp-bestanden."
+"De penseelinstellingen, in Krita bekend als ´´Penseeltip-instellingen´´,"
+" bewaart de thumbnail, de penseel-engine, de "
+"parameters, de penseel tip, en als het mogelijk is, de textuur. Ze worden "
+"opgeslagen in .kpp-bestanden, behalve voor de :ref:`MyPaint "
+"penselen <mypaint_brush_engine>`, die als ``.myb``-bestanden worden bewaard."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:20
 msgid ""
@@ -74,7 +75,6 @@ msgid "The Docker"
 msgstr "Het vastzet-paneel"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:25
-#, fuzzy
 #| msgid ""
 #| "The docker for Paint-op presets is the :ref:`brush_preset_docker`. Here "
 #| "you can tag, add, remove and search paint op presets."
@@ -82,7 +82,8 @@ msgid ""
 "The docker for Paint-op presets is the :ref:`brush_preset_docker`. Here you "
 "can tag, add, remove and search brush presets."
 msgstr ""
-"Het vastzet-paneel voor penselen is het :ref:`brush_preset_docker`. Hier "
+"Het vastzet-paneel voor penseelinstellingen is het"
+" :ref:`brush_preset_docker`. Hier "
 "kunt u penselen toevoegen, verwijderen, zoeken naar penseeltips en ze tags "
 "geven."
 
@@ -91,7 +92,6 @@ msgid "Editing the preview thumbnail"
 msgstr "De thumbnail bewerken"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:30
-#, fuzzy
 #| msgid ""
 #| "You can edit the preview thumbnail in the brush-scratchpad, but you can "
 #| "also open the \\*.kpp file in Krita to get a 200x200 file to edit to your "
@@ -105,11 +105,13 @@ msgid ""
 msgstr ""
 "U kunt de thumbnail in het penseel-kladblok bewerken, maar u kunt ook het "
 "\\*.kpp-bestand in Krita openen om het 200x200 bestand naar wens aan te "
-"passen."
+"passen. Voor :ref:`MyPaint penselen <mypaint_brush_engine>`, is er een"
+" separaat PNG-bestand die de dezelfde naam heeft als het ``.myb``-bestand,"
+" uitgezonderd die waaraan ``_prev`` is toegevoegd."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:33
 msgid "Structure"
-msgstr ""
+msgstr "Structuur"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:35
 msgid ""
@@ -120,3 +122,12 @@ msgid ""
 "--> annotations`, or by using the :program:`ImageMagick` command ``identify -"
 "verbose {FILENAME}`` on the ``.kpp``."
 msgstr ""
+":ref:`MyPaint brushes <mypaint_brush_engine>` worden opgeslagen als"
+" JSON-bestanden met een bijbehorende voorbeeld-bestand terwijl"
+" ``.kpp``-bestanden PNGs zijn met daarin een aantekening die de XML data voor"
+" het penseelengine bevat. U kunt deze data bekijken als u het"
+" ``.kpp``-bestand heeft geopend, via :menuselection:`Afbeelding -->"
+" Eigenschappen "
+"--> annotaties`, of door :program:`ImageMagick` te gebruiken met het"
+" commando ``identify -"
+"verbose {FILENAME}`` op het ``.kpp``-bestand."
