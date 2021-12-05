@@ -1,22 +1,22 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2020.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-01 00:40+0000\n"
-"PO-Revision-Date: 2020-05-23 08:00+0200\n"
+"PO-Revision-Date: 2021-12-04 11:24+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 20.07.70\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10"
+" || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 22.03.70\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -62,7 +62,7 @@ msgstr "Zasoby"
 
 #: ../../reference_manual/resource_management.rst:11
 msgid "Tagging"
-msgstr ""
+msgstr "Znaczenie"
 
 #: ../../reference_manual/resource_management.rst:11
 msgid "Mass Tagging"
@@ -73,7 +73,6 @@ msgid "Resource Management"
 msgstr "Zarządzanie zasobami"
 
 #: ../../reference_manual/resource_management.rst:18
-#, fuzzy
 #| msgid ""
 #| "Resources are pluggable bits of data, like brush presets or patterns. "
 #| "Krita has variety of resources and also has a good resource management "
@@ -85,9 +84,8 @@ msgid ""
 "disabling, sharing and more."
 msgstr ""
 "Zasoby są podłączalnymi częściami danych, takich jak nastawy pędzli lub "
-"wzorców. Krita ma różne zasoby, a także dobre zarządzanie zasobami od wersji "
-"2.9, ułatwiając artyście dzielenie się zasobami i zbieranie ich wszystkich "
-"we jednym miejscu."
+"wzorców. Krita ma rozbudowany system zarządzania zasobami, który umożliwia"
+" znaczenie, wyłączanie, udostępnianie i więcej."
 
 #: ../../reference_manual/resource_management.rst:22
 msgid ""
@@ -96,6 +94,11 @@ msgid ""
 "track of all those resources can be a handful, Krita creates a SQLite cache "
 "in which it keeps the tags, names, version and other data about the resource."
 msgstr ""
+"Wszystkie zasoby są przechowywane w katalogu zasobów. Katalog ten można"
+" określić w :ref:`ustawieniach ogólnych <resource_settings>`. Obsługa tych"
+" wszystkich zasobów może przysporzyć pracy, więc Krita tworzy pamięć"
+" podręczną SQLite, w której przechowuje znaczniki, nazwy, wersje oraz inne"
+" dane o zasobie."
 
 #: ../../reference_manual/resource_management.rst:24
 msgid ""
@@ -104,6 +107,11 @@ msgid ""
 "Deleting the cache will delete the tags and relationships it keeps track of, "
 "so be careful."
 msgstr ""
+"Dzięki tej pamięci podręcznej, Krita może uniknąć wczytywania zasobu, aż do"
+" czasu "
+"gdy będzie potrzebny. Czyni to Kritę dużo lżejszą. Usunięcie tej pamięci"
+" podręcznej usunie znacznik i zależności, które zostały w niej zapisane, więc"
+" bądź ostrożny."
 
 #: ../../reference_manual/resource_management.rst:26
 msgid ""
@@ -113,39 +121,44 @@ msgstr ""
 
 #: ../../reference_manual/resource_management.rst:28
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../reference_manual/resource_management.rst:29
 msgid ":file:`$HOME/.local/share/krita/`"
-msgstr ""
+msgstr ":file:`$HOME/.local/share/krita/`"
 
 #: ../../reference_manual/resource_management.rst:30
+#, fuzzy
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../reference_manual/resource_management.rst:31
 msgid ":file:`%APPDATA%\\\\krita\\\\`"
-msgstr ""
+msgstr ":file:`%APPDATA%\\\\krita\\\\`"
 
 #: ../../reference_manual/resource_management.rst:33
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: ../../reference_manual/resource_management.rst:33
 msgid ":file:`~/Library/Application Support/Krita/`"
-msgstr ""
+msgstr ":file:`~/Library/Application Support/Krita/`"
 
 #: ../../reference_manual/resource_management.rst:36
 msgid ""
 "If you installed Krita in the Windows Store, your custom resources will be "
 "in a location like:"
 msgstr ""
+"Jeśli wgrałeś Kritę ze sklepu Windows, to twoje własne zasoby znajdują się w "
+"miejscu:"
 
 #: ../../reference_manual/resource_management.rst:36
 msgid ""
 ":file:`%LOCALAPPDATA%\\\\Packages\\\\49800Krita_{RANDOM STRING}\\\\LocalCache"
 "\\Roaming\\krita`"
 msgstr ""
+":file:`%LOCALAPPDATA%\\\\Packages\\\\49800Krita_{RANDOM STRING}\\\\LocalCache"
+"\\Roaming\\krita`"
 
 #: ../../reference_manual/resource_management.rst:41
 #, fuzzy
@@ -155,13 +168,12 @@ msgstr "Zasoby"
 
 #: ../../reference_manual/resource_management.rst:43
 msgid "Krita can load a variety of resource libraries."
-msgstr ""
+msgstr "Krita może wczytać wiele rodzajów bibliotek zasobów."
 
 #: ../../reference_manual/resource_management.rst:46
-#, fuzzy
 #| msgid "Resources"
 msgid "Resource Folder"
-msgstr "Zasoby"
+msgstr "Katalog zasobów"
 
 #: ../../reference_manual/resource_management.rst:48
 msgid ""
@@ -169,6 +181,9 @@ msgid ""
 "resources, they will all end up here. You can configure its location in the :"
 "ref:`general preferences <resource_settings>`."
 msgstr ""
+"Katalog zasobów jest uważany za główną bibliotekę. Przy tworzeniu nowych"
+" zasobów, będą one trafiać właśnie do niego. Możesz ustawić jego położenie w"
+" : ref:`ustawieniach ogólnych <resource_settings>`."
 
 #: ../../reference_manual/resource_management.rst:49
 #, fuzzy
@@ -183,10 +198,14 @@ msgid ""
 "other information like metadata and a manifest so Krita can check there's no "
 "errors in the file."
 msgstr ""
+"Głównym formatem wymiany zasobów są :dfn:`Zestawy zasobów`, co jest"
+" spakowanym plikiem, przechowującym w sobie wszystkie zasoby razem. Zawiera"
+" także inne dane takie jak metadane i manifest tak, aby Krita mogła"
+" sprawdzić, czy nie ma błędów w tym pliku."
 
 #: ../../reference_manual/resource_management.rst:52
 msgid "Adobe Brush Library"
-msgstr ""
+msgstr "Biblioteka pędzli Adobe"
 
 #: ../../reference_manual/resource_management.rst:54
 msgid ""
@@ -194,10 +213,14 @@ msgid ""
 "load this, but now Krita will load them as a library of :ref:`brushes "
 "<resource_brush_tips>`."
 msgstr ""
+"``ABR`` zawierający wiele obrazów w swoim środku. Poprzednie wersje Krity nie"
+" mogły tego wczytać, z kolei teraz Krita może je czytywać jako bibliotekę"
+" :ref:`pędzli "
+"<resource_brush_tips>`."
 
 #: ../../reference_manual/resource_management.rst:55
 msgid "Adobe Style Library"
-msgstr ""
+msgstr "Biblioteka stylów Adobe"
 
 #: ../../reference_manual/resource_management.rst:57
 msgid ""
@@ -225,6 +248,11 @@ msgid ""
 "generated by Krita and have no physical version on disk. This is currently "
 "used for the fore-to-background gradient."
 msgstr ""
+"Biblioteka pamięci to miejsce, w którym przechowywane są zasoby tymczasowe,"
+" które "
+"są tworzone przez Kritę i nie posiadają swojego fizycznego odpowiednika na"
+" dysku. Obecnie jest to wykorzystywane dla gradientu przechodzącego od"
+" pierwszego do drugiego planu."
 
 #: ../../reference_manual/resource_management.rst:65
 msgid ""
@@ -232,13 +260,16 @@ msgid ""
 "Manage Resource Libraries`. In this dialog, you can import resource "
 "libraries, deactivate them, and also :ref:`create_bundle`."
 msgstr ""
+"Możesz zarządzać bibliotekami zasobów przechodząc do"
+" :menuselection:`Ustawienia --> "
+"Zarządzaj bibliotekami zasobów`. W tym oknie, możesz zaimportować biblioteki"
+" zasobów, wyłączyć je, a także :ref:`create_bundle`."
 
 #: ../../reference_manual/resource_management.rst:68
 msgid "Importing Bundles"
 msgstr "Importowanie pęków"
 
 #: ../../reference_manual/resource_management.rst:70
-#, fuzzy
 #| msgid ""
 #| "To import a bundle click on :guilabel:`Import Bundles/Resources` button "
 #| "on the top right side of the dialog. Select ``.bundle`` file format from "
@@ -256,14 +287,12 @@ msgid ""
 "will be listed in the bundle view. To enable or disable a bundle, select the "
 "entry in the view, and then select :guilabel:`Deactivate`."
 msgstr ""
-"Aby zaimportować pęk, naciśnij na przycisk :guilabel:`Importuj pęki/zasoby` "
+"Aby zaimportować pęk, naciśnij na przycisk :guilabel:`Zaimportuj` "
 "w górnym prawym narożniku okna dialogowego. Wybierz format pliku ``.bundle`` "
 "z rodzajów plików, jeśli nie jest wybrany, przejdź do katalogu, gdzie "
-"pobrałeś pęk, wybierz go i kliknij :guilabel:`Otwórz`. Gdy pęk zostanie "
-"zaimportowany, to pojawi się w obszarze :guilabel:`Używane pęki`. Jeśli nie "
-"potrzebujesz pęku, to możesz tymczasowo uczynić go nieużywanym poprzez jego "
-"zaznaczenie i naciśnięcie na przycisku strzałki, co przeniesie go do "
-"obszaru :guilabel:`Nieużywane`."
+"pobrałeś zestaw, wybierz go i kliknij :guilabel:`Otwórz`. Gdy zestaw zostanie "
+"zaimportowany, to pojawi się w widoku zasobów. Aby włączyć lub wyłączyć"
+" zestaw, zaznacz jego wpis na widoku, na następnie wybierz :guilabel:`Wyłącz`."
 
 #: ../../reference_manual/resource_management.rst:76
 msgid "Creating your own Bundle"
@@ -307,7 +336,7 @@ msgstr ""
 "Upewnij się, że dodasz koniuszki pędzli skojarzone z działaniami malowania, "
 "które dodajesz do pęku. Jeśli ich nie dodasz, to pędzle z nastawy wczytane z "
 "tego pęku, będą miały znak 'X' na miniaturze, co oznacza brak tekstury. "
-"Pędzl z nastawy nie będzie ten sam."
+"Pędzel z nastawy nie będzie ten sam."
 
 #: ../../reference_manual/resource_management.rst:89
 msgid ""
@@ -326,7 +355,6 @@ msgid "Deleting Imported Bundles"
 msgstr "Usuwanie zaimportowanych pęków"
 
 #: ../../reference_manual/resource_management.rst:94
-#, fuzzy
 #| msgid ""
 #| "In case you wish to delete the bundles you have imported permanently "
 #| "click on the :guilabel:`Open Resource Folder` button in the :guilabel:"
@@ -342,11 +370,12 @@ msgid ""
 "any more. The next time you start Krita the bundle and its associated "
 "resources will not be loaded."
 msgstr ""
-"W przypadku, gdy chcesz trwale usunąć pęki, które zaimportowałeś, naciśnij "
+"W przypadku, gdy chcesz trwale usunąć zestawy, które zaimportowałeś, naciśnij "
 "na przycisku :guilabel:`Otwórz katalog zasobu` w oknie dialogowym :guilabel:"
 "`Zarządzania zasobami`. Otworzy to katalog zasobów w przeglądarce plików. "
-"Przejdź do katalogu pęków i usuń plik pęku, którego już nie potrzebujesz. "
-"Przy następnym uruchomieniu Krity, pęk wraz z zasobami z nim skojarzonymi "
+"Przejdź do katalogu zestawów i usuń plik zestawu, którego już nie"
+" potrzebujesz. "
+"Przy następnym uruchomieniu Krity, zestaw wraz z zasobami z nim skojarzonymi "
 "nie zostanie wczytany."
 
 #: ../../reference_manual/resource_management.rst:99
@@ -380,6 +409,9 @@ msgid ""
 "tagging, deleting/deactivating the resource itself, importing resources and "
 "open the create bundle dialog."
 msgstr ""
+"Tutaj możesz wykonać różne rzeczy takie jak usuwanie plików kopii zapasowych,"
+" wsadowe nadawanie znaczników, usuwanie/wyłączanie zasobów, importowanie"
+" zasobów oraz otwieranie okna do tworzenia zestawów."
 
 #: ../../reference_manual/resource_management.rst:113
 #, fuzzy
@@ -399,6 +431,9 @@ msgid ""
 "certain kinds of files, and all the files you can select are possible to "
 "import for that resource."
 msgstr ""
+"Wybieranie zasobów do importowania jest całkiem proste. Możesz wybrać tylko"
+" niektóre rodzaje plików, a wszystkie pliki, które zaznaczysz są możliwe do"
+" zaimportowania do tego zasobu."
 
 #: ../../reference_manual/resource_management.rst:119
 msgid ""
@@ -408,6 +443,11 @@ msgid ""
 "resources, a window will pop up asking which resource type you intended to "
 "import the file for."
 msgstr ""
+"Przycisk importowania w zarządzaniu zasobami czasami musi wybrać, czy"
+" importowany plik :ref:`file_png` jest końcówką pędzla, czy teksturą. Przy"
+" importowaniu formatu, który może być używany do wielu rodzajów zasobów,"
+" pojawi się okno z pytaniem o rodzaj zasobu, do którego masz zamiar"
+" zaimportować plik."
 
 #: ../../reference_manual/resource_management.rst:125
 msgid "Activating and Deactivating"
@@ -426,10 +466,14 @@ msgid ""
 "deactivated resources should now be visible, select them, and then press :"
 "guilabel:`Undelete Resource`."
 msgstr ""
+"Aby włączyć zasób, przejdź do :menuselection:`Ustawie&nia --> Zarządzanie"
+" zasobami...`, a następnie włącz :guilabel:`Pokaż usunięte za&soby`."
+" Wyłączone zasoby powinny być teraz widoczne, więc zaznacz je i naciśnij :"
+"guilabel:`Przywróć zasób`."
 
 #: ../../reference_manual/resource_management.rst:134
 msgid "Returning a resource to the previous version"
-msgstr ""
+msgstr "Przywracanie zasobu do poprzedniej wersji"
 
 #: ../../reference_manual/resource_management.rst:136
 msgid ""
@@ -446,14 +490,17 @@ msgid ""
 "Backup (select and cut) all versions of the related resource into a place "
 "you can find them. Delete all these files from the ``paintoppresets`` folder."
 msgstr ""
+"Utwórz kopię zapasową (zaznacz i wytnij) wszystkie wersje danego zasobu do"
+" jednego miejsca. Usuń wszystkie pliki z katalogu ``paintoppresets``."
 
 #: ../../reference_manual/resource_management.rst:139
+#, fuzzy
 msgid "restart Krita."
-msgstr ""
+msgstr "Uruchom Kritę ponownie."
 
 #: ../../reference_manual/resource_management.rst:140
 msgid "add only the desired version of the resource."
-msgstr ""
+msgstr "dodaj tylko żądaną wersję zasobu."
 
 #: ../../reference_manual/resource_management.rst:145
 msgid "Deleting Backup files"
@@ -476,7 +523,6 @@ msgid "Tags"
 msgstr "Znaczniki"
 
 #: ../../reference_manual/resource_management.rst:154
-#, fuzzy
 #| msgid ""
 #| "Krita also has a robust tagging system for you to manage the resources on "
 #| "the fly while painting. All Krita resources can be tagged. These tags can "
@@ -492,15 +538,15 @@ msgid ""
 "and add a tag name. In addition to adding you can rename and delete a tag as "
 "well."
 msgstr ""
-"Krita ma także niezawodny system znaczników do zarządzania zasobami w tracie "
+"Czynność znakowania umożliwia zarządzanie zasobami w tracie "
 "malowania. Wszystkie zasoby Krity można oznakować. Te znaczniki można dodać "
 "przez zarządzanie zasobami, lecz także w odpowiednich dokach, takich jak dok "
-"nastaw pędzla, dok wzorców, itp. Możesz |mouseleft| na ikonie plusa w doku, "
+"nastaw pędzla, dok wzorców, itp. Możesz |mouseleft| na ikonie :guilabel:`+` w"
+" doku, "
 "aby dodać nazwę znacznika. Poza dodawaniem, możesz także zmienić nazwę lub "
 "usunąć znacznik."
 
 #: ../../reference_manual/resource_management.rst:159
-#, fuzzy
 #| msgid ""
 #| "Resources can belong to one or more tags.  For example, you may have a "
 #| "Brush Preset of a favorite **Ink Pen** variant and have it tagged so it "
@@ -512,7 +558,7 @@ msgid ""
 "in up in your Inking, Painting, Comics and Favorites groups of brushes."
 msgstr ""
 "Zasoby mogą należeć do jednego lub więcej znaczników. Na przykład, możesz "
-"mieć nastawę pędzla ulubionej odmiany **Rysika tuszowego** i mieć ją "
+"mieć nastawę pędzla ulubionej odmiany :dfn:`Rysika tuszowego` i mieć ją "
 "oznaczoną, tak że pojawia się w grupie ulubionych pędzli do tuszowania, "
 "malowania, komiksów."
 
@@ -536,6 +582,11 @@ msgid ""
 "plus icon next to the :guilabel:`tags` section to add a tag to every "
 "selected resource."
 msgstr ""
+"W oknie zarządzania zasobami, możesz oznaczyć wiele zasobów na raz. Aby"
+" zaznaczyć wiele zasobów, naciśnij :kbd:`Ctrl`, co doda poszczególne zasoby"
+" do zaznaczenia lub :kbd:`Shift` co doda wszystkie zasoby na raz. Następnie"
+" naciśnij ikonę plusa, obok obszaru :guilabel:`znaczniki`, aby dodać znacznik"
+" do każdego zaznaczonego zasobu."
 
 #: ../../reference_manual/resource_management.rst:164
 msgid ""
@@ -543,30 +594,34 @@ msgid ""
 "can be useful to ensure cross-language compatibility. The tags that get "
 "localized are..."
 msgstr ""
+"Niektóre ze znaczników są przetłumaczone. Jeśli tworzysz zestawy dla innych,"
+" to używanie takich znaczników jest użyteczne z punktu widzenia zgodności"
+" między językami. Znaczniki, które są tłumaczone to..."
 
 #: ../../reference_manual/resource_management.rst:166
 msgid "Digital"
-msgstr ""
+msgstr "Cyfrowy"
 
 #: ../../reference_manual/resource_management.rst:167
 msgid "Erasers"
-msgstr ""
+msgstr "Gumki"
 
 #: ../../reference_manual/resource_management.rst:168
 msgid "FX"
-msgstr ""
+msgstr " Fx"
 
 #: ../../reference_manual/resource_management.rst:169
 msgid "Favorites"
-msgstr ""
+msgstr "Ulubione"
 
 #: ../../reference_manual/resource_management.rst:170
 msgid "Ink"
-msgstr ""
+msgstr "Atrament"
 
 #: ../../reference_manual/resource_management.rst:171
+#, fuzzy
 msgid "Paint"
-msgstr ""
+msgstr "Farba"
 
 #: ../../reference_manual/resource_management.rst:172
 msgid "Pixel_Art"
@@ -574,18 +629,17 @@ msgstr ""
 
 #: ../../reference_manual/resource_management.rst:173
 msgid "Sketch"
-msgstr ""
+msgstr "Szkic"
 
 #: ../../reference_manual/resource_management.rst:174
 msgid "Textures"
-msgstr ""
+msgstr "Tekstury"
 
 #: ../../reference_manual/resource_management.rst:179
 msgid "Filtering"
 msgstr "Filtrowanie"
 
 #: ../../reference_manual/resource_management.rst:181
-#, fuzzy
 #| msgid ""
 #| "Some dockers, for example the brush preset docker as shown below, have a "
 #| "resource filter, which functions like a powerful search bar for the "
@@ -596,14 +650,13 @@ msgid ""
 "question."
 msgstr ""
 "Niektóre z doków, np dok nastaw pędzla, tak jak pokazano poniżej, ma filtr "
-"zasobów, który działa jak rozszerzony pasek wyszukiwania zasobów."
+"zasobów, który działa jak pasek wyszukiwania zasobów."
 
 #: ../../reference_manual/resource_management.rst:184
 msgid ".. image:: images/brushes/Brushpreset-filters.png"
 msgstr ".. image:: images/brushes/Brushpreset-filters.png"
 
 #: ../../reference_manual/resource_management.rst:185
-#, fuzzy
 #| msgid ""
 #| "You can enter brush name, tag name to quickly pull up a list of brush "
 #| "presets you want. When you select any tag from the tag drop-down and want "
@@ -616,17 +669,18 @@ msgid ""
 "on the partial, case insensitive name of the resources by using "
 "``partialname`` or ``!partialname``."
 msgstr ""
-"Możesz podać nazwę pędzla, znacznika, aby szybko wyciągnąć listę nastaw "
-"pędzli, które chcesz. Gdy chcesz wybrać dowolny znacznik z pola rozwijanego "
+"Możesz podać nazwę pędzla lub znacznika, aby szybko wyciągnąć listę nastaw "
+"pędzli, których właśnie teraz chcesz. Gdy chcesz wybrać dowolny znacznik z"
+" pola rozwijanego "
 "znaczników i dołączyć nastawę pędzli także z innych znaczników, to możesz "
-"dodać filtry w następujący sposób:"
+"dodać filtry na podstawie nazwy zasobu pisanej dowolną wielkością liter przy"
+" użyciu ``nazwa częściowa`` or ``!nazwa częściowa``."
 
 #: ../../reference_manual/resource_management.rst:188
 msgid "Resource Zooming"
 msgstr "Powiększanie zasobów"
 
 #: ../../reference_manual/resource_management.rst:188
-#, fuzzy
 #| msgid ""
 #| "If you find the thumbnails of the resources such as color swatches "
 #| "brushes and pattern to be small you can make them bigger or :guilabel:"
@@ -640,7 +694,7 @@ msgid ""
 "selector and using the :kbd:`Ctrl +` |mousescroll| shortcut."
 msgstr ""
 "Jeśli miniatury zasobów takie jak pędzle barwnych łatek oraz wzorce są zbyt "
-"małe, to możesz sprawić, że będą większe lub je :guilabel:`Powiększyć`. "
+"małe, to możesz sprawić, że będą większe lub je :dfn:`Powiększyć`. "
 "Wszystkie wybieraki zasobów można powiększyć i pomniejszyć, poprzez "
 "najechanie na wybierak i użycie skrótu :kbd:`Ctrl +` |mousescroll|."
 
@@ -662,7 +716,7 @@ msgstr "Rodzaje zasobów w Kricie"
 
 #: ../../reference_manual/resource_management.rst:203
 msgid ":ref:`gamut_mask_docker`"
-msgstr ""
+msgstr ":ref:`gamut_mask_docker`"
 
 #: ../../reference_manual/resource_management.rst:204
 msgid ":ref:`layer_style`"
