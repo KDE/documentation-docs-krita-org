@@ -169,27 +169,32 @@ Make Windows, Linux, macOS and Android packages
 
 15. Upload 21(!) files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
 
-    * krita-4.2.9-beta1.tar.gz
-    * krita-4.2.9-beta1.tar.gz.sig
-    * krita-4.2.9-beta1.tar.xz
-    * krita-4.2.9-beta1.tar.xz.sig
-    * gmic_krita_qt-x86_64.appimage
-    * gmic_krita_qt-x86_64.appimage.sig
-    * krita-4.2.9-beta1-x86_64.appimage
-    * krita-4.2.9-beta1-x86_64.appimage.sig
-    * Krita-Beta-x86_64.appimage.zsync (beta zsync belongs to /unstable/krita/updates/, stable to /stable/krita/updates/)
-    * krita-x64-4.2.9-beta1-dbg.zip
-    * krita-x64-4.2.9-beta1-setup.exe
-    * krita-x64-4.2.9-beta1.zip
-    * krita-x86-4.2.9-beta1-dbg.zip
-    * krita-x86-4.2.9-beta1-setup.exe
-    * krita-x86-4.2.9-beta1.zip
-    * krita-4.2.9-beta1.dmg
-    * krita-arm64-4.2.9-beta1.apk
-    * krita-arm32-4.2.9-beta1.apk
-    * krita-x86-4.2.9-beta1.apk
-    * krita-x86_64-4.2.9-beta1.apk
-    * md5sum.txt
+    - to https://download.kde.org/unstable/krita/4.2.9-beta1/
+        * krita-4.2.9-beta1.tar.gz
+        * krita-4.2.9-beta1.tar.gz.sig
+        * krita-4.2.9-beta1.tar.xz
+        * krita-4.2.9-beta1.tar.xz.sig
+        * gmic_krita_qt-x86_64.appimage
+        * gmic_krita_qt-x86_64.appimage.sig
+        * krita-4.2.9-beta1-x86_64.appimage
+        * krita-4.2.9-beta1-x86_64.appimage.sig
+        * krita-x64-4.2.9-beta1-dbg.zip
+        * krita-x64-4.2.9-beta1-setup.exe
+        * krita-x64-4.2.9-beta1.zip
+        * krita-x86-4.2.9-beta1-dbg.zip
+        * krita-x86-4.2.9-beta1-setup.exe
+        * krita-x86-4.2.9-beta1.zip
+        * krita-4.2.9-beta1.dmg
+        * krita-arm64-4.2.9-beta1.apk
+        * krita-arm32-4.2.9-beta1.apk
+        * krita-x86-4.2.9-beta1.apk
+        * krita-x86_64-4.2.9-beta1.apk
+        * md5sum.txt
+    - to https://download.kde.org/unstable/krita/updates/
+        * Krita-Beta-x86_64.appimage.zsync
+        
+    Please don't forget to replace "unstable" to "stable" for stable release builds. 
+    It should be replaced for both, packages themselves and zsync file
 
 
 16. Template ticket for sysadmins:
@@ -202,13 +207,16 @@ Make Windows, Linux, macOS and Android packages
 
         There are two tasks:
 
-        1) Upload release artifacts (21 files) to download.kde.org:
+        1) Upload release artifacts (20 files) to download.kde.org:
 
             * Source link: https://files.kde.org/krita/release-4.2.9-beta1/
             * Destination link: https://download.kde.org/unstable/krita/4.2.9-beta1/
-            * There should be 16 files including `md5sum.txt`
-
-        2) Add `Krita 4.2.9 Beta1` bugzilla version 
+            
+        2) Upload updates ZSync artifacts (1 file) to download.kde.org:
+            * Source link: https://files.kde.org/krita/release-4.2.9-beta1-updates/
+            * Destination link: https://download.kde.org/unstable/krita/updates/
+                         
+        3) Add `Krita 4.2.9 Beta1` bugzilla version 
 
 17. Now the folder on download.kde.org should have 21(!) files. Check if you missed something (and you surely did! :) ).
 
