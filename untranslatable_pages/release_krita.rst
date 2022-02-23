@@ -235,6 +235,9 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
 
 18. Now the folder on download.kde.org should have 21(!) files. Check if you missed something (and you surely did! :) ).
 
+19. Verify that the previous version of Krita AppImage can update to 
+    the new one from the GUI. It should use the .zsync file uploaded above.
+
     
 Release coordination
 ~~~~~~~~~~~~~~~~~~~~
