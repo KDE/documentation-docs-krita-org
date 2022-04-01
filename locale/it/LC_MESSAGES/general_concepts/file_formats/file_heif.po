@@ -1,0 +1,373 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# Valter Mura <valtermura@gmail.com>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-01 00:13+0000\n"
+"PO-Revision-Date: 2022-03-31 11:49+0200\n"
+"Last-Translator: Valter Mura <valtermura@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.03.80\n"
+
+#: ../../general_concepts/file_formats/file_heif.rst:1
+msgid "The HEIF and AVIF file formats in Krita."
+msgstr "I formati dei file HEIF e AVIF in Krita."
+
+#: ../../general_concepts/file_formats/file_heif.rst:10
+msgid "High Efficiency Image Format"
+msgstr "High Efficiency Image Format"
+
+#: ../../general_concepts/file_formats/file_heif.rst:10
+msgid "AV1 Image Format"
+msgstr "AV1 Image Format"
+
+#: ../../general_concepts/file_formats/file_heif.rst:10
+msgid "\\*.heif"
+msgstr "\\*.heif"
+
+#: ../../general_concepts/file_formats/file_heif.rst:10
+msgid "\\*.avif"
+msgstr "\\*.avif"
+
+#: ../../general_concepts/file_formats/file_heif.rst:10
+msgid "\\*.heic"
+msgstr "\\*.heic"
+
+#: ../../general_concepts/file_formats/file_heif.rst:10
+msgid "hdr"
+msgstr "hdr"
+
+#: ../../general_concepts/file_formats/file_heif.rst:10
+msgid "AVIF"
+msgstr "AVIF"
+
+#: ../../general_concepts/file_formats/file_heif.rst:10
+msgid "HEIF"
+msgstr "HEIF"
+
+#: ../../general_concepts/file_formats/file_heif.rst:10
+msgid "HEIC"
+msgstr "HEIC"
+
+#: ../../general_concepts/file_formats/file_heif.rst:16
+msgid "\\*.heif and \\*.avif"
+msgstr "\\*.heif e \\*.avif"
+
+#: ../../general_concepts/file_formats/file_heif.rst:18
+msgid "The High Efficiency Image Format (``*.heif``, ``*.heic``), and its cousin, AV1 Image Format (``*.avif``) are formats which use video codecs (``H264``, ``H265`` and ``AV1``) to store their data. They are more and more popular with mobile phones as their default image file format, and ``*.avif`` is to be natively supported by all web browsers within the next few years."
+msgstr ""
+"Il formato immagine ad alta efficienza (High Efficiency Image Format, ``*."
+"heif``, ``*.heic``) e il suo cugino, il formato immagine AV1 (AV1 Image "
+"Format, ``*.avif``) sono formati che utilizzano codifiche video (``H264``, "
+"``H265`` e ``AV1``) per memorizzare i propri dati. Stanno diventando sempre "
+"più popolari come formato immagine predefinito nei telefoni cellulari, e ``*."
+"avif`` sarà supportato nativamente da tutti i browser web entro i prossimi "
+"anni."
+
+#: ../../general_concepts/file_formats/file_heif.rst:20
+msgid "Krita supports saving :ref:`model_gray` and :ref:`model_rgb` images to these formats. Furthermore, it can save 8 bit, will save 16 bit integer as 12 bit, and can save 16 and 32 bit float as 12 bit, with an HDR color space."
+msgstr ""
+"Krita supporta il salvataggio delle immagini :ref:`model_gray` e "
+":ref:`model_rgb` in questi formati. Inoltre, può salvare in 8 bit, salva in "
+"16 bit intero come 12 bit e può salvare in 16 e 32 bit a virgola mobile come "
+"12 bit, con uno spazio dei colori HDR."
+
+#: ../../general_concepts/file_formats/file_heif.rst:22
+msgid "Compared to :ref:`file_png` and :ref:`file_jpeg`, these formats tend to smooth out textures to make them easier to compress, and therefore great for sharp images with a lot of smooth gradients. Images with a lot of texture or fine details may lose said detail (for example, cat whiskers seem to get lost), and thus :ref:`file_jpeg` might be better suited."
+msgstr ""
+"Confrontati con :ref:`file_png` e :ref:`file_jpeg`, questi formati tendono "
+"ad ammorbidire le trame per renderle più facili da comprimere, dunque sono "
+"ottime per le immagini nitide con molte sfumature morbide. Le immagini con "
+"molte trame o dettagli fini potrebbero perdere tali dettagli (per esempio le "
+"vibrisse dei gatti sembrano scomparire), dunque il formato :ref:`file_jpeg` "
+"sembra essere il più adatto."
+
+#: ../../general_concepts/file_formats/file_heif.rst:25
+msgid "Import Options"
+msgstr "Opzioni di importazione"
+
+#: ../../general_concepts/file_formats/file_heif.rst:27
+msgid "Krita supports all the color spaces that these formats can handle, and will convert in the case of the few formats it cannot handle. This has been automated for the most part, with Krita selecting or generating the appropriate ICC profile where necessary."
+msgstr ""
+"Krita supporta tutti gli spazi dei colori che questi formati sono in grado "
+"di gestire, e li converte nel caso in cui siano presenti formati non "
+"gestibili. Questo è un processo in gran parte automatizzato, Krita "
+"selezionerà o genererà il profilo ICC appropriato dove necessario."
+
+#: ../../general_concepts/file_formats/file_heif.rst:29
+msgid "Images that are HDR images, so the ones that have the Perceptual Quantizer, Hybrid Log Gamma or SMPTE ST 428 transfer functions, will be converted to a linear 32 bit floating point version of that color space."
+msgstr ""
+"Le immagini HDR, ossia quelle che possiedono le funzioni di trasferimento "
+"Perceptual Quantizer, Hybrid Log Gamma o SMPTE ST 428, saranno convertite in "
+"una versione a 32 a virgola mobile lineare di quello spazio dei colori."
+
+#: ../../general_concepts/file_formats/file_heif.rst:31
+msgid "However, Hybrid Log Gamma needs an extra conversion step inbetween, as Krita currently does not support sending HLG data to the display. For this :dfn:`Scene Linear to Display Linear` conversion, it would need to know your :dfn:`display gamma` and :dfn:`maximum brightness`. The default brightness and gamma values are the ones used for a HLG to PQ conversion, and probably your best bet when your monitor is able to display Krita's HDR. When exporting this image with HLG, it's recommended to reuse the same values for the reverse OOTF there."
+msgstr ""
+"Tuttavia, Hybrid Log Gamma necessita di un ulteriore passaggio di "
+"conversione, in quanto Krita attualmente non supporta l'invio di dati HLG al "
+"monitor. Per questa operazione di conversione :dfn:`da lineare di scena a "
+"lineare di visualizzazione` dovrai conoscere la :dfn:`gamma del monitor` e "
+"la :dfn:`luminosità massima`. La luminosità e i valori di gamma predefiniti "
+"sono quelli utilizzati per la conversione da HLG a PQ, e probabilmente la "
+"soluzione migliore quando il monitor è capace di visualizzare l'HDR di "
+"Krita. Quando esporti questa immagine con HLG, raccomandiamo di riutilizzare "
+"gli stessi valori per l'OOTF inverso."
+
+#: ../../general_concepts/file_formats/file_heif.rst:33
+msgid "Apply Hybrid Log Gamma OOTF"
+msgstr "Applica Hybrid Log Gamma OOTF"
+
+#: ../../general_concepts/file_formats/file_heif.rst:34
+msgid "Whether to apply the extra conversion step. This will convert scene linear values to display linear, and thus it's necessity is completely dependent on your HDR workflow. If in doubt, apply."
+msgstr ""
+"Se applicare o no l'ulteriore passaggio di conversione. Convertirà i valori "
+"lineari di scena in lineari di visualizzazione, dunque il suo utilizzo "
+"dipende completamente dal tuo flusso di lavoro HDR. Nel dubbio, applica "
+"l'opzione."
+
+#: ../../general_concepts/file_formats/file_heif.rst:35
+#: ../../general_concepts/file_formats/file_heif.rst:82
+msgid "Gamma"
+msgstr "Gamma"
+
+#: ../../general_concepts/file_formats/file_heif.rst:36
+#: ../../general_concepts/file_formats/file_heif.rst:83
+msgid "Approximate display gamma. Default value is 1.2 for conversion to PQ."
+msgstr ""
+"Gamma del monitor approssimata. Il valore predefinito è 1,2 per la "
+"conversione a PQ."
+
+#: ../../general_concepts/file_formats/file_heif.rst:38
+#: ../../general_concepts/file_formats/file_heif.rst:85
+msgid "Brightness"
+msgstr "Luminosità"
+
+#: ../../general_concepts/file_formats/file_heif.rst:38
+#: ../../general_concepts/file_formats/file_heif.rst:85
+msgid "Maximum display brightness. Default value is 10.000 cd/m² for conversion to PQ."
+msgstr ""
+"Luminosità massima del monitor. Il valore predefinito è 10.000 cd/m² per la "
+"conversione a PQ."
+
+#: ../../general_concepts/file_formats/file_heif.rst:41
+msgid "Export Options"
+msgstr "Opzioni di esportazione"
+
+#: ../../general_concepts/file_formats/file_heif.rst:43
+msgid "Lossless"
+msgstr "Senza perdita"
+
+#: ../../general_concepts/file_formats/file_heif.rst:44
+msgid "Use the lossless encoding options. Disables the :guilabel:`Lossy Advanced Settings`."
+msgstr ""
+"Usa le opzioni di codifica senza perdita di dati. Disabilita le "
+":guilabel:`Impostazioni avanzate con perdita`."
+
+#: ../../general_concepts/file_formats/file_heif.rst:46
+msgid "Lossy Advanced Settings"
+msgstr "Impostazioni avanzate con perdita"
+
+#: ../../general_concepts/file_formats/file_heif.rst:46
+msgid "Quality"
+msgstr "Qualità"
+
+#: ../../general_concepts/file_formats/file_heif.rst:47
+msgid "Determines how much the encoder should prioritize quality over compression. Higher values look better, but lower values have a lower file size."
+msgstr ""
+"Determina quanto il codificatore debba rendere prioritaria la qualità "
+"rispetto alla compressione. Con valori superiori si ottiene un aspetto "
+"migliore, ma con valori inferiori la dimensione del file è più piccola."
+
+#: ../../general_concepts/file_formats/file_heif.rst:49
+msgid "Chroma Subsampling settings. Humans are more sensitive to the brightness of an image than its colorfulness, so halving the colors of an image can be a very useful way to compress an image. This is best used with images that have few sharp contrasts, as that is where the reduced resolution is most obvious."
+msgstr ""
+"Impostazioni del sottocampionamento della crominanza. Gli esseri umani sono "
+"più sensibili alla luminosità di un'immagine che alla sua ricchezza di "
+"colori, dunque dimezzare i colori di un'immagine può essere un modo molto "
+"utile per comprimerla. Queste opzioni funzionano al meglio con immagini che "
+"hanno pochi contrasti netti, poiché è lì che la risoluzione ridotta è più "
+"evidente."
+
+#: ../../general_concepts/file_formats/file_heif.rst:51
+msgid "420"
+msgstr "420"
+
+#: ../../general_concepts/file_formats/file_heif.rst:52
+msgid "The brightness of the image will be at full resolution, while the colorfulness will be halved in both dimensions."
+msgstr ""
+"La luminosità dell'immagine sarà a risoluzione intera, mentre la colorazione "
+"sarà dimezzata in entrambe le dimensioni."
+
+#: ../../general_concepts/file_formats/file_heif.rst:53
+msgid "422"
+msgstr "422"
+
+#: ../../general_concepts/file_formats/file_heif.rst:54
+msgid "The brightness of the image will be at full resolution, while the colorfulness will be halved horizontally."
+msgstr ""
+"La luminosità dell'immagine sarà a risoluzione intera, mentre la colorazione "
+"sarà dimezzata orizzontalmente."
+
+#: ../../general_concepts/file_formats/file_heif.rst:56
+msgid "Chroma"
+msgstr "Crominanza"
+
+#: ../../general_concepts/file_formats/file_heif.rst:56
+msgid "444"
+msgstr "444"
+
+#: ../../general_concepts/file_formats/file_heif.rst:56
+msgid "Both brightness and colorfulness of the image will be at full resolution."
+msgstr "Luminosità e colorazione dell'immagine saranno a risoluzione intera."
+
+#: ../../general_concepts/file_formats/file_heif.rst:59
+msgid "Conversion Settings"
+msgstr "Impostazioni di conversione"
+
+#: ../../general_concepts/file_formats/file_heif.rst:61
+msgid "These only appear on floating point images, and are used to store the images with values above 1.0 as HDR images by encoding them with a specific transfer function."
+msgstr ""
+"Queste sono presenti solo sulle immagini a virgola mobile, e vengono "
+"utilizzate per memorizzare le immagini con valori sopra 1,0 come le immagini "
+"HDR, codificandole con una funzione di trasferimento specifica."
+
+#: ../../general_concepts/file_formats/file_heif.rst:64
+msgid "Encoding the right color space depends on how compatible the current color space is with the ``ITU H.273 CICP`` values [ituh273]_, as this is how ``PQ``, ``HLG`` and ``SMPTE ST 428`` are stored. ``Rec 2100 PQ`` or ``Rec 2100 HLG`` are the expected values for HDR images [rec2100]_."
+msgstr ""
+"La codifica del corretto spazio dei colori dipende da come è compatibile "
+"l'attuale spazio dei colori con i valori ``ITU H.273 CICP`` [ituh273]_, "
+"poiché questo è il modo in cui ``PQ``, ``HLG`` e ``SMPTE ST 428`` vengono "
+"memorizzati. ``Rec 2100 PQ`` o ``Rec 2100 HLG`` sono i valori attesi per le "
+"immagini HDR [rec2100]_."
+
+#: ../../general_concepts/file_formats/file_heif.rst:66
+msgid "In all cases when we store ``CICP`` values instead of an ICC profile, the Matrix Coefficient value will be set to 0 (Identity Matrix), as Krita does no conversion to ``YUV``."
+msgstr ""
+"In tutti i casi, quando memorizziamo i valori ``CICP`` anziché un profilo "
+"ICC, il valore del coefficiente di matrice verrà impostato a 0 (Identity "
+"Matrix), dato che Krita non esegue alcuna conversione a ``YUV``."
+
+#: ../../general_concepts/file_formats/file_heif.rst:68
+msgid "Rec 2100 PQ"
+msgstr "Rec 2100 PQ"
+
+#: ../../general_concepts/file_formats/file_heif.rst:69
+msgid "Image will first be converted to Rec 2020 linear. Then encoded with the Perceptual Quantizer function (also known as ``SMPTE 2048`` curve). This is the most common HDR encoding, and useful for images where the relative brightness is important."
+msgstr ""
+"L'immagine sarà prima convertita in Rec 2020 lineare. Quindi codificata con "
+"la funzione Perceptual Quantizer (conosciuta anche come curva ``SMPTE "
+"2048``). Questa è la codifica HDR più comune, ed è utile per le immagini "
+"dove è importante la luminosità relativa."
+
+#: ../../general_concepts/file_formats/file_heif.rst:70
+msgid "Rec 2100 HLG"
+msgstr "Rec 2100 HLG"
+
+#: ../../general_concepts/file_formats/file_heif.rst:71
+msgid "Image will first be converted to Rec 2020 linear. Then encoded with the Hybrid Log Gamma function, and finally, if chosen, the reverse Hybrid Log Gamma OOTF is applied. This is useful for images where the final display may not understand PQ."
+msgstr ""
+"L'immagine sarà prima convertita in Rec 2020 lineare. Quindi codificata con "
+"la funzione Hybrid Log Gamma e infine, se scelto, viene applicato Hybrid Log "
+"Gamma OOTF inverso. Questo è utile per le immagini in cui la visualizzazione "
+"finale potrebbe non comprendere PQ."
+
+#: ../../general_concepts/file_formats/file_heif.rst:72
+msgid "Keep Colorants, encode PQ"
+msgstr "Mantieni coloranti, codifica PQ"
+
+#: ../../general_concepts/file_formats/file_heif.rst:73
+msgid "Shows only for images with an ``ITU H.273`` compatible color space [ituh273]_. The image will be linearized first, and then encoded with a perceptual quantizer curve."
+msgstr ""
+"Presente solo per le immagini con uno spazio dei colori compatibile con "
+"``ITU H.273`` [ituh273]_. L'immagine sarà resa prima lineare, poi codificata "
+"con una curva quantizzata percettiva."
+
+#: ../../general_concepts/file_formats/file_heif.rst:74
+msgid "Keep Colorants, encode HLG"
+msgstr "Mantieni coloranti, codifica HLG"
+
+#: ../../general_concepts/file_formats/file_heif.rst:75
+msgid "Shows only for images with an ``ITU H.273`` compatible color space [ituh273]_. The image will be linearized first, and then encoded with a Hybrid Log Gamma curve. Finally, the reverse HLG OOTF may be applied."
+msgstr ""
+"Presente solo per le immagini con uno spazio dei colori compatibile con "
+"``ITU H.273`` [ituh273]_. L'immagine sarà resa prima lineare, poi codificata "
+"con una curva Hybrid Log Gamma. Infine, potrebbe venire applicato HLG OOTF "
+"inverso."
+
+#: ../../general_concepts/file_formats/file_heif.rst:76
+msgid "Keep Colorants, encode SMPTE ST 428"
+msgstr "Mantieni coloranti, codifica SMPTE ST 428"
+
+#: ../../general_concepts/file_formats/file_heif.rst:77
+msgid "Shows only for images with an ``ITU H.273`` compatible color space [ituh273]_. The image will be linearized first, and then encoded with ``SMPTE ST 428``. Krita always opens images like these as linear floating point, this option is there to save them as ``ST 428`` again."
+msgstr ""
+"Presente solo per le immagini con uno spazio dei colori compatibile con "
+"``ITU H.273`` [ituh273]_. L'immagine sarà resa prima lineare, poi codificata "
+"con ``SMPTE ST 428``. Krita apre sempre questo tipo di immagini come lineari "
+"a virgola mobile, questa opzione si trova lì per salvarle di nuovo come ``ST "
+"428``."
+
+#: ../../general_concepts/file_formats/file_heif.rst:78
+msgid "Space:"
+msgstr "Spazio:"
+
+#: ../../general_concepts/file_formats/file_heif.rst:78
+msgid "No Changes, Clip"
+msgstr "Nessuna modifica, taglio"
+
+#: ../../general_concepts/file_formats/file_heif.rst:79
+msgid "The image will be converted plainly to 12bit integer, and values that are out of bounds are clipped, the ICC profile will be embedded."
+msgstr ""
+"L'immagine sarà convertita semplicemente in intero a 12 bit, e i valori che "
+"sono fuori limite verranno tagliati e il profilo ICC incorporato."
+
+#: ../../general_concepts/file_formats/file_heif.rst:80
+msgid "Apply reverse Hybrid Log Gamma OOTF"
+msgstr "Applica Hybrid Log Gamma OOTF inverso"
+
+#: ../../general_concepts/file_formats/file_heif.rst:81
+msgid "Whether to apply the extra conversion step. It's necessity is completely dependent on your HDR workflow. If in doubt, apply, always apply when you've imported an image with OOTF option enabled."
+msgstr ""
+"Se applicare o no l'ulteriore passaggio di conversione. Il suo uso dipende "
+"completamente dal tuo flusso di lavoro. Nel dubbio, applica l'opzione; "
+"applica sempre quando hai importato un'immagine con l'opzione OOTF attivata."
+
+#: ../../general_concepts/file_formats/file_heif.rst:89
+msgid "`High Efficiency Image File Format on Wikipedia <https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format>`_"
+msgstr ""
+"`High Efficiency Image File Format su Wikipedia <https://en.wikipedia.org/"
+"wiki/High_Efficiency_Image_File_Format>`_"
+
+#: ../../general_concepts/file_formats/file_heif.rst:91
+msgid "`H.273 : Coding-independent code points for video signal type identification <https://www.itu.int/rec/T-REC-H.273/en>`_"
+msgstr ""
+"`H.273 : Coding-independent code points for video signal type identification "
+"<https://www.itu.int/rec/T-REC-H.273/en>`_"
+
+#: ../../general_concepts/file_formats/file_heif.rst:93
+msgid "`BT.2100 : Image parameter values for high dynamic range television for use in production and international programme exchange <https://www.itu.int/rec/R-REC-BT.2100-2-201807-I/en>`_"
+msgstr ""
+"`BT.2100 : Image parameter values for high dynamic range television for use "
+"in production and international programme exchange <https://www.itu.int/rec/"
+"R-REC-BT.2100-2-201807-I/en>`_"
+
+#: ../../general_concepts/file_formats/file_heif.rst:94
+msgid "`Perceptual Quantizer on Wikipedia <https://en.wikipedia.org/wiki/Perceptual_quantizer>`_"
+msgstr ""
+"`Perceptual Quantizer su Wikipedia <https://en.wikipedia.org/wiki/"
+"Perceptual_quantizer>`_"
+
+#: ../../general_concepts/file_formats/file_heif.rst:95
+msgid "`Hybrid Log Gamma on Wikipedia <https://en.wikipedia.org/wiki/Hybrid_log%E2%80%93gamma>`_"
+msgstr ""
+"`Hybrid Log Gamma su Wikipedia <https://en.wikipedia.org/wiki/Hybrid_log%E2"
+"%80%93gamma>`_"
