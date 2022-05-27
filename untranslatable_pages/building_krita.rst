@@ -294,7 +294,7 @@ Prerequisites
 4. LLVM MinGW compiler toolchain
 
     - Can be downloaded here: https://github.com/mstorsjo/llvm-mingw/releases/download/20220323/llvm-mingw-20220323-ucrt-x86_64.zip
-    - Unzip the archive with `7zip <https://www.7-zip.org/>`_ into a folder like :file:`C:\llvm-mingw`; the full path must not contain any spaces.
+    - Unzip the archive with `7zip <https://www.7-zip.org/>`_ into a folder like :file:`C:\\llvm-mingw`; the full path must not contain any spaces.
     - At the time of writing, we are using the tagged release 20220323 with LLVM 14.0.0 on the Binary Factory. In theory a newer version should be compatible, but use at your own risk.
     - If you really want to use other compilers, see below.
 
@@ -348,7 +348,7 @@ Then prepare a batch file to set the environment. Read this example and **adjust
     set QTCREATOR_DIR=C:\Qt\Tools\QtCreator\bin
 
     set BUILDROOT=C:\krita-dev
-    set PATH=C:\krita-dev\i\bin;C:\krita-dev\i\lib;%MINGW_BIN_DIR%;%MINGW_BIN_DIR%\..\x86_64-w64-mingw32\bin;%CMAKE_BIN_DIR%;%QTCREATOR_DIR%;%PATH%
+    set PATH=C:\krita-dev\i\bin;C:\krita-dev\i\lib;%MINGW_BIN_DIR%;%MINGW_BIN_DIR%\..\x86_64-w64-mingw32\bin;%CMAKE_BIN_DIR%;%NINJA_BIN_DIR%;%QTCREATOR_DIR%;%PATH%
 
 Every time you want to build or run your home-grown Krita, open the CMD window, change to the ``C:\krita-dev`` folder and run the ``env.bat`` file:
 
