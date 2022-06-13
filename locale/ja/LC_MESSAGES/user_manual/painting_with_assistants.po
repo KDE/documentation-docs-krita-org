@@ -1,10 +1,10 @@
-# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2020.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2020-12-05 19:29-0800\n"
+"PO-Revision-Date: 2022-06-11 22:03-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,11 +17,11 @@ msgstr ""
 
 #: ../../<rst_epilog>:1
 msgid ".. image:: images/assistants/Assistants_fish-eye_2_02.png"
-msgstr ""
+msgstr ".. image:: images/assistants/Assistants_fish-eye_2_02.png"
 
 #: ../../user_manual/painting_with_assistants.rst:2
 msgid "How to use the painting assistants in Krita to draw perspectives."
-msgstr ""
+msgstr "透視図を描くために Krita のお絵描きアシストを使う方法"
 
 #: ../../user_manual/painting_with_assistants.rst:12
 msgid "Painting Assistants"
@@ -124,10 +124,14 @@ msgid ""
 "canvas by first clicking the tool in the toolbar and then clicking four "
 "points on the canvas which will serve as the four corners of your grid."
 msgstr ""
+"このルーラーによって、お絵描きの際の透視ガイドの役割を持つキャンバス上のグ"
+"リッドを描いたり操ることができます。グリッドはまずツールバーのツールをクリッ"
+"クし、そしてグリッドの 4 つの角となるグリッド状の点をクリックすることで追加で"
+"きます。"
 
 #: ../../user_manual/painting_with_assistants.rst:60
 msgid ".. image:: images/tools/Perspectivegrid.png"
-msgstr ""
+msgstr ".. image:: images/tools/Perspectivegrid.png"
 
 #: ../../user_manual/painting_with_assistants.rst:61
 msgid ""
@@ -143,21 +147,22 @@ msgid ""
 "This will allow you to expand the grid at other angles. This process can be "
 "repeated on any subsequent grid or grid section."
 msgstr ""
+"グリッドは 4 つの角のどれかを引っ張ることで操作することができます。グリッドは"
+"どれか一辺の中点をクリックアンドドラッグすることで引き伸ばすことができます。"
+"これによって他の角のグリッドを広げることができます。このプロセスは、生成され"
+"たいかなるグリッドやグリッドセクションに対しても繰り返し行うことができます。"
 
 #: ../../user_manual/painting_with_assistants.rst:65
-#, fuzzy
-#| msgid ""
-#| "If you press the :kbd:`Shift` key while holding the center handle, they "
-#| "will snap to perfectly horizontal or vertical lines depending on the "
-#| "position of where it previously was."
 msgid ""
 "If you press the :kbd:`Shift` key while holding any of the corner handles, "
 "they'll snap to one of the other corner handles, in sets. You can delete any "
 "grid by clicking on the cancel button at its center. This tool can be used "
 "to build reference for complex scenes."
 msgstr ""
-"中央のハンドルを掴みながら :kbd:`Shift` キーを押すと、それまであった場所に基"
-"づいて水平や垂直線上にスナップします。"
+"どのコーナーハンドルを掴んでいるときでも、:kbd:`Shift` キーを押すことで他の"
+"コーナーハンドルにスナップします。また、真ん中にあるボタンをクリックすること"
+"でグリッドを削除することができます。このツールは複雑な風景を描く際の参考とし"
+"て使うことができます。"
 
 #: ../../user_manual/painting_with_assistants.rst:70
 #: ../../user_manual/painting_with_assistants.rst:74
@@ -204,11 +209,6 @@ msgid "Spline"
 msgstr "スプライン"
 
 #: ../../user_manual/painting_with_assistants.rst:88
-#, fuzzy
-#| msgid ""
-#| "This assistant allows you to position and adjust four points to create a "
-#| "cubic bezier curve. You can then draw along the curve, snapping your "
-#| "brush stroke directly to the curve line. Perfect curves every time!"
 msgid ""
 "This assistant allows you to position and adjust four points to create a "
 "cubic bézier curve. You can then draw along the curve, snapping your brush "
@@ -249,7 +249,7 @@ msgstr "1点と4つの補助点に沿わせて消失点が作られます。"
 
 #: ../../user_manual/painting_with_assistants.rst:101
 msgid "They are made and manipulated with the :ref:`assistant_tool`."
-msgstr ":ref:`アシストツール <assistant_tool>` と一緒に作られ操作します。"
+msgstr ":ref:`assistant_tool` と一緒に作られ操作します。"
 
 #: ../../user_manual/painting_with_assistants.rst:103
 msgid ""
@@ -271,8 +271,8 @@ msgid ""
 "lines shown in the tool options of the :ref:`assistant_tool`."
 msgstr ""
 "作ったばっかりや、消失点アシストを動かしたばかりの状態では選択されています。"
-"つまり :ref:`アシストツール <assistant_tool>` のツールオプションで表示される"
-"線の量を編集する事ができます。"
+"つまり :ref:`assistant_tool` のツールオプションで表示される線の量を編集する事"
+"ができます。"
 
 #: ../../user_manual/painting_with_assistants.rst:114
 msgid "Fish Eye Point"
@@ -314,35 +314,45 @@ msgid ""
 "minimum: 2 for perspective, and the final for the mid-point of the vanishing "
 "points, which controls how the grid is drawn."
 msgstr ""
+"このアシストは二点透視図法のセットアップを、2つの消失点と平行な垂直の目盛を一"
+"つのアシストにまとめることで単純化しています。これによって正方形のグリッドを"
+"描けるようにしています。これには少なくとも3点必要です: 2つの消失点と、その中"
+"点です。中点はグリッドをどのように描くかをコントロールします。"
 
 #: ../../user_manual/painting_with_assistants.rst:131
 msgid "Density"
-msgstr ""
+msgstr "密度"
 
 #: ../../user_manual/painting_with_assistants.rst:132
 msgid ""
 "An extra option in the tool options, this controls how dense the grid is."
 msgstr ""
+"ツールオプションにある追加のオプションです。これはグリッドの密度を指定しま"
+"す。"
 
 #: ../../user_manual/painting_with_assistants.rst:134
 msgid "Enable Vertical Ruler"
-msgstr ""
+msgstr "垂直方向の目盛を有効化"
 
 #: ../../user_manual/painting_with_assistants.rst:134
 msgid ""
 "This allows you to disable the vertical ruler, so that the assistant is only "
 "two vanishing points and a grid."
 msgstr ""
+"これによって垂直方向の目盛を無効にすることができます。そうするとこのアシスト"
+"は 2 つの消失点とグリッドのみを表示します。"
 
 #: ../../user_manual/painting_with_assistants.rst:138
 msgid ".. image:: images/assistants/Assistants_2_pointperspective_03.png"
-msgstr ""
+msgstr ".. image:: images/assistants/Assistants_2_pointperspective_03.png"
 
 #: ../../user_manual/painting_with_assistants.rst:138
 msgid ""
 "In the above image, a two point perspective with an area limiter is enough "
 "to draw an indoor area. The assistant is colored blue here."
 msgstr ""
+"上の画像では、室内の空間を描くのに範囲に制限をつけた 2 つのパースで十分です。"
+"ここではアシストは青で色付けられています。"
 
 #: ../../user_manual/painting_with_assistants.rst:141
 msgid "Tutorials"
@@ -358,11 +368,11 @@ msgstr ""
 
 #: ../../user_manual/painting_with_assistants.rst:146
 msgid "Technical Drawing"
-msgstr ""
+msgstr "製図"
 
 #: ../../user_manual/painting_with_assistants.rst:149
 msgid "Setting up Krita for technical drawing-like perspectives"
-msgstr ""
+msgstr "製図のようなパース用に Krita をセットアップする"
 
 #: ../../user_manual/painting_with_assistants.rst:151
 msgid ""
@@ -420,7 +430,7 @@ msgstr "これらすべては3つの平行定規を使って作られました�
 
 #: ../../user_manual/painting_with_assistants.rst:170
 msgid ".. image:: images/assistants/Assistants_oblique.png"
-msgstr ""
+msgstr ".. image:: images/assistants/Assistants_oblique.png"
 
 #: ../../user_manual/painting_with_assistants.rst:172
 msgid "Oblique"
@@ -436,7 +446,7 @@ msgstr ""
 
 #: ../../user_manual/painting_with_assistants.rst:175
 msgid ".. image:: images/assistants/Assistants_dimetric.png"
-msgstr ""
+msgstr ".. image:: images/assistants/Assistants_dimetric.png"
 
 #: ../../user_manual/painting_with_assistants.rst:177
 msgid "Dimetric & Isometric"
@@ -449,10 +459,14 @@ msgid ""
 "projection where the diagonal values are a 116.565° from the main. The "
 "latter can be easily set up by snapping the assistants to a grid."
 msgstr ""
+"二等角投影は、技術的には 3 つのすべての定規が互いに 120° 離れています。ただし"
+"ゲームにおける二等角投影は、斜めの定規が垂直になっている定規から 116.565° 離"
+"れている等角投影となっています。後者に関してはアシストをグリッドにスナップす"
+"ることでセットできます。"
 
 #: ../../user_manual/painting_with_assistants.rst:180
 msgid ".. image:: images/assistants/Assistants_trimetric.png"
-msgstr ""
+msgstr ".. image:: images/assistants/Assistants_trimetric.png"
 
 #: ../../user_manual/painting_with_assistants.rst:182
 msgid "Trimetric"
@@ -472,7 +486,7 @@ msgstr "線遠近法"
 
 #: ../../user_manual/painting_with_assistants.rst:188
 msgid ".. image:: images/assistants/Assistants_1_point_perspective.png"
-msgstr ""
+msgstr ".. image:: images/assistants/Assistants_1_point_perspective.png"
 
 #: ../../user_manual/painting_with_assistants.rst:190
 msgid "1 Point Perspective"
@@ -486,14 +500,9 @@ msgstr "1消失点を使った一点透視図法と、二つの交差する平�
 
 #: ../../user_manual/painting_with_assistants.rst:193
 msgid ".. image:: images/assistants/Assistants_2_point_perspective.png"
-msgstr ""
+msgstr ".. image:: images/assistants/Assistants_2_point_perspective.png"
 
 #: ../../user_manual/painting_with_assistants.rst:195
-#, fuzzy
-#| msgid ""
-#| "A 2 point perspective is set up using 2 vanishing point and 1 vertical "
-#| "parallel ruler. Often, putting the vanishing points outside the frame a "
-#| "little can decrease the strength of it."
 msgid ""
 "A 2 point perspective is set up using 2 vanishing point and 1 vertical "
 "parallel ruler. Often, putting the vanishing points outside the frame a "
@@ -501,15 +510,17 @@ msgid ""
 "`assistant_2_point` Ruler to set this one up very quickly."
 msgstr ""
 "二点透視図法は2つの消失点と1つの垂直平行定規を使ってセットします。しばしば、"
-"フレーム外に消失点を置くと強さが少し失われます。"
+"フレーム外に消失点を置くと強さが少し失われます。また、:ref:"
+"`assistant_2_point` ルーラーを使うことで素早くセットアップすることもできま"
+"す。"
 
 #: ../../user_manual/painting_with_assistants.rst:198
 msgid ".. image:: images/assistants/Assistants_2_pointperspective_02.png"
-msgstr ""
+msgstr ".. image:: images/assistants/Assistants_2_pointperspective_02.png"
 
 #: ../../user_manual/painting_with_assistants.rst:200
 msgid ".. image:: images/assistants/Assistants_3_point_perspective.png"
-msgstr ""
+msgstr ".. image:: images/assistants/Assistants_3_point_perspective.png"
 
 #: ../../user_manual/painting_with_assistants.rst:202
 msgid "3 Point Perspective"
@@ -543,7 +554,7 @@ msgstr ""
 
 #: ../../user_manual/painting_with_assistants.rst:212
 msgid ".. image:: images/assistants/Assistants_vanishing_point_logic_01.png"
-msgstr ""
+msgstr ".. image:: images/assistants/Assistants_vanishing_point_logic_01.png"
 
 #: ../../user_manual/painting_with_assistants.rst:213
 msgid ""
@@ -565,7 +576,7 @@ msgstr ""
 
 #: ../../user_manual/painting_with_assistants.rst:218
 msgid ".. image:: images/assistants/Assistants_vanishing_point_logic_02.png"
-msgstr ""
+msgstr ".. image:: images/assistants/Assistants_vanishing_point_logic_02.png"
 
 #: ../../user_manual/painting_with_assistants.rst:219
 msgid ""
@@ -584,15 +595,9 @@ msgstr "対角線はこれで枕木の場所を決めるのに使えるように
 
 #: ../../user_manual/painting_with_assistants.rst:224
 msgid ".. image:: images/assistants/Assistants_vanishing_point_logic_03.png"
-msgstr ""
+msgstr ".. image:: images/assistants/Assistants_vanishing_point_logic_03.png"
 
 #: ../../user_manual/painting_with_assistants.rst:225
-#, fuzzy
-#| msgid ""
-#| "Because any given set of lines has a vanishing point (outside of the ones "
-#| "flat on the view-plane), there can be an infinite amount of vanishing "
-#| "points in a linear perspective. Therefore, Krita allows you to set "
-#| "vanishing points yourself instead of forcing you to only use a few."
 msgid ""
 "Because any given set of lines has a vanishing point (outside the ones flat "
 "on the view-plane), there can be an infinite amount of vanishing points in a "
@@ -627,7 +632,7 @@ msgstr ""
 
 #: ../../user_manual/painting_with_assistants.rst:235
 msgid ".. image:: images/assistants/Fish-eye.gif"
-msgstr ""
+msgstr ".. image:: images/assistants/Fish-eye.gif"
 
 #: ../../user_manual/painting_with_assistants.rst:236
 msgid ""
