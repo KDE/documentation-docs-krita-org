@@ -1,10 +1,11 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2019-03-02 16:12-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2022-07-09 18:15-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -16,20 +17,20 @@ msgstr ""
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:1
 msgid "How to use file layers in Krita."
-msgstr ""
+msgstr "Krita ファイルレイヤーの使い方。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:12
 #: ../../reference_manual/layers_and_masks/file_layers.rst:17
 msgid "File Layers"
-msgstr ""
+msgstr "ファイルレイヤー"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:12
 msgid "Layers"
-msgstr ""
+msgstr "レイヤー"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:12
 msgid "External File"
-msgstr ""
+msgstr "外部ファイル"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:19
 msgid ""
@@ -41,32 +42,39 @@ msgid ""
 "Krita uses a relative path to store the location of the file in the .kra. If "
 "you move the .kra but not the file, the file layer may be broken."
 msgstr ""
+"ファイルレイヤーはドキュメント外のファイルへの参照です: 参照されるドキュメン"
+"トが更新されたらファイルレイヤーも更新されます。Krita に追加したら元のファイ"
+"ルをコンピュータ上から削除しないでください。元の画像を削除するとファイルレイ"
+"ヤーも動かなくなります。Krita が元のファイルを見つけられなければ、どこにある"
+"かを尋ねます。ファイルレイヤーでアニメーションを表示することはできません。"
+"Krita はファイルの場所を .kra からの相対パスで記憶します。もし .kra ファイル"
+"のみを移動させた場合も、ファイルレイヤーは動かなくなります。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:21
 msgid "File Layers have the following scaling options:"
-msgstr ""
+msgstr "ファイルレイヤーには次の拡大縮小オプションがあります:"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:23
 msgid "No Scaling"
-msgstr ""
+msgstr "拡大縮小なし"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:24
 msgid "This'll import the file layer with the full pixel-size."
-msgstr ""
+msgstr "最大ピクセルサイズでファイルレイヤーをインポートします。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:25
 msgid "Scale to Image Size"
-msgstr ""
+msgstr "画像に合わせて拡大縮小"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:26
 msgid ""
 "Scales the file layer to fit exactly within the canvas boundaries of the "
 "image."
-msgstr ""
+msgstr "キャンバス境界にピッタリ収まるようにファイルレイヤーを拡大縮小します。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:28
 msgid "Adapt to image resolution"
-msgstr ""
+msgstr "画像の解像度に合わせる"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:28
 msgid ""
@@ -76,12 +84,19 @@ msgid ""
 "precisely on the 300dpi image. Useful for comics, where the ink-layer is "
 "preferred to be at a higher resolution than the colors."
 msgstr ""
+"インポートされたレイヤーと画像が異なる解像度である場合、ファイルレイヤーの解"
+"像度を変えて拡大縮小します。言い換えると、300dpi の A4 画像に 600dpi の A4 画"
+"像をインポートすれば、ファイルレイヤーは 300dpi にピッタリ合うように拡大縮小"
+"します。色塗りレイヤーより線画レイヤーの方を高解像度にすることが好まれる漫画"
+"に便利です。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:30
 msgid ""
 "File Layers can currently not be painted on. If you want to transform a file "
 "layer, you need to apply a transformation mask to it and use that."
 msgstr ""
+"現在ファイルレイヤーには何も描くことができません。もしファイルレイヤーを変形"
+"したい場合、変形マスクを適用して使う必要があります。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:34
 msgid ""
@@ -89,6 +104,10 @@ msgid ""
 "icon. Pressing that will open the file pointed at in Krita if it hadn't yet. "
 "Using the properties you can make the file layer point to a different file."
 msgstr ""
+"レイヤードッカーではファイルレイヤーのみに、隣に小さいフォルダアイコンがあり"
+"ます。それを押すと Krita で参照するファイルがまだ開かれていない場合に開きま"
+"す。プロパティではファイルレイヤーの参照先を別のファイルにすることができま"
+"す。"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:38
 msgid ""
@@ -97,3 +116,6 @@ msgid ""
 "prompt for the file location and when done will save the file and replace "
 "the layer with a file layer pointing at that file."
 msgstr ""
+"右クリックして :menuselection:`変換 --> ファイルレイヤーへ` をすることでどの"
+"レイヤーでもファイルレイヤーにすることができます。ファイルの場所を尋ねる保存"
+"画面が開き、完了すると既存のレイヤーをそのファイルで置き換えます。"
