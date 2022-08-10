@@ -2,20 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-08-16 17:04\n"
-"Last-Translator: Guo Yunhe (guoyunhe)\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2022-08-07 13:29\n"
+"Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/www/"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___layers_and_masks___selection_masks.pot\n"
+"X-Crowdin-File-ID: 9908\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -35,19 +36,19 @@ msgstr ""
 
 #: ../../reference_manual/layers_and_masks/selection_masks.rst:1
 msgid "How to use selection masks in Krita."
-msgstr ""
+msgstr "介绍 Krita 的选区蒙版的使用方式。"
 
 #: ../../reference_manual/layers_and_masks/selection_masks.rst:15
 msgid "Layers"
-msgstr ""
+msgstr "图层"
 
 #: ../../reference_manual/layers_and_masks/selection_masks.rst:15
 msgid "Masks"
-msgstr ""
+msgstr "蒙版"
 
 #: ../../reference_manual/layers_and_masks/selection_masks.rst:15
 msgid "Selections"
-msgstr ""
+msgstr "选区"
 
 #: ../../reference_manual/layers_and_masks/selection_masks.rst:20
 msgid "Selection Masks"
@@ -62,12 +63,17 @@ msgid ""
 "Just click the round icon with the dotted outline on the local selection "
 "layer in the Layers docker."
 msgstr ""
+"局部选区蒙版可以记忆、加载、编辑某个图层上的选区。它的工作方式类似与其他图像"
+"编辑软件的额外通道，不同之处在于 :program:`Krita's` 把它们视作特殊图层，只需"
+"在图层面板内点击局部选区蒙版所在图层的虚线圆圈图标即可切换激活状态。"
 
 #: ../../reference_manual/layers_and_masks/selection_masks.rst:24
 msgid ""
-"You can make them by making a selection, and |mouseright| the layer you want "
-"to add it to select :menuselection:`Local Selection`."
+"To create a Local Selection Mask, you must first create a selection, then |"
+"mouseright| on the desired layer and select :menuselection:`Local Selection`."
 msgstr ""
+"要创建一个局部选区蒙版，你首先要新建一个选区，然后右键点击 |mouseright| 目标"
+"图层，选择 :menuselection:`局部选区蒙版` 。"
 
 #: ../../reference_manual/layers_and_masks/selection_masks.rst:26
 msgid ""
@@ -75,6 +81,8 @@ msgid ""
 "you can perform transformation, deformation and paint operations on the "
 "selection layer, modifying the selection."
 msgstr ""
+"按 :kbd:`Alt +` 左键点击 |mouseleft| 本地选区蒙版切换到“只显示选中图层”模式"
+"时，你可以对本地选区进行变形、绘制等修改。"
 
 #: ../../reference_manual/layers_and_masks/selection_masks.rst:28
 msgid ""
@@ -87,18 +95,26 @@ msgid ""
 "but also for Krita and the program would slow down trying to keep up with it "
 "all. LSM's are one of the most important features in Krita!"
 msgstr ""
+"请留意：你可以在单个图层上建立多个局部选区蒙版。这意味着你可以为单个图层的不"
+"同部分准备几个不同的局部选区，然后随时切换。这是 Krita 的一项关键特性，可以避"
+"免为了保存多个选区而建立大量图层而造成性能下降。"
 
 #: ../../reference_manual/layers_and_masks/selection_masks.rst:30
 msgid ""
 "The example below shows three LSM items all attached (under) Layer1. Any of "
 "these can be activated and used at any time."
 msgstr ""
+"下图例子中的图层 1 带有三个本地选区蒙版，它们可以随时通过点击进行激活切换。"
 
-#: ../../reference_manual/layers_and_masks/selection_masks.rst:34
+#: ../../reference_manual/layers_and_masks/selection_masks.rst:33
+msgid ".. image:: images/selection/local-selection-mask.png"
+msgstr ".. image:: images/selection/local-selection-mask.png"
+
+#: ../../reference_manual/layers_and_masks/selection_masks.rst:35
 msgid "Global Selection"
 msgstr "全局选区"
 
-#: ../../reference_manual/layers_and_masks/selection_masks.rst:36
+#: ../../reference_manual/layers_and_masks/selection_masks.rst:37
 msgid ""
 "You can modify the global selection the same way you can with a local-"
 "selection. To do so, you first need to activate the global selection as a "
@@ -106,3 +122,6 @@ msgid ""
 "Selection Mask`. The global selection, if you have anything selected, will "
 "now appear on the top of the layer stack as a selection mask."
 msgstr ""
+"全局选区可以和局部选区一样进行修改。首先你要让全局选区作为一个图层节点进行显"
+"示。前往菜单栏，勾选 :menuselection:`选择 --> 显示全局选区蒙版` 。在那之后，"
+"只要你建立了一个选区，图层面板的顶部就会显示一个选区蒙版。"

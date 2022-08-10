@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
+"POT-Creation-Date: 2022-04-27 00:40+0000\n"
 "PO-Revision-Date: 2019-04-10 03:45+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -17,10 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-
-#: ../../<rst_epilog>:188
-msgid "-DENABLE_PYTHON_2=ON"
-msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:1
 msgid "Introduction to using Krita's python plugin API."
@@ -104,7 +100,7 @@ msgstr ""
 msgid ""
 "To open the scripter, navigate to :menuselection:`Tools --> Scripts --> "
 "Scripter`. If you don't see it listed, go to :menuselection:`Settings --> "
-"Configure Krita --> Python Plugin Manager` and toggle \"Scripter\" in the "
+"Configure Krita... --> Python Plugin Manager` and toggle \"Scripter\" in the "
 "list to enable it. If you don't see the scripter plugin, make sure you are "
 "using an up-to-date version of Krita."
 msgstr ""
@@ -144,7 +140,7 @@ msgstr ""
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:58
 msgid ""
 "To allow Python to communicate with Krita, we will use the Krita module. At "
-"the top of every script, we will write: ``from krita import *``"
+"the top of every script, we will write ``from krita import *``."
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:60
@@ -205,15 +201,12 @@ msgid "Krita's API"
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:86
-msgid ""
-"`LibKis API Overview <https://api.kde.org/extragear-api/graphics-apidocs/"
-"krita/libs/libkis/html/index.html>`_"
+msgid "`LibKis API Overview <https://api.kde.org/krita/html/index.html>`_"
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:87
 msgid ""
-"`Krita class documentation <https://api.kde.org/extragear-api/graphics-"
-"apidocs/krita/libs/libkis/html/classKrita.html>`_"
+"`Krita class documentation <https://api.kde.org/krita/html/annotated.html>`_"
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:89
@@ -229,13 +222,12 @@ msgstr ""
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:91
 msgid ""
 "Let's see how this stuff works in more detail. Let's take a look at the "
-"second link, the `Krita class reference <https://api.kde.org/extragear-api/"
-"graphics-apidocs/krita/libs/libkis/html/classKrita."
-"html#aa55507903d088013ced2df8c74f28a63>`_. There we can see all the "
-"functions available to the Krita instance. If you type dir(Krita.instance()) "
-"in Python, it should match this page very closely - you can view the "
-"documentation of the functions createDocument(), activeWindow(), and "
-"action() which we used above."
+"second link, the `Krita class reference <https://api.kde.org/krita/html/"
+"classKrita.html#aa55507903d088013ced2df8c74f28a63>`_. There we can see all "
+"the functions available to the Krita instance. If you type ``dir(Krita."
+"instance())`` in Python, it should match this page very closely - you can "
+"view the documentation of the functions ``createDocument()``, "
+"``activeWindow()``, and ``action()`` which we used above."
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:93
@@ -244,8 +236,8 @@ msgid ""
 "uses, including the Qt classes that start with Q. But here is the beauty of "
 "SIP: it tries to make the translation from these classes into Python as "
 "simple and straightforward as possible. For example, you can see that the "
-"function filters() returns a QStringList. However, SIP converts those "
-"QStringLists into regular python list of strings!"
+"function ``filters()`` returns a ``QStringList``. However, SIP converts "
+"those ``QStringLists`` into regular python list of strings!"
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:100
@@ -303,11 +295,11 @@ msgid ""
 "It is a list of something, sure, but how to use it? If we go back to the "
 "Krita apidocs page and look at the function, documents() we'll see there's "
 "actually a clickable link on the 'Document' class. `If you follow that link "
-"<https://api.kde.org/extragear-api/graphics-apidocs/krita/libs/libkis/html/"
-"classDocument.html>`_, you'll see that the document has a function called "
-"name() which returns the name of the document, and functions width() and "
-"height() which return the dimensions. So if we wanted to generate an info "
-"report about the documents in Krita, we could write a script like this:"
+"<https://api.kde.org/krita/html/classDocument.html>`_, you'll see that the "
+"document has a function called name() which returns the name of the "
+"document, and functions width() and height() which return the dimensions. So "
+"if we wanted to generate an info report about the documents in Krita, we "
+"could write a script like this:"
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:136
@@ -343,9 +335,9 @@ msgstr ""
 msgid ""
 "Krita's API has many more classes, you can get to them by going to the top-"
 "left class list, or just clicking their names to get to their API docs. The "
-"functions print() or dir() are your friends here as well. This line will "
-"print out a list of all the actions in Krita - you could swap in one of "
-"these commands instead of 'python_scripter' in the example above."
+"functions ``print()`` or ``dir()`` are your friends here as well. This line "
+"will print out a list of all the actions in Krita -- you could swap in one "
+"of these commands instead of 'python_scripter' in the example above."
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:154
@@ -399,11 +391,15 @@ msgid "Python 2 and 3"
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:184
-msgid "By default Krita is compiled for python 3."
+msgid "By default, Krita is compiled for python 3."
 msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:186
 msgid ""
 "However, it is possible to compile it with python 2. To do so, you will need "
-"to add the following to the cmake configuration line::"
+"to add the following to the :program:`cmake` configuration line::"
+msgstr ""
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:188
+msgid "-DENABLE_PYTHON_2=ON"
 msgstr ""

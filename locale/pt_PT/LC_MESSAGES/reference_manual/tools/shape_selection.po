@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-09 03:41+0200\n"
-"PO-Revision-Date: 2019-05-23 18:52+0100\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2020-12-11 13:17+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -20,7 +20,9 @@ msgstr ""
 "X-POFile-SpellExtra: right images alt shapeselecttool Kritamouseleft blue\n"
 "X-POFile-IgnoreConsistency: Type\n"
 "X-POFile-SpellExtra: and selection selections geometry stroke shapes shape\n"
-"X-POFile-SpellExtra: green mouseleft tools properties fill\n"
+"X-POFile-SpellExtra: green mouseleft tools properties fill Kritamouseright\n"
+"X-POFile-SpellExtra: Mach bicúbica Bézier MeshGradients corner moving\n"
+"X-POFile-SpellExtra: Inkscape desagrupe mouseright\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -29,6 +31,14 @@ msgid ""
 msgstr ""
 ".. image:: images/icons/Krita_mouse_left.png\n"
 "   :alt: botão esquerdo"
+
+#: ../../<rst_epilog>:4
+msgid ""
+".. image:: images/icons/Krita_mouse_right.png\n"
+"   :alt: mouseright"
+msgstr ""
+".. image:: images/icons/Krita_mouse_right.png\n"
+"   :alt: botão direito"
 
 #: ../../<rst_epilog>:10
 msgid ""
@@ -265,8 +275,8 @@ msgstr ""
 "com a forma."
 
 #: ../../reference_manual/tools/shape_selection.rst:78
-msgid "Uniform scaling"
-msgstr "Escala uniforme"
+msgid "Scale Styles"
+msgstr "Estilos de Escalas"
 
 #: ../../reference_manual/tools/shape_selection.rst:79
 msgid "Not enabled: when scaling, the stroke width will stay the same."
@@ -489,6 +499,7 @@ msgid "A quick way to invert the order of the gradient."
 msgstr "Uma forma rápida de inverter a ordem do gradiente."
 
 #: ../../reference_manual/tools/shape_selection.rst:142
+#: ../../reference_manual/tools/shape_selection.rst:159
 msgid "Stop"
 msgstr "Parar"
 
@@ -526,10 +537,135 @@ msgstr ""
 "mesmos na área de desenho."
 
 #: ../../reference_manual/tools/shape_selection.rst:157
+msgid "Fills the shape with a Mesh Gradient. It has following options:"
+msgstr "Preenche a forma com um Gradiente em Malha. Tem as seguintes opções:"
+
+#: ../../reference_manual/tools/shape_selection.rst:160
+msgid ""
+"Change the color of the selected stop. Only the color of a Corner can be "
+"changed (rectangle), changing the color of Bezier handle (circle) is not "
+"possible."
+msgstr ""
+"Muda a cor da paragem seleccionada. Só poderá alterar a cor de um canto "
+"(rectângulo); a mudança da cor da pega da Bézier (círculo) não é possível."
+
+#: ../../reference_manual/tools/shape_selection.rst:161
+msgid "Rows"
+msgstr "Linhas"
+
+#: ../../reference_manual/tools/shape_selection.rst:162
+msgid "Change the number of rows in a Mesh Gradient."
+msgstr "Muda o número de linhas num Gradiente em Malha."
+
+#: ../../reference_manual/tools/shape_selection.rst:163
+msgid "Columns"
+msgstr "Colunas"
+
+#: ../../reference_manual/tools/shape_selection.rst:164
+msgid "Change the number of columns in a Mesh Gradient."
+msgstr "Muda o número de colunas num Gradiente em Malha."
+
+#: ../../reference_manual/tools/shape_selection.rst:166
+msgid "Mesh Gradient"
+msgstr "Gradiente em Malha"
+
+#: ../../reference_manual/tools/shape_selection.rst:166
+msgid "Smoothing"
+msgstr "Suavização"
+
+#: ../../reference_manual/tools/shape_selection.rst:166
+msgid ""
+"There are two possible values, *Bilinear* (default) and *Bicubic*. "
+"*Bilinear* is the linear interpolation of the color of stops, however it may "
+"create `Mach Banding effect <https://en.wikipedia.org/wiki/Mach_bands>`_. "
+"*Bicubic* is the bicubic interpolation of the color stops, this should "
+"produce smoother gradient."
+msgstr ""
+"Existem dois valores possíveis, *Bilinear* (por omissão) e *Bicúbico*. O "
+"*Bilinear* é a interpolação linear da cor das paragens; contudo, poderá "
+"criar um `efeito de Bandas de Mach <https://en.wikipedia.org/wiki/"
+"Mach_bands>`_. O *Bicúbico* é a interpolação bicúbica das paragens de cores, "
+"o que deverá produzir um gradiente mais suave."
+
+#: ../../reference_manual/tools/shape_selection.rst:170
+msgid ""
+"Mesh Gradients follow `SVG draft 2 <https://svgwg.org/svg-next/pservers."
+"html#MeshGradients>`_ for the rendering."
+msgstr ""
+"Os Gradientes em Malha seguem a `norma 2 do SVG <https://svgwg.org/svg-next/"
+"pservers.html#MeshGradients>`_ para o desenho."
+
+#: ../../reference_manual/tools/shape_selection.rst:173
+msgid "Creating Mesh Gradients"
+msgstr "Criar Gradientes em Malha"
+
+#: ../../reference_manual/tools/shape_selection.rst:175
+msgid ""
+"When Mesh Gradients option is selected for a shape, Krita fills it with "
+"default mesh gradient, which is an alternating color (it alternates between "
+"background color and white). Changing number of rows and columns from Tool "
+"Options, will add more patches to the Mesh Gradient and corners can be "
+"changed individually."
+msgstr ""
+"Quando é seleccionada a opção de Gradientes em Malha para uma forma, o Krita "
+"preenche-a com o gradiente em malha predefinido, que é uma cor alternada "
+"(vai alternando entre a cor de fundo e o branco). A mudança do número de "
+"linhas e colunas das Opções das Ferramentas irá adicionar mais padrões do "
+"Gradiente em Malha e os cantos poderão ser modificados de forma individual."
+
+#: ../../reference_manual/tools/shape_selection.rst:178
+msgid "Editing Mesh Gradients"
+msgstr "Editar os Gradientes em Malha"
+
+#: ../../reference_manual/tools/shape_selection.rst:180
+msgid ""
+"The way to edit Mesh Gradients is pretty straight forward. Each curve is an "
+"individual Bezier Curve. There are two ways to change the structure, one is "
+"by dragging the corner (rectangle) and other is by dragging the handle "
+"(circle)."
+msgstr ""
+"A forma de editar os Gradientes em Malha é relativamente intuitiva. Cada "
+"curva é uma Curva Bézier individual. Existem duas formas de modificar a "
+"estrutura; uma por arrastamento do canto (rectângulo) e a outra é arrastando "
+"a pega (círculo)."
+
+#: ../../reference_manual/tools/shape_selection.rst:186
+msgid ""
+".. image:: images/tools/MeshGradients-corner-moving.png\n"
+"   :alt: Left to right: Normal, Corner Hovered, Corner Moved and Selected."
+msgstr ""
+".. image:: images/tools/MeshGradients-corner-moving.png\n"
+"   :alt: Esquerda para a direita: Normal, Canto Realçado, Canto Movido e "
+"Seleccionado."
+
+#: ../../reference_manual/tools/shape_selection.rst:186
+msgid "Left to right: Normal, Corner Hovered, Corner Moved and Selected."
+msgstr ""
+"Esquerda para a direita: Normal, Canto Realçado, Canto Movido e Seleccionado."
+
+#: ../../reference_manual/tools/shape_selection.rst:188
+msgid ""
+"To change the color, a corner has to be selected and then Tool Options can "
+"be used to change the color of the selected corner."
+msgstr ""
+"Para mudar a cor, tem de seleccionar um canto e depois poderá usar as Opções "
+"da Ferramenta para mudar a cor do canto seleccionado."
+
+#: ../../reference_manual/tools/shape_selection.rst:192
+msgid ""
+"When importing from Inkscape, shapes may be grouped, which may not allow "
+"Krita to edit Mesh Gradients. To fix this, first ungroup (via |mouseright|) "
+"them."
+msgstr ""
+"Ao importar do Inkscape, poderá agrupar as formas, o que poderá não permitir "
+"ao Krita editar os Gradientes em Malha. Para corrigir isto, primeiro "
+"desagrupe-as (com o |mouseright|)."
+
+#: ../../reference_manual/tools/shape_selection.rst:197
 msgid "Right-click menu"
 msgstr "Menu do botão direito"
 
-#: ../../reference_manual/tools/shape_selection.rst:159
+#: ../../reference_manual/tools/shape_selection.rst:199
 msgid ""
 "The shape selection tool has a nice right click menu that gives you several "
 "features. If you have an object selected, you can perform various functions "
@@ -540,11 +676,11 @@ msgstr ""
 "poderá efectuar várias funções, como o corte, a cópia ou a passagem do "
 "objecto para a frente ou para trás."
 
-#: ../../reference_manual/tools/shape_selection.rst:162
+#: ../../reference_manual/tools/shape_selection.rst:202
 msgid ".. image:: images/vector/Vector-right-click-menu.png"
 msgstr ".. image:: images/vector/Vector-right-click-menu.png"
 
-#: ../../reference_manual/tools/shape_selection.rst:163
+#: ../../reference_manual/tools/shape_selection.rst:203
 msgid ""
 "If you have multiple objects selected you can perform \"Logical Operators\" "
 "on them, or boolean operations as they are commonly called. It will be the "
@@ -555,3 +691,6 @@ msgstr ""
 "\" (ou booleanas, como também são chamadas) sobre os mesmos. Será o último "
 "item no menu do botão direito. Poderá combinar, subtrair, interceptar ou "
 "dividir os objectos."
+
+#~ msgid "Uniform scaling"
+#~ msgstr "Escala uniforme"

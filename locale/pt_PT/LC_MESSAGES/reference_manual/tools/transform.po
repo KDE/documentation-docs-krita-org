@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-08-03 14:00+0100\n"
+"POT-Creation-Date: 2022-03-04 00:39+0000\n"
+"PO-Revision-Date: 2022-04-22 14:26+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -24,7 +24,16 @@ msgstr ""
 "X-POFile-SpellExtra: Kritatransformscage ref Kritatransformsfree\n"
 "X-POFile-SpellExtra: Kritatransformsdeformvsliquefy deformbrushengine\n"
 "X-POFile-SpellExtra: Kritatransformsliquefy Krita transformtool\n"
-"X-POFile-SpellExtra: Kritatransformswarp demãos tools\n"
+"X-POFile-SpellExtra: Kritatransformswarp demãos tools Kritamouseleft\n"
+"X-POFile-SpellExtra: Bézier Kritatransformsmesh mouseleft mantê\n"
+
+#: ../../<rst_epilog>:2
+msgid ""
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: mouseleft"
+msgstr ""
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: botão esquerdo"
 
 #: ../../<rst_epilog>:46
 msgid ""
@@ -39,12 +48,36 @@ msgid "Krita's transform tool reference."
 msgstr "Referência à ferramenta de transformação do Krita."
 
 #: ../../reference_manual/tools/transform.rst:13
+#: ../../reference_manual/tools/transform.rst:57
+msgid "Warp"
+msgstr "Fuga"
+
+#: ../../reference_manual/tools/transform.rst:13
+#: ../../reference_manual/tools/transform.rst:82
+msgid "Cage"
+msgstr "Envolvência"
+
+#: ../../reference_manual/tools/transform.rst:13
+#: ../../reference_manual/tools/transform.rst:112
+msgid "Liquify"
+msgstr "Liquidificação"
+
+#: ../../reference_manual/tools/transform.rst:13
+#: ../../reference_manual/tools/transform.rst:157
+msgid "Mesh"
+msgstr "Malha"
+
+#: ../../reference_manual/tools/transform.rst:13
 msgid "Tools"
 msgstr "Ferramentas"
 
 #: ../../reference_manual/tools/transform.rst:13
 msgid "Transform"
 msgstr "Transformar"
+
+#: ../../reference_manual/tools/transform.rst:13
+msgid "Liquefy"
+msgstr "Liquidificação"
 
 #: ../../reference_manual/tools/transform.rst:18
 msgid "Transform Tool"
@@ -175,10 +208,6 @@ msgstr ".. image:: images/tools/Krita_transforms_perspective.png"
 msgid "Perspective transform."
 msgstr "Transformação em perspectiva."
 
-#: ../../reference_manual/tools/transform.rst:57
-msgid "Warp"
-msgstr "Fuga"
-
 #: ../../reference_manual/tools/transform.rst:59
 msgid ""
 "Warp allows you to deform the image by dragging from a grid or choosing the "
@@ -201,7 +230,7 @@ msgstr ".. image:: images/tools/Krita_transforms_warp.png"
 
 #: ../../reference_manual/tools/transform.rst:69
 msgid ""
-"There are warp options: Rigid, Affine and Similtude. These change the "
+"There are warp options: Rigid, Affine and Similitude. These change the "
 "algorithm used to determine the strength of the deformation. The flexibility "
 "determines, how strong the effect of moving these points are."
 msgstr ""
@@ -240,14 +269,10 @@ msgstr ""
 "modo de transformação. Se desbloquear os pontos, voltará para o modo de "
 "edição."
 
-#: ../../reference_manual/tools/transform.rst:82
-msgid "Cage"
-msgstr "Envolvência"
-
 #: ../../reference_manual/tools/transform.rst:84
 msgid ""
 "Create a cage around an image, and when it's closed, you can use it to "
-"deform the image. If you have at the least 3 points on the canvas, you can "
+"deform the image. If you have at least 3 points on the canvas, you can "
 "choose to switch between deforming and editing the existing points."
 msgstr ""
 "Cria uma envolvência sobre a imagem e, quando estiver fechada, podê-la-á "
@@ -270,11 +295,14 @@ msgstr "Ajustar a Granularidade"
 
 #: ../../reference_manual/tools/transform.rst:95
 msgid ""
-"This adjusts the precision of the cage transform grid. Lower precision gives "
-"more speed but also gives less precise results."
+"This adjusts the precision of the cage transform grid. The lower the value, "
+"the higher the quality of the transformation (and consequently, the lower "
+"the speed). When the granularity is too high, the result starts to look "
+"\"blocky\"."
 msgstr ""
-"Isto ajusta a precisão da grelha de transformação da envolvência. Uma menor "
-"precisão é mais rápida, mas também produz resultados com menor precisão."
+"Isto ajusta a grelha de transformação. Quanto menor o valor, maior a "
+"qualidade de transformação (e, por consequência, menos a velocidade). Quando "
+"a granularidade for muito elevada, o resultado começa a ficar \"em blocos\"."
 
 #: ../../reference_manual/tools/transform.rst:97
 msgid "Preview"
@@ -282,10 +310,10 @@ msgstr "Antevisão"
 
 #: ../../reference_manual/tools/transform.rst:98
 msgid ""
-"Adjusts the granularity of the preview. It is recommended to have this lower "
-"than the :guilabel:`Real` value, as it speeds up adjusting."
+"Adjusts the granularity of the preview. It is recommended to have this "
+"higher than the :guilabel:`Real` value, as it speeds up adjusting."
 msgstr ""
-"Ajusta a granularidade da antevisão. Recomenda-se que tenha este valor menor "
+"Ajusta a granularidade da antevisão. Recomenda-se que tenha este valor maior "
 "que o valor :guilabel:`Real`, dado que acelera o ajuste."
 
 #: ../../reference_manual/tools/transform.rst:100
@@ -320,10 +348,6 @@ msgstr ""
 "rotação é feita ao carregar e arrastar o cursor para fora da área envolvente "
 "e a mudança de escala é igual, com a diferença que o utilizador carrega em :"
 "kbd:`Ctrl` antes de efectuar o movimento."
-
-#: ../../reference_manual/tools/transform.rst:112
-msgid "Liquify"
-msgstr "Liquidificação"
 
 #: ../../reference_manual/tools/transform.rst:115
 msgid ".. image:: images/tools/Transform_Tool_Options_Liquify.png"
@@ -382,8 +406,8 @@ msgid ".. image:: images/tools/Krita_transforms_liquefy.png"
 msgstr ".. image:: images/tools/Krita_transforms_liquefy.png"
 
 #: ../../reference_manual/tools/transform.rst:131
-msgid "Liquify used to turn an apple into a pear"
-msgstr "Uso da liquidificação para transformar uma maçã numa pêra"
+msgid "Liquify used to turn an apple into a pear."
+msgstr "Uso da liquidificação para transformar uma maçã numa pêra."
 
 #: ../../reference_manual/tools/transform.rst:133
 msgid "In the options for each brush there are:"
@@ -410,7 +434,7 @@ msgstr "Tamanho"
 
 #: ../../reference_manual/tools/transform.rst:138
 msgid ""
-"The brush size. The button to the right allow you to let it scale with "
+"The brush size. The button to the right allows you to let it scale with "
 "pressure."
 msgstr ""
 "O tamanho do pincel. O botão à direita permite-lhe ajustar a escala de "
@@ -467,9 +491,9 @@ msgstr "Liquidificação à esquerda e pincel de deformação à direita."
 #: ../../reference_manual/tools/transform.rst:152
 msgid ""
 "Krita also has a :ref:`deform_brush_engine` which is much faster than "
-"liquify, but has less quality. If you are attempting to make liquefy a "
+"liquify, but has less quality. If you are attempting to make liquify a "
 "little faster, note that it speeds up with the less information it needs to "
-"process, so working with liquefy within a selection or using liquefy on a "
+"process, so working with liquify within a selection or using liquify on a "
 "separate layer with little on it will greatly enhance the speed."
 msgstr ""
 "O Krita também tem um :ref:`deform_brush_engine`, que é muito mais rápido "
@@ -480,11 +504,259 @@ msgstr ""
 "camada separada com pouca informação nela, irá aumentar em grande medida a "
 "velocidade."
 
-#: ../../reference_manual/tools/transform.rst:155
+#: ../../reference_manual/tools/transform.rst:161
+msgid ""
+"The mesh transform is similar to the warp and the cage transform, except "
+"that its interface uses patches comprised of Bezier curve segments. This "
+"transform mode is particularly useful for placing images and textures on "
+"curved surfaces:"
+msgstr ""
+"A transformação da malha é semelhante à transformação em fuga ou em cadeia, "
+"com a diferença que a sua interface usa posições definidas com segmentos de "
+"curva Bézier. Este modo de transformação é particularmente útil para colocar "
+"imagens e texturas em superfícies curvas:"
+
+#: ../../reference_manual/tools/transform.rst:165
+msgid ".. image:: images/tools/Krita_transforms_mesh.png"
+msgstr ".. image:: images/tools/Krita_transforms_mesh.png"
+
+#: ../../reference_manual/tools/transform.rst:165
+msgid ""
+"Curving a logo to an apple with the mesh transform, with the control points "
+"shown."
+msgstr ""
+"A curvatura de um logótipo para uma maçã com a transformação em malha com os "
+"pontos de controlo apresentados."
+
+#: ../../reference_manual/tools/transform.rst:167
+msgid ""
+"This is a very keyboard shortcut heavy transform mode. When you start the "
+"transform you will see the overlay, which consists of several nodes that can "
+"be dragged around. You can drag on the segments between the nodes to curve "
+"them precisely, or drag on patches themselves to freely transform them. :kbd:"
+"`Ctrl + Alt +` |mouseleft| :kbd:`+ drag` shortcut on nodes and segments will "
+"allow you to subdivide the mesh. For more precision, enable the control "
+"points in the tool options, so each Bezier segment can be fine-tuned to your "
+"content."
+msgstr ""
+"Isto é um modo de transformação bastante rico em atalhos de teclado. Quando "
+"iniciar a transformação, irá ver a camada que consiste em vários nós que "
+"poderão ser arrastados à vontade. Poderá arrastar os segmentos entre os nós "
+"para os curvar de forma mais precisa, ou arrastar os locais em si para os "
+"transformar de forma livre. O :kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ "
+"arrastamento` dos nós e segmentos permitir-lhe-á subdividir a malha. Para "
+"ter uma maior precisão, active os pontos de controlo nas opções da "
+"ferramenta, para que cada segmento Bézier possa ser afinado com base no seu "
+"conteúdo."
+
+#: ../../reference_manual/tools/transform.rst:169
+msgid ""
+"To assist in maintaining the curvature of a mesh, this tool has a concept of "
+"'locked' transform. This mode is signalled by the lock icon in the cursor, "
+"and on by default. When this is enabled, adjusting one segment will also "
+"adjust its neighbouring segment in another patch. You can press :kbd:`Shift` "
+"key while dragging a segment or control point to turn this feature off, "
+"allowing for sharp angles in the mesh. After a sharp angle has been created, "
+"the locked mode will try to keep this as well."
+msgstr ""
+"Para assistir na manutenção da curvatura de uma malha, esta ferramenta tem o "
+"conceito de transformação 'bloqueada'. Este modo é assinalado com o ícone do "
+"cadeado no cursor, estando activo por omissão. Quando está activo, o ajuste "
+"de um segmento irá também ajustar o seu segmento vizinho noutro local. "
+"Poderá carregar em :kbd:`Shift` ao arrastar um segmento ou ponto de controlo "
+"para desligar esta opção, permitindo definir ângulos mais agudos na malha. "
+"Depois de definir um ângulo agudo, o modo bloqueado irá tentar também mantê-"
+"lo."
+
+#: ../../reference_manual/tools/transform.rst:172
+msgid "Shortcuts"
+msgstr "Atalhos"
+
+#: ../../reference_manual/tools/transform.rst:174
+msgid "Node or control point move"
+msgstr "Movimento do nó ou ponto de controlo"
+
+#: ../../reference_manual/tools/transform.rst:175
+msgid ""
+"|mouseleft| :kbd:`+ drag` any of the round points. The big ones are the "
+"'nodes' which determine the corners of a patch, and the small ones are the "
+"'control points', which determine the curvature for their associated segment."
+msgstr ""
+"|mouseleft| :kbd:`+ arrastamento` de qualquer um dos pontos redondos. Os "
+"grandes são os 'nós' que definem os cantos de uma posição, enquanto os "
+"pequenos são os 'pontos de controlo' que determinam a curvatura para o seu "
+"segmento associado."
+
+#: ../../reference_manual/tools/transform.rst:176
+msgid "Unlocked node or control point move"
+msgstr "Movimento de nó desbloqueado ou ponto de controlo"
+
+#: ../../reference_manual/tools/transform.rst:177
+msgid ":kbd:`Shift +` |mouseleft| :kbd:`+ drag` on a node or control point."
+msgstr ""
+":kbd:`Shift +` |mouseleft| :kbd:`+ arrastamento` de um nó ou ponto de "
+"controlo."
+
+#: ../../reference_manual/tools/transform.rst:178
+msgid "Locked segment move:"
+msgstr "Movimento de um segmento bloqueado:"
+
+#: ../../reference_manual/tools/transform.rst:179
+msgid ""
+"|mouseleft| :kbd:`+ drag` on a segment. As explained above, this will adjust "
+"neighbouring segments as well, to keep the curvature of the node intact."
+msgstr ""
+"|mouseleft| :kbd:`+ arrastamento` de um segmento. Como foi explicado acima, "
+"isto também irá ajustar os segmentos vizinhos para manter a curvatura do nó "
+"intacta."
+
+#: ../../reference_manual/tools/transform.rst:180
+msgid "Segment move"
+msgstr "Movimento do segmento"
+
+#: ../../reference_manual/tools/transform.rst:181
+msgid ":kbd:`Shift +` |mouseleft| :kbd:`+ drag` on a segment of the mesh."
+msgstr ""
+":kbd:`Shift +` |mouseleft| :kbd:`+ arrastamento` de um segmento da malha."
+
+#: ../../reference_manual/tools/transform.rst:182
+msgid "Free patch deform:"
+msgstr "Deformação livre do local:"
+
+#: ../../reference_manual/tools/transform.rst:183
+msgid ""
+"|mouseleft| :kbd:`+ drag` on an empty area inside the mesh. This will allow "
+"you to intuitively adjust a segment by just clicking anywhere and dragging. "
+"The whole segment will then adjust all its control points around the point "
+"of the cursor."
+msgstr ""
+"|mouseleft| :kbd:`+ arrastamento` sobre uma área vazia dentro da malha. Isto "
+"permitir-lhe-á ajustar de forma intuitiva um segmento, bastando para tal "
+"carregar em qualquer ponto e arrastar. Todo o segmento irá então ajustar "
+"todos os seus pontos de controlo em torno do ponto do cursor."
+
+#: ../../reference_manual/tools/transform.rst:185
+msgid ""
+":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ drag` on a border segment to split "
+"the mesh"
+msgstr ""
+":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ arrastamento` de um segmento do "
+"contorno para dividir a malha"
+
+#: ../../reference_manual/tools/transform.rst:186
+msgid "Split mesh or Move/Delete split:"
+msgstr "Divisão da malha ou Mover/Remover a divisão:"
+
+#: ../../reference_manual/tools/transform.rst:186
+msgid ""
+":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ drag` on a node to change the split"
+msgstr ""
+":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ arrastamento` de um nó para "
+"modificar a divisão"
+
+#: ../../reference_manual/tools/transform.rst:187
+msgid ""
+":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ drag` away a node to remove the split"
+msgstr ""
+":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ arrastamento` para fora de um nó "
+"para remover a divisão"
+
+#: ../../reference_manual/tools/transform.rst:188
+msgid "Select multiple nodes"
+msgstr "Seleccionar vários nós"
+
+#: ../../reference_manual/tools/transform.rst:189
+msgid ""
+":kbd:`Ctrl +` |mouseleft| on a node or control or segment, these can then be "
+"moved"
+msgstr ""
+":kbd:`Ctrl +` |mouseleft| sobre um nó, ponto de controlo ou segmento, para "
+"que os possa então mover"
+
+#: ../../reference_manual/tools/transform.rst:190
+msgid "Move selection or mesh"
+msgstr "Mover a selecção ou a malha"
+
+#: ../../reference_manual/tools/transform.rst:191
+msgid ""
+":kbd:`Shift +` |mouseleft| :kbd:`+ drag` on empty area outside the mesh."
+msgstr ""
+":kbd:`Shift +` |mouseleft| :kbd:`+ arrastamento` de uma área vazia fora da "
+"malha."
+
+#: ../../reference_manual/tools/transform.rst:192
+msgid "Rotate selection or mesh"
+msgstr "Rotação da selecção ou malha"
+
+#: ../../reference_manual/tools/transform.rst:193
+msgid ""
+"|mouseleft| :kbd:`+ drag` on an empty area outside the mesh, if there is a "
+"selection of nodes, it will rotate only them, otherwise the whole mesh will "
+"be rotated."
+msgstr ""
+"|mouseleft| :kbd:`+ arrastamento` sobre uma área vazia fora da malha, caso "
+"exista uma selecção de nós, só irá rodar estes, enquanto que no caso "
+"contrário será rodada a malha por inteiro."
+
+#: ../../reference_manual/tools/transform.rst:195
+msgid "Scale selection or mesh"
+msgstr "Ajuste da escala da selecção ou malha"
+
+#: ../../reference_manual/tools/transform.rst:195
+msgid ""
+":kbd:`Ctrl +` |mouseleft| :kbd:`+ drag` on empty area outside the mesh, if "
+"there is a selection of nodes, it will scale only them, otherwise the whole "
+"mesh will be scaled."
+msgstr ""
+":kbd:`Ctrl +`|mouseleft| :kbd:`+ arrastamento` sobre uma área vazia fora da "
+"malha, caso exista uma selecção de nós, só irá ajustar a escala destes, "
+"enquanto que no caso contrário será ajustada a malha por inteiro."
+
+#: ../../reference_manual/tools/transform.rst:198
+msgid "Tool options"
+msgstr "Opções da ferramenta"
+
+#: ../../reference_manual/tools/transform.rst:199
+msgid "Mesh Size"
+msgstr "Tamanho da Malha"
+
+#: ../../reference_manual/tools/transform.rst:200
+msgid ""
+"Gives precise controls to change the amount of patches vertically and "
+"horizontally. When increasing or decreasing the amount of patches, Krita "
+"will try to keep the curvature the same, which can be used to your advantage."
+msgstr ""
+"Oferece controlo precisos para definir a quantidade de locais de controlo na "
+"vertical e na horizontal. Ao aumentar ou diminuir a quantidade desses "
+"locais, o Krita irá tentar manter a curvatura igual, o que poderá ser usado "
+"para sua vantagem."
+
+#: ../../reference_manual/tools/transform.rst:202
+msgid "Show control points"
+msgstr "Mostrar os pontos de controlo"
+
+#: ../../reference_manual/tools/transform.rst:202
+msgid "This will toggle the control points."
+msgstr "Isto irá activar/desactivar os pontos de controlo."
+
+#: ../../reference_manual/tools/transform.rst:205
 msgid "Recursive Transform"
 msgstr "Transformação Recursiva"
 
-#: ../../reference_manual/tools/transform.rst:156
+#: ../../reference_manual/tools/transform.rst:209
+msgid ""
+"As of Krita 5.0, the toggle for recursive transform has been removed to "
+"reduce confusion, as this only worked with masks. Recursive transform is on "
+"by default for all contents of a group layer. To achieve non-recursive "
+"transformation you can use the layer lock feature."
+msgstr ""
+"Desde o Krita 5.0, o botão de comutação da transformação recursiva foi "
+"removido para reduzir a confusão, dado que isto só funcionava com máscaras. "
+"A transformação recursiva está activa por omissão para todos os conteúdos de "
+"uma camada de grupo. Para obter uma transformação não recursiva, poderá usar "
+"a funcionalidade de bloqueio de camadas."
+
+#: ../../reference_manual/tools/transform.rst:211
 msgid ""
 "The little spider icon on the lower-left of the transform tool options is "
 "the :guilabel:`Recursive Transform`."
@@ -492,11 +764,11 @@ msgstr ""
 "O pequeno ícone da aranha, no extremo inferior-esquerdo das opções da "
 "ferramenta de transformação é a :guilabel:`Transformação Recursiva`."
 
-#: ../../reference_manual/tools/transform.rst:160
+#: ../../reference_manual/tools/transform.rst:215
 msgid ".. image:: images/tools/Krita_transforms_recursive.png"
 msgstr ".. image:: images/tools/Krita_transforms_recursive.png"
 
-#: ../../reference_manual/tools/transform.rst:160
+#: ../../reference_manual/tools/transform.rst:215
 msgid ""
 "Recursive transform transforms all the layers in the group, so with this "
 "apple, both the lineart as the fill will be transformed."
@@ -505,7 +777,7 @@ msgstr ""
 "com esta maçã, tanto os desenhos das linhas como o preenchimento serão "
 "transformados."
 
-#: ../../reference_manual/tools/transform.rst:162
+#: ../../reference_manual/tools/transform.rst:217
 msgid ""
 "Recursive transform, when toggled, allows you to mass-transform all the "
 "layers in a group when only transforming the group."
@@ -513,17 +785,17 @@ msgstr ""
 "A transformação recursiva, quando for activada, permite-lhe transformar em "
 "massa todas as camadas num grupo quando só estiver a transformar o grupo."
 
-#: ../../reference_manual/tools/transform.rst:165
+#: ../../reference_manual/tools/transform.rst:220
 msgid "Continuous Transform"
 msgstr "Transformação Contínua"
 
-#: ../../reference_manual/tools/transform.rst:167
+#: ../../reference_manual/tools/transform.rst:222
 msgid ""
 "If you apply a transformation, and try to start a new one directly "
 "afterwards, Krita will attempt to recall the previous transform, so you can "
-"continue it. This is the *continuous transform*. You can press the :kbd:"
-"`Esc` key to cancel this and start a new transform, or press :guilabel:"
-"`Reset` in the tool options while no transform is active."
+"continue it. This is a *continuous transform*. You can press the :kbd:`Esc` "
+"key to cancel this and start a new transform, or press :guilabel:`Reset` in "
+"the tool options while no transform is active."
 msgstr ""
 "Se aplicar uma transformação, e tentar iniciar directamente uma nova a "
 "seguir, o Krita irá tentar invocar de novo a transformação anterior, para "
@@ -532,13 +804,13 @@ msgstr ""
 "`Reiniciar` nas opções da ferramenta enquanto não estiver activa nenhuma "
 "transformação."
 
-#: ../../reference_manual/tools/transform.rst:170
+#: ../../reference_manual/tools/transform.rst:225
 msgid "Transformation Masks"
 msgstr "Máscaras de Transformação"
 
-#: ../../reference_manual/tools/transform.rst:172
+#: ../../reference_manual/tools/transform.rst:227
 msgid ""
-"These allow you make non-destructive transforms, check :ref:`here "
+"These allow you to make non-destructive transforms, check :ref:`here "
 "<transformation_masks>` for more info."
 msgstr ""
 "Isto permite-lhe fazer transformações não destrutivas; consulte mais "

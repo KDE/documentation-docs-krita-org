@@ -1,15 +1,15 @@
 # Translation of docs_krita_org_reference_manual___linux_command_line.po to Ukrainian
-# Copyright (C) 2019 This_file_is_part_of_KDE
+# Copyright (C) 2019-2020 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2019.
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: docs_krita_org_reference_manual___linux_command_line\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-15 03:16+0200\n"
-"PO-Revision-Date: 2019-06-15 08:26+0300\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2021-08-24 12:10+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.04.0\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #: ../../reference_manual/linux_command_line.rst:None
 msgid "New in version 3.3:"
@@ -40,20 +40,20 @@ msgstr "Командний рядок Linux"
 msgid ""
 "As a native Linux program, Krita allows you to do operations on images "
 "without opening the program when using the Terminal. This option was "
-"disabled on Windows and OSX, but with 3.3 it is enabled for them!"
+"disabled on Windows and macOS, but with 3.3 it is enabled for them!"
 msgstr ""
 "Як типова програма Linux, Krita надає вам змогу виконувати типові дії із "
 "зображеннями без відкриття вікна програми за допомогою термінала. Раніше цю "
-"можливість було вимкнено у Windows і OSX, але, починаючи з версії 3.3, "
+"можливість було вимкнено у Windows і macOS, але, починаючи з версії 3.3, "
 "командним рядком можна скористатися і у цих системах!"
 
 #: ../../reference_manual/linux_command_line.rst:22
 msgid ""
 "This is primarily used in bash or shell scripts, for example, to mass "
-"convert kra files into pngs."
+"convert KRA files into PNGs."
 msgstr ""
 "В основному, цю можливість використовують у скриптах bash або скриптах "
-"оболонки, наприклад, для пакетного перетворення файлів kra на файли png."
+"оболонки, наприклад, для пакетного перетворення файлів KRA на файли PNG."
 
 #: ../../reference_manual/linux_command_line.rst:25
 msgid "Export"
@@ -104,6 +104,7 @@ msgstr ""
 "назви, щоб змінити формат файла."
 
 #: ../../reference_manual/linux_command_line.rst:47
+#: ../../reference_manual/linux_command_line.rst:147
 msgid "Example:"
 msgstr "Приклад:"
 
@@ -117,8 +118,8 @@ msgstr ""
 "Цей фрагмент коду обробляє файл ``file.png`` і зберігає його як ``file.jpg``."
 
 #: ../../reference_manual/linux_command_line.rst:57
-msgid "Export animation to the given filename and exit"
-msgstr "Експортувати анімацію до файла із вказаною назвою і вийти"
+msgid "Export animation to the given filename and exit."
+msgstr "Експортувати анімацію до файла із вказаною назвою і вийти."
 
 #: ../../reference_manual/linux_command_line.rst:59
 msgid ""
@@ -135,12 +136,12 @@ msgstr "``krita --export-sequence --export-filename file.png test.kra``"
 
 #: ../../reference_manual/linux_command_line.rst:63
 msgid ""
-"This line takes the animation in test.kra, and uses the value of --export-"
-"filename (file.png), to determine the sequence fileformat('png') and the "
+"This line takes the animation in *test.kra*, and uses the value of --export-"
+"filename (*file.png*), to determine the sequence fileformat('png') and the "
 "frame prefix ('file')."
 msgstr ""
-"У результаті виконання цієї команди для анімації у файлі test.kra, за "
-"використання значення --export-filename (file.png), буде створено "
+"У результаті виконання цієї команди для анімації у файлі *test.kra*, за "
+"використання значення --export-filename (*file.png*), буде створено "
 "послідовність зображень у вказаному форматі («png») із вказаним префіксом "
 "назви кадру («file»)."
 
@@ -149,7 +150,7 @@ msgid "PDF export"
 msgstr "Експортування до PDF"
 
 #: ../../reference_manual/linux_command_line.rst:69
-msgid "Pdf export looks a bit different, using the ``--export-pdf`` option."
+msgid "PDF export looks a bit different, using the ``--export-pdf`` option."
 msgstr ""
 "Експортування до PDF виглядає дещо інакше. Для його виконання слід "
 "скористатися параметром ``--export-pdf``."
@@ -159,8 +160,8 @@ msgid "``krita file.png --export-pdf --export-filename final.pdf``"
 msgstr "``krita file.png --export-pdf --export-filename final.pdf``"
 
 #: ../../reference_manual/linux_command_line.rst:73
-msgid "export-pdf exports the file ``file.png`` as a pdf file."
-msgstr "export-pdf експортує файл ``file.png`` як файл PDF."
+msgid "This option exports the file ``file.png`` as a PDF file."
+msgstr "Цей параметр експортує файл ``file.png`` як файл PDF."
 
 #: ../../reference_manual/linux_command_line.rst:77
 msgid "This has been removed from 3.1 because the results were incorrect."
@@ -259,3 +260,35 @@ msgstr "``krita --workspace Animation``"
 #: ../../reference_manual/linux_command_line.rst:142
 msgid "Starts Krita in the Animation workspace."
 msgstr "Запускає Krita із робочим простором Animation."
+
+#: ../../reference_manual/linux_command_line.rst:145
+msgid ""
+"Starts krita with ``filename`` added as a file-layer. Note that you must "
+"either open an existing file or create a new file using the ``new-image`` "
+"argument."
+msgstr ""
+"Запускає krita із додаванням файлового шару ``зображення``. Зауважте, що вам "
+"слід або відкрити наявний файл або створити файл за допомогою аргументу "
+"``new-image``."
+
+#: ../../reference_manual/linux_command_line.rst:149
+msgid "``krita file.kra --file-layer image.png``"
+msgstr "``krita файл.kra --file-layer зображення.png``"
+
+#: ../../reference_manual/linux_command_line.rst:151
+msgid "``krita --new-image RGBA,U8,1000,1000 --file-layer image.jpg``"
+msgstr "``krita --new-image RGBA,U8,1000,1000 --file-layer зображення.jpg``"
+
+#: ../../reference_manual/linux_command_line.rst:153
+msgid ""
+"If an instance of Krita is already running and Multiple :ref:`instances "
+"<window_settings>` are disabled, then this option can be used alone to add a "
+"file-layer to the running krita document."
+msgstr ""
+"Якщо вже запущено екземпляр Krita, а запуск декількох :ref:`екземплярів "
+"<window_settings>` вимкнено, цим параметром можна скористатися лише для "
+"додавання файлового шару до поточного документа krita."
+
+#: ../../reference_manual/linux_command_line.rst:155
+msgid "Example:  ``krita --file-layer image.png``"
+msgstr "Приклад:  ``krita --file-layer зображення.png``"

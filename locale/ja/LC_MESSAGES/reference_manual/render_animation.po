@@ -1,10 +1,11 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-03-02 16:12-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2021-09-18 17:45-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -14,29 +15,39 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
+#: ../../reference_manual/render_animation.rst:None
+msgid ""
+".. image:: images/ffmpeg_screenshot_path.png\n"
+"   :alt: FFmpeg path."
+msgstr ""
+
 #: ../../reference_manual/render_animation.rst:1
 msgid "How to use the render animation command in Krita."
-msgstr ""
+msgstr "Krita アニメーション出力コマンドの使い方。"
 
-#: ../../reference_manual/render_animation.rst:12
-#: ../../reference_manual/render_animation.rst:17
-#: ../../reference_manual/render_animation.rst:42
+#: ../../reference_manual/render_animation.rst:13
+#: ../../reference_manual/render_animation.rst:18
+#: ../../reference_manual/render_animation.rst:43
 msgid "Render Animation"
-msgstr ""
+msgstr "アニメーション出力"
 
-#: ../../reference_manual/render_animation.rst:12
+#: ../../reference_manual/render_animation.rst:13
 msgid "Animation"
-msgstr ""
+msgstr "アニメーション"
 
-#: ../../reference_manual/render_animation.rst:19
+#: ../../reference_manual/render_animation.rst:20
 msgid ""
 "Render animation allows you to render your animation to an image sequence, "
-"gif, mp4, mkv, or ogg file. It replaces :guilabel:`Export Animation`."
+"``.gif``, ``.mp4``, ``.mkv``, or ``.ogg`` file. It replaces :guilabel:"
+"`Export Animation`."
 msgstr ""
+"アニメーション出力はアニメーションを ``.gif``、``.mp4``、``.mkv`` や ``."
+"ogg`` や画像シーケンスにレンダリングすることができます。:guilabel:`アニメー"
+"ションエクスポート` の代わりとなるものです。"
 
-#: ../../reference_manual/render_animation.rst:21
+#: ../../reference_manual/render_animation.rst:22
 msgid ""
-"For rendering to an animated file format, Krita will first render to a png "
+"For rendering to an animated file format, Krita will first render to a PNG "
 "sequence and then use FFmpeg, which is really good at encoding into video "
 "files, to render that sequence to an animated file format. The reason for "
 "this two-step process is that animation files can be really complex and "
@@ -45,76 +56,94 @@ msgid ""
 "saves out weird, first saving the image sequence allows you to only resave "
 "that one weird frame before rendering."
 msgstr ""
+"動画ファイル形式に出力するには、Krita はまず PNG シーケンスに出力してから "
+"FFmpeg を使い、画像シーケンスを動画ファイル形式に変換します。FFmpeg は動画"
+"ファイルにエンコードするのがとても得意です。動画ファイルはとても複雑かつ大き"
+"くなり、この2つのステップを踏むことが、出力の過程で様々な操作をする最も良い方"
+"法になっています。例えば、コンピュータの調子が悪くなり、保存された1フレームが"
+"おかしくなった時に、最初に保存された画像シーケンスがあることによって出力前に"
+"おかしい1フレームを再保存することができます。"
 
-#: ../../reference_manual/render_animation.rst:23
+#: ../../reference_manual/render_animation.rst:24
 msgid ""
 "This means that you will need to find a good place to stick your frames "
 "before you can start rendering. If you only do throwaway animations, you can "
 "use a spot on your hard-drive with enough room and select :guilabel:`Delete "
 "Sequence After Rendering`."
 msgstr ""
+"つまり出力を開始する前にフレームを置いておく良い場所を見つけておかなければな"
+"りません。簡素なアニメーションだけであれば、十分な容量のあるハードドライブの"
+"場所を使って :guilabel:`Delete Sequence After Rendering` を選択します。"
 
-#: ../../reference_manual/render_animation.rst:26
+#: ../../reference_manual/render_animation.rst:27
 msgid "Image Sequence"
-msgstr ""
-
-#: ../../reference_manual/render_animation.rst:28
-msgid "Base Name"
-msgstr ""
+msgstr "画像シーケンス"
 
 #: ../../reference_manual/render_animation.rst:29
+msgid "Base Name"
+msgstr "基本名"
+
+#: ../../reference_manual/render_animation.rst:30
 msgid ""
 "The base name of your image sequence. This will get suffixed with a number "
 "depending on the frame."
-msgstr ""
-
-#: ../../reference_manual/render_animation.rst:30
-msgid "File Format"
-msgstr ""
+msgstr "画像シーケンスの基本名です。フレームごとの番号が後に付けられます。"
 
 #: ../../reference_manual/render_animation.rst:31
-msgid ""
-"The file format to export the sequence to. When rendering we enforce png. "
-"The usual export options can be modified with :guilabel:`...`."
-msgstr ""
+msgid "File Format"
+msgstr "ファイル形式"
 
 #: ../../reference_manual/render_animation.rst:32
-msgid "Render Location"
+msgid ""
+"The file format to export the sequence to. When rendering we enforce PNG. "
+"The usual export options can be modified with :guilabel:`...`."
 msgstr ""
+"シーケンスに出力するファイルの形式です。動画ファイル出力時には強制 PNG になり"
+"ます。高度な出力オプションは :guilabel:`...` から編集できます。"
 
 #: ../../reference_manual/render_animation.rst:33
+msgid "Render Location"
+msgstr "連番画像の保存場所"
+
+#: ../../reference_manual/render_animation.rst:34
 msgid ""
 "Where you render the image sequence to. Some people prefer to use a flash-"
 "drive or perhaps a harddrive that is fast."
 msgstr ""
-
-#: ../../reference_manual/render_animation.rst:34
-msgid "First Frame"
-msgstr ""
+"画像シーケンスが保存される場所です。人によりフラッシュドライブを使いたい場合"
+"や高速なハードドライブにすることもあります。"
 
 #: ../../reference_manual/render_animation.rst:35
+msgid "First Frame"
+msgstr "最初のフレーム"
+
+#: ../../reference_manual/render_animation.rst:36
 msgid ""
 "The first frame of the range of frames you wish to adjust. Automatically set "
 "to the first frame of your current selection in the timeline. This is useful "
 "when you only want to re-render a little part."
 msgstr ""
-
-#: ../../reference_manual/render_animation.rst:36
-msgid "Last Frame"
-msgstr ""
+"範囲の最初のフレームを調節できます。自動的にタイムラインで選択された最初のフ"
+"レームに設定されます。一部のみを再出力したいときに便利です。"
 
 #: ../../reference_manual/render_animation.rst:37
+msgid "Last Frame"
+msgstr "最後のフレーム"
+
+#: ../../reference_manual/render_animation.rst:38
 msgid ""
 "As above, the last frame of the range of frames you wish to adjust. "
 "Automatically set to the last frame of your current selection in the "
 "timeline."
 msgstr ""
+"上のように、範囲の最後のフレームを調節できます。自動的にタイムラインで選択さ"
+"れた最後のフレームに設定されます。"
 
-#: ../../reference_manual/render_animation.rst:39
+#: ../../reference_manual/render_animation.rst:40
 msgid "Naming Sequence starts with"
-msgstr ""
+msgstr "連番画像の開始番号"
 
-#: ../../reference_manual/render_animation.rst:39
+#: ../../reference_manual/render_animation.rst:40
 msgid ""
 "The frames are named by using :guilabel:`Base Name`  above and adding a "
 "number for the frame. This allows you to set where the frame number starts, "
@@ -122,59 +151,73 @@ msgid ""
 "11 and 15. Useful for programs that don't understand sequences starting with "
 "0, or for precision output."
 msgstr ""
-
-#: ../../reference_manual/render_animation.rst:44
-msgid "Render As"
-msgstr ""
+"フレームは上の :guilabel:`基本名` を使いフレーム番号を追加することで名前が付"
+"けられます。これはフレーム番号をどこから開始させるか設定でき、8から10フレーム"
+"を開始点3で出力すると11と15になります。正確な出力や、0で始まるシーケンスを認"
+"識しないプログラムに有用です。"
 
 #: ../../reference_manual/render_animation.rst:45
-msgid ""
-"The file format to render to. All except gif have extra options that can be "
-"manipulated via :guilabel:`...`."
-msgstr ""
+msgid "Render As"
+msgstr "出力"
 
 #: ../../reference_manual/render_animation.rst:46
-msgid "File"
+msgid ""
+"The file format to render to. All except GIF have extra options that can be "
+"manipulated via :guilabel:`...`."
 msgstr ""
+"出力されるファイル形式です。GIF 以外すべてはオプションを :guilabel:`...` から"
+"変更できます。"
 
 #: ../../reference_manual/render_animation.rst:47
-msgid "Location and name of the rendered animation."
-msgstr ""
+msgid "File"
+msgstr "動画の保存場所"
 
 #: ../../reference_manual/render_animation.rst:48
+msgid "Location and name of the rendered animation."
+msgstr "出力されるアニメーションの場所と名前です。"
+
+#: ../../reference_manual/render_animation.rst:49
 msgid "FFmpeg"
 msgstr ""
 
-#: ../../reference_manual/render_animation.rst:49
+#: ../../reference_manual/render_animation.rst:50
 msgid ""
 "The location where your have FFmpeg. If you don't have this, Krita cannot "
-"render an animation. For proper gif support, you will need FFmpeg 2.6, as we "
+"render an animation. For proper GIF support, you will need FFmpeg 2.6, as we "
 "use its palettegen functionality."
 msgstr ""
+"FFmpeg のある場所です。もしこれがなければ、Krita はアニメーションを動画ファイ"
+"ルとして出力できません。GIF を正しくサポートするには、palettegen 機能を使用す"
+"るため FFmpeg 2.6 が必要です。"
 
-#: ../../reference_manual/render_animation.rst:51
+#: ../../reference_manual/render_animation.rst:52
 msgid "Delete Sequence After Rendering"
 msgstr ""
 
-#: ../../reference_manual/render_animation.rst:51
+#: ../../reference_manual/render_animation.rst:52
 msgid ""
 "Delete the prerendered image sequence after done rendering. This allows you "
 "to choose whether to try and save some space, or to save the sequence for "
 "when encoding fails."
 msgstr ""
+"出力終了後にその過程で作られた画像シーケンスを削除します。エンコード失敗時に"
+"シーケンスを保存しておくか、または空きを作るか選ぶことができます。"
 
-#: ../../reference_manual/render_animation.rst:55
+#: ../../reference_manual/render_animation.rst:56
 msgid ""
-"None of the video formats support saving from images with a transparent "
-"background, so Krita will try to fill it with something. You should add a "
-"background color yourself to avoid it from using, say, black."
+"Krita currently does not support rendering video with transparent elements, "
+"and will instead render them as black. To combat this, you can add in a "
+"fully colored, opaque layer at the bottom of the file before rendering."
 msgstr ""
+"Krita は現在透過要素の動画出力はサポートしておらず、代わりに黒として表示され"
+"ます。これに対応するには、動画出力前にファイルの一番下に色の付いた不透明のレ"
+"イヤーを追加することができます。"
 
-#: ../../reference_manual/render_animation.rst:58
+#: ../../reference_manual/render_animation.rst:59
 msgid "Setting Up Krita for Exporting Animations"
-msgstr ""
+msgstr "アニメーション出力の準備をする"
 
-#: ../../reference_manual/render_animation.rst:60
+#: ../../reference_manual/render_animation.rst:61
 msgid ""
 "You will need to download an extra application and link it in Krita for it "
 "to work. The application is pretty big (50MB), so the Krita developers "
@@ -183,121 +226,204 @@ msgid ""
 "how to get it and set it up. The setup is a one-time thing so you won't have "
 "to do it again."
 msgstr ""
+"外部アプリケーションをダウンロードして Krita が分かるように紐づける必要があり"
+"ます。アプリケーションはそこそこ大きいため(50MB)、Krita 開発者は通常のアプリ"
+"ケーションとまとめて頒布はしません。これから使うこのソフトはフリーで FFmpeg "
+"と呼ばれています。入手と設定はこれから説明していきます。設定は1回だけのもので"
+"再度行う必要はありません。"
 
-#: ../../reference_manual/render_animation.rst:63
+#: ../../reference_manual/render_animation.rst:64
 msgid "Step 1 - Downloading FFmpeg"
-msgstr ""
+msgstr "ステップ1 - FFmpeg のダウンロード"
 
-#: ../../reference_manual/render_animation.rst:66
-#: ../../reference_manual/render_animation.rst:86
+#: ../../reference_manual/render_animation.rst:67
+#: ../../reference_manual/render_animation.rst:96
 msgid "For Windows"
-msgstr ""
+msgstr "Windows では"
 
-#: ../../reference_manual/render_animation.rst:68
+#: ../../reference_manual/render_animation.rst:69
+msgid "Open the FFmpeg `download page. <https://www.gyan.dev/ffmpeg/builds/>`_"
+msgstr ""
+"FFmpeg の `ダウンロードページ <https://www.gyan.dev/ffmpeg/builds/>`_ を開き"
+"ます。"
+
+#: ../../reference_manual/render_animation.rst:71
 msgid ""
-"Go to the `FFmpeg website <https://ffmpeg.org/download.html>`_. The URL that "
-"had the link for me was `here... <https://ffmpeg.zeranoe.com/builds/>`_"
+"Go to :guilabel:`release` section and choose the download link that says "
+"``ffmpeg-release-essentials.zip``."
 msgstr ""
-
-#: ../../reference_manual/render_animation.rst:70
-msgid ""
-"Watch out for the extremely annoying google and that looks like a download "
-"button! There is no big button for what we need. Either get the 64-bit "
-"STATIC version or 32-bit STATIC version that is shown later down the page. "
-"If you bought a computer in the past 5 years, you probably want the 64-bit "
-"version. Make sure you get a exe file, if you hover over the options they "
-"will give more information about what exactly you are downloading."
-msgstr ""
-
-#: ../../reference_manual/render_animation.rst:73
-#: ../../reference_manual/render_animation.rst:93
-msgid "For OSX"
-msgstr ""
+":guilabel:`release` セクションの ``ffmpeg-release-essentials.zip`` とあるダウ"
+"ンロードリンクを選びます。"
 
 #: ../../reference_manual/render_animation.rst:75
+msgid ""
+"**Don't** download the file which filename contains the word ``shared``. It "
+"won't work with Krita."
+msgstr ""
+"``shared`` とあるファイル名のファイルはダウンロード **しないで** ください。そ"
+"れは Krita では動きません。"
+
+#: ../../reference_manual/render_animation.rst:77
+msgid ""
+"If the filename ends with ``.7z``, you can still use it, but then you need "
+"to have a program that can open 7zip archives (for example `7zip itself "
+"<https://www.gyan.dev/ffmpeg/builds/>`_). In case of a ``.zip`` file, you "
+"can open it just using the Windows file browser."
+msgstr ""
+"ファイル名が ``.7z`` で終わっていても使用することはできますが、7zip 書庫(例え"
+"ば `7zip そのもの <https://www.gyan.dev/ffmpeg/builds/>`_ など)は展開できるプ"
+"ログラムが必要になります。``.zip`` ファイルの場合、Windows のファイルブラウザ"
+"を使うだけで開けます。"
+
+#: ../../reference_manual/render_animation.rst:81
+#: ../../reference_manual/render_animation.rst:114
+msgid "For macOS"
+msgstr "macOS では"
+
+#: ../../reference_manual/render_animation.rst:83
 msgid ""
 "Please see the section above. However, FFmpeg is obtained from `here "
 "<https://evermeet.cx/ffmpeg/>`_ instead. Just pick the big green button on "
 "the left under the FFmpeg heading. You will also need an archiving utility "
-"that supports .7z, since FFmpeg provides their OSX builds in .7z format. If "
-"you don't have one, try something like `Keka <https://www.kekaosx.com>`_."
+"that supports .7z, since FFmpeg provides their macOS builds in .7z format. "
+"If you don't have one, try something like `Keka <https://www.kekaosx.com>`_."
 msgstr ""
+"上のセクションを見てください。しかし、FFmpeg は代わりに `ここ <https://"
+"evermeet.cx/ffmpeg/>`_ から入手します。FFmpeg ヘッダのある所、左側にある大き"
+"な緑のボタンを選びます。また FFmpeg が macOS ビルドを .7z 形式で提供している"
+"ため、.7z をサポートする展開ソフトが必要になります。もしなければ、`Keka "
+"<https://www.kekaosx.com>`_ のようなものを試してください。"
 
-#: ../../reference_manual/render_animation.rst:78
-#: ../../reference_manual/render_animation.rst:98
-msgid "For Linux"
-msgstr ""
-
-#: ../../reference_manual/render_animation.rst:80
+#: ../../reference_manual/render_animation.rst:85
 msgid ""
-"FFmpeg can be installed from the repositories on most Linux systems. Version "
-"2.6 is required for proper gif support, as we use the palettegen "
-"functionality."
+"Alternatively you can find the smaller text under the big green button that "
+"says :guilabel:`Download as ZIP`. Then you should be able to extract it just "
+"using Finder."
 msgstr ""
-
-#: ../../reference_manual/render_animation.rst:83
-msgid "Step 2 - Unzipping and Linking to Krita"
-msgstr ""
+"もしくは大きな緑のボタン下に :guilabel:`Download as ZIP` と書かれた小さいテキ"
+"ストがあります。それなら Finder を使って展開できます。"
 
 #: ../../reference_manual/render_animation.rst:88
-msgid ""
-"Unzip the package that was just downloaded. Rename the long folder name to "
-"just ffmpeg. Let's put this folder in a easy to find location. Go to your C:"
-"\\ and place it there. You can put it wherever you want, but that is where I "
-"put it."
-msgstr ""
+#: ../../reference_manual/render_animation.rst:119
+msgid "For Linux"
+msgstr "Linux では"
 
 #: ../../reference_manual/render_animation.rst:90
 msgid ""
-"Open Krita back up and go to :menuselection:`File --> Render Animation`. "
-"Click the :guilabel:`Browse` button on the last item called FFmpeg. Select "
-"this file ``C:/ffmpeg/bin/ffmpeg.exe`` and click :guilabel:`OK`."
+"FFmpeg can be installed from the repositories on most Linux systems. Version "
+"2.6 is required for proper GIF support, as we use the palettegen "
+"functionality."
 msgstr ""
+"FFmpeg が多くの Linux システムでリポジトリからインストールできます。GIF を正"
+"しくサポートするには、palettegen 機能を使用するため FFmpeg 2.6 が必要です。"
 
-#: ../../reference_manual/render_animation.rst:95
+#: ../../reference_manual/render_animation.rst:93
+msgid "Step 2 - Unzipping and Linking to Krita"
+msgstr "ステップ2 - 展開して Krita と紐づける"
+
+#: ../../reference_manual/render_animation.rst:98
+msgid ""
+"Once you've downloaded, go to the file location. Right click on the FFmpeg "
+"file, and select ``Extract All...``. Select the file destination, and rename "
+"the file to 'ffmpeg'."
+msgstr ""
+"ダウンロードしたらファイルの場所に行きます。FFmpeg ファイルを右クリックして "
+"``展開する...`` を選択します。ファイルの場所を選んで、ファイルを 'ffmpeg' に"
+"名前変更します。"
+
+#: ../../reference_manual/render_animation.rst:100
+msgid "Hint"
+msgstr "ヒント"
+
+#: ../../reference_manual/render_animation.rst:102
+msgid ""
+"It is easiest to save the file under C: drive, but any location is fine."
+msgstr "C:ドライブに保存するのが最も簡単ですが、どこでも構いません。"
+
+#: ../../reference_manual/render_animation.rst:104
+msgid ""
+"Open Krita back up and go to :menuselection:`File --> Render Animation...`. "
+"Under ``Export > Video``, click the file icon next to FFmpeg. Select this "
+"file ``C:/ffmpeg/bin/ffmpeg.exe`` and click :guilabel:`OK`."
+msgstr ""
+"Krita を開いて :menuselection:`ファイル --> アニメーションを出力...` に行きま"
+"す。``出力 > 動画`` のところで、FFmpeg とある隣のファイルアイコンをクリックし"
+"ます。このファイル ``C:/ffmpeg/bin/ffmpeg.exe`` を選択し :guilabel:`OK` をク"
+"リックします。"
+
+#: ../../reference_manual/render_animation.rst:109
+msgid "Tip"
+msgstr "ヒント"
+
+#: ../../reference_manual/render_animation.rst:111
+msgid ""
+"If you have saved FFmpeg to a different location, choose ``<ffmpeg location>/"
+"ffmpeg/bin/ffmpeg.exe``."
+msgstr ""
+"FFmpeg を違う場所に保存したのなら、``<ffmpeg の場所>/ffmpeg/bin/ffmpeg.exe`` "
+"を選びます。"
+
+#: ../../reference_manual/render_animation.rst:116
 msgid ""
 "After downloading FFmpeg, you just need to extract it and then simply point "
 "to it in the FFmpeg location in Krita like ``/Users/user/Downloads/ffmpeg`` "
 "(assuming you downloaded and extracted the .7z file to /Users/user/"
 "Downloads)."
 msgstr ""
+"FFmpeg をダウンロードした後は、展開し Krita で ``/Users/user/Downloads/"
+"ffmpeg`` (.7z をダウンロードした後に /Users/user/Downloads に展開した場合)に"
+"リンクします。"
 
-#: ../../reference_manual/render_animation.rst:100
+#: ../../reference_manual/render_animation.rst:121
 msgid ""
 "FFmpeg is, if installed from the repositories, usually found in ``/usr/bin/"
 "ffmpeg``."
 msgstr ""
+"FFmpeg は、リポジトリからインストールしたのであれば、通常 ``/usr/bin/"
+"ffmpeg`` にあります。"
 
-#: ../../reference_manual/render_animation.rst:103
+#: ../../reference_manual/render_animation.rst:124
 msgid "Step 3 - Testing out an animation"
-msgstr ""
+msgstr "ステップ3 - アニメーションをテストする"
 
-#: ../../reference_manual/render_animation.rst:105
+#: ../../reference_manual/render_animation.rst:126
 msgid ""
 "ffmpeg.exe is what Krita uses to do all of its animation export magic. Now "
 "that it is hooked up, let us test it out."
 msgstr ""
+"ffmpeg.exe が Krita がアニメーション出力魔法に使うすべてのものです。これで準"
+"備はできましたので、試してみましょう。"
 
-#: ../../reference_manual/render_animation.rst:107
+#: ../../reference_manual/render_animation.rst:128
 msgid ""
 "Let's make an animated GIF. In the Render Animation dialog, change the :"
 "guilabel:`Render As`  field to \"GIF image\". Choose the file location where "
 "it will save with the \"File\" menu below. I just saved it to my desktop and "
-"called it \"export.gif\". When it is done, you should be able to open it up "
-"and see the animation."
+"called it \"*export.gif*\". When it is done, you should be able to open it "
+"up and see the animation."
 msgstr ""
+"アニメーション GIF を作りましょう。アニメーション出力ダイアログで、:guilabel:"
+"`出力` フィールドを \"GIF 画像\" にします。下の \"動画の保存場所\" メニューか"
+"ら場所を選びます。私はデスクトップに \"*export.gif*\" としました。終わった"
+"ら、開いてアニメーションになっているはずです。"
 
-#: ../../reference_manual/render_animation.rst:111
+#: ../../reference_manual/render_animation.rst:132
 msgid ""
 "By default, FFmpeg will render MP4 files with a too new codec, which means "
 "that Windows Media Player won't be able to play it. So for Windows, select "
 "\"baseline\" for the profile instead of \"high422\" before rendering."
 msgstr ""
+"既定では、FFmpeg は MP4 を新しすぎるコーデックでエンコードし、Windows Media "
+"Player で開くことができません。なので Windows では動画出力前に、プロファイル"
+"を \"high422\" の代わりに \"baseline\" を選択する必要があります。"
 
-#: ../../reference_manual/render_animation.rst:115
+#: ../../reference_manual/render_animation.rst:136
 msgid ""
-"OSX does not come with any software to play MP4 and MKV files. If you use "
+"macOS does not come with any software to play MP4 and MKV files. If you use "
 "Chrome for your web browser, you can drag the video file into that and the "
 "video should play. Otherwise you will need to get a program like VLC to see "
 "the video."
 msgstr ""
+"macOS は MP4 や MKV ファイルを再生できるソフトが標準で付属しません。もしウェ"
+"ブブラウザに Chrome を使っている場合、動画ファイルをドラッグすると再生できる"
+"はずです。でなければ、VLC といったプログラムを入手して動画を見ます。"

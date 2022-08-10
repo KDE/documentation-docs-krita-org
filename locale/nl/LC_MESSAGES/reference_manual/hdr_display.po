@@ -1,21 +1,22 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020.
+# Ronald Stroethoff <stroet43@zonnet.nl>, 2019, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 03:21+0200\n"
-"PO-Revision-Date: 2019-08-20 17:25+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2021-10-11 07:23+0200\n"
+"Last-Translator: Ronald Stroethoff <stroe43@zonnet.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 20.04.2\n"
 
 #: ../../<generated>:1
 msgid "MaxFALL"
@@ -43,7 +44,7 @@ msgstr "HDR-scherm"
 
 #: ../../reference_manual/hdr_display.rst:21
 msgid "Currently only available on Windows."
-msgstr ""
+msgstr "Op dit moment alleen beschikbaar voor Windows."
 
 #: ../../reference_manual/hdr_display.rst:23
 msgid ""
@@ -59,10 +60,23 @@ msgid ""
 "spectacular! It also shows more subtle shadows and has a better contrast in "
 "lower color values, but this requires a sharper eye."
 msgstr ""
+"Vanaf 4.2 kan Krita niet alleen afbeeldingen met grote bitdieptes bewerken, "
+"maar ze ook zodanig op het scherm renderen dat een HDR capabele setup ze als "
+"HDR afbeelding kan tonen. HDR afbeeldingen, zijn eenvoudig gezegd "
+"afbeeldingen met echt heldere kleuren. Ze doen dit door de beschikbaarheid "
+"van een zeer groot kleurenbereik, 16 bit en meer, en te begrijpen dat het "
+"hogere bereik van de beschikbare kleuren helderder kan zijn dan het "
+"helderste wit dat de meeste schermen kan tonen. HDR schermen, daarentegen "
+"zijn schermen die helderder kleuren kan laten zien dan de meeste schermen, "
+"en daardoor de super-felle kleuren in deze HDR afbeeldingen kan tonen. "
+"Hierdoor zien afbeeldingen met heldere dingen zoals vuur en ondergaande zon "
+"echt er spectaculair uit! Het toont ook de meer subtielere schaduwen en "
+"heeft een betere contrast in de lagere kleurwaarden, maar hiervoor heeft u "
+"een scherp oog nodig."
 
 #: ../../reference_manual/hdr_display.rst:26
 msgid "Configuring HDR"
-msgstr ""
+msgstr "HDR instellen"
 
 #: ../../reference_manual/hdr_display.rst:28
 msgid ""
@@ -74,19 +88,31 @@ msgid ""
 "suitable drivers. You then also need to configure the system settings for "
 "HDR."
 msgstr ""
+"Krita kan HDR niet op elke willekeurige monitor tonen, u heeft daarvoor een "
+"HDR capabele opstelling nodig. HDR capabele opstellingen zijn schermen die "
+"meer dan 100 nits kunnen tonen, bij voorkeur een waarde zoals 1000 en de rec "
+"2020 PQ kleurruimte kunnen tonen. U zal de juiste beeldschermkabel nodig "
+"hebben (anders worden de waarden omgezet naar gewone SDR) en een grafische "
+"kaart die HDR aankan, met de bijbehorende drivers. U zal ook de het "
+"systeemop HDR moeten instellen."
 
 #: ../../reference_manual/hdr_display.rst:30
 msgid ""
 "If you can confirm that the system understands your setup as an HDR setup, "
 "you can continue your :ref:`configuration in Krita<hdr_display_settings>`, "
-"in :menuselection:`Settings --> Configure Krita --> Display`. There, you "
+"in :menuselection:`Settings --> Configure Krita... --> Display`. There, you "
 "need to select the preferred surface, which should be as close to the "
 "display format as possible. Then restart Krita."
 msgstr ""
+"Als u er zeker van bent dat het systeem als HDR setup is opgezet, dan kunt u "
+"verdergaan met uw :ref:`configuratie in Krita<hdr_display_settings>`, in :"
+"menuselection:`Instellingen --> Krita configureren... --> Weergave`. Daar "
+"moet u het gewenste oppervlak kiezen, wat zo dicht als mogelijk bij de "
+"afmetingen van het beeldscherm moet zijn. Start daarna Krita opnieuw op."
 
 #: ../../reference_manual/hdr_display.rst:33
 msgid "Painting in HDR"
-msgstr ""
+msgstr "In HDR schilderen"
 
 #: ../../reference_manual/hdr_display.rst:35
 msgid ""
@@ -94,6 +120,10 @@ msgid ""
 "with rec 2020 gamut and a linear TRC. :guilabel:`Rec2020-elle-V4-g10.icc` is "
 "the one we ship by default."
 msgstr ""
+"Om een echt HDR afbeelding te creëren, is het noodzakelijk dat u een canvas "
+"creëert met gebruik van een profiel met een rec 2020 gamut en een lineaire "
+"TRC. :guilabel: `Rec2020-elle-V4-g10.icc` wordt door ons standaard "
+"meegeleverd."
 
 #: ../../reference_manual/hdr_display.rst:37
 msgid ""
@@ -101,6 +131,10 @@ msgid ""
 "However, a linear TRC is easier to edit images in, so we don't convert to PQ "
 "until we're satisfied with our image."
 msgstr ""
+"Standaard moeten HDR afbeeldingen het Rec2020 kleurenbereik gebruiken, en de "
+"PQ TRC. Maar met een lineaire TRC is het makkelijker om afbeeldingen te "
+"bewerken, daarom converteren we niet naar PQ totdat we helemaal tevreden "
+"zijn over onze afbeelding."
 
 #: ../../reference_manual/hdr_display.rst:39
 msgid ""
@@ -108,80 +142,96 @@ msgid ""
 "`scene_linear_painting` page, which covers things like selecting colors, "
 "gotchas, which filters work and cool workflows."
 msgstr ""
+"Om te schilderen in deze nieuwe interessante kleurruimte, leest u eerst :ref:"
+"`scene_linear_painting` pagina, waarin zaken worden behandelt zoals het "
+"selecteren van kleuren, gotchas, welke filters werken en handige "
+"werkmethodieken."
 
 #: ../../reference_manual/hdr_display.rst:42
 msgid "Exporting HDR"
-msgstr ""
+msgstr "HDR exporteren"
 
 #: ../../reference_manual/hdr_display.rst:44
 msgid "Now for saving and loading."
-msgstr ""
+msgstr "Nu wat betreft opslaan en laden."
 
 #: ../../reference_manual/hdr_display.rst:46
 msgid ""
-"The kra file format can save the floating point image just fine, and is thus "
+"The KRA file format can save the floating point image just fine, and is thus "
 "a good working file format."
 msgstr ""
+"Het KRA-bestandsformaat kan de drijvende komma afbeelding zonder problemen "
+"opslaan, en is dus een goed werkbaar bestandsformaat."
 
 #: ../../reference_manual/hdr_display.rst:48
 msgid ""
 "For sharing with other image editors, :ref:`file_exr` is recommended. For "
-"sharing with the web we currently only have :ref:`HDR png export "
+"sharing with the web we currently only have :ref:`HDR PNG export "
 "<file_png>`, but there's currently very little support for this standard. In "
 "the future we hope to see heif and avif support."
 msgstr ""
+"Voor de uitwisseling met andere afbeelding editors, :ref:`file_exr` is "
+"aanbevolen. Voor uitwisseling met het web hebben we op dit moment alleen :"
+"ref:`HDR PNG export <file_png>`, maar er is op dit moment erg weinig "
+"ondersteuning voor deze standaard. In de toekomst hopen we ondersteuning "
+"voor heif en avif te zien."
 
 #: ../../reference_manual/hdr_display.rst:50
 msgid ""
 "For exporting HDR animations, we support saving HDR to the new codec for mp4 "
 "and mkv: H.265. To use these options..."
 msgstr ""
+"Voor de export van HDR animaties, ondersteunen we het opslaan van HDR naar "
+"de nieuwe codec voor mp4 en mkv: H.265. om deze mogelijkheid te gebruiken..."
 
 #: ../../reference_manual/hdr_display.rst:52
-msgid "Get a version of FFmpeg that supports H.256"
-msgstr ""
+msgid "Get a version of FFmpeg that supports H.265."
+msgstr "Krijg een versie van FFmpeg dat H.265 ondersteund"
 
 #: ../../reference_manual/hdr_display.rst:53
 msgid "Have an animation open."
-msgstr ""
+msgstr "Heb een animatie geopend."
 
 #: ../../reference_manual/hdr_display.rst:54
-msgid ":menuselection:`File --> Render Animation`"
-msgstr ""
+msgid ":menuselection:`File --> Render Animation`."
+msgstr ":menuselection:`Bestand --> Animatie renderen`."
 
 #: ../../reference_manual/hdr_display.rst:55
-msgid "Select :guilabel:`Video`"
-msgstr ""
+msgid "Select :guilabel:`Video`."
+msgstr "Selecteer :guilabel:`Video`."
 
 #: ../../reference_manual/hdr_display.rst:56
 msgid "Select for :guilabel:`Render as`, 'MPEG-4 video' or 'Matroska'."
-msgstr ""
+msgstr "Selecteer :guilabel:`Renderen als`, 'MPEG-4 video' of 'Matroska'."
 
 #: ../../reference_manual/hdr_display.rst:57
 msgid "Press the configure button next to the file format dropdown."
 msgstr ""
+"Druk op de configuratie-knop naast de keuzelijst voor het bestandsformaat."
 
 #: ../../reference_manual/hdr_display.rst:58
-msgid "Select at the top 'H.265, MPEG-H Part 2 (HEVC)'"
-msgstr ""
+msgid "Select at the top 'H.265, MPEG-H Part 2 (HEVC)'."
+msgstr "Selecteer bovenaan 'H.265, MPEG-H Part 2 (HEVC)'."
 
 #: ../../reference_manual/hdr_display.rst:59
-msgid "Select for the :guilabel:`Profile`, 'main10'."
-msgstr ""
+msgid "Select for the :guilabel:`Profile`, 'main10 (HDR)'."
+msgstr "Selecteer voor het :guilabel:`Profiel`, 'main10 (HDR)'."
 
 #: ../../reference_manual/hdr_display.rst:60
 msgid ":guilabel:`HDR Mode` should now enable. Toggle it."
-msgstr ""
+msgstr ":guilabel:`HDR Mode` zou nu beschikbaar moeten zijn. schakel het in."
 
 #: ../../reference_manual/hdr_display.rst:61
 msgid ""
 "click :guilabel:`HDR Metadata` to configure the HDR metadata (options "
 "described below)."
 msgstr ""
+"Klik op :guilabel:`HDR Metagegevens` om de HDR metagegevens in te stellen "
+"(opties worden hieronder beschreven)."
 
 #: ../../reference_manual/hdr_display.rst:62
-msgid "finally, when done, click 'render'."
-msgstr ""
+msgid "finally, when done, click 'OK'."
+msgstr "Als dat tenslotte klaar is, klik dan op 'OK'."
 
 #: ../../reference_manual/hdr_display.rst:65
 msgid "HDR Metadata"
@@ -193,6 +243,10 @@ msgid ""
 "Master Display Color Volumes metadata and is required for the HDR video to "
 "be transferred properly to the screen by video players and the cable."
 msgstr ""
+"Dit is in het render animatie scherm. Hier stelt u de SMPTE ST.2086 of "
+"Master Display Color Volumes metadata in die nodig zijn voor de HDR video om "
+"goed naar het scherm te kunnen worden verstuurt door videospelers en de "
+"kabel."
 
 #: ../../reference_manual/hdr_display.rst:69
 msgid "Master Display"
@@ -205,6 +259,11 @@ msgid ""
 "There are two default values for common display color spaces, and a custom "
 "value, which will enable the :guilabel:`Display` options."
 msgstr ""
+"De karakteristieken van de kleurruimte voor het beeldscherm waarvoor uw "
+"afbeelding is gemaakt, normaal gesproken ook het beeldscherm dat u gebruikte "
+"om de afbeelding te schilderen. Er zijn twee standaardwaarden voor gewone "
+"beeldscherm kleurruimtes, en een aangepaste waarde, waarmee u de :guilabel:"
+"`Beeldscherm` opties inschakelt."
 
 #: ../../reference_manual/hdr_display.rst:72
 msgid ""
@@ -212,16 +271,22 @@ msgid ""
 "was made. If you do not have custom selected for :guilabel:`Master Display`, "
 "these are disabled as we can use predetermined values."
 msgstr ""
+"De precieze kleurruimte karakteristieken voor het beeldscherm waarvoor uw "
+"afbeelding is gemaakt. Als u voor :guilabel:`Hoofdscherm` niet aangepast "
+"heeft geselecteerd, dan zijn ze uitgeschakeld omdat we de vooringestelde "
+"waarden kunnen gebruiken."
 
 #: ../../reference_manual/hdr_display.rst:74
 msgid "Red/Green/Blue Primary"
-msgstr ""
+msgstr "Rood/Groen/Blauw Primair"
 
 #: ../../reference_manual/hdr_display.rst:75
 msgid ""
 "The xyY x and xyY y value of the three chromacities of your screen. These "
 "define the gamut."
 msgstr ""
+"De xyY x en xyY y waarden van de drie waarden van de drie chromacities van "
+"uw scherm. Deze bepalen het kleurenbereik."
 
 #: ../../reference_manual/hdr_display.rst:76
 msgid "White Point"
@@ -232,6 +297,8 @@ msgid ""
 "The xyY x and xyY y value of the white point of your screen, this defines "
 "what is considered 'neutral grey'."
 msgstr ""
+"De xyY x en xyY y waarden van het witpunt van uw scherm, dit definieert wat "
+"als 'neutraal grijs' wordt beschouwd."
 
 #: ../../reference_manual/hdr_display.rst:78
 msgid "Min Luminance"
@@ -239,7 +306,7 @@ msgstr "Min. lichtkracht"
 
 #: ../../reference_manual/hdr_display.rst:79
 msgid "The darkest value your screen can show in nits."
-msgstr ""
+msgstr "De donkerste waarde die uw scherm kan laten zien in nits."
 
 #: ../../reference_manual/hdr_display.rst:81
 msgid "Display"
@@ -251,7 +318,7 @@ msgstr "Max. lichtkracht"
 
 #: ../../reference_manual/hdr_display.rst:81
 msgid "The brightest value your screen can show in nits."
-msgstr ""
+msgstr "De helderste waarde die uw scherm kan laten zien in nits."
 
 #: ../../reference_manual/hdr_display.rst:83
 msgid "MaxCLL"
@@ -259,8 +326,8 @@ msgstr "MaxCLL"
 
 #: ../../reference_manual/hdr_display.rst:84
 msgid "The value of the brightest pixel of your animation in nits."
-msgstr ""
+msgstr "De waarde van de helderste pixel in uw animatie in nits."
 
 #: ../../reference_manual/hdr_display.rst:86
 msgid "The average 'brightest value' of the whole animation."
-msgstr ""
+msgstr "De gemiddelde 'helderste waarde' van de hele animatie."

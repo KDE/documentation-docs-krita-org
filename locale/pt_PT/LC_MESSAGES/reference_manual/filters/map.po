@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-04 03:33+0200\n"
-"PO-Revision-Date: 2019-05-18 13:04+0100\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2020-04-26 17:08+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -17,7 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: en Krita guilabel image Kritafiltergradientmap Phong\n"
-"X-POFile-SpellExtra: normals images brushes filters\n"
+"X-POFile-SpellExtra: normals images brushes filters pixelizada Lab\n"
+"X-POFile-IgnoreConsistency: Tiles\n"
 
 #: ../../reference_manual/filters/map.rst:1
 msgid "Overview of the map filters."
@@ -139,3 +140,122 @@ msgstr ""
 "poderá seleccionar os gradientes e alterá-los na hora, assim como usar o "
 "filtro do mapa do gradiente como uma camada de filtragem ou pincel de "
 "filtragem."
+
+#: ../../reference_manual/filters/map.rst:60
+msgid "Color Modes"
+msgstr "Modos de Cores"
+
+#: ../../reference_manual/filters/map.rst:62
+msgid "**Blend:** smoothly blend colors between stops"
+msgstr "**Mistura:** mistura suavemente as cores entre paragens"
+
+#: ../../reference_manual/filters/map.rst:63
+msgid "**Nearest:** selects color from nearest stops"
+msgstr "**Próxima:** selecciona a cor a partir das paragens mais próximas"
+
+#: ../../reference_manual/filters/map.rst:64
+msgid ""
+"**Dither:** dithers between stop colors as per `Dithering Threshold Modes`_."
+msgstr ""
+"**Meios-Tons:** cria meios-tons entre cores das paragens, de acordo com os "
+"`Modos de Limitação de Meios-Tons`_."
+
+#: ../../reference_manual/filters/map.rst:66
+#: ../../reference_manual/filters/map.rst:69
+msgid "Palettize"
+msgstr "Transformar em Paleta"
+
+#: ../../reference_manual/filters/map.rst:66
+msgid "Palette"
+msgstr "Paleta"
+
+#: ../../reference_manual/filters/map.rst:71
+msgid ""
+"Maps the color of the input to the nearest color in the selected palette. "
+"Useful for limiting color in pixel art and for artistic effects."
+msgstr ""
+"Associa a luminosidade dos dados de entrada ao gradiente seleccionado. Útil "
+"para limitar as cores em arte pixelizada e para efeitos artísticos."
+
+#: ../../reference_manual/filters/map.rst:73
+msgid ""
+"Optional dithering may be applied with the covered value range controlled by "
+"the spread value."
+msgstr ""
+"O desenho opcional em meios-tons poderá ser aplicado com a gama de valores "
+"coberta e controlada pelo valor de difusão."
+
+#: ../../reference_manual/filters/map.rst:76
+msgid "Colorspace Modes"
+msgstr "Modos de Espaços de Cores"
+
+#: ../../reference_manual/filters/map.rst:78
+msgid "**Lab:** finds nearest colors in Lab colorspace"
+msgstr "**Lab:** procura as cores mais próximas no espaço de cores Lab"
+
+#: ../../reference_manual/filters/map.rst:79
+msgid "**RGB:** finds nearest colors in RGB colorspace"
+msgstr "**RGB:** procura as cores mais próximas no espaço de cores RGB"
+
+#: ../../reference_manual/filters/map.rst:82
+msgid "Dithering Threshold Modes"
+msgstr "Modo de Limitação de Meios-Tons"
+
+#: ../../reference_manual/filters/map.rst:84
+msgid ""
+"**Pattern:** uses the lightness or alpha value of the selected pattern to "
+"threshold the input color between palette colors"
+msgstr ""
+"**Padrão:** usa a luminosidade ou valor do alfa do padrão seleccionado para "
+"limitar a cor de entrada entre as cores da paleta"
+
+#: ../../reference_manual/filters/map.rst:85
+msgid ""
+"**Noise:** uses a randomly generated value per pixel to threshold the input "
+"color between palette colors"
+msgstr ""
+"**Ruído:** usa um valor gerado aleatoriamente por pixel para limitar a cor "
+"de entrada entre as cores da paleta"
+
+#: ../../reference_manual/filters/map.rst:88
+msgid "Dithering Color Modes"
+msgstr "Modos de Cor dos Meios-Tons"
+
+#: ../../reference_manual/filters/map.rst:90
+msgid ""
+"**Per-Component Offset:** independently offsets each color channel by the "
+"threshold amount, scaled by the offset scale value"
+msgstr ""
+"**Deslocamento Por-Componente:** desloca de forma independente cada um dos "
+"canais de cores de acordo com o valor-limite, cuja escala é ajustada pelo "
+"valor de escala do deslocamento"
+
+#: ../../reference_manual/filters/map.rst:91
+msgid ""
+"**Nearest Colors:** finds the two nearest colors then applies the threshold "
+"amount to the relative distances of the two color to find the resulting color"
+msgstr ""
+"**Cores Mais Próximas:** descobre as duas cores mais próximas e depois "
+"aplica o valor-limite às distâncias relativas entre as duas cores para "
+"descobrir a cor resultante"
+
+#: ../../reference_manual/filters/map.rst:94
+msgid "Dithering Alpha Modes"
+msgstr "Modos do Alfa dos Meios-Tons"
+
+#: ../../reference_manual/filters/map.rst:96
+msgid "**Clip:** thresholds alpha at the clip position"
+msgstr "**Recorte:** limita o alfa na posição do recorte"
+
+#: ../../reference_manual/filters/map.rst:97
+msgid "**Index:** uses the selected palette index as the transparent color"
+msgstr ""
+"**Índice:** usa o índice da paleta seleccionada como a cor transparente"
+
+#: ../../reference_manual/filters/map.rst:98
+msgid ""
+"**Dither:** applies dither to the alpha value as per `Dithering Threshold "
+"Modes`_"
+msgstr ""
+"**Meios-Tons:** aplica o desenho de meios-tons no valor do alfa de acordo "
+"com os `Modos de Limitação de Meios-Tons`_"

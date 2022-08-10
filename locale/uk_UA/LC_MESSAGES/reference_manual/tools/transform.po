@@ -1,15 +1,15 @@
 # Translation of docs_krita_org_reference_manual___tools___transform.po to Ukrainian
-# Copyright (C) 2019 This_file_is_part_of_KDE
+# Copyright (C) 2019-2020 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2019.
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: docs_krita_org_reference_manual___tools___transform\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-08-02 11:37+0300\n"
+"POT-Creation-Date: 2022-03-04 00:39+0000\n"
+"PO-Revision-Date: 2022-03-04 08:42+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -18,7 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.04.0\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: ../../<rst_epilog>:2
+msgid ""
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: mouseleft"
+msgstr ""
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: mouseleft"
 
 #: ../../<rst_epilog>:46
 msgid ""
@@ -33,12 +41,36 @@ msgid "Krita's transform tool reference."
 msgstr "Довідник з інструмента перетворення Krita."
 
 #: ../../reference_manual/tools/transform.rst:13
+#: ../../reference_manual/tools/transform.rst:57
+msgid "Warp"
+msgstr "Викривлення"
+
+#: ../../reference_manual/tools/transform.rst:13
+#: ../../reference_manual/tools/transform.rst:82
+msgid "Cage"
+msgstr "Клітка"
+
+#: ../../reference_manual/tools/transform.rst:13
+#: ../../reference_manual/tools/transform.rst:112
+msgid "Liquify"
+msgstr "Розплавити"
+
+#: ../../reference_manual/tools/transform.rst:13
+#: ../../reference_manual/tools/transform.rst:157
+msgid "Mesh"
+msgstr "Сітка"
+
+#: ../../reference_manual/tools/transform.rst:13
 msgid "Tools"
 msgstr "Інструменти"
 
 #: ../../reference_manual/tools/transform.rst:13
 msgid "Transform"
 msgstr "Перетворити"
+
+#: ../../reference_manual/tools/transform.rst:13
+msgid "Liquefy"
+msgstr "Перетворювати на рідину"
 
 #: ../../reference_manual/tools/transform.rst:18
 msgid "Transform Tool"
@@ -175,10 +207,6 @@ msgstr ".. image:: images/tools/Krita_transforms_perspective.png"
 msgid "Perspective transform."
 msgstr "Перетворення перспективи."
 
-#: ../../reference_manual/tools/transform.rst:57
-msgid "Warp"
-msgstr "Викривлення"
-
 #: ../../reference_manual/tools/transform.rst:59
 msgid ""
 "Warp allows you to deform the image by dragging from a grid or choosing the "
@@ -201,7 +229,7 @@ msgstr ".. image:: images/tools/Krita_transforms_warp.png"
 
 #: ../../reference_manual/tools/transform.rst:69
 msgid ""
-"There are warp options: Rigid, Affine and Similtude. These change the "
+"There are warp options: Rigid, Affine and Similitude. These change the "
 "algorithm used to determine the strength of the deformation. The flexibility "
 "determines, how strong the effect of moving these points are."
 msgstr ""
@@ -240,14 +268,10 @@ msgstr ""
 "Намалювати точки прив'язки вручну. Блокування точок переведе програму у "
 "режим перетворення. Розблокування точок поверне її до режиму редагування."
 
-#: ../../reference_manual/tools/transform.rst:82
-msgid "Cage"
-msgstr "Клітка"
-
 #: ../../reference_manual/tools/transform.rst:84
 msgid ""
 "Create a cage around an image, and when it's closed, you can use it to "
-"deform the image. If you have at the least 3 points on the canvas, you can "
+"deform the image. If you have at least 3 points on the canvas, you can "
 "choose to switch between deforming and editing the existing points."
 msgstr ""
 "Створіть клітку навколо зображення, а потім, коли її буде замкнено, ви "
@@ -270,12 +294,14 @@ msgstr "Скоригувати подільність"
 
 #: ../../reference_manual/tools/transform.rst:95
 msgid ""
-"This adjusts the precision of the cage transform grid. Lower precision gives "
-"more speed but also gives less precise results."
+"This adjusts the precision of the cage transform grid. The lower the value, "
+"the higher the quality of the transformation (and consequently, the lower "
+"the speed). When the granularity is too high, the result starts to look "
+"\"blocky\"."
 msgstr ""
-"За допомогою цього пункту можна скоригувати точність ґратки перетворення "
-"«Клітка». Нижчі значення точності пришвидшуватимуть обробку, але результати "
-"перетворення будуть менш точними."
+"Коригує точність перетворення за ґраткою. Чим меншим є значення, тим вищою є "
+"якість перетворення (і, як наслідок, меншою є його швидкість). Якщо "
+"подільність є надто високою, результат виглядатиму поділеним на блоки."
 
 #: ../../reference_manual/tools/transform.rst:97
 msgid "Preview"
@@ -283,11 +309,11 @@ msgstr "Перегляд"
 
 #: ../../reference_manual/tools/transform.rst:98
 msgid ""
-"Adjusts the granularity of the preview. It is recommended to have this lower "
-"than the :guilabel:`Real` value, as it speeds up adjusting."
+"Adjusts the granularity of the preview. It is recommended to have this "
+"higher than the :guilabel:`Real` value, as it speeds up adjusting."
 msgstr ""
 "Змінює подільність (зернистість) зображення попереднього перегляду. "
-"Рекомендуємо використовувати значення, які є меншими за значення :guilabel:"
+"Рекомендуємо використовувати значення, які є більшими за значення :guilabel:"
 "`Дійсна`, оскільки це пришвидшує коригування."
 
 #: ../../reference_manual/tools/transform.rst:100
@@ -322,10 +348,6 @@ msgstr ""
 "обмежувальної рамки. Обертання можна виконувати натисканням і перетягуванням "
 "курсором поза обмежувальною рамкою. Масштабування виконується так само, лише "
 "з натисканням клавіші :kbd:`Ctrl` перед пересуванням вказівника."
-
-#: ../../reference_manual/tools/transform.rst:112
-msgid "Liquify"
-msgstr "Розплавити"
 
 #: ../../reference_manual/tools/transform.rst:115
 msgid ".. image:: images/tools/Transform_Tool_Options_Liquify.png"
@@ -384,8 +406,8 @@ msgid ".. image:: images/tools/Krita_transforms_liquefy.png"
 msgstr ".. image:: images/tools/Krita_transforms_liquefy.png"
 
 #: ../../reference_manual/tools/transform.rst:131
-msgid "Liquify used to turn an apple into a pear"
-msgstr "Використання розплавлення для перетворення яблука на грушу"
+msgid "Liquify used to turn an apple into a pear."
+msgstr "Використання розплавлення для перетворення яблука на грушу."
 
 #: ../../reference_manual/tools/transform.rst:133
 msgid "In the options for each brush there are:"
@@ -413,7 +435,7 @@ msgstr "Розмір"
 
 #: ../../reference_manual/tools/transform.rst:138
 msgid ""
-"The brush size. The button to the right allow you to let it scale with "
+"The brush size. The button to the right allows you to let it scale with "
 "pressure."
 msgstr ""
 "Розмір пензля. За допомогою кнопки, яку розташовано праворуч, можна "
@@ -470,9 +492,9 @@ msgstr "Розплавлення ліворуч і пензель викривл
 #: ../../reference_manual/tools/transform.rst:152
 msgid ""
 "Krita also has a :ref:`deform_brush_engine` which is much faster than "
-"liquify, but has less quality. If you are attempting to make liquefy a "
+"liquify, but has less quality. If you are attempting to make liquify a "
 "little faster, note that it speeds up with the less information it needs to "
-"process, so working with liquefy within a selection or using liquefy on a "
+"process, so working with liquify within a selection or using liquify on a "
 "separate layer with little on it will greatly enhance the speed."
 msgstr ""
 "Крім того, у Krita передбачено :ref:`deform_brush_engine`, який працює "
@@ -482,11 +504,254 @@ msgstr ""
 "для позначеного фрагмента або окремого шару, де майже нічого немає, може "
 "значно пришвидшити роботу перетворення."
 
-#: ../../reference_manual/tools/transform.rst:155
+#: ../../reference_manual/tools/transform.rst:161
+msgid ""
+"The mesh transform is similar to the warp and the cage transform, except "
+"that its interface uses patches comprised of Bezier curve segments. This "
+"transform mode is particularly useful for placing images and textures on "
+"curved surfaces:"
+msgstr ""
+"Сіткове перетворення є подібним до перетворення викривлення або клітки, але "
+"його інтерфейс використовує фрагменти, складені з сегментів кривих Безьє. "
+"Цей режим перетворення, зокрема, корисний для розташування зображень і "
+"текстур на криволінійних поверхнях:"
+
+#: ../../reference_manual/tools/transform.rst:165
+msgid ".. image:: images/tools/Krita_transforms_mesh.png"
+msgstr ".. image:: images/tools/Krita_transforms_mesh.png"
+
+#: ../../reference_manual/tools/transform.rst:165
+msgid ""
+"Curving a logo to an apple with the mesh transform, with the control points "
+"shown."
+msgstr ""
+"Накладання логотипа на яблуко за допомогою сіткового перетворення із "
+"показаними контрольними точками."
+
+#: ../../reference_manual/tools/transform.rst:167
+msgid ""
+"This is a very keyboard shortcut heavy transform mode. When you start the "
+"transform you will see the overlay, which consists of several nodes that can "
+"be dragged around. You can drag on the segments between the nodes to curve "
+"them precisely, or drag on patches themselves to freely transform them. :kbd:"
+"`Ctrl + Alt +` |mouseleft| :kbd:`+ drag` shortcut on nodes and segments will "
+"allow you to subdivide the mesh. For more precision, enable the control "
+"points in the tool options, so each Bezier segment can be fine-tuned to your "
+"content."
+msgstr ""
+"Це режим перетворення, у якому майже усе керується за допомогою клавіатурних "
+"скорочень. На початку перетворення програма покаже вам накладку, яка "
+"складатиметься із декількох вузлів, які можна довільним чином пересувати "
+"полотном. Ви можете перетягувати сегменти між вузлами для точного "
+"відтворення кривих або перетягувати самі латки для створення потрібного "
+"ефекту. За допомогою комбінації :kbd:`Ctrl + Alt +` |mouseleft| + :kbd:"
+"`перетягування` на вузлах і сегментах ви можете ділити сітку. Щоб підвищити "
+"точність, увімкніть контрольні точки у параметрах інструмента, щоб "
+"коригувати кожен сегмент кривої Безьє за вашими потребами."
+
+#: ../../reference_manual/tools/transform.rst:169
+msgid ""
+"To assist in maintaining the curvature of a mesh, this tool has a concept of "
+"'locked' transform. This mode is signalled by the lock icon in the cursor, "
+"and on by default. When this is enabled, adjusting one segment will also "
+"adjust its neighbouring segment in another patch. You can press :kbd:`Shift` "
+"key while dragging a segment or control point to turn this feature off, "
+"allowing for sharp angles in the mesh. After a sharp angle has been created, "
+"the locked mode will try to keep this as well."
+msgstr ""
+"Щоб спростити підтримання кривини сітки, у цьому інструменті передбачено "
+"можливість «заблокованого» перетворення. Про увімкнення цього режиму "
+"сигналізує піктограма замка на вказівнику. Типово, цей режим увімкнено. З "
+"увімкненим блокуванням коригування сегмента призводить до коригування "
+"сусідніх сегментів в сусідніх латках. Ви можете натиснути і утримувати "
+"клавішу :kbd:`Shift` при перетягуванні сегмента бо контрольної точки, щоб "
+"вимкнути режим блокування і створити гострі кути у сітці. Після створення "
+"гострого кута використання режиму з блокуванням зберігатиме його гостроту."
+
+#: ../../reference_manual/tools/transform.rst:172
+msgid "Shortcuts"
+msgstr "Клавіатурні скорочення"
+
+#: ../../reference_manual/tools/transform.rst:174
+msgid "Node or control point move"
+msgstr "Пересунути вузол або контрольну точку"
+
+#: ../../reference_manual/tools/transform.rst:175
+msgid ""
+"|mouseleft| :kbd:`+ drag` any of the round points. The big ones are the "
+"'nodes' which determine the corners of a patch, and the small ones are the "
+"'control points', which determine the curvature for their associated segment."
+msgstr ""
+"|mouseleft| + :kbd:`перетягування` будь-якої з круглих крапок. Великі крапки "
+"— «вузли», які визначають кути латки, а малі — «контрольні точки», які "
+"визначають кривину пов'язаного із ними сегмента."
+
+#: ../../reference_manual/tools/transform.rst:176
+msgid "Unlocked node or control point move"
+msgstr "Пересування розблокованого вузла або контрольної точки"
+
+#: ../../reference_manual/tools/transform.rst:177
+msgid ":kbd:`Shift +` |mouseleft| :kbd:`+ drag` on a node or control point."
+msgstr ""
+":kbd:`Shift +` |mouseleft| + :kbd:`перетягування` вузла або контрольної "
+"точки."
+
+#: ../../reference_manual/tools/transform.rst:178
+msgid "Locked segment move:"
+msgstr "Пересування заблокованого сегмента:"
+
+#: ../../reference_manual/tools/transform.rst:179
+msgid ""
+"|mouseleft| :kbd:`+ drag` on a segment. As explained above, this will adjust "
+"neighbouring segments as well, to keep the curvature of the node intact."
+msgstr ""
+"|mouseleft| :kbd:`+ перетягування` сегмента. Як пояснено вище, це коригує "
+"також параметри сусідніх сегментів для збереження кривини у вузлі."
+
+#: ../../reference_manual/tools/transform.rst:180
+msgid "Segment move"
+msgstr "Пересування сегмента"
+
+#: ../../reference_manual/tools/transform.rst:181
+msgid ":kbd:`Shift +` |mouseleft| :kbd:`+ drag` on a segment of the mesh."
+msgstr ":kbd:`Shift +` |mouseleft| + :kbd:`перетягування` сегмента сітки."
+
+#: ../../reference_manual/tools/transform.rst:182
+msgid "Free patch deform:"
+msgstr "Довільне деформування латки:"
+
+#: ../../reference_manual/tools/transform.rst:183
+msgid ""
+"|mouseleft| :kbd:`+ drag` on an empty area inside the mesh. This will allow "
+"you to intuitively adjust a segment by just clicking anywhere and dragging. "
+"The whole segment will then adjust all its control points around the point "
+"of the cursor."
+msgstr ""
+"|mouseleft| :kbd:`+ перетягування` на порожнє місце всередині сітки. Це "
+"надає змогу інтуїтивно зрозуміло скоригувати сегмент простим клацанням у "
+"довільному місці із перетягуванням. Увесь сегмент далі коригує усі свої "
+"контрольні точки навколо точки вказівника."
+
+#: ../../reference_manual/tools/transform.rst:185
+msgid ""
+":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ drag` on a border segment to split "
+"the mesh"
+msgstr ""
+":kbd:`Ctrl` + Alt +` |mouseleft| :kbd:`+ перетягування` на межі сегмента для "
+"поділу сітки"
+
+#: ../../reference_manual/tools/transform.rst:186
+msgid "Split mesh or Move/Delete split:"
+msgstr "Поділ сітки або пересування чи вилучення поділу:"
+
+#: ../../reference_manual/tools/transform.rst:186
+msgid ""
+":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ drag` on a node to change the split"
+msgstr ""
+":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ перетягування` вузла для зміни поділу"
+
+#: ../../reference_manual/tools/transform.rst:187
+msgid ""
+":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ drag` away a node to remove the split"
+msgstr ""
+":kbd:`Ctrl + Alt +` |mouseleft| :kbd:`+ перетягування` вузла за межі сітки "
+"для вилучення поділу"
+
+#: ../../reference_manual/tools/transform.rst:188
+msgid "Select multiple nodes"
+msgstr "Позначення декількох вузлів"
+
+#: ../../reference_manual/tools/transform.rst:189
+msgid ""
+":kbd:`Ctrl +` |mouseleft| on a node or control or segment, these can then be "
+"moved"
+msgstr ""
+":kbd:`Ctrl +` |mouseleft| на вузлі, контрольній точці або сегменті — "
+"пересування відповідних елементів"
+
+#: ../../reference_manual/tools/transform.rst:190
+msgid "Move selection or mesh"
+msgstr "Пересування позначеного або сітки"
+
+#: ../../reference_manual/tools/transform.rst:191
+msgid ""
+":kbd:`Shift +` |mouseleft| :kbd:`+ drag` on empty area outside the mesh."
+msgstr ""
+":kbd:`Shift +` + |mouseleft| :kbd:`+ перетягування` на порожнє місце поза "
+"сіткою."
+
+#: ../../reference_manual/tools/transform.rst:192
+msgid "Rotate selection or mesh"
+msgstr "Обертання позначеного або сітки"
+
+#: ../../reference_manual/tools/transform.rst:193
+msgid ""
+"|mouseleft| :kbd:`+ drag` on an empty area outside the mesh, if there is a "
+"selection of nodes, it will rotate only them, otherwise the whole mesh will "
+"be rotated."
+msgstr ""
+"|mouseleft| :kbd:`+ перетягування` на порожнє місце поза сіткою; якщо "
+"позначено вузли, буде виконано їхнє обертання; якщо позначених вузлів немає, "
+"буде виконано обертання усієї сітки."
+
+#: ../../reference_manual/tools/transform.rst:195
+msgid "Scale selection or mesh"
+msgstr "Масштабування позначеного або сітки"
+
+#: ../../reference_manual/tools/transform.rst:195
+msgid ""
+":kbd:`Ctrl +` |mouseleft| :kbd:`+ drag` on empty area outside the mesh, if "
+"there is a selection of nodes, it will scale only them, otherwise the whole "
+"mesh will be scaled."
+msgstr ""
+":kbd:`Ctrl +` |mouseleft| :kbd:`+ перетягування` на порожнє місце поза "
+"сіткою; якщо позначено вузли, буде виконано їхнє масштабування; якщо "
+"позначених вузлів немає, буде виконано масштабування усієї сітки."
+
+#: ../../reference_manual/tools/transform.rst:198
+msgid "Tool options"
+msgstr "Параметри інструмента"
+
+#: ../../reference_manual/tools/transform.rst:199
+msgid "Mesh Size"
+msgstr "Розмір сітки"
+
+#: ../../reference_manual/tools/transform.rst:200
+msgid ""
+"Gives precise controls to change the amount of patches vertically and "
+"horizontally. When increasing or decreasing the amount of patches, Krita "
+"will try to keep the curvature the same, which can be used to your advantage."
+msgstr ""
+"Точні засоби керування зміною кількості латок у вертикальному та "
+"горизонтальному напрямках. При збільшенні або зменшенні кількості латок, "
+"Krita намагається не змінювати кривини, і цим можна скористатися."
+
+#: ../../reference_manual/tools/transform.rst:202
+msgid "Show control points"
+msgstr "Показати контрольні точки"
+
+#: ../../reference_manual/tools/transform.rst:202
+msgid "This will toggle the control points."
+msgstr "Увімкнути або вимкнути показ контрольних точок."
+
+#: ../../reference_manual/tools/transform.rst:205
 msgid "Recursive Transform"
 msgstr "Рекурсивне перетворення"
 
-#: ../../reference_manual/tools/transform.rst:156
+#: ../../reference_manual/tools/transform.rst:209
+msgid ""
+"As of Krita 5.0, the toggle for recursive transform has been removed to "
+"reduce confusion, as this only worked with masks. Recursive transform is on "
+"by default for all contents of a group layer. To achieve non-recursive "
+"transformation you can use the layer lock feature."
+msgstr ""
+"З версії Krita 5.0 перемикач для рекурсивного перетворення було вилучено з "
+"метою запобігти непорозумінням, оскільки він працював лише для масок. У "
+"нових версіях рекурсивне перетворення є типовим для усіх даних групового "
+"шару. Щоб отримати нерекурсивне перетворення, ви можете скористатися "
+"можливістю блокування шарів."
+
+#: ../../reference_manual/tools/transform.rst:211
 msgid ""
 "The little spider icon on the lower-left of the transform tool options is "
 "the :guilabel:`Recursive Transform`."
@@ -495,11 +760,11 @@ msgstr ""
 "невеличкої піктограми із зображенням, подібним до павутини, можна виконати :"
 "guilabel:`Рекурсивне перетворення`."
 
-#: ../../reference_manual/tools/transform.rst:160
+#: ../../reference_manual/tools/transform.rst:215
 msgid ".. image:: images/tools/Krita_transforms_recursive.png"
 msgstr ".. image:: images/tools/Krita_transforms_recursive.png"
 
-#: ../../reference_manual/tools/transform.rst:160
+#: ../../reference_manual/tools/transform.rst:215
 msgid ""
 "Recursive transform transforms all the layers in the group, so with this "
 "apple, both the lineart as the fill will be transformed."
@@ -507,7 +772,7 @@ msgstr ""
 "Рекурсивне перетворення перетворює усі шари у групі, тому у нашому прикладі "
 "з яблуком, буде перетворено графіку і заповнення."
 
-#: ../../reference_manual/tools/transform.rst:162
+#: ../../reference_manual/tools/transform.rst:217
 msgid ""
 "Recursive transform, when toggled, allows you to mass-transform all the "
 "layers in a group when only transforming the group."
@@ -515,17 +780,17 @@ msgstr ""
 "Рекурсивне перетворення, якщо його увімкнено, надає вам змогу пакетно "
 "перетворити усі шари у групі одним перетворенням пункту групи."
 
-#: ../../reference_manual/tools/transform.rst:165
+#: ../../reference_manual/tools/transform.rst:220
 msgid "Continuous Transform"
 msgstr "Неперервне перетворення"
 
-#: ../../reference_manual/tools/transform.rst:167
+#: ../../reference_manual/tools/transform.rst:222
 msgid ""
 "If you apply a transformation, and try to start a new one directly "
 "afterwards, Krita will attempt to recall the previous transform, so you can "
-"continue it. This is the *continuous transform*. You can press the :kbd:"
-"`Esc` key to cancel this and start a new transform, or press :guilabel:"
-"`Reset` in the tool options while no transform is active."
+"continue it. This is a *continuous transform*. You can press the :kbd:`Esc` "
+"key to cancel this and start a new transform, or press :guilabel:`Reset` in "
+"the tool options while no transform is active."
 msgstr ""
 "Якщо ви застосуєте перетворення, а потім одразу започаткуєте нове, Krita "
 "спробує згадати попереднє перетворення, тобто ви зможете його продовжити. Ця "
@@ -534,14 +799,22 @@ msgstr ""
 "або натиснути кнопку :guilabel:`Скинути` на панелі параметрів інструмента, "
 "доки не вибрано перетворення."
 
-#: ../../reference_manual/tools/transform.rst:170
+#: ../../reference_manual/tools/transform.rst:225
 msgid "Transformation Masks"
 msgstr "Маски перетворення"
 
-#: ../../reference_manual/tools/transform.rst:172
+#: ../../reference_manual/tools/transform.rst:227
 msgid ""
-"These allow you make non-destructive transforms, check :ref:`here "
+"These allow you to make non-destructive transforms, check :ref:`here "
 "<transformation_masks>` for more info."
 msgstr ""
 "За допомогою масок можна виконувати неруйнівне перетворення. Ознайомтеся із "
 "вмістом розділу :ref:`transformation_masks`, щоб дізнатися більше."
+
+#~ msgid ""
+#~ "This adjusts the precision of the cage transform grid. Lower precision "
+#~ "gives more speed but also gives less precise results."
+#~ msgstr ""
+#~ "За допомогою цього пункту можна скоригувати точність ґратки перетворення "
+#~ "«Клітка». Нижчі значення точності пришвидшуватимуть обробку, але "
+#~ "результати перетворення будуть менш точними."
