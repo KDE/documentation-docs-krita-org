@@ -1,0 +1,565 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 00:13+0000\n"
+"PO-Revision-Date: 2022-08-07 13:29\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
+"docs_krita_org_reference_manual___dockers___animation_curves.pot\n"
+"X-Crowdin-File-ID: 25641\n"
+
+#: ../../<rst_epilog>:2
+msgid ""
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: mouseleft"
+msgstr ""
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: mouseleft"
+
+#: ../../<rst_epilog>:4
+msgid ""
+".. image:: images/icons/Krita_mouse_right.png\n"
+"   :alt: mouseright"
+msgstr ""
+".. image:: images/icons/Krita_mouse_right.png\n"
+"   :alt: mouseright"
+
+#: ../../reference_manual/dockers/animation_curves.rst:1
+msgid "Overview of the Animation Curves docker."
+msgstr "介绍 Krita 的动画曲线面板。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:11
+msgid "Animation"
+msgstr "动画"
+
+#: ../../reference_manual/dockers/animation_curves.rst:11
+msgid "Animation Curves"
+msgstr "动画曲线"
+
+#: ../../reference_manual/dockers/animation_curves.rst:11
+msgid "Interpolation"
+msgstr "插值"
+
+#: ../../reference_manual/dockers/animation_curves.rst:11
+msgid "Tweening"
+msgstr "中间画/补间/过渡"
+
+#: ../../reference_manual/dockers/animation_curves.rst:16
+msgid "Animation Curves Docker"
+msgstr "动画曲线"
+
+#: ../../reference_manual/dockers/animation_curves.rst:18
+msgid ""
+":program:`Krita`'s :dfn:`Animation Curves Docker` allows artists to animate "
+"the values of some properties over time."
+msgstr ""
+":program:`Krita` 的\\ :dfn:`动画曲线面板`\\ 可以让动画师将某些属性与时间关"
+"联，以此制作动态效果。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:20
+msgid ""
+"When animating a complex cut, it's not unusual to want to animate things "
+"that would be difficult or inefficient to do through drawing alone. In "
+"traditional pen-and-paper animation dating back to the 1920s, special "
+"lighting rigs and purpose-built devices like multiplane cameras were used to "
+"pull off special effects that changed animation forever! Likewise, Krita's "
+"Animation Curves docker allows us to animate more than just the lines on "
+"your canvas, such as a layer's opacity or the position, rotation and scale "
+"of a :ref:`Transform Mask <transformation_masks>`."
+msgstr ""
+"在制作画面内容复杂的动画剪辑时，动画师可能需要制作一些难以通过单纯手绘来呈现"
+"的动态效果。早在 1920 年代的纸笔动画时期，人们已经发明了多层动画摄影机等特殊"
+"手段，为非手绘动画特效带来了革命。Krita 的动画曲线面板让动画师可以操作手绘线"
+"条以外的内容来制作动效：调整图层的透明度、通过\\ :ref:`变形蒙版 "
+"<transformation_masks>`\\ 进行移动、旋转、缩放等。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:22
+msgid ""
+"Because most things can be boiled down to numeric values (for example, "
+"opacity as a percentage or the position of a Transform Mask), and because "
+"computers are great with maths and automation, we can plot and visualize the "
+"change in values over time on a simple 2D graph. What's more, we can also "
+"draw lines and curves that show the computer how we want it to calculate the "
+"values in between each of our plotted keyframe values; a technique known as "
+"interpolation or :dfn:`tweening`."
+msgstr ""
+"许多动效可以被归纳为数值的变化 (透明度的百分数变化、变形蒙版的位置坐标等)，而"
+"计算机程序擅于处理单一数值的变化。动画曲线面板利用了这一特性，在一个图表中显"
+"示了某个数值相对时间的变化，甚至可以通过曲线来精细控制变化的速度。动画师只需"
+"指定曲线上的关键帧，程序会自动通过插值处理 (也叫\\ :dfn:`过渡`\\ ) 来填补关键"
+"帧之间的过渡帧。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:26
+msgid ".. image:: images/dockers/Animation_Curves_Docker.png"
+msgstr ".. image:: images/dockers/Animation_Curves_Docker.png"
+
+#: ../../reference_manual/dockers/animation_curves.rst:28
+msgid "Overview"
+msgstr "界面介绍"
+
+#: ../../reference_manual/dockers/animation_curves.rst:30
+msgid ""
+"As shown in the image above, Krita's Animation Curves Docker can be thought "
+"of as different sections:"
+msgstr "Krita 的动画曲线面板界面如上图所示。它可被分为下面几个部分："
+
+#: ../../reference_manual/dockers/animation_curves.rst:32
+msgid ""
+":dfn:`Utilities` -- The left side of the toolbar gives animators quick "
+"access to all of the widgets that are critical to their workflow; :dfn:"
+"`transport controls` (previous, play/pause, stop and next buttons), a frame "
+"counter, preview controls (speed and drop frames), buttons for adding and "
+"removing :dfn:`scalar keyframes`, buttons for changing the :dfn:"
+"`interpolation mode` and :dfn:`tangent mode` of the selected keyframe, a box "
+"for setting the selected keyframe to a specific value, as well as buttons to "
+"help zoom and navigate the main graph view."
+msgstr ""
+":dfn:`工具按钮` -- 工具栏左侧的按钮用于访问此面板的关键功能：\\ :dfn:`播放控"
+"制按钮` (上一帧、停止、播放/暂停、下一帧)、帧编号数值框、预览设置 (跳帧和速"
+"度)、添加/移除\\ :dfn:`属性关键帧`\\ 的按钮、更改\\ :dfn:`插值模式`\\ 的按"
+"钮、更改所选关键帧的\\ :dfn:`切点插值模式`\\ 的按钮、所选关键帧的数值框、图表"
+"视图的缩放和导航按钮等。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:34
+msgid ""
+":dfn:`Settings` -- While all of the high-traffic controls are presented "
+"directly, the right end of the toolbar also contains buttons for opening "
+"submenus for things like onion skins and settings that you can generally set "
+"and forget (for example, :dfn:`playback range`, :dfn:`frame rate` and :dfn:"
+"`autokey mode`)."
+msgstr ""
+":dfn:`控制按钮` -- 工具栏的右侧显示了一些用于打开/关闭界面元素和面板子菜单的"
+"按钮，如绘图纸外观开关、动画选项菜单 (包括各种杂项，如\\ :dfn:`动画开始帧/结"
+"束帧`\\ 、\\ :dfn:`每秒帧数`\\ 和\\ :dfn:`自动关键帧模式`\\ 等)。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:36
+msgid ""
+":dfn:`Channels List` -- This area shows the various channels of the current "
+"layer that are currently being animated within the Animation Curves Docker. "
+"Each independent channel is associated with a unique color and its "
+"visibility within the graph view can be toggled by clicking on the eyeball "
+"icon."
+msgstr ""
+":dfn:`通道列表` -- 显示当前图层在动画曲线面板中的各个通道。每个独立通道都关联"
+"了一种独立颜色，点击通道列表右侧的“眼睛”按钮，可在曲线图表视图中显示/隐藏该通"
+"道。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:38
+msgid ""
+":dfn:`Graph View` -- Last but not least is the :dfn:`graph view`, the big "
+"graph of values and times that we use to animate the value of parameters "
+"over time. When a :term:`keyframe` is added to the current channel at the "
+"current time it will appear as a colored circle within the graph view. After "
+"clicking on the keyframe to select it, you can change the value by dragging "
+"the circle vertically or by entering a specific value into the value box on "
+"the toolbar. Similarly, you can change the time of the selected frame by "
+"dragging it horizontally. Finally, when the select keyframe is using :"
+"guilabel:`bezier curve interpolation`, selecting it will cause one or more :"
+"dfn:`curve handles` to appear, which can be used to change the shape of the "
+"interpolation curve over time."
+msgstr ""
+":dfn:`图表视图` -- :dfn:`图表视图`\\ 是一个大型数值-时间图表，用于编辑动画曲"
+"线，制作补间动画。在当前通道添加一个\\ :term:`关键帧`\\ ，它在图表视图中会显"
+"示为一个带有颜色的圆点。点击该关键帧即可选中它。要更改关键帧数值，既可以垂直"
+"拖动圆点，也可以世界在工具栏的数值框输入一个数值。要更改关键帧时间点，可以水"
+"平拖动圆点。如果选中的关键帧使用了 :guilabel:`贝塞尔曲线插值` ，选中圆点后将"
+"显示\\ :dfn:`曲线手柄`\\ 用于调整插值曲线在时间维度的形状。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:42
+msgid "Animating Opacity"
+msgstr "基于不透明度的补间动画"
+
+#: ../../reference_manual/dockers/animation_curves.rst:44
+msgid ""
+"Starting with :program:`Krita 5`, we can use the Animation Curves Docker to "
+"animate a layer's :term:`opacity` and, with the help of a :ref:`Transform "
+"Mask <transformation_masks>`, its :dfn:`position`, :dfn:`rotation`, :dfn:"
+"`scale` and :dfn:`shear`."
+msgstr ""
+"从 :program:`Krita 5` 开始，动画曲线面板可以制作基于\\ :term:`不透明度`\\ 变"
+"化的动画，并且可以通过\\ :ref:`变形蒙版 <transformation_masks>`\\ 制作基于"
+"\\ :dfn:`位置`\\ 、\\ :dfn:`旋转`\\ 、\\ :dfn:`缩放`\\ 、\\ :dfn:`斜切`\\ 等"
+"变形效果的动画。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:48
+msgid ""
+"Though the design is pretty similar to the :ref:`timeline_docker`, the "
+"Animation Curves Docker may be a bit confusing or intimidating when you "
+"first open it, especially if you haven't done digital animation before."
+msgstr ""
+"动画曲线面板的外观虽然与\\ :ref:`timeline_docker`\\ 相似，但实际操作方式存在"
+"不少差异。如果你从未制作过数字动画，建议通读本文了解详情，并通过实际操作进行"
+"熟悉。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:50
+msgid "Let's look first at *animating a layer's opacity*:"
+msgstr "现在让我们学习如何制作\\ **基于图层不透明度的动画**\\ ："
+
+#: ../../reference_manual/dockers/animation_curves.rst:52
+msgid ""
+"Say you want to animate something like an expanding cloud of dust that "
+"gradually becomes more transparent as it dissipates, or maybe a haunting "
+"ghost that seems to materialize out of thin air. These types of effects are "
+"pretty hard to get right by traditionally animated line drawings alone, and "
+"that's exactly where the Animation Curves Docker can step in."
+msgstr ""
+"传统动画极度依赖线条，因此不擅长处理某些特效，例如逐渐扩散消失的尘雾、从虚空"
+"中慢慢现身的鬼怪等。动画曲线面板刚好相反，它特别擅长处理这类特效。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:54
+msgid ""
+"After *selecting the layer* that you want to animate the opacity of, you "
+"need to *select the frame time you want the opacity to start changing at* by "
+"clicking somewhere on the :term:`frame timing header` at the top of the "
+"graph view. Just like the :ref:`timeline_docker`, we can click and drag "
+"anywhere on the timing header to \"scrub\" across your animation and preview "
+"the results."
+msgstr ""
+"首先选中需要制作不透明度动画的图层，然后选中不透明度\\ **开始发生变化**\\ 的"
+"帧时间。点击或拖动在图表视图顶部的\\ :term:`帧时间表头`\\ ，可以像使用\\ :"
+"ref:`timeline_docker`\\ 时一样跳转时间点或滑动当前时间指示器 (播放头)，让你可"
+"以通过手动滑动来预览动画的效果。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:56
+msgid ""
+"Next we create our first scalar :term:`keyframe` by clicking on the :"
+"guilabel:`add keyframe` button on the docker's titlebar."
+msgstr ""
+"选好时间点后，点击动画曲线工具栏中的 :guilabel:`添加属性关键帧` 按钮，添加一"
+"个\\ :term:`keyframe`\\ 。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:58
+msgid ""
+"When you do this you'll notice two things happen. First, a new :guilabel:"
+"`opacity channel` will appear in the :dfn:`channels list` on the left-hand "
+"side, next to a colored mark that's associated with the color of the "
+"keyframes and curves in the :dfn:`graph view`. Second, a single keyframe "
+"will appear somewhere inside the graph view at the currently active time."
+msgstr ""
+"创建属性关键帧后，一个新的 :guilabel:`不透明度通道` 将被显示到面板左侧的\\ :"
+"dfn:`通道列表`\\ ，它的左侧显示了这个通道所关联的颜色，此通道在\\ :dfn:`图表"
+"视图`\\ 中的关键帧和曲线将按此颜色显示。与此同时，一个属性关键帧将被添加到图"
+"表视图的当前活动时间点。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:60
+msgid ""
+"Of course it takes more than a single point to make a line or curve, so we "
+"have a little bit more work to do."
+msgstr "然而只有一个点是不能被叫做“曲线”的，我们接下来还要添加更多的点。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:62
+msgid ""
+"Just like our first keyframe, we need to make a second keyframe. Let's "
+"change the active frame time again (by clicking or scrubbing across the "
+"timing header) and add another keyframe at that new time (by clicking on "
+"the :guilabel:`add keyframe` button). As you'd expect, a second keyframe has "
+"appeared at the new time and a straight line has appeared between them."
+msgstr ""
+"要创建第 2 个关键帧，首先要更改当前活动时间。在帧时间表头点击或拖动，选择一个"
+"新的时间点，然后点击 :guilabel:`添加属性关键帧` 按钮，即可在图表视图中添加第 "
+"2 个属性关键帧，第 1 帧和第 2 帧之间以一条直线相连。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:64
+msgid ""
+"With the active time still over our new keyframe, you'll find that as you "
+"change the :dfn:`opacity slider` above the :ref:`layer_docker` the new "
+"keyframe that we've created will move up and down. Likewise, moving the "
+"keyframe up and down will cause the opacity *at that time* to change."
+msgstr ""
+"确保当前活动时间位于第 2 关键帧，然后拖动位于\\ :ref:`layer_docker`\\ 顶部的"
+"\\ :dfn:`不透明度滑动条`\\ ，你会发现动画曲线图表视图中的第 2 关键帧会随之上"
+"下移动，反之亦然。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:66
+msgid ""
+"And just like that, when you press the :guilabel:`play button` you'll see "
+"the opacity of the layer animate over time!"
+msgstr ""
+"就这样，一段透明度变化的简易动画就制作完毕了。点击动画曲线面板工具栏的 :"
+"guilabel:`播放按钮` 即可看到图层的透明度随着时间变化。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:70
+msgid ""
+"Unlike traditional methods, animating with curves can cause values to change "
+"across every frame of your animation. This can be more demanding on your "
+"machine and cause the caching process to take a little bit more time, as it "
+"calculates and stores each frame."
+msgstr ""
+"和逐帧手绘动画不同，基于动画曲线制作的动画会让每帧的属性数值都发生变化。由于"
+"每一帧都需要计算并存储内容，这会对电脑性能提出更高的要求，缓存过程也会将耗费"
+"更长时间。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:72
+msgid ""
+"*Before we move on*, let's use :dfn:`interpolation curves` instead of a "
+"straight line to change the timing and general feel of our opacity animation."
+msgstr ""
+"我们还可以使用\\ :dfn:`插值曲线`\\ 来代替插值直线，使动画的透明度变化过程更加"
+"生动。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:74
+msgid ""
+"If you select the first keyframe (the one on the left-hand side) of your "
+"line segment and click on the :guilabel:`bezier curve interpolation` button "
+"in the utilities section of the titlebar, you'll notice that the keyframe "
+"will appear as a hollow circle on the graph view. That hollow circle is a :"
+"dfn:`handle`, and by clicking on it and dragging in different directions you "
+"can change the arc of the curve between your two keyframes."
+msgstr ""
+"选中第 1 关键帧，点击动画曲线面板工具栏中的 :guilabel:`贝塞尔曲线插值` 按钮，"
+"图表视图中代表第 1 关键帧的实心圆点将变成一个空心圆圈。此空心圆圈是贝塞尔曲线"
+"的\\ :dfn:`调整手柄`\\ ，点击并拖动它即可使第 1 关键帧和第 2 关键帧之间的曲线"
+"发生变化。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:76
+msgid ""
+"Similarly, you can click on the :guilabel:`linear interpolation` button to "
+"change your curve back into a line, or the :guilabel:`constant` button to "
+"turn off interpolation altogether, causing values to jump suddenly between "
+"keyframes."
+msgstr ""
+"你还可以点击旁边的 :guilabel:`线性插值` 按钮，将插值方式改回直线方式；你也可"
+"以点击它右边的 :guilabel:`无插值` 按钮，关闭所有插值效果，这样数值会在下一关"
+"键帧之前保持不变，然后在下一关键帧处直接跳跃到新的数值。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:80
+msgid ""
+"It's important to be aware of which animation frame is selected and active, "
+"as shown by the highlighted vertical line on the graph view. The keyframe "
+"that changes as you make adjustments elsewhere in the program will always be "
+"dependent on the active frame time!"
+msgstr ""
+"当前帧时间决定了你正在更改的关键帧是哪一帧。请时刻关注图表视图中的垂直高亮"
+"线，它是当前帧时间指示器 (播放头)。你正在更改的关键帧永远是位于此位置的那一"
+"帧。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:82
+msgid ""
+"*Ok, it's a bit tough to put in writing...* But it's not so bad once you get "
+"the hang of it!"
+msgstr ""
+"说了这么多，你是不是觉得有点太复杂了？不过实际上这却出乎意料地简单！只要你跟"
+"随本文一步步操作，多试几遍，很快就能掌握。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:86
+msgid "Animating Transform Masks"
+msgstr "基于变形蒙版的补间动画"
+
+#: ../../reference_manual/dockers/animation_curves.rst:88
+msgid ""
+"Now let's talk a bit about how we can use a :ref:`transformation_masks` to "
+"*animate our layer's position, rotation, scale and shear* for :dfn:`"
+"\"tweening\"` effects:"
+msgstr ""
+"接下来我们将介绍如何使用\\ :ref:`transformation_masks`\\ 来制作图层的移动、旋"
+"转、缩放、斜切等变形类\\ :dfn:`补间动画`\\ ："
+
+#: ../../reference_manual/dockers/animation_curves.rst:90
+msgid ""
+"Animating a transform mask is a lot like animating opacity, but first we "
+"need to *add a Transform Mask*. (You can do this by |mouseright| on the "
+"layer that you want to animate, and then :menuselection:`Add --> Transform "
+"Mask`.)"
+msgstr ""
+"基于变形蒙版的动画和基于不透明度的动画大同小异，但需要先为图层添加一个\\ **变"
+"形蒙版**\\ 。请在想要制作变形蒙版动画的图层上点击右键 |mouseright| ，选择 :"
+"menuselection:`添加 --> 变形蒙版`\\ 。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:92
+msgid ""
+"Transform Masks allow us to :dfn:`transform` (translate, rotate, scale, or "
+"shear) the layer that they are attached to, without affecting its original "
+"position. And (starting with Krita 5) they also allow us to animate a "
+"layer's transform!"
+msgstr ""
+"变形蒙版的功能是对它关联的图层进行\\ :dfn:`变形操作` (移动、旋转、缩放、斜切"
+"等)，且不会修改原图层的实际内容。Krita 从 5.0 版开始支持在动画制作中使用变形"
+"蒙版。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:94
+msgid ""
+"Much like how we animated opacity above, we need to add our first "
+"transformation keyframe. To do this, *first make sure that you have your "
+"layer's Transform Mask selected*, and then click on the :guilabel:`add "
+"keyframe` button at the top of the docker."
+msgstr ""
+"和不透明度动画时一样，我们要先添加第 1 关键帧。在添加关键帧前，请确保你已经选"
+"中了目标图层的\\ **变形蒙版**\\ ，然后点击动画曲线面板工具栏中的 :guilabel:`"
+"添加属性关键帧` 按钮。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:98
+msgid ""
+"Remember (as of Krita 5.0) we can only *directly* animate the opacity curve "
+"of a layer. In order to animate a layer's position, rotation, scale and "
+"shear, we need to attach a Transform Mask and animate it instead."
+msgstr ""
+"请牢记：Krita 在 5.0 版时只能在动画曲线中\\ **直接**\\ 控制图层的不透明度。变"
+"形有关的动画曲线只能在变形蒙版上进行应用。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:100
+msgid ""
+"As such, *when you have a regular paint layer selected* the Animation Curves "
+"Docker will automatically add opacity keyframes, and *when you have a "
+"transform mask selected* the Animation Curves Docker will automatically add "
+"transformation keyframes."
+msgstr ""
+"正因为如此，当你选中了一个\\ **普通图层**\\ 时，动画曲线面板的添加属性关键帧"
+"按钮将自动添加\\ **不透明度属性关键帧**\\ 。而当你选中了一个\\ **变形蒙版**"
+"\\ 时，添加属性关键帧按钮将自动添加\\ **变形属性关键帧**\\ 。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:102
+msgid ""
+"Try to always keep in mind what type of layer you have selected when "
+"animating curves in Krita!"
+msgstr ""
+"在创建所需的动画曲线属性关键帧之前，请记得确保你已经选择了对应的图层类型！"
+
+#: ../../reference_manual/dockers/animation_curves.rst:104
+msgid ""
+"You should see a whole bunch of channels appear in the channels list, each "
+"with a unique name and color, as well as a number of corresponding keyframes."
+msgstr ""
+"添加一个关键帧后，通道列表中将出现一大堆列表，每个通道都有一个独立的名称和颜"
+"色，在图表视图中也会有一个对应的关键帧。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:106
+msgid ""
+"If you want to you can edit these key frames directly in the graph view, but "
+"it's probably more intuitive to do it directly on the canvas. So now, when "
+"you use the :ref:`Transform Tool <transform_tool>` on your :ref:"
+"`transformation_masks`, you should see the various keyframes of each channel "
+"moving around in the graph view to reflect the changes."
+msgstr ""
+"你可以直接在图表视图中通过拖动或者数值框来编辑这些关键帧，但这样做不够直观。"
+"你可以先选中要变形的\\ :ref:`transformation_masks`\\ ，然后切换到\\ :ref:`变"
+"形工具 <transform_tool>`\\ 。在使用变形工具进行变形\\ **并确认后**\\ ，你会看"
+"到图表视图中的对应关键帧随之发生移动。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:110
+msgid ""
+"Animating a Transform Mask spawns a lot of channels but, depending on your "
+"goals, you may only want to work with a small number of them at a time. "
+"*Hiding* and *soloing* channels in the channels list can make it much easier "
+"to see and edit curves, especially since you can use the :guilabel:`zoom to "
+"channel` and :guilabel:`zoom to curve` buttons at the top of the docker to "
+"fit the graph view to the currently visible channels."
+msgstr ""
+"为变形蒙版添加属性关键帧后会生成一大堆通道，但你可能只会用到其中的几个通道。"
+"你可以点击眼睛图标隐藏不需要的通道，也可以按住 Shift 点击眼睛图标来单独显示某"
+"个通道。这些功能可以配合动画曲线面板工具栏中的 :guilabel:`缩放视图以适合通道"
+"范围` 按钮和 :guilabel:`缩放视图以适合曲线` 按钮发挥很大作用。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:112
+msgid ""
+"Navigating by click-dragging on the zoomable scrollbars and *values header* "
+"(on the left-hand side of the graph view) can also really help with editing "
+"curves!"
+msgstr ""
+"你可以拖动动画曲线面板底部的\\ **可缩放滚动条**\\ 、图表视图右侧的\\ **数值表"
+"头**\\ ，对图表视图进行缩放控制。具体操作请见后文。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:114
+msgid ""
+"Finally, click or scrub to a different frame time, add another keyframe, and "
+"use the Transform Tool on the same Transform Mask again."
+msgstr ""
+"最后，在帧时间表头上点击或者滑动，选择一个新的时间点，插入另一个属性关键帧，"
+"确保选中的是同一个变形蒙版，然后使用变形工具对其进行变形，\\ **变形完成后记得"
+"按回车确认**\\ ！"
+
+#: ../../reference_manual/dockers/animation_curves.rst:116
+msgid ""
+"Press the :guilabel:`play button` and (after a little bit of caching) there "
+"you have it, a layer with an animated Transform Mask!"
+msgstr ""
+"点击 :guilabel:`播放按钮` ，等待 Krita 完成缓存操作，然后你就能看到制作好的基"
+"于变形蒙版的动画了！"
+
+#: ../../reference_manual/dockers/animation_curves.rst:120
+msgid "Controls"
+msgstr "操作列表"
+
+#: ../../reference_manual/dockers/animation_curves.rst:122
+msgid ":dfn:`Channels List`"
+msgstr ":dfn:`通道列表`"
+
+#: ../../reference_manual/dockers/animation_curves.rst:124
+msgid "|mouseleft| on Eye Icon: Toggle show/hide channel."
+msgstr "左键点击 |mouseleft| 眼睛图标：显示/隐藏通道。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:125
+msgid ":kbd:`Shift +` |mouseleft| on Eye Icon: Solo channel."
+msgstr ":kbd:`Shift +` 左键点击 |mouseleft| 眼睛图标：单独显示通道。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:126
+msgid "|mouseright| : Open layer or channel context menu. [Reset Channel(s)]"
+msgstr "右键点击 |mouseright|\\ ：打开图层或通道右键菜单 (重置通道)。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:128
+msgid ":dfn:`Graph View`"
+msgstr ":dfn:`图表视图`"
+
+#: ../../reference_manual/dockers/animation_curves.rst:130
+msgid "|mouseleft| : Select keyframe."
+msgstr "左键点击 |mouseleft|\\ ：选择关键帧。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:131
+msgid "|mouseleft| :kbd:`+ drag` : *Move* frame(s)."
+msgstr "左键点击 |mouseleft| :kbd:`+ 拖动`\\ ：移动关键帧。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:132
+msgid "|mouseleft| double-click : Select all keyframes at time."
+msgstr "左键双击 |mouseleft|\\ ：同时选中所有关键帧。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:133
+msgid ""
+":kbd:`Alt +` |mouseleft| double-click : Select all keyframes of channel."
+msgstr ":kbd:`Alt +`左键双击 |mouseleft|\\ ：选择该通道的所有关键帧。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:134
+msgid ":kbd:`Space +` |mouseleft| : Pan."
+msgstr ":kbd:`空格键 +` 左键拖动 |mouseleft|\\ ：左右平移图表视图。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:135
+msgid ":kbd:`Space +` |mouseright| : Zoom."
+msgstr ":kbd:`空格键 +` 右键拖动 |mouseright|\\ ：缩放图表视图。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:137
+msgid ":dfn:`Frame Timing Header`"
+msgstr ":dfn:`帧时间表头`"
+
+#: ../../reference_manual/dockers/animation_curves.rst:139
+msgid "|mouseleft| : Move to time and select frame of the active layer."
+msgstr ""
+"左键点击 |mouseleft|\\ ：跳转切换到当前时间点，并选择活动图层中对应的帧 (请注"
+"意：此操作不会切换活动图层)。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:140
+msgid ""
+"|mouseleft| :kbd:`+ drag` : Scrub through time and select frame of the "
+"active layer."
+msgstr ""
+"左键点击 |mouseleft| :kbd:` + 拖动`\\ ：滑动切换当前时间点，并选择活动图层中"
+"对应的帧。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:142
+msgid ":dfn:`Value Header`"
+msgstr ":dfn:`数值表头`"
+
+#: ../../reference_manual/dockers/animation_curves.rst:144
+msgid "|mouseleft| :kbd:`+ drag` : Zoom graph view."
+msgstr "左键点击 |mouseleft| :kbd:`+ 拖动`\\ ：缩放图表视图。"
+
+#: ../../reference_manual/dockers/animation_curves.rst:145
+msgid ":kbd:`Space +` |mouseleft| :kbd:`+ drag` : Pan graph view."
+msgstr ":kbd:`空格键 +` 左键点击 |mouseleft| :kbd:`+ 拖动`\\ ：平移图表视图。"

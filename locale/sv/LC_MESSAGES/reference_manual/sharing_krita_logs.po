@@ -1,0 +1,726 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2021-08-28 11:35+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid ""
+"# if you have Krita installed from repositories, you may need to only write "
+"'gdb krita'\n"
+"# if not, write the path to the executable file\n"
+"gdb path/to/krita"
+msgstr ""
+"# Om Krita är installerad från arkiv, kan det räcka att bara skriva 'gdb "
+"krita'\n"
+"# skriv annars sökvägen till den körbara filen\n"
+"gdb sökväg/till/krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid "set pagination off"
+msgstr "set pagination off"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid "run"
+msgstr "run"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid "thread apply all bt"
+msgstr "thread apply all bt"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid "thread apply all bt full"
+msgstr "thread apply all bt full"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid "lldb /Applications/krita.app/Contents/MacOS/krita"
+msgstr "lldb /Applications/krita.app/Contents/MacOS/krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid "thread backtrace all"
+msgstr "thread backtrace all"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid ""
+"# On Linux, if installed from repositories:\n"
+"krita\n"
+"# On Linux, in all other cases:\n"
+"#  (remember that if you want to reference a file from the directory\n"
+"#   you're currently in, you need to write: './krita_filename' instead of "
+"'krita_filename'\n"
+"#   and remember that this file need to have execution rights to be "
+"executed)\n"
+"path/to/krita"
+msgstr ""
+"# På Linux,  om installerad från arkiv:\n"
+"krita\n"
+"# På Linux, i alla andra fall:\n"
+"#  (kom ihåg att om man vill referera till en fil från katalogen som för\n"
+"#   närvarande används. måste man skriva: './krita_filnamn' istället för "
+"'krita_filnamn'\n"
+"#   och kom ihåg att filen måste ha körrättigheter för att kunna köras)\n"
+"sökväg/till/krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid ""
+"# On macOS:\n"
+"/Applications/krita.app/Contents/MacOS/krita"
+msgstr ""
+"# På macOS:\n"
+"/Applications/krita.app/Contents/MacOS/krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid ""
+"REM  On Windows:\n"
+"REM  By default, cmd.exe will prefer running the .COM file over the .EXE, "
+"so\n"
+"REM  you may also leave out the .COM file extension.\n"
+"\"C:\\Program Files\\Krita (x64)\\bin\\krita.com\""
+msgstr ""
+"REM  På Windows:\n"
+"REM  Normalt föredrar cmd.exe att köra .COM-filer hellre än .EXE, så\n"
+"REM  man kan också utelämna filändelsen .COM.\n"
+"\"C:\\Program Files\\Krita (x64)\\bin\\krita.com\""
+
+#: ../../reference_manual/sharing_krita_logs.rst:1
+msgid "How to get a Krita Usage Log, Krita's backtrace or Krita's text output."
+msgstr ""
+"Hur man får en användningslogg, bakåtspårning eller textutmatning från Krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:11
+msgid "Backtrace"
+msgstr "Bakåtspårning "
+
+#: ../../reference_manual/sharing_krita_logs.rst:11
+msgid "Debug"
+msgstr "Felsökning"
+
+#: ../../reference_manual/sharing_krita_logs.rst:11
+msgid "Log"
+msgstr "Logg"
+
+#: ../../reference_manual/sharing_krita_logs.rst:16
+msgid "Getting Krita logs"
+msgstr "Skapa loggar med Krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:19
+msgid ""
+"There are three different kinds of logs that Krita can produce. Depending on "
+"the issue, you might be asked for a specific one or for all of them. This "
+"page will tell you how to gather the necessary information to give to Krita "
+"developers or user supporters."
+msgstr ""
+"Det finns tre olika loggar som Krita kan skapa. Beroende på problemet kan du "
+"bli tillfrågad om en specifik av dem eller alla. Den här sidan talar om hur "
+"man samlar in den nödvändiga informationen att ge till Kritas utvecklare "
+"eller användarsupport."
+
+#: ../../reference_manual/sharing_krita_logs.rst:22
+msgid ""
+":ref:`Krita Usage Log <krita_usage_log>` -- this log contains your last 10 "
+"Krita sessions (one session means opening Krita). It shows times when you "
+"opened it, basic information about your system and Krita, and all files you "
+"created, opened and saved, including all auto-saves."
+msgstr ""
+":ref:`Kritas användningslogg <krita_usage_log>`: Loggen innehåller de tio "
+"senaste Krita-sessionerna (en session betyder att starta Krita). Den visar "
+"tider när det startades, grundläggande information om systemet och Krita, "
+"och alla filer som skapades, öppnades och sparades, inklusive alla som "
+"sparades automatiskt."
+
+#: ../../reference_manual/sharing_krita_logs.rst:23
+msgid ""
+":ref:`System information <getting_system_information>` -- this is not "
+"exactly a log, but a file that contains detailed system information related "
+"to Krita."
+msgstr ""
+":ref:`Systeminformation <getting_system_information>`: Det är inte "
+"egentligen en logg, men en fil som innehåller detaljerad systeminformation "
+"relaterad till Krita."
+
+#: ../../reference_manual/sharing_krita_logs.rst:24
+msgid ""
+":ref:`Crash log/backtrace <getting_backtrace>` -- this log is created when "
+"Krita closes incorrectly because of an internal issue. This log is often "
+"necessary to get the issue fixed if developers cannot reproduce issue "
+"(repeat steps to get the crash)."
+msgstr ""
+":ref:`Kraschlogg/bakåtspårning <getting_backtrace>`: Loggen skapas när Krita "
+"stängs på ett felaktigt sätt på grund av ett internt problem. Loggen är ofta "
+"nödvändig för att rätta problemet om utvecklarna inte kan reproducera "
+"problemet (upprepa stegen för att få kraschen)."
+
+#: ../../reference_manual/sharing_krita_logs.rst:25
+msgid ""
+":ref:`Krita console output/Log Viewer output/DebugView output "
+"<krita_console_debugview>` -- this log contains anything random that Krita "
+"felt the need to report. It often contains some useful additional "
+"information that can help solving the issue."
+msgstr ""
+":ref:`Kritas terminalutmatning/Loggvisningsutmatning/DebugView-utmatning "
+"<krita_console_debugview>`: Loggen innehåller allt godtyckligt som Krita "
+"kände behov av att rapportera. Den innehåller ofta någon ytterligare "
+"användbar information som kan hjälpa till att lösa problemet."
+
+#: ../../reference_manual/sharing_krita_logs.rst:30
+msgid "Quick access"
+msgstr "Snabbåtkomst"
+
+#: ../../reference_manual/sharing_krita_logs.rst:32
+#: ../../reference_manual/sharing_krita_logs.rst:78
+#: ../../reference_manual/sharing_krita_logs.rst:111
+#: ../../reference_manual/sharing_krita_logs.rst:132
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../reference_manual/sharing_krita_logs.rst:34
+#: ../../reference_manual/sharing_krita_logs.rst:41
+#: ../../reference_manual/sharing_krita_logs.rst:48
+msgid ":ref:`Krita Usage Log <krita_usage_log>`"
+msgstr ":ref:`Kritas användningslogg <krita_usage_log>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:35
+#: ../../reference_manual/sharing_krita_logs.rst:42
+#: ../../reference_manual/sharing_krita_logs.rst:49
+msgid ":ref:`System information <getting_system_information>`"
+msgstr ":ref:`Systeminformation <getting_system_information>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:36
+msgid ":ref:`Backtrace  <getting_backtrace_windows>`"
+msgstr ":ref:`Bakåtspårning  <getting_backtrace_windows>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:37
+msgid ""
+"Krita text output from :ref:`Log Viewer (in GUI) "
+"<krita_text_output_logviewer>`, :ref:`console <krita_text_output_console>` "
+"or :ref:`DebugView (external application) <using_debug_view>`"
+msgstr ""
+"Kritas textutmatning från :ref:`Loggvisning (i det grafiska "
+"användargränssnittet) <krita_text_output_logviewer>`, :ref:`terminal "
+"<krita_text_output_console>` eller :ref:`DebugView (externt program) "
+"<using_debug_view>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:39
+#: ../../reference_manual/sharing_krita_logs.rst:76
+#: ../../reference_manual/sharing_krita_logs.rst:109
+#: ../../reference_manual/sharing_krita_logs.rst:141
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../reference_manual/sharing_krita_logs.rst:43
+msgid ":ref:`Backtrace  <getting_backtrace_linux>`"
+msgstr ":ref:`Bakåtspårning  <getting_backtrace_linux>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:44
+#: ../../reference_manual/sharing_krita_logs.rst:51
+msgid ""
+"Krita text output from :ref:`Log Viewer (in GUI) "
+"<krita_text_output_logviewer>` or :ref:`console <krita_text_output_console>`"
+msgstr ""
+"Kritas textutmatning från :ref:`Loggvisning (i det grafiska "
+"användargränssnittet) <krita_text_output_logviewer>` eller :ref:`terminalen "
+"<krita_text_output_console>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:46
+#: ../../reference_manual/sharing_krita_logs.rst:81
+#: ../../reference_manual/sharing_krita_logs.rst:114
+#: ../../reference_manual/sharing_krita_logs.rst:198
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../reference_manual/sharing_krita_logs.rst:50
+msgid ":ref:`Backtrace  <getting_backtrace_mac>`"
+msgstr ":ref:`Bakåtspårning <getting_backtrace_mac>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:60
+msgid "Krita Usage Log"
+msgstr "Krita användningslogg"
+
+#: ../../reference_manual/sharing_krita_logs.rst:63
+#: ../../reference_manual/sharing_krita_logs.rst:96
+#: ../../reference_manual/sharing_krita_logs.rst:242
+msgid "Through GUI"
+msgstr "Via det grafiska användargränssnittet"
+
+#: ../../reference_manual/sharing_krita_logs.rst:66
+msgid ""
+"The easiest way to get Krita Usage Log is through Krita's GUI. Go to  :"
+"menuselection:`Help --> Show Krita Log for bug reports`. A new dialog will "
+"open, showing the content of the log."
+msgstr ""
+"Det enklaste sättet att hämta Kritas användningslogg är via Kritas grafiska "
+"användargränssnitt. Gå till :menuselection:`Hjälp --> Visa Krita logg för "
+"felrapporter`. En ny dialogruta öppnas, som visar loggens innehåll."
+
+#: ../../reference_manual/sharing_krita_logs.rst:70
+#: ../../reference_manual/sharing_krita_logs.rst:103
+msgid "From the file system"
+msgstr "Från filsystemet"
+
+#: ../../reference_manual/sharing_krita_logs.rst:72
+#: ../../reference_manual/sharing_krita_logs.rst:105
+msgid ""
+"Sometimes however it is not possible to use Krita's GUI, for example when it "
+"doesn't even open. Since logs are regular text files, you can get them from "
+"your file system by yourself."
+msgstr ""
+"Ibland är det dock inte möjligt att använda Kritas grafiska "
+"användargränssnitt, exempelvis när det inte ens visas. Eftersom loggar är "
+"vanliga textfiler, kan man hämta dem från filsystemet själv."
+
+#: ../../reference_manual/sharing_krita_logs.rst:74
+msgid "The file is called :file:`krita.log`. Location of the file:"
+msgstr "Filen heter :file:`krita.log`. Filens plats:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:77
+msgid ":file:`$HOME/.local/share/krita.log`"
+msgstr ":file:`$HOME/.local/share/krita.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:79
+msgid ":file:`%LOCALAPPDATA%\\\\krita.log`"
+msgstr ":file:`%LOCALAPPDATA%\\\\krita.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:81
+msgid ":file:`$HOME/Library/Application Support/krita.log`"
+msgstr ":file:`$HOME/Library/Application Support/krita.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:85
+msgid ""
+"In Windows you can simply paste this path into the Windows Explorer's search "
+"box, on the top bar, and it will find the file for you."
+msgstr ""
+"På Windows kan man helt enkelt klistra in sökvägen i sökrutan på Windows "
+"utforskare, på den övre raden, så hittar den filen åt dig."
+
+#: ../../reference_manual/sharing_krita_logs.rst:93
+msgid "System information related to Krita"
+msgstr "Systeminformation relaterad till Krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:99
+msgid ""
+"The easiest way to get system information related to Krita is through "
+"Krita's GUI. Go to  :menuselection:`Help --> Show system information for bug "
+"reports`. A new dialog will open, showing the content."
+msgstr ""
+"Det enklaste sättet att hämta systeminformation relaterad till Krita är via "
+"Kritas grafiska användargränssnitt. Gå till :menuselection:`Hjälp --> Visa "
+"systeminformation för felrapporter`. En ny dialogruta öppnas, som visar "
+"innehållet."
+
+#: ../../reference_manual/sharing_krita_logs.rst:107
+msgid "The file is called :file:`krita-sysinfo.log`. Location of the file:"
+msgstr "Filen heter :file:`krita-sysinfo.log`. Filens plats:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:110
+msgid ":file:`$HOME/.local/share/krita-sysinfo.log`"
+msgstr ":file:`$HOME/.local/share/krita-sysinfo.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:112
+msgid ":file:`%LOCALAPPDATA%\\\\krita-sysinfo.log`"
+msgstr ":file:`%LOCALAPPDATA%\\\\krita-sysinfo.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:114
+msgid ":file:`$HOME/Library/Application Support/krita-sysinfo.log`"
+msgstr ":file:`$HOME/Library/Application Support/krita-sysinfo.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:118
+msgid ""
+"In Windows you can simply paste this path into the file browser textbox on "
+"the top bar and it will find you the file."
+msgstr ""
+"På Windows kan man helt enkelt klistra in sökvägen i filbläddrarens textruta "
+"på den övre raden, så hittar den filen åt dig."
+
+#: ../../reference_manual/sharing_krita_logs.rst:124
+msgid "Crash log and backtrace"
+msgstr "Kraschlogg och bakåtspårning"
+
+#: ../../reference_manual/sharing_krita_logs.rst:126
+msgid "Location and the way to get a backtrace is different on all systems."
+msgstr ""
+"Platsen och sättet att skapa en bakåtspårning skiljer sig på alla system."
+
+#: ../../reference_manual/sharing_krita_logs.rst:134
+msgid ""
+"Usually, it is sufficient to share the content of :menuselection:`Help --> "
+"Show Krita Log for bug reports` as it contains the backtrace."
+msgstr ""
+"Oftast är det tillräckligt att dela innehållet under :menuselection:`Hjälp --"
+"> Visa Kritas logg för felrapporter` eftersom den innehåller bakåtspårningen."
+
+#: ../../reference_manual/sharing_krita_logs.rst:136
+msgid ""
+"If you cannot open Krita because it crashes on startup, please provide the :"
+"file:`%LOCALAPPDATA%\\\\kritacrash.log`. Sometimes more detailed information "
+"is needed, then you will be asked to closely follow :ref:`Dr. Mingw debugger "
+"<dr_minw>` guide."
+msgstr ""
+"Om det inte går att öppna Krita eftersom det kraschar vid start, "
+"tillhandahåll då filen :file:`%LOCALAPPDATA%\\\\kritacrash.log`. Ibland "
+"behövs mer detaljerad information, och i så fall blir du tillfrågad om att "
+"följa handledningen :ref:`Dr. Mingw avlusare <dr_minw>` noggrant."
+
+#: ../../reference_manual/sharing_krita_logs.rst:143
+msgid "On Linux, there are five ways of installing Krita."
+msgstr "På Linux finns det fem sätt att installera Krita."
+
+#: ../../reference_manual/sharing_krita_logs.rst:145
+msgid "Using distribution packages"
+msgstr "Använda distributionspaket"
+
+#: ../../reference_manual/sharing_krita_logs.rst:146
+msgid "Building Krita yourself from source"
+msgstr "Bygga Krita själv från källkod"
+
+#: ../../reference_manual/sharing_krita_logs.rst:147
+msgid "Using a snap package"
+msgstr "Använda ett snap-paket"
+
+#: ../../reference_manual/sharing_krita_logs.rst:148
+msgid "Using a flatpak package"
+msgstr "Använda ett flatpak-paket"
+
+#: ../../reference_manual/sharing_krita_logs.rst:149
+msgid "Using the official AppImage"
+msgstr "Använda officiell AppImage"
+
+#: ../../reference_manual/sharing_krita_logs.rst:151
+msgid ""
+"Only distribution packages and built-from-source can produce usable crash "
+"logs/backtraces. For distribution packages, you will need to install the "
+"corresponding debug or dbg packages; the method for that is different from "
+"distribution to distribution. If you use distribution packages and the KDE "
+"Plasma Desktop, a crash dialog will be shown that has the backtrace in the "
+"\"Developer\" tab."
+msgstr ""
+"Bara distributionspaket och att bygga från källkod producerar användbara "
+"kraschloggar och bakåtspårningar. För distributionspaket måste man "
+"installera motsvarande debug- eller dbg-paket. Metoden skiljer sig åt från "
+"distribution till distribution. Om man använda distributionspaket och KDE:s "
+"Plasma-skrivbord, visas en kraschdialogruta som innehåller bakåtspårningen "
+"under fliken 'Utvecklare'."
+
+#: ../../reference_manual/sharing_krita_logs.rst:153
+msgid "Otherwise, you have to use :literal:`gdb` in a terminal window."
+msgstr "Annars måste man använda :literal:`gdb` i ett terminalfönster."
+
+#: ../../reference_manual/sharing_krita_logs.rst:155
+msgid "Open Krita in :literal:`gdb`:"
+msgstr "Öppna Krita i :literal:`gdb`:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:163
+msgid "Disable pagination:"
+msgstr "Inaktivera sidbrytning:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:169
+#: ../../reference_manual/sharing_krita_logs.rst:210
+msgid "Run Krita:"
+msgstr "Kör Krita:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:175
+#: ../../reference_manual/sharing_krita_logs.rst:215
+msgid "Make it crash."
+msgstr "Få det att krascha."
+
+#: ../../reference_manual/sharing_krita_logs.rst:176
+msgid "Get the short backtrace:"
+msgstr "Skapa den korta bakåtspårningen:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:182
+msgid "Get the long backtrace:"
+msgstr "Skapa en lång bakåtspårning:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:188
+msgid "Short and long backtraces save to separate text files."
+msgstr "Spara kort och lång bakåtspårning i separata textfiler."
+
+#: ../../reference_manual/sharing_krita_logs.rst:189
+msgid ""
+"From the short backtrace, it's recommended to cut out all threads that are "
+"identical to some others or don't seem to hold any additional information."
+msgstr ""
+"Det rekommenderas att klippa ut alla trådar som är identiska med andra, "
+"eller inte verkar innehålla någon ytterligare information, från den korta "
+"bakåtspårningen."
+
+#: ../../reference_manual/sharing_krita_logs.rst:191
+msgid ""
+"If you feel like you know which part of the backtrace is the most important "
+"(it's usually the longest thread), then cut it out and put this fragment in "
+"the bug report in a comment. Both backtraces still will be needed: attach "
+"them to the bug report as well."
+msgstr ""
+"Om du känner att du vet vilken del av bakåtspårningen som är viktigast (det "
+"är oftast den längsta tråden), klipp då ut och lägg till fragmentet i "
+"felrapporten i en kommentar. Båda bakåtspårningarna behövs ändå. Bilägg dem "
+"också till felrapporten."
+
+#: ../../reference_manual/sharing_krita_logs.rst:193
+msgid ""
+"If you prefer not to make this decision, just attach both files with "
+"backtraces to the bug report."
+msgstr ""
+"Om du föredrar att inte ta beslutet, bifoga bara båda filerna med "
+"bakåtspårningar till felrapporten."
+
+#: ../../reference_manual/sharing_krita_logs.rst:201
+msgid "On macOS it's recommended to use :literal:`lldb`."
+msgstr "På macOS rekommenderas att använda :literal:`lldb`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:203
+msgid "Open Terminal.app"
+msgstr "Öppna Terminal.app"
+
+#: ../../reference_manual/sharing_krita_logs.rst:204
+msgid "Open Krita in :literal:`lldb`:"
+msgstr "Öppna Krita i :literal:`lldb`:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:216
+msgid "Get the backtrace:"
+msgstr "Skapa bakåtspårning:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:223
+msgid "Save the backtrace to a text file."
+msgstr "Spara bakåtspårningen i en textfil."
+
+#: ../../reference_manual/sharing_krita_logs.rst:224
+msgid ""
+"From the backtrace it's recommended to cut out all threads that are "
+"identical to some others or don't seem to hold any additional information to "
+"put into the comment (so it's easily accessible for the developer)."
+msgstr ""
+"Det rekommenderas att klippa ut alla trådar som är identiska med andra, "
+"eller inte verkar innehålla någon ytterligare information från "
+"bakåtspårningen och lägga till i kommentaren (så att de är lätta att komma "
+"åt för utvecklaren)."
+
+#: ../../reference_manual/sharing_krita_logs.rst:226
+msgid ""
+"If you feel like you know which part of the backtrace is the most important "
+"(it's usually the longest thread), then cut it out and put this fragment in "
+"the bug report in a comment. The full backtrace still will be needed: attach "
+"it to the bug report as well."
+msgstr ""
+"Om du känner att du vet vilken del av bakåtspårningen som är viktigast (det "
+"är oftast den längsta tråden), klipp då ut och lägg till fragmentet i "
+"felrapporten i en kommentar. Den fullständiga bakåtspårningen behövs ändå. "
+"Bilägg den också till felrapporten."
+
+#: ../../reference_manual/sharing_krita_logs.rst:228
+msgid ""
+"If you prefer not to make this decision, just attach the file with the "
+"backtrace to the bug report."
+msgstr ""
+"Om du föredrar att inte ta beslutet, bifoga bara filen med bakåtspårningen "
+"till felrapporten."
+
+#: ../../reference_manual/sharing_krita_logs.rst:235
+msgid "Krita's text output"
+msgstr "Kritas textutmatning"
+
+#: ../../reference_manual/sharing_krita_logs.rst:237
+msgid ""
+"Most of Krita's text output can be gathered using :guilabel:`Log Viewer`. "
+"The only exception are messages from when Krita is starting up, so there is "
+"no GUI yet, or when it closes or crashes so no user interaction is possible "
+"after the event."
+msgstr ""
+"Det mesta av Kritas textutmatning kan samlas in genom att använda :guilabel:"
+"`Loggvisningen`. De enda undantagen är meddelanden när Krita startas, så att "
+"det inte finns något grafiskt gränssnitt ännu, eller när det stängs eller "
+"kraschar så att ingen användarinteraktion är möjlig efter händelsen."
+
+#: ../../reference_manual/sharing_krita_logs.rst:244
+msgid "Go to :menuselection:`Settings --> Dockers --> Log Viewer`."
+msgstr "Gå till :menuselection:`Inställningar --> Paneler --> Loggvisning`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:246
+msgid ""
+"The first button from the left enables and disables logging, so make sure it "
+"is pressed."
+msgstr ""
+"Den första knappen från vänster aktiverar och inaktiverar loggningen, så "
+"säkerställer att den är nertryckt."
+
+#: ../../reference_manual/sharing_krita_logs.rst:248
+#: ../../reference_manual/sharing_krita_logs.rst:295
+msgid "Do the thing you want to get the output of."
+msgstr "Gör saken som genererar utmatningen."
+
+#: ../../reference_manual/sharing_krita_logs.rst:250
+msgid ""
+"Use the third button (tooltip says: *Save the log*) to save the log to a "
+"file."
+msgstr ""
+"Använd den tredje knappen (verktygsknappen lyder: *Spara loggen*) för att "
+"spara loggen i en fil."
+
+#: ../../reference_manual/sharing_krita_logs.rst:252
+msgid "Attach the file to the bug report."
+msgstr "Bilägg filen till felrapporten."
+
+#: ../../reference_manual/sharing_krita_logs.rst:257
+msgid "From the console"
+msgstr "Från terminalen"
+
+#: ../../reference_manual/sharing_krita_logs.rst:259
+msgid ""
+"Using the console is the most reliable way to get Krita's text output. This "
+"way is similar on macOS and Linux."
+msgstr ""
+"Att använda terminalen är det säkraste sättet att visa Kritas textutmatning. "
+"Sättet är liknande på macOS och Linux."
+
+#: ../../reference_manual/sharing_krita_logs.rst:263
+msgid ""
+"This is now also possible on Windows using the :file:`krita.com` executable."
+msgstr ""
+"Det är nu också möjligt på Windows genom att använda det körbara programmet :"
+"file:`krita.com`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:267
+msgid ""
+"The :program:`krita.com` executable starts Krita as a command-line program "
+"with a console window. This was not available before Krita version 5.0. If "
+"you have an older version or would prefer to use the :program:`krita.exe` "
+"program without a console window, see :ref:`DebugView guide "
+"<using_debug_view>`."
+msgstr ""
+"Det körbara programmet :program:`krita.com` startar Krita som ett "
+"kommandoradsprogram med ett terminalfönster. Det var inte tillgängligt innan "
+"Krita version 5.0. Om du har en äldre version eller föredrar att använda "
+"programmet :program:`krita.exe` utan ett terminalfönster, se :ref:`DebugView-"
+"handledningen <using_debug_view>`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:269
+msgid ""
+"On macOS open :program:`Terminal.app`, on Linux open your favorite terminal "
+"or console application. On Windows, open a Command Prompt by typing :code:"
+"`cmd.exe` on the Start Menu and pressing :kbd:`Enter`."
+msgstr ""
+"Öppna :program:`Terminal.app` på macOS, öppna ditt terminal- eller konsol-"
+"favoritprogram på Linux. Öppna en kommandotolk på WIndows genom att skriva "
+"in :code:`cmd.exe` i startmenyn och trycka på :kbd:`Enter`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:271
+msgid "Write the path to the Krita executable."
+msgstr "Skriv in sökvägen till det körbara programmet Krita."
+
+#: ../../reference_manual/sharing_krita_logs.rst:297
+msgid "Copy the content, save to a file and attach to the bug report."
+msgstr "Kopiera innehållet, spara det i en fil och bilägg till felrapporten."
+
+#: ../../reference_manual/sharing_krita_logs.rst:303
+msgid "From the DebugView"
+msgstr "Från DebugView"
+
+#: ../../reference_manual/sharing_krita_logs.rst:304
+msgid ""
+"To get the text output of Krita on Windows using the graphical program, you "
+"need an external program called :literal:`DebugView`. Compared to using the "
+"console, DebugView has the benefit of including timestamps to the log "
+"entries."
+msgstr ""
+"För att få textutmatningen från Krita på Windows med det grafiska "
+"programmet, behöver man ett externt program som heter :literal:`DebugView`. "
+"Jämfört med att använda terminalen, har DebugView fördelen av att inkludera "
+"tidsstämplar i loggposterna."
+
+#: ../../reference_manual/sharing_krita_logs.rst:307
+msgid ""
+"`Download DebugView <https://docs.microsoft.com/en-us/sysinternals/downloads/"
+"debugview>`_ if you haven't already. Click on the blue bold :guilabel:"
+"`Download DebugView` text with underline, downloading should start "
+"immediately."
+msgstr ""
+"`Ladda ner DebugView <https://docs.microsoft.com/en-us/sysinternals/"
+"downloads/debugview>`_ om det inte redan är gjort. Klicka på den blåa "
+"texten :guilabel:`Download DebugView` i fetstil med understreck, så ska "
+"nerladdningen starta direkt."
+
+#: ../../reference_manual/sharing_krita_logs.rst:309
+msgid ""
+"The file you download is a .zip archive. Windows 10 has a zip archive opener "
+"already included. Just extract all of the files somewhere. You can learn "
+"more about extracing on `Windows extracting manual page <https://support."
+"microsoft.com/en-us/help/4028088/windows-zip-and-unzip-files>`_."
+msgstr ""
+"Den nerladdade filen är ett .zip-arkiv. Windows 10 har redan möjlighet att "
+"öppna ett zip-arkiv. Packa bara upp alla filerna någonstans. Man kan lära "
+"sig mer om att packa upp filer på hjälpsidan `Komprimera och packa upp filer "
+"<https://support.microsoft.com/sv-se/windows/komprimera-och-packa-upp-"
+"filer-8d28fa72-f2f9-712f-67df-f80cf89fd4e5>`_."
+
+#: ../../reference_manual/sharing_krita_logs.rst:311
+msgid ""
+"There is a file inside the archive that is called :file:`DbgView.exe` (which "
+"you can see as :file:`DbgView`, depending on your system settings). Double-"
+"click on it."
+msgstr ""
+"Det finns en fil inne i arkivet som kallas :file:`DbgView.exe` (som kan "
+"visas som :file:`DbgView`, beroende på systeminställningarna). Dubbelklicka "
+"på den."
+
+#: ../../reference_manual/sharing_krita_logs.rst:313
+msgid "Let the program run and open Krita."
+msgstr "Låt programmet köra och öppna Krita."
+
+#: ../../reference_manual/sharing_krita_logs.rst:315
+msgid "Do things you want to get output of."
+msgstr "Gör sakerna som genererar utmatningen."
+
+#: ../../reference_manual/sharing_krita_logs.rst:317
+msgid ""
+"Switch to DebugView and copy the content. Save to a file and attach to the "
+"bug report."
+msgstr ""
+"Byt till DebugView och kopiera innehållet. Spara i en fil och bilägg till "
+"felrapporten."
+
+#~ msgid "Mac"
+#~ msgstr "Mac"
+
+#~ msgid ""
+#~ "In versions 4.2.0-4.2.9, Krita Usage Log is accessible through :"
+#~ "menuselection:`Help --> Show system information for bug reports`. Note "
+#~ "that for Krita versions 4.1.7 and below, no usage log is available and "
+#~ "the menu entry only contains system information."
+#~ msgstr ""
+#~ "I version 4.2.0 - 4.2.9, är Kritas användningslogg tillgänglig via :"
+#~ "menuselection:`Hjälp --> Visa systeminformation för felrapporter`. "
+#~ "Observera att för Krita version 4.1.7 och tidigare, är ingen "
+#~ "användningslogg tillgänglig och menyalternativet innehåller bara "
+#~ "systeminformation."
+
+#~ msgid ""
+#~ "In versions 4.2.0-4.2.8, this menu entry contains both system information "
+#~ "and Krita Usage Log."
+#~ msgstr ""
+#~ "I version 4.2.0 - 4.2.8, innehåller menyalternativet både "
+#~ "systeminformation och Kritas användningslogg."
+
+#~ msgid ""
+#~ "On Mac open :file:`Terminal.app`, on Linux open your favourite terminal "
+#~ "or console application."
+#~ msgstr ""
+#~ "Öppna :file:`Terminal.app` på Mac, och öppna ditt favoritterminalprogram "
+#~ "på Linux."
+
+#~ msgid ":ref:`Dr. Mingw debugger <dr_minw>` guide."
+#~ msgstr "Handledning för :ref:`Dr. Mingw debugger <dr_minw>`."
+
+#~ msgid "On Linux it's recommended to use :literal:`gdb`."
+#~ msgstr "På Linux rekommenderas att använda :literal:`gdb`."

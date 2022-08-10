@@ -1,0 +1,1768 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2022-08-07 13:29\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
+"docs_krita_org_reference_manual___seexpr.pot\n"
+"X-Crowdin-File-ID: 24448\n"
+
+#: ../../reference_manual/seexpr.rst:1
+msgid "SeExpr Quick Reference for Krita"
+msgstr "Krita 的 SeExpr 脚本变量、函数、运算符参考。"
+
+#: ../../reference_manual/seexpr.rst:11
+msgid "Fill Layer"
+msgstr "填充图层"
+
+#: ../../reference_manual/seexpr.rst:11
+msgid "SeExpr"
+msgstr "SeExpr"
+
+#: ../../reference_manual/seexpr.rst:17
+msgid "SeExpr Quick Reference"
+msgstr "SeExpr 表达式参考"
+
+#: ../../reference_manual/seexpr.rst:19
+msgid ""
+"This page details all the available variables, functions, and operators in "
+"SeExpr. It is a heavily edited version of the official `user documentation "
+"<https://wdas.github.io/SeExpr/doxygen/userdoc.html>`_, adapted for usage "
+"with Krita."
+msgstr ""
+"本页面列出了所有在 Krita 中可用的 SeExpr 变量、函数和运算符，并介绍它们的功能"
+"和用法。所有内容均基于 `SeExpr 官方用户文档 <https://wdas.github.io/SeExpr/"
+"doxygen/userdoc.html>`_ 修改而来，为了方便 Krita 用户的使用进行了一些语句上的"
+"调整。(译者注：为了照顾脚本编程的实际需要，本页的某些部分采用中英对照翻译。)"
+
+#: ../../reference_manual/seexpr.rst:23
+msgid "Source code at `KDE Invent <https://invent.kde.org/lsegovia/seexpr>`_"
+msgstr ""
+"查看 `Krita 的 SeExpr 模块源代码 <https://invent.kde.org/lsegovia/seexpr>`_"
+
+#: ../../reference_manual/seexpr.rst:24
+msgid ""
+"Disney's SeExpr `API Documentation <http://wdas.github.io/SeExpr/doxygen/>`_"
+msgstr ""
+"查看 `迪士尼的 SeExpr API 文档 <http://wdas.github.io/SeExpr/doxygen/>`_"
+
+#: ../../reference_manual/seexpr.rst:27
+msgid ":ref:`seexpr_tut_intro`"
+msgstr ":ref:`seexpr_tut_intro`"
+
+#: ../../reference_manual/seexpr.rst:28
+msgid ":ref:`seexpr_fill_layer`"
+msgstr ":ref:`seexpr_fill_layer`"
+
+#: ../../reference_manual/seexpr.rst:29
+msgid ":ref:`resource_seexpr_scripts`"
+msgstr ":ref:`resource_seexpr_scripts`"
+
+#: ../../reference_manual/seexpr.rst:30
+msgid ""
+"`\"Procedural texture generator (example and wishes)\" on Krita Artists "
+"<https://krita-artists.org/t/procedural-texture-generator-example-and-"
+"wishes/7638>`_"
+msgstr ""
+"`“程序化纹理生成器的示例和功能请求” Krita Artists 论坛主题帖 <https://krita-"
+"artists.org/t/procedural-texture-generator-example-and-wishes/7638>`_"
+
+#: ../../reference_manual/seexpr.rst:31
+msgid "`Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_"
+msgstr "`Inigo Quilez 的相关文章 <https://iquilezles.org/www/index.htm>`_"
+
+#: ../../reference_manual/seexpr.rst:32
+msgid "`The Book of Shaders <https://thebookofshaders.com/>`_"
+msgstr "`片段着色器入门指南 (含中文版) <https://thebookofshaders.com/>`_"
+
+#: ../../reference_manual/seexpr.rst:34
+msgid "Contents"
+msgstr "目录"
+
+#: ../../reference_manual/seexpr.rst:38
+msgid "Variables"
+msgstr "Variables (变量)"
+
+#: ../../reference_manual/seexpr.rst:41
+msgid "External variables"
+msgstr "External variables (外部变量)"
+
+#: ../../reference_manual/seexpr.rst:43
+msgid ""
+"These variables are provided by host applications, in this case Krita. They "
+"are registered with SeExpr's autocomplete help, which can be accessed by :"
+"kbd:`Ctrl+Space`."
+msgstr ""
+"这些变量由宿主程序 (Krita) 提供。它们被注册到 SeExpr 模块的自动完成提示信息"
+"中，可以通过 :kbd:`Ctrl+Space` 快捷键访问。"
+
+#: ../../reference_manual/seexpr.rst:48
+msgid "$u, $v"
+msgstr "$u, $v"
+
+#: ../../reference_manual/seexpr.rst:50
+msgid "Pixel position in normalized coordinates."
+msgstr "图像位置的归一化坐标信息。"
+
+#: ../../reference_manual/seexpr.rst:51
+msgid "$w, $h"
+msgstr "$w, $h"
+
+#: ../../reference_manual/seexpr.rst:53
+msgid "Image's width and height in pixels."
+msgstr "图像的像素宽度和高度信息。"
+
+#: ../../reference_manual/seexpr.rst:56
+msgid "Local Variables"
+msgstr "Local Variables (局部变量)"
+
+#: ../../reference_manual/seexpr.rst:58
+msgid "Local variables can be defined at the start of the expression::"
+msgstr "局部变量可以在表达式的开头处定义::"
+
+#: ../../reference_manual/seexpr.rst:60
+msgid ""
+"$a = noise($P);\n"
+"$b = noise($a * 1);\n"
+"pow($a, 0.5) + $b"
+msgstr ""
+"$a = noise($P);\n"
+"$b = noise($a * 1);\n"
+"pow($a, 0.5) + $b"
+
+#: ../../reference_manual/seexpr.rst:64
+msgid ""
+"External variables can also be overridden by local assignment. This can be "
+"useful to scale the noise frequency for instance::"
+msgstr "外部变量也可以被局部赋值所改写。例如对噪声频率进行缩放::"
+
+#: ../../reference_manual/seexpr.rst:66
+msgid ""
+"$P = $P * 10; # increase noise frequency\n"
+"fbm(vnoise($P) + $P/4)"
+msgstr ""
+"$P = $P * 10; # 提高噪声频率\n"
+"fbm(vnoise($P) + $P/4)"
+
+#: ../../reference_manual/seexpr.rst:69
+msgid "You can also define namespaced variables, e.g.::"
+msgstr "你也可以定义命名空间变量，例如::"
+
+#: ../../reference_manual/seexpr.rst:71
+msgid "$A::a = $u * 10;"
+msgstr "$A::a = $u * 10;"
+
+#: ../../reference_manual/seexpr.rst:75
+msgid "Control Structures"
+msgstr "Control Structures (控制结构)"
+
+#: ../../reference_manual/seexpr.rst:77
+msgid "SeExpr provides the well-known `if` conditional structure::"
+msgstr "SeExpr 提供了常见的 `if` 条件结构::"
+
+#: ../../reference_manual/seexpr.rst:79
+msgid ""
+"if ($ u > 0.5) {\n"
+"    $color = [0, 0, 1];\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
+msgstr ""
+"if ($ u > 0.5) {\n"
+"    $color = [0, 0, 1];\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
+
+#: ../../reference_manual/seexpr.rst:88
+msgid "And the *ternary operator*::"
+msgstr "它也提供了 **ternary operator (三元运算符)**::"
+
+#: ../../reference_manual/seexpr.rst:90
+msgid "$u = $i < .5 ? 0.0 : 10.0"
+msgstr "$u = $i < .5 ? 0.0 : 10.0"
+
+#: ../../reference_manual/seexpr.rst:92
+msgid "You can freely nest ternary operators, e.g.::"
+msgstr "你可以任意嵌套三元运算符，例如::"
+
+#: ../../reference_manual/seexpr.rst:94
+msgid ""
+"$color = $u < .5 ? ($v < 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];\n"
+"$color"
+msgstr ""
+"$color = $u < .5 ? ($v < 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];\n"
+"$color"
+
+#: ../../reference_manual/seexpr.rst:97
+msgid "You can also achieve the same with `if` structures::"
+msgstr "你也可以通过 `if` 结构来实现三元运算符的嵌套::"
+
+#: ../../reference_manual/seexpr.rst:99
+msgid ""
+"if ($ u > 0.5) {\n"
+"    if ($v < 0.5) {\n"
+"        $color = [0, 0, 1];\n"
+"    }\n"
+"    else {\n"
+"        $color = [1, 0, 0];\n"
+"    }\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
+msgstr ""
+"if ($ u > 0.5) {\n"
+"    if ($v < 0.5) {\n"
+"        $color = [0, 0, 1];\n"
+"    }\n"
+"    else {\n"
+"        $color = [1, 0, 0];\n"
+"    }\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
+
+#: ../../reference_manual/seexpr.rst:115
+msgid "Operators (listed in decreasing precedence)"
+msgstr "Operators (运算符/按递减顺序排列)"
+
+#: ../../reference_manual/seexpr.rst:118
+msgid "[a,b,c]"
+msgstr "[a,b,c]"
+
+#: ../../reference_manual/seexpr.rst:120
+msgid "vector constructor"
+msgstr "vector constructor (矢量构造函数)"
+
+#: ../../reference_manual/seexpr.rst:121
+msgid "$P[ n ]"
+msgstr "$P[ n ]"
+
+#: ../../reference_manual/seexpr.rst:123
+msgid "vector component access"
+msgstr "vector component access (矢量分量访问)"
+
+#: ../../reference_manual/seexpr.rst:125
+msgid "``n`` must be 0, 1, or 2, e.g.::"
+msgstr "``n`` 必须是 0、1 或者 2，例如::"
+
+#: ../../reference_manual/seexpr.rst:127
+msgid "$P[0]"
+msgstr "$P[0]"
+
+#: ../../reference_manual/seexpr.rst:128
+msgid "^"
+msgstr "^"
+
+#: ../../reference_manual/seexpr.rst:130
+msgid "exponentiation"
+msgstr "exponentiation (取幂、乘方)"
+
+#: ../../reference_manual/seexpr.rst:132
+msgid "Same as the ``pow`` function."
+msgstr "与 ``pow`` 函数相同。"
+
+#: ../../reference_manual/seexpr.rst:133
+msgid "!"
+msgstr "!"
+
+#: ../../reference_manual/seexpr.rst:135
+msgid "logical NOT"
+msgstr "logical NOT (逻辑非)"
+
+#: ../../reference_manual/seexpr.rst:136
+msgid "~"
+msgstr "~"
+
+#: ../../reference_manual/seexpr.rst:138
+msgid "inversion"
+msgstr "inversion (求逆/反相)"
+
+#: ../../reference_manual/seexpr.rst:143
+msgid "~$A"
+msgstr "~$A"
+
+#: ../../reference_manual/seexpr.rst:145
+msgid "gives the same result as::"
+msgstr "上面的表达式将给出与下面的表达式相同的结果::"
+
+#: ../../reference_manual/seexpr.rst:147
+msgid "1 - $A"
+msgstr "1 - $A"
+
+#: ../../reference_manual/seexpr.rst:148
+msgid "\\*/ %"
+msgstr "\\*/ %"
+
+#: ../../reference_manual/seexpr.rst:150
+msgid "multiply, divide, modulus"
+msgstr "分别是：multiply (乘)、divide (除)、modulus(模)。"
+
+#: ../../reference_manual/seexpr.rst:152
+msgid "``%`` is the same as the ``fmod`` function."
+msgstr "``%`` 与 ``fmod`` 函数相同。"
+
+#: ../../reference_manual/seexpr.rst:153
+msgid "+-"
+msgstr "+-"
+
+#: ../../reference_manual/seexpr.rst:155
+msgid "add, subtract"
+msgstr "分别是：add (加)、subtract (减)"
+
+#: ../../reference_manual/seexpr.rst:156
+msgid "<> <= >="
+msgstr "<> <= >="
+
+#: ../../reference_manual/seexpr.rst:158
+msgid ""
+"comparison: less than, greater than, less or equal than, greater or equal "
+"than"
+msgstr ""
+"比较，分别是：less than (小于)、greater than (大于)、less or equal than (小于"
+"等于)、greater or equal than (大于等于)。"
+
+#: ../../reference_manual/seexpr.rst:160
+msgid "Only uses the first component of a vector."
+msgstr "它们只使用矢量的第一分量进行对比。"
+
+#: ../../reference_manual/seexpr.rst:161
+msgid "== !="
+msgstr "== !="
+
+#: ../../reference_manual/seexpr.rst:163
+msgid "equality, inequality"
+msgstr "分别是：equality (等于)、inequality (不等于)"
+
+#: ../../reference_manual/seexpr.rst:164
+msgid "&&"
+msgstr "&&"
+
+#: ../../reference_manual/seexpr.rst:166
+msgid "logical AND"
+msgstr "logical AND (逻辑与)"
+
+#: ../../reference_manual/seexpr.rst:167
+msgid "||"
+msgstr "||"
+
+#: ../../reference_manual/seexpr.rst:169
+msgid "logical OR"
+msgstr "logical OR (逻辑或)"
+
+#: ../../reference_manual/seexpr.rst:170
+msgid "?:"
+msgstr "?:"
+
+#: ../../reference_manual/seexpr.rst:172
+msgid "ternary ``if`` operator"
+msgstr "ternary ``if`` operator (三元 ``if`` 运算符)"
+
+#: ../../reference_manual/seexpr.rst:174
+msgid "Example::"
+msgstr "示例::"
+
+#: ../../reference_manual/seexpr.rst:176
+msgid "$u < .5 ? 0 : 1"
+msgstr "$u < .5 ? 0 : 1"
+
+#: ../../reference_manual/seexpr.rst:177
+msgid "->"
+msgstr "->"
+
+#: ../../reference_manual/seexpr.rst:179
+msgid ""
+"apply - The function on the right of the arrow is applied to the expression "
+"on the left."
+msgstr "apply (应用)：将箭头右边的函数应用到箭头左边的表达式。"
+
+#: ../../reference_manual/seexpr.rst:181
+msgid "Examples::"
+msgstr "示例::"
+
+#: ../../reference_manual/seexpr.rst:183
+msgid ""
+"$Cs->contrast(.7) -> clamp(0.2,0.8)\n"
+"$u->hsi(20,1.2,1,$Cs->gamma(1.2))"
+msgstr ""
+"$Cs->contrast(.7) -> clamp(0.2,0.8)\n"
+"$u->hsi(20,1.2,1,$Cs->gamma(1.2))"
+
+#: ../../reference_manual/seexpr.rst:188
+msgid "Assignment Operators"
+msgstr "Assignment Operators (赋值运算符)"
+
+#: ../../reference_manual/seexpr.rst:190
+msgid "Besides the basic assignment statement::"
+msgstr "你可以使用基本赋值语句，例如::"
+
+#: ../../reference_manual/seexpr.rst:192
+msgid "$foo = $bar"
+msgstr "$foo = $bar"
+
+#: ../../reference_manual/seexpr.rst:194
+msgid "you can also do operator assignments such as::"
+msgstr "你也可以在赋值语句中使用运算符::"
+
+#: ../../reference_manual/seexpr.rst:196
+msgid "$foo += $bar;"
+msgstr "$foo += $bar;"
+
+#: ../../reference_manual/seexpr.rst:198
+msgid "which is equivalent to::"
+msgstr "上面的语句相当于::"
+
+#: ../../reference_manual/seexpr.rst:200
+msgid "$foo = $foo + $bar;"
+msgstr "$foo = $foo + $bar;"
+
+#: ../../reference_manual/seexpr.rst:202
+msgid "Additionally, there are:"
+msgstr "可以使用的赋值运算符如下："
+
+#: ../../reference_manual/seexpr.rst:204
+msgid "``+=``"
+msgstr "``+=``"
+
+#: ../../reference_manual/seexpr.rst:205
+msgid "``-=``"
+msgstr "``-=``"
+
+#: ../../reference_manual/seexpr.rst:206
+msgid "``/=``"
+msgstr "``/=``"
+
+#: ../../reference_manual/seexpr.rst:207
+msgid "``%=``"
+msgstr "``%=``"
+
+#: ../../reference_manual/seexpr.rst:208
+msgid "``*=``"
+msgstr "``*=``"
+
+#: ../../reference_manual/seexpr.rst:209
+msgid "``^=``"
+msgstr "``^=``"
+
+#: ../../reference_manual/seexpr.rst:213
+msgid "Comments"
+msgstr "Comments (代码注释)"
+
+#: ../../reference_manual/seexpr.rst:215
+msgid ""
+"You can add comments to your script by using the ``#`` character. SeExpr "
+"will then skip the rest of the line for rendering purposes. However, they "
+"are not ignored; comments can still be used to declare the valid value range "
+"of integer, float, and vector variables. This enables you to manage them "
+"using widgets that will accept the specified range."
+msgstr ""
+"你可以用 ``#`` 字符给对脚本进行代码注释。SeExpr 不会对一行代码里位于 ``#`` 号"
+"后面的内容进行渲染，但这不意味着它们被完全忽略——代码注释可以用来声明整数、浮"
+"点和矢量变量的有效范围，你可以使用 SeExpr 对话框的图形控件在此范围内拖动数"
+"值。"
+
+#: ../../reference_manual/seexpr.rst:223
+msgid ""
+"``$var0`` is an integer variable that ranges between 0 and 10 inclusive::"
+msgstr "``$var0`` 作为整数变量，范围在 0 - 10 (含)::"
+
+#: ../../reference_manual/seexpr.rst:225
+msgid "$var0 = 0; # 0, 10"
+msgstr "$var0 = 0; # 0, 10"
+
+#: ../../reference_manual/seexpr.rst:227
+msgid "``$var1`` is a floating point variable with the same range::"
+msgstr "``$var1`` 作为浮点变量，范围和前者一样::"
+
+#: ../../reference_manual/seexpr.rst:229
+msgid "$var1 = 0; # 0.000, 10.000"
+msgstr "$var1 = 0; # 0.000, 10.000"
+
+#: ../../reference_manual/seexpr.rst:231
+msgid "``$var2`` is a vector variable::"
+msgstr "``$var2`` 作为矢量变量，范围和前者一样::"
+
+#: ../../reference_manual/seexpr.rst:233
+msgid "$var2 = [0, 0, 0] # 0.000, 10.000"
+msgstr "$var2 = [0, 0, 0] # 0.000, 10.000"
+
+#: ../../reference_manual/seexpr.rst:235
+msgid ""
+"The latter is very helpful; SeExpr considers vectors with range ``[0, 1]`` "
+"as colors::"
+msgstr ""
+"最后一个例子尤其有用。SeExpr 会将范围为 ``[0, 1]`` 的矢量视作颜色信息::"
+
+#: ../../reference_manual/seexpr.rst:237
+msgid ""
+"# this is a dark red\n"
+"$color = [0.5, 0, 0] # 0.000, 1.000"
+msgstr ""
+"# 输出颜色为暗红色\n"
+"$color = [0.5, 0, 0] # 0.000, 1.000"
+
+#: ../../reference_manual/seexpr.rst:240
+msgid ""
+"In all cases, if not specified, the associated widgets' range will go from 0 "
+"to 1."
+msgstr ""
+"不管是哪种数值类型，如果没有指定范围，那么 SeExpr 对话框控件将默认范围为 0 - "
+"1 (含)。"
+
+#: ../../reference_manual/seexpr.rst:242
+msgid "For a multi-line expression, each line may have its own comment."
+msgstr "多行表达式的每一行都可以有自己的代码注释。"
+
+#: ../../reference_manual/seexpr.rst:246
+msgid "Logging Functions"
+msgstr "Logging Functions (日志函数)"
+
+#: ../../reference_manual/seexpr.rst:249
+msgid "float **printf** ( string format, [param0, param1, ...] )"
+msgstr "float **printf** ( string format, [param0, param1, ...] )"
+
+#: ../../reference_manual/seexpr.rst:251
+msgid ""
+"Prints a string to stdout that is formatted as given. Formatting parameters "
+"possible are ``%f`` for float (takes the first component of vector argument) "
+"or ``%v`` for vector."
+msgstr ""
+"将字符串按照给定格式输出到 stdout 标准输出。可用的格式参数有： ``%f`` 浮点 "
+"(取矢量参数的第一分量) 和 ``%v`` 矢量。"
+
+#: ../../reference_manual/seexpr.rst:256
+msgid "For example, if you wrote::"
+msgstr "输入以下代码::"
+
+#: ../../reference_manual/seexpr.rst:258
+msgid "$u = printf(\"test %f %v\",[1,2,3],[4,5,6]);"
+msgstr "$u = printf(\"test %f %v\",[1,2,3],[4,5,6]);"
+
+#: ../../reference_manual/seexpr.rst:260
+msgid "you would get in your console::"
+msgstr "命令行控制台将返回::"
+
+#: ../../reference_manual/seexpr.rst:262
+msgid "test 1 [4,5,6]"
+msgstr "test 1 [4,5,6]"
+
+#: ../../reference_manual/seexpr.rst:263
+msgid ""
+"string **sprintf** ( string format, [double|string, double|string, ...] )"
+msgstr ""
+"string **sprintf** ( string format, [double|string, double|string, ...] )"
+
+#: ../../reference_manual/seexpr.rst:265
+msgid ""
+"Returns a string formatted from the given values.  See ``man sprintf`` for "
+"format details."
+msgstr ""
+"返回一组按照给定值进行格式化的字符串。请在命令行控制台输入 ``man sprintf`` 查"
+"看格式的相关细节。"
+
+#: ../../reference_manual/seexpr.rst:269
+msgid "Color, Masking, and Remapping Functions"
+msgstr "Color, Masking, and Remapping Functions (颜色、遮蔽、重映射函数)"
+
+#: ../../reference_manual/seexpr.rst:272
+msgid "float **bias** ( float x, float b)"
+msgstr "float **bias** ( float x, float b)"
+
+#: ../../reference_manual/seexpr.rst:274
+msgid ""
+"Variation of gamma where control parameter goes from ``0`` to ``1`` with "
+"values ``> 0.5`` pulling the curve up and values ``< 0.5`` pulling the curve "
+"down. Defined as ``pow(x, log(b)/log(0.5))``."
+msgstr ""
+"这是一个 gamma 变量，它的控制参数范围为 ``0`` 到 ``1``。数值 ``> 0.5`` 时拉高"
+"曲线， ``< 0.5`` 时拉低曲线。按照 ``pow(x, log(b)/log(0.5))`` 进行定义。"
+
+#: ../../reference_manual/seexpr.rst:277
+msgid "float **boxstep** ( float x, float a )"
+msgstr "float **boxstep** ( float x, float a )"
+
+#: ../../reference_manual/seexpr.rst:278
+msgid "float **gaussstep** ( float x, float a, float b )"
+msgstr "float **gaussstep** ( float x, float a, float b )"
+
+#: ../../reference_manual/seexpr.rst:279
+msgid "float **linearstep** ( float x, float a, float b )"
+msgstr "float **linearstep** ( float x, float a, float b )"
+
+#: ../../reference_manual/seexpr.rst:280
+msgid "float **smoothstep** ( float x, float a, float b )"
+msgstr "float **smoothstep** ( float x, float a, float b )"
+
+#: ../../reference_manual/seexpr.rst:282
+msgid ""
+"The step functions are zero for ``x < a`` and one for ``x > b`` (or ``x > "
+"a`` in the case of boxstep). Between ``a`` and ``b``, the value changes "
+"continuously between zero and one. The ``gausstep`` function uses the "
+"standard Gaussian \"bell\" curve which is based on an exponential curve. The "
+"``smoothstep`` function uses a cubic curve. Intuitively, ``gausstep`` has a "
+"sharper transition near one and a softer transition near zero whereas "
+"``smoothstep`` has a medium softness near both one and zero."
+msgstr ""
+"step (梯度) 函数在 ``x < a`` 时为 0，在 ``x > b`` (boxstep 正方插值的场合则"
+"是 ``x > a`` ) 时为 1。在 ``a`` 和 ``b`` 之间，数值从 0 到 1 连续过渡。 "
+"``gaussstep`` (高斯梯度) 函数使用基于指数曲线的标准高斯钟形曲线。 "
+"``smoothstep`` 函数则使用三次曲线 (立方曲线)。从直觉感受来说， ``gaussstep`` "
+"在接近 1 时过渡陡峭，而在接近 0 时过渡平缓。 ``smoothstep`` 在 1 和 0 附近的"
+"过渡具有中等的柔和度。"
+
+#: ../../reference_manual/seexpr.rst:290
+msgid "float **clamp** ( float x, float lo, float hi )"
+msgstr "float **clamp** ( float x, float lo, float hi )"
+
+#: ../../reference_manual/seexpr.rst:292
+msgid "Constrain ``x`` to range ``[lo, hi]``."
+msgstr "将 ``x`` 限制在 ``[lo, hi]`` 范围内。"
+
+#: ../../reference_manual/seexpr.rst:293
+msgid "float **compress** ( float x, float lo, float hi )"
+msgstr "float **compress** ( float x, float lo, float hi )"
+
+#: ../../reference_manual/seexpr.rst:295
+msgid "Compress the dynamic range from ``[0, 1]`` to ``[lo, hi]``."
+msgstr "将动态范围从 ``[0, 1]`` 压缩至 ``[lo, hi]`` 。"
+
+#: ../../reference_manual/seexpr.rst:296
+msgid "float **contrast** ( float x, float c )"
+msgstr "float **contrast** ( float x, float c )"
+
+#: ../../reference_manual/seexpr.rst:298
+msgid ""
+"Adjust the contrast. For ``c`` from ``0`` to ``0.5``, the contrast is "
+"decreased. For ``c > 0.5``, the contrast is increased."
+msgstr ""
+"调整对比度。 ``c`` 在 ``0`` 到 ``0.5`` 之间时，对比度将下降。 ``c > 0.5`` "
+"时，对比度将提高。"
+
+#: ../../reference_manual/seexpr.rst:300
+msgid "float **expand** ( float x, float lo, float hi )"
+msgstr "float **expand** ( float x, float lo, float hi )"
+
+#: ../../reference_manual/seexpr.rst:302
+msgid "Expand the dynamic range from ``[lo, hi]`` to ``[0, 1]``."
+msgstr "将动态范围从 ``[lo, hi]`` 扩展至 ``[0, 1]`` 。"
+
+#: ../../reference_manual/seexpr.rst:303
+msgid "float **fit** ( float x, float a1, float b1, float a2, float b2 )"
+msgstr "float **fit** ( float x, float a1, float b1, float a2, float b2 )"
+
+#: ../../reference_manual/seexpr.rst:305
+msgid "Linear remapping of ``[a1..x..b1]`` to ``[a2..x..b2]``"
+msgstr "将 ``[a1..x..b1]`` 线性重映射到 ``[a2..x..b2]`` 。"
+
+#: ../../reference_manual/seexpr.rst:306
+msgid "float **gamma** ( float x, float g)"
+msgstr "float **gamma** ( float x, float g)"
+
+#: ../../reference_manual/seexpr.rst:308
+msgid "``pow(x, 1/g)``"
+msgstr "``pow(x, 1/g)``"
+
+#: ../../reference_manual/seexpr.rst:309
+msgid "float **invert** ( float x )"
+msgstr "float **invert** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:311
+msgid "Invert the value. Defined as ``1 - x``."
+msgstr "将数值进行反相。按照 ``1 - x`` 进行定义。"
+
+#: ../../reference_manual/seexpr.rst:312
+msgid "color **hsi** ( color x, float h, float s, float i, float map=1 )"
+msgstr "color **hsi** ( color x, float h, float s, float i, float map=1 )"
+
+#: ../../reference_manual/seexpr.rst:314
+msgid ""
+"The ``hsi`` function shifts the hue by ``h`` (in degrees) and scales the "
+"saturation and intensity by ``s`` and ``i`` respectively. A map may be "
+"supplied which will control the shift - the full shift will happen when the "
+"map is one and no shift will happen when the map is zero. The shift will be "
+"scaled back for values between zero and one."
+msgstr ""
+"``hsi`` 函数按 ``h`` (单位为度) 对色相进行 shift (偏移)，按 ``s`` 对饱和度进"
+"行 scale (按比例缩放)，按 ``i`` 对亮度进行缩放。可以提供 map (映射值) 来控制"
+"偏移量。map 为 1 时色相旋转一周；map 为 0 时色相不旋转；对于 0 到 1 之间的数"
+"值，偏移量将等比例缩放。"
+
+#: ../../reference_manual/seexpr.rst:320
+msgid "color **hsltorgb** ( color hsl )"
+msgstr "color **hsltorgb** ( color hsl )"
+
+#: ../../reference_manual/seexpr.rst:321
+msgid "color **rgbtohsl** ( color rgb )"
+msgstr "color **rgbtohsl** ( color rgb )"
+
+#: ../../reference_manual/seexpr.rst:323
+msgid ""
+"RGB to HSL color space conversion. HSL is Hue, Saturation, Lightness (all in "
+"the range ``[0, 1]``). These functions have also been extended to support "
+"RGB and HSL values outside of the range ``[0, 1]`` in a reasonable way. For "
+"any RGB or HSL value (except for negative values), the conversion is well-"
+"defined and reversible."
+msgstr ""
+"RGB 到 HSL 色彩空间转换。HSL 代表 Hue (色相)、Saturation (饱和度)、Lightness "
+"(亮度) (这些数值的范围全部为 ``[0, 1]`` )。可扩展至支持在合理范围内超出 "
+"``[0, 1]`` 的 RGB 和 HSL 数值。对于任意 RGB 或者 HSL 数值 (负值除外)，此转换"
+"操作是定义明确且可逆的。"
+
+#: ../../reference_manual/seexpr.rst:329
+msgid ""
+"color **midhsi** ( color x, float h, float s, float i, float map, float "
+"falloff=1, int interp=0 )"
+msgstr ""
+"color **midhsi** ( color x, float h, float s, float i, float map, float "
+"falloff=1, int interp=0 )"
+
+#: ../../reference_manual/seexpr.rst:331
+msgid ""
+"The ``midhsi`` function is just like the ``hsi`` function except that the "
+"control map is centered around the mid point (value of ``0.5``) and can "
+"scale the shift in both directions. At the mid point, no shift happens. At "
+"*1.0*, the full shift happens, and at ``0.0``, the full inverse shift "
+"happens. Additional ``falloff`` and ``interp`` controls are provided to "
+"adjust the map using the ``remap`` function. The default ``falloff`` and "
+"``interp`` values result in no remapping."
+msgstr ""
+"``midhsi`` 函数和 ``hsi`` 函数类似，但它的控制映射按中间点对齐 (数值为 "
+"``0.5``)，且可以向两个方向按比例缩放色相偏移量。数值在中间点时色相不发生偏"
+"移。数值为 ``1.0`` 时色相顺时针旋转一周，数值为 ``0.0`` 时色相逆时针旋转一"
+"周。另外还可以使用 ``falloff`` 和 ``interp`` 来控制 ``remap`` 函数对映射进行"
+"调整。 ``falloff`` 和 ``interp`` 为默认值时不发生重映射。"
+
+#: ../../reference_manual/seexpr.rst:338
+msgid "float **mix** ( float a, float b, float alpha )"
+msgstr "float **mix** ( float a, float b, float alpha )"
+
+#: ../../reference_manual/seexpr.rst:340
+msgid ""
+"Blend of a and b according to alpha. Defined as ``a*(1-alpha) +b*alpha``."
+msgstr ""
+"根据 alpha (透明度通道) 混合 a 和 b 。按照 ``a*(1-alpha) +b*alpha`` 进行定"
+"义。"
+
+#: ../../reference_manual/seexpr.rst:342
+msgid ""
+"float **remap** ( float x, float source, float range, float falloff, int "
+"interp )"
+msgstr ""
+"float **remap** ( float x, float source, float range, float falloff, int "
+"interp )"
+
+#: ../../reference_manual/seexpr.rst:344
+msgid ""
+"General remapping function. When ``x`` is within ``± range`` of source, the "
+"result is one. The result falls to zero beyond that range over ``falloff`` "
+"distance. The falloff shape is controlled by ``interp``."
+msgstr ""
+"常规重映射函数。当 ``x`` 在源数据的 ``± range`` 范围内时，结果为 1。当超出 "
+"``falloff`` 距离时数值降为 0。falloff shape (滚降形状) 由 ``interp`` 进行控"
+"制。"
+
+#: ../../reference_manual/seexpr.rst:349
+msgid "Numeric values or named constants may be used:"
+msgstr "滚降形状可以用数字或者具名常量控制："
+
+#: ../../reference_manual/seexpr.rst:351
+msgid "int **linear** = 0"
+msgstr "int **linear** = 0 (线性)"
+
+#: ../../reference_manual/seexpr.rst:352
+msgid "int **smooth** = 1"
+msgstr "int **smooth** = 1 (平滑)"
+
+#: ../../reference_manual/seexpr.rst:353
+msgid "int **gaussian** = 2"
+msgstr "int **gaussian** = 2 (高斯)"
+
+#: ../../reference_manual/seexpr.rst:357
+msgid "Noise Functions"
+msgstr "Noise Functions (噪声函数)"
+
+#: ../../reference_manual/seexpr.rst:360
+msgid "float **cellnoise** ( vector v )"
+msgstr "float **cellnoise** ( vector v )"
+
+#: ../../reference_manual/seexpr.rst:361
+msgid "float **cellnoise1** ( float x )"
+msgstr "float **cellnoise1** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:362
+msgid "float **cellnoise2** ( float x, float y )"
+msgstr "float **cellnoise2** ( float x, float y )"
+
+#: ../../reference_manual/seexpr.rst:363
+msgid "float **cellnoise3** ( float x, float y, float z )"
+msgstr "float **cellnoise3** ( float x, float y, float z )"
+
+#: ../../reference_manual/seexpr.rst:364
+msgid "color **ccellnoise** ( vector v )"
+msgstr "color **ccellnoise** ( vector v )"
+
+#: ../../reference_manual/seexpr.rst:366
+msgid ""
+"``cellnoise`` generates a field of constant colored cubes based on the "
+"integer location. This is the same as the `PRMan cellnoise function <https://"
+"renderman.pixar.com/resources/RenderMan_20/cellnoise.html>`_."
+msgstr ""
+"``cellnoise`` 会在一片区域中依据整数位置生成一片带有恒定颜色的方块。它和 "
+"`PRMan cellnoise function 功能一致 <https://renderman.pixar.com/resources/"
+"RenderMan_20/cellnoise.html>`_ 。"
+
+#: ../../reference_manual/seexpr.rst:370
+msgid "``ccellnoise`` outputs color cellnoise."
+msgstr "``ccellnoise`` 输出 color cellnoise (色块噪声)。"
+
+#: ../../reference_manual/seexpr.rst:372
+msgid ""
+"float **fbm** ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )"
+msgstr ""
+"float **fbm** ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )"
+
+#: ../../reference_manual/seexpr.rst:373
+msgid ""
+"color **cfbm** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+"color **cfbm** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+
+#: ../../reference_manual/seexpr.rst:374
+msgid ""
+"vector **vfbm** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+"vector **vfbm** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+
+#: ../../reference_manual/seexpr.rst:375
+msgid ""
+"float **fbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+msgstr ""
+"float **fbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+
+#: ../../reference_manual/seexpr.rst:376
+msgid ""
+"color **cfbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+msgstr ""
+"color **cfbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+
+#: ../../reference_manual/seexpr.rst:377
+msgid ""
+"vector **vfbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+msgstr ""
+"vector **vfbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+
+#: ../../reference_manual/seexpr.rst:379
+msgid ""
+"``fbm`` (Fractal Brownian Motion) is a multi-frequency noise function. The "
+"base frequency is the same as the ``noise`` function. The total number of "
+"frequencies is controlled by ``octaves``. The ``lacunarity`` is the spacing "
+"between the frequencies - a value of 2 means each octave is twice the "
+"previous frequency. The ``gain`` controls how much each frequency is scaled "
+"relative to the previous frequency."
+msgstr ""
+"``fbm`` (Fractal Brownian Motion / 分形布朗运动) 是一个多频率噪声函数。它的基"
+"本频率和 ``noise`` 函数相同，频率总数通过 ``octaves``控制。 ``lacunarity`` 是"
+"频率之间的间隙，数值为 2 时代表每一 octave (八度) 的频率是前一八度的 2 倍。 "
+"``gain`` 控制每个频率相对前一频率如何按比例缩放。"
+
+#: ../../reference_manual/seexpr.rst:388
+msgid "``cfbm`` and ``cfbm4`` outputs color noise."
+msgstr "``cfbm`` 和 ``cfbm4`` 输出颜色噪声。"
+
+#: ../../reference_manual/seexpr.rst:390
+msgid "``vfbm`` and ``vfbm4`` outputs vector noise."
+msgstr "``vfbm`` 和 ``vfbm4`` 输出矢量噪声。"
+
+#: ../../reference_manual/seexpr.rst:391
+msgid "float **hash** ( float seed1, [float seed2, ...] )"
+msgstr "float **hash** ( float seed1, [float seed2, ...] )"
+
+#: ../../reference_manual/seexpr.rst:393
+msgid ""
+"Like ``rand``, but with no internal seeds. Any number of seeds may be given "
+"and the result will be a random function based on all the seeds."
+msgstr ""
+"和 ``rand`` 类似，但不带有内部种子。可以指定任意数量的种子，结果为基于所有种"
+"子的随机函数。"
+
+#: ../../reference_manual/seexpr.rst:396
+msgid "float **noise** ( vector v )"
+msgstr "float **noise** ( vector v )"
+
+#: ../../reference_manual/seexpr.rst:397
+msgid "float **noise** ( float x, float y )"
+msgstr "float **noise** ( float x, float y )"
+
+#: ../../reference_manual/seexpr.rst:398
+msgid "float **noise** ( float x, float y, float z )"
+msgstr "float **noise** ( float x, float y, float z )"
+
+#: ../../reference_manual/seexpr.rst:399
+msgid "float **noise** ( float x, float y, float z, float w )"
+msgstr "float **noise** ( float x, float y, float z, float w )"
+
+#: ../../reference_manual/seexpr.rst:400
+msgid "color **cnoise** ( vector v)"
+msgstr "color **cnoise** ( vector v)"
+
+#: ../../reference_manual/seexpr.rst:401
+msgid "color **cnoise4** ( vector v, float t)"
+msgstr "color **cnoise4** ( vector v, float t)"
+
+#: ../../reference_manual/seexpr.rst:402
+msgid "float **pnoise** ( vector v, vector period )"
+msgstr "float **pnoise** ( vector v, vector period )"
+
+#: ../../reference_manual/seexpr.rst:403
+msgid "float **snoise** ( vector v)"
+msgstr "float **snoise** ( vector v)"
+
+#: ../../reference_manual/seexpr.rst:404
+msgid "float **snoise4** ( vector v, float t)"
+msgstr "float **snoise4** ( vector v, float t)"
+
+#: ../../reference_manual/seexpr.rst:405
+msgid "vector **vnoise** (vector v )"
+msgstr "vector **vnoise** (vector v )"
+
+#: ../../reference_manual/seexpr.rst:406
+msgid "vector **vnoise4** (vector v, float t )"
+msgstr "vector **vnoise4** (vector v, float t )"
+
+#: ../../reference_manual/seexpr.rst:408
+msgid ""
+"``noise`` is a random function that smoothly blends between samples at "
+"integer locations. This is Ken Perlin's original noise function."
+msgstr ""
+"``noise`` 是一个随机函数，它会在整数位置平滑地混合样本。这也是 Ken Perlin 发"
+"明的原始噪声函数 (柏林噪声)。"
+
+#: ../../reference_manual/seexpr.rst:413
+msgid "``cnoise`` and ``cnoise4`` output color noise."
+msgstr "``cnoise`` 和 ``cnoise4`` 输出颜色噪声。"
+
+#: ../../reference_manual/seexpr.rst:415
+msgid "``noise4`` outputs signed vector noise."
+msgstr "``noise4`` 输出有正负之分的矢量噪声。"
+
+#: ../../reference_manual/seexpr.rst:417
+msgid "``pnoise`` outputs periodic noise."
+msgstr "``pnoise`` 输出周期噪声。"
+
+#: ../../reference_manual/seexpr.rst:419
+msgid "``snoise`` and ``snoise4`` output signed noise with range ``[-1, 1]``."
+msgstr "``snoise`` 和 ``snoise4`` 输出有正负之分的噪声，范围为 ``[-1, 1]`` 。"
+
+#: ../../reference_manual/seexpr.rst:421
+msgid "``vnoise`` outputs signed vector noise."
+msgstr "``vnoise`` 输出有正负之分的矢量噪声。"
+
+#: ../../reference_manual/seexpr.rst:422
+msgid "float **rand** ( [float min, float max], [float seed] )"
+msgstr "float **rand** ( [float min, float max], [float seed] )"
+
+#: ../../reference_manual/seexpr.rst:424
+msgid ""
+"Random number between ``[min, max]`` (or ``[0, 1]`` if unspecified). If a "
+"seed is supplied, it will be used in addition to the internal seeds and may "
+"be used to create multiple distinct generators."
+msgstr ""
+"在 ``[min, max]`` 范围内的随机数字 (如果不指定范围则是 ``[0, 1]`` )。如果提供"
+"了外部种子，内部种子将和外部种子一同被使用，可以用于编写各种效果独特的生成"
+"器。"
+
+#: ../../reference_manual/seexpr.rst:427
+msgid ""
+"float **turbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+"float **turbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+
+#: ../../reference_manual/seexpr.rst:428
+msgid ""
+"color **cturbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+"color **cturbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+
+#: ../../reference_manual/seexpr.rst:429
+msgid ""
+"vector **vturbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+"vector **vturbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+
+#: ../../reference_manual/seexpr.rst:431
+msgid ""
+"``turbulence`` is a variant of ``fbm`` where the absolute value of each "
+"noise term is taken. This gives a more billowy appearance."
+msgstr ""
+"``turbulence`` 是 ``fbm`` 的变体，它会取每种噪声条件的绝对值，给出更加汹涌的"
+"视觉效果。"
+
+#: ../../reference_manual/seexpr.rst:433
+msgid ""
+"float **voronoi** ( vector v, int type=1, float jitter=0.5, float "
+"fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+msgstr ""
+"float **voronoi** ( vector v, int type=1, float jitter=0.5, float "
+"fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+
+#: ../../reference_manual/seexpr.rst:434
+msgid ""
+"color **cvoronoi** ( vector v, int type=1, float jitter=0.5, float "
+"fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+msgstr ""
+"color **cvoronoi** ( vector v, int type=1, float jitter=0.5, float "
+"fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+
+#: ../../reference_manual/seexpr.rst:435
+msgid ""
+"vector **pvoronoi** ( vector v, float jitter=0.5, float fbmScale=0, int "
+"fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+msgstr ""
+"vector **pvoronoi** ( vector v, float jitter=0.5, float fbmScale=0, int "
+"fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+
+#: ../../reference_manual/seexpr.rst:437
+msgid ""
+"``voronoi`` is a cellular noise pattern. It is a jittered variant of "
+"``cellnoise``. The type parameter describes different variants of the noise "
+"function. The ``jitter`` param controls how irregular the pattern is (0 is "
+"like ordinary cellnoise). The ``fbm...`` params can be used to distort the "
+"noise field. When ``fbmScale`` is zero (the default), there is no "
+"distortion. The remaining params are the same as for the ``fbm`` function."
+msgstr ""
+"``voronoi`` 是一种蜂窝状噪声图案，也叫做泰森图。它是 ``cellnoise`` 的抖动变"
+"体。它的类型参数描述了不同的噪声函数变体。 ``jitter`` 参数控制蜂窝形状的不规"
+"则程度 (0 与一般 cellnoise 图案相同)。 ``fbm...`` 参数可被用于扭曲噪声场。当 "
+"``fbmScale`` 为 0 (默认值) 时不发生扭曲。其余参数和 ``fbm`` 函数中的相同。"
+
+#: ../../reference_manual/seexpr.rst:448
+msgid "Voronoi types 1 through 5:"
+msgstr "Voronoi 的类型，从 1 到 5："
+
+#: ../../reference_manual/seexpr.rst:450
+msgid "|image0| |image1| |image2| |image3| |image4|"
+msgstr "|image0| |image1| |image2| |image3| |image4|"
+
+#: ../../reference_manual/seexpr.rst:453
+msgid ""
+"``cvoronoi`` returns a random color for each cell and ``pvoronoi`` returns "
+"the point location of the center of the cell."
+msgstr ""
+"``cvoronoi`` 给蜂窝图案的每一格返回一种随机颜色， ``pvoronoi`` 返回蜂窝图案格"
+"子中心点位置。"
+
+#: ../../reference_manual/seexpr.rst:459
+msgid "Selection Functions"
+msgstr "Selection Functions (选择函数)"
+
+#: ../../reference_manual/seexpr.rst:462
+msgid "float **choose** ( float index, float choice1, float choice2, [...] )"
+msgstr "float **choose** ( float index, float choice1, float choice2, [...] )"
+
+#: ../../reference_manual/seexpr.rst:464
+msgid ""
+"Chooses one of the supplied choices based on the index (assumed to be in the "
+"range ``[0, 1]``)."
+msgstr "在提供的选项中基于 index (索引) 选取其中之一 (假设范围为 ``[0, 1]``)。"
+
+#: ../../reference_manual/seexpr.rst:466
+msgid "int **cycle** ( int index, int loRange, int hiRange )"
+msgstr "int **cycle** ( int index, int loRange, int hiRange )"
+
+#: ../../reference_manual/seexpr.rst:468
+msgid ""
+"Cycles through values between loRange and hiRange based on supplied index. "
+"This is an offset ``mod`` function. The result is computed as ``loRange + "
+"value % (hiRange-loRange+1)``."
+msgstr ""
+"按照提供的 index (索引) 在 loRange 和 hiRange 之间 cycle (循环) 输出数值。这"
+"是一个 offset (偏移)的 ``mod`` 函数。其结果按照 ``loRange + value % (hiRange-"
+"loRange+1)`` 进行计算。"
+
+#: ../../reference_manual/seexpr.rst:471
+msgid ""
+"int **pick** ( float index, int loRange, int hiRange, [ float "
+"weights, ... ] )"
+msgstr ""
+"int **pick** ( float index, int loRange, int hiRange, [ float "
+"weights, ... ] )"
+
+#: ../../reference_manual/seexpr.rst:473
+msgid ""
+"Picks values randomly between loRange and hiRange based on supplied index "
+"(which is automatically hashed). The values will be distributed according to "
+"the supplied weights. Any weights not supplied are assumed to be 1.0."
+msgstr ""
+"按照提供的 index (索引值，通过自动散列得到 / automatically hashed) 在 "
+"loRange 和 hiRange 之间随机选取数值。数值将按照提供的 weight (权重) 进行分"
+"布。未提供权重的假设其权重为 1.0。"
+
+#: ../../reference_manual/seexpr.rst:477
+msgid ""
+"float **wchoose** ( float index, float choice1, float weight1, float "
+"choice2, float weight2, [...] )"
+msgstr ""
+"float **wchoose** ( float index, float choice1, float weight1, float "
+"choice2, float weight2, [...] )"
+
+#: ../../reference_manual/seexpr.rst:479
+msgid ""
+"Chooses one of the supplied choices based on the index (assumed to be in "
+"range ``[0, 1]``). The values will be distributed according to the supplied "
+"weights."
+msgstr ""
+"按照索引 (假设范围为 ``[0, 1]``) 从提供的选项中选择其一。数值将按照提供的权重"
+"进行分布。"
+
+#: ../../reference_manual/seexpr.rst:485
+msgid "This example returns integer values between 1 and 10::"
+msgstr "此例子返回整数数值，范围为 1 - 10::"
+
+#: ../../reference_manual/seexpr.rst:487
+msgid "pick(value, 1, 10)"
+msgstr "pick(value, 1, 10)"
+
+#: ../../reference_manual/seexpr.rst:489
+msgid ""
+"This example returns the values 1 and 2 twice and 2.5 times as often "
+"respectively as compared to the other values (3-10)::"
+msgstr ""
+"此例子返回数值为 1 的频率为 3 - 10 的 2 倍，2 的频率为 3 - 10 的 2.5 倍::"
+
+#: ../../reference_manual/seexpr.rst:492
+msgid "pick(value, 1, 10, 2, 2.5)"
+msgstr "pick(value, 1, 10, 2, 2.5)"
+
+#: ../../reference_manual/seexpr.rst:494
+msgid ""
+"This example returns 10, 11, and 13 through 20 (12 is skipped due to zero "
+"weight)::"
+msgstr "此例子返回 10、11 和 13 - 20 (12 的权重为 0，它被跳过)::"
+
+#: ../../reference_manual/seexpr.rst:496
+msgid "pick(value, 10, 20, 1, 1, 0)"
+msgstr ""
+"This example returns 10, 11, and 13 through 20 (12 is skipped due to zero "
+"weight)::"
+
+#: ../../reference_manual/seexpr.rst:501
+msgid "General Mathematical Constants and Functions"
+msgstr "一般数学常量和函数"
+
+#: ../../reference_manual/seexpr.rst:504
+msgid "float **PI**"
+msgstr "float **PI**"
+
+#: ../../reference_manual/seexpr.rst:508
+msgid "float PI = 3.14159..."
+msgstr "float PI = 3.14159..."
+
+#: ../../reference_manual/seexpr.rst:509
+msgid "float **E**"
+msgstr "float **E**"
+
+#: ../../reference_manual/seexpr.rst:513
+msgid "float E = 2.71828..."
+msgstr "float E = 2.71828..."
+
+#: ../../reference_manual/seexpr.rst:516
+msgid "float **abs** ( float x)"
+msgstr "float **abs** ( float x)"
+
+#: ../../reference_manual/seexpr.rst:518
+msgid "Absolute value of ``x``."
+msgstr "求 ``x`` 的绝对值。"
+
+#: ../../reference_manual/seexpr.rst:519
+msgid "float **cbrt** ( float x )"
+msgstr "float **cbrt** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:521
+msgid "Cube root."
+msgstr "求 x 的立方根。"
+
+#: ../../reference_manual/seexpr.rst:522
+msgid "float **ceil** ( float x )"
+msgstr "float **ceil** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:524
+msgid "Next higher integer."
+msgstr "取下一更大整数。"
+
+#: ../../reference_manual/seexpr.rst:525
+msgid "float **exp** ( float x )"
+msgstr "float **exp** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:527
+msgid "``E`` raised to the ``x`` power."
+msgstr "求 ``E`` 的 ``x`` 次方。"
+
+#: ../../reference_manual/seexpr.rst:528
+msgid "float **floor** ( float x )"
+msgstr "float **floor** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:530
+msgid "Next lower integer."
+msgstr "取下一更小整数。"
+
+#: ../../reference_manual/seexpr.rst:531
+msgid "float **fmod** ( float x, float y )"
+msgstr "float **fmod** ( float x, float y )"
+
+#: ../../reference_manual/seexpr.rst:533
+msgid "Remainder of ``x / y``."
+msgstr "求 ``x / y`` 的余数。"
+
+#: ../../reference_manual/seexpr.rst:535
+msgid "Also available as the ``%`` operator."
+msgstr "也可以通过 ``%`` 运算符调用。"
+
+#: ../../reference_manual/seexpr.rst:536
+msgid "float **log** ( float x )"
+msgstr "float **log** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:538
+msgid "Natural logarithm."
+msgstr "求自然对数。"
+
+#: ../../reference_manual/seexpr.rst:539
+msgid "float **log10** ( float x )"
+msgstr "float **log10** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:541
+msgid "Base 10 logarithm."
+msgstr "求以 10 为底的对数。"
+
+#: ../../reference_manual/seexpr.rst:542
+msgid "float **max** ( float a, float b )"
+msgstr "float **max** ( float a, float b )"
+
+#: ../../reference_manual/seexpr.rst:544
+msgid "Greater of ``a`` and ``b``."
+msgstr "取 ``a`` 和 ``b`` 的较大值。"
+
+#: ../../reference_manual/seexpr.rst:545
+msgid "float **min** ( float a, float b )"
+msgstr "float **min** ( float a, float b )"
+
+#: ../../reference_manual/seexpr.rst:547
+msgid "Lesser of ``a`` and ``b``."
+msgstr "取 ``a`` 和 ``b`` 的较小值。"
+
+#: ../../reference_manual/seexpr.rst:548
+msgid "float **pow** ( float x, float y )"
+msgstr "float **pow** ( float x, float y )"
+
+#: ../../reference_manual/seexpr.rst:550
+msgid "``x`` to the ``y`` power."
+msgstr "求 ``x`` 的 ``y`` 次方。"
+
+#: ../../reference_manual/seexpr.rst:552
+msgid "Also available as the ``^`` operator."
+msgstr "也可以通过 ``^`` 运算符调用。"
+
+#: ../../reference_manual/seexpr.rst:553
+msgid "float **round** ( float x )"
+msgstr "float **round** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:555
+msgid "Nearest integer."
+msgstr "取 x 的最近似整数。"
+
+#: ../../reference_manual/seexpr.rst:556
+msgid "float **sqrt** ( float x )"
+msgstr "float **sqrt** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:558
+msgid "Square root."
+msgstr "求 x 的平方根。"
+
+#: ../../reference_manual/seexpr.rst:559
+msgid "float **trunc** ( float x )"
+msgstr "float **trunc** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:561
+msgid "Nearest integer towards zero."
+msgstr "趋零截尾，求 x 在趋近零方向上的最近似整数。"
+
+#: ../../reference_manual/seexpr.rst:565
+msgid "Trigonometry Functions"
+msgstr "Trigonometry Functions (三角函数)"
+
+#: ../../reference_manual/seexpr.rst:568
+msgid "float **acos** ( float x )"
+msgstr "float **acos** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:570
+msgid "Arc cosine."
+msgstr "求反余弦弧度。"
+
+#: ../../reference_manual/seexpr.rst:571
+msgid "float **acosd** ( float x )"
+msgstr "float **acosd** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:573
+msgid "Arc cosine in degrees."
+msgstr "求反余弦角度。"
+
+#: ../../reference_manual/seexpr.rst:574
+msgid "float **acosh** ( float x )"
+msgstr "float **acosh** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:576
+msgid "Hyperbolic arc cosine."
+msgstr "求双曲反余弦弧度。"
+
+#: ../../reference_manual/seexpr.rst:577
+msgid "float **asin** ( float x )"
+msgstr "float **asin** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:579
+msgid "Arc sine."
+msgstr "求反正弦弧度。"
+
+#: ../../reference_manual/seexpr.rst:580
+msgid "float **asind** ( float x )"
+msgstr "float **asind** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:582
+msgid "Arc sine in degrees."
+msgstr "求反正弦角度。"
+
+#: ../../reference_manual/seexpr.rst:583
+msgid "float **asinh** ( float x )"
+msgstr "float **asinh** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:585
+msgid "Hyperbolic arc sine."
+msgstr "求双曲反正弦弧度。"
+
+#: ../../reference_manual/seexpr.rst:586
+msgid "float **atan** ( float x )"
+msgstr "float **atan** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:588
+msgid "Arc tangent."
+msgstr "求反正切弧度。"
+
+#: ../../reference_manual/seexpr.rst:589
+msgid "float **atand** ( float x )"
+msgstr "float **atand** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:591
+msgid "Arc tangent in degrees."
+msgstr "求反正切角度。"
+
+#: ../../reference_manual/seexpr.rst:592
+msgid "float **atan2** ( float y, float x)"
+msgstr "float **atan2** ( float y, float x)"
+
+#: ../../reference_manual/seexpr.rst:594
+msgid "Arc tangent of ``y/x`` between ``-PI`` and ``PI``."
+msgstr "在 ``-PI`` 和 ``PI`` 之间求 ``y/x`` 的反正切弧度。"
+
+#: ../../reference_manual/seexpr.rst:595
+msgid "float **atan2d** ( float y, float x )"
+msgstr "float **atan2d** ( float y, float x )"
+
+#: ../../reference_manual/seexpr.rst:597
+msgid "Arc tangent in degrees of ``y/x`` between ``-180º`` and ``180º``."
+msgstr "在 ``-180º`` 和 ``180º`` 之间求 ``y/x`` 的反正切角度。"
+
+#: ../../reference_manual/seexpr.rst:598
+msgid "float **atanh** ( float x )"
+msgstr "float **atanh** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:600
+msgid "Hyperbolic arc tangent."
+msgstr "求双曲反正切弧度。"
+
+#: ../../reference_manual/seexpr.rst:601
+msgid "float **cos** ( float x )"
+msgstr "float **cos** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:603
+msgid "Cosine."
+msgstr "求余弦弧度。"
+
+#: ../../reference_manual/seexpr.rst:604
+msgid "float **cosd** ( float x )"
+msgstr "float **cosd** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:606
+msgid "Cosine in degrees."
+msgstr "求余弦角度。"
+
+#: ../../reference_manual/seexpr.rst:607
+msgid "float **cosh** ( float x )"
+msgstr "float **cosh** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:609
+msgid "Hyperbolic cosine."
+msgstr "求双曲余弦弧度。"
+
+#: ../../reference_manual/seexpr.rst:610
+msgid "float **deg** ( float x )"
+msgstr "float **deg** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:612
+msgid "Radians to degrees."
+msgstr "将弧度转换为角度。"
+
+#: ../../reference_manual/seexpr.rst:613
+msgid "float **hypot** ( float x, float y )"
+msgstr "float **hypot** ( float x, float y )"
+
+#: ../../reference_manual/seexpr.rst:615
+msgid "Length of 2D vector ``[x, y]``."
+msgstr "求二维矢量 ``[x, y]`` 的长度。"
+
+#: ../../reference_manual/seexpr.rst:616
+msgid "float **rad** ( float x )"
+msgstr "float **rad** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:618
+msgid "Degrees to radians."
+msgstr "将角度转换为弧度。"
+
+#: ../../reference_manual/seexpr.rst:619
+msgid "float **sin** ( float x )"
+msgstr "float **sin** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:621
+msgid "Sine."
+msgstr "求正弦弧度。"
+
+#: ../../reference_manual/seexpr.rst:622
+msgid "float **sind** ( float x )"
+msgstr "float **sind** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:624
+msgid "Sine in degrees."
+msgstr "求正弦角度。"
+
+#: ../../reference_manual/seexpr.rst:625
+msgid "float **sinh** ( float x )"
+msgstr "float **sinh** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:627
+msgid "Hyperbolic sine."
+msgstr "求双曲正弦弧度。"
+
+#: ../../reference_manual/seexpr.rst:628
+msgid "float **tan** ( float x )"
+msgstr "float **tan** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:630
+msgid "Tangent."
+msgstr "求正切弧度。"
+
+#: ../../reference_manual/seexpr.rst:631
+msgid "float **tand** ( float x )"
+msgstr "float **tand** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:633
+msgid "Tangent in degrees."
+msgstr "求正切角度。"
+
+#: ../../reference_manual/seexpr.rst:634
+msgid "float **tanh** ( float x )"
+msgstr "float **tanh** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:636
+msgid "Hyperbolic tangent."
+msgstr "求双曲正切弧度。"
+
+#: ../../reference_manual/seexpr.rst:640
+msgid "Vector Functions"
+msgstr "Vector Functions (矢量函数)"
+
+#: ../../reference_manual/seexpr.rst:643
+msgid "float angle ( vector a, vector b )"
+msgstr "float angle ( vector a, vector b )"
+
+#: ../../reference_manual/seexpr.rst:645
+msgid "Angle between two vectors (in radians)."
+msgstr "求两个矢量之间的夹角 (输出弧度)"
+
+#: ../../reference_manual/seexpr.rst:646
+msgid "vector **cross** ( vector a, vector b )"
+msgstr "vector **cross** ( vector a, vector b )"
+
+#: ../../reference_manual/seexpr.rst:648
+msgid "Vector cross product."
+msgstr "求矢量的矢量积。"
+
+#: ../../reference_manual/seexpr.rst:649
+msgid "float **dist** ( vector a, vector b )"
+msgstr "float **dist** ( vector a, vector b )"
+
+#: ../../reference_manual/seexpr.rst:651
+msgid "Distance between two points."
+msgstr "求两点间距离。"
+
+#: ../../reference_manual/seexpr.rst:652
+msgid "float **dot** ( vector a, vector b)"
+msgstr "float **dot** ( vector a, vector b)"
+
+#: ../../reference_manual/seexpr.rst:654
+msgid "Vector dot product."
+msgstr "求矢量的标量积。"
+
+#: ../../reference_manual/seexpr.rst:655
+msgid "float **length** ( vector v )"
+msgstr "float **length** ( vector v )"
+
+#: ../../reference_manual/seexpr.rst:657
+msgid "Length of vector."
+msgstr "求矢量的长度。"
+
+#: ../../reference_manual/seexpr.rst:658
+msgid "vector **norm** ( vector v )"
+msgstr "vector **norm** ( vector v )"
+
+#: ../../reference_manual/seexpr.rst:660
+msgid "Vector scaled to unit length."
+msgstr "求矢量缩放至单位长度后的矢量。"
+
+#: ../../reference_manual/seexpr.rst:661
+msgid "vector **ortho** ( vector a, vector b )"
+msgstr "vector **ortho** ( vector a, vector b )"
+
+#: ../../reference_manual/seexpr.rst:663
+msgid "Vector orthographic to two vectors."
+msgstr "求与两组矢量正交的矢量。"
+
+#: ../../reference_manual/seexpr.rst:664
+msgid "vector **rotate** ( vector v, vector axis, float angle )"
+msgstr "vector **rotate** ( vector v, vector axis, float angle )"
+
+#: ../../reference_manual/seexpr.rst:666
+msgid "Rotates ``v`` around axis by the given ``angle`` (in radians)."
+msgstr "按照给定的角度 ``angle`` (弧度数值)，绕轴旋转矢量 ``v`` 。"
+
+#: ../../reference_manual/seexpr.rst:667
+msgid "vector **up** ( vector v, vector up )"
+msgstr "vector **up** ( vector v, vector up )"
+
+#: ../../reference_manual/seexpr.rst:669
+msgid ""
+"Rotates ``v`` such that the Y axis points in the given ``up`` direction."
+msgstr "旋转矢量 ``v`` ，使其 Y 轴指向给定的 ``up`` 方向。"
+
+#: ../../reference_manual/seexpr.rst:674
+msgid "Vector Support"
+msgstr "Vector Support (矢量功能支持)"
+
+#: ../../reference_manual/seexpr.rst:676
+msgid ""
+"*Vectors* (points, colors, or 3D vectors) may be intermixed with *scalars* "
+"(simple floating point values). If a scalar is used in a vector context, it "
+"is replicated into the three components, e.g. ``0.5`` becomes ``[0.5, 0.5, "
+"0.5]``."
+msgstr ""
+"** Vectors (矢量)** 包括矢量点、颜色矢量和三维矢量，有时也和 **scalars (标"
+"量)** (simple floating point values / 简单浮点数值) 混用。如果在矢量语境里面"
+"使用标量，它将会被复制到矢量的三个分量上，例如 ``0.5`` 将被转换为 ``[0.5, "
+"0.5, 0.5]`` 。"
+
+#: ../../reference_manual/seexpr.rst:680
+msgid ""
+"If a vector is used in a scalar context, only the first component is used. "
+"One of the benefits of this is that all the functions that are defined to "
+"work with scalars automatically extend to vectors. For instance, ``pick``, "
+"``choose``, ``cycle``, ``spline``, etc., will work just fine with vectors."
+msgstr ""
+"矢量在标量语境中使用时，只有它的第一分量才会被使用。这种做法的好处是所有给标"
+"量准备的函数也可以自动支持矢量。例如 ``pick`` 、 ``choose`` 、 ``cycle`` 、 "
+"``spline`` 等均可使用矢量。"
+
+#: ../../reference_manual/seexpr.rst:686
+msgid ""
+"Arithmetic operators such as ``+``, ``*``, etc., and scalar functions are "
+"applied component-wise to vectors. For example, applying the ``gamma`` "
+"function to a map adjusts the gamma of all three color channels."
+msgstr ""
+"算数运算符，如 ``+`` 、 ``*`` 等，还有标量函数会按照分量应用到矢量。例如将 "
+"``gamma`` 函数应用到一个 mao (映射) 时将调整全部三个颜色通道的 gamma 值。"
+
+#: ../../reference_manual/seexpr.rst:692
+msgid "Curve Functions"
+msgstr "Curve Functions (曲线函数)"
+
+#: ../../reference_manual/seexpr.rst:694
+msgid ""
+"Interpolation of parameter values to a set of control points is governed by "
+"the following functions."
+msgstr "将参数数值按照下列函数指定的控制点进行插值。"
+
+#: ../../reference_manual/seexpr.rst:698
+msgid ""
+"color **ccurve** ( float param, float pos0, color val0, int interp0, float "
+"pos1, color val1, int interp1, [...] )"
+msgstr ""
+"color **ccurve** ( float param, float pos0, color val0, int interp0, float "
+"pos1, color val1, int interp1, [...] )"
+
+#: ../../reference_manual/seexpr.rst:700
+msgid ""
+"Interpolates color ramp given by control points at ``param``. Control points "
+"are specified by triples of parameters ``pos_i``, ``val_i``, and "
+"``interp_i``."
+msgstr ""
+"用 ``param`` 处给定的控制点对颜色梯度进行插值。控制点由三元参数 ``pos_i`` 、 "
+"``val_i`` 、 ``interp_i`` 进行指定。"
+
+#: ../../reference_manual/seexpr.rst:705 ../../reference_manual/seexpr.rst:719
+msgid "Interpolation codes are:"
+msgstr "插值方式代码如下："
+
+#: ../../reference_manual/seexpr.rst:707 ../../reference_manual/seexpr.rst:721
+msgid "0 - none"
+msgstr "0 - none (无)"
+
+#: ../../reference_manual/seexpr.rst:708 ../../reference_manual/seexpr.rst:722
+msgid "1 - linear"
+msgstr "1 - linear (线性)"
+
+#: ../../reference_manual/seexpr.rst:709 ../../reference_manual/seexpr.rst:723
+msgid "2 - smooth"
+msgstr "2 - smooth (平滑)"
+
+#: ../../reference_manual/seexpr.rst:710 ../../reference_manual/seexpr.rst:724
+msgid "3 - spline"
+msgstr "3 - spline (样条曲线)"
+
+#: ../../reference_manual/seexpr.rst:711 ../../reference_manual/seexpr.rst:725
+msgid "4 - monotone (non-oscillating) spline"
+msgstr "4 - monotone (non-oscillating) spline (单调/非振动样条曲线)"
+
+#: ../../reference_manual/seexpr.rst:712
+msgid ""
+"float **curve** ( float param, float pos0, float val0, int interp0, float "
+"pos1, float val1, int interp1, [...] )"
+msgstr ""
+"float **curve** ( float param, float pos0, float val0, int interp0, float "
+"pos1, float val1, int interp1, [...] )"
+
+#: ../../reference_manual/seexpr.rst:714
+msgid ""
+"Interpolates a 1D ramp defined by control points at ``param``. Control "
+"points are specified by triples of parameters ``pos_i``, ``val_i``, and "
+"``interp_i``."
+msgstr ""
+"用 ``param`` 处给定的控制点对一维梯度进行插值。控制点由三元参数 ``pos_i`` 、 "
+"``val_i`` 、 ``interp_i`` 进行指定。"
+
+#: ../../reference_manual/seexpr.rst:726
+msgid ""
+"float **spline** ( float param, float y1, float y2, float y3, float y4, "
+"[...] )"
+msgstr ""
+"float **spline** ( float param, float y1, float y2, float y3, float y4, "
+"[...] )"
+
+#: ../../reference_manual/seexpr.rst:728
+msgid ""
+"Interpolates a set of values to the parameter specified where ``y1``, ..., "
+"``yn`` are distributed evenly from ``[0, 1]``."
+msgstr ""
+"将一组数值按照指定参数进行插值， ``y1`` 至 ``yn`` 的数值在 ``[0, 1]`` 范围内"
+"等距分布。"
+
+#: ../../reference_manual/seexpr.rst:733
+msgid "Custom Plugins"
+msgstr "自定义插件"
+
+#: ../../reference_manual/seexpr.rst:735
+msgid ""
+"Custom functions may be written in C++ and loaded as one or more dynamic "
+"plugins.  See `Writing Custom Expression Plugins <https://wdas.github.io/"
+"SeExpr/doxygen/plugins.html>`_ for more details."
+msgstr ""
+"自定义函数可用 C++ 编写后作为动态插件加载。详情请参照 SeExpr 的 `Writing "
+"Custom Expression Plugins / 编写自定义表达式插件 <https://wdas.github.io/"
+"SeExpr/doxygen/plugins.html>`_ 文章。"
+
+#: ../../reference_manual/seexpr.rst:737
+msgid "This functionality is not supported in Krita."
+msgstr "Krita 不支持此功能。"
+
+#: ../../reference_manual/seexpr.rst:739
+msgid ""
+".. image:: images/seexpr/Se_voronoi_1.png\n"
+"   :alt: image0"
+msgstr ""
+".. image:: images/seexpr/Se_voronoi_1.png\n"
+"   :alt: image0"
+
+#: ../../reference_manual/seexpr.rst:740
+msgid ""
+".. image:: images/seexpr/Se_voronoi_2.png\n"
+"   :alt: image1"
+msgstr ""
+".. image:: images/seexpr/Se_voronoi_2.png\n"
+"   :alt: image1"
+
+#: ../../reference_manual/seexpr.rst:741
+msgid ""
+".. image:: images/seexpr/Se_voronoi_3.png\n"
+"   :alt: image2"
+msgstr ""
+".. image:: images/seexpr/Se_voronoi_3.png\n"
+"   :alt: image2"
+
+#: ../../reference_manual/seexpr.rst:742
+msgid ""
+".. image:: images/seexpr/Se_voronoi_4.png\n"
+"   :alt: image3"
+msgstr ""
+".. image:: images/seexpr/Se_voronoi_4.png\n"
+"   :alt: image3"
+
+#: ../../reference_manual/seexpr.rst:743
+msgid ""
+".. image:: images/seexpr/Se_voronoi_5.png\n"
+"   :alt: image4"
+msgstr ""
+".. image:: images/seexpr/Se_voronoi_5.png\n"
+"   :alt: image4"
