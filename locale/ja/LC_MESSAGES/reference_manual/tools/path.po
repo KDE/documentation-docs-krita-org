@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"POT-Creation-Date: 2022-08-10 00:40+0000\n"
 "PO-Revision-Date: 2022-03-06 21:55-0800\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -70,32 +70,36 @@ msgid "|toolbeziercurve|"
 msgstr ""
 
 #: ../../reference_manual/tools/path.rst:21
+#, fuzzy
+#| msgid ""
+#| "You can draw curves by using this tool. Click the |mouseleft| to indicate "
+#| "the starting point of the curve, then click again for consecutive control "
+#| "points of the curve."
 msgid ""
-"You can draw curves by using this tool. Click the |mouseleft| to indicate "
-"the starting point of the curve, then click again for consecutive control "
-"points of the curve."
+"You can draw curves by using this tool. Click |mouseleft| to indicate the "
+"starting point of the curve, then click again for consecutive control points "
+"of the curve. While creating a control point, drag to create the handles, "
+"they will show as red lines."
 msgstr ""
 "このツールでは曲線を描くことができます。曲線の始点を |mouseleft| クリックで示"
 "し、再度クリックして操作点を作成します。"
 
 #: ../../reference_manual/tools/path.rst:23
+#, fuzzy
+#| msgid ""
+#| "On a vector layer, you can click on a previously inserted control point "
+#| "to modify it. With an intermediate control point (i.e. a point that is "
+#| "not the starting point and not the ending point), you can move the "
+#| "direction handles separately to have the curve enter and leave the point "
+#| "in different directions. After editing a point, you can just click on the "
+#| "canvas to continue adding points to the curve."
 msgid ""
-":program:`Krita` will show a blue line with two handles when you add a "
-"control point. You can drag these handles to change the direction of the "
-"curve in that point."
-msgstr ""
-":program:`Krita` は操作点を作成すると2つのハンドルが付いた青い線を表示しま"
-"す。このハンドルをドラッグすることでその点からの曲線の向きを変えることができ"
-"ます。"
-
-#: ../../reference_manual/tools/path.rst:25
-msgid ""
-"On a vector layer, you can click on a previously inserted control point to "
-"modify it. With an intermediate control point (i.e. a point that is not the "
-"starting point and not the ending point), you can move the direction handles "
+"With an intermediate control point (i.e. a point that is not the starting "
+"point and not the ending point), you can move the direction handles "
 "separately to have the curve enter and leave the point in different "
 "directions. After editing a point, you can just click on the canvas to "
-"continue adding points to the curve."
+"continue adding points to the curve. When creating a path on a vector layer, "
+"the resulting path can be further edited with the :ref:`shape_edit_tool`."
 msgstr ""
 "ベクターレイヤーでは、前追加された操作点をクリックして編集することができま"
 "す。中間操作点(例えば開始や終了地点でない点)で、その点に入って出ていく向きを"
@@ -103,40 +107,50 @@ msgstr ""
 "線への点の追加を続行できます。"
 
 #: ../../reference_manual/tools/path.rst:27
-msgid ""
-"Pressing the :kbd:`Del` key will remove the currently selected control point "
-"from the curve. Double-click the |mouseleft| on any point of the curve or "
-"press the :kbd:`Enter` key to finish drawing, or press the :kbd:`Esc` key to "
-"cancel the entire curve. You can use the :kbd:`Ctrl` key while keeping the |"
-"mouseleft| pressed to move the entire curve to a different position."
+msgid ".. image:: images/tools/path_tool_usage.png"
 msgstr ""
-":kbd:`Del` キーを押すことで選択されている操作点を曲線から削除します。曲線上の"
-"どの点でも |mouseleft| ダブルクリックしたり :kbd:`Enter` キーを押すことで曲線"
-"を完成させ、または :kbd:`Esc` キーを押すことで曲線全体をキャンセルします。|"
-"mouseleft| を押したまま :kbd:`Ctrl` キーを使うことで曲線全体を違う場所に移動"
-"できます。"
+
+#: ../../reference_manual/tools/path.rst:27
+msgid ""
+"The path preview that shows while drawing a path. The start of the path is "
+"indicated with a white square, the preview for the path itself in black, and "
+"the red dotted lines being the control points for the current handle."
+msgstr ""
 
 #: ../../reference_manual/tools/path.rst:29
 msgid ""
-"While drawing the :kbd:`Ctrl` key while dragging will push the handles both "
-"ways. The :kbd:`Alt` key will create a sharp corner, and the :kbd:`Shift` "
-"key will allow you to make a handle while at the end of the curve. |"
-"mouseright| will undo the last added point."
+"Double-click |mouseleft| on any point of the curve or press the :kbd:`Enter` "
+"key to finish drawing, or press the :kbd:`Esc` key to cancel the entire "
+"curve."
+msgstr ""
+
+#: ../../reference_manual/tools/path.rst:31
+#, fuzzy
+#| msgid ""
+#| "While drawing the :kbd:`Ctrl` key while dragging will push the handles "
+#| "both ways. The :kbd:`Alt` key will create a sharp corner, and the :kbd:"
+#| "`Shift` key will allow you to make a handle while at the end of the "
+#| "curve. |mouseright| will undo the last added point."
+msgid ""
+"While drawing a curve, pressing the :kbd:`Ctrl` key while dragging will push "
+"the handles both ways. The :kbd:`Alt` key will create a sharp corner, and "
+"the :kbd:`Shift` key will allow you to make a handle while at the end of the "
+"curve. |mouseright| will undo the last added point."
 msgstr ""
 "ドラッグしつつ :kbd:`Ctrl` キーを押して描くことでハンドルを両方の方向に出すこ"
 "とができます。:kbd:`Alt` キーで角ばった角にすることができ、:kbd:`Shift` キー"
 "で曲線の終わりでもハンドルを作ることができます。|mouseright| で最後に追加され"
 "た点を取り消します。"
 
-#: ../../reference_manual/tools/path.rst:32
+#: ../../reference_manual/tools/path.rst:34
 msgid "Tool Options"
 msgstr "ツールのオプション"
 
-#: ../../reference_manual/tools/path.rst:36
+#: ../../reference_manual/tools/path.rst:38
 msgid "Autosmooth Curve"
 msgstr "Autosmooth 曲線"
 
-#: ../../reference_manual/tools/path.rst:37
+#: ../../reference_manual/tools/path.rst:39
 msgid ""
 "Toggling this will have nodes initialize with smooth curves instead of "
 "angles. Untoggle this if you want to create sharp angles for a node. This "
@@ -145,15 +159,15 @@ msgstr ""
 "これをオンにするとノードを角ではなくスムーズな曲線で始めます。角ばったノード"
 "にしたい時はチェックを外します。ドラッグした時の曲線の角ばりに影響します。"
 
-#: ../../reference_manual/tools/path.rst:39
+#: ../../reference_manual/tools/path.rst:41
 msgid "Angle Snapping Delta"
 msgstr "角度スナップデルタ"
 
-#: ../../reference_manual/tools/path.rst:40
+#: ../../reference_manual/tools/path.rst:42
 msgid "The angle to snap to."
 msgstr "スナップする角度です。"
 
-#: ../../reference_manual/tools/path.rst:42
+#: ../../reference_manual/tools/path.rst:44
 msgid ""
 "Angle snap will make it easier to have the next line be at a specific angle "
 "of the current. The angle is determined by the :guilabel:`Angle Snapping "
@@ -161,3 +175,26 @@ msgid ""
 msgstr ""
 "角度スナップは次の線を特定の角度で作ることがより簡単になります。この角度は :"
 "guilabel:`角度スナップデルタ` で決めます。"
+
+#~ msgid ""
+#~ ":program:`Krita` will show a blue line with two handles when you add a "
+#~ "control point. You can drag these handles to change the direction of the "
+#~ "curve in that point."
+#~ msgstr ""
+#~ ":program:`Krita` は操作点を作成すると2つのハンドルが付いた青い線を表示しま"
+#~ "す。このハンドルをドラッグすることでその点からの曲線の向きを変えることがで"
+#~ "きます。"
+
+#~ msgid ""
+#~ "Pressing the :kbd:`Del` key will remove the currently selected control "
+#~ "point from the curve. Double-click the |mouseleft| on any point of the "
+#~ "curve or press the :kbd:`Enter` key to finish drawing, or press the :kbd:"
+#~ "`Esc` key to cancel the entire curve. You can use the :kbd:`Ctrl` key "
+#~ "while keeping the |mouseleft| pressed to move the entire curve to a "
+#~ "different position."
+#~ msgstr ""
+#~ ":kbd:`Del` キーを押すことで選択されている操作点を曲線から削除します。曲線"
+#~ "上のどの点でも |mouseleft| ダブルクリックしたり :kbd:`Enter` キーを押すこ"
+#~ "とで曲線を完成させ、または :kbd:`Esc` キーを押すことで曲線全体をキャンセル"
+#~ "します。|mouseleft| を押したまま :kbd:`Ctrl` キーを使うことで曲線全体を違"
+#~ "う場所に移動できます。"

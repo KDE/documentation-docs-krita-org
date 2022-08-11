@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-01 00:13+0000\n"
+"POT-Creation-Date: 2022-08-10 00:40+0000\n"
 "PO-Revision-Date: 2021-12-13 17:23+0000\n"
 "Last-Translator: BiseChen <bise.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/krita-"
@@ -271,7 +271,7 @@ msgstr "CPU 限制"
 msgid "The number of cores you want to allow Krita to use when multithreading."
 msgstr "指定 Krita 可使用的執行緒數量上限。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:68
+#: ../../reference_manual/preferences/performance_settings.rst:67
 msgid "Frame Rendering Clones Limit"
 msgstr "動畫繪製平行副本上限"
 
@@ -288,15 +288,29 @@ msgstr ""
 "外的記憶體，如果處理的動畫很龐大又複雜時，為了不耗盡記憶體，這時有必要限制處"
 "理動畫使用的執行緒數量。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:71
+#: ../../reference_manual/preferences/performance_settings.rst:70
+#, fuzzy
+#| msgid "Frame Rendering Clones Limit"
+msgid "Frame Rendering Timeout"
+msgstr "動畫繪製平行副本上限"
+
+#: ../../reference_manual/preferences/performance_settings.rst:70
+msgid ""
+"To prevent Krita from hanging on a single frame, we limit how long it can "
+"spend on rendering a frame before moving on the next. If rendering an "
+"animation fails very often due a timeout, you can increase this value. Do "
+"note that it might also be caused by the file being too complex."
+msgstr ""
+
+#: ../../reference_manual/preferences/performance_settings.rst:73
 msgid "Other"
 msgstr "其它"
 
-#: ../../reference_manual/preferences/performance_settings.rst:72
+#: ../../reference_manual/preferences/performance_settings.rst:74
 msgid "Limit frames per second while painting."
 msgstr "繪畫模式每秒影格數限制。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:73
+#: ../../reference_manual/preferences/performance_settings.rst:75
 msgid ""
 "This makes the canvas update less often, which means Krita can spend more "
 "time calculating other things. Some people find fewer updates unnerving to "
@@ -305,28 +319,28 @@ msgstr ""
 "降低繪製時畫布更新率。這讓 Krita 可以保留處理其他事情的資源，因為有些人很在意"
 "筆刷更新頻率，因此加入這個選項讓用戶自己設置。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:74
+#: ../../reference_manual/preferences/performance_settings.rst:76
 msgid "Debug logging of OpenGL framerate"
 msgstr "啟用除錯用的OpenGL影格速率記錄"
 
-#: ../../reference_manual/preferences/performance_settings.rst:75
+#: ../../reference_manual/preferences/performance_settings.rst:77
 msgid "Will show the canvas framerate on the canvas when active."
 msgstr "啟用後將在畫布上顯示影格速率。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:76
+#: ../../reference_manual/preferences/performance_settings.rst:78
 msgid "Debug logging for brush rendering speed."
 msgstr "啟用供除錯用的筆刷繪製速度記錄。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:77
+#: ../../reference_manual/preferences/performance_settings.rst:79
 msgid ""
 "Will show numbers indicating how fast the last brush stroke was on canvas."
 msgstr "啟用後將顯示一組數字，顯示最後一個畫筆描繪的速度。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:78
+#: ../../reference_manual/preferences/performance_settings.rst:80
 msgid "Disable vector optimizations (for AMD CPUs)"
 msgstr "停用AVX 向量最佳化（給 AMD CPU）"
 
-#: ../../reference_manual/preferences/performance_settings.rst:79
+#: ../../reference_manual/preferences/performance_settings.rst:81
 msgid ""
 "Vector optimizations are a special way of asking the CPU to do maths, these "
 "have names such as SIMD and AVX. These optimizations can make Krita a lot "
@@ -337,11 +351,11 @@ msgstr ""
 "等。這些最佳化可以讓 Krita 繪製時更快。假如您 Windows 電腦使用的是比較老舊的 "
 "AMD CPU ，當執行 Krita 繪製發生一些奇怪的狀況時，可以將這個項目打鉤停用。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:80
+#: ../../reference_manual/preferences/performance_settings.rst:82
 msgid "Progress reporting"
 msgstr "程式進度報告"
 
-#: ../../reference_manual/preferences/performance_settings.rst:81
+#: ../../reference_manual/preferences/performance_settings.rst:83
 msgid ""
 "This allows you to toggle the progress reporter, which is a little feedback "
 "progress bar that shows up in the status bar when you let Krita do heavy "
@@ -353,7 +367,7 @@ msgstr ""
 "會在狀態欄顯示進度條表明當前狀態，欄位旁邊的紅色停止按鈕可以中止這個顯示。這"
 "功能預設開啟，您可以在這裡將它關閉。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:83
+#: ../../reference_manual/preferences/performance_settings.rst:85
 msgid ""
 "This enables performance logging, which is then saved to the ``Log`` folder "
 "in your ``working directory``. Your working directory is where the autosave "
@@ -362,11 +376,11 @@ msgstr ""
 "啟用這個項目時，Krita 會將程式性能記錄寫入到 ``工作目錄`` 的 ``Log`` 檔案中。"
 "這個 ``工作目錄`` 也是自動儲存的目錄。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:85
+#: ../../reference_manual/preferences/performance_settings.rst:87
 msgid "Performance logging"
 msgstr "程式效能記錄"
 
-#: ../../reference_manual/preferences/performance_settings.rst:85
+#: ../../reference_manual/preferences/performance_settings.rst:87
 msgid ""
 "So for unnamed files, this is the ``$HOME`` folder in Linux, and the ``%TEMP"
 "%`` folder in Windows."
@@ -374,18 +388,18 @@ msgstr ""
 "如果影像尚未命名， Linux 環境下的日誌會寫入到 ``$HOME`` 資料夾，而 Windows 環"
 "境則是 ``%TEMP%`` 資料夾。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:88
+#: ../../reference_manual/preferences/performance_settings.rst:90
 msgid "Animation Cache"
 msgstr "動畫快取"
 
-#: ../../reference_manual/preferences/performance_settings.rst:92
+#: ../../reference_manual/preferences/performance_settings.rst:94
 msgid ""
 "The animation cache is the space taken up by animation frames in the memory "
 "of the computer. A cache in this sense is a cache of precalculated images."
 msgstr ""
 "動畫快取是動畫幀在記憶體中所佔用的空間，是將預先計算好的影像放在快取中。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:94
+#: ../../reference_manual/preferences/performance_settings.rst:96
 msgid ""
 "Playing back a video at 25 FPS means that the computer has to precalculate "
 "25 images per second of video. Now, video playing software is able to do "
@@ -398,7 +412,7 @@ msgstr ""
 "體可以為此做大量最佳化以提高效率，但 Krita 必須允許使用者編輯影像，因此無法像"
 "影片播放軟體那樣做出最佳化。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:96
+#: ../../reference_manual/preferences/performance_settings.rst:98
 msgid ""
 "Still, an animator does need to be able to see what kind of animation they "
 "are making. To do this properly, we need to decide how Krita will regenerate "
@@ -413,11 +427,11 @@ msgstr ""
 "選擇可以做到這個要求，最好的解決方案就是依序動畫的特性在電腦配備的效能上進行"
 "調整。在這個選項中您可以自定義生成快取的方式和場合。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:99
+#: ../../reference_manual/preferences/performance_settings.rst:101
 msgid "Cache Storage Backend"
 msgstr "快取存放空間後端（快取空間的位置）"
 
-#: ../../reference_manual/preferences/performance_settings.rst:102
+#: ../../reference_manual/preferences/performance_settings.rst:104
 msgid ""
 "Animation frame cache will be stored in RAM, completely without any "
 "limitations. This is also the way it was handled before 4.1. This is only "
@@ -432,7 +446,7 @@ msgstr ""
 "如果您電腦沒有這麼多記憶體，那麼最好*不要*使用此選項，同時也請考慮降低動畫的"
 "解析度。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:106
+#: ../../reference_manual/preferences/performance_settings.rst:108
 msgid ""
 "Please make sure your computer has enough RAM *above* the amount you "
 "requested in the :guilabel:`General` tab. Otherwise you might face system "
@@ -441,20 +455,20 @@ msgstr ""
 "請確保您的電腦有足夠的實體記憶體。實體記憶體必須*大於*您在 \\:guilabel:`一般`"
 "\\ 中所指定的容量，否則您可能會遇到系統凍結鎖死的狀況。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:108
+#: ../../reference_manual/preferences/performance_settings.rst:110
 msgid "For 1 second of FullHD @ 25 FPS you will need 200 extra MiB of Memory."
 msgstr "每秒 25 FPS 的 FullHD （1080P 高畫質）動畫需要 200MiB 記憶體。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:109
+#: ../../reference_manual/preferences/performance_settings.rst:111
 msgid "In-memory"
 msgstr "使用記憶體"
 
-#: ../../reference_manual/preferences/performance_settings.rst:109
+#: ../../reference_manual/preferences/performance_settings.rst:111
 msgid ""
 "For 1 second of 4K UltraHD@ 25 FPS, you will need 800 extra MiB of Memory."
 msgstr "每秒 25 FPS 的 4K UltraHD （4K 超高畫質）動畫需要 800MiB 記憶體。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:112
+#: ../../reference_manual/preferences/performance_settings.rst:114
 msgid ""
 "Animation frames are stored in the hard disk in the same folder as the swap "
 "file. The cache is stored in a compressed way. A little amount of extra RAM "
@@ -463,11 +477,11 @@ msgstr ""
 "使用此選項時，動畫幀會預先壓縮並與記憶體交換檔儲存在同一個硬碟的目錄中。此選"
 "項需使用少量實體記憶體以供運作。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:114
+#: ../../reference_manual/preferences/performance_settings.rst:116
 msgid "On-disk"
 msgstr "使用硬碟"
 
-#: ../../reference_manual/preferences/performance_settings.rst:114
+#: ../../reference_manual/preferences/performance_settings.rst:116
 msgid ""
 "Since data transfer speed of the hard drive is slow, you might want to limit "
 "the :guilabel:`Cached Frame Size` to be able to play your video at 25 fps. A "
@@ -476,15 +490,15 @@ msgstr ""
 "因為硬碟的資料傳輸速度比較慢，建議您將\\ :guilabel:`限制快取影格的大小`\\ 設"
 "定為 2500px （像素） 以便讓 Krita 能在 25fps 的速度下播放影片。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:117
+#: ../../reference_manual/preferences/performance_settings.rst:119
 msgid "Cache Generation Options"
 msgstr "快取產生選項"
 
-#: ../../reference_manual/preferences/performance_settings.rst:119
+#: ../../reference_manual/preferences/performance_settings.rst:121
 msgid "Limit Cached Frame Size"
 msgstr "限制快取影格大小"
 
-#: ../../reference_manual/preferences/performance_settings.rst:120
+#: ../../reference_manual/preferences/performance_settings.rst:122
 msgid ""
 "Render scaled down version of the frame if the image is bigger than the "
 "provided limit. Make sure you enable this option when using On-Disk storage "
@@ -497,11 +511,11 @@ msgstr ""
 "快取，它很有可能因無法全速播放而出現卡幀的狀況，所以這是用比較低的畫質來換取"
 "影片流暢的播放，請放心這個功能並不會影響最後輸出的畫質。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:121
+#: ../../reference_manual/preferences/performance_settings.rst:123
 msgid "Use Region Of Interest"
 msgstr "使用重點區域"
 
-#: ../../reference_manual/preferences/performance_settings.rst:122
+#: ../../reference_manual/preferences/performance_settings.rst:124
 msgid ""
 "We technically only need to use the section of the image that is in view. "
 "Region of interest represents that section. When the image is above the "
@@ -510,11 +524,11 @@ msgstr ""
 "就技術而言，我們僅需使用視圖中有影像的那部分畫面。啟用此選項並設定數值後， "
 "Krita 將以此值為限制，繪製可見畫面外百分比之區域。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:124
+#: ../../reference_manual/preferences/performance_settings.rst:126
 msgid "Enable Background Cache Generation"
 msgstr "啟用在背景產生快取"
 
-#: ../../reference_manual/preferences/performance_settings.rst:124
+#: ../../reference_manual/preferences/performance_settings.rst:126
 msgid ""
 "This allows you to set whether the animation is cached for playback in the "
 "background (that is, when you're not using the computer). Then, when "
@@ -525,15 +539,15 @@ msgstr ""
 "這個選項可讓您選擇是否在電腦不使用時於背景製作動畫快取，這可以減少快取等待時"
 "間，有利於流暢的播放動畫。若您想節省電腦的耗電量那就關閉這個選項。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:129
+#: ../../reference_manual/preferences/performance_settings.rst:131
 msgid "Instant Preview"
 msgstr "即時預覽"
 
-#: ../../reference_manual/preferences/performance_settings.rst:131
+#: ../../reference_manual/preferences/performance_settings.rst:133
 msgid "Use in-stack preview in Transform Tool"
 msgstr "變形工具顯示圖層堆疊中的預覽"
 
-#: ../../reference_manual/preferences/performance_settings.rst:132
+#: ../../reference_manual/preferences/performance_settings.rst:134
 msgid ""
 "Whether to use a floating preview for the :ref:`transform_tool`, or whether "
 "to have it rendered in place."
@@ -541,11 +555,11 @@ msgstr ""
 "啟用此選項後，將顯示已繪製圖層混合模式效果的\\ :ref:`transform_tool`\\ 預覽。"
 "取消鉤選時則浮動顯示預覽。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:133
+#: ../../reference_manual/preferences/performance_settings.rst:135
 msgid "Force instant preview in Transform Tool"
 msgstr "強制變形工具使用即時預覽"
 
-#: ../../reference_manual/preferences/performance_settings.rst:134
+#: ../../reference_manual/preferences/performance_settings.rst:136
 msgid ""
 "Turns on :ref:`instant_preview` for the :ref:`transform_tool` even when it's "
 "off in :menuselection:`View --> Instant preview`."
@@ -553,11 +567,11 @@ msgstr ""
 "就算在選單中\\ :menuselection:`檢視--> 即時預覽`\\ 功能未啟用的狀態下，乃強制"
 "開啟\\ :ref:`transform_tool`\\ 的\\ :ref:`instant_preview`\\。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:135
+#: ../../reference_manual/preferences/performance_settings.rst:137
 msgid "Force instant preview in Move Tool"
 msgstr "強制移動工具使用即時預覽"
 
-#: ../../reference_manual/preferences/performance_settings.rst:136
+#: ../../reference_manual/preferences/performance_settings.rst:138
 msgid ""
 "Turns on :ref:`instant_preview` for the :ref:`move_tool` even when it's off "
 "in :menuselection:`View --> Instant preview`."
@@ -565,7 +579,7 @@ msgstr ""
 "就算在選單中\\ :menuselection:`檢視--> 即時預覽`\\ 功能未啟用的狀態下，乃強制"
 "開啟\\ :ref:`move_tool`\\ 的\\ :ref:`instant_preview`\\。"
 
-#: ../../reference_manual/preferences/performance_settings.rst:138
+#: ../../reference_manual/preferences/performance_settings.rst:140
 msgid ""
 "Turns on :ref:`instant_preview` for the :ref:`filters` even when it's off "
 "in :menuselection:`View --> Instant preview`."

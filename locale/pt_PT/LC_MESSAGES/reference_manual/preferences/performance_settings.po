@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-01 00:13+0000\n"
+"POT-Creation-Date: 2022-08-10 00:40+0000\n"
 "PO-Revision-Date: 2021-09-01 16:31+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -298,7 +298,7 @@ msgstr ""
 "O número de núcleos do CPU que deseja permitir que o Krita use quando "
 "executar várias tarefas."
 
-#: ../../reference_manual/preferences/performance_settings.rst:68
+#: ../../reference_manual/preferences/performance_settings.rst:67
 msgid "Frame Rendering Clones Limit"
 msgstr "Limite de Clones no Desenho da Imagem"
 
@@ -317,15 +317,29 @@ msgstr ""
 "demasiado pesadas na sua máquina; por isso, nesse caso, tente baixar este "
 "valor."
 
-#: ../../reference_manual/preferences/performance_settings.rst:71
+#: ../../reference_manual/preferences/performance_settings.rst:70
+#, fuzzy
+#| msgid "Frame Rendering Clones Limit"
+msgid "Frame Rendering Timeout"
+msgstr "Limite de Clones no Desenho da Imagem"
+
+#: ../../reference_manual/preferences/performance_settings.rst:70
+msgid ""
+"To prevent Krita from hanging on a single frame, we limit how long it can "
+"spend on rendering a frame before moving on the next. If rendering an "
+"animation fails very often due a timeout, you can increase this value. Do "
+"note that it might also be caused by the file being too complex."
+msgstr ""
+
+#: ../../reference_manual/preferences/performance_settings.rst:73
 msgid "Other"
 msgstr "Outro"
 
-#: ../../reference_manual/preferences/performance_settings.rst:72
+#: ../../reference_manual/preferences/performance_settings.rst:74
 msgid "Limit frames per second while painting."
 msgstr "Limitar as imagens por segundo durante a pintura."
 
-#: ../../reference_manual/preferences/performance_settings.rst:73
+#: ../../reference_manual/preferences/performance_settings.rst:75
 msgid ""
 "This makes the canvas update less often, which means Krita can spend more "
 "time calculating other things. Some people find fewer updates unnerving to "
@@ -336,31 +350,31 @@ msgstr ""
 "Algumas pessoas podem achar que é irritante ver menos actualizações; "
 "contudo, isto é configurável."
 
-#: ../../reference_manual/preferences/performance_settings.rst:74
+#: ../../reference_manual/preferences/performance_settings.rst:76
 msgid "Debug logging of OpenGL framerate"
 msgstr "Registo de depuração da taxa de imagens do OpenGL"
 
-#: ../../reference_manual/preferences/performance_settings.rst:75
+#: ../../reference_manual/preferences/performance_settings.rst:77
 msgid "Will show the canvas framerate on the canvas when active."
 msgstr ""
 "Irá mostrar a taxa de imagens na área de desenho, quando estiver activa."
 
-#: ../../reference_manual/preferences/performance_settings.rst:76
+#: ../../reference_manual/preferences/performance_settings.rst:78
 msgid "Debug logging for brush rendering speed."
 msgstr "Depuração do registo para a velocidade de desenho do pincel."
 
-#: ../../reference_manual/preferences/performance_settings.rst:77
+#: ../../reference_manual/preferences/performance_settings.rst:79
 msgid ""
 "Will show numbers indicating how fast the last brush stroke was on canvas."
 msgstr ""
 "Irá mostrar números que indicam quão rápido foi o último traço do pincel na "
 "área de desenho."
 
-#: ../../reference_manual/preferences/performance_settings.rst:78
+#: ../../reference_manual/preferences/performance_settings.rst:80
 msgid "Disable vector optimizations (for AMD CPUs)"
 msgstr "Desactivar as optimizações vectoriais (para os CPU's da AMD)"
 
-#: ../../reference_manual/preferences/performance_settings.rst:79
+#: ../../reference_manual/preferences/performance_settings.rst:81
 msgid ""
 "Vector optimizations are a special way of asking the CPU to do maths, these "
 "have names such as SIMD and AVX. These optimizations can make Krita a lot "
@@ -373,11 +387,11 @@ msgstr ""
 "que tenha um CPU da AMD em Windows. Parece existir algo de estranho aqui, "
 "por isso desactive-os aqui."
 
-#: ../../reference_manual/preferences/performance_settings.rst:80
+#: ../../reference_manual/preferences/performance_settings.rst:82
 msgid "Progress reporting"
 msgstr "Relatório do progresso"
 
-#: ../../reference_manual/preferences/performance_settings.rst:81
+#: ../../reference_manual/preferences/performance_settings.rst:83
 msgid ""
 "This allows you to toggle the progress reporter, which is a little feedback "
 "progress bar that shows up in the status bar when you let Krita do heavy "
@@ -392,7 +406,7 @@ msgstr ""
 "activo por omissão, mas dado que o progresso em si poderá levar algum tempo, "
 "poderá desligá-lo aqui."
 
-#: ../../reference_manual/preferences/performance_settings.rst:83
+#: ../../reference_manual/preferences/performance_settings.rst:85
 msgid ""
 "This enables performance logging, which is then saved to the ``Log`` folder "
 "in your ``working directory``. Your working directory is where the autosave "
@@ -402,11 +416,11 @@ msgstr ""
 "``Log`` da sua ``pasta de trabalho``. A sua pasta de trabalho será onde é "
 "feita também a gravação automática."
 
-#: ../../reference_manual/preferences/performance_settings.rst:85
+#: ../../reference_manual/preferences/performance_settings.rst:87
 msgid "Performance logging"
 msgstr "Registo da performance"
 
-#: ../../reference_manual/preferences/performance_settings.rst:85
+#: ../../reference_manual/preferences/performance_settings.rst:87
 msgid ""
 "So for unnamed files, this is the ``$HOME`` folder in Linux, and the ``%TEMP"
 "%`` folder in Windows."
@@ -414,11 +428,11 @@ msgstr ""
 "Igual, mas para ficheiros sem nome; esta é a pasta ``$HOME`` no Linux e a "
 "pasta ``%TEMP%`` no Windows."
 
-#: ../../reference_manual/preferences/performance_settings.rst:88
+#: ../../reference_manual/preferences/performance_settings.rst:90
 msgid "Animation Cache"
 msgstr "'Cache' da Animação"
 
-#: ../../reference_manual/preferences/performance_settings.rst:92
+#: ../../reference_manual/preferences/performance_settings.rst:94
 msgid ""
 "The animation cache is the space taken up by animation frames in the memory "
 "of the computer. A cache in this sense is a cache of precalculated images."
@@ -427,7 +441,7 @@ msgstr ""
 "na memória do computador. Uma 'cache', neste sentido, é uma 'cache' de "
 "imagens pré-calculadas."
 
-#: ../../reference_manual/preferences/performance_settings.rst:94
+#: ../../reference_manual/preferences/performance_settings.rst:96
 msgid ""
 "Playing back a video at 25 FPS means that the computer has to precalculate "
 "25 images per second of video. Now, video playing software is able to do "
@@ -444,7 +458,7 @@ msgstr ""
 "e um leitor de vídeo dedicado não, o Krita não pode fazer o mesmo tipo de "
 "optimizações que um leitor de vídeo dedicado fará."
 
-#: ../../reference_manual/preferences/performance_settings.rst:96
+#: ../../reference_manual/preferences/performance_settings.rst:98
 msgid ""
 "Still, an animator does need to be able to see what kind of animation they "
 "are making. To do this properly, we need to decide how Krita will regenerate "
@@ -463,11 +477,11 @@ msgstr ""
 "nesta página, poderá personalizar a forma como e quando será gerada a "
 "'cache'."
 
-#: ../../reference_manual/preferences/performance_settings.rst:99
+#: ../../reference_manual/preferences/performance_settings.rst:101
 msgid "Cache Storage Backend"
 msgstr "Infra-estrutura de Armazenamento da 'Cache'"
 
-#: ../../reference_manual/preferences/performance_settings.rst:102
+#: ../../reference_manual/preferences/performance_settings.rst:104
 msgid ""
 "Animation frame cache will be stored in RAM, completely without any "
 "limitations. This is also the way it was handled before 4.1. This is only "
@@ -484,7 +498,7 @@ msgstr ""
 "(digamos, à volta de 64GiB) de RAM, *não* use esta opção (e reduza os seus "
 "projectos)."
 
-#: ../../reference_manual/preferences/performance_settings.rst:106
+#: ../../reference_manual/preferences/performance_settings.rst:108
 msgid ""
 "Please make sure your computer has enough RAM *above* the amount you "
 "requested in the :guilabel:`General` tab. Otherwise you might face system "
@@ -494,23 +508,23 @@ msgstr ""
 "valor pedido na página :guilabel:`Geral`. Caso contrário, poderá obter "
 "bloqueios do sistema."
 
-#: ../../reference_manual/preferences/performance_settings.rst:108
+#: ../../reference_manual/preferences/performance_settings.rst:110
 msgid "For 1 second of FullHD @ 25 FPS you will need 200 extra MiB of Memory."
 msgstr ""
 "Para 1 segundo de FullHD @ 25 IPS, irá precisar de 200 MiB extra de memória."
 
-#: ../../reference_manual/preferences/performance_settings.rst:109
+#: ../../reference_manual/preferences/performance_settings.rst:111
 msgid "In-memory"
 msgstr "Na memória"
 
-#: ../../reference_manual/preferences/performance_settings.rst:109
+#: ../../reference_manual/preferences/performance_settings.rst:111
 msgid ""
 "For 1 second of 4K UltraHD@ 25 FPS, you will need 800 extra MiB of Memory."
 msgstr ""
 "Para 1 segundo de UltraHD 4K @ 25 IPS, irá precisar de 800 MiB extra de "
 "memória."
 
-#: ../../reference_manual/preferences/performance_settings.rst:112
+#: ../../reference_manual/preferences/performance_settings.rst:114
 msgid ""
 "Animation frames are stored in the hard disk in the same folder as the swap "
 "file. The cache is stored in a compressed way. A little amount of extra RAM "
@@ -520,11 +534,11 @@ msgstr ""
 "ficheiro de memória virtual. A 'cache' é guardada de forma comprimida. "
 "Também é necessária uma pequena quantidade de RAM extra."
 
-#: ../../reference_manual/preferences/performance_settings.rst:114
+#: ../../reference_manual/preferences/performance_settings.rst:116
 msgid "On-disk"
 msgstr "No disco"
 
-#: ../../reference_manual/preferences/performance_settings.rst:114
+#: ../../reference_manual/preferences/performance_settings.rst:116
 msgid ""
 "Since data transfer speed of the hard drive is slow, you might want to limit "
 "the :guilabel:`Cached Frame Size` to be able to play your video at 25 fps. A "
@@ -535,15 +549,15 @@ msgstr ""
 "poder reproduzir o seu vídeo a 25 imagens por segundo. Um limite de 2500 px "
 "é normalmente uma boa escolha."
 
-#: ../../reference_manual/preferences/performance_settings.rst:117
+#: ../../reference_manual/preferences/performance_settings.rst:119
 msgid "Cache Generation Options"
 msgstr "Opções de Geração da 'Cache'"
 
-#: ../../reference_manual/preferences/performance_settings.rst:119
+#: ../../reference_manual/preferences/performance_settings.rst:121
 msgid "Limit Cached Frame Size"
 msgstr "Limitar o Tamanho da Imagem em 'Cache'"
 
-#: ../../reference_manual/preferences/performance_settings.rst:120
+#: ../../reference_manual/preferences/performance_settings.rst:122
 msgid ""
 "Render scaled down version of the frame if the image is bigger than the "
 "provided limit. Make sure you enable this option when using On-Disk storage "
@@ -558,11 +572,11 @@ msgstr ""
 "toda a velocidade. Baixe o tamanho para desenhar mais depressa, às custas de "
 "uma menor resolução."
 
-#: ../../reference_manual/preferences/performance_settings.rst:121
+#: ../../reference_manual/preferences/performance_settings.rst:123
 msgid "Use Region Of Interest"
 msgstr "Usar a Região de Interesse"
 
-#: ../../reference_manual/preferences/performance_settings.rst:122
+#: ../../reference_manual/preferences/performance_settings.rst:124
 msgid ""
 "We technically only need to use the section of the image that is in view. "
 "Region of interest represents that section. When the image is above the "
@@ -572,11 +586,11 @@ msgstr ""
 "região de interesse representa essa secção. Quando a imagem estiver acima do "
 "limite configurável, desenha apenas a parte visível dela."
 
-#: ../../reference_manual/preferences/performance_settings.rst:124
+#: ../../reference_manual/preferences/performance_settings.rst:126
 msgid "Enable Background Cache Generation"
 msgstr "Activar a Geração da Cache em Segundo Plano"
 
-#: ../../reference_manual/preferences/performance_settings.rst:124
+#: ../../reference_manual/preferences/performance_settings.rst:126
 msgid ""
 "This allows you to set whether the animation is cached for playback in the "
 "background (that is, when you're not using the computer). Then, when "
@@ -590,15 +604,15 @@ msgstr ""
 "menos tempo. Contudo, se desligar esta 'cache' automática, poderá poupar "
 "energia, fazendo com que o seu computador trabalhe menos."
 
-#: ../../reference_manual/preferences/performance_settings.rst:129
+#: ../../reference_manual/preferences/performance_settings.rst:131
 msgid "Instant Preview"
 msgstr "Antevisão Instantânea"
 
-#: ../../reference_manual/preferences/performance_settings.rst:131
+#: ../../reference_manual/preferences/performance_settings.rst:133
 msgid "Use in-stack preview in Transform Tool"
 msgstr "Usar a antevisão na pilha da Ferramenta de Transformação"
 
-#: ../../reference_manual/preferences/performance_settings.rst:132
+#: ../../reference_manual/preferences/performance_settings.rst:134
 msgid ""
 "Whether to use a floating preview for the :ref:`transform_tool`, or whether "
 "to have it rendered in place."
@@ -606,11 +620,11 @@ msgstr ""
 "Se deve usar uma antevisão flutuante para a :ref:`transform_tool` ou se deve "
 "ser desenhada no local."
 
-#: ../../reference_manual/preferences/performance_settings.rst:133
+#: ../../reference_manual/preferences/performance_settings.rst:135
 msgid "Force instant preview in Transform Tool"
 msgstr "Forçar a antevisão instantânea na Ferramenta de Transformação"
 
-#: ../../reference_manual/preferences/performance_settings.rst:134
+#: ../../reference_manual/preferences/performance_settings.rst:136
 msgid ""
 "Turns on :ref:`instant_preview` for the :ref:`transform_tool` even when it's "
 "off in :menuselection:`View --> Instant preview`."
@@ -618,11 +632,11 @@ msgstr ""
 "Activa a :ref:`instant_preview` para a :ref:`transform_tool`, mesmo quando "
 "estiver desligada em :menuselection:`Ver --> Antevisão instantânea`."
 
-#: ../../reference_manual/preferences/performance_settings.rst:135
+#: ../../reference_manual/preferences/performance_settings.rst:137
 msgid "Force instant preview in Move Tool"
 msgstr "Forçar a antevisão instantânea na Ferramenta para Mover"
 
-#: ../../reference_manual/preferences/performance_settings.rst:136
+#: ../../reference_manual/preferences/performance_settings.rst:138
 msgid ""
 "Turns on :ref:`instant_preview` for the :ref:`move_tool` even when it's off "
 "in :menuselection:`View --> Instant preview`."
@@ -630,7 +644,7 @@ msgstr ""
 "Activa a :ref:`instant_preview` para a :ref:`move_tool`, mesmo quando "
 "estiver desligada em  :menuselection:`Ver --> Antevisão instantânea`."
 
-#: ../../reference_manual/preferences/performance_settings.rst:138
+#: ../../reference_manual/preferences/performance_settings.rst:140
 msgid ""
 "Turns on :ref:`instant_preview` for the :ref:`filters` even when it's off "
 "in :menuselection:`View --> Instant preview`."

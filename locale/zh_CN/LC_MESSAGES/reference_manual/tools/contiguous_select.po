@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-01 00:40+0000\n"
+"POT-Creation-Date: 2022-08-10 00:40+0000\n"
 "PO-Revision-Date: 2022-08-07 13:29\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,6 +17,14 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___tools___contiguous_select.pot\n"
 "X-Crowdin-File-ID: 9638\n"
+
+#: ../../<generated>:1
+msgid "Reference"
+msgstr ""
+
+#: ../../<generated>:1
+msgid "Color Labeled Layers"
+msgstr "选择图层颜色标签"
 
 #: ../../<generated>:1
 msgid "Labels Used"
@@ -141,73 +149,96 @@ msgstr ""
 msgid "Tool Options"
 msgstr "工具选项"
 
-#: ../../reference_manual/tools/contiguous_select.rst:42
-msgid "Anti-aliasing"
-msgstr "抗锯齿"
-
-#: ../../reference_manual/tools/contiguous_select.rst:43
-msgid ""
-"This toggles whether or not to give selections feathered edges. Some people "
-"prefer hard-jagged edges for their selections."
-msgstr "勾选后将羽化选区边缘。如果需要选区边缘保持清晰锐利，请关闭抗锯齿。"
+#: ../../reference_manual/tools/contiguous_select.rst:44
+msgid "Threshold"
+msgstr ""
 
 #: ../../reference_manual/tools/contiguous_select.rst:44
-msgid "Fuzziness"
-msgstr "颜色容差"
-
-#: ../../reference_manual/tools/contiguous_select.rst:45
 msgid ""
 "This controls whether or not the contiguous selection sees another color as "
 "a border."
 msgstr "该值用于控制选中的相连颜色可以与点击处颜色存在多大差异。"
 
-#: ../../reference_manual/tools/contiguous_select.rst:46
-msgid "Grow/Shrink selection."
-msgstr "扩大/缩小选区"
-
-#: ../../reference_manual/tools/contiguous_select.rst:47
-msgid "This value extends/contracts the shape beyond its initial size."
-msgstr "该值用于控制选区相对于实际的相连颜色区域向外扩大/向内收缩的程度。"
+#: ../../reference_manual/tools/contiguous_select.rst:48
+#, fuzzy
+#| msgid "Selection"
+msgid "Selection Extent"
+msgstr "选区"
 
 #: ../../reference_manual/tools/contiguous_select.rst:48
-msgid "Feathering"
-msgstr "羽化半径"
+msgid "Spread"
+msgstr ""
 
 #: ../../reference_manual/tools/contiguous_select.rst:49
-msgid "This value will add a soft border to the selection-shape."
-msgstr "该值用于控制在选区边缘添加的柔和过渡区域的大小。"
+msgid ""
+"Set how far the fully opaque portion of the selection should extend. See :"
+"ref:`fill_tool` for extra explanation."
+msgstr ""
+
+#: ../../reference_manual/tools/contiguous_select.rst:51
+#, fuzzy
+#| msgid "Anti-aliasing"
+msgid "Anti-alias"
+msgstr "抗锯齿"
+
+#: ../../reference_manual/tools/contiguous_select.rst:52
+msgid ""
+"This will smooth the jagged edges present in the selection. It differs from "
+"feathering in that this will smooth in the direction of the edge instead of "
+"all directions, and only if the edge is jagged (high contrast)."
+msgstr ""
 
 #: ../../reference_manual/tools/contiguous_select.rst:53
+#, fuzzy
+#| msgid "Selection"
+msgid "Grow Selection"
+msgstr "选区"
+
+#: ../../reference_manual/tools/contiguous_select.rst:54
+msgid ""
+"This value extends (positive values) or contracts (negative values) the "
+"selection."
+msgstr ""
+
+#: ../../reference_manual/tools/contiguous_select.rst:55
+msgid "Adjustments"
+msgstr ""
+
+#: ../../reference_manual/tools/contiguous_select.rst:55
+#, fuzzy
+#| msgid "Feathering"
+msgid "Feathering Radius"
+msgstr "羽化半径"
+
+#: ../../reference_manual/tools/contiguous_select.rst:56
+#, fuzzy
+#| msgid "This value will add a soft border to the selection-shape."
+msgid "This value will add a soft border to the selection."
+msgstr "该值用于控制在选区边缘添加的柔和过渡区域的大小。"
+
+#: ../../reference_manual/tools/contiguous_select.rst:60
 msgid ""
 "Select which layers to use as a reference for the contiguous select tool. "
 "The options are:"
 msgstr "选择相连颜色选区工具应在哪些图层上进行采样，选项包括："
 
-#: ../../reference_manual/tools/contiguous_select.rst:55
+#: ../../reference_manual/tools/contiguous_select.rst:62
 msgid "Current Layer"
 msgstr "当前图层"
 
-#: ../../reference_manual/tools/contiguous_select.rst:56
+#: ../../reference_manual/tools/contiguous_select.rst:63
 msgid "Only use the currently selected layer."
 msgstr "只对当前图层颜色进行采样以确定相连颜色区域。"
 
-#: ../../reference_manual/tools/contiguous_select.rst:57
+#: ../../reference_manual/tools/contiguous_select.rst:64
 msgid "All layers"
 msgstr "所有图层"
 
-#: ../../reference_manual/tools/contiguous_select.rst:58
+#: ../../reference_manual/tools/contiguous_select.rst:65
 msgid "Use all visible layers."
 msgstr "对所有图层合并后的颜色进行采样以确定相连颜色区域。"
 
-#: ../../reference_manual/tools/contiguous_select.rst:60
-msgid "Sample"
-msgstr "采样图层"
-
-#: ../../reference_manual/tools/contiguous_select.rst:60
-msgid "Color Labeled Layers"
-msgstr "选择图层颜色标签"
-
-#: ../../reference_manual/tools/contiguous_select.rst:60
+#: ../../reference_manual/tools/contiguous_select.rst:67
 msgid ""
 "Use only the layers specified with a certain color label. This is useful for "
 "complex images, where you might have multiple lineart layers. Label them "
@@ -217,6 +248,26 @@ msgstr ""
 "只对标有所选颜色标签的图层的颜色进行采样以确定相连颜色区域。如果你的图层非常"
 "多，以至于已经在使用颜色标签在管理，这可以提高工作效率。"
 
-#: ../../reference_manual/tools/contiguous_select.rst:65
-msgid "Used with the 'Color Labeled Layers' option above."
-msgstr "只在选择“选择图层颜色标签”时可用。勾选用于采样的图层的颜色标签。"
+#: ../../reference_manual/tools/contiguous_select.rst:70
+msgid "Select the color labels of the layers that should be used as reference."
+msgstr ""
+
+#~ msgid ""
+#~ "This toggles whether or not to give selections feathered edges. Some "
+#~ "people prefer hard-jagged edges for their selections."
+#~ msgstr "勾选后将羽化选区边缘。如果需要选区边缘保持清晰锐利，请关闭抗锯齿。"
+
+#~ msgid "Fuzziness"
+#~ msgstr "颜色容差"
+
+#~ msgid "Grow/Shrink selection."
+#~ msgstr "扩大/缩小选区"
+
+#~ msgid "This value extends/contracts the shape beyond its initial size."
+#~ msgstr "该值用于控制选区相对于实际的相连颜色区域向外扩大/向内收缩的程度。"
+
+#~ msgid "Sample"
+#~ msgstr "采样图层"
+
+#~ msgid "Used with the 'Color Labeled Layers' option above."
+#~ msgstr "只在选择“选择图层颜色标签”时可用。勾选用于采样的图层的颜色标签。"

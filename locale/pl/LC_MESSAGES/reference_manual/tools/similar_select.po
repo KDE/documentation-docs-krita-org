@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-01 00:40+0000\n"
+"POT-Creation-Date: 2022-08-10 00:40+0000\n"
 "PO-Revision-Date: 2022-02-07 19:35+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -19,8 +19,16 @@ msgstr ""
 "X-Generator: Lokalize 22.03.70\n"
 
 #: ../../<generated>:1
-msgid "Fuzziness"
-msgstr "Romzycie"
+msgid "Reference"
+msgstr ""
+
+#: ../../<generated>:1
+msgid "Color Labeled Layers"
+msgstr "Warstwy z barwnymi etykietami"
+
+#: ../../<generated>:1
+msgid "Labels Used"
+msgstr "Używane etykiety"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -194,22 +202,65 @@ msgstr ""
 "To ustawienie zostało wyjaśnione w dziale :ref:`pixel_vector_selection`."
 
 #: ../../reference_manual/tools/similar_select.rst:65
-msgid "Anti-aliasing"
-msgstr "Wygładzanie krawędzi"
+#, fuzzy
+#| msgid "Selection"
+msgid "Selection Extent"
+msgstr "Zaznaczanie"
 
 #: ../../reference_manual/tools/similar_select.rst:65
-msgid ""
-"This toggles whether or not to give selections feathered edges. Some people "
-"prefer hard-jagged edges for their selections."
+msgid "Threshold"
 msgstr ""
-"To określa, czy nadać zaznaczeniom miękkie krawędzie. Niektórzy wolą widzieć "
-"ostro zakończone krawędzie wokół zaznaczenia."
 
-#: ../../reference_manual/tools/similar_select.rst:69
-msgid "This has been removed as it only caused confusion."
-msgstr "Zostało to usunięte, bo tylko wprowadzało zamieszanie."
+#: ../../reference_manual/tools/similar_select.rst:66
+msgid ""
+"This controls the range of the color hue used to create the selection. A "
+"lower number will select colors closer to the color that you chose in the "
+"first place. And a higher number will expand the hue range and select colors "
+"even if they are not so similar to the original color."
+msgstr ""
+"Steruje to zakresem odcienia barwy użytego do stworzenia zaznaczenia. Niższa "
+"wartość najpierw zaznaczy barwy, które są bliżej do wybranej. Wyższa wartość "
+"rozszerzy zakres odcieni i zaznaczy barwy nawet wtedy, gdy nie są podobne do "
+"pierwotnie wybranej barwy."
+
+#: ../../reference_manual/tools/similar_select.rst:70
+#, fuzzy
+#| msgid "Anti-aliasing"
+msgid "Anti-alias"
+msgstr "Wygładzanie krawędzi"
+
+#: ../../reference_manual/tools/similar_select.rst:71
+msgid ""
+"This will smooth the jagged edges present in the region. It differs from "
+"feathering in that this will smooth in the direction of the edge instead of "
+"all directions, and only if the edge is jagged (high contrast)."
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:73
+#, fuzzy
+#| msgid "Selection"
+msgid "Grow Selection"
+msgstr "Zaznaczanie"
 
 #: ../../reference_manual/tools/similar_select.rst:74
+msgid ""
+"This value extends (positive values) or contracts (negative values) the "
+"region."
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:75
+msgid "Adjustments"
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:75
+msgid "Feathering Radius"
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:76
+msgid "This value will add a soft border to the region."
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:80
 msgid ""
 "Select which layers to use as a reference for the contiguous select tool. "
 "The options are:"
@@ -217,31 +268,23 @@ msgstr ""
 "Wybierz warstwy używane jako odniesienie dla narzędzia ciągłego zaznaczania. "
 "Możliwe ustawienia to:"
 
-#: ../../reference_manual/tools/similar_select.rst:76
+#: ../../reference_manual/tools/similar_select.rst:82
 msgid "Current Layer"
 msgstr "Bieżąca warstwa"
 
-#: ../../reference_manual/tools/similar_select.rst:77
+#: ../../reference_manual/tools/similar_select.rst:83
 msgid "Only use the currently selected layer."
 msgstr "Użyj tylko obecnie zaznaczonej warstwy."
 
-#: ../../reference_manual/tools/similar_select.rst:78
+#: ../../reference_manual/tools/similar_select.rst:84
 msgid "All layers"
 msgstr "Wszystkie warstwy"
 
-#: ../../reference_manual/tools/similar_select.rst:79
+#: ../../reference_manual/tools/similar_select.rst:85
 msgid "Use all visible layers."
 msgstr "Użyj wszystkich widocznych warstw."
 
-#: ../../reference_manual/tools/similar_select.rst:81
-msgid "Sample"
-msgstr "Przykład"
-
-#: ../../reference_manual/tools/similar_select.rst:81
-msgid "Color Labeled Layers"
-msgstr "Warstwy z barwnymi etykietami"
-
-#: ../../reference_manual/tools/similar_select.rst:81
+#: ../../reference_manual/tools/similar_select.rst:87
 msgid ""
 "Use only the layers specified with a certain color label. This is useful for "
 "complex images, where you might have multiple lineart layers. Label them "
@@ -253,25 +296,28 @@ msgstr ""
 "etykietę odpowiednią etykietą barwą i używaj tych etykiet do wskazywania, "
 "których warstw używać jako odniesień."
 
-#: ../../reference_manual/tools/similar_select.rst:86
-msgid "Labels Used"
-msgstr "Używane etykiety"
-
-#: ../../reference_manual/tools/similar_select.rst:86
-msgid "Used with the 'Color Labeled Layers' option above."
-msgstr "Używane z ustawieniem 'Warstw z barwnymi etykietami' powyżej."
-
-#: ../../reference_manual/tools/similar_select.rst:89
-msgid ""
-"This controls the range of the color hue used to create the selection. A "
-"lower number will select colors closer to the color that you chose in the "
-"first place. And a higher number will expand the hue range and select colors "
-"even if they are not so similar to the original color."
+#: ../../reference_manual/tools/similar_select.rst:90
+msgid "Select the color labels of the layers that should be used as reference."
 msgstr ""
-"Steruje to zakresem odcienia barwy użytego do stworzenia zaznaczenia. Niższa "
-"wartość najpierw zaznaczy barwy, które są bliżej do wybranej. Wyższa wartość "
-"rozszerzy zakres odcieni i zaznaczy barwy nawet wtedy, gdy nie są podobne do "
-"pierwotnie wybranej barwy."
+
+#~ msgid "Fuzziness"
+#~ msgstr "Romzycie"
+
+#~ msgid ""
+#~ "This toggles whether or not to give selections feathered edges. Some "
+#~ "people prefer hard-jagged edges for their selections."
+#~ msgstr ""
+#~ "To określa, czy nadać zaznaczeniom miękkie krawędzie. Niektórzy wolą "
+#~ "widzieć ostro zakończone krawędzie wokół zaznaczenia."
+
+#~ msgid "This has been removed as it only caused confusion."
+#~ msgstr "Zostało to usunięte, bo tylko wprowadzało zamieszanie."
+
+#~ msgid "Sample"
+#~ msgstr "Przykład"
+
+#~ msgid "Used with the 'Color Labeled Layers' option above."
+#~ msgstr "Używane z ustawieniem 'Warstw z barwnymi etykietami' powyżej."
 
 #~ msgid ""
 #~ ":kbd:`R` sets the selection to 'replace' in the tool options, this is the "

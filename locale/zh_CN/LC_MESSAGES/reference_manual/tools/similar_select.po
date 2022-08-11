@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-01 00:40+0000\n"
+"POT-Creation-Date: 2022-08-10 00:40+0000\n"
 "PO-Revision-Date: 2022-08-07 13:29\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -19,8 +19,16 @@ msgstr ""
 "X-Crowdin-File-ID: 9834\n"
 
 #: ../../<generated>:1
-msgid "Fuzziness"
-msgstr "颜色容差"
+msgid "Reference"
+msgstr ""
+
+#: ../../<generated>:1
+msgid "Color Labeled Layers"
+msgstr "按图层颜色标签"
+
+#: ../../<generated>:1
+msgid "Labels Used"
+msgstr "采样图层颜色标签"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -188,50 +196,85 @@ msgid "This option is explained in the :ref:`pixel_vector_selection` section."
 msgstr "详情请见\\ :ref:`pixel_vector_selection`\\ 页面。"
 
 #: ../../reference_manual/tools/similar_select.rst:65
-msgid "Anti-aliasing"
-msgstr "抗锯齿"
+#, fuzzy
+#| msgid "Selection"
+msgid "Selection Extent"
+msgstr "选择"
 
 #: ../../reference_manual/tools/similar_select.rst:65
-msgid ""
-"This toggles whether or not to give selections feathered edges. Some people "
-"prefer hard-jagged edges for their selections."
-msgstr "勾选后将羽化选区边缘。如果需要选区边缘保持清晰锐利，请关闭抗锯齿。"
+msgid "Threshold"
+msgstr ""
 
-#: ../../reference_manual/tools/similar_select.rst:69
-msgid "This has been removed as it only caused confusion."
-msgstr "此功能已被移除，因为它只会造成混乱。"
+#: ../../reference_manual/tools/similar_select.rst:66
+msgid ""
+"This controls the range of the color hue used to create the selection. A "
+"lower number will select colors closer to the color that you chose in the "
+"first place. And a higher number will expand the hue range and select colors "
+"even if they are not so similar to the original color."
+msgstr ""
+"此数值控制建立选区时色相的容差范围。数值较小，将只选中与你当初选择的颜色差别"
+"较小的颜色。数值较大，将同时选中与你当初选择的颜色差别较大的颜色。"
+
+#: ../../reference_manual/tools/similar_select.rst:70
+#, fuzzy
+#| msgid "Anti-aliasing"
+msgid "Anti-alias"
+msgstr "抗锯齿"
+
+#: ../../reference_manual/tools/similar_select.rst:71
+msgid ""
+"This will smooth the jagged edges present in the region. It differs from "
+"feathering in that this will smooth in the direction of the edge instead of "
+"all directions, and only if the edge is jagged (high contrast)."
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:73
+#, fuzzy
+#| msgid "Selection"
+msgid "Grow Selection"
+msgstr "选择"
 
 #: ../../reference_manual/tools/similar_select.rst:74
+msgid ""
+"This value extends (positive values) or contracts (negative values) the "
+"region."
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:75
+msgid "Adjustments"
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:75
+msgid "Feathering Radius"
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:76
+msgid "This value will add a soft border to the region."
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:80
 msgid ""
 "Select which layers to use as a reference for the contiguous select tool. "
 "The options are:"
 msgstr "选择相连颜色选区工具应在哪些图层上进行采样，选项包括："
 
-#: ../../reference_manual/tools/similar_select.rst:76
+#: ../../reference_manual/tools/similar_select.rst:82
 msgid "Current Layer"
 msgstr "当前图层"
 
-#: ../../reference_manual/tools/similar_select.rst:77
+#: ../../reference_manual/tools/similar_select.rst:83
 msgid "Only use the currently selected layer."
 msgstr "只对当前图层颜色进行采样以确定相连颜色区域。"
 
-#: ../../reference_manual/tools/similar_select.rst:78
+#: ../../reference_manual/tools/similar_select.rst:84
 msgid "All layers"
 msgstr "所有图层"
 
-#: ../../reference_manual/tools/similar_select.rst:79
+#: ../../reference_manual/tools/similar_select.rst:85
 msgid "Use all visible layers."
 msgstr "对所有图层合并后的颜色进行采样以确定相连颜色区域。"
 
-#: ../../reference_manual/tools/similar_select.rst:81
-msgid "Sample"
-msgstr "采样图层"
-
-#: ../../reference_manual/tools/similar_select.rst:81
-msgid "Color Labeled Layers"
-msgstr "按图层颜色标签"
-
-#: ../../reference_manual/tools/similar_select.rst:81
+#: ../../reference_manual/tools/similar_select.rst:87
 msgid ""
 "Use only the layers specified with a certain color label. This is useful for "
 "complex images, where you might have multiple lineart layers. Label them "
@@ -241,20 +284,23 @@ msgstr ""
 "只对标有某些颜色标签的图层的颜色进行采样以确定相连颜色区域。如果你的图层非常"
 "多，以至于已经在使用颜色标签在管理，这可以提高工作效率。"
 
-#: ../../reference_manual/tools/similar_select.rst:86
-msgid "Labels Used"
-msgstr "采样图层颜色标签"
-
-#: ../../reference_manual/tools/similar_select.rst:86
-msgid "Used with the 'Color Labeled Layers' option above."
-msgstr "只在选择“按图层颜色标签”时可用，选择用于采样的图层的颜色标签。"
-
-#: ../../reference_manual/tools/similar_select.rst:89
-msgid ""
-"This controls the range of the color hue used to create the selection. A "
-"lower number will select colors closer to the color that you chose in the "
-"first place. And a higher number will expand the hue range and select colors "
-"even if they are not so similar to the original color."
+#: ../../reference_manual/tools/similar_select.rst:90
+msgid "Select the color labels of the layers that should be used as reference."
 msgstr ""
-"此数值控制建立选区时色相的容差范围。数值较小，将只选中与你当初选择的颜色差别"
-"较小的颜色。数值较大，将同时选中与你当初选择的颜色差别较大的颜色。"
+
+#~ msgid "Fuzziness"
+#~ msgstr "颜色容差"
+
+#~ msgid ""
+#~ "This toggles whether or not to give selections feathered edges. Some "
+#~ "people prefer hard-jagged edges for their selections."
+#~ msgstr "勾选后将羽化选区边缘。如果需要选区边缘保持清晰锐利，请关闭抗锯齿。"
+
+#~ msgid "This has been removed as it only caused confusion."
+#~ msgstr "此功能已被移除，因为它只会造成混乱。"
+
+#~ msgid "Sample"
+#~ msgstr "采样图层"
+
+#~ msgid "Used with the 'Color Labeled Layers' option above."
+#~ msgstr "只在选择“按图层颜色标签”时可用，选择用于采样的图层的颜色标签。"

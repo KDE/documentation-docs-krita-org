@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"POT-Creation-Date: 2022-08-10 00:40+0000\n"
 "PO-Revision-Date: 2022-08-07 13:29\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -142,37 +142,189 @@ msgstr ".. image:: images/filters/Levels-filter.png"
 
 #: ../../reference_manual/filters/adjust.rst:66
 msgid ""
-"This is very useful to do an initial cleanup of scanned lineart or grayscale "
-"images. If the scanned lineart is light you can slide the black triangle to "
-"right to make it darker or if you want to remove the gray areas you can "
-"slide the white slider to left."
+"With these two buttons you can switch between \"lightness only\" and \"per "
+"channel\" levels adjustment. If you use the second mode you can modify the "
+"levels for each channel independently and you can change the active channel "
+"by selecting it in the list that appears at the right side of the buttons."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:67
+msgid "This area shows the histogram for the active channel."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:68
+msgid ""
+"This is a slider that you can use to quickly change the input black and "
+"white points and gamma."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:69
+msgid ""
+"These input boxes do the same as the input levels slider, but allow you to "
+"finetune the values."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:70
+msgid ""
+"This is a slider that you can use to quickly change the output black and "
+"white ponts."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:71
+msgid ""
+"These input boxes do the same as the output levels slider, but allow you to "
+"finetune the values."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:72
+msgid ""
+"These buttons allow you to control the visualization of the histogram. The "
+"first button makes it use a linear scale (the default). The second one makes "
+"it use a logarithmic scale. The third one changes its vertical size to fit "
+"the whole histogram in the area. The forth one changes the vertical size to "
+"fit in the area most of the histogram but cutting long peaks produced by "
+"outliers. You can also change the size of the histogram by clicking and "
+"dragging verticaly on the area or by double-clicking to change between \"fit "
+"all\" and \"fit cutting long peaks\"."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:73
+msgid "This button brings up the auto levels dialog for the current channel."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:74
+msgid ""
+"These buttons allow you to reset (from top to bottom) the levels of the "
+"current channel, the input levels of the current channel, the output levels "
+"of the current channel, and the levels of all the channels."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:75
+msgid ""
+"This button brings up the multi-channel auto levels dialog (only available "
+"in the RGBA color model)."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:77
+#, fuzzy
+#| msgid ""
+#| "This is very useful to do an initial cleanup of scanned lineart or "
+#| "grayscale images. If the scanned lineart is light you can slide the black "
+#| "triangle to right to make it darker or if you want to remove the gray "
+#| "areas you can slide the white slider to left."
+msgid ""
+"This filter is very useful to do an initial cleanup of scanned lineart or "
+"grayscale images. If the scanned lineart is light you can slide the black "
+"handle in the input levels to the right to make it darker or if you want to "
+"remove the gray areas you can slide the white handle to the left."
 msgstr ""
 "此滤镜在清理刚扫描进电脑的灰阶草稿时特别有用。因为草稿的空白较多，你可以把黑"
 "色的三角稍微右移使得线条更黑，把白色三角左移可以去除浅灰色的杂点。"
 
-#: ../../reference_manual/filters/adjust.rst:68
+#: ../../reference_manual/filters/adjust.rst:79
 msgid ""
-"Auto levels is a quick way to adjust tone of an image. If you want to change "
-"the settings later you can click on the :guilabel:`Create Filter Mask` "
-"button to add the levels as a filter mask."
+"Auto levels is a quick way to adjust tone of an image. You can update the "
+"levels of the filter automaticaly by using the auto levels dialog that "
+"appears when clicking one of the buttons explained earlier:"
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:84
+#, fuzzy
+#| msgid ".. image:: images/filters/Levels-filter.png"
+msgid ".. image:: images/filters/Levels-filter-autolevels.png"
+msgstr ".. image:: images/filters/Levels-filter.png"
+
+#: ../../reference_manual/filters/adjust.rst:85
+msgid ""
+":guilabel:`Shadows and Highlights`: In this group of widgets you can select "
+"how the shadows and highlights are enhanced."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:87
+msgid ""
+":guilabel:`Method`: this is available only in the RGBA color model when "
+"using the multi-channel autolevels and allows you to select if you want to "
+"apply the same input levels to all the channels or different input levels to "
+"each."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:88
+msgid ""
+":guilabel:`Shadows clipping` and :guilabel:`Highlights clipping`: these "
+"parameters tell the percentage of dark/light colors that are going to be "
+"clipped. This is useful when the histogram has long, low valued, tails at "
+"the shadows/highlights extremes."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:89
+msgid ""
+":guilabel:`Maximum offset`: this allows to set how much the input black and "
+"white points can be moved from their relative extremes."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:90
+msgid ""
+":guilabel:`Shadows color` and :guilabel:`Highlights color`: allows you to "
+"choose which colors should be used for the output shadows/highlights."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:92
+msgid ""
+":guilabel:`Midtones`: In this group of widgets you can select how the "
+"midtones are enhanced."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:94
+msgid ""
+":guilabel:`Method`: here you can choose not to enhance the midtones or a "
+"method to find the midtone point of the image using the median or the mean "
+"of the histogram."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:95
+msgid ""
+":guilabel:`Amount`: with this parameter you can choose how much the final "
+"midtone point used to adjust the image differs from the center of the "
+"histogram. If you choose 0% then the center of the histogram is used as "
+"midtone point (which meand no correction except for the output color). If "
+"you choose 100% then the median or mean is used (depending on the method "
+"selected). And if you choose a value inbetween then a midtone point between "
+"those is used by linearly interpolating them."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:96
+msgid ""
+":guilabel:`Color`: allows you to choose which color should be used for the "
+"output midtones."
+msgstr ""
+
+#: ../../reference_manual/filters/adjust.rst:98
+#, fuzzy
+#| msgid ""
+#| "Auto levels is a quick way to adjust tone of an image. If you want to "
+#| "change the settings later you can click on the :guilabel:`Create Filter "
+#| "Mask` button to add the levels as a filter mask."
+msgid ""
+"If you want to change the settings later you can click on the :guilabel:"
+"`Create Filter Mask` button to add the levels as a filter mask."
 msgstr ""
 "自动色阶可以快速调整图像的色阶分布。如果你希望进行非破坏性编辑以便日后修改此"
 "滤镜的效果，可以点击 :guilabel:`创建滤镜蒙版` 按钮来添加一个“色阶”滤镜蒙版。"
 
-#: ../../reference_manual/filters/adjust.rst:71
-#: ../../reference_manual/filters/adjust.rst:74
+#: ../../reference_manual/filters/adjust.rst:100
+#: ../../reference_manual/filters/adjust.rst:103
 msgid "Color Adjustment Curves"
 msgstr "颜色调整曲线"
 
-#: ../../reference_manual/filters/adjust.rst:71
+#: ../../reference_manual/filters/adjust.rst:100
 msgid "RGB Curves"
 msgstr "RGB 曲线"
 
-#: ../../reference_manual/filters/adjust.rst:71
+#: ../../reference_manual/filters/adjust.rst:100
 msgid "Curves Filter"
 msgstr "颜色曲线滤镜"
 
-#: ../../reference_manual/filters/adjust.rst:76
+#: ../../reference_manual/filters/adjust.rst:105
 msgid ""
 "This filter allows you to adjust each channel by manipulating the curves. "
 "You can even adjust the alpha channel and the lightness channel through this "
@@ -188,27 +340,27 @@ msgstr ""
 "火，我们可以把颜色调整得偏红黄，而在雪山上我们可以把颜色调整的偏蓝绿。此滤镜"
 "的默认快捷键是 :kbd:`Ctrl + M`。"
 
-#: ../../reference_manual/filters/adjust.rst:81
+#: ../../reference_manual/filters/adjust.rst:110
 msgid "Since 4.1 this filter can also handle Hue and Saturation curves."
 msgstr "从 4.1 版开始此滤镜还可以调整色相和饱和度曲线。"
 
-#: ../../reference_manual/filters/adjust.rst:84
+#: ../../reference_manual/filters/adjust.rst:113
 msgid ".. image:: images/filters/Color-adjustment-curve.png"
 msgstr ".. image:: images/filters/Color-adjustment-curve.png"
 
-#: ../../reference_manual/filters/adjust.rst:85
+#: ../../reference_manual/filters/adjust.rst:114
 msgid "Cross Channel Color Adjustment"
 msgstr "跨通道颜色调整"
 
-#: ../../reference_manual/filters/adjust.rst:85
+#: ../../reference_manual/filters/adjust.rst:114
 msgid "Driving Adjustment by channel"
 msgstr "按通道调整颜色"
 
-#: ../../reference_manual/filters/adjust.rst:88
+#: ../../reference_manual/filters/adjust.rst:117
 msgid "Cross-channel color adjustment"
 msgstr "跨通道颜色调整"
 
-#: ../../reference_manual/filters/adjust.rst:92
+#: ../../reference_manual/filters/adjust.rst:121
 msgid ""
 "Sometimes, when you are adjusting the colors for an image, you want bright "
 "colors to be more saturated, or have a little bit of brightness in the "
@@ -217,11 +369,11 @@ msgstr ""
 "在你调整图像时，你可能会希望让颜色可以更饱和一些，或者让某种颜色变得更加明"
 "亮。"
 
-#: ../../reference_manual/filters/adjust.rst:94
+#: ../../reference_manual/filters/adjust.rst:123
 msgid "The Cross-channel color adjustment filter allows you to do this."
 msgstr "跨通道颜色调整滤镜可以实现这种调整。"
 
-#: ../../reference_manual/filters/adjust.rst:96
+#: ../../reference_manual/filters/adjust.rst:125
 msgid ""
 "At the top, there are two drop-downs. The first one is to choose which :"
 "guilabel:`Channel` you wish to modify. The :guilabel:`Driver Channel` drop "
@@ -230,17 +382,17 @@ msgstr ""
 "在这个对话框顶部有两个下拉菜单。第一个 :guilabel:`通道` 菜单选择被更改的通"
 "道，第二个  :guilabel:`驱动通道` 菜单选择用来控制画面被调整区域的通道。"
 
-#: ../../reference_manual/filters/adjust.rst:99
+#: ../../reference_manual/filters/adjust.rst:128
 msgid ".. image:: images/filters/cross_channel_filter.png"
 msgstr ".. image:: images/filters/cross_channel_filter.png"
 
-#: ../../reference_manual/filters/adjust.rst:100
+#: ../../reference_manual/filters/adjust.rst:129
 msgid ""
 "The curve, on the horizontal axis, represents the driver channel, while the "
 "vertical axis represent the channel you wish to modify."
 msgstr "曲线的水平坐标代表驱动通道，垂直坐标代表被调整通道。"
 
-#: ../../reference_manual/filters/adjust.rst:102
+#: ../../reference_manual/filters/adjust.rst:131
 msgid ""
 "So if you wish to increase the saturation in the lighter parts, you pick :"
 "guilabel:`Saturation` in the first drop-down, and :guilabel:`Lightness` as "
@@ -249,7 +401,7 @@ msgstr ""
 "以提高画面较亮部分饱和度的操作为例。先在“通道”菜单中选择 :guilabel:`饱和度"
 "` ，在“驱动通道”菜单中选择 :guilabel:`亮度` ，然后把右边拖到顶部附近。"
 
-#: ../../reference_manual/filters/adjust.rst:104
+#: ../../reference_manual/filters/adjust.rst:133
 msgid ""
 "If you wish to desaturate everything but the teal/blues, you select :"
 "guilabel:`Saturation` for the channel and :guilabel:`Hue` for the driver. "
@@ -259,17 +411,17 @@ msgstr ""
 "` ，在“驱动通道”菜单中选择 :guilabel:`色相` ，然后在曲线中部创建一个控制点，"
 "再把这个点向左下角或者右下角靠近。"
 
-#: ../../reference_manual/filters/adjust.rst:107
+#: ../../reference_manual/filters/adjust.rst:136
 msgid "Brightness/Contrast curves"
 msgstr "亮度/对比度曲线"
 
-#: ../../reference_manual/filters/adjust.rst:109
+#: ../../reference_manual/filters/adjust.rst:138
 msgid ""
 "This filter allows you to adjust the brightness and contrast of the image by "
 "adjusting the curves."
 msgstr "此滤镜可以通过调整曲线来控制图像的亮度和对比度。"
 
-#: ../../reference_manual/filters/adjust.rst:113
+#: ../../reference_manual/filters/adjust.rst:142
 msgid ""
 "These have been removed in Krita 4.0, because the Color Adjustment filter "
 "can do the same. Old files with brightness/contrast curves will be loaded as "
@@ -278,12 +430,12 @@ msgstr ""
 "此组滤镜在 4.0 版中已被移除。颜色调整曲线滤镜可以胜任同类任务，而旧版 KRA 图"
 "像文件的非破坏性滤镜中的亮度、对比度曲线会被自动读取为颜色调整曲线。"
 
-#: ../../reference_manual/filters/adjust.rst:115
-#: ../../reference_manual/filters/adjust.rst:118
+#: ../../reference_manual/filters/adjust.rst:144
+#: ../../reference_manual/filters/adjust.rst:147
 msgid "Color Balance"
 msgstr "色彩平衡"
 
-#: ../../reference_manual/filters/adjust.rst:120
+#: ../../reference_manual/filters/adjust.rst:149
 msgid ""
 "This filter allows you to control the color balance of the image by "
 "adjusting the sliders for Shadows, Midtones and Highlights. The default "
@@ -292,28 +444,28 @@ msgstr ""
 "此滤镜通过分别对阴影色、中间色、高亮色的颜色滑动条进行控制来调整图像的色彩平"
 "衡。此滤镜的默认快捷键是 :kbd:`Ctrl + B` 。"
 
-#: ../../reference_manual/filters/adjust.rst:123
+#: ../../reference_manual/filters/adjust.rst:152
 msgid ".. image:: images/filters/Color-balance.png"
 msgstr ".. image:: images/filters/Color-balance.png"
 
-#: ../../reference_manual/filters/adjust.rst:124
-#: ../../reference_manual/filters/adjust.rst:162
+#: ../../reference_manual/filters/adjust.rst:153
+#: ../../reference_manual/filters/adjust.rst:191
 msgid "Saturation"
 msgstr "饱和度"
 
-#: ../../reference_manual/filters/adjust.rst:124
+#: ../../reference_manual/filters/adjust.rst:153
 msgid "Desaturation"
 msgstr "去色"
 
-#: ../../reference_manual/filters/adjust.rst:124
+#: ../../reference_manual/filters/adjust.rst:153
 msgid "Gray"
 msgstr "灰度"
 
-#: ../../reference_manual/filters/adjust.rst:127
+#: ../../reference_manual/filters/adjust.rst:156
 msgid "Desaturate"
 msgstr "去色"
 
-#: ../../reference_manual/filters/adjust.rst:129
+#: ../../reference_manual/filters/adjust.rst:158
 msgid ""
 "Image-wide desaturation filter. Will make any image Grayscale. Has several "
 "choices by which logic the colors are turned to gray. The default shortcut "
@@ -322,73 +474,73 @@ msgstr ""
 "这是一个针对整张图像的去色滤镜，可以把任意图像变为灰度图，具有数种不同的转换"
 "逻辑。此滤镜的默认快捷键是 :kbd:`Ctrl + Shift + U` 。"
 
-#: ../../reference_manual/filters/adjust.rst:133
+#: ../../reference_manual/filters/adjust.rst:162
 msgid ".. image:: images/filters/Desaturate-filter.png"
 msgstr ".. image:: images/filters/Desaturate-filter.png"
 
-#: ../../reference_manual/filters/adjust.rst:134
-#: ../../reference_manual/filters/adjust.rst:162
+#: ../../reference_manual/filters/adjust.rst:163
+#: ../../reference_manual/filters/adjust.rst:191
 msgid "Lightness"
 msgstr "亮度"
 
-#: ../../reference_manual/filters/adjust.rst:135
+#: ../../reference_manual/filters/adjust.rst:164
 msgid "This will turn colors to gray using the HSL model."
 msgstr "使用 HSL 模型来把颜色转换为灰度。"
 
-#: ../../reference_manual/filters/adjust.rst:136
+#: ../../reference_manual/filters/adjust.rst:165
 msgid "Luminosity (ITU-R BT.709)"
 msgstr "明度 (ITU-R BT.709)"
 
-#: ../../reference_manual/filters/adjust.rst:137
+#: ../../reference_manual/filters/adjust.rst:166
 msgid ""
 "Will turn the color to gray by using the appropriate amount of weighting per "
 "channel according to ITU-R BT.709."
 msgstr "把颜色转换为灰度时，按照 ITU-R BT.709 标准对各个通道进行权重。"
 
-#: ../../reference_manual/filters/adjust.rst:138
+#: ../../reference_manual/filters/adjust.rst:167
 msgid "Luminosity (ITU-R BT.601)"
 msgstr "明度 (ITU-R BT.601)"
 
-#: ../../reference_manual/filters/adjust.rst:139
+#: ../../reference_manual/filters/adjust.rst:168
 msgid ""
 "Will turn the color to gray by using the appropriate amount of weighting per "
 "channel according to ITU-R BT.601."
 msgstr "把颜色转换为灰度时，按照 ITU-R BT.601 标准对各个通道进行权重。"
 
-#: ../../reference_manual/filters/adjust.rst:140
+#: ../../reference_manual/filters/adjust.rst:169
 msgid "Average"
 msgstr "平均值"
 
-#: ../../reference_manual/filters/adjust.rst:141
+#: ../../reference_manual/filters/adjust.rst:170
 msgid "Will make an average of all channels."
 msgstr "计算所有通道的平均值。"
 
-#: ../../reference_manual/filters/adjust.rst:142
+#: ../../reference_manual/filters/adjust.rst:171
 msgid "Min"
 msgstr "最小值"
 
-#: ../../reference_manual/filters/adjust.rst:143
+#: ../../reference_manual/filters/adjust.rst:172
 msgid "Subtracts all from one another to find the gray value."
 msgstr "把所有通道两两相减，找出最小的灰度数值。"
 
-#: ../../reference_manual/filters/adjust.rst:145
+#: ../../reference_manual/filters/adjust.rst:174
 msgid "Max"
 msgstr "最大值"
 
-#: ../../reference_manual/filters/adjust.rst:145
+#: ../../reference_manual/filters/adjust.rst:174
 msgid "Adds all channels together to get a gray value."
 msgstr "把所有通道的数值加起来得到的灰度数值。"
 
-#: ../../reference_manual/filters/adjust.rst:147
-#: ../../reference_manual/filters/adjust.rst:150
+#: ../../reference_manual/filters/adjust.rst:176
+#: ../../reference_manual/filters/adjust.rst:179
 msgid "Invert"
 msgstr "反相"
 
-#: ../../reference_manual/filters/adjust.rst:147
+#: ../../reference_manual/filters/adjust.rst:176
 msgid "Negative"
 msgstr "负片"
 
-#: ../../reference_manual/filters/adjust.rst:152
+#: ../../reference_manual/filters/adjust.rst:181
 msgid ""
 "This filter like the name suggests inverts the color values in the image. So "
 "white (1,1,1) becomes black (0,0,0), yellow (1,1,0) becomes blue (0,1,1), "
@@ -397,39 +549,39 @@ msgstr ""
 "此滤镜会将图像的颜色数值进行反相。白 (1,1,1) 会变成黑 (0,0,0)，黄 (1,1,0) 会"
 "变成蓝 (0,1,1)，如此类推。此滤镜的快捷键是 :kbd:`Ctrl + I` 。"
 
-#: ../../reference_manual/filters/adjust.rst:155
+#: ../../reference_manual/filters/adjust.rst:184
 msgid "Contrast"
 msgstr "对比度"
 
-#: ../../reference_manual/filters/adjust.rst:158
+#: ../../reference_manual/filters/adjust.rst:187
 msgid "Auto Contrast"
 msgstr "自动对比度"
 
-#: ../../reference_manual/filters/adjust.rst:160
+#: ../../reference_manual/filters/adjust.rst:189
 msgid "Tries to adjust the contrast to universally acceptable levels."
 msgstr "尝试把图像的对比度调整为一个可被普遍接受的水平。"
 
-#: ../../reference_manual/filters/adjust.rst:162
+#: ../../reference_manual/filters/adjust.rst:191
 msgid "Hue"
 msgstr "色相"
 
-#: ../../reference_manual/filters/adjust.rst:162
+#: ../../reference_manual/filters/adjust.rst:191
 msgid "Value"
 msgstr "明度"
 
-#: ../../reference_manual/filters/adjust.rst:162
+#: ../../reference_manual/filters/adjust.rst:191
 msgid "Brightness"
 msgstr "亮度"
 
-#: ../../reference_manual/filters/adjust.rst:162
+#: ../../reference_manual/filters/adjust.rst:191
 msgid "Chroma"
 msgstr "色品"
 
-#: ../../reference_manual/filters/adjust.rst:165
+#: ../../reference_manual/filters/adjust.rst:194
 msgid "HSV/HSL Adjustment"
 msgstr "HSV/HSL 调整"
 
-#: ../../reference_manual/filters/adjust.rst:167
+#: ../../reference_manual/filters/adjust.rst:196
 msgid ""
 "With this filter, you can adjust the Hue, Saturation, Value or Lightness, "
 "through sliders. The default shortcut for this filter is :kbd:`Ctrl + U`."
@@ -437,25 +589,25 @@ msgstr ""
 "此滤镜可以通过滑动条来调整色相、饱和度、明度或者亮度。它的默认快捷键是 :kbd:"
 "`Ctrl + U` 。"
 
-#: ../../reference_manual/filters/adjust.rst:170
+#: ../../reference_manual/filters/adjust.rst:199
 msgid ".. image:: images/filters/Hue-saturation-filter.png"
 msgstr ".. image:: images/filters/Hue-saturation-filter.png"
 
-#: ../../reference_manual/filters/adjust.rst:171
+#: ../../reference_manual/filters/adjust.rst:200
 msgid "Colorize"
 msgstr "着色"
 
-#: ../../reference_manual/filters/adjust.rst:172
+#: ../../reference_manual/filters/adjust.rst:201
 msgid ""
 "This is an option to have all the pixels have the same hue. It uses a HSL "
 "formula by default."
 msgstr "勾选后将使整个画面的颜色具有相同的色相。默认使用 HSL 模型。"
 
-#: ../../reference_manual/filters/adjust.rst:174
+#: ../../reference_manual/filters/adjust.rst:203
 msgid "Legacy Mode"
 msgstr "旧版模式"
 
-#: ../../reference_manual/filters/adjust.rst:174
+#: ../../reference_manual/filters/adjust.rst:203
 msgid ""
 "In the development of Krita 4.3, the HSV algorithm was adjusted to maintain "
 "the variation in brightness better. This is important because brightness "
@@ -467,16 +619,16 @@ msgstr ""
 "化最为敏感，所以应该尽力保证明度变化的稳定性。如果你习惯了旧版的算法，可以勾"
 "选此框。"
 
-#: ../../reference_manual/filters/adjust.rst:176
-#: ../../reference_manual/filters/adjust.rst:179
+#: ../../reference_manual/filters/adjust.rst:205
+#: ../../reference_manual/filters/adjust.rst:208
 msgid "Threshold"
 msgstr "阈值"
 
-#: ../../reference_manual/filters/adjust.rst:176
+#: ../../reference_manual/filters/adjust.rst:205
 msgid "Black and White"
 msgstr "黑白"
 
-#: ../../reference_manual/filters/adjust.rst:181
+#: ../../reference_manual/filters/adjust.rst:210
 msgid ""
 "A simple black and white threshold filter that uses sRGB luminosity. It'll "
 "convert any image to a image with only black and white, with the input "
@@ -485,24 +637,24 @@ msgstr ""
 "一个简单的黑白阈值滤镜，使用 sRGB 明度曲线。它会把任意图像转换为黑白双色图，"
 "阈值级别控制的是黑白互换的数值。"
 
-#: ../../reference_manual/filters/adjust.rst:183
-#: ../../reference_manual/filters/adjust.rst:196
+#: ../../reference_manual/filters/adjust.rst:212
+#: ../../reference_manual/filters/adjust.rst:225
 msgid "Slope"
 msgstr "斜率"
 
-#: ../../reference_manual/filters/adjust.rst:183
+#: ../../reference_manual/filters/adjust.rst:212
 msgid "ASC CDL"
 msgstr "ASC CDL"
 
-#: ../../reference_manual/filters/adjust.rst:183
+#: ../../reference_manual/filters/adjust.rst:212
 msgid "Offset and Power Curves"
 msgstr "偏移和指数曲线"
 
-#: ../../reference_manual/filters/adjust.rst:186
+#: ../../reference_manual/filters/adjust.rst:215
 msgid "Slope, Offset, Power"
 msgstr "斜率、偏移、强度"
 
-#: ../../reference_manual/filters/adjust.rst:188
+#: ../../reference_manual/filters/adjust.rst:217
 msgid ""
 "A different kind of color balance filter, with three color selectors, which "
 "will have the same shape as the one used in settings."
@@ -510,7 +662,7 @@ msgstr ""
 "这是一个不同类型的色彩平衡滤镜，显示有三个拾色器，拾色器的模式和形状和高级拾"
 "色器的设定相同。"
 
-#: ../../reference_manual/filters/adjust.rst:190
+#: ../../reference_manual/filters/adjust.rst:219
 msgid ""
 "This filter is particular useful because it has been defined by the American "
 "Society for Cinema as \"ASC_CDL\", meaning that it is a standard way of "
@@ -519,23 +671,23 @@ msgstr ""
 "此滤镜被美国电影协会定义为“ASC_CDL”，是一种描述色彩平衡的标准手段，它也因此被"
 "广泛使用。"
 
-#: ../../reference_manual/filters/adjust.rst:197
+#: ../../reference_manual/filters/adjust.rst:226
 msgid ""
 "This represents a multiplication and determine the adjustment of the "
 "brighter colors in an image."
 msgstr "此项控制一个颜色数值的乘数，用于调整图像的高亮色。"
 
-#: ../../reference_manual/filters/adjust.rst:198
+#: ../../reference_manual/filters/adjust.rst:227
 msgid "Offset"
 msgstr "偏移"
 
-#: ../../reference_manual/filters/adjust.rst:199
+#: ../../reference_manual/filters/adjust.rst:228
 msgid ""
 "This determines how much the bottom is offset from the top, and so "
 "determines the color of the darkest colors."
 msgstr "此项控制底部颜色数值与顶部颜色数值之间的偏移量，用于调整图像的最暗色。"
 
-#: ../../reference_manual/filters/adjust.rst:201
+#: ../../reference_manual/filters/adjust.rst:230
 msgid ""
 "This represents a power function, and determines the adjustment of the mid-"
 "tone to dark colors of an image."

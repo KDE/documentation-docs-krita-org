@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-01 00:40+0000\n"
+"POT-Creation-Date: 2022-08-10 00:40+0000\n"
 "PO-Revision-Date: 2022-02-06 17:11-0800\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -16,8 +16,16 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 
 #: ../../<generated>:1
-msgid "Fuzziness"
-msgstr "あいまいさ"
+msgid "Reference"
+msgstr ""
+
+#: ../../<generated>:1
+msgid "Color Labeled Layers"
+msgstr "色ラベル付きレイヤー"
+
+#: ../../<generated>:1
+msgid "Labels Used"
+msgstr "使用されたラベル"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -174,53 +182,87 @@ msgstr ""
 "す。"
 
 #: ../../reference_manual/tools/similar_select.rst:65
-msgid "Anti-aliasing"
-msgstr "アンチエイリアス"
+#, fuzzy
+#| msgid "Selection"
+msgid "Selection Extent"
+msgstr "選択"
 
 #: ../../reference_manual/tools/similar_select.rst:65
-msgid ""
-"This toggles whether or not to give selections feathered edges. Some people "
-"prefer hard-jagged edges for their selections."
+msgid "Threshold"
 msgstr ""
-"選択のふちを柔らかくすることができます。ジャギーのある硬いふちを好む人もいま"
-"す。"
 
-#: ../../reference_manual/tools/similar_select.rst:69
-msgid "This has been removed as it only caused confusion."
-msgstr "これは混乱させるだけだとして削除されました。"
+#: ../../reference_manual/tools/similar_select.rst:66
+msgid ""
+"This controls the range of the color hue used to create the selection. A "
+"lower number will select colors closer to the color that you chose in the "
+"first place. And a higher number will expand the hue range and select colors "
+"even if they are not so similar to the original color."
+msgstr ""
+"選択作成に使われる色相の範囲を操作できます。低い値であれば最初に選択された色"
+"により近い色を選択するようになります。高い値は色相の範囲を広げ、元の色にそん"
+"なに近くなくても選択するようになります。"
+
+#: ../../reference_manual/tools/similar_select.rst:70
+#, fuzzy
+#| msgid "Anti-aliasing"
+msgid "Anti-alias"
+msgstr "アンチエイリアス"
+
+#: ../../reference_manual/tools/similar_select.rst:71
+msgid ""
+"This will smooth the jagged edges present in the region. It differs from "
+"feathering in that this will smooth in the direction of the edge instead of "
+"all directions, and only if the edge is jagged (high contrast)."
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:73
+#, fuzzy
+#| msgid "Selection"
+msgid "Grow Selection"
+msgstr "選択"
 
 #: ../../reference_manual/tools/similar_select.rst:74
+msgid ""
+"This value extends (positive values) or contracts (negative values) the "
+"region."
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:75
+msgid "Adjustments"
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:75
+msgid "Feathering Radius"
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:76
+msgid "This value will add a soft border to the region."
+msgstr ""
+
+#: ../../reference_manual/tools/similar_select.rst:80
 msgid ""
 "Select which layers to use as a reference for the contiguous select tool. "
 "The options are:"
 msgstr ""
 "近似色選択ツールでどのレイヤーを判定に使用するかを選択します。オプションは:"
 
-#: ../../reference_manual/tools/similar_select.rst:76
+#: ../../reference_manual/tools/similar_select.rst:82
 msgid "Current Layer"
 msgstr "現在のレイヤー"
 
-#: ../../reference_manual/tools/similar_select.rst:77
+#: ../../reference_manual/tools/similar_select.rst:83
 msgid "Only use the currently selected layer."
 msgstr "現在選択されているレイヤーのみを使用します。"
 
-#: ../../reference_manual/tools/similar_select.rst:78
+#: ../../reference_manual/tools/similar_select.rst:84
 msgid "All layers"
 msgstr "すべてのレイヤー"
 
-#: ../../reference_manual/tools/similar_select.rst:79
+#: ../../reference_manual/tools/similar_select.rst:85
 msgid "Use all visible layers."
 msgstr "すべての表示レイヤーを使用します。"
 
-#: ../../reference_manual/tools/similar_select.rst:81
-msgid "Sample"
-msgstr "サンプル"
-
-#: ../../reference_manual/tools/similar_select.rst:81
-msgid "Color Labeled Layers"
-msgstr "色ラベル付きレイヤー"
-
-#: ../../reference_manual/tools/similar_select.rst:81
+#: ../../reference_manual/tools/similar_select.rst:87
 msgid ""
 "Use only the layers specified with a certain color label. This is useful for "
 "complex images, where you might have multiple lineart layers. Label them "
@@ -231,21 +273,25 @@ msgstr ""
 "な、複雑な画像に便利です。適当な色ラベルを付け判定に使用するレイヤーとして印"
 "をつけるのに使います。"
 
-#: ../../reference_manual/tools/similar_select.rst:86
-msgid "Labels Used"
-msgstr "使用されたラベル"
-
-#: ../../reference_manual/tools/similar_select.rst:86
-msgid "Used with the 'Color Labeled Layers' option above."
-msgstr "上の'色ラベル付きレイヤー'オプションで使います。"
-
-#: ../../reference_manual/tools/similar_select.rst:89
-msgid ""
-"This controls the range of the color hue used to create the selection. A "
-"lower number will select colors closer to the color that you chose in the "
-"first place. And a higher number will expand the hue range and select colors "
-"even if they are not so similar to the original color."
+#: ../../reference_manual/tools/similar_select.rst:90
+msgid "Select the color labels of the layers that should be used as reference."
 msgstr ""
-"選択作成に使われる色相の範囲を操作できます。低い値であれば最初に選択された色"
-"により近い色を選択するようになります。高い値は色相の範囲を広げ、元の色にそん"
-"なに近くなくても選択するようになります。"
+
+#~ msgid "Fuzziness"
+#~ msgstr "あいまいさ"
+
+#~ msgid ""
+#~ "This toggles whether or not to give selections feathered edges. Some "
+#~ "people prefer hard-jagged edges for their selections."
+#~ msgstr ""
+#~ "選択のふちを柔らかくすることができます。ジャギーのある硬いふちを好む人もい"
+#~ "ます。"
+
+#~ msgid "This has been removed as it only caused confusion."
+#~ msgstr "これは混乱させるだけだとして削除されました。"
+
+#~ msgid "Sample"
+#~ msgstr "サンプル"
+
+#~ msgid "Used with the 'Color Labeled Layers' option above."
+#~ msgstr "上の'色ラベル付きレイヤー'オプションで使います。"
