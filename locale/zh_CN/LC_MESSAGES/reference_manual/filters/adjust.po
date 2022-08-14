@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-10 00:40+0000\n"
-"PO-Revision-Date: 2022-08-07 13:29\n"
+"PO-Revision-Date: 2022-08-13 03:53\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___filters___adjust.pot\n"
 "X-Crowdin-File-ID: 9990\n"
+"Language: zh_CN\n"
 
 #: ../../<generated>:1
 msgid "Power"
@@ -36,7 +36,7 @@ msgstr "滤镜"
 
 #: ../../reference_manual/filters/adjust.rst:16
 msgid "Adjust"
-msgstr "调整"
+msgstr "调整颜色/图像"
 
 #: ../../reference_manual/filters/adjust.rst:18
 msgid ""
@@ -147,34 +147,36 @@ msgid ""
 "levels for each channel independently and you can change the active channel "
 "by selecting it in the list that appears at the right side of the buttons."
 msgstr ""
+"这两个按钮切换“仅调整亮度”和“独立调整所有通道”模式。后者可以单独调整每个通道"
+"的色阶。选择此模式时，按钮的右侧还会显示一个下拉菜单，用于选择活动通道。"
 
 #: ../../reference_manual/filters/adjust.rst:67
 msgid "This area shows the histogram for the active channel."
-msgstr ""
+msgstr "此区域显示图像的直方图。"
 
 #: ../../reference_manual/filters/adjust.rst:68
 msgid ""
 "This is a slider that you can use to quickly change the input black and "
 "white points and gamma."
-msgstr ""
+msgstr "此滑块用于快速更改图像的输入黑点值、白点值和伽玛值。"
 
 #: ../../reference_manual/filters/adjust.rst:69
 msgid ""
 "These input boxes do the same as the input levels slider, but allow you to "
 "finetune the values."
-msgstr ""
+msgstr "这些输入框和前一项中的输入色阶滑动条功能相同，用于精确指定数值。"
 
 #: ../../reference_manual/filters/adjust.rst:70
 msgid ""
 "This is a slider that you can use to quickly change the output black and "
 "white ponts."
-msgstr ""
+msgstr "此滑块用于快速更改图像的输出黑点值和白点值。"
 
 #: ../../reference_manual/filters/adjust.rst:71
 msgid ""
 "These input boxes do the same as the output levels slider, but allow you to "
 "finetune the values."
-msgstr ""
+msgstr "这些输入框和前一项中的输出色阶滑动条功能相同，用于精确指定数值。"
 
 #: ../../reference_manual/filters/adjust.rst:72
 msgid ""
@@ -187,10 +189,14 @@ msgid ""
 "dragging verticaly on the area or by double-clicking to change between \"fit "
 "all\" and \"fit cutting long peaks\"."
 msgstr ""
+"这组按钮用于控制直方图的可视化方式。第一个按钮是线性直方图 (默认值)，第二个按"
+"钮是对数直方图，第三个按钮将调整直方图的垂直大小以适合显示区域，第四个按钮和"
+"第三个按钮功能类似，但会切断异常的长尖峰。你还可以在显示区域垂直拖动以调整直"
+"方图的垂直大小，还可以双击显示区域以循环切换第三、第四按钮的模式。"
 
 #: ../../reference_manual/filters/adjust.rst:73
 msgid "This button brings up the auto levels dialog for the current channel."
-msgstr ""
+msgstr "此按钮将打开当前通道的自动色阶对话框。"
 
 #: ../../reference_manual/filters/adjust.rst:74
 msgid ""
@@ -198,20 +204,16 @@ msgid ""
 "current channel, the input levels of the current channel, the output levels "
 "of the current channel, and the levels of all the channels."
 msgstr ""
+"这些按钮用于重置被调整过的色阶，从上至下分别是重置当前通道色阶、重置当前通道"
+"的输入色阶、重置当前通道的输出色阶、重置所有通道的色阶。"
 
 #: ../../reference_manual/filters/adjust.rst:75
 msgid ""
 "This button brings up the multi-channel auto levels dialog (only available "
 "in the RGBA color model)."
-msgstr ""
+msgstr "此按钮将打开多通道自动色阶调整对话框 (仅在 RGBA 色彩模型中可用)。"
 
 #: ../../reference_manual/filters/adjust.rst:77
-#, fuzzy
-#| msgid ""
-#| "This is very useful to do an initial cleanup of scanned lineart or "
-#| "grayscale images. If the scanned lineart is light you can slide the black "
-#| "triangle to right to make it darker or if you want to remove the gray "
-#| "areas you can slide the white slider to left."
 msgid ""
 "This filter is very useful to do an initial cleanup of scanned lineart or "
 "grayscale images. If the scanned lineart is light you can slide the black "
@@ -219,7 +221,7 @@ msgid ""
 "remove the gray areas you can slide the white handle to the left."
 msgstr ""
 "此滤镜在清理刚扫描进电脑的灰阶草稿时特别有用。因为草稿的空白较多，你可以把黑"
-"色的三角稍微右移使得线条更黑，把白色三角左移可以去除浅灰色的杂点。"
+"色滑块稍微右移使得线条更黑，把白色滑块左移可以去除浅灰色的杂点。"
 
 #: ../../reference_manual/filters/adjust.rst:79
 msgid ""
@@ -227,18 +229,19 @@ msgid ""
 "levels of the filter automaticaly by using the auto levels dialog that "
 "appears when clicking one of the buttons explained earlier:"
 msgstr ""
+"自动色阶是用于快速调整图像色调的功能。点击上方介绍过的两个自动色阶按钮即可打"
+"开此对话框，对色阶进行自动调整："
 
 #: ../../reference_manual/filters/adjust.rst:84
-#, fuzzy
-#| msgid ".. image:: images/filters/Levels-filter.png"
 msgid ".. image:: images/filters/Levels-filter-autolevels.png"
-msgstr ".. image:: images/filters/Levels-filter.png"
+msgstr ".. image:: images/filters/Levels-filter-autolevels.png"
 
 #: ../../reference_manual/filters/adjust.rst:85
 msgid ""
 ":guilabel:`Shadows and Highlights`: In this group of widgets you can select "
 "how the shadows and highlights are enhanced."
 msgstr ""
+":guilabel:`阴影色和高光色`\\ ：这组控件中可以调整阴影色和高光色的增强方式。"
 
 #: ../../reference_manual/filters/adjust.rst:87
 msgid ""
@@ -247,6 +250,9 @@ msgid ""
 "apply the same input levels to all the channels or different input levels to "
 "each."
 msgstr ""
+":guilabel:`方式`\\ ：此选单仅在选择了 RGBA 色彩模型，并点击应用自动色阶到所有"
+"通道按钮打开对话框时才可用。它可以选择是将相同的输入色阶应用到所有通道，还是"
+"将不同的输入色阶应用到各个通道。"
 
 #: ../../reference_manual/filters/adjust.rst:88
 msgid ""
@@ -255,24 +261,29 @@ msgid ""
 "clipped. This is useful when the histogram has long, low valued, tails at "
 "the shadows/highlights extremes."
 msgstr ""
+":guilabel:`阴影色剪切`\\ 和\\ :guilabel:`高光色剪切`\\ ：这两个滑动条用于指定"
+"被剪切的阴影色和高光色的百分比。这在图像包含数值极低的极限阴影色和高光色时有"
+"用。"
 
 #: ../../reference_manual/filters/adjust.rst:89
 msgid ""
 ":guilabel:`Maximum offset`: this allows to set how much the input black and "
 "white points can be moved from their relative extremes."
-msgstr ""
+msgstr ":guilabel:`最大偏移`\\ ：用于指定输入黑点和白点的最大相对极值偏移量。"
 
 #: ../../reference_manual/filters/adjust.rst:90
 msgid ""
 ":guilabel:`Shadows color` and :guilabel:`Highlights color`: allows you to "
 "choose which colors should be used for the output shadows/highlights."
 msgstr ""
+":guilabel:`阴影色`\\ 和\\ :guilabel:`高光色`\\ ：用于指定输出的阴影色和高光"
+"色。"
 
 #: ../../reference_manual/filters/adjust.rst:92
 msgid ""
 ":guilabel:`Midtones`: In this group of widgets you can select how the "
 "midtones are enhanced."
-msgstr ""
+msgstr ":guilabel:`中间调`\\ ：这组控件用于选择中间调的增强方式。"
 
 #: ../../reference_manual/filters/adjust.rst:94
 msgid ""
@@ -280,6 +291,8 @@ msgid ""
 "method to find the midtone point of the image using the median or the mean "
 "of the histogram."
 msgstr ""
+":guilabel:`方式`\\ ：在此选择中间调的调整方式，包括不调整、使用直方图的中位数"
+"或者平均值来调整中间调。"
 
 #: ../../reference_manual/filters/adjust.rst:95
 msgid ""
@@ -291,25 +304,24 @@ msgid ""
 "selected). And if you choose a value inbetween then a midtone point between "
 "those is used by linearly interpolating them."
 msgstr ""
+":guilabel:`强度`\\ ：此参数控制用于调整图像的最终中间调与直方图中心的偏差程"
+"度。0% 意味着直方图的中心将被用作中间调 (除了输出颜色外不进行修正)；100% 意味"
+"着完全使用中位数或者平均值 (取决于上面选择的方式)。如果选择 0% 和 100% 之间的"
+"数值，那么程序会按照线性插值来获取中间调。"
 
 #: ../../reference_manual/filters/adjust.rst:96
 msgid ""
 ":guilabel:`Color`: allows you to choose which color should be used for the "
 "output midtones."
-msgstr ""
+msgstr ":guilabel:`颜色`\\ ：用于选择输出中间调使用的颜色。"
 
 #: ../../reference_manual/filters/adjust.rst:98
-#, fuzzy
-#| msgid ""
-#| "Auto levels is a quick way to adjust tone of an image. If you want to "
-#| "change the settings later you can click on the :guilabel:`Create Filter "
-#| "Mask` button to add the levels as a filter mask."
 msgid ""
 "If you want to change the settings later you can click on the :guilabel:"
 "`Create Filter Mask` button to add the levels as a filter mask."
 msgstr ""
-"自动色阶可以快速调整图像的色阶分布。如果你希望进行非破坏性编辑以便日后修改此"
-"滤镜的效果，可以点击 :guilabel:`创建滤镜蒙版` 按钮来添加一个“色阶”滤镜蒙版。"
+"如果你希望进行非破坏性编辑以便日后修改此滤镜的效果，可以点击 :guilabel:`创建"
+"滤镜蒙版` 按钮来添加一个“色阶”滤镜蒙版。"
 
 #: ../../reference_manual/filters/adjust.rst:100
 #: ../../reference_manual/filters/adjust.rst:103

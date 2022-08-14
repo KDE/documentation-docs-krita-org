@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-10 00:40+0000\n"
-"PO-Revision-Date: 2022-08-07 13:29\n"
+"PO-Revision-Date: 2022-08-13 03:53\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,16 +17,15 @@ msgstr ""
 "docs_krita_org_reference_manual___brushes___brush_engines___spray_brush_engine."
 "pot\n"
 "X-Crowdin-File-ID: 9882\n"
+"Language: zh_CN\n"
 
 #: ../../<generated>:1
 msgid "Mix with background color."
 msgstr "与背景色混合"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:0
-#, fuzzy
-#| msgid ".. image:: images/icons/spraybrush.svg"
 msgid ".. image:: images/brushes/krita-spray-brush-engine-distribution.png"
-msgstr ".. image:: images/icons/spraybrush.svg"
+msgstr ".. image:: images/brushes/krita-spray-brush-engine-distribution.png"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:1
 msgid "The Spray Brush Engine manual page."
@@ -107,11 +105,11 @@ msgstr "喷雾区域"
 msgid ""
 "Here you can set different properties related to the area where the "
 "particles are distributed and how they are distributed."
-msgstr ""
+msgstr "这些设置用于控制喷雾粒子的分布区域和分布方式。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:44
 msgid "Area"
-msgstr ""
+msgstr "喷雾区域"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:46
 msgid "Diameter"
@@ -171,26 +169,20 @@ msgid "Count"
 msgstr "数量"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:64
-#, fuzzy
-#| msgid "Use a specified amount of particles."
 msgid "Use a specified number of particles."
 msgstr "指定喷雾的颗粒数量。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:66
-#, fuzzy
-#| msgid "Count"
 msgid "Amount"
-msgstr "数量"
+msgstr "粒子数量"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:66
 msgid "Density"
 msgstr "密度"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:66
-#, fuzzy
-#| msgid "Use a specified amount of particles."
 msgid "Use a percentage for the number of particles."
-msgstr "指定喷雾的颗粒数量。"
+msgstr "以粒子数量的百分比指定密度。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:71
 msgid ""
@@ -200,18 +192,21 @@ msgid ""
 "the angle and the distance of the particles relative to the center of the "
 "spray area."
 msgstr ""
+"在此设置粒子在喷雾区域中的分布方式。Krita 使用\\ `极坐标系<https://en."
+"wikipedia.org/wiki/Polar_coordinate_system>`_\\ 描述粒子分布方式，你可以指定"
+"相对喷雾区域的中心的角度和距离。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:74
 msgid ""
 "You can specify how the particles are distributed around the center using "
 "one of the following options:"
-msgstr ""
+msgstr "你可以使用下列选项之一来指定粒子在围绕中心分布的方式："
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:76
 msgid ""
 ":guilabel:`Uniform`: Distributes the particles uniformly. Each angle is "
 "equally likely to receive a particle."
-msgstr ""
+msgstr ":guilabel:`均匀`\\ ：均匀分布粒子，所有角度上的粒子分布概率均等。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:77
 msgid ""
@@ -222,10 +217,13 @@ msgid ""
 "ends up at that particular angle. In the spray area the angle increases "
 "clockwise."
 msgstr ""
+":guilabel:`曲线`\\ ：设置一条用于指定粒子如何分布的自定义曲线。曲线左端代表 "
+"0 度，右端代表 360 度 (喷雾区域顺时针角度)。垂直方向上的数值越高，代表对应角"
+"度的粒子分布概率越高。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:79
 msgid "Angular"
-msgstr ""
+msgstr "角向分布"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:79
 msgid ""
@@ -233,16 +231,18 @@ msgid ""
 "360 degrees. Without this, you would need to build a very complex curve with "
 "too many control points to achieve the same result."
 msgstr ""
+":guilabel:`重复次数`\\ ：让曲线从 0 到 360 度重复自身的次数，这可以降低制作复"
+"杂曲线的难度。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:82
 msgid ""
 "You can specify how the particles are distributed from the center to the "
 "edge of the spray area using one of the following options:"
-msgstr ""
+msgstr "你可以使用下列选项之一来指定粒子在喷雾区域的中心到边缘之间分布的方式："
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:84
 msgid ":guilabel:`Uniform`: Distributes the particles uniformly."
-msgstr ""
+msgstr ":guilabel:`均匀`\\ ：均匀分布粒子。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:86
 msgid ""
@@ -255,18 +255,26 @@ msgid ""
 "circumference at a distance of 100 pixels, while being 10 times smaller in "
 "length."
 msgstr ""
+":guilabel:`偏向中心分布 (旧版)`\\ ：此选项用于兼容 5.1 版之前制作的笔刷。在 "
+"5.1 版之前，粒子按照与中心的距离线性均匀分布，造成喷雾区域中心的粒子分布更加"
+"密集。例如距离中心 10 像素的一圈和距离中心 100 像素的一圈的粒子数量相同，但前"
+"者的周长却远长于后者，造成平面视觉上的不均匀。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:88
 msgid ""
 ":guilabel:`Gaussian`: distributes the particles using a gaussian or `normal "
 "distribution <https://en.wikipedia.org/wiki/Normal_distribution>`_."
 msgstr ""
+":guilabel:`高斯`\\ ：使用高斯或\\ `正态分布<https://en.wikipedia.org/wiki/"
+"Normal_distribution>`_\\ 来分布粒子。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:90
 msgid ""
 ":guilabel:`Standard deviation`: Sets the standard deviation of the "
 "distribution. Higher values will make the particles more spread."
 msgstr ""
+":guilabel:`标准差`\\ ：设置高斯分布的标准差。数值较低时，粒子将向喷雾区域的中"
+"心聚集。数值较高时，粒子项喷雾区域的周边扩散。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:91
 msgid ""
@@ -274,12 +282,14 @@ msgid ""
 "with the brushes made prior to version 5.1. See the previous point for more "
 "information."
 msgstr ""
+":guilabel:`偏向中心分布 (旧版)`\\ ：此选项用于兼容 5.1 版之前制作的笔刷。请参"
+"考上面段落的介绍。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:93
 msgid ""
 ":guilabel:`Cluster`: This will allow you to quickly concentrate the "
 "particles towards the center or the edge of the spray area."
-msgstr ""
+msgstr ":guilabel:`聚集`\\ ：将粒子快速聚集在喷雾区域的中心或者边缘。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:95
 msgid ""
@@ -288,6 +298,8 @@ msgid ""
 "the particles concentrate towards the border of the spray area. Values near "
 "0 will make the particles spread more uniformly."
 msgstr ""
+":guilabel:`聚集程度`\\ ：正值将使粒子集中到喷雾区域的中心。负值将使粒子集中到"
+"喷雾区域的边缘。零值和接近零值将使粒子均匀分布。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:97
 msgid ""
@@ -297,16 +309,17 @@ msgid ""
 "the vertical direction mean that there is a higher probability that a "
 "particle ends up at that particular distance."
 msgstr ""
+":guilabel:`曲线`\\ ：设置一条用于指定粒子如何分布的自定义曲线。曲线左端代表喷"
+"雾区域的中心，右端代表喷雾区域的边缘。垂直方向上的数值越高，代表对应距离的粒"
+"子分布概率越高。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:99
-#, fuzzy
-#| msgid "Gaussian Distribution"
 msgid "Distribution"
-msgstr "高斯分布"
+msgstr "分布方式"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:99
 msgid "Radial"
-msgstr ""
+msgstr "径向分布"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:99
 msgid ""
@@ -314,64 +327,68 @@ msgid ""
 "center of the spray area to its edge. Without this, you would need to build "
 "a very complex curve with too many control points to achieve the same result."
 msgstr ""
+":guilabel:`重复次数`\\ ：让曲线从喷雾中心到边缘重复自身的次数，这可以降低制作"
+"复杂曲线的难度。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:103
 msgid "Different distribution types on display:"
-msgstr ""
+msgstr "上图显示的不同分布类型的介绍："
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:105
 msgid ""
 "Uniform for both Angular and Radial, with `Center-biased spread (legacy)` "
 "turned on."
-msgstr ""
+msgstr "角向和径向分布同时设为均匀分布，启用偏向中心分布 (旧版)。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:106
 msgid ""
 "Uniform for both Angular and Radial, with `Center-biased spread (legacy)` "
 "turned off."
-msgstr ""
+msgstr "角向和径向分布同时设为均匀分布，禁用偏向中心分布 (旧版)。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:107
 msgid "Clustered for Radial, with Clusting Amount: 0.0."
-msgstr ""
+msgstr "径向分布设为聚集，聚集程度为 0.0。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:108
 msgid "Clustered for Radial, with Clusting Amount: -5.0."
-msgstr ""
+msgstr "径向分布设为聚集，聚集程度为 -5.0。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:109
 msgid "Clustered for Radial, with Clusting Amount: +5.0."
-msgstr ""
+msgstr "径向分布设为聚集，聚集程度为 +5.0。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:110
 msgid "Curve for Angular, using the default curve and 0 repeats."
-msgstr ""
+msgstr "角向分布设为曲线，使用默认曲线，重复次数为 0。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:111
 msgid "Curve for Angular, using the default curve and 5 repeats."
-msgstr ""
+msgstr "角向分布设为曲线，使用默认曲线，重复次数为 5。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:112
 msgid "Curve for Radial, using the default curve with 3 repeats."
-msgstr ""
+msgstr "径向分布设为曲线，使用默认曲线，重复次数为 3。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:113
 msgid ""
 "Curve for Angular using a hill shaped curve, 7 repeats, and Clustered for "
 "Radial, with Clusting Amount: -5.0."
 msgstr ""
+"角向分布设为曲线，使用山形曲线，重复次数为 7，径向分布设为聚集，聚集程度为 "
+"-5.0。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:114
 msgid "Gaussian for Radial, with Standard Deviation: 25."
-msgstr ""
+msgstr "径向分布设为高斯，标准差为 25。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:115
 msgid "Gaussian for Radial, with Standard Deviation: 50."
-msgstr ""
+msgstr "径向分布设为高斯，标准差为 50。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:116
 msgid "Gaussian for Radial, with Standard Deviation: 80."
-msgstr ""
+msgstr "径向分布设为高斯，标准差为 80。"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:121
 msgid "Spray Shape"
@@ -544,14 +561,3 @@ msgid ""
 "Gives the particle a random color between foreground/input/random HSV and "
 "the background color."
 msgstr "粒子颜色将在前景色、输入、随机 HSV 数值、背景色之间随机变化。"
-
-#~ msgid "The area in which the particles are sprayed."
-#~ msgstr "此选项页面控制喷雾的区域。"
-
-#~ msgid "Use a % amount of particles."
-#~ msgstr "按百分比控制粒子数量。"
-
-#~ msgid ""
-#~ "Focuses the particles to paint in the center instead of evenly random "
-#~ "over the spray area."
-#~ msgstr "将粒子集中在喷雾区域的中间附近，而不是在区域内随机喷射。"

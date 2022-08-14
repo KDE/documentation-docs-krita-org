@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-10 00:40+0000\n"
-"PO-Revision-Date: 2022-08-07 13:29\n"
+"PO-Revision-Date: 2022-08-13 03:53\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,6 +17,7 @@ msgstr ""
 "docs_krita_org_reference_manual___layers_and_masks___fill_layer_generators___screentone."
 "pot\n"
 "X-Crowdin-File-ID: 24440\n"
+"Language: zh_CN\n"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:1
 msgid "How to use Screen Tone generation in Krita."
@@ -45,11 +45,11 @@ msgstr ""
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:22
 msgid "Contents"
-msgstr ""
+msgstr "目录"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:25
 msgid "General Concepts"
-msgstr ""
+msgstr "基础概念"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:27
 msgid ""
@@ -57,22 +57,24 @@ msgid ""
 "principles. Following are some explanations of basic concepts used through "
 "this page."
 msgstr ""
+"Krita 的网点生成器同时使用了来自传统半调和数字半调的原则。下面我们将介绍一些"
+"相关的基础概念。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:30
 msgid "Pixel Grid"
-msgstr ""
+msgstr "像素网格"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:32
 msgid ""
 "The pixel grid is the grid formed by the regular positioning of each pixel "
 "in the image. Each cell in this grid is formed by a single pixel."
 msgstr ""
+"像素网格指由图像中的每个像素的规则分布的位置分割得到的网格。像素网格的每个单"
+"元格都是一个像素。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:33
-#, fuzzy
-#| msgid "Screentone"
 msgid "Screen"
-msgstr "网点"
+msgstr "网点网"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:35
 msgid ""
@@ -82,12 +84,13 @@ msgid ""
 "through which the light passed. Here we use the term to refer to the "
 "unbounded regular pattern formed by repeating some shape."
 msgstr ""
+"网点中“网”的概念与模拟半调技术的起源有关，它和丝网印刷有着密切的联系。传统的"
+"半调工艺会使用一种带有许多小孔的薄片 (例如织物)，这些小孔用于透过光线。我们在"
+"本页用“网点网”来指代不断重复某种形状的、大小不限的规则图案。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:36
-#, fuzzy
-#| msgid "Screentone"
 msgid "Screen Cell"
-msgstr "网点"
+msgstr "网点单元格"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:38
 msgid ""
@@ -97,20 +100,25 @@ msgid ""
 "and the arrangement of the cells, in a regular and orthogonal grid, forms "
 "the screen."
 msgstr ""
+"网点单元格是指\\ :term:`网<Screen>`\\ 中包含的可重复的形状或图像 (通常是点，"
+"但也可以是线或者其他形状)。每个网点单元格在原则上应包含相同的形状，网点单元格"
+"以网格方式排列 (垂直或者成角度均可) 便组成了网点网。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:39
 msgid "Screen Grid"
-msgstr ""
+msgstr "网点网格"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:41
 msgid ""
 "The screen grid is the grid formed by the regular positioning of :term:"
 "`screen cells<Screen Cell>`."
 msgstr ""
+"网点网格是由\\ :term:`网点单元格<Screen Cell>`\\ 的规则重复的位置分割出来的格"
+"子。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:42
 msgid "Macrocell"
-msgstr ""
+msgstr "宏单元格"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:44
 msgid ""
@@ -130,22 +138,32 @@ msgid ""
 "`macrocell` or :dfn:`supercell`. Similarly the single cell is sometimes "
 "called :dfn:`microcell`."
 msgstr ""
+"网点滤镜要将\\ :term:`网点网<Screen>`\\ 的图像对齐到\\ :term:`像素网格<Pixel "
+"Grid>` (栅格化处理)，但是像素网格的分辨率是有限的，会造成每个\\ :term:`网点单"
+"元格<Screen Cell>`\\ 包含的像素形状并非完全一致的情况，从而导致网点在视觉上呈"
+"现出摩尔纹 (网花)。要解决这个问题，可以将\\ :term:`网点网格<Screen Grid>`\\ "
+"通过一种特殊的方式对齐到像素网格，使得网点单元格的角可以精确的落在整数的像素"
+"坐标上。你可以选择让网点单元格在垂直和水平方向上多少格对齐一次。举例来说，如"
+"果你指定网点网格在水平方向上每 2 单元格整数对齐一次，在垂直方向上每 1 单元格"
+"整数对齐一次，那么图案会以每 2x1 格为一组重复 (组内单元格的对齐方式可以不"
+"同)。这种重复的网点单元格编组被称作\\ :dfn:`宏单元格`\\ 或者\\ :dfn:`超单元格"
+"`\\ ，而单个单元格则相对地被称作\\ :dfn:`微单元格`\\ 。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:45
 msgid "Spot Function"
-msgstr ""
+msgstr "网点函数"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:47
 msgid ""
 "A spot function is a kind of function that generates the shapes analytically "
 "inside every :term:`screen cell<Screen Cell>` (a circle, a line, etc.)."
 msgstr ""
+"网点函数是用于在每个\\ :term:`网点单元格<Screen Cell>`\\ 中生成重复图案 (点、"
+"线、其他形状等) 的函数。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:51
-#, fuzzy
-#| msgid ".. image:: images/layers/fill_layer_screentone_type.png"
 msgid ".. image:: images/layers/fill_layer_screentone_grids.png"
-msgstr ".. image:: images/layers/fill_layer_screentone_type.png"
+msgstr ".. image:: images/layers/fill_layer_screentone_grids.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:51
 msgid ""
@@ -156,10 +174,15 @@ msgid ""
 "in contiguous macrocells but may differ slightly in shape between them. Note "
 "how the corners of the macrocell align with the pixel grid."
 msgstr ""
+"上图是一张网点图案的放大图，蓝色格子是\\ :term:`像素网格<Pixel Grid>`\\ ，绿"
+"色格子是\\ :term:`网点网格<Screen Grid>`\\ 。如果仔细观察，会发现两者并不总是"
+"能够对齐。红色格子标出了一个\\ :term:`宏单元格<Macrocell>`\\ 的轮廓，你会发现"
+"它的四个角都精确对齐到了像素网格。虽然宏单元格内部的每个微单元格的对齐方式略"
+"有不同，但作为一个宏单元格重复时，每个宏单元格的对齐方式是一致的。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:54
 msgid "Description of the Parameters"
-msgstr ""
+msgstr "参数介绍"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:57
 msgid "Screentone Type"
@@ -395,10 +418,8 @@ msgid "Usage Tips"
 msgstr ""
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:133
-#, fuzzy
-#| msgid "Interpolation"
 msgid "What Interpolation to Use?"
-msgstr "插值方式"
+msgstr ""
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:135
 msgid ""
@@ -602,10 +623,8 @@ msgid ""
 msgstr ""
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:208
-#, fuzzy
-#| msgid "Brightness & Contrast"
 msgid "Using the Brightness and Contrast Options"
-msgstr "亮度和对比度"
+msgstr ""
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:210
 msgid ""
@@ -638,12 +657,10 @@ msgid ""
 msgstr ""
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:220
-#, fuzzy
-#| msgid ".. image:: images/layers/fill_layer_screentone_type.png"
 msgid ""
 ".. image:: images/layers/fill_layer_screentone_brightness_contrast_example."
 "png"
-msgstr ".. image:: images/layers/fill_layer_screentone_type.png"
+msgstr ""
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:220
 msgid ""
