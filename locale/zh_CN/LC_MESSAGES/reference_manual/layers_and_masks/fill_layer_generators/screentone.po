@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-10 00:40+0000\n"
-"PO-Revision-Date: 2022-08-13 03:53\n"
+"PO-Revision-Date: 2022-08-20 14:18\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,6 +17,7 @@ msgstr ""
 "docs_krita_org_reference_manual___layers_and_masks___fill_layer_generators___screentone."
 "pot\n"
 "X-Crowdin-File-ID: 24440\n"
+"Language: zh_CN\n"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:1
 msgid "How to use Screen Tone generation in Krita."
@@ -242,6 +242,15 @@ msgid ""
 "40% will produce a shape that has 40% of the pixels *white* and 60% *black*. "
 "To solve this the user can select between three equalization modes:"
 msgstr ""
+":term:`网点函数<Spot Function>`\\ 是一种简单的周期性 2D 函数，输出黑白之间的"
+"一个颜色数值。它的每个宽度和高度周期都会形成一个\\ :term:`网点单元格<Screen "
+"Cell>`\\ ，而所有单元格组合后便成为了\\ :term:`网点网格<Screen Grid>`\\ 。网"
+"点函数的设计简单，可以快速算出结果，但某些函数的输出数值并非均匀分布。如果我"
+"们对函数的输出数值进行阈限 (对比度数值为 100%，与传统半调类似)，非均匀分布的"
+"特性会造成单元格之间的形状失去与输入亮度和黑色区域覆盖范围的相关性，进而造成"
+"输入亮度和视觉亮度的不匹配。如果函数的输出数值是均匀分布的，那么在将亮度设为 "
+"40% 时将生成 40% 的白像素和 60% 的黑像素。为了解决这个问题，用户可以从下面的"
+"三种均衡方式中选择一种："
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:72
 msgid ""
@@ -250,16 +259,21 @@ msgid ""
 "of values if the function is not already equalized. This is the same "
 "behavior as in versions prior to 5.1."
 msgstr ""
+":guilabel:`无`\\ ：网点生成器将直接使用\\ :term:`网点函数<Spot Function>`\\ "
+"的原始输出值，在函数不均衡的情况下也不强制进行均匀分布。这也是 Krita 在 5.1 "
+"版之前的行为。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:74
 msgid ""
 ":guilabel:`Function based equalization`: this mode will perform something "
 "similar to histogram equalization to the :term:`function<Spot Function>`."
 msgstr ""
+":guilabel:`基于函数`\\ ：对\\ :term:`网点函数<Spot Function>`\\ 的输出结果进"
+"行类似直方图均衡的处理。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:76
 msgid "Equalization"
-msgstr ""
+msgstr "均衡方式"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:76
 msgid ""
@@ -277,6 +291,15 @@ msgid ""
 "bit more if the number of pixels in it is greater than 256), avoiding the "
 "sudden jumps in brightness."
 msgstr ""
+":guilabel:`基于模板`\\ ：此模式的流程比较复杂，它尝试在数字半调的处理环节中复"
+"现传统\\ :term:`网点网<Screen>`\\ 的生成方式，以一种完全不同的方式来实现均衡"
+"化。首先，它会使用\\ :term:`网点函数<Spot Function>`\\  配合变形参数创建一个"
+"模板 (小图案)，此模板包含一个或者多个\\ :term:`网点单元格<Screen Cell>` (可以"
+"将一套模板视作一个\\ :term:`宏单元格<Macrocell>`)，此模板会被重复绘制，形成"
+"\\ :term:`网点网格<Screen Grid>`\\ 。为了对模板进行均衡化，宏单元格中的所有像"
+"素都会被按照由暗到亮的顺序进行排列，而每个单元格的像素则会被从左上到右下顺序"
+"排列。这一步骤会生成一个均衡化的宏单元格，每次循环它都会增加 1 像素 (如果宏单"
+"元格包含的像素数目大于 256，此数值会更大)，以避免亮度的突然跳跃。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:80
 msgid ".. image:: images/layers/fill_layer_screentone_type.png"
@@ -311,7 +334,7 @@ msgstr ""
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:95
 msgid "Size Mode"
-msgstr ""
+msgstr "大小模式"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:95
 msgid ""
@@ -322,10 +345,14 @@ msgid ""
 "cells manually. Those two modes are synched so changing the frequency will "
 "change the cell size and viceversa."
 msgstr ""
+"选择调整网点的几何变形时，使用基于分辨率还是基于像素的模式。在基于分辨率模式"
+"下，你可以设置一个分辨率，然后以线每英寸/厘米为单位更改图案频率。在基于像素模"
+"式下，你可以手动指定单元格的大小，这是旧版的调整方式。这两个模式的参数是同步"
+"的，更改频率将同时更改单元格大小，反之亦然。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:100
 msgid "Align to Pixel Grid"
-msgstr ""
+msgstr "对齐像素网格"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:100
 msgid ""
@@ -334,6 +361,9 @@ msgid ""
 "producing a more pleasant and regular tiled structure. The downside is that "
 "the range of possible transformations is reduced."
 msgstr ""
+"启用对齐像素网格时，所有单元格 (如果对齐单位大于 1 单元格，则是所有宏单元格) "
+"将包含完全相同的像素形状，从而生成更加规则、美观的图块结构。缺点是可行的变形"
+"范围会受到限制。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:104
 msgid ".. image:: images/layers/fill_layer_screentone_transformation.png"
@@ -415,17 +445,17 @@ msgstr ""
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:130
 msgid "Usage Tips"
-msgstr ""
+msgstr "使用技巧"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:133
 msgid "What Interpolation to Use?"
-msgstr ""
+msgstr "如何选择插值方式"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:135
 msgid ""
 "The interpolation sets how the shape of the pattern should vary from dark to "
 "light."
-msgstr ""
+msgstr "插值方式可以影响图案在从暗到亮的区域中过渡时的形状变化。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:137
 msgid ""
@@ -434,6 +464,8 @@ msgid ""
 "equalization mode the interpolation will look the same in the case of the "
 "line patterns."
 msgstr ""
+"你只需要在使用圆点、椭圆点和线图案时考虑插值。如果你使用了某种均衡模式，不同"
+"插值方式下的线图案将看起来完全相同。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:139
 msgid ""
@@ -447,10 +479,15 @@ msgid ""
 "look as small black circles/ellipses. At mid-brightness values the pattern "
 "will look as a checkerboard."
 msgstr ""
+"总的来说，对于圆点和椭圆点网点而言，更改插值方式将影响图案在亮度发生变化时的"
+"形状变化。如果使用线性插值，点状网点将仿佛黑色的圆点/椭圆点从中心径向增大，直"
+"至覆盖\\ :term:`网点单元格<Screen Cell>`\\ 。如果使用正弦插值，点状网点的形状"
+"将以对称方式发生变化，意味着在亮度较低的区域图案将呈现为白点，在亮度较高的区"
+"域团将呈现为黑点，在中间亮度区域的图案将呈现为黑白交错的棋盘格状。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:142
 msgid "What Equalization Mode to Use?"
-msgstr ""
+msgstr "如何选择均衡方式"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:144
 msgid ""
@@ -459,36 +496,39 @@ msgid ""
 "using small :term:`cell<Screen Cell>` sizes. Here is a comparison of the "
 "modes:"
 msgstr ""
+"在绝大多数情况下你应该使用默认的\\ :dfn:`基于模板`\\ 的均衡方式。此模式在使用"
+"小尺寸的\\ :term:`网点单元格<Screen Cell>`\\ 时效果更好。以下是各种均衡模式的"
+"优劣比较："
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:146
 msgid ":guilabel:`No Equalization`:"
-msgstr ""
+msgstr ":guilabel:`无`\\ ："
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:148
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:162
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:173
 msgid "Pros:"
-msgstr ""
+msgstr "优点："
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:150
 msgid "It is the fastest mode."
-msgstr ""
+msgstr "速度最快。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:151
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:165
 msgid "Nice smoothing of the edges."
-msgstr ""
+msgstr "轮廓平滑。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:153
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:178
 msgid "Cons:"
-msgstr ""
+msgstr "缺点："
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:155
 msgid ""
 "There is a missmatch between the brightness parameter and the perceived "
 "brightness."
-msgstr ""
+msgstr "亮度参数和视觉亮度存在不匹配的现象。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:156
 msgid ""
@@ -498,27 +538,29 @@ msgid ""
 "bunch of pixels are added all around the dot. This produces a big jump on "
 "the perceived brightness."
 msgstr ""
+"可能会在单元格较小时导致生成的亮度变化范围受限。例如在生成径向变大的圆点形状"
+"时，半径增大 1 像素，意味着许多像素要添加到圆点周围。这会造成视觉亮度的跳跃。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:158
 msgid ""
 "When to use: use this mode when you need the most speed and don't care about "
 "the perceived brightness or the shapes at small cell sizes."
-msgstr ""
+msgstr "适合场景：当你需要速度，且不关注视觉亮度和单元格较小时的形状时。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:160
 msgid ":guilabel:`Function based equalization`:"
-msgstr ""
+msgstr ":guilabel:`基于函数`\\ ："
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:164
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:175
 msgid "It produces better perceived tones."
-msgstr ""
+msgstr "能生成视觉效果更好的网点。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:167
 msgid ""
 "Cons: Since it is still an analytical approach it may not produce a wide "
 "range of brightness variations when the cells are small."
-msgstr ""
+msgstr "缺点：可能会在单元格较小时导致生成的亮度变化范围受限。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:169
 msgid ""
@@ -526,47 +568,51 @@ msgid ""
 "use big cell sizes, or if you need nice smoothing. For example if you use "
 "the screentone on graphic design works."
 msgstr ""
+"适合场景：需要准确的网点形状，且使用较大的网点单元格时，或者在需要更好的轮廓"
+"平滑时。适合生成图形设计所需的网点。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:171
 msgid ":guilabel:`Template based equalization`:"
-msgstr ""
+msgstr ":guilabel:`基于模板`\\ ："
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:176
 msgid "No sudden jumps in perceived brightness."
-msgstr ""
+msgstr "不会发生视觉亮度的跳跃。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:180
 msgid ""
 "The shape may not be as correct as in the other cases, although it is "
 "difficult to perceive."
-msgstr ""
+msgstr "生成的形状不如其他两种模式精确，尽管肉眼很难看得出来。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:181
 msgid "The smoothing of the edges is worst."
-msgstr ""
+msgstr "边缘的平滑效果最差。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:183
 msgid "When to use:"
-msgstr ""
+msgstr "适合场景："
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:185
 msgid ""
 "Use this mode whenever possible, specialy if you want small cell sizes or if "
 "you want smooth transitions between perceived brightness values."
 msgstr ""
+"尽可能使用此模式，尤其是在配合较小的网点单元格使用时，或者需要亮度变化时想要"
+"得到平滑的网点过渡时。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:186
 msgid "Use this mode if you use 100% contrast."
-msgstr ""
+msgstr "使用 100% 对比度时。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:187
 msgid ""
 "Use this mode if you use the screentone generator with the halftone filter."
-msgstr ""
+msgstr "在半调滤镜中使用网点生成器时。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:190
 msgid "What Size Mode to Use?"
-msgstr ""
+msgstr "如何选择大小模式"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:192
 msgid ""
@@ -574,6 +620,8 @@ msgid ""
 "size related calculations you want to avoid, and this usually has to be with "
 "the final medium you intend the image to be displayed on."
 msgstr ""
+"大小模式的选择主要影响可以省略多少与大小有关的计算，通常取决于图像显示的最终"
+"媒介。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:194
 msgid ""
@@ -583,6 +631,9 @@ msgid ""
 "the image then you can easily map the frequency values to real life "
 "meassures."
 msgstr ""
+"如果制作的图像需要打印，那么将\\ :term:`单元格<Screen Cell>`\\ 的大小模式设为"
+"基于分辨率，然后调整单元格频率会比较方便。如果你选择了与图像本身相同的分辨"
+"率，就可以轻松地将网点频率映射到实际尺寸。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:196
 msgid ""
@@ -592,10 +643,13 @@ msgid ""
 "size of the pattern, this mode allows you to easily try different sizes "
 "while looking at the image to see the changes."
 msgstr ""
+"如果制作的图像主要用于屏幕显示，那么大小模式选择基于像素会更加方便。只要你不"
+"在乎图案打印出来后的实际大小，此模式可以方便你在调整网点大小时直接观察图像的"
+"变化。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:199
 msgid "Using the Align to Pixel Grid Options"
-msgstr ""
+msgstr "对齐像素网格选项的使用"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:201
 msgid ""
@@ -603,6 +657,8 @@ msgid ""
 "regularity and to avoid moire patterns. Usually you won't have to change the "
 "default values."
 msgstr ""
+"此选项用于确保生成形状规则的\\ :term:`单元格<Screen Cell>`\\ ，从而避免摩尔"
+"纹 (网花)。在通常情况下你无需更改它的默认值。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:203
 msgid ""
@@ -614,6 +670,10 @@ msgid ""
 "disabling the alignment. In fact, disabling the alignment has the same "
 "effect as aligning the grid at infinity."
 msgstr ""
+"对齐\\ :term:`像素网格<Pixel Grid>`\\ 的缺点是对可用的变形范围造成限制。如果"
+"你在勾选对齐像素网格时无法使用所需的旋转角度、单元格大小或者斜切程度，你可以"
+"使用滑动条提高对齐的单元格个数。建议尽可能调整参数而不是干脆禁用对齐。禁用对"
+"齐像素网格的效果与对齐到无限的效果相同。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:205
 msgid ""
@@ -621,10 +681,12 @@ msgid ""
 "respect to the :term:`screen grid<Screen Grid>`), the more likely the "
 "appearance of moire patterns will be."
 msgstr ""
+"注意：对齐点之间的\\ :term:`网点网格<Screen Grid>`\\ 距离越远，越有可能发生摩"
+"尔纹 (网花)。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:208
 msgid "Using the Brightness and Contrast Options"
-msgstr ""
+msgstr "亮度和对比度选项的使用"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:210
 msgid ""
@@ -632,6 +694,8 @@ msgid ""
 "will have to set the contrast slider to a high value and then change how "
 "dark/light the pattern looks with the brightness slider."
 msgstr ""
+"在大多数情况下，为了实现传统的网点/半调效果，你需要将对比度滑动条设置为较高的"
+"值，然后通过调整亮度滑动条来调整深色/浅色图案的视觉效果。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:212
 msgid ""
@@ -639,12 +703,14 @@ msgid ""
 "approach to digital halftoning, since printers can only output black or "
 "white (ink or absence of ink)."
 msgstr ""
+"对比度为 100% 时，形状轮廓将带有锯齿，图案非黑即白。这是传统数字半调的处理方"
+"式，因为打印机只能输出黑或者白 (上墨或者不上墨)。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:214
 msgid ""
 "If you want sharp edges but also want antialiased edges, you can try "
 "choosing a contrast value around 80% to 95%."
-msgstr ""
+msgstr "对比度为 80% 到 95% 时可以得到既锐利，又没有锯齿的轮廓。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:216
 msgid ""
@@ -655,12 +721,17 @@ msgid ""
 "then apply your own contrast adjustment filter and achieve even more unique "
 "looks as shown in the following image."
 msgstr ""
+"在某些场合你需要生成非常模糊的形状。例如在半调滤镜中使用网点生成器时，建议使"
+"用 50% 对比度和 50% 亮度。这是因为半调滤镜本身会进行对比度调整。在模糊的形状"
+"上应用自定义对比度调整滤镜可以生成效果有趣的图案，如下图所示。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:220
 msgid ""
 ".. image:: images/layers/fill_layer_screentone_brightness_contrast_example."
 "png"
 msgstr ""
+".. image:: images/layers/fill_layer_screentone_brightness_contrast_example."
+"png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:220
 msgid ""
@@ -669,3 +740,6 @@ msgid ""
 "layer with a curves filter mask applied to it. On the right: the curve used "
 "on the filter."
 msgstr ""
+"左图：一张简单的网点图层，使用了宽度为 50 像素的椭圆网点，正弦插值，亮度和对"
+"比度均为 50%；中图：在左图的基础上应用了一个自定义曲线滤镜蒙版；右图：中图滤"
+"镜使用的曲线。"

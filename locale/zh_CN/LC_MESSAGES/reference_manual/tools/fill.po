@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-10 00:40+0000\n"
-"PO-Revision-Date: 2022-08-13 03:53\n"
+"PO-Revision-Date: 2022-08-20 14:18\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___tools___fill.pot\n"
 "X-Crowdin-File-ID: 9678\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:56
 msgid ""
@@ -28,7 +28,7 @@ msgstr ""
 
 #: ../../reference_manual/tools/fill.rst:0
 msgid ".. image:: images/tools/opacity_spread.png"
-msgstr ""
+msgstr ".. image:: images/tools/opacity_spread.png"
 
 #: ../../reference_manual/tools/fill.rst:0
 msgid ".. image:: images/tools/fill_selection_boundary.png"
@@ -81,52 +81,52 @@ msgstr "工具选项"
 
 #: ../../reference_manual/tools/fill.rst:29
 msgid "Current Selection"
-msgstr ""
+msgstr "当前选区"
 
 #: ../../reference_manual/tools/fill.rst:30
 msgid ""
 "Activating this will result in the shape filling the whole of the active "
 "selection."
-msgstr ""
+msgstr "勾选后将直接把当前选区整个填满。部分工具选项将不可用。"
 
 #: ../../reference_manual/tools/fill.rst:32
 msgid "What to Fill"
-msgstr ""
+msgstr "填充区域"
 
 #: ../../reference_manual/tools/fill.rst:32
 msgid "Contiguous Region"
-msgstr ""
+msgstr "图层中的相连颜色区域"
 
 #: ../../reference_manual/tools/fill.rst:32
 msgid ""
 "This option is the default and allows filling a region of contiguous pixels "
 "obtained from the image at the point where the user clicks."
-msgstr ""
+msgstr "此为默认值，填充与用户点击位置相连的近似颜色的区域。"
 
 #: ../../reference_manual/tools/fill.rst:36
 msgid "Foreground Color"
-msgstr ""
+msgstr "前景色"
 
 #: ../../reference_manual/tools/fill.rst:36
 msgid ""
 "Selecting this option will fill the obtained region with the foreground "
 "color."
-msgstr ""
+msgstr "使用前景色填充采样得到的区域。"
 
 #: ../../reference_manual/tools/fill.rst:40
 msgid "Background Color"
-msgstr ""
+msgstr "背景色"
 
 #: ../../reference_manual/tools/fill.rst:41
 msgid ""
 "Selecting this option will fill the obtained region with the background "
 "color."
-msgstr ""
+msgstr "使用背景色填充采样得到的区域。"
 
 #: ../../reference_manual/tools/fill.rst:44
 msgid ""
 "Selecting this option will fill the obtained region with the current pattern."
-msgstr ""
+msgstr "使用当前图案填充采样得到的区域。"
 
 #: ../../reference_manual/tools/fill.rst:48
 msgid "Scale"
@@ -138,11 +138,11 @@ msgstr "对填充的图案进行缩放。"
 
 #: ../../reference_manual/tools/fill.rst:53
 msgid "Fill with"
-msgstr ""
+msgstr "填充内容"
 
 #: ../../reference_manual/tools/fill.rst:53
 msgid "Pattern"
-msgstr ""
+msgstr "图案"
 
 #: ../../reference_manual/tools/fill.rst:53
 msgid "Rotation"
@@ -154,7 +154,7 @@ msgstr "对填充的图案进行旋转。"
 
 #: ../../reference_manual/tools/fill.rst:57
 msgid "Threshold"
-msgstr "颜色容差"
+msgstr "色差阈值"
 
 #: ../../reference_manual/tools/fill.rst:57
 msgid ""
@@ -162,6 +162,8 @@ msgid ""
 "words, how far the region should extend from the selected pixel in terms of "
 "color similarity."
 msgstr ""
+"指定填充工具在什么条件下将另一种颜色视作边界。换句话说，就是两种颜色之间的数"
+"值差别要达到多少才被视作非近似色。"
 
 #: ../../reference_manual/tools/fill.rst:62
 msgid ""
@@ -169,10 +171,13 @@ msgid ""
 "make opaque only the pixels that are exactly equal to the selected pixel. "
 "100% will make opaque all the pixels in the region up to its boundary."
 msgstr ""
+"设置填充完全不透明颜色区域的扩展程度。\n"
+"0% - 只有与采样点颜色完全相同的区域填充不透明颜色。\n"
+"100% - 整个填充区域全部填充不透明颜色。"
 
 #: ../../reference_manual/tools/fill.rst:65
 msgid "Spread"
-msgstr ""
+msgstr "边缘扩展"
 
 #: ../../reference_manual/tools/fill.rst:66
 msgid ""
@@ -183,6 +188,9 @@ msgid ""
 "with a threshold value of 65 and a spread value of 0, 30, 60 and 100 percent "
 "from left to right."
 msgstr ""
+"左图：原始图像。黑点代表填充工具点击的位置。右侧组图上一排的色差阈值均为 30，"
+"边缘扩展从左到右分别为 0、30 、60、100。右侧组图下一排的色差阈值均为 65，边缘"
+"扩展从左到右分别为 0、30 、60、100。"
 
 #: ../../reference_manual/tools/fill.rst:72
 msgid ""
@@ -196,7 +204,7 @@ msgstr "采样区域受选区限制"
 
 #: ../../reference_manual/tools/fill.rst:76
 msgid "Region Extent"
-msgstr ""
+msgstr "填充范围"
 
 #: ../../reference_manual/tools/fill.rst:76
 msgid ""
@@ -208,7 +216,7 @@ msgstr ""
 
 #: ../../reference_manual/tools/fill.rst:81
 msgid "Anti-alias"
-msgstr ""
+msgstr "抗锯齿：边缘平滑"
 
 #: ../../reference_manual/tools/fill.rst:82
 msgid ""
@@ -216,6 +224,9 @@ msgid ""
 "feathering in that this will smooth in the direction of the edge instead of "
 "all directions, and only if the edge is jagged (high contrast)."
 msgstr ""
+"对填充区域轮廓的锯齿状边缘进行平滑处理。抗锯齿和羽化的不同之处在于，抗锯齿是"
+"沿着轮廓方向平滑，而羽化则向所有方向平滑，而且抗锯齿只会在轮廓有锯齿 (存在高"
+"反差颜色) 时进行平滑。"
 
 #: ../../reference_manual/tools/fill.rst:84
 msgid "Grow Selection"
@@ -225,11 +236,11 @@ msgstr "扩大/缩小填充区域"
 msgid ""
 "This value extends (positive values) or contracts (negative values) the "
 "region."
-msgstr ""
+msgstr "按照设置值扩大 (正值) 或缩小 (负值) 填充区域。"
 
 #: ../../reference_manual/tools/fill.rst:87
 msgid "Adjustments"
-msgstr ""
+msgstr "填充区域调整"
 
 #: ../../reference_manual/tools/fill.rst:87
 msgid "Feathering Radius"
@@ -237,7 +248,7 @@ msgstr "羽化半径"
 
 #: ../../reference_manual/tools/fill.rst:87
 msgid "This value will add a soft border to the region."
-msgstr ""
+msgstr "该值用于控制在填充区域边缘添加的柔和过渡区域的大小。"
 
 #: ../../reference_manual/tools/fill.rst:92
 msgid ""
@@ -272,7 +283,7 @@ msgstr ""
 
 #: ../../reference_manual/tools/fill.rst:102
 msgid "Reference"
-msgstr ""
+msgstr "采样图层"
 
 #: ../../reference_manual/tools/fill.rst:102
 msgid "Color Labeled Layers"
@@ -284,31 +295,32 @@ msgstr "选择采样图层颜色标签"
 
 #: ../../reference_manual/tools/fill.rst:102
 msgid "Select the color labels of the layers that should be used as reference."
-msgstr ""
+msgstr "选择用于填充区域采样的图层颜色标签。"
 
 #: ../../reference_manual/tools/fill.rst:107
 msgid ""
 "Select what should happen when one clicks and drags the pointer on the "
 "canvas."
-msgstr ""
+msgstr "选择在画布上点击并拖动时的填充操作。"
 
 #: ../../reference_manual/tools/fill.rst:109
 msgid "Fill Regions of Any Color"
-msgstr ""
+msgstr "填充任意颜色的区域"
 
 #: ../../reference_manual/tools/fill.rst:110
 msgid ""
 "With this option selected, the tool will fill any region along the path "
 "described by the pointer while dragging, regardless of its color."
 msgstr ""
+"选中此项时，填充工具将沿着光标的拖动路径连续填充，不管光标下的颜色如何。"
 
 #: ../../reference_manual/tools/fill.rst:111
 msgid "Multiple Fill"
-msgstr ""
+msgstr "拖动连续填充"
 
 #: ../../reference_manual/tools/fill.rst:111
 msgid "Fill Regions of Similar Colors"
-msgstr ""
+msgstr "仅填充与拖动开始区域颜色相似的区域"
 
 #: ../../reference_manual/tools/fill.rst:112
 msgid ""
@@ -316,3 +328,5 @@ msgid ""
 "described by the pointer while dragging that have the same color as the "
 "first region filled."
 msgstr ""
+"选中此项时，填充工具将沿着光标的拖动路径连续填充，但仅在光标下的颜色与拖动起"
+"始点的颜色相同时才进行填充。"
