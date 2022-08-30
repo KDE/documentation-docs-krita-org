@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-10 00:40+0000\n"
-"PO-Revision-Date: 2022-08-18 19:04+0200\n"
+"PO-Revision-Date: 2022-08-20 13:24+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.04.0\n"
 
@@ -46,6 +46,16 @@ msgid ""
 "you are doing collaboration with other artists, it may be better to use a "
 "different file format."
 msgstr ""
+"WebP è un formato di file basato sulle `specifiche del contenitore RIFF "
+"<https://developers.google.com/speed/webp/docs/riff_container>`_ che, come "
+":ref:`file_heif`, è costruito su un codec video (`VP8 <https://developers."
+"google.com/speed/webp/docs/compression#lossy_webp>`_) per supportare la "
+":ref:`lossy_compression`. WebP viene utilizzato in modo esteso per i siti "
+"web, sebbene non tutti i siti web supportino il caricamento di questo tipo "
+"di file. Se ospiti un sito web, puoi investigare se WebP è un miglioramento "
+"rispetto a :ref:`file_jpeg` o :ref:`file_png`. Comunque, non è molto "
+"supportato dagli editor di immagini, è dunque meglio utilizzare un altro "
+"formato di file se collabori con altri artisti."
 
 #: ../../general_concepts/file_formats/file_webp.rst:19
 msgid ""
@@ -53,6 +63,9 @@ msgid ""
 "it supports all the export options offered by `libwebp <https://chromium."
 "googlesource.com/webm/libwebp>`_."
 msgstr ""
+":program:`Krita` ha supportato per un periodo l'esportazione WebP semplice, "
+"ma a partire dalla versione 5.1 supporta tutte le opzioni di esportazione "
+"offerte da `libwebp <https://chromium.googlesource.com/webm/libwebp>`_."
 
 #: ../../general_concepts/file_formats/file_webp.rst:22
 msgid "Export Options:"
@@ -68,6 +81,14 @@ msgid ""
 "to choose is whether you want a high quality result at the cost of a slow "
 "export, or a quick export at the cost of quality."
 msgstr ""
+"Anziché doverti sobbarcare le impostazioni precise, il sistema di "
+"esportazione WebP proverà varie tecniche per la compressione migliore. Tu "
+"fornisci un obbiettivo (una determinata qualità o la dimensione del file) da "
+"raggiungere ed esso tenterà tutto il possibile per raggiungere "
+"quell'obbiettivo. Per farlo puoi in realtà provare a ripetere più volte uno "
+"specifico passaggio del processo di codifica. Alla fine, quello che dovrai "
+"fare sarà scegliere tra un risultato di alta qualità, con un'esportazione "
+"più lenta, o un'esportazione rapida, ma di qualità inferiore."
 
 #: ../../general_concepts/file_formats/file_webp.rst:27
 msgid "General:"
@@ -83,6 +104,9 @@ msgid ""
 "images, use :guilabel:`Line Drawing`, for painterly images, use :guilabel:"
 "`Portrait` or :guilabel:`Outdoor Photo`."
 msgstr ""
+"WebP offre alcune preimpostazioni per determinati tipi di foto. Per le "
+"immagini stilizzate, usa :guilabel:`Disegno linee`, per le immagini di tipo "
+"pittorico, usa :guilabel:`Ritratto` o :guilabel:`Foto all'aperto`."
 
 #: ../../general_concepts/file_formats/file_webp.rst:31
 msgid "Lossless Compression:"
@@ -94,10 +118,13 @@ msgid ""
 "is a slightly different algorithm, which is heavier but gives better results "
 "for sharp contrasts."
 msgstr ""
+"Usa la :ref:`modalità di compressione senza perdita di dati "
+"<lossless_compression>` , si tratta di un algoritmo leggermente differente, "
+"più pesante ma che produce risultati migliori per i contrasti forti."
 
 #: ../../general_concepts/file_formats/file_webp.rst:34
 msgid "Slider for quality."
-msgstr ""
+msgstr "Cursore per la qualità."
 
 #: ../../general_concepts/file_formats/file_webp.rst:36
 msgid ""
@@ -110,6 +137,16 @@ msgid ""
 "useful for situations where the file size can become a problem, such as "
 "serving it over the Internet."
 msgstr ""
+"Con la :guilabel:`Compressione senza perdita di dati`, lo 0% indica che la "
+"libreria utilizzerà la quantità minima di trucchi algoritmici per ridurre la "
+"dimensione del file. Ciò significa tempi di salvataggio veloci ma file di "
+"dimensioni maggiori. Al contrario, il 100% indica che verranno applicati "
+"tutti i trucchi algoritmici, producendo file di dimensioni più piccole ma "
+"con tempi di salvataggio più lunghi. La prima opzione è consigliata in "
+"situazioni in cui è più importante la velocità rispetto alla dimensione, "
+"come per i file che condividi tramite USB. L'ultima è utile nei casi in cui "
+"la dimensione dei file può rappresentare un problema, come nel caso di file "
+"da mettere a disposizione su Internet."
 
 #: ../../general_concepts/file_formats/file_webp.rst:37
 msgid "Quality:"
@@ -124,6 +161,13 @@ msgid ""
 "remove the least amount of image information and thus maintain quality at "
 "the expense of a large file size."
 msgstr ""
+"Senza la :guilabel:`Compressione senza perdita di dati`, le informazioni "
+"considerate ridondanti verranno rimosse, anziché compresse. Ciò significa "
+"che allo 0% la maggior parte delle informazioni verrà persa e sarà "
+"conseguita la dimensione più piccola del file. Questa operazione ridurrà "
+"anche la qualità complessiva dell'immagine. Al contrario, il 100% rimuoverà "
+"la quantità minima delle informazioni dell'immagine e conserverà la qualità "
+"al costo di una dimensione del file maggiore."
 
 #: ../../general_concepts/file_formats/file_webp.rst:39
 msgid "Trade Off"
@@ -134,6 +178,8 @@ msgid ""
 "A slider that allows you to select whether saving speed is more important "
 "than quality."
 msgstr ""
+"Un cursore che ti permette di scegliere se la velocità di salvataggio è più "
+"importante della qualità."
 
 #: ../../general_concepts/file_formats/file_webp.rst:42
 msgid "Dithering:"
@@ -144,6 +190,8 @@ msgid ""
 "This enables dithering, which allows storing fewer colors while still "
 "keeping good gradients."
 msgstr ""
+"Abilita il dithering, che permette di memorizzare meno colori mantenendo "
+"però buone sfumature."
 
 #: ../../general_concepts/file_formats/file_webp.rst:45
 msgid "Advanced"
@@ -158,6 +206,9 @@ msgid ""
 "Specifies the strength of the Spatial Noise Shaping algorithm, which tries "
 "to see if parts of the image can be better compressed than other parts."
 msgstr ""
+"Specifica l'intensità dell'algoritmo Spatial Noise Shaping, che verifica la "
+"possibilità che alcune parti dell'immagine possano essere compresse meglio "
+"di altre parti."
 
 #: ../../general_concepts/file_formats/file_webp.rst:49
 msgid "Filter Strength:"
@@ -168,6 +219,8 @@ msgid ""
 "Strength of the deblocking filter. 0% will mean there's no filtering after "
 "decoding, with increasing filter strength the image will appear smoother."
 msgstr ""
+"Forza del filtro *deblocking*. 0% indica nessun filtraggio dopo la codifica, "
+"aumentando la forza del filtro l'immagine apparirà più morbida."
 
 #: ../../general_concepts/file_formats/file_webp.rst:51
 msgid "Filter Sharpness:"
@@ -178,6 +231,8 @@ msgid ""
 "Defines the sharpness of the deblocking filter, with 0 being the sharpest "
 "and 7 being the least sharp."
 msgstr ""
+"Definisce la nitidezza del filtro deblocking: 0 è il più nitido, 7 il meno "
+"nitido."
 
 #: ../../general_concepts/file_formats/file_webp.rst:53
 msgid "Filter Type:"
@@ -188,6 +243,8 @@ msgid ""
 "Type of deblocking filter, options are :guilabel:`Strong` and :guilabel:"
 "`Simple`."
 msgstr ""
+"Tipo di filtro deblocking, le opzioni sono:guilabel:`Forte` e "
+":guilabel:`Semplice`."
 
 #: ../../general_concepts/file_formats/file_webp.rst:56
 msgid "Alpha Plane Compression:"
@@ -198,6 +255,8 @@ msgid ""
 "Whether to losslessly compress the alpha channel (Lossless) or outright "
 "discard it (None). None"
 msgstr ""
+"Se la compressione senza perdita di dati comprime il canale alfa (senza "
+"perdita di dati) o lo tralascia completamente (Nessuno)."
 
 #: ../../general_concepts/file_formats/file_webp.rst:58
 msgid "Predictive Filtering for Alpha Plane:"
@@ -210,6 +269,10 @@ msgid ""
 "one to use, making it slower than :guilabel:`Fast`, which just makes a guess "
 "and selects that."
 msgstr ""
+"Se deve essere utilizzato il filtro predittivo o no per il canale alfa/"
+"trasparenza. :guilabel:`Migliore` tenterà tutte le modalità di filtraggio "
+"predittivo possibili prima di decidere quale usare, rendendo l'operazione "
+"più lenta di :guilabel:`Veloce`, che prova a indovinare e selezionandone una."
 
 #: ../../general_concepts/file_formats/file_webp.rst:60
 msgid "Alpha Plane Quality:"
@@ -221,6 +284,9 @@ msgid ""
 "means no compression. Only with :guilabel:`Alpha Plane Compression` set to "
 "Lossless."
 msgstr ""
+"Qualità di compressione per il canale alfa. 0% indica la dimensione più "
+"piccola, 100% nessuna compressione. Possibile solo con la "
+":guilabel:`Compressione Piano alfa` impostata a Senza perdita di dati."
 
 #: ../../general_concepts/file_formats/file_webp.rst:62
 msgid "Show Compressed:"
@@ -231,6 +297,8 @@ msgid ""
 "Tells libwebp to skip the in-loop filtering step. May adversely affect the "
 "quality of the end file."
 msgstr ""
+"Dice a libwebp di saltare il passaggio di filtraggio ciclico. Potrebbe "
+"influenzare in senso negativo la qualità del file finale."
 
 #: ../../general_concepts/file_formats/file_webp.rst:64
 msgid "Multithreaded Encoding:"
@@ -238,7 +306,7 @@ msgstr "Codifica con multithreading:"
 
 #: ../../general_concepts/file_formats/file_webp.rst:65
 msgid "Use multithreading for encoding if possible."
-msgstr ""
+msgstr "Usa il multithreading per la codifica, se possibile."
 
 #: ../../general_concepts/file_formats/file_webp.rst:66
 msgid "Reduce Memory Usage:"
@@ -246,17 +314,19 @@ msgstr "Riduci utilizzo della memoria:"
 
 #: ../../general_concepts/file_formats/file_webp.rst:67
 msgid "Try to reduce memory usage at the cost of speed."
-msgstr ""
+msgstr "Tenta di ridurre l'uso della memoria sacrificando la velocità."
 
 #: ../../general_concepts/file_formats/file_webp.rst:68
 msgid "Exact:"
-msgstr ""
+msgstr "Esatti:"
 
 #: ../../general_concepts/file_formats/file_webp.rst:69
 msgid ""
 "Preserve RGB values in transparent areas instead of defaulting them to "
 "transparent black."
 msgstr ""
+"Conserva gli esatti valori RGB nelle aree trasparenti, anziché renderli in "
+"nero trasparente in modo predefinito."
 
 #: ../../general_concepts/file_formats/file_webp.rst:71
 msgid "Use Sharp YUV:"
@@ -264,7 +334,7 @@ msgstr "Usa Sharp YUV:"
 
 #: ../../general_concepts/file_formats/file_webp.rst:71
 msgid "Whether to use the slower, but more accurate, RGB to YUV conversion."
-msgstr ""
+msgstr "Se utilizzare la conversione RGB a YUV, più lenta ma più accurata."
 
 #: ../../general_concepts/file_formats/file_webp.rst:74
 msgid "Lossy Compression"
@@ -274,6 +344,8 @@ msgstr "Compressione con perdita di dati"
 msgid ""
 "The following options only apply if :guilabel:`Lossless Compression` is off."
 msgstr ""
+"Le opzioni che seguono sono valide solo se la :guilabel:`Compressione senza "
+"perdita di dati` è disattiva."
 
 #: ../../general_concepts/file_formats/file_webp.rst:77
 msgid "Target Size:"
@@ -281,7 +353,7 @@ msgstr "Dimensione risultante:"
 
 #: ../../general_concepts/file_formats/file_webp.rst:78
 msgid "Specify the amount of bytes to aim for."
-msgstr ""
+msgstr "Specifica la quantità di byte a cui puntare."
 
 #: ../../general_concepts/file_formats/file_webp.rst:79
 msgid "Target PSNR:"
@@ -293,6 +365,9 @@ msgid ""
 "Peak_signal-to-noise_ratio_>`, and indicates how much noise the image has. "
 "Higher values mean less noise is accepted."
 msgstr ""
+"PSNR significa `Peak Signal to Noise Ratio <https://en.wikipedia.org/wiki/"
+"Peak_signal-to-noise_ratio_>`, e indica quanto rumore possiede l'immagine. "
+"Valori più alti indica che è accettato meno rumore."
 
 #: ../../general_concepts/file_formats/file_webp.rst:81
 msgid "Segments:"
@@ -303,6 +378,8 @@ msgid ""
 "How many segments the VP8 video codec can divide the image into. VP8 accepts "
 "between 1 and 4 segments."
 msgstr ""
+"In quanti segmenti il codec video VP8 può dividere l'immagine. VP8 accetta "
+"da uno a quattro segmenti."
 
 #: ../../general_concepts/file_formats/file_webp.rst:83
 msgid "Partitions:"
@@ -313,16 +390,22 @@ msgid ""
 "Sets how many partitions can the VP8 codec use for storing decompression "
 "information. Must be between 0 and 3. Default is 0 to make decoding easier."
 msgstr ""
+"Imposta quante partizioni il codec VP8 può utilizzare per memorizzare le "
+"informazioni di decompressione. Devono essere tra 0 e 3. Il valore "
+"predefinito è 0 per rendere la decodifica più semplice."
 
+# VM: it should be "Auto Adjust Filter Strength", as per Krita interface.
 #: ../../general_concepts/file_formats/file_webp.rst:85
 msgid "Auto Adjust Filter Stretch:"
-msgstr ""
+msgstr "Forza del filtro automatica:"
 
 #: ../../general_concepts/file_formats/file_webp.rst:86
 msgid ""
 "The encoder will spend some time tuning and selecting the best filter "
 "options before encoding."
 msgstr ""
+"Il codificatore selezionerà le migliori opzioni di filtraggio prima della "
+"codifica."
 
 #: ../../general_concepts/file_formats/file_webp.rst:87
 msgid "Entropy Passes:"
@@ -333,6 +416,8 @@ msgid ""
 "Number of passes to do for selecting the best option between target size and "
 "target PSNR."
 msgstr ""
+"Numero di passi da eseguire per selezionare l'opzione migliore tra la "
+"dimensione risultante e la PSNR risultante."
 
 #: ../../general_concepts/file_formats/file_webp.rst:89
 msgid "Emulate JPEG Size:"
@@ -341,6 +426,8 @@ msgstr "Emula la dimensione JPEG:"
 #: ../../general_concepts/file_formats/file_webp.rst:90
 msgid "The encoder will try to match the size of a jpeg of similar dimensions."
 msgstr ""
+"Il codificatore tenterà di far corrispondere la dimensione di un file JPEG "
+"alle dimensioni indicate."
 
 #: ../../general_concepts/file_formats/file_webp.rst:91
 msgid "Minimum Quality:"
@@ -349,6 +436,8 @@ msgstr "Qualità minima:"
 #: ../../general_concepts/file_formats/file_webp.rst:92
 msgid "Used with 'entropy passes', the lowest allowed quality for the image."
 msgstr ""
+"Utilizzata con i 'passi di entropia', è la qualità più bassa consentita per "
+"l'immagine."
 
 #: ../../general_concepts/file_formats/file_webp.rst:93
 msgid "Maximum Quality:"
@@ -357,12 +446,16 @@ msgstr "Qualità massima:"
 #: ../../general_concepts/file_formats/file_webp.rst:94
 msgid "Used with 'entropy passes', the highest allowed quality for the image."
 msgstr ""
+"Utilizzata con i 'passi di entropia', è la qualità più alta consentita per "
+"l'immagine."
 
 #: ../../general_concepts/file_formats/file_webp.rst:96
 msgid ""
 "Whether or not to add :guilabel:`Pseudo Random Dithering` to the image "
 "before converting RGB to YUV."
 msgstr ""
+"Se aggiungere o no il :guilabel:`Dithering pseudo casuale` all'immagine "
+"prima di convertire RGB in YUV."
 
 #: ../../general_concepts/file_formats/file_webp.rst:97
 msgid "Preprocessing Filter:"
@@ -376,6 +469,8 @@ msgstr "Compressione senza perdita"
 msgid ""
 "The following options only work with :guilabel:`Lossless Compression` on."
 msgstr ""
+"Le opzioni che seguono funzionano solo se la :guilabel:`Compressione senza "
+"perdita di dati` è attiva."
 
 #: ../../general_concepts/file_formats/file_webp.rst:103
 msgid "Partition Limit:"
@@ -386,6 +481,8 @@ msgid ""
 "Limit how big a given segment is in bytes. The higher this is, the less "
 "possible information is stored per segment."
 msgstr ""
+"Limita la dimensione di un segmento dato in byte. Più alto è questo limite, "
+"meno informazione possibile viene memorizzata per segmento."
 
 #: ../../general_concepts/file_formats/file_webp.rst:106
 msgid ""
@@ -393,6 +490,10 @@ msgid ""
 "in lossless compression mode. This enables this feature. Automatically "
 "triggers :guilabel:`Lossless Compression`."
 msgstr ""
+"Il codificatore è in grado di regolare in modo minimo i valori di pixel in "
+"modo che essi siano compressi meglio nella modalità di compressione senza "
+"perdita di dati. Questa opzione abilita questa funzionalità. Attiva "
+"automaticamente la :guilabel:`Compressione senza perdita di dati`."
 
 #: ../../general_concepts/file_formats/file_webp.rst:108
 msgid "Near Lossless:"
@@ -400,4 +501,4 @@ msgstr "Quasi senza perdita:"
 
 #: ../../general_concepts/file_formats/file_webp.rst:111
 msgid "https://developers.google.com/speed/webp/docs/compression"
-msgstr ""
+msgstr "https://developers.google.com/speed/webp/docs/compression"
