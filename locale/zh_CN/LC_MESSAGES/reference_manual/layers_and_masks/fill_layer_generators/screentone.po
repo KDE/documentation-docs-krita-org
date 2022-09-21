@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-15 00:39+0000\n"
-"PO-Revision-Date: 2022-08-20 14:18\n"
+"PO-Revision-Date: 2022-09-20 01:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,6 +17,7 @@ msgstr ""
 "docs_krita_org_reference_manual___layers_and_masks___fill_layer_generators___screentone."
 "pot\n"
 "X-Crowdin-File-ID: 24440\n"
+"Language: zh_CN\n"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:1
 msgid "How to use Screen Tone generation in Krita."
@@ -93,13 +93,6 @@ msgid "Screen Cell"
 msgstr "网点单元格"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:38
-#, fuzzy
-#| msgid ""
-#| "A screen cell is the minimum rectangular area in the :term:"
-#| "`screen<Screen>` that contains a repeteable shape or image (commonly a "
-#| "dot, but can be a part of a line or other shape). In principle every cell "
-#| "contains the same shape, and the arrangement of the cells, in a regular "
-#| "and orthogonal grid, forms the screen."
 msgid ""
 "A screen cell is the minimum rectangular area in the :term:`screen<Screen>` "
 "that contains a repeatable shape or image (commonly a dot, but can be a part "
@@ -128,23 +121,6 @@ msgid "Macrocell"
 msgstr "宏单元格"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:44
-#, fuzzy
-#| msgid ""
-#| "Because this filter needs to align the :term:`screen<Screen>` image to "
-#| "the :term:`pixel grid<Pixel Grid>` (the rasterization process) it may "
-#| "happen that not all the :term:`cells<Screen Cell>` contain exactly the "
-#| "same shape (in terms of pixel values). This can produce artifacts such as "
-#| "moire patterns. To solve this, the :term:`screen grid<Screen Grid>` can "
-#| "be aligned to the pixel grid in such a way that some screen cell corners "
-#| "fall at integer pixel coordinates. You can select every how many screen "
-#| "cells horizontally and vertically this should happen. The effect is that "
-#| "the shapes of the set of cells between such aligned corners will repeat. "
-#| "For example, if you align the screen grid every 2 cells horizontally and "
-#| "every 1 cell vertically, every 2 by 1 block of cells will be identical "
-#| "(although the cells inside the block can be alightly different with "
-#| "respect to each other). This set of contiguous cells that repeat along "
-#| "the screen is sometimes called a :dfn:`macrocell` or :dfn:`supercell`. "
-#| "Similarly the single cell is sometimes called :dfn:`microcell`."
 msgid ""
 "Because this filter needs to align the :term:`screen<Screen>` image to the :"
 "term:`pixel grid<Pixel Grid>` (the rasterization process) it may happen that "
@@ -250,23 +226,6 @@ msgstr ""
 "明显。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:70
-#, fuzzy
-#| msgid ""
-#| "The :term:`spot functions<Spot Function>` are simple periodic 2D "
-#| "functions that output a value between black and white. Every one cycle in "
-#| "the width and height forms a :term:`screentone cell<Screen Cell>` and all "
-#| "the cells combined form the :term:`screentone grid<Screen Grid>`. The "
-#| "spot functions are designed to be simple and fast to compute, but for "
-#| "some functions this means that they don't have a uniform distribution of "
-#| "values. Suppose we threshold the function (contrast value equal to 100%, "
-#| "the usual in traditional halftoning). This lack of uniform distribution "
-#| "has the downside of not producing shapes that have a direct relation "
-#| "between the brightness of the input and the coverage of the black areas. "
-#| "The effect is a mismatch between the input brightness and the perceived "
-#| "brightness. If the function has a uniform distribution of values, for "
-#| "example choosing a brightness of 40% will produce a shape that has 40% of "
-#| "the pixels *white* and 60% *black*. To solve this the user can select "
-#| "between three equalization modes:"
 msgid ""
 "The :term:`spot functions<Spot Function>` are simple periodic 2D functions "
 "that output a value between black and white. Every one cycle in the width "
@@ -379,14 +338,6 @@ msgid "Size Mode"
 msgstr "大小模式"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:95
-#, fuzzy
-#| msgid ""
-#| "You can choose between a resolution based mode and an pixel based mode to "
-#| "adjust the geometric transformations of the screen. In the resolution "
-#| "mode you set a resolution and change the frequency of the patterns in "
-#| "lines per inch/cm. The pixel mode is the old one in which you set the "
-#| "size of the cells manually. Those two modes are synched so changing the "
-#| "frequency will change the cell size and viceversa."
 msgid ""
 "You can choose between a resolution based mode and a pixel based mode to "
 "adjust the geometric transformations of the screen. In the resolution mode "
@@ -518,17 +469,6 @@ msgstr ""
 "插值方式下的线图案将看起来完全相同。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:139
-#, fuzzy
-#| msgid ""
-#| "So, in summary, change the interpolation if you use round or elliptical "
-#| "dots to vary how they change shape when changing the brightness. If you "
-#| "use linear interpolation the dots will look as black circles/ellipses "
-#| "that grow radially until they cover the :term:`cells<Screen Cell>`. If "
-#| "you use the sinusoidal interpolation, the round/elliptical dot pattern "
-#| "will change *symmetrically*. This means that at low brightness values the "
-#| "pattern will look as small white circles/ellipses and at hight brightness "
-#| "values it will look as small black circles/ellipses. At mid-brightness "
-#| "values the pattern will look as a checkerboard."
 msgid ""
 "So, in summary, change the interpolation if you use round or elliptical dots "
 "to vary how they change shape when changing the brightness. If you use "
@@ -586,10 +526,6 @@ msgid "Cons:"
 msgstr "缺点："
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:155
-#, fuzzy
-#| msgid ""
-#| "There is a missmatch between the brightness parameter and the perceived "
-#| "brightness."
 msgid ""
 "There is a mismatch between the brightness parameter and the perceived "
 "brightness."
@@ -617,8 +553,6 @@ msgid ":guilabel:`Function based equalization`:"
 msgstr ":guilabel:`基于函数`\\ ："
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:164
-#, fuzzy
-#| msgid "It produces better perceived tones."
 msgid "It produces better-perceived tones."
 msgstr "能生成视觉效果更好的网点。"
 
@@ -629,11 +563,6 @@ msgid ""
 msgstr "缺点：可能会在单元格较小时导致生成的亮度变化范围受限。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:169
-#, fuzzy
-#| msgid ""
-#| "When to use: use this mode if you need accurate tone representation and "
-#| "you use big cell sizes, or if you need nice smoothing. For example if you "
-#| "use the screentone on graphic design works."
 msgid ""
 "When to use: use this mode if you need accurate tone representation and you "
 "use big cell sizes, or if you need nice smoothing. For example, if you use "
@@ -669,10 +598,6 @@ msgid "When to use:"
 msgstr "适合场景："
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:185
-#, fuzzy
-#| msgid ""
-#| "Use this mode whenever possible, specialy if you want small cell sizes or "
-#| "if you want smooth transitions between perceived brightness values."
 msgid ""
 "Use this mode whenever possible, especially if you want small cell sizes or "
 "if you want smooth transitions between perceived brightness values."
@@ -694,11 +619,6 @@ msgid "What Size Mode to Use?"
 msgstr "如何选择大小模式"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:192
-#, fuzzy
-#| msgid ""
-#| "At the end of the day choosing what size mode to use is a matter of how "
-#| "many size related calculations you want to avoid, and this usually has to "
-#| "be with the final medium you intend the image to be displayed on."
 msgid ""
 "At the end of the day choosing what size mode to use is a matter of how many "
 "size-related calculations you want to avoid, and this usually has to be with "
@@ -708,13 +628,6 @@ msgstr ""
 "媒介。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:194
-#, fuzzy
-#| msgid ""
-#| "If you intend to print the image you are making, then you will find it "
-#| "easier setting the :term:`cells<Screen Cell>` size in terms of resolution "
-#| "and cell frequency. If you choose the same resolution as the resolution "
-#| "of the image then you can easily map the frequency values to real life "
-#| "meassures."
 msgid ""
 "If you intend to print the image you are making, then you will find it "
 "easier to set the :term:`cells<Screen Cell>` size in terms of resolution and "
@@ -779,11 +692,6 @@ msgid "Using the Brightness and Contrast Options"
 msgstr "亮度和对比度选项的使用"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:210
-#, fuzzy
-#| msgid ""
-#| "Most of the times, to achieve the classical screentone/halftone look, you "
-#| "will have to set the contrast slider to a high value and then change how "
-#| "dark/light the pattern looks with the brightness slider."
 msgid ""
 "Most of the time, to achieve the classical screentone/halftone look, you "
 "will have to set the contrast slider to a high value and then change how "
@@ -808,14 +716,6 @@ msgid ""
 msgstr "对比度为 80% 到 95% 时可以得到既锐利，又没有锯齿的轮廓。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:216
-#, fuzzy
-#| msgid ""
-#| "Sometimes you will need to have extra soft shapes. For example, if you "
-#| "use the screentone generator with the halftone filter, you better use a "
-#| "50% contrast and 50% brightness. The reason is that the halftone filter "
-#| "performs it's own contrast adjustment. You can take advantage of these "
-#| "soft shapes to then apply your own contrast adjustment filter and achieve "
-#| "even more unique looks as shown in the following image."
 msgid ""
 "Sometimes you will need to have extra soft shapes. For example, if you use "
 "the screentone generator with the halftone filter, you better use a 50% "
@@ -837,12 +737,6 @@ msgstr ""
 "png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:220
-#, fuzzy
-#| msgid ""
-#| "On the left: a simple screentone layer with 50 pixels wide elliptical "
-#| "dots, sinusoidal interpolation and 50% brightness and contrast. On the "
-#| "middle: The layer with a curves filter mask applied to it. On the right: "
-#| "the curve used on the filter."
 msgid ""
 "On the left: a simple screentone layer with 50 pixels wide elliptical dots, "
 "sinusoidal interpolation and 50% brightness and contrast. In the middle: The "
