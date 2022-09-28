@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the Krita Manual package.
 #
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2022.
+# Ronald Stroethoff <stroet43@zonnet.nl>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-15 00:39+0000\n"
-"PO-Revision-Date: 2022-09-15 14:18+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2022-08-10 00:40+0000\n"
+"PO-Revision-Date: 2022-09-27 19:03+0200\n"
+"Last-Translator: Ronald Stroethoff <stroet43@zonnet.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:2
 msgid "The JPEG XL file format in Krita."
@@ -56,9 +57,10 @@ msgid ""
 msgstr ""
 "JPEG-XL (``.jxl``) is een nieuw afbeeldingsbestandsformaat zonder extra "
 "kosten. Het ondersteunt :ref:`compressie-modi met verlies "
-"<lossless_compression>` ontworpen voor foto's lijkend op het "
+"<lossless_compression>` ontworpen voor foto's wat lijkt op het "
 "bestandsformaat :ref:`JPEG <file_jpeg>` en ook :ref:`compressie-modi zonder "
-"verlies<lossless_compression>` lijkend op formaten zoals :ref:`PNG "
+"verlies<lossless_compression>` zodat het dan lijkt op formaten zoals"
+" :ref:`PNG "
 "<file_png>`. Bovendien ondersteunt het ook opslaan van animaties met "
 "meerdere frames zoals :ref:`GIF <file_gif>`."
 
@@ -71,6 +73,13 @@ msgid ""
 "But for images with a lot of sharp contrasts, like text and comic book "
 "styles, lossless compression is usually the better choice."
 msgstr ""
+"Bij de keuze tussen verlies en verliesvrije compressie-methodes, is hetzelfde"
+" advies voor :ref:`JPEG <file_jpeg>` en :ref:`PNG <file_png>`van toepassing."
+" Bij afbeeldingen met veel kleurverlopen, zoals complete schilderijen, kan"
+" compressie met verlies goed kleine bestanden met erg weinig visuele"
+" kwaliteitsverlies geven. "
+"Maar bij afbeeldingen met veel scherpe contrasten, zoals tekst en"
+" stripverhalen, is meestal verliesvrije compressie een betere keuze."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:23
 msgid ""
@@ -80,13 +89,13 @@ msgid ""
 "lossy compression methods. Instead you should use the lossless compression "
 "mode, or a working file format while you are working on the image."
 msgstr ""
-"Voor JPEG XL-bestanden die verliesgevende compressie gebruiken, raden wij "
-"het u niet aan om hetzelfde bestand herhaaldelijk op te slaan. De "
-"verliesgevende compressie veroorzaakt dat iedere keer dat u het opslaat de "
-"kwaliteit van het bestand vermindert. Dit is een fundamenteel probleem met "
-"verliesgevende compressietechnieken. In plaats daarvan zou u de verliesvrij "
-"compressiemodus moeten gebruiken of een werkend bestandsformaat als u aan de "
-"afbeelding werkt."
+"Voor JPEG XL-bestanden die verliesgevende compressie gebruiken, raden wij het"
+" u niet aan om hetzelfde bestand herhaaldelijk op te slaan. De verliesgevende"
+" compressie veroorzaakt dat iedere keer dat u het opslaat de kwaliteit van"
+" het bestand vermindert. Dit is een fundamenteel probleem met verliesgevende"
+" compressietechnieken. In plaats daarvan zou u de verliesvrij compressiemodus"
+" moeten gebruiken of een werkend bestandsformaat als u aan de afbeelding"
+" werkt."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:25
 msgid ""
@@ -100,6 +109,21 @@ msgid ""
 "JPEG XL. Krita always exports files from the raw pixel data, therefore this "
 "does *not* have the same effect as transcoding directly from JPEG to JPEG XL."
 msgstr ""
+"Het is mogelijk om verliesvrij JPEG afbeeldingen te transcoderen naar JPEG"
+" XL. Het transcoderen bewaart de al gecomprimeerde data met kwaliteitsverlies"
+" van de"
+" originele JPEG afbeelding zonder extra kwaliteitsvermindering veroorzaakt"
+" door het opnieuw coderen, terwijl de bestandsgrootte kleiner wordt gemaakt"
+" dan dat van het origineel. Om dit te kunnen doen, moet u gespecialiseerde"
+" programma's gebruiken, bijvoorbeeld :program:`cjxl` voor op de commandoregel"
+" van `libjxl <https://github.com/libjxl/libjxl>`_, om de conversie uit te"
+" voeren. "
+"Wees erop bedacht dat u dit *niet* kan doen door de JPEG afbeelding in Krita"
+" te openen en daarna het"
+" her-exporteren naar JPEG XL. Krita exporteert altijd bestanden vanuit de raw"
+" pixel data, daarom"
+" heeft dit *niet* hetzelfde effect als het direct van JPEG naar JPEG XL"
+" transcoderen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:27
 msgid ""
@@ -110,6 +134,15 @@ msgid ""
 "export options. This is different from :ref:`render_animation` in that it "
 "does not use FFmpeg."
 msgstr ""
+"Het exporteren van animaties uit Krita naar JPEG XL is mogelijk, maar voegt"
+" alle lagen in de afbeelding samen. Om JPEG XL animaties te exporteren,"
+" gebruikt u :term:`Exporteren...` in het menu :ref:`file_menu` om deze"
+" vervolgens op te slaan"
+" of te exporteren naar een ``.jxl``-bestand. Let er op dat u"
+" :guilabel:`Opslaan als geanimeerde JPEG-XL` in"
+" de export opties inschakelt. Dit wijkt af van :ref:`render_animation` omdat"
+" het"
+" FFmpeg niet gebruikt."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:30
 msgid "Export Options"
@@ -128,6 +161,15 @@ msgid ""
 "and how much effort the encoder should put into finding the best compression "
 "for your image, with more effort also meaning longer saving times."
 msgstr ""
+"JPEG XL's encoder is ontworpen om er weinig interactie mee te hebben. Waar u"
+" in het geval van "
+"JPEG de gewenste kwaliteit moet selecteren, probeert JPEG XL in plaats"
+" daarvan de beste kwaliteit voor uw afbeelding te vinden. Wat u in plaats"
+" daarvan kiest is wat de gewenste compressie is :ref:`verliesgevend of"
+" verliesvrij <lossless_compression>`, "
+"en hoeveel moeite de encoder moet doen om de beste compressie voor uw"
+" afbeelding te vinden, waarbij meer moeite ook betekent een langere tijd bij"
+" het opslaan."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:37
 msgid "Save as animated JPEG XL"
@@ -143,6 +185,15 @@ msgid ""
 "painterly animation. We recommend you try using video rendering for "
 "painterly animation instead."
 msgstr ""
+"In JPEG XL is de mogelijkheid aanwezig om kleine animaties die lijken op"
+" :ref:`file_gif` op te slaan. De animatie-mogelijkheden zijn eenvoudig"
+" genoeg, en speciaal ontworpen voor gestileerde inhoud die niet veel"
+" verschillende kleuren heeft, zoals cell-animatie. Dit is omdat JPEG XL geen"
+" intra-frame prediction heeft, wat de beste manier is om video bestanden op"
+" te slaan die veel verschillende kleuren hebben zoals een 3D animatie, film"
+" en painterly"
+" animation. We raden u aan om in plaats daarvan video rendering voor"
+" painterly animation uit te proberen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:40
 msgid "Lossless encoding."
@@ -155,6 +206,12 @@ msgid ""
 "and lossy mode, with the latter being closer to the way the original :ref:"
 "`file_jpeg` encodes."
 msgstr ""
+"Of u :ref:`verliesvrije compressie <lossless_compression>` gebruikt. Net"
+" zoals :ref:`file_webp`, heeft JPEG XL een andere manier van codering om"
+" afbeeldingen in"
+" een verliesvrije mode en mode met verlies te coderen, waarbij de laatste"
+" methode dichter bij de manier werkt waarop het origineel :ref:"
+"`file_jpeg` codeert."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:43
 msgid ""
@@ -162,10 +219,10 @@ msgid ""
 "allows you to decide how much the encoder should prioritize quality over "
 "speed. The different modes can be seen as presets [1]_:"
 msgstr ""
-"De codeerder kan een beter resultaat geven als het meer tijd wordt gegeven. "
-"Deze schuifregelaar biedt u om te beslissen hoeveel de codeerder prioriteit "
-"geeft aan kwaliteit boven snelheid. De verschillende modi kunnen gezien "
-"worden als voorinstellingen [1]_:"
+"De codeerder kan een beter resultaat geven als het meer tijd wordt gegeven."
+" Deze schuifregelaar biedt u om te beslissen hoeveel de codeerder prioriteit"
+" geeft aan kwaliteit boven snelheid. De verschillende modi kunnen gezien"
+" worden als voorinstellingen [1]_:"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:45
 msgid ""
@@ -173,64 +230,66 @@ msgid ""
 "for lossy compression, for lossless uses gradient predictors and fast "
 "histograms, but no MA tree."
 msgstr ""
-"Lightning -- een snelle modus nuttig voor verliesloze modus. Snelst "
-"mogelijke waarden voor compressie zonder verlies, omdat verliesloos "
-"gradiëntvoorspellers en snelle histogrammen gebruikt, maar geen MA-"
-"boomstructuur."
+"Lightning – een snelle modus nuttig voor verliesloze modus. Snelst mogelijke"
+" waarden voor compressie zonder verlies, omdat verliesloos"
+" kleurverloop-voorspellers en snelle histogrammen gebruikt, maar geen"
+" MA-boomstructuur."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:46
 msgid ""
 "Thunder -- Both Lightning and Thunder are similar for Lossy, for lossless, "
 "Thunder uses a fixed MA tree and gradient predictors."
 msgstr ""
-"Thunder -- zowel Lightning als Thunder zijn gelijk voor met verlies, voor "
-"verliesloos, gebruikt Thunder een vaste MA-boomstructuur en "
-"gradiëntvoorspellers."
+"Thunder – zowel Lightning als Thunder zijn gelijk voor met verlies, voor"
+" verliesloos, gebruikt Thunder een vaste MA-boomstructuur en"
+" kleurverloop-voorspellers."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:47
 msgid "Falcon -- Instead of using lossless mode, disables all options."
 msgstr ""
-"Falcon -- in plaats van gebruikt van modus verliesloos, worden alle opties "
-"uitgeschakeld."
+"Falcon – in plaats van gebruikt van modus verliesloos, worden alle opties"
+" uitgeschakeld."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:48
 msgid ""
 "Cheetah -- Enables coefficient reordering, context clustering, and "
 "heuristics for selecting DCT sizes and quantization steps."
 msgstr ""
-"Cheetah -- schakelt coëfficiënt opnieuw ordenen, contextclustering en "
-"heuristieken voor selecteren van DCT groottes en kwantisatiestappen in."
+"Cheetah – schakelt coëfficiënt opnieuw ordenen, contextclustering en"
+" heuristieken voor selecteren van DCT groottes en kwantisatiestappen in."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:49
 msgid ""
 "Hare -- Enables Gaborish Filtering, Chroma from Luma and estimates "
 "quantization steps."
 msgstr ""
-"Hare -- schakelt Gaborish filtering, Chroma uit Luma en schattingen van "
-"kwantisatiestappen in."
+"Hare – schakelt Gaborish filtering, Chroma uit Luma en schattingen van"
+" kwantisatiestappen in."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:50
 msgid "Wombat -- Enables error diffusion quantization and DCT heuristics."
-msgstr "Wombat -- schakelt foutdiffusiekwantisatie en DCT heuristieken in."
+msgstr "Wombat – schakelt foutdiffusiekwantisatie en DCT heuristieken in."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:51
 msgid ""
 "Squirrel -- Enables dots, patches and spline detection as well as context "
 "clustering."
 msgstr ""
-"Squirrel -- schakelt punten, vegen en splinedetectie in evenals clustering "
-"van context."
+"Squirrel – schakelt punten, vegen en splinedetectie in evenals clustering van"
+" context."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:52
 msgid ""
 "Kitten -- Optimizes the adaptive quantization for a psychovisual metric."
 msgstr ""
-"Kitten -- optimaliseert de adaptieve kwantisatie voor een psychovisuele "
-"metriek."
+"Kitten – optimaliseert de adaptieve kwantisatie voor een psychovisuele"
+" metriek."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:53
 msgid "Tortoise -- Enables a more thorough adaptive quantization search."
 msgstr ""
+"Tortoise -- Schakelt een nog grondiger zoektocht naar kwantisatie"
+" in die u ook nog kan instellen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:54
 msgid "Tradeoff"
@@ -241,6 +300,9 @@ msgid ""
 "You can force-enable several of the options in the :guilabel:`Advanced` "
 "section even if they are disabled by the :guilabel:`Tradeoff` preset."
 msgstr ""
+"U kunt het gebruik van verschillende opties in de :guilabel:`Geavanceerde` "
+"sectie forceren zelfs als ze uitgeschakeld zijn in de "
+" :guilabel:`Afweging`-instelling."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:57
 msgid "Encoding Options"
@@ -259,6 +321,12 @@ msgid ""
 "by desktop computers and quality is of utmost importance, this should be set "
 "to 0."
 msgstr ""
+"De decoderingssnelheid kan verbetert worden door bepaalde optimalisaties toe"
+" te staan. Dit zal echter wel een beetje kwaliteitsvermindering geven."
+" Bijvoorbeeld, als u denkt dat uw afbeeldingen voornamelijk worden bekeken op"
+" mobiele telefoons dan kan het een good idee zijn om met deze optie te"
+" experimenteren. Daarentegen, als uw afbeelding alleen op desktop computers"
+" wordt bekeken en kwaliteit heel belangrijk is, dan moet u dit op 0 instellen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:60
 msgid "Advanced"
@@ -266,7 +334,7 @@ msgstr "Geavanceerd"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:62
 msgid "JPEG XL has two major ways of encoding data:"
-msgstr ""
+msgstr "JPEG XL heeft twee manieren voor het coderen van data:"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:64
 msgid "VarDCT"
@@ -278,17 +346,25 @@ msgid ""
 "original JPEG, and thus best for 'Natural' images, such as photographs and "
 "images with a lot of gradients and textures."
 msgstr ""
+"Deze is in dezelfde familie van compressietechnieken als die wordt gebruikt"
+" in de originele JPEG, en is dus het beste voor 'Natuurlijke' afbeeldingen,"
+" zoals foto's en afbeeldingen met veel kleurverlopen en texturen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:67
 msgid "Modular Mode"
-msgstr "Modulaire modus"
+msgstr "Modular Mode"
 
+# " Codering zonder verlies" in menu veranderen naar "verliesvrij coderen"
 #: ../../general_concepts/file_formats/file_jxl.rst:67
 msgid ""
 "This one has specific features for so-called 'synthetic' images, such as "
 "line art and images with a lot of wide patches. Modular mode is always used "
 "when selecting :guilabel:`Lossless Encoding`."
 msgstr ""
+"Deze heeft specifieke functionaliteiten voor de zogeheten 'synthetische'"
+" afbeeldingen, zoals lijntekeningen en afbeeldingen met veel grote vlakken."
+" Modulaire modus wordt altijd gebruikt als u :guilabel:`Codering zonder"
+" verlies`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:69
 msgid ""
@@ -297,6 +373,11 @@ msgid ""
 "smaller chunks called 'Groups', these are 256x256 for VarDCT and you can "
 "choose one of several sizes for Modular Mode."
 msgstr ""
+"U kunt VarDCT beschouwen als compressie met 'verlies', terwijl Modular"
+" Mode is als 'verliesvrije' compressie. Daarbij splitst JPEG XL afbeeldingen"
+" op"
+" in kleinere stukken die 'Groups' worden genoemd, deze zijn 256x256 voor"
+" VarDCT en u kunt voor Modular Mode een van de andere formaten kiezen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:72
 msgid ""
@@ -306,10 +387,18 @@ msgid ""
 "you'd scale down the image by half (for 2x2), quarter (for 4x4) or to an "
 "eight (for 8x8) and then scaled it back up to the original size."
 msgstr ""
+"Hoe u een sample van de kleurkanalen neemt. Dit houd in dat er minder"
+" informatie wordt opgeslagen, wat een kleiner bestand geeft. Echter, omdat"
+" dit alleen een paar pixels bekijkt, gaan scherpe contrasten verloren. Het"
+" effect is vergelijkbaar met als u de afbeelding met helft (in resolutie) "
+" (voor 2x2), naar een vierde (voor 4x4) of naar een achtste (voor 8x8)"
+" verkleint en vervolgens weer naar originele afmeting (in resolutie) terug"
+" vergroot."
 
+# "resamping" moet zijn "resampling"
 #: ../../general_concepts/file_formats/file_jxl.rst:75
-msgid "Color channel resampling."
-msgstr "Opnieuw samplen van kleurkanaal."
+msgid "Color channel resamping."
+msgstr "Opnieuw samplen van kleurkanaal"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:75
 msgid ""
@@ -317,6 +406,10 @@ msgid ""
 "and devoid of sharp contrast. It's recommended to set this to :guilabel:`No "
 "Downsampling` in any other case."
 msgstr ""
+"Deze functionaliteit is met name handig bij afbeeldingen die expres wazig"
+" zijn en waarbij scherpe contrasten afwezig zijn. Wij raden aan om dit in"
+" alle andere gevallen in te"
+" stellen op :guilabel:`Geen downsamplen` ."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:77
 msgid "Alpha channel resampling"
@@ -324,11 +417,11 @@ msgstr "Opnieuw samplen van alfa-kanaal"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:78
 msgid ""
-"Same as :guilabel:`Color channel resampling`, but then for the transparency "
+"Same as :guilabel:`Color channel resamping`, but then for the transparency "
 "of the image."
 msgstr ""
-"Zelfde als :guilabel:`Opnieuw samplen van kleurkanaal`, maar dan voor de "
-"transparantie van de afbeelding."
+"Hetzelfde als :guilabel:`Opnieuw samplen van kleurkanaal`, maar dan voor de"
+" transparantie van een afbeelding."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:79
 msgid "Photon noise"
@@ -340,6 +433,9 @@ msgid ""
 "later by the computer, giving a simulation of the noise that cameras "
 "sometimes capture."
 msgstr ""
+"Dit bepaald of ruis aanwezig in de afbeelding moet worden verwijderd en later"
+" weer moet worden toegevoegd in de computer, daarmee een simulatie makend van"
+" de ruis die cameras' s opvangen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:82
 msgid ""
@@ -350,6 +446,13 @@ msgid ""
 "`Generate Patches` is on, and the encoder finds both patches and dots, the "
 "dots will be encoded as if they were patches."
 msgstr ""
+"Punten zijn een vorm van ruis die groter is dan :guilabel:`Fotonruis`."
+" Dergelijke punten zorgen ervoor dat afbeeldingen plezieriger zijn om naar te"
+" kijken, echter, ze maken compressie moeilijker. Hiermee kunt u de keuze"
+" maken of deze punten verwijderd worden en later weer toegevoegd worden. Als"
+" dit en :guilabel:`Vlekken genereren` is ingeschakeld, en de encoder vindt"
+" zowel vlekken als punten, dan worden de punten gecodeerd alsof ze vlekken"
+" waren."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:84
 #: ../../general_concepts/file_formats/file_jxl.rst:91
@@ -363,12 +466,14 @@ msgstr ""
 msgid ""
 "Default -- Encoder will select this option depending on :guilabel:`Tradeoff`."
 msgstr ""
+"Standaard -- Encoder zal deze instelling selecteren afhankelijk van"
+" :guilabel:`Afweging`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:85
 #: ../../general_concepts/file_formats/file_jxl.rst:92
 #: ../../general_concepts/file_formats/file_jxl.rst:101
 msgid "Enabled -- Always use this regardless :guilabel:`Tradeoff`."
-msgstr "Ingeschakeld -- dit altijd ongeacht gebruiken :guilabel:`Tradeoff`."
+msgstr "Ingeschakeld – dit altijd ongeacht :guilabel:`Afweging` gebruiken."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:86
 msgid "Generate dots"
@@ -378,7 +483,7 @@ msgstr "Punten genereren"
 #: ../../general_concepts/file_formats/file_jxl.rst:93
 #: ../../general_concepts/file_formats/file_jxl.rst:102
 msgid "Disabled -- Never use this regardless :guilabel:`Tradeoff`."
-msgstr ""
+msgstr "Uitgeschakeld – gebruik dit nooit ongeacht :guilabel:`Afweging`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:89
 msgid ""
@@ -386,6 +491,11 @@ msgid ""
 "This can be useful with images that have a lot of repeating bits, like "
 "sprite art, images with text or images using a lot of patterns."
 msgstr ""
+"Dit bepaald of er wordt geprobeerd om stukjes en vlekken van een afbeelding"
+" te hergebruiken. "
+"Dit kan handig zijn bij afbeeldingen die veel herhalende stukjes hebben,"
+" zoals sprite art, afbeeldingen met tekst of afbeeldingen die veel patronen"
+" gebruiken."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:93
 msgid "Generate patches"
@@ -400,6 +510,8 @@ msgid ""
 "The edge preserving filter tries to preserve edges without getting artifacts "
 "like 'rings'."
 msgstr ""
+"Het filter voor behouden van randen probeert randen te bewaren zonder dat er"
+" artefacten zoals 'ringen' optreden."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:98
 msgid ""
@@ -407,6 +519,9 @@ msgid ""
 "emphasize important contrasts that would otherwise be lost during encoding "
 "and decoding."
 msgstr ""
+"Of u een Gabor-achtige filter voor scherper maken toepast, wat kan helpen bij"
+" het benadrukken van belangrijke contrasten die anders verloren zouden gaan"
+" bij het coderen en het decoderen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:102
 msgid "Gaborish filter"
@@ -425,12 +540,23 @@ msgid ""
 "method, the lossless :guilabel:`Modular Mode`, or by letting the encoder "
 "itself choose."
 msgstr ""
+"In tegenstelling tot de *Modular Mode*, wat een verliesvrije compressie"
+" methode is, splitst Modulaire codering de afbeelding in kleinere stukken,"
+" zodat multi-"
+"threaded codering mogelijk is, maar ook per-stuk optimalisatie.Deze optie"
+" staat u toe om een keuze te maken of de encoder verliesgevende"
+" :guilabel:`VarDCT` "
+"methode, de verliesvrije :guilabel:`Modular Mode` moet gebruiken, of dat de"
+" encoder zelf een keuze mag maken."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:107
 msgid ""
 "Whether to keep the color values when a pixel is fully transparent or "
 "whether to abstract them away as if they were transparent black."
 msgstr ""
+"Of de kleurwaarden moeten worden bewaart als een pixel volledig transparant"
+" is of dat deze informatie weggegooid moet worden alsof ze transparant zwart"
+" zijn."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:110
 #: ../../general_concepts/file_formats/file_jxl.rst:127
@@ -439,7 +565,7 @@ msgstr ""
 #: ../../general_concepts/file_formats/file_jxl.rst:172
 #: ../../general_concepts/file_formats/file_jxl.rst:184
 msgid "Enabled -- Always use this regardless of :guilabel:`Tradeoff`."
-msgstr ""
+msgstr "Ingeschakeld – dit altijd ongeacht :guilabel:`Afweging` gebruiken."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:111
 msgid "Keep color of invisible pixels"
@@ -452,7 +578,7 @@ msgstr "Kleur van onzichtbare pixels behouden"
 #: ../../general_concepts/file_formats/file_jxl.rst:173
 #: ../../general_concepts/file_formats/file_jxl.rst:185
 msgid "Disabled -- Never use this regardless of :guilabel:`Tradeoff`."
-msgstr ""
+msgstr "Uitgeschakeld – gebruik dit nooit ongeacht :guilabel:`Afweging`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:114
 msgid ""
@@ -460,6 +586,9 @@ msgid ""
 "for partially downloaded images and images using :guilabel:`Progressive "
 "Encoding`."
 msgstr ""
+"Hoe de groups worden opgeslagen in :guilabel:`Modulaire codering`. Dit is"
+" belangrijk bij gedeeltelijk gedownloade afbeeldingen en afbeeldingen die"
+" :guilabel:`Progressieve codering` gebruiken."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:116
 #: ../../general_concepts/file_formats/file_jxl.rst:156
@@ -468,7 +597,7 @@ msgstr "Standaard"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:117
 msgid "Depends on :guilabel:`Tradeoff`."
-msgstr ""
+msgstr "Afhankelijk van :guilabel:`Afweging`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:118
 msgid "Scanline order"
@@ -476,7 +605,7 @@ msgstr "Volgorde van scanlijn"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:119
 msgid "Top left of the image is also the first group."
-msgstr ""
+msgstr "Linksboven in de afbeelding is ook de eerste group."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:121
 msgid "Group order"
@@ -484,11 +613,11 @@ msgstr "Volgorde voor groepen"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:121
 msgid "Center first"
-msgstr ""
+msgstr "Midden eerst"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:121
 msgid "The centermost group of the image is the first group."
-msgstr ""
+msgstr "De group in het midden van de afbeelding is de eerste group."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:124
 msgid ""
@@ -496,6 +625,10 @@ msgid ""
 "section from the pixel brightness, meaning it only has to store the pixel "
 "brightness and not the color. Experimentation is recommended."
 msgstr ""
+"JPEG XL kan enkele wiskundige trucs gebruiken om de kleur van een opgegeven"
+" sectie te voorspellen uit de helderheid van de pixels, wat inhoud dat het"
+" alleen de helderheid van de pixels hoeft op te slaan en niet de kleur. Wij"
+" raden u aan om daarmee te experimenteren."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:128
 msgid "Chroma-from-luma"
@@ -511,6 +644,14 @@ msgid ""
 "this mathematical function is also finetuned by the encoder, this is called "
 "`Adaptive Quantization`."
 msgstr ""
+"De basis van JPEG's compressie is de zogeheten Discrete Cosine Transform "
+"(DCT). Hiermee kan een complexe verloop van kleuren vereenvoudigd worden naar"
+" een wiskundige formule. Een van de nieuwe functionaliteiten van JPEG XL is"
+" dat deze DCT niet 8x8 hoeft te zijn, en ze hoeven ook niet hetzelfde formaat"
+" te hebben"
+" over de hele afbeelding. Dit wordt 'Variable DCT' genoemd. De compressie die"
+" op deze wiskundige functie wordt toegepast wordt op details geregeld door de"
+" encoder, dit wordt `Adaptive Quantization` genoemd."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:133
 msgid ""
@@ -525,6 +666,19 @@ msgid ""
 "especially useful for images alongside text or images that get served over a "
 "slow internet connection."
 msgstr ""
+"Omdat de encoder in staat is om de beste oplossing voor de compressie te"
+" selecteren (Afhankelijk van wat u heeft gekozen bij :guilabel:`Afweging`),"
+" is het enige"
+" waar u zich nog zorgen over hoeft te maken of u de progressieve modus in wil"
+" schakelen. De Progressieve modus voor VarDCT neemt de zogeheten `DC` waarden"
+" (die per DCT blok zijn) om een grove voorbeeld te produceren die eerst kan"
+" worden getoond waarna het de "
+"`AC` waarden neemt neemt, die de fijne details voorstellen, en verstuurt deze"
+" als laatste. Dit resulteert bij progressieve afbeeldingen in het effect dat"
+" eerst een ruwe wazige afbeelding laat zien die tijdens het downloaden,"
+" *progressief* scherper wordt. Dit is met name bruikbaar bij afbeeldingen"
+" naast tekst en bij afbeeldingen die via een trage internet-verbinding wordt"
+" verstuurt."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:136
 msgid ""
@@ -532,6 +686,10 @@ msgid ""
 "fine details of images. This takes more time but generally gives better "
 "results."
 msgstr ""
+"Hiermee schakelt u de progressieve modus in en gebruikt daarbij de"
+" geavanceerde kleur-formules om de kleine details in de afbeeldingen uit te"
+" rekenen. Dit heeft meer tijd nodig maar geeft in het algemeen betere"
+" resultaten."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:140
 msgid "Spectral progression"
@@ -543,6 +701,9 @@ msgid ""
 "fine details. This leads to a smaller file size at the cost of giving the "
 "encoder more time to do so."
 msgstr ""
+"Hiermee schakelt u de progressieve modus in en gebruikt daarbij de"
+" kwantificering om de kleine details te comprimeren. Dit geeft een kleinere"
+" bestandsgrootte ten koste van het feit dat de encoder meer tijd nodig heeft."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:147
 msgid "Quantization"
@@ -557,10 +718,18 @@ msgid ""
 "JPEG XL, you can opt to use a low-resolution image in addition. This should "
 "result in a better preview, though the file size will be a few bytes bigger."
 msgstr ""
+"Waar de vorige twee opties de kleinere details van een progressief gecodeerde"
+" afbeelding behandelde, gaat `DC` over de grove compressie, Specifiek een"
+" coëfficiënt voor elk DCT blok wat kan worden gebruikt om een grof"
+" voorbeeldweergave te creëren bij het progressief decoderen. Omdat DCT bij"
+" JPEG XL variabel in grote kan zijn, kunt u daarbij kiezen om een lage"
+" resolutie afbeelding te gebruiken. Dit zou moeten resulteren in een betere"
+" voorbeeldweergave, ofschoon de bestandsgrootte een paar bytes groter zal"
+" zijn."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:157
 msgid "Let the encoder choose."
-msgstr ""
+msgstr "Het codeersysteem laten kiezen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:158
 msgid "Disable"
@@ -568,17 +737,19 @@ msgstr "Uitschakelen"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:159
 msgid "Do not use a lower-resolution image at all."
-msgstr ""
+msgstr "Helemaal geen lagere-resolutie gebruiken."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:160
 msgid "64x64 low resolution pass"
-msgstr ""
+msgstr "64x64 lagere resolutie doorgang"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:161
 msgid ""
 "Create an 64x64 image to use alongside the `DC` values to create the "
 "progressive preview."
 msgstr ""
+"Creëert een 64x64 afbeelding om samen met de `DC` waarden te worden gebruikt"
+" voor de creatie van de progressieve voorbeeldweergave."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:163
 msgid "VarDCT parameters"
@@ -590,28 +761,39 @@ msgstr "Lage resolutie DC"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:163
 msgid "512x512 + 64x64 low resolution pass"
-msgstr ""
+msgstr "512x512 + 64x64 lagere resolutie doorgang."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:163
 msgid ""
 "Create both a 512x512 image and a 64x64 image to use alongside the `DC` "
 "values to create the progressive preview."
 msgstr ""
+"Creëert zowel een 512x512 als een 64x64 afbeelding om samen met de `DC`"
+" waarden te worden gebruikt voor de creatie van de progressieve"
+" voorbeeldweergave."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:166
 msgid ""
 "Extra options for :guilabel:`Modular Mode`. Modular mode uses something akin "
 "to a small programming language by way of predictors to describe image data "
-"succinct and precise."
+"succint and precise."
 msgstr ""
+"Extra opties voor de :guilabel:`Modular Mode`. Modular mode gebruikt iets dat"
+" vergelijkbaar is met een simpel programmeertaal om afbeelding-data beknopt"
+" maar toch nauwkeurig te voorspellen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:169
 msgid ""
 "Whether or not to enable progressive encoding/decoding. As explained in :"
 "guilabel:`VarDCT parameters`, this means that the image can be saved in such "
-"a way that upon downloading and showing it, a rough previews will get shown "
+"a way that upon downloading and showing it, a rough previous will get shown "
 "first."
 msgstr ""
+"Of de progressieve coderen/decoderen moet worden ingeschakeld. Zoals"
+" uitgelegd in :"
+"guilabel:`VarDCT parameters`, houdt dit in dat de afbeelding zodanig kan"
+" worden opgeslagen dat tijdens het downloaden, dat eerst een grove versie kan"
+" worden getoond."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:172
 msgid "Progressive encoding"
@@ -628,6 +810,12 @@ msgid ""
 "values possible. For 8 bit, 100% would mean 255 values total, 50% would mean "
 "128 values total, and 10% would mean a total of 25 values total."
 msgstr ""
+"Kleuren worden als een palet opgeslagen afhankelijk van het feit of of het"
+" totaal aantal gebruikte verschillende kleuren kleiner is dan het percentage"
+" van alle mogelijke kleurkanalen. Bij 8 bit, zou 100% in totaal 255 waarden"
+" inhouden, zou 50% in totaal 128 waarden inhouden, en 10% zou een totaal van"
+" 25"
+" waarden inhouden."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:176
 msgid "Local channel palette range"
@@ -636,7 +824,7 @@ msgstr "Lokale kanaalpaletreeks"
 #: ../../general_concepts/file_formats/file_jxl.rst:177
 msgid ""
 "Like :guilabel:`Global channel palette range`, but then decided per group."
-msgstr ""
+msgstr "Net zoal :guilabel:`Globale kanaalpaletreeks`, maar dan per group."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:178
 msgid "Use color palette for ... colors or less."
@@ -647,12 +835,17 @@ msgid ""
 "Select the maximum amount of colors that need to be present in a group "
 "before the encoder will try to store them as a palette."
 msgstr ""
+"Stel het maximum aantal kleuren in dat in een groep aanwezig moet zijn"
+" voordat de encoder zal proberen om ze als een palet op te slaan."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:181
 msgid ""
 "Whether to use a Delta-palette, also called a lossy-palette. This compresses "
 "the palette, but there's no official documentation yet on how exactly."
 msgstr ""
+"Of u een Deltapalet gebruikt, ook wel een lossy-palette genoemd. Dit"
+" comprimeert het palet, maar er is nu nog geen officiële documentatie over"
+" hoe dat precies werkt."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:185
 msgid "Delta palette"
@@ -664,6 +857,10 @@ msgid ""
 "You can choose how big these chunks are when using Modular Mode, for VarDCT "
 "they will default to 256x256."
 msgstr ""
+"Afbeeldingen kunnen gesplist worden in kleinere stukken, die apart gecodeerd"
+" kunnen worden. "
+"U kunt instellen hoe groot deze stukken zijn bij gebruik van Modular Mode,"
+" voor VarDCT zijn ze standaard 256x256."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:190
 msgid "128x128"
@@ -694,28 +891,38 @@ msgid ""
 "pixel to the left'. This is a predictor, and you can select which predictor "
 "you'd prefer to be used. Recommended value is :guilabel:`Default`."
 msgstr ""
+"Welke voorspeller te gebruiken in combinatie met de :guilabel:`MA tree`. Waar "
+"VarDCT de afbeelding comprimeert door complexe kleurverlopen om te zetten"
+" naar wiskundige formules, comprimeert Modular Mode de secties door vast te"
+" stellen of het kan worden omschreven met de pixels in de buurt, zoals"
+" 'dezelfde kleur als de "
+"pixel aan de links'. Dit is een voorspeller, en u kunt instellen welke"
+" voorspeller uw voorkeur heeft om te worden gebruikt. De aanbevolen"
+" instelling is :guilabel:`Standaard`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:198
 msgid "Default -- Let the encoder choose."
-msgstr ""
+msgstr "Standaard -- Het codeersysteem laten kiezen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:199
 msgid "Zero -- Always returns the value 0."
-msgstr ""
+msgstr "Nul -- Geeft altijd de waarde 0."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:200
 msgid "Left -- Always returns the value at the left."
-msgstr ""
+msgstr "Links -- Geeft altijd de waarde aan de linkerkant."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:201
 msgid "Top -- Always returns the value at the top."
-msgstr ""
+msgstr "Boven -- Geeft altijd de waarde aan de bovenkant."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:202
 msgid ""
 "Avg0 -- Returns the average of the values to the immediate left and top of "
 "the current location."
 msgstr ""
+"Avg0 -- Geeft het gemiddelde van de waarden onmiddellijk links en boven de"
+" huidige locatie."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:203
 msgid ""
@@ -728,20 +935,25 @@ msgid ""
 "Gradient -- Returns the value of the top-left neighbour minus the values of "
 "the top and left neighbours."
 msgstr ""
+"Kleuverloop -- Geeft de waarde van buur linksboven minus de waarden van de"
+" buren erboven en links ervan."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:205
 msgid ""
 "Weighted -- A complex predictor that weights the top, left and top-left "
 "pixels in certain ways to achieve the result."
 msgstr ""
+"Gewogen -- Een ingewikkelde voorspeller die voor het resultaat op een"
+" bepaalde manier een combinatie neemt van de pixels boven, links en"
+" linksboven."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:206
 msgid "Top Right -- Returns the value topright of the current location."
-msgstr ""
+msgstr "Rechtsboven -- Geeft de waarde rechtsboven de huidige locatie."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:207
 msgid "Top Left -- Returns the value topleft of the current location."
-msgstr ""
+msgstr "Linksboven -- Geeft de waarde linksboven de huidige locatie."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:208
 msgid "Left Left -- Returns the value topright of the current location."
@@ -752,18 +964,24 @@ msgid ""
 "Avg1 -- Returns the average of the values to the immediate left and top-left "
 "of the current location."
 msgstr ""
+"Gem1 -- Geeft het gemiddelde van de waarden onmiddellijk links en linksboven"
+" de huidige locatie."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:210
 msgid ""
 "Avg2 -- Returns the average of the values to the immediate top-left and top "
 "of the current location."
 msgstr ""
+"Gem2 -- Geeft het gemiddelde van de waarden onmiddellijk linksboven en boven"
+" de huidige locatie."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:211
 msgid ""
 "Avg3 -- Returns the average of the values to the immediate left and top-"
 "right of the current location."
 msgstr ""
+"Gem3 -- Geeft het gemiddelde van de waarden onmiddellijk links en rechtsboven"
+" de huidige locatie."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:212
 msgid ""
@@ -771,10 +989,12 @@ msgid ""
 "left, topright, and their immediately adjacent neighbours in the same "
 "direction."
 msgstr ""
+"Toptop voorspeld gemiddelde -- Weegt de waarden van 6 buren: boven, "
+"links, rechtsboven, en hun buren in dezelfde richting."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:213
 msgid "Gradient + Weighted -- Mixes gradient and weighted."
-msgstr ""
+msgstr "Kleurverloop + Gewogen -- Mengt de kleurverloop en het gewicht."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:214
 msgid "Predictor"
@@ -800,6 +1020,11 @@ msgid ""
 "better understood context and thus better compression, but these also take "
 "more resources while encoding."
 msgstr ""
+"Hoeveel pixels worden gebruikt voor de Meta-Adaptive Context tree. De MA tree"
+" is een manier van analyseren van de pixels rondom de geselecteerde pixel, en"
+" afhankelijk van de context die de gekozen voorspeller voor deze pixel kiest."
+" Meer pixels houdt in dat een beter begrepen context en dus een betere"
+" compressie, maar daar is ook meer tijd voor nodig tijdens het coderen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:220
 msgid "Metadata"
@@ -814,6 +1039,8 @@ msgid ""
 "Whether to store any metadata at all. You can individually toggle :guilabel:"
 "`Exif`, :guilabel:`IPTC` and :guilabel:`XMP`."
 msgstr ""
+"Of enige metadata moet worden opgeslagen. U kunt :guilabel:"
+"`Exif`, :guilabel:`IPTC` en :guilabel:`XMP` apart instellen."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:223
 msgid "Anonymizer"
@@ -821,7 +1048,7 @@ msgstr "Anoniem maken"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:224
 msgid "Whether to remove author information."
-msgstr ""
+msgstr "Of de informatie over de auteur verwijderd moet worden."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:226
 msgid "Tool information"
@@ -829,21 +1056,23 @@ msgstr "Hulpmiddeleninformatie"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:226
 msgid "Whether to add tool information."
-msgstr ""
+msgstr "Of informatie over het programma toegevoegd moet worden."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:230
 msgid "`JPEG XL official website <https://jpeg.org/jpegxl/>`_"
-msgstr ""
+msgstr "`JPEG XL officiële website <https://jpeg.org/jpegxl/>`_"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:231
 msgid "`JPEG XL community website <https://jpegxl.info/>`_"
-msgstr ""
+msgstr "`Website van JPEG XL gemeenschap <https://jpegxl.info/>`_"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:232
 msgid ""
 "`libjxl -- JPEG XL reference implementation <https://github.com/libjxl/"
 "libjxl>`_"
 msgstr ""
+"`libjxl -- JPEG XL reference implementation <https://github.com/libjxl/"
+"libjxl>`_"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:234
 msgid ""
@@ -851,3 +1080,6 @@ msgid ""
 "blob/315247f000cff01fbc7ee2dd8252ea8fb82d0769/doc/benchmarking.md>`_ as well "
 "as comments inside the libjxl source code."
 msgstr ""
+"`Gekopieerd uit deze libjxl readme <https://github.com/libjxl/libjxl/"
+"blob/315247f000cff01fbc7ee2dd8252ea8fb82d0769/doc/benchmarking.md>`_ maar ook"
+" als commentaar in de libjxl broncode."
