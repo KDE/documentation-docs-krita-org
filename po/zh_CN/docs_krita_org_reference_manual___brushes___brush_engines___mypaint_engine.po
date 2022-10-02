@@ -1,0 +1,600 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-18 00:22+0000\n"
+"PO-Revision-Date: 2022-09-20 01:57\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
+"docs_krita_org_reference_manual___brushes___brush_engines___mypaint_engine."
+"pot\n"
+"X-Crowdin-File-ID: 25649\n"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:1
+msgid "The MyPaint Brush Engine manual page."
+msgstr "介绍 Krita 的 MyPaint 笔刷引擎。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:11
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:17
+msgid "MyPaint Brush Engine"
+msgstr "MyPaint 笔刷引擎"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:11
+msgid "Brush Engine"
+msgstr "笔刷引擎"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:21
+msgid ".. image:: images/icons/mypaintbrush.svg"
+msgstr ".. image:: images/icons/mypaintbrush.svg"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:22
+msgid ""
+"`MyPaint <http://www.mypaint.org>`_ is a free painting program that comes "
+"with a lot of specific brushes. Krita can use those brushes for painting "
+"using the MyPaint brush engine."
+msgstr ""
+"`MyPaint <http://www.mypaint.org>`_ 是一款自由开源的免费绘画程序，它自带了一"
+"套专用的笔刷。Krita 从 5.0 版起内建了 MyPaint 的笔刷引擎程序库，因此也可以使"
+"用 MyPaint 的笔刷预设。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:24
+msgid ""
+"You can create new brush presets using the MyPaint brush engine in Krita, "
+"but the presets are saved in Krita's .kpp file format, not mypaints .myb "
+"format, so you cannot reuse those presets in MyPaint."
+msgstr ""
+"你可以在 Krita 中使用 MyPaint 笔刷引擎来制作新笔刷预设，但 Krita 只能将预设保"
+"存为 Krita 原生的 .kpp 笔刷文件格式，而不是 MyPaint 的 .myb 格式，因此你无法"
+"在 MyPaint 中使用这些笔刷预设。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:27
+msgid "Dynamic Inputs"
+msgstr "动态输入"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:29
+msgid ""
+"Dynamic Inputs are a way for MyPaint to get information of the external "
+"devices as a drawing tablet; for instance the pressure over the drawing "
+"tablet, the speed of pencil movement, the pencil tilt .. etc. They are "
+"equivalent to :ref:`sensors` in Krita."
+msgstr ""
+"动态输入是 MyPaint 获取外部设备信息的方式，例如从数位板获取压力、笔尖坐标和移"
+"动速度、笔身倾斜等信息。它们相当于 Krita 的\\ :ref:`sensors`\\ 。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:31
+msgid "MyPaint has 9 inputs:"
+msgstr "MyPaint 有 9 种动态输入方式："
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:34
+msgid "Pressure"
+msgstr "压力"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:34
+msgid "The pressure handled by a tablet. Typically in the range 0.0 to 1.0."
+msgstr "数位板感应到的压力。典型范围：0.0 到 1.0。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:37
+msgid "Fine Speed"
+msgstr "精细速度"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:37
+msgid "How quickly the stylus is moving. This can vary quite a lot."
+msgstr "压感笔的移动速度，频繁采样，数值波动较大。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:40
+msgid "Gross Speed"
+msgstr "粗略速度"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:40
+msgid "Similar to fine speed but it changes very slowly."
+msgstr "压感笔的移动速度，更新缓慢，数值波动较小。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:43
+msgid "Random"
+msgstr "随机"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:43
+msgid "Fast and random noise, changes with every brush stroke."
+msgstr "快速随机噪声，每笔数值均不同。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:46
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:240
+msgid "Stroke"
+msgstr "笔画行程"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:46
+msgid ""
+"This input goes slowly from 0.0 to 1.0 while the stroke is being applied. "
+"This is related to \"stroke duration\" and \"stroke holdtime\" settings."
+msgstr ""
+"此输入项会在笔画绘制的过程中逐渐从 0.0 升至 1.0，它和后面将要介绍的“笔画长度"
+"对数”、“笔画持续时间”这两个选项有关。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:49
+msgid "Direction"
+msgstr "笔画方向"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:49
+msgid "This input defines the angle of a stroke, in degrees."
+msgstr "此输入项定义笔画的角度，单位为度。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:52
+msgid "Declination"
+msgstr "笔身倾角"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:52
+msgid ""
+"This input defines the declination of the stylus tilt. This is the same as "
+"tilt-elevation in Krita."
+msgstr "此输入项定义压感倾斜时的笔身倾角。它与 Krita 的“倾斜仰角”传感器相同。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:55
+msgid "Ascension"
+msgstr "笔身指向"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:55
+msgid ""
+"Straight pen ascension. When the active tip points to it, it is 0. When the "
+"pen turns 90 degrees clockwise is +90. When it turns 90 degrees "
+"counterclockwise is -90. This is the same as tilt-direction in Krita."
+msgstr ""
+"此输入项定义压感笔的笔身指向角度。笔身向 12 点钟方向倾斜时 (笔尖指向执笔者) "
+"为 0°，笔身顺时针旋转 90° 时为 +90，笔身逆时针旋转 90° 时为 -90，角度在 "
+"-180° 到 +180° 的区间变化。它与 Krita 的笔身指向传感器相同。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:58
+msgid ""
+"This is a user-defined input. It is related to the \"customized input\" "
+"setting."
+msgstr "此输入项的实际功能由用户自定义，详情请见后文\\ **自定义输入**\\ 一节。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:59
+msgid "Custom"
+msgstr "自定义"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:62
+msgid "Parameters"
+msgstr "参数"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:65
+msgid "Has the following parameters:"
+msgstr "MyPaint 笔刷引擎有下列可用参数："
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:67
+msgid ":ref:`mypaint_basic`"
+msgstr ":ref:`mypaint_basic`"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:68
+msgid ":ref:`mypaint_color`"
+msgstr ":ref:`mypaint_color`"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:69
+msgid ":ref:`mypaint_speed`"
+msgstr ":ref:`mypaint_speed`"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:70
+msgid ":ref:`mypaint_dabs`"
+msgstr ":ref:`mypaint_dabs`"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:71
+msgid ":ref:`mypaint_opacity`"
+msgstr ":ref:`mypaint_opacity`"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:72
+msgid ":ref:`mypaint_tracking`"
+msgstr ":ref:`mypaint_tracking`"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:73
+msgid ":ref:`mypaint_smudge`"
+msgstr ":ref:`mypaint_smudge`"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:74
+msgid ":ref:`mypaint_stroke`"
+msgstr ":ref:`mypaint_stroke`"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:75
+msgid ":ref:`mypaint_custom`"
+msgstr ":ref:`mypaint_custom`"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:81
+msgid "Basic"
+msgstr "基本"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:84
+msgid "Radius"
+msgstr "半径"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:85
+msgid ""
+"This is to set the radius of the brush. Please note that all of the mypaint "
+"radii are logarithmic. For instance, if you are setting the radius of a "
+"preset to say, 2.0 then the actual radius of the preset is going to be "
+"e^(2.0) which is equal to 7.389. This makes the size of the brush equal to "
+"14.78. So, we can say that mypaint_radius = log(actual_radius)."
+msgstr ""
+"此参数用于设定笔刷的半径。请注意：MyPaint 笔刷引擎中的所有半径均为对数半径。"
+"在实际操作中，如果你将笔刷预设的半径设为 2.0，实际的半径数值将是 e^(2.0) = "
+"7.389，笔刷的实际大小将是 14.78。计算公式：MyPaint 半径 = log(实际半径)。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:88
+msgid "Hardness"
+msgstr "硬度"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:89
+msgid "Hardness defines the sharpness of the brushes."
+msgstr "此参数定义了笔刷轮廓的锐利程度。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:92
+msgid ".. image:: images/brushes/mypaint/hardness.png"
+msgstr ".. image:: images/brushes/mypaint/hardness.png"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:94
+msgid "Eraser"
+msgstr "橡皮擦"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:95
+msgid "If this option is checked the brush will act as an eraser."
+msgstr "勾选此项时，笔刷将切换为橡皮擦模式。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:98
+msgid "Radius by Random"
+msgstr "随机半径"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:99
+msgid ""
+"This option is used to generate a brush preset whose radii and opacity "
+"change randomly during the stroke. This should not be confused with the "
+"random dynamic option in the radius setting."
+msgstr ""
+"此选项可以生成在笔画绘制过程中\\ **笔刷半径**\\ 和\\ **不透明度**\\ 随机变化"
+"的笔刷预设。不要与\\ **半径**\\ 选项中的\\ **随机**\\ 动态选项混淆。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:102
+msgid "Anti Aliasing"
+msgstr "抗锯齿"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:103
+msgid ""
+"This option is used to smoothen the edges of the brush and remove the "
+"jagging effect. Most useful for very small presets."
+msgstr "此选项用于平滑笔刷边缘，移除锯齿现象。适用于非常小的笔刷预设。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:106
+msgid "Elliptical Dab: Angle"
+msgstr "椭圆笔尖角度"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:107
+msgid ""
+"Sets the angle of the brush dabs. Gives the best results for brushes with a "
+"low ratio and a direction filter, and allows for strokes akin to a "
+"calligraphic pen."
+msgstr ""
+"设置笔尖印迹的角度。对于笔尖具有较小宽高比，并且应用了\\ **笔画方向过滤**\\ "
+"选项的笔刷预设效果最明显，让笔画能够如同扁头笔一样绘制，例如西文书法笔刷等。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:110
+msgid "Elliptical Dab: Ratio"
+msgstr "椭圆笔尖宽高比"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:111
+msgid "This option is used to change the aspect ratio of dab."
+msgstr "此选项用于控制笔尖印迹的宽高比。数值越高，笔尖印迹越扁。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:114
+msgid ".. image:: images/brushes/mypaint/elliptical_dab_ratio.png"
+msgstr ".. image:: images/brushes/mypaint/elliptical_dab_ratio.png"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:116
+msgid "Direction Filter"
+msgstr "笔画方向过滤"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:117
+msgid ""
+"This option is used to make the dabs adhere to a specific vector direction. "
+"In simple words, at times you might find the dabs not following the vector "
+"path of your strokes, this setting helps us rectify that."
+msgstr ""
+"此选项用于强制笔尖印迹遵循一个特定的矢量方向。如果你感到笔尖印迹和笔画的矢量"
+"方向不一致，可以使用此选项减轻此问题。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:122
+msgid "Color"
+msgstr "颜色"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:125
+msgid "Change color Hue"
+msgstr "更改色相"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:126
+msgid ""
+"This option is used to shift the hue in a clockwise or anti-clockwise "
+"direction."
+msgstr "此选项用于顺时针或逆时针旋转色相。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:129
+msgid "Change color Lightness"
+msgstr "更改亮度 (HSL)"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:130
+msgid ""
+"This option is used to change color luminance using the HSL color model."
+msgstr "此选项将按照 HSL 色彩模型更改颜色的亮度。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:133
+msgid "Change color Value"
+msgstr "更改亮度 (HSV)"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:134
+msgid ""
+"This option is used to change color value (brightness, intensity) in HSV "
+"color model."
+msgstr "此选项将按照 HSV 色彩模型更改颜色的亮度 (明度)。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:137
+msgid "Change color Saturation HSL"
+msgstr "更改饱和度 (HSL)"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:138
+msgid "This option is used to change color saturation using HSL color model."
+msgstr "此选项将按照 HSL 色彩模型更改颜色的饱和度。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:141
+msgid "Change color Saturation HSV"
+msgstr "更改饱和度 (HSV)"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:142
+msgid "This option is used to change color saturation using HSV color model."
+msgstr "此选项将按照 HSV 色彩模型更改颜色的饱和度。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:147
+msgid "Speed"
+msgstr "速度"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:150
+msgid "Fine Speed Gamma"
+msgstr "精细速度伽玛值"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:151
+msgid ""
+"This option is used to change the reaction of the fine speed input to "
+"extreme physical speed."
+msgstr "此选项用于调整精细速度输入数值对极限物理速度的反应方式。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:154
+msgid "Gross Speed Gamma"
+msgstr "粗略速度伽玛值"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:155
+msgid ""
+"This option is used to change the reaction of gross speed to extreme "
+"physical speed."
+msgstr "此选项用于调整粗略速度输入数值对极限物理速度的反应方式。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:158
+msgid "Fine Speed Slowness / Fine Speed Filter"
+msgstr "精细速度减缓程度/精细速度过滤"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:159
+msgid ""
+"This option describes how slow the input fine speed is following the real "
+"speed."
+msgstr "此选项用于控制精细速度输入值相对于实际速度的减缓程度。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:162
+msgid "Gross Speed Slowness / Gross Speed Filter"
+msgstr "粗略速度减缓程度/粗略速度过滤"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:163
+msgid ""
+"This option describes how slow the input gross speed is following the real "
+"speed."
+msgstr "此选项用于控制粗略速度输入值相对于实际速度的减缓程度。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:166
+msgid "Offset by Speed"
+msgstr "按速度偏移"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:167
+msgid ""
+"This option is used to change the position of dabs based on stroke speed."
+msgstr "此选项用于按照笔画速度更改笔尖印迹的位置。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:170
+msgid "Offset By Random [Jitter]"
+msgstr "随机偏移 [抖动]"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:171
+msgid ""
+"This option adds a random offset to the position where each dab is drawn."
+msgstr "此选项将对每一个笔尖印迹绘制的位置附加随机偏移。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:176
+msgid "Dabs"
+msgstr "笔尖印迹"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:179
+msgid "Dabs per Actual Radius"
+msgstr "每实际半径印迹数"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:180
+msgid ""
+"This option describes how many dabs to draw when the pointer moves the "
+"distance of the brush radius."
+msgstr "此选项控制每当光标移动了相当于笔刷半径的距离时，要绘制多少个笔尖印迹。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:183
+msgid "Dabs per Second"
+msgstr "每秒印迹数"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:184
+msgid ""
+"This option describes how many dabs to draw per second irrespective of any "
+"other parameter."
+msgstr "此选项控制每秒绘制的笔尖印迹数量，它不受其他参数的影响。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:189
+msgid "Opacity"
+msgstr "不透明度"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:192
+msgid "Opaque"
+msgstr "不透明"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:193
+msgid "Opaque describe the translucency or transparency of mypaint brushes."
+msgstr "此选项用于控制 MyPaint 笔刷的半透明或透明程度。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:196
+msgid "Opaque Linearize"
+msgstr "不透明度线性化"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:197
+msgid ""
+"This option lets you correct the nonlinearity introduced by blending "
+"multiple dabs on top of each other."
+msgstr "此选项用于修正相互重叠的多个笔尖印迹在混合时造成的非线性现象。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:200
+msgid "Opaque Multiply"
+msgstr "不透明度相乘"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:201
+msgid "This makes opacity depend on pressure."
+msgstr "此选项按照压力数值影响不透明度。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:206
+msgid "Tracking"
+msgstr "笔尖位置跟踪"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:209
+msgid "Slow Tracking"
+msgstr "减慢跟踪"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:210
+msgid ""
+"Slow pointer tracking speed. Higher values remove jitter in cursor "
+"movements. Useful for drawing smooth outlines."
+msgstr ""
+"减慢光标的跟踪速度。较高的数值可以去除光标移动时的抖动现象，有助于画出平滑的"
+"轮廓。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:213
+msgid "Slow Tracking per Dab"
+msgstr "减慢跟踪 (每印迹)"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:214
+msgid "Similar to above but at a brushdab level."
+msgstr "类似于上一个选项，但此选项会在每个笔尖印迹的层面进行减缓。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:217
+msgid "Tracking Noise"
+msgstr "跟踪噪声"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:218
+msgid ""
+"Add randomness to the mouse pointer. This usually generates many small lines "
+"in random directions."
+msgstr "此选项会将随机度附加到鼠标光标，通常会生成许多随机方向的细线。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:223
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:226
+msgid "Smudge"
+msgstr "涂抹"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:227
+msgid ""
+"This option lets you smudge, by picking a color from the canvas and mixing "
+"this with the brush color. The color slowly changes to the color you are "
+"painting on."
+msgstr ""
+"此选项用于进行涂抹，它将从画布上拾取颜色，然后与笔刷的当前颜色进行混合。笔刷"
+"画出的颜色会随着你笔下位置原有的颜色缓缓变化。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:230
+msgid "Smudge Length"
+msgstr "涂抹长度"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:231
+msgid ""
+"This option controls how much the painting color is mixed with the colors "
+"from the canvas."
+msgstr "此选项控制笔刷颜色与画布颜色混合的多少。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:234
+msgid "Smudge Radius logarithmic"
+msgstr "涂抹半径 (对数)"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:235
+msgid ""
+"This option modifies the radius of the circle where the color is picked up "
+"for smudging."
+msgstr "此选项控制涂抹的拾色采样半径。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:243
+msgid "Stroke Duration logarithmic"
+msgstr "笔画长度 (对数)"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:244
+msgid ""
+"This option describes how far you have to move until the stroke input "
+"becomes 1.0"
+msgstr "此选项控制笔画行程输入数值达到 1.0 时笔尖需要移动的距离。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:247
+msgid "Stroke Holdtime"
+msgstr "笔画持续时间"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:248
+msgid ""
+"This option defines how long the stroke input stays at 1.0. After that it "
+"will go back towards 0.0 and then start increasing again."
+msgstr ""
+"此选项控制笔画行程输入值能在 1.0 持续多长时间。超过该时间后笔画行程将重置为 "
+"0.0，并重新开始上升。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:251
+msgid "Stroke Threshold"
+msgstr "笔画行程启动压力"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:252
+msgid ""
+"This option defines how much pressure is needed to start the stroke. This "
+"affects stroke input only. The MyPaint brush engine does not need any "
+"minimum pressure level to start drawing."
+msgstr ""
+"此选项用于控制笔画行程开始计数所需的最小压力，它只对笔画行程参数有作用。"
+"MyPaint 笔刷引擎本身不会设置笔画绘制所需的最小压力。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:257
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:260
+msgid "Custom Input"
+msgstr "自定义输入"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:261
+msgid ""
+"The idea of this input is that you make this input depend on a mixture of "
+"pressure/speed/whatever, and then make other settings depend on this 'custom "
+"input' instead of repeating this combination everywhere you need."
+msgstr ""
+"此输入项让你可以将特定的压力、速度、或其他动态输入混合映射成一个选项，然后让"
+"其他选项直接使用这一组自定义输入，从而免去在其他笔刷选项中重复设置多个动态输"
+"入。"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:264
+msgid "Custom Input Slowness"
+msgstr "自定义输入减慢程度"
+
+#: ../../reference_manual/brushes/brush_engines/mypaint_engine.rst:265
+msgid ""
+"This option defines how slow the custom input setting actually follows the "
+"desired value."
+msgstr "此选项控制自定义输入数值相对于实际数值的减缓程度。"

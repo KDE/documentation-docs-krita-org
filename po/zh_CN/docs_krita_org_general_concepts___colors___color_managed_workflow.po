@@ -1,0 +1,1357 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-26 00:39+0000\n"
+"PO-Revision-Date: 2022-09-20 01:57\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
+"docs_krita_org_general_concepts___colors___color_managed_workflow.pot\n"
+"X-Crowdin-File-ID: 10136\n"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:0
+msgid ".. image:: images/color_category/Kiki_matrix_profile.png"
+msgstr ".. image:: images/color_category/Kiki_matrix_profile.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:0
+msgid ".. image:: images/color_category/Kiki_cLUTprofiles.png"
+msgstr ".. image:: images/color_category/Kiki_cLUTprofiles.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:None
+msgid ".. image:: images/color_category/Krita_2_9_colormanagement_group1.png"
+msgstr ".. image:: images/color_category/Krita_2_9_colormanagement_group1.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:None
+msgid ".. image:: images/color_category/Krita_2_9_colormanagement_group2.png"
+msgstr ".. image:: images/color_category/Krita_2_9_colormanagement_group2.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:None
+msgid ".. image:: images/color_category/Krita_2_9_colormanagement_group3.png"
+msgstr ".. image:: images/color_category/Krita_2_9_colormanagement_group3.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:None
+msgid ".. image:: images/color_category/Krita_2_9_colormanagement_group4.png"
+msgstr ".. image:: images/color_category/Krita_2_9_colormanagement_group4.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:None
+msgid ".. image:: images/dockers/LUT_Management_Docker.png"
+msgstr ".. image:: images/dockers/LUT_Management_Docker.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:None
+msgid ".. image:: images/color_category/Krita_HDR_1.svg"
+msgstr ".. image:: images/color_category/Krita_HDR_1.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:None
+msgid ".. image:: images/color_category/Krita_HDR2.svg"
+msgstr ".. image:: images/color_category/Krita_HDR2.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:None
+msgid ""
+".. image:: images/color_category/Krita-colormanaged-workflow_webcomic.svg"
+msgstr ""
+".. image:: images/color_category/Krita-colormanaged-workflow_webcomic.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:None
+msgid ".. image:: images/color_category/Krita-colormanaged-workflow_print.svg"
+msgstr ".. image:: images/color_category/Krita-colormanaged-workflow_print.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:None
+msgid ".. image:: images/color_category/Krita-colormanaged-workflow_games.svg"
+msgstr ".. image:: images/color_category/Krita-colormanaged-workflow_games.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:1
+msgid "How a color managed workflow works."
+msgstr "介绍色彩管理流程的原理。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:12
+msgid "Color"
+msgstr "色彩"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:12
+msgid "Color Management"
+msgstr "色彩管理"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:12
+msgid "ICC Profiles"
+msgstr "ICC 特性文件"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:12
+msgid "OCIO"
+msgstr "OCIO"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:17
+msgid "Color Managed Workflow"
+msgstr "色彩管理流程"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:19
+msgid ""
+"You may have heard that Krita has something called color-management. Or "
+"maybe you just wondered what all these 'color model' and 'color profile' "
+"things you can find in the menus mean. Color management is pretty useful for "
+"people who work in digital imaging professionally, and hopefully this page "
+"will explain why."
+msgstr ""
+"色彩管理是数字影像从业人员不可或缺的工具。你或许在操作系统的显示器面板或者打"
+"印机驱动程序中看到过“色彩管理”的有关选项，你也或许对 Krita 新建图像对话框"
+"的“色彩模型”和“色彩特性文件”这些选项的作用感到好奇。下面我们会介绍色彩管理的"
+"作用、原理和它在 Krita 中的使用流程。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:22
+msgid "Basic Info"
+msgstr "导言"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:24
+msgid ""
+"If you've never worked with color management before, and have no clue what "
+"it is, then know that you've probably been working in the 8bit RGB color "
+"space with the sRGB profile. This means you can choose for *sRGB built-in* "
+"or *sRGB-elle-v2-srgbtrc.icc*. With the new color space browser this profile "
+"is marked with *(default)* when using 8bit."
+msgstr ""
+"虽然你可能不知道什么是色彩管理，但是你的操作系统、应用软件、显示器和打印机很"
+"可能已经在进行某种形式的色彩管理了。在默认状态下，绝大多数软硬件使用 sRGB 色"
+"彩空间，Krita 也不例外。Krita 默认会为 8 位通道的新建图像选用 *sRGB built-"
+"in* 或者 *sRGB-elle-v2-srgbtrc.icc* 色彩空间特性文件。除非你知道自己在干什"
+"么，否则按照默认的来准没错！"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:26
+msgid ""
+"We'll go into what these terms mean in the theory, but if you're here only "
+"for trying to figure out which is the default, you now know it. Maybe, after "
+"reading this, you may feel like changing the default, to get new and "
+"interesting results from filters, blending modes, or just the color smudge "
+"brush."
+msgstr ""
+"如果你阅读本文只是想知道色彩管理的默认值如何设置，那么你的目的已经达到了。但"
+"光知道默认值其实还远远不够。接下来我们还要深入讲解色彩管理的理论知识。在读完"
+"本文后，你将学会为什么要进行色彩管理、如何进行色彩管理、新建文件和导出文件的"
+"一般做法等。学会这些基础知识之后，你可以尝试使用默认值以外的选项，以便从滤"
+"镜、混合模式抑或是运用了颜色涂抹模型的笔刷中获得全新的结果。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:29
+msgid "What is the problem?"
+msgstr "色彩管理的作用"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:31
+msgid ""
+"To explain the point of color management, you'd first need to learn which "
+"problem color management tries to solve."
+msgstr ""
+"简单来说，色彩管理可以确保一张图像能够在不同的设备上显示、打印出一致的颜色。"
+"我们用下面这个例子来进行说明。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:33
+msgid "Let us imagine a kinder garden:"
+msgstr "让我们想象一位老师正在给 4 个孩子上绘画课："
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:35
+msgid ""
+"The class of 28 children is subdivided in groups of 7. Each group has its "
+"own table."
+msgstr ""
+"老师有一些水彩颜料，他把这些颜料分给 4 个孩子，每个人分到的颜色不完全一样。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:37
+msgid ""
+"The teacher gives them a painting assignment: They need to paint a red "
+"triangle, a blue square, a green circle and put a yellow border around the "
+"three. The kids are very experienced with painting already, so the teacher "
+"can confidently leave the smarter ones to their own devices, and spent more "
+"time on those who need help."
+msgstr ""
+"老师给孩子们布置了一个绘画任务：画出一个红色的三角形、一个蓝色的正方形、一个"
+"绿色的圆形，然后用黄色框把这三个图形给围起来。孩子们只能使用自己分到的颜料来"
+"作画。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:40
+msgid "The following results come from painting:"
+msgstr "下面就是孩子们交上来的结果："
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:42
+msgid ""
+"Even though all groups had the same assignment, each group's result looks "
+"different."
+msgstr "尽管每个组的任务都是一样的，但是他们的成果看起来却不一样。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:49
+msgid ""
+"Group 1 had vermillion red, citron yellow and ultramarine blue to their "
+"disposal. This means their triangle looks nice and red, but their circle's "
+"green is muddy. This is because ultramarine is too dark of a blue to create "
+"nice greens with."
+msgstr ""
+"第一个孩子分到的颜料是朱红、明黄和群青。三角形的红色很鲜明，但圆形的绿色却很"
+"浑浊。这是因为群青的颜色太暗，它很难跟明黄混合出鲜艳的绿色。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:56
+msgid ""
+"Group 2 had magenta red, citron yellow and cerulean blue. Magenta is a type "
+"of red that is closer to pink, opposed to vermillion, which is closer to "
+"orange. However, their green looks nice because cerulean is a much lighter "
+"blue."
+msgstr ""
+"第二个孩子分到的颜料是品红、明黄和天蓝。和第一个孩子使用的偏橙色的朱红相比，"
+"品红会显得偏粉、偏紫。这张图中的绿色更好看，这是因为天蓝是一种比较浅的蓝色，"
+"与明黄可以混合出明亮的绿色。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:64
+msgid ""
+"Group 3 had vermillion red, citron yellow, emerald green and cerulean blue. "
+"They didn't mix their green, and thus ended up with a purer color."
+msgstr ""
+"第三个孩子用的颜料是朱红、明黄、翠绿和天蓝。这张画中的绿色不是用两种颜色调配"
+"出来的，所以看上去鲜艳明亮。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:71
+msgid ""
+"Finally, group 4 has vermillion red, citron yellow and cerulean blue. Their "
+"colors probably look like what you imagined."
+msgstr "第四个孩子用的颜料是朱红、明黄和天蓝。最终画出来的几种颜色还算正常。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:73
+msgid ""
+"Now, these are kindergarteners, so this isn't the largest problem in the "
+"world. However, imagine that something like this happened at a printing "
+"company? Imagine four printers printing the same magazine with wildly "
+"different results? That would be disastrous!"
+msgstr ""
+"在这个例子里，4 个孩子试图使用不同的颜料来呈现同样的颜色，结果颜色发生了偏"
+"差。不过这只是孩子涂鸦而已，少许偏差没什么大不了的。但想象一下如果这样的事情"
+"发生在一家印刷公司里会怎样？车间里的四台打印机把同一本杂志印成 4 种截然不同的"
+"效果，那就是印刷事故啦！"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:75
+msgid "For this purpose, we invented color management."
+msgstr "为了让颜色在不同的输出设备中能够保持一致，我们发明了色彩管理体系。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:78
+msgid "What is color management?"
+msgstr "色彩管理的原理"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:80
+msgid ""
+"Color management is, dryly put, a set of systems that tries to have the same "
+"color translate properly between color devices."
+msgstr "色彩管理是一整套用于在不同的显色设备之间保持颜色转换一致性的系统。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:82
+msgid ""
+"It usually works by attempting to convert a color to the reference color "
+"space XYZ. XYZ is a coordinate system that has a spot for all colors that "
+"the average human eye can see."
+msgstr ""
+"这套系统一般会先把某种颜色转换到 XYZ 参考色彩空间。XYZ 的坐标系中包含了人眼可"
+"以感知的一切颜色。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:84
+msgid ""
+"From XYZ it can then be translated back into another device space, such as "
+"RGB (for screens), or CMYK (for printers)."
+msgstr ""
+"然后它会把该颜色从 XYZ 转换到其他设备的色彩空间，如 RGB (用于屏幕) 或 CMYK "
+"(用于打印)。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:86
+msgid ""
+"Krita has two systems dedicated to color management. On the one hand, we "
+"have **lcms2**, which deal with ICC profiles, and on the other, we have "
+"**OCIO**, which deal with LUT color management."
+msgstr ""
+"Krita 有两套专门用于色彩管理的系统。一个是 **lcms2**，负责处理 ICC 特性文件。"
+"另一个则是 **OCIO**，负责处理 LUT 色彩管理。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:88
+msgid ""
+"To give a crude estimate, ICC profiles deal with keeping colors consistent "
+"over many interpretations of devices (screens, printers) by using a "
+"reference space, and OCIO deals with manipulating the interpretation of said "
+"colors."
+msgstr ""
+"大致来说，ICC 特性文件通过一个参考色彩空间来保证在不同设备 (屏幕、打印机等) "
+"上呈现一致的颜色，而 OCIO 则可以对颜色的展现方式进行调整。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:90
+msgid "Within both we can identify the following color spaces:"
+msgstr "无论是哪个系统，我们都会按照用途把色彩空间识别为下面几类："
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:93
+msgid ""
+"Device spaces are those describing your monitor, and have to be made using a "
+"little device that is called \"colorimeter\". This device, in combination "
+"with the right software, measures the strongest red, green and blue your "
+"screen can produce, as well as the white, black and gray it produces. Using "
+"these and several other measurements it creates an ICC profile unique to "
+"your screen. You set these in Krita's color management tab. By default we "
+"assume sRGB for screens, but it's very likely that your screen isn't exactly "
+"fitting sRGB, especially if you have a high quality screen, where it may be "
+"a bigger space instead. Device spaces are also why you should first consult "
+"with your printer what profile they expect. Many printing houses have their "
+"own device profiles for their printers, or may prefer doing color conversion "
+"themselves. You can read more about colorimeter usage :ref:`here "
+"<profiling_and_calibration>`."
+msgstr ""
+"设备空间用于描述显示器和打印机等颜色输出设备的色彩空间。设备空间的制作需要使"
+"用一种叫做“色差计”的小型计算机外设。以显示器为例，色差计与配套软件会测量显示"
+"器能够显示的最纯的红、绿、蓝、白、黑和灰等颜色，外加一些其他测量，最终生成一"
+"组受测屏幕的 ICC 特性文件。你可以在 Krita 的色彩管理选项页面里指定该特性文"
+"件。默认状态下我们会假定显示器符合 sRGB 规范，但大多数屏幕并不能完全符合 "
+"sRGB，而高品质显示器的色域又往往比 sRGB 更宽。而如果讨论的是打印机，许多印刷"
+"公司会给自己的打印机准备设备空间，有些公司还会希望由他们进行色彩转换，所以事"
+"先要问清楚。想要了解色差计的用法，可以 :ref:`阅读此文 "
+"<profiling_and_calibration>` 。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:94
+msgid "Device spaces"
+msgstr "设备空间"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:96
+msgid "Working spaces"
+msgstr "工作空间"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:97
+msgid ""
+"These are delivered alongside Krita for ICC, and downloadable from the OCIO "
+"website for OCIO. Working spaces are particularly nice to do color "
+"calculations in, which programs like Krita do often. It's therefore "
+"recommended to have a working space profile for your image."
+msgstr ""
+"工作空间是色彩管理流程的参考色彩空间，我们一般会使用几种常见的规范性空间。"
+"Krita 等图像软件需要进行大量与色彩相关的运算，而在工作色彩空间内部进行这种运"
+"算效果更好，因此我们建议为你的图像指定一个工作空间特性文件。Krita 已经自带了"
+"用于 ICC 的特性文件，而用于 OCIO 的配置文件则可以从 OCIO 网站下载。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:99
+msgid "Aesthetic or Look spaces"
+msgstr "审美或观察空间"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:99
+msgid ""
+"These are special spaces that have been deformed to give a certain look to "
+"an image. Krita doesn't deliver Look profiles for ICC, nor does it yet "
+"support Look spaces for OCIO."
+msgstr ""
+"这些特殊的色彩空间经过人为扭曲，用来为图像呈现某些特殊的视觉效果。Krita 没有"
+"自带 ICC 观察空间，也未在 OCIO 中对其提供支持。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:102
+msgid "Color managed workflow"
+msgstr "色彩管理流程"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:104
+msgid ""
+"Knowing this about these spaces of course doesn't give you an idea of how to "
+"use them, but it does make it easier to explain how to use them. So let us "
+"look at a typical color management workflow:"
+msgstr ""
+"现在让我们粗略介绍一下色彩管理流程的全过程，为后面更深入的学习打下基础。下图"
+"是一个典型的色彩管理流程："
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:110
+msgid ".. image:: images/color_category/Krita-colormanaged-workflow_text.svg"
+msgstr ".. image:: images/color_category/Krita-colormanaged-workflow_text.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:110
+msgid ""
+"A typical example of a color managed workflow. We have input from scanners "
+"and cameras, which we convert to a working space that can be used between "
+"different editing software, and is converted to an output space for viewing "
+"on screen or printing."
+msgstr ""
+"这是一个典型的色彩管理流程实例。我们先从扫描仪和数码相机输入图像，然后把这些"
+"图像转换到一个能够被各种编辑软件识别的工作空间，最后转换到用于屏幕观察或者打"
+"印输出的空间。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:112
+msgid ""
+"In a traditional color managed workflow, we usually think in terms of real "
+"world colors being converted to computer colors and the other way around. "
+"So, for example photos from a camera or scanned in images. If you have a "
+"device space of such a device, we first assign said device space to the "
+"image, and then convert it to a working space."
+msgstr ""
+"在一个传统的色彩管理流程里，我们通常关注的是现实世界色彩与计算机色彩之间的转"
+"换。例如数码相机的照片或者扫描到计算机的图像等。如果你的成像设备具有自己的设"
+"备空间，我们首先要把这台设备的空间指定给它生成的图像，然后再把图像转换到一个"
+"工作空间。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:114
+msgid ""
+"We then do all our editing in the working space, and use the working space "
+"to communicate between editing programs. In Krita's case, due to it having "
+"two color management systems, we use ICC profiles between programs like Gimp "
+"2.9+, Inkscape, digiKam and Scribus, and OCIO configuration between Blender "
+"and Natron."
+msgstr ""
+"我们接下来便要在该工作空间中完成所有的编辑作业，不同的编辑软件之间也通过该工"
+"作空间来相互配合。Krita 通过 ICC 特性文件与 GIMP 2.9 +、Inkscape、Digikam 和 "
+"Scribus 等软件对接，通过 OCIO 配置来与 Blender 和 Natron 等软件对接。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:116
+msgid ""
+"You also store your working files in the working space, just like how you "
+"have the layers unmerged in the working file, or have it at a very high "
+"resolution."
+msgstr ""
+"你的工作文件本身也是保存在工作空间下面的。工作文件在这里指的是用于作品编辑的"
+"高分辨率、图层分离的原文件。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:118
+msgid ""
+"Sometimes, we apply aesthetic or 'look' spaces to an image as part of the "
+"editing process. This is rather advanced, and probably not something to "
+"worry about in Krita's case."
+msgstr ""
+"在图像的编辑过程中，我们还可以把具有某种审美意趣“观察空间”应用到图像上，人为"
+"地扭曲图像的显示效果。这是一个相当高级的运用领域，在使用 Krita 的时候一般用不"
+"着关注这个。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:120
+msgid ""
+"Then, when we're done editing, we try to convert to an output space, which "
+"is another device space. This can be CMYK for printers or a special screen "
+"RGB profile. When you are dealing with professional printing houses, it is "
+"best to ask them about this step. They have a lot of experience with doing "
+"the best conversion, and may prefer to do the conversion from your working "
+"space to the device space of their printers."
+msgstr ""
+"图像在完成编辑之后便要进行输出，这就要求我们把图像转换到输出空间。输出空间是"
+"另一台设备的色彩空间，它可以是打印机的 CMYK 特性文件，也可以是某台显示器的 "
+"RGB 特性文件。如果是打印输出，家用和办公打印机会在设备内部完成输出空间转换，"
+"而印刷公司的情况会复杂一些。每家印刷公司的习惯不同，有些公司习惯让客户自行把"
+"图像的工作空间转换到他们打印机的设备空间，有些则习惯直接获取客户的原始图像代"
+"为转换。所以在联系印刷公司时，你应该询问对方关于图像输出的要求。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:122
+msgid ""
+"Another form of output is the way your screen displays the color. Unlike "
+"regular output, this one is done all the time during editing: After all, you "
+"need to be able to see what you are doing, but your screen is still a device "
+"with a device space, so it does distort how the image looks. In this manner, "
+"you can see your screen as a set of binoculars you have to look through to "
+"see your image at all."
+msgstr ""
+"屏幕显示本身也是一种输出方式。你可以把屏幕当成一个望远镜，你必须通过它才能看"
+"到图像，而它的镜片会影响你透过它看见的颜色。每台屏幕的颜色显示效果不同，所以"
+"在理想状态下它们应该配有自己的特性文件。和打印机只需要转换一次空间相比，图像"
+"输出到屏幕时必须持续不断地进行色彩空间转换。图像在编辑软件视图中发生的每一次"
+"变化，都会按照显示器的设备特性文件进行转换。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:124
+msgid ""
+"Therefore, without a profiled monitor, you actually don't know what the "
+"actual colors you are working with are like, because the computer doesn't "
+"know the relevant properties of your screen. So if you profiled your "
+"monitor, give Krita the profile in the settings, and select the sRGB space "
+"to draw in, you are for the first time seeing the actual colors of the sRGB "
+"space."
+msgstr ""
+"因此，如果你的显示器没有特性文件，计算机就无法得知你的屏幕的相对特性并进行相"
+"应的色彩转换，你也就无法确定它显示的颜色是否准确。你必须首先为你的显示器进行"
+"特性化，制作它的设备特性文件，然后在 Krita 的色彩管理选项中把该特性文件设为设"
+"备空间，最后还要把正在编辑的图像的工作空间设为 sRGB 空间。只有满足了这些条"
+"件，你的显示器才能在 sRGB 色彩空间下显示准确的颜色。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:127
+msgid "So what does this mean?"
+msgstr "色彩管理和数字绘画"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:133
+msgid ""
+".. image:: images/color_category/Krita-colormanaged-workflow_krita_text.svg"
+msgstr ""
+".. image:: images/color_category/Krita-colormanaged-workflow_krita_text.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:133
+msgid ""
+"When we paint from scratch, we can see our screen profile as the input "
+"space, because we use it to determine what colors to pick. This somewhat "
+"simplifies the workflow, but makes the screen profile and viewing conditions "
+"more important."
+msgstr ""
+"如果我们使用计算机从头开始绘制作品，我们可以把显示器的特性文件作为输入空间，"
+"因为画面使用的颜色就是通过这台显示器选取的。虽然这可以简化色彩管理流程，但也"
+"意味着显示器特性文件和观察条件的作用更加重要了。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:135
+msgid ""
+"Now, photographers and people who do a tricky discipline of VFX called "
+"'color grading' will go completely mad over trying to get the colors they "
+"put in to come out 100% correctly, and will even count in factors like the "
+"time of day and the color they painted their walls. For example, if the wall "
+"behind your computer is pure red, your eyes will adjust to be less sensitive "
+"to red, which means that the colors they pick in the program could come out "
+"redder. We call these the *viewing conditions*."
+msgstr ""
+"为了让输入和输出的色彩完全一致，摄影师和特效行业负责颜色修正的人员需要考虑许"
+"多因素，这里面甚至包括了时间、天气和装修的颜色。这种讲究并不是在故弄玄虚。举"
+"个例子，如果显示器背后的墙壁是纯红色的，你的眼睛为了适应这个环境会降低对红色"
+"敏感程度，于是在程序里选择的颜色就会偏红。我们把观察颜色时所在环境的照明等因"
+"素称为 **观察条件** 。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:137
+msgid ""
+"Thankfully, artists have to worry a slight bit less about this. As "
+"illustrations are fully handmade, we are able to identify the important bits "
+"and make appropriate contrasts between colors. This means that even if our "
+"images turn out to be slightly redder than intended, it is less likely the "
+"whole image is ruined. If we look back at the kindergarten example above, we "
+"still understand what the image was supposed to look like, despite there "
+"being different colors on each image. Furthermore, because the colors in "
+"illustrations are deliberately picked, we can correct them more easily on a "
+"later date. Yet, at the same time, it is of course a big drag to do this, "
+"and we might have had much more flexibility had we taken viewing conditions "
+"under consideration."
+msgstr ""
+"观察条件对于画手的影响比摄影师要少一些。画作是全人工绘制的，我们主要靠明暗和"
+"颜色之间的反差来营造氛围和突出重点。即使成品比我们的原意要偏红，作品整体也不"
+"至于会因此毁掉。我们可以回顾本文开头孩子们画画的例子，虽然每张图的颜色存在偏"
+"差，但这并不妨碍我们理解图像想要表达的颜色是什么。我们还可以在后期对颜色进行"
+"修正，只是修正的过程会很麻烦。要是一开始就把观察条件考虑在内，我们日后的工作"
+"就可以更加轻松。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:139
+msgid ""
+"That said, for artists it is also very useful to understand the working "
+"spaces. Different working spaces give different results with filters and "
+"mixing, and only some working spaces can be used for advanced technology "
+"like HDR."
+msgstr ""
+"尽管如此，了解工作空间的相关知识对于画手来说还是相当有用的。不同的工作空间在"
+"使用滤镜和混合颜色时会给出不同的结果。如果要运用像 HDR 这样的高科技，也需要知"
+"道哪些工作空间与之兼容。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:141
+msgid ""
+"Similarly, Krita, as a program intended to make images from scratch, doesn't "
+"really worry about assigning workspaces after having made the image. But "
+"because you are using the screen as a binocular to look at your image, and "
+"to pick colors, you can see your screen's device space as an input space to "
+"the image. Hence why profiling your monitor and giving the profile to Krita "
+"in the settings can help with preparing your work for print and future "
+"ventures in the long run."
+msgstr ""
+"正如上文所说的那样，Krita 是一个专门为了从头开始绘制图像而设计的程序，它的工"
+"作空间不是在图像制作完成之后才去指定的。因为你必须通过显示器去观察正在制作的"
+"图像，在显示器对图像的影响下选取颜色，所以显示器的设备空间可被看作是图像的输"
+"入空间。这也是为什么你应该为你的显示器进行特性化，并把生成的特性文件指定给 "
+"Krita。这一步虽然麻烦，但从长远来看可以为你的绘画和印前准备带来极大的好处。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:143
+msgid ""
+"Overall, it is kinda useful to keep things like viewing conditions in the "
+"back of your mind. Many professional artists use a mid-gray color as their "
+"default canvas background because they find they create much more dynamic "
+"images due to having improved their viewing conditions. It is also why a lot "
+"of graphics programs, including Krita, come with a dark theme nowadays. "
+"(Though, of course this might also be because dark themes can be considered "
+"cool, who knows.)"
+msgstr ""
+"不管怎样，我们应该时刻留意观察条件带来的影响。许多专业的画手会选用中性灰作为"
+"画布背景色，因为他们发现这样可以画出光色更为明快的作品，而这背后的原理便是中"
+"性灰改善了他们的观察条件。这也是为什么包括 Krita 在内的众多影像软件都会自带一"
+"套暗色主题。(不过说不定也因为暗色主题看起来更高大上一些)"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:148
+msgid "ICC profiles"
+msgstr "ICC 特性文件"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:150
+msgid ""
+"An ICC profile is a set of coordinates describing the extremities of the "
+"device space within XYZ, and it is the color management data you use to "
+"communicate your working space to printers and applications that are "
+"designed for the print industry, such as Gimp, Scribus, Photoshop, "
+"Illustrator, Inkscape, digiKam, RawTheraphee, etc. You have two types of ICC "
+"profiles:"
+msgstr ""
+"ICC 特性文件是一组用于色彩管理的坐标数据，它描述了在 XYZ 坐标中设备空间的各个"
+"顶点。它用于在工作空间和打印机之间，或者在不同的印刷行业软件之间进行色彩转换"
+"和配合，如 GIMP、Scribus、Photoshop、Illustrator、Inkscape、digiKam、"
+"RawTheraphee 等。ICC 特性文件有两种："
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:153
+msgid ""
+"These are delivered alongside Krita. Matrix shaper profiles are made by "
+"setting parameters and interpolating between these to get the exact size of "
+"the color space. Due to this, Krita's color space browser can give you a lot "
+"of information on these profiles. Such profiles are also preferable as "
+"working space."
+msgstr ""
+"这些特性文件是 Krita 自带的。阶调矩阵特性文件中包含了各个坐标点的参数和它们之"
+"间的插值，以此确定色彩空间的确切体积。Krita 的色彩空间浏览器已经为它们准备了"
+"详尽的介绍资料。这些特性文件适合用作工作空间。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:159
+msgid "Matrix Shaper profiles"
+msgstr "阶调矩阵特性文件"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:159
+msgid ""
+"Matrix shaper profiles have a few parameters that describe the color space "
+"which are then interpolated between, this requires a lot of maths."
+msgstr ""
+"阶调矩阵特性文件包含了一些描述色彩空间的坐标参数，在这些参数之间的部分则是通"
+"过插值来填补的，这需要进行大量的数学运算。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:162
+msgid ""
+"These are fairly rare, and primarily used to describe printer profiles, such "
+"as CMYK. cLUT, or Color Look-up Table profiles store far more data than "
+"Matrix shaper profiles, so they can hold data of little particularities "
+"caused by, for example, unexpected results from mixing pigments. This is a "
+"far more organic approach to describing a color space, hence why a lot of "
+"programs that don't care for color management much don't support these."
+msgstr ""
+"这种特性文件并不常见，主要用于描述打印机设备空间，如 CMYK 等。cLUT 是 Color "
+"Look-up Table 即查找表的英文缩写，它们比阶调矩阵特性文件的数据量要大得多，这"
+"样才能能针对一些难以预见的情况，如某些颜料的混合特性等保存所需的数据。这是描"
+"述色彩空间的一种极为专业的手段，所以许多不关注色彩管理的程序不会支持它们。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:168
+msgid ""
+"cLUT profiles work by holding tables of each color in a color space and "
+"their respective coordinates in a reference space. For CMYK this is "
+"typically L\\*A\\*B\\* and for the rest XYZ. These tables are tricky to "
+"make, which means these profiles are a lot rarer."
+msgstr ""
+"cLUT 特性文件为处于该色彩空间中的每种颜色准备了表格以记录它们在参考空间中的坐"
+"标。对 CMYK 而言一般采用 L\\*A\\*B\\* 空间，而其他类型的特性文件通常使用 XYZ "
+"空间。这些表格的制作过程格外麻烦，所以它们也较为少见。 "
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:169
+msgid "cLUT profiles"
+msgstr "cLUT 特性文件"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:171
+msgid ""
+"The interesting thing about ICC profiles is that your working space can be "
+"larger than your device space. This is generally not bad. However, when "
+"converting, you do end up with the question of how to translate the working "
+"space values."
+msgstr ""
+"ICC 特性文件的有趣之处是你可以使用一个比设备空间更宽广的工作空间。一般来说这"
+"不是坏事，可到了转换空间的时候你就得面对如何转换工作空间数值的问题。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:174
+msgid "Perceptual"
+msgstr "可感知"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:174
+msgid ""
+"This just squishes the values of the working space into the space it's "
+"converted to. It's a nice method to see all possible values in this, but not "
+"so good if you want accurate color reproduction. Use this if you want to see "
+"all colors in an image, or want to express all possible contrasts. Doesn't "
+"work with Matrix Shaper profiles, defaults to relative colorimetric."
+msgstr ""
+"此模式把工作空间中的数值进行挤压，然后塞进要转换到的目标空间里。这种转换手段"
+"对于重现可感知的全部明度范围很有用，但不适合需要精确重现颜色的用途。如果你想"
+"分清一个图像中的各种颜色，或者想要完整表达原图各种光色之间的明暗关系，可以选"
+"用此模式。此模式不兼容阶调矩阵特性文件，它默认给相对比色模式使用。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:177
+msgid "Absolute Colorimetric"
+msgstr "绝对比色"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:177
+msgid ""
+"The opposite to Perceptual, Absolute colorimetric will attempt to retain all "
+"the correct colors at whatever cost, which may result in awful looking "
+"colors. Recommended only for reproduction work. Doesn't work with Matrix "
+"Shaper profiles in Krita due to ICC v4 workflow standards."
+msgstr ""
+"与可感知模式相反，绝对比色模式会牺牲一切其他因素来保持正确的颜色数值，这样有"
+"可能产生难看的颜色。建议仅用于色彩重现工作。由于 ICC v4 色彩管理流程标准的限"
+"制，此模式不兼容阶调矩阵特性文件。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:180
+msgid "Relative Colorimetric"
+msgstr "相对比色"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:180
+msgid ""
+"An in between solution between perceptual and absolute, relative will try to "
+"fit whatever colors it can match between color spaces. It does this by "
+"aligning the white and black points. It cuts off the rest to their "
+"respective borders. This is what all matrix shaper profiles default to "
+"during conversion, because the ICC v4 workflow specifies to only use "
+"Relative Colorimetric for matrix shaper profiles."
+msgstr ""
+"这是一个介于可感知模式和绝对比色模式之间的模式。相对比色模式会首先尝试匹配两"
+"个色彩空间中相同的颜色。要做到这一点，它首先对齐两个空间的白点和黑点，然后沿"
+"着两个空间的相对边界进行切除。由于 ICC v4 色彩管理流程规范只允许为阶调矩阵特"
+"性文件使用相对比色模式，因此所有阶调矩阵特性文件都默认使用此模式。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:183
+msgid "Saturation"
+msgstr "饱和度优先"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:183
+msgid ""
+"Does anything to retain colorfulness, even hue will be sacrificed. Used in "
+"infographics. Doesn't work with Matrix Shaper profiles, defaults to relative "
+"colorimetric."
+msgstr ""
+"此模式会不惜一切代价来保持颜色的鲜艳程度，为此可以牺牲色相的一致性。用于信息"
+"图。此模式不兼容阶调矩阵特性文件，那些特性文件会默认使用相对比色模式。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:185
+msgid ""
+"*ICC profile version* is the last thing to keep in mind when dealing with "
+"ICC profiles. Krita delivers both Version 2 and Version 4 profiles, with the "
+"later giving better results in doing color maths, but the former being more "
+"widely supported (as seen below in 'Interaction with other applications'). "
+"This is also why Krita defaults to V2, and we recommend using V2 when you "
+"aren't certain if the other programs you are using support V4."
+msgstr ""
+"**ICC 特性文件版本** 是在与 ICC 特性文件打交道时最后一件需要留意的事情。"
+"Krita 同时预装了符合第 2 版 (V2) 和第 4 版 (V4) 规范的特性文件，后者进行颜色"
+"运算时效果更好，但前者的受支持范围更广 (参见下文“与其他应用程序配合”一节)，因"
+"此 Krita 默认使用 V2，我们也建议在无法确定其他程序是否支持 V4 的情况下选用 "
+"V2。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:188
+msgid "LUT docker and HDR imaging"
+msgstr "LUT 工具面板和 HDR 成像"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:196
+msgid ""
+"The :ref:`lut_docker` is the second important bit of color management in "
+"Krita that is shared between Krita and programs like Blender, Natron and "
+"Nuke, and only uses Look Up Tables that are configured via a config file."
+msgstr ""
+":ref:`lut_docker` 是 Krita 次要的色彩管理模块，它与 Blender、Natron 和 Nuke "
+"的色彩管理系统可以互通，它仅使用配置文件中定义的查找表。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:198
+msgid ""
+"You can set the workingspace of the image under input color space, and the "
+"display to sRGB or your own LUT if you have added it to the configuration. "
+"View in this case is for proofing transforms to a certain display device."
+msgstr ""
+"你可以在“输入色彩空间”处设置图像的工作空间，然后把“显示设备”设为 sRGB 或者你"
+"添加到配置中的自定义 LUT 文件。在此场景下的“视图”选单可以用来模拟某种显示设备"
+"进行软打样。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:200
+msgid ""
+"Component, exposure, gamma, whitepoint and blackpoint are knobs which allows "
+"you to modify the display filter."
+msgstr "颜色分量、曝光、gamma、白点和黑点滑动条用于对视图的显示滤镜进行调整。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:208
+msgid ""
+"As explained before, we can see our monitor as a telescope or binocular into "
+"the world of our picture. Which means it distorts our view of the image a "
+"little. But we can modify this binocular, or display filter to see our image "
+"in a different way. For example, to allow us to see the white in an image "
+"that are whiter than the white of our screen. To explain what that means, we "
+"need to think about what white is."
+msgstr ""
+"正如前面解释的那样，我们可以把显示器看作是用来观察图像的一个望远镜，它会对图"
+"像造成轻微的影响。我们也可以对这个望远镜进行改造，就好象插入了一片滤镜的方式"
+"来以另外一种方式去观察图像。例如我们可以通过某种改造让我们可以看见比我们的显"
+"示器的白点更亮的白。要说清楚这一点，我们要首先讨论一下白是什么。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:210
+msgid ""
+"For example, white, on our monitor is full red, full green and full blue. "
+"But it's certainly different from white on our paper, or the color of milk, "
+"white from the sun, or even the white of our cell-phone displays."
+msgstr ""
+"例如，我们显示器上的白是它能够显示的最亮的纯红、纯绿和纯蓝叠加而来的。这种白"
+"受显示器自身特性的影响，和白纸的白、牛奶的白、阳光的白，甚至是随便一台手机显"
+"示的白都是不一样的。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:212
+msgid ""
+"Black similarly, is brighter on a LCD display than a LED one, and "
+"incomparable with the black of a carefully sealed room."
+msgstr ""
+"黑也是同理，在 LCD 面板上的黑要比 LED 面板上的黑要更亮，这是因为 LCD 面板使用"
+"一组背光照亮整个面板，即使纯黑的画面也会漏出少许背光，而 LED 面板在纯黑的位置"
+"是不发光的。正因如此，LCD 面板的黑与一间被彻底密封起来的房间内部的黑根本没有"
+"可比性。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:214
+msgid ""
+"This means that there's potentially blacker blacks than screen black, and "
+"white whites than screen white. However, for simplicity's sake we still "
+"assign the black-point and the white-point to certain values. From there, we "
+"can determine whether a white is whiter than the white point, or a black "
+"blacker than the black-point."
+msgstr ""
+"这意味着可能存在比屏幕显示的黑更暗的黑，比屏幕显示的白更亮的白。不过为了方便"
+"起见，让我们先将黑点和白点指定成某个数值，然后比较某种黑是否比该黑点更暗，某"
+"种白是否比该白点更亮。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:216
+msgid ""
+"The LUT docker allows us to control this display-filter and modify the "
+"distortion. This is useful when we start modifying images that are made with "
+"scene referred values, such as HDR photos, or images coming out of a render "
+"engine."
+msgstr ""
+"LUT 工具面板让我们可以对视图显示滤镜对色彩施加的变化进行控制。这项功能用于修"
+"改那些为场景光参考亮度而制作的图像，如 HDR 照片或者由渲染引擎输出的图像。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:224
+msgid ""
+"So, for example, we can choose to scale whiter-than-screen-white to our "
+"screen-white so we can see the contrasts there."
+msgstr ""
+"例如我们可以把比屏幕白更亮的白的范围按照我们的屏幕白进行等比挤压，这样就可以"
+"看清整体的明暗关系了。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:226
+msgid ""
+"The point of this is that you can take advantage of more lightness detail in "
+"an image. While you can't see the difference between screen white and whiter-"
+"than-screen-white (because your screen can't show the difference), graphics "
+"programs can certainly use it."
+msgstr ""
+"这么做的意义是让你看清楚图像亮部所包含的细节。尽管你无法分辨屏幕白和比它更亮"
+"的白的真实区别 (因为你的屏幕显示不出来)，图像程序依然能够照常处理其中的色彩数"
+"据。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:228
+msgid ""
+"A common example is matching the lighting between a 3d model and a real "
+"world scene. Others are advanced photo retouching, with much more contrast "
+"information available to the user. In painting itself, this allows you to "
+"create an image where you can be flippant with the contrast, and allow "
+"yourself to go as bright as you'd like."
+msgstr ""
+"一个常见的用例是在一个 3D 模型与现实场景之间匹配光照效果。另外一个用例是高级"
+"照片修图作业时通过这种手段呈现图像中尽可能多的色彩对比信息。对于绘画作业本身"
+"而言，这让你可以自如地控制整体的对比度和亮度。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:230
+msgid ""
+"LUT docker manipulations are per view, so you can create a new view and set "
+"it to luminosity. This way you can see the image in both color as well as "
+"grayscale and keep a good eye on your values."
+msgstr ""
+"LUT 面板可以对每个视图单独进行色彩控制，你可以创建一个新视图并设置为“明度”模"
+"式，这样你就可以同时看见彩色图和灰度图，便于把握图像整体的亮度。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:232
+msgid ""
+"Another example is to carefully watch the gradients in a certain section."
+msgstr "还有一个用例就是对某段色彩渐变的呈现效果进行仔细的监测。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:234
+msgid ""
+"Like ICC, the LUT Docker allows you to create a profile of sorts for your "
+"device. In this case it's the 'LUT', which stands for 'Look Up Table', and "
+"which can be added to OCIO by modifying the configuration file. When OCIO is "
+"turned on, the configuration in :menuselection:`Settings --> Configure "
+"Krita... --> Color Management` is turned off, unless you are using the :"
+"guilabel:`Internal` color engine."
+msgstr ""
+"你可以在 LUT 面板里创建一个类似 ICC 的特性文件。在这里我们要创建的"
+"是“LUT” (Look Up Table，查找表)，通过修改 OCIO 配置文件可将其添加进 OCIO。启"
+"用 OCIO 后，菜单栏的 :menuselection:`设置 --> 配置 Krita --> 色彩管理` 选项页"
+"面将被禁用。你只能在使用 :guilabel:`内建` 色彩引擎时才能使用该选项页面。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:237
+msgid "In summary"
+msgstr "总结"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:239
+msgid "Krita has two modes of color management:"
+msgstr "Krita 具备两种色彩管理模式："
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:241
+msgid ""
+"ICC works in terms of spaces relative to the CIEXYZ space, and requires an "
+"ICC profile."
+msgstr "ICC 基于 CIEXYZ 参考色彩空间工作，需要使用 ICC 特性文件。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:242
+msgid "OCIO works in terms of interpretation, and makes use of LUTs."
+msgstr "OCIO 以“解读”原则用来调整视图的色彩呈现效果，它使用的是 LUT 查找表。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:243
+msgid "both can be made with a colorimeter."
+msgstr "ICC 特性文件和 LUT 查找表都可以使用色差计进行制作。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:244
+msgid ""
+"If you want to have a properly color managed workflow, you have one made "
+"customary for the input device (your screen) and the output devices (your "
+"printer, or target screen). For web the output is always sRGB."
+msgstr ""
+"如果你想要组建一个正确的色彩管理流程，你必须自行为输入设备 (你的显示器) 和输"
+"出设备 (你的打印机或者目标显示器) 制作相应的 ICC 特性文件或者 LUT 查找表。面"
+"向网络用途的输出图像应该总是使用 sRGB 空间。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:245
+msgid ""
+"Set up your screen profiles under :menuselection:`Settings --> Configure "
+"Krita... --> Color management`."
+msgstr ""
+"你可以在菜单栏的 :menuselection:`设置 --> 配置 Krita --> 色彩管理` 选项页面设"
+"置显示器的特性文件。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:246
+msgid ""
+"Do NOT use screen profiles or other device profiles to draw in. Use a "
+"working space profile such as any of the 'elle' profiles for this, as the "
+"color maths will be much more predictable and pleasant. Krita will convert "
+"between your screen and working space on the fly, allowing you to pick the "
+"correct colors. This turns your screen into binoculars to view the image."
+msgstr ""
+"切勿在绘制图像时使用显示器或者其他设备特性文件作为工作空间。你应当为图像指定"
+"一个“elle”系列或者类似的工作空间。这些工作空间能让色彩运算的效果更好，更易于"
+"预测。Krita 会即时地在显示器的设备空间和工作空间之间进行色彩转换，确保你可以"
+"看见并选取正确的颜色。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:247
+msgid ""
+"Use the appropriate color management for the appropriate workflow. If you "
+"are working with Blender, you will be better off using OCIO, than ICC. If "
+"you are working with Scribus or Photoshop, use ICC."
+msgstr ""
+"你应该按照色彩管理流程的具体情况选用合适的色彩管理方式。如果你要与 Blender 协"
+"同工作，你应该选用 OCIO 而不是 ICC。如果你要与 Scribus 或者 Photoshop 协同工"
+"作，你应该选用 ICC。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:249
+msgid ""
+"Krita does a lot of color maths, often concerning the blending of colors. "
+"This color maths works best in linear color space, and linear color space "
+"requires a bit depth of at the least 16bit to work correctly. The "
+"disadvantage is that linear space can be confusing to work in."
+msgstr ""
+"Krita 会进行大量的色彩运算，这常常与颜色的混合有关。此类运算在线性的色彩空间"
+"中效果最好，而线性的色彩空间要求至少 16 位的通道深度才能正常工作。线性空间纵"
+"然有诸多好处，但它的缺点是不好理解。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:251
+msgid ""
+"If you like painting, have a decent amount of RAM, and are looking to start "
+"your baby-steps in taking advantage of Krita's color management, try "
+"upgrading from having all your images in sRGB built-in to sRGB-v2-elle-g10."
+"icc or rec2020-v2-elle-g10.icc at 16bit float. This'll give you better color "
+"blending while opening up the possibility for you to start working in HDR!"
+msgstr ""
+"如果你喜欢绘画，又有足够的内存，现在想要迈出利用 Krita 色彩管理功能的第一步，"
+"那么你可以首先把你所有的图像的工作空间从 sRGB built-in 转换到 16 位浮点下的 "
+"sRGB-v2-elle-g10.icc 或者 rec2020-v2-elle-g10.icc 特性文件。这不但可以使得色"
+"彩的混合效果更好，而且也为你打开了通向 HDR 图像编辑的大门。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:256
+msgid ""
+"Some graphics cards, such as those of the NVidia-brand actually have the "
+"best performance under 16bit float, because NVidia cards convert to floating "
+"point internally. When it does not need to do that, it speeds up!"
+msgstr ""
+"某些显卡，如使用 Nvidia 芯片的显卡在使用 16 位浮点通道时性能最佳，这是因为 "
+"Nvidia 显卡会在内部将数据转换成浮点格式。如果图像本身就是使用浮点，这个转换过"
+"程就可以省略，处理速度也会因此提高。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:260
+msgid ""
+"No amount of color management in the world can make the image on your screen "
+"and the image out of the printer have 100% the same color."
+msgstr ""
+"在现实条件下，不管色彩管理手段如何先进，执行过程如何完善，也绝无可能在屏幕显"
+"示和打印输出之间保持 100% 一致的颜色。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:263
+msgid "Exporting"
+msgstr "导出图像时的相关技巧"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:265
+msgid ""
+"When you have finished your image and are ready to export it, you can modify "
+"the color space to optimize it:"
+msgstr "在处理完一张图像并准备导出时，你可以修改它的色彩空间以优化输出效果："
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:267
+msgid "If you are preparing an image for the web:"
+msgstr "如果你要为网络用途准备该图像："
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:269
+msgid ""
+"If you use 16bit color depth or higher, convert the image to 8bit color "
+"depth. This will make the image much smaller."
+msgstr ""
+"如果你的工作空间色彩深度在 16 位或以上，你应该在导出时把图像转换为 8 位深度。"
+"这样会大大缩小图像的体积。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:271
+msgid ""
+"Krita doesn't have built-in dithering currently, which means that 16 to 8bit "
+"conversions can come out a bit banded. But you can simulate it by adding a "
+"fill layer with a pattern, set this fill layer to overlay, and to 5% "
+"opacity. Then flatten the whole image and convert it to 8bit. The pattern "
+"will function as dithering giving a smoother look to gradients."
+msgstr ""
+"Krita 目前尚不具备内建的抖动算法，这意味着从 16 位转换到 8 位深度时会产生轻微"
+"的颜色条纹。不过你可以通过下述手段来模拟颜色抖动：插入一个填充图层，在其中填"
+"充一个图案，将不透明度设为 5% 然后把图层的混合方式设成叠加。把整个图像平整为"
+"一层，然后再把它转换成 8 位。你刚才填充的图案便会如同抖动效果一样，让转换后的"
+"渐变色彩更为平滑。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:273
+msgid "If it's a gray-scale image, convert it to gray-scale."
+msgstr "如果图像只含有灰度，那就把它的色彩空间转换为灰阶。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:274
+msgid ""
+"If it's a color image, keep it in the working space profile: Many web "
+"browsers these days support color profiles embedded into images. Firefox, "
+"for example, will try to convert your image to fit the color profile of the "
+"other monitor (if they have one). That way, the image will look almost "
+"exactly the same on your screen and on other profiled monitors."
+msgstr ""
+"如果图像是彩色的，那就把它的工作空间特性文件保存到图像中。现在许多网页浏览器"
+"都能处理嵌入在图像中的色彩特性文件。以 Firefox 为例，如果对方的显示器具备一个"
+"色彩特性文件，Firefox 便会把你的图像按照该设备空间进行转换。这样一来该图像便"
+"可以在你的源显示器和已特性化的其他显示器上呈现几乎一致的效果。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:279
+msgid ""
+"In some versions of Firefox, the colors actually look strange: This is a bug "
+"in Firefox, which is because its `color management system is incomplete "
+"<https://ninedegreesbelow.com/galleries/viewing-photographs-on-the-web."
+"html>`_, save your PNG, JPG or TIFF without an embedded profile to work "
+"around this."
+msgstr ""
+"嵌入了特性文件的图像在某些版本的 Firefox 里会呈现不正常的颜色。这是 Firefox "
+"的一个已知问题，因为它的\\ `色彩管理系统并不完整 <https://ninedegreesbelow."
+"com/galleries/viewing-photographs-on-the-web.html>`_\\ 。要避免这种情况，可以"
+"在保存 PNG、JPG 或 TIFF 图像时不嵌入特性文件。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:281
+msgid "If you are preparing for print:"
+msgstr "如果你在进行印前准备："
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:283
+msgid ""
+"You hopefully made the picture in a working space profile instead of the "
+"actual custom profile of your screen, if not, convert it to something like "
+"Adobe RGB, sRGB or Rec. 2020."
+msgstr ""
+"在制作需要打印的图像时，应该为图像指定一个工作空间特性文件，最好不要为图像指"
+"定显示器的自定义设备空间特性文件。如果你的图像使用了显示器特性文件，你应该把"
+"它转换成例如 Adobe RGB、sRGB 或者 Rec. 2020 这样的工作空间特性文件。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:284
+msgid ""
+"Check with the printer what kind of image they expect. Maybe they expect "
+"sRGB color space, or perhaps they have their own profile."
+msgstr ""
+"你要检查清楚打印机能够接受的图像色彩空间。有些打印机可以接受 sRGB 色彩空间，"
+"另外一些则要使用它们自己的特性文件。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:287
+msgid "Interaction with other applications"
+msgstr "与其他应用程序配合"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:290
+msgid "Blender"
+msgstr "Blender"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:292
+msgid ""
+"If you wish to use Krita's OCIO functionality, and in particular in "
+"combination with Blender's color management, you can try to have it use "
+"Blender's OCIO config."
+msgstr ""
+"如果你想要使用 Krita 的 OCIO 功能，尤其是要与 Blender 的色彩管理功能协同工作"
+"时，你可以让 Krita 直接调用 Blender 的 OCIO 配置。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:294
+msgid ""
+"Blender's OCIO config is under ``<Blender-folder>/version number/datafiles/"
+"colormanagement``. Set the LUT docker to use the OCIO engine, and select the "
+"config from the above path. This will give you Blender's input and screen "
+"spaces, but not the looks, as those aren't supported in Krita yet."
+msgstr ""
+"Blender 的 OCIO 配置可以在 ``<Blender 程序文件夹>/版本号/datafiles/"
+"colormanagement`` 下面找到。将 LUT 面板设为使用 OCIO 引擎，然后把配置指定为上"
+"述路径。如此即可使用 Blender 的输入和屏幕空间，但 Krita 尚不支持它的观察空"
+"间。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:298
+msgid "Windows Photo Viewer"
+msgstr "Windows 照片查看器"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:300
+msgid ""
+"You might encounter some issues when using different applications together. "
+"One important thing to note is that the standard Windows Photo Viewer "
+"application does not handle modern ICC profiles. Krita uses version 4 "
+"profiles; Photo Viewer can only handle version 2 profiles. If you export to "
+"JPEG with an embedded profile, Photo Viewer will display your image much too "
+"dark."
+msgstr ""
+"Krita 生成的图像与某些应用程序之间存在兼容性问题。其中一个重要的问题发生在 "
+"Windows 自带的照片查看器上面，因为它无法处理新型的 ICC 特性文件。Krita 使用"
+"第 4 版的特性文件，而 Windows 照片查看器只能处理第 2 版的特性文件。如果你在导"
+"出成 JPEG 时嵌入了特性文件，Windows 照片查看器会把该图像显示得过于昏暗。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:303
+msgid "Example workflows"
+msgstr "色彩管理流程范例"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:305
+msgid ""
+"Here are some example workflows to get a feeling of how your color "
+"management workflow may look like."
+msgstr "下面时一些色彩管理流程的范例，你可以参考它们来规划自己的色彩管理流程。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:307
+msgid ""
+"As mentioned before, input for your screen is set via :menuselection:"
+"`Settings --> Configure Krita... --> Color management`, or via the LUT "
+"docker's 'screen space'. Working space is set via new file per document, or "
+"in the LUT docker via 'input space'."
+msgstr ""
+"如前所述，显示器的输入空间是在菜单栏的 :menuselection:`设置 --> 配置 Krita --"
+"> 色彩管理` 选项页面或者在 LUT 面板的“显示设备”处设置的。工作空间既可以在新建"
+"图像时设置，也可以在 LUT 面板的“输入空间”处设置。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:310
+msgid "Webcomic"
+msgstr "网络漫画"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:317
+#: ../../general_concepts/colors/color_managed_workflow.rst:339
+#: ../../general_concepts/colors/color_managed_workflow.rst:357
+msgid "Input"
+msgstr "输入空间"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:318
+#: ../../general_concepts/colors/color_managed_workflow.rst:340
+#: ../../general_concepts/colors/color_managed_workflow.rst:358
+msgid "Your screen profile. (You pick colors via your screen)"
+msgstr "你的显示器特性文件，因为你在制作图像时通过这台显示器选取颜色。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:319
+#: ../../general_concepts/colors/color_managed_workflow.rst:341
+#: ../../general_concepts/colors/color_managed_workflow.rst:359
+msgid "Workingspace"
+msgstr "工作空间"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:320
+msgid ""
+"sRGB (the default screen profile) or any larger profile if you can spare the "
+"bit depth and like working in them."
+msgstr ""
+"sRGB (默认显示器特性文件)，如果你喜欢也可以换用其他空间更大的特性文件，但前提"
+"是你的计算机能够流畅处理更高的位深度。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:322
+#: ../../general_concepts/colors/color_managed_workflow.rst:344
+#: ../../general_concepts/colors/color_managed_workflow.rst:362
+msgid "Output"
+msgstr "输出空间"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:322
+msgid ""
+"sRGB, ICC version 2, sRGB TRC for the internet, and a specialized CMYK "
+"profile from the printing house for the printed images."
+msgstr ""
+"sRGB，ICC 第 2 版，为互联网用途而设的 sRGB TRC 空间，还有印刷公司提供的专供打"
+"印图像使用的 CMYK 特性文件。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:324
+msgid ""
+"Use the sRGB-elle-V2-srgbtrc.icc for going between Inkscape, Photoshop, "
+"Paint Tool SAI, Illustrator, Gimp, Manga Studio, Paintstorm Studio, MyPaint, "
+"Artrage, Scribus, etc. and Krita."
+msgstr ""
+"使用 sRGB-elle-V2-srgbtrc.icc 来在 Inkscape、Photoshop、Paint Tool SAI、"
+"Illustrator、GIMP、Manga Studio、Paintstorm Studio、Mypaint、Artrage、"
+"Scribus 和 Krita 之间交换图像。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:326
+msgid ""
+"If you are using a larger space via ICC, you will only be able to "
+"interchange it between Krita, Photoshop, Illustrator, Gimp 2.9, Manga Studio "
+"and Scribus. All others assume sRGB for your space, no matter what, because "
+"they don't have color management."
+msgstr ""
+"如果通过 ICC 运用比这更大的色彩空间，则只能在 Krita、Photoshop、Illustrator、"
+"GIMP 2.9、Manga Studio 和 Scribus 之间进行互换。其他的软件会无条件地假定你的"
+"工作空间是 sRGB，因为它们并不具备色彩管理功能。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:328
+msgid ""
+"If you are going between Krita and Blender, Nuke or Natron, use OCIO and set "
+"the input space to 'sRGB', but make sure to select the sRGB profile for ICC "
+"when creating a new file."
+msgstr ""
+"如果你在 Krita 与 Blender、Nuke、Natron 之间进行互换，使用 OCIO 并将输入空间"
+"设为 “sRGB”，但记得在新建图像的 ICC 色彩空间选项中选择 sRGB 色彩特性文件。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:330
+msgid ""
+"For the final for the web, convert the image to sRGB 8bit, 'srgbtrc', do not "
+"embed the ICC profile. Then, if using PNG, put it through something like "
+"'pngcrush' or other PNG optimizers. sRGB in this case is chosen because you "
+"can assume the vast majority of your audience hasn't profiled their screen, "
+"nor do they have screens that are advanced enough for the wide gamut stuff. "
+"So hence why we convert to the screen default for the internet, sRGB."
+msgstr ""
+"对于面向网络输出的最终图像，应将图像转换为 8 位的 sRGB，'srgbtrc'，不要嵌入 "
+"ICC 特性文件。如果你输出成 PNG，还可以用 'PNGCrush' 或者其他应用对其进行优化"
+"处理。在此场景中选用 sRGB 的理由是：你可以假设绝大多数受众都不会为他们的屏幕"
+"进行特性化，而他们的屏幕大概也不会高级到可以支持宽色域之类的特性。所以我们应"
+"该默认使用 sRGB 来转换用于互联网的图像。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:333
+msgid "Print"
+msgstr "打印"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:342
+msgid "sRGB or Rec. 2020 if you can afford the bit-depth being 16bit."
+msgstr "sRGB。如果你能使用 16 位深度，则使用 Rec. 2020。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:344
+msgid ""
+"Specialized CMYK profile from the printing house for the printed images."
+msgstr "印刷公司为打印图像提供的专用 CMYK 特性文件。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:346
+msgid ""
+"The CMYK profiles are different per printer, and even per paper or ink-type "
+"so don't be presumptuous and ask ahead for them, instead of doing something "
+"like trying to paint in any random CMYK profile. As mentioned in the viewing "
+"conditions section, you want to keep your options open."
+msgstr ""
+"每台打印机的 CMYK 特性文件都是不同的，有些打印机甚至针对不同的纸张和油墨准备"
+"了不同的特性文件，因此不能随便找一个 CMYK 特性文件用于印刷。你应该直接向你的"
+"印刷公司索取专用的特性文件。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:348
+msgid ""
+"You can set the advanced color selector to transform to a given profile via :"
+"menuselection:`Settings --> Configure Krita... --> Color Selector Settings`. "
+"There, tick :guilabel:`Color Selector Uses Different Color Space than Image` "
+"and select the CMYK profile you are aiming for. This will limit your colors "
+"a little bit, but keep all the nice filter and blending options from RGB."
+msgstr ""
+"你可以将高级拾色器设成匹配某个特性文件，首先到菜单栏的 :menuselection:`设置 "
+"--> 配置 Krita --> 高级拾色器设置` 。勾选 :guilabel:`拾色器使用与图像不同的色"
+"彩空间` 然后选取你的目标 CMYK 特性文件。这将略微限制你能够运用的颜色，但你依"
+"然可以在 RGB 空间下面使用所有滤镜和混合模式。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:351
+msgid "Games"
+msgstr "游戏"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:360
+msgid "sRGB or grayscale linear for roughness and specular maps."
+msgstr "对于粗糙度和高光贴图，应选用线性 sRGB 或灰阶。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:362
+msgid ""
+"This one is tricky, but in the end it'll be sRGB for the regular player."
+msgstr "这个比较棘手，但一般情况下使用 sRGB。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:364
+msgid ""
+"So this one is tricky. You can use OCIO and ICC between programs, but "
+"recommended is to have your images to the engine in sRGB or grayscale. Many "
+"physically based renderers these days allow you to set whether an image "
+"should be read as a linear or 'srgbtrc' image, and this is even vital to "
+"have the images being considered properly in the physically based "
+"calculations of the game renderer."
+msgstr ""
+"这一点比较复杂，因为：虽然你可以在不同的程序之间使用 OCIO 和 ICC，但我们推荐"
+"把供引擎使用的图像设为 sRGB 或灰阶。有许多基于物理原理的现代渲染器允许把图像"
+"指定为线性图像或者 'srgbtrc' 图像来进行处理。在该类渲染器中图像空间的正确识别"
+"至关重要，所以设为 sRGB 是一种额外的保险。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:366
+msgid ""
+"While game engines need to have optimized content, and it's recommended to "
+"stay within 8bit, future screens may have higher bit depths, and when "
+"renderers will start supporting those, it may be beneficial to develop a "
+"workflow where the working-space files are rather unnecessarily big and you "
+"run some scripts to optimize them for your current render needs, making "
+"updating the game in the future for fancier screens less of a drag."
+msgstr ""
+"虽然游戏引擎需要加载为它们优化过的内容，一般推荐使用 8 位深度，但未来的屏幕可"
+"能会具备更高的位深度，而渲染器终有一天会支持这些特性。为了减少日后更新游戏素"
+"材时的痛苦，可以现在就打造一个采用更大色彩空间的色彩管理流程，然后编写一些脚"
+"本来满足当下的渲染需要。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:368
+msgid ""
+"Normal maps and heightmaps are officially supposed to be defined with a 'non-"
+"color data' working space, but you'll find that most engines will not care "
+"much for this. Instead, tell the game engine not to do any conversion on the "
+"file when importing."
+msgstr ""
+"法线贴图和高度贴图虽然是在一个“非彩色数据”的工作空间下进行定义的，但你会发现"
+"绝大多数引擎都不太在乎这个。你应该告诉游戏引擎在导入时不要进行任何转换操作。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:370
+msgid ""
+"Specular, glossiness, metalness and roughness maps are all based on linear "
+"calculations, and when you find that certain material has a metalness of "
+"0.3, this is 30% gray in a linear space. Therefore, make sure to tell the "
+"game engine renderer that this is a linear space image (or at the very "
+"least, should NOT be converted)."
+msgstr ""
+"高光、光泽度、金属度和粗糙度贴图全部基于线性运算，所以如果某种材质的金属度是 "
+"0.3，就意味着它是在一个线性空间中 30% 的灰。因此记得告诉游戏引擎的渲染器这是"
+"一个线性图像 (或者至少不要对其进行转换操作)。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:374
+msgid ""
+"`Visualizing the XYZ color space <https://www.youtube.com/watch?v=x0-"
+"qoXOCOow>`_."
+msgstr ""
+"`对 XYZ 色彩空间的视觉化介绍 <https://www.youtube.com/watch?v=x0-"
+"qoXOCOow>`_。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:375
+msgid ""
+"`Basics of gamma correction <https://www.cambridgeincolour.com/tutorials/"
+"gamma-correction.htm>`_."
+msgstr ""
+"`Gamma 校正的基础知识 <https://www.cambridgeincolour.com/tutorials/gamma-"
+"correction.htm>`_。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:376
+msgid ""
+"`Panda3D example of how an image that has gamma encoded without the 3D "
+"renderer being notified of it having gamma-encoding can result in too dark "
+"images <https://www.panda3d.org/blog/the-new-opengl-features-in-panda3d-1-9/"
+">`_."
+msgstr ""
+"`Panda3D 关于并非通过 3D 渲染器编码的图像会被提示其 gamma 编码将造成图像过暗"
+"的说明 <https://www.panda3d.org/blog/the-new-opengl-features-in-panda3d-1-9/"
+">`_。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:377
+msgid ""
+"`2D examples of the effect of gamma-encoding on color maths <https://"
+"ninedegreesbelow.com/photography/linear-gamma-blur-normal-blend.html>`_."
+msgstr ""
+"`Gamma 编码方式对于色彩运算的影响的 2D 示例 <https://ninedegreesbelow.com/"
+"photography/linear-gamma-blur-normal-blend.html>`_。"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:378
+msgid ""
+"`Basic overview of color management from ArgyllCMS manual <https://www."
+"argyllcms.com/doc/ColorManagement.html>`_."
+msgstr ""
+"`ArgyllCMS 手册中关于色彩管理基础的概览章节 <https://www.argyllcms.com/doc/"
+"ColorManagement.html>`_。"

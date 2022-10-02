@@ -1,0 +1,101 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2022-09-20 01:56\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
+"docs_krita_org_general_concepts___file_formats___file_jpeg.pot\n"
+"X-Crowdin-File-ID: 9860\n"
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:1
+msgid "The JPEG file format as exported by Krita."
+msgstr "介绍由 Krita 导出的 JPEG 文件格式。"
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:10
+msgid "*.jpg"
+msgstr "*.jpg"
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:10
+msgid "*.jpeg"
+msgstr "*.jpeg"
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:10
+msgid "JPG"
+msgstr "JPG"
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:10
+msgid "JPEG"
+msgstr "JPEG"
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:16
+msgid "\\*.jpg"
+msgstr "\\*.jpg"
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:18
+msgid ""
+"``.jpg``, ``.jpeg`` or ``.jpeg2000`` are a family of file-formats designed "
+"to encode photographs."
+msgstr ""
+"``.jpg``、``.jpeg`` 和 ``.jpeg2000`` 是专门为编码照片而设计的文件格式家族。"
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:20
+msgid ""
+"Photographs have the problem that they have a lot of little gradients, which "
+"means that you cannot index the file like you can with :ref:`file_gif` and "
+"expect the result to look good. What JPEG instead does is that it converts "
+"the file to a perceptual color space (:ref:`YCrCb <model_ycrcb>`), and then "
+"compresses the channels that encode the colors, while keeping the channel "
+"that holds information about the relative lightness uncompressed. This works "
+"really well because human eye-sight is not as sensitive to colorfulness as "
+"it is to relative lightness. JPEG also uses other :ref:`lossy "
+"<lossy_compression>` compression techniques, like using cosine waves to "
+"describe image contrasts."
+msgstr ""
+"照片有大量微妙的颜色渐变，因此并不适合使用 :ref:`file_gif` 的索引颜色方式来进"
+"行压缩。JPEG 的解决方案则是把文件转换为可感知模型的色彩空间 (:ref:`YCrCb "
+"<model_ycrcb>`)，对颜色通道进行压缩，但不对明度通道进行压缩。这种做法的效果特"
+"别好，因为人眼对颜色的敏感程度远不及明度。JPEG 还会使用其他的 :ref:`有损 "
+"<lossy_compression>` 压缩技术，例如使用余弦波来描述图像反差等。"
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:22
+msgid ""
+"However, it does mean that JPEG should be used in certain cases. For images "
+"with a lot of gradients, like full scale paintings, JPEG performs better "
+"than :ref:`file_png` and :ref:`file_gif`."
+msgstr ""
+"这也意味着 JPEG 特别适合某些用途。对于包含了大量颜色渐变的完整色彩范围的画"
+"作，JPEG 的压缩性能要好于 :ref:`file_png` 和 :ref:`file_gif`。"
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:24
+msgid ""
+"But for images with a lot of sharp contrasts, like text and comic book "
+"styles, PNG is a much better choice despite a larger file size. For "
+"grayscale images, :ref:`file_png` and :ref:`file_gif` will definitely be "
+"more efficient."
+msgstr ""
+"可是对于包含有大量明显反差的图像，如文字和漫画风格的图像，PNG 就会比 JPEG 更"
+"加适合，尽管前者文件更大。对于灰阶图像，:ref:`file_png` 和 :ref:`file_gif` 的"
+"压缩效率都要比 JPEG 更高。"
+
+#: ../../general_concepts/file_formats/file_jpeg.rst:26
+msgid ""
+"Because JPEG uses lossy compression, it is not advised to save over the same "
+"JPEG multiple times. The lossy compression will cause the file to reduce in "
+"quality each time you save it. This is a fundamental problem with lossy "
+"compression methods. Instead use a lossless file format, or a working file "
+"format while you are working on the image."
+msgstr ""
+"由于 JPEG 使用了有损压缩方式，不建议用 JPEG 格式反复修改保存文件。有损压缩的"
+"特性会在每次保存文件时造成画质的劣化。在编辑图像时应该使用工作文件格式，避免"
+"使用有损文件格式。"

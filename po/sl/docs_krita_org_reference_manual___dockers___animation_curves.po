@@ -1,0 +1,661 @@
+# Translation of Krita Manual to Slovenian
+#
+# Copyright (C) 2021 This_file_is_part_of_KDE
+# This file is distributed under the same license as the Krita package.
+#
+#
+# Martin Srebotnjak <miles@filmsi.net>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krita ref manual\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 00:13+0000\n"
+"PO-Revision-Date: 2022-05-10 10:30+0200\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: ../../<rst_epilog>:2
+msgid ""
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: mouseleft"
+msgstr ""
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: Levi gumb miške"
+
+#: ../../<rst_epilog>:4
+msgid ""
+".. image:: images/icons/Krita_mouse_right.png\n"
+"   :alt: mouseright"
+msgstr ""
+".. image:: images/icons/Krita_mouse_right.png\n"
+"   :alt: Desni gumb miške"
+
+#: ../../reference_manual/dockers/animation_curves.rst:1
+msgid "Overview of the Animation Curves docker."
+msgstr "Pregled zloženega okna Krivulje animacije."
+
+#: ../../reference_manual/dockers/animation_curves.rst:11
+msgid "Animation"
+msgstr "Animacija"
+
+#: ../../reference_manual/dockers/animation_curves.rst:11
+msgid "Animation Curves"
+msgstr "Krivulje animacije"
+
+#: ../../reference_manual/dockers/animation_curves.rst:11
+msgid "Interpolation"
+msgstr "Interpolacija"
+
+#: ../../reference_manual/dockers/animation_curves.rst:11
+msgid "Tweening"
+msgstr "Faziranje"
+
+#: ../../reference_manual/dockers/animation_curves.rst:16
+msgid "Animation Curves Docker"
+msgstr "Zloženo okno Krivulje animacije"
+
+#: ../../reference_manual/dockers/animation_curves.rst:18
+msgid ""
+":program:`Krita`'s :dfn:`Animation Curves Docker` allows artists to animate "
+"the values of some properties over time."
+msgstr ""
+":dfn:`Zloženo okno Krivulje animacije` programa :program:`Krita` likovnikom "
+"omogoča, da skozi čas animirajo vrednosti nekaterih lastnosti."
+
+#: ../../reference_manual/dockers/animation_curves.rst:20
+msgid ""
+"When animating a complex cut, it's not unusual to want to animate things "
+"that would be difficult or inefficient to do through drawing alone. In "
+"traditional pen-and-paper animation dating back to the 1920s, special "
+"lighting rigs and purpose-built devices like multiplane cameras were used to "
+"pull off special effects that changed animation forever! Likewise, Krita's "
+"Animation Curves docker allows us to animate more than just the lines on "
+"your canvas, such as a layer's opacity or the position, rotation and scale "
+"of a :ref:`Transform Mask <transformation_masks>`."
+msgstr ""
+"Pri animaciji kompleksnega reza ni nenavadno, da bi želeli animirati stvari, "
+"ki bi jih bilo težko ali neučinkovito narediti s samim risanjem. V "
+"tradicionalni animaciji peresa in papirja, ki sega v 20. leta, ko so posebna "
+"vpetja osvetlitve in posebej izdelane naprave, kot so večravninske kamere "
+"uporabljali za izvedbo posebnih učinkov, ki so za vedno spremenili "
+"animacijo! Prav tako nam Kritino zloženo okno Krivulje animacije omogoča, da "
+"animirajo več kot le črte na vašem platnu, kot npr. prosojnost plasti ali "
+"položaj, vrtenje in merilo :ref:`maske preoblikovanja "
+"<transformation_masks>`."
+
+#: ../../reference_manual/dockers/animation_curves.rst:22
+msgid ""
+"Because most things can be boiled down to numeric values (for example, "
+"opacity as a percentage or the position of a Transform Mask), and because "
+"computers are great with maths and automation, we can plot and visualize the "
+"change in values over time on a simple 2D graph. What's more, we can also "
+"draw lines and curves that show the computer how we want it to calculate the "
+"values in between each of our plotted keyframe values; a technique known as "
+"interpolation or :dfn:`tweening`."
+msgstr ""
+"Ker večino stvari lahko zvedemo na numerične vrednosti (npr. prosojnost kot "
+"odstotek ali položaj maske preoblikovanja) in ker so računalniki odlični z "
+"matematiko in avtomatizacijo, lahko na preprostem 2D-grafu izrišemo in "
+"vizualiziramo spremembo vrednosti skozi čas. Še več, lahko narišemo tudi "
+"črte in krivulje, ki računalniku prikazujejo, kako želimo, da izračuna "
+"vrednosti med vsako od naših izrisanih vrednosti ključnih sličic; tehniko, "
+"znano kot interpolacija ali :dfn:`faziranje`."
+
+#: ../../reference_manual/dockers/animation_curves.rst:26
+msgid ".. image:: images/dockers/Animation_Curves_Docker.png"
+msgstr ".. image:: images/dockers/Animation_Curves_Docker.png"
+
+#: ../../reference_manual/dockers/animation_curves.rst:28
+msgid "Overview"
+msgstr "Pregled"
+
+#: ../../reference_manual/dockers/animation_curves.rst:30
+msgid ""
+"As shown in the image above, Krita's Animation Curves Docker can be thought "
+"of as different sections:"
+msgstr ""
+"Kot je prikazano na zgornji sliki, si lahko zloženo okno Krivulje animacije "
+"v Kriti zamislimo kot razdeljenega na različne odseke:"
+
+#: ../../reference_manual/dockers/animation_curves.rst:32
+#, fuzzy
+msgid ""
+":dfn:`Utilities` -- The left side of the toolbar gives animators quick "
+"access to all of the widgets that are critical to their workflow; :dfn:"
+"`transport controls` (previous, play/pause, stop and next buttons), a frame "
+"counter, preview controls (speed and drop frames), buttons for adding and "
+"removing :dfn:`scalar keyframes`, buttons for changing the :dfn:"
+"`interpolation mode` and :dfn:`tangent mode` of the selected keyframe, a box "
+"for setting the selected keyframe to a specific value, as well as buttons to "
+"help zoom and navigate the main graph view."
+msgstr ""
+":d fn:'Utilities' -- Leva stran orodne vrstice animatorjem omogoča hiter "
+"dostop do vseh pripomočkov, ki so kritični za njihov potek dela; :d "
+"fn:'transport controls' (prejšnji, predvajanje/premor, zaustavitev in "
+"naslednji gumbi), števec okvirja, kontrolniki za predogled (hitrost in "
+"okvirji za spust), gumbi za dodajanje in odstranjevanje :d fn:'s scalar "
+"keyframes', Tipke za izmjeni :d fn:'interpolacijni način' i :d fn:'tangentni "
+"način' izbranog keyframea, okvir za postavljanje izbranog keyframea na "
+"specifičnu vrednost, te gumbi za pomaganje u zumiranje i navigaciju po "
+"prikazu glavne grafa."
+
+#: ../../reference_manual/dockers/animation_curves.rst:34
+#, fuzzy
+msgid ""
+":dfn:`Settings` -- While all of the high-traffic controls are presented "
+"directly, the right end of the toolbar also contains buttons for opening "
+"submenus for things like onion skins and settings that you can generally set "
+"and forget (for example, :dfn:`playback range`, :dfn:`frame rate` and :dfn:"
+"`autokey mode`)."
+msgstr ""
+":d fn:'Nastavitve' -- Medtem ko so vsi kontrolniki v visokem prometu "
+"predstavljeni neposredno, desni konec orodne vrstice vsebuje tudi gumbe za "
+"odpiranje podmenijev za stvari, kot so čebuline kože in nastavitve, ki jih "
+"lahko na splošno nastavite in pozabite (na primer :d fn:'obseg "
+"predvajanja', :d fn:'frame rate' in :d fn:'autokey mode')."
+
+#: ../../reference_manual/dockers/animation_curves.rst:36
+#, fuzzy
+msgid ""
+":dfn:`Channels List` -- This area shows the various channels of the current "
+"layer that are currently being animated within the Animation Curves Docker. "
+"Each independent channel is associated with a unique color and its "
+"visibility within the graph view can be toggled by clicking on the eyeball "
+"icon."
+msgstr ""
+":d fn:'Seznam kanalov' -- Na tem področju so prikazani različni kanali "
+"trenutne plasti, ki so trenutno animirani znotraj dockerja animacijskih "
+"krivulj. Vsak neodvisni kanal je povezan z enolično barvo in njeno vidnost "
+"znotraj pogleda grafa lahko preklapljate s klikom na ikono očesne kroglice."
+
+#: ../../reference_manual/dockers/animation_curves.rst:38
+#, fuzzy
+msgid ""
+":dfn:`Graph View` -- Last but not least is the :dfn:`graph view`, the big "
+"graph of values and times that we use to animate the value of parameters "
+"over time. When a :term:`keyframe` is added to the current channel at the "
+"current time it will appear as a colored circle within the graph view. After "
+"clicking on the keyframe to select it, you can change the value by dragging "
+"the circle vertically or by entering a specific value into the value box on "
+"the toolbar. Similarly, you can change the time of the selected frame by "
+"dragging it horizontally. Finally, when the select keyframe is using :"
+"guilabel:`bezier curve interpolation`, selecting it will cause one or more :"
+"dfn:`curve handles` to appear, which can be used to change the shape of the "
+"interpolation curve over time."
+msgstr ""
+":d fn:'Graph View' -- Nazadnje pa je :d fn:'graph view', velik graf "
+"vrednosti in časov, ki jih uporabljamo za anemijo vrednosti parametrov skozi "
+"čas. Ko je trenutni kanal dodan :term:'keyframe' v trenutnem času, se bo v "
+"pogledu grafa pojavil kot barvni krog. Ko kliknete na keyframe, da ga "
+"izberete, lahko vrednost spremenite tako, da povlečete krog navpično ali "
+"tako, da vnesete določeno vrednost v polje vrednosti v orodni vrstici. "
+"Podobno lahko čas izbranega okvirja spremenite tako, da ga povlečete "
+"vodoravno. Na koncu, ko je izbrani ključni okvir uporablja :guilabel:'bezier "
+"krivulj interpolacija', bo izbira povzročila eno ali več :d fn:'krivuljo "
+"ročaji', ki se lahko uporablja za spreminjanje oblike interpolacijo krivulj "
+"skozi čas."
+
+#: ../../reference_manual/dockers/animation_curves.rst:42
+msgid "Animating Opacity"
+msgstr "Animiranje prekrivnosti"
+
+#: ../../reference_manual/dockers/animation_curves.rst:44
+#, fuzzy
+msgid ""
+"Starting with :program:`Krita 5`, we can use the Animation Curves Docker to "
+"animate a layer's :term:`opacity` and, with the help of a :ref:`Transform "
+"Mask <transformation_masks>`, its :dfn:`position`, :dfn:`rotation`, :dfn:"
+"`scale` and :dfn:`shear`."
+msgstr ""
+"Začenši s :p rogramom:'Krita 5', lahko uporabimo dockerja za animacijske "
+"krivuljce za animiranje plasti :term:'opacity' in s pomočjo :ref:'Transform "
+"Mask <transformation_masks>', njeno :d fn:'position', :d fn:'rotacija', :d "
+"fn:'scale' in :d fn:'shear'."
+
+#: ../../reference_manual/dockers/animation_curves.rst:48
+#, fuzzy
+msgid ""
+"Though the design is pretty similar to the :ref:`timeline_docker`, the "
+"Animation Curves Docker may be a bit confusing or intimidating when you "
+"first open it, especially if you haven't done digital animation before."
+msgstr ""
+"Čeprav je zasnova precej podobna :ref:'timeline_docker', aNimation Curves "
+"Docker je morda malce zmeden ali zastrašujoč, ko ga prvič odprete, še "
+"posebej, če še niste naredili digitalne animacije prej."
+
+#: ../../reference_manual/dockers/animation_curves.rst:50
+msgid "Let's look first at *animating a layer's opacity*:"
+msgstr "Poglejmo najprej *animiranje prekrivnosti plasti*:"
+
+#: ../../reference_manual/dockers/animation_curves.rst:52
+#, fuzzy
+msgid ""
+"Say you want to animate something like an expanding cloud of dust that "
+"gradually becomes more transparent as it dissipates, or maybe a haunting "
+"ghost that seems to materialize out of thin air. These types of effects are "
+"pretty hard to get right by traditionally animated line drawings alone, and "
+"that's exactly where the Animation Curves Docker can step in."
+msgstr ""
+"Recite, da želite animira nekaj, kot širi oblak prahu, ki postopoma postaja "
+"bolj pregleden, kot se razširja, ali morda straši duh, ki se zdi, da "
+"materializirajo iz tankega zraka. Te vrste učinkov je precej težko dobiti "
+"prav s tradicionalno animirane črte risbe samo, in to je točno tam, kjer "
+"lahko animacija krivuljo Docker stopi v."
+
+#: ../../reference_manual/dockers/animation_curves.rst:54
+#, fuzzy
+msgid ""
+"After *selecting the layer* that you want to animate the opacity of, you "
+"need to *select the frame time you want the opacity to start changing at* by "
+"clicking somewhere on the :term:`frame timing header` at the top of the "
+"graph view. Just like the :ref:`timeline_docker`, we can click and drag "
+"anywhere on the timing header to \"scrub\" across your animation and preview "
+"the results."
+msgstr ""
+"Ko *izberete plast* , ki jo želite animiranje nepreglednosti, morate "
+"*izbrati čas okvirja, ki ga želite, da se nepreglednost začne spreminjati "
+"na* tako, da kliknete nekje na :term:'frame timeing header' na vrhu pogleda "
+"grafa. Tako kot :ref:'timeline_docker', lahko kliknemo in povlečemo kjerkoli "
+"v glavi časovnega razporeda, da \"scrub\" preko animacije in predogled "
+"rezultatov."
+
+#: ../../reference_manual/dockers/animation_curves.rst:56
+#, fuzzy
+msgid ""
+"Next we create our first scalar :term:`keyframe` by clicking on the :"
+"guilabel:`add keyframe` button on the docker's titlebar."
+msgstr ""
+"Nato ustvarimo naš prvi scalar :term:'keyframe' s klikom na gumb :"
+"guilabel:'add keyframe' na naslovni vrstici dockerja."
+
+#: ../../reference_manual/dockers/animation_curves.rst:58
+#, fuzzy
+msgid ""
+"When you do this you'll notice two things happen. First, a new :guilabel:"
+"`opacity channel` will appear in the :dfn:`channels list` on the left-hand "
+"side, next to a colored mark that's associated with the color of the "
+"keyframes and curves in the :dfn:`graph view`. Second, a single keyframe "
+"will appear somewhere inside the graph view at the currently active time."
+msgstr ""
+"Ko boste to storili, boste opazili, da se zgodita dve stvari. Najprej se bo "
+"na seznamu :d fn:'channels' na levi strani pojavil nov :guilabel:'opacity "
+"channel', poleg barvne oznake, ki je povezana z barvo ključnih okvirjev in "
+"krivulj v :d fn:'graf view'. Drugič, en ključni okvir se bo pojavil nekje "
+"znotraj pogleda grafa ob trenutno aktivnem času."
+
+#: ../../reference_manual/dockers/animation_curves.rst:60
+#, fuzzy
+msgid ""
+"Of course it takes more than a single point to make a line or curve, so we "
+"have a little bit more work to do."
+msgstr ""
+"Seveda je potrebno več kot eno točko, da naredimo črto ali krivuljo, tako da "
+"imamo še malo več dela."
+
+#: ../../reference_manual/dockers/animation_curves.rst:62
+#, fuzzy
+msgid ""
+"Just like our first keyframe, we need to make a second keyframe. Let's "
+"change the active frame time again (by clicking or scrubbing across the "
+"timing header) and add another keyframe at that new time (by clicking on "
+"the :guilabel:`add keyframe` button). As you'd expect, a second keyframe has "
+"appeared at the new time and a straight line has appeared between them."
+msgstr ""
+"Tako kot naš prvi ključni okvir, moramo narediti še drugi ključni okvir. "
+"Ponovno spremenimo čas aktivnega okvirja (s klikom ali pregledonjem po glavi "
+"časovnega razporeda) in ob tem novem času dodamo še en ključni okvir (s "
+"klikom na gumb :guilabel:'add keyframe'). Kot bi pričakovali, se je ob novem "
+"času pojavil še drugi ključni okvir in med njimi se je pojavila ravna črta."
+
+#: ../../reference_manual/dockers/animation_curves.rst:64
+#, fuzzy
+msgid ""
+"With the active time still over our new keyframe, you'll find that as you "
+"change the :dfn:`opacity slider` above the :ref:`layer_docker` the new "
+"keyframe that we've created will move up and down. Likewise, moving the "
+"keyframe up and down will cause the opacity *at that time* to change."
+msgstr ""
+"Z aktivnim časom, ki je še vedno nad našim novim ključnim okvirjem, boste "
+"ugotovili, da se bo, ko boste spremenili :d fn:'opacity drsnik' nad :"
+"ref:'layer_docker' nov ključni okvir, ki smo ga ustvarili, premaknil gor in "
+"dol. Tudi premikanje keyframe gor in dol bo povzročilo spremembo motnosti *v "
+"tem času*."
+
+#: ../../reference_manual/dockers/animation_curves.rst:66
+#, fuzzy
+msgid ""
+"And just like that, when you press the :guilabel:`play button` you'll see "
+"the opacity of the layer animate over time!"
+msgstr ""
+"In kar tako, ko pritisneš na :guilabel:'play button' boš skozi čas videl "
+"nepreglednost sloja animirate!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:70
+#, fuzzy
+msgid ""
+"Unlike traditional methods, animating with curves can cause values to change "
+"across every frame of your animation. This can be more demanding on your "
+"machine and cause the caching process to take a little bit more time, as it "
+"calculates and stores each frame."
+msgstr ""
+"Za razliko od tradicionalnih metod lahko animacija z krivunjami povzroči "
+"spreminjanje vrednosti v vsakem okviru vaše animacije. To je lahko bolj "
+"zahtevno na vašem računalniku in povzroči, da proces predpomnjenja traja "
+"malo več časa, saj izračuna in shrani vsak okvir."
+
+#: ../../reference_manual/dockers/animation_curves.rst:72
+#, fuzzy
+msgid ""
+"*Before we move on*, let's use :dfn:`interpolation curves` instead of a "
+"straight line to change the timing and general feel of our opacity animation."
+msgstr ""
+"*Preden gremo naprej*, uporabimo :d fn:'interpolacijne krivulje' namesto "
+"ravne črte za spremembo časovnega razporeda in splošnega občutka naše "
+"nepreglednosti animacije."
+
+#: ../../reference_manual/dockers/animation_curves.rst:74
+#, fuzzy
+msgid ""
+"If you select the first keyframe (the one on the left-hand side) of your "
+"line segment and click on the :guilabel:`bezier curve interpolation` button "
+"in the utilities section of the titlebar, you'll notice that the keyframe "
+"will appear as a hollow circle on the graph view. That hollow circle is a :"
+"dfn:`handle`, and by clicking on it and dragging in different directions you "
+"can change the arc of the curve between your two keyframes."
+msgstr ""
+"Če izberete prvi ključni okvir (tisti na levi strani) segmenta vrstice in "
+"kliknete na gumb :guilabel:'bezier curve interpolation' v razdelku "
+"pripomočkov naslovne vrstice, boste opazili, da se bo ključni okvir pojavil "
+"kot votli krog na pogledu grafa. Ta votli krog je :d fn:'handle', s klikom "
+"na to in vlečenjem v različnih smereh lahko spremenite lok krivulj med obema "
+"ključnima okvirjema."
+
+#: ../../reference_manual/dockers/animation_curves.rst:76
+#, fuzzy
+msgid ""
+"Similarly, you can click on the :guilabel:`linear interpolation` button to "
+"change your curve back into a line, or the :guilabel:`constant` button to "
+"turn off interpolation altogether, causing values to jump suddenly between "
+"keyframes."
+msgstr ""
+"Podobno lahko kliknete na gumb :guilabel:'linearna interpolacija', da "
+"spremenite krivulo nazaj v črto, ali gumb :guilabel:'constant' za izklop "
+"interpolacije v celoti, kar povzroča, da vrednosti nenadoma skočijo med "
+"ključnimi okvirji."
+
+#: ../../reference_manual/dockers/animation_curves.rst:80
+#, fuzzy
+msgid ""
+"It's important to be aware of which animation frame is selected and active, "
+"as shown by the highlighted vertical line on the graph view. The keyframe "
+"that changes as you make adjustments elsewhere in the program will always be "
+"dependent on the active frame time!"
+msgstr ""
+"Pomembno je, da se zavedate, kateri okvir animacije je izbran in aktiven, "
+"kot je prikazano v označeni navpični vrstici v pogledu grafa. Ključni okvir, "
+"ki se spreminja, ko prilagodite drugod v programu, bo vedno odvisen od časa "
+"aktivnega okvirja!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:82
+msgid ""
+"*Ok, it's a bit tough to put in writing...* But it's not so bad once you get "
+"the hang of it!"
+msgstr ""
+"*Ok, to je malo težko zapisati ...* Ampak ni tako slabo, ko enkrat obvladaš!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:86
+msgid "Animating Transform Masks"
+msgstr "Animiranje mask za preoblikovanje"
+
+#: ../../reference_manual/dockers/animation_curves.rst:88
+#, fuzzy
+msgid ""
+"Now let's talk a bit about how we can use a :ref:`transformation_masks` to "
+"*animate our layer's position, rotation, scale and shear* for :dfn:`"
+"\"tweening\"` effects:"
+msgstr ""
+"Zdaj pa se pogovoriva o tem, kako lahko uporabimo :"
+"ref:'transformation_masks' za *animacijo položaja naše plasti, vrtenja, "
+"lestvice in maže* za :d fn:'\"tweening\"' učinke:"
+
+#: ../../reference_manual/dockers/animation_curves.rst:90
+#, fuzzy
+msgid ""
+"Animating a transform mask is a lot like animating opacity, but first we "
+"need to *add a Transform Mask*. (You can do this by |mouseright| on the "
+"layer that you want to animate, and then :menuselection:`Add --> Transform "
+"Mask`.)"
+msgstr ""
+"Animacija transform maske je precej podobna animirani motnosti, vendar "
+"moramo najprej *dodati transform masko*. (To lahko storite z |mouseright| na "
+"plasti, ki jo želite anemirate, in nato :menuselection:'Add --> Transform "
+"Mask\".)"
+
+#: ../../reference_manual/dockers/animation_curves.rst:92
+#, fuzzy
+msgid ""
+"Transform Masks allow us to :dfn:`transform` (translate, rotate, scale, or "
+"shear) the layer that they are attached to, without affecting its original "
+"position. And (starting with Krita 5) they also allow us to animate a "
+"layer's transform!"
+msgstr ""
+"Transform Maske nam omogočajo, da :d fn:'transform' (prevajanje, vrtenje, "
+"tehtnica ali maže) plast, na katere so pritrjena, ne da bi vplivala na njen "
+"prvotni položaj. In (začenši s Krito 5) nam omogočajo tudi animiranje "
+"plastinega preoblikovanja!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:94
+#, fuzzy
+msgid ""
+"Much like how we animated opacity above, we need to add our first "
+"transformation keyframe. To do this, *first make sure that you have your "
+"layer's Transform Mask selected*, and then click on the :guilabel:`add "
+"keyframe` button at the top of the docker."
+msgstr ""
+"Podobno kot zgoraj smo animirani nepreglednost, moramo dodati svoj prvi "
+"transformaciati ključni okvir. Če želite to narediti, *najprej preverite, "
+"ali imate izbrano masko za transformacijo vaše plasti*, nato pa kliknite na "
+"gumb :guilabel:'add keyframe' na vrhu dockerja."
+
+#: ../../reference_manual/dockers/animation_curves.rst:98
+#, fuzzy
+msgid ""
+"Remember (as of Krita 5.0) we can only *directly* animate the opacity curve "
+"of a layer. In order to animate a layer's position, rotation, scale and "
+"shear, we need to attach a Transform Mask and animate it instead."
+msgstr ""
+"Zapomnite si (od Krita 5.0) lahko le *neposredno* animimo krivuljo "
+"nepreglednosti plasti. Za anemacijo položaja, vrtenja, tehtnice in maže "
+"plasti moramo priložiti Transform Masko in jo namesto tega anemivati."
+
+#: ../../reference_manual/dockers/animation_curves.rst:100
+#, fuzzy
+msgid ""
+"As such, *when you have a regular paint layer selected* the Animation Curves "
+"Docker will automatically add opacity keyframes, and *when you have a "
+"transform mask selected* the Animation Curves Docker will automatically add "
+"transformation keyframes."
+msgstr ""
+"Kot tak, *ko imate izbrano navadno barvo plast* bo docker animacijskih "
+"krivul samodejno dodal okvirje za ključe nepreglednosti, *ko imate izbrano "
+"masko za preobrazbo* bo docker animacijskih krivul samodejno dodal ključne "
+"okvirje za transformacijo."
+
+#: ../../reference_manual/dockers/animation_curves.rst:102
+#, fuzzy
+msgid ""
+"Try to always keep in mind what type of layer you have selected when "
+"animating curves in Krita!"
+msgstr ""
+"Poskusite vedno imeti v mislih, katere vrste plasti ste izbrali pri "
+"animiranju krivuljah v Krita!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:104
+#, fuzzy
+msgid ""
+"You should see a whole bunch of channels appear in the channels list, each "
+"with a unique name and color, as well as a number of corresponding keyframes."
+msgstr ""
+"Na seznamu kanalov bi morali videti cel kup kanalov, vsak z edinstvenim "
+"imenom in barvo, pa tudi številne ustrezne ključne okvirje."
+
+#: ../../reference_manual/dockers/animation_curves.rst:106
+#, fuzzy
+msgid ""
+"If you want to you can edit these key frames directly in the graph view, but "
+"it's probably more intuitive to do it directly on the canvas. So now, when "
+"you use the :ref:`Transform Tool <transform_tool>` on your :ref:"
+"`transformation_masks`, you should see the various keyframes of each channel "
+"moving around in the graph view to reflect the changes."
+msgstr ""
+"Če želite, lahko te ključne okvirje urejate neposredno v pogledu grafa, "
+"vendar je verjetno bolj intuitivno, da to storite neposredno na platnu. Ko "
+"torej uporabljate :ref:'Transform Tool ' na vašem <transform_tool>:"
+"ref:'transformation_masks', bi morali videti različne ključne okvire vsakega "
+"kanala, ki se gibljejo v pogledu grafa, da bi odražali spremembe."
+
+#: ../../reference_manual/dockers/animation_curves.rst:110
+#, fuzzy
+msgid ""
+"Animating a Transform Mask spawns a lot of channels but, depending on your "
+"goals, you may only want to work with a small number of them at a time. "
+"*Hiding* and *soloing* channels in the channels list can make it much easier "
+"to see and edit curves, especially since you can use the :guilabel:`zoom to "
+"channel` and :guilabel:`zoom to curve` buttons at the top of the docker to "
+"fit the graph view to the currently visible channels."
+msgstr ""
+"Animiranje transform maske se razmnoževanje veliko kanalov, vendar, odvisno "
+"od vaših ciljev, boste morda želeli delati le z majhnim številom njih "
+"naenkrat. *Skrivanje* in *soloing* kanali na seznamu kanalov lahko veliko "
+"olajšajo prikaz in urejanje krivul, še posebej, ker lahko uporabite :"
+"guilabel:'zoom to channel' in :guilabel:'zoom to curve' gumbi na vrhu "
+"dockerja, da se prilagodi pogled grafa na trenutno vidne kanale."
+
+#: ../../reference_manual/dockers/animation_curves.rst:112
+#, fuzzy
+msgid ""
+"Navigating by click-dragging on the zoomable scrollbars and *values header* "
+"(on the left-hand side of the graph view) can also really help with editing "
+"curves!"
+msgstr ""
+"Krmarjenje z vlečenjem klikov po povečavi drsnih trakov in *glava vrednosti* "
+"(na levi strani pogleda grafa) lahko prav tako resnično pomaga pri urejanju "
+"krivul!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:114
+#, fuzzy
+msgid ""
+"Finally, click or scrub to a different frame time, add another keyframe, and "
+"use the Transform Tool on the same Transform Mask again."
+msgstr ""
+"Na koncu kliknite ali izbrišite drug čas okvirja, dodajte še en ključni "
+"okvir in znova uporabite Orodje za preoblikovanje na isti Transform Maski."
+
+#: ../../reference_manual/dockers/animation_curves.rst:116
+#, fuzzy
+msgid ""
+"Press the :guilabel:`play button` and (after a little bit of caching) there "
+"you have it, a layer with an animated Transform Mask!"
+msgstr ""
+"Pritisnite gumb :guilabel:'play' in (po malo predpomnilnika) tam ga imate, "
+"plast z animirano Transform Masko!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:120
+msgid "Controls"
+msgstr "Kontrolniki"
+
+#: ../../reference_manual/dockers/animation_curves.rst:122
+msgid ":dfn:`Channels List`"
+msgstr ":dfn:`Seznam kanalov`"
+
+#: ../../reference_manual/dockers/animation_curves.rst:124
+msgid "|mouseleft| on Eye Icon: Toggle show/hide channel."
+msgstr "|mouseleft| ikone Oko: preklopi pokaži/skrij kanal."
+
+#: ../../reference_manual/dockers/animation_curves.rst:125
+#, fuzzy
+msgid ":kbd:`Shift +` |mouseleft| on Eye Icon: Solo channel."
+msgstr ":kbd:'Shift +' |mouseleft| na Ikoni očesa: Solo kanal."
+
+#: ../../reference_manual/dockers/animation_curves.rst:126
+#, fuzzy
+msgid "|mouseright| : Open layer or channel context menu. [Reset Channel(s)]"
+msgstr ""
+"|mouseright| : Odprite plast ali kontekstni meni kanala. [Ponastavi kanal(-"
+"e)]"
+
+#: ../../reference_manual/dockers/animation_curves.rst:128
+#, fuzzy
+msgid ":dfn:`Graph View`"
+msgstr ":d fn:'Pogled na graf'"
+
+#: ../../reference_manual/dockers/animation_curves.rst:130
+msgid "|mouseleft| : Select keyframe."
+msgstr "|mouseleft| : izberite ključno sličico"
+
+#: ../../reference_manual/dockers/animation_curves.rst:131
+#, fuzzy
+msgid "|mouseleft| :kbd:`+ drag` : *Move* frame(s)."
+msgstr "|mouseleft| :kbd:'+ povleci' : *Premakni* okvir(-e)."
+
+#: ../../reference_manual/dockers/animation_curves.rst:132
+msgid "|mouseleft| double-click : Select all keyframes at time."
+msgstr "|mouseleft| - dvoklik : izberite vse ključne sličice naenkrat."
+
+#: ../../reference_manual/dockers/animation_curves.rst:133
+#, fuzzy
+msgid ""
+":kbd:`Alt +` |mouseleft| double-click : Select all keyframes of channel."
+msgstr ""
+":kbd:'Alt +' |mouseleft| dvokliknite : Izberite vse ključne okvirje kanala."
+
+#: ../../reference_manual/dockers/animation_curves.rst:134
+msgid ":kbd:`Space +` |mouseleft| : Pan."
+msgstr ":kbd:`Preslednica +` |mouseleft| : zasuk."
+
+#: ../../reference_manual/dockers/animation_curves.rst:135
+msgid ":kbd:`Space +` |mouseright| : Zoom."
+msgstr ":kbd:`Space +` |mouseright| : povečava."
+
+#: ../../reference_manual/dockers/animation_curves.rst:137
+#, fuzzy
+msgid ":dfn:`Frame Timing Header`"
+msgstr ":d fn:'Glava časovnega okvirja'"
+
+#: ../../reference_manual/dockers/animation_curves.rst:139
+#, fuzzy
+msgid "|mouseleft| : Move to time and select frame of the active layer."
+msgstr "|mouseleft| : Premaknite se na čas in izberite okvir aktivne plasti."
+
+#: ../../reference_manual/dockers/animation_curves.rst:140
+#, fuzzy
+msgid ""
+"|mouseleft| :kbd:`+ drag` : Scrub through time and select frame of the "
+"active layer."
+msgstr ""
+"|mouseleft| :kbd:'+ povlecite' : Prečiščite čas in izberite okvir aktivne "
+"plasti."
+
+#: ../../reference_manual/dockers/animation_curves.rst:142
+#, fuzzy
+msgid ":dfn:`Value Header`"
+msgstr ":d fn:'Glava vrednosti'"
+
+#: ../../reference_manual/dockers/animation_curves.rst:144
+#, fuzzy
+msgid "|mouseleft| :kbd:`+ drag` : Zoom graph view."
+msgstr "|mouseleft| :kbd:'+ povlecite' : pogled zoom grafa."
+
+#: ../../reference_manual/dockers/animation_curves.rst:145
+#, fuzzy
+msgid ":kbd:`Space +` |mouseleft| :kbd:`+ drag` : Pan graph view."
+msgstr ":kbd:'Space +' |mouseleft| :kbd:'+ povlecite' : Pogled pon grafa."

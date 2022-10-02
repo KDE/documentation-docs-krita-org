@@ -1,0 +1,315 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2022-02-07 18:36+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 22.03.70\n"
+
+#: ../../user_manual/soft_proofing.rst:0
+msgid ".. image:: images/softproofing/Softproofing_adaptationstate.png"
+msgstr ".. image:: images/softproofing/Softproofing_adaptationstate.png"
+
+#: ../../user_manual/soft_proofing.rst:1
+msgid "How to use soft proofing in Krita."
+msgstr "Jak używać korekty na ekranie w Kricie."
+
+#: ../../user_manual/soft_proofing.rst:11
+msgid "Color"
+msgstr "Barwa"
+
+#: ../../user_manual/soft_proofing.rst:11
+msgid "Softproofing"
+msgstr "Korekta na ekranie"
+
+#: ../../user_manual/soft_proofing.rst:16
+msgid "Soft Proofing"
+msgstr "Korekta na ekranie"
+
+#: ../../user_manual/soft_proofing.rst:18
+msgid ""
+"When we make an image in Krita, and print that out with a printer, the image "
+"tends to look different. The colors are darker, or less dark than expected, "
+"maybe the reds are more aggressive, maybe contrast is lost. For simple "
+"documents, this isn’t much of a problem, but for professional prints, this "
+"can be very sad, as it can change the look and feel of an image drastically."
+msgstr ""
+"Gdy tworzymy obraz w Kricie i drukujemy go na drukarce, to wygląda on "
+"inaczej. Barwy są ciemniejsze lub mniej ciemne niż oczekiwano, może czerwony "
+"jest bardziej agresywny, może kontrast został utracony. Dla prostych "
+"dokumentów, to nie jest duży problem, lecz w profesjonalnych wydrukach, może "
+"to być bardzo smutne, gdyż może znacznie zmienić wygląd obrazu."
+
+#: ../../user_manual/soft_proofing.rst:20
+msgid ""
+"The reason this happens is simply because the printer uses a different color "
+"model (CMYK) and it has often access to a lower range of colors (called a "
+"gamut)."
+msgstr ""
+"Powodem, dla którego się to dzieje jest to, ze drukarki używają innego "
+"modelu barw (CMYK) i często ma dostęp do niższego zakresu barw (zwanym "
+"gamut)."
+
+#: ../../user_manual/soft_proofing.rst:22
+msgid ""
+"A naive person would suggest the following solution: do your work within the "
+"CMYK color model! But there are three problems with that:"
+msgstr ""
+"Naiwna osoba doradziłaby następujące postępowanie: pracuj w modelu barw "
+"CMYK! Jednakże powoduje to pojawienie się tych trzech kłopotów:"
+
+#: ../../user_manual/soft_proofing.rst:24
+msgid ""
+"Painting in a CMYK space doesn’t guarantee that the colors will be the same "
+"on your printer. For each combination of Ink, Paper and Printing device, the "
+"resulting gamut of colors you can use is different, which means that each of "
+"these could have a different profile associated with them."
+msgstr ""
+"Malowanie w CMYK nie zapewnia, że barwy będą takie same na twojej drukarce. "
+"Do każdej kombinacji tuszu, papieru i drukarki, wynikowy gamut barw, którego "
+"używasz jest różny. Oznacza to, że każdy z tych parametrów może potrzebować "
+"przypisania innego profilu."
+
+#: ../../user_manual/soft_proofing.rst:25
+msgid ""
+"Furthermore, even if you have the profile and are working in the exact color "
+"space that your printer can output, the CMYK color space is very irregular, "
+"meaning that the color maths isn’t as nice as in other spaces. Blending "
+"modes are different in CMYK as well."
+msgstr ""
+"Dodatkowo, nawet gdy masz profil i pracujesz w przestrzeni barw dokładnie "
+"takiej, jak na twojej drukarce, to przestrzeń barw CMYK jest bardzo "
+"nierównomierna, co oznacza, że matematyka barw nie jest taka ładna jak w "
+"innych przestrzeniach. Tryby mieszania także są inne niż w CMYK."
+
+#: ../../user_manual/soft_proofing.rst:26
+msgid ""
+"Finally, working in that specific CMYK space means that the image is stuck "
+"to that space. If you are preparing your work for different a CMYK profile, "
+"due to the paper, printer or ink being different, you might have a bigger "
+"gamut with more bright colors that you would like to take advantage of."
+msgstr ""
+"Na koniec, to praca w danej przestrzeni CMYK oznacza, że obraz ten jest "
+"związany z tą przestrzenią. Jeśli przygotowujesz swoją pracę do innego "
+"profilu CMYK, ze względu na papier, drukarkę lub inny tusz, możesz mieć "
+"większy gamut z większą liczbą jasnych barw, które chciałbyś wykorzystać."
+
+#: ../../user_manual/soft_proofing.rst:28
+msgid ""
+"So ideally, you would do the image in RGB, and use all your favorite RGB "
+"tools, and let the computer do a conversion to a given CMYK space on the "
+"fly, just for preview. This is possible, and is what we call ''Soft "
+"Proofing''."
+msgstr ""
+"Tak więc idealnie, wykonałbyś obraz w RGB i użył wszystkich swoich "
+"ulubionych narzędzi RGB i pozwolił komputerowi dokonać przekształceń do "
+"danej przestrzeni CMYK w locie, tylko do podglądu. Jest to możliwe i nazywa "
+"się \"Korekta na ekranie\"."
+
+#: ../../user_manual/soft_proofing.rst:34
+msgid ".. image:: images/softproofing/Softproofing_regularsoftproof.png"
+msgstr ".. image:: images/softproofing/Softproofing_regularsoftproof.png"
+
+#: ../../user_manual/soft_proofing.rst:34
+msgid ""
+"On the left, the original, on the right, a view where soft proofing is "
+"turned on. The difference is subtle due to the lack of really bright colors, "
+"but the soft proofed version is slightly less blueish in the whites of the "
+"flowers and slightly less saturated in the greens of the leaves."
+msgstr ""
+"Po lewej, pierwotny obraz, po prawej, widok na którym włączona jest korekta "
+"na ekranie. Różnica jest nieznaczna ze względu na brak naprawdę jasnych "
+"barw, lecz wersja z włączoną korektą jest mniej niebieska w bieli kwiatów i "
+"lekko mniej nasycona w zieleni liści."
+
+#: ../../user_manual/soft_proofing.rst:36
+msgid ""
+"You can toggle soft proofing on any image using the :kbd:`Ctrl + Y` "
+"shortcut. Unlike other programs, this is per-view, so that you can look at "
+"your image non-proofed and proofed, side by side. The settings are also per "
+"image, and saved into the ``.kra`` file. You can set the proofing options "
+"in :menuselection:`Image --> Image Properties --> Soft Proofing`."
+msgstr ""
+"Możesz włączyć korektę ekranową swojego obrazu przy użyciu skrótu :kbd:`Ctrl "
+"+ Y`. W przeciwieństwie do innych programów, odbywa się to na widok, tak "
+"więc możesz oglądać swój obraz z korektą i bez obok siebie. Ustawienia są "
+"także na obraz i są zapisywane w pliku ``.kra``. Ustawienia korekty można "
+"nadać w :menuselection:`Obraz --> Właściwości obrazu --> Korekta ekranowa`."
+
+#: ../../user_manual/soft_proofing.rst:38
+msgid "There you can set the following options:"
+msgstr "Tutaj może ustawić co następuje:"
+
+#: ../../user_manual/soft_proofing.rst:40
+msgid "Profile, Depth, Space"
+msgstr "Profil, głębia, przestrzeń"
+
+#: ../../user_manual/soft_proofing.rst:41
+msgid ""
+"Of these, only the profile is really important. This will serve as the "
+"profile you are proofing to. In a professional print workflow, this profile "
+"should be determined by the printing house."
+msgstr ""
+"Z tych, tylko profil jest naprawdę ważny. Będzie on służył jako profil, "
+"względem którego przeprowadzasz korektę. W zawodowym druku, profil ten "
+"powinien zostać nadany przez drukarnie."
+
+#: ../../user_manual/soft_proofing.rst:43
+msgid ""
+"Set the proofing Intent. It uses the same intents as the intents mentioned "
+"in the :ref:`color managed workflow <color_managed_workflow>`."
+msgstr ""
+"Ustaw zamiar korekty. Używa to tych samych zamiarów jak zamiary wspomniane "
+"w :ref:`przepływa pracy z zarządzaniem barwami <color_managed_workflow>`."
+
+#: ../../user_manual/soft_proofing.rst:48
+msgid "Intent"
+msgstr "Zamiar"
+
+#: ../../user_manual/soft_proofing.rst:49
+msgid ""
+"Left: Soft proofed image with Adaptation state slider set to max. Right: "
+"Soft proofed image with Adaptation State set to minimum."
+msgstr ""
+"Po lewej: Obraz z korektą z suwakiem stanu adaptacji ustawionym na najwyższą "
+"wartość. Po prawej: Obraz z korektą z suwakiem stanu adaptacji ustawionym na "
+"najniższą wartość."
+
+#: ../../user_manual/soft_proofing.rst:50
+msgid "Adaptation State"
+msgstr "Stan dostosowywania się"
+
+#: ../../user_manual/soft_proofing.rst:51
+msgid ""
+"A feature which allows you to set whether :guilabel:`Absolute Colorimetric` "
+"will make the white in the image screen-white during proofing (the slider "
+"set to max), or whether it will use the white point of the profile (the "
+"slider set to minimum). Often CMYK profiles have a different white as the "
+"screen, or amongst one another due to the paper color being different."
+msgstr ""
+"Funkcja, która umożliwia ustawienie czy :guilabel:`Bezwzględna kolorymetria` "
+"sprawi, że biały na obrazie będzie białym ekranowym podczas korekty (suwak "
+"ustawiony najwyżej), czy użyj białego punktu profilu (suwak ustawiony "
+"najniżej). Profile CMYK zazwyczaj mają inny biały niż ekran lub różniący się "
+"także ze względu na barwę papieru."
+
+#: ../../user_manual/soft_proofing.rst:52
+msgid "Black Point Compensation"
+msgstr "Kompensacja punktu czerni"
+
+#: ../../user_manual/soft_proofing.rst:53
+msgid ""
+"Set the black point compensation. Turning this off will crunch the shadow "
+"values to the minimum the screen and the proofing profile can handle, while "
+"turning this on will scale the black to the screen-range, showing you the "
+"full range of grays in the image."
+msgstr ""
+"Ustaw kompensację punktu czerni. Wyłączenie tego spowoduje załamanie "
+"wartości cienia do najniższych, które może obsłużyć ekran i profil korekty, "
+"podczas gdy włączenie tego przeskaluje czarny do zakresu ekranowego, "
+"pokazując ci pełny zakres szarości na obrazie."
+
+#: ../../user_manual/soft_proofing.rst:55
+msgid "Gamut Warning"
+msgstr "Ostrzeżenie gamut"
+
+#: ../../user_manual/soft_proofing.rst:55
+msgid "Set the color of the out-of-gamut warning."
+msgstr "Ostrzeżenie o ustawieniu barwy spoza gamut."
+
+#: ../../user_manual/soft_proofing.rst:57
+msgid ""
+"You can set the defaults that Krita uses in :menuselection:`Settings --> "
+"Configure Krita... --> Color Management`."
+msgstr ""
+"Możesz nadać domyślne ustawienia Kricie w :menuselection:`Ustawienia --> "
+"Ustawienia Krity... --> Zarządzanie barwą`."
+
+#: ../../user_manual/soft_proofing.rst:59
+msgid ""
+"To configure this properly, it's recommended to make a test image to print "
+"(and that is printed by a properly set-up printer) and compare against, and "
+"then approximate in the proofing options how the image looks compared to the "
+"real-life copy you have made."
+msgstr ""
+"Aby ustawić to właściwie, zaleca się wydruk obrazu próbnego (na właściwie "
+"ustawionej drukarce) i porównanie tego wydruku, a następnie spróbowanie "
+"przybliżyć w ustawieniach korekty, to jak obraz wygląda na ekranie z tym jak "
+"wygląda na wydruku."
+
+#: ../../user_manual/soft_proofing.rst:62
+msgid "Out of Gamut Warning"
+msgstr "Ostrzeżenie spoza gamut"
+
+#: ../../user_manual/soft_proofing.rst:64
+msgid ""
+"The out of gamut warning, or gamut alarm, is an extra option on top of Soft-"
+"Proofing: It allows you to see which colors are being clipped, by replacing "
+"the resulting color with the set alarm color."
+msgstr ""
+"Ostrzeżenie spoza gamut, lub alarm gamu, jest dodatkowym ustawieniem nad "
+"korektą na ekranie: umożliwia, które barwy są przycinane, poprzez "
+"zastąpienie barwy wynikowej z barwą ustawionego alarmu."
+
+#: ../../user_manual/soft_proofing.rst:66
+msgid ""
+"This can be useful to determine where certain contrasts are being lost, and "
+"to allow you to change it slowly to a less contrasted image."
+msgstr ""
+"Jest to użyteczne przy określaniu, w którym miejscu pewne kontrasty są "
+"tracone i umożliwia ci ich powolną zmianę do mniej kontrastowego obrazu."
+
+#: ../../user_manual/soft_proofing.rst:72
+msgid ".. image:: images/softproofing/Softproofing_gamutwarnings.png"
+msgstr ".. image:: images/softproofing/Softproofing_gamutwarnings.png"
+
+#: ../../user_manual/soft_proofing.rst:72
+msgid ""
+"Left: View with original image, Right: View with soft proofing and gamut "
+"warnings turned on. Krita will save the gamut warning color alongside the "
+"proofing options into the KRA file, so pick a color that you think will "
+"stand out for your current image."
+msgstr ""
+"Po lewej: widok pierwotnego obrazu, Po prawej: widok z włączoną korektą na "
+"ekranie i ostrzeżeniami gamut. Krita zapisze barwę ostrzeżenia gamut warz z "
+"ustawieniami korekty do pliku KRA, więc wybierz barwę, która myślisz, że "
+"będzie odstawać na twoim bieżącym obrazie."
+
+#: ../../user_manual/soft_proofing.rst:74
+msgid ""
+"You can activate Gamut Warnings with the :kbd:`Ctrl + Shift + Y` shortcut, "
+"but it needs soft proofing activated to work fully."
+msgstr ""
+"Ostrzeżenia gamut możesz włączyć przy użyciu skrótu :kbd:`Ctrl + Shift + Y`, "
+"lecz wymaga to włączenia korekty na ekranie, aby mogło zadziałać w pełni."
+
+#: ../../user_manual/soft_proofing.rst:77
+msgid ""
+"Soft Proofing doesn’t work properly in floating-point spaces, and attempting "
+"to force it will cause incorrect gamut alarms. It is therefore disabled."
+msgstr ""
+"Korekta na ekranie nie działa właściwie w przestrzeniach o l. "
+"zmiennoprzecinkowych, a wymuszenie tego spowoduje nieprawidłowe alarmy gamu. "
+"Tak więc jest to wyłączone."
+
+#: ../../user_manual/soft_proofing.rst:80
+msgid ""
+"Gamut Warnings sometimes give odd warnings for linear profiles in the "
+"shadows. This is a bug in LittleCMS, see `here <https://ninedegreesbelow.com/"
+"bug-reports/soft-proofing-problems.html>`_ for more info."
+msgstr ""
+"Ostrzeżenia gamut czasami dziwnie pojawiają się dla profili liniowych w "
+"cieniach. Jest to błąd w LittleCMS, zajrzyj `tutaj <https://ninedegreesbelow."
+"com/bug-reports/soft-proofing-problems.html>`_ po szczegóły."

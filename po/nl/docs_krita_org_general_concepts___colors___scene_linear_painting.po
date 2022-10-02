@@ -1,0 +1,788 @@
+# Dutch translations for Krita Manual package
+# Nederlandse vertalingen voor het pakket Krita Manual.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+#
+# Automatically generated, 2019.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2022.
+# Lo Fernchu <lofernchu@zonnet.nl>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2022-08-29 16:48+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.08.0\n"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:1
+msgid "Scene Linear painting in Krita"
+msgstr "Lineair schilderen van scenes in Krita"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+#: ../../general_concepts/colors/scene_linear_painting.rst:15
+msgid "Scene Linear Painting"
+msgstr "Lineair schilderen van scenes"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+#: ../../general_concepts/colors/scene_linear_painting.rst:81
+msgid "Color"
+msgstr "Kleur"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+msgid "HDR"
+msgstr "HDR"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+msgid "High Dynamic Range"
+msgstr "High Dynamic Range"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+msgid "Scene Linear"
+msgstr "Lineaire scene"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+msgid "Scene Referred"
+msgstr "Naar verwezen scene"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:17
+msgid ""
+"Previously referred to as HDR painting and Scene Referred painting, Scene "
+"Linear Painting is doing digital painting in a peculiar type of colorspace. "
+"It is painting in a color space that is..."
+msgstr ""
+"Eerder naar verwezen als HDR schilderen en Scene Referred painting, Lineair "
+"schilderen van scenes is digitaal schilderen in een bepaald soort "
+"kleurruimte. Het is schilderen in een kleurruimte dat is..."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:19
+msgid ""
+"Linear - there’s no gamma encoding, or tone-mapping or whatever going on "
+"with the pixels you manipulate. (This is different from the pixels you see, "
+"but we’ll get to that later)"
+msgstr ""
+"Lineair - er wordt geen gamma codering, of kleur-mapping of wat dan ook "
+"uitgevoerd op de pixels die u bewerkt. (Dit is anders voor de pixels die u "
+"ziet, maar daar komen we later op terug)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:20
+msgid "Floating Point - So 16bit or 32bit floating point per channel."
+msgstr "Drijvende komma - dus 16 bits of 32 bits drijvende komma per kanaal."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:22
+msgid ""
+"These are the two important characteristics. The colorspace has a few more "
+"properties than this, such as the white point, or more importantly, the "
+"colorants that make up the gamut. But here’s the thing, those two could be "
+"anything, as long as the space is linear and the color depth is floating "
+"point."
+msgstr ""
+"Dit zijn de twee belangrijkste eigenschappen. De kleurruimte heeft nog een "
+"paar eigenschappen, zoals de witpunt, of nog belangrijker, de kleuren die "
+"het kleurbereik bepalen. Maar er is een probleem, deze twee kunnen van alles "
+"betekenen, zolang de ruimte lineair en de kleurdiepte een drijvende komma is."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:24
+msgid ""
+"So, *Scene Linear is not a single one colorspace, but a* **TYPE** *of "
+"colorspace*. You can have a scene linear space that uses the sRGB/Rec. 709 "
+"colorants, or one that uses adobeRGB, or maybe one that uses Rec. 2020, as "
+"long as it is *linear* and in a *floating point bit depth*."
+msgstr ""
+"Dus, *Lineaire ruimte is niet een enkele kleurruimte, maar een* **TYPE** * "
+"kleurruimte*. U kunt een lineaire ruimte hebben dat de sRGB/Rec. 709 kleuren "
+"gebruikt, of een dat adobeRGB gebruikt, of misschien een dat Rec. 2020 "
+"gebruikt, zolang het maar *lineair* is en een *drijvende komma bit diepte* "
+"heeft."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:28
+msgid ""
+"If you want to create images for display on an HDR canvas, you will need to "
+"select the Rec. 2020 space profile with a linear gamma. The default profile "
+"in Krita for that is :guilabel:`Rec2020-elle-V4-g10.icc`."
+msgstr ""
+"Als u afbeeldingen wilt creëren om ze op een HDR canvas te tonen, dan moet u "
+"het Rec. 2020 ruimteprofiel met een lineaire gamma selecteren. Het standaard "
+"profiel in Krita hiervoor is :guilabel:`Rec2020-elle-V4-g10.icc`."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:30
+msgid ""
+"These two factors are for one reason: To make black and white arbitrary "
+"values. This might seem a bit weird. But when you are dealing with light-"
+"sources, you are dealing with a massive range of contrasts, and will have to "
+"decide afterwards which white and black you’d like to have. This is what the "
+"scene means in scene-linear, the relevant values are unique per scene, like "
+"a real world scene: a flower field lit by moonlight, a city in twilight or a "
+"sunny beach. You want to be able to put the right emphasis on the most "
+"important contrasting values, and being able to choose what is white and "
+"what is black is a very powerful tool here. After all, humans in the real "
+"world can see much more when they get used to the dark, or to the sun, so "
+"why not apply that to how we make our images?"
+msgstr ""
+"Deze twee factoren zijn er voor maar een reden: om zwart en wit willekeurige "
+"waarden te kunnen geven. Dit klinkt misschien een beetje raar. Maar als u "
+"met lichtbronnen werkt, dan werkt u met veel verschillende contrasten, en "
+"wilt u achteraf kunnen beslissen welke wit en zwart u wilt hebben. Dit is "
+"wat de scene betekent in scene-linear, De relevante waarden zijn per scene "
+"uniek, net zoals in een scene in de echte wereld: een veld met bloemen "
+"verlicht door de maan, een stad in de schemering of een zonnig strand. U "
+"wilt in staat zijn om de nadruk te leggen op de meest belangrijke "
+"contrasterende waarden, en het is hier een belangrijk hulpmiddel om in staat "
+"te zijn om te kiezen wat wit is en wat zwart is. Tenslotte kunnen mensen in "
+"de echte wereld veel zien als ze aan de duisternis gewent zijn, of aan de "
+"zon, dus waarom dat niet toepassen bij hoe we onze afbeeldingen maken?"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:32
+msgid ""
+"This is also why it needs to be Linear. Gamma and Tone-mapped color spaces "
+"are already choosing which contrast is the most important to you. But for "
+"that, they too need to choose what is white or black. Linear doesn’t make "
+"such assumptions, so much better for when you want to choose yourself. You "
+"will eventually want to stick your image through some tone-mapping or gamma "
+"correction, but only at the end after you have applied filters and mixed "
+"colors!"
+msgstr ""
+"Dit is waarom het lineair moet zijn. Bij gamma en kleur-mapped kleurruimten "
+"is al gekozen welk contrast het belangrijkst is voor u. Maar daarvoor moet "
+"wel gekozen zijn wat wit en zwart is. Bij lineair ligt niet veel vast, wat "
+"wel zo prettig is als u zelf wilt kiezen. U wilt waarschijnlijk kleur-"
+"mapping of gamma correctie op uw afbeelding loslaten, maar pas aan het eind "
+"als u eerst filters heeft toegepast en kleuren heeft gemengd!"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:34
+msgid ""
+"In fact, there’s always a non-destructive sort of transform going on while "
+"you are working on your image which includes the tone-mapping. This is "
+"called a display or view transform, and they provide a sort of set of "
+"binoculars into the world of your image. Without it, your computer cannot "
+"show these colors properly; it doesn’t know how to interpret it properly, "
+"often making the image too dark. Providing such a transform and allowing you "
+"to configure it is the prime function of color management."
+msgstr ""
+"Eigenlijk is er altijd een niet-destructieve vorm van transformatie bezig "
+"als u bezig bent met het werken aan uw afbeelding waarbij u ook kleur-"
+"mapping uitvoert. Dit heet een weergave transformatie, en ze geven een soort "
+"verrekijker voor de wereld van uw afbeelding. Zonder deze kan uw computer "
+"deze kleuren niet correct tonen; het weet niet hoe ze correct "
+"geïnterpreteerd moeten worden, en toont daarom vaak de afbeeldingen te "
+"donker. Het geven van een dergelijke transformatie en de mogelijkheid voor u "
+"om dit in te stellen is de primaire functie van kleurbeheer."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:36
+msgid ""
+"Between different view and display transforms, there’s also a difference in "
+"types. Some are really naive, others are more sophisticated, and some need "
+"to be used in a certain manner to work properly. The ICC color management "
+"can only give a certain type of view transforms, while OCIO color management "
+"in the LUT docker can give much more complex transforms easily configurable "
+"and custom settings that can be shared between programs."
+msgstr ""
+"De verschillende weergave-transformaties kunt u indelen in verschillende "
+"types. Sommige zijn echt naïef terwijl andere meer geavanceerd zijn, en "
+"sommige moet u op een bepaalde manier gebruiken om ze goed te laten werken. "
+"Het ICC kleurenbeheer kan alleen bepaalde type weergave-transformaties "
+"uitvoeren, terwijl de OCIO kleurenbeheer in de LUT docker veel complexere "
+"transformaties kan uitvoeren die u makkelijk kan instellen en waarvan de "
+"instellingen uitwisselbaar zijn met andere programma's."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:42
+msgid ".. image:: images/color_category/Krita_scenelinear_cat_01.png"
+msgstr ".. image:: images/color_category/Krita_scenelinear_cat_01.png"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:42
+msgid ""
+"Above, an example of the more naive transform provided by going from scene-"
+"linear sRGB to regular sRGB, and to the right a more sophisticated transform "
+"coming from the filmic blender OCIO configuration. Look at the difference "
+"between the paws. Image by Wolthera van Hövell tot Westerflier, License: CC-"
+"BY-SA"
+msgstr ""
+"hierboven is een voorbeeld van een meer naïeve transformatie door het "
+"overzetten van de scene-lineaire sRGB naar de reguliere sRGB, en aan de "
+"rechterzijde een betere transformatie die komt van de filmic blender OCIO "
+"configuratie. Kijk naar de verschillen tussen de klauwen. Afbeelding "
+"afkomstig van Wolthera van Hövell tot Westerflier, License: CC-BY-SA"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:44
+msgid ""
+"Conversely, transforming and interpreting your image’s colors is the only "
+"thing OCIO can do, and it can do it with really complex transforms, really "
+"fast. It doesn’t understand what your image’s color space is originally, "
+"doesn’t understand what CMYK is, and there’s also no such thing as a OCIO "
+"color profile. Therefore you will need to switch to an ICC workflow if you "
+"wish to prepare for print."
+msgstr ""
+"Daartegenover is het converteren en vertalen van de kleuren in uw "
+"afbeelding  het enige wat OCIO kan doen, en het kan dit met erg complexe "
+"transformaties, heel snel. Het begrijpt niet wat de originele kleurruimte "
+"van uw afbeelding is, het begrijpt niet wat CMYK is, en zoiets als een OCIO "
+"kleurprofiel bestaat niet. Daarom moet u omschakelen naar een ICC workflow "
+"als u voor het printen wilt gaan voorbereiden."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:47
+msgid "Yes, but what is the point?"
+msgstr "Ja, maar waar gaat het om?"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:49
+msgid "The point is making things easier in the long run:"
+msgstr "Het gaat erom dat het op de lange termijn makkelijker is:"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:51
+msgid "It is easier to keep saturated non-muddy colors in a linear space."
+msgstr ""
+"Het is makkelijker om niet-modderige kleuren verzadigd te houden in een "
+"lineaire ruimte."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:52
+msgid "The high bit depth makes it easier to get smoother color mixes."
+msgstr ""
+"De grote bitdiepte maakt het makkelijker om egale kleurmenging te krijgen."
+
+# In het nederlands heet het ook bokeh.
+#: ../../general_concepts/colors/scene_linear_painting.rst:53
+msgid ""
+"Filters are more powerful and give nicer results in this space. It is far "
+"more easy to get nice blurring and bokeh results."
+msgstr ""
+"Filters hebben meer mogelijkheden en geven betere resultaten in deze ruimte. "
+"Het is veel makkelijker om een mooie blurring en bokeh resultaten te krijgen."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:54
+msgid ""
+"Simple Blending Modes like Multiply or Addition are suddenly black magic. "
+"This is because Scene-Linear is the closest you can get to the physical (as "
+"in, physics, not material) model of color where multiplying colors with one "
+"another is one of the main ways to calculate the effect of light."
+msgstr ""
+"Eenvoudige mengmodus zoals vermenigvuldigen of optellen zijn plotseling "
+"tovenarij. Dit is omdat Lineaire ruimte het dichtst bij de natuurkundig (als "
+"in, natuurkunde, niet materiaal) model van kleuren komt waar het "
+"vermenigvuldigen van kleuren met anderen een van de belangrijkste manieren "
+"is voor het berekenen van lichteffecten."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:55
+msgid ""
+"Combining painting with other image results such as photography and "
+"physically based rendering is much easier as they too work in such a type of "
+"colorspace. So you could use such images as a reference with little qualms, "
+"or make textures that play nice with such a renderer."
+msgstr ""
+"Het combineren van schilderen met andere soorten afbeeldingen zoals "
+"fotograferen en op natuurkunde gebaseerde renderen is veel eenvoudiger omdat "
+"ook zij met een dergelijk soort kleurruimte werken. Daardoor kunt u zonder "
+"veel problemen dergelijke afbeeldingen als referentie gebruiken, of texturen "
+"maken die goed in een dergelijke renderer te gebruiken zijn."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:57
+msgid ""
+"So the advantages are prettier colors, cooler filter results, more control "
+"and easier interchange with other methods."
+msgstr ""
+"De voordelen zijn mooiere kleuren, betere filterresultaten, meer controle en "
+"makkelijker verbinding met andere methoden."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:60
+msgid "Okay, but why isn’t this all the rage then?"
+msgstr "Ok, maar waarom is dit dan niet allang in de mode ?"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:62
+msgid ""
+"Simply put, because while it’s easier in the long run, you will also have to "
+"drop tools and change habits..."
+msgstr ""
+"Eenvoudig gezegd, terwijl het op de lange termijn makkelijker is, maar u "
+"zult ook methodes en gewoontes niet meer kunnen gebruiken..."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:64
+msgid ""
+"In particular, there are many tools in a digital painter’s toolbox that have "
+"**hard-coded assumptions about black and white**."
+msgstr ""
+"Er zijn met name in digitale schilderskist stukken gereedschap die **vaste "
+"aannames over zwart en wit** hebben."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:66
+msgid ""
+"A very simple but massive problem is one with **inversion**. Inverting "
+"colors is done code-wise by taking the color for white and subtracting the "
+"color you want to invert from it. It’s used in many blending modes. But "
+"often the color white is hardcoded in these filters. There’s currently no "
+"application out there that allows you to define the value range that "
+"inversion is done with, so inverting is useless. And that also means the "
+"filters and blending modes that use it, such as (but not limited to)..."
+msgstr ""
+"Een eenvoudig maar groot probleem is die met **omkeren**. Het omkeren van "
+"kleuren gebeurt programmeertechnisch door de kleur voor wit te nemen en daar "
+"de kleur die u wilt omkeren vanaf te trekken. Dit wordt bij veel "
+"mengmethodes gebruikt. Maar vaak is de kleur wit vast ingesteld in deze "
+"filters. Er is op dit moment geen programma bekent waar u het kleurenreeks "
+"kunt instellen waarop de inversie wordt uitgevoerd, het omkeren is dus "
+"onbruikbaar. En dat houd dus ook in dat de filters en mengmethodes die het "
+"gebruiken, zoals (maar niet alleen deze)..."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:68
+msgid "Screen (invert+multiply+invert)"
+msgstr "Screen (omkeren+vermenigvuldigen+omkeren)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:69
+msgid ""
+"Overlay (screens values below midtone-value, in sRGB this would be middle "
+"gray)"
+msgstr ""
+"Overlay (waarden van het scherm zijn kleiner dan de waarde van de middelste "
+"kleur, bij sRGB zou dit middel grijs zijn)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:70
+msgid "Color-dodge (divides the lower color with an inversion of the top one)"
+msgstr ""
+"Color-dodge (deelt de donkerste kleur door de omgekeerde waarde van de "
+"lichtste kleur)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:71
+msgid ""
+"Color-burn (inverts the lower color and then divides it by the top color)"
+msgstr ""
+"Color-burn (keert de donkerste kleur om en deelt het door de lichtste kleur)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:72
+msgid "Hardlight (a different way of doing overlay, including the inversion)"
+msgstr "Hardlight (een andere manier van overlay, inclusief de omkering)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:73
+msgid "Softlight (uses several inversions along the way)"
+msgstr "Softlight (gebruikt onderweg diverse omkeringen)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:75
+msgid ""
+"Conversely Multiply, Linear Dodge/Addition (they’re the same thing), "
+"Subtract, Divide, Darker (only compares colors’ channel values), Lighter "
+"(ditto), and Difference *are fine to use*, as long as the program you use "
+"doesn’t do weird clipping there."
+msgstr ""
+"Daar tegenover zijn Multiply, Linear Dodge/Addition (ze zijn hetzelfde), "
+"Subtract, Divide, Darker (vergelijkt alleen de kleurwaarden van een kanaal), "
+"Lighter (ditto), en Difference * geschikt om te gebruiken*, zolang het "
+"gebruikte programma geen rare afknijpingen uitvoert."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:77
+msgid ""
+"Another one is HSL, HSI and HSY algorithms. They too need to assume "
+"something about the top value to allow scaling to white. HSV doesn’t have "
+"this problem. So it’s best to use an HSV color selector."
+msgstr ""
+"Andere zijn de HSL, HSI en HSY algoritmes. Zij moeten van iets uitgaan wat "
+"betreft de hoogste waarde om te kunnen vermenigvuldigen met wit. HSV heeft "
+"dit probleem niet. U kunt daarom het beste een HSV kleurenkiezer gebruiken."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:79
+msgid ""
+"For the blending modes that use HSY, there’s always the issue that they tend "
+"to be hardcoded to sRGB/Rec. 709 values, but are otherwise fine (and they "
+"give actually far more correct results in a linear space). So these are not "
+"a good idea to use with wide-gamut colorspaces, and due to the assumption "
+"about black and white, not with scene linear painting. The following "
+"blending modes use them:"
+msgstr ""
+"Bij de mengmethodes die HSY gebruiken, is er altijd het probleem dat ze vast "
+"zijn ingesteld op sRGB/Rec. 709 waarden, maar voor de rest is er geen "
+"probleem (en eigenlijk geven ze veel correctere resultaten in een lineaire "
+"ruimte).Het is dus geen goed idee om deze bij kleurruimten met een groot "
+"kleurenbereik te gebruiken, en vanwege de vast instellingen van zwart en "
+"wit, ook niet bij lineaire scene schilderen. De volgende mengmethodes "
+"gebruiken ze:"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:82
+msgid "Luminosity"
+msgstr "Lichtkracht"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:83
+msgid "Saturation"
+msgstr "Verzadiging"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:84
+msgid "Darker Color (uses luminosity to determine the color)"
+msgstr "Donkerder kleur (gebruikt de lichtkracht om de kleur te bepalen)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:85
+msgid "Lighter Color (Ditto)"
+msgstr "Lichtere kleur (Ditto)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:87
+msgid ""
+"So that is the blending modes. Many filters suffer from similar issues, and "
+"in many applications, filters aren’t adjusted to work with arbitrary whites."
+msgstr ""
+"Dat zijn de mengmethodes. Vele filters hebben last van dezelfde problemen, "
+"en bij veel programma's, zijn filters niet geschikt om met een willekeurige "
+"wit te werken."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:89
+msgid ""
+"Speaking of filters, when using the transform tool, you should also avoid "
+"using lanczos3, it’ll give a weird black halo to sharp contrasts in scene-"
+"linear. The bilinear interpolation filter will work just fine in this case."
+msgstr ""
+"Als we het over filters hebben, bij het maken van transformaties, kunt u "
+"beter ook lanczos3 niet gebruiken, omdat het een vreemde zwarte halo bij "
+"scherpe contrasten in scene-lineair geeft. Het bilinear interpolatie filter "
+"werkt in een dergelijk geval wel goed."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:91
+msgid "The second big problem is that **black doesn’t work quite the same**."
+msgstr ""
+"Het tweede grote probleem is dat **zwart niet helemaal op dezelfde manier "
+"werkt**."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:93
+msgid ""
+"If you have mixed pigments before, you will know that black can quite easily "
+"overpower the other colors, so you should only add the tiniest amount of it "
+"to a mixture. White in contrast gets dirtied quite easily."
+msgstr ""
+"Als u al eerder pigments heeft gemengd, dan weet u wellicht al dat zwart "
+"vrij makkelijk de andere kleuren kan overstemmen, dus u kan beter het in "
+"kleine hoeveelheden aan een mengsel toevoegen. Daarentegen kan wit vrij "
+"makkelijk smoezelig worden."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:95
+msgid ""
+"In a Scene Linear Color space, this is flipped. White is now more "
+"overpowering and black gets washed out super quickly. This relates to the "
+"additive nature of digital color theory, that becomes more obvious when "
+"working in linear."
+msgstr ""
+"In een Scene met een lineaire kleurruimte is dit andersom. Wit is nu meer "
+"overstemmend en wordt zwart makkelijker vaal. Dit hangt samen met de "
+"optellende eigenschap van de digitale kleuren-theorie, wat meer duidelijk "
+"wordt als u in lineair werkt."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:97
+msgid ""
+"This makes sketching a bit different, after all, it’s really difficult to "
+"make marks now. To get around this, you can do the following:"
+msgstr ""
+"Dit maakt het schetsen een beetje anders, tenslotte, het is erg moeilijk om "
+"aantekeningen te maken. Om dit op te lossen, kunt u het volgende doen:"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:99
+msgid ""
+"Sketch on a mid-gray background. This is recommended anyway, as it serves as "
+"a neutral backdrop. For a linear space, 18% or 22% gray would be a good "
+"neutral."
+msgstr ""
+"Schets op een neutraal grijze achtergrond. Dit wordt trouwens toch al "
+"aanbevolen, omdat het een neutrale achtergrond zal zijn. In een lineaire "
+"ruimte, zal 18% of 22% grijs een goede neutraal zijn."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:100
+msgid ""
+"Make a special brush that is more opaque than the regular sketching brushes "
+"you use."
+msgstr ""
+"Maak een speciale penseel die dekkender is dan de normale penselen die u "
+"gebruikt."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:101
+msgid "Or conversely, sketch with white instead."
+msgstr "Of omgekeerd, schets in plaats met wit."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:102
+msgid ""
+"For painting, block out the shapes with a big opaque brush before you start "
+"doing your mixing."
+msgstr ""
+"Bij het schilderen, bedek de vormen met een grote dekkende kwast voor dat "
+"begint met het mengen."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:104
+msgid ""
+"Overall, this is something that will take a little while getting used to, "
+"but you will get used to it soon enough."
+msgstr ""
+"Tenslotte is dit iets dat de nodige tijd nodig heeft om daaraan te wennen, "
+"maar u zal er snel genoeg aan gewent zijn."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:106
+msgid "Finally, there’s the **issue of size**."
+msgstr "Tenslotte, is er het **probleem van grootte**."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:108
+msgid ""
+"16 bit float per channel images are big. 32 bit float per channel images are "
+"bigger. This means that they will eat RAM and that painting and filtering "
+"will be slower. This is something that will fix itself over the years, but "
+"not many people have such a high-end PC yet, so it can be a blocker."
+msgstr ""
+"16 bit drijvende komma per kanaal is veel. 32 bit drijvende komma per kanaal "
+"afbeeldingen zijn nog groter. Dit houd in dat ze RAM opeten en dat "
+"schilderen en filteren langzamer zal zijn. Dit is iets dat vanzelf beter zal "
+"worden in de loop der jaren, maar niet iedereen heeft al een dergelijke high-"
+"end PC, dit kan dus een probleem geven."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:110
+msgid "So the issues are tools, expectations and size."
+msgstr ""
+"De problemen zijn dus de mogelijkheden, de verwachtingen en de grootte."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:113
+msgid "In Summary"
+msgstr "Samengevat"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:115
+msgid ""
+"Scene Linear Painting is painting an image in a color space that is linear "
+"and has a floating point bit depth. This does not assume anything about the "
+"values of black and white, so you can only use tools that don’t assume "
+"anything about the values of black and white. It has the advantage of having "
+"nicer filter results and better color mixtures as well as better "
+"interoperability with other scene-linear output."
+msgstr ""
+"Een lineaire scene schilderen is een afbeelding schilderen in een "
+"kleurruimte die lineair en een drijvende komma bit diepte heeft. Ze gaan "
+"niet uit van vaste waarden voor zwart en wit, u kunt dus ook alleen "
+"instrumenten gebruiken die ook niet van vaste waarden uitgaan voor zwart en "
+"wit. Het heeft het voordeel van mooiere filter-resultaten en betere "
+"kleurmengingen en ook betere uitwisselbaarheid met andere lineaire scene "
+"uitvoer."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:117
+msgid ""
+"To be able to view such an image you use a view transform, also called a "
+"display conversion. Which means that if you wish to finalize your image for "
+"the web, you make a copy of the image that goes through a display conversion "
+"or view transform that then gets saved to PNG, JPEG or TIFF."
+msgstr ""
+"Om een dergelijke weergave te kunnen bekijken moet u een weergave-"
+"transformatie gebruiken, ook wel een weergave-conversie genoemd. Wat inhoudt "
+"dat als u de afbeelding klaar wilt maken voor het internet, dat u een kopie "
+"maakt van de afbeelding die door een weergave-conversie of weergave-"
+"transformatie gaat om daarna te worden opgeslagen als PNG, JPEG of TIFF."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:120
+msgid "Getting to actual painting"
+msgstr "Echt gaan schilderen"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:122
+msgid ""
+"Now we’ve covered the theory, let us look at a workflow for painting scene "
+"linear."
+msgstr ""
+"Nu we de theorie hebben behandelt, kunnen we de werkvolgorde van het "
+"schilderen van een lineaire scene gaan bekijken."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:125
+msgid "Setting up the Canvas"
+msgstr "Het canvas voorbereiden"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:127
+msgid ""
+"Select either a 16bit or 32bit image. By default Krita will select a linear "
+"sRGB profile. If you want to create images for HDR display, you will need to "
+"make sure that the profile selected is the :guilabel:`Rec2020-elle-V4-g10."
+"icc` profile. HDR images are standardised to use the Rec. 2020 gamut, which "
+"is much larger than sRGB in size, so this ensures you've got access to all "
+"the colors."
+msgstr ""
+"Maak een keuze voor een 16bit of 32bit afbeelding. De standaard keuze van "
+"Krita is een lineaire sRGB profiel. Als u afbeeldingen voor een HDR scherm "
+"wilt creëren, dan moet u er zorg voor dragen dat het geselecteerde profiel "
+"de :guilabel:`Rec2020-elle-V4-g10.icc` profiel is. HDR afbeeldingen "
+"gebruiken standaard het Rec. 2020 kleurenbereik, wat veel groter in formaat "
+"dan sRGB is, dit zorgt ervoor dat u alle kleuren kunt gebruiken."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:129
+msgid ""
+"If you're working on a non-HDR enabled monitor, you should enable OCIO in "
+"the LUT docker."
+msgstr ""
+"Als werkt met een beeldscherm zonder HDR, dan moet u in de LUT docker OCIO "
+"inschakelen."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:131
+msgid ""
+"Keep in mind everything mentioned above. Not all filters and not all "
+"blending modes work. This will improve in the future. Other than that, "
+"everything else is the same."
+msgstr ""
+"Vergeet het bovenstaande niet. Niet alle filters en niet alle mengmethodes "
+"werken. Dit zal in de toekomst verbeteren. behalve dat is alles hetzelfde."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:134
+msgid "Picking really bright colors"
+msgstr "Echt felle kleuren selecteren"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:136
+msgid ""
+"Picking regular colors is easy, but how do we pick the really bright colors? "
+"There are three ways of getting access to the really bright colors in Krita:"
+msgstr ""
+"Normale kleuren selecteren is makkelijk, maar hoe selecteren we de echt "
+"felle kleuren? Er zijn drie manieren om in Krita toegang te krijgen tot de "
+"echt felle kleuren:"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:138
+msgid ""
+"By lowering the exposure in the LUT docker. This will increase the visible "
+"range of colors in the color selectors. You can even hotkey the exposure in "
+"the canvas input settings."
+msgstr ""
+"Door de belichting in het LUT onderdeel te verminderen. Dit zal bekijkbare "
+"gedeelte van de kleuren in de kleurenkiezer vergroten. U kunt zelfs de "
+"sneltoetsen gebruiken voor het instellen van de belichting in de canvas-"
+"instellingen."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:139
+msgid ""
+"By setting the nits slider in the :ref:`small_color_selector` higher than "
+"100."
+msgstr ""
+"Door de schuifregelaar in de :ref:`small_color_selector` hoger dan 100 te "
+"zetten."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:140
+msgid ""
+"Or simply by opening the internal color selector by double clicking the dual "
+"color button and typing in values higher than 1 into the input field."
+msgstr ""
+"Of door eenvoudig de interne kleurenkiezer te openen door te dubbelklikken "
+"op de tweekleuren knop en in het invoerveld een waarde groter dan 1 in te "
+"voeren."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:141
+msgid ""
+"And finally by picking a really bright color from an image that has such "
+"values."
+msgstr ""
+"En tenslotte door een hele felle kleur te selecteren in een afbeelding met "
+"zulke kleuren."
+
+# In het menu wordt soms swatch als vlek vertaalt, soms als swatch.
+#: ../../general_concepts/colors/scene_linear_painting.rst:143
+msgid ""
+"Then paint. It’s recommended to make a bunch of swatches in the corner, at "
+"the least, until Krita’s new Palette docker allows you to save the values "
+"properly."
+msgstr ""
+"En dan schilderen. We raden aan om in de hoek een verzameling vlekken te "
+"maken, ten minste tot het moment dat u via nieuw palet van Krita de waarden "
+"goed kunt opslaan."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:146
+msgid "Lighting based workflow"
+msgstr "Op licht gebaseerde werkvolgorde"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:148
+msgid ""
+"So, we have our typical value based workflow, where we only paint the grays "
+"of the image so that we can focus on the values of the image. We can do "
+"something similar with Scene Linear Painting."
+msgstr ""
+"Zo, we hebben onze op kleur gebaseerde standaard werkvolgorde, waar we de "
+"afbeelding alleen met grijs schilderen zodat we ons kunnen focussen op de "
+"kleuren van de afbeelding. We kunnen iets vergelijkbaar doen met lineaire "
+"scene schilderen."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:150
+msgid ""
+"Where with the value based workflow you paint the image as if it were a "
+"grayscale of what you intended to paint, with a lighting based workflow you "
+"paint as if all the objects are white. The effect of the color of an object "
+"can be determined by multiplying its base color with the color of the light. "
+"So you could paint objects as if they were white, paint the colors on a "
+"separate layer and just use the Multiply blending mode to get the right "
+"colors."
+msgstr ""
+"Met de op kleur gebaseerde werkvolgorde kunt u de afbeelding schilderen "
+"alsof u het met diverse grijswaarden wilde schilderen, met een op "
+"lichtkracht gebaseerde werkvolgorde schildert u alsof alle voorwerpen wit "
+"zijn. Het effect van de kleur van een object kunt u bepalen door zijn "
+"basiskleur te vermenigvuldigen met de kleur van het licht. U kunt dus de "
+"objecten schilderen alsof ze wit zijn, door de kleuren op een aparte laag te "
+"schilderen en gewoon Vermenigvuldigende mengmodus te gebruiken om de juiste "
+"kleuren te krijgen."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:156
+msgid ".. image:: images/color_category/Krita_scenelinear_cat_02.png"
+msgstr ".. image:: images/color_category/Krita_scenelinear_cat_02.png"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:156
+msgid ""
+"The leftmost image is both the lighting based one and the color layer "
+"separate, the middle with the two layers multiplied and the right a "
+"luminosity based view. This cat is a nice example as it demonstrates why "
+"having textures and lighting separate could be interesting."
+msgstr ""
+"De meest linkse afbeelding is zowel een op licht gebaseerde en een waarvan "
+"de kleur op een aparte laag is, de middelste heeft de twee lagen "
+"vermenigvuldigt en de rechter heeft een op lichtkracht gebaseerde weergave. "
+"Dit is een mooi voorbeeld die demonstreert waarom interessant kan zijn om de "
+"textuur en lichtkracht separaat te hebben."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:158
+msgid ""
+"You can even combine this with a value based workflow by opening a new view "
+"and setting the component to luminosity. That way you can see both the "
+"grayscale as well as the lighting based version of the image next to one "
+"another."
+msgstr ""
+"U kunt dit zelfs combineren met een op kleur gebaseerde werkvolgorde door "
+"een nieuwe weergave te openen en de onderdelen over te schakelen op "
+"lichtkracht. Op die manier kunt u zowel de op grijswaarden als de op "
+"lichtkracht gebaseerde versie van de afbeelding naast elkaar zien."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:160
+msgid ""
+"The keen minded will notice that a lighting based workflow kind of resembles "
+"the idea of a light pass and a color pass in 3d rendering. And indeed, it is "
+"basically the same, so you can use lighting passes from 3d renders here, "
+"just save them as EXR and import them as a layer. One of the examples where "
+"scene linear painting simplifies combining methods."
+msgstr ""
+"De bijdehante lezers zullen opmerken dat een op licht gebaseerde "
+"werkvolgorde min of meer overeenkomt met het idee van een licht pass en een "
+"kleur pass in de 3de rendering. En inderdaad, het is eigenlijk hetzelfde, u "
+"kunt dus de licht passes van de 3de renders hier gebruiken, sla ze gewoon op "
+"als EXR en importeer ze als een laag. Een van de voorbeelden waar het "
+"schilderen van lineaire scenes het combineren van methoden makkelijker maakt."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:163
+msgid "Finishing up"
+msgstr "Afrondend"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:165
+msgid ""
+"When you are done, you will want to apply the view transform you have been "
+"using to the image (at the least, if you want to post the end result on the "
+"Internet)... This is called LUT baking and not possible yet in Krita. "
+"Therefore you will have to save out your image in EXR and open it in either "
+"Blender or Natron. Then, in Blender it is enough to just use the same OCIO "
+"config, select the right values and save the result as a PNG."
+msgstr ""
+"Als u klaar bent dan wilt u natuurlijk de weergave transformatie die u "
+"gebruikte ook uitvoeren op de afbeelding (tenminste, als u het resultaat op "
+"het internet wilt plaatsen)... Dit wordt LUT baking genoemd en is nog niet "
+"mogelijk in Krita. U zal daarom de afbeelding moeten opslaan in EXR en het "
+"naar keuze openen in Blender of Natron. U hoeft daarna in Blender alleen "
+"maar dezelfde OCIO config te gebruiken, selecteer de juiste instellingen en "
+"sla het resultaat op als een PNG."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:167
+msgid "For saving HDR images, check the :ref:`hdr_display` page."
+msgstr ""
+"Voor het opslaan van HDR-afbeeldingen, leest u de :ref:`hdr_display` pagina."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:169
+msgid ""
+"You can even use some of Blender’s or Natron’s filters at this stage, and "
+"when working with others, you would save out in EXR so that others can use "
+"those."
+msgstr ""
+"U kunt zelfs op dat moment sommige van Blender’s of Natron’s filters "
+"gebruiken, en als u met andere werkt, dan kunt ze opslaan in EXR zodat "
+"anderen ze ook kunnen gebruiken."

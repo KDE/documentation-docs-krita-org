@@ -1,0 +1,940 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-15 00:39+0000\n"
+"PO-Revision-Date: 2022-09-20 01:57\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
+"docs_krita_org_general_concepts___file_formats___file_jxl.pot\n"
+"X-Crowdin-File-ID: 40796\n"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:2
+msgid "The JPEG XL file format in Krita."
+msgstr "Krita 中的 JPEG XL 文件格式。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:12
+msgid "*.jxl"
+msgstr "*.jxl"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:12
+msgid "JPEG XL"
+msgstr "JPEG XL"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:12
+msgid "JPEG-XL"
+msgstr "JPEG-XL"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:12
+msgid "JPEGXL"
+msgstr "JPEGXL"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:12
+msgid "JXL"
+msgstr "JXL"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:17
+msgid "\\*.jxl"
+msgstr "\\*.jxl"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:19
+msgid ""
+"JPEG XL (``.jxl``) is a new royalty-free image file format. It supports :ref:"
+"`lossy compression mode <lossless_compression>` designed for photographs "
+"similar to the :ref:`JPEG <file_jpeg>` file format, and also :ref:`lossless "
+"compression mode <lossless_compression>` similar to formats like :ref:`PNG "
+"<file_png>`. In addition, it also supports saving animations with multiple "
+"frames like :ref:`GIF <file_gif>`."
+msgstr ""
+"JPEG XL (``.jxl``) 是一种新型的图像文件格式，它无需专利费用。它既能像 :ref:"
+"`JPEG <file_jpeg>` 格式一样支持适用于照片图像的\\ :ref:`有损压缩模式"
+"<lossless_compression>`\\ ，也能和 :ref:`PNG <file_png>` 格式一样支持\\ :ref:"
+"`无损压缩模式<lossless_compression>`\\ ，还能和 :ref:`GIF <file_gif>` 格式一"
+"样支持保存动图。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:21
+msgid ""
+"When deciding between lossy and lossless compression modes, the same advice "
+"for :ref:`JPEG <file_jpeg>` and :ref:`PNG <file_png>` applies. For images "
+"with a lot of gradients, like full scale paintings, lossy compression may "
+"work very well to produce small files with very little visual quality loss. "
+"But for images with a lot of sharp contrasts, like text and comic book "
+"styles, lossless compression is usually the better choice."
+msgstr ""
+"有损和无损压缩的选择可遵循 :ref:`JPEG <file_jpeg>` 和 :ref:`PNG <file_png>` "
+"格式的经验。对于渐变色比例较多的图像而言，例如颜色过渡丰富柔和的绘画作品，有"
+"损压缩能够在画质损失较小的情况下生成较小的文件。而对于颜色反差强烈的图像而"
+"言，例如传统漫画等，无损压缩的效果通常会更好。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:23
+msgid ""
+"For JPEG XL files using lossy compression, it is not advised to save over "
+"the same file multiple times. The lossy compression will cause the file to "
+"reduce in quality each time you save it. This is a fundamental problem with "
+"lossy compression methods. Instead you should use the lossless compression "
+"mode, or a working file format while you are working on the image."
+msgstr ""
+"在使用有损压缩方式保存 JPEG XL 格式的图像时，不建议反复修改、覆盖保存原有文"
+"件。有损压缩会在每次保存文件时造成画质的劣化。在编辑图像时，应该使用无损格式"
+"保存工作图像。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:25
+msgid ""
+"It is possible to losslessly transcode JPEG images into JPEG XL. Transcoding "
+"preserves the already-lossy compression data from the original JPEG image "
+"without any quality loss caused by re-encoding, while making the file size "
+"smaller than the original. To do this, you need to use specialized tools, "
+"for example the :program:`cjxl` command line tool from `libjxl <https://"
+"github.com/libjxl/libjxl>`_, to perform the conversion. Beware that you "
+"*cannot* do this by opening the JPEG image in Krita and re-exporting it into "
+"JPEG XL. Krita always exports files from the raw pixel data, therefore this "
+"does *not* have the same effect as transcoding directly from JPEG to JPEG XL."
+msgstr ""
+"JPEG 图像可以在不损失画质的情况下转码为 JPEG XL 图像，文件体积更小。这种转换"
+"需要用到专门的程序，例如 `libjxl <https://github.com/libjxl/libjxl>`_ 项目包"
+"含的 :program:`cjxl` 命令行程序。而直接用 Krita 打开 JPEG 图像后重新导出为 "
+"JPEG XL 会造成画质劣化。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:27
+msgid ""
+"Exporting animations from Krita as JPEG XL is supported, though this "
+"flattens all layers in the image. To export JPEG XL animations, use :term:"
+"`Export...` from the :ref:`file_menu` and then saving or exporting to a ``."
+"jxl`` file. Make sure to enable :guilabel:`Save as animated JPEG XL` in the "
+"export options. This is different from :ref:`render_animation` in that it "
+"does not use FFmpeg."
+msgstr ""
+"Krita 支持使用 JPEG XL 格式导出动图，但这会将图像的所有图像合并。要导出 JPEG "
+"XL 动图，请在\\ :ref:`file_menu`\\ 选择\\ :term:`导出...`\\ 然后选择导出为 "
+"``.jxl`` 文件，在导出选项中勾选 :guilabel:`保存为 JPEG-XL 动图`\\ 。导出动图"
+"和\\ :ref:`render_animation`\\ 不是一回事，无需像后者那样使用 FFmpeg。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:30
+msgid "Export Options"
+msgstr "导出选项"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:33
+msgid "General"
+msgstr "常规"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:35
+msgid ""
+"JPEG XL's encoder is designed to be fairly hands-off. Where in the case of "
+"JPEG you'd have to select the appropriate quality, JPEG XL instead tries to "
+"find the best quality for your image. What you instead choose is whether the "
+"preferred compression is :ref:`lossy or lossless <lossless_compression>`, "
+"and how much effort the encoder should put into finding the best compression "
+"for your image, with more effort also meaning longer saving times."
+msgstr ""
+"JPEG XL 的编码器和 JPEG 有很大不同。JPEG 编码器是按照用户指定的画质输出图像"
+"的，而 JPEG XL 则是由编码器自动决定最适合图像的画质，用户只能选择使用的是\\ :"
+"ref:`有损还是无损<lossless_compression>`\\ 压缩方式，并指定在检测最佳压缩比时"
+"的检测力度。检测力度越大，保存耗时越久。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:37
+msgid "Save as animated JPEG XL"
+msgstr "保存为 JPEG XL 动图"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:38
+msgid ""
+"JPEG XL has the ability to store small animations like :ref:`file_gif`. Its "
+"animation capabilities are simple though, and specifically designed for "
+"stylized content that doesn't have a lot of colors, like cel-animation. This "
+"is because JPEG XL doesn't have intra-frame prediction, which is the best "
+"way to store video files with a lot of colors like 3D animation, film and "
+"painterly animation. We recommend you try using video rendering for "
+"painterly animation instead."
+msgstr ""
+"JPEG XL 可以像 :ref:`file_gif` 那样保存动图，但它的动画功能非常简单，不支持帧"
+"内预测，因此更适合颜色数量较少，风格化明显的动画使用，例如赛璐璐上色风格的动"
+"画，而不适合颜色层次丰富的 3D 动画、手绘颜料风格明显的动画等使用。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:40
+msgid "Lossless encoding."
+msgstr "无损编码"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:41
+msgid ""
+"Whether to use :ref:`Lossless compression <lossless_compression>`. Like :ref:"
+"`file_webp`, JPEG XL has a different way of encoding the images in lossless "
+"and lossy mode, with the latter being closer to the way the original :ref:"
+"`file_jpeg` encodes."
+msgstr ""
+"是否使用\\ :ref:`无损压缩方式<lossless_compression>`\\ 保存图像。和 :ref:"
+"`file_webp` 一样，JPEG XL 既支持有损压缩方式，也支持无损压缩方式。其中有损压"
+"缩与 :ref:`file_jpeg` 使用编码方式接近。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:43
+msgid ""
+"The encoder can give a better result if it is given more time. This slider "
+"allows you to decide how much the encoder should prioritize quality over "
+"speed. The different modes can be seen as presets [1]_:"
+msgstr "此滑动条用于权衡编码器的检测力度和编码速度，它带有一些预设 [1]_\\ ："
+
+#: ../../general_concepts/file_formats/file_jxl.rst:45
+msgid ""
+"Lightning -- A fast mode useful for lossless mode. Fastest possible values "
+"for lossy compression, for lossless uses gradient predictors and fast "
+"histograms, but no MA tree."
+msgstr ""
+"闪电 -- 适合无损压缩使用的快速模式。对于有损压缩，将使用最快的检测方式；对于"
+"无损压缩，将使用渐变色预测器和快速直方图，但不使用 MA 树。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:46
+msgid ""
+"Thunder -- Both Lightning and Thunder are similar for Lossy, for lossless, "
+"Thunder uses a fixed MA tree and gradient predictors."
+msgstr ""
+"雷声 -- 无论是有损还是无损，雷声和闪电模式在检测方式上是类似的，但雷声使用固"
+"定 MA 树和渐变色预测器。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:47
+msgid "Falcon -- Instead of using lossless mode, disables all options."
+msgstr "猎鹰 -- 禁用所有选项，不使用无损模式。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:48
+msgid ""
+"Cheetah -- Enables coefficient reordering, context clustering, and "
+"heuristics for selecting DCT sizes and quantization steps."
+msgstr ""
+"猎豹 -- 在选择 DCT 大小时启用系数重新排列、上下文聚类和启发式探测，启用定量化"
+"步骤。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:49
+msgid ""
+"Hare -- Enables Gaborish Filtering, Chroma from Luma and estimates "
+"quantization steps."
+msgstr "野兔 -- 启用类 Gabor 滤波器、从亮度推测色品、预测定量化等步骤。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:50
+msgid "Wombat -- Enables error diffusion quantization and DCT heuristics."
+msgstr "袋熊 -- 启用误差扩散定量化和 DCT 启发式检测。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:51
+msgid ""
+"Squirrel -- Enables dots, patches and spline detection as well as context "
+"clustering."
+msgstr "懂树 -- 启用点、块、样条检测，启用上下文聚类。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:52
+msgid ""
+"Kitten -- Optimizes the adaptive quantization for a psychovisual metric."
+msgstr "小猫 -- 基于视觉心理学的算法优化自适应定量化。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:53
+msgid "Tortoise -- Enables a more thorough adaptive quantization search."
+msgstr "乌龟 -- 启用更加彻底的自适应定量化查找。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:54
+msgid "Tradeoff"
+msgstr "权衡"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:55
+msgid ""
+"You can force-enable several of the options in the :guilabel:`Advanced` "
+"section even if they are disabled by the :guilabel:`Tradeoff` preset."
+msgstr ""
+"你可以在\\ :guilabel:`高级`\\ 部分中强制启用某些选项，即使它们已在\\ :"
+"guilabel:`权衡`\\ 的预设中被禁用。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:57
+msgid "Encoding Options"
+msgstr "编码选项"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:57
+msgid "Decoding Speed"
+msgstr "解码速度"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:57
+msgid ""
+"Decoding speed can be improved by allowing certain optimizations. However, "
+"this will lead to some quality loss. For example, if you think your images "
+"will be largely viewed on mobile phones it might be a good idea to "
+"experiment with this option. Conversely, if your image will only be viewed "
+"by desktop computers and quality is of utmost importance, this should be set "
+"to 0."
+msgstr ""
+"解码速度可以通过某些优化进行改善，但这也会造成画质劣化。如果你认为图像主要通"
+"过手机查看，那么可以尝试此选项；而如果你认为图像主要通过桌面电脑查看，而且画"
+"质非常重要，那么此项应设为 0。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:60
+msgid "Advanced"
+msgstr "高级"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:62
+msgid "JPEG XL has two major ways of encoding data:"
+msgstr "JPEG XL 有两种主要编码方式："
+
+#: ../../general_concepts/file_formats/file_jxl.rst:64
+msgid "VarDCT"
+msgstr "VarDCT"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:65
+msgid ""
+"This one is in the same family of compression techniques as used by the "
+"original JPEG, and thus best for 'Natural' images, such as photographs and "
+"images with a lot of gradients and textures."
+msgstr ""
+"这是一种和原版 JPEG 同一谱系的压缩技术，同样适合自然图像的编码，例如照片、包"
+"含丰富渐变色和纹理的图像等。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:67
+msgid "Modular Mode"
+msgstr "模块化模式"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:67
+msgid ""
+"This one has specific features for so-called 'synthetic' images, such as "
+"line art and images with a lot of wide patches. Modular mode is always used "
+"when selecting :guilabel:`Lossless Encoding`."
+msgstr ""
+"这是一种专门针对人工合成图像设计的压缩技术，例如线稿和包含大面积单一色块的图"
+"像等。选择\\ :guilabel:`无损编码`\\ 时，编码器将始终使用模块化模式。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:69
+msgid ""
+"You could consider VarDCT to be like 'lossy' compression, while Modular Mode "
+"is like 'lossless' compression. Furthermore, JPEG XL splits up images into "
+"smaller chunks called 'Groups', these are 256x256 for VarDCT and you can "
+"choose one of several sizes for Modular Mode."
+msgstr ""
+"你可以将 VarDCT 视作与有损压缩有关，将模块化模式则视作与无损压缩有关。JPEG "
+"XL 会将图像拆分成组块进行处理，VarDCT 使用 256x256 大小的组块，而模块化模式的"
+"组块大小可选。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:72
+msgid ""
+"How to sample the color channels. This means that there will be less "
+"information stored, leading to a smaller file. However, because this only "
+"samples a few pixels, sharp contrasts are lost. The effect is similar to if "
+"you'd scale down the image by half (for 2x2), quarter (for 4x4) or to an "
+"eight (for 8x8) and then scaled it back up to the original size."
+msgstr ""
+"色彩通道的采样方式。采样时存储的信息越少，生成的文件就越小。降低采样精度会影"
+"响图像中颜色反差的清晰程度——因为每次采样的对象不是单个像素，而是多个像素——原"
+"理和将图像缩小后重新放大成原本大小时的马赛克现象类似。2x2 和图像被缩小到一半"
+"大小后重新放大类似，4x4 和图像被缩小到四分之一大小后重新放大类似，8x8 和图像"
+"被缩小到八分之一大小后重新放大类似。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:75
+msgid "Color channel resampling."
+msgstr "色彩通道重采样"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:75
+msgid ""
+"This feature is particularly useful for images that are deliberately blurry "
+"and devoid of sharp contrast. It's recommended to set this to :guilabel:`No "
+"Downsampling` in any other case."
+msgstr ""
+"此功能适合那些包含特意的模糊效果或者缺少鲜明颜色反差的图像使用。对于其他图像"
+"而言，建议设置为\\ :guilabel:`无降采样`\\ 。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:77
+msgid "Alpha channel resampling"
+msgstr "透明度通道重采样"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:78
+msgid ""
+"Same as :guilabel:`Color channel resampling`, but then for the transparency "
+"of the image."
+msgstr "和\\ :guilabel:`色彩通道重采样`\\ 类似，但处理对象是图像的透明度。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:79
+msgid "Photon noise"
+msgstr "光子噪声"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:80
+msgid ""
+"This determines whether noise in the image should be abstracted and added "
+"later by the computer, giving a simulation of the noise that cameras "
+"sometimes capture."
+msgstr ""
+"是否要将颜色噪声从图像中减去，然后在后期重新加入，以模拟数码相机捕获图像时的"
+"画面噪声。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:82
+msgid ""
+"Dots are a form of noise larger than :guilabel:`Photon noise`. Such dots "
+"make images more pleasing to look at, however, they make compressing "
+"difficult. This option allows you to choose whether or not to abstract these "
+"dots away and have the computer add them later. If this and :guilabel:"
+"`Generate Patches` is on, and the encoder finds both patches and dots, the "
+"dots will be encoded as if they were patches."
+msgstr ""
+"点是一种噪声，它的面积大于\\ :guilabel:`光子噪声`\\ ，观感更好，但压缩时更耗"
+"费算力。此选项用于选择编码器是否要先将点从图像中减去，然后在后期重新加入。如"
+"果启用了此选项和\\ :guilabel:`生成块`\\ ，且编码器同时找到了块和点，那么点将"
+"被作为块进行编码。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:84
+#: ../../general_concepts/file_formats/file_jxl.rst:91
+#: ../../general_concepts/file_formats/file_jxl.rst:100
+#: ../../general_concepts/file_formats/file_jxl.rst:109
+#: ../../general_concepts/file_formats/file_jxl.rst:126
+#: ../../general_concepts/file_formats/file_jxl.rst:138
+#: ../../general_concepts/file_formats/file_jxl.rst:145
+#: ../../general_concepts/file_formats/file_jxl.rst:171
+#: ../../general_concepts/file_formats/file_jxl.rst:183
+msgid ""
+"Default -- Encoder will select this option depending on :guilabel:`Tradeoff`."
+msgstr "默认 -- 编码器将按照\\ :guilabel:`权衡`\\ 的预设来选择此选项。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:85
+#: ../../general_concepts/file_formats/file_jxl.rst:92
+#: ../../general_concepts/file_formats/file_jxl.rst:101
+msgid "Enabled -- Always use this regardless :guilabel:`Tradeoff`."
+msgstr "启用 -- 无视\\ :guilabel:`权衡`\\ 中预设的内容，总是启用此选项。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:86
+msgid "Generate dots"
+msgstr "生成点"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:86
+#: ../../general_concepts/file_formats/file_jxl.rst:93
+#: ../../general_concepts/file_formats/file_jxl.rst:102
+msgid "Disabled -- Never use this regardless :guilabel:`Tradeoff`."
+msgstr "禁用 -- 无视\\ :guilabel:`权衡`\\ 中预设的内容，不要启用此选项。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:89
+msgid ""
+"This determines whether or not to try and reuse bits and pieces of an image. "
+"This can be useful with images that have a lot of repeating bits, like "
+"sprite art, images with text or images using a lot of patterns."
+msgstr ""
+"此选项控制是否尝试查找和复用图像中的小块。这对于那些包含重复元素的图像有用，"
+"例如像素画、包含大量文字和图案的图像等。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:93
+msgid "Generate patches"
+msgstr "生成块"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:95
+msgid "Edge Preserving Filter"
+msgstr "边缘保护滤波器"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:96
+msgid ""
+"The edge preserving filter tries to preserve edges without getting artifacts "
+"like 'rings'."
+msgstr "边缘保护滤波器会尝试保护色块的边缘，避免产生色晕。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:98
+msgid ""
+"Whether or not to apply a Gabor-like sharpening filter, which can help "
+"emphasize important contrasts that would otherwise be lost during encoding "
+"and decoding."
+msgstr ""
+"是否应用类似 Gabor 的锐化滤波器，这将强调重要的颜色反差，避免在编码和解码的过"
+"程中损失它们。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:102
+msgid "Gaborish filter"
+msgstr "类 Gabor 滤波器"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:104
+msgid "Modular encoding"
+msgstr "模块化编码"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:105
+msgid ""
+"Unlike *Modular Mode*, which is the lossless compression method, Modular "
+"encoding instead splits the image into smaller chunks, allowing for multi-"
+"threaded encoding, as well as per-chunk optimization. This option allows you "
+"to choose whether the encoder should do so with the lossy :guilabel:`VarDCT` "
+"method, the lossless :guilabel:`Modular Mode`, or by letting the encoder "
+"itself choose."
+msgstr ""
+"此选项与无损压缩的模块化模式不是一回事。模块化编码会将图像拆分成小块以便进行"
+"多线程编码，还可以对每个图块进行单独优化。你可以选择编码器要使用有损的 :"
+"guilabel:`VarDCT` 模式还是无损的\\ :guilabel:`模块化` 模式，还是让编码器自行"
+"选择。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:107
+msgid ""
+"Whether to keep the color values when a pixel is fully transparent or "
+"whether to abstract them away as if they were transparent black."
+msgstr ""
+"当像素完全透明时，是否保存它的颜色数值。如果不保存，将把该透明像素的颜色视作"
+"完全透明的纯黑。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:110
+#: ../../general_concepts/file_formats/file_jxl.rst:127
+#: ../../general_concepts/file_formats/file_jxl.rst:139
+#: ../../general_concepts/file_formats/file_jxl.rst:146
+#: ../../general_concepts/file_formats/file_jxl.rst:172
+#: ../../general_concepts/file_formats/file_jxl.rst:184
+msgid "Enabled -- Always use this regardless of :guilabel:`Tradeoff`."
+msgstr "启用 -- 无视\\ :guilabel:`权衡`\\ 中预设的内容，总是启用此选项。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:111
+msgid "Keep color of invisible pixels"
+msgstr "保持不可见像素的颜色"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:111
+#: ../../general_concepts/file_formats/file_jxl.rst:128
+#: ../../general_concepts/file_formats/file_jxl.rst:140
+#: ../../general_concepts/file_formats/file_jxl.rst:147
+#: ../../general_concepts/file_formats/file_jxl.rst:173
+#: ../../general_concepts/file_formats/file_jxl.rst:185
+msgid "Disabled -- Never use this regardless of :guilabel:`Tradeoff`."
+msgstr "禁用 -- 无视\\ :guilabel:`权衡`\\ 中预设的内容，不要启用此选项。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:114
+msgid ""
+"How the groups are stored in :guilabel:`Modular encoding`. This is important "
+"for partially downloaded images and images using :guilabel:`Progressive "
+"Encoding`."
+msgstr ""
+"guilabel:`模块化编码`\\ 中的组块的存储方式。这会影响仅被下载了一部分的图像和"
+"使用了\\ :guilabel:`渐进式编码`\\ 的图像。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:116
+#: ../../general_concepts/file_formats/file_jxl.rst:156
+msgid "Default"
+msgstr "默认"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:117
+msgid "Depends on :guilabel:`Tradeoff`."
+msgstr "按照\\ :guilabel:`权衡`\\ 预设的设置。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:118
+msgid "Scanline order"
+msgstr "扫描线顺序"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:119
+msgid "Top left of the image is also the first group."
+msgstr "图像左上角的组块是第一个组块。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:121
+msgid "Group order"
+msgstr "组块顺序"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:121
+msgid "Center first"
+msgstr "中心起始顺序"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:121
+msgid "The centermost group of the image is the first group."
+msgstr "位于图像最中间的组块是第一个组块。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:124
+msgid ""
+"JPEG XL can use some algorithmic trickery to predict the color of a given "
+"section from the pixel brightness, meaning it only has to store the pixel "
+"brightness and not the color. Experimentation is recommended."
+msgstr ""
+"JPEG XL 可以使用专门的算法从像素的亮度来推测其颜色，从而只需存储像素的亮度，"
+"无需存储实际的颜色信息。建议在使用前进行一些试验以确保生成颜色正确的图像。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:128
+msgid "Chroma-from-luma"
+msgstr "从亮度推测色品"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:131
+msgid ""
+"The core of JPEG's compression is the so-called Discrete Cosine Transform "
+"(DCT). This allows it to simplify a complex gradient of colors to a "
+"mathematical function. One of the new features of JPEG XL is that these DCT "
+"don't have to be 8x8, nor do they have to be the same size over the whole "
+"image. This is called 'Variable DCT'. The compression that is applied on "
+"this mathematical function is also finetuned by the encoder, this is called "
+"`Adaptive Quantization`."
+msgstr ""
+"JPEG 压缩算法的核心是离散余弦变换 (DCT)，它可以将复杂的颜色过渡抽象为数学函"
+"数。JPEG XL 带来了全新的“可变 DCT”功能，这意味着 DCT 大小不再被限制在 8x8，也"
+"不再限制整张图像使用统一的 DCT 大小。针对 DCT 的压缩方式也进行了改进，称为“自"
+"适应定量化”。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:133
+msgid ""
+"Because the encoder is able to pick the best solution for the compression "
+"(Depending on what you selected for :guilabel:`Tradeoff`), the only thing "
+"you need to worry about is whether to enable progressive mode. Progressive "
+"mode for VarDCT takes the so-called `DC` values (which are per DCT block) to "
+"produce a coarse preview image that gets shown first and then it takes the "
+"`AC` values, which represent the fine details, and sends them out last. In "
+"effect this results in progressive images first showing a rough blurry image "
+"which, as the download completes, becomes *progressively* sharper. This is "
+"especially useful for images alongside text or images that get served over a "
+"slow internet connection."
+msgstr ""
+"JPEG XL 编码器可以按照\\ :guilabel:`权衡`\\ 预设中的设置选择最佳压缩方式，你"
+"只需要选择是否启用渐进式模式。VarDCT 的渐进式模式会基于所谓的 DC 系数 (每个 "
+"DCT 图块一个) 来生成图像的粗略预览画面；图像下载完毕后，再基于 AC 系数 (包含"
+"图像细节) 生成最终画面。从效果来说，这会让图像在下载过程中逐渐从模糊变清晰，"
+"对于网速较慢但图文并茂的网页来说十分有用。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:136
+msgid ""
+"This enables progressive mode and uses advanced color maths to calculate the "
+"fine details of images. This takes more time but generally gives better "
+"results."
+msgstr ""
+"此选项可以启用渐进模式，并使用复杂的颜色算法来算出图像的细节信息。这将耗费更"
+"多时间，但生成的图像效果通常更好。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:140
+msgid "Spectral progression"
+msgstr "光谱渐进"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:143
+msgid ""
+"This enables progressive mode and then uses quantization to compress the "
+"fine details. This leads to a smaller file size at the cost of giving the "
+"encoder more time to do so."
+msgstr ""
+"这将启用渐进模式，并使用定量化来压缩图像的细节信息。这将生成更小的图像文件，"
+"但编码器需要更长的时间进行编码。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:147
+msgid "Quantization"
+msgstr "定量化"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:150
+msgid ""
+"Where the previous two options covered the fine-grain parts of a progressive-"
+"encoded image, the `DC` is coarse-grain compression, specifically a "
+"coefficient for every DCT block that can be used to create the coarse "
+"preview image for progressive decoding. Because DCT can be variable-size in "
+"JPEG XL, you can opt to use a low-resolution image in addition. This should "
+"result in a better preview, though the file size will be a few bytes bigger."
+msgstr ""
+"前两个选项中提及的 DC 系数是一种粗粒度压缩方式，用于为渐进式解码生成粗略预览"
+"图像，每个 DCT 图块都有自己的 DC 系数。由于 JPEG XL 的 DCT 是可变大小的，因此"
+"可以选择使用低分辨率的图像，这样会改善预览画面的画质，但也会造成文件大小变"
+"大。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:157
+msgid "Let the encoder choose."
+msgstr "让编码器自行选择。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:158
+msgid "Disable"
+msgstr "禁用"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:159
+msgid "Do not use a lower-resolution image at all."
+msgstr "不使用低分辨率图像。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:160
+msgid "64x64 low resolution pass"
+msgstr "64x64 低分辨率处理流程"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:161
+msgid ""
+"Create an 64x64 image to use alongside the `DC` values to create the "
+"progressive preview."
+msgstr "创建一张 64x64 大小的图像与 DC 系数配合使用，以创建渐进式预览。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:163
+msgid "VarDCT parameters"
+msgstr "VarDCT 参数"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:163
+msgid "Low resolution DC"
+msgstr "低分辨率 DC"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:163
+msgid "512x512 + 64x64 low resolution pass"
+msgstr "512x512 + 64x64 低分辨率处理流程"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:163
+msgid ""
+"Create both a 512x512 image and a 64x64 image to use alongside the `DC` "
+"values to create the progressive preview."
+msgstr ""
+"同时创建一张 512x512 大小的图像和一张 64x64 大小的图像与 DC 系数配合使用，以"
+"创建渐进式预览。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:166
+msgid ""
+"Extra options for :guilabel:`Modular Mode`. Modular mode uses something akin "
+"to a small programming language by way of predictors to describe image data "
+"succinct and precise."
+msgstr ""
+":guilabel:`模块化模式`\\ 的额外选项。模块化模式使用某种类似于小型编程语言的方"
+"式简洁且精确地为预测器描述图像数据。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:169
+msgid ""
+"Whether or not to enable progressive encoding/decoding. As explained in :"
+"guilabel:`VarDCT parameters`, this means that the image can be saved in such "
+"a way that upon downloading and showing it, a rough previews will get shown "
+"first."
+msgstr ""
+"是否启用渐进式编码/解码。正如在 :guilabel:`VarDCT 参数`\\ 中解说的那样，这意"
+"味着保存的图像可以随着下载进程逐渐从模糊变清晰。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:172
+msgid "Progressive encoding"
+msgstr "渐进式编码"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:174
+msgid "Global channel palette range"
+msgstr "全局通道调色板范围"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:175
+msgid ""
+"Colors will be stored as a palette depending on whether the total amount of "
+"different colors used is smaller than the percentage of all color channel "
+"values possible. For 8 bit, 100% would mean 255 values total, 50% would mean "
+"128 values total, and 10% would mean a total of 25 values total."
+msgstr ""
+"图像的颜色会被存储在一个调色板中，而可以存储的颜色数量则取决于色彩通道的可用"
+"数值。对于 8 位通道的图像，100% 意味着 255 种数值，50% 意味着 128 种数值，"
+"10% 意味着 25 种数值。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:176
+msgid "Local channel palette range"
+msgstr "局部通道调色板范围"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:177
+msgid ""
+"Like :guilabel:`Global channel palette range`, but then decided per group."
+msgstr "类似于 :guilabel:`全局通道调色板范围`，但对象是单个组块。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:178
+msgid "Use color palette for ... colors or less."
+msgstr "为 ... 种或更少的颜色数量使用调色板"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:179
+msgid ""
+"Select the maximum amount of colors that need to be present in a group "
+"before the encoder will try to store them as a palette."
+msgstr ""
+"选择在组块中显示的最大颜色数量，低于或等于此数值时编码器将尝试把它们存储为调"
+"色板。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:181
+msgid ""
+"Whether to use a Delta-palette, also called a lossy-palette. This compresses "
+"the palette, but there's no official documentation yet on how exactly."
+msgstr ""
+"是否使用 Delta 调色板，也称有损调色板。这将对调色板进行压缩，但没有相关文档介"
+"绍它的工作方式。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:185
+msgid "Delta palette"
+msgstr "Delta 调色板"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:188
+msgid ""
+"Images can be split into smaller chunks, which can be encoded separately. "
+"You can choose how big these chunks are when using Modular Mode, for VarDCT "
+"they will default to 256x256."
+msgstr ""
+"图像可以被分隔成小块并行编码。你可以在使用模块化模式时选择图块的大小，而 "
+"VarDCT 的图块大小默认为 256x256。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:190
+msgid "128x128"
+msgstr "128x128"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:191
+msgid "256x256"
+msgstr "256x256"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:192
+msgid "512x512"
+msgstr "512x512"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:193
+msgid "Group size"
+msgstr "组块大小"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:193
+msgid "1024x1024"
+msgstr "1024x1024"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:196
+msgid ""
+"Which predictor to use in conjunction with the :guilabel:`MA tree`. Where "
+"VarDCT compresses the image by abstracting complex gradients into "
+"mathematical functions, Modular Mode compresses sections by determining if "
+"it can be described by its neighbouring pixels, like 'the same color as the "
+"pixel to the left'. This is a predictor, and you can select which predictor "
+"you'd prefer to be used. Recommended value is :guilabel:`Default`."
+msgstr ""
+"选择和 :guilabel:`MA 树`\\ 配合使用的预测器。VarDCT 模式会将图像的复杂渐变抽"
+"象成数学函数来进行压缩，模块化模式则是检测每个像素能够通过它的相邻像素进行描"
+"述，例如“与左边像素颜色相同”。建议值是\\ :guilabel:`默认`\\ 。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:198
+msgid "Default -- Let the encoder choose."
+msgstr "默认 -- 让编码器自行选择。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:199
+msgid "Zero -- Always returns the value 0."
+msgstr "零值 -- 总是返回数值 0。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:200
+msgid "Left -- Always returns the value at the left."
+msgstr "左侧 -- 总是返回左侧的数值。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:201
+msgid "Top -- Always returns the value at the top."
+msgstr "上方 -- 总是返回上方的数值。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:202
+msgid ""
+"Avg0 -- Returns the average of the values to the immediate left and top of "
+"the current location."
+msgstr "平均值 0 -- 返回当前位置的左侧和上方的数值的平均值。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:203
+msgid ""
+"Select  -- Subtracts the left and top neighbour from the top-left, and "
+"returns the neighbour whose difference is lower."
+msgstr "选择  -- 减去左侧和左上方的上方相邻像素，返回插值较低的相邻像素。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:204
+msgid ""
+"Gradient -- Returns the value of the top-left neighbour minus the values of "
+"the top and left neighbours."
+msgstr "渐变 -- 返回左上方相邻像素数值减去上方和左侧相邻像素数值。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:205
+msgid ""
+"Weighted -- A complex predictor that weights the top, left and top-left "
+"pixels in certain ways to achieve the result."
+msgstr ""
+"权衡 -- 这是一个复杂的预测器，它以某种方式权衡上方、左侧、左上方的像素以得到"
+"结果。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:206
+msgid "Top Right -- Returns the value topright of the current location."
+msgstr "右上 -- 返回当前位置右上方像素的数值。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:207
+msgid "Top Left -- Returns the value topleft of the current location."
+msgstr "左上 -- 返回当前位置左上方像素的数值。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:208
+msgid "Left Left -- Returns the value topright of the current location."
+msgstr "左左 -- 返回当前位置右上方的像素数值。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:209
+msgid ""
+"Avg1 -- Returns the average of the values to the immediate left and top-left "
+"of the current location."
+msgstr "平均值 1 -- 返回当前位置的左侧和左上的数值的平均值。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:210
+msgid ""
+"Avg2 -- Returns the average of the values to the immediate top-left and top "
+"of the current location."
+msgstr "平均值 2 -- 返回当前位置的左上和上方的数值的平均值。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:211
+msgid ""
+"Avg3 -- Returns the average of the values to the immediate left and top-"
+"right of the current location."
+msgstr "平均值 3 -- 返回当前位置的左侧和右上的数值的平均值。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:212
+msgid ""
+"Toptop predictive average -- Weights the value of 6 neighbours: the top, "
+"left, topright, and their immediately adjacent neighbours in the same "
+"direction."
+msgstr ""
+"上上预测平均值 -- 对 6 个相邻像素的数值进行权衡：上方、左侧、右上方，加上它们"
+"本身的同一方向上的相邻像素。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:213
+msgid "Gradient + Weighted -- Mixes gradient and weighted."
+msgstr "渐变 + 权衡 -- 混合渐变和权衡的方式。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:214
+msgid "Predictor"
+msgstr "预测器"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:214
+msgid "Use all predictors"
+msgstr "使用所有预测器"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:217
+msgid "Modular Parameters"
+msgstr "模块化参数"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:217
+msgid "Pixels for MA tree learning."
+msgstr "MA 树学习像素"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:217
+msgid ""
+"Fraction of pixels used for the Meta-Adaptive Context tree. The MA tree is a "
+"way of analyzing the pixels surrounding the current pixel, and depending on "
+"the context choose a given predictor for this pixel. More pixels mean a "
+"better understood context and thus better compression, but these also take "
+"more resources while encoding."
+msgstr ""
+"用于 Meta-Adaptive Context Tree (元-自适应上下文树) 的像素比例。MA 树是分析当"
+"前像素周围的像素的一种手段，它会根据上下文为这个像素选择一个预测器。MA 树学习"
+"使用的像素越多，它就能更好地理解像素所处环境 (上下文)，从而进行更好的压缩，但"
+"这也需要在编码时使用更多的算力。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:220
+msgid "Metadata"
+msgstr "元数据"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:221
+msgid "Store document metadata."
+msgstr "写入图像元数据"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:222
+msgid ""
+"Whether to store any metadata at all. You can individually toggle :guilabel:"
+"`Exif`, :guilabel:`IPTC` and :guilabel:`XMP`."
+msgstr ""
+"是否要将元数据写入文件。你可以单独打开或者关闭 :guilabel:`Exif`\\ 、\\ :"
+"guilabel:`IPTC`\\ 、\\ :guilabel:`XMP` 等三种元数据的写入。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:223
+msgid "Anonymizer"
+msgstr "匿名处理"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:224
+msgid "Whether to remove author information."
+msgstr "是否移除作者信息。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:226
+msgid "Tool information"
+msgstr "工具信息"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:226
+msgid "Whether to add tool information."
+msgstr "是否添加工具信息。"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:230
+msgid "`JPEG XL official website <https://jpeg.org/jpegxl/>`_"
+msgstr "`JPEG XL 官方网站 <https://jpeg.org/jpegxl/>`_"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:231
+msgid "`JPEG XL community website <https://jpegxl.info/>`_"
+msgstr "`JPEG XL 社区网站 <https://jpegxl.info/>`_"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:232
+msgid ""
+"`libjxl -- JPEG XL reference implementation <https://github.com/libjxl/"
+"libjxl>`_"
+msgstr "`libjxl -- JPEG XL 参考实现项目 <https://github.com/libjxl/libjxl>`_"
+
+#: ../../general_concepts/file_formats/file_jxl.rst:234
+msgid ""
+"`Copied from this libjxl readme <https://github.com/libjxl/libjxl/"
+"blob/315247f000cff01fbc7ee2dd8252ea8fb82d0769/doc/benchmarking.md>`_ as well "
+"as comments inside the libjxl source code."
+msgstr ""
+"`复制自 libjxl 的 readme 文件<https://github.com/libjxl/libjxl/"
+"blob/315247f000cff01fbc7ee2dd8252ea8fb82d0769/doc/benchmarking.md>`_\\ 和 "
+"libjxl 源代码中的注释。"

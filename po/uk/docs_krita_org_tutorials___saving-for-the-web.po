@@ -1,0 +1,205 @@
+# Translation of docs_krita_org_tutorials___saving-for-the-web.po to Ukrainian
+# Copyright (C) 2019-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: docs_krita_org_tutorials___saving-for-the-web\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2020-04-23 08:26+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.07.70\n"
+
+#: ../../tutorials/saving-for-the-web.rst:1
+msgid "Tutorial for saving images for the web."
+msgstr "Настанови щодо зберігання зображень для інтернету."
+
+#: ../../tutorials/saving-for-the-web.rst:13
+msgid "Saving For The Web"
+msgstr "Зберігання для інтернету"
+
+#: ../../tutorials/saving-for-the-web.rst:15
+msgid ""
+"Krita's default saving format is the :ref:`file_kra` format. This format "
+"saves everything Krita can manipulate about an image: Layers, Filters, "
+"Assistants, Masks, Color spaces, etc. However, that's a lot of data, so ``*."
+"kra`` files are pretty big. This doesn't make them very good for uploading "
+"to the internet. Imagine how many people's data-plans hit the limit if they "
+"only could look at ``*.kra`` files! So instead, we optimise our images for "
+"the web."
+msgstr ""
+"Типовим форматом зберігання даних у Krita є формат :ref:`file_kra`. У цьому "
+"форматі можна зберегти усі дані щодо зображення, із якими працює Krita: "
+"шари, фільтри, допоміжні лінії, маски, простори кольорів тощо. Втім, об'єм "
+"цих даних є значним, отже файли ``*.kra`` мають значні розміри. Це робить їх "
+"непридатними для вивантаження даних до інтернету. Уявіть собі, скільком "
+"користувачам доведеться платити більше за користування інтернетом, якщо вони "
+"зможуть переглядати лише файли ``*.kra``! Отже, замість використання типових "
+"файлів, маємо якось оптимізувати зображення для показу їх у інтернеті."
+
+#: ../../tutorials/saving-for-the-web.rst:17
+msgid "There are a few steps involved:"
+msgstr "Передбачено процедуру із декількох кроків:"
+
+#: ../../tutorials/saving-for-the-web.rst:19
+msgid ""
+"Save as a ``.kra``. This is your working file and serves as a backup if you "
+"make any mistakes."
+msgstr ""
+"Збережіть дані у форматі ``.kra``. Збережений файл буде вашим робочим файлом "
+"і слугуватиме резервною копією, якщо стануться якісь помилки."
+
+#: ../../tutorials/saving-for-the-web.rst:21
+msgid ""
+"Flatten all layers. This turns all your layers into a single one. Just go "
+"to :menuselection:`Layer --> Flatten Image` or press the :kbd:`Ctrl + Shift "
+"+ E` shortcut. Flattening can take a while, so if you have a big image, "
+"don't be scared if Krita freezes for a few seconds. It'll become responsive "
+"soon enough."
+msgstr ""
+"Об'єднайте усі шари. Об'єднання створить з усіх шарів зображення один шар. "
+"Скористайтеся для цього пунктом меню :menuselection:`Шар --> Звести "
+"зображення` або натисніть комбінацію клавіш :kbd:`Ctrl` + :kbd:`Shift` + :"
+"kbd:`E`. Зведення може бути тривалим. Отже, якщо маєте справу із зображенням "
+"великих розмірів, не лякайтеся, якщо Krita завмре на декілька секунд — "
+"програма невдовзі повернеться до виконання ваших наступних команд."
+
+#: ../../tutorials/saving-for-the-web.rst:23
+msgid ""
+"Convert the color space to 8bit sRGB (if it isn't yet). This is important to "
+"lower the filesize, and PNG for example can't take higher than 16bit. :"
+"menuselection:`Image --> Convert Image Color Space...` and set the options "
+"to **RGB**, **8bit** and **sRGB-elle-v2-srgbtrc.icc** respectively. If you "
+"are coming from a linear space, uncheck **little CMS** optimisations"
+msgstr ""
+"Перетворіть простір кольорів зображення на 8-бітовий sRGB (якщо це ще не "
+"було зроблено). Таке перетворення є важливим для зменшення розмірів файлів. "
+"Крім того, у форматі PNG, наприклад, не можна використовувати кольори із "
+"глибиною, що перевищує 16 бітів. Скористайтеся пунктом меню :menuselection:"
+"`Зображення --> Перетворити простір кольорів зображення…` і встановіть такі "
+"параметри: **RGB**, **8-бітовий** та **sRGB-elle-v2-srgbtrc.icc**, "
+"відповідно. Якщо перетворення відбувається з лінійного простору, зніміть "
+"позначку з пункту оптимізації **little CMS**."
+
+#: ../../tutorials/saving-for-the-web.rst:25
+msgid ""
+"Resize! Go to :menuselection:`Image --> Scale Image To New Size...` or use "
+"the :kbd:`Ctrl + Alt + I` shortcut. This calls up the resize menu. A good "
+"rule of thumb for resizing is that you try to get both sizes to be less than "
+"1200 pixels. (This being the size of HD formats). You can easily get there "
+"by setting the **Resolution** under **Print Size** to **72** dots per inch. "
+"Then press **OK** to have everything resized."
+msgstr ""
+"Змініть розміри зображення! Скористайтеся пунктом меню :menuselection:"
+"`Зображення --> Масштабувати зображення до нового розміру…` або натисніть "
+"комбінацію клавіш :kbd:`Ctrl + Alt + I`. У відповідь буде відкрито меню "
+"зміни розмірів. Правилом для зміни розмірів часто є таке: розміри за "
+"вертикаллю та горизонталлю мають не перевищувати 1200 пікселів (це розміри "
+"форматів високої роздільності (HD)). Також слід встановити **Роздільну "
+"здатність** у розділі **Розмір відбитка** у значення **72** точок на дюйм. "
+"Далі, натисніть кнопку **Гаразд**, щоб наказати програмі виконати зміну "
+"розмірів."
+
+#: ../../tutorials/saving-for-the-web.rst:27
+msgid ""
+"Sharpen the image a little. This is especially necessary for social media. "
+"Social media websites often scale and convert your image in such a way that "
+"it gets a little blurry, because they optimize towards photos and not "
+"paintings. To have your images stay sharp, it is worth it to run a sharpen "
+"filter beforehand. Because the sharpen filter is quite powerful, you are "
+"best off adding a sharpen filter mask on top of the stack and lowering its "
+"opacity till you feel the sharpness is appropriate."
+msgstr ""
+"Дещо збільште різкість зображення. Це особливо важливо для соціальних мереж. "
+"Сайти соціальних мереж часто масштабують і перетворюють ваше зображення так, "
+"що воно стає трохи розмитим, оскільки їх оптимізовано для фотографій, а не "
+"для малюнків. Щоб ваші зображення лишалися чіткими, варто попередньо "
+"обробити їх фільтром збільшення різкості. Оскільки фільтр збільшення "
+"різкості є доволі потужним, вам варто додати маску фільтрування різкості над "
+"стосом зображення і зменшувати її непрозорість, аж доки не буде досягнуто "
+"бажаної різкості."
+
+#: ../../tutorials/saving-for-the-web.rst:29
+msgid ""
+"Save as a web-safe image format. There's three that are especially "
+"recommended:"
+msgstr ""
+"Зберігайте дані у придатному для показу в інтернеті форматі. Рекомендуємо "
+"скористатися одним із таких трьох форматів:"
+
+#: ../../tutorials/saving-for-the-web.rst:32
+msgid "JPG"
+msgstr "JPG"
+
+#: ../../tutorials/saving-for-the-web.rst:34
+msgid "Use this for images with a lot of different colors, like paintings."
+msgstr ""
+"Цей формат слід використовувати для зображень, на яких багато кольорів, "
+"зокрема картин."
+
+#: ../../tutorials/saving-for-the-web.rst:37
+msgid "PNG"
+msgstr "PNG"
+
+#: ../../tutorials/saving-for-the-web.rst:39
+msgid ""
+"Use this for images with few colors or which are black and white, like "
+"comics and pixel-art. Select :guilabel:`Save as indexed PNG, if possible` to "
+"optimise even more."
+msgstr ""
+"Цим форматом варто користуватися для зображень із невеликою кількістю "
+"кольорів або чорно-білих зображень, зокрема коміксів та піксельної графіки. "
+"Для оптимізації результатів позначте пункт :guilabel:`За можливості, "
+"зберегти як індексований PNG`."
+
+#: ../../tutorials/saving-for-the-web.rst:42
+msgid "GIF"
+msgstr "GIF"
+
+#: ../../tutorials/saving-for-the-web.rst:44
+msgid ""
+"Only use this for animation (will be supported this year) or images with a "
+"super low color count, because they will get indexed."
+msgstr ""
+"Цей формат слід використовувати лише для анімацій або зображень із дуже "
+"малою кількістю кольорів, оскільки кольори на зображенні буде індексовано."
+
+#: ../../tutorials/saving-for-the-web.rst:47
+msgid "Saving with Transparency"
+msgstr "Зберігання із прозорістю"
+
+#: ../../tutorials/saving-for-the-web.rst:50
+msgid ".. image:: images/Save_with_transparency.png"
+msgstr ".. image:: images/Save_with_transparency.png"
+
+#: ../../tutorials/saving-for-the-web.rst:51
+msgid ""
+"Saving with transparency is only possible with GIF and PNG. First, make sure "
+"you see the transparency checkers (this can be done by simply hiding the "
+"bottom layers, changing the projection color in :menuselection:`Image --> "
+"Image Background Color and Transparency...`, or by using :menuselection:"
+"`Filters --> Colors --> Color to Alpha...`). Then, save as PNG and tick "
+"**Store alpha channel (transparency)**"
+msgstr ""
+"Збереження даних щодо прозорості можливе лише у форматах GIF та PNG. Перш за "
+"все, переконайтеся, що бачите картате позначення прозорості (зробити це "
+"можна просто приховавши нижні шари, змінивши колір проєкції за допомогою "
+"пункту меню :menuselection:`Зображення --> Колір та прозорість тла "
+"зображення…`, або за допомогою пункту меню :menuselection:`Фільтри --> "
+"Кольори --> Колір до альфи…`. Далі, збережіть зображення у форматі PNG і "
+"позначте при цьому пункт **Зберігати альфа-канал (прозорість)**."
+
+#: ../../tutorials/saving-for-the-web.rst:53
+msgid "Save your image, upload, and show it off!"
+msgstr ""
+"Збережіть ваш малюнок, вивантажте його на сервер і покажіть його світові!"

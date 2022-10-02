@@ -1,0 +1,378 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2021-06-27 09:10+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.12.1\n"
+
+#: ../../<generated>:1
+msgid "XYZ"
+msgstr "XYZ"
+
+#: ../../reference_manual/filters/edge_detection.rst:None
+msgid ".. image:: images/filters/Krita_4_0_height_to_normal_map.png"
+msgstr ".. image:: images/filters/Krita_4_0_height_to_normal_map.png"
+
+#: ../../reference_manual/filters/edge_detection.rst:1
+msgid "Overview of the edge detection filters."
+msgstr "Przegląd filtrów wykrywających krawędzie."
+
+#: ../../reference_manual/filters/edge_detection.rst:11
+#: ../../reference_manual/filters/edge_detection.rst:16
+#: ../../reference_manual/filters/edge_detection.rst:23
+msgid "Edge Detection"
+msgstr "Wykrywające krawędzie"
+
+#: ../../reference_manual/filters/edge_detection.rst:11
+#: ../../reference_manual/filters/edge_detection.rst:40
+#: ../../reference_manual/filters/edge_detection.rst:110
+msgid "Prewitt"
+msgstr "Prewitt"
+
+#: ../../reference_manual/filters/edge_detection.rst:11
+#: ../../reference_manual/filters/edge_detection.rst:43
+#: ../../reference_manual/filters/edge_detection.rst:113
+msgid "Sobel"
+msgstr "Sobel"
+
+#: ../../reference_manual/filters/edge_detection.rst:18
+msgid ""
+"Edge detection filters focus on finding sharp contrast or border between "
+"colors in an image to create edges or lines."
+msgstr ""
+"Filtry wykrywające krawędzie skupiają się na znajdywaniu ostrych kontrastów "
+"lub granicy pomiędzy barwami na obrazie w celu utworzenia krawędzi lub linii."
+
+#: ../../reference_manual/filters/edge_detection.rst:20
+msgid "Since 4.0 there are only two edge detection filters."
+msgstr "Od wersji 4.0 dostępne są tylko dwa filtry wykrywania krawędzi."
+
+#: ../../reference_manual/filters/edge_detection.rst:27
+msgid ""
+"A general edge detection filter that encapsulates all other filters. Edge "
+"detection filters that were separate before 4.0 have been folded into this "
+"one. It is also available for filter layers and filter brushes."
+msgstr ""
+"Filtry wykrywania krawędzi ogólnego przeznaczenia, który zawiera w sobie "
+"wszystkie inne filtry. Filtry wykrywania krawędzi, które były oddzielne "
+"przed wersją 4.0 zostały zwinięte do tego jednego. Jest ona także dostępny "
+"do warstw i pędzli filtrujących."
+
+#: ../../reference_manual/filters/edge_detection.rst:33
+msgid ".. image:: images/filters/Krita_4_0_edge_detection.png"
+msgstr ".. image:: images/filters/Krita_4_0_edge_detection.png"
+
+#: ../../reference_manual/filters/edge_detection.rst:33
+msgid ""
+"From left to right: Original, with Prewitt edge detection applied, with "
+"Prewitt edge detection applied and result applied to alpha channel, and "
+"finally the original with an edge detection filter layer with the same "
+"settings as 3, and the filter layer blending mode set to multiply."
+msgstr ""
+"Od lewej do prawej: pierwotny obraz z zastosowanym wykrywaniem krawędzi "
+"Prewitt, z zastosowanym wykrywaniem krawędzi Prewitt i wynikami "
+"zastosowanymi do kanału alfa i w końcu pierwotny obraz z wykrywaniem "
+"krawędzi poprzez warstwę filtra z tymi samymi ustawieniami co w przypadku 3 "
+"i trybem mieszania na warstwie filtra ustawionym na mnożenie."
+
+#: ../../reference_manual/filters/edge_detection.rst:36
+#: ../../reference_manual/filters/edge_detection.rst:106
+msgid ""
+"The convolution kernel formula for the edge detection. The difference "
+"between these is subtle, but still worth experimenting with."
+msgstr ""
+"Wzór jądra zwijania do wykrywania krawędzi. Różnica pomiędzy nimi jest "
+"nieznaczna, lecz nadal warta popróbowania."
+
+#: ../../reference_manual/filters/edge_detection.rst:38
+#: ../../reference_manual/filters/edge_detection.rst:108
+msgid "Simple"
+msgstr "Prosty"
+
+#: ../../reference_manual/filters/edge_detection.rst:39
+#: ../../reference_manual/filters/edge_detection.rst:109
+msgid ""
+"A Kernel that is not square unlike the other two, and while this makes it "
+"fast, it doesn't take diagonal pixels into account."
+msgstr ""
+"Jądro, które nie jest kwadratowe, tak jak dwa poprzednie. To czyni go "
+"szybkim, lecz pomija piksele po przekątnej."
+
+#: ../../reference_manual/filters/edge_detection.rst:41
+#: ../../reference_manual/filters/edge_detection.rst:111
+msgid ""
+"A square kernel that includes the diagonal pixels just as strongly as the "
+"orthogonal pixels. Gives a very strong effect."
+msgstr ""
+"Kwadratowe jądro, które dołącza wszystkie przekątne pikseli tak samo silnie "
+"jak piksele prostokątne. Daje bardzo silny wynik."
+
+#: ../../reference_manual/filters/edge_detection.rst:43
+#: ../../reference_manual/filters/edge_detection.rst:113
+msgid "Formula"
+msgstr "Wzór"
+
+#: ../../reference_manual/filters/edge_detection.rst:43
+#: ../../reference_manual/filters/edge_detection.rst:113
+msgid ""
+"A square kernel that includes the diagonal pixels slightly less strong than "
+"the orthogonal pixels. Gives a more subtle effect than Prewitt."
+msgstr ""
+"Kwadratowe jądro, które dołącza wszystkie przekątne pikseli trochę mniej "
+"silnie niż piksele prostokątne. Daje bardziej delikatny wynik niż Prewitt."
+
+#: ../../reference_manual/filters/edge_detection.rst:46
+msgid "The output."
+msgstr "Wynik."
+
+#: ../../reference_manual/filters/edge_detection.rst:48
+msgid "All sides"
+msgstr "Wszystkie strony"
+
+#: ../../reference_manual/filters/edge_detection.rst:49
+msgid ""
+"Convolves the edge detection into all directions and combines the result "
+"with the Pythagorean theorem. This will be good for most uses."
+msgstr ""
+"Zwija wykrywanie krawędzi we wszystkie kierunki i łączy wyniki przy użyciu "
+"teorii Pitagorasa. Powinno się sprawdzić w większości zastosowań."
+
+#: ../../reference_manual/filters/edge_detection.rst:50
+msgid "Top Edge"
+msgstr "Górna krawędź"
+
+#: ../../reference_manual/filters/edge_detection.rst:51
+msgid ""
+"This only detects changes going from top to bottom and thus only has top "
+"lines."
+msgstr "To wykrywa zmiany od góry do dołu i przez to ma tylko górne linie."
+
+#: ../../reference_manual/filters/edge_detection.rst:52
+msgid "Bottom Edge"
+msgstr "Dolna krawędź"
+
+#: ../../reference_manual/filters/edge_detection.rst:53
+msgid ""
+"This only detects changes going from bottom to top and thus only has bottom "
+"lines."
+msgstr "To wykrywa zmiany od dołu do góry i przez to ma tylko dolne linie."
+
+#: ../../reference_manual/filters/edge_detection.rst:54
+msgid "Right Edge"
+msgstr "Prawa krawędź"
+
+#: ../../reference_manual/filters/edge_detection.rst:55
+msgid ""
+"This only detects changes going from right to left and thus only has right "
+"lines."
+msgstr "To wykrywa zmiany od lewej do prawej i przez to ma tylko prawe linie."
+
+#: ../../reference_manual/filters/edge_detection.rst:56
+msgid "Left Edge"
+msgstr "Lewa krawędź"
+
+#: ../../reference_manual/filters/edge_detection.rst:57
+msgid ""
+"This only detects changes going from left to right and thus only has left "
+"lines."
+msgstr "To wykrywa zmiany od lewej do prawej i przez to ma tylko lewe linie."
+
+#: ../../reference_manual/filters/edge_detection.rst:59
+msgid "Output"
+msgstr "Wynik"
+
+#: ../../reference_manual/filters/edge_detection.rst:59
+msgid "Direction in Radians"
+msgstr "Kierunek w radianach"
+
+#: ../../reference_manual/filters/edge_detection.rst:59
+msgid ""
+"This convolves into all directions and then tries to output the direction of "
+"the line in radians."
+msgstr ""
+"To zwija we wszystkich kierunkach, a następnie próbuje dać wynik jako "
+"kierunek linii w radianach."
+
+#: ../../reference_manual/filters/edge_detection.rst:61
+#: ../../reference_manual/filters/edge_detection.rst:117
+msgid "Horizontal/Vertical radius"
+msgstr "Promień w poziomie/pionie"
+
+#: ../../reference_manual/filters/edge_detection.rst:62
+msgid ""
+"The radius of the edge detection. Default is 1 and going higher will "
+"increase the thickness of the lines."
+msgstr ""
+"Promień wykrywania krawędzi. Domyślnie jest to 1, a wartości wyższe zwiększą "
+"szerokość linii."
+
+#: ../../reference_manual/filters/edge_detection.rst:64
+msgid "Apply result to Alpha Channel."
+msgstr "Zastosuj wynik na kanale alfa."
+
+#: ../../reference_manual/filters/edge_detection.rst:64
+msgid ""
+"The edge detection will be used on a grayscale copy of the image, and the "
+"output will be onto the alpha channel of the image, meaning it will output "
+"lines only."
+msgstr ""
+"Wykrywanie krawędzi będzie użyte na kopii obrazu w odcieniach szarości, a "
+"wynik będzie umieszczony w kanale alfa obrazu, co oznacza, że w wyniku "
+"znajdą się tylko linie."
+
+#: ../../reference_manual/filters/edge_detection.rst:66
+msgid "High Pass"
+msgstr "Wysokie przejście"
+
+#: ../../reference_manual/filters/edge_detection.rst:69
+msgid "Gaussian High Pass"
+msgstr "Górnoprzepustowy Gausa"
+
+#: ../../reference_manual/filters/edge_detection.rst:71
+msgid ""
+"A High Pass filter is a type of edge detection filter. It is usually used to "
+"enhance contrasts, much like a sharpen filter, but within a texture editing "
+"workflow it is also used to remove local gradients."
+msgstr ""
+"Filtry górnoprzepustowy jest rodzaje filtra do wykrywania krawędzi. "
+"Zazwyczaj używa się go do polepszenia kontrastu, podobnie jak w filtrze "
+"wyostrzenia, lecz w ramach obiegu pracy do edytowania tekstury, jest używany "
+"także do usuwania lokalnych gradientów."
+
+#: ../../reference_manual/filters/edge_detection.rst:74
+msgid "Radius"
+msgstr "Promień"
+
+#: ../../reference_manual/filters/edge_detection.rst:74
+msgid ""
+"The radius within the Gaussian High Pass filter is similar to the radius in "
+"the Edge Detection filter."
+msgstr ""
+"Promień w górnoprzepustowym filtrze Gaussa jest podobny do promienia w "
+"filtrze wykrywania krawędzi."
+
+#: ../../reference_manual/filters/edge_detection.rst:76
+msgid ""
+"To use this as a sharpen filter, create a filter layer with this filter, and "
+"then set the blending mode to modes like 'soft light', 'overlay', 'hard "
+"light', 'linear light'. Different blending modes give different results."
+msgstr ""
+"Aby użyć tego jako filtra wyostrzania, utwórz warstwę filtra z tym filtrem, "
+"a następnie ustaw tryb mieszania na tryby takie jak 'miękkie światło', "
+"'nakładka', 'twarde światło', 'linowe światło'. Różne tryby mieszania dają "
+"różne wyniki."
+
+#: ../../reference_manual/filters/edge_detection.rst:82
+msgid ".. image:: images/filters/highpass_filter_sharpen.png"
+msgstr ".. image:: images/filters/highpass_filter_sharpen.png"
+
+#: ../../reference_manual/filters/edge_detection.rst:82
+msgid ""
+"**Top left**: Original, **top right**: Gaussian Highpass Result with radius "
+"3, **bottom left**: Gaussian High Pass Result with radius 3 blended over the "
+"original with to Linear Light, **bottom right**: Gaussian High Pass result "
+"with radius 3 blended over the original with Soft Light."
+msgstr ""
+"**Na górze po lewej**: Pierwotny, **na górze po prawej**: wynik filtra "
+"górnoprzepustowego Gaussa z promieniem 3, **na dole po lewej**: wynik filtra "
+"górnoprzepustowego Gaussa o promieniu 3 zmieszanego z pierwotnym obrazem z "
+"linowym światłem, **na dole po prawej**: wynik filtra górnoprzepustowego "
+"Gaussa  o promieniu 3 zmieszanym z pierwotnym obrazem z miękkim światłem."
+
+#: ../../reference_manual/filters/edge_detection.rst:84
+msgid ""
+"To remove local gradients from a texture, create a clone layer, and apply "
+"this filter as a filter mask. Then, put a filter layer with gaussian blur "
+"set to the full amount in between the clone layer and the original. Finally, "
+"set the clone layer to luminosity or multiply (in this case an extra filter "
+"mask needs to be added to reduce the levels so that the multiplication "
+"result will not be as strong)."
+msgstr ""
+"Aby usunąć lokalne gradienty z tekstury, stwórz warstwę powielenia i nałóż "
+"filtr jako maskę filtra. Następnie, umieść warstwę filtra z rozmyciem Gaussa "
+"ustawionym na pełną wartość pomiędzy warstwą powielenia i pierwotną. Na "
+"końcu, ustaw warstwę powielania na światłość lub mnożenie (w tym przypadku "
+"trzeba dodać maskę dodatkowego filtra, aby ograniczyć poziomy, tak aby wynik "
+"mnożenia nie był zbyt silny)."
+
+#: ../../reference_manual/filters/edge_detection.rst:90
+msgid ".. image:: images/filters/highpass_filter_local_gradient_removal.png"
+msgstr ".. image:: images/filters/highpass_filter_local_gradient_removal.png"
+
+#: ../../reference_manual/filters/edge_detection.rst:90
+msgid ""
+"**Left**: Original, **top right**: Gaussian High Pass Result blended with "
+"luminosity to remove the local gradients but keep the sharp details. In this "
+"specific example the lack of local gradients removes some character, but the "
+"gaussian high pass result could also be used to create a heightmap."
+msgstr ""
+"**Po lewej**: Pierwotny, **na górze po prawej**: wynik filtra "
+"górnoprzepustowego Gaussa zmieszanego ze światłością, aby usunąć lokalne "
+"gradienty, lecz aby zachować ostre szczegóły. W tym danym przypadku, brak "
+"lokalnych gradientów usuwa pewne znaki, lecz wynik górnoprzepustowego filtra "
+"Gaussa można także wykorzystać do stworzenia mapy wysokości."
+
+#: ../../reference_manual/filters/edge_detection.rst:93
+msgid "Height Map"
+msgstr "Mapa wysokości"
+
+#: ../../reference_manual/filters/edge_detection.rst:93
+msgid "Normal Map"
+msgstr "Mapa normalna"
+
+#: ../../reference_manual/filters/edge_detection.rst:96
+msgid "Height to Normal Map"
+msgstr "Wysokość do mapy normalnej"
+
+#: ../../reference_manual/filters/edge_detection.rst:103
+msgid ""
+"A filter that converts Height maps to Normal maps through the power of edge "
+"detection. It is also available for the filter layer or filter brush."
+msgstr ""
+"Filtr, który przekształca mapy wysokości do map normalny siłą wykrywania "
+"krawędzi. Jest to także dostępne dla warstwy lub pędzla filtra."
+
+#: ../../reference_manual/filters/edge_detection.rst:115
+msgid "Channel"
+msgstr "Kanał"
+
+#: ../../reference_manual/filters/edge_detection.rst:116
+msgid ""
+"Which channel of the layer should be interpreted as the grayscale heightmap."
+msgstr ""
+"Który kanał warstwy powinien być brany jako mapa wysokości odcieni szarości."
+
+#: ../../reference_manual/filters/edge_detection.rst:118
+msgid ""
+"The radius of the edge detection. Default is 1 and going higher will "
+"increase the strength of the normal map. Adjust this if the effect of the "
+"resulting normal map is too weak."
+msgstr ""
+"Promień wykrywania krawędzi. Domyślnie jest to 1, a wartości wyższe zwiększą "
+"siłę mapy normalnej. Dostosuj to, jeśli efekt normalnej mapy wynikowej jest "
+"za słaby."
+
+#: ../../reference_manual/filters/edge_detection.rst:120
+msgid ""
+"An XYZ swizzle, that allows you to map Red, Green and Blue to different 3d "
+"normal vector coordinates. This is necessary mostly for the difference "
+"between MikkT-space normal maps (+X, +Y, +Z) and the OpenGL standard normal "
+"map (+X, -Y, +Z)."
+msgstr ""
+"Krawędź XYZ, która umożliwia ci mapowanie czerwonego, zielonego i "
+"niebieskiego do współrzędnych różnych wektorów normalnych 3D. Jest to "
+"potrzebne najbardziej do różnicy pomiędzy przestrzenią map normalnych MikkT "
+"(+X, +Y, +Z) oraz mapą normalnych standardu OpenGL (+X, -Y, +Z)."

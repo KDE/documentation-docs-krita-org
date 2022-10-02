@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-08 00:40+0000\n"
+"PO-Revision-Date: 2022-09-08 09:24+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: OSX workspace EuroTemplate Krita jpg filename krita\n"
+"X-POFile-SpellExtra: export dpi template desktop kra bash KRA sequence\n"
+"X-POFile-SpellExtra: layer image RGBA new ref macOS\n"
+
+#: ../../reference_manual/linux_command_line.rst:None
+msgid "New in version 3.3:"
+msgstr "Novo na versão 3.3:"
+
+#: ../../reference_manual/linux_command_line.rst:1
+msgid "Overview of Krita's command line options."
+msgstr "Introdução às opções da linha de comandos do Krita."
+
+#: ../../reference_manual/linux_command_line.rst:11
+msgid "Command Line"
+msgstr "Linha de Comandos"
+
+#: ../../reference_manual/linux_command_line.rst:16
+msgid "Linux Command Line"
+msgstr "Linha de Comandos do Linux"
+
+#: ../../reference_manual/linux_command_line.rst:20
+msgid ""
+"As a native Linux program, Krita allows you to do operations on images "
+"without opening the program when using the Terminal. This option was "
+"disabled on Windows and macOS, but with 3.3 it is enabled for them!"
+msgstr ""
+"Como um programa nativo de Linux, o Krita permite-lhe efectuar operações "
+"sobre imagens sem abrir o programa, usando para tal o Terminal. Esta opção "
+"estava desactivada no Windows e no macOS, mas com o 3.3 está activa para "
+"esses sistemas!"
+
+#: ../../reference_manual/linux_command_line.rst:22
+msgid ""
+"This is primarily used in bash or shell scripts, for example, to mass "
+"convert KRA files into PNGs."
+msgstr ""
+"Isto é principalmente usado nos programas de 'bash' ou de outras linhas de "
+"comandos, por exemplo para converter em massa os ficheiros KRA para PNG."
+
+#: ../../reference_manual/linux_command_line.rst:25
+msgid "Export"
+msgstr "Exportar"
+
+#: ../../reference_manual/linux_command_line.rst:27
+msgid "This allows you to quickly convert files via the terminal:"
+msgstr "Isto permite-lhe converter rapidamente ficheiros através do terminal:"
+
+#: ../../reference_manual/linux_command_line.rst:29
+msgid "``krita importfilename --export --export-filename exportfilename``"
+msgstr ""
+"``krita ficheiro-importado --export --export-filename ficheiro-exportado``"
+
+#: ../../reference_manual/linux_command_line.rst:34
+msgid "importfilename"
+msgstr "ficheiro-importado"
+
+#: ../../reference_manual/linux_command_line.rst:34
+msgid "Replace this with the filename of the file you want to manipulate."
+msgstr "Substitua isto pelo nome do ficheiro que deseja manipular."
+
+#: ../../reference_manual/linux_command_line.rst:38
+msgid "Export a file selects the export option."
+msgstr "A exportação de um ficheiro selecciona a opção de exportação."
+
+#: ../../reference_manual/linux_command_line.rst:42
+msgid ""
+"Export filename says that the following word is the filename it should be "
+"exported to."
+msgstr ""
+"O nome do ficheiro exportado diz que a palavra seguinte é o nome do ficheiro "
+"para o qual deseja exportar."
+
+#: ../../reference_manual/linux_command_line.rst:45
+msgid "exportfilename"
+msgstr "ficheiro-exportado"
+
+#: ../../reference_manual/linux_command_line.rst:45
+msgid ""
+"Replace this with the name of the output file. Use a different extension to "
+"change the file format."
+msgstr ""
+"Substitua isto pelo nome do ficheiro de saída. Use uma extensão diferente "
+"para mudar o formato do ficheiro."
+
+#: ../../reference_manual/linux_command_line.rst:47
+#: ../../reference_manual/linux_command_line.rst:142
+msgid "Example:"
+msgstr "Exemplo:"
+
+#: ../../reference_manual/linux_command_line.rst:49
+msgid "``krita file.png --export --export-filename final.jpg``"
+msgstr "``krita ficheiro.png --export --export-filename final.jpg``"
+
+#: ../../reference_manual/linux_command_line.rst:51
+msgid "This line takes the file ``file.png`` and saves it as ``file.jpg``."
+msgstr ""
+"Este pedaço de código recebe o ficheiro ``ficheiro.png`` e grava-o como "
+"``final.jpg``."
+
+#: ../../reference_manual/linux_command_line.rst:57
+msgid "Export animation to the given filename and exit."
+msgstr "Exportar a animação para o nome de ficheiro indicado e sair."
+
+#: ../../reference_manual/linux_command_line.rst:59
+msgid ""
+"If a KRA file has no animation, then this command prints \"This file has no "
+"animation.\" error and does nothing."
+msgstr ""
+"Se um ficheiro KRA não tiver nenhuma animação, então este comando mostra o "
+"erro \"Este ficheiro não tem nenhuma animação.\" e não faz nada."
+
+#: ../../reference_manual/linux_command_line.rst:61
+msgid "``krita --export-sequence --export-filename file.png test.kra``"
+msgstr "``krita --export-sequence --export-filename ficheiro.png teste.kra``"
+
+#: ../../reference_manual/linux_command_line.rst:63
+msgid ""
+"This line takes the animation in *test.kra*, and uses the value of --export-"
+"filename (*file.png*), to determine the sequence fileformat('png') and the "
+"frame prefix ('file')."
+msgstr ""
+"Esta linha usa a animação no *teste.kra* e usa o valor de --export-filename "
+"(*ficheiro.png*) para definir o formato de ficheiros da sequência ('png') e "
+"o prefixo das imagens ('ficheiro')."
+
+#: ../../reference_manual/linux_command_line.rst:67
+msgid "PDF export"
+msgstr "Exportação para PDF"
+
+#: ../../reference_manual/linux_command_line.rst:69
+msgid "PDF export looks a bit different, using the ``--export-pdf`` option."
+msgstr ""
+"A exportação para PDF parece um pouco diferente, usando a opção ``--export-"
+"pdf``."
+
+#: ../../reference_manual/linux_command_line.rst:71
+msgid "``krita file.png --export-pdf --export-filename final.pdf``"
+msgstr "``krita ficheiro.png --export-pdf --export-filename final.pdf``"
+
+#: ../../reference_manual/linux_command_line.rst:73
+msgid "This option exports the file ``file.png`` as a PDF file."
+msgstr "Esta opção exporta o ficheiro ``ficheiro.png`` como um ficheiro PDF."
+
+#: ../../reference_manual/linux_command_line.rst:77
+msgid "This has been removed from 3.1 because the results were incorrect."
+msgstr "Isto foi removido no 3.1, porque os resultados eram incorrectos."
+
+#: ../../reference_manual/linux_command_line.rst:80
+msgid "Open with Custom Screen DPI"
+msgstr "Abrir com um PPP de Ecrã Diferente"
+
+#: ../../reference_manual/linux_command_line.rst:87
+msgid "This legacy option does not do anything anymore."
+msgstr "Esta opção antiga já não faz nada agora."
+
+#: ../../reference_manual/linux_command_line.rst:90
+msgid "Open template"
+msgstr "Abrir um modelo"
+
+#: ../../reference_manual/linux_command_line.rst:92
+msgid ""
+"Open krita and automatically open the given template(s). This allows you to, "
+"for example, create a shortcut to Krita that opens a given template, so you "
+"can get to work immediately!"
+msgstr ""
+"Abre o Krita e abre automaticamente o(s) modelo(s) indicado(s). Isto permite-"
+"lhe, por exemplo, criar um atalho para o Krita que abra um dado modelo, para "
+"comece logo a trabalhar de imediato!"
+
+#: ../../reference_manual/linux_command_line.rst:94
+msgid "``krita --template templatename.desktop``"
+msgstr "``krita --template nome-modelo.desktop``"
+
+#: ../../reference_manual/linux_command_line.rst:100
+msgid "Selects the template option."
+msgstr "Selecciona a opção do modelo."
+
+#: ../../reference_manual/linux_command_line.rst:102
+msgid ""
+"All templates are saved with the .desktop extension. You can find templates "
+"in the .local/share/krita/template or in the install folder of Krita."
+msgstr ""
+"Todos os modelos estão gravados com a extensão .desktop. Poderá encontrar os "
+"modelos na pasta '.local/share/apps/krita/template' ou na pasta de "
+"instalação do Krita."
+
+#: ../../reference_manual/linux_command_line.rst:104
+msgid "``krita --template BD-EuroTemplate.desktop``"
+msgstr "``krita --template BD-EuroTemplate.desktop``"
+
+#: ../../reference_manual/linux_command_line.rst:106
+msgid "This opens the European BD comic template with Krita."
+msgstr "Isto abre o modelo de bandas desenhadas Europeu com o Krita."
+
+#: ../../reference_manual/linux_command_line.rst:108
+msgid "``krita --template BD-EuroTemplate.desktop BD-EuroTemplate.desktop``"
+msgstr "``krita --template BD-EuroTemplate.desktop BD-EuroTemplate.desktop``"
+
+#: ../../reference_manual/linux_command_line.rst:110
+msgid "This opens the European BD template twice, in separate documents."
+msgstr "Isto abre o modelo de BD europeu duas vezes, em documentos separados."
+
+#: ../../reference_manual/linux_command_line.rst:113
+msgid "Start up"
+msgstr "Arranque"
+
+#: ../../reference_manual/linux_command_line.rst:121
+msgid "Starts krita without showing the splash screen."
+msgstr "Inicia o Krita sem mostrar o ecrã inicial."
+
+#: ../../reference_manual/linux_command_line.rst:125
+msgid "Starts krita in canvasonly mode."
+msgstr "Inicia o Krita no modo apenas com a área de desenho."
+
+#: ../../reference_manual/linux_command_line.rst:129
+msgid "Starts krita in fullscreen mode."
+msgstr "Inicia o Krita no modo de ecrã completo."
+
+#: ../../reference_manual/linux_command_line.rst:133
+msgid "Starts krita with the given workspace. So for example..."
+msgstr "Inicia o Krita com o espaço de trabalho indicado. Por exemplo..."
+
+#: ../../reference_manual/linux_command_line.rst:135
+msgid "``krita --workspace Animation``"
+msgstr "``krita --workspace Animação``"
+
+#: ../../reference_manual/linux_command_line.rst:137
+msgid "Starts Krita in the Animation workspace."
+msgstr "Inicia o Krita com o espaço de trabalho Animação."
+
+#: ../../reference_manual/linux_command_line.rst:140
+msgid ""
+"Starts krita with ``filename`` added as a file-layer. Note that you must "
+"either open an existing file or create a new file using the ``new-image`` "
+"argument."
+msgstr ""
+"Inicia o Krita com o ``nome-ficheiro`` adicionado como uma camada de "
+"ficheiro. Lembre-se que deverá abrir um ficheiro existente ou criar um novo "
+"com o argumento do ``new-image``."
+
+#: ../../reference_manual/linux_command_line.rst:144
+msgid "``krita file.kra --file-layer image.png``"
+msgstr "``krita ficheiro.kra --file-layer imagem.png``"
+
+#: ../../reference_manual/linux_command_line.rst:146
+msgid "``krita --new-image RGBA,U8,1000,1000 --file-layer image.jpg``"
+msgstr "``krita --new-image RGBA,U8,1000,1000 --file-layer imagem.jpg``"
+
+#: ../../reference_manual/linux_command_line.rst:148
+msgid ""
+"If an instance of Krita is already running and Multiple :ref:`instances "
+"<window_settings>` are disabled, then this option can be used alone to add a "
+"file-layer to the running krita document."
+msgstr ""
+"Se já estiver uma instầncia do Krita em execução e a opção de :ref:"
+"`Múltiplas instâncias <window_settings>` estiver desactivada, então esta "
+"opção poderá ser usada em separado para adicionar uma camada de ficheiro ao "
+"documento do Krita em curso."
+
+#: ../../reference_manual/linux_command_line.rst:150
+msgid "Example:  ``krita --file-layer image.png``"
+msgstr "Exemplo:  ``krita --file-layer imagem.png``"
