@@ -128,6 +128,19 @@ Texture Packs
 Vector libraries
 ================
 
+20+ Variety of Vector/Symbol Library Packs 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Have your pick of a large selection of libraries in many styles, shapes and colors. 
+
+.. list-table::
+
+        * - .. figure:: images/resource_packs/5_pack_gitlab_thumbnail.png
+               :target: https://ryosworkshop500.gumroad.com/
+               :width: 300
+
+               ryosworkshop500
+
 Composition templates
 ~~~~~~~~~~~~~~~~~~~~~
 
