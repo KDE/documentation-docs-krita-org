@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-15 00:51+0000\n"
-"PO-Revision-Date: 2023-01-13 21:47+0300\n"
+"POT-Creation-Date: 2023-01-16 00:51+0000\n"
+"PO-Revision-Date: 2023-01-15 19:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -49,6 +49,10 @@ msgstr ""
 ".. image:: images/icons/Krita_mouse_scroll.png\n"
 "   :alt: mousescroll"
 
+#: ../../contributors_manual/krita_manual_conventions.rst:None
+msgid "Horizontal Rulers"
+msgstr "Yatay Cetveller"
+
 #: ../../contributors_manual/krita_manual_conventions.rst:0
 msgid ""
 ".. image:: images/sample.png\n"
@@ -56,10 +60,6 @@ msgid ""
 msgstr ""
 ".. image:: images/sample.png\n"
 "   :alt: bir görsel."
-
-#: ../../contributors_manual/krita_manual_conventions.rst:None
-msgid "Horizontal Rulers"
-msgstr "Yatay Cetveller"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:1
 msgid "reStructuredText conventions for the Krita Manual."
@@ -1032,6 +1032,9 @@ msgid ""
 "useful in the main text. Like, \"These packages are named differently in "
 "openSuse versus Debian\"."
 msgstr ""
+"İpuçları, bir konu hakkında ana metinde olduğundan biraz daha fazla bilgi "
+"vermek için kullanışlıdır. \"Bu paketler, Debian'da başka openSuse'da başka "
+"biçimde adlandırılmıştır\" gibi."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:366
 msgid ""
@@ -1039,32 +1042,41 @@ msgid ""
 "your favourite document setup\", or \"Use m to mirror the canvas and see "
 "errors more easily in your drawing\"."
 msgstr ""
+"\"Favori belge kurulumunuzun bir şablonunu oluşturabilirsiniz\" veya "
+"\"Tuvali yansıtmak ve çiziminizdeki hataları daha kolay görmek için m'yi "
+"kullanın\" gibi bir şeyin nasıl yapılacağına ilişkin ek bilgiler."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:370
 msgid "Something that is important to note, but is not necessarily negative."
-msgstr ""
+msgstr "Dikkate alınması gereken; ancak mutlaka olumsuz olmayan bir şey."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:374
 msgid "This is in general when something is negative."
-msgstr ""
+msgstr "Bu genellikle bir şey olumsuz olduğunda olur."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:378
 msgid ""
 "General attention grabber. Use this when the subject is more important than "
 "warning, but not as important that is could get a dataloss."
 msgstr ""
+"Genel dikkat çekici. Konunun uyarıdan daha önemli olduğu, ancak veri kaybına "
+"neden olabilecek kadar önemli olmadığı durumlarda bunu kullanın."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:382
 msgid ""
 "This is for things that could cause dataloss, like forgetting to save, or "
 "that Python currently has no undo functionality."
 msgstr ""
+"Bu, kaydetmeyi unutmak veya Python'un şu anda geri alma işlevine sahip "
+"olmaması gibi veri kaybına neden olabilecek şeyler içindir."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:386
 msgid ""
 "This should be for things that are dangerous for the computer in general, "
 "this includes things that can cause out of memory style freezes."
 msgstr ""
+"Bu, genel olarak bilgisayar için tehlikeli olan şeyler için olmalıdır; bu, "
+"yetersiz bellek tarzı donmalara neden olabilecek şeyleri içerir."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:390
 msgid ""
@@ -1072,18 +1084,21 @@ msgid ""
 "manually given some situations, but our configuration does not do so by "
 "default."
 msgstr ""
+"Bu, büyük olasılıkla bir kılavuzla ilgili değildir. Sphinx, bazı durumlarda "
+"bunları elle olarak oluşturabilir; ancak yapılandırmamız bunu öntanımlı "
+"olarak yapmaz."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:392
 msgid "Generic admonition that can have any text"
-msgstr ""
+msgstr "Herhangi bir metne sahip olabilecek genel uyarı"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:394
 msgid "Text."
-msgstr ""
+msgstr "Metin."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:396
 msgid "You can make it like this::"
-msgstr ""
+msgstr "Bunu şöyle kılabilirsiniz::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:398
 msgid ""
@@ -1091,10 +1106,13 @@ msgid ""
 "\n"
 "    Text."
 msgstr ""
+".. admonition:: Herhangi bir metne sahip olabilecek genel uyarı\n"
+"\n"
+"    Metin."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:404
 msgid "Sphinx also adds::"
-msgstr ""
+msgstr "Sphinx ayrıca şunları ekler::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:406
 msgid ""
@@ -1102,6 +1120,9 @@ msgid ""
 "\n"
 "    Which is useful to collect external links and references."
 msgstr ""
+".. seealso::\n"
+"\n"
+"    Dış başvuruları ve bağlantıları toplamada yararlıdır."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:414
 msgid ""
@@ -1115,14 +1136,23 @@ msgid ""
 "section. It is therefore better to use headings or the ``.. Topic::`` "
 "directive. Headings also make it easier to read."
 msgstr ""
+"Yatay cetveller genellikle konu oldukça doğrudan değiştiğinde kullanılır. "
+"Bu, tarih veya kurgu gibi daha anlatı temelli yazılarda çok yaygındır. Krita "
+"el kitabı daha çok yönerge ve başvuru tarzı yazıdır, yani, genellikle farklı "
+"unsurların nasıl bir araya geldiğini belirtmek için uzun bir hikaye "
+"anlatmayız, bunun yerine belirli adımların neden belirli bir şekilde "
+"atıldığını motive etmek için uzun hikayeler vardır. . Konu değişiklikleri "
+"genellikle ilgili bir bölüme geçmek yerine yeni bir bölüme girdiğimiz için "
+"gerçekleşir. Bu nedenle başlıkları veya ``.. Konu::`` yönergesini kullanmak "
+"daha iyidir. Başlıklar da okumayı kolaylaştırır."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:418
 msgid "That said, horizontal rulers can be made with ``----``."
-msgstr ""
+msgstr "Bununla birlikte, yatay cetveller ``----`` ile yapılabilir."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:421
 msgid "The rubric directive"
-msgstr ""
+msgstr "Bölüm yönergesi"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:422
 msgid ""
@@ -1130,44 +1160,53 @@ msgid ""
 "\"topic\", but where the topic is over several paragraphs, rubric itself "
 "only deals with the header, like so::"
 msgstr ""
+"Dereceli puanlama anahtarı yönergesi, ilk bakışta \"konu\" gibi görünen bir "
+"başlık yönergesidir; ancak konunun birkaç paragraftan uzun olduğu "
+"durumlarda, değerlendirme tablosunun kendisi yalnızca başlıkla ilgilenir, "
+"şöyle::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:424
 msgid ".. rubric:: The rubric directive"
-msgstr ""
+msgstr ".. rubric:: Bölüm yönergesi"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:428
 msgid "So, when to use these?"
-msgstr ""
+msgstr "Bunları ne zaman kullanmalı?"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:429
 msgid ""
 "Only use them when you think the subject is too minor to have a proper "
 "heading."
 msgstr ""
+"Bunları yalnızca konunun uygun bir başlığa sahip olmak için çok küçük "
+"olduğunu düşündüğünüzde kullanın."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:431
 msgid "Topic"
-msgstr ""
+msgstr "Konu"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:432
 msgid ""
 "When the text is separated from the flow, so it goes into a different "
 "subject than the text itself is naturally going to."
 msgstr ""
+"Metin akıştan ayrıldığında; doğal olarak metnin kendisinden farklı bir "
+"konuya girer."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:433
 msgid "Rubric"
-msgstr ""
+msgstr "Bölüm"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:434
 msgid ""
 "When the text isn't separated from the flow, but it does not need a header "
 "either."
 msgstr ""
+"Metin akıştan ayrılmadığında; ancak bir başlığa da gereksinim duymadığında."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:436
 msgid "Admonishments"
-msgstr ""
+msgstr "Uyarılar"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:436
 msgid ""
@@ -1175,20 +1214,25 @@ msgid ""
 "and warning admonishments, as seeing them too often can make users blind to "
 "them."
 msgstr ""
+"Yalnızca anlamsal olarak uyduklarında. Bu, özellikle tehlike ve uyarı "
+"uyarıları için gereklidir, çünkü bunları çok sık görmek kullanıcıları "
+"bunlara karşı körleştirebilir."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:439
 msgid "Code Snippets"
-msgstr ""
+msgstr "Kod Parçacıkları"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:441
 msgid "``Inline code snippets`` are done with ````backticks````."
-msgstr ""
+msgstr "``Satır içi kod parçacıkları``, ```geri kesme imleri```` ile yapılır."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:443
 msgid ""
 "Multi-line code snippets are done by ending the previous section with ``::"
 "``, which'll look like this::"
 msgstr ""
+"Çok satırlı kod parçacıkları önceki bölümü ``::`` ile bitirerek yapılır, bu "
+"şuna benzer::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:445
 msgid ""
@@ -1197,12 +1241,18 @@ msgid ""
 "    Be sure to add a white space and a tab afterwards before starting the "
 "snippet."
 msgstr ""
+"Bu bir paragraf ve şu şekilde önceden biçimlendirilmiş bir parçacık "
+"tanımlanır::\n"
+"\n"
+"     Başlamadan önce bir boşluk ve sekme eklediğinizden emin olun.snippet."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:449
 msgid ""
 "You can also use the ``.. code::`` directive. If you add the language name "
 "after it, it'll do the appropriate syntax highlighting::"
 msgstr ""
+"``.. code::`` direktifini de kullanabilirsiniz. Ondan sonra dil adını "
+"eklerseniz uygun sözdizimi vurgulanır::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:451
 msgid ""
@@ -1214,10 +1264,17 @@ msgid ""
 "        alist.append(1)\n"
 "        string = \"hello world\""
 msgstr ""
+".. code:: python\n"
+"\n"
+"    # Python yorumu\n"
+"    def my_function():\n"
+"        alist = []\n"
+"        alist.append(1)\n"
+"        string = \"merhaba, dünya\""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:459
 msgid "Becomes"
-msgstr ""
+msgstr "Şu Olur"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:468
 msgid ""
@@ -1227,10 +1284,15 @@ msgid ""
 "    alist.append(1)\n"
 "    string = \"hello world\""
 msgstr ""
+"# Python yorumu\n"
+"def my_function():\n"
+"    alist = []\n"
+"    alist.append(1)\n"
+"    string = \"merhaba, dünya\""
 
 #: ../../contributors_manual/krita_manual_conventions.rst:469
 msgid "some more..."
-msgstr ""
+msgstr "biraz daha..."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:483
 msgid ""
@@ -1245,6 +1307,16 @@ msgid ""
 "    return i;\n"
 "}"
 msgstr ""
+"// C++ yorumu\n"
+"int myFunction(int i) {\n"
+"    i += 1;\n"
+"\n"
+"    // 12'den büyük olup olmadığını denetle\n"
+"    if (i>12) {\n"
+"        i = 0;\n"
+"    }\n"
+"    return i;\n"
+"}"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:498
 msgid ""
@@ -1261,48 +1333,62 @@ msgid ""
 "    line-height: 1.4;\n"
 "}"
 msgstr ""
+"/* CSS yorumu */\n"
+"body {\n"
+"    margin: 0 auto;\n"
+"    /* 800 hâlâ uygun mu? */\n"
+"    max-width:800px;\n"
+"    font-size:16px;\n"
+"    color:#333;\n"
+"    background-color: #eee;\n"
+"    padding:1em;\n"
+"    font-family:serif;\n"
+"    line-height: 1.4;\n"
+"}"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:502
 msgid ""
 "<p>this <span style=\"font-style:italic\">is</span> <!-- a HTML comment --> "
 "a paragraph.</p>"
 msgstr ""
+"<p>bu <span style=\"font-style:italic\">bir</span> <!-- a HTML comment --> "
+"paragraftır.</p>"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:504
 msgid "Other preformatted text"
-msgstr ""
+msgstr "Diğer önceden biçimlendirilmiş metinler"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:507
 msgid "One can"
-msgstr ""
+msgstr "Birisi,"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:508
 msgid "preformat"
-msgstr ""
+msgstr "bir metni"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:509
 msgid "text by"
-msgstr ""
+msgstr "her satırının"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:510
 msgid "prepending"
-msgstr ""
+msgstr "önüne"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:511
 msgid "each line"
-msgstr ""
+msgstr "bir veriyolu simgesi"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:512
 msgid "with a pipe"
-msgstr ""
+msgstr "ekleyerek"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:513
 msgid "symbol"
-msgstr ""
+msgstr "önden biçimlendirebilir"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:515
 msgid "Like so::"
-msgstr ""
+msgstr "Şöyle::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:517
 msgid ""
@@ -1314,6 +1400,13 @@ msgid ""
 "| with a pipe\n"
 "| symbol"
 msgstr ""
+"| Birisi,\n"
+"| bir metni\n"
+"| her satırının\n"
+"| önüne\n"
+"| bir veriyolu simgesi\n"
+"| ekleyerek\n"
+"| önden biçimlendirebilir"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:525
 msgid ""
@@ -1321,33 +1414,40 @@ msgid ""
 "is absolutely required to represent content that needs exact formatting, but "
 "never merely for aesthetic reasons."
 msgstr ""
+"Bu genellikle kılavuzda kullanılmaz ve yalnızca tam olarak biçimlendirilmesi "
+"gereken içeriği temsil etmenin kesinlikle gerekli olduğu durumlarda "
+"kullanılmalıdır, asla yalnızca estetik nedenlerle kullanılmamalıdır."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:530
 msgid "Glossaries, Terms and Index"
-msgstr ""
+msgstr "Kavram Dizinleri, Terimler ve İndeks"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:532
 msgid "These are sphinx features."
-msgstr ""
+msgstr "Bunlar, Sphinx özellikleridir."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:534
 msgid ""
 "Index is used in the top section, right now only single index entries are "
 "used."
 msgstr ""
+"İndeks, üst bölümde kullanılır; şu anda yalnızca tekli indeks girdileri "
+"kullanılır."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:536
 msgid ""
 "Glossaries are used for some of the menu entry sections, but not all of them."
 msgstr ""
+"Kavram dizinleri bazı menü girdisi bölümleri için kullanılır; ancak tümü "
+"için değil."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:539
 msgid "Quotes"
-msgstr ""
+msgstr "Alıntılar"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:541
 msgid "Quotes are done like this::"
-msgstr ""
+msgstr "Alıntılar şöyle yapılır::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:543
 msgid ""
@@ -1355,28 +1455,33 @@ msgid ""
 "\n"
 "-- Wolthera"
 msgstr ""
+"Bir kullanıcı kılavuzunda neden alıntılara gerek duyasınız ki...\n"
+"\n"
+"-- Saldıray Abi"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:547
 msgid "This becomes a blockquote."
-msgstr ""
+msgstr "Bu, bir blok alıntıya dönüşür."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:549
 msgid "I am not sure why you'd need quotes in a user manual..."
-msgstr ""
+msgstr "Bir kullanıcı kılavuzunda neden alıntılara gerek duyasınız ki..."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:553
 msgid ""
 "We do actually use quotes in some places. Try to add a link to the name to "
 "define where it came from."
 msgstr ""
+"Aslında bazı yerlerde alıntıları kullanıyoruz. Nereden geldiğini tanımlamak "
+"için ada bir bağlantı eklemeye çalışın."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:554
 msgid "Wolthera"
-msgstr ""
+msgstr "Saldıray Abi"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:556
 msgid "Text for Non-English Translations Only"
-msgstr ""
+msgstr "İngilizce Olmayan Çeviriler için Metin"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:558
 msgid ""
@@ -1384,6 +1489,9 @@ msgid ""
 "English translations of the manual, for example to provide non-English "
 "readers with the English names of an item for reference::"
 msgstr ""
+"Kılavuzun yalnızca İngilizce olmayan çevirileri için anlamlı olan metinleri "
+"içermek için aşağıdakileri kullanabilirsiniz; örneğin İngilizce olmayan "
+"okuyuculara atıf olarak bir ögenin İngilizce adlarını sağlamak için::"
 
 #: ../../contributors_manual/krita_manual_conventions.rst:562
 msgid ""
@@ -1392,6 +1500,11 @@ msgid ""
 "    This content is hidden for the English version, but translatable and\n"
 "    shows up in non-English versions."
 msgstr ""
+".. only:: non_english\n"
+"\n"
+"    Bu içerik, İngilizce sürüm için gizlidir; ancak çevrilebilir ve "
+"İngilizce\n"
+"    olmayan sürümlerde görünür."
 
 #: ../../contributors_manual/krita_manual_conventions.rst:568
 msgid "Notes for Translators"
