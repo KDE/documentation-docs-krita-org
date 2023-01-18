@@ -349,7 +349,7 @@ In this example we manually define a class that combines our scatter-specific mi
     };
 
 .. hint::
-    Even though virtual function are prohibited, we still use them in one place, ``KisDynamicSensor``. ``KisDynamicSensor`` is a representation of a single sensor in ``KisCurveOptionData`` and it is somewhat polymorphic. **But** these polymorphic sensors are fully contained inside a single curve option. They are created on the stack and none of their pointers are ever exposed to the outer world. 
+    Even though virtual function are prohibited, we still use them in one place, ``KisDynamicSensor``. ``KisDynamicSensor`` is a representation of a single sensor in ``KisCurveOptionData`` and it is somewhat polymorphic. **But** these polymorphic sensors are fully contained inside a single curve option. They are created internally and none of their pointers are ever exposed to the outer world. 
 
 Official documentation
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -676,26 +676,9 @@ The rough plan for porting an arbitrary painting engine ``FooOp`` to lager is th
   3) Port all non-standard options to lager: you just need to extract ``KisPressureFooBarOption::apply()`` function into a separate class named ``KisFooBarOption``. Use ``KisScatterOption`` as a reference implementation.
   4) Test if the brush still reacts to the GUI changes in an expected way
   
-3) Check if any of the options you ported had ``KisPressureFooBarOption::lodLimitation()`` method. If so, port these limitations to your new ``KisFooBarOptionData`` and ``KisFooBarOptionWidget``. Use ``KisSizeOptionData`` and ``KisSizeOptionWidget`` as a reference implementation.
+3) Check if any of the options you ported had ``KisPressureFooBarOption::lodLimitation()`` method. If so, port these limitations to your new ``KisFooBarOptionData`` and use a special creation function ``KisPaintOpOptionWidgetUtils::createOptionWidgetWithLodLimitations()`` to create a widget for it. Use ``KisSizeOptionData`` and ``KisSizeOptionWidget`` as a reference implementation.
 
 4) If any new brush option has "effective" values, verify that you have ``KisFooBarOptionModel::bakedOptionData()`` method in the model and calls it from ``KisFooBarOptionWidget::writeOptionSetting()`` in the widget.
 
 5) Open ``KisFooOpSettings`` and port all the *uniform properties* to use new data classes. Use ``KisColorSmudgeOpSettings`` as a reference implementation.
 
-Brush engines awaiting for a port
----------------------------------
-
-#) ``KisDuplicateOp``
-#) ``KisHatchingPaintOp``
-#) ``KisTangentNormalPaintOp``
-#) ``KisCurvePaintOp``
-#) ``KisDeformPaintOp``
-#) ``KisExperimentPaintOp``
-#) ``KisGridPaintOp``
-#) ``KisHairyPaintOp``
-#) ``KisMyPaintPaintOp``
-#) ``KisParticlePaintOp``
-#) ``KisRoundMarkerOp``
-#) ``KisSketchPaintOp``
-#) ``KisSprayPaintOp``
-  
