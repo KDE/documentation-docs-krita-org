@@ -25,7 +25,7 @@ function import_po_dirs # First parameter will be a path that will be a director
     # for some reason sphinx uses pt_PT instead of pt
     mv $podir/pt $podir/pt_PT
     # These are the language codes that sphinx supports.
-    for lang in bn ca cs da de es et eu fa fi fr he hr hu id it ja ko lt lv mk nb_NO ne nl pl pt_BR pt_PT ru si sk sv tr uk_UA vi zh_CN zh_TW
+    for lang in bn ca cs da de es et eu fa fi fr he hr hu id it ja ko lt lv mk nb_NO ne nl pl pt_BR pt_PT ru si sk sl sv tr uk_UA vi zh_CN zh_TW
     do
         if [ -d "$podir/$lang" ]; then
             rm -rf locale/$lang/LC_MESSAGES
