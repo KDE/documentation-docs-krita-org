@@ -1,0 +1,2082 @@
+# Translation of Krita Manual to Slovenian
+#
+# Copyright (C) 2021 This_file_is_part_of_KDE
+# This file is distributed under the same license as the Krita package.
+#
+#
+# Martin Srebotnjak <miles@filmsi.net>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krita ref manual\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2022-07-28 13:54+0200\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: ../../reference_manual/seexpr.rst:1
+#, fuzzy
+msgid "SeExpr Quick Reference for Krita"
+msgstr "SeExpr hiter sklic za Krita"
+
+#: ../../reference_manual/seexpr.rst:11
+msgid "Fill Layer"
+msgstr "Zapolni plast"
+
+#: ../../reference_manual/seexpr.rst:11
+msgid "SeExpr"
+msgstr "SeExpr"
+
+#: ../../reference_manual/seexpr.rst:17
+#, fuzzy
+#| msgid "Symmetric Difference"
+msgid "SeExpr Quick Reference"
+msgstr "Simetrična razlika"
+
+#: ../../reference_manual/seexpr.rst:19
+#, fuzzy
+msgid ""
+"This page details all the available variables, functions, and operators in "
+"SeExpr. It is a heavily edited version of the official `user documentation "
+"<https://wdas.github.io/SeExpr/doxygen/userdoc.html>`_, adapted for usage "
+"with Krita."
+msgstr ""
+"Na tej strani so podrobno opisane vse razpoložljive spremenljivke, funkcije "
+"in operaterji v programu SeExpr. Gre za močno urejeno različico uradne "
+"\"uporabniške dokumentacije <https://wdas.github.io/SeExpr/doxygen/userdoc."
+"html>\"_, prilagojene za uporabo s Krito."
+
+#: ../../reference_manual/seexpr.rst:23
+msgid "Source code at `KDE Invent <https://invent.kde.org/lsegovia/seexpr>`_"
+msgstr "Izvorna koda v `KDE Invent <https://invent.kde.org/lsegovia/seexpr>`_"
+
+#: ../../reference_manual/seexpr.rst:24
+#, fuzzy
+msgid ""
+"Disney's SeExpr `API Documentation <http://wdas.github.io/SeExpr/doxygen/>`_"
+msgstr ""
+"Disney's SeExpr 'API Dokumentacija <http://wdas.github.io/SeExpr/doxygen/>'_"
+
+#: ../../reference_manual/seexpr.rst:27
+#, fuzzy
+msgid ":ref:`seexpr_tut_intro`"
+msgstr ":ref:'seexpr_tut_intro'"
+
+#: ../../reference_manual/seexpr.rst:28
+#, fuzzy
+msgid ":ref:`seexpr_fill_layer`"
+msgstr ":ref:'seexpr_fill_layer'"
+
+#: ../../reference_manual/seexpr.rst:29
+#, fuzzy
+msgid ":ref:`resource_seexpr_scripts`"
+msgstr ":ref:'resource_seexpr_scripts'"
+
+#: ../../reference_manual/seexpr.rst:30
+msgid ""
+"`\"Procedural texture generator (example and wishes)\" on Krita Artists "
+"<https://krita-artists.org/t/procedural-texture-generator-example-and-"
+"wishes/7638>`_"
+msgstr ""
+"`»Procesni generator tekstur (primer in želje)« (v angl.) na Krita Artists "
+"<https://krita-artists.org/t/procedural-texture-generator-example-and-"
+"wishes/7638>`_"
+
+#: ../../reference_manual/seexpr.rst:31
+msgid "`Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_"
+msgstr "`Članki Iniga Quileza <https://iquilezles.org/www/index.htm>`"
+
+#: ../../reference_manual/seexpr.rst:32
+msgid "`The Book of Shaders <https://thebookofshaders.com/>`_"
+msgstr "`Knjiga senčnikov <https://thebookofshaders.com/>`_"
+
+#: ../../reference_manual/seexpr.rst:34
+msgid "Contents"
+msgstr "Vsebina"
+
+#: ../../reference_manual/seexpr.rst:38
+msgid "Variables"
+msgstr "Spremenljivke"
+
+#: ../../reference_manual/seexpr.rst:41
+msgid "External variables"
+msgstr "Zunanje spremenljivke"
+
+#: ../../reference_manual/seexpr.rst:43
+#, fuzzy
+msgid ""
+"These variables are provided by host applications, in this case Krita. They "
+"are registered with SeExpr's autocomplete help, which can be accessed by :"
+"kbd:`Ctrl+Space`."
+msgstr ""
+"Te spremenljivke zagotavljajo gostiteljske aplikacije, v tem primeru Krita. "
+"Registrirani so s seExpr-jevo samodokončano pomočjo, do katere lahko "
+"dostopate s strani :kbd:'Ctrl+Space'."
+
+#: ../../reference_manual/seexpr.rst:48
+#, fuzzy
+msgid "$u, $v"
+msgstr "$u, $v"
+
+#: ../../reference_manual/seexpr.rst:50
+#, fuzzy
+msgid "Pixel position in normalized coordinates."
+msgstr "Položaj pik na normaliziranih koordinatah."
+
+#: ../../reference_manual/seexpr.rst:51
+#, fuzzy
+msgid "$w, $h"
+msgstr "$w, $h"
+
+#: ../../reference_manual/seexpr.rst:53
+#, fuzzy
+#| msgid "Width of image in pixels."
+msgid "Image's width and height in pixels."
+msgstr "Širina slike v slikovnih točkah."
+
+#: ../../reference_manual/seexpr.rst:56
+msgid "Local Variables"
+msgstr "Krajevne spremenljivke"
+
+#: ../../reference_manual/seexpr.rst:58
+#, fuzzy
+msgid "Local variables can be defined at the start of the expression::"
+msgstr "Lokalne spremenljivke lahko določimo na začetku izraza::"
+
+#: ../../reference_manual/seexpr.rst:60
+#, fuzzy
+msgid ""
+"$a = noise($P);\n"
+"$b = noise($a * 1);\n"
+"pow($a, 0.5) + $b"
+msgstr ""
+"$a = hrup($P);\n"
+"$b = hrup($a * 1);\n"
+"pow($a, 0,5) + $b"
+
+#: ../../reference_manual/seexpr.rst:64
+#, fuzzy
+msgid ""
+"External variables can also be overridden by local assignment. This can be "
+"useful to scale the noise frequency for instance::"
+msgstr ""
+"Zunanje spremenljivke lahko preglasi tudi lokalna dodelitev. To je lahko "
+"koristno za razsežnost frekvence hrupa na primer::"
+
+#: ../../reference_manual/seexpr.rst:66
+#, fuzzy
+msgid ""
+"$P = $P * 10; # increase noise frequency\n"
+"fbm(vnoise($P) + $P/4)"
+msgstr ""
+"$P = $P * 10; # povečajte frekvenco hrupa\n"
+"fbm(vnoise($P) + $P/4)"
+
+#: ../../reference_manual/seexpr.rst:69
+#, fuzzy
+msgid "You can also define namespaced variables, e.g.::"
+msgstr "Določite lahko tudi spremenljivke, ki so razčlenjene z imenom, npr.:"
+
+#: ../../reference_manual/seexpr.rst:71
+#, fuzzy
+msgid "$A::a = $u * 10;"
+msgstr "$A::a = $u * 10;"
+
+#: ../../reference_manual/seexpr.rst:75
+#, fuzzy
+#| msgid "Structure"
+msgid "Control Structures"
+msgstr "Zgradba"
+
+#: ../../reference_manual/seexpr.rst:77
+#, fuzzy
+msgid "SeExpr provides the well-known `if` conditional structure::"
+msgstr "SeExpr zagotavlja dobro znano pogojno strukturo \"če\":"
+
+#: ../../reference_manual/seexpr.rst:79
+#, fuzzy
+msgid ""
+"if ($ u > 0.5) {\n"
+"    $color = [0, 0, 1];\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
+msgstr ""
+"če ($ u > 0,5) {\n"
+"    $color = [0, 0, 1];\n"
+"}\n"
+"drugo {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
+
+#: ../../reference_manual/seexpr.rst:88
+#, fuzzy
+msgid "And the *ternary operator*::"
+msgstr "In *ternary operator*::"
+
+#: ../../reference_manual/seexpr.rst:90
+#, fuzzy
+msgid "$u = $i < .5 ? 0.0 : 10.0"
+msgstr "$u = $i <.5 ? 0.0 : 10.0"
+
+#: ../../reference_manual/seexpr.rst:92
+#, fuzzy
+msgid "You can freely nest ternary operators, e.g.::"
+msgstr "Prosto gnezdijo ternary operaterji, npr.:"
+
+#: ../../reference_manual/seexpr.rst:94
+#, fuzzy
+msgid ""
+"$color = $u < .5 ? ($v < 0.5 ? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];\n"
+"$color"
+msgstr ""
+"$color = $u <.5? ($v < 0,5? [0, 0, 1] : [1, 0, 0]) : [0, 1, 0];\n"
+"$color"
+
+#: ../../reference_manual/seexpr.rst:97
+#, fuzzy
+msgid "You can also achieve the same with `if` structures::"
+msgstr "Enako lahko dosežete tudi s strukturami \"if\"::"
+
+#: ../../reference_manual/seexpr.rst:99
+#, fuzzy
+msgid ""
+"if ($ u > 0.5) {\n"
+"    if ($v < 0.5) {\n"
+"        $color = [0, 0, 1];\n"
+"    }\n"
+"    else {\n"
+"        $color = [1, 0, 0];\n"
+"    }\n"
+"}\n"
+"else {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
+msgstr ""
+"če ($ u > 0,5) {\n"
+"    če ($v < 0,5) {\n"
+"        $color = [0, 0, 1];\n"
+"    }\n"
+"    drugo {\n"
+"        $color = [1, 0, 0];\n"
+"    }\n"
+"}\n"
+"drugo {\n"
+"    $color = [1, 0, 0];\n"
+"}\n"
+"\n"
+"$color"
+
+#: ../../reference_manual/seexpr.rst:115
+#, fuzzy
+msgid "Operators (listed in decreasing precedence)"
+msgstr "Operaterji (našteti v upadajoči prednostni dejavnosti)"
+
+#: ../../reference_manual/seexpr.rst:118
+msgid "[a,b,c]"
+msgstr "[a,b,c]"
+
+#: ../../reference_manual/seexpr.rst:120
+#, fuzzy
+msgid "vector constructor"
+msgstr "vektorski konstruktor"
+
+#: ../../reference_manual/seexpr.rst:121
+msgid "$P[ n ]"
+msgstr "$P[ n ]"
+
+#: ../../reference_manual/seexpr.rst:123
+#, fuzzy
+msgid "vector component access"
+msgstr "vektorski dostop do komponente"
+
+#: ../../reference_manual/seexpr.rst:125
+#, fuzzy
+msgid "``n`` must be 0, 1, or 2, e.g.::"
+msgstr "\"n\" mora biti 0, 1 ali 2, npr.:"
+
+#: ../../reference_manual/seexpr.rst:127
+msgid "$P[0]"
+msgstr "$P[0]"
+
+#: ../../reference_manual/seexpr.rst:128
+msgid "^"
+msgstr "^"
+
+#: ../../reference_manual/seexpr.rst:130
+#, fuzzy
+#| msgid "Render Animation"
+msgid "exponentiation"
+msgstr "Potenciranje"
+
+#: ../../reference_manual/seexpr.rst:132
+#, fuzzy
+msgid "Same as the ``pow`` function."
+msgstr "Enako kot funkcija \"pow\"."
+
+#: ../../reference_manual/seexpr.rst:133
+msgid "!"
+msgstr "!"
+
+#: ../../reference_manual/seexpr.rst:135
+msgid "logical NOT"
+msgstr "Logični NE"
+
+#: ../../reference_manual/seexpr.rst:136
+msgid "~"
+msgstr "~"
+
+#: ../../reference_manual/seexpr.rst:138
+#, fuzzy
+#| msgid "Versions"
+msgid "inversion"
+msgstr "Brez inverzije"
+
+#: ../../reference_manual/seexpr.rst:143
+msgid "~$A"
+msgstr "~$A"
+
+#: ../../reference_manual/seexpr.rst:145
+#, fuzzy
+msgid "gives the same result as::"
+msgstr "daje enak rezultat kot:"
+
+#: ../../reference_manual/seexpr.rst:147
+msgid "1 - $A"
+msgstr "1 - $A"
+
+#: ../../reference_manual/seexpr.rst:148
+msgid "\\*/ %"
+msgstr "\\*/ %"
+
+#: ../../reference_manual/seexpr.rst:150
+#, fuzzy
+msgid "multiply, divide, modulus"
+msgstr "razmnoževanje, razdelitev, moduli"
+
+#: ../../reference_manual/seexpr.rst:152
+#, fuzzy
+msgid "``%`` is the same as the ``fmod`` function."
+msgstr "''%'' je enako funkciji ''fmod''."
+
+#: ../../reference_manual/seexpr.rst:153
+#, fuzzy
+#| msgid "+"
+msgid "+-"
+msgstr "+"
+
+#: ../../reference_manual/seexpr.rst:155
+#, fuzzy
+#| msgid "Subtract"
+msgid "add, subtract"
+msgstr "dodaj/odštej odstotek k/od nasičenosti (najm.=-100, najv.=100)."
+
+#: ../../reference_manual/seexpr.rst:156
+msgid "<> <= >="
+msgstr "<> <= >="
+
+#: ../../reference_manual/seexpr.rst:158
+#, fuzzy
+msgid ""
+"comparison: less than, greater than, less or equal than, greater or equal "
+"than"
+msgstr "primerjava: manj kot, večja od, manjša ali enaka, večja ali enaka od"
+
+#: ../../reference_manual/seexpr.rst:160
+#, fuzzy
+msgid "Only uses the first component of a vector."
+msgstr "Uporablja samo prvo komponento vektorja."
+
+#: ../../reference_manual/seexpr.rst:161
+msgid "== !="
+msgstr "== !="
+
+#: ../../reference_manual/seexpr.rst:163
+#, fuzzy
+msgid "equality, inequality"
+msgstr "enakost, neenakost"
+
+#: ../../reference_manual/seexpr.rst:164
+msgid "&&"
+msgstr "&&"
+
+#: ../../reference_manual/seexpr.rst:166
+msgid "logical AND"
+msgstr "Logičini IN"
+
+#: ../../reference_manual/seexpr.rst:167
+msgid "||"
+msgstr "||"
+
+#: ../../reference_manual/seexpr.rst:169
+msgid "logical OR"
+msgstr "Logični ALI"
+
+#: ../../reference_manual/seexpr.rst:170
+msgid "?:"
+msgstr "?:"
+
+#: ../../reference_manual/seexpr.rst:172
+#, fuzzy
+msgid "ternary ``if`` operator"
+msgstr "ternary ''if'' operater"
+
+#: ../../reference_manual/seexpr.rst:174
+msgid "Example::"
+msgstr "Primer::"
+
+#: ../../reference_manual/seexpr.rst:176
+msgid "$u < .5 ? 0 : 1"
+msgstr "$u < .5 ? 0 : 1"
+
+#: ../../reference_manual/seexpr.rst:177
+#, fuzzy
+#| msgid ">"
+msgid "->"
+msgstr ">"
+
+#: ../../reference_manual/seexpr.rst:179
+#, fuzzy
+msgid ""
+"apply - The function on the right of the arrow is applied to the expression "
+"on the left."
+msgstr ""
+"uporabite - Funkcija na desni strani puščice se uporablja za izraz na levi."
+
+#: ../../reference_manual/seexpr.rst:181
+msgid "Examples::"
+msgstr "Primeri::"
+
+#: ../../reference_manual/seexpr.rst:183
+#, fuzzy
+msgid ""
+"$Cs->contrast(.7) -> clamp(0.2,0.8)\n"
+"$u->hsi(20,1.2,1,$Cs->gamma(1.2))"
+msgstr ""
+"$Cs->kontrast(.7) -> spona(0,2,0,8)\n"
+"$u->s(20,1.2,1,$Cs->gama(1.2))"
+
+#: ../../reference_manual/seexpr.rst:188
+#, fuzzy
+msgid "Assignment Operators"
+msgstr "Operatorji dodeljevanja"
+
+#: ../../reference_manual/seexpr.rst:190
+#, fuzzy
+msgid "Besides the basic assignment statement::"
+msgstr "Poleg osnovne izjave o dodelitvi:"
+
+#: ../../reference_manual/seexpr.rst:192
+#, fuzzy
+msgid "$foo = $bar"
+msgstr "$foo = $bar"
+
+#: ../../reference_manual/seexpr.rst:194
+#, fuzzy
+msgid "you can also do operator assignments such as::"
+msgstr "dodelitve operaterja, kot so:"
+
+#: ../../reference_manual/seexpr.rst:196
+#, fuzzy
+msgid "$foo += $bar;"
+msgstr "$foo += $bar;"
+
+#: ../../reference_manual/seexpr.rst:198
+#, fuzzy
+msgid "which is equivalent to::"
+msgstr ""
+"Naslednji primer prikliče storitev <literal>Basic</literal> in kliče metodo "
+"<literal>MsgBox</literal>, ki je ekvivalentna funkciji <literal>MsgBox</"
+"literal>, ki je na voljo v Basicu:"
+
+#: ../../reference_manual/seexpr.rst:200
+#, fuzzy
+msgid "$foo = $foo + $bar;"
+msgstr "$foo = $foo + $bar;"
+
+#: ../../reference_manual/seexpr.rst:202
+msgid "Additionally, there are:"
+msgstr "Poleg tega so še:"
+
+#: ../../reference_manual/seexpr.rst:204
+msgid "``+=``"
+msgstr "``+=``"
+
+#: ../../reference_manual/seexpr.rst:205
+msgid "``-=``"
+msgstr "``-=``"
+
+#: ../../reference_manual/seexpr.rst:206
+msgid "``/=``"
+msgstr "``/=``"
+
+#: ../../reference_manual/seexpr.rst:207
+msgid "``%=``"
+msgstr "``%=``"
+
+#: ../../reference_manual/seexpr.rst:208
+msgid "``*=``"
+msgstr "``*=``"
+
+#: ../../reference_manual/seexpr.rst:209
+msgid "``^=``"
+msgstr "``^=``"
+
+#: ../../reference_manual/seexpr.rst:213
+msgid "Comments"
+msgstr "Komentarji"
+
+#: ../../reference_manual/seexpr.rst:215
+#, fuzzy
+msgid ""
+"You can add comments to your script by using the ``#`` character. SeExpr "
+"will then skip the rest of the line for rendering purposes. However, they "
+"are not ignored; comments can still be used to declare the valid value range "
+"of integer, float, and vector variables. This enables you to manage them "
+"using widgets that will accept the specified range."
+msgstr ""
+"V skript lahko dodate komentarje z znakom ''#''. SeExpr bo nato preskočil "
+"preostanek vrstice za potrebe ugasnjenja. Vendar pa se ne prezrejo; pripombe "
+"je še vedno mogoče uporabiti za razglasitev veljavnega obsega vrednosti "
+"spremenljivk za število, plovek in vektor. To vam omogoča upravljanje z "
+"uporabo pripomočkov, ki bodo sprejeli določen obseg."
+
+#: ../../reference_manual/seexpr.rst:223
+#, fuzzy
+msgid ""
+"``$var0`` is an integer variable that ranges between 0 and 10 inclusive::"
+msgstr ""
+"''$var 0'' je spremenljivka v celotnem obsegu, ki se giba med 0 in vključno "
+"10::"
+
+#: ../../reference_manual/seexpr.rst:225
+#, fuzzy
+msgid "$var0 = 0; # 0, 10"
+msgstr "$var 0 = 0; # 0, 10"
+
+#: ../../reference_manual/seexpr.rst:227
+#, fuzzy
+msgid "``$var1`` is a floating point variable with the same range::"
+msgstr "''$var 1'' je spremenljivka plavajoče točke z enakim obsegom::"
+
+#: ../../reference_manual/seexpr.rst:229
+#, fuzzy
+msgid "$var1 = 0; # 0.000, 10.000"
+msgstr "$var 1 = 0; # 0.000, 10.000"
+
+#: ../../reference_manual/seexpr.rst:231
+#, fuzzy
+msgid "``$var2`` is a vector variable::"
+msgstr "''$var 2'' je vektorska spremenljivka::"
+
+#: ../../reference_manual/seexpr.rst:233
+#, fuzzy
+msgid "$var2 = [0, 0, 0] # 0.000, 10.000"
+msgstr "$var 2 = [0, 0, 0] # 0.000, 10.000"
+
+#: ../../reference_manual/seexpr.rst:235
+#, fuzzy
+msgid ""
+"The latter is very helpful; SeExpr considers vectors with range ``[0, 1]`` "
+"as colors::"
+msgstr ""
+"Slednje je zelo koristno; SeExpr upošteva vektorje z obsegom ''[0, 1]'' kot "
+"barve::"
+
+#: ../../reference_manual/seexpr.rst:237
+#, fuzzy
+msgid ""
+"# this is a dark red\n"
+"$color = [0.5, 0, 0] # 0.000, 1.000"
+msgstr ""
+"To je temno rdeča\n"
+"$color = [0.5, 0, 0] # 0.000, 1.000"
+
+#: ../../reference_manual/seexpr.rst:240
+#, fuzzy
+msgid ""
+"In all cases, if not specified, the associated widgets' range will go from 0 "
+"to 1."
+msgstr ""
+"V vseh primerih, če ni določeno, bo obseg povezanih pripomočkov od 0 do 1."
+
+#: ../../reference_manual/seexpr.rst:242
+#, fuzzy
+msgid "For a multi-line expression, each line may have its own comment."
+msgstr "Za izraz z več vrsticami ima lahko vsaka vrstica svoj komentar."
+
+#: ../../reference_manual/seexpr.rst:246
+#, fuzzy
+msgid "Logging Functions"
+msgstr "Funkcije beleženja v zapisnik/logaritmov?"
+
+#: ../../reference_manual/seexpr.rst:249
+#, fuzzy
+msgid "float **printf** ( string format, [param0, param1, ...] )"
+msgstr "float **printf** ( oblika niza, [param0, param1, ...] )"
+
+#: ../../reference_manual/seexpr.rst:251
+#, fuzzy
+msgid ""
+"Prints a string to stdout that is formatted as given. Formatting parameters "
+"possible are ``%f`` for float (takes the first component of vector argument) "
+"or ``%v`` for vector."
+msgstr ""
+"Natisne niz za stdout, ki je oblikovan kot dano. Možni parametri oblikovanja "
+"so »%f« za float (vzame prvo komponento vektorskega argumenta) ali ''%v'' za "
+"vektor."
+
+#: ../../reference_manual/seexpr.rst:256
+#, fuzzy
+msgid "For example, if you wrote::"
+msgstr "Če ste na primer napisali::"
+
+#: ../../reference_manual/seexpr.rst:258
+#, fuzzy
+msgid "$u = printf(\"test %f %v\",[1,2,3],[4,5,6]);"
+msgstr "$u = printf (\"preskus %f %v\",[1,2,3],[4,5,6]);"
+
+#: ../../reference_manual/seexpr.rst:260
+#, fuzzy
+msgid "you would get in your console::"
+msgstr "bi dobili v konzoli::"
+
+#: ../../reference_manual/seexpr.rst:262
+#, fuzzy
+msgid "test 1 [4,5,6]"
+msgstr "preskus 1 [4,5,6]"
+
+#: ../../reference_manual/seexpr.rst:263
+#, fuzzy
+msgid ""
+"string **sprintf** ( string format, [double|string, double|string, ...] )"
+msgstr "niz **sprintf** ( oblika niza, [dvojna|string, dvojna|string, ...] )"
+
+#: ../../reference_manual/seexpr.rst:265
+#, fuzzy
+msgid ""
+"Returns a string formatted from the given values.  See ``man sprintf`` for "
+"format details."
+msgstr ""
+"Vrne niz, oblikovan iz danih vrednosti.  Za podrobnosti formata glejte \"man "
+"sprintf\"."
+
+#: ../../reference_manual/seexpr.rst:269
+#, fuzzy
+msgid "Color, Masking, and Remapping Functions"
+msgstr "Funkcije barv, maskiranje in ponovno kartiranje"
+
+#: ../../reference_manual/seexpr.rst:272
+#, fuzzy
+msgid "float **bias** ( float x, float b)"
+msgstr "plovenje **pridih** ( plovenje x, plovenje b)"
+
+#: ../../reference_manual/seexpr.rst:274
+#, fuzzy
+msgid ""
+"Variation of gamma where control parameter goes from ``0`` to ``1`` with "
+"values ``> 0.5`` pulling the curve up and values ``< 0.5`` pulling the curve "
+"down. Defined as ``pow(x, log(b)/log(0.5))``."
+msgstr ""
+"Variacija gama, kjer kontrolni parameter gre od ''0'' do ''1'' z vrednostmi "
+"''> 0,5'' povleče krivulo navzgor in vrednosti ''< 0,5'' vlečejo krivulo "
+"navzdol. Opredeljeno kot \"pow(x, log(b)/log(0.5))\"."
+
+#: ../../reference_manual/seexpr.rst:277
+#, fuzzy
+msgid "float **boxstep** ( float x, float a )"
+msgstr "float **boxstep** ( float x, float a )"
+
+#: ../../reference_manual/seexpr.rst:278
+#, fuzzy
+msgid "float **gaussstep** ( float x, float a, float b )"
+msgstr "float **gaussstep** ( float x, float a, float b )"
+
+#: ../../reference_manual/seexpr.rst:279
+#, fuzzy
+msgid "float **linearstep** ( float x, float a, float b )"
+msgstr "float **linearstep** ( float x, float a, float b )"
+
+#: ../../reference_manual/seexpr.rst:280
+#, fuzzy
+msgid "float **smoothstep** ( float x, float a, float b )"
+msgstr "float **smoothstep** ( float x, float a, float b )"
+
+#: ../../reference_manual/seexpr.rst:282
+#, fuzzy
+msgid ""
+"The step functions are zero for ``x < a`` and one for ``x > b`` (or ``x > "
+"a`` in the case of boxstep). Between ``a`` and ``b``, the value changes "
+"continuously between zero and one. The ``gausstep`` function uses the "
+"standard Gaussian \"bell\" curve which is based on an exponential curve. The "
+"``smoothstep`` function uses a cubic curve. Intuitively, ``gausstep`` has a "
+"sharper transition near one and a softer transition near zero whereas "
+"``smoothstep`` has a medium softness near both one and zero."
+msgstr ""
+"Funkcije koraka so nič za ''x < a'' in ena za ''x > b'' (ali ''x > a'' v "
+"primeru boxstepa). Med »a« in »b« se vrednost nenehno spreminja med ničlo in "
+"eno. Funkcija \"gausstep\" uporablja standardno gavsovsko \"zvonovno\" "
+"krivulo, ki temelji na eksponencialni krivuli. Funkcija ''smoothstep'' "
+"uporablja kubični krivuljo. Intuitivno ima \"gausstep\" ostrejšo tranzicijo "
+"v bližini enega in mehkejšo tranzicijo v bližini nič, \"smoothstep\" pa ima "
+"srednje mehkobnost v bližini ene in ničle."
+
+#: ../../reference_manual/seexpr.rst:290
+#, fuzzy
+msgid "float **clamp** ( float x, float lo, float hi )"
+msgstr "float **clamp** ( float x, float lo, float hi )"
+
+#: ../../reference_manual/seexpr.rst:292
+#, fuzzy
+msgid "Constrain ``x`` to range ``[lo, hi]``."
+msgstr "Omejitev \"x\" na razpon ''[lo, hi]''."
+
+#: ../../reference_manual/seexpr.rst:293
+#, fuzzy
+msgid "float **compress** ( float x, float lo, float hi )"
+msgstr "float **compress** ( float x, float lo, float hi )"
+
+#: ../../reference_manual/seexpr.rst:295
+#, fuzzy
+msgid "Compress the dynamic range from ``[0, 1]`` to ``[lo, hi]``."
+msgstr "Stisni dinamično območje od »[0, 1]'' do »[lo, hi]''."
+
+#: ../../reference_manual/seexpr.rst:296
+#, fuzzy
+msgid "float **contrast** ( float x, float c )"
+msgstr "plovenje **kontrast** ( plavajo x, plavajo c )"
+
+#: ../../reference_manual/seexpr.rst:298
+#, fuzzy
+msgid ""
+"Adjust the contrast. For ``c`` from ``0`` to ``0.5``, the contrast is "
+"decreased. For ``c > 0.5``, the contrast is increased."
+msgstr ""
+"Prilagodite kontrast. Za ''c'' od ''0'' do ''0,5'', se kontrast zmanjša. Za "
+"\"c > 0,5'', se kontrast poveča."
+
+#: ../../reference_manual/seexpr.rst:300
+#, fuzzy
+msgid "float **expand** ( float x, float lo, float hi )"
+msgstr "float **expand** ( float x, float lo, float hi )"
+
+#: ../../reference_manual/seexpr.rst:302
+#, fuzzy
+msgid "Expand the dynamic range from ``[lo, hi]`` to ``[0, 1]``."
+msgstr "Razširi dinamični razpon od »[lo, hi]'' do »[0, 1]''."
+
+#: ../../reference_manual/seexpr.rst:303
+#, fuzzy
+msgid "float **fit** ( float x, float a1, float b1, float a2, float b2 )"
+msgstr "float **fit** ( float x, float a1, float b1, float a2, float b2 )"
+
+#: ../../reference_manual/seexpr.rst:305
+#, fuzzy
+msgid "Linear remapping of ``[a1..x..b1]`` to ``[a2..x..b2]``"
+msgstr "Lineano preuslikavanje »[a1.. x..b1]'' do »[a2.. x..b2]''"
+
+#: ../../reference_manual/seexpr.rst:306
+#, fuzzy
+msgid "float **gamma** ( float x, float g)"
+msgstr "float **gamma** ( float x, float g)"
+
+#: ../../reference_manual/seexpr.rst:308
+#, fuzzy
+msgid "``pow(x, 1/g)``"
+msgstr "\"pow(x, 1/g)\""
+
+#: ../../reference_manual/seexpr.rst:309
+#, fuzzy
+msgid "float **invert** ( float x )"
+msgstr "float **invert** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:311
+#, fuzzy
+msgid "Invert the value. Defined as ``1 - x``."
+msgstr "Obrni vrednost. Opredeljeno kot \"1 - x\"."
+
+#: ../../reference_manual/seexpr.rst:312
+#, fuzzy
+msgid "color **hsi** ( color x, float h, float s, float i, float map=1 )"
+msgstr "color **his** ( color x, float h, float s, float i, float map=1 )"
+
+#: ../../reference_manual/seexpr.rst:314
+#, fuzzy
+msgid ""
+"The ``hsi`` function shifts the hue by ``h`` (in degrees) and scales the "
+"saturation and intensity by ``s`` and ``i`` respectively. A map may be "
+"supplied which will control the shift - the full shift will happen when the "
+"map is one and no shift will happen when the map is zero. The shift will be "
+"scaled back for values between zero and one."
+msgstr ""
+"Funkcija ''njegova'' premika odtenek za ''h'' (v stopinjah) in meri "
+"zasičenost in intenzivnost za ''s'' oziroma ''i''. Na voljo je lahko "
+"zemljevid, ki bo nadziral premik - popolna izmena se bo zgodila, ko je "
+"zemljevid ena in se ne bo zgodila nobena izmena, ko je zemljevid nič. Premik "
+"se bo meril nazaj za vrednosti med ničlo in eno."
+
+#: ../../reference_manual/seexpr.rst:320
+#, fuzzy
+msgid "color **hsltorgb** ( color hsl )"
+msgstr "barva **hsltorgb** ( barva hsl )"
+
+#: ../../reference_manual/seexpr.rst:321
+#, fuzzy
+msgid "color **rgbtohsl** ( color rgb )"
+msgstr "barva **rgbtohsl** ( barva rgb )"
+
+#: ../../reference_manual/seexpr.rst:323
+#, fuzzy
+msgid ""
+"RGB to HSL color space conversion. HSL is Hue, Saturation, Lightness (all in "
+"the range ``[0, 1]``). These functions have also been extended to support "
+"RGB and HSL values outside of the range ``[0, 1]`` in a reasonable way. For "
+"any RGB or HSL value (except for negative values), the conversion is well-"
+"defined and reversible."
+msgstr ""
+"RGB v pretvorbo barvnega prostora HSL. HSL je Hue, Saturation, Lightness "
+"(vse v območju ''[0, 1]''). Te funkcije so bile razširjene tudi tako, da na "
+"razumen način podpirajo vrednosti RGB in HSL zunaj obsega »[0, 1]«. Za "
+"katero koli vrednost RGB ali HSL (razen negativnih vrednosti) je konverzija "
+"dobro definirana in reverzibilna."
+
+#: ../../reference_manual/seexpr.rst:329
+#, fuzzy
+msgid ""
+"color **midhsi** ( color x, float h, float s, float i, float map, float "
+"falloff=1, int interp=0 )"
+msgstr ""
+"barva **midhsi** ( barva x, float h, float s, float i, float map, float "
+"falloff=1, int interp=0 )"
+
+#: ../../reference_manual/seexpr.rst:331
+#, fuzzy
+msgid ""
+"The ``midhsi`` function is just like the ``hsi`` function except that the "
+"control map is centered around the mid point (value of ``0.5``) and can "
+"scale the shift in both directions. At the mid point, no shift happens. At "
+"*1.0*, the full shift happens, and at ``0.0``, the full inverse shift "
+"happens. Additional ``falloff`` and ``interp`` controls are provided to "
+"adjust the map using the ``remap`` function. The default ``falloff`` and "
+"``interp`` values result in no remapping."
+msgstr ""
+"Funkcija ''midhsi'' je prav tako kot funkcija ''njegova'', le da je "
+"kontrolna karta usmerjena okoli sredine točke (vrednost ''0,5'') in lahko "
+"preusmerja premik v obe smeri. Na sredini se ne zgodi nobena izmena. Pri "
+"*1.0*se zgodi polna izmena, pri »0,0« pa se zgodi polna inverza. Dodatni "
+"kontrolniki \"falloff\" in \"interp\" so na voljo za prilagoditev zemljevida "
+"s funkcijo \"remap\". Privzete vrednosti »falloff« in »interp« ne pomenijo "
+"nobenega preslikave."
+
+#: ../../reference_manual/seexpr.rst:338
+#, fuzzy
+msgid "float **mix** ( float a, float b, float alpha )"
+msgstr "float **mix** ( float a, float b, float alpha )"
+
+#: ../../reference_manual/seexpr.rst:340
+#, fuzzy
+msgid ""
+"Blend of a and b according to alpha. Defined as ``a*(1-alpha) +b*alpha``."
+msgstr "Mešanica a in b po alfa. Opredeljeno kot \"a*(1-alfa) +b*alfa\"."
+
+#: ../../reference_manual/seexpr.rst:342
+#, fuzzy
+msgid ""
+"float **remap** ( float x, float source, float range, float falloff, int "
+"interp )"
+msgstr ""
+"float **remap** ( float x, float source, float range, float falloff, int "
+"interp )"
+
+#: ../../reference_manual/seexpr.rst:344
+#, fuzzy
+msgid ""
+"General remapping function. When ``x`` is within ``± range`` of source, the "
+"result is one. The result falls to zero beyond that range over ``falloff`` "
+"distance. The falloff shape is controlled by ``interp``."
+msgstr ""
+"Splošna funkcija za ponovno kartiranje. Ko je »x« znotraj »± razpona« vira, "
+"je rezultat eden. Rezultat pade na nič čez to območje nad \"falloff\" "
+"razdaljo. Obliko padca nadzoruje \"interp\"."
+
+#: ../../reference_manual/seexpr.rst:349
+#, fuzzy
+msgid "Numeric values or named constants may be used:"
+msgstr "Uporabijo se lahko številčne vrednosti ali imenovane konstante:"
+
+#: ../../reference_manual/seexpr.rst:351
+#, fuzzy
+msgid "int **linear** = 0"
+msgstr "int **linear** = 0"
+
+#: ../../reference_manual/seexpr.rst:352
+#, fuzzy
+msgid "int **smooth** = 1"
+msgstr "int **gladko** = 1"
+
+#: ../../reference_manual/seexpr.rst:353
+#, fuzzy
+msgid "int **gaussian** = 2"
+msgstr "int **gaussian** = 2"
+
+#: ../../reference_manual/seexpr.rst:357
+msgid "Noise Functions"
+msgstr "Funkcije šuma"
+
+#: ../../reference_manual/seexpr.rst:360
+#, fuzzy
+msgid "float **cellnoise** ( vector v )"
+msgstr "float **cellnoise** ( vektor v )"
+
+#: ../../reference_manual/seexpr.rst:361
+#, fuzzy
+msgid "float **cellnoise1** ( float x )"
+msgstr "float **cellnoise1** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:362
+#, fuzzy
+msgid "float **cellnoise2** ( float x, float y )"
+msgstr "float **cellnoise2** ( float x, float y )"
+
+#: ../../reference_manual/seexpr.rst:363
+#, fuzzy
+msgid "float **cellnoise3** ( float x, float y, float z )"
+msgstr "float **cellnoise3** ( float x, float y, float z )"
+
+#: ../../reference_manual/seexpr.rst:364
+#, fuzzy
+msgid "color **ccellnoise** ( vector v )"
+msgstr "barva **ccellnoise** ( vektor v )"
+
+#: ../../reference_manual/seexpr.rst:366
+#, fuzzy
+msgid ""
+"``cellnoise`` generates a field of constant colored cubes based on the "
+"integer location. This is the same as the `PRMan cellnoise function <https://"
+"renderman.pixar.com/resources/RenderMan_20/cellnoise.html>`_."
+msgstr ""
+"\"cellnoise\" ustvarja polje stalnih barvnih kock na podlagi celega mesta. "
+"To je enako funkciji \"PRMan cellnoise function <https://renderman.pixar.com/"
+"resources/RenderMan_20/cellnoise.html>\"_."
+
+#: ../../reference_manual/seexpr.rst:370
+#, fuzzy
+msgid "``ccellnoise`` outputs color cellnoise."
+msgstr "\"ccellnoise\" izstopa barvno cellnoise."
+
+#: ../../reference_manual/seexpr.rst:372
+#, fuzzy
+msgid ""
+"float **fbm** ( vector v, int octaves=6, float lacunarity=2, float gain=0.5 )"
+msgstr ""
+"float **fbm** ( vektor v, int oktaves=6, plavajoča lakunarnost=2, float "
+"gain=0,5 )"
+
+#: ../../reference_manual/seexpr.rst:373
+#, fuzzy
+msgid ""
+"color **cfbm** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+"barva **cfbm** ( vektor v, int oktaves=6, plavajoča lakunarnost=2, float "
+"gain=0,5 )"
+
+#: ../../reference_manual/seexpr.rst:374
+#, fuzzy
+msgid ""
+"vector **vfbm** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+"vektor **vfbm** ( vektor v, int oktave=6, plavajoča lakunarnost=2, float "
+"gain=0,5 )"
+
+#: ../../reference_manual/seexpr.rst:375
+#, fuzzy
+msgid ""
+"float **fbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+msgstr ""
+"float **fbm4** ( vektor v, float time, int octaves=6, lacunarity float=2, "
+"float gain=0,5 )"
+
+#: ../../reference_manual/seexpr.rst:376
+#, fuzzy
+msgid ""
+"color **cfbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+msgstr ""
+"barva **cfbm4** ( vektor v, float time, int octaves=6, lacunarity float=2, "
+"float gain=0,5 )"
+
+#: ../../reference_manual/seexpr.rst:377
+#, fuzzy
+msgid ""
+"vector **vfbm4** ( vector v, float time, int octaves=6, float lacunarity=2, "
+"float gain=0.5 )"
+msgstr ""
+"vektor **vfbm4** ( vektor v, float time, int octaves=6, lacunarity float=2, "
+"float gain=0,5 )"
+
+#: ../../reference_manual/seexpr.rst:379
+#, fuzzy
+msgid ""
+"``fbm`` (Fractal Brownian Motion) is a multi-frequency noise function. The "
+"base frequency is the same as the ``noise`` function. The total number of "
+"frequencies is controlled by ``octaves``. The ``lacunarity`` is the spacing "
+"between the frequencies - a value of 2 means each octave is twice the "
+"previous frequency. The ``gain`` controls how much each frequency is scaled "
+"relative to the previous frequency."
+msgstr ""
+"'fbm' (Fractal Brownian Motion) je več frekvenčna funkcija hrupa. Osnovna "
+"frekvenca je enaka funkciji »hrupa«. Skupno število frekvenc je pod nadzorom "
+"\"oktav\". ''lakunarnost'' je razmik med frekvencami - vrednost 2 pomeni, da "
+"je vsaka oktava dvakrat večja od prejšnje frekvence. \"Dobiček\" nadzoruje, "
+"koliko je vsaka frekvenca razmašena glede na prejšnjo frekvenco."
+
+#: ../../reference_manual/seexpr.rst:388
+#, fuzzy
+msgid "``cfbm`` and ``cfbm4`` outputs color noise."
+msgstr "''cfbm'' in ''cfbm4'' izhodi barvni hrup."
+
+#: ../../reference_manual/seexpr.rst:390
+#, fuzzy
+msgid "``vfbm`` and ``vfbm4`` outputs vector noise."
+msgstr "''vfbm'' in ''vfbm4'' izhodi vektorski hrup."
+
+#: ../../reference_manual/seexpr.rst:391
+#, fuzzy
+msgid "float **hash** ( float seed1, [float seed2, ...] )"
+msgstr "float **hash** ( plavajoče seme1, [plavajoče seme2, ...] )"
+
+#: ../../reference_manual/seexpr.rst:393
+#, fuzzy
+msgid ""
+"Like ``rand``, but with no internal seeds. Any number of seeds may be given "
+"and the result will be a random function based on all the seeds."
+msgstr ""
+"Kot \"rand\", vendar brez notranjih seme. Vsako število seme se lahko da in "
+"rezultat bo naključna funkcija, ki temelji na vseh semenih."
+
+#: ../../reference_manual/seexpr.rst:396
+#, fuzzy
+msgid "float **noise** ( vector v )"
+msgstr "plovenje **hrup** ( vektor v )"
+
+#: ../../reference_manual/seexpr.rst:397
+#, fuzzy
+msgid "float **noise** ( float x, float y )"
+msgstr "float **noise** ( float x, float y )"
+
+#: ../../reference_manual/seexpr.rst:398
+#, fuzzy
+msgid "float **noise** ( float x, float y, float z )"
+msgstr "float **noise** ( float x, float y, float z )"
+
+#: ../../reference_manual/seexpr.rst:399
+#, fuzzy
+msgid "float **noise** ( float x, float y, float z, float w )"
+msgstr "float **noise** ( float x, float y, float z, float w )"
+
+#: ../../reference_manual/seexpr.rst:400
+#, fuzzy
+msgid "color **cnoise** ( vector v)"
+msgstr "barva **cnoise** ( vektor v)"
+
+#: ../../reference_manual/seexpr.rst:401
+#, fuzzy
+msgid "color **cnoise4** ( vector v, float t)"
+msgstr "barva **cnoise4** ( vektor v, float t)"
+
+#: ../../reference_manual/seexpr.rst:402
+#, fuzzy
+msgid "float **pnoise** ( vector v, vector period )"
+msgstr "float **pnoise** ( vektor v, vektorsko obdobje )"
+
+#: ../../reference_manual/seexpr.rst:403
+#, fuzzy
+msgid "float **snoise** ( vector v)"
+msgstr "float **snoise** ( vektor v)"
+
+#: ../../reference_manual/seexpr.rst:404
+#, fuzzy
+msgid "float **snoise4** ( vector v, float t)"
+msgstr "float **snoise4** ( vektor v, float t)"
+
+#: ../../reference_manual/seexpr.rst:405
+#, fuzzy
+msgid "vector **vnoise** (vector v )"
+msgstr "vektor **vnoise** (vektor v )"
+
+#: ../../reference_manual/seexpr.rst:406
+#, fuzzy
+msgid "vector **vnoise4** (vector v, float t )"
+msgstr "vektor **vnoise4** (vektor v, float t )"
+
+#: ../../reference_manual/seexpr.rst:408
+#, fuzzy
+msgid ""
+"``noise`` is a random function that smoothly blends between samples at "
+"integer locations. This is Ken Perlin's original noise function."
+msgstr ""
+"»hrup« je naključna funkcija, ki se gladko zliva med vzorce na mestih v vseh "
+"mestih. To je originalna funkcija hrupa Kena Perlina."
+
+#: ../../reference_manual/seexpr.rst:413
+#, fuzzy
+msgid "``cnoise`` and ``cnoise4`` output color noise."
+msgstr "''cnoise'' in ''cnoise4'' izhodni barvni hrup."
+
+#: ../../reference_manual/seexpr.rst:415
+#, fuzzy
+msgid "``noise4`` outputs signed vector noise."
+msgstr "\"hrup 4\" izhodi podpisani vektorski hrup."
+
+#: ../../reference_manual/seexpr.rst:417
+#, fuzzy
+msgid "``pnoise`` outputs periodic noise."
+msgstr "\"pnoise\" izstopa periodični hrup."
+
+#: ../../reference_manual/seexpr.rst:419
+#, fuzzy
+msgid "``snoise`` and ``snoise4`` output signed noise with range ``[-1, 1]``."
+msgstr ""
+"''snoise'' in ''snoise4'' izhodni podpisani hrup z razponom ''[-1, 1]''."
+
+#: ../../reference_manual/seexpr.rst:421
+#, fuzzy
+msgid "``vnoise`` outputs signed vector noise."
+msgstr "\"vnoise\" izhodi podpisani vektorski hrup."
+
+#: ../../reference_manual/seexpr.rst:422
+#, fuzzy
+msgid "float **rand** ( [float min, float max], [float seed] )"
+msgstr "float **rand** ( [float min, float max], [float seed] )"
+
+#: ../../reference_manual/seexpr.rst:424
+#, fuzzy
+msgid ""
+"Random number between ``[min, max]`` (or ``[0, 1]`` if unspecified). If a "
+"seed is supplied, it will be used in addition to the internal seeds and may "
+"be used to create multiple distinct generators."
+msgstr ""
+"Naključno število med »[min, max]'' (ali »[0, 1]'' če ni ustrezno). Če je "
+"seme dobavljeno, se bo uporabljalo poleg notranjih seme in se lahko "
+"uporablja za ustvarjanje več različnih generatorjev."
+
+#: ../../reference_manual/seexpr.rst:427
+#, fuzzy
+msgid ""
+"float **turbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+"float **turbulence** ( vektor v, int oktaves=6, plavajoča lakunarnost=2, "
+"float gain=0,5 )"
+
+#: ../../reference_manual/seexpr.rst:428
+#, fuzzy
+msgid ""
+"color **cturbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+"barva **cturbulence** ( vektor v, int oktaves=6, plavajoča lakunarnost=2, "
+"float gain=0,5 )"
+
+#: ../../reference_manual/seexpr.rst:429
+#, fuzzy
+msgid ""
+"vector **vturbulence** ( vector v, int octaves=6, float lacunarity=2, float "
+"gain=0.5 )"
+msgstr ""
+"vektor **vturbulenca** ( vektor v, int oktave=6, plavajoča lakunarnost=2, "
+"float gain=0,5 )"
+
+#: ../../reference_manual/seexpr.rst:431
+#, fuzzy
+msgid ""
+"``turbulence`` is a variant of ``fbm`` where the absolute value of each "
+"noise term is taken. This gives a more billowy appearance."
+msgstr ""
+"\"turbulenca\" je različica \"fbm\", kjer se vzame absolutna vrednost "
+"vsakega izraza hrupa. To daje bolj billowy videz."
+
+#: ../../reference_manual/seexpr.rst:433
+#, fuzzy
+msgid ""
+"float **voronoi** ( vector v, int type=1, float jitter=0.5, float "
+"fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+msgstr ""
+"float **voronoi** ( vektor v, int tip=1, plavajoča trema=0,5, float "
+"fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0,5)"
+
+#: ../../reference_manual/seexpr.rst:434
+#, fuzzy
+msgid ""
+"color **cvoronoi** ( vector v, int type=1, float jitter=0.5, float "
+"fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+msgstr ""
+"barva **cvoronoi** ( vektor v, int tip=1, plavajoča trema=0,5, float "
+"fbmScale=0, int fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0,5)"
+
+#: ../../reference_manual/seexpr.rst:435
+#, fuzzy
+msgid ""
+"vector **pvoronoi** ( vector v, float jitter=0.5, float fbmScale=0, int "
+"fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0.5)"
+msgstr ""
+"vektor **pvoronoi** ( vektor v, plavajoča trema=0,5, float fbmScale=0, int "
+"fbmOctaves=4, float fbmLacunarity=2, float fbmGain=0,5)"
+
+#: ../../reference_manual/seexpr.rst:437
+#, fuzzy
+msgid ""
+"``voronoi`` is a cellular noise pattern. It is a jittered variant of "
+"``cellnoise``. The type parameter describes different variants of the noise "
+"function. The ``jitter`` param controls how irregular the pattern is (0 is "
+"like ordinary cellnoise). The ``fbm...`` params can be used to distort the "
+"noise field. When ``fbmScale`` is zero (the default), there is no "
+"distortion. The remaining params are the same as for the ``fbm`` function."
+msgstr ""
+"\"voronoi\" je celični vzorec hrupa. Gre za tresoče varianto \"cellnoise\". "
+"Parameter tipa opisuje različne različice funkcije hrupa. Param ''trema'' "
+"nadzoruje, kako nepravilen je vzorec (0 je kot navadna cellnoise). Parame "
+"''fbm...'' lahko uporabljamo za izkrivljanje hrupnega polja. Ko je "
+"»fbmScale« nič (privzeto), ni izkrivljanja. Preostali params so enaki kot za "
+"funkcijo ''fbm''."
+
+#: ../../reference_manual/seexpr.rst:448
+#, fuzzy
+msgid "Voronoi types 1 through 5:"
+msgstr "Voronoi tipi 1 do 5:"
+
+#: ../../reference_manual/seexpr.rst:450
+#, fuzzy
+msgid "|image0| |image1| |image2| |image3| |image4|"
+msgstr "|image0| |image1| |image2| |image3| |image4|"
+
+#: ../../reference_manual/seexpr.rst:453
+#, fuzzy
+msgid ""
+"``cvoronoi`` returns a random color for each cell and ``pvoronoi`` returns "
+"the point location of the center of the cell."
+msgstr ""
+"''cvoronoi'' vrne naključno barvo za vsako celico in ''pvoronoi'' vrne "
+"točkovno mesto središča celice."
+
+#: ../../reference_manual/seexpr.rst:459
+msgid "Selection Functions"
+msgstr "Funkcije izbora"
+
+#: ../../reference_manual/seexpr.rst:462
+#, fuzzy
+msgid "float **choose** ( float index, float choice1, float choice2, [...] )"
+msgstr "float **choose** ( float index, float choice1, float choice2, [...] )"
+
+#: ../../reference_manual/seexpr.rst:464
+#, fuzzy
+msgid ""
+"Chooses one of the supplied choices based on the index (assumed to be in the "
+"range ``[0, 1]``)."
+msgstr ""
+"Izbere eno od priloženih izbir na podlagi indeksa (za katero se domneva, da "
+"je v razponu »[0, 1]«."
+
+#: ../../reference_manual/seexpr.rst:466
+#, fuzzy
+msgid "int **cycle** ( int index, int loRange, int hiRange )"
+msgstr "int **cikel** ( indeks int, int loRange, int hiRange )"
+
+#: ../../reference_manual/seexpr.rst:468
+#, fuzzy
+msgid ""
+"Cycles through values between loRange and hiRange based on supplied index. "
+"This is an offset ``mod`` function. The result is computed as ``loRange + "
+"value % (hiRange-loRange+1)``."
+msgstr ""
+"Ciklira skozi vrednosti med loRange in hiRange na podlagi priloženega "
+"indeksa. To je pomik funkcije \"mod\". Rezultat je izračunan kot \"loRange + "
+"value % (hiRange-loRange+1)\"."
+
+#: ../../reference_manual/seexpr.rst:471
+#, fuzzy
+msgid ""
+"int **pick** ( float index, int loRange, int hiRange, [ float "
+"weights, ... ] )"
+msgstr ""
+"int **pick** ( float index, int loRange, int hiRange, [ plavajoče "
+"uteži, ... ] )"
+
+#: ../../reference_manual/seexpr.rst:473
+#, fuzzy
+msgid ""
+"Picks values randomly between loRange and hiRange based on supplied index "
+"(which is automatically hashed). The values will be distributed according to "
+"the supplied weights. Any weights not supplied are assumed to be 1.0."
+msgstr ""
+"Izbira vrednosti naključno med loRange in hiRange na podlagi priloženega "
+"indeksa (ki se samodejno shišira). Vrednosti bodo porazdeljene glede na "
+"dobavljene uteži. Vsaka teža, ki ni dobavljena, se predpostavlja, da je 1.0."
+
+#: ../../reference_manual/seexpr.rst:477
+#, fuzzy
+msgid ""
+"float **wchoose** ( float index, float choice1, float weight1, float "
+"choice2, float weight2, [...] )"
+msgstr ""
+"float **wchoose** ( float index, float choice1, float weight1, float "
+"choice2, float weight2, [...] )"
+
+#: ../../reference_manual/seexpr.rst:479
+#, fuzzy
+msgid ""
+"Chooses one of the supplied choices based on the index (assumed to be in "
+"range ``[0, 1]``). The values will be distributed according to the supplied "
+"weights."
+msgstr ""
+"Izbere eno od priloženih odločitev na podlagi indeksa (za katero se domneva, "
+"da je v območju »[0, 1]«. Vrednosti bodo porazdeljene glede na dobavljene "
+"uteži."
+
+#: ../../reference_manual/seexpr.rst:485
+#, fuzzy
+msgid "This example returns integer values between 1 and 10::"
+msgstr "Ta primer vrne vrednosti v vseh vrednostih med 1 in 10::"
+
+#: ../../reference_manual/seexpr.rst:487
+#, fuzzy
+msgid "pick(value, 1, 10)"
+msgstr "izberi(vrednost, 1, 10)"
+
+#: ../../reference_manual/seexpr.rst:489
+#, fuzzy
+msgid ""
+"This example returns the values 1 and 2 twice and 2.5 times as often "
+"respectively as compared to the other values (3-10)::"
+msgstr ""
+"Ta primer vrne vrednosti 1 in 2 dvakrat oziroma 2,5-krat tolikokrat kot v "
+"primerjavi z drugimi vrednostmi (3-10)::"
+
+#: ../../reference_manual/seexpr.rst:492
+#, fuzzy
+msgid "pick(value, 1, 10, 2, 2.5)"
+msgstr "izberi(vrednost, 1, 10, 2, 2.5)"
+
+#: ../../reference_manual/seexpr.rst:494
+#, fuzzy
+msgid ""
+"This example returns 10, 11, and 13 through 20 (12 is skipped due to zero "
+"weight)::"
+msgstr ""
+"Ta primer vrne 10, 11 in 13 do 20 (12 se preskoči zaradi ničelne teže)::"
+
+#: ../../reference_manual/seexpr.rst:496
+#, fuzzy
+msgid "pick(value, 10, 20, 1, 1, 0)"
+msgstr "pick(vrednost, 10, 20, 1, 1, 0)"
+
+#: ../../reference_manual/seexpr.rst:501
+msgid "General Mathematical Constants and Functions"
+msgstr "Splošne matematične konstante in funkcije"
+
+#: ../../reference_manual/seexpr.rst:504
+#, fuzzy
+msgid "float **PI**"
+msgstr "plavajo **PI**"
+
+#: ../../reference_manual/seexpr.rst:508
+#, fuzzy
+msgid "float PI = 3.14159..."
+msgstr "float PI = 3.14159..."
+
+#: ../../reference_manual/seexpr.rst:509
+#, fuzzy
+msgid "float **E**"
+msgstr "plavajo **E**"
+
+#: ../../reference_manual/seexpr.rst:513
+#, fuzzy
+msgid "float E = 2.71828..."
+msgstr "float E = 2.71828..."
+
+#: ../../reference_manual/seexpr.rst:516
+#, fuzzy
+msgid "float **abs** ( float x)"
+msgstr "float **abs** ( float x)"
+
+#: ../../reference_manual/seexpr.rst:518
+#, fuzzy
+msgid "Absolute value of ``x``."
+msgstr "Absolutna vrednost \"x\"."
+
+#: ../../reference_manual/seexpr.rst:519
+#, fuzzy
+msgid "float **cbrt** ( float x )"
+msgstr "float **cbrt** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:521
+#, fuzzy
+msgid "Cube root."
+msgstr "kubični koren"
+
+#: ../../reference_manual/seexpr.rst:522
+#, fuzzy
+msgid "float **ceil** ( float x )"
+msgstr "float **ceil** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:524
+#, fuzzy
+msgid "Next higher integer."
+msgstr "Naslednje večje število."
+
+#: ../../reference_manual/seexpr.rst:525
+#, fuzzy
+msgid "float **exp** ( float x )"
+msgstr "float **exp** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:527
+#, fuzzy
+msgid "``E`` raised to the ``x`` power."
+msgstr "''E'' dvignjene na moč ''x''."
+
+#: ../../reference_manual/seexpr.rst:528
+#, fuzzy
+msgid "float **floor** ( float x )"
+msgstr "plovenje **nadstropje** ( plovenje x )"
+
+#: ../../reference_manual/seexpr.rst:530
+#, fuzzy
+msgid "Next lower integer."
+msgstr "Naslednje spodnje število."
+
+#: ../../reference_manual/seexpr.rst:531
+#, fuzzy
+msgid "float **fmod** ( float x, float y )"
+msgstr "float **fmod** ( float x, float y )"
+
+#: ../../reference_manual/seexpr.rst:533
+#, fuzzy
+msgid "Remainder of ``x / y``."
+msgstr "Preostanek \"x / y\"."
+
+#: ../../reference_manual/seexpr.rst:535
+#, fuzzy
+msgid "Also available as the ``%`` operator."
+msgstr "Na voljo je tudi kot operater \"%\"."
+
+#: ../../reference_manual/seexpr.rst:536
+#, fuzzy
+msgid "float **log** ( float x )"
+msgstr "float **log** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:538
+msgid "Natural logarithm."
+msgstr "Naravni logaritem."
+
+#: ../../reference_manual/seexpr.rst:539
+#, fuzzy
+msgid "float **log10** ( float x )"
+msgstr "float **log10** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:541
+#, fuzzy
+#| msgid "Radius Logarithmic"
+msgid "Base 10 logarithm."
+msgstr "Logaritmični polmer"
+
+#: ../../reference_manual/seexpr.rst:542
+#, fuzzy
+msgid "float **max** ( float a, float b )"
+msgstr "float **max** ( float a, float b )"
+
+#: ../../reference_manual/seexpr.rst:544
+#, fuzzy
+msgid "Greater of ``a`` and ``b``."
+msgstr "Večje od \"a\" in \"b\"."
+
+#: ../../reference_manual/seexpr.rst:545
+#, fuzzy
+msgid "float **min** ( float a, float b )"
+msgstr "float **min** ( float a, float b )"
+
+#: ../../reference_manual/seexpr.rst:547
+#, fuzzy
+msgid "Lesser of ``a`` and ``b``."
+msgstr "Manj \"a\" in \"b\"."
+
+#: ../../reference_manual/seexpr.rst:548
+#, fuzzy
+msgid "float **pow** ( float x, float y )"
+msgstr "float **pow** ( float x, float y )"
+
+#: ../../reference_manual/seexpr.rst:550
+#, fuzzy
+msgid "``x`` to the ``y`` power."
+msgstr "''x'' na ''y'' moč."
+
+#: ../../reference_manual/seexpr.rst:552
+#, fuzzy
+msgid "Also available as the ``^`` operator."
+msgstr "Na voljo je tudi kot operator »^«."
+
+#: ../../reference_manual/seexpr.rst:553
+#, fuzzy
+msgid "float **round** ( float x )"
+msgstr "float **round** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:555
+msgid "Nearest integer."
+msgstr "Najbližje celo število."
+
+#: ../../reference_manual/seexpr.rst:556
+#, fuzzy
+msgid "float **sqrt** ( float x )"
+msgstr "float **sqrt** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:558
+msgid "Square root."
+msgstr "Kvadratni koren."
+
+#: ../../reference_manual/seexpr.rst:559
+#, fuzzy
+msgid "float **trunc** ( float x )"
+msgstr "float **trunc** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:561
+#, fuzzy
+msgid "Nearest integer towards zero."
+msgstr "Najbližje število proti ničli."
+
+#: ../../reference_manual/seexpr.rst:565
+msgid "Trigonometry Functions"
+msgstr "Trigonometrijske funkcije"
+
+#: ../../reference_manual/seexpr.rst:568
+#, fuzzy
+msgid "float **acos** ( float x )"
+msgstr "float **acos** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:570
+#, fuzzy
+msgid "Arc cosine."
+msgstr "Arkus kosinus"
+
+#: ../../reference_manual/seexpr.rst:571
+#, fuzzy
+msgid "float **acosd** ( float x )"
+msgstr "float **acosd** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:573
+#, fuzzy
+msgid "Arc cosine in degrees."
+msgstr "Arc cosine v stopinjah."
+
+#: ../../reference_manual/seexpr.rst:574
+#, fuzzy
+msgid "float **acosh** ( float x )"
+msgstr "float **acosh** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:576
+#, fuzzy
+msgid "Hyperbolic arc cosine."
+msgstr "Hiperbolični lok cosine."
+
+#: ../../reference_manual/seexpr.rst:577
+#, fuzzy
+msgid "float **asin** ( float x )"
+msgstr "float **asin** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:579
+#, fuzzy
+msgid "Arc sine."
+msgstr "Arkus sinus"
+
+#: ../../reference_manual/seexpr.rst:580
+#, fuzzy
+msgid "float **asind** ( float x )"
+msgstr "float **asind** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:582
+#, fuzzy
+msgid "Arc sine in degrees."
+msgstr "Lok sine v stopinjah."
+
+#: ../../reference_manual/seexpr.rst:583
+#, fuzzy
+msgid "float **asinh** ( float x )"
+msgstr "float **asinh** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:585
+#, fuzzy
+msgid "Hyperbolic arc sine."
+msgstr "Hiperbolični lok sine."
+
+#: ../../reference_manual/seexpr.rst:586
+#, fuzzy
+msgid "float **atan** ( float x )"
+msgstr "float **atan** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:588
+msgid "Arc tangent."
+msgstr "Arkus tangens."
+
+#: ../../reference_manual/seexpr.rst:589
+#, fuzzy
+msgid "float **atand** ( float x )"
+msgstr "float **atand** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:591
+#, fuzzy
+msgid "Arc tangent in degrees."
+msgstr "Lok tangenta v stopinjah."
+
+#: ../../reference_manual/seexpr.rst:592
+#, fuzzy
+msgid "float **atan2** ( float y, float x)"
+msgstr "plovenje **atan2** ( plavajo y, plavajo x)"
+
+#: ../../reference_manual/seexpr.rst:594
+#, fuzzy
+msgid "Arc tangent of ``y/x`` between ``-PI`` and ``PI``."
+msgstr "Obločna tangenta »y/x« med ''-PI'' in ''PI''."
+
+#: ../../reference_manual/seexpr.rst:595
+#, fuzzy
+msgid "float **atan2d** ( float y, float x )"
+msgstr "float **atan2d** ( float y, float x )"
+
+#: ../../reference_manual/seexpr.rst:597
+#, fuzzy
+msgid "Arc tangent in degrees of ``y/x`` between ``-180º`` and ``180º``."
+msgstr "Obločna tangenta v stopinjah 'y/x' med ''-180º'' in ''180º''."
+
+#: ../../reference_manual/seexpr.rst:598
+#, fuzzy
+msgid "float **atanh** ( float x )"
+msgstr "float **atanh** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:600
+#, fuzzy
+msgid "Hyperbolic arc tangent."
+msgstr "Hiperbolični lok tangenta."
+
+#: ../../reference_manual/seexpr.rst:601
+#, fuzzy
+msgid "float **cos** ( float x )"
+msgstr "float **cos** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:603
+#, fuzzy
+msgid "Cosine."
+msgstr "Kosinus"
+
+#: ../../reference_manual/seexpr.rst:604
+#, fuzzy
+msgid "float **cosd** ( float x )"
+msgstr "float **cosd** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:606
+#, fuzzy
+msgid "Cosine in degrees."
+msgstr "Cosine v stopinjah."
+
+#: ../../reference_manual/seexpr.rst:607
+#, fuzzy
+msgid "float **cosh** ( float x )"
+msgstr "float **cosh** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:609
+#, fuzzy
+msgid "Hyperbolic cosine."
+msgstr "Hiperbolični kosinus"
+
+#: ../../reference_manual/seexpr.rst:610
+#, fuzzy
+msgid "float **deg** ( float x )"
+msgstr "float **deg** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:612
+#, fuzzy
+msgid "Radians to degrees."
+msgstr ""
+"Če želite stopinje pretvoriti v radiane, pomnožite vrednost z pi/180. Za "
+"pretvorbo iz radianov v stopinje pomnožite radiane z 180/pi."
+
+#: ../../reference_manual/seexpr.rst:613
+#, fuzzy
+msgid "float **hypot** ( float x, float y )"
+msgstr "float **hypot** ( float x, float y )"
+
+#: ../../reference_manual/seexpr.rst:615
+#, fuzzy
+msgid "Length of 2D vector ``[x, y]``."
+msgstr "Dolžina 2D vektorja ''[x, y]''."
+
+#: ../../reference_manual/seexpr.rst:616
+#, fuzzy
+msgid "float **rad** ( float x )"
+msgstr "float **rad** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:618
+msgid "Degrees to radians."
+msgstr "Stopinje v radiane."
+
+#: ../../reference_manual/seexpr.rst:619
+#, fuzzy
+msgid "float **sin** ( float x )"
+msgstr "float **sin** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:621
+msgid "Sine."
+msgstr "Sinus."
+
+#: ../../reference_manual/seexpr.rst:622
+#, fuzzy
+msgid "float **sind** ( float x )"
+msgstr "float **sind** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:624
+#, fuzzy
+msgid "Sine in degrees."
+msgstr "Sine v stopinjah."
+
+#: ../../reference_manual/seexpr.rst:625
+#, fuzzy
+msgid "float **sinh** ( float x )"
+msgstr "float **sinh** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:627
+#, fuzzy
+msgid "Hyperbolic sine."
+msgstr "Hiperbolični sinus"
+
+#: ../../reference_manual/seexpr.rst:628
+#, fuzzy
+msgid "float **tan** ( float x )"
+msgstr "float **tan** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:630
+msgid "Tangent."
+msgstr "Tangens."
+
+#: ../../reference_manual/seexpr.rst:631
+#, fuzzy
+msgid "float **tand** ( float x )"
+msgstr "float **tand** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:633
+msgid "Tangent in degrees."
+msgstr "Tangens v stopinjah."
+
+#: ../../reference_manual/seexpr.rst:634
+#, fuzzy
+msgid "float **tanh** ( float x )"
+msgstr "float **tanh** ( float x )"
+
+#: ../../reference_manual/seexpr.rst:636
+msgid "Hyperbolic tangent."
+msgstr "Hiperbolični tangens."
+
+#: ../../reference_manual/seexpr.rst:640
+msgid "Vector Functions"
+msgstr "Vektorske funkcije"
+
+#: ../../reference_manual/seexpr.rst:643
+#, fuzzy
+msgid "float angle ( vector a, vector b )"
+msgstr "kot plovov ( vektor a, vektor b )"
+
+#: ../../reference_manual/seexpr.rst:645
+#, fuzzy
+msgid "Angle between two vectors (in radians)."
+msgstr "Kot med dvema vektorjema (v radianih)."
+
+#: ../../reference_manual/seexpr.rst:646
+#, fuzzy
+msgid "vector **cross** ( vector a, vector b )"
+msgstr "vektor **križ** ( vektor a, vektor b )"
+
+#: ../../reference_manual/seexpr.rst:648
+#, fuzzy
+msgid "Vector cross product."
+msgstr "Vektorski križni izdelek."
+
+#: ../../reference_manual/seexpr.rst:649
+#, fuzzy
+msgid "float **dist** ( vector a, vector b )"
+msgstr "plovenje **dist** ( vektor a, vektor b )"
+
+#: ../../reference_manual/seexpr.rst:651
+msgid "Distance between two points."
+msgstr "Razdalja med dvema točkama."
+
+#: ../../reference_manual/seexpr.rst:652
+#, fuzzy
+msgid "float **dot** ( vector a, vector b)"
+msgstr "plovenje **dot** ( vektor a, vektor b)"
+
+#: ../../reference_manual/seexpr.rst:654
+#, fuzzy
+msgid "Vector dot product."
+msgstr "Vektorski izdelek."
+
+#: ../../reference_manual/seexpr.rst:655
+#, fuzzy
+msgid "float **length** ( vector v )"
+msgstr "plovenje **dolžina** ( vektor v )"
+
+#: ../../reference_manual/seexpr.rst:657
+#, fuzzy
+msgid "Length of vector."
+msgstr "Dolžina vektorja."
+
+#: ../../reference_manual/seexpr.rst:658
+#, fuzzy
+msgid "vector **norm** ( vector v )"
+msgstr "vektor **norm** ( vektor v )"
+
+#: ../../reference_manual/seexpr.rst:660
+#, fuzzy
+msgid "Vector scaled to unit length."
+msgstr "Vektor je meril na dolžino enote."
+
+#: ../../reference_manual/seexpr.rst:661
+#, fuzzy
+msgid "vector **ortho** ( vector a, vector b )"
+msgstr "vektor **orto** ( vektor a, vektor b )"
+
+#: ../../reference_manual/seexpr.rst:663
+#, fuzzy
+msgid "Vector orthographic to two vectors."
+msgstr "Vektorska ortografija na dva vektorja."
+
+#: ../../reference_manual/seexpr.rst:664
+#, fuzzy
+msgid "vector **rotate** ( vector v, vector axis, float angle )"
+msgstr "vektor **vrtenje** ( vektor v, vektorska os, kot plovov )"
+
+#: ../../reference_manual/seexpr.rst:666
+#, fuzzy
+msgid "Rotates ``v`` around axis by the given ``angle`` (in radians)."
+msgstr "Vrti se ''v'' okoli osi za dani ''kot'' (v radianih)."
+
+#: ../../reference_manual/seexpr.rst:667
+#, fuzzy
+msgid "vector **up** ( vector v, vector up )"
+msgstr "vektor **up** ( vektor v, vektor navzgor )"
+
+#: ../../reference_manual/seexpr.rst:669
+#, fuzzy
+msgid ""
+"Rotates ``v`` such that the Y axis points in the given ``up`` direction."
+msgstr "Zasuka ''v'' tako, da os Y kaže v dano smer ''navzgor''."
+
+#: ../../reference_manual/seexpr.rst:674
+#, fuzzy
+#| msgid "Vector Layer"
+msgid "Vector Support"
+msgstr "Vektorska plast"
+
+#: ../../reference_manual/seexpr.rst:676
+#, fuzzy
+msgid ""
+"*Vectors* (points, colors, or 3D vectors) may be intermixed with *scalars* "
+"(simple floating point values). If a scalar is used in a vector context, it "
+"is replicated into the three components, e.g. ``0.5`` becomes ``[0.5, 0.5, "
+"0.5]``."
+msgstr ""
+"*Vektorji* (točke, barve ali 3D vektorji) se lahko prepletajo z *scalars* "
+"(preproste vrednosti plavajočih točk). Če se scalar uporablja v vektorski "
+"kontekst, se replicira v tri komponente, npr."
+
+#: ../../reference_manual/seexpr.rst:680
+#, fuzzy
+msgid ""
+"If a vector is used in a scalar context, only the first component is used. "
+"One of the benefits of this is that all the functions that are defined to "
+"work with scalars automatically extend to vectors. For instance, ``pick``, "
+"``choose``, ``cycle``, ``spline``, etc., will work just fine with vectors."
+msgstr ""
+"Če se vektor uporablja v merilnem kontekstu, se uporablja le prva "
+"komponenta. Ena od prednosti tega je, da se vse funkcije, ki so opredeljene "
+"za delo s scalars samodejno razširijo na vektorje. Na primer, ''pick'', "
+"''choose'', ''cycle'', ''spline'', itd., bo delovalo prav v redu z vektorji."
+
+#: ../../reference_manual/seexpr.rst:686
+#, fuzzy
+msgid ""
+"Arithmetic operators such as ``+``, ``*``, etc., and scalar functions are "
+"applied component-wise to vectors. For example, applying the ``gamma`` "
+"function to a map adjusts the gamma of all three color channels."
+msgstr ""
+"Aritmetični operatorji, kot so ''+'', ''*'', itd. Na primer, uporaba "
+"funkcije »gama« na zemljevidu prilagodi gamo vseh treh barvnih kanalov."
+
+#: ../../reference_manual/seexpr.rst:692
+msgid "Curve Functions"
+msgstr "Funkcije krivulj"
+
+#: ../../reference_manual/seexpr.rst:694
+#, fuzzy
+msgid ""
+"Interpolation of parameter values to a set of control points is governed by "
+"the following functions."
+msgstr ""
+"Interpolacijo vrednosti parametrov na niz kontrolnih točk urejajo naslednje "
+"funkcije."
+
+#: ../../reference_manual/seexpr.rst:698
+#, fuzzy
+msgid ""
+"color **ccurve** ( float param, float pos0, color val0, int interp0, float "
+"pos1, color val1, int interp1, [...] )"
+msgstr ""
+"barva **ccurve** ( float param, float pos0, color val0, int interp0, float "
+"pos1, color val1, int interp1, [...] )"
+
+#: ../../reference_manual/seexpr.rst:700
+#, fuzzy
+msgid ""
+"Interpolates color ramp given by control points at ``param``. Control points "
+"are specified by triples of parameters ``pos_i``, ``val_i``, and "
+"``interp_i``."
+msgstr ""
+"Interpolira barvno rampo, ki jo dajejo kontrolne točke pri ''param''. "
+"Kontrolne točke so določene s troji parametrov \"pos_i\", \"val_i\" in "
+"\"interp_i\"."
+
+#: ../../reference_manual/seexpr.rst:705 ../../reference_manual/seexpr.rst:719
+msgid "Interpolation codes are:"
+msgstr "Kode interpolacije so:"
+
+#: ../../reference_manual/seexpr.rst:707 ../../reference_manual/seexpr.rst:721
+msgid "0 - none"
+msgstr "0 - brez"
+
+#: ../../reference_manual/seexpr.rst:708 ../../reference_manual/seexpr.rst:722
+msgid "1 - linear"
+msgstr "1 - linearno"
+
+#: ../../reference_manual/seexpr.rst:709 ../../reference_manual/seexpr.rst:723
+msgid "2 - smooth"
+msgstr "2 - gladko"
+
+#: ../../reference_manual/seexpr.rst:710 ../../reference_manual/seexpr.rst:724
+msgid "3 - spline"
+msgstr "3 - zlepek"
+
+#: ../../reference_manual/seexpr.rst:711 ../../reference_manual/seexpr.rst:725
+#, fuzzy
+msgid "4 - monotone (non-oscillating) spline"
+msgstr "4 - monoton (neoscilijoča) spline"
+
+#: ../../reference_manual/seexpr.rst:712
+#, fuzzy
+msgid ""
+"float **curve** ( float param, float pos0, float val0, int interp0, float "
+"pos1, float val1, int interp1, [...] )"
+msgstr ""
+"plavajo **krivuljo** ( plavajoči param, plavajoči pos0, plavajoči val0, int "
+"interp0, float pos1, float val1, int interp1, [...] )"
+
+#: ../../reference_manual/seexpr.rst:714
+#, fuzzy
+msgid ""
+"Interpolates a 1D ramp defined by control points at ``param``. Control "
+"points are specified by triples of parameters ``pos_i``, ``val_i``, and "
+"``interp_i``."
+msgstr ""
+"Interpolira 1D rampo, opredeljeno s kontrolnimi točkami pri \"param\". "
+"Kontrolne točke so določene s troji parametrov \"pos_i\", \"val_i\" in "
+"\"interp_i\"."
+
+#: ../../reference_manual/seexpr.rst:726
+#, fuzzy
+msgid ""
+"float **spline** ( float param, float y1, float y2, float y3, float y4, "
+"[...] )"
+msgstr ""
+"plavajo **spline** ( plava param, plavajo y1, plavajo y2, plavajo y3, "
+"plavajo y4, [...] )"
+
+#: ../../reference_manual/seexpr.rst:728
+#, fuzzy
+msgid ""
+"Interpolates a set of values to the parameter specified where ``y1``, ..., "
+"``yn`` are distributed evenly from ``[0, 1]``."
+msgstr ""
+"Interpolira nabor vrednosti do parametra, določenega, kjer se \"y1\", ..., "
+"\"yn\" enakomerno porazdeli iz »[0, 1]«."
+
+#: ../../reference_manual/seexpr.rst:733
+msgid "Custom Plugins"
+msgstr "Vstavki po meri"
+
+#: ../../reference_manual/seexpr.rst:735
+#, fuzzy
+msgid ""
+"Custom functions may be written in C++ and loaded as one or more dynamic "
+"plugins.  See `Writing Custom Expression Plugins <https://wdas.github.io/"
+"SeExpr/doxygen/plugins.html>`_ for more details."
+msgstr ""
+"Funkcije po meri so lahko zapisane v C++ in naložene kot eden ali več "
+"dinamičnih vtičnikov.  Če želite več podrobnosti, glejte »Pisanje vtičnikov "
+"<https://wdas.github.io/SeExpr/doxygen/plugins.html> izrazov po meri«."
+
+#: ../../reference_manual/seexpr.rst:737
+msgid "This functionality is not supported in Krita."
+msgstr "Ta funkcionalnost ni podprta v Kriti."
+
+#: ../../reference_manual/seexpr.rst:739
+msgid ""
+".. image:: images/seexpr/Se_voronoi_1.png\n"
+"   :alt: image0"
+msgstr ""
+".. image:: images/seexpr/Se_voronoi_1.png\n"
+"   :alt: slika0"
+
+#: ../../reference_manual/seexpr.rst:740
+msgid ""
+".. image:: images/seexpr/Se_voronoi_2.png\n"
+"   :alt: image1"
+msgstr ""
+".. image:: images/seexpr/Se_voronoi_2.png\n"
+"   :alt: slika1"
+
+#: ../../reference_manual/seexpr.rst:741
+msgid ""
+".. image:: images/seexpr/Se_voronoi_3.png\n"
+"   :alt: image2"
+msgstr ""
+".. image:: images/seexpr/Se_voronoi_3.png\n"
+"   :alt: slika2"
+
+#: ../../reference_manual/seexpr.rst:742
+msgid ""
+".. image:: images/seexpr/Se_voronoi_4.png\n"
+"   :alt: image3"
+msgstr ""
+".. image:: images/seexpr/Se_voronoi_4.png\n"
+"   :alt: slika3"
+
+#: ../../reference_manual/seexpr.rst:743
+msgid ""
+".. image:: images/seexpr/Se_voronoi_5.png\n"
+"   :alt: image4"
+msgstr ""
+".. image:: images/seexpr/Se_voronoi_5.png\n"
+"   :alt: slika4"

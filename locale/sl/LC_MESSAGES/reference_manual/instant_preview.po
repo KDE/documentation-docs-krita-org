@@ -1,0 +1,197 @@
+# Translation of Krita Manual to Slovenian
+#
+# Copyright (C) 2021 This_file_is_part_of_KDE
+# This file is distributed under the same license as the Krita package.
+#
+#
+# Martin Srebotnjak <miles@filmsi.net>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krita ref manual\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2022-06-16 17:21+0200\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"X-Generator: Poedit 3.1\n"
+
+#: ../../<rst_epilog>:2
+msgid ""
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: mouseleft"
+msgstr ""
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: Levi gumb miške"
+
+#: ../../reference_manual/instant_preview.rst:1
+msgid "How the Instant Preview technology in Krita works."
+msgstr "Kako deluje tehnologija sprotnega predogleda v Kriti."
+
+#: ../../reference_manual/instant_preview.rst:10
+#: ../../reference_manual/instant_preview.rst:15
+msgid "Instant Preview"
+msgstr "Sprotni predogled"
+
+#: ../../reference_manual/instant_preview.rst:10
+msgid "Performance"
+msgstr "Hitrost delovanja"
+
+#: ../../reference_manual/instant_preview.rst:10
+#, fuzzy
+msgid "Lag"
+msgstr "Zakasnitev"
+
+#: ../../reference_manual/instant_preview.rst:17
+#, fuzzy
+msgid ""
+"Instant Preview (previously known under the code name Level Of Detail/LOD "
+"strokes) is Krita's special speed-up mechanism that was funded by the 2015 "
+"Kickstarter. Krita slows down with really large images due to the large "
+"amount of data it's crunching in painting these images. Instant Preview "
+"works by taking a smaller version of the canvas, and drawing the feedback on "
+"there while Krita calculates the real stroke in the background. This means "
+"that if you have a 4k screen and are working on a 4k image at 100% zoom, you "
+"won't feel any speed up."
+msgstr ""
+"Sprotni predogled (prej znan pod kodnim imenom Raven podrobnosti/Poteze LOD) "
+"je poseben mehanizem Krite za pospeševanje, financiran kot projekt na "
+"Kickstarterju 2015. Krita upočasni z res velikimi slikami zaradi velike "
+"količine podatkov, ki jih pri slikanju teh slik. Instant Preview deluje "
+"tako, da vzamete manjšo različico platna in narišete povratne informacije o "
+"tem, medtem ko Krita izračuna pravo potezo v ozadju. To pomeni, da če imate "
+"4k zaslon in delate na 4k sliko na 100% zoom, ne boste čutili nobene "
+"hitrosti."
+
+#: ../../reference_manual/instant_preview.rst:20
+msgid "Activating Instant Preview"
+msgstr "Vklop sprotnega predogleda"
+
+#: ../../reference_manual/instant_preview.rst:24
+#, fuzzy
+msgid ""
+"Instant Preview requires OpenGL 3.0 support at minimum. So if you don't "
+"have :guilabel:`high-quality` scaling available in :menuselection:`Settings "
+"--> Configure Krita... --> Display --> Display scaling filter`, then you "
+"won't be able to use Instant Preview either."
+msgstr ""
+"Sprotni predogled potrebuje podporo za vsaj OpenGL 3.0. Če torej nimate na "
+"voljo :guilabel:`visoko-kakovostnega` merila v :menuselection:`Nastavitve --"
+"> Prilagodi Krito … --> Zaslon --> Filter merila zaslona`, potem tudi "
+"sprotnega predogleda ne boste mogli uporabljati."
+
+#: ../../reference_manual/instant_preview.rst:29
+msgid ".. image:: images/brushes/Lod_position.png"
+msgstr ".. image:: images/brushes/Lod_position.png"
+
+#: ../../reference_manual/instant_preview.rst:29
+msgid "The Global Instant Preview toggle is under the view menu."
+msgstr "Preklopnik globalnega sprotnega predogleda se nahaja v meniju Pogled."
+
+#: ../../reference_manual/instant_preview.rst:31
+#, fuzzy
+msgid ""
+"Instant Preview is activated in two places: The view menu (:kbd:`Shift + L` "
+"shortcut), and the settings of the given paintop by default. This is because "
+"Instant Preview has different limitations with different paint operations."
+msgstr ""
+"Sprotni predogled aktivirata na dveh mestih: v meniju Pogled (tipke za "
+"bližnjico :kbd:`dvigalka + L`) in v nastavitvah za dani paintop privzeto. To "
+"je zato, ker ima Sprotni predogled različne omejitve z različnimi "
+"operacijami slikanja."
+
+#: ../../reference_manual/instant_preview.rst:33
+#, fuzzy
+msgid ""
+"For example, the overlay mode in the color smudge brush will disable the "
+"ability to have Instant Preview on the brush, so does using 'fade' sensor "
+"for size."
+msgstr ""
+"Primer: prekrivni način v čopiču za razmazovanje barve onemogoči možnost "
+"sprotnega predogleda na čopiču, kot tudi uporabo tipala »pojemanje« za "
+"velikost."
+
+#: ../../reference_manual/instant_preview.rst:35
+#, fuzzy
+msgid ""
+"Similarly, the auto-spacing, fuzzy sensor in size, use of density in brush-"
+"tip and the use of texture paintops will make it more difficult to determine "
+"a stroke, and thus will give a feeling of 'popping' when the stroke is "
+"finished."
+msgstr ""
+"Podobno bo samodejni razmik, mehko (nejasno) tipalo po velikosti, uporaba "
+"gostote v konici čopiča in uporaba barve tekstura otežilo določitev poteze, "
+"in tako bo dal občutek \"popping«, ko je poteza zaključena."
+
+#: ../../reference_manual/instant_preview.rst:37
+msgid ""
+"When you check the brush settings, the Instant Preview checkbox will have a "
+"\\* behind it. Hovering over it will give you a list of options that are "
+"affecting the Instant Preview mode."
+msgstr ""
+"Ko preverite nastavitve čopiča, bo potrditveno polje Sprotni predogled za "
+"njim označeno z \\* . Lebdenje nad le-to vam bo dalo seznam možnosti, ki "
+"vplivajo na način sprotnega predogleda."
+
+#: ../../reference_manual/instant_preview.rst:41
+#, fuzzy
+msgid ""
+"|mouseleft| this pop-up will give a slider, which can be used to determine "
+"the threshold size at which instant preview activates. By default this "
+"100px. This is useful for brushes that are optimised to work on small sizes."
+msgstr ""
+"|mouseleft| ta pojavni okno bo dal drsnik, ki se lahko uporablja za "
+"določanje velikosti praga, pri katerem se aktivira trenutni predogled. "
+"Privzeto to 100px. To je uporabno za čopiče, ki so optimizirani za delo na "
+"majhnih velikostih."
+
+#: ../../reference_manual/instant_preview.rst:47
+msgid ".. image:: images/brushes/Lod_position2.png"
+msgstr ".. image:: images/brushes/Lod_position2.png"
+
+#: ../../reference_manual/instant_preview.rst:47
+msgid ""
+"The Instant Preview checkbox at the bottom of the brush settings editor will "
+"give you feedback when there's settings active that can't be previewed "
+"right. Hover over it to get more detail. In this case, the issue is that "
+"auto-spacing is on."
+msgstr ""
+"Potrditveno polje Sprotni predogled na dnu urejevalnika nastavitev čopiča "
+"vam bo dalo povratne informacije, ko obstajajo aktivne nastavitve, ki jih ni "
+"mogoče predogledati pravilno. Premaknite se nad le-te, da vidite "
+"podrobnosti. V tem primeru je težava v tem, da je samodejni razmik vklopljen."
+
+#: ../../reference_manual/instant_preview.rst:50
+msgid "Tools that benefit from Instant Preview"
+msgstr "Orodja s sprotnim predogledom"
+
+#: ../../reference_manual/instant_preview.rst:52
+msgid "The following tools benefit from Instant Preview:"
+msgstr "Ta orodja imajo koristi od sprotnega predogleda:"
+
+#: ../../reference_manual/instant_preview.rst:54
+msgid "The Freehand brush tool."
+msgstr "Orodje Prostoročni čopič."
+
+#: ../../reference_manual/instant_preview.rst:55
+msgid "The geometric tools."
+msgstr "Geometrična orodja."
+
+#: ../../reference_manual/instant_preview.rst:56
+msgid "The Move Tool."
+msgstr "Orodje Premakni."
+
+#: ../../reference_manual/instant_preview.rst:57
+msgid "The Filters."
+msgstr "Filtri."
+
+#: ../../reference_manual/instant_preview.rst:58
+msgid "Animation."
+msgstr "Animacija."

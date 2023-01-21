@@ -1,0 +1,846 @@
+# Translation of Krita Manual to Slovenian
+#
+# Copyright (C) 2021 This_file_is_part_of_KDE
+# This file is distributed under the same license as the Krita package.
+#
+#
+# Martin Srebotnjak <miles@filmsi.net>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krita manual\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2022-04-17 10:36+0200\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:1
+#, fuzzy
+msgid "Scene Linear painting in Krita"
+msgstr "Scena Lineano slikanje v Kriti"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+#: ../../general_concepts/colors/scene_linear_painting.rst:15
+#, fuzzy
+msgid "Scene Linear Painting"
+msgstr "Scena Lineano slikarstvo"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+#: ../../general_concepts/colors/scene_linear_painting.rst:81
+msgid "Color"
+msgstr "Barva"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+#, fuzzy
+#| msgctxt "@item:inlistbox Quality"
+#| msgid "AHD"
+msgid "HDR"
+msgstr "AHD"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+#, fuzzy
+msgid "High Dynamic Range"
+msgstr "RGBE High Dynamic-Range"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+#, fuzzy
+#| msgctxt "Gradient type - Linear"
+#| msgid "Linear"
+msgid "Scene Linear"
+msgstr ""
+"<html><head/><body><p>Hibridna logaritemska gama potrebuje vmesni dodaten "
+"korak pretvorbe, saj Krita trenutno ne more poslati podatkov HLG neposredno "
+"na zaslon. Zato uporabimo HLG opto-optično krivuljo za pretvorbo iz zaslona "
+"v prizor linearno.</p></body></html>"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+#, fuzzy
+#| msgctxt "Add scene before active scene"
+#| msgid "Add Scene Before"
+msgid "Scene Referred"
+msgstr "Dodaj prizor pred"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:17
+#, fuzzy
+msgid ""
+"Previously referred to as HDR painting and Scene Referred painting, Scene "
+"Linear Painting is doing digital painting in a peculiar type of colorspace. "
+"It is painting in a color space that is..."
+msgstr ""
+"Prej imenovana HDR slika in Scene Referred slikarstvo, Scene Linear Painting "
+"se dela digitalno slikarstvo v posebnem tipu barvnega prostora. To je "
+"slikanje v barvnem prostoru, ki je..."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:19
+#, fuzzy
+msgid ""
+"Linear - there’s no gamma encoding, or tone-mapping or whatever going on "
+"with the pixels you manipulate. (This is different from the pixels you see, "
+"but we’ll get to that later)"
+msgstr ""
+"Linear - ni gama kodiranje, ali tone-kartiranje ali karkoli se dogaja s "
+"piksli, ki jih manipulirate. (To se razlikuje od piksli, ki jih vidite, "
+"vendar bomo to dobili kasneje)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:20
+#, fuzzy
+msgid "Floating Point - So 16bit or 32bit floating point per channel."
+msgstr "Plavajoča točka - Torej 16bitna ali 32bitna plavajoča točka na kanal."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:22
+#, fuzzy
+msgid ""
+"These are the two important characteristics. The colorspace has a few more "
+"properties than this, such as the white point, or more importantly, the "
+"colorants that make up the gamut. But here’s the thing, those two could be "
+"anything, as long as the space is linear and the color depth is floating "
+"point."
+msgstr ""
+"To sta dve pomembni značilnosti. Barvni prostor ima nekaj več lastnosti kot "
+"ta, kot je bela točka, ali še pomembneje, barvila, ki so gamut. Ampak v tem "
+"je stvar, ta dva bi lahko bila karkoli, dokler je prostor linea dolg in je "
+"globina barve plavajoča točka."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:24
+#, fuzzy
+msgid ""
+"So, *Scene Linear is not a single one colorspace, but a* **TYPE** *of "
+"colorspace*. You can have a scene linear space that uses the sRGB/Rec. 709 "
+"colorants, or one that uses adobeRGB, or maybe one that uses Rec. 2020, as "
+"long as it is *linear* and in a *floating point bit depth*."
+msgstr ""
+"Torej, *Scene Linear ni en en barvni prostor, ampak a* **TYPE** "
+"*colorspace*. Lahko imate sceno linearnega prostora, ki uporablja sRGB/Rec. "
+"709 barvila, ali tisti, ki uporablja adobeRGB, ali morda tisti, ki uporablja "
+"Rec. 2020, dokler je *linear* in v *plavajoče točke bit globina*."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:28
+#, fuzzy
+msgid ""
+"If you want to create images for display on an HDR canvas, you will need to "
+"select the Rec. 2020 space profile with a linear gamma. The default profile "
+"in Krita for that is :guilabel:`Rec2020-elle-V4-g10.icc`."
+msgstr ""
+"Če želite ustvariti slike za prikaz na HDR platnu, boste morali izbrati "
+"presledni profil Rec. 2020 z linearnim gama. Privzeti profil v Kriti je :"
+"guilabel:'Rec2020-elle-V4-g10.icc'."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:30
+#, fuzzy
+msgid ""
+"These two factors are for one reason: To make black and white arbitrary "
+"values. This might seem a bit weird. But when you are dealing with light-"
+"sources, you are dealing with a massive range of contrasts, and will have to "
+"decide afterwards which white and black you’d like to have. This is what the "
+"scene means in scene-linear, the relevant values are unique per scene, like "
+"a real world scene: a flower field lit by moonlight, a city in twilight or a "
+"sunny beach. You want to be able to put the right emphasis on the most "
+"important contrasting values, and being able to choose what is white and "
+"what is black is a very powerful tool here. After all, humans in the real "
+"world can see much more when they get used to the dark, or to the sun, so "
+"why not apply that to how we make our images?"
+msgstr ""
+"Ta dva dejavnika sta iz enega razloga: narediti črno-bele poljubne "
+"vrednosti. To bi se lahko zdelo malce čudno. Ko pa imate opravka z "
+"svetlobnimi viri, imate opravka z veliko paleto kontrastov in se boste "
+"morali odločiti, katere bele in črne bi radi imeli. To je tisto, kar prizor "
+"pomeni v sceni-linear, ustrezne vrednote so edinstvene na prizor, kot pravi "
+"svetovni prizor: cvetlično polje, osvetljeno z mesečino, mesto v somraku ali "
+"sončna plaža. Želite biti sposobni dati pravi poudarek na najpomembnejših "
+"kontrastnih vrednotah, in biti sposoben izbrati, kaj je belo in kaj je črno "
+"je zelo močno orodje tukaj. Navsezadnje lahko ljudje v resničnem svetu "
+"vidijo veliko več, ko se navadijo na temo, ali na sonce, zakaj ne bi to "
+"uporabili za to, kako delamo naše podobe?"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:32
+#, fuzzy
+msgid ""
+"This is also why it needs to be Linear. Gamma and Tone-mapped color spaces "
+"are already choosing which contrast is the most important to you. But for "
+"that, they too need to choose what is white or black. Linear doesn’t make "
+"such assumptions, so much better for when you want to choose yourself. You "
+"will eventually want to stick your image through some tone-mapping or gamma "
+"correction, but only at the end after you have applied filters and mixed "
+"colors!"
+msgstr ""
+"To je tudi razlog, zakaj mora biti Linear. Gama in Tone-kartiranje barvni "
+"prostori že izbirajo, kateri kontrast je za vas najpomembnejši. Za to pa "
+"morajo tudi oni izbrati, kaj je belo ali črno. Linearan ne naredi takih "
+"predpostavk, toliko bolje za, ko želite izbrati sami. Na koncu boste želeli "
+"svojo sliko vstaviti skozi nekaj tone-kartiranje ali gama popravek, vendar "
+"šele na koncu, ko ste uporabili filtre in mešane barve!"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:34
+#, fuzzy
+msgid ""
+"In fact, there’s always a non-destructive sort of transform going on while "
+"you are working on your image which includes the tone-mapping. This is "
+"called a display or view transform, and they provide a sort of set of "
+"binoculars into the world of your image. Without it, your computer cannot "
+"show these colors properly; it doesn’t know how to interpret it properly, "
+"often making the image too dark. Providing such a transform and allowing you "
+"to configure it is the prime function of color management."
+msgstr ""
+"V bistvu se vedno dogaja neuničujoča vrsta preobrazbe, medtem ko delaš na "
+"sliki, ki vključuje kartiranje tona. To se imenuje prikazovalnik ali ogledna "
+"transformacija in zagotavljajo nekakšno vrsto enogleda v svet vaše slike. "
+"Brez njega računalnik ne more pravilno pokazati teh barv; ne ve, kako jo "
+"pravilno razlagati, pogosto naredi podobo preveč temno. Zagotavljanje takšne "
+"preobrazbe in omogočanje konfiguracije je glavna funkcija upravljanja barv."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:36
+#, fuzzy
+msgid ""
+"Between different view and display transforms, there’s also a difference in "
+"types. Some are really naive, others are more sophisticated, and some need "
+"to be used in a certain manner to work properly. The ICC color management "
+"can only give a certain type of view transforms, while OCIO color management "
+"in the LUT docker can give much more complex transforms easily configurable "
+"and custom settings that can be shared between programs."
+msgstr ""
+"Med različnimi pogledi in spreminjanje zaslona, obstaja tudi razlika v "
+"vrstah. Nekateri so res naivni, drugi so bolj prefinjeni, nekatere pa je "
+"treba za pravilno delo uporabiti na določen način. Upravljanje barv ICC "
+"lahko da le določeno vrsto pogled preoblikuje, medtem ko OCIO upravljanje "
+"barv v lut docker lahko daje veliko bolj zapletene transformacije enostavno "
+"nastavljive in po meri nastavitve, ki jih je mogoče deliti med programi."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:42
+#, fuzzy
+msgid ".. image:: images/color_category/Krita_scenelinear_cat_01.png"
+msgstr ".. slika:: slike/color_category/Krita_scenelinear_cat_01.png"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:42
+#, fuzzy
+msgid ""
+"Above, an example of the more naive transform provided by going from scene-"
+"linear sRGB to regular sRGB, and to the right a more sophisticated transform "
+"coming from the filmic blender OCIO configuration. Look at the difference "
+"between the paws. Image by Wolthera van Hövell tot Westerflier, License: CC-"
+"BY-SA"
+msgstr ""
+"Zgoraj je primer bolj naivne preobrazbe, ki jo zagotavlja prehod iz scene "
+"linearnega sRGB v redni sRGB, na desni pa bolj prefinjena preobrazba, ki "
+"prihaja iz konfiguracije filmskega mešalnika OCIO. Poglej razliko med taci. "
+"Image by Wolthera van Hövell tot Westerflier, License: CC-BY-SA"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:44
+#, fuzzy
+msgid ""
+"Conversely, transforming and interpreting your image’s colors is the only "
+"thing OCIO can do, and it can do it with really complex transforms, really "
+"fast. It doesn’t understand what your image’s color space is originally, "
+"doesn’t understand what CMYK is, and there’s also no such thing as a OCIO "
+"color profile. Therefore you will need to switch to an ICC workflow if you "
+"wish to prepare for print."
+msgstr ""
+"Nasprotno, preoblikovanje in tolmačenje barv vaše slike je edina stvar, ki "
+"jo lahko OCIO naredi, in to lahko stori z res zapletenimi transformacijami, "
+"res hitro. Ne razume, kakšen je prvotno barvni prostor vaše slike, ne "
+"razume, kaj je CMYK, prav tako ne obstaja tako, kot je OCIO barvni profil. "
+"Če se želite pripraviti na tiskanje, boste morali preklopiti na potek dela "
+"ICC."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:47
+#, fuzzy
+msgid "Yes, but what is the point?"
+msgstr "Ja, ampak v čem je smisel?"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:49
+#, fuzzy
+msgid "The point is making things easier in the long run:"
+msgstr "Bistvo je, da stvari na dolgi rok olajšajo:"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:51
+#, fuzzy
+msgid "It is easier to keep saturated non-muddy colors in a linear space."
+msgstr "V linearnem prostoru je lažje ohraniti nasičene nemušne barve."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:52
+#, fuzzy
+msgid "The high bit depth makes it easier to get smoother color mixes."
+msgstr ""
+"Visoka bitna globina omogoča lažji dostop do bolj gladkih barvnih mešanic."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:53
+#, fuzzy
+msgid ""
+"Filters are more powerful and give nicer results in this space. It is far "
+"more easy to get nice blurring and bokeh results."
+msgstr ""
+"Filtri so močnejši in dajejo lepše rezultate v tem prostoru. To je veliko "
+"lažje dobiti lepo zamegljen in bokeh rezultate."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:54
+#, fuzzy
+msgid ""
+"Simple Blending Modes like Multiply or Addition are suddenly black magic. "
+"This is because Scene-Linear is the closest you can get to the physical (as "
+"in, physics, not material) model of color where multiplying colors with one "
+"another is one of the main ways to calculate the effect of light."
+msgstr ""
+"Preprosti načini mešanja, kot sta Multiply ali Addition, so nenadoma črna "
+"magija. To je zato, ker Scene-Linear je najbližje, da lahko pridete do "
+"fizičnega (kot v, fizika, ne materiala) model barve, kjer je množenje barv "
+"med seboj eden od glavnih načinov za izračun učinka svetlobe."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:55
+#, fuzzy
+msgid ""
+"Combining painting with other image results such as photography and "
+"physically based rendering is much easier as they too work in such a type of "
+"colorspace. So you could use such images as a reference with little qualms, "
+"or make textures that play nice with such a renderer."
+msgstr ""
+"Združevanje slikanja z drugimi slikovnimi rezultati, kot sta fotografiranje "
+"in fizično zasnovano underiranje, je veliko lažje, saj tudi oni delujejo v "
+"takšnem barvnem prostoru. Tako bi lahko uporabili take slike kot referenca z "
+"malo qualms, ali pa bi teksture, ki igrajo lepo s takim renderer."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:57
+#, fuzzy
+msgid ""
+"So the advantages are prettier colors, cooler filter results, more control "
+"and easier interchange with other methods."
+msgstr ""
+"Prednosti so torej lepše barve, rezultati hladnejšega filtra, več nadzora in "
+"lažja izmenjava z drugimi metodami."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:60
+#, fuzzy
+msgid "Okay, but why isn’t this all the rage then?"
+msgstr "V redu, ampak zakaj potem ni vse to bes?"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:62
+#, fuzzy
+msgid ""
+"Simply put, because while it’s easier in the long run, you will also have to "
+"drop tools and change habits..."
+msgstr ""
+"Preprosto povedano, saj čeprav je na dolgi rok lažje, boste morali tudi "
+"odvreči orodja in spremeniti navade..."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:64
+#, fuzzy
+msgid ""
+"In particular, there are many tools in a digital painter’s toolbox that have "
+"**hard-coded assumptions about black and white**."
+msgstr ""
+"V orodni škatli digitalnega slikarja je še posebej veliko orodij, ki imajo "
+"**trde kodne predpostavke o črno-belih**."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:66
+#, fuzzy
+msgid ""
+"A very simple but massive problem is one with **inversion**. Inverting "
+"colors is done code-wise by taking the color for white and subtracting the "
+"color you want to invert from it. It’s used in many blending modes. But "
+"often the color white is hardcoded in these filters. There’s currently no "
+"application out there that allows you to define the value range that "
+"inversion is done with, so inverting is useless. And that also means the "
+"filters and blending modes that use it, such as (but not limited to)..."
+msgstr ""
+"Zelo preprost, a masiven problem je eden z **inverzija**. Obrnjevanje barv "
+"je narejeno kodno, tako da vzamete barvo za belo in odštejete barvo, ki jo "
+"želite invertirate od tega. Uporablja se v mnogih načinih mešanja. Toda "
+"pogosto barva bela je hardcoded v teh filtrih. Trenutno ni aplikacije, ki bi "
+"vam omogočala, da določite obseg vrednosti, s ko je inverzija opravljena, "
+"zato je invertiranje neusmiljen. In to pomeni tudi filtre in načine mešanja, "
+"ki ga uporabljajo, kot so (vendar ne omejeno na)..."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:68
+#, fuzzy
+msgid "Screen (invert+multiply+invert)"
+msgstr "Zaslon (invert+multiply+invert)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:69
+#, fuzzy
+msgid ""
+"Overlay (screens values below midtone-value, in sRGB this would be middle "
+"gray)"
+msgstr ""
+"Preklop (vrednosti zaslonov pod vrednostjo midtone, v sRGB bi to bilo "
+"srednje sivo)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:70
+#, fuzzy
+msgid "Color-dodge (divides the lower color with an inversion of the top one)"
+msgstr "Color-dodge (deli spodnjo barvo z pretvorbo zgornjega)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:71
+#, fuzzy
+msgid ""
+"Color-burn (inverts the lower color and then divides it by the top color)"
+msgstr "Barvno zapisovanje (obrni spodnjo barvo in jo nato deli z zgornjim)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:72
+#, fuzzy
+msgid "Hardlight (a different way of doing overlay, including the inversion)"
+msgstr "Hardlight (drugačen način za prečiranje, vključno z inverzijo)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:73
+#, fuzzy
+msgid "Softlight (uses several inversions along the way)"
+msgstr "Mehka svetloba (uporablja več inverzija na poti)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:75
+#, fuzzy
+msgid ""
+"Conversely Multiply, Linear Dodge/Addition (they’re the same thing), "
+"Subtract, Divide, Darker (only compares colors’ channel values), Lighter "
+"(ditto), and Difference *are fine to use*, as long as the program you use "
+"doesn’t do weird clipping there."
+msgstr ""
+"Nasprotno Pomnoži, Linear Dodge /Dodatek (so ista stvar), Odštej, Razdeli, "
+"Temnejši (primerja samo vrednosti kanalov barv), Lažji (ditto) in Razlika "
+"*so v redu za uporabo*, dokler program, ki ga uporabljate, ne naredi čudno "
+"izrezovanje tam."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:77
+#, fuzzy
+msgid ""
+"Another one is HSL, HSI and HSY algorithms. They too need to assume "
+"something about the top value to allow scaling to white. HSV doesn’t have "
+"this problem. So it’s best to use an HSV color selector."
+msgstr ""
+"Drugi so HSL, HSI in HSY algoritmi. Tudi oni morajo predpostavljati nekaj o "
+"zgornji vrednosti, da bi omogočili razmah bele barve. HSV nima te težave. "
+"Zato je najbolje uporabiti izbirnik barv HSV."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:79
+#, fuzzy
+msgid ""
+"For the blending modes that use HSY, there’s always the issue that they tend "
+"to be hardcoded to sRGB/Rec. 709 values, but are otherwise fine (and they "
+"give actually far more correct results in a linear space). So these are not "
+"a good idea to use with wide-gamut colorspaces, and due to the assumption "
+"about black and white, not with scene linear painting. The following "
+"blending modes use them:"
+msgstr ""
+"Za načine mešanja, ki uporabljajo HSY, vedno obstaja vprašanje, da so "
+"običajno hardcoded na vrednosti sRGB/Rec. 709, vendar so sicer v redu (in "
+"dajejo dejansko veliko bolj pravilne rezultate v linearnem prostoru). To "
+"torej ni dobra ideja za uporabo s široko-gamut barvnimi prostori, in zaradi "
+"predpostavke o črno-beli, ne s scene linearnega slikanja. Uporabljajo jih "
+"naslednji načini mešanja:"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:82
+#, fuzzy
+#| msgctxt "Blending mode - Luminosity HSY"
+#| msgid "Luminosity"
+msgid "Luminosity"
+msgstr "Svetilnost"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:83
+msgid "Saturation"
+msgstr "Nasičenost"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:84
+#, fuzzy
+msgid "Darker Color (uses luminosity to determine the color)"
+msgstr "Temnejša barva (za določanje barve uporablja svetilnost)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:85
+#, fuzzy
+#| msgctxt "Blending mode - Lighter Color"
+#| msgid "Lighter Color"
+msgid "Lighter Color (Ditto)"
+msgstr "Svetlejša barva"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:87
+#, fuzzy
+msgid ""
+"So that is the blending modes. Many filters suffer from similar issues, and "
+"in many applications, filters aren’t adjusted to work with arbitrary whites."
+msgstr ""
+"To so načini mešanja. Številni filtri trpijo zaradi podobnih težav, v "
+"številnih aplikacijah pa filtri niso prilagojeni za delo s samovoljno belci."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:89
+#, fuzzy
+msgid ""
+"Speaking of filters, when using the transform tool, you should also avoid "
+"using lanczos3, it’ll give a weird black halo to sharp contrasts in scene-"
+"linear. The bilinear interpolation filter will work just fine in this case."
+msgstr ""
+"Ko smo že pri filtrih, ko uporabljate orodje za preoblikovanje, se morate "
+"izogibati tudi uporabi lanczos3, bo dal čuden črni halo za ostre kontraste v "
+"sceni linearni. Bilinearni interpolacijni filter bo v tem primeru deloval "
+"prav dobro."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:91
+#, fuzzy
+msgid "The second big problem is that **black doesn’t work quite the same**."
+msgstr "Druga velika težava je v tem, da **črna ne deluje povsem enako**."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:93
+#, fuzzy
+msgid ""
+"If you have mixed pigments before, you will know that black can quite easily "
+"overpower the other colors, so you should only add the tiniest amount of it "
+"to a mixture. White in contrast gets dirtied quite easily."
+msgstr ""
+"Če ste že prej mešali pigmente, boste vedeli, da lahko črna kar zlahka "
+"premaga druge barve, zato naj mešanici dodate le najmanjšo količino. Bela v "
+"nasprotju z lahkoto umaže."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:95
+#, fuzzy
+msgid ""
+"In a Scene Linear Color space, this is flipped. White is now more "
+"overpowering and black gets washed out super quickly. This relates to the "
+"additive nature of digital color theory, that becomes more obvious when "
+"working in linear."
+msgstr ""
+"V prostoru linearni barvi scene je to preklopno. Bela je zdaj bolj nadmočna "
+"in črna se super hitro izsuši. To se nanaša na aditivnost teorije digitalnih "
+"barv, ki postane bolj očitna pri delu v linearnem."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:97
+#, fuzzy
+msgid ""
+"This makes sketching a bit different, after all, it’s really difficult to "
+"make marks now. To get around this, you can do the following:"
+msgstr ""
+"Zaradi tega je skiciranje nekoliko drugačno, navsezadnje je zdaj res težko "
+"narediti sledi. Če želite to zaobiti, lahko naredite to:"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:99
+#, fuzzy
+msgid ""
+"Sketch on a mid-gray background. This is recommended anyway, as it serves as "
+"a neutral backdrop. For a linear space, 18% or 22% gray would be a good "
+"neutral."
+msgstr ""
+"Skica na sredini sive podlage. To je tako ali tako priporočljivo, saj služi "
+"kot nevtralna ozadja. Za linealen prostor bi bila 18% or 22% gray dobra "
+"nevtralna."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:100
+#, fuzzy
+msgid ""
+"Make a special brush that is more opaque than the regular sketching brushes "
+"you use."
+msgstr ""
+"Naredite posebno ščetko, ki je bolj nepregledna kot običajne ščetke za "
+"skiciranje, ki jih uporabljate."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:101
+#, fuzzy
+msgid "Or conversely, sketch with white instead."
+msgstr "Ali nasprotno, skica z belo namesto."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:102
+#, fuzzy
+msgid ""
+"For painting, block out the shapes with a big opaque brush before you start "
+"doing your mixing."
+msgstr ""
+"Za slikanje, blokirajte oblike z veliko nepregledno ščetko, preden začnete "
+"mešati."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:104
+#, fuzzy
+msgid ""
+"Overall, this is something that will take a little while getting used to, "
+"but you will get used to it soon enough."
+msgstr ""
+"Na splošno je to nekaj, kar bo trajalo nekaj časa, ko se boste navadili, "
+"vendar se boste kmalu navadili."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:106
+#, fuzzy
+msgid "Finally, there’s the **issue of size**."
+msgstr "Končno je tu še **številka velikosti**."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:108
+#, fuzzy
+msgid ""
+"16 bit float per channel images are big. 32 bit float per channel images are "
+"bigger. This means that they will eat RAM and that painting and filtering "
+"will be slower. This is something that will fix itself over the years, but "
+"not many people have such a high-end PC yet, so it can be a blocker."
+msgstr ""
+"16 bitnih plov na kanal slike so velike. 32 bitnih plov na kanal slike so "
+"večje. To pomeni, da bodo jedli RAM in da bo slikanje in filtriranje "
+"počasneje. To je nekaj, kar se bo popravilo v preteklih letih, vendar ni "
+"veliko ljudi imajo tako high-end PC še, tako da je lahko blokator."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:110
+#, fuzzy
+msgid "So the issues are tools, expectations and size."
+msgstr "Zato so vprašanja orodja, pričakovanja in velikost."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:113
+#, fuzzy
+#| msgid "Summary:"
+msgid "In Summary"
+msgstr "Povzetek"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:115
+#, fuzzy
+msgid ""
+"Scene Linear Painting is painting an image in a color space that is linear "
+"and has a floating point bit depth. This does not assume anything about the "
+"values of black and white, so you can only use tools that don’t assume "
+"anything about the values of black and white. It has the advantage of having "
+"nicer filter results and better color mixtures as well as better "
+"interoperability with other scene-linear output."
+msgstr ""
+"Scene Linear Painting je slika slike v barvnem prostoru, ki je lineano in "
+"ima plavajoče točke bit globino. To ne predvideva ničesar o vrednostih črno-"
+"belih, zato lahko uporabljate le orodja, ki ne predpostavljajo nič o "
+"vrednostih črno-belih. Ima prednost, da imajo lepše rezultate filtra in "
+"boljše barvne mešanice, kot tudi boljšo interoperabilnost z drugimi scene "
+"linearni izhod."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:117
+#, fuzzy
+msgid ""
+"To be able to view such an image you use a view transform, also called a "
+"display conversion. Which means that if you wish to finalize your image for "
+"the web, you make a copy of the image that goes through a display conversion "
+"or view transform that then gets saved to PNG, JPEG or TIFF."
+msgstr ""
+"Če si želite ogledati tako sliko, uporabite pretvorbo pogleda, ki se imenuje "
+"tudi konverzija zaslona. Kar pomeni, da če želite dokončevati sliko za "
+"splet, naredite kopijo slike, ki gre skozi pretvorbo zaslona ali ogled "
+"transformacije, ki se nato shrani v PNG, JPEG ali TIFF."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:120
+#, fuzzy
+#| msgid "Set line width of actual selection"
+msgid "Getting to actual painting"
+msgstr "Določite širino črte dejanskega izbora"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:122
+#, fuzzy
+msgid ""
+"Now we’ve covered the theory, let us look at a workflow for painting scene "
+"linear."
+msgstr ""
+"Zdaj smo pokrili teorijo, poglejmo potek dela za slikanje scene linearni."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:125
+#, fuzzy
+msgid "Setting up the Canvas"
+msgstr "Nastavitev platna"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:127
+#, fuzzy
+msgid ""
+"Select either a 16bit or 32bit image. By default Krita will select a linear "
+"sRGB profile. If you want to create images for HDR display, you will need to "
+"make sure that the profile selected is the :guilabel:`Rec2020-elle-V4-g10."
+"icc` profile. HDR images are standardised to use the Rec. 2020 gamut, which "
+"is much larger than sRGB in size, so this ensures you've got access to all "
+"the colors."
+msgstr ""
+"Izberite 16bitno ali 32bitno sliko. Privzeto bo Krita izbral lineani profil "
+"sRGB. Če želite ustvariti slike za HDR zaslon, se morate prepričati, da je "
+"izbrani profil :guilabel:'Rec2020-elle-V4-g10.icc' profil. HDR slike so "
+"standardizirane za uporabo gamut Rec. 2020, ki je veliko večji od velikosti "
+"SRGB, tako da to zagotavlja, da imate dostop do vseh barv."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:129
+#, fuzzy
+msgid ""
+"If you're working on a non-HDR enabled monitor, you should enable OCIO in "
+"the LUT docker."
+msgstr ""
+"Če delate na monitorju, ki ni omogočen za HDR, omogočite OCIO v dockerju LUT."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:131
+#, fuzzy
+msgid ""
+"Keep in mind everything mentioned above. Not all filters and not all "
+"blending modes work. This will improve in the future. Other than that, "
+"everything else is the same."
+msgstr ""
+"Imajte v mislih vse zgoraj omenjeno. Ne delujejo vsi filtri in vsi načini "
+"mešanja. To se bo v prihodnosti izboljšalo. Razen tega je vse ostalo enako."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:134
+#, fuzzy
+msgid "Picking really bright colors"
+msgstr "Izbiranje res svetlih barv"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:136
+#, fuzzy
+msgid ""
+"Picking regular colors is easy, but how do we pick the really bright colors? "
+"There are three ways of getting access to the really bright colors in Krita:"
+msgstr ""
+"Izbiranje navadnih barv je enostavno, ampak kako izberemo res svetle barve? "
+"Obstajajo trije načini za dostop do res svetlih barv v Kriti:"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:138
+#, fuzzy
+msgid ""
+"By lowering the exposure in the LUT docker. This will increase the visible "
+"range of colors in the color selectors. You can even hotkey the exposure in "
+"the canvas input settings."
+msgstr ""
+"Z znižanjem izpostavljenosti v dockerju LUT. To bo povečalo vidno paleto "
+"barv v barvnih izbirnikov. Lahko celo hotkey izpostavljenost v nastavitvah "
+"vnosa na platnu."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:139
+#, fuzzy
+msgid ""
+"By setting the nits slider in the :ref:`small_color_selector` higher than "
+"100."
+msgstr "Z nastavitvijo drsnika v :ref:'small_color_selector' višjo od 100."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:140
+#, fuzzy
+msgid ""
+"Or simply by opening the internal color selector by double clicking the dual "
+"color button and typing in values higher than 1 into the input field."
+msgstr ""
+"Ali preprosto z odpiranjem notranjega izbirnika barv tako, da dvokliknite "
+"dvojni barvni gumb in vnesete vrednosti višje od 1 v polje za vnos."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:141
+#, fuzzy
+msgid ""
+"And finally by picking a really bright color from an image that has such "
+"values."
+msgstr "In končno z izbiro res svetle barve iz slike, ki ima takšne vrednosti."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:143
+#, fuzzy
+msgid ""
+"Then paint. It’s recommended to make a bunch of swatches in the corner, at "
+"the least, until Krita’s new Palette docker allows you to save the values "
+"properly."
+msgstr ""
+"Potem pa slikaj. Priporočljivo je, da naredite kup swatches v kotu, vsaj "
+"dokler Krita nov Palette docker vam omogoča, da shranite vrednosti pravilno."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:146
+#, fuzzy
+msgid "Lighting based workflow"
+msgstr "Potek dela, ki temelji na osvetlitvi"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:148
+#, fuzzy
+msgid ""
+"So, we have our typical value based workflow, where we only paint the grays "
+"of the image so that we can focus on the values of the image. We can do "
+"something similar with Scene Linear Painting."
+msgstr ""
+"Imamo torej tipičen potek dela, ki temelji na vrednosti, kjer slikamo le "
+"sive slike, da se lahko osredotočimo na vrednosti slike. Lahko naredimo "
+"nekaj podobnega s Scene Linear Painting."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:150
+#, fuzzy
+msgid ""
+"Where with the value based workflow you paint the image as if it were a "
+"grayscale of what you intended to paint, with a lighting based workflow you "
+"paint as if all the objects are white. The effect of the color of an object "
+"can be determined by multiplying its base color with the color of the light. "
+"So you could paint objects as if they were white, paint the colors on a "
+"separate layer and just use the Multiply blending mode to get the right "
+"colors."
+msgstr ""
+"Kjer s potekom dela, ki temelji na vrednosti, slikate sliko, kot da je to "
+"sivi tone tega, kar ste nameravali slikati, z svetlobno zasnovanim potekom "
+"dela, ki ga slikate, kot da so vsi predmeti beli. Učinek barve predmeta "
+"lahko določimo tako, da pomnožimo njegovo osnovno barvo z barvo svetlobe. "
+"Tako bi lahko barvali predmete, kot da bi bili beli, barve na ločeni plasti "
+"in samo uporabite način multiply mešanja, da bi dobili pravo barvo."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:156
+#, fuzzy
+msgid ".. image:: images/color_category/Krita_scenelinear_cat_02.png"
+msgstr ".. slika:: slike/color_category/Krita_scenelinear_cat_02.png"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:156
+#, fuzzy
+msgid ""
+"The leftmost image is both the lighting based one and the color layer "
+"separate, the middle with the two layers multiplied and the right a "
+"luminosity based view. This cat is a nice example as it demonstrates why "
+"having textures and lighting separate could be interesting."
+msgstr ""
+"Najbolj leva slika je osvetlitev, ki temelji na eni, barvna plast pa ločena, "
+"sredina z pomnoženim obema plastema, desno pa pogled, ki temelji na "
+"svetilnosti. Ta mačka je lep primer, saj dokazuje, zakaj bi bilo lahko "
+"zanimivo imeti teksture in osvetlitev ločeno."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:158
+#, fuzzy
+msgid ""
+"You can even combine this with a value based workflow by opening a new view "
+"and setting the component to luminosity. That way you can see both the "
+"grayscale as well as the lighting based version of the image next to one "
+"another."
+msgstr ""
+"To lahko celo združite z potekom dela, ki temelji na vrednosti, tako da "
+"odprete nov pogled in nastavite komponento na svetilnost. Tako lahko vidite "
+"tako sivo kot tudi osvetlitveno različico slike drug ob drugem."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:160
+#, fuzzy
+msgid ""
+"The keen minded will notice that a lighting based workflow kind of resembles "
+"the idea of a light pass and a color pass in 3d rendering. And indeed, it is "
+"basically the same, so you can use lighting passes from 3d renders here, "
+"just save them as EXR and import them as a layer. One of the examples where "
+"scene linear painting simplifies combining methods."
+msgstr ""
+"Eened minded bo opazil, da svetloba temelji potek dela nekako podobno idejo "
+"svetlobe pass in barvno podajo v 3d underiranje. In res, je v bistvu enako, "
+"tako da lahko uporabite svetlobne premice iz 3d renders tukaj, samo shranite "
+"jih kot EXR in jih uvozite kot plast. Eden od primerov, kjer lineano "
+"slikanje scene poenostavnja kombiniranje metod."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:163
+#, fuzzy
+#| msgid "Finished saving %1"
+msgid "Finishing up"
+msgstr "Dokončano shranjevanje %1"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:165
+#, fuzzy
+msgid ""
+"When you are done, you will want to apply the view transform you have been "
+"using to the image (at the least, if you want to post the end result on the "
+"Internet)... This is called LUT baking and not possible yet in Krita. "
+"Therefore you will have to save out your image in EXR and open it in either "
+"Blender or Natron. Then, in Blender it is enough to just use the same OCIO "
+"config, select the right values and save the result as a PNG."
+msgstr ""
+"Ko končate, boste želeli uporabiti pretvorbo pogleda, ki ste jo uporabljali "
+"na sliki (vsaj, če želite na internetu objavljati končni rezultat)... To se "
+"imenuje LUT peka in še ni mogoče v Kriti. Zato boste morali shraniti svojo "
+"sliko v EXR in jo odpreti v Blender ali Natron. Nato je v Blenderju dovolj, "
+"da samo uporabite isto OCIO konfiguracijo, izberite pravih vrednosti in "
+"shranite rezultat kot PNG."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:167
+#, fuzzy
+msgid "For saving HDR images, check the :ref:`hdr_display` page."
+msgstr "Za shranjevanje hdr slik preverite stran :ref:'hdr_display'."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:169
+#, fuzzy
+msgid ""
+"You can even use some of Blender’s or Natron’s filters at this stage, and "
+"when working with others, you would save out in EXR so that others can use "
+"those."
+msgstr ""
+"V tej fazi lahko celo uporabite nekaj Blenderjevih ali Natronovih filtrov, "
+"pri delu z drugimi pa bi prihranili v EXR, tako da bi jih lahko uporabljali "
+"drugi."
