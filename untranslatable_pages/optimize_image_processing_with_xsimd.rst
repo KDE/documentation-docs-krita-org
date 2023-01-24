@@ -346,7 +346,7 @@ In the next step we need to create a *FactoryImpl* class. It is actually the cla
 
 Now we need to actually compile ``KoOptimizedPixelDataScalerU8ToU16FactoryImpl.cpp`` for all targets. To do that we should use a special CMake macro:
 
-.. code-block::
+.. code-block:: cmake
 
     // file: CMakeLists.txt
 
