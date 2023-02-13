@@ -293,12 +293,12 @@ Prerequisites
 
 4. LLVM MinGW compiler toolchain
 
-    - Can be downloaded here: https://github.com/mstorsjo/llvm-mingw/releases/download/20220323/llvm-mingw-20220323-ucrt-x86_64.zip
+    - Can be downloaded here: https://github.com/mstorsjo/llvm-mingw/releases/download/20220906/llvm-mingw-20220906-ucrt-x86_64.zip
     - Unzip the archive with `7zip <https://www.7-zip.org/>`_ into a folder like :file:`C:\\llvm-mingw`; the full path must not contain any spaces.
-    - At the time of writing, we are using the tagged release 20220323 with LLVM 14.0.0 on the Binary Factory. In theory a newer version should be compatible, but use at your own risk.
+    - We are using the tagged release 20220906 with LLVM 15.0.0 on the Binary Factory. In theory a newer version should be compatible, but use at your own risk.
     - If you really want to use other compilers, see below.
 
-5. You will also need a release of Python 3.8 (not 3.7, not 3.9) - https://www.python.org.
+5. You will also need a release of Python 3.10 (not 3.7, not 3.8, not 3.9, not 3.11) - https://www.python.org.
 
     - Make sure to have that version of python.exe in your path. This version of Python will be used for two things to configure Qt and to build the Python scripting module.  Do not set PYTHONHOME or PYTHONPATH.
     - Make sure that your Python will have the correct architecture for the version you are trying to build. If building for 32-bit target, you need the 32-bit release of Python.
@@ -341,7 +341,7 @@ Then prepare a batch file to set the environment. Read this example and **adjust
 .. code:: batch
 
     :: Build/dev tools
-    set MINGW_BIN_DIR=C:\llvm-mingw\llvm-mingw-20220323-ucrt-x86_64\bin
+    set MINGW_BIN_DIR=C:\llvm-mingw\llvm-mingw-20220906-ucrt-x86_64\bin
     set CMAKE_BIN_DIR=C:\Program Files\CMake\bin
     set NINJA_BIN_DIR=C:\krita-dev\ninja
     set PYTHON_BIN_DIR=C:\Python38
