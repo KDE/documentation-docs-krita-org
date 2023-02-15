@@ -593,7 +593,7 @@ For a good example of an 'option' let's consider ``KisMirrorOption``. This class
     #include <KisPaintOpOptionUtils.h>
     namespace kpou = KisPaintOpOptionUtils;
 
-    class KisMirrorOption : public KisCurveOption2
+    class KisMirrorOption : public KisCurveOption
     {
     public:
 
@@ -616,7 +616,7 @@ For a good example of an 'option' let's consider ``KisMirrorOption``. This class
         // option, it is used only during the initialization
 
         KisMirrorOption(const KisMirrorOptionData &data)
-            : KisCurveOption2(data)
+            : KisCurveOption(data)
             , m_enableHorizontalMirror(data.enableHorizontalMirror)
             , m_enableVerticalMirror(data.enableVerticalMirror)
         {
@@ -630,7 +630,7 @@ For a good example of an 'option' let's consider ``KisMirrorOption``. This class
             // skipped some calculations using:
             //   * m_enableHorizontalMirror
             //   * m_enableVerticalMirror
-            //   * KisCurveOption2::computeSizeLikeValue(info)
+            //   * KisCurveOption::computeSizeLikeValue(info)
             // ...
             
             MirrorProperties mirrors;
