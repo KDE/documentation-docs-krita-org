@@ -99,7 +99,7 @@ Brush Packs
                Jackpack
 
           - .. figure:: /images/resource_packs/Resources-razcoreBrushes.png
-               :target: https://razcore.gitlab.io/posts/2017/06/11/p02-rzv-krita-brushkit/
+               :target: https://gitlab.com/razcore-rad/rzv-krita-brushkit/-/raw/master/release/RZV.zip
 
                Razcore
 
