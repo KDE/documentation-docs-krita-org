@@ -350,6 +350,11 @@ Then prepare a batch file to set the environment. Read this example and **adjust
     set BUILDROOT=C:\krita-dev
     set PATH=C:\krita-dev\i\bin;C:\krita-dev\i\lib;%MINGW_BIN_DIR%;%MINGW_BIN_DIR%\..\x86_64-w64-mingw32\bin;%CMAKE_BIN_DIR%;%NINJA_BIN_DIR%;%QTCREATOR_DIR%;%PATH%
 
+.. attention::
+    Make sure your ``PATH`` variable does **not** have double backslash symbols ``\\``. Especially as a result of multiple path variables concatenation.
+
+    If it has, ASAN symbolizer will crash when parsing error-reports.
+
 Every time you want to build or run your home-grown Krita, open the CMD window, change to the ``C:\krita-dev`` folder and run the ``env.bat`` file:
 
 .. code:: batch
@@ -391,6 +396,11 @@ To fetch prebuilt dependencies just run the embedded cmake script:
 
 (Or you can download it yourself from https://binary-factory.kde.org/job/Krita_Nightly_Windows_Dependency_Build/)
 
+.. attention::
+    If you build Krita with ASAN, make sure you don't use prebuilt deps, or at least manually rebuild Qt with
+    ASAN support as well (``-DQT_ENABLE_ASAN=ON``). There is a `know issue in LLVM's linker <https://github.com/llvm/llvm-project/issues/61685>`_,
+    which causes Qt be loaded before ASAN and, therefore, causing some allocations confuse ASAN. Until this issue is fixed,
+    build Qt with ASAN as a workaround.
 
 Building dependencies yourself
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
