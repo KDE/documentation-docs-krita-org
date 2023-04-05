@@ -30,7 +30,7 @@ This docker allows you to quickly shift between undo states, and even go back in
 Cumulative Undo
 ---------------
 
-Cumulative Undo is a feature of Krita that allows merging similar undo states basing on their time separation. It makes undo history cleaner. 
+Cumulative Undo is a feature of Krita that allows merging similar undo states basing on their time separation. It makes the undo history cleaner. 
 
 .. raw:: html
 
@@ -43,7 +43,7 @@ Cumulative Undo settings are located under :guilabel:`General` -> :guilabel:`Mis
 
 .. image:: /images/dockers/Cumulative_Undo_General_Settings.png
 
-In the advanced section of the settigns you can configure the following properties:
+In the advanced section of the settings you can configure the following properties:
 
 .. image:: /images/dockers/Cumulative_Undo_Advanced_Settings.png
 
