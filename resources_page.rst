@@ -42,11 +42,6 @@ Brush Packs
 
                Al-dy
 
-        * - .. figure:: /images/resource_packs/Resources-vascoBrushes.jpg
-               :target: https://vascobasque.wordpress.com/2014/02/03/modular-brushset-v4/
-
-               Vasco Basqué
-
           - .. figure:: /images/resource_packs/Resources-stalcryBrushes.jpg
                :target: https://www.deviantart.com/stalcry/art/Krita-Custom-Brushes-350338351
 
