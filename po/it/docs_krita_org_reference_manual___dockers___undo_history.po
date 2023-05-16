@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"POT-Creation-Date: 2023-05-16 00:40+0000\n"
 "PO-Revision-Date: 2021-04-16 19:51+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -16,10 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.03.80\n"
-
-#: ../../<generated>:1
-msgid "Split strokes."
-msgstr "Dividi tratteggi."
 
 #: ../../reference_manual/dockers/undo_history.rst:1
 msgid "Overview of the undo history docker."
@@ -41,11 +37,18 @@ msgstr "Cronologia"
 msgid "Undo History"
 msgstr "Annulla la cronologia"
 
-#: ../../reference_manual/dockers/undo_history.rst:20
+#: ../../reference_manual/dockers/undo_history.rst:19
+#: ../../reference_manual/dockers/undo_history.rst:22
+#, fuzzy
+#| msgid "Undo History"
+msgid "Undo History Docker"
+msgstr "Annulla la cronologia"
+
+#: ../../reference_manual/dockers/undo_history.rst:25
 msgid ".. image:: images/dockers/Krita_Undo_History_Docker.png"
 msgstr ".. image:: images/dockers/Krita_Undo_History_Docker.png"
 
-#: ../../reference_manual/dockers/undo_history.rst:21
+#: ../../reference_manual/dockers/undo_history.rst:26
 msgid ""
 "This docker allows you to quickly shift between undo states, and even go "
 "back in time far more quickly than rapidly reusing the :kbd:`Ctrl + Z` "
@@ -55,60 +58,134 @@ msgstr ""
 "annullamento e perfino di tornare indietro nel tempo molto più rapidamente "
 "rispetto alla scorciatoia :kbd:`Ctrl + Z`."
 
-#: ../../reference_manual/dockers/undo_history.rst:23
+#: ../../reference_manual/dockers/undo_history.rst:28
 msgid "Cumulate Undo"
 msgstr "Annullamento cumulativo"
 
-#: ../../reference_manual/dockers/undo_history.rst:26
+#: ../../reference_manual/dockers/undo_history.rst:31
 msgid "Cumulative Undo"
 msgstr "Annullamenti cumulativi"
 
-#: ../../reference_manual/dockers/undo_history.rst:28
-msgid ""
-"Click on the settings icon at the bottom of the Undo History docker. It will "
-"show you a dialog box to enable cumulative undo. You can change these "
-"parameters:"
-msgstr ""
-"Fai clic sull'icona delle impostazioni nella parte inferiore dell'area di "
-"aggancio Annulla la cronologia: comparirà un riquadro di dialogo per "
-"attivare un annullamento cumulativo. Potrai cambiare questi parametri:"
-
-#: ../../reference_manual/dockers/undo_history.rst:30
-msgid "Start merging time"
-msgstr "Tempo di inizio fusione"
-
-#: ../../reference_manual/dockers/undo_history.rst:31
-msgid ""
-"The amount of seconds required to consider a group of strokes to be worth "
-"one undo step."
-msgstr ""
-"La quantità di secondi necessari per considerare l'annullamento di un gruppo "
-"di tratteggi con un solo passaggio."
-
-#: ../../reference_manual/dockers/undo_history.rst:32
-msgid "Group time"
-msgstr "Tempo del gruppo"
-
 #: ../../reference_manual/dockers/undo_history.rst:33
 msgid ""
-"According to this parameter -- groups are made. Every stroke is put into the "
-"same group until two consecutive strokes have a time gap of more than T "
-"seconds. Then a new group is started."
+"Cumulative Undo is a feature of Krita that allows merging similar undo "
+"states basing on their time separation. It makes the undo history cleaner."
 msgstr ""
-"In base a questo parametro vengono creati dei gruppi. Ogni tratteggio è "
-"inserito nello stesso gruppo finché due tratteggi consecutivi sono "
-"distanziati da intervallo di tempo superiore di T secondi. Quando questo si "
-"verifica, viene creato un nuovo gruppo."
 
-#: ../../reference_manual/dockers/undo_history.rst:35
+#: ../../reference_manual/dockers/undo_history.rst:42
 msgid ""
-"A user may want to keep the ability of Undoing/Redoing his/her last N "
-"strokes. Once N is crossed -- the earlier strokes are merged into the "
-"group's first stroke."
+"Cumulative Undo settings are located under :guilabel:`General` -> :guilabel:"
+"`Miscellaneous` page of Krita settings dialog"
 msgstr ""
-"Si potrebbe voler mantenere la capacità di eseguire l'azione di annullare/"
-"rifare per gli ultimi N tratteggi. Una volta che N viene superato, i "
-"tratteggi precedenti vengono fusi nel primo tratteggio del gruppo."
+
+#: ../../reference_manual/dockers/undo_history.rst:45
+#, fuzzy
+#| msgid ".. image:: images/dockers/Krita_Undo_History_Docker.png"
+msgid ".. image:: images/dockers/Cumulative_Undo_General_Settings.png"
+msgstr ".. image:: images/dockers/Krita_Undo_History_Docker.png"
+
+#: ../../reference_manual/dockers/undo_history.rst:46
+msgid ""
+"In the advanced section of the settings you can configure the following "
+"properties:"
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:49
+#, fuzzy
+#| msgid ".. image:: images/dockers/Krita_Undo_History_Docker.png"
+msgid ".. image:: images/dockers/Cumulative_Undo_Advanced_Settings.png"
+msgstr ".. image:: images/dockers/Krita_Undo_History_Docker.png"
+
+#: ../../reference_manual/dockers/undo_history.rst:50
+msgid "Wait before merging strokes"
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:51
+msgid ""
+"The minimal age (in seconds) of the strokes to become subject to merging. "
+"This option allows you to keep undo for last N seconds intact."
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:52
+msgid "Exclude last strokes from merge"
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:53
+msgid ""
+"The minimal number of strokes that undo history should have before merging "
+"will start. This option allows you to keep N last strokes intact."
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:54
+msgid "Max interval group strokes"
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:55
+msgid ""
+"The maximum break the user takes between doing two strokes that can be "
+"considered to belong the same group. The lower the value, the more "
+"irrelevant strokes will be merged."
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:57
+msgid "Max group duration"
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:57
+msgid ""
+"The maximum duration of a single group. When a group becomes too long, Krita "
+"just starts a new one."
+msgstr ""
+
+#: ../../reference_manual/dockers/undo_history.rst:59
+msgid ""
+"Apart from these options, Krita will make sure that strokes of different "
+"colors, brush presets or blending modes are not merged together."
+msgstr ""
+
+#~ msgid "Split strokes."
+#~ msgstr "Dividi tratteggi."
+
+#~ msgid ""
+#~ "Click on the settings icon at the bottom of the Undo History docker. It "
+#~ "will show you a dialog box to enable cumulative undo. You can change "
+#~ "these parameters:"
+#~ msgstr ""
+#~ "Fai clic sull'icona delle impostazioni nella parte inferiore dell'area di "
+#~ "aggancio Annulla la cronologia: comparirà un riquadro di dialogo per "
+#~ "attivare un annullamento cumulativo. Potrai cambiare questi parametri:"
+
+#~ msgid "Start merging time"
+#~ msgstr "Tempo di inizio fusione"
+
+#~ msgid ""
+#~ "The amount of seconds required to consider a group of strokes to be worth "
+#~ "one undo step."
+#~ msgstr ""
+#~ "La quantità di secondi necessari per considerare l'annullamento di un "
+#~ "gruppo di tratteggi con un solo passaggio."
+
+#~ msgid "Group time"
+#~ msgstr "Tempo del gruppo"
+
+#~ msgid ""
+#~ "According to this parameter -- groups are made. Every stroke is put into "
+#~ "the same group until two consecutive strokes have a time gap of more than "
+#~ "T seconds. Then a new group is started."
+#~ msgstr ""
+#~ "In base a questo parametro vengono creati dei gruppi. Ogni tratteggio è "
+#~ "inserito nello stesso gruppo finché due tratteggi consecutivi sono "
+#~ "distanziati da intervallo di tempo superiore di T secondi. Quando questo "
+#~ "si verifica, viene creato un nuovo gruppo."
+
+#~ msgid ""
+#~ "A user may want to keep the ability of Undoing/Redoing his/her last N "
+#~ "strokes. Once N is crossed -- the earlier strokes are merged into the "
+#~ "group's first stroke."
+#~ msgstr ""
+#~ "Si potrebbe voler mantenere la capacità di eseguire l'azione di annullare/"
+#~ "rifare per gli ultimi N tratteggi. Una volta che N viene superato, i "
+#~ "tratteggi precedenti vengono fusi nel primo tratteggio del gruppo."
 
 #~ msgid ""
 #~ ".. image:: images/icons/Krita_mouse_right.png\n"
