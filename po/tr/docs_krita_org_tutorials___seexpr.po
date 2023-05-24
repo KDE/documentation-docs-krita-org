@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2023-02-25 00:17+0300\n"
+"PO-Revision-Date: 2023-05-24 00:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,39 +15,39 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: ../../tutorials/seexpr.rst:0
 msgid ".. image:: images/seexpr/SeExpr_editor.png"
-msgstr ""
+msgstr ".. image:: images/seexpr/SeExpr_editor.png"
 
 #: ../../tutorials/seexpr.rst:0
 msgid ".. image:: images/seexpr/SeExpr_first_render.png"
-msgstr ""
+msgstr ".. image:: images/seexpr/SeExpr_first_render.png"
 
 #: ../../tutorials/seexpr.rst:0
 msgid ".. image:: images/seexpr/SeExpr_save.png"
-msgstr ""
+msgstr ".. image:: images/seexpr/SeExpr_save.png"
 
 #: ../../tutorials/seexpr.rst:0
 msgid ".. image:: images/seexpr/SeExpr_overwrite_preset.png"
-msgstr ""
+msgstr ".. image:: images/seexpr/SeExpr_overwrite_preset.png"
 
 #: ../../tutorials/seexpr.rst:0
 msgid ".. image:: images/seexpr/SeExpr_rename_preset.png"
-msgstr ""
+msgstr ".. image:: images/seexpr/SeExpr_rename_preset.png"
 
 #: ../../tutorials/seexpr.rst:1 ../../tutorials/seexpr.rst:12
 msgid "Introduction to SeExpr"
-msgstr ""
+msgstr "SeExpr'a Giriş"
 
 #: ../../tutorials/seexpr.rst:16
 msgid "This document will introduce you to the SeExpr expression language."
-msgstr ""
+msgstr "Bu belge, sizi SeExpr ifade diliyle tanıştırır."
 
 #: ../../tutorials/seexpr.rst:20
 msgid "What is SeExpr?"
-msgstr ""
+msgstr "SeExpr nedir?"
 
 #: ../../tutorials/seexpr.rst:22
 msgid ""
@@ -57,22 +57,28 @@ msgid ""
 "RenderMan_20/PxrSeExpr.html>`_ a \"scriptable pattern generator and combiner"
 "\"."
 msgstr ""
+"SeExpr, Disney Animation tarafından tasarlanmış, gömülebilir bir ifade "
+"dilidir. Bu dil, uygulamaların devingen bir biçimde üretilmiş içeriği "
+"sunabilmesine olanak tanır. Pixar firması, `belgelendirmelerinde bu dili "
+"<https://renderman.pixar.com/resources/RenderMan_20/PxrSeExpr.html>`_ bir "
+"\"betikle genişletilebilir desen üreticisi ve birleştiricisi\" olarak "
+"tanımlar."
 
 #: ../../tutorials/seexpr.rst:27
 msgid "SeExpr is available within Krita as a Fill Layer."
-msgstr ""
+msgstr "SeExpr, Krita'da bir Dolgu Katman olarak kullanılabilir."
 
 #: ../../tutorials/seexpr.rst:30
 msgid ":ref:`seexpr`"
-msgstr ""
+msgstr ":ref:`seexpr`"
 
 #: ../../tutorials/seexpr.rst:31
 msgid ":ref:`seexpr_fill_layer`"
-msgstr ""
+msgstr ":ref:`seexpr_fill_layer`"
 
 #: ../../tutorials/seexpr.rst:32
 msgid ":ref:`resource_seexpr_scripts`"
-msgstr ""
+msgstr ":ref:`resource_seexpr_scripts`"
 
 #: ../../tutorials/seexpr.rst:33
 msgid ""
@@ -80,24 +86,29 @@ msgid ""
 "<https://krita-artists.org/t/procedural-texture-generator-example-and-"
 "wishes/7638>`_"
 msgstr ""
+"`Krita Artists forumunda <https://krita-artists.org/t/procedural-texture-"
+"generator-example-and-wishes/7638>`_ \"Prosedürsel doku üreteci (örnekler ve "
+"dilekler)\" başlığı"
 
 #: ../../tutorials/seexpr.rst:34
 msgid "`Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_"
-msgstr ""
+msgstr "`Inigo Quilez'in yazıları <https://iquilezles.org/www/index.htm>`_"
 
 #: ../../tutorials/seexpr.rst:35
 msgid "`The Book of Shaders <https://thebookofshaders.com/>`_"
-msgstr ""
+msgstr "`Gölgeleyiciler Kitabı <https://thebookofshaders.com/>`_"
 
 #: ../../tutorials/seexpr.rst:39
 msgid "Background"
-msgstr ""
+msgstr "Arka Plan"
 
 #: ../../tutorials/seexpr.rst:41
 msgid ""
 "To understand what SeExpr is about, we need to differentiate between two "
 "types of graphics, *raster* and *procedural*."
 msgstr ""
+"SeExpr'in ne olduğunu anlamak için iki tür grafik arasındaki ayrımı "
+"bulabilmemiz gereklidir, *raster* ve *oransal*."
 
 #: ../../tutorials/seexpr.rst:44
 msgid ""
@@ -106,6 +117,11 @@ msgid ""
 "memes, are all a multitude of tiny little dots of color, or *pixels*, "
 "arranged into a grid."
 msgstr ""
+"Her gün gördüğünüz birçok bilgisayar üretimi şey -- fotoğraflar, en "
+"sevdiğiniz animenin ekran görüntüleri, mimler -- bunların hepsi ilk "
+"belirttiğimiz sınıfa ait olan, bir ızgaraya dizilmiş tonlarca ufak renk "
+"noktalarından veya daha yaygın olan tanımıyla piksellerden oluşan bir "
+"görseldir."
 
 #: ../../tutorials/seexpr.rst:49
 msgid ""
@@ -115,6 +131,12 @@ msgid ""
 "sample it again (which is sometimes impossible), or edit it with a raster "
 "graphics program, like Krita."
 msgstr ""
+"Raster grafiklerin iki adet dezavantajı vardır. Onları oluşturduğunuz andan "
+"itibaren çözünürlükleri sabir kalır. Onlara yakınlaştırma yaptığınızda "
+"sihirli bir biçimde daha çok ayrıntı bekleyemezsiniz. Onları değiştirmeniz "
+"gerektiğinde ya kaynağa gidip onu yeniden örneklemeniz (bazen bunu yapmak "
+"olanaksızdır) ya da Krita gibi bir raster grafik programıyla düzenlemeniz "
+"gerekir."
 
 #: ../../tutorials/seexpr.rst:55
 msgid ""
@@ -127,64 +149,74 @@ msgid ""
 "three bits of information: its size in pixels, the size of the pixel itself, "
 "and *the total memory needed*."
 msgstr ""
+"Ancak en büyük sorunlardan biri, SD kartlar gibi ikincil depolama veya RAM "
+"gibi programlarımızın kullanabileceği **alan** ile her zaman sınırlı "
+"olmamızdır. Sıkıştırılmadığı sürece, görsel belleği gereksinimleri, "
+"`görselin boyutunda ikinci derecedendir <https://blender.stackexchange.com/"
+"questions/112505/why-is-my-half-resolution-render-taking-a-quarter-of-the-"
+"time-of-the-full-one>`_. Örneğin, Krita'nın :ref:`create_new_document` "
+"iletişim kutusu, size üç parça bilgi sunar: Görselin piksel türünden boyutu, "
+"pikselin kendisinin boyutu ve toplam gereken bellek tutarı."
 
 #: ../../tutorials/seexpr.rst:64
 msgid ".. image:: images/Krita_newfile.png"
-msgstr ""
+msgstr ".. image:: images/Krita_newfile.png"
 
 #: ../../tutorials/seexpr.rst:65
 msgid ""
 "Here's a summary for square textures. Note that the memory needed is for "
 "*one layer only*:"
 msgstr ""
+"İşte kare dokular için bir özet. Gereken bellek *yalnızca bir katman* "
+"içindir:"
 
 #: ../../tutorials/seexpr.rst:69
 msgid "Size"
-msgstr ""
+msgstr "Boyut"
 
 #: ../../tutorials/seexpr.rst:69
 msgid "Memory needed"
-msgstr ""
+msgstr "Gereken bellek"
 
 #: ../../tutorials/seexpr.rst:71
 msgid "256"
-msgstr ""
+msgstr "256"
 
 #: ../../tutorials/seexpr.rst:71
 msgid "256 KB"
-msgstr ""
+msgstr "256 KB"
 
 #: ../../tutorials/seexpr.rst:72
 msgid "512"
-msgstr ""
+msgstr "512"
 
 #: ../../tutorials/seexpr.rst:72
 msgid "1 MB"
-msgstr ""
+msgstr "1 MB"
 
 #: ../../tutorials/seexpr.rst:73
 msgid "1024"
-msgstr ""
+msgstr "1024"
 
 #: ../../tutorials/seexpr.rst:73
 msgid "4 MB"
-msgstr ""
+msgstr "4 MB"
 
 #: ../../tutorials/seexpr.rst:74
 msgid "2048"
-msgstr ""
+msgstr "2048"
 
 #: ../../tutorials/seexpr.rst:74
 msgid "16 MB"
-msgstr ""
+msgstr "16 MB"
 
 #: ../../tutorials/seexpr.rst:75
 msgid "4096"
-msgstr ""
+msgstr "4096"
 
 #: ../../tutorials/seexpr.rst:75
 msgid "64 MB"
-msgstr ""
+msgstr "64 MB"
 
 #: ../../tutorials/seexpr.rst:78
 msgid ""
@@ -193,6 +225,11 @@ msgid ""
 "describe a shape. As they are mathematically defined, they can be resized to "
 "suit your needs without losing resolution."
 msgstr ""
+"Başka bir alternatif ise :ref:`vector_graphics` kullanmaktır. Vektör "
+"grafikler; örneğin, SVG'ler, bir şekli belirtmek için yivler ve Bézier "
+"eğrileri gibi matematikler formüllerden yararlanırlar. Matematiksel olarak "
+"tanımlandıklarından, çözünürlüklerini kaybetmeden gereksinimlerinize göre "
+"yeniden boyutlandırılabilirler."
 
 #: ../../tutorials/seexpr.rst:83
 msgid ""
@@ -203,16 +240,24 @@ msgid ""
 "the texture. And, because it is not limited in its precision, you can render "
 "complex patterns in your layers at completely arbitrary resolution."
 msgstr ""
+"SeExpr ise *prosedürsel grafikler* denen başka bir sınıfa aittir. Vektör "
+"grafiklere benzer olarak, prosedürsel grafikler tanımlarını depolamak için "
+"yalnızca birkaç KB'a gereksinim duyarlar. Ancak onlar matematiksel formüller "
+"kullanmazlar; rengin nasıl hesaplanacağını dokunun her bir noktasına "
+"*kodlarsınız*. Kesinliği sınırlı olmadığı için katmanlarınızdaki karmaşık "
+"desenleri tamamen isteğe bağlı çözünürlükte işleyebilirsiniz."
 
 #: ../../tutorials/seexpr.rst:92
 msgid "Writing a script"
-msgstr ""
+msgstr "Bir betik yazmak"
 
 #: ../../tutorials/seexpr.rst:94
 msgid ""
 "In this tutorial, we'll show you how to write a script in SeExpr, render it "
 "to a layer, and then save it as a preset."
 msgstr ""
+"Bu öğreticide, SeExpr ile nasıl bir betik yazılacağını, katmana nasıl "
+"sunulacağını ve nasıl bir önayar olarak kaydedileceğini göstereceğiz."
 
 #: ../../tutorials/seexpr.rst:97
 msgid ""
@@ -220,20 +265,25 @@ msgid ""
 "Layer. Then select the SeExpr generator from the list. You'll be greeted by "
 "this window:"
 msgstr ""
+":ref:`layer_docker` ögesine gidip yeni bir Dolgu Katman ekleyerek "
+"başlıyoruz. Sonrasında, listeden SeExpr'i seçin. Karşınıza bu pencere "
+"çıkacaktır:"
 
 #: ../../tutorials/seexpr.rst:103
 msgid ""
 "The SeExpr generator dialog is divided into two tabs. For now, we'll stay "
 "on :guilabel:`Options`."
 msgstr ""
+"SeExpr üreteci iletişim kutusu iki sekmeye ayrılmıştır. Şimdilik :guilabel:"
+"`Seçenekler` bölümünde kalacağız."
 
 #: ../../tutorials/seexpr.rst:107
 msgid ":ref:`fill_layers` describes these tabs in more detail."
-msgstr ""
+msgstr ":ref:`fill_layers`, bu sekmeleri ayrıntılı olarak açıklar."
 
 #: ../../tutorials/seexpr.rst:109
 msgid "Let's start by painting a layer in light blue."
-msgstr ""
+msgstr "Açık mavi ile bir katmanı boyayarak başlayalım."
 
 #: ../../tutorials/seexpr.rst:111
 msgid ""
@@ -243,6 +293,11 @@ msgid ""
 "as a *vector*. We'll start by defining the ``$color`` variable and giving it "
 "a value."
 msgstr ""
+"En önce, SeExpr betikleri bir çıktı değişkeni tanımlamalıdır. bunu şimdilik "
+"``$color`` olarak beyan edelim. SeExpr renkleri :ref:`RGB renk uzayında "
+"<model_rgb>` kabul ettiğinden, renk değişkenleri adına *vektör* denilen bir "
+"renk üçlüsüyle tanımlanırlar. ``$color`` değişkenini tanımlayp ona bir değer "
+"vererek başlayalım."
 
 #: ../../tutorials/seexpr.rst:116
 msgid ""
@@ -250,34 +305,41 @@ msgid ""
 "$color`` to something like ``[0.5, 0.5, 1]`` (half lit red, half lit green, "
 "fully lit blue)::"
 msgstr ""
+"Metin kutusuna gidin ve içinde metin varsa silin. Sonrasında, ``$color`` "
+"değişkenini ``[0.5, 0.5, 1]`` gibi bir değere tanımlayın (yarı açık kırmızı, "
+"yarı açık yeşil, tam açık mavi)::"
 
 #: ../../tutorials/seexpr.rst:120
 msgid "$color = [0.5, 0.5, 1];"
-msgstr ""
+msgstr "$color = [0.5, 0.5, 1];"
 
 #: ../../tutorials/seexpr.rst:122
 msgid ""
 "SeExpr needs to know which variable holds the final color value. This is "
 "done by writing at the end, on its own line, the name of the variable::"
 msgstr ""
+"SeExpr'nin, hangi değişkenin nihai renk değerini tuttuğunu bilmesi gerekir. "
+"Bu, son kısımda ayrı bir satırda, değişkenin adı yazılarak yapılır::"
 
 #: ../../tutorials/seexpr.rst:125
 msgid "$color"
-msgstr ""
+msgstr "$color"
 
 #: ../../tutorials/seexpr.rst:127
 msgid "The script should now look like this::"
-msgstr ""
+msgstr "Betik şimdi şöyle görünmelidir::"
 
 #: ../../tutorials/seexpr.rst:129
 msgid ""
 "$color = [0.5, 0.5, 1];\n"
 "$color"
 msgstr ""
+"$color = [0.5, 0.5, 1];\n"
+"$color"
 
 #: ../../tutorials/seexpr.rst:132
 msgid "Click :guilabel:`OK`, and you'll render your first script!"
-msgstr ""
+msgstr ":guilabel:`Tamam`'a tıklayın ve ilk betiğinizi sunun!"
 
 #: ../../tutorials/seexpr.rst:137
 msgid ""
@@ -286,14 +348,21 @@ msgid ""
 "<linear_and_gamma>`, sRGB images. Krita transforms them into your document's "
 "color space using the sRGB-elle-V2-srgbtrc.icc profile."
 msgstr ""
+"Tümüyle kesin olması açısından SeExpr bir **renk yönetimi yapmaz**. Dokuları "
+"her zaman :ref:`32 bit kayan noktalı değer <bit_depth>`, :ref:`gaması "
+"düzeltilmiş <linear_and_gamma>` ve sRGB görseller olarak sunar. Krita onları "
+"sRGB-elle-V2-srgbtrc.icc profilini kullanarak belgenizin renk uzayına "
+"dönüştürür."
 
 #: ../../tutorials/seexpr.rst:143
 msgid "See :ref:`color_managed_workflow` for what this means."
 msgstr ""
+"Bunun ne anlama geldiğini öğrenmek için :ref:`color_managed_workflow` "
+"bölümüne bakın."
 
 #: ../../tutorials/seexpr.rst:147
 msgid "Managing your script using widgets"
-msgstr ""
+msgstr "Araç takımlarını kullanarak betiğinizi yönetmek"
 
 #: ../../tutorials/seexpr.rst:149
 msgid ""
@@ -301,10 +370,13 @@ msgid ""
 "layer's properties by right-clicking on :guilabel:`Fill Layer 1`, and "
 "selecting :guilabel:`Layer Properties...`."
 msgstr ""
+"Değişkenlerinizi tanımlamanın ve yönetmenin başka bir yolu da vardır. :"
+"guilabel:`Dolgu Katman 1` üzerine sağ tıklayıp :guilabel:`Katman "
+"Özellikleri...`'ni seçerek katman özelliklerini açın."
 
 #: ../../tutorials/seexpr.rst:154
 msgid ".. image:: images/seexpr/SeExpr_prop_1.png"
-msgstr ""
+msgstr ".. image:: images/seexpr/SeExpr_prop_1.png"
 
 #: ../../tutorials/seexpr.rst:155
 msgid ""
@@ -312,201 +384,239 @@ msgid ""
 "SeExpr enables a whole chunk of knobs to manage individual variables. In our "
 "example above, you can change ``$color``'s in three ways:"
 msgstr ""
+"Ortadaki kutuyu fark ettiniz mi? Sözdizimi doğru bir betik algıladığında, "
+"SeExpr, değişkenleri teker teker yönetmek için bir sürü düğmeler sunar. "
+"Yukarıdaki örneğimizde, ``$color``'leri üç ayrı biçimde değiştirebilirsiniz:"
 
 #: ../../tutorials/seexpr.rst:159
 msgid "enter the red, green, or blue channel's value in the input fields"
-msgstr ""
+msgstr "girdi alanlarına kırmızı, yeşil ve mavi kanalın değerlerini girin"
 
 #: ../../tutorials/seexpr.rst:160
 msgid "move the little colored sliders to change the respective channel"
 msgstr ""
+"ilgili kanalı değiştirmek için küçük renkli kaydırıcıları hareket ettirin"
 
 #: ../../tutorials/seexpr.rst:161
 msgid ""
 "click on the preview square to the left of the boxes, to select a completely "
 "new color."
 msgstr ""
+"tümüyle yeni bir renk seçmek için kutuların solundaki önizleme karelerine "
+"tıklayın"
 
 #: ../../tutorials/seexpr.rst:163
 msgid ""
 "The last button on the middle box is always :guilabel:`Add new variable`. "
 "Click it and this dialog will open:"
 msgstr ""
+"Ortadaki kutudaki son düğme her zaman :guilabel:`Yeni Değişken Ekle`'dir. "
+"Buna tıkladığınızda aşağıdaki iletişim kutusu açılır:"
 
 #: ../../tutorials/seexpr.rst:167
 msgid ".. image:: images/seexpr/SeExpr_add_variable.png"
-msgstr ""
+msgstr ".. image:: images/seexpr/SeExpr_add_variable.png"
 
 #: ../../tutorials/seexpr.rst:168
 msgid "This dialog shows you all the types of variables that SeExpr accepts:"
 msgstr ""
+"Bu iletişim kutusu, SeExpr'in kabul ettiği tüm değişken türlerini gösterir:"
 
 #: ../../tutorials/seexpr.rst:171
 msgid "Curve and Color curve"
-msgstr ""
+msgstr "Eğri ve Renk Eğrisi"
 
 #: ../../tutorials/seexpr.rst:173
 msgid ""
 "They are the SeExpr version of :ref:`Stop Gradients <resource_gradients>`: "
 "they interpolate a ramp given by a set of values."
 msgstr ""
+"Bunlar, :ref:`Durak Gradyanları <resource_gradients>`'nın SeExpr "
+"sürümleridir; verilen değer kümesiyle bir rampa aradeğerlerler."
 
 #: ../../tutorials/seexpr.rst:175
 msgid ""
 "Curves represent 1D gradients, returning a single float at each evaluation "
 "point."
 msgstr ""
+"Eğriler, 1B gradyanları temsil ederler; her bir değerlendirme noktasında tek "
+"bir kayan noktalı değer döndürürler."
 
 #: ../../tutorials/seexpr.rst:177
 msgid "Color curves represent RGB gradients, returning a Color at each point."
 msgstr ""
+"Renk eğrileri RGB gradyanlarını temsil ederler; her bir noktada bir renk "
+"döndürürler."
 
 #: ../../tutorials/seexpr.rst:178
 msgid "Integers and Floats"
-msgstr ""
+msgstr "Tamsayılar ve Kayan Noktalı Değerler"
 
 #: ../../tutorials/seexpr.rst:180
 msgid "Numbers."
-msgstr ""
+msgstr "Sayılar."
 
 #: ../../tutorials/seexpr.rst:181
 msgid "Vector"
-msgstr ""
+msgstr "Vektör"
 
 #: ../../tutorials/seexpr.rst:183
 msgid "A triplet of floats."
-msgstr ""
+msgstr "Bir kayan noktalı değer üçlüsü."
 
 #: ../../tutorials/seexpr.rst:184
 msgid "Color"
-msgstr ""
+msgstr "Renk"
 
 #: ../../tutorials/seexpr.rst:186
 msgid "A vector representing an RGB color."
-msgstr ""
+msgstr "Bir RGB rengi temsil eden bir vektör."
 
 #: ../../tutorials/seexpr.rst:187
 msgid "Swatch"
-msgstr ""
+msgstr "Örnek"
 
 #: ../../tutorials/seexpr.rst:189
 msgid "A list of Colors."
-msgstr ""
+msgstr "Bir renkler listesi."
 
 #: ../../tutorials/seexpr.rst:190
 msgid "String"
-msgstr ""
+msgstr "Dizi"
 
 #: ../../tutorials/seexpr.rst:192
 msgid "Usually single words."
-msgstr ""
+msgstr "Genelde tek sözcükler."
 
 #: ../../tutorials/seexpr.rst:194
 msgid ""
 "For instance, you could replicate ``$color`` in the :guilabel:`Vector` tab:"
 msgstr ""
+"Örneğin, :guilabel:`Vektör` sekmesinde ``$color`` değişkenini "
+"yineleyebilirsiniz:"
 
 #: ../../tutorials/seexpr.rst:197
 msgid ".. image:: images/seexpr/SeExpr_add_variable_vector.png"
-msgstr ""
+msgstr ".. image:: images/seexpr/SeExpr_add_variable_vector.png"
 
 #: ../../tutorials/seexpr.rst:200
 msgid "Creating your first preset"
-msgstr ""
+msgstr "İlk önayarınızı oluşturmak"
 
 #: ../../tutorials/seexpr.rst:202
 msgid "Once your script is ready, you can reuse it by making a preset."
-msgstr ""
+msgstr "Betiğiniz hazırsa onu bir önayar yaparak yeniden kullanabilirsiniz."
 
 #: ../../tutorials/seexpr.rst:204
 msgid "You can create one through the top bar of the :guilabel:`Options` tab:"
 msgstr ""
+":guilabel:`Seçenekler` sekmesinin üst çubuğundan bir tane oluşturabilirsiniz."
 
 #: ../../tutorials/seexpr.rst:208
 msgid ""
 "Select :guilabel:`Save New SeExpr Preset...` and the following dialog will "
 "open:"
 msgstr ""
+":guilabel:`Yeni SeExpr Önayarı Kaydet` ögesini seçin ve aşağıdaki iletişim "
+"kutusu açılacaktır:"
 
 #: ../../tutorials/seexpr.rst:213
 msgid ""
 "You can edit the name of the preset in the top line edit box, and set a  "
 "thumbnail for easy identification."
 msgstr ""
+"Üst satırdaki düzenleme kutusundan önayarın adını düzenleyebilir ve kolayca "
+"ayırt edebilmek için bir küçük görsel atayabilirsiniz."
 
 #: ../../tutorials/seexpr.rst:215
 msgid ""
 "The dialog will append \"Copy\" to the preset's name if it is a copy of an "
 "existing one. You can change it at will."
 msgstr ""
+"Önayar halihazırda varsa iletişim kutusu adın sonuna \"Kopya\" sonekini "
+"koyar. İstediğiniz zaman değiştirebilirsiniz."
 
 #: ../../tutorials/seexpr.rst:217
 msgid "The dialog provides the following choices for setting a thumbnail:"
 msgstr ""
+"İletişim kutusu, bir küçük görsel ayarlama konusunda aşağıdaki seçenekleri "
+"sunar:"
 
 #: ../../tutorials/seexpr.rst:220
 msgid "Load Existing Thumbnail"
-msgstr ""
+msgstr "Var Olan Küçük Görseli Yükle"
 
 #: ../../tutorials/seexpr.rst:222
 msgid ""
 "If the preset already has a thumbnail (for instance, if you created it from "
 "an existing preset), this button will load and apply it."
 msgstr ""
+"Önayarın halihazırda bir küçük görseli varsa (örneğin var olan bir önayarı "
+"yinelediyseniz) bu düğme onu yükler ve uygular."
 
 #: ../../tutorials/seexpr.rst:223
 msgid "Load Image"
-msgstr ""
+msgstr "Görsel Yükle"
 
 #: ../../tutorials/seexpr.rst:225
 msgid "Applies an image from the filesystem as a thumbnail."
-msgstr ""
+msgstr "Dosya sisteminden alınacak bir görseli küçük görsel olarak uygular."
 
 #: ../../tutorials/seexpr.rst:226
 msgid "Render Script to Thumbnail"
-msgstr ""
+msgstr "Betiği Küçük Görsele Sun"
 
 #: ../../tutorials/seexpr.rst:228
 msgid ""
 "Renders your script to a 256x256 texture, and applies the latter as a "
 "thumbnail."
 msgstr ""
+"Betiğinizi 256 x 256 boyutunda bir doku olarak sunar ve onu bir küçük görsel "
+"olarak uygular."
 
 #: ../../tutorials/seexpr.rst:229
 msgid "Clear Thumbnail"
-msgstr ""
+msgstr "Küçük Görseli Temizle"
 
 #: ../../tutorials/seexpr.rst:231
 msgid ""
 "Deletes the thumbnail. Note that, if the preset is a copy of an existing "
 "one, this can be reverted by clicking :guilabel:`Load Existing Thumbnail`."
 msgstr ""
+"Küçük görseli siler. Önayar, var olan bir önayarın kopyasıyla bu, :guilabel:"
+"`Var Olan Küçük Görseli Yükle` seçeneği kullanılarak geri alınabilir."
 
 #: ../../tutorials/seexpr.rst:235
 msgid "Changing existing presets"
-msgstr ""
+msgstr "Var olan önayarları değiştirmek"
 
 #: ../../tutorials/seexpr.rst:237
 msgid ""
 "If you change a preset's script, you will notice two new buttons in the top "
 "bar of the :guilabel:`Options` tab:"
 msgstr ""
+"Bir önayarın betiğini değiştirirseniz :guilabel:`Seçenekler` sekmesinin üst "
+"kısmında iki yeni düğme fark edeceksiniz:"
 
 #: ../../tutorials/seexpr.rst:241
 msgid ""
 "The reload button will restore the preset to its original properties, while "
 "clicking on :guilabel:`Overwrite Preset` will save your changes."
 msgstr ""
+"Yeniden Yükle düğmesi, önayarı özgün özelliklerine geri yüklerken, :guilabel:"
+"`Önayarın Üzerine Yaz` seçeneğine tıklamak değişiklikleriniz kaydeder."
 
 #: ../../tutorials/seexpr.rst:243
 msgid ""
 "Additionally, you can edit the preset's name by clicking on the rename "
 "button, entering the new name, and clicking on :guilabel:`Save`:"
 msgstr ""
+"Ek olarak, Yeniden Adlandır düğmesine tıklayıp yeni adı girdikten sonra :"
+"guilabel:`Kaydet` düğmesine basarak önayarın adını değiştirebilirsiniz."
 
 #: ../../tutorials/seexpr.rst:251
 msgid "Bundling your presets"
-msgstr ""
+msgstr "Önayarlarınızı demetlemek"
 
 #: ../../tutorials/seexpr.rst:253
 msgid ""
@@ -514,3 +624,6 @@ msgid ""
 "resource in Krita. Follow the instructions in :ref:`resource_management` to "
 "create your own bundles."
 msgstr ""
+"Betiklerinizi paylaşmak çok kolaydır! SeExpr betik önayarlarının Krita'daki "
+"diğer özkaynaklardan bir ayrımı yoktur. Kendi demetlerinizi oluşturmak için :"
+"ref:`resource_management` bölümündeki yönergeleri izleyin."
