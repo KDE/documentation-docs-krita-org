@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 00:13+0000\n"
-"PO-Revision-Date: 2023-02-25 00:17+0300\n"
+"PO-Revision-Date: 2023-05-24 00:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: ../../tutorials/saving-for-the-web.rst:1
 msgid "Tutorial for saving images for the web."
-msgstr ""
+msgstr "Görselleri web için kaydetme öğreticisi."
 
 #: ../../tutorials/saving-for-the-web.rst:13
 msgid "Saving For The Web"
-msgstr ""
+msgstr "Web için Kaydetmek"
 
 #: ../../tutorials/saving-for-the-web.rst:15
 msgid ""
@@ -35,16 +35,26 @@ msgid ""
 "only could look at ``*.kra`` files! So instead, we optimise our images for "
 "the web."
 msgstr ""
+"Krita'nın öntanımlı kaydetme biçimi :ref:`file_kra` biçimidir. Bu biçim,"
+" Krita'nın bir görselde manipüle edebileceği her şeyi kaydeder: Katmanlar,"
+" Süzgeçler, Yardımcılar, Maskeler, Renk Uzayları vb. Bu biçimde pek çok veri"
+" depolandığından ``*.kra`` dosyalarının boyutu pek büyüktür. Bu yüzden bu"
+" dosyaları internete yüklemek güçtür ve pek önerilmez. Bir de bu büyüklükteki"
+" ``*.kra`` dosyalarına cep telefonunuzdan baktığınızı düşünün; insanların"
+" taşınabilir veri kotalarını su gibi içmek istemezsiniz. Bu yüzden,"
+" görsellerimizi internete yüklemeden önce onları eniyilemeliyiz."
 
 #: ../../tutorials/saving-for-the-web.rst:17
 msgid "There are a few steps involved:"
-msgstr ""
+msgstr "Atmanız gereken birkaç adım vardır:"
 
 #: ../../tutorials/saving-for-the-web.rst:19
 msgid ""
 "Save as a ``.kra``. This is your working file and serves as a backup if you "
 "make any mistakes."
 msgstr ""
+"Önce bir ``*.kra`` dosyası olarak kaydedin. Bu sizin çalışma dosyanız ve aynı"
+" zamanda bir yanlış yapmanız durumunda başvuracağınız yedeğinizdir."
 
 #: ../../tutorials/saving-for-the-web.rst:21
 msgid ""
@@ -54,6 +64,11 @@ msgid ""
 "don't be scared if Krita freezes for a few seconds. It'll become responsive "
 "soon enough."
 msgstr ""
+"Tüm katmanlarınızı düzleştirin. Bu, tüm katmanlarınızı tek bir katmana"
+" yerleştirir. :menuselection:`Katman --> Görseli Düzleştir` yolunu izleyin"
+" veya :kbd:`Kontrol + Üst Karakter + E` kısayolunu kullanın. Düzleştirme"
+" bayağı bir vakit alabilir; Krita birkaç saniyeliğine donarsa panik yapmayın."
+" Kısa süre içinde yeniden yanıt verir duruma gelecektir."
 
 #: ../../tutorials/saving-for-the-web.rst:23
 msgid ""
@@ -63,6 +78,12 @@ msgid ""
 "to **RGB**, **8bit** and **sRGB-elle-v2-srgbtrc.icc** respectively. If you "
 "are coming from a linear space, uncheck **little CMS** optimisations"
 msgstr ""
+"Renk uzayını 8 bit sRGB olarak dönüştürün (eğer zaten bu değilse). Bu, dosya"
+" boyutunu indirmenin önemli bir adımıdır ve örneğin PNG, 16 bit değerlerden"
+" daha fazlasını kullanamaz. :menuselection:`Görsel --> Görsel Renk Uzayını"
+" Dönüştür...` yolunu izleyin ve seçenekleri sırasıyla **RGB**, **8 bit** ve"
+" **sRGB-elle-v2-srgbtrc.icc** olarak değiştirin. Doğrusal bir uzaydan"
+" geliyorsanız **little CMS** eniyilemelerinin işaretini kaldırın."
 
 #: ../../tutorials/saving-for-the-web.rst:25
 msgid ""
@@ -73,6 +94,14 @@ msgid ""
 "by setting the **Resolution** under **Print Size** to **72** dots per inch. "
 "Then press **OK** to have everything resized."
 msgstr ""
+"Yeniden boyutlandırın! :menuselection:`Görsel --> Görseli Yeni Boyuta"
+" Ölçekle...` yolunu izleyin veya :kbd:`Kontrol + Seçenek + I` kısayolunu"
+" kullanın. Bu, bir yeniden boyutlandırma menüsünü getirir. Yeniden"
+" boyutlandırmanın önemli ilkelerinden bir tanesi, her iki boyutun da 1200"
+" pikselden daha az olmasına dikkat etmektir (Yüksek Belirginlik boyutu)."
+" Bunu, **Yazdırma Boyutu** altındaki **Çözünürlük** değerini inç başına 72"
+" nokta olarak ayarlayarak elde edebilirsiniz. Sonrasında işlemin tamamlanması"
+" için **Tamam**'a basın."
 
 #: ../../tutorials/saving-for-the-web.rst:27
 msgid ""
@@ -84,24 +113,34 @@ msgid ""
 "best off adding a sharpen filter mask on top of the stack and lowering its "
 "opacity till you feel the sharpness is appropriate."
 msgstr ""
+"Görseli biraz keskinleştirin. Bu, özellikle sosyal medya için gereklidir."
+" Sosyal medya siteleri genelde görsellerinizi bulanıklaşacak biçimde"
+" küçültmeye çalışırlar; çünkü genelde fotoğrafların yükleneceğini"
+" varsayarlar, çizimlerin/boyamaların değil. Görsellerinizin keskin kalmasını"
+" sağlamak için öncesinde bir keskinleştirme süzgeci uygulamak yararlı"
+" olacaktır. Keskinleştirme süzgeci özünde pek güçlü olduğundan, yığının en"
+" üstüne bir keskinleştirme süzgeç maskesi uygulayıp uygun keskinlik değerine"
+" ulaştığınızı düşününceye kadar matlığını indirmeniz yapabileceğinizin en"
+" iyisi olacaktır."
 
 #: ../../tutorials/saving-for-the-web.rst:29
 msgid ""
 "Save as a web-safe image format. There's three that are especially "
 "recommended:"
 msgstr ""
+"Web'e uygun bir görsel biçiminde kaydedin. Üç biçim özellikle öne çıkar:"
 
 #: ../../tutorials/saving-for-the-web.rst:32
 msgid "JPG"
-msgstr ""
+msgstr "JPG"
 
 #: ../../tutorials/saving-for-the-web.rst:34
 msgid "Use this for images with a lot of different colors, like paintings."
-msgstr ""
+msgstr "Tablolar gibi pek çok değişik renk içeren görsellerde kullanın."
 
 #: ../../tutorials/saving-for-the-web.rst:37
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 #: ../../tutorials/saving-for-the-web.rst:39
 msgid ""
@@ -109,24 +148,29 @@ msgid ""
 "comics and pixel-art. Select :guilabel:`Save as indexed PNG, if possible` to "
 "optimise even more."
 msgstr ""
+"Az renkli veya siyah-beyaz görsellerde kullanın (örneğin piksel sanatı veya"
+" karikatürler için). Daha da eniyilemek için :guilabel:`Olanaklıysa"
+" indekslenmiş PNG olarak kaydet` seçeneğini seçin."
 
 #: ../../tutorials/saving-for-the-web.rst:42
 msgid "GIF"
-msgstr ""
+msgstr "GIF"
 
 #: ../../tutorials/saving-for-the-web.rst:44
 msgid ""
 "Only use this for animation (will be supported this year) or images with a "
 "super low color count, because they will get indexed."
 msgstr ""
+"Renkler indeksleneceğinden, bunu yalnızca canlandırmalar veya çok düşük renk"
+" sayısına sahip görselelr için kullanın."
 
 #: ../../tutorials/saving-for-the-web.rst:47
 msgid "Saving with Transparency"
-msgstr ""
+msgstr "Saydamlıkla Kaydetmek"
 
 #: ../../tutorials/saving-for-the-web.rst:50
 msgid ".. image:: images/Save_with_transparency.png"
-msgstr ""
+msgstr ".. image:: images/Save_with_transparency.png"
 
 #: ../../tutorials/saving-for-the-web.rst:51
 msgid ""
@@ -137,7 +181,14 @@ msgid ""
 "`Filters --> Colors --> Color to Alpha...`). Then, save as PNG and tick "
 "**Store alpha channel (transparency)**"
 msgstr ""
+"Saydamlıkla kaydetmek yalnızca GIF ve PNG ile olanaklıdır. Saydamlık"
+" damalarını gördüğünüzden emin olun (bu, alt katmanları gizleyerek,"
+" :menuselection:`Görsel --> Görsel Arka Plan Rengi ve Saydamlığı...`"
+" üzerinden projeksiyon rengini değiştirerek veya :menuselection:`Süzgeçler --"
+"> Renkler --> Renkten Alfaya...` kullanılarak yapılabilir). Sonrasında, PNG"
+" olarak kaydedin ve **Alfa kanalını depola (saydamlık)** seçeneğini"
+" işaretleyin."
 
 #: ../../tutorials/saving-for-the-web.rst:53
 msgid "Save your image, upload, and show it off!"
-msgstr ""
+msgstr "Görselinizi kaydedin, karşıya yükleyin ve millete gösterin!"
