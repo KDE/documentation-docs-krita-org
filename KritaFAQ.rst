@@ -358,6 +358,13 @@ and/or in Krita packages obtained from third parties (e.g. in some Linux distrib
 If you are on Linux the best way to resolve this is to use an official package from `krita.org <https://krita.org>`_, such as the
 AppImage, Snap/Flatpak or PPA releases that are officially provided on the `download page <https://krita.org/download/krita-desktop/>`_.
 
+I turned on HiDPI support, but the UI is still really small
+-----------------------------------------------------------
+
+Try to set the ``QT_AUTO_SCREEN_SCALE_FACTOR`` environment variable to ``1``.
+Learn more about how your setup can affect Qt's handling of HiDPI scaling on
+`the documentation site of Qt <https://doc.qt.io/qt-5/highdpi.html>`.
+
 Tablets
 =======
 
