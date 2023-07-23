@@ -4,25 +4,26 @@
 # This file is distributed under the same license as the Krita Manual package.
 #
 # Automatically generated, 2019.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020, 2022.
+# Ronald Stroethoff <stroe43@zonnet.nl>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-05-07 10:16+0200\n"
+"POT-Creation-Date: 2022-08-10 00:40+0000\n"
+"PO-Revision-Date: 2022-08-19 15:52+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.0\n"
+"X-Generator: Lokalize 22.04.3\n"
 
 #: ../../<generated>:1
 msgid "Activate Angle Snap"
-msgstr "Onder een hoek aanhaken activeren"
+msgstr "Onder een hoek vastklikken activeren"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -30,7 +31,7 @@ msgid ""
 "   :alt: mouseleft"
 msgstr ""
 ".. image:: images/icons/Krita_mouse_left.png\n"
-"   :alt: muislinks"
+"   :alt: linkermuisknop"
 
 #: ../../<rst_epilog>:4
 msgid ""
@@ -38,7 +39,7 @@ msgid ""
 "   :alt: mouseright"
 msgstr ""
 ".. image:: images/icons/Krita_mouse_right.png\n"
-"   :alt: muisrechts"
+"   :alt: rechtermuisknop"
 
 #: ../../<rst_epilog>:34
 msgid ""
@@ -46,11 +47,11 @@ msgid ""
 "   :alt: toolbeziercurve"
 msgstr ""
 ".. image:: images/icons/bezier_curve.svg\n"
-"   :alt: toolbeziercurve"
+"   :alt: hulpmiddel voor bezierkromme"
 
 #: ../../reference_manual/tools/path.rst:1
 msgid "Krita's path tool reference."
-msgstr "Verwijzing naar hulpmiddel Pad van Krita."
+msgstr "Beschrijving van het onderdeel in Krita voor de creatie van een pad."
 
 #: ../../reference_manual/tools/path.rst:11
 msgid "Tools"
@@ -74,79 +75,136 @@ msgstr "Pen"
 
 #: ../../reference_manual/tools/path.rst:17
 msgid "Bezier Curve Tool"
-msgstr "Hulpmiddel voor Bezierkromme"
+msgstr "Gereedschap voor Bezierkromme"
 
 #: ../../reference_manual/tools/path.rst:19
 msgid "|toolbeziercurve|"
-msgstr ""
+msgstr "|hulpmiddel voor bezierkromme|"
 
 #: ../../reference_manual/tools/path.rst:21
 msgid ""
-"You can draw curves by using this tool. Click the |mouseleft| to indicate "
-"the starting point of the curve, then click again for consecutive control "
-"points of the curve."
+"You can draw curves by using this tool. Click |mouseleft| to indicate the "
+"starting point of the curve, then click again for consecutive control points "
+"of the curve. While creating a control point, drag to create the handles, "
+"they will show as red lines."
 msgstr ""
+"U kunt krommen tekenen met dit hulpmiddel. Klik met de |mouseleft| om het "
+"startpunt van de kromme aan te geven, klik daarna opnieuw voor opvolgende "
+"besturingspunten van de kromme. Tijdens het aanmaken van een besturingspunt, "
+"sleep om de hendels aan te maken, ze zullen als rode lijnen getoond worden."
 
 #: ../../reference_manual/tools/path.rst:23
 msgid ""
-":program:`Krita` will show a blue line with two handles when you add a "
-"control point. You can drag these handles to change the direction of the "
-"curve in that point."
-msgstr ""
-
-#: ../../reference_manual/tools/path.rst:25
-msgid ""
-"On a vector layer, you can click on a previously inserted control point to "
-"modify it. With an intermediate control point (i.e. a point that is not the "
-"starting point and not the ending point), you can move the direction handles "
+"With an intermediate control point (i.e. a point that is not the starting "
+"point and not the ending point), you can move the direction handles "
 "separately to have the curve enter and leave the point in different "
 "directions. After editing a point, you can just click on the canvas to "
-"continue adding points to the curve."
+"continue adding points to the curve. When creating a path on a vector layer, "
+"the resulting path can be further edited with the :ref:`shape_edit_tool`."
 msgstr ""
+"Bij een tussenliggende controlepunt (d.w.z. een punt dat geen startpunt en "
+"geen eindpunt is), kunt richting-hendels separaat verplaatsen om de kromme "
+"in verschillende richtingen bij het punt aan te laten kommen en te laten "
+"vertrekken. Nadat u een punt heeft bewerkt, kunt u gewoon op het werkvlak "
+"klikken om meer punten aan de kromme toe te voegen. Bij het aanmaken van een "
+"pad op een vectorlaag, kan het resulterende pad verder bewerkt worden met "
+"de :ref:`shape_edit_tool`."
+
+#: ../../reference_manual/tools/path.rst:27
+msgid ".. image:: images/tools/path_tool_usage.png"
+msgstr ".. image:: images/tools/path_tool_usage.png"
 
 #: ../../reference_manual/tools/path.rst:27
 msgid ""
-"Pressing the :kbd:`Del` key will remove the currently selected control point "
-"from the curve. Double-click the |mouseleft| on any point of the curve or "
-"press the :kbd:`Enter` key to finish drawing, or press the :kbd:`Esc` key to "
-"cancel the entire curve. You can use the :kbd:`Ctrl` key while keeping the |"
-"mouseleft| pressed to move the entire curve to a different position."
+"The path preview that shows while drawing a path. The start of the path is "
+"indicated with a white square, the preview for the path itself in black, and "
+"the red dotted lines being the control points for the current handle."
 msgstr ""
+"Het voorbeeld van het pad dat getoond wordt tijdens het tekenen van een pad. "
+"Het begin van het pad wordt aangegeven met een wit vierkantje, het voorbeeld "
+"van het pad zelf is zwart en de rode gestippelde lijnen zijn de "
+"besturingspunten voor de huidige hendel."
 
 #: ../../reference_manual/tools/path.rst:29
 msgid ""
-"While drawing the :kbd:`Ctrl` key while dragging will push the handles both "
-"ways. The :kbd:`Alt` key will create a sharp corner, and the :kbd:`Shift` "
-"key will allow you to make a handle while at the end of the curve. |"
-"mouseright| will undo the last added point."
+"Double-click |mouseleft| on any point of the curve or press the :kbd:`Enter` "
+"key to finish drawing, or press the :kbd:`Esc` key to cancel the entire "
+"curve."
 msgstr ""
+"Dubbelklik |mouseleft| op een punt van de kromme of druk op de toets :kbd:"
+"`Enter` om het tekenen te beëindigen of druk op de toets :kbd:`Esc` om de "
+"gehele kromme te annuleren."
 
-#: ../../reference_manual/tools/path.rst:32
+#: ../../reference_manual/tools/path.rst:31
+msgid ""
+"While drawing a curve, pressing the :kbd:`Ctrl` key while dragging will push "
+"the handles both ways. The :kbd:`Alt` key will create a sharp corner, and "
+"the :kbd:`Shift` key will allow you to make a handle while at the end of the "
+"curve. |mouseright| will undo the last added point."
+msgstr ""
+"Bij het tekenen van een kromme de :kbd:`Ctrl`-toets indrukt tijdens het "
+"verslepen dan worden de hendels naar beiden zijden geduwd. De :kbd:`Alt`-"
+"toets creëert een hoek, en met de :kbd:`Shift`-toets kunt u aan het eind van "
+"de kromme een hendel creëren. |mouseright| verwijdert de laatst toegevoegde "
+"punt."
+
+#: ../../reference_manual/tools/path.rst:34
 msgid "Tool Options"
-msgstr "Hulpmiddelopties"
+msgstr "Instellingen van dit onderdeel"
 
-#: ../../reference_manual/tools/path.rst:36
+#: ../../reference_manual/tools/path.rst:38
 msgid "Autosmooth Curve"
 msgstr "Automatisch kromme gladstrijken"
 
-#: ../../reference_manual/tools/path.rst:37
+#: ../../reference_manual/tools/path.rst:39
 msgid ""
 "Toggling this will have nodes initialize with smooth curves instead of "
 "angles. Untoggle this if you want to create sharp angles for a node. This "
-"will not affect curve sharpness from dragging after clicking."
+"will affect curve sharpness from dragging after clicking."
 msgstr ""
+"Als u dit inschakelt dan zijn er bij de knooppunten mooie bochten in plaats "
+"van hoeken. Schakel dit uit als u bij een knooppunt hoeken wilt hebben. Dit "
+"beïnvloedt na het klikken de scherpte van de kromme na het verslepen."
 
-#: ../../reference_manual/tools/path.rst:39
+#: ../../reference_manual/tools/path.rst:41
 msgid "Angle Snapping Delta"
-msgstr "Delta voor onder een hoek aanhaken"
-
-#: ../../reference_manual/tools/path.rst:40
-msgid "The angle to snap to."
-msgstr ""
+msgstr "Delta voor onder een hoek vastklikken"
 
 #: ../../reference_manual/tools/path.rst:42
+msgid "The angle to snap to."
+msgstr "De hoek om op vast te klikken."
+
+#: ../../reference_manual/tools/path.rst:44
 msgid ""
 "Angle snap will make it easier to have the next line be at a specific angle "
 "of the current. The angle is determined by the :guilabel:`Angle Snapping "
 "Delta`."
 msgstr ""
+"Hoek vastklikken maakt het makkelijker om de volgende lijn onder een "
+"bepaalde hoek ten opzichte van de huidige lijn te trekken. De hoek stelt u "
+"in bij :guilabel:`Delta voor onder een hoek vastklikken`."
+
+#~ msgid ""
+#~ ":program:`Krita` will show a blue line with two handles when you add a "
+#~ "control point. You can drag these handles to change the direction of the "
+#~ "curve in that point."
+#~ msgstr ""
+#~ ":program:`Krita` zal een blauwe lijn tonen met twee handvatten wanneer u "
+#~ "een besturingspunt toevoegt. U kunt deze handvatten verslepen om de "
+#~ "richting van de kromme in dat punt te wijzigen."
+
+#~ msgid ""
+#~ "Pressing the :kbd:`Del` key will remove the currently selected control "
+#~ "point from the curve. Double-click the |mouseleft| on any point of the "
+#~ "curve or press the :kbd:`Enter` key to finish drawing, or press the :kbd:"
+#~ "`Esc` key to cancel the entire curve. You can use the :kbd:`Ctrl` key "
+#~ "while keeping the |mouseleft| pressed to move the entire curve to a "
+#~ "different position."
+#~ msgstr ""
+#~ "Als u op de :kbd:`Del`-toets drukt dan verwijderd u de geselecteerde "
+#~ "controlepunt van de kromme. Als u dubbelklikt met de |mouseleft| op enig "
+#~ "punt van de kromme of u drukt op de :`Enter`-toets dan stopt u met "
+#~ "tekenen, en als u de :kbd:`Esc`-toets indrukt dan verwijdert u de hele "
+#~ "kromme. Als u de :kbd:`Ctrl`-toets indrukt terwijl u de |mouseleft| "
+#~ "ingedrukt houd dan kunt u de hele kromme naar een andere locatie "
+#~ "verplaatsen."

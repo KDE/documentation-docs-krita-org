@@ -1,0 +1,599 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2021-02-19 19:42-0800\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: ../../tutorials/seexpr.rst:0
+msgid ".. image:: images/seexpr/SeExpr_editor.png"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:0
+msgid ".. image:: images/seexpr/SeExpr_first_render.png"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:0
+msgid ".. image:: images/seexpr/SeExpr_save.png"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:0
+msgid ".. image:: images/seexpr/SeExpr_overwrite_preset.png"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:0
+msgid ".. image:: images/seexpr/SeExpr_rename_preset.png"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:1 ../../tutorials/seexpr.rst:12
+msgid "Introduction to SeExpr"
+msgstr "SeExpr 入門"
+
+#: ../../tutorials/seexpr.rst:16
+msgid "This document will introduce you to the SeExpr expression language."
+msgstr "このドキュメントでは SeExpr 式言語の紹介をします。"
+
+#: ../../tutorials/seexpr.rst:20
+msgid "What is SeExpr?"
+msgstr "SeExpr って何？"
+
+#: ../../tutorials/seexpr.rst:22
+msgid ""
+"SeExpr is an embeddable expression language, designed by Disney Animation, "
+"that allows host applications to render dynamically generated content. Pixar "
+"calls it `in its documentation <https://renderman.pixar.com/resources/"
+"RenderMan_20/PxrSeExpr.html>`_ a \"scriptable pattern generator and combiner"
+"\"."
+msgstr ""
+"SeExpr はディズニーアニメーションによって設計された埋め込み可能型式言語で、ホ"
+"ストアプリケーションが動的に生成されたコンテンツをレンダーできます。ピクサー"
+"は `ドキュメントの中で <https://renderman.pixar.com/resources/RenderMan_20/"
+"PxrSeExpr.html>`_ \"パターン生成合成スクリプト\" と呼んでいます。"
+
+#: ../../tutorials/seexpr.rst:27
+msgid "SeExpr is available within Krita as a Fill Layer."
+msgstr "SeExpr は Krita 内では塗りつぶしレイヤーとして利用できます。"
+
+#: ../../tutorials/seexpr.rst:30
+msgid ":ref:`seexpr`"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:31
+msgid ":ref:`seexpr_fill_layer`"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:32
+msgid ":ref:`resource_seexpr_scripts`"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:33
+msgid ""
+"`\"Procedural texture generator (example and wishes)\" on Krita Artists "
+"<https://krita-artists.org/t/procedural-texture-generator-example-and-"
+"wishes/7638>`_"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:34
+msgid "`Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:35
+msgid "`The Book of Shaders <https://thebookofshaders.com/>`_"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:39
+msgid "Background"
+msgstr "背景"
+
+#: ../../tutorials/seexpr.rst:41
+msgid ""
+"To understand what SeExpr is about, we need to differentiate between two "
+"types of graphics, *raster* and *procedural*."
+msgstr ""
+"SeExpr が何かを理解するには、*ラスター型* と *手続き型* という二つのグラ"
+"フィックの区別をする必要があります。"
+
+#: ../../tutorials/seexpr.rst:44
+msgid ""
+"The vast majority of the computer-generated stuff you see every day belong "
+"to the first type-- images like photos, your favorite anime screenshots, "
+"memes, are all a multitude of tiny little dots of color, or *pixels*, "
+"arranged into a grid."
+msgstr ""
+"今日見かけるコンピュータ合成の大部分のものは前者で-- 写真のような画像、大好き"
+"なアニメのスクリーンショット、コラはすべて小さい色の点の集まり、*ピクセル* "
+"が、碁盤目状に並べられています。"
+
+#: ../../tutorials/seexpr.rst:49
+msgid ""
+"Raster graphics have two drawbacks. First, once you create them, their "
+"resolution is **fixed**. You cannot zoom in and magically get any more "
+"detail. And if you need to change them, either you go back to the source and "
+"sample it again (which is sometimes impossible), or edit it with a raster "
+"graphics program, like Krita."
+msgstr ""
+"ラスターグラフィックには二つの欠点があります。一つは一度作ってしまうと、解像"
+"度が **固定** されてしまいます。ズームして魔法のように細部を得られたりはしま"
+"せん。もし変更する必要があれば、ソースに戻って再度標本抽出する必要があり(それ"
+"は時々不可能なことで)、もしくは Krita のようなラスターグラフィックプログラム"
+"で編集します。"
+
+#: ../../tutorials/seexpr.rst:55
+msgid ""
+"One of the biggest problems, however, is that we are always limited by the "
+"**space** our programs can use; either secondary storage, like SD cards, or "
+"RAM. Unless compressed, image memory needs are `quadratic in the size of the "
+"image <https://blender.stackexchange.com/questions/112505/why-is-my-half-"
+"resolution-render-taking-a-quarter-of-the-time-of-the-full-one>`_. For a "
+"quick example, the :ref:`create_new_document` dialog of Krita tells you "
+"three bits of information: its size in pixels, the size of the pixel itself, "
+"and *the total memory needed*."
+msgstr ""
+"しかし最も大きい問題の一つが、プログラムで使える **スペース** は補助記憶装置"
+"の SD カードや RAM でさえ常に限られていることです。圧縮しない限り `画像サイズ"
+"の二乗に比例して  <https://blender.stackexchange.com/questions/112505/why-is-"
+"my-half-resolution-render-taking-a-quarter-of-the-time-of-the-full-one>`_ 必"
+"要になります。簡単には例えば、Krita の :ref:`create_new_document` ダイアログ"
+"では3つのビット情報を教えてくれます: ピクセルでのサイズ、ピクセル自体のサイ"
+"ズ、それから *必要になる総メモリ* です。"
+
+#: ../../tutorials/seexpr.rst:64
+msgid ".. image:: images/Krita_newfile.png"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:65
+msgid ""
+"Here's a summary for square textures. Note that the memory needed is for "
+"*one layer only*:"
+msgstr ""
+"四角形のテクスチャのまとめです。ここで必要とされるメモリは *1レイヤーのみ* で"
+"あることに留意してください。"
+
+#: ../../tutorials/seexpr.rst:69
+msgid "Size"
+msgstr "サイズ"
+
+#: ../../tutorials/seexpr.rst:69
+msgid "Memory needed"
+msgstr "必要メモリ"
+
+#: ../../tutorials/seexpr.rst:71
+msgid "256"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:71
+msgid "256 KB"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:72
+msgid "512"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:72
+msgid "1 MB"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:73
+msgid "1024"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:73
+msgid "4 MB"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:74
+msgid "2048"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:74
+msgid "16 MB"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:75
+msgid "4096"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:75
+msgid "64 MB"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:78
+msgid ""
+"An alternative is to use :ref:`vector_graphics`. Vector graphics, for "
+"instance SVGs, employ mathematic formulae like splines and Bézier curves to "
+"describe a shape. As they are mathematically defined, they can be resized to "
+"suit your needs without losing resolution."
+msgstr ""
+"他には :ref:`vector_graphics` があります。ベクターグラフィック、例えば SVG "
+"は、形を表現するためにベジェ曲線やスプラインといった数式に依存しています。数"
+"学定義に依るため、解像度を失うことなく必要とするサイズにリサイズできます。"
+
+#: ../../tutorials/seexpr.rst:83
+msgid ""
+"SeExpr belongs to a different class, *procedural graphics*. Similar to "
+"vector graphics, procedural graphics only need a few KBs of secondary "
+"storage for their definition. But they are not defined by mathematical "
+"formulae; you actually *code* how the color is calculated at each point of "
+"the texture. And, because it is not limited in its precision, you can render "
+"complex patterns in your layers at completely arbitrary resolution."
+msgstr ""
+"SeExpr は異なるカテゴリに位置する、*手続き型グラフィック* です。ベクターグラ"
+"フィックと似ていて、手続き型グラフィックは定義に補助記憶装置に数KBしか必要と"
+"しません。しかし数式に依るのではなく; テクスチャに使われるそれぞれの点の色を"
+"計算するために *プログラム* します。その上精度に縛られることはないので、レイ"
+"ヤーの複雑なパターンを完全に任意の解像度でレンダーすることができます。"
+
+#: ../../tutorials/seexpr.rst:92
+msgid "Writing a script"
+msgstr "スクリプトを書く"
+
+#: ../../tutorials/seexpr.rst:94
+msgid ""
+"In this tutorial, we'll show you how to write a script in SeExpr, render it "
+"to a layer, and then save it as a preset."
+msgstr ""
+"このチュートリアルでは SeExpr でのスクリプトの描き方、レイヤーにレンダーし、"
+"プリセットとして保存します。"
+
+#: ../../tutorials/seexpr.rst:97
+msgid ""
+"We'll start by going to the :ref:`layer_docker`, and adding a new Fill "
+"Layer. Then select the SeExpr generator from the list. You'll be greeted by "
+"this window:"
+msgstr ""
+"始めに :ref:`layer_docker` に行き、新しい塗りつぶしレイヤーを追加します。リス"
+"トから SeExpr ジェネレーターを選択します。このウィンドウがお出迎えしてくれま"
+"す:"
+
+#: ../../tutorials/seexpr.rst:103
+msgid ""
+"The SeExpr generator dialog is divided into two tabs. For now, we'll stay "
+"on :guilabel:`Options`."
+msgstr ""
+"SeExpr ジェネレーターダイアログは二つのタブに分かれています。とりあえずは :"
+"guilabel:`Options` を見ます。"
+
+#: ../../tutorials/seexpr.rst:107
+msgid ":ref:`fill_layers` describes these tabs in more detail."
+msgstr "タブについての詳しい説明は :ref:`fill_layers` にあります。"
+
+#: ../../tutorials/seexpr.rst:109
+msgid "Let's start by painting a layer in light blue."
+msgstr "まずレイヤーをライトブルーに塗りましょう。"
+
+#: ../../tutorials/seexpr.rst:111
+msgid ""
+"First, SeExpr scripts must define an output variable, let's call it ``"
+"$color``. As SeExpr thinks of colors in the :ref:`RGB color "
+"space<model_rgb>`, color variables are defined by a triplet of numbers known "
+"as a *vector*. We'll start by defining the ``$color`` variable and giving it "
+"a value."
+msgstr ""
+"最初に、SeExpr は出力変数を定義する必要があるので、``$color`` としましょう。"
+"SeExpr は :ref:`RGB 色空間<model_rgb>` で色を考えるので、色変数は *ベクター* "
+"として知られる3連の数により定義されます。``$color`` 変数を定義し値を与えると"
+"ころから始めます。"
+
+#: ../../tutorials/seexpr.rst:116
+msgid ""
+"Go to the text box, and clear it if it has any text. Then, define and set ``"
+"$color`` to something like ``[0.5, 0.5, 1]`` (half lit red, half lit green, "
+"fully lit blue)::"
+msgstr ""
+"テキストボックスに行き、もし何かテキストがあればすべてクリアします。それから "
+"``$color`` を宣言し ``[0.5, 0.5, 1]`` のように設定します (半分赤、半分緑、全"
+"青)::"
+
+#: ../../tutorials/seexpr.rst:120
+msgid "$color = [0.5, 0.5, 1];"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:122
+msgid ""
+"SeExpr needs to know which variable holds the final color value. This is "
+"done by writing at the end, on its own line, the name of the variable::"
+msgstr ""
+"SeExpr はどの変数が最後の色の値を持っているか知らなければなりません。これは変"
+"数名を、最後の行の、最後に書きます。"
+
+#: ../../tutorials/seexpr.rst:125
+msgid "$color"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:127
+msgid "The script should now look like this::"
+msgstr "スクリプトはこのようになっているはずです::"
+
+#: ../../tutorials/seexpr.rst:129
+msgid ""
+"$color = [0.5, 0.5, 1];\n"
+"$color"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:132
+msgid "Click :guilabel:`OK`, and you'll render your first script!"
+msgstr ""
+":guilabel:`OK` をクリックし、最初のスクリプトをレンダーしてみましょう！"
+
+#: ../../tutorials/seexpr.rst:137
+msgid ""
+"To be absolutely precise, SeExpr **has no color management**. It always "
+"renders textures as :ref:`32-bit float <bit_depth>`, :ref:`gamma corrected "
+"<linear_and_gamma>`, sRGB images. Krita transforms them into your document's "
+"color space using the sRGB-elle-V2-srgbtrc.icc profile."
+msgstr ""
+"とても正確に言うと、SeExpr には **カラーマネジメントが存在しません**。テクス"
+"チャを常に :ref:`32ビット浮動小数 <bit_depth>` の、:ref:`ガンマ補正 "
+"<linear_and_gamma>`、sRGB 画像でレンダーします。Krita は sRGB-elle-V2-"
+"srgbtrc.icc プロファイルを使ってお使いのドキュメントの色空間に変換します。"
+
+#: ../../tutorials/seexpr.rst:143
+msgid "See :ref:`color_managed_workflow` for what this means."
+msgstr "それの意味するところは :ref:`color_managed_workflow` を見てください。"
+
+#: ../../tutorials/seexpr.rst:147
+msgid "Managing your script using widgets"
+msgstr "ウィジェットを使ってスクリプトを管理する"
+
+#: ../../tutorials/seexpr.rst:149
+msgid ""
+"There is also another way to define and edit your variables. Open the fill "
+"layer's properties by right-clicking on :guilabel:`Fill Layer 1`, and "
+"selecting :guilabel:`Layer Properties...`."
+msgstr ""
+"他にも変数を定義して編集する方法があります。:guilabel:`Fill Layer 1` を右ク"
+"リックして :guilabel:`プロパティ...` を選択して塗りつぶしレイヤーのプロパティ"
+"を開きます。"
+
+#: ../../tutorials/seexpr.rst:154
+msgid ".. image:: images/seexpr/SeExpr_prop_1.png"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:155
+msgid ""
+"Notice the middle box? Once it detects a syntactically correct script, "
+"SeExpr enables a whole chunk of knobs to manage individual variables. In our "
+"example above, you can change ``$color``'s in three ways:"
+msgstr ""
+"中央の箱が見えますか？構文的に正しいスクリプトを検出すると、SeExpr は個々の変"
+"数を管理する操作が有効になります。この上の例で、``$color`` を3つの方法で変更"
+"できます。"
+
+#: ../../tutorials/seexpr.rst:159
+msgid "enter the red, green, or blue channel's value in the input fields"
+msgstr "入力フィールドに赤、緑、青チャネルの値を入力する"
+
+#: ../../tutorials/seexpr.rst:160
+msgid "move the little colored sliders to change the respective channel"
+msgstr "チャンネルの小さい色のついたスライダーを動かして変更する"
+
+#: ../../tutorials/seexpr.rst:161
+msgid ""
+"click on the preview square to the left of the boxes, to select a completely "
+"new color."
+msgstr "ボックス左の四角をクリックして、全く新しい色を選択する。"
+
+#: ../../tutorials/seexpr.rst:163
+msgid ""
+"The last button on the middle box is always :guilabel:`Add new variable`. "
+"Click it and this dialog will open:"
+msgstr ""
+"中央ボックスの下のボタンは常に :guilabel:`新しい変数を追加する` になっていま"
+"す。クリックするとこのダイアログが開きます:"
+
+#: ../../tutorials/seexpr.rst:167
+msgid ".. image:: images/seexpr/SeExpr_add_variable.png"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:168
+msgid "This dialog shows you all the types of variables that SeExpr accepts:"
+msgstr "このダイアログは SeExpr で使えるすべての型の変数が表示されます:"
+
+#: ../../tutorials/seexpr.rst:171
+msgid "Curve and Color curve"
+msgstr "曲線と色曲線"
+
+#: ../../tutorials/seexpr.rst:173
+msgid ""
+"They are the SeExpr version of :ref:`Stop Gradients <resource_gradients>`: "
+"they interpolate a ramp given by a set of values."
+msgstr ""
+"SeExpr 版の :ref:`Stop Gradients <resource_gradients>` で、1組の値から得られ"
+"る勾配を補完します。"
+
+#: ../../tutorials/seexpr.rst:175
+msgid ""
+"Curves represent 1D gradients, returning a single float at each evaluation "
+"point."
+msgstr ""
+"曲線は一次元のグラデーションを表し、それぞれの評価点において単精度浮動小数を"
+"返します。"
+
+#: ../../tutorials/seexpr.rst:177
+msgid "Color curves represent RGB gradients, returning a Color at each point."
+msgstr "色曲線は RGB グラデーションを表し、それぞれの点に色を返します。"
+
+#: ../../tutorials/seexpr.rst:178
+msgid "Integers and Floats"
+msgstr "整数と浮動小数"
+
+#: ../../tutorials/seexpr.rst:180
+msgid "Numbers."
+msgstr "数。"
+
+#: ../../tutorials/seexpr.rst:181
+msgid "Vector"
+msgstr "ベクター"
+
+#: ../../tutorials/seexpr.rst:183
+msgid "A triplet of floats."
+msgstr "3連の浮動小数。"
+
+#: ../../tutorials/seexpr.rst:184
+msgid "Color"
+msgstr "色"
+
+#: ../../tutorials/seexpr.rst:186
+msgid "A vector representing an RGB color."
+msgstr "RGB 色を表すベクター。"
+
+#: ../../tutorials/seexpr.rst:187
+msgid "Swatch"
+msgstr "スウォッチ"
+
+#: ../../tutorials/seexpr.rst:189
+msgid "A list of Colors."
+msgstr "色のリスト。"
+
+#: ../../tutorials/seexpr.rst:190
+msgid "String"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:192
+msgid "Usually single words."
+msgstr "通常は単一の語。"
+
+#: ../../tutorials/seexpr.rst:194
+msgid ""
+"For instance, you could replicate ``$color`` in the :guilabel:`Vector` tab:"
+msgstr "例えば、:guilabel:`ベクター` タブにある ``$color`` を複製できます:"
+
+#: ../../tutorials/seexpr.rst:197
+msgid ".. image:: images/seexpr/SeExpr_add_variable_vector.png"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:200
+msgid "Creating your first preset"
+msgstr "最初のプリセットを作る"
+
+#: ../../tutorials/seexpr.rst:202
+msgid "Once your script is ready, you can reuse it by making a preset."
+msgstr "スクリプトの準備が出来たら、プリセットを作って再利用できます。"
+
+#: ../../tutorials/seexpr.rst:204
+msgid "You can create one through the top bar of the :guilabel:`Options` tab:"
+msgstr ":guilabel:`Options` タブのトップバーから作れます:"
+
+#: ../../tutorials/seexpr.rst:208
+msgid ""
+"Select :guilabel:`Save New SeExpr Preset...` and the following dialog will "
+"open:"
+msgstr ""
+":guilabel:`新しい SeExpr プリセットを保存する...` を選択すると次のダイアログ"
+"が開きます:"
+
+#: ../../tutorials/seexpr.rst:213
+msgid ""
+"You can edit the name of the preset in the top line edit box, and set a  "
+"thumbnail for easy identification."
+msgstr ""
+"一番上の編集ボックスでプリセットの名前を編集でき、簡単にわかるようにサムネイ"
+"ルを設定できます。"
+
+#: ../../tutorials/seexpr.rst:215
+msgid ""
+"The dialog will append \"Copy\" to the preset's name if it is a copy of an "
+"existing one. You can change it at will."
+msgstr ""
+"プリセットがコピーであるならダイアログはプリセット名に\"Copy\"を付します。こ"
+"れは変えることができます。"
+
+#: ../../tutorials/seexpr.rst:217
+msgid "The dialog provides the following choices for setting a thumbnail:"
+msgstr "このダイアログでは次のようなサムネイル設定が可能です:"
+
+#: ../../tutorials/seexpr.rst:220
+msgid "Load Existing Thumbnail"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:222
+msgid ""
+"If the preset already has a thumbnail (for instance, if you created it from "
+"an existing preset), this button will load and apply it."
+msgstr ""
+"プリセットが既にサムネイルを持っているなら(例えば、既にあるプリセットから作成"
+"したときなど)、このボタンで読み込んで適用できます。"
+
+#: ../../tutorials/seexpr.rst:223
+msgid "Load Image"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:225
+msgid "Applies an image from the filesystem as a thumbnail."
+msgstr "ファイルシステムからサムネイルとなる画像を適用します。"
+
+#: ../../tutorials/seexpr.rst:226
+msgid "Render Script to Thumbnail"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:228
+msgid ""
+"Renders your script to a 256x256 texture, and applies the latter as a "
+"thumbnail."
+msgstr ""
+"スクリプトを256x256テクスチャとしてレンダーし、サムネイルとして適用します。"
+
+#: ../../tutorials/seexpr.rst:229
+msgid "Clear Thumbnail"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:231
+msgid ""
+"Deletes the thumbnail. Note that, if the preset is a copy of an existing "
+"one, this can be reverted by clicking :guilabel:`Load Existing Thumbnail`."
+msgstr ""
+"サムネイルを削除します。プリセットが既にあるもののコピーなら、これは :"
+"guilabel:`Load Existing Thumbnail` をクリックすることで戻せることに留意してく"
+"ださい。"
+
+#: ../../tutorials/seexpr.rst:235
+msgid "Changing existing presets"
+msgstr ""
+
+#: ../../tutorials/seexpr.rst:237
+msgid ""
+"If you change a preset's script, you will notice two new buttons in the top "
+"bar of the :guilabel:`Options` tab:"
+msgstr ""
+"プリセットのスクリプトを変更すると、:guilabel:`Options` タブ一番上のバーに二"
+"つのボタンに気が付くでしょう。"
+
+#: ../../tutorials/seexpr.rst:241
+msgid ""
+"The reload button will restore the preset to its original properties, while "
+"clicking on :guilabel:`Overwrite Preset` will save your changes."
+msgstr ""
+"再読み込みボタンはプリセットの元の状態を復元し、:guilabel:`Overwrite Preset` "
+"をクリックすると変更を保存します。"
+
+#: ../../tutorials/seexpr.rst:243
+msgid ""
+"Additionally, you can edit the preset's name by clicking on the rename "
+"button, entering the new name, and clicking on :guilabel:`Save`:"
+msgstr ""
+"さらに、プリセット名はリネームボタンをクリックすることで編集でき、新しい名前"
+"を入力して、:guilabel:`保存` をクリックします:"
+
+#: ../../tutorials/seexpr.rst:251
+msgid "Bundling your presets"
+msgstr "プリセットをまとめる"
+
+#: ../../tutorials/seexpr.rst:253
+msgid ""
+"Sharing your scripts is easy! SeExpr script presets are just like any other "
+"resource in Krita. Follow the instructions in :ref:`resource_management` to "
+"create your own bundles."
+msgstr ""
+"プリセットを共有するのは簡単です！SeExpr スクリプトプリセットは Krita の他の"
+"リソースと同様です。:ref:`resource_management` にある説明に従ってご自身のバン"
+"ドルを作ってください。"

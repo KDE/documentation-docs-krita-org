@@ -1,17 +1,18 @@
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-04 03:33+0200\n"
-"PO-Revision-Date: 2019-02-27 02:50+0100\n"
-"Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
-"Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2021-09-17 08:11+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 21.08.1\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
@@ -20,22 +21,23 @@ msgstr ""
 "Generated-By: Babel 0.9.6\n"
 "X-Source-Language: C\n"
 
+# unreviewed-context
 #: ../../reference_manual/layers_and_masks/file_layers.rst:1
 msgid "How to use file layers in Krita."
-msgstr ""
+msgstr "Comment utiliser les calques de fichier dans Krita."
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:12
 #: ../../reference_manual/layers_and_masks/file_layers.rst:17
 msgid "File Layers"
-msgstr ""
+msgstr "Calques de fichier"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:12
 msgid "Layers"
-msgstr ""
+msgstr "Calques"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:12
 msgid "External File"
-msgstr ""
+msgstr "Fichier externe"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:19
 msgid ""
@@ -43,34 +45,49 @@ msgid ""
 "referenced document updates, the file layer will update. Do not remove the "
 "original file on your computer once you add it to Krita. Deleting your "
 "original image will break the file layer. If Krita cannot find the original "
-"file, it'll ask you where to find it. File layers cannot display animations."
+"file, it'll ask you where to find it. File layers cannot display animations. "
+"Krita uses a relative path to store the location of the file in the .kra. If "
+"you move the .kra but not the file, the file layer may be broken."
 msgstr ""
+"Les calques de fichiers sont des références à des fichiers en dehors du "
+"document. Si le document référencé est mis à jour, le calque de fichier sera "
+"aussi mis à jour. Veuillez ne pas supprimer le fichier d'origine sur votre "
+"ordinateur, une fois que vous l'avez référencé dans Krita. En effet, sa "
+"suppression cassera le calque de fichier. Si Krita ne peut trouver le "
+"fichier d'origine, Krita vous demandera de le localiser. Les calques de "
+"fichier ne peuvent afficher des animations. Krita utilise un emplacement "
+"relatif pour enregistrer dans le fichier « .kra » l'emplacement du fichier. "
+"Si vous déplacer le fichier « .kra » mais pas le fichier de calque, le "
+"calque de fichier pourrait ne plus fonctionner."
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:21
 msgid "File Layers have the following scaling options:"
 msgstr ""
+"Les calques de fichier possèdent les options suivantes de dimensionnement :"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:23
 msgid "No Scaling"
-msgstr "Pas de redimensionnement"
+msgstr "Aucun dimensionnement"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:24
 msgid "This'll import the file layer with the full pixel-size."
-msgstr ""
+msgstr "Ceci importera le calque de fichier avec sa taille totale en pixels."
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:25
 msgid "Scale to Image Size"
-msgstr "Redimensionner à la taille de l'image"
+msgstr "Dimensionner à la taille de l'image"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:26
 msgid ""
 "Scales the file layer to fit exactly within the canvas boundaries of the "
 "image."
 msgstr ""
+"Dimensionne le calque de fichier pour correspondre exactement aux limites du "
+"tableau pour l'image."
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:28
 msgid "Adapt to image resolution"
-msgstr ""
+msgstr "Adapter la résolution de l'image"
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:28
 msgid ""
@@ -80,12 +97,21 @@ msgid ""
 "precisely on the 300dpi image. Useful for comics, where the ink-layer is "
 "preferred to be at a higher resolution than the colors."
 msgstr ""
+"Si le calque importé et l'image ont des résolutions différentes, Krita "
+"dimensionnera le calque de fichier selon sa résolution. En d'autres termes, "
+"lors d'une importation d'un image A4 à 600 dpi vers une image A4 à 300 dpi, "
+"le calque de fichier se dimensionnera exactement pour une image à 300 dpi. "
+"Utile pour les bandes dessinées, où le calque d'encre est privilégié avec "
+"une résolution plus élevée plutôt que les couleurs."
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:30
 msgid ""
 "File Layers can currently not be painted on. If you want to transform a file "
 "layer, you need to apply a transformation mask to it and use that."
 msgstr ""
+"Il est impossible actuellement de dessiner sur les calques de fichier. Si "
+"vous voulez transformer un calque de fichier, vous avez besoin d'y appliquer "
+"un masque de transformation et d'en utiliser le résultat."
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:34
 msgid ""
@@ -93,6 +119,10 @@ msgid ""
 "icon. Pressing that will open the file pointed at in Krita if it hadn't yet. "
 "Using the properties you can make the file layer point to a different file."
 msgstr ""
+"Dans le panneau de calques, à coté du calque de fichier uniquement, il y a "
+"une petit icône de dossiers. Un clic dessus ouvrira le fichier référencé "
+"dans Krita, si cela n'est pas encore fait. L'utilisation des propriétés vous "
+"permet de modifier la référence vers un autre fichier."
 
 #: ../../reference_manual/layers_and_masks/file_layers.rst:38
 msgid ""
@@ -101,3 +131,9 @@ msgid ""
 "prompt for the file location and when done will save the file and replace "
 "the layer with a file layer pointing at that file."
 msgstr ""
+"Vous pouvez regrouper tous les ensembles de calques dans un calque de "
+"fichier en faisant un clic droit dessus et en sélectionnant :menuselection:"
+"`Convertir / Vers un calque de fichier`. Une demande d'enregistrement "
+"apparaîtra alors, vous demandant un emplacement pour le fichier. Ensuite, le "
+"fichier sera enregistré et remplacera le calque par un calque de fichier "
+"référençant ce fichier."

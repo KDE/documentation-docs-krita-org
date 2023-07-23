@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-08-02 12:15+0100\n"
+"POT-Creation-Date: 2021-12-16 00:40+0000\n"
+"PO-Revision-Date: 2021-12-16 17:59+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 20.08.1\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -34,25 +34,36 @@ msgstr ""
 "   :alt: mushjul"
 
 #: ../../reference_manual/resource_management.rst:None
-msgid ".. image:: images/resources/Tags-krita.png"
-msgstr ".. image:: images/resources/Tags-krita.png"
-
-#: ../../reference_manual/resource_management.rst:None
 msgid ".. image:: images/resources/Manageresources.png"
 msgstr ".. image:: images/resources/Manageresources.png"
+
+#: ../../reference_manual/resource_management.rst:None
+msgid ".. image:: images/resources/Tags-krita.png"
+msgstr ".. image:: images/resources/Tags-krita.png"
 
 #: ../../reference_manual/resource_management.rst:1
 msgid "Overview of Resource Management in Krita."
 msgstr "Översikt av resurshantering i Krita."
 
 #: ../../reference_manual/resource_management.rst:11
-#: ../../reference_manual/resource_management.rst:21
+msgid "Resources"
+msgstr "Resurser"
+
+#: ../../reference_manual/resource_management.rst:11
 msgid "Bundles"
 msgstr "Packar"
 
 #: ../../reference_manual/resource_management.rst:11
-msgid "Resources"
-msgstr "Resurser"
+msgid "Resource Cache"
+msgstr "Resurscache"
+
+#: ../../reference_manual/resource_management.rst:11
+msgid "Tagging"
+msgstr "Etikettering"
+
+#: ../../reference_manual/resource_management.rst:11
+msgid "Mass Tagging"
+msgstr "Massetikettering"
 
 #: ../../reference_manual/resource_management.rst:16
 msgid "Resource Management"
@@ -61,240 +72,209 @@ msgstr "Resurshantering"
 #: ../../reference_manual/resource_management.rst:18
 msgid ""
 "Resources are pluggable bits of data, like brush presets or patterns. Krita "
-"has variety of resources and also has a good resource management starting "
-"from 2.9, making it really easy for artists to share and collate all the "
-"resources together"
+"has a sophisticated resource management system, which allows tagging, "
+"disabling, sharing and more."
 msgstr ""
 "Resurser är inkopplingsbara databitar, som penselförinställningar eller "
-"mönster. Krita har en mängd resurser och har också bra resurshantering med "
-"början på 2.9, vilket gör det enkelt för konstnärer att dela och "
-"sammanställa alla resurser."
+"mönster. Krita har ett avancerat resurshanteringssystem, vilket gör det "
+"möjligt att etikettera, inaktivera, dela, med mera."
 
-#: ../../reference_manual/resource_management.rst:23
+#: ../../reference_manual/resource_management.rst:22
 msgid ""
-"Starting from 2.9 Krita has a new format to manage resources it is called "
-"''Bundles'', a bundle is just a compressed file containing all the resources "
-"together."
+"All resources are stored in the resource folder. This folder can be "
+"configured in :ref:`the general preferences <resource_settings>`. As keeping "
+"track of all those resources can be a handful, Krita creates a SQLite cache "
+"in which it keeps the tags, names, version and other data about the resource."
 msgstr ""
-"Med början på 2.9 har Krita ett nytt format för att hantera resurser, som "
-"kallas \"packar\". En packe är bara en komprimerad fil som innehåller alla "
-"resurserna."
+"Alla resurser lagras i resurskatalogen. Katalogen kan anpassas i :ref:`de "
+"allmänna inställningar <resource_settings>`. Eftersom det kan vara knepigt "
+"att hålla reda på alla resurserna, skapade Krita en SQLite-cache, där "
+"etiketter, namn, version och annan data om resursen lagras."
+
+#: ../../reference_manual/resource_management.rst:24
+msgid ""
+"Thanks to this cache, Krita can avoid loading a resource until necessary. "
+"This makes Krita a lot lighter than when it did not have this cache. "
+"Deleting the cache will delete the tags and relationships it keeps track of, "
+"so be careful."
+msgstr ""
+"Tack vare cachen, kan Krita undvika att läsa in en resurs till det är "
+"nödvändigt. Det gör Krita mycket lättviktigare än när cachen inte fanns. Att "
+"ta bort cachen tar bort etiketterna och förhållandena som den håller ordning "
+"på, så var försiktig."
 
 #: ../../reference_manual/resource_management.rst:26
-msgid "Tags"
-msgstr "Etiketter"
+msgid ""
+"If you have not changed your resource folder location, the resources can be "
+"found at..."
+msgstr ""
+"Om man inte har ändrat platsen för resurskatalogen, finns resurserna ..."
 
 #: ../../reference_manual/resource_management.rst:28
-msgid ""
-"Krita also has a robust tagging system for you to manage the resources on "
-"the fly while painting. All Krita resources can be tagged. These tags can be "
-"added via the resource manager, but also via the respective dockers such as "
-"brush preset docker, pattern docker etc. You can |mouseleft| the plus icon "
-"in the docker and add a tag name. In addition to adding you can rename and "
-"delete a tag as well."
-msgstr ""
-"Krita har också ett robust etikettsystem för att hantera resurserna i farten "
-"vid målning. Alla resurser i Krita kan etiketteras. Etiketterna kan läggas "
-"till med resurshanteraren, men också via respektive paneler såsom "
-"penselförinställningspanelen, mönsterpanelen, etc. Man kan vänsterklicka på "
-"plusikonen i panelen och lägga till ett etikettnamn. Förutom att lägga till "
-"det kan man också byta namn på eller ta bort en etikett."
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../reference_manual/resource_management.rst:29
+msgid ":file:`$HOME/.local/share/krita/`"
+msgstr ":file:`$HOME/.local/share/krita/`"
+
+#: ../../reference_manual/resource_management.rst:30
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../reference_manual/resource_management.rst:31
+msgid ":file:`%APPDATA%\\\\krita\\\\`"
+msgstr ":file:`%APPDATA%\\\\krita\\\\`"
 
 #: ../../reference_manual/resource_management.rst:33
-msgid ""
-"Resources can belong to one or more tags.  For example, you may have a Brush "
-"Preset of a favorite **Ink Pen** variant and have it tagged so it shows in "
-"up in your Inking, Painting, Comics and Favorites groups of brushes."
-msgstr ""
-"Resurser kan höra till en eller flera etiketter. Man kan exempelvis ha en "
-"penselförinställning för en favoritvariant av **bläckpenna** och etikettera "
-"den så att den dyker upp i penselgrupperna för teckning, målning, serier och "
-"favoriter."
+msgid "macOS"
+msgstr "macOS"
 
-#: ../../reference_manual/resource_management.rst:34
-msgid ""
-"Brushes in the \"Predefined\" tab of the Brush Settings Editor can be also "
-"tagged and grouped for convenience."
-msgstr ""
-"Penslar under fliken \"Fördefinierade\" i penselinställningseditorn kan "
-"också etiketteras och grupperas för bekvämlighet."
+#: ../../reference_manual/resource_management.rst:33
+msgid ":file:`~/Library/Application Support/Krita/`"
+msgstr ":file:`~/Library/Application Support/Krita/`"
 
-#: ../../reference_manual/resource_management.rst:37
-msgid "Filtering"
-msgstr "Filtrering"
-
-#: ../../reference_manual/resource_management.rst:40
+#: ../../reference_manual/resource_management.rst:36
 msgid ""
-"Some dockers, for example the brush preset docker as shown below, have a "
-"resource filter, which functions like a powerful search bar for the resource "
-"in question."
+"If you installed Krita in the Windows Store, your custom resources will be "
+"in a location like:"
 msgstr ""
-"Visa paneler, exempelvis penselförinställningspanelen som visas nedan, har "
-"ett resursfilter som fungerar som en kraftfull sökrad för resursen i fråga."
+"Om Krita installerades från Windows butik, kommer egna resurser finnas på en "
+"plats såsom:"
+
+#: ../../reference_manual/resource_management.rst:36
+msgid ""
+":file:`%LOCALAPPDATA%\\\\Packages\\\\49800Krita_{RANDOM STRING}\\\\LocalCache"
+"\\Roaming\\krita`"
+msgstr ""
+":file:`%LOCALAPPDATA%\\\\Packages\\\\49800Krita_{RANDOM STRING}\\\\LocalCache"
+"\\Roaming\\krita`"
+
+#: ../../reference_manual/resource_management.rst:41
+msgid "Resource Libraries"
+msgstr "Resursbibliotek"
 
 #: ../../reference_manual/resource_management.rst:43
-msgid ".. image:: images/brushes/Brushpreset-filters.png"
-msgstr ".. image:: images/brushes/Brushpreset-filters.png"
-
-#: ../../reference_manual/resource_management.rst:44
-msgid ""
-"You can enter brush name, tag name to quickly pull up a list of brush "
-"presets you want. When you select any tag from the tag drop-down and want to "
-"include brush presets from other tags as well then you can add filters the "
-"following way:"
-msgstr ""
-"Man kan skriva in penselnamn, etikettnamn eller snabbt ta fram en lista över "
-"penselförinställningar som man vill ha. När man väljer en etikett i "
-"etikettkombinationsrutan och dessutom vill inkludera penselförinställningar "
-"från andra etiketter, kan man lägga till filter på följande sätt:"
+msgid "Krita can load a variety of resource libraries."
+msgstr "Krita kan läsa in diverse olika resursbibliotek."
 
 #: ../../reference_manual/resource_management.rst:46
-msgid ""
-"To filter based on the partial, case insensitive name of the resources you "
-"can add ``partialname`` or ``!partialname``."
-msgstr ""
-"För att filtrera baserat på det partiella skiftlägesokänsliga namnet på "
-"resursen kan man lägga till ``partiellt namn`` eller ``!partiellt namn``."
-
-#: ../../reference_manual/resource_management.rst:47
-msgid ""
-"To include other Tags type the respective name of the tag in square brackets "
-"like this ``[Tagname]`` or to exclude a tag type ``![Tagname]``."
-msgstr ""
-"För att inkludera andra etiketter skriv in respektive namn på etiketten inom "
-"hakparenteser så här ``[Etikettnamn]`` eller för att undanta en etikettyp ``!"
-"[Etikettnamn]``."
+msgid "Resource Folder"
+msgstr "Resurskatalog"
 
 #: ../../reference_manual/resource_management.rst:48
 msgid ""
-"For case sensitive matching of preset name type ``\"Preset name\"`` or ``! "
-"\"Preset name\"`` to exclude."
+"The resource folder is considered the primary library. When creating new "
+"resources, they will all end up here. You can configure its location in the :"
+"ref:`general preferences <resource_settings>`."
 msgstr ""
-"För skiftlägeskänslig matchning av förinställningsnamn skriv ``"
-"\"Förinställningsnamn\"`` eller ``! \"Förinställningsnamn\"`` för att "
-"undanta det."
+"Resurskatalogen anses vara det huvudsakliga biblioteket. När nya resurser "
+"skapas, hamnar de här. Man kan ställa in dess plats under :ref:`allmänna "
+"inställningar <resource_settings>`."
+
+#: ../../reference_manual/resource_management.rst:49
+msgid "Resource Bundle"
+msgstr "Resurspacke"
 
 #: ../../reference_manual/resource_management.rst:51
-msgid "An incredibly quick way to save a group or brushes into a tag is to:"
-msgstr ""
-"Ett otroligt snabbt sätt att spara en grupp eller penslar i en etikett är "
-"att:"
-
-#: ../../reference_manual/resource_management.rst:53
 msgid ""
-"Create a new tag by |mouseleft| on the green plus sign.  This will empty out "
-"the contents of the Brush Preset docker."
+"The primary format to share resources is :dfn:`Resource Bundles`, which is a "
+"compressed file containing all the resources together. It also contains some "
+"other information like metadata and a manifest so Krita can check there's no "
+"errors in the file."
 msgstr ""
-"Skapa en ny etikett genom att vänsterklicka på det gröna plustecknet. Det "
-"tömmer innehållet i penselförinställningspanelen."
+"Det huvudsakliga formatet för att dela resurser är :dfn:`Resurspackar`, som "
+"är en komprimerad fil som innehåller alla resurser tillsammans. Den "
+"innehåller också viss annan information som metadata och ett manifest så att "
+"Krita kan kontrollera att det inte finns några fel i filen."
+
+#: ../../reference_manual/resource_management.rst:52
+msgid "Adobe Brush Library"
+msgstr "Adobe penselbibliotek"
 
 #: ../../reference_manual/resource_management.rst:54
 msgid ""
-"Use the :guilabel:`Resource Filter` at the bottom of the :guilabel:`Brush "
-"Presets` dock or :guilabel:`Brush Settings Editor` to type in what you want "
-"to group.  For instance: if you type **Pencil** in the filter box you will "
-"get all Brush Presets with **Pencil** somewhere in their name.  Now you have "
-"all the Pencil-related Brush Presets together in one place."
+"An ``ABR`` with multiple images inside. Previous versions of Krita could not "
+"load this, but now Krita will load them as a library of :ref:`brushes "
+"<resource_brush_tips>`."
 msgstr ""
-"Använd :guilabel:`Resursfilter` längst ner i panelen :guilabel:"
-"`Penselförinställningar` eller :guilabel:`Penselförinställningseditor` för "
-"att skriva in vad som ska grupperas. Om man exempelvis skriver in **Penna** "
-"i filterrutan får man alla penselförinställningar som har **Penna** "
-"någonstans i sina namn. Nu har man alla pennrelaterade "
-"penselförinställningarna tillsammans på et ställe."
+"En ``ABR`` med flera bilder inuti. Tidigare versioner av Krita kunde inte "
+"läsa in den, men nu läser Krita in dem som penselbibliotek :ref:`penslar "
+"<resource_brush_tips>`."
 
 #: ../../reference_manual/resource_management.rst:55
-msgid ""
-"To finish, click the :guilabel:`Save` button (small disk icon to the right "
-"of the :guilabel:`Resource Filter` box) or press the :kbd:`Enter` key and "
-"all the items will be saved with the new tag you created."
-msgstr ""
-"Klicka på knappen :guilabel:`Spara` (den lilla skivan till höger om rutan :"
-"guilabel:`Resursfilter`) eller tryck på tangenten :kbd:`Enter` för att "
-"slutföra det, så sparas alla objekt med den nya etiketten som man skapade."
+msgid "Adobe Style Library"
+msgstr "Adobe stilbibliotek"
 
 #: ../../reference_manual/resource_management.rst:57
 msgid ""
-"Now, anytime you want to open up your \"digital pencil box\" and see what "
-"you have to work with all you have to do is use the pull-down and select :"
-"guilabel:`Pencils`.  The Resource Filter works the same way in other parts "
-"of Krita so be on the lookout for it!"
+"This is the :program:`Photoshop` ``ASL`` format, which stores :ref:"
+"`layer_style`."
 msgstr ""
-"När man nu när som helst vill öppna sin \"digitala pennlåda\" och se vad man "
-"kan arbeta med, är allt man behöver göra att använda kombinationsrutan och "
-"välja :guilabel:`Pennor`. Resursfiltret fungerar på samma sätt för andra "
-"delar av Krita, så håll ögonen öppna!"
+"Det här är formatet :program:`Photoshop` ``ASL``, som lagrar :ref:"
+"`layer_style`."
 
-#: ../../reference_manual/resource_management.rst:60
-msgid "Resource Zooming"
-msgstr "Resurszoomning"
+#: ../../reference_manual/resource_management.rst:58
+msgid "Document Storage"
+msgstr "Dokumentlagring"
 
 #: ../../reference_manual/resource_management.rst:60
 msgid ""
-"If you find the thumbnails of the resources such as color swatches brushes "
-"and pattern to be small you can make them bigger or :guilabel:`Zoom in`. All "
-"resource selectors can be zoomed in and out of, by hovering over the "
-"selector and using the :kbd:`Ctrl +` |mousescroll| shortcut."
+"Every Krita document can store resources and act as a resource library. This "
+"is currently only used for palettes."
 msgstr ""
-"Om man tycker att resursernas miniatyrbilder, såsom färgrutor för penslar "
-"och mönster, är för små, kan man göra dem större eller :guilabel:`Zooma in`. "
-"Alla resursväljare kan zoomas in och ut genom att hålla musen över väljaren "
-"och använda genvägen :kbd:`Ctrl +` mushjul."
+"Alla Krita-dokument kan lagra resurser och fungera som ett resursbibliotek. "
+"Det används för närvarande bara för paletter."
+
+#: ../../reference_manual/resource_management.rst:61
+msgid "Memory Storage"
+msgstr "Minneslagring"
 
 #: ../../reference_manual/resource_management.rst:63
-msgid "Managing Resources"
-msgstr "Hantera resurser"
+msgid ""
+"Finally, the memory library is where temporary resources are kept, which are "
+"generated by Krita and have no physical version on disk. This is currently "
+"used for the fore-to-background gradient."
+msgstr ""
+"Slutligen är minnesbiblioteket stället där tillfälliga resurser lagras, som "
+"skapas av Krita och inte har någon fysisk version på disk. Det används för "
+"närvarande för förgrunds- till bakgrundstoning."
 
 #: ../../reference_manual/resource_management.rst:65
 msgid ""
-"As mentioned earlier Krita has a flexible resource management system. "
-"Starting from version 2.9 you can share various resources mentioned above by "
-"sharing a single compressed zip file created within Krita."
+"You can manage resource libraries by going to :menuselection:`Settings --> "
+"Manage Resource Libraries`. In this dialog, you can import resource "
+"libraries, deactivate them, and also :ref:`create_bundle`."
 msgstr ""
-"Som tidigare nämnts har Krita ett flexibelt resurshanteringssystem. Med "
-"början på version 2.9 kan man dela olika resurser som nämns ovan genom att "
-"dela en enda komprimerad zip-fil skapad inne i Krita."
+"Man kan hantera resursbibliotek genom att gå till :menuselection:"
+"`Inställningar --> Hantera resursbibliotek`. I dialogrutan kan man importera "
+"resursbibliotek, inaktivera dem, och även :ref:`create_bundle`."
 
-#: ../../reference_manual/resource_management.rst:67
-msgid ""
-"The manage resources section in the settings was also revamped for making it "
-"easy for the artists to prepare these bundle files. You can open manage "
-"resource section by going to :menuselection:`Settings`   then :menuselection:"
-"`Manage Resources`."
-msgstr ""
-"Sektionen i inställningarna för att hantera resurser har också stöpts om för "
-"att göra det enklare för konstnärer att göra i ordning packarna. Man kan "
-"visa sektionen för resurshantering genom att gå till :menuselection:"
-"`Inställningar` och därefter :menuselection:`Hantera resurser`."
-
-#: ../../reference_manual/resource_management.rst:73
+#: ../../reference_manual/resource_management.rst:68
 msgid "Importing Bundles"
 msgstr "Importera packar"
 
-#: ../../reference_manual/resource_management.rst:75
+#: ../../reference_manual/resource_management.rst:70
 msgid ""
-"To import a bundle click on :guilabel:`Import Bundles/Resources` button on "
-"the top right side of the dialog. Select ``.bundle`` file format from the "
-"file type if it is not already selected, browse to the folder where you have "
-"downloaded the bundle, select it and click :guilabel:`Open`. Once the bundle "
-"is imported it will be listed in the :guilabel:`Active Bundle` section. If "
-"you don't need the bundle you can temporarily make it inactive by selecting "
-"it and clicking on the arrow button, this will move it to the :guilabel:"
-"`Inactive` section."
+"To import a bundle click on :guilabel:`Import` button on the top right side "
+"of the dialog. Select ``.bundle`` file format from the file type if it is "
+"not already selected, browse to the folder where you have downloaded the "
+"bundle, select it and click :guilabel:`Open`. Once the bundle is imported it "
+"will be listed in the bundle view. To enable or disable a bundle, select the "
+"entry in the view, and then select :guilabel:`Deactivate`."
 msgstr ""
-"Klicka på knappen :guilabel:`Importera packar eller resurser` för att "
-"importera en packe. Välj filformatet ``.bundle`` som filtyp om det inte "
-"redan är valt, bläddra till katalogen dit packen har laddats ner, markera "
-"den och klicka på :guilabel:`Öppna`. När packen väl har importerats listas "
-"den i sektionen  :guilabel:`Aktiv packe`. Om man inte behöver packen kan den "
-"tillfälligt göras inaktiv genom att markera den och klicka på piltangenten "
-"så flyttas den till sektionen :guilabel:`Inaktiv`."
+"Klicka på knappen :guilabel:`Importera` längst upp till höger i dialogrutan "
+"för att importera en packe. Välj filformatet ``.bundle`` som filtyp om det "
+"inte redan är valt, bläddra till katalogen dit packen har laddats ner, "
+"markera den och klicka på :guilabel:`Öppna`. När packen väl har importerats "
+"listas den i vyn över packar. För att aktivera eller inaktivera en packe, "
+"markera posten i vyn och välj sedan :guilabel:`Inaktivera`."
 
-#: ../../reference_manual/resource_management.rst:79
+#: ../../reference_manual/resource_management.rst:76
 msgid "Creating your own Bundle"
 msgstr "Skapa en egen packe"
 
-#: ../../reference_manual/resource_management.rst:81
+#: ../../reference_manual/resource_management.rst:78
 msgid ""
 "You can create your own bundle from the resources of your choice. Click on "
 "the :guilabel:`Create bundle` button. This will open a dialog box as shown "
@@ -303,11 +283,11 @@ msgstr ""
 "Man kan skapa en ny packe från önskad resurs. Klicka på knappen :guilabel:"
 "`Skapa packe`. Det öppnar en dialogruta som visas nedan."
 
-#: ../../reference_manual/resource_management.rst:84
+#: ../../reference_manual/resource_management.rst:81
 msgid ".. image:: images/resources/Creating-bundle.png"
 msgstr ".. image:: images/resources/Creating-bundle.png"
 
-#: ../../reference_manual/resource_management.rst:85
+#: ../../reference_manual/resource_management.rst:82
 msgid ""
 "The left hand section is for filling up information about the bundle like "
 "author name, website, email, bundle icon, etc. The right hand side provides "
@@ -321,7 +301,7 @@ msgstr ""
 "ska läggas till i packen från kombinationsrutan ovanför och lägg till den i "
 "packen genom att markera en resurs och klicka på piltangenten."
 
-#: ../../reference_manual/resource_management.rst:90
+#: ../../reference_manual/resource_management.rst:87
 msgid ""
 "Make sure you add brush tips for used in the respective paintop presets you "
 "are adding to the bundle. If you don't provide the brush tips then the brush "
@@ -334,7 +314,7 @@ msgstr ""
 "från packen ha en X-markering på miniatyrbilden som anger att strukturen "
 "saknas. Och penselförinställningen är inte likadan."
 
-#: ../../reference_manual/resource_management.rst:92
+#: ../../reference_manual/resource_management.rst:89
 msgid ""
 "Once you have added all the resources you can create bundle by clicking on "
 "the :guilabel:`Save` button, the bundle will be saved in the location you "
@@ -346,11 +326,159 @@ msgstr ""
 "kan man dela med sig av packen till andra konstnärer eller läsa in den på "
 "andra arbetsstationer."
 
-#: ../../reference_manual/resource_management.rst:95
+#: ../../reference_manual/resource_management.rst:92
+msgid "Deleting Imported Bundles"
+msgstr "Ta bort importerade packar"
+
+#: ../../reference_manual/resource_management.rst:94
+msgid ""
+"In case you wish to delete the bundles you have imported *permanently* click "
+"on the :guilabel:`Open Resource Folder` button in the :guilabel:`Manage "
+"Resources` dialog. This will open the resource folder in your file browser. "
+"Go inside the bundles folder and delete the bundle file which you don't need "
+"any more. The next time you start Krita the bundle and its associated "
+"resources will not be loaded."
+msgstr ""
+"I fall man vill ta bort packar som man har importerat *permanent*, klicka på "
+"knappen  :guilabel:`Öppna resurskatalog` i dialogrutan  :guilabel:`Hantera "
+"resurser`. Det öppnar resurskatalogen i filbläddraren. Gå in i katalogen med "
+"packar och ta bort filen för packen som inte längre behövs. Nästa gång Krita "
+"startas läses inte packen och tillhörande resurs in."
+
+#: ../../reference_manual/resource_management.rst:99
+msgid "Managing Resources"
+msgstr "Hantera resurser"
+
+#: ../../reference_manual/resource_management.rst:101
+msgid ""
+"As mentioned earlier Krita has a flexible resource management system. "
+"Starting from version 2.9 you can share various resources mentioned above by "
+"sharing a single compressed ZIP file created within Krita."
+msgstr ""
+"Som tidigare nämnts har Krita ett flexibelt resurshanteringssystem. Med "
+"början på version 2.9 kan man dela olika resurser som nämns ovan genom att "
+"dela en enda komprimerad ZIP-fil skapad inne i Krita."
+
+#: ../../reference_manual/resource_management.rst:103
+msgid ""
+"The manage resources section in the settings was also revamped for making it "
+"easy for the artists to prepare these bundle files. You can open manage "
+"resource section by going to :menuselection:`Settings --> Manage Resources..."
+"` menu item."
+msgstr ""
+"Sektionen i inställningarna för att hantera resurser har också stöpts om för "
+"att göra det enklare för konstnärer att göra i ordning packarna. Man kan "
+"visa sektionen för resurshantering genom att gå till menyalternativet :"
+"menuselection:`Inställningar` och därefter :menuselection:`Hantera "
+"resurser...`."
+
+#: ../../reference_manual/resource_management.rst:108
+msgid ""
+"You can do a variety of things here, like deleting backup files, mass-"
+"tagging, deleting/deactivating the resource itself, importing resources and "
+"open the create bundle dialog."
+msgstr ""
+"Man kan göra olika saker här, som ta bort säkerhetskopior, massetikettering, "
+"ta bort eller inaktivera själva resursen, importera resurser och öppna "
+"dialogrutan för att skapa en packe."
+
+#: ../../reference_manual/resource_management.rst:113
+msgid "Importing resources"
+msgstr "Importera resurser"
+
+#: ../../reference_manual/resource_management.rst:115
+msgid ""
+"To import resources, select the :guilabel:`import` in the resource choosers "
+"or the resource manager."
+msgstr ""
+"Välj :guilabel:`importera` i resursväljaren eller resurshanteraren för att "
+"importera resurser."
+
+#: ../../reference_manual/resource_management.rst:117
+msgid ""
+"The resource chooser import is fairly straight forward. You can only select "
+"certain kinds of files, and all the files you can select are possible to "
+"import for that resource."
+msgstr ""
+"Resursväljaren för import är ganska rättfram. Man kan bara välja vissa "
+"sorters filer, och alla filer man kan välja är möjliga att importera för den "
+"resursen."
+
+#: ../../reference_manual/resource_management.rst:119
+msgid ""
+"The import button in the resource manager however sometimes needs to make a "
+"choice on whether an imported :ref:`file_png` file is a brush tip or a "
+"texture. When importing a format that can be used for multiple types of "
+"resources, a window will pop up asking which resource type you intended to "
+"import the file for."
+msgstr ""
+"Importknappen i resurshanteraren behöver dock ibland välja om en importerad :"
+"ref:`file_png`-fil är en penselspets eller en struktur. Vid import av ett "
+"format som kan användas för flera olika typer av resurser, dyker ett fönster "
+"upp som frågar vilken resurstyp som filen avsågs importeras för."
+
+#: ../../reference_manual/resource_management.rst:125
+msgid "Activating and Deactivating"
+msgstr "Aktivera och inaktivera"
+
+#: ../../reference_manual/resource_management.rst:127
+msgid ""
+"Deactivating resources is done by selecting them in their respective "
+"resource chooser, and pressing the trashcan icon."
+msgstr ""
+"Att inaktivera resurser görs genom att välja dem i respektive resursväljare, "
+"och klicka på papperskorgsikonen."
+
+#: ../../reference_manual/resource_management.rst:129
+msgid ""
+"For activating a resource, go to :menuselection:`Setti&ngs --> Manage "
+"Resources...`, then turn on :guilabel:`&Show Deleted Resources`. The "
+"deactivated resources should now be visible, select them, and then press :"
+"guilabel:`Undelete Resource`."
+msgstr ""
+"Gå till :menuselection:`In&ställningar --> Hantera resurser...` för att "
+"aktivera en resurs, sätt sedan på :guilabel:`Vi&sa borttagna resurser`. De "
+"inaktiverade resurserna ska nu vara synliga, markera dem, och klicka sedan "
+"på :guilabel:`Återställ resurs`."
+
+#: ../../reference_manual/resource_management.rst:134
+msgid "Returning a resource to the previous version"
+msgstr "Returnera en resurs till föregående version."
+
+#: ../../reference_manual/resource_management.rst:136
+msgid ""
+"First go to the resource folder, :menuselection:`Settings --> Manage "
+"Resources... --> Open Resource Folder`."
+msgstr ""
+"Gå först till resurskatalogen, :menuselection:`Inställningar --> Hantera "
+"resurser... --> Öppna resurskatalog`."
+
+#: ../../reference_manual/resource_management.rst:137
+msgid "Then go into the ``paintoppresets`` folder."
+msgstr "Gå sedan till katalogen ``paintoppresets``."
+
+#: ../../reference_manual/resource_management.rst:138
+msgid ""
+"Backup (select and cut) all versions of the related resource into a place "
+"you can find them. Delete all these files from the ``paintoppresets`` folder."
+msgstr ""
+"Säkerhetskopiera (markera och klipp ut) alla versioner av den relaterade "
+"resursen på en plats där de kan hittas. Ta bort alla dessa filer från "
+"katalogen ``paintoppresets``."
+
+#: ../../reference_manual/resource_management.rst:139
+msgid "restart Krita."
+msgstr "starta om Krita."
+
+#: ../../reference_manual/resource_management.rst:140
+msgid "add only the desired version of the resource."
+msgstr "lägg bara till önskade versioner av resursen."
+
+#: ../../reference_manual/resource_management.rst:145
 msgid "Deleting Backup files"
 msgstr "Ta bort säkerhetskopior"
 
-#: ../../reference_manual/resource_management.rst:97
+#: ../../reference_manual/resource_management.rst:147
 msgid ""
 "When you delete a preset from Krita, Krita doesn't actually delete the "
 "physical copy of the preset. It just adds it to a black list so that the "
@@ -363,25 +491,265 @@ msgstr ""
 "här listan in. För att ta bort penslarna från listan, klicka på :guilabel:"
 "`Ta bort säkerhetskopior`."
 
-#: ../../reference_manual/resource_management.rst:100
-msgid "Deleting Imported Bundles"
-msgstr "Ta bort importerade packar"
+#: ../../reference_manual/resource_management.rst:152
+msgid "Deleting backup files has temporarily been disabled for 5.0."
+msgstr "Borttagning av säkerhetskopior har tillfälligt inaktiverats för 5.0."
 
-#: ../../reference_manual/resource_management.rst:102
+#: ../../reference_manual/resource_management.rst:157
+msgid "Tags"
+msgstr "Etiketter"
+
+#: ../../reference_manual/resource_management.rst:159
 msgid ""
-"In case you wish to delete the bundles you have imported permanently click "
-"on the :guilabel:`Open Resource Folder` button in the :guilabel:`Manage "
-"Resources` dialog. This will open the resource folder in your file manager / "
-"explorer. Go inside the bundles folder and delete the bundle file which you "
-"don't need any more. The next time you start Krita the bundle and its "
-"associated resources will not be loaded."
+"Tagging allows you to manage the resources on the fly while painting. All "
+"Krita resources can be tagged. These tags can be added via the resource "
+"manager, but also via the respective dockers such as brush preset docker, "
+"pattern docker etc. You can |mouseleft| the :guilabel:`+` icon in the docker "
+"and add a tag name. In addition to adding you can rename and delete a tag as "
+"well."
 msgstr ""
-"I fall man vill permanent ta bort packar som man har importerat, klicka på "
-"knappen  :guilabel:`Öppna resurskatalog` i dialogrutan  :guilabel:`Hantera "
-"resurser`. Det öppnar resurskatalogen i filhanteraren eller utforskaren. Gå "
-"in i katalogen med packar och ta bort filen för packen som inte längre "
-"behövs. Nästa gång Krita startas läses inte packen och tillhörande resurs in."
+"Etiketter gör det möjligt att hantera resurserna i farten vid målning. Alla "
+"resurser i Krita kan etiketteras. Etiketterna kan läggas till med "
+"resurshanteraren, men också via respektive paneler såsom "
+"penselförinställningspanelen, mönsterpanelen, etc. Man kan vänsterklicka på "
+"ikonen :guilabel:`+` i panelen och lägga till ett etikettnamn. Förutom att "
+"lägga till det kan man också byta namn på eller ta bort en etikett."
 
-#: ../../reference_manual/resource_management.rst:105
+#: ../../reference_manual/resource_management.rst:164
+msgid ""
+"Resources can belong to one or more tags.  For example, you may have a Brush "
+"Preset of a favorite :dfn:`Ink Pen` variant and have it tagged so it shows "
+"in up in your Inking, Painting, Comics and Favorites groups of brushes."
+msgstr ""
+"Resurser kan höra till en eller flera etiketter. Man kan exempelvis ha en "
+"penselförinställning för en favoritvariant av dfn:`teckningspenna` och "
+"etikettera den så att den dyker upp i penselgrupperna för teckning, målning, "
+"serier och favoriter."
+
+#: ../../reference_manual/resource_management.rst:165
+msgid ""
+"Every resource can be tagged, so brushes in the :guilabel:`Predefined` tab "
+"of the Brush Settings Editor can be also tagged and grouped for convenience."
+msgstr ""
+"Alla resurser kan etiketteras, alltså kan penslar under fliken "
+"\"Fördefinierade\" i penselinställningseditorn också etiketteras och "
+"grupperas för bekvämlighet."
+
+#: ../../reference_manual/resource_management.rst:167
+msgid ""
+"In the resource manager, you can tag multiple resources at once. To select "
+"multiple resources, use :kbd:`Ctrl` for adding individual resources to the "
+"selection or :kbd:`Shift` for adding every resource at once. Then press the "
+"plus icon next to the :guilabel:`tags` section to add a tag to every "
+"selected resource."
+msgstr ""
+"Man kan etikettera flera resurser samtidigt i resurshanteraren. För att "
+"lägga till flera resurser, använd :kbd:`Ctrl` för tillägg av individuella "
+"resurser i markeringen, eller :kbd:`Shift` för att lägga till alla resurser "
+"på en gång. Tryck sedan på plusikonen intill :guilabel:`etiketter` för att "
+"lägga till en etikett i alla markerade resurser."
+
+#: ../../reference_manual/resource_management.rst:169
+msgid ""
+"Some tags are translated. If you make bundles for others, using such tags "
+"can be useful to ensure cross-language compatibility. The tags that get "
+"localized are..."
+msgstr ""
+"Några etiketter är översatta. Om packar skapas för andra, kan det vara "
+"användbart att använda sådana etiketter för att säkerställa kompatibilitet "
+"mellan språk. Etiketterna som översätts är ..."
+
+#: ../../reference_manual/resource_management.rst:171
+msgid "Digital"
+msgstr "Digitala"
+
+#: ../../reference_manual/resource_management.rst:172
+msgid "Erasers"
+msgstr "Radering"
+
+#: ../../reference_manual/resource_management.rst:173
+msgid "FX"
+msgstr "Effekter"
+
+#: ../../reference_manual/resource_management.rst:174
+msgid "Favorites"
+msgstr "Favoriter"
+
+#: ../../reference_manual/resource_management.rst:175
+msgid "Ink"
+msgstr "Bläck"
+
+#: ../../reference_manual/resource_management.rst:176
+msgid "Paint"
+msgstr "Måla"
+
+#: ../../reference_manual/resource_management.rst:177
+msgid "Pixel_Art"
+msgstr "Pixel art"
+
+#: ../../reference_manual/resource_management.rst:178
+msgid "Sketch"
+msgstr "Skiss"
+
+#: ../../reference_manual/resource_management.rst:179
+msgid "Textures"
+msgstr "Strukturer"
+
+#: ../../reference_manual/resource_management.rst:184
+msgid "Filtering"
+msgstr "Filtrering"
+
+#: ../../reference_manual/resource_management.rst:186
+msgid ""
+"Some dockers, for example the brush preset docker as shown below, have a "
+"resource filter, which functions like a search bar for the resource in "
+"question."
+msgstr ""
+"Visa paneler, exempelvis penselförinställningspanelen som visas nedan, har "
+"ett resursfilter som fungerar som en sökrad för resursen i fråga."
+
+#: ../../reference_manual/resource_management.rst:189
+msgid ".. image:: images/brushes/Brushpreset-filters.png"
+msgstr ".. image:: images/brushes/Brushpreset-filters.png"
+
+#: ../../reference_manual/resource_management.rst:190
+msgid ""
+"You can enter brush name, tag name to quickly pull up a list of brush "
+"presets you want. When you select any tag from the tag drop-down and want to "
+"include brush presets from other tags as well then you can add filters based "
+"on the partial, case insensitive name of the resources by using "
+"``partialname`` or ``!partialname``."
+msgstr ""
+"Man kan skriva in penselnamn, etikettnamn eller snabbt ta fram en lista över "
+"penselförinställningar som man vill ha. När man väljer en etikett i "
+"etikettkombinationsrutan och dessutom vill inkludera penselförinställningar "
+"från andra etiketter, kan man lägga till filter baserat på det partiella, "
+"skiftlägesokänsliga namnet på resursen genom att använda ``partiellt-namn`` "
+"or ``!partiellt-namn``."
+
+#: ../../reference_manual/resource_management.rst:193
+msgid "Resource Zooming"
+msgstr "Resurszoomning"
+
+#: ../../reference_manual/resource_management.rst:193
+msgid ""
+"If you find the thumbnails of the resources such as color swatches brushes "
+"and pattern to be small you can make them bigger or :dfn:`Zoom in`. All "
+"resource selectors can be zoomed in and out of, by hovering over the "
+"selector and using the :kbd:`Ctrl +` |mousescroll| shortcut."
+msgstr ""
+"Om man tycker att resursernas miniatyrbilder, såsom färgrutor för penslar "
+"och mönster, är för små, kan man göra dem större eller :dfn:`Zooma in`. Alla "
+"resursväljare kan zoomas in och ut genom att hålla musen över väljaren och "
+"använda genvägen :kbd:`Ctrl +` mushjul."
+
+#: ../../reference_manual/resource_management.rst:196
 msgid "Resource Types in Krita"
 msgstr "Resurstyper i Krita"
+
+#: ../../reference_manual/resource_management.rst:198
+msgid "Main Resource Types"
+msgstr "Huvudsakliga resurstyper"
+
+#: ../../reference_manual/resource_management.rst:206
+msgid "Other Resource Types"
+msgstr "Andra resurstyper"
+
+#: ../../reference_manual/resource_management.rst:208
+msgid ":ref:`gamut_mask_docker`"
+msgstr ":ref:`gamut_mask_docker`"
+
+#: ../../reference_manual/resource_management.rst:209
+msgid ":ref:`layer_style`"
+msgstr ":ref:`layer_style`"
+
+#: ../../reference_manual/resource_management.rst:210
+msgid ":ref:`task_sets_docker`"
+msgstr ":ref:`task_sets_docker`"
+
+#: ../../reference_manual/resource_management.rst:211
+msgid ":ref:`vector_library_docker`"
+msgstr ":ref:`vector_library_docker`"
+
+#: ../../reference_manual/resource_management.rst:212
+msgid ":ref:`palette_docker`"
+msgstr ":ref:`palette_docker`"
+
+#~ msgid ""
+#~ "To filter based on the partial, case insensitive name of the resources "
+#~ "you can add ``partialname`` or ``!partialname``."
+#~ msgstr ""
+#~ "För att filtrera baserat på det partiella skiftlägesokänsliga namnet på "
+#~ "resursen kan man lägga till ``partiellt namn`` eller ``!partiellt namn``."
+
+#~ msgid ""
+#~ "To include other Tags type the respective name of the tag in square "
+#~ "brackets like this ``[Tagname]`` or to exclude a tag type ``![Tagname]``."
+#~ msgstr ""
+#~ "För att inkludera andra etiketter skriv in respektive namn på etiketten "
+#~ "inom hakparenteser så här ``[Etikettnamn]`` eller för att undanta en "
+#~ "etikettyp ``![Etikettnamn]``."
+
+#~ msgid ""
+#~ "For case sensitive matching of preset name type ``\"Preset name\"`` or "
+#~ "``! \"Preset name\"`` to exclude."
+#~ msgstr ""
+#~ "För skiftlägeskänslig matchning av förinställningsnamn skriv ``"
+#~ "\"Förinställningsnamn\"`` eller ``! \"Förinställningsnamn\"`` för att "
+#~ "undanta det."
+
+#~ msgid "An incredibly quick way to save a group or brushes into a tag is to:"
+#~ msgstr ""
+#~ "Ett otroligt snabbt sätt att spara en grupp eller penslar i en etikett är "
+#~ "att:"
+
+#~ msgid ""
+#~ "Create a new tag by |mouseleft| on the :guilabel:`+`.  This will empty "
+#~ "out the contents of the Brush Preset docker."
+#~ msgstr ""
+#~ "Skapa en ny etikett genom att vänsterklicka på :guilabel:`+`. Det tömmer "
+#~ "innehållet i penselförinställningspanelen."
+
+#~ msgid ""
+#~ "Use the :guilabel:`Resource Filter` at the bottom of the :guilabel:`Brush "
+#~ "Presets` dock or :guilabel:`Brush Settings Editor` to type in what you "
+#~ "want to group.  For instance: if you type ``Pencil`` in the filter box "
+#~ "you will get all Brush Presets with ``Pencil`` somewhere in their name.  "
+#~ "Now you have all the Pencil-related Brush Presets together in one place."
+#~ msgstr ""
+#~ "Använd :guilabel:`Resursfilter` längst ner i panelen :guilabel:"
+#~ "`Penselförinställningar` eller :guilabel:`Penselförinställningseditor` "
+#~ "för att skriva in vad som ska grupperas. Om man exempelvis skriver in "
+#~ "``Penna`` i filterrutan får man alla penselförinställningar som har "
+#~ "``Penna`` någonstans i sina namn. Nu har man alla pennrelaterade "
+#~ "penselförinställningarna tillsammans på et ställe."
+
+#~ msgid ""
+#~ "To finish, click the :guilabel:`Save` button (small disk icon to the "
+#~ "right of the :guilabel:`Resource Filter` box) or press the :kbd:`Enter` "
+#~ "key and all the items will be saved with the new tag you created."
+#~ msgstr ""
+#~ "Klicka på knappen :guilabel:`Spara` (den lilla skivan till höger om "
+#~ "rutan :guilabel:`Resursfilter`) eller tryck på tangenten :kbd:`Enter` för "
+#~ "att slutföra det, så sparas alla objekt med den nya etiketten som man "
+#~ "skapade."
+
+#~ msgid ""
+#~ "Now, anytime you want to open up your \"digital pencil box\" and see what "
+#~ "you have to work with all you have to do is use the pull-down and select :"
+#~ "guilabel:`Pencils`.  The Resource Filter works the same way in other "
+#~ "parts of Krita so be on the lookout for it!"
+#~ msgstr ""
+#~ "När man nu när som helst vill öppna sin \"digitala pennlåda\" och se vad "
+#~ "man kan arbeta med, är allt man behöver göra att använda "
+#~ "kombinationsrutan och välja :guilabel:`Pennor`. Resursfiltret fungerar på "
+#~ "samma sätt för andra delar av Krita, så håll ögonen öppna!"
+
+#~ msgid ""
+#~ "Starting from 2.9 Krita has a new format to manage resources it is called "
+#~ "''Bundles'', a bundle is just a compressed file containing all the "
+#~ "resources together."
+#~ msgstr ""
+#~ "Med början på 2.9 har Krita ett nytt format för att hantera resurser, som "
+#~ "kallas \"packar\". En packe är bara en komprimerad fil som innehåller "
+#~ "alla resurserna."

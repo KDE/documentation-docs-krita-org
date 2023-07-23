@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-11 03:18+0200\n"
-"PO-Revision-Date: 2019-06-11 10:05+0100\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2020-04-26 19:12+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -18,6 +18,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: en Sobol Krita Mikkt XYZ Prewitt images edgedetection\n"
 "X-POFile-SpellExtra: heighttonormalmap image Sobel filters\n"
+"X-POFile-SpellExtra: highpassfilterlocalgradientremoval\n"
+"X-POFile-SpellExtra: highpassfiltersharpen\n"
 
 #: ../../<generated>:1
 msgid "XYZ"
@@ -39,13 +41,13 @@ msgstr "Detecção de Contornos"
 
 #: ../../reference_manual/filters/edge_detection.rst:11
 #: ../../reference_manual/filters/edge_detection.rst:40
-#: ../../reference_manual/filters/edge_detection.rst:83
+#: ../../reference_manual/filters/edge_detection.rst:110
 msgid "Prewitt"
 msgstr "Prewitt"
 
 #: ../../reference_manual/filters/edge_detection.rst:11
 #: ../../reference_manual/filters/edge_detection.rst:43
-#: ../../reference_manual/filters/edge_detection.rst:86
+#: ../../reference_manual/filters/edge_detection.rst:113
 msgid "Sobel"
 msgstr "Sobel"
 
@@ -82,16 +84,16 @@ msgid ""
 "From left to right: Original, with Prewitt edge detection applied, with "
 "Prewitt edge detection applied and result applied to alpha channel, and "
 "finally the original with an edge detection filter layer with the same "
-"settings as 3, and the filter layer blending mode set to multiply"
+"settings as 3, and the filter layer blending mode set to multiply."
 msgstr ""
 "Da esquerda para a direita: Original, com a detecção de contornos Prewitt "
 "aplicada, com a detecção de contornos Prewitt aplicada e o resultado "
 "aplicado no canal alfa e, finalmente, o original com uma camada de filtragem "
 "de detecção de contornos com a mesma configuração do 3 e com o modo de "
-"mistura da camada de filtragem configurado como Multiplicação"
+"mistura da camada de filtragem configurado como Multiplicação."
 
 #: ../../reference_manual/filters/edge_detection.rst:36
-#: ../../reference_manual/filters/edge_detection.rst:79
+#: ../../reference_manual/filters/edge_detection.rst:106
 msgid ""
 "The convolution kernel formula for the edge detection. The difference "
 "between these is subtle, but still worth experimenting with."
@@ -100,12 +102,12 @@ msgstr ""
 "entre estes é subtil, mas vale a pena experimentá-la."
 
 #: ../../reference_manual/filters/edge_detection.rst:38
-#: ../../reference_manual/filters/edge_detection.rst:81
+#: ../../reference_manual/filters/edge_detection.rst:108
 msgid "Simple"
 msgstr "Simples"
 
 #: ../../reference_manual/filters/edge_detection.rst:39
-#: ../../reference_manual/filters/edge_detection.rst:82
+#: ../../reference_manual/filters/edge_detection.rst:109
 msgid ""
 "A Kernel that is not square unlike the other two, and while this makes it "
 "fast, it doesn't take diagonal pixels into account."
@@ -114,7 +116,7 @@ msgstr ""
 "rapidamente, não tem os pixels diagonais em conta."
 
 #: ../../reference_manual/filters/edge_detection.rst:41
-#: ../../reference_manual/filters/edge_detection.rst:84
+#: ../../reference_manual/filters/edge_detection.rst:111
 msgid ""
 "A square kernel that includes the diagonal pixels just as strongly as the "
 "orthogonal pixels. Gives a very strong effect."
@@ -123,12 +125,12 @@ msgstr ""
 "os ortogonais. Cria um efeito muito forte."
 
 #: ../../reference_manual/filters/edge_detection.rst:43
-#: ../../reference_manual/filters/edge_detection.rst:86
+#: ../../reference_manual/filters/edge_detection.rst:113
 msgid "Formula"
 msgstr "Fórmula"
 
 #: ../../reference_manual/filters/edge_detection.rst:43
-#: ../../reference_manual/filters/edge_detection.rst:86
+#: ../../reference_manual/filters/edge_detection.rst:113
 msgid ""
 "A square kernel that includes the diagonal pixels slightly less strong than "
 "the orthogonal pixels. Gives a more subtle effect than Prewitt."
@@ -217,7 +219,7 @@ msgstr ""
 "direcção da linha em radianos."
 
 #: ../../reference_manual/filters/edge_detection.rst:61
-#: ../../reference_manual/filters/edge_detection.rst:90
+#: ../../reference_manual/filters/edge_detection.rst:117
 msgid "Horizontal/Vertical radius"
 msgstr "Raio horizontal/vertical"
 
@@ -244,18 +246,111 @@ msgstr ""
 "que só irá gerar linhas."
 
 #: ../../reference_manual/filters/edge_detection.rst:66
+msgid "High Pass"
+msgstr "Passa-Alto"
+
+#: ../../reference_manual/filters/edge_detection.rst:69
+msgid "Gaussian High Pass"
+msgstr "Passa-Alto Gaussiano"
+
+#: ../../reference_manual/filters/edge_detection.rst:71
+msgid ""
+"A High Pass filter is a type of edge detection filter. It is usually used to "
+"enhance contrasts, much like a sharpen filter, but within a texture editing "
+"workflow it is also used to remove local gradients."
+msgstr ""
+"Um filtro Passa-Alto é um tipo de filtro de detecção de arestas. É "
+"normalmente usado para melhorar os contrastes, como o filtro de afiamento "
+"mas, num processo de edição de texturas, também é usado para remover os "
+"gradientes locais."
+
+#: ../../reference_manual/filters/edge_detection.rst:74
+msgid "Radius"
+msgstr "Raio"
+
+#: ../../reference_manual/filters/edge_detection.rst:74
+msgid ""
+"The radius within the Gaussian High Pass filter is similar to the radius in "
+"the Edge Detection filter."
+msgstr ""
+"O raio dentro do filtro Passa-Alto Gaussiano é semelhante ao raio no filtro "
+"de Detecção de Arestas."
+
+#: ../../reference_manual/filters/edge_detection.rst:76
+msgid ""
+"To use this as a sharpen filter, create a filter layer with this filter, and "
+"then set the blending mode to modes like 'soft light', 'overlay', 'hard "
+"light', 'linear light'. Different blending modes give different results."
+msgstr ""
+"Para usar isto como um filtro de afiamento, crie uma camada de filtragem com "
+"este filtro e depois use o modo de mistura nos modos como a 'luz suave', a "
+"'sobreposição', a 'luz forte' ou 'luz linear'. Os diferentes modos de "
+"mistura geram resultados diferentes."
+
+#: ../../reference_manual/filters/edge_detection.rst:82
+msgid ".. image:: images/filters/highpass_filter_sharpen.png"
+msgstr ".. image:: images/filters/highpass_filter_sharpen.png"
+
+#: ../../reference_manual/filters/edge_detection.rst:82
+msgid ""
+"**Top left**: Original, **top right**: Gaussian Highpass Result with radius "
+"3, **bottom left**: Gaussian High Pass Result with radius 3 blended over the "
+"original with to Linear Light, **bottom right**: Gaussian High Pass result "
+"with radius 3 blended over the original with Soft Light."
+msgstr ""
+"**Superior esquerdo**: Original, **superior direito**: Resultado do Passa-"
+"Alto Gaussiano com raio 3, **inferior esquerdo**: Resultado do Passa-Alto "
+"Gaussiano com raio 3 misturado com o original com Luz Linear, **inferior "
+"direito**: Resultado do Passa-Alto Gaussiano com raio 3 misturado com o "
+"original com Luz Suave."
+
+#: ../../reference_manual/filters/edge_detection.rst:84
+msgid ""
+"To remove local gradients from a texture, create a clone layer, and apply "
+"this filter as a filter mask. Then, put a filter layer with gaussian blur "
+"set to the full amount in between the clone layer and the original. Finally, "
+"set the clone layer to luminosity or multiply (in this case an extra filter "
+"mask needs to be added to reduce the levels so that the multiplication "
+"result will not be as strong)."
+msgstr ""
+"Para remover os gradientes locais de uma textura, crie uma camada de "
+"clonagem e aplique este filtro como uma máscara de filtragem. Depois, "
+"coloque uma máscara de filtragem com o borrão gaussiano configurado com o "
+"valor total entre a camada de clonagem e o original. Finalmente, configure a "
+"camada de clonagem para a luminosidade ou multiplicação (neste caso, é "
+"necessário adicionar uma máscara de filtragem extra para reduzir os níveis, "
+"de forma que o resultado da multiplicação não seja tão forte)."
+
+#: ../../reference_manual/filters/edge_detection.rst:90
+msgid ".. image:: images/filters/highpass_filter_local_gradient_removal.png"
+msgstr ".. image:: images/filters/highpass_filter_local_gradient_removal.png"
+
+#: ../../reference_manual/filters/edge_detection.rst:90
+msgid ""
+"**Left**: Original, **top right**: Gaussian High Pass Result blended with "
+"luminosity to remove the local gradients but keep the sharp details. In this "
+"specific example the lack of local gradients removes some character, but the "
+"gaussian high pass result could also be used to create a heightmap."
+msgstr ""
+"**Esquerda**: Original, **superior direita**: Resultado do Passa-Alto "
+"Gaussiano misturado com a luminosidade para remover os gradientes locais mas "
+"para manter os detalhes nítidos. Neste exemplo específico, a falta de "
+"gradientes locais remove algumas características, mas o resultado do passa-"
+"alto gaussiano poderá também ser usado para criar um mapa de altura."
+
+#: ../../reference_manual/filters/edge_detection.rst:93
 msgid "Height Map"
 msgstr "Mapa de Altura"
 
-#: ../../reference_manual/filters/edge_detection.rst:66
+#: ../../reference_manual/filters/edge_detection.rst:93
 msgid "Normal Map"
 msgstr "Mapa da Normal"
 
-#: ../../reference_manual/filters/edge_detection.rst:69
+#: ../../reference_manual/filters/edge_detection.rst:96
 msgid "Height to Normal Map"
 msgstr "Mapa de Altura à Normal"
 
-#: ../../reference_manual/filters/edge_detection.rst:76
+#: ../../reference_manual/filters/edge_detection.rst:103
 msgid ""
 "A filter that converts Height maps to Normal maps through the power of edge "
 "detection. It is also available for the filter layer or filter brush."
@@ -264,18 +359,18 @@ msgstr ""
 "tal a potencialidade da detecção de contornos. Também está disponível para a "
 "camada de filtragem ou para o pincel de filtragem."
 
-#: ../../reference_manual/filters/edge_detection.rst:88
+#: ../../reference_manual/filters/edge_detection.rst:115
 msgid "Channel"
 msgstr "Canal"
 
-#: ../../reference_manual/filters/edge_detection.rst:89
+#: ../../reference_manual/filters/edge_detection.rst:116
 msgid ""
 "Which channel of the layer should be interpreted as the grayscale heightmap."
 msgstr ""
 "Qual o canal da camada que deverá ser interpretado como o mapa de altura em "
 "tons de cinzento."
 
-#: ../../reference_manual/filters/edge_detection.rst:91
+#: ../../reference_manual/filters/edge_detection.rst:118
 msgid ""
 "The radius of the edge detection. Default is 1 and going higher will "
 "increase the strength of the normal map. Adjust this if the effect of the "
@@ -285,7 +380,7 @@ msgstr ""
 "maior será a potência do mapa da normal. Ajuste este valor se o efeito do "
 "mapa da normal resultante for demasiado fraco."
 
-#: ../../reference_manual/filters/edge_detection.rst:93
+#: ../../reference_manual/filters/edge_detection.rst:120
 msgid ""
 "An XYZ swizzle, that allows you to map Red, Green and Blue to different 3d "
 "normal vector coordinates. This is necessary mostly for the difference "

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: "
 "docs_krita_org_reference_manual___resource_management___paintoppresets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-15 03:16+0200\n"
+"POT-Creation-Date: 2021-09-01 00:13+0000\n"
 "PO-Revision-Date: 2019-04-02 12:59+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -46,8 +46,10 @@ msgstr "Predvoľba štetca"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:18
 msgid ""
-"Paint Op presets store the preview thumbnail, brush-engine, the parameters, "
-"the brush tip, and, if possible, the texture. They are saved as .kpp files"
+"Brush Presets, known within Krita as ``paintoppresets``, store the preview "
+"thumbnail, brush-engine, the parameters, the brush tip, and, if possible, "
+"the texture. They are saved as ``.kpp`` files, except for :ref:`MyPaint "
+"brushes <mypaint_brush_engine>`, which are saved as ``.myb`` files."
 msgstr ""
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:20
@@ -63,7 +65,7 @@ msgstr "Docker"
 #: ../../reference_manual/resource_management/paintoppresets.rst:25
 msgid ""
 "The docker for Paint-op presets is the :ref:`brush_preset_docker`. Here you "
-"can tag, add, remove and search paint op presets."
+"can tag, add, remove and search brush presets."
 msgstr ""
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:28
@@ -73,5 +75,22 @@ msgstr ""
 #: ../../reference_manual/resource_management/paintoppresets.rst:30
 msgid ""
 "You can edit the preview thumbnail in the brush-scratchpad, but you can also "
-"open the \\*.kpp file in Krita to get a 200x200 file to edit to your wishes."
+"open the ``\\*.kpp`` file in Krita to get a 200x200 file to edit to your "
+"wishes. For :ref:`MyPaint brushes <mypaint_brush_engine>`, there is a "
+"separate PNG file which is the same name as the ``.myb`` file, except with "
+"``_prev`` attached."
+msgstr ""
+
+#: ../../reference_manual/resource_management/paintoppresets.rst:33
+msgid "Structure"
+msgstr ""
+
+#: ../../reference_manual/resource_management/paintoppresets.rst:35
+msgid ""
+":ref:`MyPaint brushes <mypaint_brush_engine>` are stored as JSON files with "
+"an accompanying preview image, while ``.kpp`` files are PNGs which contain "
+"an annotation with the XML data for the brush engine. You can view this data "
+"when having the ``.kpp`` file open, via :menuselection:`image --> properties "
+"--> annotations`, or by using the :program:`ImageMagick` command ``identify -"
+"verbose {FILENAME}`` on the ``.kpp``."
 msgstr ""

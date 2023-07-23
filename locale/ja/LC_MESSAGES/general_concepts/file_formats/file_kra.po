@@ -1,49 +1,94 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-19 03:24+0200\n"
-"PO-Revision-Date: 2019-03-02 16:12-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"POT-Creation-Date: 2021-09-01 00:13+0000\n"
+"PO-Revision-Date: 2022-06-05 23:46-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #: ../../general_concepts/file_formats/file_kra.rst:1
 msgid "The Krita Raster Archive file format."
-msgstr ""
+msgstr "Krita ラスターアーカイブファイル形式"
 
 #: ../../general_concepts/file_formats/file_kra.rst:10
 msgid "*.kra"
-msgstr ""
+msgstr "*.kra"
 
 #: ../../general_concepts/file_formats/file_kra.rst:10
 msgid "KRA"
-msgstr ""
+msgstr "KRA"
 
 #: ../../general_concepts/file_formats/file_kra.rst:10
 msgid "Krita Archive"
-msgstr ""
+msgstr "Krita アーカイブ"
+
+#: ../../general_concepts/file_formats/file_kra.rst:10
+msgid "KRZ"
+msgstr "KRZ"
+
+#: ../../general_concepts/file_formats/file_kra.rst:10
+msgid "*.krz"
+msgstr "*.krz"
 
 #: ../../general_concepts/file_formats/file_kra.rst:15
 msgid "\\*.kra"
-msgstr ""
+msgstr "\\*.kra"
 
 #: ../../general_concepts/file_formats/file_kra.rst:17
 msgid ""
 "``.kra`` is Krita's internal file-format, which means that it is the file "
 "format that saves all of the features Krita can handle. It's construction is "
 "vaguely based on the open document standard, which means that you can rename "
-"your ``.kra`` file to a ``.zip`` file and open it up to look at the insides."
+"your ``.kra`` file to a ``.zip`` file and open it up to look at the insides. "
+"In Krita's settings dialog you can enable compression; with compression "
+"enabled the files will be smaller, but saving will take longer."
 msgstr ""
+"``.kra`` は Krita の内部ファイル形式で、Krita が扱うすべての機能を保存するこ"
+"とができるファイル形式です。構造はおおよそ open document standard に基づき、"
+"``.kra`` ファイルを ``.zip`` ファイルにリネームすることで開いて中を見ることが"
+"できます。 Krita の設定ダイアログの中で、圧縮を有効にすることができます。そう"
+"することでファイルは小さくなりますが、保存の際に時間がかかります。"
 
 #: ../../general_concepts/file_formats/file_kra.rst:19
 msgid ""
-"It is a format that you can expect to get very heavy, and isn't meant for "
-"sharing on the internet."
+"Other applications mostly cannot open ``.kra``  files, and you cannot upload "
+"``.kra`` as images on websites like twitter or deviantArt."
 msgstr ""
+"他のアプリケーションはたいてい ``.kra`` ファイルを開くことができません。そし"
+"て Twitter や DeviantArt のようなウェブサイトに ``.kra`` ファイルを画像として"
+"アップロードすることもできません。"
+
+#: ../../general_concepts/file_formats/file_kra.rst:21
+msgid ""
+"A ``.kra`` file contains a file names ``mergedimage.png`` which contains the "
+"rendered image as you see it on your canvas. Some applications, like "
+"Scribus, can use the ``mergedimage.png`` file to open ``.kra`` files. This "
+"file is always in the RGBA color model, or grayscale for files that are "
+"originally grayscale."
+msgstr ""
+"``.kra`` ファイルは ``mergedimage.png`` というファイルを含んでいます。これ"
+"は、キャンバスで見るのと同じような、レンダリングされた画像です。Scribus のよ"
+"うなアプリケーションでは、``.kra`` ファイルを開くために ``mergedimage.png`` "
+"を使用する場合があります。このファイルは常に RGBA カラーモデルか、元のファイ"
+"ルがグレースケールの場合はグレースケールとなっています。"
+
+#: ../../general_concepts/file_formats/file_kra.rst:23
+msgid ""
+"The ``.krz`` file format is a ``.kra`` file without ``mergedimage.png`` and "
+"with compression always enabled. You can use this format if you want to save "
+"disk space and do not care about interchange with those applications that "
+"load the ``mergedimage.png`` file."
+msgstr ""
+"``.krz`` ファイル形式は ``.kra`` ファイルから ``mergedimage.png`` を取り除い"
+"た形式で、また常に圧縮が有効になっています。ディスク容量を節約したいとき、そ"
+"して ``mergedimage.png`` ファイルを読み込むようなアプリケーションとの互換性を"
+"気にしない場合、このファイル形式を利用することができます。"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-04 03:33+0200\n"
-"PO-Revision-Date: 2019-05-08 17:30+0100\n"
+"POT-Creation-Date: 2021-09-01 00:13+0000\n"
+"PO-Revision-Date: 2021-09-01 16:25+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -16,17 +16,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-POFile-SpellExtra: Task set image en images dockers\n"
+"X-POFile-SpellExtra: Task set image en images dockers Krita dfn ref\n"
+"X-POFile-SpellExtra: mainmenu kbd Enter guilabel kts addnewpaintlayer\n"
+"X-POFile-SpellExtra: addnewclonelayer addnewfilelayer\n"
 
 #: ../../reference_manual/dockers/task_sets.rst:1
 msgid "Overview of the task sets docker."
 msgstr "Introdução à área de conjuntos de tarefas."
 
-#: ../../reference_manual/dockers/task_sets.rst:16
+#: ../../reference_manual/dockers/task_sets.rst:12
+msgid "Task Sets"
+msgstr "Conjuntos de Tarefas"
+
+#: ../../reference_manual/dockers/task_sets.rst:12
+msgid "Actions"
+msgstr "Acções"
+
+#: ../../reference_manual/dockers/task_sets.rst:12
+msgid "Macro"
+msgstr "Macro"
+
+#: ../../reference_manual/dockers/task_sets.rst:17
 msgid "Task Sets Docker"
 msgstr "Área de Conjuntos de Tarefas"
 
-#: ../../reference_manual/dockers/task_sets.rst:18
+#: ../../reference_manual/dockers/task_sets.rst:19
 msgid ""
 "Task sets are for sharing a set of steps, like a tutorial. You make them "
 "with the task-set docker."
@@ -34,31 +48,59 @@ msgstr ""
 "Os conjuntos de tarefas servem para partilhar um conjunto de passos, como se "
 "fosse um tutorial. Podê-los-á compor com a área de conjuntos de tarefas."
 
-#: ../../reference_manual/dockers/task_sets.rst:21
+#: ../../reference_manual/dockers/task_sets.rst:22
 msgid ".. image:: images/dockers/Task-set.png"
 msgstr ".. image:: images/dockers/Task-set.png"
 
-#: ../../reference_manual/dockers/task_sets.rst:22
+#: ../../reference_manual/dockers/task_sets.rst:23
 msgid ""
 "Task sets can record any kind of command also available via the shortcut "
-"manager. It can not record strokes, like the macro recorder can. However, "
-"you can play macros with the tasksets!"
+"manager. It is not a macro recorder, right now, Krita does not have that "
+"kind of functionality."
 msgstr ""
 "Os conjuntos de tarefas conseguem gravar qualquer tipo de comandos que "
-"estejam também disponíveis no gestor de atalhos. Não consegue gravar traços, "
-"como acontece com o gravador de macros. Contudo, poderá reproduzir macros "
-"com os conjuntos de tarefas!"
+"estejam também disponíveis no gestor de atalhos. Não é um gravador de "
+"macros, já que para já o Krita não tem esse tipo de funcionalidade."
 
-#: ../../reference_manual/dockers/task_sets.rst:24
+#: ../../reference_manual/dockers/task_sets.rst:25
 msgid ""
 "The tasksets docker has a record button, and you can use this to record a "
-"certain workflow. Then use this to let items appear in the taskset list. "
-"Afterwards, turn off the record. You can then click any action in the list "
-"to make them happen. Press the 'Save' icon to name and save the taskset."
+"certain workflow. All :dfn:`Actions` can be recorded. These include every "
+"action available in the :ref:`main_menu`, but also all actions available "
+"via :kbd:`Ctrl + Enter`. Then use this to let items appear in the taskset "
+"list. Afterwards, turn off :guilabel:`record`. You can then click any action "
+"in the list to make them happen. Press the :guilabel:`Save` icon to name and "
+"save the taskset."
 msgstr ""
 "A área de conjuntos de tarefas tem um botão de gravação, o qual poderá ser "
-"usado para gravar um dado fluxo de trabalho. Depois, pode usar isto para "
-"apresentar os itens na lista de conjuntos de tarefas. Depois disso tudo, "
-"desligue a gravação. Poderá então carregar em qualquer acção da lista para a "
-"executar. Carregue no botão 'Gravar' para atribuir um nome e gravar o "
-"conjunto de tarefas."
+"usado para gravar um dado fluxo de trabalho. Todas as :dfn:`Acções` poderão "
+"ser gravadas. Estas incluem todas as acções disponíveis no :ref:`main_menu`, "
+"mas também todas as acções disponíveis com o :kbd:`Ctrl + Enter`. Depois, "
+"pode usar isto para apresentar os itens na lista de conjuntos de tarefas. "
+"Depois disso tudo, desligue a :guilabel:`gravação`. Poderá então carregar em "
+"qualquer acção da lista para a executar. Carregue no botão :guilabel:"
+"`Gravar` para atribuir um nome e gravar o conjunto de tarefas."
+
+#: ../../reference_manual/dockers/task_sets.rst:27
+msgid ""
+"Task sets are a :ref:`resource <resource_management>`. As such, they can be "
+"saved, tagged, reordered. They are stored as ``*.kts`` files, which are XML "
+"files::"
+msgstr ""
+"Os conjuntos de tarefas são um :ref:`recurso <resource_management>`. Como "
+"tal, poderão ser gravados, marcados ou reordenados. São gravados como "
+"ficheiros ``*.kts``, que são ficheiros XML::"
+
+#: ../../reference_manual/dockers/task_sets.rst:29
+msgid ""
+"<Taskset name=\"example\" version=\"1\">\n"
+"    <action>add_new_paint_layer</action>\n"
+"    <action>add_new_clone_layer</action>\n"
+"    <action>add_new_file_layer</action>\n"
+"</Taskset>"
+msgstr ""
+"<Taskset name=\"exemplo\" version=\"1\">\n"
+"    <action>add_new_paint_layer</action>\n"
+"    <action>add_new_clone_layer</action>\n"
+"    <action>add_new_file_layer</action>\n"
+"</Taskset>"

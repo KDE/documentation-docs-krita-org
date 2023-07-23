@@ -1,0 +1,644 @@
+# Translation of docs_krita_org_reference_manual___dockers___animation_curves.po to Catalan
+# Copyright (C) 2021-2023 This_file_is_part_of_KDE
+# This file is distributed under same license as the source of its messages in English.
+#
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2021, 2022, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: websites-docs-krita-org\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 00:13+0000\n"
+"PO-Revision-Date: 2023-02-26 17:23+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: ../../<rst_epilog>:2
+msgid ""
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: mouseleft"
+msgstr ""
+".. image:: images/icons/Krita_mouse_left.png\n"
+"   :alt: clic esquerre del ratolí"
+
+#: ../../<rst_epilog>:4
+msgid ""
+".. image:: images/icons/Krita_mouse_right.png\n"
+"   :alt: mouseright"
+msgstr ""
+".. image:: images/icons/Krita_mouse_right.png\n"
+"   :alt: clic dret del ratolí"
+
+#: ../../reference_manual/dockers/animation_curves.rst:1
+msgid "Overview of the Animation Curves docker."
+msgstr "Vista general de l'acoblador Corbes d'animació."
+
+#: ../../reference_manual/dockers/animation_curves.rst:11
+msgid "Animation"
+msgstr "Animació"
+
+#: ../../reference_manual/dockers/animation_curves.rst:11
+msgid "Animation Curves"
+msgstr "Corbes d'animació"
+
+#: ../../reference_manual/dockers/animation_curves.rst:11
+msgid "Interpolation"
+msgstr "Interpolació"
+
+#: ../../reference_manual/dockers/animation_curves.rst:11
+msgid "Tweening"
+msgstr "Agermanament"
+
+#: ../../reference_manual/dockers/animation_curves.rst:16
+msgid "Animation Curves Docker"
+msgstr "Acoblador Corbes d'animació"
+
+#: ../../reference_manual/dockers/animation_curves.rst:18
+msgid ""
+":program:`Krita`'s :dfn:`Animation Curves Docker` allows artists to animate "
+"the values of some properties over time."
+msgstr ""
+"L':dfn:`acoblador Corbes d'animació` del :program:`Krita` permet als "
+"artistes animar els valors d'algunes propietats al llarg del temps."
+
+#: ../../reference_manual/dockers/animation_curves.rst:20
+msgid ""
+"When animating a complex cut, it's not unusual to want to animate things "
+"that would be difficult or inefficient to do through drawing alone. In "
+"traditional pen-and-paper animation dating back to the 1920s, special "
+"lighting rigs and purpose-built devices like multiplane cameras were used to "
+"pull off special effects that changed animation forever! Likewise, Krita's "
+"Animation Curves docker allows us to animate more than just the lines on "
+"your canvas, such as a layer's opacity or the position, rotation and scale "
+"of a :ref:`Transform Mask <transformation_masks>`."
+msgstr ""
+"En animar un retallat complex, no és estrany voler animar coses que serien "
+"difícils o ineficients fer només amb el dibuix. En l'animació tradicional de "
+"llapis i paper que es remunta a la dècada de 1920, s'utilitzaven plataformes "
+"i dispositius especials d'il·luminació, com les càmeres multiplans per a "
+"crear efectes especials, els quals van canviar l'animació per sempre! "
+"Tanmateix, l'acoblador Corbes d'animació del Krita ens permet animar més que "
+"només les línies en el llenç, com l'opacitat o la posició d'una capa, el gir "
+"i l'escala d'una :ref:`Màscara de transformació <transformation_masks>`."
+
+# skip-rule: t-sc-plot
+#: ../../reference_manual/dockers/animation_curves.rst:22
+msgid ""
+"Because most things can be boiled down to numeric values (for example, "
+"opacity as a percentage or the position of a Transform Mask), and because "
+"computers are great with maths and automation, we can plot and visualize the "
+"change in values over time on a simple 2D graph. What's more, we can also "
+"draw lines and curves that show the computer how we want it to calculate the "
+"values in between each of our plotted keyframe values; a technique known as "
+"interpolation or :dfn:`tweening`."
+msgstr ""
+"A causa que la majoria de les coses es poden reduir a valors numèrics (per "
+"exemple, l'opacitat com un percentatge o la posició d'una Màscara de "
+"transformació), i pel fet que els ordinadors són excel·lents amb les "
+"matemàtiques i l'automatització, podem traçar i visualitzar el canvi en els "
+"valors al llarg del temps sobre un gràfic en 2D senzill. A més, també podem "
+"dibuixar línies i corbes que mostrin a l'ordinador com volem que calculi els "
+"valors entre cadascun dels nostres valors de fotograma clau traçats. Una "
+"tècnica coneguda com a interpolació o :dfn:`agermanament`."
+
+#: ../../reference_manual/dockers/animation_curves.rst:26
+msgid ".. image:: images/dockers/Animation_Curves_Docker.png"
+msgstr ".. image:: images/dockers/Animation_Curves_Docker.png"
+
+#: ../../reference_manual/dockers/animation_curves.rst:28
+msgid "Overview"
+msgstr "Resum"
+
+#: ../../reference_manual/dockers/animation_curves.rst:30
+msgid ""
+"As shown in the image above, Krita's Animation Curves Docker can be thought "
+"of as different sections:"
+msgstr ""
+"Com es mostra a la imatge de dalt, l'acoblador Corbes d'animació del Krita "
+"es pot considerar com a seccions diferents:"
+
+#: ../../reference_manual/dockers/animation_curves.rst:32
+msgid ""
+":dfn:`Utilities` -- The left side of the toolbar gives animators quick "
+"access to all of the widgets that are critical to their workflow; :dfn:"
+"`transport controls` (previous, play/pause, stop and next buttons), a frame "
+"counter, preview controls (speed and drop frames), buttons for adding and "
+"removing :dfn:`scalar keyframes`, buttons for changing the :dfn:"
+"`interpolation mode` and :dfn:`tangent mode` of the selected keyframe, a box "
+"for setting the selected keyframe to a specific value, as well as buttons to "
+"help zoom and navigate the main graph view."
+msgstr ""
+":dfn:`Utilitats`: El costat esquerre de la barra d'eines dona accés ràpid "
+"als animadors a tots els ginys que són crítics per al seu flux de treball: :"
+"dfn:`Controls de transport` (Els botons anterior, reprodueix/fes una pausa, "
+"atura), un comptador de fotogrames, controls de vista prèvia (velocitat i "
+"descarta els fotogrames), botons per a afegir i eliminar :dfn:`fotogrames "
+"clau escalars`, botons per canviar el :dfn:`mode d'interpolació` i el :dfn:"
+"`mode tangent` del fotograma clau seleccionat, un quadre per a configurar el "
+"fotograma clau seleccionat a un valor específic, així com els botons per a "
+"ajudar a fer zoom i navegar per la vista principal de la gràfica."
+
+#: ../../reference_manual/dockers/animation_curves.rst:34
+msgid ""
+":dfn:`Settings` -- While all of the high-traffic controls are presented "
+"directly, the right end of the toolbar also contains buttons for opening "
+"submenus for things like onion skins and settings that you can generally set "
+"and forget (for example, :dfn:`playback range`, :dfn:`frame rate` and :dfn:"
+"`autokey mode`)."
+msgstr ""
+":dfn:`Opcions de configuració`: Si bé tots els controls amb un trànsit alt "
+"es presenten directament, l'extrem dret de la barra d'eines també conté "
+"botons per a submenús d'obertura per a coses com les pells de ceba i opcions "
+"de configuració que en general podeu establir i oblidar (per exemple, l':dfn:"
+"`interval de reproducció`, :dfn:`velocitat dels fotogrames` i el :dfn:`mode "
+"clau automàtica`)."
+
+#: ../../reference_manual/dockers/animation_curves.rst:36
+msgid ""
+":dfn:`Channels List` -- This area shows the various channels of the current "
+"layer that are currently being animated within the Animation Curves Docker. "
+"Each independent channel is associated with a unique color and its "
+"visibility within the graph view can be toggled by clicking on the eyeball "
+"icon."
+msgstr ""
+":dfn:`Llista de canals`: Aquesta àrea mostra els diversos canals de la capa "
+"actual que s'estan animant dins de l'acoblador Corbes d'animació. Cada canal "
+"independent s'associa amb un color únic i la seva visibilitat dins de la "
+"vista de la gràfica es pot activar fent clic sobre la icona del globus "
+"ocular."
+
+#: ../../reference_manual/dockers/animation_curves.rst:38
+msgid ""
+":dfn:`Graph View` -- Last but not least is the :dfn:`graph view`, the big "
+"graph of values and times that we use to animate the value of parameters "
+"over time. When a :term:`keyframe` is added to the current channel at the "
+"current time it will appear as a colored circle within the graph view. After "
+"clicking on the keyframe to select it, you can change the value by dragging "
+"the circle vertically or by entering a specific value into the value box on "
+"the toolbar. Similarly, you can change the time of the selected frame by "
+"dragging it horizontally. Finally, when the select keyframe is using :"
+"guilabel:`bezier curve interpolation`, selecting it will cause one or more :"
+"dfn:`curve handles` to appear, which can be used to change the shape of the "
+"interpolation curve over time."
+msgstr ""
+":dfn:`Vista de la gràfica`: Finalment, però no menys important hi ha la :dfn:"
+"`vista de la gràfica`, la gran gràfica de valors i temps que utilitzem per a "
+"animar el valor dels paràmetres al llarg del temps. Quan s'afegeix un :term:"
+"`fotograma clau` al canal actual al temps actual, apareixerà com un cercle "
+"de color dins de la vista de la gràfica. Després de fer clic sobre el "
+"fotograma clau per a seleccionar-lo, podreu canviar el valor arrossegant el "
+"cercle verticalment o introduint un valor específic en el quadre de valors "
+"que hi ha a la barra d'eines. De manera similar, podreu canviar el temps del "
+"fotograma seleccionat arrossegant horitzontalment. Finalment, quan el "
+"fotograma clau seleccionat està utilitzant la :guilabel:`Interpolació de la "
+"corba de Bézier`, la selecció farà que apareguin una o més :dfn:`nanses de "
+"corba`, les quals es poden utilitzar per a canviar la forma de la corba "
+"d'interpolació al llarg del temps."
+
+#: ../../reference_manual/dockers/animation_curves.rst:42
+msgid "Animating Opacity"
+msgstr "Animar l'opacitat"
+
+#: ../../reference_manual/dockers/animation_curves.rst:44
+msgid ""
+"Starting with :program:`Krita 5`, we can use the Animation Curves Docker to "
+"animate a layer's :term:`opacity` and, with the help of a :ref:`Transform "
+"Mask <transformation_masks>`, its :dfn:`position`, :dfn:`rotation`, :dfn:"
+"`scale` and :dfn:`shear`."
+msgstr ""
+"Començant amb el :program:`Krita 5`, podem utilitzar l'acoblador Corbes "
+"d'animació per a animar l':term:`opacitat` d'una capa i, amb l'ajuda d'una :"
+"ref:`Màscara de transformació <transformation_masks>`, la seva :dfn:"
+"`posició`, :dfn:`gir`, :dfn:`escala` i :dfn:`inclinació`."
+
+#: ../../reference_manual/dockers/animation_curves.rst:48
+msgid ""
+"Though the design is pretty similar to the :ref:`timeline_docker`, the "
+"Animation Curves Docker may be a bit confusing or intimidating when you "
+"first open it, especially if you haven't done digital animation before."
+msgstr ""
+"Tot i que el disseny és molt similar a l':ref:`timeline_docker`, l'acoblador "
+"Corbes d'animació pot ser una mica confús o intimidant quan l'obriu per "
+"primera vegada, especialment si no heu creat abans una animació digital."
+
+#: ../../reference_manual/dockers/animation_curves.rst:50
+msgid "Let's look first at *animating a layer's opacity*:"
+msgstr "Vegem primer com *animar l'opacitat d'una capa*:"
+
+#: ../../reference_manual/dockers/animation_curves.rst:52
+msgid ""
+"Say you want to animate something like an expanding cloud of dust that "
+"gradually becomes more transparent as it dissipates, or maybe a haunting "
+"ghost that seems to materialize out of thin air. These types of effects are "
+"pretty hard to get right by traditionally animated line drawings alone, and "
+"that's exactly where the Animation Curves Docker can step in."
+msgstr ""
+"Diguem que voleu animar quelcom com un núvol de pols en expansió que "
+"gradualment es torna més transparent a mesura que es dissipa, o potser un "
+"fantasma inquietant que sembla desmaterialitzar-se a l'aire. Aquests tipus "
+"d'efectes són força difícils d'aconseguir només amb els tradicionals "
+"dibuixos de línies animades, i aquí és exactament on l'animació pot pujar "
+"l'acoblador Corbes d'animació."
+
+#: ../../reference_manual/dockers/animation_curves.rst:54
+msgid ""
+"After *selecting the layer* that you want to animate the opacity of, you "
+"need to *select the frame time you want the opacity to start changing at* by "
+"clicking somewhere on the :term:`frame timing header` at the top of the "
+"graph view. Just like the :ref:`timeline_docker`, we can click and drag "
+"anywhere on the timing header to \"scrub\" across your animation and preview "
+"the results."
+msgstr ""
+"Després de *seleccionar la capa* de la qual voleu animar l'opacitat, haureu "
+"de *seleccionar el temps del fotograma on voleu que l'opacitat comenci a "
+"canviar* fent clic en algun lloc de la :term:`Capçalera de temporització "
+"dels fotogrames` que hi ha a la part superior de la vista de la gràfica. "
+"Igual que l':ref:`timeline_docker`, podem fer clic i arrossegar en qualsevol "
+"lloc de la capçalera de temps a «fregar» a través de l'animació i "
+"previsualitzar-ne el resultat."
+
+#: ../../reference_manual/dockers/animation_curves.rst:56
+msgid ""
+"Next we create our first scalar :term:`keyframe` by clicking on the :"
+"guilabel:`add keyframe` button on the docker's titlebar."
+msgstr ""
+"A continuació, crearem el nostre primer :term:`fotograma clau` escalar fent "
+"clic al botó :guilabel:`Afegeix un fotograma clau` que hi ha a la barra de "
+"títol de l'acoblador."
+
+#: ../../reference_manual/dockers/animation_curves.rst:58
+msgid ""
+"When you do this you'll notice two things happen. First, a new :guilabel:"
+"`opacity channel` will appear in the :dfn:`channels list` on the left-hand "
+"side, next to a colored mark that's associated with the color of the "
+"keyframes and curves in the :dfn:`graph view`. Second, a single keyframe "
+"will appear somewhere inside the graph view at the currently active time."
+msgstr ""
+"Quan ho feu, notareu que succeeixen dues coses. Primer, apareixerà un canal "
+"d':guilabel:`Opacitat` nou en la :dfn:`llista de canals` que hi ha al costat "
+"esquerre, al costat d'una marca de color que s'associa amb el color dels "
+"fotogrames clau i les corbes en la :dfn:`vista de la gràfica`. En segon "
+"lloc, apareixerà un sol fotograma clau en algun lloc dins de la vista de la "
+"gràfica en el moment actualment actiu."
+
+#: ../../reference_manual/dockers/animation_curves.rst:60
+msgid ""
+"Of course it takes more than a single point to make a line or curve, so we "
+"have a little bit more work to do."
+msgstr ""
+"Per descomptat, es necessita més d'un sol punt per a crear una línia o "
+"corba, de manera que tenim una mica més de treball per fer."
+
+#: ../../reference_manual/dockers/animation_curves.rst:62
+msgid ""
+"Just like our first keyframe, we need to make a second keyframe. Let's "
+"change the active frame time again (by clicking or scrubbing across the "
+"timing header) and add another keyframe at that new time (by clicking on "
+"the :guilabel:`add keyframe` button). As you'd expect, a second keyframe has "
+"appeared at the new time and a straight line has appeared between them."
+msgstr ""
+"Igual que el nostre primer fotograma clau, ens cal crear un segon fotograma "
+"clau. Canviarem de nou el temps del fotograma actiu (fent clic o fregant a "
+"través de la capçalera de temps) i afegirem un altre fotograma clau en "
+"aquest temps nou (fent clic sobre el botó :guilabel:`Afegeix un fotograma "
+"clau`). Com espereu, apareixerà un segon fotograma clau en el temps nou i "
+"una línia recta entre ells."
+
+#: ../../reference_manual/dockers/animation_curves.rst:64
+msgid ""
+"With the active time still over our new keyframe, you'll find that as you "
+"change the :dfn:`opacity slider` above the :ref:`layer_docker` the new "
+"keyframe that we've created will move up and down. Likewise, moving the "
+"keyframe up and down will cause the opacity *at that time* to change."
+msgstr ""
+"Amb el temps actiu encara sobre el nostre fotograma clau nou, trobareu que a "
+"mesura que canvieu el :dfn:`control lliscant de l'opacitat` sobre "
+"l'acoblador :ref:`layer_docker`, el fotograma clau nou que hem creat es "
+"mourà cap amunt i cap avall. De la mateixa manera, moure el fotograma clau "
+"cap amunt i cap avall causarà que l'opacitat canviï *en aquest moment*."
+
+#: ../../reference_manual/dockers/animation_curves.rst:66
+msgid ""
+"And just like that, when you press the :guilabel:`play button` you'll see "
+"the opacity of the layer animate over time!"
+msgstr ""
+"I així, quan premeu el botó de :guilabel:`Reprodueix`, veureu l'opacitat de "
+"la capa animada al llarg del temps!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:70
+msgid ""
+"Unlike traditional methods, animating with curves can cause values to change "
+"across every frame of your animation. This can be more demanding on your "
+"machine and cause the caching process to take a little bit more time, as it "
+"calculates and stores each frame."
+msgstr ""
+"A diferència dels mètodes tradicionals, animar amb corbes pot fer que els "
+"valors canviïn a través de cada fotograma de l'animació. Això pot ser més "
+"exigent en la vostra màquina i fer que el procés d'emmagatzematge en la "
+"memòria cau prengui una mica més de temps, ja que calcula i emmagatzema cada "
+"fotograma."
+
+#: ../../reference_manual/dockers/animation_curves.rst:72
+msgid ""
+"*Before we move on*, let's use :dfn:`interpolation curves` instead of a "
+"straight line to change the timing and general feel of our opacity animation."
+msgstr ""
+"*Abans de seguir endavant*, utilitzarem :dfn:`corbes d'interpolació` en "
+"comptes d'una línia recta per a canviar el temps i la sensació general de la "
+"nostra animació amb opacitat."
+
+#: ../../reference_manual/dockers/animation_curves.rst:74
+msgid ""
+"If you select the first keyframe (the one on the left-hand side) of your "
+"line segment and click on the :guilabel:`bezier curve interpolation` button "
+"in the utilities section of the titlebar, you'll notice that the keyframe "
+"will appear as a hollow circle on the graph view. That hollow circle is a :"
+"dfn:`handle`, and by clicking on it and dragging in different directions you "
+"can change the arc of the curve between your two keyframes."
+msgstr ""
+"Si seleccioneu el primer fotograma clau (el primer en el costat esquerre) "
+"del vostre segment de línia i feu clic sobre el botó :guilabel:`Interpolació "
+"de la corba de Bézier` a la secció utilitats de la barra de títol, notareu "
+"que el fotograma clau apareixerà com un cercle buit a la vista de la "
+"gràfica. Aquest cercle buit és una :dfn:`nansa`, s'hi pot fer clic i "
+"arrossegar en direccions diferents per a canviar l'arc de la corba entre els "
+"dos fotogrames clau."
+
+#: ../../reference_manual/dockers/animation_curves.rst:76
+msgid ""
+"Similarly, you can click on the :guilabel:`linear interpolation` button to "
+"change your curve back into a line, or the :guilabel:`constant` button to "
+"turn off interpolation altogether, causing values to jump suddenly between "
+"keyframes."
+msgstr ""
+"De manera similar, podeu fer clic en el botó :guilabel:`Interpolació lineal` "
+"per a canviar de nou la corba dins d'una línia, o el botó :guilabel:"
+"`Constant` per a desactivar completament la interpolació, causant que els "
+"valors saltin sobtadament entre els fotogrames clau."
+
+#: ../../reference_manual/dockers/animation_curves.rst:80
+msgid ""
+"It's important to be aware of which animation frame is selected and active, "
+"as shown by the highlighted vertical line on the graph view. The keyframe "
+"that changes as you make adjustments elsewhere in the program will always be "
+"dependent on the active frame time!"
+msgstr ""
+"És important conèixer quin fotograma clau hi ha seleccionat i actiu, com es "
+"mostra a la línia vertical ressaltada a la vista de la gràfica. El fotograma "
+"clau canviarà a mesura que realitzeu ajustos en altres parts del programa, i "
+"això sempre dependrà del temps del fotograma actiu!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:82
+msgid ""
+"*Ok, it's a bit tough to put in writing...* But it's not so bad once you get "
+"the hang of it!"
+msgstr ""
+"*Bé, és una mica difícil d'escriure...* però no serà tan dolent un cop en "
+"depengueu!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:86
+msgid "Animating Transform Masks"
+msgstr "Animació amb màscares de transformació"
+
+#: ../../reference_manual/dockers/animation_curves.rst:88
+msgid ""
+"Now let's talk a bit about how we can use a :ref:`transformation_masks` to "
+"*animate our layer's position, rotation, scale and shear* for :dfn:`"
+"\"tweening\"` effects:"
+msgstr ""
+"Ara parlarem una mica sobre com podem utilitzar les :ref:"
+"`transformation_masks` per a *animar la nostra posició, gir, escala i "
+"inclinació* de la nostra capa per a :dfn:`«agermanar»` els efectes:"
+
+#: ../../reference_manual/dockers/animation_curves.rst:90
+msgid ""
+"Animating a transform mask is a lot like animating opacity, but first we "
+"need to *add a Transform Mask*. (You can do this by |mouseright| on the "
+"layer that you want to animate, and then :menuselection:`Add --> Transform "
+"Mask`.)"
+msgstr ""
+"Animar una màscara de transformació és molt semblant a l'opacitat animada, "
+"però primer hem d'*afegir una màscara de transformació*. (Podeu fer-ho fent |"
+"mouseright| sobre la capa que voleu animar i després emprant l'element de "
+"menú «:menuselection:`Afegeix --> Màscara de transformació`»)."
+
+#: ../../reference_manual/dockers/animation_curves.rst:92
+msgid ""
+"Transform Masks allow us to :dfn:`transform` (translate, rotate, scale, or "
+"shear) the layer that they are attached to, without affecting its original "
+"position. And (starting with Krita 5) they also allow us to animate a "
+"layer's transform!"
+msgstr ""
+"Les màscares de transformació ens permeten :dfn:`transformar` (traslladar, "
+"girar, escalar o inclinar) la capa amb la qual està adjuntada, sense afectar "
+"la seva posició original. I (començant amb el Krita 5), també ens permeten "
+"animar la transformació d'una capa!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:94
+msgid ""
+"Much like how we animated opacity above, we need to add our first "
+"transformation keyframe. To do this, *first make sure that you have your "
+"layer's Transform Mask selected*, and then click on the :guilabel:`add "
+"keyframe` button at the top of the docker."
+msgstr ""
+"Igual que com en animar amb l'opacitat anteriorment, necessitem afegir el "
+"nostre primer fotograma clau de la transformació. Per a fer això, *primer "
+"assegureu-vos de tenir seleccionada la màscara de transformació de la capa* "
+"i després feu clic sobre el botó :guilabel:`Afegeix un fotograma clau` que "
+"hi ha a la part superior de l'acoblador."
+
+#: ../../reference_manual/dockers/animation_curves.rst:98
+msgid ""
+"Remember (as of Krita 5.0) we can only *directly* animate the opacity curve "
+"of a layer. In order to animate a layer's position, rotation, scale and "
+"shear, we need to attach a Transform Mask and animate it instead."
+msgstr ""
+"Recordeu (a partir del Krita 5.0) només podem animar *directament* la corba "
+"d'opacitat d'una capa. Per a animar la posició, el gir, l'escala i la "
+"inclinació d'una capa, hem d'adjuntar una Màscara de transformació i animar-"
+"la."
+
+#: ../../reference_manual/dockers/animation_curves.rst:100
+msgid ""
+"As such, *when you have a regular paint layer selected* the Animation Curves "
+"Docker will automatically add opacity keyframes, and *when you have a "
+"transform mask selected* the Animation Curves Docker will automatically add "
+"transformation keyframes."
+msgstr ""
+"Com a tal, *quan teniu seleccionada una capa de pintura regular*, "
+"l'acoblador Corbes d'animació afegirà automàticament els fotogrames clau "
+"d'opacitat, i *quan hàgiu seleccionat una màscara de transformació*, "
+"l'acoblador Corbes d'animació afegirà automàticament els fotogrames clau de "
+"la transformació."
+
+#: ../../reference_manual/dockers/animation_curves.rst:102
+msgid ""
+"Try to always keep in mind what type of layer you have selected when "
+"animating curves in Krita!"
+msgstr ""
+"Quan animeu les corbes en el Krita, intenteu tenir sempre en compte quin "
+"tipus de capa heu seleccionat!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:104
+msgid ""
+"You should see a whole bunch of channels appear in the channels list, each "
+"with a unique name and color, as well as a number of corresponding keyframes."
+msgstr ""
+"Hauria de veure aparèixer un munt de canals a la llista de canals, cadascun "
+"amb un nom i color únics, així com una sèrie de fotogrames clau "
+"corresponents."
+
+#: ../../reference_manual/dockers/animation_curves.rst:106
+msgid ""
+"If you want to you can edit these key frames directly in the graph view, but "
+"it's probably more intuitive to do it directly on the canvas. So now, when "
+"you use the :ref:`Transform Tool <transform_tool>` on your :ref:"
+"`transformation_masks`, you should see the various keyframes of each channel "
+"moving around in the graph view to reflect the changes."
+msgstr ""
+"Si ho voleu, podeu editar aquests fotogrames clau directament a la vista de "
+"la gràfica, però probablement serà més intuïtiu fer-ho directament sobre el "
+"llenç. Així que ara, quan empreu l':ref:`eina Transforma <transform_tool>` "
+"en les :ref:`transformation_masks`, veureu com es mouen els diversos "
+"fotogrames clau de cada canal en la vista de la gràfica per a reflectir els "
+"canvis."
+
+#: ../../reference_manual/dockers/animation_curves.rst:110
+msgid ""
+"Animating a Transform Mask spawns a lot of channels but, depending on your "
+"goals, you may only want to work with a small number of them at a time. "
+"*Hiding* and *soloing* channels in the channels list can make it much easier "
+"to see and edit curves, especially since you can use the :guilabel:`zoom to "
+"channel` and :guilabel:`zoom to curve` buttons at the top of the docker to "
+"fit the graph view to the currently visible channels."
+msgstr ""
+"Animar una Màscara de transformació genera molts canals, però depenent dels "
+"vostres objectius, és possible que només vulgueu treballar alhora amb un "
+"nombre petit. Els canals *Oculta* i *Solitari* en la llista de canals poden "
+"fer que sigui molt més fàcil veure i editar els corbes, especialment perquè "
+"podeu utilitzar els botons :guilabel:`Fes zoom al canal` i :guilabel:`Fes "
+"zoom a la corba` que hi ha a la part superior de l'acoblador perquè s'ajusti "
+"la vista de la gràfica als canals actualment visibles."
+
+#: ../../reference_manual/dockers/animation_curves.rst:112
+msgid ""
+"Navigating by click-dragging on the zoomable scrollbars and *values header* "
+"(on the left-hand side of the graph view) can also really help with editing "
+"curves!"
+msgstr ""
+"Navegar fent clic + arrossegar sobre les barres de desplaçament de zoom i la "
+"*capçalera de valors* (al costat esquerre de la vista de la gràfica) també "
+"poden ajudar realment amb l'edició de les corbes."
+
+#: ../../reference_manual/dockers/animation_curves.rst:114
+msgid ""
+"Finally, click or scrub to a different frame time, add another keyframe, and "
+"use the Transform Tool on the same Transform Mask again."
+msgstr ""
+"Finalment, feu clic o arrossegueu fins a un temps de fotograma diferent, "
+"afegiu un altre fotograma clau i utilitzeu l'eina Transforma de nou en la "
+"mateixa Màscara de transformació."
+
+#: ../../reference_manual/dockers/animation_curves.rst:116
+msgid ""
+"Press the :guilabel:`play button` and (after a little bit of caching) there "
+"you have it, a layer with an animated Transform Mask!"
+msgstr ""
+"Premeu el botó :guilabel:`Reprodueix` i (després d'una mica d'emmagatzematge "
+"en la memòria cau) aquí la teniu, una capa amb una Màscara de transformació "
+"animada!"
+
+#: ../../reference_manual/dockers/animation_curves.rst:120
+msgid "Controls"
+msgstr "Controls"
+
+#: ../../reference_manual/dockers/animation_curves.rst:122
+msgid ":dfn:`Channels List`"
+msgstr ":dfn:`Llista de canals`"
+
+#: ../../reference_manual/dockers/animation_curves.rst:124
+msgid "|mouseleft| on Eye Icon: Toggle show/hide channel."
+msgstr ""
+":kbd:`Feu` |mouseleft| sobre la icona d'un ull: canvia entre mostra/oculta "
+"el canal."
+
+#: ../../reference_manual/dockers/animation_curves.rst:125
+msgid ":kbd:`Shift +` |mouseleft| on Eye Icon: Solo channel."
+msgstr ":kbd:`Maj + feu` |mouseleft| sobre la icona d'un ull: canal solitari."
+
+#: ../../reference_manual/dockers/animation_curves.rst:126
+msgid "|mouseright| : Open layer or channel context menu. [Reset Channel(s)]"
+msgstr ""
+":kbd:`Feu` |mouseright|: obre la capa o el menú contextual del canal. "
+"[Restableix el/s canal/s]"
+
+#: ../../reference_manual/dockers/animation_curves.rst:128
+msgid ":dfn:`Graph View`"
+msgstr ":dfn:`Vista de la gràfica`"
+
+#: ../../reference_manual/dockers/animation_curves.rst:130
+msgid "|mouseleft| : Select keyframe."
+msgstr ":kbd:`Feu` |mouseleft|: selecciona el fotograma clau."
+
+#: ../../reference_manual/dockers/animation_curves.rst:131
+msgid "|mouseleft| :kbd:`+ drag` : *Move* frame(s)."
+msgstr ":kbd:`Feu` |mouseleft| :kbd:`+ arrossega`: *mou* el/s fotograma/es."
+
+#: ../../reference_manual/dockers/animation_curves.rst:132
+msgid "|mouseleft| double-click : Select all keyframes at time."
+msgstr ""
+":kbd:`Feu` |mouseleft| :kbd:`+ doble clic` : selecciona alhora tots els "
+"fotogrames clau."
+
+#: ../../reference_manual/dockers/animation_curves.rst:133
+msgid ""
+":kbd:`Alt +` |mouseleft| double-click : Select all keyframes of channel."
+msgstr ""
+":kbd:`Alt + feu` |mouseleft| :kbd:`+ doble clic` : selecciona tots els "
+"fotogrames clau del canal."
+
+#: ../../reference_manual/dockers/animation_curves.rst:134
+msgid ":kbd:`Space +` |mouseleft| : Pan."
+msgstr ":kbd:`Espai +` |mouseleft|: desplaça."
+
+#: ../../reference_manual/dockers/animation_curves.rst:135
+msgid ":kbd:`Space +` |mouseright| : Zoom."
+msgstr ":kbd:`Espai +` |mouseright|: zoom."
+
+#: ../../reference_manual/dockers/animation_curves.rst:137
+msgid ":dfn:`Frame Timing Header`"
+msgstr ":dfn:`Capçalera de temporització dels fotogrames`"
+
+#: ../../reference_manual/dockers/animation_curves.rst:139
+msgid "|mouseleft| : Move to time and select frame of the active layer."
+msgstr ""
+"|mouseleft|: moveu el temps i seleccioneu el fotograma de la capa activa."
+
+#: ../../reference_manual/dockers/animation_curves.rst:140
+msgid ""
+"|mouseleft| :kbd:`+ drag` : Scrub through time and select frame of the "
+"active layer."
+msgstr ""
+"|mouseleft| :kbd:`+ arrossega`: aneu a través del temps i seleccioneu el "
+"fotograma de la capa activa."
+
+#: ../../reference_manual/dockers/animation_curves.rst:142
+msgid ":dfn:`Value Header`"
+msgstr ":dfn:`Capçalera de valor`"
+
+#: ../../reference_manual/dockers/animation_curves.rst:144
+msgid "|mouseleft| :kbd:`+ drag` : Zoom graph view."
+msgstr ""
+":kbd:`Feu` |mouseleft| :kbd:`+ arrossega`: fa zoom a la vista de la gràfica."
+
+#: ../../reference_manual/dockers/animation_curves.rst:145
+msgid ":kbd:`Space +` |mouseleft| :kbd:`+ drag` : Pan graph view."
+msgstr ""
+":kbd:`Espai + feu` |mouseleft| :kbd:`+ arrossega`: fa una panoràmica a la "
+"vista de la gràfica."

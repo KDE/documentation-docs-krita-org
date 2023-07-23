@@ -1,16 +1,16 @@
 # Translation of docs_krita_org_reference_manual___preferences___tablet_settings.po to Ukrainian
-# Copyright (C) 2019 This_file_is_part_of_KDE
+# Copyright (C) 2019-2020 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2019.
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: "
 "docs_krita_org_reference_manual___preferences___tablet_settings\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-08-02 11:48+0300\n"
+"POT-Creation-Date: 2023-02-02 00:52+0000\n"
+"PO-Revision-Date: 2023-02-02 09:52+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.04.0\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #: ../../reference_manual/preferences/tablet_settings.rst:1
 msgid "Configuring the tablet in Krita."
@@ -62,12 +62,12 @@ msgstr ""
 
 #: ../../reference_manual/preferences/tablet_settings.rst:24
 msgid ""
-"Some tablet devices don't tell us whether the side buttons on a stylus. If "
-"you have such a device, you can try activate this workaround. Krita will try "
-"to read right and middle-button clicks as if they were coming from a mouse "
-"instead of a tablet. It may or may not work on your device (depends on the "
-"tablet driver implementation). After changing this option Krita should be "
-"restarted."
+"Some tablet devices don't tell us whether it has side buttons on a stylus. "
+"If you have such a device, you can try activate this workaround. Krita will "
+"try to read right and middle-button clicks as if they were coming from a "
+"mouse instead of a tablet. It may or may not work on your device (depends on "
+"the tablet driver implementation). After changing this option Krita should "
+"be restarted."
 msgstr ""
 "Деякі пристрої планшетів не повідомляють, чи є на стилі бічні кнопки. Якщо "
 "ви є власником саме такого пристрою, ви можете спробувати цей спосіб. Krita "
@@ -81,14 +81,59 @@ msgid "Use Mouse Events for Right and Middle clicks."
 msgstr "Використовувати події миші для клацання правою та середньою кнопками."
 
 #: ../../reference_manual/preferences/tablet_settings.rst:29
+msgid ""
+"This changes the way freehand brush smoothing works in Krita by using the "
+"driver's timestamps instead of a timer-based one."
+msgstr ""
+"Це змінює спосіб, у який працює згладжування при довільному малюванні у "
+"Krita шляхом використання часових позначок драйвера, а не часових позначок "
+"на основі таймера."
+
+#: ../../reference_manual/preferences/tablet_settings.rst:31
+msgid "Use Tablet Driver Stamps For Brush Speed"
+msgstr "Використовувати часові позначки драйвера планшета для швидкості пензля"
+
+#: ../../reference_manual/preferences/tablet_settings.rst:34
+msgid ""
+"This sets what Krita should consider the maximum brush speed. You can find "
+"the maximum value by using the tablet tester."
+msgstr ""
+"Встановлює величину, яку Krita використовуватиме як максимальну швидкість "
+"пензля. Визначити максимальну швидкість можна за допомогою засобу перевірки "
+"планшета."
+
+#: ../../reference_manual/preferences/tablet_settings.rst:36
+msgid "Maximum Brush Speed"
+msgstr "Максимальна швидкість пензля"
+
+#: ../../reference_manual/preferences/tablet_settings.rst:39
+msgid ""
+"With some devices the speed samples can be very erratic. This can be reduced "
+"by instead of using each sample on its own, several samples are compared to "
+"find a smoother value. This controls how many speed samples should be taken "
+"into account. Note that too many samples can result in the loss of subtle "
+"speed changes."
+msgstr ""
+"Для деяких пристроїв надані значення швидкості можуть бути дуже неточними. "
+"Наслідки таких неточностей можна усунути шляхом використання замість окремих "
+"вимірів певного згладженого значення. Цей пункт визначає, скільки вимірювань "
+"має бути використано для згладжування. Зауважте, що використання надто "
+"великої кількості вимірювань може призвести до втрати ефекту маих змін "
+"швидкості."
+
+#: ../../reference_manual/preferences/tablet_settings.rst:41
+msgid "Brush Speed Smoothing"
+msgstr "Згладжування швидкості пензля"
+
+#: ../../reference_manual/preferences/tablet_settings.rst:44
 msgid "On Windows 8 or above only."
 msgstr "Лише для Windows 8 і новіших версій."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:31
+#: ../../reference_manual/preferences/tablet_settings.rst:46
 msgid "WinTab"
 msgstr "WinTab"
 
-#: ../../reference_manual/preferences/tablet_settings.rst:32
+#: ../../reference_manual/preferences/tablet_settings.rst:47
 msgid ""
 "Use the WinTab API to receive tablet pen input. This is the API being used "
 "before Krita 3.3. This option is recommended for most Wacom tablets."
@@ -97,16 +142,16 @@ msgstr ""
 "WinTab. Це програмний інтерфейс, який використовувався у версіях Krita до "
 "3.3. Рекомендуємо цей варіант для більшості планшетів Wacom."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:34
+#: ../../reference_manual/preferences/tablet_settings.rst:49
 msgid "For Krita 3.3 or later:Tablet Input API"
 msgstr ""
 "Для Krita 3.3 та новіших версій: Програмний інтерфейс введення з планшета"
 
-#: ../../reference_manual/preferences/tablet_settings.rst:34
+#: ../../reference_manual/preferences/tablet_settings.rst:49
 msgid "Windows 8+ Pointer Input"
 msgstr "Введення з вказівника Windows 8+"
 
-#: ../../reference_manual/preferences/tablet_settings.rst:34
+#: ../../reference_manual/preferences/tablet_settings.rst:49
 msgid ""
 "Use the Pointer Input messages to receive tablet pen input. This option "
 "depends on Windows Ink support from the tablet driver. This is a relatively "
@@ -123,15 +168,15 @@ msgstr ""
 "(наприклад нещодавньою версією пристроїв Microsoft Surface) або якщо ваш "
 "планшет не працює належним чином з WinTab."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:37
+#: ../../reference_manual/preferences/tablet_settings.rst:52
 msgid "Advanced Tablet Settings for WinTab"
 msgstr "Додаткові параметри планшета для WinTab"
 
-#: ../../reference_manual/preferences/tablet_settings.rst:41
+#: ../../reference_manual/preferences/tablet_settings.rst:56
 msgid ".. image:: images/preferences/advanced-settings-tablet.png"
 msgstr ".. image:: images/preferences/advanced-settings-tablet.png"
 
-#: ../../reference_manual/preferences/tablet_settings.rst:42
+#: ../../reference_manual/preferences/tablet_settings.rst:57
 msgid ""
 "When using multiple monitors or using a tablet that is also a screen, Krita "
 "will get conflicting information about how big your screen is, and sometimes "
@@ -145,23 +190,23 @@ msgstr ""
 "За допомогою цього вікна налаштовування ви можете вибрати належні параметри "
 "роздільності екрана."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:44
+#: ../../reference_manual/preferences/tablet_settings.rst:59
 msgid "Use Information Provided by Tablet"
 msgstr "Використовувати дані, які надано планшетом"
 
-#: ../../reference_manual/preferences/tablet_settings.rst:45
+#: ../../reference_manual/preferences/tablet_settings.rst:60
 msgid "Use the information as given by the tablet."
 msgstr "Використовувати дані, які надано планшетом."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:46
+#: ../../reference_manual/preferences/tablet_settings.rst:61
 msgid "Map to entire virtual screen"
 msgstr "Пов'язати з усім віртуальним екраном"
 
-#: ../../reference_manual/preferences/tablet_settings.rst:47
+#: ../../reference_manual/preferences/tablet_settings.rst:62
 msgid "Use the information as given by Windows."
 msgstr "Використовувати дані, які надано Windows."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:49
+#: ../../reference_manual/preferences/tablet_settings.rst:64
 msgid ""
 "Type in the numbers manually. Use this when you have tried the other "
 "options. You might even need to do trial and error if that is the case, but "
@@ -171,11 +216,11 @@ msgstr ""
 "спрацьовують. Можливо, вам навіть доведеться трохи використати метод спроб і "
 "помилок, але, врешті, це дасть вам можливість таки налаштувати програму."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:51
+#: ../../reference_manual/preferences/tablet_settings.rst:66
 msgid "Map to Custom Area"
 msgstr "Пов'язати із нетиповою ділянкою"
 
-#: ../../reference_manual/preferences/tablet_settings.rst:51
+#: ../../reference_manual/preferences/tablet_settings.rst:66
 msgid ""
 "If you have a dual monitor setup and only the top half of the screen is "
 "reachable, you might have to enter the total width of both screens plus the "
@@ -185,7 +230,7 @@ msgstr ""
 "частиною екрана, у цьому полі, ймовірно, слід вказати загальну ширину обох "
 "екранів плюс подвоєну висоту зображення на вашому моніторі."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:55
+#: ../../reference_manual/preferences/tablet_settings.rst:70
 msgid ""
 "To access this dialog in Krita versions older than 4.2, you had to do the "
 "following:"
@@ -193,26 +238,26 @@ msgstr ""
 "Щоб отримати доступ до цього діалогового вікна у версіях Krita до 4.2, вам "
 "слід виконати такі дії:"
 
-#: ../../reference_manual/preferences/tablet_settings.rst:57
+#: ../../reference_manual/preferences/tablet_settings.rst:72
 msgid "Put your stylus away from the tablet."
 msgstr "Приберіть стило подалі від планшета."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:58
+#: ../../reference_manual/preferences/tablet_settings.rst:73
 msgid ""
 "Start Krita without using a stylus, that is using a mouse or a keyboard."
 msgstr ""
 "Запустіть Krita без використання стила, тобто з використання миші або "
 "клавіатури."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:59
+#: ../../reference_manual/preferences/tablet_settings.rst:74
 msgid "Press the :kbd:`Shift` key and hold it."
 msgstr "Натисніть і утримуйте клавішу :kbd:`Shift`."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:60
+#: ../../reference_manual/preferences/tablet_settings.rst:75
 msgid "Touch a tablet with your stylus so Krita would recognize it."
 msgstr "Доторкніться стилом до планшета так, щоб Krita розпізнала планшет."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:62
+#: ../../reference_manual/preferences/tablet_settings.rst:77
 msgid ""
 "If adjusting this doesn't work, and if you have a Wacom tablet, an offset in "
 "the canvas can be caused by a faulty Wacom preference file which is not "
@@ -222,7 +267,7 @@ msgstr ""
 "бути спричинено помилками у файлі налаштувань Wacom, який не було вилучено "
 "або замінено під час перевстановлення драйверів."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:64
+#: ../../reference_manual/preferences/tablet_settings.rst:79
 msgid ""
 "To fix it, use the “Wacom Tablet Preference File Utility” to clear all the "
 "preferences. This should allow Krita to detect the correct settings "
@@ -232,7 +277,7 @@ msgstr ""
 "для вилучення усіх налаштувань. Після цього Krita зможе визначити належні "
 "параметри роботи автоматично."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:67
+#: ../../reference_manual/preferences/tablet_settings.rst:82
 msgid ""
 "Clearing all wacom preferences will reset your tablet's configuration, thus "
 "you will need to recalibrate/reconfigure it."
@@ -241,11 +286,11 @@ msgstr ""
 "налаштування вашого планшета буде скинуто до типових, отже вам доведеться "
 "повторно виконати процедуру калібрування і налаштовування."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:70
+#: ../../reference_manual/preferences/tablet_settings.rst:85
 msgid "Tablet Tester"
 msgstr "Тестування планшета…"
 
-#: ../../reference_manual/preferences/tablet_settings.rst:74
+#: ../../reference_manual/preferences/tablet_settings.rst:89
 msgid ""
 "This is a special feature for debugging tablet input. When you click on it, "
 "it will open a window with two sections. The left section is the **Drawing "
@@ -255,7 +300,7 @@ msgstr ""
 "натиснути цей пункт, буде відкрито вікно із двома розділами. Лівий розділ "
 "матиме назву **Область малювання**, а права — **Виведення тексту**."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:76
+#: ../../reference_manual/preferences/tablet_settings.rst:91
 msgid ""
 "If you draw over the Drawing Area, you will see a line appear. If your "
 "tablet is working it should be both a red and blue line."
@@ -263,7 +308,7 @@ msgstr ""
 "Під час малювання на ділянці малювання з'явиться лінія. Якщо ваш планшет "
 "працює як слід, це будуть дві лінії — червона і синя."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:78
+#: ../../reference_manual/preferences/tablet_settings.rst:93
 msgid ""
 "The red line represents mouse events. Mouse events are the most basic events "
 "that Krita can pick up. However, mouse events have crude coordinates and "
@@ -273,7 +318,7 @@ msgstr ""
 "які може реєструвати Krita. Втім, події миші дають не дуже точні координати "
 "і не передають дані щодо чутливості до тиску."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:80
+#: ../../reference_manual/preferences/tablet_settings.rst:95
 msgid ""
 "The blue line represents the tablet events. The tablet events only show up "
 "when Krita can access your tablet. These have more precise coordinates and "
@@ -283,7 +328,7 @@ msgstr ""
 "якщо Krita має доступ до планшета. Ці події дають точніші координати і дають "
 "доступ до даних щодо чутливості до тиску."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:84
+#: ../../reference_manual/preferences/tablet_settings.rst:99
 msgid ""
 "If you have no blue line when drawing on the lefthand drawing area, Krita "
 "cannot access your tablet. Check out the :ref:`page on drawing tablets "
@@ -294,7 +339,7 @@ msgstr ""
 "`розділом щодо малювання на планшеті <drawing_tablets>`, щоб дізнатися "
 "більше про те, як усунути ці проблеми."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:86
+#: ../../reference_manual/preferences/tablet_settings.rst:101
 msgid ""
 "When you draw a line, the output on the right will show all sorts of text "
 "output. This text output can be attached to a help request or a bug report "
@@ -305,16 +350,16 @@ msgstr ""
 "запиту щодо допомоги або звіту щодо вади. Вони допомагають розібратися із "
 "тим, що відбувається."
 
-#: ../../reference_manual/preferences/tablet_settings.rst:89
+#: ../../reference_manual/preferences/tablet_settings.rst:104
 msgid "External Links"
 msgstr "Зовнішні посилання"
 
-#: ../../reference_manual/preferences/tablet_settings.rst:91
+#: ../../reference_manual/preferences/tablet_settings.rst:106
 msgid ""
 "`David Revoy wrote an indepth guide on using this feature to maximum "
-"advantage. <https://www.davidrevoy.com/article182/calibrating-wacom-stylus-"
-"pressure-on-krita>`_"
+"advantage <https://www.davidrevoy.com/article182/calibrating-wacom-stylus-"
+"pressure-on-krita>`_."
 msgstr ""
 "`Давід Ревуа написав докладні настанови щодо використання цієї можливості із "
 "максимальною користю. <https://www.davidrevoy.com/article182/calibrating-"
-"wacom-stylus-pressure-on-krita>`_"
+"wacom-stylus-pressure-on-krita>`_."

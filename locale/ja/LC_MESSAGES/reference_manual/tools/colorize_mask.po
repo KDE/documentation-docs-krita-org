@@ -1,16 +1,17 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-31 03:24+0200\n"
-"PO-Revision-Date: 2019-03-02 16:12-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"POT-Creation-Date: 2023-07-20 00:43+0000\n"
+"PO-Revision-Date: 2022-02-06 16:15-0800\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -105,16 +106,16 @@ msgstr ""
 
 #: ../../reference_manual/tools/colorize_mask.rst:1
 msgid "How to use the colorize mask in Krita."
-msgstr ""
+msgstr "Krita 自動塗り分けマスクの使い方。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 #: ../../reference_manual/tools/colorize_mask.rst:16
 msgid "Colorize Mask"
-msgstr ""
+msgstr "自動塗り分けマスク"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Tools"
-msgstr ""
+msgstr "ツール"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Lazybrush"
@@ -122,15 +123,15 @@ msgstr ""
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Masks"
-msgstr ""
+msgstr "マスク"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Layers"
-msgstr ""
+msgstr "レイヤー"
 
 #: ../../reference_manual/tools/colorize_mask.rst:11
 msgid "Flat Color"
-msgstr ""
+msgstr "フラットカラー"
 
 #: ../../reference_manual/tools/colorize_mask.rst:18
 msgid "|toolcolorizemask|"
@@ -141,6 +142,8 @@ msgid ""
 "A tool for quickly coloring line art, the Colorize Mask Editing tool can be "
 "found next to the gradient tool on your toolbox."
 msgstr ""
+"ツールボックスのグラデーションツール隣にある自動塗り分けマスク編集ツールは、"
+"線に素早く色を付けることができます。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:22
 msgid ""
@@ -150,22 +153,30 @@ msgid ""
 "\"disableColorizeMaskFeature=false\" to the top. Then restart Krita. Its "
 "official incarnation is in 4.0."
 msgstr ""
+"3.1 でこの機能は既に存在していましたが、実際の作業用にアルゴリズムを最適化さ"
+"れていなかったために既定で無効にされています。有効にするには Krita 設定ファイ"
+"ルを見つけ、メモ帳で開き、一番上に \"disableColorizeMaskFeature=false\" を追"
+"加します。それから Krita を再起動します。公式での導入は4.0です。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:26
 msgid "Usage"
-msgstr ""
+msgstr "使い方"
 
 #: ../../reference_manual/tools/colorize_mask.rst:28
 msgid ""
 "This tool works in conjunction with the colorize mask, and the usage is as "
 "follows:"
 msgstr ""
+"このツールは自動塗り分けマスクと合わせて使用するもので、使い方は次のとおりで"
+"す:"
 
 #: ../../reference_manual/tools/colorize_mask.rst:30
 msgid ""
 "For this example, we'll be using the ghost lady also used to explain masks "
 "on :ref:`the basic concepts page <basic_concepts>`."
 msgstr ""
+"この例では、:ref:`基本的なコンセプトのページ <basic_concepts>` でマスクの説明"
+"に使用したお化けの女性を使用します。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:36
 msgid ""
@@ -173,6 +184,8 @@ msgid ""
 "what's more, the background is made up of two layers: one main and one for "
 "the details."
 msgstr ""
+"画像には背景から切り離された女性の線画と、2つのレイヤーの背景: メインと細部の"
+"ものがあります。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:38
 msgid ""
@@ -184,6 +197,12 @@ msgid ""
 "algorithm easier to use. The tool options overview below shows which options "
 "control that."
 msgstr ""
+"最初に、線画レイヤーを選択した状態で自動塗り分けマスク編集ツールを選択しま"
+"す。キャンバス上で |mouseleft| するとレイヤーに自動塗り分けマスクを追加しま"
+"す。または線画レイヤーを |mouseleft| し、:menuselection:`追加 --> 自動塗り分"
+"けマスク` を選択することもできます。突然線画が変になりますが、これはアルゴリ"
+"ズムが線画を簡単に使えるようフィルタがした事前処理です。下にあるツールのオプ"
+"ション概要はどれがどの操作をするかを示しています。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:45
 msgid ""
@@ -193,6 +212,10 @@ msgid ""
 "colorize mask indicating how long it takes. The bigger your file, the longer "
 "it will take."
 msgstr ""
+"では、ブラシ色でストロークを描き、ツールのオプションにある :guilabel:`更新` "
+"を押すか、自動塗り分けマスクプロパティ最後にあるアイコンを触ります。レイヤー"
+"ドッカーには、自動塗り分けマスクがどれだけかかっているかを表示する小さな進捗"
+"バーがあります。ファイルが大きくなればなるほど、時間もそれだけかかります。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:51
 msgid ""
@@ -202,6 +225,11 @@ msgid ""
 "transparent, by selecting it and pressing \"transparent\". Updating the mask "
 "will still show the blue stroke, but the result will be transparent:"
 msgstr ""
+"ここでは青を透過にしたいと思います。自動塗り分けマスク編集ツールのツールのオ"
+"プションに小さなパレットがあるのが見えると思います。これらは既に使用した色で"
+"す。ここで色を削除したり、選択して\"透過\"を押すことでその色を透過としてマー"
+"クすることができます。マスクを更新しても青いストロークは表示されたままです"
+"が、結果は透過になっています:"
 
 #: ../../reference_manual/tools/colorize_mask.rst:57
 msgid ""
@@ -211,24 +239,35 @@ msgid ""
 "combined size of the line art and the coloring key strokes. Therefore, make "
 "sure that the colorizing keystrokes only take up as much as they really need."
 msgstr ""
+"自動塗り分けマスクのアルゴリズムが低速であり、またお化けの女性全体を埋めるに"
+"はレイヤーの一部だけで済むため、:guilabel:`レイヤーの境界に制限` を使用するこ"
+"とができます。これは色ストロークと線画を合わせたサイズにのみ塗り分けマスクを"
+"制限することができます。なので色塗りストロークが本当に必要な部分にだけあるよ"
+"うにしてください。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:63
 msgid ""
 "Now the algorithm will be possibly a lot faster, allowing us to add strokes "
 "and press :guilabel:`Update` in rapid succession:"
 msgstr ""
+"これでアルゴリズムはかなり早くなるはずで、ストロークを追加し :guilabel:`更新"
+"` を押せば素早く結果が得られます:"
 
 #: ../../reference_manual/tools/colorize_mask.rst:69
 msgid ""
 "To see the final result, disable :guilabel:`Edit Key Strokes` or toggle the "
 "second to last icon on the colorize mask."
 msgstr ""
+"最終的な出来上がりを見るには、:guilabel:`制御描線を編集` を無効にするか塗り分"
+"けマスク最後から二番目のアイコンを触ります。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:75
 msgid ""
 "If you want to edit the strokes again, re-enable :guilabel:`Edit Key "
 "Strokes`."
 msgstr ""
+"再度ストロークを編集したいときは、もう一度 :guilabel:`制御描線を編集` を有効"
+"にします。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:77
 msgid ""
@@ -240,6 +279,12 @@ msgid ""
 "You can recognize a disabled colorize mask because its name is stricken "
 "through."
 msgstr ""
+"これで自動塗り分けマスクは、マスクの一つとして、線画レイヤーのグループに追加"
+"することができます。グループ全体に含むものを線画として使用します。これは線画"
+"が二つに分かれているこの例の背景にピッタリです。またパススルーモードが有効な"
+"グループではグループの一部とはみなされないため、そこに追加された塗り分けマス"
+"クはむこうになることも意味しています。塗り分けマスクが無効かどうかは名前が太"
+"字になっていることで見分けられます。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:79
 msgid ""
@@ -247,6 +292,9 @@ msgid ""
 "canvas with the Colorize Mask editing tool, or |mouseright| the layer to :"
 "menuselection:`Add --> Colorize Mask`."
 msgstr ""
+"自動塗り分けマスクをグループに追加するには、グループを選択してから自動塗り分"
+"けマスク編集ツールでキャンバスを |mouseleft| するか、レイヤーを |mouseright| "
+"し :menuselection:`追加 --> 自動塗り分けマスク` を選びます。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:85
 msgid ""
@@ -254,6 +302,8 @@ msgid ""
 "menuselection:`Limit to Layer Bounds` because the background covers the "
 "whole image."
 msgstr ""
+"では、早く背景にストロークを追加します。画像全体に背景があるため :guilabel:`"
+"レイヤーの境界に制限` を使う必要はありません。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:91
 msgid ""
@@ -261,10 +311,12 @@ msgid ""
 "colorize mask as long as they can draw. The Colorize Mask Editing tool is "
 "just the most convenient because you can get to the algorithm options."
 msgstr ""
+"一応、描けさえすれば他のブラシやツールを塗り分けマスクに使うことができます。"
+"自動塗り分けマスク編集ツールはアルゴリズムオプションがあって便利なだけです。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:93
 msgid "Out final result looks like this:"
-msgstr ""
+msgstr "最終的な出来上がりはこのようになります:"
 
 #: ../../reference_manual/tools/colorize_mask.rst:99
 msgid ""
@@ -272,6 +324,9 @@ msgid ""
 "--> to Paint Layer`. Then, :menuselection:`Layer --> Split --> Split Layer`. "
 "This will give separate color islands that you can easily edit:"
 msgstr ""
+"これで完了です、自動塗り分けマスクを |mouseright| し :menuselection:`変換 --"
+"> ペイントレイヤーへ` を選びます。それから :menuselection:`レイヤー --> 分離 "
+"--> レイヤーを分離` です。簡単に編集できる色だけのものが得られます:"
 
 #: ../../reference_manual/tools/colorize_mask.rst:105
 msgid ""
@@ -279,33 +334,40 @@ msgid ""
 "from the first image to the following took only 30 minutes, and would've "
 "taken quite a bit longer."
 msgstr ""
+"これで素早く描いていけます。最初の画像から次まで自動塗り分けマスクを使用し"
+"て、30分程度かかります。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:111
 msgid ""
-"The colorize masks are saved to the .kra file, so as long as you don't save "
-"and open to a different file format, nor convert the colorize mask to a "
+"The colorize masks are saved to the ``.kra`` file, so as long as you don't "
+"save and open to a different file format, nor convert the colorize mask to a "
 "paintlayer, you can keep working adjust the results."
 msgstr ""
+"異なるファイル形式に保存して開かない限り、自動塗り分けマスクは ``.kra`` ファ"
+"イルに保存されペイントレイヤーに変換されることはないため、再調節する可能性を"
+"残しながら作業ができます。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:114
 msgid "Tool Options"
-msgstr ""
+msgstr "ツールのオプション"
 
 #: ../../reference_manual/tools/colorize_mask.rst:116
 #: ../../reference_manual/tools/colorize_mask.rst:172
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 #: ../../reference_manual/tools/colorize_mask.rst:117
 msgid ""
 "Run the colorize mask algorithm. The progress bar for updates on a colorize "
 "mask shows only in the layer docker."
 msgstr ""
+"自動塗り分けアルゴリズムを走らせます。自動塗り分けマスク更新の進捗バーはレイ"
+"ヤードッカーにのみ表示されます。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:118
 #: ../../reference_manual/tools/colorize_mask.rst:169
 msgid "Edit key strokes"
-msgstr ""
+msgstr "制御描線を編集"
 
 #: ../../reference_manual/tools/colorize_mask.rst:119
 msgid ""
@@ -313,6 +375,8 @@ msgid ""
 "'prefiltering' on the line art, which is for example a blur filter for gap "
 "closing."
 msgstr ""
+"マスクを編集モードにします。編集モードでは線画の'事前処理'が表示され、ぼかし"
+"フィルタの閉じの例になっています。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:121
 msgid ""
@@ -320,11 +384,13 @@ msgid ""
 "active, this will be shown semi-transparently, so it will be easy to "
 "recognize the difference between the strokes and the output."
 msgstr ""
+"自動塗り分けマスクの出力を表示します。:guilabel:`制御描線を編集` がオンになっ"
+"ていれば半透明で表示され、出力と区別しやすいようになっています。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:127
 #: ../../reference_manual/tools/colorize_mask.rst:165
 msgid "Show output"
-msgstr ""
+msgstr "出力を表示"
 
 #: ../../reference_manual/tools/colorize_mask.rst:127
 msgid ""
@@ -333,10 +399,13 @@ msgid ""
 "Strokes` are on. On the **Right**: :guilabel:`Show Output` is off and :"
 "guilabel:`Edit Key Strokes` is on."
 msgstr ""
+"**左** は: :guilabel:`出力を表示` がオン、:guilabel:`制御描線を編集` がオフ。"
+"**中央** は: :guilabel:`出力を表示` と :guilabel:`制御描線を編集` がオン。**"
+"右** は: :guilabel:`出力を表示` がオフで :guilabel:`制御描線を編集` がオン。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:129
 msgid "Limit to layer bounds"
-msgstr ""
+msgstr "レイヤーの境界に制限"
 
 #: ../../reference_manual/tools/colorize_mask.rst:130
 msgid ""
@@ -344,6 +413,8 @@ msgid ""
 "line art it is filling. This can speed up the use of the mask on complicated "
 "compositions, such as comic pages."
 msgstr ""
+"制御描線と線画を組み合わせたレイヤー境界に自動塗り分けマスクを制限します。漫"
+"画のような込み入った構成でマスクを高速化することに使用できます。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:132
 msgid ""
@@ -351,10 +422,13 @@ msgid ""
 "object. For the best use, set the value to the thinnest lines on the image. "
 "In the image below, note how edge detection affects the big black areas:"
 msgstr ""
+"例えば物の影のような、大きな広いエリアがある線画に使用します。最も効果的に使"
+"うには、画像で一番細い線に値を合わせることです。下の画像ではエッジ検出が大き"
+"な黒いエリアに影響していることを見てください:"
 
 #: ../../reference_manual/tools/colorize_mask.rst:138
 msgid "Edge detection"
-msgstr ""
+msgstr "エッジ検知"
 
 #: ../../reference_manual/tools/colorize_mask.rst:138
 msgid ""
@@ -363,6 +437,8 @@ msgid ""
 "the same example with edge detection enabled and set to 2px, and that same "
 "example without edit key strokes enabled."
 msgstr ""
+"左から右に: エッジ検知なしの黒い影のある物の例、同じものを制御描線なしにした"
+"例。それからエッジ検知を 2px に設定した例と、それの制御描線をなしにした例。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:141
 msgid ""
@@ -372,10 +448,14 @@ msgid ""
 "how the prefiltered line art (that's the blurry haze) affects the color "
 "patches."
 msgstr ""
+"アルゴリズムが輪郭の隙間を検出するのに優れているとしても、これは隙間検出をさ"
+"らに向上させることができます。高い値であれば、大きな隙間も閉じようとします"
+"が、高すぎる値は他のエラーを引き起こします。事前処理された線画(ぼかされたも"
+"の)は色パッチに影響することに留意してください。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:146
 msgid "Gap close hint"
-msgstr ""
+msgstr "閉空間の目安間隔"
 
 #: ../../reference_manual/tools/colorize_mask.rst:147
 msgid ""
@@ -383,6 +463,9 @@ msgid ""
 "guilabel:`Gap close hint` is 15px (the lines are 10px). On the **Right**: :"
 "guilabel:`Gap close hint` is 275px."
 msgstr ""
+"**左** は: :guilabel:`閉空間の目安間隔` が 0px。**中央** は: :guilabel:`閉空"
+"間の目安間隔` が 15px (線は 10px)。**右** は: :guilabel:`閉空間の目安間隔` "
+"が 275px。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:149
 msgid ""
@@ -390,14 +473,16 @@ msgid ""
 "they shouldn't. At 0 no clean up is done, at 100% the clean-up is most "
 "aggressive."
 msgstr ""
+"線画の本来超えてはいけないところにかかっている制御描線を認識しようとします。0"
+"では何もせず、100%では最も強力になります。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:153
 msgid "Clean up"
-msgstr ""
+msgstr "塗り分け線を整理"
 
 #: ../../reference_manual/tools/colorize_mask.rst:155
 msgid "Key strokes"
-msgstr ""
+msgstr "制御描線"
 
 #: ../../reference_manual/tools/colorize_mask.rst:156
 msgid ""
@@ -405,10 +490,13 @@ msgid ""
 "so you can switch back to colors easily. You can increase the swatch size by "
 "hovering over it with the mouse, and doing :kbd:`Ctrl +` |mousescroll|."
 msgstr ""
+"制御描線で使われた色をこのパレットに格納します。また前の色に戻す際に便利で"
+"す。スウォッチサイズはマウスホバーして :kbd:`Ctrl +` |mousescroll| することで"
+"大きくできます。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:158
 msgid "Transparent"
-msgstr ""
+msgstr "透過"
 
 #: ../../reference_manual/tools/colorize_mask.rst:158
 msgid ""
@@ -416,43 +504,78 @@ msgid ""
 "to be interpreted a 'transparent' with this. In the clean-up screenshot "
 "above, cyan had been marked as transparent."
 msgstr ""
+"パレットの下にこのボタンがあり、選択された色を'透過'と解釈するようマークでき"
+"ます。上の塗り分け線を整理で説明した画像では、シアンを透過としてマークされて"
+"います。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:161
 msgid "Layer properties"
-msgstr ""
+msgstr "レイヤープロパティ"
 
 #: ../../reference_manual/tools/colorize_mask.rst:163
 msgid ""
 "The colorize mask layer has four properties. They are all the buttons on the "
-"right side of the layer:"
+"right side of the colorize mask layer:"
 msgstr ""
+"自動塗り分けマスクには4つのプロパティがあります。すべて自動塗り分けマスクレイ"
+"ヤー右側のボタンになっています:"
 
 #: ../../reference_manual/tools/colorize_mask.rst:166
 msgid ""
-"The first button, it allows you to toggle whether you'll see the output from "
-"the colorize algorithm."
+"|show-output| The show output icon allows you to toggle whether you'll see "
+"the output from the colorize algorithm."
 msgstr ""
+"|show-output| このアイコンで出力を表示アイコンで自動塗り分けアルゴリズムの出"
+"力を表示するかを切り替えることができます。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:167
 msgid "Lock"
-msgstr ""
+msgstr "ロック"
 
 #: ../../reference_manual/tools/colorize_mask.rst:168
-msgid "Stops the mask from being edited."
-msgstr ""
+msgid "|lock-icon| This icon stops the mask from being edited."
+msgstr "|lock-icon| マスクを編集できないようにします。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:170
 msgid ""
-"Whether the colorize mask is in edit mode. In edit mode it'll show the "
-"strokes, and the output will be semi-transparent."
+"|edit-strokes| This icon shows whether the colorize mask is in edit mode. In "
+"edit mode it'll show the strokes, and the output will be semi-transparent."
 msgstr ""
+"|edit-strokes| このアイコンは自動塗り分けマスクが編集モードにあるかを表示して"
+"います。編集モードでは制御描線を表示し、出力は半透明になります。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:172
 msgid ""
-"The last button will force the colorize mask to update, even when you're in "
-"a different tool."
+"|update-icon| This icon will force the colorize mask to update, even when "
+"you're in a different tool."
 msgstr ""
+"|update-icon| 他のツールを使用中でも、自動塗り分けマスクを強制的に更新しま"
+"す。"
 
 #: ../../reference_manual/tools/colorize_mask.rst:174
 msgid "Colorize masks cannot be animated."
+msgstr "自動塗り分けマスクはアニメーションにすることができません。"
+
+#: ../../reference_manual/tools/colorize_mask.rst:177
+msgid ""
+".. image:: images/tools/colorize-show-output-icons.png\n"
+"   :alt: show-output"
+msgstr ""
+
+#: ../../reference_manual/tools/colorize_mask.rst:179
+msgid ""
+".. image:: images/tools/colorize-lock-icon.png\n"
+"   :alt: lock-icon"
+msgstr ""
+
+#: ../../reference_manual/tools/colorize_mask.rst:181
+msgid ""
+".. image:: images/tools/colorize-edit-key-strokes-icon.png\n"
+"   :alt: edit-strokes"
+msgstr ""
+
+#: ../../reference_manual/tools/colorize_mask.rst:183
+msgid ""
+".. image:: images/tools/colorize-update-icon.png\n"
+"   :alt: update-icon"
 msgstr ""

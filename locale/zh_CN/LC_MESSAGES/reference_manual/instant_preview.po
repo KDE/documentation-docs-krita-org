@@ -2,20 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-08-16 17:04\n"
-"Last-Translator: Guo Yunhe (guoyunhe)\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2023-07-18 11:12\n"
+"Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/www/"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___instant_preview.pot\n"
+"X-Crowdin-File-ID: 9946\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -27,20 +28,20 @@ msgstr ""
 
 #: ../../reference_manual/instant_preview.rst:1
 msgid "How the Instant Preview technology in Krita works."
-msgstr "介绍 Krita 的即时预览技术的工作原理。"
+msgstr "介绍 Krita 的快速预渲染功能的工作方式。"
 
 #: ../../reference_manual/instant_preview.rst:10
 #: ../../reference_manual/instant_preview.rst:15
 msgid "Instant Preview"
-msgstr "即时预览功能"
+msgstr "快速预渲染"
 
 #: ../../reference_manual/instant_preview.rst:10
 msgid "Performance"
-msgstr ""
+msgstr "性能"
 
 #: ../../reference_manual/instant_preview.rst:10
 msgid "Lag"
-msgstr ""
+msgstr "拖慢"
 
 #: ../../reference_manual/instant_preview.rst:17
 msgid ""
@@ -53,33 +54,33 @@ msgid ""
 "that if you have a 4k screen and are working on a 4k image at 100% zoom, you "
 "won't feel any speed up."
 msgstr ""
-"即时预览功能是 Krita 针对大型画面和大型笔刷的特殊加速功能。它的工作原理是先直"
-"接采样视图显示的画面，画出大致的预览效果，而与此同时在后台对实际的全尺寸图像"
-"进行处理，在处理完成后替换掉之前的预览效果。换句话说，如果视图正在按实际大小 "
-"(100% 缩放) 显示，这个功能不会带来任何加速效果。"
+"快速预渲染是 Krita 为了提高大尺寸图像和大尺寸笔刷的绘画性能而设计的特殊加速功"
+"能。它的工作原理是先直接把笔刷画到视图画面 (一般都是缩小显示) 上给画师预览绘"
+"制效果，同时在后台处理全尺寸图像，处理完成后替换掉之前的预览效果。换句话说，"
+"如果视图正在按实际大小 (100% 缩放) 显示，这个功能不会带来任何加速效果。"
 
 #: ../../reference_manual/instant_preview.rst:20
 msgid "Activating Instant Preview"
-msgstr "启用即时预览功能"
+msgstr "启用快速预渲染"
 
 #: ../../reference_manual/instant_preview.rst:24
 msgid ""
 "Instant Preview requires OpenGL 3.0 support at minimum. So if you don't "
 "have :guilabel:`high-quality` scaling available in :menuselection:`Settings "
-"--> Configure Krita --> Display --> Display scaling filter`, then you won't "
-"be able to use Instant Preview either."
+"--> Configure Krita... --> Display --> Display scaling filter`, then you "
+"won't be able to use Instant Preview either."
 msgstr ""
-"即时预览功能需要显卡支持 OpenGL 3.0 以上。如果在菜单栏的 :menuselection:`设"
-"置 --> 配置 Krita --> 显示 --> 视图缩放算法` 选单中没有 :guilabel:`高质量` 选"
+"快速预渲染需要显卡支持 OpenGL 3.0 以上。如果在菜单栏的 :menuselection:`设置 "
+"--> 配置 Krita --> 显示 --> 视图缩放算法` 选单中不存在 :guilabel:`高质量` 选"
 "项，你将无法使用此功能。"
 
 #: ../../reference_manual/instant_preview.rst:29
 msgid ".. image:: images/brushes/Lod_position.png"
-msgstr ""
+msgstr ".. image:: images/brushes/Lod_position.png"
 
 #: ../../reference_manual/instant_preview.rst:29
 msgid "The Global Instant Preview toggle is under the view menu."
-msgstr ""
+msgstr "Krita 的全局快速预渲染开关可以在“视图”菜单里找到。"
 
 #: ../../reference_manual/instant_preview.rst:31
 msgid ""
@@ -87,6 +88,10 @@ msgid ""
 "shortcut), and the settings of the given paintop by default. This is because "
 "Instant Preview has different limitations with different paint operations."
 msgstr ""
+"快速预渲染有两个开关，全局开关和笔刷开关，这两个开关必须同时打开才能启用笔画"
+"预渲染。全局开关在“视图”菜单中，也可以通过 :kbd:`Shift + L` 快捷键进行切换。"
+"笔刷开关在笔刷选项控制面板 (F5) 的最下面一排选框中。某些笔刷选项无法在快速预"
+"渲染模式下工作，使用它们的预设将无法打开快速预渲染的笔刷开关。"
 
 #: ../../reference_manual/instant_preview.rst:33
 msgid ""
@@ -94,8 +99,8 @@ msgid ""
 "ability to have Instant Preview on the brush, so does using 'fade' sensor "
 "for size."
 msgstr ""
-"例如，颜色涂抹笔刷引擎使用覆盖模式时、大小选项映射到淡化传感器时都会禁用笔刷"
-"的即时预览功能。"
+"例如，颜色涂抹笔刷引擎在使用覆盖模式时、大小选项在映射到渐弱渐强传感器时，笔"
+"刷的快速预渲染开关都会被强制关闭。"
 
 #: ../../reference_manual/instant_preview.rst:35
 msgid ""
@@ -104,10 +109,10 @@ msgid ""
 "a stroke, and thus will give a feeling of 'popping' when the stroke is "
 "finished."
 msgstr ""
-"有时即使该功能不被强制禁用，也会造成一些问题。例如使用笔尖自动间距时、大小映"
-"射到随机度传感器时、笔尖调整密度选项时、在笔刷引擎中使用纹理时，即时预览的效"
-"果均不理想，笔画渲染结束并切换的瞬间会明显察觉到预览效果和最终结果存在较大差"
-"别。"
+"某些笔刷选项虽能使用笔画快速预渲染，但会造成一些问题。例如使用笔尖自动间距"
+"时、大小映射到随机度传感器时、笔尖调整密度选项时、在笔刷引擎中使用纹理时，笔"
+"画快速预渲染的效果均不理想，后台处理结束并切换的瞬间会明显察觉到预渲染效果和"
+"最终结果有跳跃性的差别。"
 
 #: ../../reference_manual/instant_preview.rst:37
 msgid ""
@@ -115,8 +120,8 @@ msgid ""
 "\\* behind it. Hovering over it will give you a list of options that are "
 "affecting the Instant Preview mode."
 msgstr ""
-"在笔刷选项面板 (F5) 中，在“即时预览”字样上点击鼠标左键和右键可以发现一些隐藏"
-"的相关提示和功能。"
+"在笔刷选项面板 (F5) 中，在“快速预渲染”字样上点击鼠标左键和右键可以发现一些隐"
+"藏的相关提示和功能。"
 
 #: ../../reference_manual/instant_preview.rst:41
 msgid ""
@@ -124,14 +129,14 @@ msgid ""
 "the threshold size at which instant preview activates. By default this "
 "100px. This is useful for brushes that are optimised to work on small sizes."
 msgstr ""
-"|mouseleft| 左键单击或者悬浮在“即时预览”字样上方可以查看该功能是否可用，在不"
-"可用时还会提示当前笔刷大小和触发功能的阈值。右键单击则可以调整该阈值，默认为 "
-"100 px。大小低于此阈值的笔刷将无法启用即时预览功能。此功能对于那些要在特定大"
+"|mouseleft| 左键单击或者悬浮在“快速预渲染”字样上方可以查看该功能是否可用，在"
+"不可用时还会提示当前笔刷大小和触发功能的阈值。右键单击则可以调整该阈值，默认"
+"为 100 px。大小低于此阈值的笔刷将无法启用快速预渲染。此功能对于那些要在特定大"
 "小下面工作的笔刷很有用。"
 
 #: ../../reference_manual/instant_preview.rst:47
 msgid ".. image:: images/brushes/Lod_position2.png"
-msgstr ""
+msgstr ".. image:: images/brushes/Lod_position2.png"
 
 #: ../../reference_manual/instant_preview.rst:47
 msgid ""
@@ -140,16 +145,16 @@ msgid ""
 "right. Hover over it to get more detail. In this case, the issue is that "
 "auto-spacing is on."
 msgstr ""
-"笔刷即时预览功能的开关位置。你可以在它的文字上悬停或者左键单击来查看相关信"
-"息，右键单击可以调整阈值。"
+"笔刷的快速预渲染开关选框。你可以在它的文字上悬停或者左键单击来查看相关信息，"
+"右键单击可以调整阈值。"
 
 #: ../../reference_manual/instant_preview.rst:50
 msgid "Tools that benefit from Instant Preview"
-msgstr "即时预览功能生效工具"
+msgstr "支持快速预渲染的工具"
 
 #: ../../reference_manual/instant_preview.rst:52
 msgid "The following tools benefit from Instant Preview:"
-msgstr "即使预览功能在下列工具中生效："
+msgstr "下列工具可配合快速预渲染使用："
 
 #: ../../reference_manual/instant_preview.rst:54
 msgid "The Freehand brush tool."

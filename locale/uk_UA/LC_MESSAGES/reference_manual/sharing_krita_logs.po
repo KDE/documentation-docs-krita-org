@@ -1,0 +1,843 @@
+# Translation of docs_krita_org_reference_manual___sharing_krita_logs.po to Ukrainian
+# Copyright (C) 2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: docs_krita_org_reference_manual___sharing_krita_logs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-10 00:40+0000\n"
+"PO-Revision-Date: 2022-08-10 18:33+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid ""
+"# if you have Krita installed from repositories, you may need to only write "
+"'gdb krita'\n"
+"# if not, write the path to the executable file\n"
+"gdb path/to/krita"
+msgstr ""
+"# якщо Krita встановлено зі сховищ пакунків дистрибутива, вам, можливо, "
+"достатньо скомандувати «gdb krita»\n"
+"# якщо це не так, вкажіть шлях до виконуваного файла\n"
+"gdb path/to/krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid "set pagination off"
+msgstr "set pagination off"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid "run"
+msgstr "run"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid "thread apply all bt"
+msgstr "thread apply all bt"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid "thread apply all bt full"
+msgstr "thread apply all bt full"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid "lldb /Applications/krita.app/Contents/MacOS/krita"
+msgstr "lldb /Applications/krita.app/Contents/MacOS/krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid "thread backtrace all"
+msgstr "thread backtrace all"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid ""
+"# On Linux, if installed from repositories:\n"
+"krita\n"
+"# On Linux, in all other cases:\n"
+"#  (remember that if you want to reference a file from the directory\n"
+"#   you're currently in, you need to write: './krita_filename' instead of "
+"'krita_filename'\n"
+"#   and remember that this file need to have execution rights to be "
+"executed)\n"
+"path/to/krita"
+msgstr ""
+"# У Linux, якщо встановлено зі сховищ пакунків дистрибутива:\n"
+"krita\n"
+"# У Linux, в усіх інших випадках:\n"
+"#  (пам'ятайте, що якщо ви хочете послатися на файл з каталогу,\n"
+"#   у якому ви зараз працюєте, вам слід вказати «./назва_файла_krita» "
+"замість «назва_файла_krita»\n"
+"#   і пам'ятайте, що цей файл повинен мати права на виконання, щоб його "
+"можна було виконати)\n"
+"шлях/до/krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid ""
+"# On macOS:\n"
+"/Applications/krita.app/Contents/MacOS/krita"
+msgstr ""
+"# У macOS:\n"
+"/Applications/krita.app/Contents/MacOS/krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:None
+msgid ""
+"REM  On Windows:\n"
+"REM  By default, cmd.exe will prefer running the .COM file over the .EXE, "
+"so\n"
+"REM  you may also leave out the .COM file extension.\n"
+"\"C:\\Program Files\\Krita (x64)\\bin\\krita.com\""
+msgstr ""
+"REM  У Windows:\n"
+"REM  Типово, у cmd.exe надано перевагу запуску файла .COM, а не .EXE, отже,\n"
+"REM  ви можете пропустити суфікс назви файла .COM.\n"
+"\"C:\\Program Files\\Krita (x64)\\bin\\krita.com\""
+
+#: ../../reference_manual/sharing_krita_logs.rst:1
+msgid "How to get a Krita Usage Log, Krita's backtrace or Krita's text output."
+msgstr ""
+"Як отримати вміст журналу користування Krita, дані зворотного трасування "
+"Krita або текстове виведення Krita."
+
+#: ../../reference_manual/sharing_krita_logs.rst:11
+msgid "Backtrace"
+msgstr "Зворотне трасування"
+
+#: ../../reference_manual/sharing_krita_logs.rst:11
+msgid "Debug"
+msgstr "Діагностика"
+
+#: ../../reference_manual/sharing_krita_logs.rst:11
+msgid "Log"
+msgstr "Журнал"
+
+#: ../../reference_manual/sharing_krita_logs.rst:16
+msgid "Getting Krita logs"
+msgstr "Отримання журналів роботи Krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:19
+msgid ""
+"There are three different kinds of logs that Krita can produce. Depending on "
+"the issue, you might be asked for a specific one or for all of them. This "
+"page will tell you how to gather the necessary information to give to Krita "
+"developers or user supporters."
+msgstr ""
+"Krita виводить дані до трьох типів журналів. Залежно від проблеми, "
+"розробникам можуть знадобитися дані з журналу певного типу або з усіх "
+"журналів. На цій сторінці наведено дані щодо того, як зібрати потрібні дані "
+"для надання розробникам або учасникам команди підтримки Krita."
+
+#: ../../reference_manual/sharing_krita_logs.rst:22
+msgid ""
+":ref:`Krita Usage Log <krita_usage_log>` -- this log contains your last 10 "
+"Krita sessions (one session means opening Krita). It shows times when you "
+"opened it, basic information about your system and Krita, and all files you "
+"created, opened and saved, including all auto-saves."
+msgstr ""
+":ref:`Журнал користування Krita <krita_usage_log>` — у цьому журналі "
+"містяться дані останніх 10 сеансів Krita (одним сеансом вважається проміжок "
+"роботи програми після її запуску). У журналі вказано моменти часу відкриття "
+"програми, базові відомості щодо системи і Krita, а також назви усіх "
+"створених, відкритих та збережених файлів, включно із усіма файлами "
+"автоматично створених копій."
+
+#: ../../reference_manual/sharing_krita_logs.rst:23
+msgid ""
+":ref:`System information <getting_system_information>` -- this is not "
+"exactly a log, but a file that contains detailed system information related "
+"to Krita."
+msgstr ""
+":ref:`Відомості щодо системи <getting_system_information>` — це не зовсім "
+"журнал, просто файл, який містить докладні відомості щодо системи, які "
+"пов'язано із Krita."
+
+#: ../../reference_manual/sharing_krita_logs.rst:24
+msgid ""
+":ref:`Crash log/backtrace <getting_backtrace>` -- this log is created when "
+"Krita closes incorrectly because of an internal issue. This log is often "
+"necessary to get the issue fixed if developers cannot reproduce issue "
+"(repeat steps to get the crash)."
+msgstr ""
+":ref:`Журнал або зворотне трасування аварійного завершення роботи "
+"<getting_backtrace>` — цей журнал буде створено, якщо роботу Krita буде "
+"завершено аварійно через якусь внутрішню проблему. Вміст цього журналу часто "
+"є необхідним для виправлення вади у програмі, якщо розробникам не вдається "
+"відтворити цю ваду (повторити кроки, які призводять до аварійного завершення "
+"роботи програми) самостійно."
+
+#: ../../reference_manual/sharing_krita_logs.rst:25
+msgid ""
+":ref:`Krita console output/Log Viewer output/DebugView output "
+"<krita_console_debugview>` -- this log contains anything random that Krita "
+"felt the need to report. It often contains some useful additional "
+"information that can help solving the issue."
+msgstr ""
+":ref:`Виведення Krita до консолі/Виведення до журналу перегляду/Виведення на "
+"панель діагностики <krita_console_debugview>` — у цьому журналі містяться "
+"випадкові повідомлення, які логіка програми Krita виводить до звіту щодо "
+"роботи. У цьому журналі часто містяться додаткові корисні дані, які можуть "
+"допомогти усунути проблему."
+
+#: ../../reference_manual/sharing_krita_logs.rst:30
+msgid "Quick access"
+msgstr "Швидкий доступ"
+
+#: ../../reference_manual/sharing_krita_logs.rst:32
+#: ../../reference_manual/sharing_krita_logs.rst:83
+#: ../../reference_manual/sharing_krita_logs.rst:119
+#: ../../reference_manual/sharing_krita_logs.rst:143
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../reference_manual/sharing_krita_logs.rst:34
+#: ../../reference_manual/sharing_krita_logs.rst:41
+#: ../../reference_manual/sharing_krita_logs.rst:48
+#: ../../reference_manual/sharing_krita_logs.rst:55
+msgid ":ref:`Krita Usage Log <krita_usage_log>`"
+msgstr ":ref:`Журнал користування Krita <krita_usage_log>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:35
+#: ../../reference_manual/sharing_krita_logs.rst:42
+#: ../../reference_manual/sharing_krita_logs.rst:49
+#: ../../reference_manual/sharing_krita_logs.rst:56
+msgid ":ref:`System information <getting_system_information>`"
+msgstr ":ref:`Відомості щодо системи <getting_system_information>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:36
+msgid ":ref:`Backtrace  <getting_backtrace_windows>`"
+msgstr ":ref:`Зворотне трасування  <getting_backtrace_windows>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:37
+msgid ""
+"Krita text output from :ref:`Log Viewer (in GUI) "
+"<krita_text_output_logviewer>`, :ref:`console <krita_text_output_console>` "
+"or :ref:`DebugView (external application) <using_debug_view>`"
+msgstr ""
+"Текстові дані Krita з :ref:`журналу переглядача (у графічному інтерфейсі) "
+"<krita_text_output_logviewer>`, :ref:`console <krita_text_output_console>` "
+"або з :ref:`панелі діагностики (зовнішня програма) <using_debug_view>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:39
+#: ../../reference_manual/sharing_krita_logs.rst:81
+#: ../../reference_manual/sharing_krita_logs.rst:117
+#: ../../reference_manual/sharing_krita_logs.rst:152
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../reference_manual/sharing_krita_logs.rst:43
+msgid ":ref:`Backtrace  <getting_backtrace_linux>`"
+msgstr ":ref:`Зворотне трасування  <getting_backtrace_linux>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:44
+#: ../../reference_manual/sharing_krita_logs.rst:51
+msgid ""
+"Krita text output from :ref:`Log Viewer (in GUI) "
+"<krita_text_output_logviewer>` or :ref:`console <krita_text_output_console>`"
+msgstr ""
+"Текстові дані Krita з :ref:`журналу переглядача (у графічному інтерфейсі) "
+"<krita_text_output_logviewer>` або з :ref:`консолі "
+"<krita_text_output_console>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:46
+#: ../../reference_manual/sharing_krita_logs.rst:85
+#: ../../reference_manual/sharing_krita_logs.rst:121
+#: ../../reference_manual/sharing_krita_logs.rst:209
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../reference_manual/sharing_krita_logs.rst:50
+msgid ":ref:`Backtrace  <getting_backtrace_mac>`"
+msgstr ":ref:`Зворотне трасування  <getting_backtrace_mac>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:53
+#: ../../reference_manual/sharing_krita_logs.rst:89
+#: ../../reference_manual/sharing_krita_logs.rst:125
+#: ../../reference_manual/sharing_krita_logs.rst:245
+msgid "Android"
+msgstr "Android"
+
+#: ../../reference_manual/sharing_krita_logs.rst:57
+msgid ":ref:`Backtrace  <getting_backtrace_android>`"
+msgstr ":ref:`Зворотне трасування <getting_backtrace_android>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:58
+msgid ":ref:`Logcat  <getting_logcat>`"
+msgstr ":ref:`Logcat  <getting_logcat>`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:65
+msgid "Krita Usage Log"
+msgstr "Журнал користування Krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:68
+#: ../../reference_manual/sharing_krita_logs.rst:104
+#: ../../reference_manual/sharing_krita_logs.rst:269
+msgid "Through GUI"
+msgstr "З використанням графічного інтерфейсу"
+
+#: ../../reference_manual/sharing_krita_logs.rst:71
+msgid ""
+"The easiest way to get Krita Usage Log is through Krita's GUI. Go to  :"
+"menuselection:`Help --> Show Krita Log for bug reports`. A new dialog will "
+"open, showing the content of the log."
+msgstr ""
+"Найпростішим способом отримати дані з журналу користування Krita є "
+"використання графічного інтерфейсу Krita. Скористайтеся пунктом меню :"
+"menuselection:`Довідка --> Показати журнал Krita для звітування про вади`. У "
+"відповідь буде відкрито нове діалогове вікно, у якому буде показано вміст "
+"журналу."
+
+#: ../../reference_manual/sharing_krita_logs.rst:75
+#: ../../reference_manual/sharing_krita_logs.rst:111
+msgid "From the file system"
+msgstr "З використанням файлової системи"
+
+#: ../../reference_manual/sharing_krita_logs.rst:77
+#: ../../reference_manual/sharing_krita_logs.rst:113
+msgid ""
+"Sometimes however it is not possible to use Krita's GUI, for example when it "
+"doesn't even open. Since logs are regular text files, you can get them from "
+"your file system by yourself."
+msgstr ""
+"Втім, іноді скористатися графічним інтерфейсом Krita неможливо. Наприклад, у "
+"випадках, коли вікно програми просто неможливо відкрити. Оскільки журнали є "
+"звичайними текстовими файлами, ви можете отримати до них доступ вручну за "
+"допомогою файлової системи вашого комп'ютера."
+
+#: ../../reference_manual/sharing_krita_logs.rst:79
+msgid "The file is called :file:`krita.log`. Location of the file:"
+msgstr "Файл журналу має назву :file:`krita.log`. Місце зберігання файла:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:82
+msgid ":file:`$HOME/.local/share/krita.log`"
+msgstr ":file:`$HOME/.local/share/krita.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:84
+msgid ":file:`%LOCALAPPDATA%\\\\krita.log`"
+msgstr ":file:`%LOCALAPPDATA%\\\\krita.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:86
+msgid ":file:`$HOME/Library/Application Support/krita.log`"
+msgstr ":file:`$HOME/Library/Application Support/krita.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:88
+msgid ""
+"Play Store version: :file:`<storage>/Android/data/org.krita/files/krita.log`"
+msgstr ""
+"Версія для Play Store: :file:`<storage>/Android/data/org.krita/files/krita."
+"log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:89
+msgid ""
+"Krita Next: :file:`<storage>/Android/data/org.krita.next/files/krita.log`"
+msgstr ""
+"Krita Next: :file:`<storage>/Android/data/org.krita.next/files/krita.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:93
+msgid ""
+"In Windows you can simply paste this path into the Windows Explorer's search "
+"box, on the top bar, and it will find the file for you."
+msgstr ""
+"У Windows ви можете просто вставити цей шлях до рядка пошуку Провідника "
+"Windows на верхній панелі, і програма знайде для вас відповідний файл."
+
+#: ../../reference_manual/sharing_krita_logs.rst:101
+msgid "System information related to Krita"
+msgstr "Відомості щодо системи, які пов'язано із Krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:107
+msgid ""
+"The easiest way to get system information related to Krita is through "
+"Krita's GUI. Go to  :menuselection:`Help --> Show system information for bug "
+"reports`. A new dialog will open, showing the content."
+msgstr ""
+"Найпростішим способом отримання відомостей щодо системи, які пов'язано із "
+"Krita, є графічний інтерфейс Krita. Скористайтеся пунктом меню :"
+"menuselection:`Довідка --> Показати дані щодо системи для звітування щодо "
+"вад`. У відповідь буде відкрити діалогове вікно, у якому буде показано "
+"відповідні дані."
+
+#: ../../reference_manual/sharing_krita_logs.rst:115
+msgid "The file is called :file:`krita-sysinfo.log`. Location of the file:"
+msgstr ""
+"Файл журналу має назву :file:`krita-sysinfo.log`. Місце зберігання файла:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:118
+msgid ":file:`$HOME/.local/share/krita-sysinfo.log`"
+msgstr ":file:`$HOME/.local/share/krita-sysinfo.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:120
+msgid ":file:`%LOCALAPPDATA%\\\\krita-sysinfo.log`"
+msgstr ":file:`%LOCALAPPDATA%\\\\krita-sysinfo.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:122
+msgid ":file:`$HOME/Library/Application Support/krita-sysinfo.log`"
+msgstr ":file:`$HOME/Library/Application Support/krita-sysinfo.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:124
+msgid ""
+"Play Store version: :file:`<storage>/Android/data/org.krita/files/krita-"
+"sysinfo.log`"
+msgstr ""
+"Версія для Play Store: :file:`<storage>/Android/data/org.krita/files/krita-"
+"sysinfo.log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:125
+msgid ""
+"Krita Next: :file:`<storage>/Android/data/org.krita.next/files/krita-sysinfo."
+"log`"
+msgstr ""
+"Krita Next: :file:`<storage>/Android/data/org.krita.next/files/krita-sysinfo."
+"log`"
+
+#: ../../reference_manual/sharing_krita_logs.rst:129
+msgid ""
+"In Windows you can simply paste this path into the file browser textbox on "
+"the top bar and it will find you the file."
+msgstr ""
+"У Windows ви можете просто вставити цей шлях до поля адреси Провідника на "
+"верхній панелі, і програма знайде для вас потрібний файл."
+
+#: ../../reference_manual/sharing_krita_logs.rst:135
+msgid "Crash log and backtrace"
+msgstr "Журнал аварійного завершення роботи та зворотне трасування"
+
+#: ../../reference_manual/sharing_krita_logs.rst:137
+msgid "Location and the way to get a backtrace is different on all systems."
+msgstr ""
+"Розташування і спосіб отримання даних зворотного трасування у різних "
+"системах є різним."
+
+#: ../../reference_manual/sharing_krita_logs.rst:145
+msgid ""
+"Usually, it is sufficient to share the content of :menuselection:`Help --> "
+"Show Krita Log for bug reports` as it contains the backtrace."
+msgstr ""
+"Зазвичай, достатньо надати дані, які показано у вікні, що відкривається "
+"пунктом меню :menuselection:`Довідка --> Показати журнал Krita для "
+"звітування про вади`, оскільки у цих даних міститься зворотне трасування."
+
+#: ../../reference_manual/sharing_krita_logs.rst:147
+msgid ""
+"If you cannot open Krita because it crashes on startup, please provide the :"
+"file:`%LOCALAPPDATA%\\\\kritacrash.log`. Sometimes more detailed information "
+"is needed, then you will be asked to closely follow :ref:`Dr. Mingw debugger "
+"<dr_minw>` guide."
+msgstr ""
+"Якщо ви не можете відкрити вікно Krita, оскільки програма завершує роботу в "
+"аварійному режимі під час запуску, будь ласка, надайте дані з файла :file:`"
+"%LOCALAPPDATA%\\\\kritacrash.log`. Іноді, потрібна докладніша інформація. У "
+"таких випадках вам слід точно виконати настанови з розділу щодо :ref:`засобу "
+"діагностики Dr. Mingw <dr_minw>`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:154
+msgid "On Linux, there are five ways of installing Krita."
+msgstr "У Linux передбачено п'ять способів встановлення Krita."
+
+#: ../../reference_manual/sharing_krita_logs.rst:156
+msgid "Using distribution packages"
+msgstr "За допомогою пакунків дистрибутива"
+
+#: ../../reference_manual/sharing_krita_logs.rst:157
+msgid "Building Krita yourself from source"
+msgstr "Збирання і встановлення Krita власноруч"
+
+#: ../../reference_manual/sharing_krita_logs.rst:158
+msgid "Using a snap package"
+msgstr "За допомогою пакунка snap"
+
+#: ../../reference_manual/sharing_krita_logs.rst:159
+msgid "Using a flatpak package"
+msgstr "За допомогою пакунка flatpak"
+
+#: ../../reference_manual/sharing_krita_logs.rst:160
+msgid "Using the official AppImage"
+msgstr "За допомогою офіційного пакунка AppImage"
+
+#: ../../reference_manual/sharing_krita_logs.rst:162
+msgid ""
+"Only distribution packages and built-from-source can produce usable crash "
+"logs/backtraces. For distribution packages, you will need to install the "
+"corresponding debug or dbg packages; the method for that is different from "
+"distribution to distribution. If you use distribution packages and the KDE "
+"Plasma Desktop, a crash dialog will be shown that has the backtrace in the "
+"\"Developer\" tab."
+msgstr ""
+"Придатні до аналізу журнали аварій та дані зворотного трасування можна "
+"отримати лише з пакунків дистрибутивів або зібраних власноруч версій. Для "
+"роботи з пакунками дистрибутивів вам слід встановити відповідні діагностичні "
+"пакунки (debug або dbg). Спосіб встановлення залежить від конкретного "
+"дистрибутива. Якщо ви користуєтеся пакунками дистрибутива і стільничним "
+"середовищем Плазми KDE, система покаже діалогове вікно аварійного завершення "
+"роботи, у якому дані зворотного трасування буде наведено на вкладці "
+"«Розробник»."
+
+#: ../../reference_manual/sharing_krita_logs.rst:164
+msgid "Otherwise, you have to use :literal:`gdb` in a terminal window."
+msgstr ""
+"У інших випадках вам доведеться скористатися :literal:`gdb` у вікні "
+"термінала."
+
+#: ../../reference_manual/sharing_krita_logs.rst:166
+msgid "Open Krita in :literal:`gdb`:"
+msgstr "Відкрийте Krita у :literal:`gdb`:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:174
+msgid "Disable pagination:"
+msgstr "Вимкніть поділ на сторінки:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:180
+#: ../../reference_manual/sharing_krita_logs.rst:221
+msgid "Run Krita:"
+msgstr "Запустіть Krita:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:186
+#: ../../reference_manual/sharing_krita_logs.rst:226
+msgid "Make it crash."
+msgstr "Виконайте дії, які призводять до аварійного завершення роботи."
+
+#: ../../reference_manual/sharing_krita_logs.rst:187
+msgid "Get the short backtrace:"
+msgstr "Отримайте скорочений варіант зворотного трасування:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:193
+msgid "Get the long backtrace:"
+msgstr "Отримайте повний варіант зворотного трасування:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:199
+msgid "Short and long backtraces save to separate text files."
+msgstr ""
+"Скорочений і повний варіанти зворотного трасування зберігаються у окремих "
+"текстових файлах."
+
+#: ../../reference_manual/sharing_krita_logs.rst:200
+msgid ""
+"From the short backtrace, it's recommended to cut out all threads that are "
+"identical to some others or don't seem to hold any additional information."
+msgstr ""
+"Зі скороченого варіанта зворотного трасування рекомендуємо вилучити усі дані "
+"потоків, які є ідентичними або, очевидно, не містять корисної інформації."
+
+#: ../../reference_manual/sharing_krita_logs.rst:202
+msgid ""
+"If you feel like you know which part of the backtrace is the most important "
+"(it's usually the longest thread), then cut it out and put this fragment in "
+"the bug report in a comment. Both backtraces still will be needed: attach "
+"them to the bug report as well."
+msgstr ""
+"Якщо ви впевнені щодо того, яка саме частин зворотного трасування є "
+"найважливішою (зазвичай, це найдовша гілка виконання), виріжте її і вставте "
+"вирізаний фрагмент до звіту щодо вади як коментар. Втім, корисними будуть "
+"обидва варіанти зворотного трасування — їх також варто долучити до вашого "
+"звіту щодо вади."
+
+#: ../../reference_manual/sharing_krita_logs.rst:204
+msgid ""
+"If you prefer not to make this decision, just attach both files with "
+"backtraces to the bug report."
+msgstr ""
+"Якщо ви не певні щодо корисних для розробників даних, просто долучіть обидва "
+"файли зворотного трасування до звіту щодо вади."
+
+#: ../../reference_manual/sharing_krita_logs.rst:212
+msgid "On macOS it's recommended to use :literal:`lldb`."
+msgstr "У системах macOS рекомендуємо скористатися :literal:`lldb`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:214
+msgid "Open Terminal.app"
+msgstr "Відкрийте Terminal.app"
+
+#: ../../reference_manual/sharing_krita_logs.rst:215
+msgid "Open Krita in :literal:`lldb`:"
+msgstr "Відкрийте Krita у :literal:`lldb`:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:227
+msgid "Get the backtrace:"
+msgstr "Отримайте дані зворотного трасування:"
+
+#: ../../reference_manual/sharing_krita_logs.rst:234
+msgid "Save the backtrace to a text file."
+msgstr "Збережіть дані зворотного трасування до текстового файла."
+
+#: ../../reference_manual/sharing_krita_logs.rst:235
+msgid ""
+"From the backtrace it's recommended to cut out all threads that are "
+"identical to some others or don't seem to hold any additional information to "
+"put into the comment (so it's easily accessible for the developer)."
+msgstr ""
+"Зі зворотного трасування рекомендуємо вилучити усі дані потоків, які є "
+"ідентичними або, очевидно, не містять корисної інформації). Корисні дані "
+"варто додати як коментар, так, щоб розробнику було простіше з ними працювати."
+
+#: ../../reference_manual/sharing_krita_logs.rst:237
+msgid ""
+"If you feel like you know which part of the backtrace is the most important "
+"(it's usually the longest thread), then cut it out and put this fragment in "
+"the bug report in a comment. The full backtrace still will be needed: attach "
+"it to the bug report as well."
+msgstr ""
+"Якщо ви впевнені щодо того, яка саме частин зворотного трасування є "
+"найважливішою (зазвичай, це найдовша гілка виконання), виріжте її і вставте "
+"вирізаний фрагмент до звіту щодо вади як коментар. Втім, корисним буде і "
+"повний варіант зворотного трасування — його також варто долучити до вашого "
+"звіту щодо вади."
+
+#: ../../reference_manual/sharing_krita_logs.rst:239
+msgid ""
+"If you prefer not to make this decision, just attach the file with the "
+"backtrace to the bug report."
+msgstr ""
+"Якщо ви не певні щодо корисних для розробників даних, просто долучіть файл "
+"із даними зворотного трасування до звіту щодо вади."
+
+#: ../../reference_manual/sharing_krita_logs.rst:247
+msgid ""
+"To get the logs using the GUI, share the content of :menuselection:`Help --> "
+"Show crash log for bug reports`."
+msgstr ""
+"Для отримання журналів за допомогою графічного інтерфейсу скористайтеся "
+"даними, які надає пункт меню :menuselection:`Довідка --> Показати журнал "
+"Krita для звітування про вади`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:249
+msgid ""
+"If you cannot open Krita because it crashes on startup, please provide the :"
+"file:`<storage>/Android/data/org.krita/files/kritacrashlog.txt`."
+msgstr ""
+"Якщо ви не можете відкрити вікно Krita, оскільки програма завершує роботу "
+"під час запуску, будь ласка, надайте вміст файла :file:`<storage>/Android/"
+"data/org.krita/files/kritacrashlog.txt`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:254
+msgid "Logcat (Android)"
+msgstr "Logcat (Android)"
+
+#: ../../reference_manual/sharing_krita_logs.rst:256
+msgid ""
+"To get the logcat output for Krita, share the content of :menuselection:"
+"`Help --> Show Android log for bug reports`."
+msgstr ""
+"Для отримання виведених даних logcat для Krita скористайтеся даними, які "
+"надає пункт меню :menuselection:`Довідка --> Показати журнал Android для "
+"звітування про вади`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:262
+msgid "Krita's text output"
+msgstr "Текстове виведення Krita"
+
+#: ../../reference_manual/sharing_krita_logs.rst:264
+msgid ""
+"Most of Krita's text output can be gathered using :guilabel:`Log Viewer`. "
+"The only exception are messages from when Krita is starting up, so there is "
+"no GUI yet, or when it closes or crashes so no user interaction is possible "
+"after the event."
+msgstr ""
+"Більшу частину виведених Krita текстових даних можна зібрати за допомогою "
+"панелі :guilabel:`Перегляд журналу`. Єдиним виключенням є повідомлення, які "
+"Krita виводить під час запуску, оскільки у цей час у програми ще немає "
+"графічного інтерфейсу, або повідомлення, які програма виводить, коли "
+"завершує роботу у штатному або аварійному режимі, оскільки у ці періоди "
+"роботи взаємодія із користувачем є неможливою."
+
+#: ../../reference_manual/sharing_krita_logs.rst:271
+msgid "Go to :menuselection:`Settings --> Dockers --> Log Viewer`."
+msgstr ""
+"Скористайтеся пунктом меню :menuselection:`Параметри --> Бічні панелі --> "
+"Перегляд журналу`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:273
+msgid ""
+"The first button from the left enables and disables logging, so make sure it "
+"is pressed."
+msgstr ""
+"За допомогою найлівішої кнопки можна вмикати і вимикати ведення журналу. "
+"Переконайтеся, що вона перебуває у натиснутому стані."
+
+#: ../../reference_manual/sharing_krita_logs.rst:275
+#: ../../reference_manual/sharing_krita_logs.rst:322
+msgid "Do the thing you want to get the output of."
+msgstr ""
+"Виконайте дії, які слід виконати для отримання потрібних вам виведених даних."
+
+#: ../../reference_manual/sharing_krita_logs.rst:277
+msgid ""
+"Use the third button (tooltip says: *Save the log*) to save the log to a "
+"file."
+msgstr ""
+"Скористайтеся третьою за ліком кнопкою (вона має підказку *Зберегти журнал*) "
+"для збереження журналу до файла."
+
+#: ../../reference_manual/sharing_krita_logs.rst:279
+msgid "Attach the file to the bug report."
+msgstr "Долучіть файл до звіту щодо вади."
+
+#: ../../reference_manual/sharing_krita_logs.rst:284
+msgid "From the console"
+msgstr "За допомогою консолі"
+
+#: ../../reference_manual/sharing_krita_logs.rst:286
+msgid ""
+"Using the console is the most reliable way to get Krita's text output. This "
+"way is similar on macOS and Linux."
+msgstr ""
+"Використання консолі є найнадійнішим способом отримати виведені Krita "
+"текстові дані. Це стосується операційних систем macOS і Linux."
+
+#: ../../reference_manual/sharing_krita_logs.rst:290
+msgid ""
+"This is now also possible on Windows using the :file:`krita.com` executable."
+msgstr ""
+"Крім того, у новій версії це можна робити у Windows за допомогою "
+"виконуваного файла :file:`krita.com`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:294
+msgid ""
+"The :program:`krita.com` executable starts Krita as a command-line program "
+"with a console window. This was not available before Krita version 5.0. If "
+"you have an older version or would prefer to use the :program:`krita.exe` "
+"program without a console window, see :ref:`DebugView guide "
+"<using_debug_view>`."
+msgstr ""
+"Виконуваний файл :program:`krita.com` запускає Krita як програму, яка працює "
+"з командного рядка, за допомогою вікна консолі. Цим файлом не можна було "
+"скористатися у версіях Krita до 5.0. Якщо ви користуєтеся старішою версією "
+"або надаєте перевагу використанню програми :program:`krita.exe` без вікна "
+"консолі, див. :ref:`настанови щодо DebugView <using_debug_view>`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:296
+msgid ""
+"On macOS open :program:`Terminal.app`, on Linux open your favorite terminal "
+"or console application. On Windows, open a Command Prompt by typing :code:"
+"`cmd.exe` on the Start Menu and pressing :kbd:`Enter`."
+msgstr ""
+"У macOS відкрийте :program:`Terminal.app`, у Linux відкрийте ваш улюблений "
+"емулятор термінала або програму-консоль. У Windows відкрийте командний рядок "
+"введенням команди :code:`cmd.exe` у меню «Пуск» із наступним натисканням "
+"клавіші :kbd:`Enter`."
+
+#: ../../reference_manual/sharing_krita_logs.rst:298
+msgid "Write the path to the Krita executable."
+msgstr "Впишіть шлях до виконуваного файла Krita."
+
+#: ../../reference_manual/sharing_krita_logs.rst:324
+msgid "Copy the content, save to a file and attach to the bug report."
+msgstr ""
+"Скопіюйте дані, збережіть їх до файла і долучіть файл до звіту щодо вади."
+
+#: ../../reference_manual/sharing_krita_logs.rst:330
+msgid "From the DebugView"
+msgstr "За допомогою DebugView"
+
+#: ../../reference_manual/sharing_krita_logs.rst:331
+msgid ""
+"To get the text output of Krita on Windows using the graphical program, you "
+"need an external program called :literal:`DebugView`. Compared to using the "
+"console, DebugView has the benefit of including timestamps to the log "
+"entries."
+msgstr ""
+"Щоб отримати текстове виведення Krita у Windows за допомогою програми із "
+"графічним інтерфейсом, вам слід скористатися зовнішньою програмою, яка має "
+"назву :literal:`DebugView`. Порівняно із використанням консолі, перевагою "
+"DebugView є включення часових позначок до записів журналу."
+
+#: ../../reference_manual/sharing_krita_logs.rst:334
+msgid ""
+"`Download DebugView <https://docs.microsoft.com/en-us/sysinternals/downloads/"
+"debugview>`_ if you haven't already. Click on the blue bold :guilabel:"
+"`Download DebugView` text with underline, downloading should start "
+"immediately."
+msgstr ""
+"`Отримайте DebugView <https://docs.microsoft.com/en-us/sysinternals/"
+"downloads/debugview>`_, якщо програму ще не встановлено у системі. Натисніть "
+"яскраво-синій запис :guilabel:`Download DebugView` із підкреслюванням. "
+"Одразу після цього має розпочатися отримання даних програми."
+
+#: ../../reference_manual/sharing_krita_logs.rst:336
+msgid ""
+"The file you download is a .zip archive. Windows 10 has a zip archive opener "
+"already included. Just extract all of the files somewhere. You can learn "
+"more about extracing on `Windows extracting manual page <https://support."
+"microsoft.com/en-us/help/4028088/windows-zip-and-unzip-files>`_."
+msgstr ""
+"Отриманий вами файл є архівом .zip. До складу Windows 10 вже включено засоби "
+"розпаковування zip. Достатньо видобути усі файли з архіву до якоїсь теки. "
+"Докладніше про видобування даних можна дізнатися зі `сторінки підручника "
+"Windows, яку присвячено видобуванню даних <https://support.microsoft.com/en-"
+"us/help/4028088/windows-zip-and-unzip-files>`_."
+
+#: ../../reference_manual/sharing_krita_logs.rst:338
+msgid ""
+"There is a file inside the archive that is called :file:`DbgView.exe` (which "
+"you can see as :file:`DbgView`, depending on your system settings). Double-"
+"click on it."
+msgstr ""
+"У видобутих із архіву даних буде файл із назвою :file:`DbgView.exe` "
+"(підписом до якого буде :file:`DbgView`, залежно від параметрів роботи вашої "
+"системи). Двічі клацніть на ньому."
+
+#: ../../reference_manual/sharing_krita_logs.rst:340
+msgid "Let the program run and open Krita."
+msgstr "Дочекайтеся запуску програми і відкрийте у ній Krita."
+
+#: ../../reference_manual/sharing_krita_logs.rst:342
+msgid "Do things you want to get output of."
+msgstr ""
+"Виконайте дії, які слід виконати для отримання потрібних вам виведених даних."
+
+#: ../../reference_manual/sharing_krita_logs.rst:344
+msgid ""
+"Switch to DebugView and copy the content. Save to a file and attach to the "
+"bug report."
+msgstr ""
+"Перемкніться на DebugView і скопіюйте дані. Збережіть дані до файла і "
+"долучіть файл до звіту щодо вади."
+
+#~ msgid "Mac"
+#~ msgstr "Mac"
+
+#~ msgid ""
+#~ "In versions 4.2.0-4.2.9, Krita Usage Log is accessible through :"
+#~ "menuselection:`Help --> Show system information for bug reports`. Note "
+#~ "that for Krita versions 4.1.7 and below, no usage log is available and "
+#~ "the menu entry only contains system information."
+#~ msgstr ""
+#~ "У версіях 4.2.0-4.2.9 доступ до журналу користування Krita можна було "
+#~ "отримати за допомогою пункту меню :menuselection:`Довідка --> Показати "
+#~ "дані щодо системи для звітів щодо вад`. Зауважте, що у версії Krita 4.1.7 "
+#~ "і давніших версіях журнал користування є недоступним, а у вікні, яке "
+#~ "відкриває пункт меню, містяться лише дані щодо системи."
+
+#~ msgid ""
+#~ "In versions 4.2.0-4.2.8, this menu entry contains both system information "
+#~ "and Krita Usage Log."
+#~ msgstr ""
+#~ "У версіях 4.2.0-4.2.8 у вікні, яке відкриває цей пункт меню, містяться "
+#~ "одразу дані щодо системи і журнал користування  Krita."
+
+#~ msgid ""
+#~ "On Mac open :file:`Terminal.app`, on Linux open your favourite terminal "
+#~ "or console application."
+#~ msgstr ""
+#~ "У Mac відкрийте файл :file:`Terminal.app`; у Linux відкрийте вашу "
+#~ "улюблену програму-термінал або консоль."
+
+#~ msgid ":ref:`Dr. Mingw debugger <dr_minw>` guide."
+#~ msgstr ""
+#~ ":ref:`настанови підручника з засобу діагностики Dr. Mingw <dr_minw>`."
+
+#~ msgid "On Linux it's recommended to use :literal:`gdb`."
+#~ msgstr "У Linux рекомендуємо скористатися :literal:`gdb`."
+
+#~ msgid ""
+#~ "Before version 4.2.9, this file is not created. To find the system "
+#~ "information, you need to look for the file mentioned in :ref:`Krita Usage "
+#~ "Log <krita_usage_log>`"
+#~ msgstr ""
+#~ "До версії 4.2.9 програма не створювала цей файл. Щоб отримати дані щодо "
+#~ "системи у таких застарілих версіях, вам слід скористатися файлом, який "
+#~ "згадано у розділі :ref:`Журнал користування Krita <krita_usage_log>`"

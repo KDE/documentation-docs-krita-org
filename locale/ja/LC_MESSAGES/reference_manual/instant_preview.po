@@ -1,16 +1,17 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 03:06+0200\n"
-"PO-Revision-Date: 2019-03-02 16:12-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2021-03-14 16:45-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -22,20 +23,20 @@ msgstr ""
 
 #: ../../reference_manual/instant_preview.rst:1
 msgid "How the Instant Preview technology in Krita works."
-msgstr ""
+msgstr "Krita の高速プレビュー機能がどのように動くか。"
 
 #: ../../reference_manual/instant_preview.rst:10
 #: ../../reference_manual/instant_preview.rst:15
 msgid "Instant Preview"
-msgstr ""
+msgstr "高速プレビュー"
 
 #: ../../reference_manual/instant_preview.rst:10
 msgid "Performance"
-msgstr ""
+msgstr "パフォーマンス"
 
 #: ../../reference_manual/instant_preview.rst:10
 msgid "Lag"
-msgstr ""
+msgstr "ラグ"
 
 #: ../../reference_manual/instant_preview.rst:17
 msgid ""
@@ -48,18 +49,28 @@ msgid ""
 "that if you have a 4k screen and are working on a 4k image at 100% zoom, you "
 "won't feel any speed up."
 msgstr ""
+"高速プレビュー(以前は LOD ストロークの開発名で知られていました)は2015年に "
+"Kickstarter で資金調達された Krita を速度向上させる特別な仕組みです。Krita は"
+"大きな画像を描こうとするととても大きなデータ量のために遅くなってしまいます。"
+"高速プレビューはキャンバスの小さい複製を扱い、そこに描かれたものから計算して "
+"Krita は後ろに本物のストロークを描きます。つまりもし4Kスクリーンに4K画像を"
+"ズーム100%で作業していたなら、何の速度向上もありません。"
 
 #: ../../reference_manual/instant_preview.rst:20
 msgid "Activating Instant Preview"
-msgstr ""
+msgstr "高速プレビューを有効化する"
 
 #: ../../reference_manual/instant_preview.rst:24
 msgid ""
 "Instant Preview requires OpenGL 3.0 support at minimum. So if you don't "
 "have :guilabel:`high-quality` scaling available in :menuselection:`Settings "
-"--> Configure Krita --> Display --> Display scaling filter`, then you won't "
-"be able to use Instant Preview either."
+"--> Configure Krita... --> Display --> Display scaling filter`, then you "
+"won't be able to use Instant Preview either."
 msgstr ""
+"高速プレビューは最低でも OpenGL 3.0 サポートが必要です。なのでもし :"
+"menuselection:`設定 --> Krita の設定を編集... --> 表示 --> 拡大縮小モード` の"
+"ところに :guilabel:`高品質` がなければ、高速プレビューも使用することができま"
+"せん。"
 
 #: ../../reference_manual/instant_preview.rst:29
 msgid ".. image:: images/brushes/Lod_position.png"
@@ -67,7 +78,7 @@ msgstr ""
 
 #: ../../reference_manual/instant_preview.rst:29
 msgid "The Global Instant Preview toggle is under the view menu."
-msgstr ""
+msgstr "高速プレビューのグローバルスイッチは表示メニューにあります。"
 
 #: ../../reference_manual/instant_preview.rst:31
 msgid ""
@@ -75,6 +86,9 @@ msgid ""
 "shortcut), and the settings of the given paintop by default. This is because "
 "Instant Preview has different limitations with different paint operations."
 msgstr ""
+"高速プレビューは二つの場所で有効化できます: 表示メニュー(:kbd:`Shift + L` "
+"ショートカット)と、paintOp 既定の設定に依ることです。これは描く処理により高速"
+"プレビューも異なる制限が与えられるためです。"
 
 #: ../../reference_manual/instant_preview.rst:33
 msgid ""
@@ -82,6 +96,8 @@ msgid ""
 "ability to have Instant Preview on the brush, so does using 'fade' sensor "
 "for size."
 msgstr ""
+"例えば、混色ブラシのオーバーレイはブラシの高速プレビューを無効化しますし、サ"
+"イズに'減衰'センサーを使うのも同様です。"
 
 #: ../../reference_manual/instant_preview.rst:35
 msgid ""
@@ -90,6 +106,9 @@ msgid ""
 "a stroke, and thus will give a feeling of 'popping' when the stroke is "
 "finished."
 msgstr ""
+"また自動描点間隔、サイズにファジーセンサー、ブラシ形状に密度を使うことやテク"
+"スチャ paintOp の使用はすべてストロークを確定するのがより難しくなり、ストロー"
+"クを描き終わると'飛び出る'ような感触になります。"
 
 #: ../../reference_manual/instant_preview.rst:37
 msgid ""
@@ -97,6 +116,9 @@ msgid ""
 "\\* behind it. Hovering over it will give you a list of options that are "
 "affecting the Instant Preview mode."
 msgstr ""
+"ブラシ設定をみると、高速プレビューチェックボックスの後ろに\\*があります。ここ"
+"にマウスポインタを乗せると高速プレビューに影響するオプションのリストが現れま"
+"す。"
 
 #: ../../reference_manual/instant_preview.rst:41
 msgid ""
@@ -104,6 +126,9 @@ msgid ""
 "the threshold size at which instant preview activates. By default this "
 "100px. This is useful for brushes that are optimised to work on small sizes."
 msgstr ""
+"このポップアップを |mouseleft| するとスライダーが現れ、高速プレビューが有効化"
+"されるサイズのしきい値を決めることができ、既定では 100px です。小さいサイズで"
+"の作業に最適化されているブラシに有用です。"
 
 #: ../../reference_manual/instant_preview.rst:47
 msgid ".. image:: images/brushes/Lod_position2.png"
@@ -116,31 +141,34 @@ msgid ""
 "right. Hover over it to get more detail. In this case, the issue is that "
 "auto-spacing is on."
 msgstr ""
+"ブラシ設定エディタ下の高速プレビューチェックボックスは正しくプレビューできな"
+"い設定が有効になっているときにお知らせします。マウスホバーすることで詳細が表"
+"示されます。この場合、自動描点間隔がオンになっているのが問題になっています。"
 
 #: ../../reference_manual/instant_preview.rst:50
 msgid "Tools that benefit from Instant Preview"
-msgstr ""
+msgstr "高速プレビューで有利になるツール"
 
 #: ../../reference_manual/instant_preview.rst:52
 msgid "The following tools benefit from Instant Preview:"
-msgstr ""
+msgstr "次のツールは高速プレビューを使用することがメリットになります:"
 
 #: ../../reference_manual/instant_preview.rst:54
 msgid "The Freehand brush tool."
-msgstr ""
+msgstr "フリーハンドブラシツール"
 
 #: ../../reference_manual/instant_preview.rst:55
 msgid "The geometric tools."
-msgstr ""
+msgstr "形状ツール"
 
 #: ../../reference_manual/instant_preview.rst:56
 msgid "The Move Tool."
-msgstr ""
+msgstr "移動ツール"
 
 #: ../../reference_manual/instant_preview.rst:57
 msgid "The Filters."
-msgstr ""
+msgstr "フィルタ"
 
 #: ../../reference_manual/instant_preview.rst:58
 msgid "Animation."
-msgstr ""
+msgstr "アニメーション"

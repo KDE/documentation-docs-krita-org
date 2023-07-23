@@ -4,25 +4,26 @@
 # This file is distributed under the same license as the Krita Manual package.
 #
 # Automatically generated, 2019.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2023.
+# Ronald Stroethoff <stroet43@zonnet.nl>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-11 03:18+0200\n"
-"PO-Revision-Date: 2019-07-08 14:28+0200\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2023-06-22 10:14+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.2\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: ../../reference_manual/dockers/onion_skin.rst:1
 msgid "Overview of the onion skin docker."
-msgstr "Overzicht van de vastzetter Uienskin."
+msgstr "Overzicht van het Onion skin vastzet-paneel."
 
 #: ../../reference_manual/dockers/onion_skin.rst:10
 msgid "Animation"
@@ -30,11 +31,11 @@ msgstr "Animatie"
 
 #: ../../reference_manual/dockers/onion_skin.rst:10
 msgid "Onion Skin"
-msgstr "Uienskin"
+msgstr "Onion Skin"
 
 #: ../../reference_manual/dockers/onion_skin.rst:15
 msgid "Onion Skin Docker"
-msgstr "Vastzetter Uienskin"
+msgstr "Onion Skin vastzet-paneel"
 
 #: ../../reference_manual/dockers/onion_skin.rst:18
 msgid ".. image:: images/dockers/Onion_skin_docker.png"
@@ -46,6 +47,9 @@ msgid ""
 "previous frame sort of layered on top of the current. This is called *onion-"
 "skinning*."
 msgstr ""
+"Om makkelijker een animatie te maken, kan het helpen om zowel de volgende "
+"frame als de vorige samen met het huidige frame op elkaar gestapeld te zien. "
+"Dit word *onion-skinning* genoemd."
 
 #: ../../reference_manual/dockers/onion_skin.rst:22
 msgid ".. image:: images/dockers/Onion_skin_01.png"
@@ -56,8 +60,8 @@ msgid ""
 "Basically, they are images that represent the frames before and after the "
 "current frame, usually colored or tinted."
 msgstr ""
-"In de basis zijn ze afbeeldingen die de frames representeren voor en na het "
-"huidige frame, gewoonlijk gekleurd of getint."
+"In feite zijn het afbeeldingen die de frames voorstellen voor en na het "
+"huidige frame, meestal gekleurd of getint."
 
 #: ../../reference_manual/dockers/onion_skin.rst:25
 msgid ""
@@ -66,6 +70,11 @@ msgid ""
 "white to be white, not transparent, so don’t animated on an opaque layer if "
 "you want onion skins.)"
 msgstr ""
+"U kunt ze IN- en UIT-schakelen door op het pictogram met het lampje van de "
+"geanimeerde laag (dat dus frames heeft) te klikken en niet compleet "
+"transparant is. (Krita neemt aan dat wit niet transparant is maar wit, "
+"animeer daarom dus niet op een transparante laag als u met onion skins wilt "
+"werken.)"
 
 #: ../../reference_manual/dockers/onion_skin.rst:29
 msgid ""
@@ -75,6 +84,13 @@ msgid ""
 "image dialog. Just don't try to animate on a layer like this if you rely on "
 "onion skins, instead make a new one."
 msgstr ""
+"Vanaf versie 4.2 zijn onion skins uitgeschakeld op lagen waarvan de "
+"standaard pixels volledig doorzichtig zijn. Deze lagen kunnen op dit moment "
+"alleen gecreëerd worden met gebruik van :guilabel:`Achtergrond als "
+"rasterlaag gebruiken` in de :guilabel:`Eigenschappen` sectie van het dialoog "
+"voor een nieuwe afbeelding. Probeer alleen niet om op een dergelijke laag te "
+"animeren als u afhankelijk bent van onion skins, maak in plaats daarvan een "
+"nieuwe aan."
 
 #: ../../reference_manual/dockers/onion_skin.rst:31
 msgid ""
@@ -86,6 +102,13 @@ msgid ""
 "working on, and the light table would make the lines of the keyframes shine "
 "through, so they could reference them."
 msgstr ""
+"De term onionskin komt van het feit dat uien (onions) bijna transparant "
+"zijn. Bij traditionele animatie maken animators hun animaties op semi-"
+"transparant papier boven op een lichttafel (van een speciale type voor "
+"animatie), en ze beginnen eerst met zogeheten keyframes, en tekenen daarna "
+"de tussenliggende frames. hiervoor plaatsen ze de genoemde keyframes onder "
+"het frame waar ze aan werken, zodat de lichttafel de lijnen van de keyframes "
+"er doorheen schijnen, en ze die als referentie konden gebruiken."
 
 #: ../../reference_manual/dockers/onion_skin.rst:33
 msgid ""
@@ -93,7 +116,7 @@ msgid ""
 "useful when trying to animate."
 msgstr ""
 "Onion-skinning is een digitale implementatie van zo'n workflow en het is erg "
-"nuttig bij het proberen van animatie."
+"handig bij het uittesten van een animatie."
 
 #: ../../reference_manual/dockers/onion_skin.rst:36
 msgid ".. image:: images/dockers/Onion_skin_02.png"
@@ -107,6 +130,11 @@ msgid ""
 "transparency’ while the sliders to the side allow you to control the "
 "transparency per keyframe offset."
 msgstr ""
+"U stelt met de schuifbalk en de knop in het midden de algemene transparantie "
+"en zichtbaarheid van alle onion skins. Met de rechthoekjes bovenaan kunt de "
+"frames makkelijk aan- en uitschakelen, de hoofd schuifknop in het midden is "
+"een soort van ‘algemene transparantie’ terwijl u met de schuifknoppen links "
+"en rechts daarvan de transparantie per keyframe instelt."
 
 #: ../../reference_manual/dockers/onion_skin.rst:39
 msgid ""
@@ -115,13 +143,13 @@ msgid ""
 "original colors at 50%."
 msgstr ""
 "Tint bestuurt hoe sterk de frames een tint krijgen, het eerste scherm heeft "
-"100%, wat een silhouet, terwijl met minder u nog steeds een beetje van de "
-"originele kleur kunt zien bij 50%."
+"100%, wat een silhouet creëert, terwijl met minder u nog steeds een beetje "
+"van de originele kleur kunt zien bij 50%."
 
 #: ../../reference_manual/dockers/onion_skin.rst:41
 msgid ""
 "The :guilabel:`Previous Frame` and :guilabel:`Next Frame` color labels "
 "allows you set the colors."
 msgstr ""
-"De kleurlabels :guilabel:`Vorige frame` en :guilabel:`Volgende frame` bieden "
-"u het instellen van de kleuren."
+"U kunt de kleuren met de kleurlabels :guilabel:`Vorige frame` en :guilabel:"
+"`Volgende frame` instellen."

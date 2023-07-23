@@ -2,50 +2,99 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-04 03:33+0200\n"
-"PO-Revision-Date: 2019-08-16 17:04\n"
-"Last-Translator: Guo Yunhe (guoyunhe)\n"
+"POT-Creation-Date: 2021-09-01 00:13+0000\n"
+"PO-Revision-Date: 2023-07-18 11:12\n"
+"Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/www/"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___dockers___task_sets.pot\n"
+"X-Crowdin-File-ID: 9910\n"
 
 #: ../../reference_manual/dockers/task_sets.rst:1
 msgid "Overview of the task sets docker."
-msgstr ""
+msgstr "介绍 Krita 的操作流程面板。"
 
-#: ../../reference_manual/dockers/task_sets.rst:16
+#: ../../reference_manual/dockers/task_sets.rst:12
+msgid "Task Sets"
+msgstr "操作流程"
+
+#: ../../reference_manual/dockers/task_sets.rst:12
+msgid "Actions"
+msgstr "操作"
+
+#: ../../reference_manual/dockers/task_sets.rst:12
+msgid "Macro"
+msgstr "宏"
+
+#: ../../reference_manual/dockers/task_sets.rst:17
 msgid "Task Sets Docker"
-msgstr "操作集合"
+msgstr "操作流程"
 
-#: ../../reference_manual/dockers/task_sets.rst:18
+#: ../../reference_manual/dockers/task_sets.rst:19
 msgid ""
 "Task sets are for sharing a set of steps, like a tutorial. You make them "
 "with the task-set docker."
 msgstr ""
-
-#: ../../reference_manual/dockers/task_sets.rst:21
-msgid ".. image:: images/dockers/Task-set.png"
-msgstr ""
+"操作流程可以用于分享一组操作步骤，例如教程等用途。你可以使用此面板录制操作流"
+"程。"
 
 #: ../../reference_manual/dockers/task_sets.rst:22
+msgid ".. image:: images/dockers/Task-set.png"
+msgstr ".. image:: images/dockers/Task-set.png"
+
+#: ../../reference_manual/dockers/task_sets.rst:23
 msgid ""
 "Task sets can record any kind of command also available via the shortcut "
-"manager. It can not record strokes, like the macro recorder can. However, "
-"you can play macros with the tasksets!"
+"manager. It is not a macro recorder, right now, Krita does not have that "
+"kind of functionality."
 msgstr ""
+"操作流程只能记录键盘快捷键列表中的操作。它并不是一个宏录制器，Krita 目前暂不"
+"具备这种功能。"
 
-#: ../../reference_manual/dockers/task_sets.rst:24
+#: ../../reference_manual/dockers/task_sets.rst:25
 msgid ""
 "The tasksets docker has a record button, and you can use this to record a "
-"certain workflow. Then use this to let items appear in the taskset list. "
-"Afterwards, turn off the record. You can then click any action in the list "
-"to make them happen. Press the 'Save' icon to name and save the taskset."
+"certain workflow. All :dfn:`Actions` can be recorded. These include every "
+"action available in the :ref:`main_menu`, but also all actions available "
+"via :kbd:`Ctrl + Enter`. Then use this to let items appear in the taskset "
+"list. Afterwards, turn off :guilabel:`record`. You can then click any action "
+"in the list to make them happen. Press the :guilabel:`Save` icon to name and "
+"save the taskset."
 msgstr ""
+"操作流程面板有一个 :guilabel:`录制` 按钮，点击后即可开始录制。它只能录制\\ :"
+"dfn:`支持键盘快捷键的操作`\\ ，包括显示在\\ :ref:`main_menu`\\ 中的所有操作，"
+"还有按下 :kbd:`Ctrl + 回车键` 筛选显示的操作。已经进行的操作将显示在操作流程"
+"面板中。再次点击 :guilabel:`录制` 按钮即可停止录制。点击 :guilabel:`保存按钮"
+"` 即可命名并保存该操作流程。"
+
+#: ../../reference_manual/dockers/task_sets.rst:27
+msgid ""
+"Task sets are a :ref:`resource <resource_management>`. As such, they can be "
+"saved, tagged, reordered. They are stored as ``*.kts`` files, which are XML "
+"files::"
+msgstr ""
+"操作流程是一种\\ :ref:`资源 <resource_management>`\\ ，你可以保存它们、为他们"
+"分配标签、进行排序和筛选等。操作流程的文件格式为 ``*.kts`` ，它实际上是一种 "
+"XML 文件::"
+
+#: ../../reference_manual/dockers/task_sets.rst:29
+msgid ""
+"<Taskset name=\"example\" version=\"1\">\n"
+"    <action>add_new_paint_layer</action>\n"
+"    <action>add_new_clone_layer</action>\n"
+"    <action>add_new_file_layer</action>\n"
+"</Taskset>"
+msgstr ""
+"<Taskset name=\"example\" version=\"1\">\n"
+"    <action>add_new_paint_layer</action>\n"
+"    <action>add_new_clone_layer</action>\n"
+"    <action>add_new_file_layer</action>\n"
+"</Taskset>"

@@ -4,21 +4,22 @@
 # This file is distributed under the same license as the Krita Manual package.
 #
 # Automatically generated, 2019.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2021.
+# Ronald Stroethoff <stroe43@zonnet.nl>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-19 03:24+0200\n"
-"PO-Revision-Date: 2019-07-19 11:00+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"POT-Creation-Date: 2021-09-01 00:13+0000\n"
+"PO-Revision-Date: 2021-10-12 09:28+0200\n"
+"Last-Translator: Ronald Stroethoff <stroe43@zonnet.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.2\n"
+"X-Generator: Lokalize 20.04.2\n"
 
 #: ../../general_concepts/file_formats/file_kra.rst:1
 msgid "The Krita Raster Archive file format."
@@ -36,6 +37,14 @@ msgstr "KRA"
 msgid "Krita Archive"
 msgstr "Krita Archive"
 
+#: ../../general_concepts/file_formats/file_kra.rst:10
+msgid "KRZ"
+msgstr "KRZ"
+
+#: ../../general_concepts/file_formats/file_kra.rst:10
+msgid "*.krz"
+msgstr "*.krz"
+
 #: ../../general_concepts/file_formats/file_kra.rst:15
 msgid "\\*.kra"
 msgstr "\\*.kra"
@@ -45,18 +54,57 @@ msgid ""
 "``.kra`` is Krita's internal file-format, which means that it is the file "
 "format that saves all of the features Krita can handle. It's construction is "
 "vaguely based on the open document standard, which means that you can rename "
-"your ``.kra`` file to a ``.zip`` file and open it up to look at the insides."
+"your ``.kra`` file to a ``.zip`` file and open it up to look at the insides. "
+"In Krita's settings dialog you can enable compression; with compression "
+"enabled the files will be smaller, but saving will take longer."
 msgstr ""
 "``.kra`` is het interne bestandsformaat van Krita, wat betekent dat het het "
 "bestandsformaat is dat alle functies opslaat die Krita kan behandelen. Zijn "
 "constructie is vaag gebaseerd op de open document standaard, wat betekent "
 "dat u uw ``.kra`` bestand kunt hernoemen tot een ``.zip`` bestand en het "
-"openen om erin te kijken."
+"openen om erin te kijken. In de dialoog voor instellingen van Krita kunt u "
+"compressie inschakelen; met compressie ingeschakeld zullen de bestanden "
+"kleiner zijn, maar opslaan zal langer duren."
 
 #: ../../general_concepts/file_formats/file_kra.rst:19
 msgid ""
-"It is a format that you can expect to get very heavy, and isn't meant for "
-"sharing on the internet."
+"Other applications mostly cannot open ``.kra``  files, and you cannot upload "
+"``.kra`` as images on websites like twitter or deviantArt."
 msgstr ""
-"Het is een formaat waarvan u kunt verwachten dat het erg zwaar kan worden en "
-"niet bedoeld is om te delen op het internet."
+"Andere toepassingen kunnen meestal geen ``.kra``  bestanden openen en u kunt "
+"geen ``.kra`` als afbeeldingen uploaden naar websites zoals twitter of "
+"deviantArt."
+
+#: ../../general_concepts/file_formats/file_kra.rst:21
+msgid ""
+"A ``.kra`` file contains a file names ``mergedimage.png`` which contains the "
+"rendered image as you see it on your canvas. Some applications, like "
+"Scribus, can use the ``mergedimage.png`` file to open ``.kra`` files. This "
+"file is always in the RGBA color model, or grayscale for files that are "
+"originally grayscale."
+msgstr ""
+"Een ``.kra`` bestand bevat een bestand genaamd ``mergedimage.png`` die de "
+"gerenderde afbeelding bevat zoals u het ziet op uw werkveld. Sommige "
+"toepassingen, zoals Scribus, kunnen het bestand ``mergedimage.png`` "
+"gebruiken bij openen van ``.kra`` bestanden. Dit bestand is altijd in het "
+"RGBA kleurmodel,  of grijsschaal voor bestanden die oorspronkelijk "
+"grijsschaal zijn."
+
+#: ../../general_concepts/file_formats/file_kra.rst:23
+msgid ""
+"The ``.krz`` file format is a ``.kra`` file without ``mergedimage.png`` and "
+"with compression always enabled. You can use this format if you want to save "
+"disk space and do not care about interchange with those applications that "
+"load the ``mergedimage.png`` file."
+msgstr ""
+"Het ``.krz`` bestandsformaat is een ``.kra`` bestand zonder ``mergedimage."
+"png`` en compressie is altijd ingeschakeld. U kunt dit formaat gebruiken als "
+"u schijfruimte wilt besparen en geen behoefte heeft aan uitwisseling met die "
+"toepassingen die het bestand ``mergedimage.png``  laden."
+
+#~ msgid ""
+#~ "It is a format that you can expect to get very heavy, and isn't meant for "
+#~ "sharing on the internet."
+#~ msgstr ""
+#~ "Het is een formaat waarvan u kunt verwachten dat het erg zwaar kan worden "
+#~ "en niet bedoeld is om te delen op het internet."

@@ -5,32 +5,33 @@
 #
 # Automatically generated, 2019.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
+# Ronald Stroethoff <stroe43@zonnet.nl>, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-15 03:16+0200\n"
-"PO-Revision-Date: 2019-06-15 23:05+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"POT-Creation-Date: 2021-09-01 00:13+0000\n"
+"PO-Revision-Date: 2021-11-06 10:44+0100\n"
+"Last-Translator: Ronald Stroethoff <stroe43@zonnet.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.1\n"
+"X-Generator: Lokalize 20.04.2\n"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:1
 msgid "The Brush Presets resource in Krita."
-msgstr "De hulpbron voor voorinstellingen van penseel in Krita."
+msgstr "De hulpdata voor penseelinstellingen in Krita."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:11
 msgid "Resources"
-msgstr "Hulpbronnen"
+msgstr "Hulpdata"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:11
 msgid "Brush Presets"
-msgstr "Voorinstellingen van penseel"
+msgstr "Penseelinstellingen"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:11
 msgid "Brushes"
@@ -38,40 +39,81 @@ msgstr "Penselen"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:11
 msgid "Paintop Presets"
-msgstr ""
+msgstr "Penseeltip-instellingen"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:16
 msgid "Brush Preset"
-msgstr "Voorinstellingen van penseel"
+msgstr "Penseelinstellingen"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:18
 msgid ""
-"Paint Op presets store the preview thumbnail, brush-engine, the parameters, "
-"the brush tip, and, if possible, the texture. They are saved as .kpp files"
+"Brush Presets, known within Krita as ``paintoppresets``, store the preview "
+"thumbnail, brush-engine, the parameters, the brush tip, and, if possible, "
+"the texture. They are saved as ``.kpp`` files, except for :ref:`MyPaint "
+"brushes <mypaint_brush_engine>`, which are saved as ``.myb`` files."
 msgstr ""
+"De penseelinstellingen, in Krita bekend als ´´Penseeltip-instellingen´´, "
+"bewaart de thumbnail, de penseel-engine, de parameters, de penseel tip, en "
+"als het mogelijk is, de textuur. Ze worden opgeslagen in .kpp-bestanden, "
+"behalve voor de :ref:`MyPaint penselen <mypaint_brush_engine>`, die als ``."
+"myb``-bestanden worden bewaard."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:20
 msgid ""
 "For information regarding the brush system, see :ref:`Brushes "
 "<loading_saving_brushes>`."
 msgstr ""
+"Voor informatie wat betreft het systemen van penselen, zie :ref:`Penselen "
+"<loading_saving_brushes>`."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:23
 msgid "The Docker"
-msgstr "De vastzetter"
+msgstr "Het vastzet-paneel"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:25
 msgid ""
 "The docker for Paint-op presets is the :ref:`brush_preset_docker`. Here you "
-"can tag, add, remove and search paint op presets."
+"can tag, add, remove and search brush presets."
 msgstr ""
+"Het vastzet-paneel voor penseelinstellingen is het :ref:"
+"`brush_preset_docker`. Hier kunt u penselen toevoegen, verwijderen, zoeken "
+"naar penseeltips en ze tags geven."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:28
 msgid "Editing the preview thumbnail"
-msgstr ""
+msgstr "De thumbnail bewerken"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:30
 msgid ""
 "You can edit the preview thumbnail in the brush-scratchpad, but you can also "
-"open the \\*.kpp file in Krita to get a 200x200 file to edit to your wishes."
+"open the ``\\*.kpp`` file in Krita to get a 200x200 file to edit to your "
+"wishes. For :ref:`MyPaint brushes <mypaint_brush_engine>`, there is a "
+"separate PNG file which is the same name as the ``.myb`` file, except with "
+"``_prev`` attached."
 msgstr ""
+"U kunt de thumbnail in het penseel-kladblok bewerken, maar u kunt ook het "
+"\\*.kpp-bestand in Krita openen om het 200x200 bestand naar wens aan te "
+"passen. Voor :ref:`MyPaint penselen <mypaint_brush_engine>`, is er een "
+"separaat PNG-bestand die de dezelfde naam heeft als het ``.myb``-bestand, "
+"uitgezonderd die waaraan ``_prev`` is toegevoegd."
+
+#: ../../reference_manual/resource_management/paintoppresets.rst:33
+msgid "Structure"
+msgstr "Structuur"
+
+#: ../../reference_manual/resource_management/paintoppresets.rst:35
+msgid ""
+":ref:`MyPaint brushes <mypaint_brush_engine>` are stored as JSON files with "
+"an accompanying preview image, while ``.kpp`` files are PNGs which contain "
+"an annotation with the XML data for the brush engine. You can view this data "
+"when having the ``.kpp`` file open, via :menuselection:`image --> properties "
+"--> annotations`, or by using the :program:`ImageMagick` command ``identify -"
+"verbose {FILENAME}`` on the ``.kpp``."
+msgstr ""
+":ref:`MyPaint brushes <mypaint_brush_engine>` worden opgeslagen als JSON-"
+"bestanden met een bijbehorende voorbeeld-bestand terwijl ``.kpp``-bestanden "
+"PNGs zijn met daarin een aantekening die de XML data voor het penseelengine "
+"bevat. U kunt deze data bekijken als u het ``.kpp``-bestand heeft geopend, "
+"via :menuselection:`Afbeelding --> Eigenschappen --> annotaties`, of door :"
+"program:`ImageMagick` te gebruiken met het commando ``identify -verbose "
+"{FILENAME}`` op het ``.kpp``-bestand."

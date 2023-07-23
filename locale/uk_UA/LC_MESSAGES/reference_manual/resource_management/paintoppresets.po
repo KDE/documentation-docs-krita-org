@@ -1,16 +1,16 @@
 # Translation of docs_krita_org_reference_manual___resource_management___paintoppresets.po to Ukrainian
-# Copyright (C) 2019 This_file_is_part_of_KDE
+# Copyright (C) 2019-2020 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2019.
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: "
 "docs_krita_org_reference_manual___resource_management___paintoppresets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-15 03:16+0200\n"
-"PO-Revision-Date: 2019-06-15 08:18+0300\n"
+"POT-Creation-Date: 2021-09-01 00:13+0000\n"
+"PO-Revision-Date: 2021-09-01 08:11+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.04.0\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:1
 msgid "The Brush Presets resource in Krita."
@@ -47,11 +47,15 @@ msgstr "Набір пензлів"
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:18
 msgid ""
-"Paint Op presets store the preview thumbnail, brush-engine, the parameters, "
-"the brush tip, and, if possible, the texture. They are saved as .kpp files"
+"Brush Presets, known within Krita as ``paintoppresets``, store the preview "
+"thumbnail, brush-engine, the parameters, the brush tip, and, if possible, "
+"the texture. They are saved as ``.kpp`` files, except for :ref:`MyPaint "
+"brushes <mypaint_brush_engine>`, which are saved as ``.myb`` files."
 msgstr ""
-"У наборах дій з малювання зберігаються мініатюра, рушій пензля, параметри, "
-"кінчик пензля і, якщо можливо, текстура. Набори зберігаються у файлах .kpp."
+"У наборах пензлів, які у Krita мають внутрішню назву ``paintoppresets``, "
+"зберігаються мініатюра, рушій пензля, параметри, кінчик пензля і, якщо "
+"можливо, текстура. Набори зберігаються у файлах ``.kpp``, окрім :ref:"
+"`пензлів MyPaint <mypaint_brush_engine>`, які зберігаються у файлах ``.myb``."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:20
 msgid ""
@@ -68,11 +72,11 @@ msgstr "Бічна панель"
 #: ../../reference_manual/resource_management/paintoppresets.rst:25
 msgid ""
 "The docker for Paint-op presets is the :ref:`brush_preset_docker`. Here you "
-"can tag, add, remove and search paint op presets."
+"can tag, add, remove and search brush presets."
 msgstr ""
 "Бічною панеллю для наборів дій малювання є :ref:`brush_preset_docker`. За "
 "допомогою цієї панелі ви можете встановлювати мітки, додавати, вилучати і "
-"шукати набори дій з малювання."
+"шукати набори пензлів."
 
 #: ../../reference_manual/resource_management/paintoppresets.rst:28
 msgid "Editing the preview thumbnail"
@@ -81,8 +85,34 @@ msgstr "Редагування мініатюри для попередньог�
 #: ../../reference_manual/resource_management/paintoppresets.rst:30
 msgid ""
 "You can edit the preview thumbnail in the brush-scratchpad, but you can also "
-"open the \\*.kpp file in Krita to get a 200x200 file to edit to your wishes."
+"open the ``\\*.kpp`` file in Krita to get a 200x200 file to edit to your "
+"wishes. For :ref:`MyPaint brushes <mypaint_brush_engine>`, there is a "
+"separate PNG file which is the same name as the ``.myb`` file, except with "
+"``_prev`` attached."
 msgstr ""
 "Редагувати мініатюру для попереднього перегляду можна за допомогою нотатника "
-"для пензлів. Крім того, ви можете просто відкрити файл \\*.kpp у Krita і "
-"змінити зображення 200x200 так, як ви цього хочете."
+"для пензлів. Крім того, ви можете просто відкрити файл ``\\*.kpp`` у Krita і "
+"змінити зображення 200x200 так, як ви цього хочете. Для :ref:`пензлів "
+"MyPaint <mypaint_brush_engine>` передбачено окремий файл PNG, який повинен "
+"мати таку саму назву, що і файл ``.myb``, але із додаванням ``_prev``."
+
+#: ../../reference_manual/resource_management/paintoppresets.rst:33
+msgid "Structure"
+msgstr "Структура"
+
+#: ../../reference_manual/resource_management/paintoppresets.rst:35
+msgid ""
+":ref:`MyPaint brushes <mypaint_brush_engine>` are stored as JSON files with "
+"an accompanying preview image, while ``.kpp`` files are PNGs which contain "
+"an annotation with the XML data for the brush engine. You can view this data "
+"when having the ``.kpp`` file open, via :menuselection:`image --> properties "
+"--> annotations`, or by using the :program:`ImageMagick` command ``identify -"
+"verbose {FILENAME}`` on the ``.kpp``."
+msgstr ""
+":ref:`Пензлі MyPaint <mypaint_brush_engine>` зберігаються у форматі файлів "
+"JSON із супутнім зображенням для попереднього перегляду, а файли ``.kpp`` є "
+"збіркою файлів PNG, яка містить анотацію у форматі даних XML для рушія "
+"пензлів. Ви можете переглянути ці дані, відкривши файл ``.kpp`` і "
+"скориставшись пунктами меню :menuselection:`Зображення --> Властивості --> "
+"Анотації` або програмою з комплекту :program:`ImageMagick` — ``identify -"
+"verbose {НАЗВА_ФАЙЛА}`` для відповідного файла ``.kpp``."

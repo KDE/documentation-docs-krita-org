@@ -2,36 +2,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-04 03:33+0200\n"
-"PO-Revision-Date: 2019-08-16 17:05\n"
-"Last-Translator: Guo Yunhe (guoyunhe)\n"
+"POT-Creation-Date: 2021-08-24 00:13+0000\n"
+"PO-Revision-Date: 2023-07-18 11:12\n"
+"Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/www/"
+"X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___layers_and_masks___clone_layers.pot\n"
+"X-Crowdin-File-ID: 10106\n"
 
 #: ../../reference_manual/layers_and_masks/clone_layers.rst:1
 msgid "How to use clone layers."
-msgstr ""
+msgstr "介绍克隆图层的使用方式。"
 
 #: ../../reference_manual/layers_and_masks/clone_layers.rst:15
 msgid "Layers"
-msgstr ""
+msgstr "图层"
 
 #: ../../reference_manual/layers_and_masks/clone_layers.rst:15
 msgid "Linked Clone"
-msgstr ""
+msgstr "关联克隆"
 
 #: ../../reference_manual/layers_and_masks/clone_layers.rst:15
 msgid "Clone Layer"
-msgstr ""
+msgstr "克隆图层"
 
 #: ../../reference_manual/layers_and_masks/clone_layers.rst:20
 msgid "Clone Layers"
@@ -43,10 +44,13 @@ msgid ""
 "cannot draw or paint on it directly, but it can be used to create effects by "
 "applying different types of layers and masks (e.g. filter layers or masks)."
 msgstr ""
+"克隆图层是一种自动保持与源图层同步更新的特殊图层。你不能直接在克隆图层上进行"
+"绘制，但可以通过对它应用不同类型的图层和蒙版来创建特效 (例如滤镜图层或者蒙"
+"版)。"
 
 #: ../../reference_manual/layers_and_masks/clone_layers.rst:25
-msgid "Example uses of Clone Layers."
-msgstr "克隆图层用例"
+msgid "Example uses of Clone Layers"
+msgstr "克隆图层用法示例"
 
 #: ../../reference_manual/layers_and_masks/clone_layers.rst:27
 msgid ""
@@ -54,26 +58,31 @@ msgid ""
 "to create a glow around them that was updated as you updated your character, "
 "you could:"
 msgstr ""
+"举例来说，如果你正在绘制一群魔法师，并且打算在这些人物的轮廓上制作发光效果，"
+"而且希望发光效果能与人物的变化同步，你可以这么做："
 
 #: ../../reference_manual/layers_and_masks/clone_layers.rst:29
 msgid "Have a Paint Layer where you draw your character"
-msgstr ""
+msgstr "把人物绘制在一个颜料图层上。"
 
 #: ../../reference_manual/layers_and_masks/clone_layers.rst:30
 msgid ""
 "Use the Clone Layer feature to create a clone of the layer that you drew "
 "your character on"
-msgstr ""
+msgstr "为人物所在的颜料图层创建一个克隆图层。"
 
 #: ../../reference_manual/layers_and_masks/clone_layers.rst:31
 msgid ""
 "Apply an HSV filter mask to the clone layer to make the shapes on it white "
 "(or blue, or green etc.)"
 msgstr ""
+"将一个 HSV 滤镜蒙版应用到该克隆图层，把人物调整成白色 (当然也可以是蓝色，绿色"
+"或其他颜色)。"
 
 #: ../../reference_manual/layers_and_masks/clone_layers.rst:32
-msgid "Apply a blur filter mask to the clone layer so it looks like a \"glow\""
-msgstr ""
+msgid ""
+"Apply a blur filter mask to the clone layer so it looks like a \"glow\"."
+msgstr "对该克隆图层应用模糊滤镜蒙版，使它呈现出发光效果。"
 
 #: ../../reference_manual/layers_and_masks/clone_layers.rst:34
 msgid ""
@@ -81,3 +90,54 @@ msgid ""
 "will automatically update the clone layer, making your \"glow\" apply to "
 "every change you make."
 msgstr ""
+"完成上述操作后，即使你回到人物所在的颜料图层继续增删细节，Krita 也会把这些修"
+"改同步到克隆图层，使发光特效始终与人物配合一致。"
+
+#: ../../reference_manual/layers_and_masks/clone_layers.rst:37
+msgid "Changing the source of Clone Layers"
+msgstr "更改克隆图层的来源"
+
+#: ../../reference_manual/layers_and_masks/clone_layers.rst:39
+msgid ""
+"You can change the source of one or more Clone Layers in the Layers Docker. "
+"To do so, select one or more Clone Layers in the docker (hold :kbd:`Ctrl` "
+"or :kbd:`Shift` and left-click the layers). Then, right-click on any "
+"selected layer. In the context menu, there is an action named :guilabel:`Set "
+"Copy From`. Click it. A dialog will pop up and there is a drop-down menu "
+"with all possible layers to be set as the source of all selected Clone "
+"Layers. If the current source of them consists of multiple layers, the "
+"default activated selection in the drop-down menu will be blank. Otherwise, "
+"it would be the common source of selected Clone Layers."
+msgstr ""
+"你可以更改克隆图层的来源。在图层面板中选中一个克隆图层，点击右键，选择“克隆图"
+"层来源”，即可在弹出对话框的下拉选单中选择克隆图层的新来源。如需一次更改多个克"
+"隆图层的来源，你可以在图层面板中按住 :kbd:`Ctrl` 键或者 :kbd:`Shift` 键选中多"
+"个图层，然后点击右键操作，按照前面所述操作。"
+
+#: ../../reference_manual/layers_and_masks/clone_layers.rst:41
+msgid "Possible target layers are determined through the following criteria:"
+msgstr "可选来源图层的标准："
+
+#: ../../reference_manual/layers_and_masks/clone_layers.rst:43
+msgid "Any Clone Layer that is selected is invalid."
+msgstr "不能选择要更改来源的克隆图层本身。"
+
+#: ../../reference_manual/layers_and_masks/clone_layers.rst:44
+msgid "A parent or clone of any invalid layer is invalid."
+msgstr "不能选择任何无效的图层的来源或者克隆图层。"
+
+#: ../../reference_manual/layers_and_masks/clone_layers.rst:45
+msgid "All other layers are valid."
+msgstr "可以选择其他任意图层。"
+
+#: ../../reference_manual/layers_and_masks/clone_layers.rst:47
+msgid ""
+"If you select one layer in the drop-down menu, a preview of the canvas will "
+"be shown. Click :guilabel:`OK` to apply the changes. Click :guilabel:"
+"`Cancel` to discard the changes. If you make changes to the image outside "
+"the dialog, the changes will be applied and the dialog will be automatically "
+"closed."
+msgstr ""
+"在下拉选单中选中来源图层后，在画布上将会显示更改后的预览。点击 :guilabel:`确"
+"定` 应用更改，点击 :guilabel:`取消` 放弃更改。如果这时对画布进行了改动，更改"
+"将被自动应用，对话框将被关闭。"
