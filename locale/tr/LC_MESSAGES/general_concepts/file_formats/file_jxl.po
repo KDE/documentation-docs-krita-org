@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-15 00:39+0000\n"
-"PO-Revision-Date: 2023-05-12 12:49+0300\n"
+"PO-Revision-Date: 2023-07-26 00:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,11 +15,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:2
 msgid "The JPEG XL file format in Krita."
-msgstr ""
+msgstr "Krita'da JPEG XL dosya biçimi."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:12
 msgid "*.jxl"
@@ -54,6 +54,12 @@ msgid ""
 "<file_png>`. In addition, it also supports saving animations with multiple "
 "frames like :ref:`GIF <file_gif>`."
 msgstr ""
+"JPEG XL (``.jxl``) yeni ve telif hakkı sorunu içermeyen bir görsel dosyası "
+"biçimidir. :ref:`JPEG <file_jpeg>` dosya biçimine benzer bir biçimde, "
+"fotoğraflar için tasarlanmış :ref:`kayıplı sıkıştırma kipini "
+"<lossless_compression>` ve ayrıca :ref:`PNG <file_png>`'ye benzer bir biçimde "
+":ref:`kayıplı sıkıştırma kipini <lossless_compression>` destekler. Ek olarak, "
+":ref:`GIF <file_gif>` gibi çok kareli canlandırmaları da destekler."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:21
 msgid ""
@@ -64,6 +70,12 @@ msgid ""
 "But for images with a lot of sharp contrasts, like text and comic book "
 "styles, lossless compression is usually the better choice."
 msgstr ""
+"Kayıplı ve kayıpsız sıkıştırma kipleri arasında seçim yaparken, "
+":ref:`JPEG <file_jpeg>` ve :ref:`PNG <file_png>` için verilen tavsiyeler "
+"burada da geçerlidir. Tablolar gibi çok gradyanlı görsellerde kayıplı "
+"sıkıştırma pek fazla bir görsellik kaybı olmadan iyi sonuçlar verebilir. "
+"Metin ve çizgi roman gibi pek çok keskin karşıtlıklar içeren görseller "
+"içinse kayıplı sıkıştırma genelde daha iyi bir seçimdir."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:23
 msgid ""
@@ -73,6 +85,11 @@ msgid ""
 "lossy compression methods. Instead you should use the lossless compression "
 "mode, or a working file format while you are working on the image."
 msgstr ""
+"Kayıplı sıkıştırma kullanan JPEG XL dosyaları için, aynı dosyanın üzerine "
+"birden çok kez kaydedilmesi önerilmez. Kayıplı sıkıştırma, dosyayı her "
+"kaydedişinizde kalitesinin düşmesine neden olur. Bu, kayıplı sıkıştırma "
+"yöntemlerindeki temel bir sorundur. Bunun yerine, görsel üzerinde çalışırken "
+"kayıpsız sıkıştırma modunu veya çalışan bir dosya biçimini kullanmalısınız."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:25
 msgid ""
@@ -86,6 +103,16 @@ msgid ""
 "JPEG XL. Krita always exports files from the raw pixel data, therefore this "
 "does *not* have the same effect as transcoding directly from JPEG to JPEG XL."
 msgstr ""
+"JPEG görsellerini kayıpsız bir şekilde JPEG XL'e dönüştürmek olanaklıdır. "
+"Kod dönüştürme, yeniden kodlamanın neden olduğu herhangi bir kalite kaybı "
+"olmadan özgün JPEG görselindeki halihazırda kayıp olan sıkıştırma verisini "
+"korurken, dosya boyutunu özgününden daha küçük hale getirir. Dönüşümü "
+"gerçekleştirmek için; örneğin `libjxl <https://github.com/libjxl/libjxl>`_ "
+"dahilindeki :program:`cjxl` komut satırı aracı gibi özel araçlar kullanmanız "
+"gerekir. JPEG görselini Krita'da açıp JPEG XL'e yeniden dışa aktararak bunu "
+"*yapamayacağınıza* dikkat edin. Krita, dosyaları her zaman ham piksel "
+"verisinden dışa aktarır, bu nedenle bu, doğrudan JPEG'den JPEG XL'e kod "
+"dönüştürmeyle aynı etkiye *sahip değildir*."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:27
 msgid ""
@@ -96,14 +123,21 @@ msgid ""
 "export options. This is different from :ref:`render_animation` in that it "
 "does not use FFmpeg."
 msgstr ""
+"Canlandırmaları Krita'dan JPEG XL olarak dışa aktarma desteklenir; ancak bu,"
+" görseldeki tüm katmanları düzleştirir. JPEG XL canlandırmalarını dışa"
+" aktarmak için :ref:'file_menu'dan :term:`Dışa Aktar...`'ı kullanın ve"
+" ardından bir ``.jxl`` dosyasına kaydedin veya dışa aktarın. Dışa aktarma"
+" seçeneklerinde :guilabel:`Canlandırılmış JPEG-XL olarak kaydet` seçeneğini"
+" etkinleştirdiğinizden emin olun. Bu, :ref:`render_animation`'dan farklıdır;"
+" çünkü FFmpeg kullanmaz."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:30
 msgid "Export Options"
-msgstr ""
+msgstr "Dışa Aktarma Seçenekleri"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:33
 msgid "General"
-msgstr ""
+msgstr "Genel"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:35
 msgid ""
@@ -114,10 +148,17 @@ msgid ""
 "and how much effort the encoder should put into finding the best compression "
 "for your image, with more effort also meaning longer saving times."
 msgstr ""
+"JPEG XL'in kodlayıcısı, oldukça pratik olacak şekilde tasarlanmıştır. JPEG "
+"söz konusu olduğunda uygun kaliteyi seçmeniz gerekirken, JPEG XL bunun yerine "
+"görseliniz için en iyi kaliteyi bulmaya çalışır. Sizin seçeceğiniz tek şey "
+":ref:`kayıplı veya kayıpsız <lossless_compression>` sıkıştırma kullanıp "
+"kullanmayacağınız ve kodlayıcının görseliniz için en iyi sıkıştırma türünü "
+"uygularken ne kadar efor sarfetmesi gerektiğini belirlemektir. Daha çok efor, "
+"daha uzun kaydetme zamanları anlamına gelir."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:37
 msgid "Save as animated JPEG XL"
-msgstr ""
+msgstr "Canlandırılmış JPEG XL olarak kaydet"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:38
 msgid ""
@@ -129,10 +170,17 @@ msgid ""
 "painterly animation. We recommend you try using video rendering for "
 "painterly animation instead."
 msgstr ""
+"JPEG XL, :ref:`file_gif` gibi küçük canlandırmaları kaydedebilir. Canlandırma "
+"yetenekleri basittir ve hücre canlandırması gibi çok fazla renge sahip "
+"olmayan stilize içerik için özel olarak tasarlanmıştır. Bunun nedeni, "
+"JPEG XL'in çerçeve içi tahmine sahip olmamasıdır; bu, 3B canlandırma, film ve "
+"resimli canlandırma gibi birçok renk içeren video dosyalarını depolamanın en "
+"iyi yoludur. Bunun yerine resimsel canlandırma için video işlemeyi kullanmayı "
+"denemenizi öneririz."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:40
 msgid "Lossless encoding."
-msgstr ""
+msgstr "Kayıpsız kodlama."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:41
 msgid ""
@@ -141,6 +189,10 @@ msgid ""
 "and lossy mode, with the latter being closer to the way the original :ref:"
 "`file_jpeg` encodes."
 msgstr ""
+":ref:`Kayıpsız sıkıştırmanın <lossless_compression>` kullanılıp "
+"kullanılmayacağı. :ref:`file_webp` gibi, JPEG XL'in görselleri kayıpsız ve "
+"kayıplı kipte kodlamasının farklı yolları vardır. Bunlardan ikincisi, "
+":ref:`file_jpeg` kodlamasına daha yakındır."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:43
 msgid ""
@@ -148,6 +200,10 @@ msgid ""
 "allows you to decide how much the encoder should prioritize quality over "
 "speed. The different modes can be seen as presets [1]_:"
 msgstr ""
+"Kodlayıcıya daha fazla zaman verilirse daha iyi sonuç verebilir. Bu "
+"kaydırıcı, kodlayıcının hızdan çok kaliteye ne kadar öncelik vermesi "
+"gerektiğine karar vermenizi sağlar. Farklı modlar ön ayarlar olarak "
+"görülebilir [1]_:"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:45
 msgid ""
@@ -155,65 +211,84 @@ msgid ""
 "for lossy compression, for lossless uses gradient predictors and fast "
 "histograms, but no MA tree."
 msgstr ""
+"Yıldırım -- Kayıpsız kip için kullanışlı bir hızlı kip. Kayıplı sıkıştırma "
+"için olabilecek en hızlı değerler, kayıpsız kullanımlar için gradyan tahmin "
+"edicileri ve hızlı histogramlar; ancak MA ağacı yoktur."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:46
 msgid ""
 "Thunder -- Both Lightning and Thunder are similar for Lossy, for lossless, "
 "Thunder uses a fixed MA tree and gradient predictors."
 msgstr ""
+"Gök Gürültüsü - Hem Yıldırım hem de Gök Gürültüsü, Kayıplı için benzerdir, "
+"kayıpsız için Gök gürültüsü sabit bir MA ağacı ve gradyan tahmin edicileri "
+"kullanır."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:47
 msgid "Falcon -- Instead of using lossless mode, disables all options."
 msgstr ""
+"Şahin -- Kayıpsız kipi kullanmak yerine tüm seçenekleri devre dışı "
+"bırakır."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:48
 msgid ""
 "Cheetah -- Enables coefficient reordering, context clustering, and "
 "heuristics for selecting DCT sizes and quantization steps."
 msgstr ""
+"Çita -- DCT boyutlarını ve niceleme adımlarını seçmek için katsayı yeniden "
+"sıralama, bağlam kümeleme ve buluşsal yöntemleri etkinleştirir."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:49
 msgid ""
 "Hare -- Enables Gaborish Filtering, Chroma from Luma and estimates "
 "quantization steps."
 msgstr ""
+"Yabantavşanı -- Gaborish Süzmeyi, Luma'dan Chroma'yı etkinleştirir ve "
+"niceleme adımlarını tahmin eder."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:50
 msgid "Wombat -- Enables error diffusion quantization and DCT heuristics."
 msgstr ""
+"Vombat -- Hata difüzyon nicelemesini ve DCT buluşsal yöntemini "
+"etkinleştirir."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:51
 msgid ""
 "Squirrel -- Enables dots, patches and spline detection as well as context "
 "clustering."
 msgstr ""
+"Sincap - Bağlam kümelemenin yanı sıra noktalar, yamalar ve eğri algılamayı "
+"etkinleştirir."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:52
 msgid ""
 "Kitten -- Optimizes the adaptive quantization for a psychovisual metric."
 msgstr ""
+"Yavru Kedi -- Uyarlanabilir nicelemeyi psiko-görsel bir ölçüm için eniyiler."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:53
 msgid "Tortoise -- Enables a more thorough adaptive quantization search."
-msgstr ""
+msgstr "Kaplumbağa -- Daha kapsamlı bir uyarlamalı niceleme araması sağlar."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:54
 msgid "Tradeoff"
-msgstr ""
+msgstr "Ödün"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:55
 msgid ""
 "You can force-enable several of the options in the :guilabel:`Advanced` "
 "section even if they are disabled by the :guilabel:`Tradeoff` preset."
 msgstr ""
+"Seçeneklerden bazılarını, :guilabel:`Ödün` bölümünden devre dışı bırakılmış "
+"olsalar bile :guilabel:`Gelişmiş` bölümünden zorla etkinleştirebilirsiniz."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:57
 msgid "Encoding Options"
-msgstr ""
+msgstr "Kodlama Seçenekleri"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:57
 msgid "Decoding Speed"
-msgstr ""
+msgstr "Kod Çözme Hızı"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:57
 msgid ""
@@ -224,18 +299,23 @@ msgid ""
 "by desktop computers and quality is of utmost importance, this should be set "
 "to 0."
 msgstr ""
+"Belirli eniyilemelere izin verilerek kod çözme hızı artırılabilir. Ancak bu "
+"bir miktar kalite kaybına yol açacaktır. Örneğin, görsellerinizin büyük "
+"ölçüde cep telefonlarında izleneceğini düşünüyorsanız bu seçeneği denemeniz "
+"iyi bir fikir olabilir. Tersine, görseliniz yalnızca masaüstü bilgisayarlarda "
+"görüntülenecekse ve kalite çok önemliyse bu 0 olarak ayarlanmalıdır."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:60
 msgid "Advanced"
-msgstr ""
+msgstr "Gelişmiş"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:62
 msgid "JPEG XL has two major ways of encoding data:"
-msgstr ""
+msgstr "JPEG XL, veri kodlamak için iki temel yol kullanır:"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:64
 msgid "VarDCT"
-msgstr ""
+msgstr "VarDCT"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:65
 msgid ""
@@ -243,10 +323,13 @@ msgid ""
 "original JPEG, and thus best for 'Natural' images, such as photographs and "
 "images with a lot of gradients and textures."
 msgstr ""
+"Bu, özgün JPEG tarafından kullanılanla aynı sıkıştırma teknikleri "
+"ailesindendir ve bu nedenle, çok sayıda gradyan ve dokuya sahip fotoğraflar "
+"ve görseller gibi 'Doğal' görüntüler için en iyisidir."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:67
 msgid "Modular Mode"
-msgstr ""
+msgstr "Modüler Kip"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:67
 msgid ""
@@ -814,3 +897,4 @@ msgid ""
 "blob/315247f000cff01fbc7ee2dd8252ea8fb82d0769/doc/benchmarking.md>`_ as well "
 "as comments inside the libjxl source code."
 msgstr ""
+
