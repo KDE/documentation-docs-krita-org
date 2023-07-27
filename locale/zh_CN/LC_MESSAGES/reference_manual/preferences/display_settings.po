@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-10 00:40+0000\n"
+"POT-Creation-Date: 2023-07-26 00:40+0000\n"
 "PO-Revision-Date: 2023-07-23 12:28\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,11 +28,17 @@ msgstr "介绍 Krita 的显示设置页面。"
 
 #: ../../reference_manual/preferences/display_settings.rst:12
 #: ../../reference_manual/preferences/display_settings.rst:24
+#: ../../reference_manual/preferences/display_settings.rst:46
+msgid "Canvas Graphics Acceleration"
+msgstr "画布显卡加速"
+
+#: ../../reference_manual/preferences/display_settings.rst:12
+#: ../../reference_manual/preferences/display_settings.rst:41
 msgid "OpenGL"
 msgstr "画布显卡加速"
 
 #: ../../reference_manual/preferences/display_settings.rst:12
-#: ../../reference_manual/preferences/display_settings.rst:82
+#: ../../reference_manual/preferences/display_settings.rst:95
 msgid "Canvas Border"
 msgstr "画布外围背景色"
 
@@ -47,10 +53,6 @@ msgstr "设置"
 #: ../../reference_manual/preferences/display_settings.rst:12
 msgid "Transparency Checkers"
 msgstr "透明度棋盘颜色"
-
-#: ../../reference_manual/preferences/display_settings.rst:12
-msgid "Canvas Graphics Acceleration"
-msgstr "画布显卡加速"
 
 #: ../../reference_manual/preferences/display_settings.rst:12
 msgid "Display"
@@ -70,17 +72,14 @@ msgstr ""
 "在显示选项页面，你可以更改与显卡加速、HDR 显示和透明度棋盘格、画布外围背景色"
 "等设置。另外还有一些与显示有关的杂项设置也被归类在这里。"
 
-#: ../../reference_manual/preferences/display_settings.rst:26
-msgid ""
-"**For Krita 3.3 or later: Reworded as \"*Canvas Graphics Acceleration*\"**"
-msgstr ""
-"勾选此选框，可以启用画布视图的显卡加速功能。Krita 用来绘制画布视图的软件叫"
-"做“渲染器”。某些渲染器可以利用显卡进行加速，提高笔刷绘制的流畅度、提高缩放的"
-"速度和品质、提供无级缩放和旋转等。在 Windows 下面，Krita 可以使用 OpenGL 或"
-"者 Direct3D 两种图形软件接口进行显卡加速；在 Linux 和 macOS 下面只能使用 "
-"OpenGL。"
-
 #: ../../reference_manual/preferences/display_settings.rst:28
+msgid ""
+"In Krita 3.2 and before, this used to be named :guilabel:`OpenGL`, with the "
+"checkbox for :guilabel:`Canvas Graphics Acceleration` being named :guilabel:"
+"`Enable OpenGL`."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:30
 msgid ""
 "OpenGL is a bit of code especially for graphics cards. Graphics cards a "
 "dedicate piece of hardware for helping your computer out with graphics "
@@ -93,13 +92,20 @@ msgstr ""
 "过 ANGLE 图形库将 OpenGL 与 Windows 原生的 Direct3D 11 图形接口进行对接，这极"
 "大地提高了画布显卡加速功能的兼容性。"
 
-#: ../../reference_manual/preferences/display_settings.rst:30
+#: ../../reference_manual/preferences/display_settings.rst:32
+#, fuzzy
+#| msgid ""
+#| "**For Krita 3.3 or later:** On Windows, Krita also supports using "
+#| "Direct3D instead with the help of the ANGLE library. ANGLE works by "
+#| "converting the OpenGL functions that Krita makes use of to the equivalent "
+#| "in Direct3D. It may (or may not) be slower than native OpenGL, but it has "
+#| "better compatibility with typical Windows graphics drivers."
 msgid ""
-"**For Krita 3.3 or later:** On Windows, Krita also supports using Direct3D "
-"instead with the help of the ANGLE library. ANGLE works by converting the "
-"OpenGL functions that Krita makes use of to the equivalent in Direct3D. It "
-"may (or may not) be slower than native OpenGL, but it has better "
-"compatibility with typical Windows graphics drivers."
+"On Windows, Krita also supports using Direct3D instead with the help of the "
+"ANGLE library. ANGLE works by converting the OpenGL functions that Krita "
+"makes use of to the equivalent in Direct3D. It may (or may not) be slower "
+"than native OpenGL, but it has better compatibility with typical Windows "
+"graphics drivers."
 msgstr ""
 "Krita 要求显卡驱动支持 OpenGL 3.2 及以上，否则不能实现高品质缩放和无级缩放/旋"
 "转。2012 年后的显卡均能完整支持 Krita 的显卡加速功能——最旧的型号包括 NVidia "
@@ -107,13 +113,7 @@ msgstr ""
 "显卡 3000 家族等。请定期到厂商的官方网站上获取最新版的显卡驱动程序，这可以提"
 "高性能和减少错误。"
 
-#: ../../reference_manual/preferences/display_settings.rst:32
-msgid ""
-"Enable OpenGL **(For Krita 3.3 or later: Reworded as *Canvas Graphics "
-"Acceleration*)**"
-msgstr "画布显卡加速 (新版) / 启用 OpenGL (3.3 版前)"
-
-#: ../../reference_manual/preferences/display_settings.rst:33
+#: ../../reference_manual/preferences/display_settings.rst:35
 msgid ""
 "Selecting this checkbox will enable the OpenGL / ANGLE canvas drawing mode. "
 "With a decent graphics card this should give faster feedback on brushes and "
@@ -125,41 +125,48 @@ msgstr ""
 "集成显卡一般已经足够使用，入门级独立显卡更是可以表现得相当流畅。在 macOS 下，"
 "同样的集成显卡往往无法达到 Windows / Linux 下面的性能。"
 
-#: ../../reference_manual/preferences/display_settings.rst:35
-msgid "For Krita 3.3 or later:"
-msgstr "3.3 版起"
-
-#: ../../reference_manual/preferences/display_settings.rst:35
-msgid "Renderer"
-msgstr "渲染器"
-
-#: ../../reference_manual/preferences/display_settings.rst:36
-msgid ""
-"*On Windows:* You can switch between native OpenGL or ANGLE Direct3D 11 "
-"rendering. The usual recommendation is to leave it as \"Auto\", which Krita "
-"will decide the best to use based on some internal compatibility checking. "
-"Changes to this option require a restart of Krita to take effect."
-msgstr ""
-"在 Windows 下面你可以在 OpenGL 或者 Direct3D 11 渲染器之间进行选择。默认自动"
-"使用 Direct3D 11，它在 Windows 下面问题最少，但一些旧版本软件会默认使用 "
-"OpenGL。如果在 Windows 下感觉卡顿，或者遇到一些奇怪的显示问题，请将渲染器手动"
-"更改为\\** 当前渲染器**\\ 以外的模式，例如原来是 OpenGL，现在改为 Direct3D "
-"11，反之亦然。更改此选项后请重新启动 Krita 以生效。"
-
 #: ../../reference_manual/preferences/display_settings.rst:37
-msgid "Use Texture Buffer"
-msgstr "使用纹理缓冲"
-
-#: ../../reference_manual/preferences/display_settings.rst:38
-msgid ""
-"This setting utilizes the graphics card's buffering capabilities to speed "
-"things up a bit. Although for now, this feature may be broken on some AMD/"
-"Radeon cards and may work fine on some Intel graphics cards."
+msgid "Renderer (Requires Restart)"
 msgstr ""
-"勾选此项将利用显卡的纹理缓冲功能，对提高显示速度有一些帮助。此选项在 Intel 核"
-"芯显卡上工作良好，但在某些 AMD 显卡上会造成一些问题。请实际测试后选用。"
+
+#: ../../reference_manual/preferences/display_settings.rst:39
+msgid "Auto (Recommended)"
+msgstr ""
 
 #: ../../reference_manual/preferences/display_settings.rst:40
+msgid ""
+"Krita will decide the best renderer to use based on some internal "
+"compatibility checking."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:42
+msgid "Krita will use OpenGL."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:43
+#, fuzzy
+#| msgid "OpenGL"
+msgid "OpenGL ES"
+msgstr "画布显卡加速"
+
+#: ../../reference_manual/preferences/display_settings.rst:44
+msgid ""
+"Krita will use OpenGl ES, which is a subset of OpenGL. Using this can be "
+"useful for less powerful devices."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:46
+msgid "ANGLE Direct3D (Windows Only)"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:46
+msgid ""
+"Krita will use the ANGLE compatibility layer to convert the OpenGL calls to "
+"Direct3D calls. Wether this works better than regular OpenGL depends on the "
+"graphics drivers of the computer."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:49
 msgid ""
 "The user can choose which scaling mode to use while zooming the canvas. The "
 "choice here only affects the way the image is displayed during canvas "
@@ -170,11 +177,11 @@ msgstr ""
 "意：此选项只影响图像的视图缩放显示画质，它与 Krita 的调整图像大小、变形工具等"
 "实际图像处理品质没有关系。在视图缩放为 100% 时所有模式的显示效果完全一致。"
 
-#: ../../reference_manual/preferences/display_settings.rst:42
+#: ../../reference_manual/preferences/display_settings.rst:51
 msgid "Nearest Neighbour"
 msgstr "最近邻"
 
-#: ../../reference_manual/preferences/display_settings.rst:43
+#: ../../reference_manual/preferences/display_settings.rst:52
 msgid ""
 "This is the fastest and crudest filtering method. While fast, this results "
 "in a large number of artifacts - 'blockiness' during magnification, and "
@@ -184,11 +191,11 @@ msgstr ""
 "种算法的速度很快，但放大后图像会产生大量锯齿、形成刺眼的色块和摩尔纹，在缩放"
 "过程中还会发生颜色边界的跳跃闪烁现象。"
 
-#: ../../reference_manual/preferences/display_settings.rst:44
+#: ../../reference_manual/preferences/display_settings.rst:53
 msgid "Bilinear Filtering"
 msgstr "双线性"
 
-#: ../../reference_manual/preferences/display_settings.rst:45
+#: ../../reference_manual/preferences/display_settings.rst:54
 msgid ""
 "This is the next step up. This removes the 'blockiness' seen during "
 "magnification and gives a smooth looking result. For most purposes this "
@@ -198,23 +205,23 @@ msgstr ""
 "也更加平滑。许多不支持显卡加速的同类软件都使用类似的缩放算法。如果你需要提高"
 "显示性能，此模式可以在画质和性能之间取得较好的平衡。"
 
-#: ../../reference_manual/preferences/display_settings.rst:46
+#: ../../reference_manual/preferences/display_settings.rst:55
 msgid "Trilinear Filtering"
 msgstr "三线性"
 
-#: ../../reference_manual/preferences/display_settings.rst:47
+#: ../../reference_manual/preferences/display_settings.rst:56
 msgid "This should give a little better result than Bilinear Filtering."
 msgstr "这种算法的画质比双线性好一些。"
 
-#: ../../reference_manual/preferences/display_settings.rst:49
+#: ../../reference_manual/preferences/display_settings.rst:57
 msgid "Scaling Mode"
 msgstr "视图缩放算法"
 
-#: ../../reference_manual/preferences/display_settings.rst:49
+#: ../../reference_manual/preferences/display_settings.rst:57
 msgid "High Quality Filtering"
 msgstr "最佳画质"
 
-#: ../../reference_manual/preferences/display_settings.rst:49
+#: ../../reference_manual/preferences/display_settings.rst:58
 msgid ""
 "Only available when your graphics card supports OpenGL 3.0. As the name "
 "suggests, this setting provides the best looking image during canvas "
@@ -223,15 +230,38 @@ msgstr ""
 "仅在支持 OpenGL 3.0 的显卡上可用，推荐 OpenGL 3.2 及以上。顾名思义，它可以在"
 "进行视图缩放时提供最好的画质，与前面几种算法对比时优势非常明显。"
 
-#: ../../reference_manual/preferences/display_settings.rst:54
+#: ../../reference_manual/preferences/display_settings.rst:59
+msgid "Use Texture Buffer"
+msgstr "使用纹理缓冲"
+
+#: ../../reference_manual/preferences/display_settings.rst:60
+msgid ""
+"This setting utilizes the graphics card's buffering capabilities to speed "
+"things up a bit. Although for now, this feature may be broken on some AMD/"
+"Radeon cards and may work fine on some Intel graphics cards."
+msgstr ""
+"勾选此项将利用显卡的纹理缓冲功能，对提高显示速度有一些帮助。此选项在 Intel 核"
+"芯显卡上工作良好，但在某些 AMD 显卡上会造成一些问题。请实际测试后选用。"
+
+#: ../../reference_manual/preferences/display_settings.rst:62
+msgid "Use Large Pixmap Cache"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:62
+msgid ""
+"This should be enabled if you experience artifacts with the :ref:`assistants "
+"<painting_with_assistants>`."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:67
 msgid "HDR"
 msgstr "HDR 选项"
 
-#: ../../reference_manual/preferences/display_settings.rst:58
+#: ../../reference_manual/preferences/display_settings.rst:71
 msgid "These settings are only available when using Windows."
 msgstr "此选项卡只在 Windows 下可用。"
 
-#: ../../reference_manual/preferences/display_settings.rst:60
+#: ../../reference_manual/preferences/display_settings.rst:73
 msgid ""
 "Since 4.2 Krita can not just edit floating point images, but also render "
 "them on screen in a way that an HDR capable setup can show them as HDR "
@@ -240,7 +270,7 @@ msgstr ""
 "自 4.2 版起 Krita 不但可以制作浮点通道的图像，还能在支持 HDR 的软硬件环境下按"
 "照 HDR 标准显示图像。"
 
-#: ../../reference_manual/preferences/display_settings.rst:62
+#: ../../reference_manual/preferences/display_settings.rst:75
 msgid ""
 "The HDR settings will show you the display format that Krita can handle, and "
 "the current output format. You will want to set the preferred output format "
@@ -249,11 +279,11 @@ msgstr ""
 "HDR 选项卡显示了 Krita 支持的显示格式、当前输出格式、首选输出格式。请将首选输"
 "出格式设为与本机显示器最接近的格式。"
 
-#: ../../reference_manual/preferences/display_settings.rst:64
+#: ../../reference_manual/preferences/display_settings.rst:77
 msgid "Display Format"
 msgstr "显示格式"
 
-#: ../../reference_manual/preferences/display_settings.rst:65
+#: ../../reference_manual/preferences/display_settings.rst:78
 msgid ""
 "The format your display is in by default. If this isn't higher than 8bit, "
 "there's a good chance your monitor is not an HDR monitor as far as Krita can "
@@ -266,19 +296,19 @@ msgstr ""
 "检查视频线材是否支持 HDR，显示器的相关设置有没有正确配置，显卡驱动是否最新或"
 "者存在故障等。你也可以检查 HDR 功能是否在其他支持 HDR 的软件中正常工作。"
 
-#: ../../reference_manual/preferences/display_settings.rst:66
+#: ../../reference_manual/preferences/display_settings.rst:79
 msgid "Current Output format"
 msgstr "当前输出格式"
 
-#: ../../reference_manual/preferences/display_settings.rst:67
+#: ../../reference_manual/preferences/display_settings.rst:80
 msgid "What Krita is rendering the canvas to currently."
 msgstr "Krita 当前用于画布视图渲染的格式。"
 
-#: ../../reference_manual/preferences/display_settings.rst:69
+#: ../../reference_manual/preferences/display_settings.rst:82
 msgid "Preferred Output Format"
 msgstr "首选输出格式"
 
-#: ../../reference_manual/preferences/display_settings.rst:69
+#: ../../reference_manual/preferences/display_settings.rst:82
 msgid ""
 "Which surface type you prefer. This should be ideally the closest to the "
 "display format, but perhaps due to driver issues you might want to try other "
@@ -287,11 +317,13 @@ msgstr ""
 "你希望 Krita 使用的画布视图显示格式。请将它设为最为接近当前显示器规格的格式。"
 "有时候某些驱动程序问题会迫使你使用其他格式。更改此设置后需要重新启动 Krita。"
 
-#: ../../reference_manual/preferences/display_settings.rst:72
-msgid "Transparency Checkerboard"
-msgstr "透明度棋盘颜色"
+#: ../../reference_manual/preferences/display_settings.rst:85
+#, fuzzy
+#| msgid "Canvas Graphics Acceleration"
+msgid "Canvas Decorations"
+msgstr "画布显卡加速"
 
-#: ../../reference_manual/preferences/display_settings.rst:74
+#: ../../reference_manual/preferences/display_settings.rst:88
 msgid ""
 "Krita supports layer transparency. Of course, the nasty thing is that "
 "transparency can't be seen. So to indicate transparency at the lowest layer, "
@@ -300,84 +332,57 @@ msgstr ""
 "Krita 的所有图层均支持透明度，并默认通过灰白两色的棋盘格图案代表透明区域。你"
 "可以在此组选项中更改棋盘格图案的相关设置。"
 
-#: ../../reference_manual/preferences/display_settings.rst:76
+#: ../../reference_manual/preferences/display_settings.rst:90
 msgid "Size"
 msgstr "大小"
 
-#: ../../reference_manual/preferences/display_settings.rst:77
+#: ../../reference_manual/preferences/display_settings.rst:91
 msgid ""
 "This sets the size of the checkers which show up in transparent parts of an "
 "image."
 msgstr "指定透明度棋盘格的大小。"
 
-#: ../../reference_manual/preferences/display_settings.rst:79
-#: ../../reference_manual/preferences/display_settings.rst:84
-#: ../../reference_manual/preferences/display_settings.rst:94
-#: ../../reference_manual/preferences/display_settings.rst:106
+#: ../../reference_manual/preferences/display_settings.rst:92
+#, fuzzy
+#| msgid "Transparency Checkerboard"
+msgid "Transparency Checkerboard:"
+msgstr "透明度棋盘颜色"
+
+#: ../../reference_manual/preferences/display_settings.rst:92
+#: ../../reference_manual/preferences/display_settings.rst:95
+#: ../../reference_manual/preferences/display_settings.rst:102
 msgid "Color"
 msgstr "颜色"
 
-#: ../../reference_manual/preferences/display_settings.rst:79
+#: ../../reference_manual/preferences/display_settings.rst:93
 msgid "The user can set the colors for the checkers over here."
 msgstr "点击两个色块可以显示拾色器，分别指定透明度棋盘格的两种格子的颜色。"
 
-#: ../../reference_manual/preferences/display_settings.rst:85
+#: ../../reference_manual/preferences/display_settings.rst:96
 msgid ""
 "The user can select the color for the canvas i.e. the space beyond a "
 "document's boundaries."
 msgstr "指定画布视图周围背景的颜色。默认为灰色。"
 
-#: ../../reference_manual/preferences/display_settings.rst:87
-msgid "Hide Scrollbars"
-msgstr "隐藏画布滚动条"
-
-#: ../../reference_manual/preferences/display_settings.rst:87
-msgid "Selecting this will hide the scrollbars in all view modes."
-msgstr "勾选后将隐藏画布视图的滚动条。"
-
-#: ../../reference_manual/preferences/display_settings.rst:90
-msgid "Selection Overlay"
-msgstr "选区蒙版颜色"
-
-#: ../../reference_manual/preferences/display_settings.rst:92
-msgid ""
-"Set the color of the alternate :ref:`Selection <selections_basics>` display "
-"mode. This mode is typically used when making complex selections."
-msgstr ""
-"设置\\ :ref:`选区<selections_basics>`\\ 的备选显示模式的选区叠加颜色。该备选"
-"模式主要用于制作复杂的选区。"
-
-#: ../../reference_manual/preferences/display_settings.rst:95
-msgid "Color of the overlay."
-msgstr "选区的叠加颜色。"
-
-#: ../../reference_manual/preferences/display_settings.rst:97
-msgid "Opacity"
-msgstr "不透明度"
-
-#: ../../reference_manual/preferences/display_settings.rst:97
-msgid "How opaque the overlay is."
-msgstr "选区叠加颜色的不透明度。"
-
 #: ../../reference_manual/preferences/display_settings.rst:100
-msgid "Pixel Grid"
-msgstr "像素网格颜色"
-
-#: ../../reference_manual/preferences/display_settings.rst:104
 msgid ""
 "This allows configuring an automatic pixel-by-pixel grid, which is very "
 "useful for doing pixel art."
 msgstr "对放大到一定程度时显示的像素网格进行配置。这在进行像素级编辑时有用。"
 
-#: ../../reference_manual/preferences/display_settings.rst:107
+#: ../../reference_manual/preferences/display_settings.rst:103
 msgid "The color of the grid."
 msgstr "指定像素网格的颜色。"
 
-#: ../../reference_manual/preferences/display_settings.rst:109
+#: ../../reference_manual/preferences/display_settings.rst:105
+msgid "Pixel Grid"
+msgstr "像素网格颜色"
+
+#: ../../reference_manual/preferences/display_settings.rst:105
 msgid "Start Showing at"
 msgstr "出现倍率"
 
-#: ../../reference_manual/preferences/display_settings.rst:109
+#: ../../reference_manual/preferences/display_settings.rst:105
 msgid ""
 "This determines the zoom level at which the pixel grid starts showing, as "
 "showing it when the image is zoomed out a lot will make the grid overwhelm "
@@ -386,51 +391,95 @@ msgstr ""
 "指定像素网格开始显示的放大倍率。默认为 2400%，否则在小倍率下显示网格，白花花"
 "的一片反而影响工作效率。"
 
-#: ../../reference_manual/preferences/display_settings.rst:112
+#: ../../reference_manual/preferences/display_settings.rst:108
+#, fuzzy
+#| msgid "Opacity"
+msgid "Outline Opacity"
+msgstr "不透明度"
+
+#: ../../reference_manual/preferences/display_settings.rst:109
+#, fuzzy
+#| msgid ""
+#| "Set the color of the alternate :ref:`Selection <selections_basics>` "
+#| "display mode. This mode is typically used when making complex selections."
+msgid ""
+"Set the opacity of the regular :ref:`Selection <selections_basics>` display "
+"mode."
+msgstr ""
+"设置\\ :ref:`选区<selections_basics>`\\ 的备选显示模式的选区叠加颜色。该备选"
+"模式主要用于制作复杂的选区。"
+
+#: ../../reference_manual/preferences/display_settings.rst:110
+msgid "Overlay Color"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:111
+msgid ""
+"Set the color of the alternate :ref:`Selection <selections_basics>` display "
+"mode. This mode is typically used when making complex selections."
+msgstr ""
+"设置\\ :ref:`选区<selections_basics>`\\ 的备选显示模式的选区叠加颜色。该备选"
+"模式主要用于制作复杂的选区。"
+
+#: ../../reference_manual/preferences/display_settings.rst:113
+msgid "Selection Overlay"
+msgstr "选区蒙版颜色"
+
+#: ../../reference_manual/preferences/display_settings.rst:113
+msgid "Opacity"
+msgstr "不透明度"
+
+#: ../../reference_manual/preferences/display_settings.rst:113
+#, fuzzy
+#| msgid "How opaque the overlay is."
+msgid "How opaque the selection overlay is."
+msgstr "选区叠加颜色的不透明度。"
+
+#: ../../reference_manual/preferences/display_settings.rst:116
 msgid "Miscellaneous"
 msgstr "其他界面选项"
 
-#: ../../reference_manual/preferences/display_settings.rst:114
+#: ../../reference_manual/preferences/display_settings.rst:118
 msgid "Hide canvas scrollbars."
 msgstr "隐藏画布滚动条"
 
-#: ../../reference_manual/preferences/display_settings.rst:115
+#: ../../reference_manual/preferences/display_settings.rst:119
 msgid "Hides the scrollbars on the canvas."
 msgstr "勾选后将隐藏画布右方和下方的滚动条。"
 
-#: ../../reference_manual/preferences/display_settings.rst:116
+#: ../../reference_manual/preferences/display_settings.rst:120
 msgid "Enable Curve Anti-Aliasing"
 msgstr "预览曲线抗锯齿"
 
-#: ../../reference_manual/preferences/display_settings.rst:117
+#: ../../reference_manual/preferences/display_settings.rst:121
 msgid ""
 "This allows anti-aliasing on previewing curves, like the ones for the circle "
 "tool, or the path tool."
 msgstr "在椭圆工具和曲线工具等的预览曲线上启用抗锯齿显示。"
 
-#: ../../reference_manual/preferences/display_settings.rst:118
+#: ../../reference_manual/preferences/display_settings.rst:122
 msgid "Hide Layer thumbnail popup"
 msgstr "图层面板悬停时不弹出缩略图"
 
-#: ../../reference_manual/preferences/display_settings.rst:119
+#: ../../reference_manual/preferences/display_settings.rst:123
 msgid "This disables the thumbnail that you get when hovering over a layer."
 msgstr "勾选后，在图层面板的图层上悬停时将不会弹出显示该图层的缩略图。"
 
-#: ../../reference_manual/preferences/display_settings.rst:120
+#: ../../reference_manual/preferences/display_settings.rst:124
 msgid "Color Channels in Color"
 msgstr "色彩通道面板示色"
 
-#: ../../reference_manual/preferences/display_settings.rst:121
+#: ../../reference_manual/preferences/display_settings.rst:125
 msgid ""
 "This configures whether the image display should be colored when only a "
 "single channel is selected in the channels docker."
 msgstr "在通道面板中仅选中了单个通道时，显示的图像是否按照通道颜色显示。"
 
-#: ../../reference_manual/preferences/display_settings.rst:122
+#: ../../reference_manual/preferences/display_settings.rst:126
 msgid "Enable Selection Outline Anti-Aliasing"
 msgstr "选区轮廓抗锯齿"
 
-#: ../../reference_manual/preferences/display_settings.rst:123
+#: ../../reference_manual/preferences/display_settings.rst:127
 msgid ""
 "This allows automatic anti-aliasing on selection. It makes the selection "
 "feel less jaggy and more precise."
@@ -438,7 +487,7 @@ msgstr ""
 "在选区轮廓上启用抗锯齿显示，可以让选区轮廓美观和精确一些，但会降低蚂蚁线效果"
 "的提示作用。"
 
-#: ../../reference_manual/preferences/display_settings.rst:125
+#: ../../reference_manual/preferences/display_settings.rst:129
 msgid ""
 "When selected the checkers will move along with opaque elements of an image "
 "during canvas Panning, Zooming, etc.  Otherwise the checkers remain "
@@ -446,3 +495,45 @@ msgid ""
 msgstr ""
 "注意：此选项位于\\ **其他**\\ 选项卡。勾选此项后，画布视图平移、缩放时透明度"
 "棋盘格将跟随移动。不勾选此项时，透明度在画布视图平移、缩放时将保持静止。"
+
+#~ msgid ""
+#~ "**For Krita 3.3 or later: Reworded as \"*Canvas Graphics Acceleration*\"**"
+#~ msgstr ""
+#~ "勾选此选框，可以启用画布视图的显卡加速功能。Krita 用来绘制画布视图的软件叫"
+#~ "做“渲染器”。某些渲染器可以利用显卡进行加速，提高笔刷绘制的流畅度、提高缩放"
+#~ "的速度和品质、提供无级缩放和旋转等。在 Windows 下面，Krita 可以使用 "
+#~ "OpenGL 或者 Direct3D 两种图形软件接口进行显卡加速；在 Linux 和 macOS 下面"
+#~ "只能使用 OpenGL。"
+
+#~ msgid ""
+#~ "Enable OpenGL **(For Krita 3.3 or later: Reworded as *Canvas Graphics "
+#~ "Acceleration*)**"
+#~ msgstr "画布显卡加速 (新版) / 启用 OpenGL (3.3 版前)"
+
+#~ msgid "For Krita 3.3 or later:"
+#~ msgstr "3.3 版起"
+
+#~ msgid "Renderer"
+#~ msgstr "渲染器"
+
+#~ msgid ""
+#~ "*On Windows:* You can switch between native OpenGL or ANGLE Direct3D 11 "
+#~ "rendering. The usual recommendation is to leave it as \"Auto\", which "
+#~ "Krita will decide the best to use based on some internal compatibility "
+#~ "checking. Changes to this option require a restart of Krita to take "
+#~ "effect."
+#~ msgstr ""
+#~ "在 Windows 下面你可以在 OpenGL 或者 Direct3D 11 渲染器之间进行选择。默认自"
+#~ "动使用 Direct3D 11，它在 Windows 下面问题最少，但一些旧版本软件会默认使用 "
+#~ "OpenGL。如果在 Windows 下感觉卡顿，或者遇到一些奇怪的显示问题，请将渲染器"
+#~ "手动更改为\\** 当前渲染器**\\ 以外的模式，例如原来是 OpenGL，现在改为 "
+#~ "Direct3D 11，反之亦然。更改此选项后请重新启动 Krita 以生效。"
+
+#~ msgid "Hide Scrollbars"
+#~ msgstr "隐藏画布滚动条"
+
+#~ msgid "Selecting this will hide the scrollbars in all view modes."
+#~ msgstr "勾选后将隐藏画布视图的滚动条。"
+
+#~ msgid "Color of the overlay."
+#~ msgstr "选区的叠加颜色。"

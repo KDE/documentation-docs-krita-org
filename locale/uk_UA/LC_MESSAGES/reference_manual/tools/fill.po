@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: docs_krita_org_reference_manual___tools___fill\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-10 00:40+0000\n"
-"PO-Revision-Date: 2022-08-11 09:36+0300\n"
+"POT-Creation-Date: 2023-07-26 00:40+0000\n"
+"PO-Revision-Date: 2023-07-26 21:27+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -20,6 +20,18 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
 
+#: ../../<generated>:1
+msgid "Reference"
+msgstr "Довідник"
+
+#: ../../<generated>:1
+msgid "Drag-Fill Mode"
+msgstr "Режим заповнення перетягуванням"
+
+#: ../../<generated>:1
+msgid "Fill Regions of Similar Colors"
+msgstr "Заповнення ділянок подібних кольорів"
+
 #: ../../<rst_epilog>:56
 msgid ""
 ".. image:: images/icons/fill_tool.svg\n"
@@ -29,12 +41,42 @@ msgstr ""
 "   :alt: toolfill"
 
 #: ../../reference_manual/tools/fill.rst:0
+#| msgid ".. image:: images/tools/fill_selection_boundary.png"
+msgid ".. image:: images/tools/fill_tool_what_to_fill.png"
+msgstr ".. image:: images/tools/fill_tool_what_to_fill.png"
+
+#: ../../reference_manual/tools/fill.rst:0
+#| msgid ".. image:: images/tools/fill_selection_boundary.png"
+msgid ".. image:: images/tools/fill_tool_region-filling-flood-fill.svg"
+msgstr ".. image:: images/tools/fill_tool_region-filling-flood-fill.svg"
+
+#: ../../reference_manual/tools/fill.rst:0
+#| msgid ".. image:: images/tools/fill_selection_boundary.png"
+msgid ".. image:: images/tools/fill_tool_region-filling-boundary-fill.svg"
+msgstr ".. image:: images/tools/fill_tool_region-filling-boundary-fill.svg"
+
+#: ../../reference_manual/tools/fill.rst:0
+#| msgid ".. image:: images/tools/fill_selection_boundary.png"
+msgid ".. image:: images/tools/fill_tool_pixel_selection_policies.png"
+msgstr ".. image:: images/tools/fill_tool_pixel_selection_policies.png"
+
+#: ../../reference_manual/tools/fill.rst:0
 msgid ".. image:: images/tools/opacity_spread.png"
 msgstr ".. image:: images/tools/opacity_spread.png"
 
 #: ../../reference_manual/tools/fill.rst:0
 msgid ".. image:: images/tools/fill_selection_boundary.png"
 msgstr ".. image:: images/tools/fill_selection_boundary.png"
+
+#: ../../reference_manual/tools/fill.rst:0
+#| msgid ".. image:: images/tools/fill_selection_boundary.png"
+msgid ".. image:: images/tools/fill_tool_stop-at-boundary.svg"
+msgstr ".. image:: images/tools/fill_tool_stop-at-boundary.svg"
+
+#: ../../reference_manual/tools/fill.rst:0
+#| msgid ".. image:: images/tools/fill_selection_boundary.png"
+msgid ".. image:: images/tools/fill_tool_stop_growing.png"
+msgstr ".. image:: images/tools/fill_tool_stop_growing.png"
 
 #: ../../reference_manual/tools/fill.rst:1
 msgid "Krita's fill tool reference."
@@ -96,10 +138,6 @@ msgid ""
 msgstr "Якщо позначити цей пункт, буде заповнено усю позначену ділянку."
 
 #: ../../reference_manual/tools/fill.rst:32
-msgid "What to Fill"
-msgstr "Об'єкт заповнення"
-
-#: ../../reference_manual/tools/fill.rst:32
 msgid "Contiguous Region"
 msgstr "Неперервна область"
 
@@ -112,11 +150,51 @@ msgstr ""
 "пікселів, отриману із зображення, від точки, у якій користувач виконав "
 "клацання."
 
-#: ../../reference_manual/tools/fill.rst:36
+#: ../../reference_manual/tools/fill.rst:37
+#| msgid "Fill Regions of Similar Colors"
+msgid "Regions of Similar Color"
+msgstr "Ділянки подібних кольорів"
+
+#: ../../reference_manual/tools/fill.rst:37
+#| msgid ""
+#| "This option is the default and allows filling a region of contiguous "
+#| "pixels obtained from the image at the point where the user clicks."
+msgid ""
+"This option allows filling all the regions similar in color to the pixel "
+"where the user clicks"
+msgstr ""
+"За допомогою цього варіанта ви можете заповнювати усі ділянки, які є"
+" подібними за кольором до пікселя, де було здійснено клацання кнопкою миші"
+
+#: ../../reference_manual/tools/fill.rst:41
+#| msgid "Fill Tool"
+msgid "Fill Mode"
+msgstr "Режим заповнення"
+
+#: ../../reference_manual/tools/fill.rst:41
+msgid ""
+"a: An image with a selection. The red dot marks where the user clicked to "
+"fill. b: The region filled using:guilabel:`Current Selection`. c: The region "
+"filled using :guilabel:`Contiguous Pixels`, filling all pixels that are both "
+"similar and contiguous to the one the user clicked. d: The region filled "
+"with :guilabel:`Regions of Similar Color`, filling pixels similarly colored "
+"to the one the user clicked."
+msgstr ""
+"a: Зображення з позначеною ділянкою. Червона крапка позначає місце, де"
+" користувач клацнув кнопкою миші для заповнення ділянки. b: Ділянку"
+" заповнено з використанням варіанта :guilabel:`Поточне позначене`. c:"
+" Ділянку заповнено з використанням варіанта :guilabel:`Неперервні пікселі`,"
+" заповнено усі пікселі, які є подібними до поточного, де було здійснено"
+" клацання, і розташовані у неперервній ділянці зображення разом із ним. d:"
+" Ділянку заповнено з використання варіанта :guilabel:`Ділянки подібного"
+" кольору`, заповнено усі пікселі, які мають подібний колір до пікселя, де"
+" було здійснено клацання."
+
+#: ../../reference_manual/tools/fill.rst:45
 msgid "Foreground Color"
 msgstr "Колір переднього плану"
 
-#: ../../reference_manual/tools/fill.rst:36
+#: ../../reference_manual/tools/fill.rst:45
 msgid ""
 "Selecting this option will fill the obtained region with the foreground "
 "color."
@@ -124,54 +202,114 @@ msgstr ""
 "Якщо позначено цей пункт, програма заповнить отриману ділянку кольором "
 "переднього плану."
 
-#: ../../reference_manual/tools/fill.rst:40
+#: ../../reference_manual/tools/fill.rst:50
 msgid "Background Color"
 msgstr "Колір тла"
 
-#: ../../reference_manual/tools/fill.rst:41
+#: ../../reference_manual/tools/fill.rst:50
 msgid ""
 "Selecting this option will fill the obtained region with the background "
 "color."
 msgstr ""
 "Якщо позначено цей пункт, програма заповнить отриману ділянку кольором тла."
 
-#: ../../reference_manual/tools/fill.rst:44
+#: ../../reference_manual/tools/fill.rst:53
 msgid ""
 "Selecting this option will fill the obtained region with the current pattern."
 msgstr ""
 "Якщо вибрати цей варіант, програма заповнить отриману область поточним "
 "візерунком."
 
-#: ../../reference_manual/tools/fill.rst:48
+#: ../../reference_manual/tools/fill.rst:57
 msgid "Scale"
 msgstr "Масштабувати"
 
-#: ../../reference_manual/tools/fill.rst:49
+#: ../../reference_manual/tools/fill.rst:58
 msgid "This allows you to scale the pattern used in the fill."
 msgstr ""
 "За допомогою цього пункту ви можете масштабувати візерунок для заповнення."
 
-#: ../../reference_manual/tools/fill.rst:53
-msgid "Fill with"
-msgstr "Заповнення"
+#: ../../reference_manual/tools/fill.rst:62
+#| msgid "Fill Tool"
+msgid "Fill Source"
+msgstr "Джерело заповнення"
 
-#: ../../reference_manual/tools/fill.rst:53
+#: ../../reference_manual/tools/fill.rst:62
 msgid "Pattern"
 msgstr "Візерунок"
 
-#: ../../reference_manual/tools/fill.rst:53
+#: ../../reference_manual/tools/fill.rst:62
 msgid "Rotation"
 msgstr "Обертання"
 
-#: ../../reference_manual/tools/fill.rst:53
+#: ../../reference_manual/tools/fill.rst:62
 msgid "This allows you to rotate the pattern used in the fill."
-msgstr "За допомогою цього пункту ви можете обертати візерунок для заповнення."
+msgstr ""
+"За допомогою цього пункту ви можете обертати візерунок для заповнення."
 
-#: ../../reference_manual/tools/fill.rst:57
+#: ../../reference_manual/tools/fill.rst:68
+msgid ""
+"When filling a contiguous region, the user can choose how the pixels are "
+"selected based on color similarity."
+msgstr ""
+"При заповненні неперервної ділянки користувач може вибрати, як буде вибрано"
+" пікселі на основі подібності кольорів."
+
+#: ../../reference_manual/tools/fill.rst:74
+#| msgid "Fill Regions of Similar Colors"
+msgid "Fill Similar Pixels"
+msgstr "Заповнити подібні пікселі"
+
+#: ../../reference_manual/tools/fill.rst:74
+msgid ""
+"The contiguous pixels that are similar to the one the user clicked on are "
+"selected."
+msgstr ""
+"Неперервна ділянка пікселів, які є подібними за кольором до пікселя, де"
+" користувач клацнув кнопкою миші."
+
+#: ../../reference_manual/tools/fill.rst:80
+msgid ""
+"All the contiguous pixels are selected as long as they are not similar to "
+"the user defined boundary color."
+msgstr ""
+"Буде позначено усю неперервну ділянку пікселів, аж до пікселів, колір яких"
+" подібний до визначеного користувачем кольору межі ділянки."
+
+#: ../../reference_manual/tools/fill.rst:83
+msgid "Fill All Pixels Until a Boundary"
+msgstr "Заповнити усі пікселі, аж до межі"
+
+#: ../../reference_manual/tools/fill.rst:83
+#| msgid "Background Color"
+msgid "Boundary Color"
+msgstr "Колір межі"
+
+#: ../../reference_manual/tools/fill.rst:83
+msgid "Defines the color used as a boundary."
+msgstr "Визначає колір, який буде використано як межу."
+
+#: ../../reference_manual/tools/fill.rst:87
+msgid "Pixel Selection Modes"
+msgstr "Режими вибору пікселів"
+
+#: ../../reference_manual/tools/fill.rst:87
+msgid ""
+"a: An image with a red dot marking where the user clicked to fill. b: The "
+"filled region when selecting only the similar contiguous pixels. c: The "
+"filled region all the pixels until the boundary color (here set to the color "
+"black)."
+msgstr ""
+"a: Зображення із червоною крапкою, що позначає місце, де користувач клацнув"
+" кнопкою миші для заповнення ділянки. b: Заповнена ділянка, якщо буде"
+" вибрано лише неперервну ділянку подібних пікселів. c: Заповнена ділянка з"
+" усіма пікселями, аж до кольору межі (тут вибрано чорний колір)."
+
+#: ../../reference_manual/tools/fill.rst:90
 msgid "Threshold"
 msgstr "Поріг"
 
-#: ../../reference_manual/tools/fill.rst:57
+#: ../../reference_manual/tools/fill.rst:90
 msgid ""
 "Determines when the fill-tool sees another color as a border. In other "
 "words, how far the region should extend from the selected pixel in terms of "
@@ -181,7 +319,7 @@ msgstr ""
 "словами, наскільки слід розширювати область від позначеного пікселя у "
 "параметрах подібності кольорів."
 
-#: ../../reference_manual/tools/fill.rst:62
+#: ../../reference_manual/tools/fill.rst:95
 msgid ""
 "Set how far the fully opaque portion of the region should extend. 0% will "
 "make opaque only the pixels that are exactly equal to the selected pixel. "
@@ -192,11 +330,11 @@ msgstr ""
 "ідентичними із позначеним пікселем. 100% — зробити непрозорими усі пікселі у "
 "області аж до її межі."
 
-#: ../../reference_manual/tools/fill.rst:65
+#: ../../reference_manual/tools/fill.rst:99
 msgid "Spread"
 msgstr "Розсіювання"
 
-#: ../../reference_manual/tools/fill.rst:66
+#: ../../reference_manual/tools/fill.rst:99
 msgid ""
 "Left: Original image. The black dot indicates where the fill operation "
 "starts. Top-right: a row of images that show the result of filling with a "
@@ -212,7 +350,7 @@ msgstr ""
 "результат заповнення із пороговим значенням 65 і значенням розсіювання 0, "
 "30, 60 і 100 зліва праворуч."
 
-#: ../../reference_manual/tools/fill.rst:72
+#: ../../reference_manual/tools/fill.rst:104
 msgid ""
 "When checked, this will count the borders of the selection as an extra "
 "boundary on top of the pixel difference."
@@ -220,15 +358,17 @@ msgstr ""
 "Якщо позначено, межі позначеної області вважатимуться додатковими межами над "
 "різницею у пікселях."
 
-#: ../../reference_manual/tools/fill.rst:75
-msgid "Use selection as boundary"
+#: ../../reference_manual/tools/fill.rst:108
+#| msgid "Region Extent"
+msgid "Fill Extent"
+msgstr "Область заповнення"
+
+#: ../../reference_manual/tools/fill.rst:108
+#| msgid "Use selection as boundary"
+msgid "Use Selection as Boundary"
 msgstr "Позначення як межа"
 
-#: ../../reference_manual/tools/fill.rst:76
-msgid "Region Extent"
-msgstr "Поширення області"
-
-#: ../../reference_manual/tools/fill.rst:76
+#: ../../reference_manual/tools/fill.rst:108
 msgid ""
 "Left: Original selection with a line. Middle: Filled with 'use selection as "
 "boundary' off. Right: Filled with 'use selection as boundary' on."
@@ -236,11 +376,12 @@ msgstr ""
 "Ліворуч: початкове позначення з лінією. Посередині: заповнено із вимкненим "
 "«Позначення як межа». Праворуч: заповнено із увімкненим «Позначення як межа»."
 
-#: ../../reference_manual/tools/fill.rst:81
-msgid "Anti-alias"
+#: ../../reference_manual/tools/fill.rst:114
+#| msgid "Anti-alias"
+msgid "Anti-aliasing"
 msgstr "Згладжування"
 
-#: ../../reference_manual/tools/fill.rst:82
+#: ../../reference_manual/tools/fill.rst:114
 msgid ""
 "This will smooth the jagged edges present in the region. It differs from "
 "feathering in that this will smooth in the direction of the edge instead of "
@@ -250,11 +391,7 @@ msgstr ""
 "згладжує у напрямку краю, а не в усіх напрямках, і лише якщо крає є нерівним "
 "(висококонтрастним)."
 
-#: ../../reference_manual/tools/fill.rst:84
-msgid "Grow Selection"
-msgstr "Збільшити позначене"
-
-#: ../../reference_manual/tools/fill.rst:85
+#: ../../reference_manual/tools/fill.rst:117
 msgid ""
 "This value extends (positive values) or contracts (negative values) the "
 "region."
@@ -262,42 +399,98 @@ msgstr ""
 "Це значення розширює (додатні значення) або стискає (від'ємні значення) "
 "область."
 
-#: ../../reference_manual/tools/fill.rst:87
+#: ../../reference_manual/tools/fill.rst:125
+msgid ""
+"This option is useful when filling inner regions of a lineart. When the "
+"lines have smooth borders, some unwanted pixels may remain unfilled between "
+"the line's darkest or more opaque parts and the filled region. To improve "
+"that, it is common to grow the region a bit to cover those pixels."
+msgstr ""
+"Цей варіант корисний, якщо ви заповнюєте внутрішні ділянки графіки. Якщо"
+" лінії мають плавні межі, незаповненими можуть залишитися деякі пікселі між"
+" найтемнішою і частиною лінії або непрозорішими частинами зображення та"
+" заповненою ділянкою. У таких випадках може допомогти певне збільшення"
+" ділянки, щоб вона вкрила ці пікселі."
+
+#: ../../reference_manual/tools/fill.rst:127
+msgid ""
+"One issue that may arise is that the lines vary in width and the expanded "
+"region exceeds some of the thinner ones. If this option is selected, the "
+"growing process will stop adaptively if the color of the pixels begins to "
+"get lighter or less opaque. This effectively prevents the expanded region "
+"from reaching the opposite side of the lines."
+msgstr ""
+"Може виникнути проблема із тим, що лінії мають змінну товщину і розширення"
+" ділянки може призвести до перетину заповненням найтонших частин лінії. Якщо"
+" позначено цей пункт, збільшення зупинятиметься адаптивно, якщо колір"
+" пікселів ставатиме світлішим або менш непрозорим. Це запобігатиме"
+" досягненню розширеною ділянкою протилежного боку лінії."
+
+#: ../../reference_manual/tools/fill.rst:131
+msgid ""
+"Comparison of the filled region with and without the option selected. The "
+"filled regions were painted with the multiply blending mode for clarity. a: "
+"An image with some lineart that varies in width and a red dot indicating "
+"where the user clicked to fill. b: The filled region without being expanded. "
+"c: The filled region after being expanded by twelve pixels. Note that the "
+"region exceeds the line in some points. d: The filled region after being "
+"expanded by twelve pixels, but stopping adaptively at the darkest pixels."
+msgstr ""
+"Порівняння заповненої ділянки з позначенням пункту і без його позначення."
+" Заповнені ділянки для виразності намальовано із використанням режиму"
+" змішування «множення». a: "
+"Зображення з графікою з лініями змінної товщини і червоною крапкою у місці,"
+" де було здійснено клацання мишею для заповнення. b: Заповнена ділянка без"
+" розширення. "
+"c: Заповнена ділянка після розширення на дванадцять пікселів. Зауважте, що у"
+" деяких точка ділянка перейшла за лінію. d: Заповнена ділянка після"
+" розширення на дванадцять пікселів, але із адаптивним зупиненням у"
+" найтемніших пікселях."
+
+#: ../../reference_manual/tools/fill.rst:132
+msgid "Grow Selection"
+msgstr "Збільшити позначене"
+
+#: ../../reference_manual/tools/fill.rst:132
+msgid "Stop Growing at the Darkest and/or More Opaque Pixels"
+msgstr "Зупинити збільшення на найтемніших і/або непрозоріших пікселях"
+
+#: ../../reference_manual/tools/fill.rst:135
 msgid "Adjustments"
 msgstr "Коригування"
 
-#: ../../reference_manual/tools/fill.rst:87
+#: ../../reference_manual/tools/fill.rst:135
 msgid "Feathering Radius"
 msgstr "Радіус розтягування"
 
-#: ../../reference_manual/tools/fill.rst:87
+#: ../../reference_manual/tools/fill.rst:135
 msgid "This value will add a soft border to the region."
 msgstr "Це значення додасть м'яку межу до ділянки."
 
-#: ../../reference_manual/tools/fill.rst:92
+#: ../../reference_manual/tools/fill.rst:140
 msgid ""
 "Select which layers to use as a reference for the fill tool. The options are:"
 msgstr ""
 "Виберіть шари, які буде використано як еталон для інструмента заповнення. "
 "Передбачено такі варіанти:"
 
-#: ../../reference_manual/tools/fill.rst:94
+#: ../../reference_manual/tools/fill.rst:142
 msgid "Current Layer"
 msgstr "Поточний шар"
 
-#: ../../reference_manual/tools/fill.rst:95
+#: ../../reference_manual/tools/fill.rst:143
 msgid "Only use the currently selected layer."
 msgstr "Використовувати лише поточний позначений шар."
 
-#: ../../reference_manual/tools/fill.rst:96
+#: ../../reference_manual/tools/fill.rst:144
 msgid "All layers"
 msgstr "Усі шари"
 
-#: ../../reference_manual/tools/fill.rst:97
+#: ../../reference_manual/tools/fill.rst:145
 msgid "Use all visible layers."
 msgstr "Використовувати усі видимі шари."
 
-#: ../../reference_manual/tools/fill.rst:99
+#: ../../reference_manual/tools/fill.rst:147
 msgid ""
 "Use only the layers specified with a certain color label. This is useful for "
 "complex images, where you might have multiple lineart layers. Label them "
@@ -309,24 +502,21 @@ msgstr ""
 "Позначте шари відповідною кольоровою міткою і користуйтеся цими мітками для "
 "визначення шарів, які слід використовувати як еталонні."
 
-#: ../../reference_manual/tools/fill.rst:102
-msgid "Reference"
-msgstr "Еталон"
-
-#: ../../reference_manual/tools/fill.rst:102
+#: ../../reference_manual/tools/fill.rst:150
 msgid "Color Labeled Layers"
 msgstr "Позначені кольором шари"
 
-#: ../../reference_manual/tools/fill.rst:102
+#: ../../reference_manual/tools/fill.rst:150
 msgid "Labels Used"
 msgstr "Використані мітки"
 
-#: ../../reference_manual/tools/fill.rst:102
-msgid "Select the color labels of the layers that should be used as reference."
+#: ../../reference_manual/tools/fill.rst:150
+msgid ""
+"Select the color labels of the layers that should be used as reference."
 msgstr ""
 "Вибрати мітки кольорів шарів, які має бути використано з довідковою метою."
 
-#: ../../reference_manual/tools/fill.rst:107
+#: ../../reference_manual/tools/fill.rst:155
 msgid ""
 "Select what should happen when one clicks and drags the pointer on the "
 "canvas."
@@ -334,11 +524,11 @@ msgstr ""
 "Вибрати дію, яку має бути виконано, коли художник клацає і перетягує "
 "вказівник полотном."
 
-#: ../../reference_manual/tools/fill.rst:109
+#: ../../reference_manual/tools/fill.rst:157
 msgid "Fill Regions of Any Color"
 msgstr "Заповнити області будь-якого кольору"
 
-#: ../../reference_manual/tools/fill.rst:110
+#: ../../reference_manual/tools/fill.rst:158
 msgid ""
 "With this option selected, the tool will fill any region along the path "
 "described by the pointer while dragging, regardless of its color."
@@ -347,15 +537,7 @@ msgstr ""
 "контуру, описаного вказівником під час перетягування, незалежно від її "
 "кольору."
 
-#: ../../reference_manual/tools/fill.rst:111
-msgid "Multiple Fill"
-msgstr "Кратне заповнення"
-
-#: ../../reference_manual/tools/fill.rst:111
-msgid "Fill Regions of Similar Colors"
-msgstr "Заповнення ділянок подібних кольорів"
-
-#: ../../reference_manual/tools/fill.rst:112
+#: ../../reference_manual/tools/fill.rst:160
 msgid ""
 "With this option selected, the tool will fill the regions along path "
 "described by the pointer while dragging that have the same color as the "
@@ -364,6 +546,15 @@ msgstr ""
 "Якщо вибрано цей варіант, інструмент заповнить області уздовж контуру, "
 "описаного вказівником під час перетягування, які мають той самий колір, що і "
 "перша заповнена область."
+
+#~ msgid "What to Fill"
+#~ msgstr "Об'єкт заповнення"
+
+#~ msgid "Fill with"
+#~ msgstr "Заповнення"
+
+#~ msgid "Multiple Fill"
+#~ msgstr "Кратне заповнення"
 
 #~ msgid "Fast Mode"
 #~ msgstr "Швидкий режим"

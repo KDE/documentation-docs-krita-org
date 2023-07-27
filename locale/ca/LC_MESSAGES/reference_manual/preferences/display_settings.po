@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: websites-docs-krita-org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-10 00:40+0000\n"
+"POT-Creation-Date: 2023-07-26 00:40+0000\n"
 "PO-Revision-Date: 2023-02-26 17:35+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -31,11 +31,17 @@ msgstr "Configuració de la pantalla al Krita."
 
 #: ../../reference_manual/preferences/display_settings.rst:12
 #: ../../reference_manual/preferences/display_settings.rst:24
+#: ../../reference_manual/preferences/display_settings.rst:46
+msgid "Canvas Graphics Acceleration"
+msgstr "Acceleració dels gràfics del llenç"
+
+#: ../../reference_manual/preferences/display_settings.rst:12
+#: ../../reference_manual/preferences/display_settings.rst:41
 msgid "OpenGL"
 msgstr "OpenGL"
 
 #: ../../reference_manual/preferences/display_settings.rst:12
-#: ../../reference_manual/preferences/display_settings.rst:82
+#: ../../reference_manual/preferences/display_settings.rst:95
 msgid "Canvas Border"
 msgstr "Vora del llenç"
 
@@ -50,10 +56,6 @@ msgstr "Opcions de configuració"
 #: ../../reference_manual/preferences/display_settings.rst:12
 msgid "Transparency Checkers"
 msgstr "Quadres d'escacs de transparència"
-
-#: ../../reference_manual/preferences/display_settings.rst:12
-msgid "Canvas Graphics Acceleration"
-msgstr "Acceleració dels gràfics del llenç"
 
 #: ../../reference_manual/preferences/display_settings.rst:12
 msgid "Display"
@@ -73,14 +75,14 @@ msgstr ""
 "Aquí hi ha diverses opcions de configuració que es poden editar per a la "
 "representació del Krita."
 
-#: ../../reference_manual/preferences/display_settings.rst:26
-msgid ""
-"**For Krita 3.3 or later: Reworded as \"*Canvas Graphics Acceleration*\"**"
-msgstr ""
-"**Per al Krita 3.3 o posterior: reanomenat com a «*Acceleració dels gràfics "
-"del llenç*»**"
-
 #: ../../reference_manual/preferences/display_settings.rst:28
+msgid ""
+"In Krita 3.2 and before, this used to be named :guilabel:`OpenGL`, with the "
+"checkbox for :guilabel:`Canvas Graphics Acceleration` being named :guilabel:"
+"`Enable OpenGL`."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:30
 msgid ""
 "OpenGL is a bit of code especially for graphics cards. Graphics cards a "
 "dedicate piece of hardware for helping your computer out with graphics "
@@ -92,13 +94,20 @@ msgstr ""
 "ordinador amb els càlculs gràfics, el Krita l'empra molt. Tots els "
 "ordinadors moderns tenen targetes gràfiques."
 
-#: ../../reference_manual/preferences/display_settings.rst:30
+#: ../../reference_manual/preferences/display_settings.rst:32
+#, fuzzy
+#| msgid ""
+#| "**For Krita 3.3 or later:** On Windows, Krita also supports using "
+#| "Direct3D instead with the help of the ANGLE library. ANGLE works by "
+#| "converting the OpenGL functions that Krita makes use of to the equivalent "
+#| "in Direct3D. It may (or may not) be slower than native OpenGL, but it has "
+#| "better compatibility with typical Windows graphics drivers."
 msgid ""
-"**For Krita 3.3 or later:** On Windows, Krita also supports using Direct3D "
-"instead with the help of the ANGLE library. ANGLE works by converting the "
-"OpenGL functions that Krita makes use of to the equivalent in Direct3D. It "
-"may (or may not) be slower than native OpenGL, but it has better "
-"compatibility with typical Windows graphics drivers."
+"On Windows, Krita also supports using Direct3D instead with the help of the "
+"ANGLE library. ANGLE works by converting the OpenGL functions that Krita "
+"makes use of to the equivalent in Direct3D. It may (or may not) be slower "
+"than native OpenGL, but it has better compatibility with typical Windows "
+"graphics drivers."
 msgstr ""
 "**Per al Krita 3.3 o posterior:** Al Windows, el Krita també admet l'ús de "
 "Direct3D amb l'ajuda de la biblioteca ANGLE. ANGLE funciona convertint les "
@@ -106,15 +115,7 @@ msgstr ""
 "(o no) ser més lent que OpenGL natiu, però té una millor compatibilitat amb "
 "els controladors de gràfics típics de Windows."
 
-#: ../../reference_manual/preferences/display_settings.rst:32
-msgid ""
-"Enable OpenGL **(For Krita 3.3 or later: Reworded as *Canvas Graphics "
-"Acceleration*)**"
-msgstr ""
-"Activa l'OpenGL **(Per al Krita 3.3 o posterior: reanomenat com a "
-"*Acceleració dels gràfics del llenç*)**"
-
-#: ../../reference_manual/preferences/display_settings.rst:33
+#: ../../reference_manual/preferences/display_settings.rst:35
 msgid ""
 "Selecting this checkbox will enable the OpenGL / ANGLE canvas drawing mode. "
 "With a decent graphics card this should give faster feedback on brushes and "
@@ -127,44 +128,48 @@ msgstr ""
 "del llenç com Gira, Zoom i Desplaça haurien de ser considerablement més "
 "ràpides."
 
-#: ../../reference_manual/preferences/display_settings.rst:35
-msgid "For Krita 3.3 or later:"
-msgstr "Per al Krita 3.3 o posterior:"
-
-#: ../../reference_manual/preferences/display_settings.rst:35
-msgid "Renderer"
-msgstr "Renderitzador"
-
-#: ../../reference_manual/preferences/display_settings.rst:36
-msgid ""
-"*On Windows:* You can switch between native OpenGL or ANGLE Direct3D 11 "
-"rendering. The usual recommendation is to leave it as \"Auto\", which Krita "
-"will decide the best to use based on some internal compatibility checking. "
-"Changes to this option require a restart of Krita to take effect."
-msgstr ""
-"*Al Windows*: podreu canviar entre la representació nativa de l'OpenGL o "
-"ANGLE per a Direct3D 11. La recomanació habitual és deixar-ho a «Automàtic», "
-"el Krita decidirà quin és el millor per a emprar basant-se en algunes "
-"verificacions internes de compatibilitat. Els canvis en aquesta opció "
-"requereixen un reinici del Krita perquè tingui efecte."
-
 #: ../../reference_manual/preferences/display_settings.rst:37
-msgid "Use Texture Buffer"
-msgstr "Usa la memòria intermèdia de textures"
-
-#: ../../reference_manual/preferences/display_settings.rst:38
-msgid ""
-"This setting utilizes the graphics card's buffering capabilities to speed "
-"things up a bit. Although for now, this feature may be broken on some AMD/"
-"Radeon cards and may work fine on some Intel graphics cards."
+msgid "Renderer (Requires Restart)"
 msgstr ""
-"Aquesta opció de configuració utilitza les capacitats d'emmagatzematge en "
-"memòria intermèdia de la targeta gràfica per a accelerar una mica les coses. "
-"Encara que per ara, aquesta característica pot estar malmesa en algunes "
-"targetes gràfiques AMD/Radeon i pot funcionar bé en algunes targetes "
-"gràfiques Intel."
+
+#: ../../reference_manual/preferences/display_settings.rst:39
+msgid "Auto (Recommended)"
+msgstr ""
 
 #: ../../reference_manual/preferences/display_settings.rst:40
+msgid ""
+"Krita will decide the best renderer to use based on some internal "
+"compatibility checking."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:42
+msgid "Krita will use OpenGL."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:43
+#, fuzzy
+#| msgid "OpenGL"
+msgid "OpenGL ES"
+msgstr "OpenGL"
+
+#: ../../reference_manual/preferences/display_settings.rst:44
+msgid ""
+"Krita will use OpenGl ES, which is a subset of OpenGL. Using this can be "
+"useful for less powerful devices."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:46
+msgid "ANGLE Direct3D (Windows Only)"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:46
+msgid ""
+"Krita will use the ANGLE compatibility layer to convert the OpenGL calls to "
+"Direct3D calls. Wether this works better than regular OpenGL depends on the "
+"graphics drivers of the computer."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:49
 msgid ""
 "The user can choose which scaling mode to use while zooming the canvas. The "
 "choice here only affects the way the image is displayed during canvas "
@@ -176,11 +181,11 @@ msgstr ""
 "operacions en el llenç i no tindrà cap efecte en la forma en què el Krita "
 "ajustarà la imatge quan s'apliqui una transformació."
 
-#: ../../reference_manual/preferences/display_settings.rst:42
+#: ../../reference_manual/preferences/display_settings.rst:51
 msgid "Nearest Neighbour"
 msgstr "Proximitat"
 
-#: ../../reference_manual/preferences/display_settings.rst:43
+#: ../../reference_manual/preferences/display_settings.rst:52
 msgid ""
 "This is the fastest and crudest filtering method. While fast, this results "
 "in a large number of artifacts - 'blockiness' during magnification, and "
@@ -190,11 +195,11 @@ msgstr ""
 "dona com a resultat una gran quantitat de defectes -«efecte pixelat» durant "
 "l'ampliació i, pixelat i reflexos durant la reducció-."
 
-#: ../../reference_manual/preferences/display_settings.rst:44
+#: ../../reference_manual/preferences/display_settings.rst:53
 msgid "Bilinear Filtering"
 msgstr "Filtratge bilineal"
 
-#: ../../reference_manual/preferences/display_settings.rst:45
+#: ../../reference_manual/preferences/display_settings.rst:54
 msgid ""
 "This is the next step up. This removes the 'blockiness' seen during "
 "magnification and gives a smooth looking result. For most purposes this "
@@ -205,23 +210,23 @@ msgstr ""
 "finalitats, aquesta hauria de ser una bona compensació entre velocitat i "
 "qualitat."
 
-#: ../../reference_manual/preferences/display_settings.rst:46
+#: ../../reference_manual/preferences/display_settings.rst:55
 msgid "Trilinear Filtering"
 msgstr "Filtratge trilineal"
 
-#: ../../reference_manual/preferences/display_settings.rst:47
+#: ../../reference_manual/preferences/display_settings.rst:56
 msgid "This should give a little better result than Bilinear Filtering."
 msgstr "Hauria de donar un resultat una mica millor que el Filtratge bilineal."
 
-#: ../../reference_manual/preferences/display_settings.rst:49
+#: ../../reference_manual/preferences/display_settings.rst:57
 msgid "Scaling Mode"
 msgstr "Mode de l'escalat"
 
-#: ../../reference_manual/preferences/display_settings.rst:49
+#: ../../reference_manual/preferences/display_settings.rst:57
 msgid "High Quality Filtering"
 msgstr "Filtratge d'alta qualitat"
 
-#: ../../reference_manual/preferences/display_settings.rst:49
+#: ../../reference_manual/preferences/display_settings.rst:58
 msgid ""
 "Only available when your graphics card supports OpenGL 3.0. As the name "
 "suggests, this setting provides the best looking image during canvas "
@@ -231,17 +236,43 @@ msgstr ""
 "3.0. Com el seu nom indica, aquesta opció de configuració proporciona la "
 "millor imatge durant les operacions en el llenç."
 
-#: ../../reference_manual/preferences/display_settings.rst:54
+#: ../../reference_manual/preferences/display_settings.rst:59
+msgid "Use Texture Buffer"
+msgstr "Usa la memòria intermèdia de textures"
+
+#: ../../reference_manual/preferences/display_settings.rst:60
+msgid ""
+"This setting utilizes the graphics card's buffering capabilities to speed "
+"things up a bit. Although for now, this feature may be broken on some AMD/"
+"Radeon cards and may work fine on some Intel graphics cards."
+msgstr ""
+"Aquesta opció de configuració utilitza les capacitats d'emmagatzematge en "
+"memòria intermèdia de la targeta gràfica per a accelerar una mica les coses. "
+"Encara que per ara, aquesta característica pot estar malmesa en algunes "
+"targetes gràfiques AMD/Radeon i pot funcionar bé en algunes targetes "
+"gràfiques Intel."
+
+#: ../../reference_manual/preferences/display_settings.rst:62
+msgid "Use Large Pixmap Cache"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:62
+msgid ""
+"This should be enabled if you experience artifacts with the :ref:`assistants "
+"<painting_with_assistants>`."
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:67
 msgid "HDR"
 msgstr "HDR"
 
-#: ../../reference_manual/preferences/display_settings.rst:58
+#: ../../reference_manual/preferences/display_settings.rst:71
 msgid "These settings are only available when using Windows."
 msgstr ""
 "Aquestes opcions de configuració només estan disponibles quan utilitzeu "
 "Windows."
 
-#: ../../reference_manual/preferences/display_settings.rst:60
+#: ../../reference_manual/preferences/display_settings.rst:73
 msgid ""
 "Since 4.2 Krita can not just edit floating point images, but also render "
 "them on screen in a way that an HDR capable setup can show them as HDR "
@@ -251,7 +282,7 @@ msgstr ""
 "flotant, sinó també renderitzar-les a la pantalla de manera que una "
 "configuració HDR sigui capaç de mostrar-les com a imatges HDR."
 
-#: ../../reference_manual/preferences/display_settings.rst:62
+#: ../../reference_manual/preferences/display_settings.rst:75
 msgid ""
 "The HDR settings will show you the display format that Krita can handle, and "
 "the current output format. You will want to set the preferred output format "
@@ -262,11 +293,11 @@ msgstr ""
 "establir el format preferit de la sortida en el més proper al que la vostra "
 "pantalla pot gestionar per a utilitzar-la completament."
 
-#: ../../reference_manual/preferences/display_settings.rst:64
+#: ../../reference_manual/preferences/display_settings.rst:77
 msgid "Display Format"
 msgstr "Format de visualització"
 
-#: ../../reference_manual/preferences/display_settings.rst:65
+#: ../../reference_manual/preferences/display_settings.rst:78
 msgid ""
 "The format your display is in by default. If this isn't higher than 8bit, "
 "there's a good chance your monitor is not an HDR monitor as far as Krita can "
@@ -281,19 +312,19 @@ msgstr ""
 "HDR, o les opcions de configuració de l'HDR del sistema estan configurades "
 "correctament."
 
-#: ../../reference_manual/preferences/display_settings.rst:66
+#: ../../reference_manual/preferences/display_settings.rst:79
 msgid "Current Output format"
 msgstr "Format de sortida actual"
 
-#: ../../reference_manual/preferences/display_settings.rst:67
+#: ../../reference_manual/preferences/display_settings.rst:80
 msgid "What Krita is rendering the canvas to currently."
 msgstr "El que Krita està representant el llenç actualment."
 
-#: ../../reference_manual/preferences/display_settings.rst:69
+#: ../../reference_manual/preferences/display_settings.rst:82
 msgid "Preferred Output Format"
 msgstr "Format de sortida preferit"
 
-#: ../../reference_manual/preferences/display_settings.rst:69
+#: ../../reference_manual/preferences/display_settings.rst:82
 msgid ""
 "Which surface type you prefer. This should be ideally the closest to the "
 "display format, but perhaps due to driver issues you might want to try other "
@@ -304,11 +335,13 @@ msgstr ""
 "controlador, és possible que vulgueu provar altres formats. Això requereix "
 "un reinici."
 
-#: ../../reference_manual/preferences/display_settings.rst:72
-msgid "Transparency Checkerboard"
-msgstr "Transparència en escacs"
+#: ../../reference_manual/preferences/display_settings.rst:85
+#, fuzzy
+#| msgid "Canvas Graphics Acceleration"
+msgid "Canvas Decorations"
+msgstr "Acceleració dels gràfics del llenç"
 
-#: ../../reference_manual/preferences/display_settings.rst:74
+#: ../../reference_manual/preferences/display_settings.rst:88
 msgid ""
 "Krita supports layer transparency. Of course, the nasty thing is that "
 "transparency can't be seen. So to indicate transparency at the lowest layer, "
@@ -319,11 +352,11 @@ msgstr ""
 "transparència més baixa en la capa, utilitzarem un patró de quadres. Aquesta "
 "part permet configurar-ho."
 
-#: ../../reference_manual/preferences/display_settings.rst:76
+#: ../../reference_manual/preferences/display_settings.rst:90
 msgid "Size"
 msgstr "Mida"
 
-#: ../../reference_manual/preferences/display_settings.rst:77
+#: ../../reference_manual/preferences/display_settings.rst:91
 msgid ""
 "This sets the size of the checkers which show up in transparent parts of an "
 "image."
@@ -331,18 +364,23 @@ msgstr ""
 "Estableix la mida dels quadres d'escacs que es mostren a les parts "
 "transparents d'una imatge."
 
-#: ../../reference_manual/preferences/display_settings.rst:79
-#: ../../reference_manual/preferences/display_settings.rst:84
-#: ../../reference_manual/preferences/display_settings.rst:94
-#: ../../reference_manual/preferences/display_settings.rst:106
+#: ../../reference_manual/preferences/display_settings.rst:92
+#, fuzzy
+#| msgid "Transparency Checkerboard"
+msgid "Transparency Checkerboard:"
+msgstr "Transparència en escacs"
+
+#: ../../reference_manual/preferences/display_settings.rst:92
+#: ../../reference_manual/preferences/display_settings.rst:95
+#: ../../reference_manual/preferences/display_settings.rst:102
 msgid "Color"
 msgstr "Color"
 
-#: ../../reference_manual/preferences/display_settings.rst:79
+#: ../../reference_manual/preferences/display_settings.rst:93
 msgid "The user can set the colors for the checkers over here."
 msgstr "L'usuari podrà establir aquí els colors per als quadres d'escacs."
 
-#: ../../reference_manual/preferences/display_settings.rst:85
+#: ../../reference_manual/preferences/display_settings.rst:96
 msgid ""
 "The user can select the color for the canvas i.e. the space beyond a "
 "document's boundaries."
@@ -350,46 +388,7 @@ msgstr ""
 "L'usuari podrà seleccionar el color per al llenç, és a dir, l'espai més "
 "enllà dels límits d'un document."
 
-#: ../../reference_manual/preferences/display_settings.rst:87
-msgid "Hide Scrollbars"
-msgstr "Oculta les barres de desplaçament"
-
-#: ../../reference_manual/preferences/display_settings.rst:87
-msgid "Selecting this will hide the scrollbars in all view modes."
-msgstr ""
-"En seleccionar-la, s'ocultaran les barres de desplaçament en tots els modes "
-"de vista."
-
-#: ../../reference_manual/preferences/display_settings.rst:90
-msgid "Selection Overlay"
-msgstr "Superposició de la selecció"
-
-#: ../../reference_manual/preferences/display_settings.rst:92
-msgid ""
-"Set the color of the alternate :ref:`Selection <selections_basics>` display "
-"mode. This mode is typically used when making complex selections."
-msgstr ""
-"Estableix el color del mode de visualització alternatiu :ref:`Selecció "
-"<selections_basics>`. Aquest mode s'utilitza normalment quan es fan "
-"seleccions complexes."
-
-#: ../../reference_manual/preferences/display_settings.rst:95
-msgid "Color of the overlay."
-msgstr "El color de la superposició."
-
-#: ../../reference_manual/preferences/display_settings.rst:97
-msgid "Opacity"
-msgstr "Opacitat"
-
-#: ../../reference_manual/preferences/display_settings.rst:97
-msgid "How opaque the overlay is."
-msgstr "Com és d'opaca la superposició."
-
 #: ../../reference_manual/preferences/display_settings.rst:100
-msgid "Pixel Grid"
-msgstr "Quadrícula de píxels"
-
-#: ../../reference_manual/preferences/display_settings.rst:104
 msgid ""
 "This allows configuring an automatic pixel-by-pixel grid, which is very "
 "useful for doing pixel art."
@@ -397,15 +396,19 @@ msgstr ""
 "Permet configurar una quadrícula automàtica de píxel per píxel, la qual és "
 "molt útil per fer art de píxels."
 
-#: ../../reference_manual/preferences/display_settings.rst:107
+#: ../../reference_manual/preferences/display_settings.rst:103
 msgid "The color of the grid."
 msgstr "El color de la quadrícula."
 
-#: ../../reference_manual/preferences/display_settings.rst:109
+#: ../../reference_manual/preferences/display_settings.rst:105
+msgid "Pixel Grid"
+msgstr "Quadrícula de píxels"
+
+#: ../../reference_manual/preferences/display_settings.rst:105
 msgid "Start Showing at"
 msgstr "Comença la visualització des de"
 
-#: ../../reference_manual/preferences/display_settings.rst:109
+#: ../../reference_manual/preferences/display_settings.rst:105
 msgid ""
 "This determines the zoom level at which the pixel grid starts showing, as "
 "showing it when the image is zoomed out a lot will make the grid overwhelm "
@@ -415,24 +418,70 @@ msgstr ""
 "mostrar-se, ja que en mostrar-la quan la imatge s'allunya molt, la "
 "quadrícula sobrepassarà la imatge i, per tant, serà contraproduent."
 
-#: ../../reference_manual/preferences/display_settings.rst:112
+#: ../../reference_manual/preferences/display_settings.rst:108
+#, fuzzy
+#| msgid "Opacity"
+msgid "Outline Opacity"
+msgstr "Opacitat"
+
+#: ../../reference_manual/preferences/display_settings.rst:109
+#, fuzzy
+#| msgid ""
+#| "Set the color of the alternate :ref:`Selection <selections_basics>` "
+#| "display mode. This mode is typically used when making complex selections."
+msgid ""
+"Set the opacity of the regular :ref:`Selection <selections_basics>` display "
+"mode."
+msgstr ""
+"Estableix el color del mode de visualització alternatiu :ref:`Selecció "
+"<selections_basics>`. Aquest mode s'utilitza normalment quan es fan "
+"seleccions complexes."
+
+#: ../../reference_manual/preferences/display_settings.rst:110
+msgid "Overlay Color"
+msgstr ""
+
+#: ../../reference_manual/preferences/display_settings.rst:111
+msgid ""
+"Set the color of the alternate :ref:`Selection <selections_basics>` display "
+"mode. This mode is typically used when making complex selections."
+msgstr ""
+"Estableix el color del mode de visualització alternatiu :ref:`Selecció "
+"<selections_basics>`. Aquest mode s'utilitza normalment quan es fan "
+"seleccions complexes."
+
+#: ../../reference_manual/preferences/display_settings.rst:113
+msgid "Selection Overlay"
+msgstr "Superposició de la selecció"
+
+#: ../../reference_manual/preferences/display_settings.rst:113
+msgid "Opacity"
+msgstr "Opacitat"
+
+#: ../../reference_manual/preferences/display_settings.rst:113
+#, fuzzy
+#| msgid "How opaque the overlay is."
+msgid "How opaque the selection overlay is."
+msgstr "Com és d'opaca la superposició."
+
+#: ../../reference_manual/preferences/display_settings.rst:116
 msgid "Miscellaneous"
 msgstr "Miscel·lània"
 
 # skip-rule: punctuation-period
-#: ../../reference_manual/preferences/display_settings.rst:114
+#: ../../reference_manual/preferences/display_settings.rst:118
 msgid "Hide canvas scrollbars."
 msgstr "Oculta les barres de desplaçament del llenç."
 
-#: ../../reference_manual/preferences/display_settings.rst:115
+#: ../../reference_manual/preferences/display_settings.rst:119
 msgid "Hides the scrollbars on the canvas."
 msgstr "Ocultarà les barres de desplaçament sobre el llenç."
 
-#: ../../reference_manual/preferences/display_settings.rst:116
+#: ../../reference_manual/preferences/display_settings.rst:120
 msgid "Enable Curve Anti-Aliasing"
 msgstr "Activa la corba antialiàsing"
 
-#: ../../reference_manual/preferences/display_settings.rst:117
+#: ../../reference_manual/preferences/display_settings.rst:121
 msgid ""
 "This allows anti-aliasing on previewing curves, like the ones for the circle "
 "tool, or the path tool."
@@ -440,20 +489,20 @@ msgstr ""
 "Permet l'antialiàsing sobre la vista prèvia de les corbes, com les de l'eina "
 "de cercle o l'eina de camí."
 
-#: ../../reference_manual/preferences/display_settings.rst:118
+#: ../../reference_manual/preferences/display_settings.rst:122
 msgid "Hide Layer thumbnail popup"
 msgstr "Oculta la finestra emergent de miniatures de la capa"
 
-#: ../../reference_manual/preferences/display_settings.rst:119
+#: ../../reference_manual/preferences/display_settings.rst:123
 msgid "This disables the thumbnail that you get when hovering over a layer."
 msgstr ""
 "Inhabilitarà la miniatura que obtindríeu en passar per sobre d'una capa."
 
-#: ../../reference_manual/preferences/display_settings.rst:120
+#: ../../reference_manual/preferences/display_settings.rst:124
 msgid "Color Channels in Color"
 msgstr "Canals de color en color"
 
-#: ../../reference_manual/preferences/display_settings.rst:121
+#: ../../reference_manual/preferences/display_settings.rst:125
 msgid ""
 "This configures whether the image display should be colored when only a "
 "single channel is selected in the channels docker."
@@ -461,11 +510,11 @@ msgstr ""
 "Configura si se li ha de donar color a la visualització de la imatge quan "
 "només se selecciona un sol canal a l'acoblador Canals."
 
-#: ../../reference_manual/preferences/display_settings.rst:122
+#: ../../reference_manual/preferences/display_settings.rst:126
 msgid "Enable Selection Outline Anti-Aliasing"
 msgstr "Activa la selecció de contorn antialiàsing"
 
-#: ../../reference_manual/preferences/display_settings.rst:123
+#: ../../reference_manual/preferences/display_settings.rst:127
 msgid ""
 "This allows automatic anti-aliasing on selection. It makes the selection "
 "feel less jaggy and more precise."
@@ -473,7 +522,7 @@ msgstr ""
 "Permet l'antialiàsing automàtic sobre la selecció. Farà que l'aspecte de la "
 "selecció sigui menys irregular i més precís."
 
-#: ../../reference_manual/preferences/display_settings.rst:125
+#: ../../reference_manual/preferences/display_settings.rst:129
 msgid ""
 "When selected the checkers will move along with opaque elements of an image "
 "during canvas Panning, Zooming, etc.  Otherwise the checkers remain "
@@ -483,3 +532,46 @@ msgstr ""
 "elements opacs d'una imatge durant el Desplaçament, Zoom, etc. del Llenç. "
 "Altrament, els quadres d'escacs romandran estacionaris i només es mouran les "
 "parts opaques d'una imatge."
+
+#~ msgid ""
+#~ "**For Krita 3.3 or later: Reworded as \"*Canvas Graphics Acceleration*\"**"
+#~ msgstr ""
+#~ "**Per al Krita 3.3 o posterior: reanomenat com a «*Acceleració dels "
+#~ "gràfics del llenç*»**"
+
+#~ msgid ""
+#~ "Enable OpenGL **(For Krita 3.3 or later: Reworded as *Canvas Graphics "
+#~ "Acceleration*)**"
+#~ msgstr ""
+#~ "Activa l'OpenGL **(Per al Krita 3.3 o posterior: reanomenat com a "
+#~ "*Acceleració dels gràfics del llenç*)**"
+
+#~ msgid "For Krita 3.3 or later:"
+#~ msgstr "Per al Krita 3.3 o posterior:"
+
+#~ msgid "Renderer"
+#~ msgstr "Renderitzador"
+
+#~ msgid ""
+#~ "*On Windows:* You can switch between native OpenGL or ANGLE Direct3D 11 "
+#~ "rendering. The usual recommendation is to leave it as \"Auto\", which "
+#~ "Krita will decide the best to use based on some internal compatibility "
+#~ "checking. Changes to this option require a restart of Krita to take "
+#~ "effect."
+#~ msgstr ""
+#~ "*Al Windows*: podreu canviar entre la representació nativa de l'OpenGL o "
+#~ "ANGLE per a Direct3D 11. La recomanació habitual és deixar-ho a "
+#~ "«Automàtic», el Krita decidirà quin és el millor per a emprar basant-se "
+#~ "en algunes verificacions internes de compatibilitat. Els canvis en "
+#~ "aquesta opció requereixen un reinici del Krita perquè tingui efecte."
+
+#~ msgid "Hide Scrollbars"
+#~ msgstr "Oculta les barres de desplaçament"
+
+#~ msgid "Selecting this will hide the scrollbars in all view modes."
+#~ msgstr ""
+#~ "En seleccionar-la, s'ocultaran les barres de desplaçament en tots els "
+#~ "modes de vista."
+
+#~ msgid "Color of the overlay."
+#~ msgstr "El color de la superposició."

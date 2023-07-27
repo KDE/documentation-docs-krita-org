@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-10 00:40+0000\n"
+"POT-Creation-Date: 2023-07-26 00:40+0000\n"
 "PO-Revision-Date: 2022-08-19 15:37+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -174,7 +174,7 @@ msgstr ""
 "actuele as van de uiteindelijke ellips."
 
 #: ../../user_manual/painting_with_assistants.rst:72
-#: ../../user_manual/painting_with_assistants.rst:172
+#: ../../user_manual/painting_with_assistants.rst:186
 msgid "Perspective"
 msgstr "Perspectief"
 
@@ -413,17 +413,25 @@ msgstr ""
 "gebruiken in randgevallen zoals panorama's."
 
 #: ../../user_manual/painting_with_assistants.rst:151
-#: ../../user_manual/painting_with_assistants.rst:221
+#: ../../user_manual/painting_with_assistants.rst:235
 msgid "2 Point Perspective"
 msgstr "2 punten-perspectief"
 
 #: ../../user_manual/painting_with_assistants.rst:155
+#, fuzzy
+#| msgid ""
+#| "This assistant simplifies the setup of a two point perspective by putting "
+#| "the two vanishing points and the parallel vertical ruler into one single "
+#| "assistant. This allows it to draw a grid of squares. It requires 3 points "
+#| "at minimum: 2 for perspective, and the final for the mid-point of the "
+#| "vanishing points, which controls how the grid is drawn."
 msgid ""
-"This assistant simplifies the setup of a two point perspective by putting "
-"the two vanishing points and the parallel vertical ruler into one single "
-"assistant. This allows it to draw a grid of squares. It requires 3 points at "
-"minimum: 2 for perspective, and the final for the mid-point of the vanishing "
-"points, which controls how the grid is drawn."
+"This assistant simplifies the setup of a two point perspective by combining "
+"the functions of the :ref:`assistant_vanishing_point` assistant and the "
+"parallel vertical :ref:`assistant_ruler` into one single assistant. "
+"Additionally, it displays accurate square grid planes of the configured "
+"perspective, which can help you visually tune the intensity of the "
+"perspective distortion."
 msgstr ""
 "Deze assistent maakt het instellen van een tweepunten perspectief eenvoudig "
 "door het opzetten van de twee verdwijnpunten en de verticale liniaal in een "
@@ -433,10 +441,20 @@ msgstr ""
 "regelt hoe het raster wordt getekend."
 
 #: ../../user_manual/painting_with_assistants.rst:157
+msgid ""
+"It requires 3 points to achieve this: the first 2 of which are the vanishing "
+"points, while the third point is used to determine the *center of vision*, "
+"which affects how the grid is displayed. In two point perspective the "
+"*center of vision* is a point on the horizon line, so the assistant displays "
+"a small notch to indicate its location. Generally, the center of vision is "
+"also where the main focus of an illustration is."
+msgstr ""
+
+#: ../../user_manual/painting_with_assistants.rst:159
 msgid "Density"
 msgstr "Dichtheid"
 
-#: ../../user_manual/painting_with_assistants.rst:158
+#: ../../user_manual/painting_with_assistants.rst:160
 msgid ""
 "An extra option in the tool options, this controls how dense the grid is."
 msgstr ""
@@ -444,11 +462,11 @@ msgstr ""
 "bij elkaar staan."
 
 # in menu "Vertical Ruler"vertalen naar "Verticale liniaal"
-#: ../../user_manual/painting_with_assistants.rst:160
+#: ../../user_manual/painting_with_assistants.rst:162
 msgid "Enable Vertical Ruler"
 msgstr "Verticale liniaal inschakelen"
 
-#: ../../user_manual/painting_with_assistants.rst:160
+#: ../../user_manual/painting_with_assistants.rst:162
 msgid ""
 "This allows you to disable the vertical ruler, so that the assistant is only "
 "two vanishing points and a grid."
@@ -456,11 +474,11 @@ msgstr ""
 "Hiermee kunt u de verticale liniaal uitschakelen, zodat de assistent alleen "
 "bestaat uit twee verdwijnpunten en een raster."
 
-#: ../../user_manual/painting_with_assistants.rst:164
+#: ../../user_manual/painting_with_assistants.rst:166
 msgid ".. image:: images/assistants/Assistants_2_pointperspective_03.png"
 msgstr ".. image:: images/assistants/Assistants_2_pointperspective_03.png"
 
-#: ../../user_manual/painting_with_assistants.rst:164
+#: ../../user_manual/painting_with_assistants.rst:166
 msgid ""
 "In the above image, a two point perspective with an area limiter is enough "
 "to draw an indoor area. The assistant is colored blue here."
@@ -469,11 +487,52 @@ msgstr ""
 "voldoende om een binnenruimte te tekenen. De assistent is hier blauw "
 "gekleurd."
 
-#: ../../user_manual/painting_with_assistants.rst:167
+#: ../../user_manual/painting_with_assistants.rst:169
+msgid "Tips"
+msgstr ""
+
+#: ../../user_manual/painting_with_assistants.rst:171
+msgid ""
+"You can hold specific key combinations while moving a vanishing point to "
+"activate the following behaviours:"
+msgstr ""
+
+#: ../../user_manual/painting_with_assistants.rst:173
+msgid ":kbd:`Alt`"
+msgstr ""
+
+#: ../../user_manual/painting_with_assistants.rst:174
+#, fuzzy
+#| msgid "The vanishing point assistant also shows several general lines."
+msgid "The vanishing point will only move along the horizon line"
+msgstr "Het verdwijnpuntassistent. toont ook verschillende algemene lijnen."
+
+#: ../../user_manual/painting_with_assistants.rst:175
+msgid ":kbd:`Ctrl`"
+msgstr ""
+
+#: ../../user_manual/painting_with_assistants.rst:176
+msgid ""
+"The grid will rotate along with the vanishing point on the horizon line. "
+"This allows you to easily draw several two-point objects that belong in the "
+"same scene at various angles to each other."
+msgstr ""
+
+#: ../../user_manual/painting_with_assistants.rst:178
+msgid ":kbd:`Ctrl+Shift`"
+msgstr ""
+
+#: ../../user_manual/painting_with_assistants.rst:178
+msgid ""
+"Both vanishing points move to change the visual size of the grid's *field of "
+"view*."
+msgstr ""
+
+#: ../../user_manual/painting_with_assistants.rst:181
 msgid "Tutorials"
 msgstr "Handleidingen"
 
-#: ../../user_manual/painting_with_assistants.rst:169
+#: ../../user_manual/painting_with_assistants.rst:183
 msgid ""
 "Check out this in depth discussion and tutorial on https://www.youtube.com/"
 "watch?v=OhEv2pw3EuI"
@@ -481,16 +540,16 @@ msgstr ""
 "Bekijk deze uitgebreide discussie en instructie op https://www.youtube.com/"
 "watch?v=OhEv2pw3EuI"
 
-#: ../../user_manual/painting_with_assistants.rst:172
+#: ../../user_manual/painting_with_assistants.rst:186
 msgid "Technical Drawing"
 msgstr "Technische tekening"
 
-#: ../../user_manual/painting_with_assistants.rst:175
+#: ../../user_manual/painting_with_assistants.rst:189
 msgid "Setting up Krita for technical drawing-like perspectives"
 msgstr ""
 "Krita instellen voor een technische tekening zoals een perspectief tekening."
 
-#: ../../user_manual/painting_with_assistants.rst:177
+#: ../../user_manual/painting_with_assistants.rst:191
 msgid ""
 "So now that you've seen the wide range of drawing assistants that Krita "
 "offers, here is an example of how using these assistants you can set up "
@@ -500,7 +559,7 @@ msgstr ""
 "Krita aanwezig zijn, is hier een voorbeeld van hoe u deze assistenten kan "
 "kan gebruiken voor het instellen van Krita voor een technische tekening."
 
-#: ../../user_manual/painting_with_assistants.rst:179
+#: ../../user_manual/painting_with_assistants.rst:193
 msgid ""
 "This tutorial below should give you an idea of how to set up the assistants "
 "for specific types of technical views."
@@ -508,7 +567,7 @@ msgstr ""
 "Deze handleiding hieronder zou u een idee moeten geven hoe u de assistenten "
 "moet instellen voor specifieke typen tekenweergaven."
 
-#: ../../user_manual/painting_with_assistants.rst:181
+#: ../../user_manual/painting_with_assistants.rst:195
 msgid ""
 "If you want to instead do the true projection, check out :ref:`the "
 "projection category <cat_projection>`."
@@ -516,11 +575,11 @@ msgstr ""
 "Als u in plaats daarvan een echte projectie wilt uitvoeren, bestudeer dan :"
 "ref:`de projectie categorie <cat_projection>`."
 
-#: ../../user_manual/painting_with_assistants.rst:184
+#: ../../user_manual/painting_with_assistants.rst:198
 msgid "Orthographic"
 msgstr "Orthographisch"
 
-#: ../../user_manual/painting_with_assistants.rst:186
+#: ../../user_manual/painting_with_assistants.rst:200
 msgid ""
 "Orthographic is a mode where you try to look at something from the left or "
 "the front. Typically, you try to keep everything in exact scale with each "
@@ -531,7 +590,7 @@ msgstr ""
 "houden, in tegenstelling tot een perspectief vervorming."
 
 # controleer in menu "parallel ruler" naar "perspectief as"
-#: ../../user_manual/painting_with_assistants.rst:188
+#: ../../user_manual/painting_with_assistants.rst:202
 msgid ""
 "The key assistant you want to use here is the Parallel Ruler. You can set "
 "these up horizontally or vertically, so you always have access to a Grid."
@@ -540,23 +599,23 @@ msgstr ""
 "U kunt deze verticaal of horizontaal instellen, zodat u altijd uw raster kan "
 "bewerken."
 
-#: ../../user_manual/painting_with_assistants.rst:191
+#: ../../user_manual/painting_with_assistants.rst:205
 msgid "Axonometric"
 msgstr "Axonometrisch"
 
-#: ../../user_manual/painting_with_assistants.rst:193
+#: ../../user_manual/painting_with_assistants.rst:207
 msgid "All of these are set up using three Parallel Rulers."
 msgstr "Deze worden allemaal opgezet met drie perspectief-lijnen."
 
-#: ../../user_manual/painting_with_assistants.rst:196
+#: ../../user_manual/painting_with_assistants.rst:210
 msgid ".. image:: images/assistants/Assistants_oblique.png"
 msgstr ".. image:: images/assistants/Assistants_oblique.png"
 
-#: ../../user_manual/painting_with_assistants.rst:198
+#: ../../user_manual/painting_with_assistants.rst:212
 msgid "Oblique"
 msgstr "Schuin"
 
-#: ../../user_manual/painting_with_assistants.rst:198
+#: ../../user_manual/painting_with_assistants.rst:212
 msgid ""
 "For oblique, set two parallel rulers to horizontal and vertical, and one to "
 "an angle, representing depth."
@@ -564,15 +623,15 @@ msgstr ""
 "Voor schuin, stelt u twee perspectief-lijnen in, een voor horizontaal en een "
 "voor verticaal, en een onder een hoek , die de diepte moet voorstellen."
 
-#: ../../user_manual/painting_with_assistants.rst:201
+#: ../../user_manual/painting_with_assistants.rst:215
 msgid ".. image:: images/assistants/Assistants_dimetric.png"
 msgstr ".. image:: images/assistants/Assistants_dimetric.png"
 
-#: ../../user_manual/painting_with_assistants.rst:203
+#: ../../user_manual/painting_with_assistants.rst:217
 msgid "Dimetric & Isometric"
 msgstr "Dimetrisch & Isometrisch"
 
-#: ../../user_manual/painting_with_assistants.rst:203
+#: ../../user_manual/painting_with_assistants.rst:217
 msgid ""
 "Isometric perspective has technically all three rulers set up at 120° from "
 "each other. Except when it's game isometric, then it's a type of dimetric "
@@ -585,15 +644,15 @@ msgstr ""
 "ten opzichte van de hoofdas. Die laatste kan makkelijk opgezet worden door "
 "de assistent aan een raster te laten vastklikken."
 
-#: ../../user_manual/painting_with_assistants.rst:206
+#: ../../user_manual/painting_with_assistants.rst:220
 msgid ".. image:: images/assistants/Assistants_trimetric.png"
 msgstr ".. image:: images/assistants/Assistants_trimetric.png"
 
-#: ../../user_manual/painting_with_assistants.rst:208
+#: ../../user_manual/painting_with_assistants.rst:222
 msgid "Trimetric"
 msgstr "Trimetrisch"
 
-#: ../../user_manual/painting_with_assistants.rst:208
+#: ../../user_manual/painting_with_assistants.rst:222
 msgid ""
 "Is when all the angles are slightly different. Often looks like a slightly "
 "angled isometric."
@@ -601,19 +660,19 @@ msgstr ""
 "Dat is wanneer alle hoeken een beetje anders zijn. Lijkt vaak op een "
 "isometrische tekening onder een kleine hoek."
 
-#: ../../user_manual/painting_with_assistants.rst:211
+#: ../../user_manual/painting_with_assistants.rst:225
 msgid "Linear Perspective"
 msgstr "Lineair perspectief"
 
-#: ../../user_manual/painting_with_assistants.rst:214
+#: ../../user_manual/painting_with_assistants.rst:228
 msgid ".. image:: images/assistants/Assistants_1_point_perspective.png"
 msgstr ".. image:: images/assistants/Assistants_1_point_perspective.png"
 
-#: ../../user_manual/painting_with_assistants.rst:216
+#: ../../user_manual/painting_with_assistants.rst:230
 msgid "1 Point Perspective"
 msgstr "1 punt-perspectief"
 
-#: ../../user_manual/painting_with_assistants.rst:216
+#: ../../user_manual/painting_with_assistants.rst:230
 msgid ""
 "A 1 point perspective is set up using 1 vanishing point, and two crossing "
 "perpendicular parallel rulers."
@@ -621,11 +680,11 @@ msgstr ""
 "Een 1 punts perspectief stelt u op door 1 verdwijnpunt met 2 perspectief-"
 "lijnen die haaks op elkaar staan te gebruiken"
 
-#: ../../user_manual/painting_with_assistants.rst:219
+#: ../../user_manual/painting_with_assistants.rst:233
 msgid ".. image:: images/assistants/Assistants_2_point_perspective.png"
 msgstr ".. image:: images/assistants/Assistants_2_point_perspective.png"
 
-#: ../../user_manual/painting_with_assistants.rst:221
+#: ../../user_manual/painting_with_assistants.rst:235
 msgid ""
 "A 2 point perspective is set up using 2 vanishing point and 1 vertical "
 "parallel ruler. Often, putting the vanishing points outside the frame a "
@@ -637,27 +696,27 @@ msgstr ""
 "plaatsen, vermindert u vaak de sterkte ervan. U kunt ook een :ref:"
 "`assistant_2_point` liniaal gebruiken om dit makkelijk en snel op te zetten."
 
-#: ../../user_manual/painting_with_assistants.rst:224
+#: ../../user_manual/painting_with_assistants.rst:238
 msgid ".. image:: images/assistants/Assistants_2_pointperspective_02.png"
 msgstr ".. image:: images/assistants/Assistants_2_pointperspective_02.png"
 
-#: ../../user_manual/painting_with_assistants.rst:226
+#: ../../user_manual/painting_with_assistants.rst:240
 msgid ".. image:: images/assistants/Assistants_3_point_perspective.png"
 msgstr ".. image:: images/assistants/Assistants_3_point_perspective.png"
 
-#: ../../user_manual/painting_with_assistants.rst:228
+#: ../../user_manual/painting_with_assistants.rst:242
 msgid "3 Point Perspective"
 msgstr "3 punten-perspectief"
 
-#: ../../user_manual/painting_with_assistants.rst:228
+#: ../../user_manual/painting_with_assistants.rst:242
 msgid "A 3 point perspective is set up using 3 vanishing point rulers."
 msgstr "Een 3 punts perspectief stelt u op door 3 verdwijnpunt lijnen."
 
-#: ../../user_manual/painting_with_assistants.rst:231
+#: ../../user_manual/painting_with_assistants.rst:245
 msgid "Logic of the vanishing point"
 msgstr "De logica van het verdwijnpunt"
 
-#: ../../user_manual/painting_with_assistants.rst:233
+#: ../../user_manual/painting_with_assistants.rst:247
 msgid ""
 "There's a little secret that perspective tutorials don't always tell you, "
 "and that's that a vanishing point is the point where any two parallel lines "
@@ -669,7 +728,7 @@ msgstr ""
 "perspectief-lijnen elkaar ontmoeten. Dit betekent dat een 1 punt perspectief "
 "en een 2 punt perspectief eigenlijk hetzelfde zijn."
 
-#: ../../user_manual/painting_with_assistants.rst:235
+#: ../../user_manual/painting_with_assistants.rst:249
 msgid ""
 "We can prove this via a little experiment. That good old problem: drawing a "
 "rail-road."
@@ -677,11 +736,11 @@ msgstr ""
 "We kunnen dit met een klein experiment aantonen. Het bekende en oude "
 "probleem: het tekenen van een spoorlijn."
 
-#: ../../user_manual/painting_with_assistants.rst:238
+#: ../../user_manual/painting_with_assistants.rst:252
 msgid ".. image:: images/assistants/Assistants_vanishing_point_logic_01.png"
 msgstr ".. image:: images/assistants/Assistants_vanishing_point_logic_01.png"
 
-#: ../../user_manual/painting_with_assistants.rst:239
+#: ../../user_manual/painting_with_assistants.rst:253
 msgid ""
 "You are probably familiar with the problem: How to determine where the next "
 "beam is going to be, as perspective projection will make them look closer "
@@ -691,7 +750,7 @@ msgstr ""
 "volgende biels moet komen, omdat ze bij de perspectief projectie dichter bij "
 "elkaar moeten komen."
 
-#: ../../user_manual/painting_with_assistants.rst:241
+#: ../../user_manual/painting_with_assistants.rst:255
 msgid ""
 "Typically, the solution is to draw a line in the middle and then draw lines "
 "diagonally across. After all, those lines are parallel, meaning that the "
@@ -701,11 +760,11 @@ msgstr ""
 "diagonaal lijnen tekenen.Tenslotte zijn die lijnen parallel, wat inhoud dat "
 "exact dezelfde afstand wordt gebruikt."
 
-#: ../../user_manual/painting_with_assistants.rst:244
+#: ../../user_manual/painting_with_assistants.rst:258
 msgid ".. image:: images/assistants/Assistants_vanishing_point_logic_02.png"
 msgstr ".. image:: images/assistants/Assistants_vanishing_point_logic_02.png"
 
-#: ../../user_manual/painting_with_assistants.rst:245
+#: ../../user_manual/painting_with_assistants.rst:259
 msgid ""
 "But because they are parallel, we can use a vanishing point assistant "
 "instead, and we use the alignment handles to align it to the diagonal of the "
@@ -716,7 +775,7 @@ msgstr ""
 "het diagonaal van de biels uit te lijnen, en met de horizon (hier rood "
 "gemarkeerd)."
 
-#: ../../user_manual/painting_with_assistants.rst:247
+#: ../../user_manual/painting_with_assistants.rst:261
 msgid ""
 "That diagonal can then in turn be used to determine the position of the "
 "beams:"
@@ -724,11 +783,11 @@ msgstr ""
 "Die diagonaal kan dan gebruikt worden om de positie van de bielsen te "
 "bepalen:"
 
-#: ../../user_manual/painting_with_assistants.rst:250
+#: ../../user_manual/painting_with_assistants.rst:264
 msgid ".. image:: images/assistants/Assistants_vanishing_point_logic_03.png"
 msgstr ".. image:: images/assistants/Assistants_vanishing_point_logic_03.png"
 
-#: ../../user_manual/painting_with_assistants.rst:251
+#: ../../user_manual/painting_with_assistants.rst:265
 msgid ""
 "Because any given set of lines has a vanishing point (outside the ones flat "
 "on the view-plane), there can be an infinite amount of vanishing points in a "
@@ -740,11 +799,11 @@ msgstr ""
 "een lineaire perspectief zijn. Daarom laat Krita u verdwijnpunten plaatsen "
 "in plaats dat het u tot het gebruik een paar beperkt."
 
-#: ../../user_manual/painting_with_assistants.rst:254
+#: ../../user_manual/painting_with_assistants.rst:268
 msgid "Fish Eye perspective"
 msgstr "Vissenoog perspectief"
 
-#: ../../user_manual/painting_with_assistants.rst:256
+#: ../../user_manual/painting_with_assistants.rst:270
 msgid ""
 "Fish eye perspective works much the same as the linear perspective, the big "
 "difference being that in a fish-eye perspective, any parallel set of lines "
@@ -754,7 +813,7 @@ msgstr ""
 "perspectief, het grote verschil bij een vissenoog perspectief, is dat elke "
 "parallelle set lijnen twee verdwijnpunten heeft, voor elke zijde een."
 
-#: ../../user_manual/painting_with_assistants.rst:258
+#: ../../user_manual/painting_with_assistants.rst:272
 msgid ""
 "So, to set them up, the easiest way is one horizontal, one vertical, on the "
 "same spot, and one vanishing point assistant in the middle."
@@ -762,11 +821,11 @@ msgstr ""
 "Om het dus op te zetten is de makkelijkste manier om een horizontaal, een "
 "verticaal, op dezelfde plek, en een verdwijnpuntassistent in het midden."
 
-#: ../../user_manual/painting_with_assistants.rst:261
+#: ../../user_manual/painting_with_assistants.rst:275
 msgid ".. image:: images/assistants/Fish-eye.gif"
 msgstr ".. image:: images/assistants/Fish-eye.gif"
 
-#: ../../user_manual/painting_with_assistants.rst:262
+#: ../../user_manual/painting_with_assistants.rst:276
 msgid ""
 "But, you can also make one horizontal one that is just as big as the other "
 "horizontal one, and put it halfway:"
