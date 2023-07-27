@@ -43,7 +43,7 @@ Canvas Graphics Acceleration
         OpenGL ES
             Krita will use OpenGl ES, which is a subset of OpenGL. Using this can be useful for less powerful devices.
         ANGLE Direct3D (Windows Only)
-            Krita will use the ANGLE compatibility layer to convert the OpenGL calls to Direct3D calls. Wether this works better than regular OpenGL depends on the graphics drivers of the computer.
+            Krita will use the ANGLE compatibility layer to convert the OpenGL calls to Direct3D calls. Whether this works better than regular OpenGL depends on the graphics drivers of the computer.
 
 Scaling Mode
     The user can choose which scaling mode to use while zooming the canvas. The choice here only affects the way the image is displayed during canvas operations and has no effect on how Krita scales an image when a transformation is applied.

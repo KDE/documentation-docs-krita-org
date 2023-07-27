@@ -55,13 +55,13 @@ Height
 FPS
     Set the desired frames per second.
 Filter
-    Set the scaling filter. :guilabel:`Bicubic` is fine for most cases, but if you wnat to, say, export a pixel art animation at twice the size, [Nearest] :guilabel:`Neighbour` will preserve the fine details better.
+    Set the scaling filter. :guilabel:`Bicubic` is fine for most cases, but if you want to, say, export a pixel art animation at twice the size, [Nearest] :guilabel:`Neighbour` will preserve the fine details better.
 Render As
     The file format to render to. All except GIF have extra options that can be manipulated via :guilabel:`...`.
 Video Location
     Location and name of the rendered animation.
     
-    Inlude Audio
+    Include Audio
         Include any audio you have added.
     
 FFmpeg

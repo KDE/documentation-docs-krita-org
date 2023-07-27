@@ -17,7 +17,7 @@
 Audio for Animation
 ===================
 
-Within Krita you can load an audio file into your document to help syncronize your animation with dialogue or music. This functionality is available from the audio menu in the Timeline Docker's titlebar.
+Within Krita you can load an audio file into your document to help synchronize your animation with dialogue or music. This functionality is available from the audio menu in the Timeline Docker's titlebar.
 
 Importing Audio Files
 ---------------------
@@ -49,4 +49,4 @@ As of now there is no visual audio waveform display in Krita's UI, so you will n
 Exporting with Audio
 --------------------
 
-To have audio included with you exported animation video you will need to check enable it in the Render Animation options. In the :menuselection:`File --> Render Animation` options there is a checkbox :guilabel:`Include Audio`. Make sure that is checked before you export and you should be good to go.
+To have audio included with your exported animation video you will need to check enable it in the Render Animation options. In the :menuselection:`File --> Render Animation` options there is a checkbox :guilabel:`Include Audio`. Make sure that is checked before you export and you should be good to go.

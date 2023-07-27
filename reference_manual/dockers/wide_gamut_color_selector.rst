@@ -24,7 +24,7 @@ To open the Wide Gamut Color Selector choose :menuselection:`Settings --> Docker
 
 The top right of the selector has a foreground and background selector, while the middle is the main selector.
 
-You can configure this docker by clicking the settings icons in the top level of the selector. Here you can access quick settings, like the color model and prefered selector shapes, and more configuration can be accessed with :guilabel:`Configure...`.
+You can configure this docker by clicking the settings icons in the top level of the selector. Here you can access quick settings, like the color model and preferred selector shapes, and more configuration can be accessed with :guilabel:`Configure...`.
 
 .. note::
 
@@ -57,7 +57,7 @@ This sections covers the selector layout.
 Show Quick Settings Menu
     This will allow you to turn off the quick settings.
 Favourite selection
-    This will allow you to select prefered shapes that show up in the quick settings menu.
+    This will allow you to select preferred shapes that show up in the quick settings menu.
 Selection Color space
     Select which color space will be used for the selector. You can use between current layer/mask, image, or a custom profile. This is useful for when you need to ensure your colors work inside a specific CMYK color space, while having the main image in RGB.
     
@@ -85,7 +85,7 @@ Layout
         Along orientation
             Scrolls vertically or horizontally depending on orientation. Patches are laid out in the perpendicular direction.
         Laterally
-            Shows perpendicular to the orientation, so vertically when the orientation is horizontal, and vice-versa. Patches are laid out following the orientation.
+            Shows perpendicular to the orientation, so vertically when the orientation is horizontal, and vice versa. Patches are laid out following the orientation.
     Rows
         The amount of rows the patches will take up.
 Patches
@@ -136,7 +136,7 @@ Layout
         Along orientation
             Scrolls vertically or horizontally depending on orientation.
         Laterally
-            Shows perpendicular to the orientation, so vertically when the orientation is horizontal, and vice-versa.
+            Shows perpendicular to the orientation, so vertically when the orientation is horizontal, and vice versa.
     Rows
         The amount of rows the patches will take up.
 Patches

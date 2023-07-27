@@ -27,7 +27,7 @@ Scale to Image Size
 Adapt to image resolution
     If the imported layer and the image have a different resolution, it'll scale the filelayer by scaling its resolution. In other words, import a 600dpi A4 image onto a 300dpi A4 image, and the filelayer will be scaled to fit precisely on the 300dpi image. Useful for comics, where the ink-layer is preferred to be at a higher resolution than the colors.
 Scaling Filter
-    Here you can set the scaling filter. Most of the time, you will want to use :guilabel:`Bicubic`. However when working with pixel art, it is more useful to to use :guilabel:Ǹearest Neighbour` which doesn't try to mix colors.
+    Here you can set the scaling filter. Most of the time, you will want to use :guilabel:`Bicubic`. However when working with pixel art, it is more useful to use :guilabel:`Nearest Neighbour` which doesn't try to mix colors.
     
     .. versionadded:: 5.2
     

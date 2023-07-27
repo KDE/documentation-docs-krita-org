@@ -33,7 +33,7 @@ The first slider controls the thumbnail size of the layers and how much layers i
 Then there's the blending info options. The dropdown has four options:
 
 None
-    No extra informationm is shown.
+    No extra information is shown.
 Simple
     This will only display the opacity or the blending mode when they're not 100% and 'Normal'.
 Balanced
