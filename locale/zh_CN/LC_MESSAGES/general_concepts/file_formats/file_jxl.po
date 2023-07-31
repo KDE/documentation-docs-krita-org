@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-26 00:40+0000\n"
-"PO-Revision-Date: 2023-07-23 12:29\n"
+"PO-Revision-Date: 2023-07-30 07:10\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_general_concepts___file_formats___file_jxl.pot\n"
 "X-Crowdin-File-ID: 40796\n"
+"Language: zh_CN\n"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:2
 msgid "The JPEG XL file format in Krita."
@@ -164,6 +164,8 @@ msgid ""
 "being used as animation, this can be useful to store multi-page images like :"
 "ref:`file_tif`."
 msgstr ""
+"如果禁用此选项，而且没有使用帧来保存动图，则 JPEG XL 可以通过帧来保存图层，从"
+"而实现类似于 :ref:`file_tif` 的多图层功能。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:42
 msgid ""
@@ -171,89 +173,89 @@ msgid ""
 "layer stacks like :ref:`file_psd` and :ref:`file_kra` does. Some of its "
 "limitations are:"
 msgstr ""
+"JPEG-XL 只能提供非常基本的多图层功能，它无法像 :ref:`file_psd` 和 :ref:"
+"`file_kra` 文件那样保存复杂的图层堆栈。它的限制包括但不限于："
 
 #: ../../general_concepts/file_formats/file_jxl.rst:44
 msgid ""
 "Only raster paint layers are supported, any other type of layer will get "
 "rasterized and group layers will be flattened."
 msgstr ""
+"只支持光栅图层 (Krita 中的颜料图层)。所有其他类型的图层将被光栅化后保存，图层"
+"组将被合并保存。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:45
 msgid ""
 "Limited blending modes, only Normal and Addition while other modes will get "
 "converted to Normal."
-msgstr ""
+msgstr "只支持两种混合模式：正常、相加。其他混合模式将被转换为正常模式。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:46
 msgid ""
 "No partial layer opacity, will only export visible layers with full opacity "
 "setting (100%)."
 msgstr ""
+"不支持半透明图层。可见图层将只能按照完全不透明 (100% 不透明度) 进行导出。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:47
 msgid ""
 "No layer styles, these will get rasterized with Normal blending mode for "
 "outside pixels."
 msgstr ""
+"不支持图层样式。原图中通过图层样式生成的外部像素将在光栅化后以正常混合模式保"
+"存。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:48
 msgid ""
 "Layer masks will be flattened and rasterized, but Colorize Mask won't get "
 "rendered."
-msgstr ""
+msgstr "图层蒙版将在合并后光栅化。智能填色蒙版的自动填充部分将不被渲染。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:50
 msgid "We recommend you leave this option enabled for web delivery."
-msgstr ""
+msgstr "我们建议在保存用于网络的图像时将此选项保持在启用状态。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:51
 msgid "Flatten the image"
-msgstr ""
+msgstr "合并此图像"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:54
-#, fuzzy
-#| msgid "Lossless encoding."
 msgid "Lossy encoding"
-msgstr "无损编码"
+msgstr "有损编码"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:55
-#, fuzzy
-#| msgid ""
-#| "Whether to use :ref:`Lossless compression <lossless_compression>`. Like :"
-#| "ref:`file_webp`, JPEG XL has a different way of encoding the images in "
-#| "lossless and lossy mode, with the latter being closer to the way the "
-#| "original :ref:`file_jpeg` encodes."
 msgid ""
 "Whether to use :ref:`Lossy compression <lossy_compression>`. Like :ref:"
 "`file_webp`, JPEG XL has a different way of encoding the images in lossless "
 "and lossy mode, with the latter being closer to the way the original :ref:"
 "`file_jpeg` encodes."
 msgstr ""
-"是否使用\\ :ref:`无损压缩方式<lossless_compression>`\\ 保存图像。和 :ref:"
+"是否使用\\ :ref:`有损压缩方式<lossy_compression>`\\ 保存图像。和 :ref:"
 "`file_webp` 一样，JPEG XL 既支持有损压缩方式，也支持无损压缩方式。其中有损压"
-"缩与 :ref:`file_jpeg` 使用编码方式接近。"
+"缩与 :ref:`file_jpeg` 使用的编码方式类似。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:56
 msgid "Quality"
-msgstr ""
+msgstr "画质"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:57
 msgid ""
 "This option sets the desired quality for lossy compression. Higher values "
 "look better, but lower values have a lower file size."
 msgstr ""
+"此选项用于指定有损压缩方式的画质。数值越高，画质越好；数值越低，文件越小。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:59
-#, fuzzy
-#| msgid "Modular Mode"
 msgid "Use modular mode"
-msgstr "模块化模式"
+msgstr "使用模块化模式"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:59
 msgid ""
 "Use the alternative Modular mode for lossy compression. By default, JPEG XL "
 "encodes lossy image with VarDCT mode."
 msgstr ""
+"为有损压缩使用替代的模块化模式。JPEG XL 默认使用 VarDCT 模式来对图像进行有损"
+"编码。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:63
 msgid ""
@@ -351,7 +353,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:80
 msgid "Conversion Settings"
-msgstr ""
+msgstr "色彩空间转换设置"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:82
 msgid ""
@@ -359,6 +361,8 @@ msgid ""
 "space, and the options are exactly the same as the conversion settings for :"
 "ref:`file_heif`."
 msgstr ""
+"此选项仅在图像使用浮点色彩空间时才会启用。它与 :ref:`file_heif` 格式的色彩空"
+"间转换设置完全相同。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:87
 msgid "Advanced"

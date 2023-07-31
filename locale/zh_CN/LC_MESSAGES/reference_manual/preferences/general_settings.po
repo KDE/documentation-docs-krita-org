@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-26 00:40+0000\n"
-"PO-Revision-Date: 2023-07-23 12:28\n"
+"PO-Revision-Date: 2023-07-30 07:10\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___preferences___general_settings.pot\n"
 "X-Crowdin-File-ID: 9790\n"
+"Language: zh_CN\n"
 
 #: ../../<generated>:1
 msgid "Resource Folder"
@@ -217,7 +217,7 @@ msgstr "显示一个单独的黑色像素。"
 
 #: ../../reference_manual/preferences/general_settings.rst:71
 msgid "Black Pixel"
-msgstr "单像素黑色"
+msgstr "单像素黑点"
 
 #: ../../reference_manual/preferences/general_settings.rst:74
 msgid "Gives a single white pixel."
@@ -225,7 +225,7 @@ msgstr "显示一个单独的白色像素。"
 
 #: ../../reference_manual/preferences/general_settings.rst:77
 msgid "White Pixel"
-msgstr "单像素白色"
+msgstr "单像素白点"
 
 #: ../../reference_manual/preferences/general_settings.rst:80
 msgid "Outline Shape"
@@ -397,10 +397,8 @@ msgid "Set the color of the sub window canvas area."
 msgstr "为子窗口模式下的视图设置背景色。"
 
 #: ../../reference_manual/preferences/general_settings.rst:135
-#, fuzzy
-#| msgid "Subwindow Documents"
 msgid "Subwindow mode"
-msgstr "子窗口视图"
+msgstr "子窗口模式"
 
 #: ../../reference_manual/preferences/general_settings.rst:135
 msgid "Don't show contents when moving sub-windows"
@@ -445,10 +443,8 @@ msgid "Enable Hi-DPI support"
 msgstr "启用高分辨率 (Hi-DPI) 支持功能"
 
 #: ../../reference_manual/preferences/general_settings.rst:145
-#, fuzzy
-#| msgid "(Hi-DPI) Enable fractional scale factor"
 msgid "Enable fractional scale factor"
-msgstr "启用非整数倍缩放 (Hi-DPI)"
+msgstr "启用非整数倍缩放"
 
 #: ../../reference_manual/preferences/general_settings.rst:148
 msgid ""
@@ -480,8 +476,6 @@ msgid "Tools Settings"
 msgstr "工具选项卡"
 
 #: ../../reference_manual/preferences/general_settings.rst:160
-#, fuzzy
-#| msgid "In docker (default)"
 msgid "In Docker (default)"
 msgstr "工具选项面板"
 
@@ -494,10 +488,8 @@ msgid "Tool Options Location"
 msgstr "工具选项位置"
 
 #: ../../reference_manual/preferences/general_settings.rst:162
-#, fuzzy
-#| msgid "In toolbar"
 msgid "In Toolbar"
-msgstr "工具栏按钮/点击弹出"
+msgstr "工具栏按钮 (点击弹出)"
 
 #: ../../reference_manual/preferences/general_settings.rst:163
 msgid ""
@@ -522,11 +514,11 @@ msgstr ""
 
 #: ../../reference_manual/preferences/general_settings.rst:167
 msgid "This allows you to control the way blending modes are handled for CMYK."
-msgstr ""
+msgstr "用于指定在 CMYK 色彩空间下如何处理色彩通道的混合模式。"
 
 #: ../../reference_manual/preferences/general_settings.rst:169
 msgid "Subtractive (Krita 5.2+)"
-msgstr ""
+msgstr "减色法"
 
 #: ../../reference_manual/preferences/general_settings.rst:170
 msgid ""
@@ -534,6 +526,8 @@ msgid ""
 "in most blending modes having a similar effect to the same blending modes in "
 "RGB. This is useful when you are doing interchange using PSD files."
 msgstr ""
+"Krita 5.2 以及之后版本的默认值。先对色彩通道进行反相，然后应用混合模式。这将"
+"使大多数混合模式与 RGB 色彩空间下的效果近似。"
 
 #: ../../reference_manual/preferences/general_settings.rst:172
 msgid ""
@@ -542,14 +536,17 @@ msgid ""
 "RGB look like it makes things darker, while in this additive CMYK mode it "
 "will make things lighter."
 msgstr ""
+"Krita 5.1 以及之前版本的默认值。不对色彩通道进行反相，直接应用混合模式。这将"
+"使大多数混合模式与 RGB 色彩空间下的效果不同。例如在 RGB 色彩空间下，正片叠底="
+"相乘模式会使混合后的颜色更深；而在 CMYK 模式下，这将使混合后的颜色更浅。"
 
 #: ../../reference_manual/preferences/general_settings.rst:173
 msgid "Additive (Krita 5.1 and earlier)"
-msgstr ""
+msgstr "加色法"
 
 #: ../../reference_manual/preferences/general_settings.rst:175
 msgid "CMYK Blending Mode"
-msgstr ""
+msgstr "CMYK 混合模式"
 
 #: ../../reference_manual/preferences/general_settings.rst:178
 msgid "Switch Control/Alt Selection Modifiers"
@@ -633,11 +630,11 @@ msgstr "启用平滑缩放"
 msgid ""
 "This got replaced with the :guilabel:`Zoom Steps between powers of Two` "
 "option."
-msgstr ""
+msgstr "此选项被 :guilabel:`缩放平滑度` 取代。"
 
 #: ../../reference_manual/preferences/general_settings.rst:205
 msgid "Zoom Steps between powers of Two"
-msgstr ""
+msgstr "缩放平滑度"
 
 #: ../../reference_manual/preferences/general_settings.rst:205
 msgid ""
@@ -646,6 +643,9 @@ msgid ""
 "how many steps steps go inbetween those. The higher the value, the smoother "
 "the zoom with a |mousescroll|."
 msgstr ""
+"Krita 的主要缩放比例为 2 的 N 次方 (例如：2 的 -1 次方 = 0.5 = 50%、2 的 -2 "
+"次方 = 0.25 = 25%、2 的 2次方 = 4 = 400%)。此数值用于指定每两个主要缩放比例之"
+"间有多少个过渡级别。此数值越高，鼠标滚轮 |mousescroll| 的缩放越平滑。"
 
 #: ../../reference_manual/preferences/general_settings.rst:208
 msgid "This enables kinetic scrolling for scrollable areas."
@@ -736,8 +736,8 @@ msgstr "自动保存频率"
 #: ../../reference_manual/preferences/general_settings.rst:240
 msgid ""
 "Here the user can specify how often Krita should autosave the file, you can "
-"tick the checkbox to turn it off. For Windows these files are saved in the ``"
-"%TEMP%`` directory. If you are on Linux it is stored in :file:`/"
+"tick the checkbox to turn it off. For Windows these files are saved in the "
+"``%TEMP%`` directory. If you are on Linux it is stored in :file:`/"
 "home/'username'`."
 msgstr ""
 "指定 Krita 每隔多长时间进行一次自动保存。自动保存文件在 Windows 下面将被保存"
@@ -1175,17 +1175,19 @@ msgstr "旧版文件字体 DPI"
 
 #: ../../reference_manual/preferences/general_settings.rst:354
 msgid "Automatic Layer Suffixes"
-msgstr ""
+msgstr "图层名称后缀"
 
 #: ../../reference_manual/preferences/general_settings.rst:356
 msgid ""
 "By default, Krita will add extra info behind layers it generates. These "
 "toggles allow you to turn that off."
 msgstr ""
+"在默认情况下，Krita 会为某些图层的名称自动附加后缀。这些选项用于禁止自动附加"
+"后缀。"
 
 #: ../../reference_manual/preferences/general_settings.rst:358
 msgid "Add \"Merged\" to merged group layers."
-msgstr ""
+msgstr "图层组合并后：自动附加“合并”后缀"
 
 #: ../../reference_manual/preferences/general_settings.rst:359
 msgid ""
@@ -1193,16 +1195,20 @@ msgid ""
 "\"Merged\" after the layer name. If you make frequent use of merging, it can "
 "be useful to turn this off."
 msgstr ""
+"当图层组被合并成单个颜料图层时，Krita 会在它的图层名称中附加“合并”后缀。如果"
+"您经常合并图层组，“合并”后缀会越来越多，您可以为此禁用这个自动后缀。"
 
 #: ../../reference_manual/preferences/general_settings.rst:361
 msgid "Add \"(Pasted)\" to pasted layers."
-msgstr ""
+msgstr "粘贴的图层：自动附加“(粘贴)”后缀"
 
 #: ../../reference_manual/preferences/general_settings.rst:361
 msgid ""
 "When you copy and paste a section of a layer, Krita will add \"(Pasted)\" "
 "after the layer name so you can keep track of that."
 msgstr ""
+"当您复制并粘贴图层内容时，Krita 会在粘贴的图层的名称中附加“(粘贴)”后缀。这可"
+"以帮助您定位那些粘贴的图层。如果您觉得这样不美观，可以禁用这个自动后缀。"
 
 #: ../../reference_manual/preferences/general_settings.rst:369
 msgid "Resources"

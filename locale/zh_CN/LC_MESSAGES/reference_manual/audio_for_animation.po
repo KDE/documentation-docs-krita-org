@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-28 00:40+0000\n"
-"PO-Revision-Date: 2023-07-23 12:28\n"
+"PO-Revision-Date: 2023-07-30 07:10\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___audio_for_animation.pot\n"
 "X-Crowdin-File-ID: 9926\n"
+"Language: zh_CN\n"
 
 #: ../../reference_manual/audio_for_animation.rst:1
 msgid "The audio playback with animation in Krita."
@@ -43,17 +43,13 @@ msgid "Audio for Animation"
 msgstr "动画的音频功能"
 
 #: ../../reference_manual/audio_for_animation.rst:20
-#, fuzzy
-#| msgid ""
-#| "You can add audio files to your animation to help sync lips or music. "
-#| "This functionality is available in the timeline docker."
 msgid ""
 "Within Krita you can load an audio file into your document to help "
 "synchronize your animation with dialogue or music. This functionality is "
 "available from the audio menu in the Timeline Docker's titlebar."
 msgstr ""
-"你可以把音频文件添加到动画中，辅助进行对口型和音画同步等工作。此功能可以在时"
-"间轴面板中进行控制。"
+"Krita 支持为图像加载音频文件，以便制作音画/声画同步的动画。您可以在动画时间轴"
+"面板的顶部工具栏上找到动画音频菜单。"
 
 #: ../../reference_manual/audio_for_animation.rst:23
 msgid "Importing Audio Files"
@@ -63,13 +59,13 @@ msgstr "导入音频文件"
 msgid ""
 "Krita supports a variety of audio file types, including WAV, FLAC, OGG, MP3, "
 "and more."
-msgstr ""
+msgstr "Krita 支持多重音频文件格式，包括但不限于 WAV、FLAC、OGG、MP3 等。"
 
 #: ../../reference_manual/audio_for_animation.rst:27
 msgid ""
 "To load an audio file into your Krita document, first open the Timeline "
 "Docker."
-msgstr ""
+msgstr "要加载一个音频文件到当前的 Krita 图像，请首先打开动画时间轴面板。"
 
 #: ../../reference_manual/audio_for_animation.rst:29
 msgid ""
@@ -78,42 +74,32 @@ msgid ""
 "area where you will interact with Krita's audio system, including loading "
 "and removing audio tracks and adjusting the playback volume."
 msgstr ""
+"在动画时间轴面板的顶部工具栏的右侧有一个“扬声器”图标的按钮，点击后将展开 "
+"Krita 的动画音频菜单。您可以在这里进行与音频相关的大部分操作，包括加载/移除音"
+"频轨道、调整音量、静音等。"
 
 #: ../../reference_manual/audio_for_animation.rst:32
 msgid ""
 "Specifically, these options and widgets are available in the Audio Menu:"
-msgstr ""
+msgstr "动画音频菜单包括以下控件："
 
 #: ../../reference_manual/audio_for_animation.rst:34
-#, fuzzy
-#| msgid "Importing Audio Files"
 msgid "Load Audio File"
-msgstr "导入音频文件"
+msgstr "加载音频文件"
 
 #: ../../reference_manual/audio_for_animation.rst:35
-#, fuzzy
-#| msgid "Remove audio"
 msgid "Remove Audio File"
-msgstr "移除音频"
+msgstr "移除音频文件"
 
 #: ../../reference_manual/audio_for_animation.rst:36
-#, fuzzy
-#| msgid "Audio"
 msgid "Mute Audio"
-msgstr "音频"
+msgstr "静音"
 
 #: ../../reference_manual/audio_for_animation.rst:37
-#, fuzzy
-#| msgid "Volume slider"
 msgid "Audio Volume Slider"
-msgstr "音量滑动条"
+msgstr "音量控制滑动条"
 
 #: ../../reference_manual/audio_for_animation.rst:39
-#, fuzzy
-#| msgid ""
-#| "Krita saves the location of your audio file. If you move the audio file "
-#| "or rename it, Krita will not be able to find it. Krita will tell you the "
-#| "file was moved or deleted the next time you try to open the Krita file up."
 msgid ""
 "Crucially, Krita only saves the location (file path) of your audio file "
 "inside your Krita document. Because of that, if you happen to move or rename "
@@ -122,9 +108,10 @@ msgid ""
 "However, Krita will tell you the file was moved or deleted the next time you "
 "try to open the Krita file up."
 msgstr ""
-"Krita 会在 KRA 文件中保存音频文件的所在位置。如果音频文件被移动或重命名，"
-"Krita 将无法找到它。在下次打开该 KRA 文件时，Krita 会提示音频文件已被移动或者"
-"删除。"
+"请注意：Krita 仅在图像中保存音频文件的位置 (文件路径)，而不是直接嵌入音频文件"
+"到图像中。如果您在 Krita 动画图像中导入了一个音频文件，并在此后对这个音频文件"
+"进行了重命名或者移动，Krita 将在下一次打开该图像时提示无法找到该音频文件，您"
+"必须手动重新导入它。"
 
 #: ../../reference_manual/audio_for_animation.rst:42
 msgid "Using Audio"
@@ -137,6 +124,8 @@ msgid ""
 "that you want on. Then, when you press the Play button, your audio will "
 "playback while you animation plays synchronized with the image frame changes."
 msgstr ""
+"导入音频后，您便可以在时间轴的帧格上拖动播放头，Krita 将播放播放头所在帧对应"
+"的一小段音频。如果您点击播放按钮，Krita 将同步播放音频和帧动画。"
 
 #: ../../reference_manual/audio_for_animation.rst:46
 msgid ""
@@ -144,106 +133,20 @@ msgid ""
 "will need to use your ears and the scrubbing functionality to line your "
 "keyframes up with specific parts of the audio."
 msgstr ""
+"Krita 尚未支持显示音频的波形。您目前只能依靠听觉和播放头拖放功能来将关键帧对"
+"齐到音频的特定位置。"
 
 #: ../../reference_manual/audio_for_animation.rst:50
 msgid "Exporting with Audio"
 msgstr "导出带音频的动画"
 
 #: ../../reference_manual/audio_for_animation.rst:52
-#, fuzzy
-#| msgid ""
-#| "To get the audio file included when you are exporting, you need to "
-#| "include it in the Render Animation options. In the :menuselection:`File --"
-#| "> Render Animation` options there is a checkbox :guilabel:`Include "
-#| "Audio`. Make sure that is checked before you export and you should be "
-#| "good to go."
 msgid ""
 "To have audio included with your exported animation video you will need to "
 "check enable it in the Render Animation options. In the :menuselection:`File "
 "--> Render Animation` options there is a checkbox :guilabel:`Include Audio`. "
 "Make sure that is checked before you export and you should be good to go."
 msgstr ""
-"要在导出动画时包含音频文件，必须在导出前勾选相关选项。打开菜单栏的 :"
-"menuselection:`文件-> 渲染动画` 对话框，找到 :guilabel:`包含音频` 复选框，确"
-"保在导出之前勾选了此选项。"
-
-#~ msgid ""
-#~ "Audio for animation is an unfinished feature. It has multiple bugs and "
-#~ "may not work on your system."
-#~ msgstr ""
-#~ "动画音频是一个尚未完善的功能。它仍有一些程序缺陷，在你的系统下面未必能够正"
-#~ "常工作。"
-
-#~ msgid ""
-#~ "Krita supports MP3, OGM, and WAV audio files. When you open up your "
-#~ "timeline docker, there will be a speaker button in the top left area."
-#~ msgstr ""
-#~ "Krita 支持 MP3、OGM 和 WAV 音频文件。要使用它们，打开时间轴面板，在左上角"
-#~ "可以找到一个扬声器按钮。"
-
-#~ msgid ""
-#~ "If you press the speaker button, you will get the available audio options "
-#~ "for the animation."
-#~ msgstr "按下该扬声器按钮，将弹出可供动画使用的音频选项。"
-
-#~ msgid "Open"
-#~ msgstr "打开"
-
-#~ msgid "Mute"
-#~ msgstr "静音"
-
-#~ msgid ""
-#~ "After you import the audio, you can scrub through the timeline and it "
-#~ "will play the audio chunk at the time spot. When you press the Play "
-#~ "button, the entire the audio file will playback as it will in the final "
-#~ "version. There is no visual display of the audio file on the screen, so "
-#~ "you will need to use your ears and the scrubbing functionality to "
-#~ "position frames."
-#~ msgstr ""
-#~ "导入音频之后，你可以通过拖动时间轴来播放在对应时间点的音频。按下“播放”按钮"
-#~ "时，整个音频文件将如同在动画的最终输出版本一样进行播放。音频信息不会在屏幕"
-#~ "上显示，所以你只能一边拖动时间轴一边监听来定位对应的动画帧。"
-
-#~ msgid "Packages needed for Audio on Linux"
-#~ msgstr "Linux 环境下音频功能所需软件包"
-
-#~ msgid ""
-#~ "The following packages are necessary for having the audio support on "
-#~ "Linux:"
-#~ msgstr "在 Linux 环境下面，实现 Krita 的音频功能支持需要安装下列软件包："
-
-#~ msgid "For people who build Krita on Linux:"
-#~ msgstr "用于编译 Krita："
-
-#~ msgid "libasound2-dev"
-#~ msgstr "libasound2-dev"
-
-#~ msgid "libgstreamer1.0-dev gstreamer1.0-pulseaudio"
-#~ msgstr "libgstreamer1.0-dev gstreamer1.0-pulseaudio"
-
-#~ msgid "libgstreamer-plugins-base1.0-dev"
-#~ msgstr "libgstreamer-plugins-base1.0-dev"
-
-#~ msgid "libgstreamer-plugins-good1.0-dev"
-#~ msgstr "libgstreamer-plugins-good1.0-dev"
-
-#~ msgid "libgstreamer-plugins-bad1.0-dev"
-#~ msgstr "libgstreamer-plugins-bad1.0-dev"
-
-#~ msgid "For people who use Krita on Linux:"
-#~ msgstr "用于运行 Krita："
-
-#~ msgid "libqt5multimedia5-plugins"
-#~ msgstr "libqt5multimedia5-plugins"
-
-#~ msgid "libgstreamer-plugins-base1.0"
-#~ msgstr "libgstreamer-plugins-base1.0"
-
-#~ msgid "libgstreamer-plugins-good1.0"
-#~ msgstr "libgstreamer-plugins-good1.0"
-
-#~ msgid "libgstreamer-plugins-bad1.0"
-#~ msgstr "libgstreamer-plugins-bad1.0"
-
-#~ msgid "Since Krita 4.4, audio works inside the AppImage."
-#~ msgstr "从 4.4 版开始，AppImage 版的 Krita 可以直接使用音频。"
+"要在导出的动画视频中包含音频，您需要在导出动画对话框的选项中勾选对应的选项。"
+"在菜单栏打开 :menuselection:`文件 --> 导出动画`\\ ，选中 :guilabel:`包含音频"
+"`\\ ，然后点击确定即可。"

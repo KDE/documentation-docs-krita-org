@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-28 00:40+0000\n"
-"PO-Revision-Date: 2023-07-23 12:28\n"
+"PO-Revision-Date: 2023-07-30 07:10\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___preferences___display_settings.pot\n"
 "X-Crowdin-File-ID: 9762\n"
+"Language: zh_CN\n"
 
 #: ../../<generated>:1
 msgid "Move Checkers When Scrolling"
@@ -35,7 +35,7 @@ msgstr "画布显卡加速"
 #: ../../reference_manual/preferences/display_settings.rst:12
 #: ../../reference_manual/preferences/display_settings.rst:41
 msgid "OpenGL"
-msgstr "画布显卡加速"
+msgstr "OpenGL"
 
 #: ../../reference_manual/preferences/display_settings.rst:12
 #: ../../reference_manual/preferences/display_settings.rst:95
@@ -78,6 +78,8 @@ msgid ""
 "checkbox for :guilabel:`Canvas Graphics Acceleration` being named :guilabel:"
 "`Enable OpenGL`."
 msgstr ""
+"在 Krita 3.2 和之前版本中，此功能的名称是 :guilabel:`OpenGL`\\ ，\\ :"
+"guilabel:`画布显卡加速` 的名称则是 :guilabel:`启用 OpenGL`\\ 。"
 
 #: ../../reference_manual/preferences/display_settings.rst:30
 msgid ""
@@ -86,20 +88,13 @@ msgid ""
 "calculations, which Krita uses a lot. All modern computer have graphics "
 "cards."
 msgstr ""
-"Krita 原生的显卡加速模式是 OpenGL，这是一种自由开放的图形软件接口。在 3.3 版"
-"之前，Krita 只能通过 OpenGL 模式来进行加速，但我们发现并不是所有的显卡都能在 "
-"Windows 下面良好地支持 OpenGL。为了解决这个问题，从 3.3 版开始，Krita 可以通"
-"过 ANGLE 图形库将 OpenGL 与 Windows 原生的 Direct3D 11 图形接口进行对接，这极"
-"大地提高了画布显卡加速功能的兼容性。"
+"Krita 原生的显卡加速模式是 OpenGL，这是一种自由开放的图形软件接口。Krita 要求"
+"显卡驱动支持 OpenGL 3.2 及以上，否则不能实现高品质缩放和无级缩放/旋转。2012 "
+"年后的显卡均能完整支持 Krita 的显卡加速功能——最早到 NVidia 的 Geforce 8000 家"
+"族，AMD/ATi 的 HD 2000 家族，Intel 的 IvyBridge 架构 / 核芯显卡 3000 家族等。"
+"请定期到厂商的官方网站上获取最新版的显卡驱动程序，这可以提高性能和减少错误。"
 
 #: ../../reference_manual/preferences/display_settings.rst:32
-#, fuzzy
-#| msgid ""
-#| "**For Krita 3.3 or later:** On Windows, Krita also supports using "
-#| "Direct3D instead with the help of the ANGLE library. ANGLE works by "
-#| "converting the OpenGL functions that Krita makes use of to the equivalent "
-#| "in Direct3D. It may (or may not) be slower than native OpenGL, but it has "
-#| "better compatibility with typical Windows graphics drivers."
 msgid ""
 "On Windows, Krita also supports using Direct3D instead with the help of the "
 "ANGLE library. ANGLE works by converting the OpenGL functions that Krita "
@@ -107,11 +102,9 @@ msgid ""
 "than native OpenGL, but it has better compatibility with typical Windows "
 "graphics drivers."
 msgstr ""
-"Krita 要求显卡驱动支持 OpenGL 3.2 及以上，否则不能实现高品质缩放和无级缩放/旋"
-"转。2012 年后的显卡均能完整支持 Krita 的显卡加速功能——最旧的型号包括 NVidia "
-"的 Geforce 8000 家族，AMD/ATi 的 HD 2000 家族，Intel 的 IvyBridge 架构 / 核芯"
-"显卡 3000 家族等。请定期到厂商的官方网站上获取最新版的显卡驱动程序，这可以提"
-"高性能和减少错误。"
+"在 Windows 环境下，Krita 可以通过 ANGLE 程序库将 OpenGL 指令转译成 Windows 原"
+"生的 Direct3D 11 指令运行。Direct3D 11 模式的兼容性通常更好， 但性能却未必更"
+"好。它的具体的表现取决于显卡驱动。"
 
 #: ../../reference_manual/preferences/display_settings.rst:35
 msgid ""
@@ -122,42 +115,44 @@ msgid ""
 msgstr ""
 "勾选此项将启用画布视图的显卡加速模式。如果显卡性能足够好，这将让笔刷的绘制更"
 "加平滑，缩放更为快捷，且缩放后的图像品质更高，还能提供无级缩放和旋转等功能。"
-"集成显卡一般已经足够使用，入门级独立显卡更是可以表现得相当流畅。在 macOS 下，"
-"同样的集成显卡往往无法达到 Windows / Linux 下面的性能。"
+"近年的集成显卡一般可以满足典型的 1080P 屏幕所需的性能；4K 及以上的高分辨率、"
+"高刷新率屏幕可能至少需要 GTX 1660、RX 590 级别的独立显卡。请注意：在 macOS 环"
+"境下，即使是同级别的显卡也往往无法达到 Windows / Linux 下面的性能，在某些情况"
+"下甚至关闭画布显卡加速反而会让画面的显示更加流畅。"
 
 #: ../../reference_manual/preferences/display_settings.rst:37
 msgid "Renderer (Requires Restart)"
-msgstr ""
+msgstr "首选渲染器 (需要重启)"
 
 #: ../../reference_manual/preferences/display_settings.rst:39
 msgid "Auto (Recommended)"
-msgstr ""
+msgstr "自动 (推荐)"
 
 #: ../../reference_manual/preferences/display_settings.rst:40
 msgid ""
 "Krita will decide the best renderer to use based on some internal "
 "compatibility checking."
-msgstr ""
+msgstr "Krita 将根据内建的兼容性检查机制自动选择最适合的渲染器。"
 
 #: ../../reference_manual/preferences/display_settings.rst:42
 msgid "Krita will use OpenGL."
-msgstr ""
+msgstr "Krita 将使用 OpenGL 渲染器。"
 
 #: ../../reference_manual/preferences/display_settings.rst:43
-#, fuzzy
-#| msgid "OpenGL"
 msgid "OpenGL ES"
-msgstr "画布显卡加速"
+msgstr "OpenGL ES"
 
 #: ../../reference_manual/preferences/display_settings.rst:44
 msgid ""
 "Krita will use OpenGl ES, which is a subset of OpenGL. Using this can be "
 "useful for less powerful devices."
 msgstr ""
+"Krita 将使用 OpenGL ES 渲染器。这是 OpenGL 的低配版本，可能在性能较低的设备上"
+"运行得更加流畅。"
 
 #: ../../reference_manual/preferences/display_settings.rst:46
 msgid "ANGLE Direct3D (Windows Only)"
-msgstr ""
+msgstr "Direct3D 11 - 通过 ANGLE 转译"
 
 #: ../../reference_manual/preferences/display_settings.rst:46
 msgid ""
@@ -165,6 +160,9 @@ msgid ""
 "Direct3D calls. Whether this works better than regular OpenGL depends on the "
 "graphics drivers of the computer."
 msgstr ""
+"仅在 Windows 环境下可用。Krita 将使用 ANGLE 转译层将 OpenGL 指令转译成 "
+"Direct3D 指令。此模式的兼容性通常比 OpenGL 更好，但性能却未必更好。它的具体的"
+"表现取决于显卡驱动。"
 
 #: ../../reference_manual/preferences/display_settings.rst:49
 msgid ""
@@ -245,13 +243,15 @@ msgstr ""
 
 #: ../../reference_manual/preferences/display_settings.rst:62
 msgid "Use Large Pixmap Cache"
-msgstr ""
+msgstr "使用大像素映射缓存"
 
 #: ../../reference_manual/preferences/display_settings.rst:62
 msgid ""
 "This should be enabled if you experience artifacts with the :ref:`assistants "
 "<painting_with_assistants>`."
 msgstr ""
+"如果在使用\\ :ref:`辅助尺工具\\ <painting_with_assistants>`\\ 时出现显示错"
+"误，请启用此选项。"
 
 #: ../../reference_manual/preferences/display_settings.rst:67
 msgid "HDR"
@@ -318,10 +318,8 @@ msgstr ""
 "有时候某些驱动程序问题会迫使你使用其他格式。更改此设置后需要重新启动 Krita。"
 
 #: ../../reference_manual/preferences/display_settings.rst:85
-#, fuzzy
-#| msgid "Canvas Graphics Acceleration"
 msgid "Canvas Decorations"
-msgstr "画布显卡加速"
+msgstr "画布辅助显示"
 
 #: ../../reference_manual/preferences/display_settings.rst:88
 msgid ""
@@ -343,8 +341,6 @@ msgid ""
 msgstr "指定透明度棋盘格的大小。"
 
 #: ../../reference_manual/preferences/display_settings.rst:92
-#, fuzzy
-#| msgid "Transparency Checkerboard"
 msgid "Transparency Checkerboard:"
 msgstr "透明度棋盘颜色"
 
@@ -392,34 +388,27 @@ msgstr ""
 "的一片反而影响工作效率。"
 
 #: ../../reference_manual/preferences/display_settings.rst:108
-#, fuzzy
-#| msgid "Opacity"
 msgid "Outline Opacity"
-msgstr "不透明度"
+msgstr "轮廓不透明度"
 
 #: ../../reference_manual/preferences/display_settings.rst:109
-#, fuzzy
-#| msgid ""
-#| "Set the color of the alternate :ref:`Selection <selections_basics>` "
-#| "display mode. This mode is typically used when making complex selections."
 msgid ""
 "Set the opacity of the regular :ref:`Selection <selections_basics>` display "
 "mode."
 msgstr ""
-"设置\\ :ref:`选区<selections_basics>`\\ 的备选显示模式的选区叠加颜色。该备选"
-"模式主要用于制作复杂的选区。"
+"设置\\ :ref:`选区<selections_basics>`\\ 在一般显示模式下的轮廓不透明度。"
 
 #: ../../reference_manual/preferences/display_settings.rst:110
 msgid "Overlay Color"
-msgstr ""
+msgstr "叠加层颜色"
 
 #: ../../reference_manual/preferences/display_settings.rst:111
 msgid ""
 "Set the color of the alternate :ref:`Selection <selections_basics>` display "
 "mode. This mode is typically used when making complex selections."
 msgstr ""
-"设置\\ :ref:`选区<selections_basics>`\\ 的备选显示模式的选区叠加颜色。该备选"
-"模式主要用于制作复杂的选区。"
+"设置\\ :ref:`选区<selections_basics>`\\ 在备选显示模式下的选区叠加颜色。该备"
+"选模式通常在建立复杂的选区时会被使用。"
 
 #: ../../reference_manual/preferences/display_settings.rst:113
 msgid "Selection Overlay"
@@ -430,10 +419,8 @@ msgid "Opacity"
 msgstr "不透明度"
 
 #: ../../reference_manual/preferences/display_settings.rst:113
-#, fuzzy
-#| msgid "How opaque the overlay is."
 msgid "How opaque the selection overlay is."
-msgstr "选区叠加颜色的不透明度。"
+msgstr "选区叠加层颜色的不透明度。"
 
 #: ../../reference_manual/preferences/display_settings.rst:116
 msgid "Miscellaneous"
@@ -495,45 +482,3 @@ msgid ""
 msgstr ""
 "注意：此选项位于\\ **其他**\\ 选项卡。勾选此项后，画布视图平移、缩放时透明度"
 "棋盘格将跟随移动。不勾选此项时，透明度在画布视图平移、缩放时将保持静止。"
-
-#~ msgid ""
-#~ "**For Krita 3.3 or later: Reworded as \"*Canvas Graphics Acceleration*\"**"
-#~ msgstr ""
-#~ "勾选此选框，可以启用画布视图的显卡加速功能。Krita 用来绘制画布视图的软件叫"
-#~ "做“渲染器”。某些渲染器可以利用显卡进行加速，提高笔刷绘制的流畅度、提高缩放"
-#~ "的速度和品质、提供无级缩放和旋转等。在 Windows 下面，Krita 可以使用 "
-#~ "OpenGL 或者 Direct3D 两种图形软件接口进行显卡加速；在 Linux 和 macOS 下面"
-#~ "只能使用 OpenGL。"
-
-#~ msgid ""
-#~ "Enable OpenGL **(For Krita 3.3 or later: Reworded as *Canvas Graphics "
-#~ "Acceleration*)**"
-#~ msgstr "画布显卡加速 (新版) / 启用 OpenGL (3.3 版前)"
-
-#~ msgid "For Krita 3.3 or later:"
-#~ msgstr "3.3 版起"
-
-#~ msgid "Renderer"
-#~ msgstr "渲染器"
-
-#~ msgid ""
-#~ "*On Windows:* You can switch between native OpenGL or ANGLE Direct3D 11 "
-#~ "rendering. The usual recommendation is to leave it as \"Auto\", which "
-#~ "Krita will decide the best to use based on some internal compatibility "
-#~ "checking. Changes to this option require a restart of Krita to take "
-#~ "effect."
-#~ msgstr ""
-#~ "在 Windows 下面你可以在 OpenGL 或者 Direct3D 11 渲染器之间进行选择。默认自"
-#~ "动使用 Direct3D 11，它在 Windows 下面问题最少，但一些旧版本软件会默认使用 "
-#~ "OpenGL。如果在 Windows 下感觉卡顿，或者遇到一些奇怪的显示问题，请将渲染器"
-#~ "手动更改为\\** 当前渲染器**\\ 以外的模式，例如原来是 OpenGL，现在改为 "
-#~ "Direct3D 11，反之亦然。更改此选项后请重新启动 Krita 以生效。"
-
-#~ msgid "Hide Scrollbars"
-#~ msgstr "隐藏画布滚动条"
-
-#~ msgid "Selecting this will hide the scrollbars in all view modes."
-#~ msgstr "勾选后将隐藏画布视图的滚动条。"
-
-#~ msgid "Color of the overlay."
-#~ msgstr "选区的叠加颜色。"

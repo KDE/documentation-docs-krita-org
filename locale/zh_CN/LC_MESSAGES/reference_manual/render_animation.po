@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-28 00:40+0000\n"
-"PO-Revision-Date: 2023-07-23 12:29\n"
+"PO-Revision-Date: 2023-07-30 07:10\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___render_animation.pot\n"
 "X-Crowdin-File-ID: 10090\n"
+"Language: zh_CN\n"
 
 #: ../../reference_manual/render_animation.rst:None
 msgid ""
@@ -77,7 +77,7 @@ msgstr ""
 
 #: ../../reference_manual/render_animation.rst:27
 msgid "General"
-msgstr ""
+msgstr "常规"
 
 #: ../../reference_manual/render_animation.rst:29
 msgid "First Frame"
@@ -106,10 +106,8 @@ msgstr ""
 "染动画的一部分时有用。"
 
 #: ../../reference_manual/render_animation.rst:35
-#, fuzzy
-#| msgid "Image Sequence"
 msgid "Export as Image Sequence"
-msgstr "图像序列"
+msgstr "导出为图像序列"
 
 #: ../../reference_manual/render_animation.rst:37
 msgid "File Format"
@@ -124,10 +122,8 @@ msgstr ""
 "guilabel:`...` 按钮可以更改当前文件格式的保存选项。"
 
 #: ../../reference_manual/render_animation.rst:39
-#, fuzzy
-#| msgid "Render Location"
 msgid "Image Location"
-msgstr "图像输出位置"
+msgstr "图像导出位置"
 
 #: ../../reference_manual/render_animation.rst:40
 msgid ""
@@ -147,7 +143,7 @@ msgstr "图像序列的主文件名，在它后面会跟随每帧的帧编号作
 
 #: ../../reference_manual/render_animation.rst:43
 msgid "Start numbering at."
-msgstr ""
+msgstr "序列起点编号"
 
 #: ../../reference_manual/render_animation.rst:44
 msgid ""
@@ -162,45 +158,47 @@ msgstr ""
 
 #: ../../reference_manual/render_animation.rst:46
 msgid "Only Unique Frames"
-msgstr ""
+msgstr "只生成图像发生变化的帧"
 
 #: ../../reference_manual/render_animation.rst:46
 msgid ""
 "Normally Krita generates a frame for every FPS in the sequence. Ticking this "
 "will only generate keyframes, saving space."
 msgstr ""
+"Krita 在正常情况下会为时间轴的每一个帧格生成一帧图像。勾选此项后，Krita 将只"
+"生成图像发生变化的帧，以节省空间。"
 
 #: ../../reference_manual/render_animation.rst:49
 msgid "Export as Video"
-msgstr ""
+msgstr "导出为视频"
 
 #: ../../reference_manual/render_animation.rst:51
 msgid "Width"
-msgstr ""
+msgstr "宽度"
 
 #: ../../reference_manual/render_animation.rst:52
 msgid "Set the desired width in pixels."
-msgstr ""
+msgstr "设置导出视频的宽度，单位为像素。"
 
 #: ../../reference_manual/render_animation.rst:53
 msgid "Height"
-msgstr ""
+msgstr "高度"
 
 #: ../../reference_manual/render_animation.rst:54
 msgid "Set the desired height in pixels."
-msgstr ""
+msgstr "设置导出视频的高度，单位为像素。"
 
 #: ../../reference_manual/render_animation.rst:55
 msgid "FPS"
-msgstr ""
+msgstr "每秒帧数"
 
 #: ../../reference_manual/render_animation.rst:56
 msgid "Set the desired frames per second."
-msgstr ""
+msgstr "设置导出视频的每秒帧数。"
 
 #: ../../reference_manual/render_animation.rst:57
 msgid "Filter"
-msgstr ""
+msgstr "缩放插值方式"
 
 #: ../../reference_manual/render_animation.rst:58
 msgid ""
@@ -208,6 +206,9 @@ msgid ""
 "you want to, say, export a pixel art animation at twice the size, [Nearest] :"
 "guilabel:`Neighbour` will preserve the fine details better."
 msgstr ""
+"设置视频的缩放插值方式。一般情况下建议使用 :guilabel:`双立方`\\ 。如果要以整"
+"数倍缩放来导出像素画动画，建议使用 :guilabel:`最近邻`\\ ，这将确保缩放后的像"
+"素格的一致性，并避免产生新的颜色。"
 
 #: ../../reference_manual/render_animation.rst:59
 msgid "Render As"
@@ -226,22 +227,20 @@ msgid "Location and name of the rendered animation."
 msgstr "指定视频输出的位置和文件名。"
 
 #: ../../reference_manual/render_animation.rst:65
-#, fuzzy
-#| msgid "Render Location"
 msgid "Video Location"
-msgstr "图像输出位置"
+msgstr "视频导出位置"
 
 #: ../../reference_manual/render_animation.rst:65
 msgid "Include Audio"
-msgstr ""
+msgstr "包含音频"
 
 #: ../../reference_manual/render_animation.rst:65
 msgid "Include any audio you have added."
-msgstr ""
+msgstr "在视频中包含您导入的音频。"
 
 #: ../../reference_manual/render_animation.rst:68
 msgid "The location where your have FFmpeg."
-msgstr ""
+msgstr "指定 FFmpeg 程序所在的位置。"
 
 #: ../../reference_manual/render_animation.rst:70
 msgid ""
@@ -249,6 +248,8 @@ msgid ""
 "provide some options, but it is still useful to set this if you want to use "
 "a specific version of FFMpeg for rendering videos."
 msgstr ""
+"这已不再是必填项，因为 Krita 现在已经自带了 FFmpeg 的精简版本。但如果您需要使"
+"用特定版本的 FFmpeg 才具备的某些选项来导出视频，请在此指定 FFmpeg 的位置。"
 
 #: ../../reference_manual/render_animation.rst:71
 msgid "FFmpeg"
@@ -272,6 +273,9 @@ msgid ""
 "Since 5.2, Krita will always delete the image sequence if :guilabel:`Export "
 "as Image Sequence` is not checked while :guilabel:`Export as Video` is."
 msgstr ""
+"从 Krita 5.2 版开始，如果在导出时只勾选了 :guilabel:`导出为视频`\\ ，没有勾"
+"选 :guilabel:`导出为图像序列`\\ ，Krita 将总是在导出完成后删除在导出过程中生"
+"成的图像序列。"
 
 #: ../../reference_manual/render_animation.rst:82
 msgid ""
@@ -295,6 +299,9 @@ msgid ""
 "experts might want to use a specific version of FFMpeg to get more codec "
 "options."
 msgstr ""
+"Krita 从 5.2 版开始自带了 FFmpeg 的精简版本，您不再需要自行下载并配置 "
+"FFmpeg。如果您是专业用户，需要使用某些自带版本中没有的编码器选项，也可以自行"
+"下载并配置 FFmpeg。"
 
 #: ../../reference_manual/render_animation.rst:91
 msgid ""
@@ -302,26 +309,29 @@ msgid ""
 "and ``OGG``, which are a wrapper around the video data (amongst others), "
 "which are encoded with codecs, of which the bundled FFMpeg supports:"
 msgstr ""
+"Krita 自带的 FFmpeg 支持以下视频封装格式：\\ ``Webm``\\ 、\\ ``MKV`` 和 "
+"``OGG``\\ 。视频封装格式只是一个外壳，它包装的视频数据是使用独立于封装格式的"
+"视频编码器进行编码的。Krita 自带的 FFmpeg 支持以下视频编码："
 
 #: ../../reference_manual/render_animation.rst:93
 msgid "AOM AV1"
-msgstr ""
+msgstr "AOM AV1"
 
 #: ../../reference_manual/render_animation.rst:94
 msgid "VPX VP9"
-msgstr ""
+msgstr "VPX VP9"
 
 #: ../../reference_manual/render_animation.rst:95
 msgid "VPX VP8"
-msgstr ""
+msgstr "VPX VP8"
 
 #: ../../reference_manual/render_animation.rst:96
 msgid "264 (via openH264)"
-msgstr ""
+msgstr "264 (通过 openH264 编码器)"
 
 #: ../../reference_manual/render_animation.rst:97
 msgid "Theora"
-msgstr ""
+msgstr "Theora"
 
 #: ../../reference_manual/render_animation.rst:99
 msgid ""
@@ -329,6 +339,8 @@ msgid ""
 "FFMpeg and set it up. The setup is a one-time thing so you won't have to do "
 "it again."
 msgstr ""
+"如果您需要自行下载并配置 FFmpeg，请按照以下指引进行操作。完成首次配置后，日后"
+"导出动画时将无需再次配置。"
 
 #: ../../reference_manual/render_animation.rst:102
 msgid "Step 1 - Downloading FFmpeg"
@@ -522,31 +534,3 @@ msgstr ""
 "如果你的 macOS 无法播放 MP4 或者 MKV 视频文件，而你正在使用 Chrome 浏览器，你"
 "可以把视频文件拖进它的窗口直接播放。你也可以安装 VLC 播放器，它也是一款自由开"
 "源软件。"
-
-#~ msgid "Naming Sequence starts with"
-#~ msgstr "序列起点编号"
-
-#~ msgid "File"
-#~ msgstr "视频输出位置"
-
-#~ msgid ""
-#~ "The location where your have FFmpeg. If you don't have this, Krita cannot "
-#~ "render an animation. For proper GIF support, you will need FFmpeg 2.6, as "
-#~ "we use its palettegen functionality."
-#~ msgstr ""
-#~ "指定 FFmpeg 的位置。这是一个第三方的自由开源视频处理程序，Krita 必须使用它"
-#~ "来输出视频。GIF 支持需要 FFmpeg 2.6 以上版本，因为我们使用了 palettegen 功"
-#~ "能。"
-
-#~ msgid ""
-#~ "You will need to download an extra application and link it in Krita for "
-#~ "it to work. The application is pretty big (50MB), so the Krita developers "
-#~ "didn't want to bundle it with the normal application. The software that "
-#~ "we will use is free and called FFmpeg. The following instructions will "
-#~ "explain how to get it and set it up. The setup is a one-time thing so you "
-#~ "won't have to do it again."
-#~ msgstr ""
-#~ "Krita 需要 FFmpeg 来渲染动画。FFmpeg 是一个第三方的自由开源视频处理程序，"
-#~ "由于它的体积太大 (50MB 以上)，许多用户又不使用 Krita 的动画功能，我们并未"
-#~ "在软件中捆绑它。你需要自行下载 FFmpeg 并进行初期配置。下面将分步介绍配置过"
-#~ "程："
