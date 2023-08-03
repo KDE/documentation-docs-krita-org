@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-26 00:40+0000\n"
-"PO-Revision-Date: 2023-07-30 07:10\n"
+"PO-Revision-Date: 2023-08-02 12:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___tools___fill.pot\n"
 "X-Crowdin-File-ID: 9678\n"
+"Language: zh_CN\n"
 
 #: ../../<generated>:1
 msgid "Reference"
@@ -24,11 +24,11 @@ msgstr "采样图层"
 
 #: ../../<generated>:1
 msgid "Drag-Fill Mode"
-msgstr "拖动式填充模式"
+msgstr "拖动填充有效区域"
 
 #: ../../<generated>:1
 msgid "Fill Regions of Similar Colors"
-msgstr "仅填充与拖动开始区域颜色相似的区域"
+msgstr "拖动开始处的相似色"
 
 #: ../../<rst_epilog>:56
 msgid ""
@@ -162,9 +162,9 @@ msgid ""
 msgstr ""
 "图 a：填充前的例图，虚线部分是当前选区，红点是填充时点击的位置；图 b：填充区"
 "域设为 :guilabel:`当前选区/整个画布` 时的填充结果；图 c：填充区域设为 :"
-"guilabel:`相连颜色区域` 时的填充效果，红、黄、蓝线被视作相连颜色区域的界限；"
-"图 d：填充区域设为 :guilabel:`相似颜色区域` 时的填充效果，选区内的白色部分作"
-"为相似颜色被全部填充。"
+"guilabel:`相连颜色区域` 时的填充效果，图中的红、黄、蓝线被视作相连颜色区域的"
+"界限；图 d：填充区域设为 :guilabel:`相似颜色区域` 时的填充效果，选区内的白色"
+"部分被视作相似颜色而被全部填充。"
 
 #: ../../reference_manual/tools/fill.rst:45
 msgid "Foreground Color"
@@ -219,39 +219,39 @@ msgstr "对填充的图案进行旋转。"
 msgid ""
 "When filling a contiguous region, the user can choose how the pixels are "
 "selected based on color similarity."
-msgstr ""
+msgstr "填充相连颜色区域时，您可以选择两种不同的方式来处理填充区域的界限。"
 
 #: ../../reference_manual/tools/fill.rst:74
 msgid "Fill Similar Pixels"
-msgstr ""
+msgstr "相连颜色区域"
 
 #: ../../reference_manual/tools/fill.rst:74
 msgid ""
 "The contiguous pixels that are similar to the one the user clicked on are "
 "selected."
-msgstr ""
+msgstr "填充区域的边界按照与点击处颜色的相似性确定。"
 
 #: ../../reference_manual/tools/fill.rst:80
 msgid ""
 "All the contiguous pixels are selected as long as they are not similar to "
 "the user defined boundary color."
-msgstr ""
+msgstr "填充区域的边界按照与自定义边界颜色的不相似性确定。"
 
 #: ../../reference_manual/tools/fill.rst:83
 msgid "Fill All Pixels Until a Boundary"
-msgstr ""
+msgstr "自定义边界颜色"
 
 #: ../../reference_manual/tools/fill.rst:83
 msgid "Boundary Color"
-msgstr ""
+msgstr "边界颜色"
 
 #: ../../reference_manual/tools/fill.rst:83
 msgid "Defines the color used as a boundary."
-msgstr ""
+msgstr "指定作为填充区域边界的颜色。"
 
 #: ../../reference_manual/tools/fill.rst:87
 msgid "Pixel Selection Modes"
-msgstr ""
+msgstr "填充边界模式"
 
 #: ../../reference_manual/tools/fill.rst:87
 msgid ""
@@ -260,6 +260,11 @@ msgid ""
 "filled region all the pixels until the boundary color (here set to the color "
 "black)."
 msgstr ""
+"图 a：填充前的例图，红点是填充时点击的位置；图 b：填充界限设为 :guilabel:`相"
+"连颜色区域` 时的填充结果——图中的红、黄、蓝、黑线因为与点击处的白色不相似，因"
+"此被视作相连颜色区域的界限；图 c：填充界限设为 :guilabel:`自定义边界颜色` ，"
+"边界颜色设为黑色时的填充结果——黑色圆圈成为了填充区域的边界，圈内的颜色因为与"
+"黑色不相似而一律被填充，但不会超过黑色边界填充到外面。"
 
 #: ../../reference_manual/tools/fill.rst:90
 msgid "Threshold"
@@ -271,8 +276,9 @@ msgid ""
 "words, how far the region should extend from the selected pixel in terms of "
 "color similarity."
 msgstr ""
-"指定填充工具在什么条件下将另一种颜色视作边界。换句话说，就是两种颜色之间的数"
-"值差别要达到多少才被视作非近似色。"
+"指定填充工具在色差多大时才将另一种颜色视作边界。也可以理解为填充区域在边界处"
+"允许越界的色差上限。如果两种颜色之间的色差超过此值，则将两者之间的边界视作填"
+"充边界，不再向外扩展。"
 
 #: ../../reference_manual/tools/fill.rst:95
 msgid ""
@@ -305,27 +311,27 @@ msgstr ""
 msgid ""
 "When checked, this will count the borders of the selection as an extra "
 "boundary on top of the pixel difference."
-msgstr "勾选后，相连颜色采样区域不能越过选区轮廓"
+msgstr "勾选此项后，选区的轮廓也将被视作填充边界。"
 
 #: ../../reference_manual/tools/fill.rst:108
 msgid "Fill Extent"
-msgstr "填充界限"
+msgstr "填充边界"
 
 #: ../../reference_manual/tools/fill.rst:108
 msgid "Use Selection as Boundary"
-msgstr ""
+msgstr "当前选区被视作填充边界"
 
 #: ../../reference_manual/tools/fill.rst:108
 msgid ""
 "Left: Original selection with a line. Middle: Filled with 'use selection as "
 "boundary' off. Right: Filled with 'use selection as boundary' on."
 msgstr ""
-"左图：演示素材，选区被一条细线截断成两块；中图：填充时不勾选“采样区域受选区限"
-"制”；右图：填充时勾选“采样区域受选区限制”"
+"左图：填充前的例图，圆形选区的中间有一条细线；中图：不勾选“选区被视作填充边"
+"界”时的填充效果；右图：勾选“选区被视作填充边界”时的填充效果。"
 
 #: ../../reference_manual/tools/fill.rst:114
 msgid "Anti-aliasing"
-msgstr ""
+msgstr "抗锯齿：边缘平滑"
 
 #: ../../reference_manual/tools/fill.rst:114
 msgid ""
@@ -350,6 +356,9 @@ msgid ""
 "the line's darkest or more opaque parts and the filled region. To improve "
 "that, it is common to grow the region a bit to cover those pixels."
 msgstr ""
+"此选项是“扩大/缩小填充区域”右侧的一个小按钮，它是专门为填充线稿准备的针对性功"
+"能。在给线稿填充颜色时，如果线稿的边缘不够锐利，在填充时很容易在线条周围留下"
+"空隙。常见的做法是将填充区域扩大一些，以便能填满这些空隙。"
 
 #: ../../reference_manual/tools/fill.rst:127
 msgid ""
@@ -359,6 +368,9 @@ msgid ""
 "get lighter or less opaque. This effectively prevents the expanded region "
 "from reaching the opposite side of the lines."
 msgstr ""
+"然而单纯地扩大填充区域又会遇到新的问题：如果线稿的线条有粗细变化，那么在填充"
+"时很容易越界。启用“最深/最不透明颜色作为填充边界”后，填充区域将在线稿颜色变"
+"浅、变得不透明时停止扩大，确保填充时不会越界。"
 
 #: ../../reference_manual/tools/fill.rst:131
 msgid ""
@@ -370,6 +382,10 @@ msgid ""
 "region exceeds the line in some points. d: The filled region after being "
 "expanded by twelve pixels, but stopping adaptively at the darkest pixels."
 msgstr ""
+"填充边界效果对比，红点为填充点击处，混合模式为“正片叠底=相乘”。图 a：线稿原图"
+"——线条带有粗细、深浅变化；图 b：直接填充，不扩大填充区域——填充颜色在线稿周围"
+"留下了空隙；图 c：填充区域扩大了 12 像素——填充颜色在某些地方越界填充到了另一"
+"边；图 d：填充区域扩大了 12 像素，且勾选了“最深/最不透明颜色作为填充边界”。"
 
 #: ../../reference_manual/tools/fill.rst:132
 msgid "Grow Selection"
@@ -377,11 +393,11 @@ msgstr "扩大/缩小填充区域"
 
 #: ../../reference_manual/tools/fill.rst:132
 msgid "Stop Growing at the Darkest and/or More Opaque Pixels"
-msgstr ""
+msgstr "最深/最不透明颜色作为填充边界"
 
 #: ../../reference_manual/tools/fill.rst:135
 msgid "Adjustments"
-msgstr "填充区域调整"
+msgstr "边缘微调"
 
 #: ../../reference_manual/tools/fill.rst:135
 msgid "Feathering Radius"
@@ -438,24 +454,21 @@ msgstr "选择用于填充区域采样的图层颜色标签。"
 msgid ""
 "Select what should happen when one clicks and drags the pointer on the "
 "canvas."
-msgstr "选择在画布上点击并拖动时的填充操作。"
+msgstr "在画布上点击并拖动时可以填充的颜色区域。"
 
 #: ../../reference_manual/tools/fill.rst:157
 msgid "Fill Regions of Any Color"
-msgstr "填充任意颜色的区域"
+msgstr "任意颜色"
 
 #: ../../reference_manual/tools/fill.rst:158
 msgid ""
 "With this option selected, the tool will fill any region along the path "
 "described by the pointer while dragging, regardless of its color."
-msgstr ""
-"选中此项时，填充工具将沿着光标的拖动路径连续填充，不管光标下的颜色如何。"
+msgstr "填充在拖动路径上的任意颜色区域。"
 
 #: ../../reference_manual/tools/fill.rst:160
 msgid ""
 "With this option selected, the tool will fill the regions along path "
 "described by the pointer while dragging that have the same color as the "
 "first region filled."
-msgstr ""
-"选中此项时，填充工具将沿着光标的拖动路径连续填充，但仅在光标下的颜色与拖动起"
-"始点的颜色相同时才进行填充。"
+msgstr "填充在拖动路径上与拖动开始处颜色相似的区域。"

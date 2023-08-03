@@ -3,10 +3,9 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-26 00:40+0000\n"
-"PO-Revision-Date: 2023-07-30 07:10\n"
+"PO-Revision-Date: 2023-08-02 12:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +16,7 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/websites-docs-krita-org/"
 "docs_krita_org_reference_manual___tools___transform.pot\n"
 "X-Crowdin-File-ID: 9974\n"
+"Language: zh_CN\n"
 
 #: ../../<rst_epilog>:2
 msgid ""
@@ -693,11 +693,11 @@ msgstr "显示控制点"
 
 #: ../../reference_manual/tools/transform.rst:207
 msgid "Transform Multiple Layers"
-msgstr ""
+msgstr "变形多个图层"
 
 #: ../../reference_manual/tools/transform.rst:209
 msgid "Krita allows you to transform multiple layers at once."
-msgstr ""
+msgstr "Krita 可以同时对多个图层进行变形操作。"
 
 #: ../../reference_manual/tools/transform.rst:211
 msgid ""
@@ -707,12 +707,18 @@ msgid ""
 "layers (To achieve non-recursive transformation you can use the layer lock "
 "feature)."
 msgstr ""
+"在 5.0 版之前的旧版 Krita 中，如果要对多个图层进行变形，您首先要将这些图层放"
+"到一个图层组中，然后启用变形工具的 :guilabel:`递归变形` (蜘蛛按钮)，最后进行"
+"变形。从 5.0 版开始，图层组总是启用递归变形功能。您可以通过图层锁定功能来实现"
+"图层组的非递归变形。"
 
 #: ../../reference_manual/tools/transform.rst:215
 msgid ""
 "Transforming multiple layers doesn't require a group anymore, now all layers "
 "selected in the layer docker will be transformed at once."
 msgstr ""
+"从 Krita 5.2 开始，变形多个图层时不再需要图层组。如果您在图层面板中选中了多个"
+"图层，变形工具将同时对它们进行变形。"
 
 #: ../../reference_manual/tools/transform.rst:219
 msgid ".. image:: images/tools/Krita_transforms_recursive.png"
@@ -723,6 +729,8 @@ msgid ""
 "Krita allows you to transforms all the layers in the group, so with this "
 "apple, both the lineart as the fill will be transformed."
 msgstr ""
+"上图：启用了递归模式后，尽管我们只对图层组进行了变形操作，但图层组中的梨的线"
+"稿和颜色图层都一起被变形了。"
 
 #: ../../reference_manual/tools/transform.rst:222
 msgid "Continuous Transform"
