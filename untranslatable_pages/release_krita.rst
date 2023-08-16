@@ -173,12 +173,15 @@ Runs
 15. Verify that the filesize of .zsync blob is different from the one 
     stored on https://download.kde.org
 
-    - for stable releases: https://download.kde.org/stable/krita/updates/
-    - for unstable releases: https://download.kde.org/unstable/krita/updates/
+    - for stable releases: https://download.kde.org/stable/krita/updates/Krita-Stable-x86_64.appimage.zsync
+    - for unstable releases: https://download.kde.org/unstable/krita/updates/Krita-Beta-x86_64.appimage.zsync
     
     The filesize must be different, otherwise KDE's mirroring system will not 
     propagate the change automatically. If you see that the filesize is the same,
     notify sysadmins to update the mirrors manually.
+
+    Please take it into account that "unstable" releases should have "Beta" in the zsync file name,
+    **not** "Unstable" as you could guess. This word comes from `$CHANNEL` variable in `build_image.sh` script.
 
 16. Upload all files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
 
