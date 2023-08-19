@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-26 00:40+0000\n"
-"PO-Revision-Date: 2023-08-17 20:25+0200\n"
+"PO-Revision-Date: 2023-08-18 09:18+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -104,8 +104,8 @@ msgid ""
 "Here you can set different properties related to the area where the "
 "particles are distributed and how they are distributed."
 msgstr ""
-"Här kan man ställa in olika egenskaper relaterade till området där"
-" partiklarna är fördelade och hur de är fördelade."
+"Här kan man ställa in olika egenskaper relaterade till området där "
+"partiklarna är fördelade och hur de är fördelade."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:44
 msgid "Area"
@@ -192,18 +192,26 @@ msgid ""
 "the angle and the distance of the particles relative to the center of the "
 "spray area."
 msgstr ""
+"Här kan man ställa in hur partiklarna fördelas i sprejområdet. Partiklarna"
+" fördelas med hjälp av `polära koordinater <https://sv.wikipedia.org/wiki/Pol"
+"%C3%A4ra_koordinater>`_, så man kan ställa in olika fördelningar för vinkeln"
+" och avståndet för partiklarna i förhållande till mitten av sprejområdet."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:74
 msgid ""
 "You can specify how the particles are distributed around the center using "
 "one of the following options:"
 msgstr ""
+"Man kan ange hur partiklarna är fördelade runt mitten med hjälp av något av"
+" följande alternativ:"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:76
 msgid ""
 ":guilabel:`Uniform`: Distributes the particles uniformly. Each angle is "
 "equally likely to receive a particle."
 msgstr ""
+":guilabel:`Likformig`: Fördelar partiklarna jämnt. Det är lika sannolik att"
+" varje vinkel tar emot en partikel."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:77
 msgid ""
@@ -214,6 +222,11 @@ msgid ""
 "ends up at that particular angle. In the spray area the angle increases "
 "clockwise."
 msgstr ""
+":guilabel:`Kurva`: Man kan ställa in en egen kurva som modellerar hur"
+" partiklarna ska fördelas. Den vänstra sidan av kurvan representerar en"
+" vinkel på 0 grader och den högra sidan en vinkel på 360 grader. Högre värden"
+" i vertikal riktning gör att det är större sannolikhet att en partikel hamnar"
+" i just den vinkeln. I sprejområdet ökar vinkeln medurs."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:79
 msgid "Angular"
@@ -225,16 +238,21 @@ msgid ""
 "360 degrees. Without this, you would need to build a very complex curve with "
 "too many control points to achieve the same result."
 msgstr ""
+":guilabel:`Upprepa`: Låt kurvan upprepa sig flera gånger från 0 till 360"
+" grader. Utan det skulle man behöva skapa en mycket komplex kurva med för"
+" många styrpunkter för att uppnå samma resultat."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:82
 msgid ""
 "You can specify how the particles are distributed from the center to the "
 "edge of the spray area using one of the following options:"
 msgstr ""
+"Man kan ange hur partiklarna fördelas från mitten till kanten av sprejområdet"
+" med ett av följande alternativ:"
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:84
 msgid ":guilabel:`Uniform`: Distributes the particles uniformly."
-msgstr ""
+msgstr ":guilabel:`Likformig`: Fördelar partiklarna likformigt."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:86
 msgid ""
@@ -247,18 +265,29 @@ msgid ""
 "circumference at a distance of 100 pixels, while being 10 times smaller in "
 "length."
 msgstr ""
+":guilabel:`Centrumbaserad spridning (föråldrad)`: Alternativet säkerställer"
+" kompatibilitet med penslar som skapades före version 5.1. Förut var"
+" partiklarna jämnt fördelade i termer av avstånd från centrum, men det"
+" slutade med att fler partiklar koncentrerades i mitten av sprejområdet ur"
+" ett tvådimensionellt perspektiv. Till exempel har en omkrets på avståndet 10"
+" bildpunkter från mitten ungefär samma antal partiklar som en omkrets på ett"
+" avstånd av 100 bildpunkter, samtidigt som den är 10 gånger mindre i längd."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:88
 msgid ""
 ":guilabel:`Gaussian`: distributes the particles using a gaussian or `normal "
 "distribution <https://en.wikipedia.org/wiki/Normal_distribution>`_."
 msgstr ""
+":guilabel:`Gaussisk`: Fördelar partiklarna med en Gauss- eller"
+" `normalfördelning <https://sv.wikipedia.org/wiki/Normalf%C3%B6rdelning>`_."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:90
 msgid ""
 ":guilabel:`Standard deviation`: Sets the standard deviation of the "
 "distribution. Higher values will make the particles more spread."
 msgstr ""
+":guilabel:`Standardavvikelse`: Ställer in fördelningens standardavvikelse."
+" Större värden gör att partiklarna sprids mer."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:91
 msgid ""
@@ -266,14 +295,17 @@ msgid ""
 "with the brushes made prior to version 5.1. See the previous point for more "
 "information."
 msgstr ""
+":guilabel:`Centrumbaserad spridning (föråldrad)`: Alternativet säkerställer"
+" kompatibilitet med penslar som skapades innan version 5.1. Se föregående"
+" punkt för mer information."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:93
 msgid ""
 ":guilabel:`Cluster`: This will allow you to quickly concentrate the "
 "particles towards the center or the edge of the spray area."
 msgstr ""
-":guilabel:`Kluster`: Gör det möjligt att snabbt koncentrera partiklarna mot"
-" centrum eller sprejområdets kant."
+":guilabel:`Kluster`: Gör det möjligt att snabbt koncentrera partiklarna mot "
+"centrum eller sprejområdets kant."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:95
 msgid ""
@@ -282,10 +314,10 @@ msgid ""
 "the particles concentrate towards the border of the spray area. Values near "
 "0 will make the particles spread more uniformly."
 msgstr ""
-":guilabel:`Klustervärde`: Positiva värden gör att partiklarna koncentreras"
-" mot sprejområdets centrum. Negativa värden gör att partiklarna koncentreras"
-" mot sprejområdets gräns. Värden nära 0 gör att partiklarna sprids"
-" likformigare."
+":guilabel:`Klustervärde`: Positiva värden gör att partiklarna koncentreras "
+"mot sprejområdets centrum. Negativa värden gör att partiklarna koncentreras "
+"mot sprejområdets gräns. Värden nära 0 gör att partiklarna sprids "
+"likformigare."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:97
 msgid ""
@@ -295,6 +327,11 @@ msgid ""
 "the vertical direction mean that there is a higher probability that a "
 "particle ends up at that particular distance."
 msgstr ""
+":guilabel:`Kurva`: Man kan ställa in en egen kurva som modellerar hur"
+" partiklarna ska fördelas. Den vänstra sidan av kurvan representerar mitten"
+" av sprejområdet och den högra sidan representerar dess kant. Högre värden i"
+" vertikal riktning gör att det är större sannolikhet att en partikel hamnar"
+" på just det avståndet."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:99
 msgid "Distribution"
@@ -310,6 +347,9 @@ msgid ""
 "center of the spray area to its edge. Without this, you would need to build "
 "a very complex curve with too many control points to achieve the same result."
 msgstr ""
+":guilabel:`Upprepa`: Låt kurvan upprepa sig flera gånger från mitten av"
+" sprejområdet till dess kant. Utan det skulle man behöva skapa en mycket"
+" komplex kurva med för många styrpunkter för att uppnå samma resultat."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:103
 msgid "Different distribution types on display:"
@@ -320,54 +360,63 @@ msgid ""
 "Uniform for both Angular and Radial, with `Center-biased spread (legacy)` "
 "turned on."
 msgstr ""
+"Likformig för både Vinkelformat och Radiell, med `Centrumbaserad spridning"
+" (föråldrad)` på."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:106
 msgid ""
 "Uniform for both Angular and Radial, with `Center-biased spread (legacy)` "
 "turned off."
 msgstr ""
+"Likformig för både Vinkelformat och Radiell, med `Centrumbaserad spridning"
+" (föråldrad)` avstängt."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:107
 msgid "Clustered for Radial, with Clusting Amount: 0.0."
-msgstr ""
+msgstr "Klustrat för Radiell, med klustervärde 0,0."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:108
 msgid "Clustered for Radial, with Clusting Amount: -5.0."
-msgstr ""
+msgstr "Klustrat för Radiell, med klustervärde -5,0."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:109
 msgid "Clustered for Radial, with Clusting Amount: +5.0."
-msgstr ""
+msgstr "Klustrat för Radiell, med klustervärde +5,0."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:110
 msgid "Curve for Angular, using the default curve and 0 repeats."
 msgstr ""
+"Kurva för Vinkelformat, med användning av standardkurvan och 0 upprepningar."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:111
 msgid "Curve for Angular, using the default curve and 5 repeats."
 msgstr ""
+"Kurva för Vinkelformat, med användning av standardkurvan och 5 upprepningar."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:112
 msgid "Curve for Radial, using the default curve with 3 repeats."
 msgstr ""
+"Kurva för Radiell, med användning av standardkurvan och 3 upprepningar."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:113
 msgid ""
 "Curve for Angular using a hill shaped curve, 7 repeats, and Clustered for "
 "Radial, with Clusting Amount: -5.0."
 msgstr ""
+"Kurva för Vinkelformad, som använder en kurva formad som en kulle, 7"
+" upprepningar, och Klustrat för Radiell, men klustervärde: -5,0."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:114
 msgid "Gaussian for Radial, with Standard Deviation: 25."
-msgstr ""
+msgstr "Gaussisk för Radiell, men standardavvikelse: 25."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:115
 msgid "Gaussian for Radial, with Standard Deviation: 50."
-msgstr ""
+msgstr "Gaussisk för Radiell, men standardavvikelse: 50."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:116
 msgid "Gaussian for Radial, with Standard Deviation: 80."
-msgstr ""
+msgstr "Gaussisk för Radiell, men standardavvikelse: 80."
 
 #: ../../reference_manual/brushes/brush_engines/spray_brush_engine.rst:121
 msgid "Spray Shape"
