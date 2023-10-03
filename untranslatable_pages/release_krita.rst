@@ -101,15 +101,15 @@ Create the tarball
 1. Get the tarball from gitlab: https://invent.kde.org/graphics/krita/-/tags
 2. Unpack the tarball
 3. Rename folder from `krita-v5.1.0-beta1` into `krita-5.1.0-beta1` (without 'v' prefix in the version string)
-3. Package the tarball as .gz and .xz
-4. Sign both tarballs:
+4. Package the tarball as .gz and .xz
+5. Sign both tarballs:
 
     .. code::
 
         gpg --output krita-5.1.0-beta1.tar.gz.sig --detach-sign krita-5.1.0-beta1.tar.gz
         gpg --output krita-5.1.0-beta1.tar.xz.sig --detach-sign krita-5.1.0-beta1.tar.xz
 
-5. Upload the gz tarball to files.kde.org, where builders can pick them up (the sigs and the xz tarball aren't used for the binary builders):
+6. Upload the gz tarball to files.kde.org, where builders can pick them up (the sigs and the xz tarball aren't used for the binary builders):
 
     * https://files.kde.org/krita/.release/$version/krita-$version.tar.gz
 
