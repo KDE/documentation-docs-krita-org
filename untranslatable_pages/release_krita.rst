@@ -275,10 +275,10 @@ Post-release
 * BlenderArtists (wolthera)
 * deviantart (wolthera)
 * VK (dmitry)
-* blendernation (boud)
-* twitter (boud)
-* facebook (boud)
-* 3dpro (boud)
+* blendernation (halla)
+* twitter (halla)
+* facebook (halla)
+* 3dpro (halla)
 * reddit (raghukamath)
 
 Notes
