@@ -165,6 +165,19 @@ Enable Vertical Ruler
    
    In the above image, a two point perspective with an area limiter is enough to draw an indoor area. The assistant is colored blue here.
 
+.. _curvilinear_perspective:
+
+Curvilinear Perspective
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 5.3
+
+Using this assistant, one can draw parallel lines that curve to converge at two specified vanishing points. This assistant is similar to the :ref:`assistant_fish_eye` assistant, except that it uses circular arcs to create curvature instead of ellipses. This allows for a different type of curved perspective compared to the :ref:`assistant_fish_eye`, especially whenever it comes to drawing outside of the vanishing points.
+
+.. figure:: /images/assistants/CurvilinearPerspective.png
+
+The assistant can be used to create 4-point, 5-point, and certain forms of 6-point perspectives through utilizing combinations of this assistant and other assistants, such as :ref:`assistant_vanishing_point`.
+
 Tips
 ^^^^
 
