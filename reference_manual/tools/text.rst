@@ -19,13 +19,25 @@ Text Tool
 
 This tool allows you to add text to your artwork.
 
-.. note::
+To create a text, click on the canvas with |mouseleft| and a text with "Placeholder Text" will appear. To create a simple wrapped text ("inline-size", doing |mouseleft| :kbd:`+ drag` to create a rectangular area. When the area is larger than the currently selected font's line height, the cursor image will start showing the cursor for inline-size. Releasing the mouse button will then add the default text with wrapping enabled. To avoid creating a wrapped text while dragging, press :kbd:`Ctrl` while dragging.
 
-   The text layout got reworked in Krita 5.2, however the text tool itself has not yet received an update. For now, if you want to use features like ``inline-size`` for wrapping or ``writing-mode:vertical-rl`` for vertical text, you will need to use the SVG source editor. We will update the text tool in future versions of Krita.
+Editing Text
+------------
 
-You use it by doing |mouseleft| :kbd:`+ drag` to create a rectangular selection. When releasing |mouseleft| a default text will be created and the text editor window will pop-up.
+If you have just created a text, a blinking cursor will be visible on the text. You will now be able to move it around with the keyboard arrow keys,  type and remove text with back space and delete keys, as well as use any system input methods for complex text input. Selecting text can be done by holding shift while navigating with the arrow keys to the end point of the selection. You can also use |mouseleft| :kbd:`+ drag` to select text, :kbd:`double-click +` |mouseleft| to select a word and :kbd:`triple-click +` |mouseleft| to select the whole text.
 
-Hovering over other text shapes will highlight their bounding box. |mouseleft| on a highlighted text will select it as the active text.
+.. Note::
+
+   Because you need the keys on your keyboard to type text, many shortcuts will be disabled. If you want to use a particular shortcut while editing text, it is best to set it up to use either with :kbd:`Ctrl`, :kbd:`Alt` or :kbd:`Ctrl + Shift` as modifiers, as Krita will consider others text to be input. Canvas input gestures like touch rotate, |mousemiddle| pan, or |mousescroll| will work by virtue of not having any text associated.
+   
+   In addition Krita supports all of `Qt's default text movement shortcuts <https://doc.qt.io/qt-5/qkeysequence.html#standard-shortcuts>`_. These correspond to the default for a given operating system, so for example, :kbd:`Ctrl + →` will move the cursor to the end of words on Windows, while on MacOS the same action corresponds to :kbd:`Alt + arrow keys`. Because Krita supports vertical text, we will also check against the appropriate keys for the given writing mode, meaning that in vertical, :kbd:`Ctrl + ↓` will move to the end of the word.
+
+To finish editing text, click outside the text box, or start editing a different text. To do so, hover over any other text. This can be on the same layer or on any other editable vector layer. When hovering over the text, its bounding box will be highlighted. Clicking on it will then select the layer, and enter the editing mode on that text.
+
+Beyond editing the contents, you can also move the text. To do so, hover over the bounding box so the cursor will switch to a move cursor. Then |mouseleft| :kbd:`+ drag` will move the text.
+
+When editing a inline-size wrapped shape, you can also edit the wrapping area. Two handles will appear on each side of the text, showing the limits at which the text will wrap. By doing |mouseleft| :kbd:`+ drag` on these handles, you can increase or decrease the wrapping area. When the text is aligned to one of the handles, moving one of the other will swap the text alignment so it stays aligned to that handle. When the alignment is set to the middle, the text will stay in between the two bars. If you want the text to stay at the same place when editing a centered text and only change the wrapping area width, hold :kbd:`Ctrl` while dragging.
+
 
 Tool Options
 ------------
