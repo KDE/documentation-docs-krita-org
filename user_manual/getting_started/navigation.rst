@@ -20,7 +20,7 @@ Navigation
 Interface
 ---------
 
-Krita's interface is very flexible and provides an ample choice for the artists to arrange the elements of the workspace. An artist can snap and arrange the elements, much like snapping together Lego blocks. Krita provides a set of construction kit parts in the form of Dockers and Toolbars. Every set of elements can be shown, hidden, moved and rearranged that let the artists easily customize their own user interface experience.
+Krita's interface is very flexible and provides an ample choice for the artist to arrange the elements of the workspace. An artist can snap and arrange the elements, much like snapping together Lego blocks. Krita provides a set of construction kit parts in the form of Dockers and Toolbars. Every set of elements can be shown, hidden, moved and rearranged, that lets the artist to easily customize their own user interface experience.
 
 A Tour of the Krita Interface
 -----------------------------
@@ -37,16 +37,16 @@ As we've said before, the Krita interface is very malleable and the way that you
 - **D** -- Status Bar -- This space shows the preferred mode for showing selection i.e. marching ants or mask mode, your selected brush preset, :ref:`Color Space <color_managed_workflow>`, image size and provides a convenient zoom control.
 - **E** -- Floating Panel/Docker -- These can be "popped" in and out of their docks at any time in order to see a greater range of options. A good example of this would be the :ref:`brush_preset_docker` or the :ref:`palette_docker`.
 
-Your canvas sits in the middle and unlike traditional paper or even most digital painting applications, Krita provides the artist with a scrolling canvas of infinite size (not that you'll need it of course!). The standard navigation tools are as follows:
+Your canvas sits in the middle and unlike traditional paper, or even most digital painting applications, Krita provides the artist with a scrolling canvas of infinite size (not that you'll need it of course!). The standard navigation tools are as follows:
 
 Navigating the Canvas
 ---------------------
 Many of the canvas navigation actions, like rotation, mirroring and zooming have default keys attached to them:
 
 Panning
- This can be done through |mousemiddle|, :kbd:`Space +` |mouseleft| and :kbd:`the directional keys`.
+ This can be done through either |mousemiddle|, or by holding :kbd:`Space +` |mouseleft| and :kbd:`the directional keys`.
 Zooming
- Discrete zooming can be done through :kbd:`+` and :kbd:`-` keys. Using the :kbd:`Ctrl + Space` or :kbd:`Ctrl +` |mousemiddle| shortcuts can allow for direct zooming with the stylus.
+ Discrete zooming can be done through :kbd:`+` and :kbd:`-` keys. Using the :kbd:`Ctrl + Space` or :kbd:`Ctrl +` |mousemiddle| shortcuts allows for direct zooming with the stylus.
 Mirroring
  You can mirror the view can be quickly done via :kbd:`M` key. Mirroring is a great technique that seasoned digital artists use to quickly review the composition of their work to ensure that it "reads" well, even when flipped horizontally.
  
@@ -54,7 +54,7 @@ Mirroring
     If you use :kbd:`Alt + M`, mirroring will use the cursor position as the center to mirror around instead of the middle of the view. There is also a :guilabel:`Mirror Canvas` available in the :ref:`shortcut_settings` to assign a shortcut to.
 
 Rotating
- You can rotate the canvas without transforming. It can be done with the :kbd:`Ctrl + [` shortcut or :kbd:`4` key  and the other way with :kbd:`Ctrl + ]` shortcut or :kbd:`6` key. Quick mouse based rotation is the :kbd:`Shift + Space` and :kbd:`Shift +` |mousemiddle| shortcuts. To reset rotation use the :kbd:`5` key.
+ You can rotate the canvas without transforming. It can be done with the :kbd:`Ctrl + [` shortcut or :kbd:`4` key  and the other way with :kbd:`Ctrl + ]` shortcut or :kbd:`6` key. Quick mouse based rotation is done with the :kbd:`Shift + Space` and :kbd:`Shift +` |mousemiddle| shortcuts. To reset rotation use the :kbd:`5` key.
 
 You can also find these under :menuselection:`View --> Canvas`.
 
