@@ -129,7 +129,7 @@ require = function r(s, a, l) {
 var URLList = window.location.href.split("/");
 var languageCodeFromURL = 'en'; //default to english
 for (var section = 0; section < URLList.length; section++) {
-    languages = ['bn', 'ca', 'cs', 'da', 'de', 'en', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'he', 'hr', 'hu', 'id', 'it',  'ja', 'ko', 'lt', 'lv', 'mk', 'nb_NO', 'ne', 'nl', 'pl', 'pt_BR', 'pt_PT', 'ru', 'si', 'sk', 'sv', 'tr', 'uk_UA', 'vi', 'zh_CN', 'zh_TW'];
+    languages = ['bn', 'ca', 'cs', 'da', 'de', 'en', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'he', 'hr', 'hu', 'id', 'it',  'ja', 'ko', 'lt', 'lv', 'mk', 'nb_NO', 'ne', 'nl', 'pl', 'pt_BR', 'pt_PT', 'ru', 'si', 'sk', 'sl', 'sv', 'tr', 'uk_UA', 'vi', 'zh_CN', 'zh_TW'];
     if (languages.indexOf(URLList[section]) > 0) {
         languageCodeFromURL = URLList[section];
     }
