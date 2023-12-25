@@ -366,6 +366,9 @@ function determine_appropriate_language( $request, $browser_languages, $supporte
                 // Note this also matches `zh` without script or region subtag.
                 $language = "zh_CN";
             }
+        } elseif( strcasecmp($language, "uk") === 0 ) {
+            // Ukrainian
+            $language = "uk_UA";
         } else {
             // Browsers use dashes to seperate language variants
             // But KDE translation systems use underscores for this so ensure we are consistent here
