@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-05 12:21+0000\n"
-"PO-Revision-Date: 2023-12-25 13:28+0300\n"
+"PO-Revision-Date: 2023-12-28 12:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -75,6 +75,9 @@ msgid ""
 "has a sophisticated resource management system, which allows tagging, "
 "disabling, sharing and more."
 msgstr ""
+"Özkaynaklar, fırça önayarları veya desenleri gibi eklenebilir veri"
+" parçalarıdır. Krita; etiketlemeye, devre dışı bırakmaya, paylaşmaya ve daha"
+" fazlasına olanak tanıyan gelişmiş bir özkaynak yönetim sistemine sahiptir."
 
 #: ../../reference_manual/resource_management.rst:22
 msgid ""
@@ -83,6 +86,11 @@ msgid ""
 "track of all those resources can be a handful, Krita creates a SQLite cache "
 "in which it keeps the tags, names, version and other data about the resource."
 msgstr ""
+"Tüm özkaynaklar, özkaynak klasöründe depolanırlar. Bu klasör, :ref:`the"
+" general preferences <resource_settings>` bölümünde yapılandırılabilir. Tüm"
+" bu özkaynakları takip etmek zor olabileceğinden Krita, özkaynakla ilgili"
+" etiketleri, adları, sürümü ve diğer verileri saklayan bir SQLite önbelleği"
+" oluşturur."
 
 #: ../../reference_manual/resource_management.rst:24
 msgid ""
@@ -91,60 +99,67 @@ msgid ""
 "Deleting the cache will delete the tags and relationships it keeps track of, "
 "so be careful."
 msgstr ""
+"Bu önbellek sayesinde Krita, gerekli olana kadar özkaynak yüklemekten"
+" kaçınabilir. Bu, Krita'yı bu önbelleğe sahip olmadığı zamana göre çok daha"
+" hafif hale getirir. Önbelleğin silinmesi, takip ettiği etiketleri ve"
+" ilişkileri silecektir; bu nedenle dikkatli olun."
 
 #: ../../reference_manual/resource_management.rst:26
 msgid ""
 "If you have not changed your resource folder location, the resources can be "
 "found at..."
-msgstr ""
+msgstr "Eğer değiştirmediyseniz özkaynaklar şu konumlarda bulunabilirler:"
 
 #: ../../reference_manual/resource_management.rst:28
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../reference_manual/resource_management.rst:29
 msgid ":file:`$HOME/.local/share/krita/`"
-msgstr ""
+msgstr ":file:`$HOME/.local/share/krita/`"
 
 #: ../../reference_manual/resource_management.rst:30
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../reference_manual/resource_management.rst:31
 msgid ":file:`%APPDATA%\\\\krita\\\\`"
-msgstr ""
+msgstr ":file:`%APPDATA%\\\\krita\\\\`"
 
 #: ../../reference_manual/resource_management.rst:33
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: ../../reference_manual/resource_management.rst:33
 msgid ":file:`~/Library/Application Support/Krita/`"
-msgstr ""
+msgstr ":file:`~/Library/Application Support/Krita/`"
 
 #: ../../reference_manual/resource_management.rst:36
 msgid ""
 "If you installed Krita in the Windows Store, your custom resources will be "
 "in a location like:"
 msgstr ""
+"Krita'yı Microsoft Store'dan kurduysanız özkaynaklarınız şu konumda olacaktır:"
 
 #: ../../reference_manual/resource_management.rst:36
 msgid ""
 ":file:`%LOCALAPPDATA%\\\\Packages\\\\49800Krita_{RANDOM STRING}\\\\LocalCache"
 "\\Roaming\\krita`"
 msgstr ""
+":file:`%LOCALAPPDATA%\\\\Packages\\\\49800Krita_{RANDOM STRING}\\\\LocalCache"
+"\\Roaming\\krita`"
 
 #: ../../reference_manual/resource_management.rst:41
 msgid "Resource Libraries"
-msgstr ""
+msgstr "Özkaynak Kitaplıkları"
 
 #: ../../reference_manual/resource_management.rst:43
 msgid "Krita can load a variety of resource libraries."
-msgstr ""
+msgstr "Krita, çok çeşitli özkaynak kitaplıklarını yükleyebilir."
 
 #: ../../reference_manual/resource_management.rst:46
 msgid "Resource Folder"
-msgstr ""
+msgstr "Özkaynak Klasörü"
 
 #: ../../reference_manual/resource_management.rst:48
 msgid ""
@@ -152,10 +167,13 @@ msgid ""
 "resources, they will all end up here. You can configure its location in the :"
 "ref:`general preferences <resource_settings>`."
 msgstr ""
+"Özkaynak klasörü, birincil kitaplık olarak kabul edilir. Yeni özkaynaklar"
+" oluşturduğunuzda hepsi buraya koyulurlar. Bu klasörün konumunu :ref:`general"
+" preferences <resource_settings>` bölümünde değiştirebilirsiniz."
 
 #: ../../reference_manual/resource_management.rst:49
 msgid "Resource Bundle"
-msgstr ""
+msgstr "Özkaynak Demeti"
 
 #: ../../reference_manual/resource_management.rst:51
 msgid ""
@@ -164,10 +182,14 @@ msgid ""
 "other information like metadata and a manifest so Krita can check there's no "
 "errors in the file."
 msgstr ""
+"Özkaynakları paylaşmak için kullanılan birincil biçim :dfn:`Özkaynak"
+" Demeti`'dir. Bu, tüm özkaynakları içeren sıkıştırılmış bir dosyadır. Ek"
+" olarak, üst veri ve manifesto gibi veriler de içerir; böylece Krita,"
+" dosyalarda bir hata olup olmadığını denetleyebilir."
 
 #: ../../reference_manual/resource_management.rst:52
 msgid "Adobe Brush Library"
-msgstr ""
+msgstr "Adobe Fırça Kitaplığı"
 
 #: ../../reference_manual/resource_management.rst:54
 msgid ""
@@ -175,30 +197,36 @@ msgid ""
 "load this, but now Krita will load them as a library of :ref:`brushes "
 "<resource_brush_tips>`."
 msgstr ""
+"Birden çok görsel içeren bir ``ABR``. Krita'nın önceki sürümleri bunları"
+" yükleyemiyordu; ancak artık bir :ref:`brushes <resource_brush_tips>`"
+" kitaplığı olarak yüklenebiliyorlar."
 
 #: ../../reference_manual/resource_management.rst:55
 msgid "Adobe Style Library"
-msgstr ""
+msgstr "Adobe Biçem Kitaplığı"
 
 #: ../../reference_manual/resource_management.rst:57
 msgid ""
 "This is the :program:`Photoshop` ``ASL`` format, which stores :ref:"
 "`layer_style`."
 msgstr ""
+"Bu, bir :ref:`layer_style` içeren :program:`Photoshop` ``ASL`` biçimidir."
 
 #: ../../reference_manual/resource_management.rst:58
 msgid "Document Storage"
-msgstr ""
+msgstr "Belge Depolaması"
 
 #: ../../reference_manual/resource_management.rst:60
 msgid ""
 "Every Krita document can store resources and act as a resource library. This "
 "is currently only used for palettes."
 msgstr ""
+"Her bir Krita belgesi özkaynaklar depolayabilir ve bir özkaynak kitaplığı"
+" olarak davranabilir. Bu, şu an için yalnızca paletlerde kullanılabilir."
 
 #: ../../reference_manual/resource_management.rst:61
 msgid "Memory Storage"
-msgstr ""
+msgstr "Bellek Depolaması"
 
 #: ../../reference_manual/resource_management.rst:63
 msgid ""
@@ -206,6 +234,9 @@ msgid ""
 "generated by Krita and have no physical version on disk. This is currently "
 "used for the fore-to-background gradient."
 msgstr ""
+"Son olarak bellek kitaplığı, Krita tarafından oluşturulan ve diskte fiziksel"
+" sürümü bulunmayan geçici özkaynakların tutulduğu yerdir. Bu, şu anda önden"
+" arka plana geçiş için kullanılmaktadır."
 
 #: ../../reference_manual/resource_management.rst:65
 msgid ""
@@ -513,32 +544,33 @@ msgstr ""
 
 #: ../../reference_manual/resource_management.rst:196
 msgid "Resource Types in Krita"
-msgstr ""
+msgstr "Krita'da Özkaynak Türleri"
 
 #: ../../reference_manual/resource_management.rst:198
 msgid "Main Resource Types"
-msgstr ""
+msgstr "Ana Özkaynak Türleri"
 
 #: ../../reference_manual/resource_management.rst:206
 msgid "Other Resource Types"
-msgstr ""
+msgstr "Diğer Özkaynak Türleri"
 
 #: ../../reference_manual/resource_management.rst:208
 msgid ":ref:`gamut_mask_docker`"
-msgstr ""
+msgstr ":ref:`gamut_mask_docker`"
 
 #: ../../reference_manual/resource_management.rst:209
 msgid ":ref:`layer_style`"
-msgstr ""
+msgstr ":ref:`layer_style`"
 
 #: ../../reference_manual/resource_management.rst:210
 msgid ":ref:`task_sets_docker`"
-msgstr ""
+msgstr ":ref:`task_sets_docker`"
 
 #: ../../reference_manual/resource_management.rst:211
 msgid ":ref:`vector_library_docker`"
-msgstr ""
+msgstr ":ref:`vector_library_docker`"
 
 #: ../../reference_manual/resource_management.rst:212
 msgid ":ref:`palette_docker`"
-msgstr ""
+msgstr ":ref:`palette_docker`"
+
