@@ -26,6 +26,11 @@ Color Space Chooser Dropdown
 
 Fairly straightforward. This color space chooser dropdown allows you to pick the color space, the bit depth and the ICC profile in which you are going to pick your color.
 
+.. versionadded:: 5.3
+
+The chain-link button indicates that the color space will be linked to that of the current layer.
+If a different color space is chosen, it will become unlinked.
+
 Sliders
 -------
 
@@ -46,3 +51,7 @@ HSV Color Selector
 In RGB color spaces, the toggle button allows you to switch into HSV mode and choose using the Hue, Saturation and Value sliders.
 
 .. image:: /images/dockers/Krita_Specific_Color_Selector_Docker_3.png
+
+.. versionadded:: 5.2
+
+With the dropdown, you may also choose HSL (Hue, Saturation, Lightness), HSI (Hue, Saturation, Intensity), or HSY (Hue, Saturation, Luma) modes.
