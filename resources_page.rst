@@ -36,7 +36,7 @@ Brush Packs
                Ramon Miranda
 
           - .. figure:: /images/resource_packs/Resources-conceptBrushes.jpg
-               :target: https://drive.google.com/file/d/1sl8sW7pu7QtGxunLeZapksU1u6Uc9VF5/view?usp=sharing
+               :target: https://drive.google.com/file/d/1mXZ47C9dcrlekFkv1xgD9nZRd9aWYG0Q/view
 
                Concept art & Illustration Pack
 
@@ -92,7 +92,7 @@ Brush Packs
                Rakurri
 
         * - .. figure:: /images/resource_packs/Resources-jackpackBrushes.jpg
-               :target: https://gumroad.com/l/pPCFg
+               :target: https://drive.google.com/file/d/1Xc5-7JS0sAk_mojns3jlvSa_jrXZPK30/view?usp=sharing
 
                Jackpack
 
