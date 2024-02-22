@@ -86,8 +86,30 @@ Build the docker image and run the container
 
 .. code::
 
-    ./bin/build_image krita-deps
-    ./bin/run_container krita-deps krita-auto-1
+    ./bin/build_image
+    ./bin/run_container
+
+Cleanup the dependencies
+------------------------
+
+The dependencies are cached in ``~/persistent/deps/`` folder. It may occupy
+up to 4.7 GiB. If you happen to have problems with space, make sure you
+removed all the cached checkout:
+
+.. code::
+
+    # clean up about 2.4 GiB of the cached deps checkout
+
+    rm -rf ./persistent/deps/_install
+
+If you need more space, you can freely remove the entire deps cache
+(it will be automatically refetched on the next call to ``./bin/bootstrap-deps.sh``)
+
+.. code::
+
+    # clean up everything
+
+    rm -rf ./persistent/deps/
 
 
 Enter the container and build Krita
@@ -202,19 +224,22 @@ Run those commands in the console in the host system. If you want to update the 
 .. code::
 
     # remove old dependencies
-    rm ./persistent/krita-appimage-deps.tar
+    rm ./persistent/deps/_install
 
     # download new deps
     ./bin/bootstrap-deps.sh
 
-    # build image
-    ./bin/build_image krita-deps
-
     # remove the current container
-    ./bin/remove_container krita-auto-1
+    ./bin/remove_container
+
+    # remove the image for the current container
+    docker image remove krita-auto-1
+
+    # build image
+    ./bin/build_image
 
     # run the container (it will create one)
-    ./bin/run_container krita-deps krita-auto-1
+    ./bin/run_container
 
 After that you need to build Krita in the docker as usual.
 
