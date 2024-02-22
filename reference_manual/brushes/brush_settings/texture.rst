@@ -39,6 +39,13 @@ Texturing mode
     .. image:: /images/brushes/Krita_2_9_brushengine_texture_01.png
     .. image:: /images/brushes/Krita_4_4_brushengine_texture_lightness_gradient_demo.png
 
+    Soft Texturing
+        .. versionadded:: 5.3
+        
+        When the *strength* option is on, it's value is used as a factor on how the texture is applied using the selected texturing mode. By toggling the *soft texturing* option you can alter this behavior. With 100% strength the texturing looks the same no matter the state of the *soft texturing* option, which is the same as when the strength option is off. But when using lower values for the strength, it does matter the state of the *soft texturing* option: if it is off then, for lower strength values, the texturing is applied normally but the stroke seems to disappear, giving an effect similar to rubbing some drawing tool against some textured surface with more or less pressure; on the other hand, if the *soft texturing* option is on then, for lower strength values, the stroke looks more like if the texture was not applied at all, leaving the stroke with the un-textured look.
+
+        The soft texturing can be activated to better replicate the Photoshop brushes for the modes other than height and linear height.
+
     In the following explanations, the sample strokes go from low strength on the left side to high strength on the
     right side. The top stroke uses a hard brush tip and the bottom one a soft brush tip. On the left side of the
     strokes there are two non-textured dots, just for comparison sake.
@@ -46,90 +53,162 @@ Texturing mode
     Multiply
         Uses alpha multiplication to determine the effect of the texture. Has a soft feel.
 
-        .. image:: /images/brushes/texture_blending_modes/multiply.png
+        .. figure:: /images/brushes/texture_blending_modes/multiply.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_multiply.png
+
+           *Soft texturing on*
     Subtract
         Uses subtraction to determine the effect of the texture. Has a harsher, more texture feel.
 
-        .. image:: /images/brushes/texture_blending_modes/subtract.png
+        .. figure:: /images/brushes/texture_blending_modes/subtract.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_subtract.png
+
+           *Soft texturing on*
     Lightness Map
         .. versionadded:: 4.4
         
         Applies lightness values of the texture to the paint.  Can be used to simulate paper/canvas, or for painting a texture, like reptile skin or tree bark.
 
-        .. image:: /images/brushes/texture_blending_modes/lightness_map.png
+        .. figure:: /images/brushes/texture_blending_modes/lightness_map.png
     Gradient Map
         .. versionadded:: 4.4
 
         Maps gray/lightness values of the texture to the currently selected gradient.  Useful for painting textures with multiple colors, like reptile skin, tree bark, stars, etc.
 
-        .. image:: /images/brushes/texture_blending_modes/gradient_map.png
+        .. figure:: /images/brushes/texture_blending_modes/gradient_map.png
     Darken
         .. versionadded:: 5.0
 
         This mode chooses the minimum alpha value between the brush tip and the texture. The effect is as if the texture
         made holes in the opaque areas of the brush tip.
 
-        .. image:: /images/brushes/texture_blending_modes/darken.png
+        .. figure:: /images/brushes/texture_blending_modes/darken.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_darken.png
+
+           *Soft texturing on*
     Overlay
         .. versionadded:: 5.0
 
         The texture is softly applied to the semi-transparent areas of the brush tip.
         This mode produces a result similar to *multiply* but allowing for full coverage when high strength values are used.
 
-        .. image:: /images/brushes/texture_blending_modes/overlay.png
+        .. figure:: /images/brushes/texture_blending_modes/overlay.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_overlay.png
+
+           *Soft texturing on*
     Color Dodge
         .. versionadded:: 5.0
 
         This mode produces features with somewhat hard edges on the brush tip by making it more opaque where the texture
         values are brighter.
 
-        .. image:: /images/brushes/texture_blending_modes/color_dodge.png
+        .. figure:: /images/brushes/texture_blending_modes/color_dodge.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_color_dodge.png
+
+           *Soft texturing on*
     Burn
         .. versionadded:: 5.0
 
         This mode produces holes with somewhat hard edges on the brush tip by making it more transparent where the texture
         values are darker.
 
-        .. image:: /images/brushes/texture_blending_modes/color_burn.png
+        .. figure:: /images/brushes/texture_blending_modes/color_burn.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_color_burn.png
+
+           *Soft texturing on*
     Linear Dodge
         .. versionadded:: 5.0
 
         Similar to *color dodge* but the opacity of the brush tip is increased even more.
 
-        .. image:: /images/brushes/texture_blending_modes/linear_dodge.png
+        .. figure:: /images/brushes/texture_blending_modes/linear_dodge.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_linear_dodge.png
+
+           *Soft texturing on*
     Linear Burn
         .. versionadded:: 5.0
 
         The result is similar to *burn* but with the opacity decreased a bit more. It also is similar to the *subtract*
         mode but with the texture inverted.
 
-        .. image:: /images/brushes/texture_blending_modes/linear_burn.png
+        .. figure:: /images/brushes/texture_blending_modes/linear_burn.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_linear_burn.png
+
+           *Soft texturing on*
     Hard Mix (Photoshop)
         .. versionadded:: 5.0
 
         This mode produces a result similar to *burn* or *linear burn* and allows to obtain full coverage when high strength values
         are used. The resulting edges are very hard (in fact, aliased).
 
-        .. image:: /images/brushes/texture_blending_modes/hard_mix_ps.png
+        .. figure:: /images/brushes/texture_blending_modes/hard_mix_ps.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_hard_mix_ps.png
+
+           *Soft texturing on*
     Hard Mix Softer (Photoshop)
         .. versionadded:: 5.0
 
         This mode tries to emulate *hard mix (photoshop)* while producing softer, antialiased, edges.
 
-        .. image:: /images/brushes/texture_blending_modes/hard_mix_softer_ps.png
+        .. figure:: /images/brushes/texture_blending_modes/hard_mix_softer_ps.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_hard_mix_softer_ps.png
+
+           *Soft texturing on*
     Height
         .. versionadded:: 5.0
 
         This mode is similar to the *subtract* mode but with a higher range of possibilities when applying the strength.
         Contrary to *subtract*, it allows to achieve full coverage with one stroke.
 
-        .. image:: /images/brushes/texture_blending_modes/height.png
+        .. figure:: /images/brushes/texture_blending_modes/height.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_height.png
+
+           *Soft texturing on*
     Linear Height
         .. versionadded:: 5.0
 
         Same as *height* but combined with *multiply* to achieve softer transitions.
 
-        .. image:: /images/brushes/texture_blending_modes/linear_height.png
+        .. figure:: /images/brushes/texture_blending_modes/linear_height.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_linear_height.png
+
+           *Soft texturing on*
     Height (Photoshop)
         .. versionadded:: 5.0
 
@@ -139,13 +218,25 @@ Texturing mode
         is mapped in the algorithm. When using a strength value of 0.1 the results are almost identical to the *subtract*
         mode with a strength of 1.
 
-        .. image:: /images/brushes/texture_blending_modes/height_ps.png
+        .. figure:: /images/brushes/texture_blending_modes/height_ps.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_height_ps.png
+
+           *Soft texturing on*
     Linear Height (Photoshop)
         .. versionadded:: 5.0
 
         Same as *height (photoshop)* but combined with *multiply* to achieve softer transitions.
 
-        .. image:: /images/brushes/texture_blending_modes/linear_height_ps.png
+        .. figure:: /images/brushes/texture_blending_modes/linear_height_ps.png
+
+           *Soft texturing off*
+
+        .. figure:: /images/brushes/texture_blending_modes/soft_linear_height_ps.png
+
+           *Soft texturing on*
 
 Cutoff policy
     Cutoff policy will determine what range and where the strength will affect the textured outcome.
