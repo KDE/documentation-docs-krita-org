@@ -16,7 +16,7 @@
 \*.jxl
 ======
 
-JPEG XL (``.jxl``) is a new royalty-free image file format. It supports :ref:`lossy compression mode <lossless_compression>` designed for photographs similar to the :ref:`JPEG <file_jpeg>` file format, and also :ref:`lossless compression mode <lossless_compression>` similar to formats like :ref:`PNG <file_png>`. In addition, it also supports saving animations with multiple frames like :ref:`GIF <file_gif>`.
+JPEG XL (``.jxl``) is a new royalty-free image file format. It supports :ref:`lossy compression mode <lossless_compression>` designed for photographs similar to the :ref:`JPEG <file_jpeg>` file format, and also :ref:`lossless compression mode <lossless_compression>` similar to formats like :ref:`PNG <file_png>`. In addition, it also supports saving animations with multiple frames like :ref:`GIF <file_gif>` or simple multi-layered raster image without animation.
 
 When deciding between lossy and lossless compression modes, the same advice for :ref:`JPEG <file_jpeg>` and :ref:`PNG <file_png>` applies. For images with a lot of gradients, like full scale paintings, lossy compression may work very well to produce small files with very little visual quality loss. But for images with a lot of sharp contrasts, like text and comic book styles, lossless compression is usually the better choice.
 
@@ -59,6 +59,10 @@ Encoding Options
         Use the alternative Modular mode for lossy compression. By default, JPEG XL encodes lossy image with VarDCT mode.
     
     .. versionadded:: 5.2
+    Lossless alpha
+        By default, alpha channel (transparency) will also be compressed when using Lossy encoding. If enabled, this option will set alpha channel to lossless (uncompressed). Useful to reduce transparency artifact on lossy export.
+    
+    .. versionadded:: 5.3
     Tradeoff
         The encoder can give a better result if it is given more time. This slider allows you to decide how much the encoder should prioritize quality over speed. The different modes can be seen as presets [1]_:
     
@@ -79,7 +83,13 @@ Encoding Options
 Conversion Settings
 ~~~~~~~~~~~~~~~~~~~
 
-This option is only enabled when the image is in a floating point color space, and the options are exactly the same as the conversion settings for :ref:`file_heif`.
+Color profile
+    (Lossless) Use CICP instead of ICC if possible
+        If enabled, Krita will attempt to convert document ICC profile into equivalent CICP profile to save more space when exporting lossless JPEG XL. If there's no equivalent CICP profile, ICC will still be saved instead. This is particularly useful for web delivery.
+    
+    .. versionadded:: 5.3
+HDR conversion
+    This option is only enabled when the image is in a floating point color space, and the options are exactly the same as the conversion settings for :ref:`file_heif`.
 
 .. versionadded:: 5.2
 
