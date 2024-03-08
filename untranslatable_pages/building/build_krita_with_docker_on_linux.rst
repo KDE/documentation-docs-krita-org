@@ -76,6 +76,8 @@ Then you need to download deps and Krita source tree. These steps are not includ
 
     ## or ...
     # git clone kde:krita persistent/krita
+    # "kde:krita" should be replaced with a link for cloning the repository,
+    # such as "git@invent.kde.org:graphics/krita.git".
 
     # download the deps archive
     ./bin/bootstrap-deps.sh
@@ -132,7 +134,7 @@ Enter the container and build Krita
     make -j8 install
 
     # start Krita
-    ../appimage-workspace/krita.appdir/usr/bin/krita
+    ../krita.appdir/usr/bin/krita
 
 
 Building AppImage package for your version of Krita
