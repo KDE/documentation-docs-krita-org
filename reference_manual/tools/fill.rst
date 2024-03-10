@@ -98,6 +98,15 @@ Fill Extent
         
             Left: Original image. The black dot indicates where the fill operation starts. Top-right: a row of images that show the result of filling with a threshold value of 30 and a spread value of 0, 30, 60 and 100 percent from left to right. Bottom-right: a row of images that show the result of filling with a threshold value of 65 and a spread value of 0, 30, 60 and 100 percent from left to right.
 
+    Close Gap
+        .. versionadded:: 5.3
+
+        This option sets the minimum gap size that the contiguous fill will be able to propagate into.
+
+        .. figure:: /images/tools/fill_tool_close_gap.png
+
+            Left: The original image (black over white) and a green dot marking where the fill will be initiated. Center: The image after a fill operation using a gap size of 0 pixels. Right: The image after a fill operation using a gap size of 8 pixels.
+
     Use Selection as Boundary
         .. versionadded:: 4.4
 

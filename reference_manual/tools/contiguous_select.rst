@@ -43,10 +43,21 @@ Selection Extent
     Threshold
         This controls whether or not the contiguous selection sees another color as a border.
 
-    .. versionadded:: 5.1
+    Spread
+        .. versionadded:: 5.1
 
-        Spread
-            Set how far the fully opaque portion of the selection should extend. See :ref:`fill_tool` for extra explanation.
+        Set how far the fully opaque portion of the selection should extend. See :ref:`fill_tool` for extra explanation.
+
+    Close Gap
+        .. versionadded:: 5.3
+
+        This option sets the minimum gap size that the contiguous fill will be able to propagate into.
+
+        .. figure:: /images/tools/contiguous_selection_close_gap.gif
+
+            Left: The original image (black over white) and a green dot marking where the contiguous selection will be initiated. Center: The selection marquee after a selection operation using a gap size of 0 pixels. Right: The selection marquee after a selection operation using a gap size of 8 pixels. Note that the selected regions are emphasized with a light pink color for clarity sake.
+
+
 Adjustments
     Anti-alias
         This will smooth the jagged edges present in the selection. It differs from feathering in that this will smooth in the direction of the edge instead of all directions, and only if the edge is jagged (high contrast).
@@ -54,6 +65,7 @@ Adjustments
         This value extends (positive values) or contracts (negative values) the selection.
     Feathering Radius
         This value will add a soft border to the selection.
+
 Reference
     .. versionadded:: 4.3
     
