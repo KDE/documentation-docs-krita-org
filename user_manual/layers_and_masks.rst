@@ -54,6 +54,8 @@ Once you assign color labels to your layers, you can then filter layers having s
 
     You can also use this dropdown to filter the layers by layer name.
 
+.. _types_of_layers:
+
 Types of Layers
 ---------------
 
@@ -63,6 +65,8 @@ Types of Layers
 The image above shows the various types of layers in :ref:`layer_docker`. Each layer type has a different purpose for example all the vector elements can be only placed on a vector layer and similarly normal raster elements are mostly on the paint layer, :ref:`cat_layers_and_masks` page contains more information about these types layers.
 
 Now Let us see how these layers are composited in Krita.
+
+.. _how_layers_composited_in_krita:
 
 How are layers composited in Krita?
 ------------------------------------
@@ -78,6 +82,8 @@ Group Layers composite separately from the other layers in the stack, except whe
 The groups in a PSD file saved from Photoshop have pass-through mode on by default unless they are specifically set with other blending modes.
 
 .. index:: Alpha Inheritance, Clipping Masks
+
+.. _inherit_alpha_or_clipping_layers:
 
 Inherit Alpha or Clipping layers
 --------------------------------

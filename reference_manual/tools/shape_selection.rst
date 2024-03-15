@@ -7,11 +7,44 @@
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - Scott Petrovic
              - Raghavendra Kamath
-	     - Alberto Eleuterio Flores Guerrero <barbanegra+bugs@posteo.mx>
+             - Alberto Eleuterio Flores Guerrero <barbanegra+bugs@posteo.mx>
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Tools, Vector, Shape Selection
+
+
+.. |icon_paintorder-fsm| image:: /images/icons/paint-order-fill-stroke-marker.svg
+    :width: 24
+.. |icon_paintorder-sfm| image:: /images/icons/paint-order-stroke-fill-marker.svg
+    :width: 24
+.. |icon_paintorder-msf| image:: /images/icons/paint-order-marker-stroke-fill.svg
+    :width: 24
+.. |icon_chain| image:: /images/icons/chain-icon.svg
+    :height: 18
+.. |icon_chain-broken| image:: /images/icons/chain-broken-icon.svg
+    :height: 18
+.. |icon_strokecap-butt| image:: /images/icons/stroke-cap-butt.svg
+    :width: 24
+.. |icon_strokecap-round| image:: /images/icons/stroke-cap-round.svg
+    :width: 24
+.. |icon_strokecap-square| image:: /images/icons/stroke-cap-square.svg
+    :width: 24
+.. |icon_strokejoin-bevel| image:: /images/icons/stroke-join-bevel.svg
+    :width: 24
+.. |icon_strokejoin-miter| image:: /images/icons/stroke-join-miter.svg
+    :width: 24
+.. |icon_strokejoin-round| image:: /images/icons/stroke-join-round.svg
+    :width: 24
+
+.. |img_strokejoin-miter| image:: /images/tools/shape-selection-menu-stroke-corner-miter.png
+    :width: 150
+.. |img_strokejoin-round| image:: /images/tools/shape-selection-menu-stroke-corner-round.png
+    :width: 150
+.. |img_strokejoin-bevel| image:: /images/tools/shape-selection-menu-stroke-corner-bevel.png
+    :width: 150
+
 .. _shape_selection_tool:
+
 
 ====================
 Shape Selection Tool
@@ -25,19 +58,27 @@ After you create vector shapes, you can use this tool to select, transform, and 
 
 Selection
 ---------
-Selecting shapes can be done by two types of actions:
+Selecting shapes can be done by three types of actions:
 
 - |mouseleft| on a single shape to select it.
-- |mouseleft| and drag to select multiple shapes.  
+- |mouseleft| and drag to select multiple shapes.
+
     - *Blue selection* (drag left to right): selects only shapes fully covered. 
     - *Green selection* (drag right to left): selects all the touched shapes.
+- Press :kbd:`Shift` key while |mouseleft| to add or remove a shape from selection.
 
 .. figure:: /images/tools/blue-and-green-selections.png
    :align: center
    :alt: Left: Blue selection. Right: Green selection.
-	 
+
    Blue selection: left-to-right, selects fully covered images. --  Green selection: right-to-left, selects touched shapes.
-	 
+
+
+.. Important::
+
+    *Selecting multiple shapes is only possible for shapes within the same Vector Layer*
+
+
 Placement, Scale, Angle and Distortion
 --------------------------------------
 
@@ -51,12 +92,33 @@ Once an object is selected, a dashed bounding box will appear around it. The box
    
 Placement
     |mouseleft| and hold inside the bounding box, while holding move the shape to the desired position.
+
+    .. tip::
+
+        You can lock move on a vertical or horizontal axis: hold |mouseleft| and then press :kbd:`Shift` key while moving.
+
 Scale
     |mouseleft| and hold inside any of the square handles, move to adjust the dimensions of the object. 
+
+    .. tip::
+
+       You can lock width/height ratio when resizing shape: hold |mouseleft| and then press :kbd:`Shift` while resizing.
+
+       You can resize around shape center: hold |mouseleft| and then press :kbd:`Ctrl` while resizing.
+
+       Combination of :kbd:`Ctrl + Shift` is possible.
+
 Angle
-    Place the cursor slightly outside any of the corner handles. |mouseleft| and drag to adjust the angle of the shape. 
+    Place the cursor slightly outside any of the corner handles. |mouseleft| and drag to adjust the angle of the shape.
+
+    .. tip::
+
+       You can constrain 45° rotation: hold |mouseleft| and then press :kbd:`Ctrl` while rotating.
+
 Distortion
-   Place the cursor slightly outside any of the middle handles. |mouseleft| and drag to skew the shape. 
+   Place the cursor slightly outside any of the middle handles. |mouseleft| and drag to skew the shape.
+
+
 
 Tool Options
 ------------
@@ -71,20 +133,67 @@ Geometry
    :alt: Tool options: Geometry tool.
 
 
-Geometry is the first section in the tool options. This section allows you to set precisely the 'x' and 'y' coordinates, and also the width and height of the shape.
+Geometry is the first section in the tool options.
+
+
+Position
+    Position of a shape is defined by :guilabel:`X` and :guilabel:`Y` coordinates.
+
+    .. image:: /images/tools/shape-selection-menu-geometry-position.png
+
+    Also, the origin of position (top-left, middle, bottom-right, ...) is defined by the active button:
+
+    .. image:: /images/tools/shape-selection-menu-geometry-origin.png
+
+    Provided position coordinates are always relative to origin: if origin is modified, :guilabel:`X` and :guilabel:`Y` coordinates are updated in consequence.
+
+
+    .. tip::
+
+        You can also use :ref:`Docker Arrange <arrange_docker>` tools to easily
+
+        - Align shapes
+        - Distribute shapes
+        - Normalize distances between shapes
+
+Size
+    Size of a shape is defined by width and height.
+
+    .. image:: /images/tools/shape-selection-menu-geometry-size.png
+
+    | Aspect ratio of a shape can be locked |icon_chain| or unlocked |icon_chain-broken|.
+    | When locked, modifying width value will automatically update height, modifying height value will automatically update width.
+
 
 Scale Styles
     Enabled: when scaling, it will scale the stroke width with the shape.
     
     Not enabled: when scaling, the stroke width will stay the same.
+
 Global coordinates
     Determines whether the width and height bars use the width and height of the object, while taking transforms into account.
+
+Fill, Stroke, Markers
+    Like there's a *z-Order* for shapes, there's also a *z-Order* to render shape elements (Fill, Stroke, Markers).
+
+    Which element is drawn first can change final shape render.
+
+    .. table:: A polygon, solid Red fill, Blue 25px solid stroke, Blue bullet markers
+
+        +----------------------------------------------------------+----------------------------------------------------------+----------------------------------------------------------+
+        | .. figure:: /images/tools/                               | .. figure:: /images/tools/                               | .. figure:: /images/tools/                               |
+        |             shape-selection-menu-geometry-zorder-fsm.png |             shape-selection-menu-geometry-zorder-sfm.png |             shape-selection-menu-geometry-zorder-sfm.png |
+        |                                                          |                                                          |                                                          |
+        |    |icon_paintorder-fsm| Fill, Stroke, Markers           |    |icon_paintorder-sfm| Stroke, Fill, Markers           |    |icon_paintorder-fsm| Markers, Stroke, Fill           |
+        |                                                          |                                                          |                                                          |
+        +----------------------------------------------------------+----------------------------------------------------------+----------------------------------------------------------+
+
 Opacity
     The general opacity, or transparency, of the object. Opacity for stroke and fill are explained in the next two sections.
 
 .. warning:: 
 
-    Anchor Lock is not implemented at the moment.
+    As Anchor Lock is not implemented at the moment, checkbox is disabled.
 
     
 Stroke
@@ -102,12 +211,42 @@ Then, there are the settings for the stroke style:
 
 Thickness
     Sets the width of the stroke. When creating a shape, Krita will use the current brush size to determine the width of the stroke.
+
 Cap and corner style
-    Sets the stroke cap and stroke corner style, this can be accessed by pressing the three dots button next to the thickness entry.
+    Line Cap define how the end of a stroke is rendered, while Line Corner define how segments jonction (from a polyline or polygon) are rendered.
+
+    Options can be accessed by pressing the three dots button next to the thickness entry.
+
+    Possible Cap values:
+
+    - |icon_strokecap-butt| Butt
+    - |icon_strokecap-round| Round
+    - |icon_strokecap-square| Square
+
+    .. figure:: /images/tools/shape-selection-menu-stroke-cap.png
+
+        Difference between cap values on 25px thickness lines: Butt, Round and Square
+
+    Possible Corner values:
+
+    - |icon_strokejoin-bevel| Bevel
+    - |icon_strokejoin-miter| Miter
+    - |icon_strokejoin-round| Round
+
+    |img_strokejoin-bevel| |img_strokejoin-miter| |img_strokejoin-round|
+
+    *Difference between corner values on 25px thickness rectangle: Bevel, Miter and Round*
+
+
 Line-style
     Sets the line style of the stroke: *solid*, *dashes*, *dots*, or mixes of *dashes and dots*.
+
+    .. figure:: /images/tools/shape-selection-menu-stroke-style.png
+
+
 Markers
     Adds markers to the stroke. Markers are little figures that will appear at the start, end or all the nodes in between, depending on your configuration.
+
 
 Fill
 ~~~~
@@ -121,8 +260,10 @@ A fill can be: *solid color*, *gradient*, or *none* (transparent)
 
 None
     No fill. It's transparent.
+
 Color
     A flat color, you can select a new one by pressing the color button.
+
 Gradient
     As the name implies this type fills the shape with a gradient. It has the following options:
 

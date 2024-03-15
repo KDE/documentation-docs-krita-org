@@ -9,6 +9,34 @@
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Tools, Vector, Shape Edit
+
+.. |icon_path-break-point| image:: /images/icons/path-break-point.svg
+    :width: 24
+.. |icon_path-break-segment| image:: /images/icons/path-break-segment.svg
+    :width: 24
+.. |icon_pathpoint-corner| image:: /images/icons/pathpoint-corner.svg
+    :width: 24
+.. |icon_pathpoint-curve| image:: /images/icons/pathpoint-curve.svg
+    :width: 24
+.. |icon_pathpoint-insert| image:: /images/icons/pathpoint-insert.svg
+    :width: 24
+.. |icon_pathpoint-join| image:: /images/icons/pathpoint-join.svg
+    :width: 24
+.. |icon_pathpoint-line| image:: /images/icons/pathpoint-line.svg
+    :width: 24
+.. |icon_pathpoint-merge| image:: /images/icons/pathpoint-merge.svg
+    :width: 24
+.. |icon_pathpoint-remove| image:: /images/icons/pathpoint-remove.svg
+    :width: 24
+.. |icon_pathpoint-smooth| image:: /images/icons/pathpoint-smooth.svg
+    :width: 24
+.. |icon_pathpoint-symmetric| image:: /images/icons/pathpoint-symmetric.svg
+    :width: 24
+.. |icon_pathsegment-curve| image:: /images/icons/pathsegment-curve.svg
+    :width: 24
+.. |icon_pathsegment-line| image:: /images/icons/pathsegment-line.svg
+    :width: 24
+
 .. _shape_edit_tool:
 
 ===============
@@ -17,11 +45,11 @@ Shape Edit Tool
 
 |toolshapeedit|
 
-The shape editing tool is for editing vector shapes. In Krita versions before 4.0 it would only show up in the docker when you had a vector shape selected. In Krita 4.0, this tool is always visible and has the Shape Properties docker as a part of it.
+The shape editing tool is for editing vector shapes.
 
 .. image:: /images/tools/Shape-editing-tool-example.png
 
-You can access the Edit Shapes tool by clicking on the icon in the toolbox, but you can also access it by pressing the :kbd:`Enter` key when in the Shape Selection tool and having a shape selected that can be most efficiently edited with the edit shapes tool (right now, that's all shapes but text).
+You can access the Edit Shapes tool by clicking on the icon in the toolbox, but you can also access it by pressing the :kbd:`Enter` key or double-|mouseleft| when in the Shape Selection tool and having a shape selected that can be most efficiently edited with the edit shapes tool (right now, that's all shapes but text).
 
 On Canvas Editing of Shapes
 ---------------------------
@@ -40,11 +68,15 @@ Paths in Krita are mostly bezier curves, and are made up of nodes. For straight 
 Selecting Nodes for Editing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can select a single node with |mouseleft|, they will turn bright green if selected.
+You can select a single node with |mouseleft|, they will turn bright blue if selected.
+
+You can also select multiples nodes:
 
 |mouseleft| :kbd:`+ Shift` on unselected nodes will add them to a selection.
 
 |mouseleft| :kbd:`+ drag` will make a selection rectangle. All nodes whose handles are touched by the rectangle will be selected. This combines with the |mouseleft| :kbd:`+ Shift` shortcut above.
+
+|mouseleft| on a segment will add both nodes that define segment to a selection.
 
 Selected Nodes
 ^^^^^^^^^^^^^^
@@ -53,21 +85,34 @@ You can add and remove side handles from a selected node with the |mouseleft| :k
 
 Krita has several node-types that allow you control the side handles more efficiently. These are the corner, smooth and symmetric modes.
 
- Corner
-     Represented by a diamond, the corner type allows you to have handles that can point in different directions and have different lengths.
- Smooth
-     Represented by a circle, the smooth type will ensure a smooth transition by always pointing the handles into opposite directions, but they can still have different lengths.
- Symmetric
-     Represented by a square, the symmetric node will force handles to always point in opposite directions and have the same length.
+Corner
+    Represented by a diamond, the corner type allows you to have handles that can point in different directions and have different lengths.
+
+    .. image:: /images/tools/Shape-editing-tool-nodes-corner.png
+
+Smooth
+    Represented by a circle, the smooth type will ensure a smooth transition by always pointing the handles into opposite directions, but they can still have different lengths.
+
+    .. image:: /images/tools/Shape-editing-tool-nodes-smooth.png
+
+
+Symmetric
+    Represented by a square, the symmetric node will force handles to always point in opposite directions and have the same length.
+
+    .. image:: /images/tools/Shape-editing-tool-nodes-symmetric.png
 
 |mouseleft| :kbd:`+ Ctrl` on a selected node will cycle between the node-types.
 
 :kbd:`Del` key will remove the selected node.
 
+
 Selected Segments
 ^^^^^^^^^^^^^^^^^
 
 Segments are the lines between nodes. Hovering over a segment will show a dotted line, indicating it can be selected.
+
+.. image:: /images/tools/Shape-editing-tool-segment-over.png
+
 
 You can |mouseleft| and drag on a segment to curve it to the mouse point. Clicking on different parts of the segment and dragging will curve it differently.
 
@@ -104,68 +149,147 @@ Node Editing
     Edit the nodes.
 
     Corner Point
+        |icon_pathpoint-corner|
+
         Make the selected node a corner or cusp. This means that the side handles can point in different directions and be different lengths.
+
     Smooth Point
+        |icon_pathpoint-smooth|
+
         Make the selected node smooth. The two side handles will always point in opposite directions, but their length can be different.
+
     Symmetric Point
+        |icon_pathpoint-symmetric|
+
         Make the selected node symmetric. The two side handles will always point in opposite directions, and their length will stay the same.
+
     Insert Point
+        |icon_pathpoint-insert|
+
         Insert a new node into the middle of the selected segment.
+
     Remove Point
+        |icon_pathpoint-remove|
+
         Remove the selected node.
 
 Line Segment Editing
     Edit line segments between nodes.
 
     Segment To Line
+        |icon_pathsegment-line|
+
         Make the current segment a straight line.
+
     Segment To Curve
+        |icon_pathsegment-curve|
+
         Make the current segment a curve: It'll add side handles for this segment to the nodes attached to it.
+
     Make Line Point
+        |icon_pathpoint-line|
+
         Turn the selected node into a sharp corner: This will remove the side handles.
+
     Make Curve Point
+        |icon_pathpoint-curve|
+
         Turn the selected node into one that can curve: This will add side handles to the node.
+
     Break at Point
+        |icon_path-break-point|
+
         Break the path at this point.
+
     Break Segment
+        |icon_path-break-segment|
+
         Break the path at the selected segment.
+
     Join with Segment
+        |icon_pathpoint-join|
+
         Join two nodes that are only attached on one side with a segment.
+
     Merge Points
+        |icon_pathpoint-merge|
+
         Merge two nodes into one, if the nodes are adjacent or if both nodes are only attached on one side with a segment.
 
-Rectangle Shapes
-~~~~~~~~~~~~~~~~
+Specialized Vector Shapes: Rectangle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |toolrectangle|
 
 Rectangle shapes are the ones made with the :ref:`rectangle_tool`. It has extra options to make rounded corners easy.
 
+.. image:: /images/tools/Shape-editing-tool-svs-rectangle-options.png
+    :width: 400
+
 Corner radius x
     The radius of the x-axis of the corner curve.
+
 Corner radius y
     The radius of the y-axis of the corner curve.
 
-Ellipse Shapes
-~~~~~~~~~~~~~~
++----------------------------------------------------------+----------------------------------------------------------+
+| .. figure:: /images/tools/                               | .. figure:: /images/tools/                               |
+|             Shape-editing-tool-svs-rectangle-01.png      |             Shape-editing-tool-svs-rectangle-02.png      |
+|    :width: 250                                           |    :width: 250                                           |
+|                                                          |                                                          |
+|    Editing a rectangle object, click and drag anchor     |    Editing a rectangle object for which a border radius  |
+|    in top-right corner to change border radius           |    has been applied: anchor indicates border radius size |
+|                                                          |                                                          |
++----------------------------------------------------------+----------------------------------------------------------+
+
+
+Specialized Vector Shapes: Ellipse
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |toolellipse|
 
-Ellipse shapes are the ones made with the :ref:`ellipse_tool`.
+Ellipse shapes are the ones made with the :ref:`ellipse_tool`. It has extra options to easily create arc, pie and cord.
+
+.. image:: /images/tools/Shape-editing-tool-svs-ellipse-options.png
+    :width: 400
 
 Type
     The type of ellipse shape it is.
 
     Arc
         An arc shape will keep the path open when it isn't fully circular.
+
+        .. image:: /images/tools/Shape-editing-tool-svs-ellipse-02.png
+            :width: 250
+
     Pie
         A pie shape will add two extra lines to the center when the shape isn't fully circular, like how one cuts out a piece from a pie.
+
+        .. image:: /images/tools/Shape-editing-tool-svs-ellipse-03.png
+            :width: 250
+
     Chord
         A cord shape will add a straight line between the two ends if the path isn't fully circular, as if a cord is being strung between the two points. 
 
+        .. image:: /images/tools/Shape-editing-tool-svs-ellipse-04.png
+            :width: 250
+
 Start Angle
     The angle at which the shape starts.
+
 End Angle
     The angle at which the shape ends.
+
 Close Ellipse
     An action to quickly make the ellipse fully circular.
+
+    .. image:: /images/tools/Shape-editing-tool-svs-ellipse-01.png
+        :width: 250
+
+
+Specialized Vector Shapes: Calligraphy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|toolcalligraphy|
+
+Calligraphy shapes are the ones made with the :ref:`calligraphy_tool`. It has no extra options.

@@ -7,86 +7,262 @@
    :authors: - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - Scott Petrovic
              - Raghavendra Kamath <raghavendr.raghu@gmail.com>
+             - Grum999
    :license: GNU free documentation license 1.3 or later.
 
-.. index:: ! Layers, Passthrough Mode, Alpha Inheritance, Blending Mode, Label, Onion Skin, Layer Style, Alpha Lock
+.. index:: ! Layers, Passthrough Mode, Alpha Inheritance, Blending Mode, Label, Onion Skin, Layer Style, Alpha Lock, Vector Layer, Anti-aliasing
 .. _layer_docker:
+.. |icon_visible| image:: /images/icons/visible.svg
+    :width: 18
+.. |icon_novisible| image:: /images/icons/novisible.svg
+    :width: 18
+.. |icon_locked| image:: /images/icons/locked.svg
+    :width: 18
+.. |icon_unlocked| image:: /images/icons/unlocked.svg
+    :width: 18
+.. |icon_alphalocked| image:: /images/icons/bar-transparency-locked.svg
+    :width: 18
+.. |icon_alphaunlocked| image:: /images/icons/bar-transparency-unlocked.svg
+    :width: 18
+.. |icon_passthrough-enabled| image:: /images/icons/passthrough-enabled.svg
+    :width: 18
+.. |icon_passthrough-disabled| image:: /images/icons/passthrough-disabled.svg
+    :width: 18
+.. |icon_transparency-enabled| image:: /images/icons/transparency-enabled.svg
+    :width: 18
+.. |icon_transparency-disabled| image:: /images/icons/transparency-disabled.svg
+    :width: 18
+.. |icon_arrow-up| image:: /images/icons/arrow-up.svg
+    :width: 18
+.. |icon_arrow-down| image:: /images/icons/arrow-down.svg
+    :width: 18
+.. |icon_arrow-right| image:: /images/icons/arrow-right.svg
+    :width: 18
+.. |icon_onion-on| image:: /images/icons/onionOn.svg
+    :width: 18
+.. |icon_onion-off| image:: /images/icons/onionOff.svg
+    :width: 18
+.. |icon_layerfx-on| image:: /images/icons/layer-style-enabled.svg
+    :width: 18
+.. |icon_layerfx-off| image:: /images/icons/layer-style-disabled.svg
+    :width: 18
+.. |icon_select-shape| image:: /images/icons/select-shape.svg
+    :width: 18
+.. |icon_select-pixel| image:: /images/icons/select-pixel.svg
+    :width: 18
+.. |icon_add| image:: /images/icons/list-add.svg
+    :width: 18
+.. |icon_duplicatelayer| image:: /images/icons/duplicatelayer.svg
+    :width: 18
+.. |icon_properties| image:: /images/icons/properties.svg
+    :width: 18
+.. |icon_deletelayer| image:: /images/icons/deletelayer.svg
+    :width: 18
+
 
 ======
 Layers
 ======
 
-.. image:: /images/dockers/Krita_Layers_Docker.png
+.. figure:: /images/dockers/Krita_Layers_Docker.png
+
+    General overview of layer docker for a document with multiple layers
+
 
 The Layers docker is for one of the core concepts of Krita: :ref:`Layer Management <layers_and_masks>`. You can add, delete, rename, duplicate and do many other things to layers here.
 
-At the top there are four controls. Two of them are layer properties, the blending mode and the opacity. But there are also two smaller buttons. One is the filter option. This allows you to filter all existing layers by either color label, or since Krita 5.0 by layer name.
+
+The interface is splitted in 3 main parts:
+
+- The controls
+- The layer strack
+- The operations bar
+
+
+The controls
+------------
+
+At the top there are four controls.
+
+.. image:: /images/dockers/Krita_Layers_Docker_areatop.png
+   :alt: Top area of layer docker, with 4 controls
+
+
+Blending mode
+    .. image:: /images/dockers/Krita_Layers_Docker_blendingmode.png
+        :alt: The blending mode dropdown list
+
+    A dropdown list to set :ref:`Blending mode <blending_modes>` for the active layer.
+
+
+Opacity
+    .. image:: /images/dockers/Krita_Layers_Docker_opacity.png
+        :alt: The opacity slider
+
+    A slider to set opacity for the active layer.
+
+
+Filter
+    .. image:: /images/dockers/Krita_Layers_Docker_filter.png
+        :alt: The filter button
+
+    This allows you to filter all existing layers, can be useful if you have a lot (can be hundreds!) of layers.
+
+    .. figure:: /images/dockers/Krita_Layers_Docker_filterui.png
+
+        Filter option popup from filter button
+
+    Filter can be applied on:
+
+    - Color label (available only if there's color label used, and only used color label can be filtered)
+    - Layer name
+
+
+Display settings
+    .. image:: /images/dockers/Krita_Layers_Docker_displaysettings.png
+        :alt: The display settings button
+
+    This allows you to adjust some extra display options of the layer stack.
+
+    .. figure:: /images/dockers/Krita_Layers_Docker_displaysettingsui.png
+
+        Display settings popup from display settings button
+
+    Available display settings are:
+
+    - :guilabel:`Thumbnail size` slider, to let you control the size of layer's thumbnail preview
+
+    - :guilabel:`Tree indentation` slider, to let you control the indentation of sub-layer's, to get a more or less compact view
+
+    .. _iref-layer_detailmode:
+
+    - The blending mode information, defined by 3 parameters
+
+      .. versionadded:: 5.2
+
+      - Drowpdown :guilabel:`Detail mode`
+
+        +---------------+-----------------------------------------------------------------------------------------------+
+        | Mode          | Description                                                                                   |
+        +===============+===============================================================================================+
+        | **None**      | No extra information is shown.                                                                |
+        +---------------+-----------------------------------------------------------------------------------------------+
+        | **Simple**    | This will only display the opacity or the blending mode when they're not 100% and 'Normal'.   |
+        +---------------+-----------------------------------------------------------------------------------------------+
+        | **Balanced**  | This will display both the opacity and the blending mode for layers where either the opacity  |
+        |               | is below 100%, or the blending mode is not 'normal'.                                          |
+        +---------------+-----------------------------------------------------------------------------------------------+
+        | **Detailed**  | This will always show the opacity and blending options for all layers.                        |
+        +---------------+-----------------------------------------------------------------------------------------------+
+
+      - The :guilabel:`Opacity` slider (enabled if mode is not **None**) allows you to control the opacity of the extra blending info label.
+      - The :guilabel:`Inline` checkbox (enabled if mode is not **None**) will provide information on a single compact line.
+
+    .. _iref-layer_checkbox:
+
+    - The :guilabel:`Checkbox for Selecting Layers` enables the extra checkboxes between the visibility icon and the label.
+
+      This is useful for situations where you may not have access to a :kbd:`Ctrl` or :kbd:`Shift` key to select multiple layers, such as on a tablet.
 
 
 
-The second button allows you to adjust some extra display options of the layer docker.
 
-The first slider controls the thumbnail size of the layers and how much layers indent when they are grouped. Some people prefer large thumbnails with a lot of indentation, others want the visuals to take up the least amount of space.
-
-.. versionadded:: 5.2
-
-Then there's the blending info options. The dropdown has four options:
-
-None
-    No extra information is shown.
-Simple
-    This will only display the opacity or the blending mode when they're not 100% and 'Normal'.
-Balanced
-    This will display both the opacity and the blending mode for layers where either the opacity is below 100%, or the blending mode is not 'normal'.
-Detailed
-    This will always show the opacity and blending options for all layers.
-
-The opacity slider below the dropdown allows you to control the opacity of the extra blending info label.
-
-Then there's :guilabel:`Checkbox for Selecting Layers`, which enables the extra checkboxes between the visibility icon and the label. This is useful for situations where you may not have access to a Ctrl or Shift key to select multiple layers, such as on a tablet.
 
 The Layer Stack
 ---------------
 
 You can select the active layer here. Using the :kbd:`Shift` and :kbd:`Ctrl` keys you can select multiple layers and drag-and-drop them. You can also change the visibility, edit state, alpha inheritance and rename layers. You can open and close groups, and you can drag and drop layers, either to reorder them, or to put them in groups.
 
+
+.. image:: /images/dockers/Krita_Layers_Docker_arealayerstack.png
+   :alt: Layer stack
+
+The Layer Stack is organized in 3 parts:
+
+- Left side: an eye-icon and :ref:`optional checkbox <iref-layer_checkbox>`
+- Middle: layer name and :ref:`optional informations <iref-layer_detailmode>`
+- Right side: miscellaneous icons (icons will vary according to layer type)
+
+
 .. glossary::
 
-    Name
-        The Layer name, just do double- |mouseleft| to make it editable, and press the :kbd:`Enter` key to finish editing.
+    Alpha Inheritance
+        *Only available on* :ref:`Layers <types_of_layers>`.
+
+        Clicking the alpha inheritance-icon allow to activate |icon_transparency-enabled| or disable |icon_transparency-disabled| how the content of mode affect the layers.
+
+        This will use the alpha of all the peers of this layer as a transparency mask.
+
+        *Check* :ref:`inherit_alpha_or_clipping_layers` *or* :ref:`clipping_masks_and_alpha_inheritance` *for detailled explanations and examples.*
+
+    Alpha Lock
+        *Only available on* :ref:`paint_layers`.
+
+        Clicking the alpha lock-icon allow to lock |icon_alphalocked| or unlock |icon_alphaunlocked| the alpha channel.
+
+        Lock the alpha channel prevent the transparency of a layer being changed. Useful in coloring images.
+
+    Anti aliasing
+        *Only available on* :ref:`vector_layers`.
+
+        Clicking the anti aliasing-icon to activate |icon_select-shape| or deactivate |icon_select-pixel| the anti aliasing mode.
+
+    Blending Mode
+        *Only available on* :ref:`Layers <types_of_layers>`.
+
+        This will set the :ref:`blending_modes` of the layer.
 
     Color Label
         This is a color that you can set on the layer. |mouseright| the layer to get a context menu to assign a color to it. You can then later filter on these colors.
     
-    Blending Mode
-        This will set the :ref:`blending_modes` of the layer.
-    
-    Opacity
-        This will set the opacity of the whole layer.
-    
-    Visibility
-        An eye-icon. Clicking this can hide a whole layer.
-    
-    Edit State (Or layer Locking)
-        A lock Icon. Clicking this will prevent the layer from being edited, useful when handling large amounts of layers.
-    
-    Alpha Lock
-        This will prevent the alpha of the layer being edited. In more plain terms: This will prevent the transparency of a layer being changed. Useful in coloring images.
-    
-    Pass-through mode
-        Only available on Group Layers, this allows you to have the blending modes of the layers within affect the layers outside the group. Doesn't work with masks currently, therefore these have a strike-through on group layers set to pass-through.
-    
-    Alpha Inheritance
-        This will use the alpha of all the peers of this layer as a transparency mask. For a full explanation see :ref:`layers_and_masks`.
-    
-    Open or Close Layers
-        (An Arrow Icon) This will allow you to access sub-layers of a layer. Seen with masks and groups.
-    
-    Onion Skin
-        This is only available on :ref:`animated layers <animation>`, and toggles the onion skin feature.
-    
+
+
+    Edit State (Layer lock)
+        .. _layer_locked:
+
+        Clicking the lock-icon allow to lock |icon_locked| or unlock |icon_unlocked| the layer.
+
+        Lock the layer prevent any modification to be made on layer. Useful when handling large amounts of layers or to ensure to not modify a layer content by mistake.
+
+    Expand or Collapse layers
+        *Only available on non-empty* :ref:`group_layers` and :ref:`Layers <types_of_layers>` for which masks are defined.
+
+        Clicking the arrow-icon to expand |icon_arrow-down| or collapse |icon_arrow-right| group/layer.
+
     Layer Style
-        This is only available on layers which have a :ref:`layer_style` assigned. The button allows you to switch between on/off quickly.
+        *Only available on* :ref:`Layers <types_of_layers>` *which have a* :ref:`layer_style` *assigned.*
+
+        Clicking the FX-icon allow to quickly activate |icon_layerfx-on| or deactivate |icon_layerfx-off| the layer style.
+
+    Name
+        The Layer name, just do double- |mouseleft| to make it editable, and press the :kbd:`Enter` key to finish editing.
+
+    Onion Skin
+        *Only available on* :ref:`animated layers <animation>`
+
+        Clicking the bulb-icon to activate |icon_onion-on| or deactivate |icon_onion-off| onion skin features.
+
+    Opacity
+        *Only available on* :ref:`Layers <types_of_layers>`.
+
+        This will set the opacity of the whole layer.
+
+    Pass-through mode
+        *Only available on* :ref:`group_layers`.
+
+        Clicking the pass-through mode-icon allow to activate |icon_passthrough-enabled| or deactivate |icon_passthrough-disabled| how the blending mode affect the contained layers.
+
+        When active, this allows you to have the blending modes of the layers within affect the layers outside the group.
+
+        Doesn't work with masks currently, therefore these have a strike-through on group layers set to pass-through.
+
+        *Check* :ref:`how_layers_composited_in_krita` *or* :ref:`clipping_masks_and_alpha_inheritance` *for detailled explanations and examples.*
+
+
+    Visibility
+        .. _layer_visibility:
+
+        Clicking the eye-icon allow to show |icon_visible| or hide |icon_novisible| a whole layer.
 
     Thumbnail Image
         This shows a miniature image with the layer contents. If you :kbd:`Ctrl +` |mouseleft| on it then you can make a selection from the contents of that layer (see `Hot keys and Sticky Keys`_ section below).
@@ -112,23 +288,37 @@ There, to change the names of all layers, the checkbox before :guilabel:`Name` s
 
 .. image:: /images/layers/Krita-multi-layer-edit.png
 
-Lower buttons
--------------
+
+The operations bar
+------------------
 
 These are buttons for doing layer operations.
 
+.. image:: /images/dockers/Krita_Layers_Docker_areabtnbar.png
+    :alt: Button bar to apply action on layers
+
 Add
-    Will by default add a new Paint Layer, but using the little arrow, you can call a sub-menu with the other layer types.
+    Clicking the |icon_add| button will by default add a new :ref:`Paint Layer <paint_layers>`.
+
+    The little arrow button aside will popup a sub-menu with all available :ref:`layers_and_masks`.
+
 Duplicate
-    Will Duplicate the active layer(s). Can be quickly invoked with the :kbd:`Ctrl +` |mouseleft| :kbd:`+ drag` shortcut.
+    Clicking the |icon_duplicatelayer| button will duplicate the active layer(s). Can be quickly invoked with the :kbd:`Ctrl +` |mouseleft| :kbd:`+ drag` shortcut.
+
 Move layer up.
-    Will move the active layer up. Will switch them out and in groups when coming across them.
+    Clicking the |icon_arrow-up| button will move the active layer up. Will switch them out and in groups when coming across them.
+
 Move layer down.
-    Will move the active layer down. Will switch them out and in groups when coming across them.
+    Clicking the |icon_arrow-down| button will move the active layer down. Will switch them out and in groups when coming across them.
+
 Layer properties.
-    Will open the layer properties window. The button to the side will open up the |mouseright| context menu for the currently selected layer. This is useful when you don't have access to a |mouseright| button.
+    Clicking the |icon_properties| button open the layer properties window.
+
+    The little arrow button aside will popup the |mouseright| context menu for the currently selected layer. This is useful when you don't have access to a |mouseright| button.
+
 Delete
-    Will delete the active layer(s). For safety reasons, you can only delete visible layers.
+    Clicking the |icon_deletelayer| button will delete the active layer(s). For safety reasons, you can only delete :ref:`visible <layer_visibility>` and :ref:`unlocked <layer_locked>` layers.
+
 
 Hot keys and Sticky Keys
 ------------------------
