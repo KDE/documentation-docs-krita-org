@@ -78,7 +78,7 @@ var Search = {
   },
 
   init : function() {
-      var params = $.getQueryParameters();
+      var params = getQueryParameters();
       if (params.q) {
           var query = params.q[0];
           $('input[name="q"]')[0].value = query;
@@ -252,7 +252,7 @@ var Search = {
       }
     }
 
-    var highlightstring = '?highlight=' + $.urlencode(hlterms.join(" "));
+    var highlightstring = '?highlight=' + encodeURIComponent(hlterms.join(" "));
 
     // console.debug('SEARCH: searching for:');
     // console.info('required: ', searchterms);
@@ -517,8 +517,7 @@ var Search = {
       for (i = 0; i < excluded.length; i++) {
         if (terms[excluded[i]] == file ||
             titleterms[excluded[i]] == file ||
-            $u.contains(terms[excluded[i]] || [], file) ||
-            $u.contains(titleterms[excluded[i]] || [], file)) {
+            $u.contains(terms[excluded[i]] || [], file) || $u.contains(titleterms[excluded[i]] || [], file)) {
           valid = false;
           break;
         }
@@ -565,6 +564,19 @@ var Search = {
     return rv;
   }
 };
+
+
+function getQueryParameters() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const params = {};
+
+    for (const [key, value] of urlParams.entries()) {
+        params[key] = value;
+    }
+
+    return params;
+}
 
 $(document).ready(function() {
   Search.init();
