@@ -475,7 +475,7 @@ and initializes them using ``setupPainter()``.
 The freehand tool is split into four classes:
 
 ``KisToolFreehand``
-   highlevel tool class that get the mouse events form the Ko-classes
+   highlevel tool class that get the mouse events from the Ko-classes
    and distributes events among internal classes.
 ``KisToolPaintingInformationBuilder``
    converts mouse events represented by ``KoPointerEvent`` objects into

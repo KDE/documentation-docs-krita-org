@@ -43,7 +43,7 @@ There's three times you need to make merge requests.
 Checklist for review
 --------------------
 
-Here's a quick checklist that is gone over when reviewing patches. While some requests require specialist knowledge, these items are so universal that anyone who knows how to check them can do so and comment on them. Feel free to do this yourself on `open requests <https://invent.kde.org/graphics/krita.git/merge_requests?scope=all&utf8=%E2%9C%93&state=opened>`_, we welcome it!
+Here's a quick checklist that is gone over when reviewing patches. While some requests require specialist knowledge, these items are so universal that anyone who knows how to check them can do so and comment on them. Feel free to do this yourself on `open requests <https://invent.kde.org/graphics/krita/-/merge_requests?scope=all&state=opened>`_, we welcome it!
 
 Also check out the `manual for reviewing merge requests in Gitlab <https://invent.kde.org/help/user/project/merge_requests/index.md>`_.
 
