@@ -80,7 +80,7 @@ var Search = {
   init : function() {
       var params = getQueryParameters();
       if (params.q) {
-          var query = params.q[0];
+          var query = params.q;
           $('input[name="q"]')[0].value = query;
           this.performSearch(query);
       }
@@ -316,11 +316,13 @@ var Search = {
           displayNextItem();
           return;
         }   
-
         
         var listItem = $('<li style="display:none"></li>');
         var requestUrl = "";
         var linkUrl = "";
+        if (DOCUMENTATION_OPTIONS.URL_ROOT === undefined) {
+          DOCUMENTATION_OPTIONS.URL_ROOT = "";
+        }
         if (DOCUMENTATION_OPTIONS.BUILDER === 'dirhtml') {
           // dirhtml builder
           var dirname = item[0] + '/';
