@@ -15,6 +15,19 @@ Making a release
 
 .. contents::
 
+On branching out a stable branch
+--------------------------------
+
+When we change the stable branch name, e.g. when changing `krita/5.2` into `krita/5.3` we should update its name in several
+places to keep CI infrastructure working properly:
+
+1. APK signer: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/apksigner-projects.yaml
+2. Windows signer: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/windowsbinariessigner-projects.yaml
+3. Nightly builds publisher: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/buildpublisher-projects.yaml
+4. Translations' "stable" branch: https://invent.kde.org/sysadmin/repo-metadata/-/blob/master/projects-invent/graphics/krita/i18n.json
+5. Notify translators about the tranlsations branch switch!
+
+
 Before the release
 ------------------
 
