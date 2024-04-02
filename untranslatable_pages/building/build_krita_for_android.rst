@@ -16,10 +16,151 @@ Building Krita for Android
 ==========================
 
 Use Linux to build Krita for Android. Building Krita for Android on another system 
-is *NOT* supported yet. It is possible to use :ref:`Krita Docker Image <building_krita_with_docker>`
-for the builds.
+is *NOT* supported yet. There are two approaches for building Krita for Android:
+one with CI's docker image, and the other one straight in the host system.
 
 .. contents::
+
+
++++++++++++++++++++++++++++
+Using prebuilt docker image
++++++++++++++++++++++++++++
+
+Docker approach is based on the normal linux-docker builds approach. You might want
+to check the details in the original document for Linux: 
+:ref:`Krita Docker Image <building_krita_with_docker>`
+
+Here we expect that you have already performed all the 
+:ref:`Prerequisites <building_krita_with_docker_prerequisites>` steps and 
+:ref:`downloaded Krita sources <building_krita_with_docker_download_sources>` 
+using the original document.
+
+Building the Android container
+------------------------------
+
+Firstly you need to download all Krita dependencies and QtCreator. When 
+fetching the dependencies you need to select he target architecture:
+``x86_64``, ``armeabi-v7a`` or ``arm64-v8a``.
+
+.. code::
+
+    # download the dependencies and QtCreator
+    ./bin/bootstrap-deps.sh --android=x86_64
+
+    # if you don't want to fetch QtCreator, but only deps,
+    # use bootstrap-krita-deps.sh
+    # ./bin/bootstrap-krita-deps.sh --android=x86_64
+
+This script will set up the full SDP environment in ``./persistent/deps`` folder. The 
+deps themselves will be located in ``./persistent/deps/_install``
+
+Now build the docker image and run the container. Just pass the ``--android`` flag to 
+the ``build_image`` script and it  will fetch the correct image for you:
+
+.. code::
+
+    ./bin/build_image --android
+    ./bin/run_container
+
+If you are hard on harddrive space, you can cleanup the caches using the 
+:ref:`cleanup section <building_krita_with_docker_cleanup>` of the original manual.
+
+Enter the container and build Krita
+-----------------------------------
+
+.. code::
+
+    # enter the container
+    ./bin/enter
+
+You need to manually set up a few environment variables and folders
+(they might be automated later, but not right now):
+
+.. code::
+
+    # set ABI you are building for
+    export KDECI_ANDROID_ABI=x86_64
+    
+    # location where _build and _packaging folders will be located
+    # (don't change)
+    export KDECI_WORKDIR_PATH=/home/appimage/appimage-workspace
+    
+    # location where the dependencies were unpacked (don't change)
+    export KDECI_SHARED_INSTALL_PATH=/home/appimage/appimage-workspace/deps/usr
+
+.. warning::
+
+    Currently, you need to set up these variable **every time** you 
+    enter the container!
+
+Then create the build directory and enter it (don't change the location, since it
+is tightly linked to ``$KDECI_WORKDIR_PATH`` in the packaging scripts)
+
+.. code::
+
+    mkdir -p /home/appimage/appimage-workspace/krita/_build
+    cd /home/appimage/appimage-workspace/krita/_build
+
+Configure Krita:
+
+.. code::
+
+    cmake -DBUILD_TYPE=RelWithDebInfo \
+          -DHIDE_SAFE_ASSERTS=OFF \
+          -DBUILD_TESTING=OFF \
+          -DCMAKE_INSTALL_PREFIX=~/appimage-workspace/deps/usr/ \
+          -DCMAKE_TOOLCHAIN_FILE=~/persistent/krita/krita-deps-management/tools/android-toolchain-krita.cmake \
+          ~/persistent/krita/
+
+There are two important switches that are unique to Android platform:
+
+1) ``CMAKE_INSTALL_PREFIX`` is set to the same folder as the 
+   dependencies themselves. It is necessary, because APK packaging
+   scripts cannot search in separate directories.
+
+2) ``CMAKE_TOOLCHAIN_FILE`` should point to a special toolchain file that will read
+   custom environment variables (pre-set in the docker containter) and locates
+   SDK and NDK paths.
+
+Then build Krita as usual:
+
+.. code::
+
+    make -j8 install
+
+Building the APK package
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you set up ``KDECI_WORKDIR_PATH`` and ``KDECI_SHARED_INSTALL_PATH`` properly,
+then just do:
+
+.. code::
+
+    python ~/persistent/krita/build-tools/ci-scripts/build-android-package.py
+
+And you will get an APK package in ``$KDECI_WORKDIR_PATH/krita/_packaging``
+
+If you happen to need an AAB package, then you need to generate a bit more artifacts:
+
+.. code::
+
+    python ~/persistent/krita/build-tools/ci-scripts/build-android-package.py --archive-artifacts
+    python ~/persistent/krita/build-tools/ci-scripts/build-android-appbundle.py
+
+The first command will build and APK and package all artifacts in 
+``$KDECI_WORKDIR_PATH/krita/_packaging/krita_build_apk`` and the second script will 
+reuse these artifacts for building AAB package.
+
+++++++++++++++++++++++++++++++++++++++++++++++
+Using your host system for Android development
+++++++++++++++++++++++++++++++++++++++++++++++
+
+.. warning::
+
+    !!!This section is under a rewrite right now!!!
+
+If you chose to build on your host system, you will have much more troubles to resolve, because
+you need to set up all SDK and NDK things.
 
 Setting up Android SDK and NDK
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

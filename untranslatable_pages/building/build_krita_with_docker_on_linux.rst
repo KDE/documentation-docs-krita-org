@@ -20,6 +20,8 @@ that is used on KDE CI for building official AppImage packages. This guide is va
 
 .. contents::
 
+.. _building_krita_with_docker_prerequisites:
+
 Prerequisites
 -------------
 
@@ -61,6 +63,11 @@ folder into another location, where there is enough space.
         sudo systemctl start docker
 
 
+.. _building_krita_with_docker_download_sources:
+
+Downloading Krita sources
+-------------------------
+
 Then you need to download deps and Krita source tree. These steps are not included into the *Dockerfile* to save internal bandwidth 
 
 .. code::
@@ -79,9 +86,14 @@ Then you need to download deps and Krita source tree. These steps are not includ
     # "kde:krita" should be replaced with a link for cloning the repository,
     # such as "git@invent.kde.org:graphics/krita.git".
 
+
+Downloading prebuilt Krita dependencies
+---------------------------------------
+
+.. code::
+    
     # download the deps archive
     ./bin/bootstrap-deps.sh
-
 
 Build the docker image and run the container
 --------------------------------------------
@@ -90,6 +102,8 @@ Build the docker image and run the container
 
     ./bin/build_image
     ./bin/run_container
+
+.. _building_krita_with_docker_cleanup:
 
 Cleanup the dependencies
 ------------------------
