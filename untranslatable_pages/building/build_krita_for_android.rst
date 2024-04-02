@@ -35,6 +35,19 @@ Here we expect that you have already performed all the
 :ref:`downloaded Krita sources <building_krita_with_docker_download_sources>` 
 using the original document.
 
+Fetch CI-management repositories
+--------------------------------
+
+For building on Android we need the toolchain files from the ci-management repository,
+so fetch them:
+
+.. code::
+
+    pushd ./persistent/krita
+    git clone https://invent.kde.org/dkazakov/krita-deps-management.git
+    git clone https://invent.kde.org/dkazakov/ci-utilities.git -b work/split-ci-branch krita-deps-management/ci-utilities
+    popd
+
 Building the Android container
 ------------------------------
 
