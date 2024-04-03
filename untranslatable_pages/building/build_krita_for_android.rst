@@ -118,7 +118,7 @@ Configure Krita:
 
 .. code::
 
-    cmake -DBUILD_TYPE=RelWithDebInfo \
+    cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo \
           -DHIDE_SAFE_ASSERTS=OFF \
           -DBUILD_TESTING=OFF \
           -DCMAKE_INSTALL_PREFIX=~/appimage-workspace/deps/usr/ \
@@ -164,13 +164,16 @@ The first command will build and APK and package all artifacts in
 ``$KDECI_WORKDIR_PATH/krita/_packaging/krita_build_apk`` and the second script will 
 reuse these artifacts for building AAB package.
 
+Troubleshooting
+~~~~~~~~~~~~~~~
+
+The ground truth for the docker builds is the ``android.yml`` script that is used on CI.
+If you have a suspicion that this manual got outdated, please compare it to the `original 
+android.yml file <https://invent.kde.org/graphics/krita/-/blob/master/build-tools/ci-scripts/android.yml>`__
+
 ++++++++++++++++++++++++++++++++++++++++++++++
 Using your host system for Android development
 ++++++++++++++++++++++++++++++++++++++++++++++
-
-.. warning::
-
-    !!!This section is under a rewrite right now!!!
 
 If you chose to build on your host system, you will have much more troubles to resolve, because
 you need to set up all SDK and NDK things.
@@ -182,16 +185,16 @@ First configure prefix variable where we install our SDKs:
 
 .. code:: shell
 
-    export KRITA_ANDROID_ROOT=/home/appimage/appimage-workspace/android/
+    export ANDROID_ROOT=/home/appimage/appimage-workspace/android/
 
-We right now use Android NDK version ``r22b`` to do our builds. So, it is recommended to use that. Download it from `google's
+Right now we use Android NDK version ``r22b`` to do our builds. So, it is recommended to use that. Download it from `google's
 website <https://developer.android.com/ndk/downloads/older_releases.html>`__
-then extract it into ``$KRITA_ANDROID_ROOT``
+then extract it into ``$ANDROID_ROOT``
 
 Next you need to download command line tools that will let you install
 the SDKs and build tools. Look for links to ``commandlinetools`` at the bottom
 of `android studio page <https://developer.android.com/studio>`__.
-Download and extract the tools into ``$KRITA_ANDROID_ROOT``.
+Download and extract the tools into ``$ANDROID_ROOT``.
 
 .. hint::
     Theoretocally, you can try installing the whole Android Studio and configure
@@ -202,6 +205,20 @@ Download and extract the tools into ``$KRITA_ANDROID_ROOT``.
     ``Android SDK Build-Tools`` (`more info in the official documentation 
     <https://developer.android.com/studio/intro/update#sdk-manager>`__)
 
+Configure environment variables
+-------------------------------
+
+.. code:: shell
+
+    export KDECI_ANDROID_SDK_ROOT=$ANDROID_ROOT/sdk
+    export KDECI_ANDROID_NDK_ROOT=$ANDROID_ROOT/android-ndk-r22b/
+    export ANDROID_HOME=$ANDROID_ROOT/sdk
+    export PATH="$ANDROID_ROOT/sdk/platform-tools/:$ANDROID_ROOT/cmdline-tools/bin/:$PATH"
+
+.. note::
+
+    You might want to put these variables into some ``env`` file and source it before 
+    every use of Android environment
 
 Installing Prerequisites
 ------------------------
@@ -225,16 +242,29 @@ for ``javac`` **and the runtime** (no idea how to check that).
     javac --version
     ls -l /usr/lib/jvm/*
 
+Make sure that you have Python of version **3.10** installed:
+
+.. code::
+
+    > python --version
+    Python 3.10.13
+
+.. note::
+
+    Theoretically, Python 3.9 may also work, but it is not tested. Python 3.8 will 
+    **not** work, that is tested.
+
 Install SDKs and build tools:
 
 .. code:: shell
 
-    cd $KRITA_ANDROID_ROOT
-    cmdline-tools/bin/sdkmanager --sdk_root=$KRITA_ANDROID_ROOT/sdk/ --licenses
-    cmdline-tools/bin/sdkmanager --sdk_root=$KRITA_ANDROID_ROOT/sdk/ platform-tools
-    cmdline-tools/bin/sdkmanager --sdk_root=$KRITA_ANDROID_ROOT/sdk/ "platforms;android-23" # TODO:not needed?
-    cmdline-tools/bin/sdkmanager --sdk_root=$KRITA_ANDROID_ROOT/sdk/ "platforms;android-33"
-    cmdline-tools/bin/sdkmanager --sdk_root=$KRITA_ANDROID_ROOT/sdk/ "build-tools;34.0.0"
+    yes | sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT/sdk/ --licenses
+    sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT platform-tools
+    sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT "platforms;android-33"
+    sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT "build-tools;30.0.3"
+    sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT "build-tools;34.0.0"
+    sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT emulator
+    sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT tools
 
 .. hint::
 
@@ -247,64 +277,157 @@ Install SDKs and build tools:
     * NDK: https://developer.android.com/ndk/downloads/revision_history
     * SDK: ``where???``
 
-Adjust ``PATH`` variable to use the installed android tools:
+Fetch Krita Deps
+----------------
+
+Choose sources and environment directories:
 
 .. code:: shell
 
-    export PATH=$KRITA_ANDROID_ROOT/sdk/emulator/:$PATH
-    export PATH=$KRITA_ANDROID_ROOT/sdk/platform-tools/:$PATH
-    export PATH=$KRITA_ANDROID_ROOT/cmdline-tools/bin/:$PATH
+    export SRCDIR=/home/appimage/persistent/sources
+    export ENVDIR=/home/appimage/persistent/envdir
 
+    mkdir -p $SRCDIR
+    mkdir -p $ENVDIR
 
-Building Krita's deps
----------------------
+``$SRCDIR`` will store all sources and build artifacts, but ``$ENVDIR`` will store 
+packages and caches.
 
-First you need to set up environment variables that are used by our ``androidbuild.sh`` 
-script:
-
-.. code:: shell
-
-    export KRITA_ROOT=/home/appimage/persistent/krita/
-    export BUILD_ROOT=/home/appimage/appimage-workspace/krita-build/
-    export ANDROID_ABI=x86_64
-    export ANDROID_API_LEVEL=23
-    export CMAKE_ANDROID_NDK=$KRITA_ANDROID_ROOT/android-ndk-r22b/
-    export ANDROID_SDK_ROOT=$KRITA_ANDROID_ROOT/sdk/
-    export BUILD_TYPE=Release
-
-You can modify ``ANDROID_ABI`` and ``BUILD_TYPE`` if you want to build for another 
-architecture:
-
-* ``ANDROID_ABI``: x86_64, armeabi-v7a, arm64-v8a
-* ``BUILD_TYPE``: Release, Debug
-
-.. warning::
-
-    Please take it into account that 32-bit x86 versions of Krita are now deprecated 
-    and not officially supported.
-
-Now build the dependencies (the script will fetch all the options from
-the environment variables we set before):
+Checkout Krita repository and all the management repositories:
 
 .. code:: shell
 
-    $KRITA_ROOT/packaging/android/androidbuild.sh -p=boost
-    $KRITA_ROOT/packaging/android/androidbuild.sh -p=qt
-    $KRITA_ROOT/packaging/android/androidbuild.sh -p=3rdparty
-    $KRITA_ROOT/packaging/android/androidbuild.sh -p=kf5
+    cd $SRCDIR
 
-Build Krita and the APK file:
+    git clone https://invent.kde.org/graphics/krita.git
+    git clone https://invent.kde.org/dkazakov/krita-deps-management.git krita/krita-deps-management
+    git clone https://invent.kde.org/dkazakov/ci-utilities.git -b work/split-ci-branch krita/krita-deps-management/ci-utilities
+
+Install python dependencies. You might want to use Python's ``venv`` feature for this:
 
 .. code:: shell
 
-    $KRITA_ROOT/packaging/android/androidbuild.sh -p=krita-bin
-    $KRITA_ROOT/packaging/android/androidbuild.sh -p=apk
+    # set up venv
+    python3.10 -m venv --upgrade-deps $WORKDIR/PythonEnv
+    source $WORKDIR/PythonEnv/bin/activate
 
-The APK package will be placed into ``$BUILD_ROOT/krita_build_apk/build/outputs/apk/{debug,release}`` 
-folder.
+    # install requirements
+    python -m pip install -r $SRCDIR/krita/krita-deps-management/requirements.txt
 
+Set up an environment variable for the target android architecture:
+
+.. code:: shell
+    
+    export KDECI_ANDROID_ABI=x86_64
+
+Set up working directory and environment:
+
+.. code:: shell
+
+    cd $SRCDIR/krita
+    python krita-deps-management/tools/setup-env.py \
+        # Path to our venv to make sure it is automatically activated in this environment
+        -v $WORKDIR/PythonEnv \
+        # select target ABI
+        --android-abi $KDECI_ANDROID_ABI \
+        # select workdir root (where the caches and downloads will go)
+        --root $WORKDIR
+
+    # activate the generated environment
+    source $WORKDIR/base-env
+
+    # generate deps file
+    python krita-deps-management/tools/generate-deps-file.py \
+        -s krita-deps-management/latest/krita-deps.yml \
+        -o .kde-ci.yml
+
+    # fetch the dependencies
+    python krita-deps-management/ci-utilities/run-ci-build.py \
+        # requitred fields for the script
+        --project krita --branch master \
+        # platform for which to fetch dependencies
+        --platform Android/$KDECI_ANDROID_ABI \
+        # only generate environment file in `./env`
+        --only-env
+
+    # activate generated environment
+
+    source ./env
+
+.. note::
+
+    Next time you enter the environment, you just neet to perform the latest
+    environment set up using ``source ./env``. It will activate all your manual
+    configurations as well, like Python's ``venv``, ``KDECI_ANDROID_SDK_ROOT`` 
+    and ``KDECI_ANDROID_ABI``.
+
+Configure Krita:
+
+.. code:: shell
+
+    cd $SRCDIR/krita/_build
+    cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+        -DHIDE_SAFE_ASSERTS=OFF \
+        -DBUILD_TESTING=OFF \
+        -DCMAKE_INSTALL_PREFIX=$SRCDIR/krita/_install \
+        -DCMAKE_TOOLCHAIN_FILE=$SRCDIR/krita/krita-deps-management/tools/android-toolchain-krita.cmake \
+        $SRCDIR/krita/
+
+There are two important switches that are unique to Android platform:
+
+1) ``CMAKE_INSTALL_PREFIX`` is set to the same folder as the 
+   dependencies themselves. It is necessary, because APK packaging
+   scripts cannot search in separate directories.
+
+2) ``CMAKE_TOOLCHAIN_FILE`` should point to a special toolchain file that will read
+   custom environment variables (pre-set in the docker containter) and locates
+   SDK and NDK paths.
+
+Then build Krita as usual:
+
+.. code:: shell
+
+    make -j8 install
+
+Building the APK package
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+When building outside docker it is important that ``_install`` and ``_build`` folders are
+placed straight in the Krita source tree. That allows APK building scripts to find the 
+assets properly, since it searches stuff relative to the current working directory:
+
+.. code:: shell
+
+    cd $SRCDIR/krita
+    python build-tools/ci-scripts/build-android-package.py
+
+And you will get an APK package in ``_packaging`` subfolder.
+
+If you happen to need an AAB package, then you need to generate a bit more artifacts:
+
+.. code:: shell
+
+    cd $SRCDIR/krita
+    python build-tools/ci-scripts/build-android-package.py --archive-artifacts
+    python build-tools/ci-scripts/build-android-appbundle.py
+
+The first command will build and APK and package all artifacts in 
+``_packaging/krita_build_apk`` and the second script will reuse these artifacts for building AAB package.
+
+
+Troubleshooting
+~~~~~~~~~~~~~~~
+
+The ground truth for building the environment (i.e. setting up SDK, NDK and Python) is 
+`the Dockerfile used on CI <https://invent.kde.org/sysadmin/ci-images/-/blob/master/krita-android-builder/Dockerfile>`__
+
+The ground truth for the actual build of Krita is ``android.yml`` script that is used on CI.
+If you have a suspicion that this manual got outdated, please compare it to the `original 
+android.yml file <https://invent.kde.org/graphics/krita/-/blob/master/build-tools/ci-scripts/android.yml>`__
+
++++++++++++++++++++++++++++
 Installing Android Emulator
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++++++
 
 Using Android emulator is easy, after it is configured initially. The only issue 
 that worth remembering is that when using x86_64 builds the host system should 
