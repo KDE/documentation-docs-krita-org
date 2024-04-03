@@ -302,6 +302,9 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
         * ``AppImage exists: True`` will tell you if the AppImage URL in downloadable, 
           so you don't have to recheck it yourself
 
+    If you want to test ZSync manually, don't use the system-provided package. Use 
+    this cli-tool provided by AppImage team: https://appimage.github.io/zsync2/
+
 20. Manually verify that the previous version of Krita AppImage can update to 
     the new one from the GUI. It should use the .zsync file uploaded above.
     
