@@ -26,6 +26,7 @@ places to keep CI infrastructure working properly:
 3. Nightly builds publisher: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/buildpublisher-projects.yaml
 4. Translations' "stable" branch: https://invent.kde.org/sysadmin/repo-metadata/-/blob/master/projects-invent/graphics/krita/i18n.json
 5. Notify translators about the tranlsations branch switch!
+6. Updata the link to "Krita Plus" ZSync channel in ``build-tools/ci-scripts/show-updates-status.py`` script
 
 
 Before the release
@@ -250,9 +251,59 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
 
 18. Now the folder on download.kde.org should have 21(!) files. Check if you missed something (and you surely did! :) ).
 
-19. Verify that the previous version of Krita AppImage can update to 
-    the new one from the GUI. It should use the .zsync file uploaded above.
+19. Verify consistency of all ZSync AppImage update links using the special script:
 
+    .. code:: shell
+
+        cd krita/
+        python build-tools/ci-scripts/show-updates-status.py
+
+    It should show information like this:
+
+    .. code::
+
+        == Channel: Stable FAILED ==
+        ZSync URL: https://download.kde.org/stable/krita/updates/Krita-Stable-x86_64.appimage.zsync
+        ZSync exists: True
+        AppImage exists: False
+            MTime:  Wed, 06 Dec 2023 13:28:16 +0000
+            Filename:  krita-5.2.2-x86_64.appimage
+            URL:  https://binary-factory.kde.org/job/Krita_Release_Appimage_Build/124//artifact/krita-5.2.2-x86_64.appimage
+            SHA-1:  16a1a640084446b45ea078d8b81cffc075144a02
+
+        == Channel: Beta (unstable) FAILED ==
+        ZSync URL: https://download.kde.org/unstable/krita/updates/Krita-Beta-x86_64.appimage.zsync
+        ZSync exists: True
+        AppImage exists: False
+            MTime:  Thu, 14 Sep 2023 09:26:05 +0000
+            Filename:  krita-5.2.0-rc1-x86_64.appimage
+            URL:  https://binary-factory.kde.org/job/Krita_Release_Appimage_Build/121//artifact/krita-5.2.0-rc1-x86_64.appimage
+            SHA-1:  4bd0f522c22f41e504bf1e9ced540fa11ed5ec53
+
+        == Channel: Plus FAILED ==
+        ZSync URL: https://cdn.kde.org/ci-builds/graphics/krita/krita/5.2/linux/Krita-Plus-x86_64.appimage.zsync
+        ZSync exists: False
+        AppImage exists: False
+
+        == Channel: Next ==
+        ZSync URL: https://cdn.kde.org/ci-builds/graphics/krita/master/linux/Krita-Next-x86_64.appimage.zsync
+        ZSync exists: True
+        AppImage exists: True
+            MTime:  Tue, 02 Apr 2024 22:30:57 +0000
+            Filename:  krita-5.3.0-prealpha-64b33ed808-x86_64.appimage
+            URL:  https://cdn.kde.org/ci-builds/graphics/krita/master/linux/krita-5.3.0-prealpha-64b33ed808-x86_64.appimage
+            SHA-1:  e360127c3c956499ed0266ad8eb9bcdad3789956
+
+    Check the following:
+
+        * none of the channels are marked with **FAILED**
+        * AppImage's filename is set to the one you just uploaded
+        * Appimage's URL is a full URL pointing to a seemingly correct location
+        * ``AppImage exists: True`` will tell you if the AppImage URL in downloadable, 
+          so you don't have to recheck it yourself
+
+20. Manually verify that the previous version of Krita AppImage can update to 
+    the new one from the GUI. It should use the .zsync file uploaded above.
     
 Release coordination
 ~~~~~~~~~~~~~~~~~~~~
