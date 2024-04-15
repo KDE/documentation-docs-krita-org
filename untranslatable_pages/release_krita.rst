@@ -15,6 +15,77 @@ Making a release
 
 .. contents::
 
+Krita releases and update channels
+----------------------------------
+
+At any point of time Krita users have access to four(!) versions of Krita. We calls these versions "channels", since they are "channels through which the users can get updates of the software".
+
+1. **Krita Stable** is the latest stable version of Krita that has been released to the users
+    
+    * the user can manually download it from the official side
+
+    * packages are stored at the "stable" prefix on dko: https://download.kde.org/stable/krita/
+
+    * AppImage updater will suggest an update **only** from one stable version to another, e.g. "Krita 5.2.2 -> Krita 5.2.3" or "Krita 5.2.2 -> Krita 5.3.0"
+
+    * AppImage updater uses link at address: https://download.kde.org/stable/krita/updates/Krita-Stable-x86_64.appimage.zsync
+
+2. **Krita Beta** is the latest alpha or beta version of Krita
+
+    * these packages are supposed to be used for pre-release testing
+
+    * we usually make beta-release announcements with direct links to these packages
+
+    * packages are stored at the "unstable" prefix on dko: https://download.kde.org/unstable/krita/
+
+    * AppImage updater will suggest updates if
+
+        * the next beta or release candidate version has been released;
+
+        * the final release is published (update to final)
+
+    * AppImage updater uses link at address: https://download.kde.org/unstable/krita/updates/Krita-Beta-x86_64.appimage.zsync
+
+3. **Krita Plus** is the latest stable release with all backported patches, built nightly
+
+    * this channel is basically the nightly build of the current stable branch
+
+    * packages are stored at the gitlab's CDN server: https://cdn.kde.org/ci-builds/graphics/krita/krita-5.2/
+
+    * AppImage updater will suggest updates if
+
+        * a new nightly with the same minor version has been published, e.g.
+
+            + krita/5.2 will update to the new version of krita/5.2
+
+            + krita/5.3 will update to the new version of krita/5.3
+
+            + they will not cross-update, unless the next point...
+
+        * a stable version of the next minor branch has been officially released
+
+            + krita/5.2 will update to krita/5.3 **after** the first official stable release of krita/5.3 has been made
+
+    * AppImage updater uses link at the corresponding branch at CDN:
+
+        - krita/5.2 packages use: https://cdn.kde.org/ci-builds/graphics/krita/krita-5.2/linux/Krita-Plus-x86_64.appimage.zsync
+
+        - krita/5.3 packages use: https://cdn.kde.org/ci-builds/graphics/krita/krita-5.3/linux/Krita-Plus-x86_64.appimage.zsync
+
+        - after the first version of krita/5.3 has been released, the link in 5.2 branch should be replaced
+
+    * **TODO:** remap these links to some static location at https://updates.krita.org/krita-5.2/linux/Krita-Plus-x86_64.appimage.zsync
+
+4. **Krita Next** is the nightly build of the development (``master``) branch of Krita
+
+    * packages are stored at the gitlab's CDN server: https://cdn.kde.org/ci-builds/graphics/krita/master/
+
+    * AppImage updater will suggest updates every time development branch gets a new nightly build
+
+    * AppImage updater uses link at address: https://cdn.kde.org/ci-builds/graphics/krita/master/linux/Krita-Next-x86_64.appimage.zsync
+
+    * **TODO:** remap these links to some static location at https://updates.krita.org/master/linux/Krita-Next-x86_64.appimage.zsync
+
 On branching out a stable branch
 --------------------------------
 
@@ -22,11 +93,19 @@ When we change the stable branch name, e.g. when changing `krita/5.2` into `krit
 places to keep CI infrastructure working properly:
 
 1. APK signer: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/apksigner-projects.yaml
+
 2. Windows signer: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/windowsbinariessigner-projects.yaml
+
 3. Nightly builds publisher: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/buildpublisher-projects.yaml
+
 4. Translations' "stable" branch: https://invent.kde.org/sysadmin/repo-metadata/-/blob/master/projects-invent/graphics/krita/i18n.json
+
 5. Notify translators about the tranlsations branch switch!
-6. Updata the link to "Krita Plus" ZSync channel in ``build-tools/ci-scripts/show-updates-status.py`` script
+
+6. Update the link to "Krita Plus" ZSync channel in ``build-tools/ci-scripts/show-updates-status.py`` script
+
+    * make sure you keep the old link in the script as well, until the branch is fully deprecated and removed 
+      from the CDN server (we need to keep the link up for some time to let people update to the new version)
 
 
 Before the release
@@ -298,14 +377,20 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
 
         * none of the channels are marked with **FAILED**
         * AppImage's filename is set to the one you just uploaded
-        * Appimage's URL is a full URL pointing to a seemingly correct location
+        * Appimage's URL is a full URL pointing to a seemingly correct location (see the definition of the "channels" above)
         * ``AppImage exists: True`` will tell you if the AppImage URL in downloadable, 
           so you don't have to recheck it yourself
 
     If you want to test ZSync manually, don't use the system-provided package. Use 
     this cli-tool provided by AppImage team: https://appimage.github.io/zsync2/
 
-20. Manually verify that the previous version of Krita AppImage can update to 
+20. If you are doing **the first stable release** after branching-out, e.g. the first release of "Krita 5.3.0", then make sure 
+    ask sysadmins to relink "Krita Plus krita/5.2" zsync file to "Krita Plus krita/5.3"
+
+21. If you are doing **any stable release**, manually switch zsync file of Krita Beta to the Krita Stable, to make sure
+    users will get updates.
+
+21. Manually verify that the previous version of Krita AppImage can update to 
     the new one from the GUI. It should use the .zsync file uploaded above.
     
 Release coordination
