@@ -107,6 +107,8 @@ places to keep CI infrastructure working properly:
     * make sure you keep the old link in the script as well, until the branch is fully deprecated and removed 
       from the CDN server (we need to keep the link up for some time to let people update to the new version)
 
+7. Update Krita version in ``master`` branch to be higher than in stable.
+
 
 Before the release
 ------------------
@@ -390,7 +392,10 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
 21. If you are doing **any stable release**, manually switch zsync file of Krita Beta to the Krita Stable, to make sure
     users will get updates.
 
-21. Manually verify that the previous version of Krita AppImage can update to 
+22. If you are doing **any release from a stable branch**, manually update the version to the next one with suffix "alpha" to 
+    make sure that Krita Plus packages correctly show it to the user.
+
+23. Manually verify that the previous version of Krita AppImage can update to 
     the new one from the GUI. It should use the .zsync file uploaded above.
     
 Release coordination
