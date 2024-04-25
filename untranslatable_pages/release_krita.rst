@@ -392,8 +392,8 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
 21. If you are doing **any stable release**, manually switch zsync file of Krita Beta to the Krita Stable, to make sure
     users will get updates.
 
-22. If you are doing **any release from a stable branch**, manually update the version to the next one with suffix "alpha" to 
-    make sure that Krita Plus packages correctly show it to the user.
+22. If you are doing **any release from a stable branch**, manually update the version to the next one with suffix "prealpha" to 
+    make sure that Krita Plus packages correctly show it to the user. You need to do that in ``CMakeLists.txt`` and ``build.gradle``.
 
 23. Manually verify that the previous version of Krita AppImage can update to 
     the new one from the GUI. It should use the .zsync file uploaded above.
