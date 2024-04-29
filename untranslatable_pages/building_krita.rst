@@ -160,22 +160,35 @@ Building Krita
 
 
 
-Again, on the command line, with the same script that is used to make the nightly builds and the releases:
+Again, on the command line, configure the build:
 
 .. code:: batch
 
     cd /d C:\krita-dev
     env.bat
-    krita\build-tools\windows\build.cmd --no-interactive --jobs 8 --skip-deps --download-dir C:\krita-dev\cache\downloads --deps-install-dir C:\krita-dev\_install --krita-build-dir C:\krita-dev\b_krita --plugins-build-dir C:\krita-dev\b_plugins --krita-install-dir C:\krita-dev\_install
+    mkdir -p C:\krita-dev\b_krita
+    cd b_krita
+
+    cmake C:\krita-dev\krita ^
+        -DCMAKE_INSTALL_PREFIX=C:/krita-dev/_install ^
+        -DBUILD_TESTING=ON ^
+        -DINSTALL_BENCHMARKS=ON ^
+        -DKRITA_ENABLE_PCH=OFF ^
+        -DHIDE_SAFE_ASSERTS=OFF ^
+        -G Ninja ^
+        -DCMAKE_BUILD_TYPE=RelWithDebInfo
+
+    ninja -j8 install
     
-If you are hacking on Krita, you can rebuild Krita without running this script by entering the build directory and running ``mingw32-make -j8 install`` or ``ninja install``.
+    
+If you are hacking on Krita, you can rebuild Krita without running the full build by entering the build directory and running ``mingw32-make -j8 install`` or ``ninja -j8 install``.
 
 .. code:: batch
 
+    cd /d C:\krita-dev
+    env.bat
     cd b_krita
-    mingw32-make -j8 install
-    :: or
-    ninja install
+    ninja -j8 install
 
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_006-installing_by-deevad.jpg
 
@@ -192,7 +205,7 @@ You must start Krita from the command prompt, after having run ``env.bat``:
     _install\bin\krita
     :: or
     _install\bin\krita.exe
-    
+
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_008-running-success_by-deevad.jpg
 
 Building on macOS
