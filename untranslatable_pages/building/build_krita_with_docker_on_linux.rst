@@ -263,15 +263,13 @@ After that you need to build Krita in the docker as usual.
 Extra developer tools
 ---------------------
 
-To install QtCreator, enter the container and start the installer, downloaded while fetching dependencies. Make sure you install it into '~/qtcreator' directory without any version suffixes, then you will be able to use the script below:
+QtCreator is usually installed into the docker image into ``~/qtcreator/`` folder. The fetching of the prebuilt QtCreator 
+happens when you run ``./bin/bootstrap-deps.sh`` script. That is, if you skipped installing deps QtCreator will not be installed
+and you will have to download it manually from `this location <https://files.kde.org/krita/build/qtcreator-package.tar.gz>`_.
 
-.. code::
-
-    # inside the container
-    ./persistent/qt-creator-opensource-linux-x86_64.run
-
-
-To start QtCreator:
+You may also try to dowload the official QtCreator installer from `<https://download.qt.io/official_releases/qtcreator/>`_. In 
+case you decide to use it, just enter the container and install it. Make sure you install it into '~/qtcreator' directory without 
+any version suffixes, then you will be able to run it directly from the host system using the script below:
 
 .. code::
 
