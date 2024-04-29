@@ -10,20 +10,33 @@ After you install Python bring up a command prompt and type: `python --version`
 
 It should tell you the version and verify that Python is installed. Mine says `Python 3.6.3`. If it says `Python 2.7.15` try replacing `python` with `python3`.
 
-Next you will need to install Sphinx so you can use it in projects. Type this from the command line: `python -m pip install --upgrade sphinx` 
+Next you will need to install Sphinx so you can use it in projects:
+
+```bash
+# set up virtual environment
+python3 -m venv PythonEnvTesting
+source PythonEnvTesting/bin/activate
+
+# install Sphinx and its dependencies
+pip install -r requirements.txt
+
+# if you want the autorebuild feature, install sphinx-autorebuild
+pip install sphinx-autobuild
+
+# start auto-rebuild script
+sphinx-autobuild . _build/autohtml --open-browser
+```
 
 Windows: If "pip" is not found, you will need to add the folder to your environment variables. This should be in C:\Users\<username>\AppData\Local\Programs\Python\Python<version>\Scripts
 
 Linux: On some distributions, `pip` might not be installed by default with python, for that you need to run 
 
 ```bash
-$ sudo apt-get install python3-pip      # Ubuntu/Debian based
-$ sudo dnf install python3	            # Fedora based
-$ sudo pacman -S python-pip	            # Arch based
-$ sudo zypper install python3-pip		# OpenSuse based
+$ sudo apt-get install python3-pip python3-venv  # Ubuntu/Debian based
+$ sudo dnf install python3                       # Fedora based
+$ sudo pacman -S python-pip                      # Arch based
+$ sudo zypper install python3-pip                # OpenSuse based
 ```
-
-
 
 After it is done you can make sure it is installed. Type this in the command line: `sphinx-build --version`
 
