@@ -219,81 +219,135 @@ Prequisites
 You will need to install:
 
 * CMake: https://cmake.org
+* Python 3.10 or higher
 * XCode: get it from the app store
 * Qt Creator: https://download.qt.io/official_releases/qtcreator/
 
 Preparation
 ~~~~~~~~~~~
 
-
-Open Terminal.app
-
-.. code:: console
-
-    cd
-    mkdir dev
-    cd dev 
-    git clone https://invent.kde.org/graphics/krita.git
-    
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg
 
-    
-Create an env.sh file that should contain the following lines:
+Open Terminal.app. First you need to install necessary build tools that we fetch via Craft:
 
-.. code:: console
+.. code:: bash
 
-    export BUILDROOT=$HOME/dev 
-    export PATH=/Applications/CMake.app/Contents/bin:$BUILDROOT/i/bin/:$PATH
+    export BUILDROOT=$HOME/dev
+
+    mkdir -p $BUILDROOT
+    cd $BUILDROOT 
     
-Building the dependencies
-~~~~~~~~~~~~~~~~~~~~~~~~~
+    # fetch Craft and use it for installing CMake, ninja and a few other tools
+    git clone https://invent.kde.org/packaging/craftmaster.git --depth=1
+    export KDECI_CRAFT_DOWNLOADS=$BUILDROOT/craft-downloads
+    export KDECI_CRAFT_CONFIG=$BUILDROOT/upstream-ci-utilities/craft/qt5/CraftConfig.ini
+    export KDECI_CRAFT_PROJECT_CONFIG=$BUILDROOT/.craft.ini
+    export KDECI_CRAFT_PLATFORM=macos-arm-clang
+
+    touch $KDECI_CRAFT_PROJECT_CONFIG
+    function craftmaster { python3 craftmaster/CraftMaster.py --config $KDECI_CRAFT_CONFIG --config-override $KDECI_CRAFT_PROJECT_CONFIG --target $KDECI_CRAFT_PLATFORM --variables DownloadDir=$KDECI_CRAFT_DOWNLOADS $@; }
+
+    craftmaster --setup
+    craftmaster -c -i --options virtual.ignored=True --update craft
+    craftmaster -c -i core/cacert dev-utils/7zip-base dev-utils/cmake-base dev-utils/7zip dev-utils/cmake dev-utils/patchelf dev-utils/ninja
+
+    # add the tools that Craft installed into the current PATH
+    export PATH=$BUILDROOT/$KDECI_CRAFT_PLATFORM/dev-utils/bin/:$PATH
+
+Now fetch Krita sources, build scripts and set up virtual environment for Python:
+
+.. code:: bash
+
+    cd $BUILDROOT
+    git clone https://invent.kde.org/graphics/krita.git
+
+    # fetch environment scripts under Krita's source directory
+    cd krita
+    git clone https://invent.kde.org/dkazakov/krita-deps-management.git krita-deps-management --depth=1
+    git clone https://invent.kde.org/dkazakov/ci-utilities.git -b work/split-ci-branch krita-deps-management/ci-utilities --depth=1
+
+    # create venv environemnt for running build scripts
+    python3 -m venv $BUILDROOT/venv --upgrade-deps
+    source $BUILDROOT/venv/bin/activate
+    pip install -r krita-deps-management/requirements.txt
+
+
+Fetching prebuilt dependencies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg
 
+Now set up the environment for building Krita and download all the dependencies in a prebuilt form:
 
-It is possible to build Krita against dependencies installed through MacPorts or some similar packaging service. If you do that, you're on your own though.
+.. code:: bash
 
-Open Terminal.app and source the env.sh file you just created:
+    cd $BUILDROOT/krita
+    source $BUILDROOT/venv/bin/activate
 
-.. code:: console
+    python krita-deps-management/tools/setup-env.py --full-krita-env -v $BUILDROOT/venv -p $BUILDROOT/$KDECI_CRAFT_PLATFORM/dev-utils/bin/
 
-    cd ~/dev
-    . env.sh
-    ./krita/packaging/macos/osxbuild.sh builddeps
-    
-    
-This will complain several time that it cannot find the Java SDK: just click that away, and don't worry. Building the dependencies will take several hours.
+The script will generate the following environment for you:
+
+    * ``$BUILDROOT/krita/_install`` --- the install prefix for Krita with all the deps preinstalled
+    * ``$BUILDROOT/krita/_build`` --- the build folder for Krita
+    * ``$BUILDROOT/krita/env`` --- a script for build environment activation
+    * ``$BUILDROOT/krita/env_deactivate`` --- a script for build environment de-activation
+
+The steps above should be done only once when you set up the environement for the first time. Next time
+you open the console you should just source the env-file at ``$BUILDROOT/krita/env``, you don't have to 
+repeat all these steps with craft and python's environment.
 
 Building Krita
 ~~~~~~~~~~~~~~
 
-In the same terminal window (if you open a new one, you will have to *source* the env.sh script again by running ". env.sh" -- that's a dot.
-
-.. code:: console
-
-     ./krita/packaging/macos/osxbuild.sh buildinstall
-     
-This will build and install Krita to $HOME/dev/i/krita.app
-
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_006-installing_by-deevad.jpg
 
+Building Krita is straightforward, just activate the environment and do the build. Everything 
+will be activated automatically.
+
+.. code:: bash
+
+    # go to the Krita source directory
+    cd $BUILDROOT/krita
+
+    # activate the build environment (you don't need to activate 
+    # any previous environments, like Python's venv environment; 
+    # everything is included in this ``env`` file)
+    source $BUILDROOT/krita/env
+
+    mkdir -p _build
+    cd _build
+
+    # configure Krita as usual
+    cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+          -DHIDE_SAFE_ASSERTS=OFF \
+          -DBUILD_TESTING=ON \
+          -DCMAKE_INSTALL_PREFIX=$BUILDROOT/krita/_install \
+          -DCMAKE_TOOLCHAIN_FILE=$BUILDROOT/krita/krita-deps-management/tools/macos-toolchain-krita.cmake \
+          $BUILDROOT/krita
+
+    # build and install
+    ninja -j8 install
+     
+This will build and install Krita to ``$BUILDROOT/krita/_install/bin/krita.app``
 
 Running Krita
 ~~~~~~~~~~~~~
 
 You can run krita in the same terminal window:
 
-.. code:: console
+.. code:: bash
 
-    ~/dev/i/krita.app/Contents/MacOS/krita
+    $BUILDROOT/krita/_install/bin/krita.app/Contents/MacOS/krita
     
 If you want to debug krita with lldb:
 
-.. code:: console
+.. code:: bash
 
-    lldb ~/dev/i/krita.app/Contents/MacOS/krita
-    (lldb) target create "./i/bin/krita.app/Contents/MacOS/krita"
-    Current executable set to './i/bin/krita.app/Contents/MacOS/krita' (x86_64).
+    cd $BUILDROOT/krita
+    lldb ./_install/bin/krita.app/Contents/MacOS/krita
+    (lldb) target create "./_install/bin/krita.app/Contents/MacOS/krita"
+    Current executable set to './_install/bin/krita.app/Contents/MacOS/krita' (x86_64).
     (lldb) r
     
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_008-running-success_by-deevad.jpg
