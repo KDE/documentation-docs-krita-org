@@ -291,6 +291,12 @@ Building on Android
 See a dedicated page for :ref:`building Krita on Android <building_krita_for_android>`
 
 
+Building Krita's dependencies manually
+--------------------------------------
+
+See a dedicated page for :ref:`building Krita's dependencies manually <working_on_krita_deps>`
+
+
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
