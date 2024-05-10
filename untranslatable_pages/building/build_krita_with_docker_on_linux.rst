@@ -62,6 +62,15 @@ folder into another location, where there is enough space.
 
         sudo systemctl start docker
 
+Second, make sure that you have python3 and python3-venv packages installed:
+
+.. code::
+
+    sudo apt install python3 python3-venv
+
+``python3-venv`` package is used for bootstrapping the dependencies on the host system before 
+building the docker image, so you need to have it preinstalled.
+
 
 .. _building_krita_with_docker_download_sources:
 
