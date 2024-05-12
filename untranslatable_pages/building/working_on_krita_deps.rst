@@ -151,6 +151,20 @@ You can source the first file to activate environment for building **this very s
 to another subproject, don't forget to deactivate the environment with the second 
 script.
 
+.. note::
+
+    Sourcing ``env`` and ``base-env`` scripts will also set up two special variables for you that will help
+    you determine which environment you are in:
+
+    * ``KDECI_ENV_ACTIVATION_SCRIPT``
+    * ``KDECI_ENV_DEACTIVATION_SCRIPT``
+
+    Hence, to deactivate the current environement you can just call:
+
+    .. code:: bash
+
+        source $KDECI_ENV_DEACTIVATION_SCRIPT
+
 After the project is built at least once, you can edit its sources 
 and do incremental rebuilds manually :
 
@@ -179,6 +193,9 @@ and do incremental rebuilds manually :
 
     # after the work is done, deactivate the per-project environment
     source ./env_deactivate
+
+    # alternatively, use the environment variable for that
+    # source $KDECI_ENV_DEACTIVATION_SCRIPT
 
 Building all packages in isolated environments
 ==============================================
