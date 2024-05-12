@@ -61,7 +61,7 @@ virtual environment and install python modules into that:
     mkdir /home/appimage/appimage-workspace/root
     cd /home/appimage/appimage-workspace/root
     git clone https://invent.kde.org/dkazakov/krita-deps-management.git
-    git clone https://invent.kde.org/dkazakov/ci-utilities.git -b work/split-ci-branch krita-deps-management/ci-utilities
+    git clone https://invent.kde.org/dkazakov/ci-utilities.git krita-deps-management/ci-utilities
     python3 -m venv PythonEnv
     source ./PythonEnv/bin/activate
     pip install -r krita-deps-management/requirements.txt

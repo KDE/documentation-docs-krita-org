@@ -104,7 +104,7 @@ Set up python environment (you don't need to hand-craft the bat file with the pr
 .. code:: batch
 
     git clone https://invent.kde.org/dkazakov/krita-deps-management.git
-    git clone https://invent.kde.org/dkazakov/ci-utilities.git -b work/split-ci-branch krita-deps-management/ci-utilities
+    git clone https://invent.kde.org/dkazakov/ci-utilities.git krita-deps-management/ci-utilities
 
     c:\Python310\python.exe -m venv PythonEnv --upgrade-deps
     PythonEnv\Scripts\activate.bat
@@ -264,7 +264,7 @@ Now fetch Krita sources, build scripts and set up virtual environment for Python
     # fetch environment scripts under Krita's source directory
     cd krita
     git clone https://invent.kde.org/dkazakov/krita-deps-management.git krita-deps-management --depth=1
-    git clone https://invent.kde.org/dkazakov/ci-utilities.git -b work/split-ci-branch krita-deps-management/ci-utilities --depth=1
+    git clone https://invent.kde.org/dkazakov/ci-utilities.git krita-deps-management/ci-utilities --depth=1
 
     # create venv environemnt for running build scripts
     python3 -m venv $BUILDROOT/venv --upgrade-deps

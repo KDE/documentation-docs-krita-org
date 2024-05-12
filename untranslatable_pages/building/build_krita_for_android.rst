@@ -45,7 +45,7 @@ so fetch them:
 
     pushd ./persistent/krita
     git clone https://invent.kde.org/dkazakov/krita-deps-management.git
-    git clone https://invent.kde.org/dkazakov/ci-utilities.git -b work/split-ci-branch krita-deps-management/ci-utilities
+    git clone https://invent.kde.org/dkazakov/ci-utilities.git krita-deps-management/ci-utilities
     popd
 
 Building the Android container
@@ -301,7 +301,7 @@ Checkout Krita repository and all the management repositories:
 
     git clone https://invent.kde.org/graphics/krita.git
     git clone https://invent.kde.org/dkazakov/krita-deps-management.git krita/krita-deps-management
-    git clone https://invent.kde.org/dkazakov/ci-utilities.git -b work/split-ci-branch krita/krita-deps-management/ci-utilities
+    git clone https://invent.kde.org/dkazakov/ci-utilities.git krita/krita-deps-management/ci-utilities
 
 Install python dependencies. You might want to use Python's ``venv`` feature for this:
 
