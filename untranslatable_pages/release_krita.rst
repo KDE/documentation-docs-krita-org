@@ -86,6 +86,12 @@ At any point of time Krita users have access to four(!) versions of Krita. We ca
 
     * **TODO:** remap these links to some static location at https://updates.krita.org/master/linux/Krita-Next-x86_64.appimage.zsync
 
+.. note::
+
+    Krita's main CMakeLists.txt file has a special code to detect the current channel based on the version switches. It sets
+    variable ``BRANDING``, which is later used to change application's icon and splashscreen. Branding can be one of:
+    "default", "Beta", "Plus" or "Next".
+
 On branching out a stable branch
 --------------------------------
 
