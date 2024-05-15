@@ -228,7 +228,7 @@ Preparation
 
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_002-git-clone_001_by-deevad.jpg
 
-Open Terminal.app. First you need to install necessary build tools that we fetch via Craft:
+Open Terminal.app. First you need to create buildroot folder:
 
 .. code:: bash
 
@@ -236,23 +236,6 @@ Open Terminal.app. First you need to install necessary build tools that we fetch
 
     mkdir -p $BUILDROOT
     cd $BUILDROOT 
-    
-    # fetch Craft and use it for installing CMake, ninja and a few other tools
-    git clone https://invent.kde.org/packaging/craftmaster.git --depth=1
-    export KDECI_CRAFT_DOWNLOADS=$BUILDROOT/craft-downloads
-    export KDECI_CRAFT_CONFIG=$BUILDROOT/upstream-ci-utilities/craft/qt5/CraftConfig.ini
-    export KDECI_CRAFT_PROJECT_CONFIG=$BUILDROOT/.craft.ini
-    export KDECI_CRAFT_PLATFORM=macos-arm-clang
-
-    touch $KDECI_CRAFT_PROJECT_CONFIG
-    function craftmaster { python3 craftmaster/CraftMaster.py --config $KDECI_CRAFT_CONFIG --config-override $KDECI_CRAFT_PROJECT_CONFIG --target $KDECI_CRAFT_PLATFORM --variables DownloadDir=$KDECI_CRAFT_DOWNLOADS $@; }
-
-    craftmaster --setup
-    craftmaster -c -i --options virtual.ignored=True --update craft
-    craftmaster -c -i core/cacert dev-utils/7zip-base dev-utils/cmake-base dev-utils/7zip dev-utils/cmake dev-utils/patchelf dev-utils/ninja
-
-    # add the tools that Craft installed into the current PATH
-    export PATH=$BUILDROOT/$KDECI_CRAFT_PLATFORM/dev-utils/bin/:$PATH
 
 Now fetch Krita sources, build scripts and set up virtual environment for Python:
 
@@ -271,6 +254,14 @@ Now fetch Krita sources, build scripts and set up virtual environment for Python
     source $BUILDROOT/venv/bin/activate
     pip install -r krita-deps-management/requirements.txt
 
+Install build tools (CMake, Ninja, CCache) that we use for Krita builds 
+on CI. If you have these tools installed separately, then you can skip this step:
+
+.. code:: bash
+
+    cd $BUILDROOT
+    python3 $BUILDROOT/krita/build-tools/ci-scripts/download-macos-tools.py
+    source $BUILDROOT/_krita-tools/activate
 
 Fetching prebuilt dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -283,6 +274,7 @@ Now set up the environment for building Krita and download all the dependencies 
 
     cd $BUILDROOT/krita
     source $BUILDROOT/venv/bin/activate
+    source $BUILDROOT/_krita-tools/activate # if you used CI build tools
 
     python krita-deps-management/tools/setup-env.py --full-krita-env -v $BUILDROOT/venv -p $BUILDROOT/$KDECI_CRAFT_PLATFORM/dev-utils/bin/
 
@@ -314,6 +306,7 @@ will be activated automatically.
     # any previous environments, like Python's venv environment; 
     # everything is included in this ``env`` file)
     source $BUILDROOT/krita/env
+    source $BUILDROOT/_krita-tools/activate # if you used CI build tools
 
     mkdir -p _build
     cd _build
