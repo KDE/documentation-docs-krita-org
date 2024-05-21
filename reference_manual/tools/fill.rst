@@ -158,12 +158,14 @@ Reference
         Labels Used
             Select the color labels of the layers that should be used as reference.
 
-    Drag-Fill Mode
-        .. versionadded:: 5.1
+Drag-Fill Mode
+    .. versionadded:: 5.1
 
-        Select what should happen when one clicks and drags the pointer on the canvas.
+    Select what should happen when one clicks and drags the pointer on the canvas.
 
-        Fill Regions of Any Color
-            With this option selected, the tool will fill any region along the path described by the pointer while dragging, regardless of its color.
-        Fill Regions of Similar Colors
-            With this option selected, the tool will fill the regions along path described by the pointer while dragging that have the same color as the first region filled.
+    Do not use
+        With this option selected, dragging won't fill additional regions, only the one where the user first clicked.
+    Fill Regions of Any Color
+        With this option selected, the tool will fill any region along the path described by the pointer while dragging, regardless of its color.
+    Fill Regions of Similar Colors
+        With this option selected, the tool will fill the regions along path described by the pointer while dragging that have the same color as the first region filled.
