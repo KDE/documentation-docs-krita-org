@@ -121,29 +121,17 @@ You can also find Krita pkgbuild in arch user repositories, but it is not guaran
 
 Flatpak
 ~~~~~~~
-We also have Flatpak for nightlies and stable builds, these builds are not maintained by the core developers themselves. You can either get the builds from the `KDE community website <https://binary-factory.kde.org>`_ or from the `Flathub Maintainers <https://flathub.org/apps/details/org.kde.krita>`_. The KDE community website only offers nightly builds of Flatpak.
+We also have Flatpak for stable builds, but these builds are not maintained by the core developers themselves. You can get the builds from the `Flathub Maintainers <https://flathub.org/apps/details/org.kde.krita>`_.
 
-To install Flatpak build from the software center just open the Flatpakrepo files with Discover or the software center provided by your distribution:
+To install the Flatpak build from Discover or the software center provided by your distribution, just download and open `the Flatpakrepo files <https://flathub.org/repo/flathub.flatpakrepo>`_ with the software center. You can then search for Krita and the software center will show you the Flatpak version for installation.
 
-    `Flathub Repo <https://flathub.org/repo/flathub.flatpakrepo>`_
-
-    `KDE Flatpak Repo <https://distribute.kde.org/kdeapps.flatpakrepo>`_
-
-After adding one of the above repos you can then search for Krita and the software center will show you the Flatpak version for installation.
-
-If you prefer doing it from terminal you can use the following commands to install Krita's Flatpak build
-
-    For KDE Flatpak Repo:
-
-    ``flatpak --user remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo``
-
-    ``flatpak --user install kdeapps org.kde.krita-nightly``
-
-    For installing it from Flathub Repo:
+If you prefer doing it from terminal you can use the following commands:
 
     ``flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo``
 
     ``flatpak --user install flathub org.kde.krita``
+
+There used to be a KDE flatpak repo for nightly builds, but it has since been discontinued.
 
 Snaps
 ~~~~~
