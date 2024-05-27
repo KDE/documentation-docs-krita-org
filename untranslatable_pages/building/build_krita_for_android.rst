@@ -123,6 +123,7 @@ Configure Krita:
           -DBUILD_TESTING=OFF \
           -DCMAKE_INSTALL_PREFIX=~/appimage-workspace/deps/usr/ \
           -DCMAKE_TOOLCHAIN_FILE=~/persistent/krita/krita-deps-management/tools/android-toolchain-krita.cmake \
+          -DANDROID_ENABLE_STDIO_FORWARDING=ON \
           ~/persistent/krita/
 
 There are two important switches that are unique to Android platform:
@@ -134,6 +135,9 @@ There are two important switches that are unique to Android platform:
 2) ``CMAKE_TOOLCHAIN_FILE`` should point to a special toolchain file that will read
    custom environment variables (pre-set in the docker containter) and locates
    SDK and NDK paths.
+
+3) Enable ``ANDROID_ENABLE_STDIO_FORWARDING`` to get proper logging in 'logcat'. This
+   option enables manual forwarding of stdout and stderr into logcat-logger.
 
 Then build Krita as usual:
 
@@ -371,6 +375,7 @@ Configure Krita:
         -DBUILD_TESTING=OFF \
         -DCMAKE_INSTALL_PREFIX=$SRCDIR/krita/_install \
         -DCMAKE_TOOLCHAIN_FILE=$SRCDIR/krita/krita-deps-management/tools/android-toolchain-krita.cmake \
+        -DANDROID_ENABLE_STDIO_FORWARDING=ON \
         $SRCDIR/krita/
 
 There are two important switches that are unique to Android platform:
@@ -382,6 +387,9 @@ There are two important switches that are unique to Android platform:
 2) ``CMAKE_TOOLCHAIN_FILE`` should point to a special toolchain file that will read
    custom environment variables (pre-set in the docker containter) and locates
    SDK and NDK paths.
+
+3) Enable ``ANDROID_ENABLE_STDIO_FORWARDING`` to get proper logging in 'logcat'. This
+   option enables manual forwarding of stdout and stderr into logcat-logger.
 
 Then build Krita as usual:
 
