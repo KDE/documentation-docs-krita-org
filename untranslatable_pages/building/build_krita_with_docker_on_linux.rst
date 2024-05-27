@@ -104,6 +104,23 @@ Downloading prebuilt Krita dependencies
     # download the deps archive
     ./bin/bootstrap-deps.sh
 
+.. note::
+
+    If you want to build and ASAN-capable build of Krita, then you should make sure that this
+    script installs an ASAN-capable version of Qt. To do that, declare an environment variable
+    on your host **before** bootstrapping the deps:
+
+    .. code:: bash
+
+        export KDECI_PACKAGE_ALIASES_YAML='{ ext_qt : ext_qt-asan }'
+
+    If you don't want ASAN-capable, but just a debug-capable build of Qt, then
+    change this variable to:
+
+    .. code:: bash
+
+        export KDECI_PACKAGE_ALIASES_YAML='{ ext_qt : ext_qt-debug }'
+
 Build the docker image and run the container
 --------------------------------------------
 
@@ -159,6 +176,11 @@ Enter the container and build Krita
     # start Krita
     ../krita.appdir/usr/bin/krita
 
+.. note::
+
+    If you need to build an ASAN-capable build of Krita (**and** you have passed
+    ``KDECI_PACKAGE_ALIASES_YAML`` during the dependencies fetch phase), then pass
+    ``-DECM_ENABLE_SANITIZERS=address`` to CMake as well.
 
 Building AppImage package for your version of Krita
 ---------------------------------------------------
@@ -267,6 +289,11 @@ Run those commands in the console in the host system. If you want to update the 
     ./bin/run_container
 
 After that you need to build Krita in the docker as usual.
+
+.. note::
+
+    Don't forget about setting ``KDECI_PACKAGE_ALIASES_YAML`` if you need any special flavour
+    of the Qt library installed.
 
 
 Extra developer tools
