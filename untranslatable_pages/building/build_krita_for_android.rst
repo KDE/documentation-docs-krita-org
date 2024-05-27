@@ -262,7 +262,7 @@ Install SDKs and build tools:
 
 .. code:: shell
 
-    yes | sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT/sdk/ --licenses
+    yes | sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT --licenses
     sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT platform-tools
     sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT "platforms;android-33"
     sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT "build-tools;30.0.3"
