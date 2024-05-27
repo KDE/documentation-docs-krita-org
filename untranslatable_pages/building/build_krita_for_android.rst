@@ -464,7 +464,7 @@ architecture you would like to test:
 
 .. code:: shell
 
-    sdkmanager --sdk_root=$KRITA_ANDROID_ROOT/sdk/ "system-images;android-23;google_apis;x86_64"
+    sdkmanager --sdk_root=$KDECI_ANDROID_SDK_ROOT "system-images;android-23;google_apis;x86_64"
 
 Create the virtual device:
 
@@ -477,7 +477,7 @@ Create the virtual device:
     avdmanager create avd --force --name $device_name --abi x86_64 --package 'system-images;android-23;google_apis;x86_64'
 
     # create an SD card for the device
-    mksdcard -l testsdcard 512M $KRITA_ANDROID_ROOT/sdcard.img
+    mksdcard -l testsdcard 512M ~/sdcard.img
 
 Open configuration file for the new device (located at ``~/.android/avd/Test_API_23.avd/config.ini``)
 and edit the following values:
