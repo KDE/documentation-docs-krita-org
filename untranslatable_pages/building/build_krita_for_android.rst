@@ -422,7 +422,6 @@ If you happen to need an AAB package, then you need to generate a bit more artif
 The first command will build and APK and package all artifacts in 
 ``_packaging/krita_build_apk`` and the second script will reuse these artifacts for building AAB package.
 
-
 Troubleshooting
 ~~~~~~~~~~~~~~~
 
@@ -530,6 +529,33 @@ When the container it not needed anymore, it can be removed with the follwoing c
 
     avdmanager delete avd -n $device_name
 
+Iteratively rebuild Krita and its package after making changes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you change something in the Krita's code, you should rebuild the pacakge and 
+reinstall it onto your device (or emulator).
+
+Firstly, you need to manually set up environment variables, that are usually set
+up by ``build-android-package.py``:
+
+.. code:: shell
+
+    export ANDROID_ABI=$KDECI_ANDROID_ABI
+    export KRITA_INSTALL_PREFIX=$KDECI_SHARED_INSTALL_PATH
+
+Then just run the build and deploy steps in one line:
+
+.. code:: shell
+
+    cd cd $SRCDIR/krita/_build/krita_build_apk
+    make -j8 install -C .. && ./gradlew installDebug && adb shell am start -n "org.krita.debug/org.krita.android.MainActivity"
+
+This command will do four things:
+
+1) Rebuild Krita itself
+2) Build a debugging version of a package using existing apk artifacts directories
+3) Install the package on the currently connected device (or emulator)
+4) Run Krita on the currently connected device (or emulator)
 
 Debugging crashes
 ~~~~~~~~~~~~~~~~~
