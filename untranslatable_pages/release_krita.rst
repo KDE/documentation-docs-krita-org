@@ -205,7 +205,7 @@ Create the tarball
 Make Windows, Linux, macOS and Android packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Request four release builds on GitLat's CI
+#. Request four release builds on GitLat's CI
 
     1) Go to "Tags" page in Krita repository: https://invent.kde.org/graphics/krita/-/tags
 
@@ -224,27 +224,27 @@ Make Windows, Linux, macOS and Android packages
 
         * android-build-appbundle-release
 
-2. Download all built artifacts using "Krita Atrifacts Download" script (https://invent.kde.org/dkazakov/krita-artifacts-download)
+#. Download all built artifacts using "Krita Atrifacts Download" script (https://invent.kde.org/dkazakov/krita-artifacts-download)
 
     .. code: bash
 
         python3 kad.py artifacts -d release-v5.1.0-beta1 -t v5.1.0-beta1 -p
 
-3. For each build check:
+#. For each build check:
 
     * Krita starts
     * Localization works
     * Python plugins are available
     * Basic painting and most recently fixed bugs are fixed
 
-4. Sign the AppImage:
+#. Sign the AppImage:
 
     .. code::
 
         gpg --detach-sign --output krita-5.1.0-beta-x86_64.appimage.sig krita-5.1.0-beta-x86_64.appimage
 
 
-5. Sign four Android packages (or send them to Halla for signing)
+#. Sign four Android packages (or send them to Halla for signing)
 
     Note: there is a useful script for signing them...
 
@@ -258,10 +258,9 @@ Make Windows, Linux, macOS and Android packages
     * krita-x86-5.1.0-beta1.apk
     * krita-x86_64-5.1.0-beta1.apk
 
-6. Now you should have 18 files in your release folder
+#. Now you should have 18 files in your release folder
 
-8. Verify that the filesize of .zsync blob is different from the one 
-    stored on https://download.kde.org
+#. Verify that the filesize of .zsync blob is different from the one stored on https://download.kde.org
 
     - for stable releases: https://download.kde.org/stable/krita/updates/Krita-Stable-x86_64.appimage.zsync
     - for unstable releases: https://download.kde.org/unstable/krita/updates/Krita-Beta-x86_64.appimage.zsync
@@ -273,11 +272,10 @@ Make Windows, Linux, macOS and Android packages
     Please take it into account that "unstable" releases should have "Beta" in the zsync file name,
     **not** "Unstable" as you could guess. This word comes from `$CHANNEL` variable in `build_image.sh` script.
 
-9. Upload all files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
-
-Note that the msix file is only for uploading to the Windows Store, it doesn't need to be uploaded to download.kde.org.
+#. Upload all files to download.kde.org (or ask sysadmins to do that using this manual ftp://upload.kde.org/README):
 
     - to https://download.kde.org/unstable/krita/5.1.0-beta1/
+
         * krita-5.1.0-beta1.tar.gz
         * krita-5.1.0-beta1.tar.gz.sig
         * krita-5.1.0-beta1.tar.xz
@@ -291,11 +289,19 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
         * krita-arm64-5.1.0-beta1.apk
         * krita-arm32-5.1.0-beta1.apk
         * krita-x86_64-5.1.0-beta1.apk
+
     - to https://download.kde.org/unstable/krita/updates/
+
         * Krita-Beta-x86_64.appimage.zsync
-        
-    Please don't forget to replace "unstable" to "stable" for stable release builds. 
-    It should be replaced for both, packages themselves and zsync file
+
+    .. warning::
+
+        Please don't forget to replace "unstable" to "stable" for stable release builds. It should be
+        replaced for both, packages themselves and zsync file
+
+    .. note::
+
+        Note that the msix file is only for uploading to the Windows Store, it doesn't need to be uploaded to download.kde.org.
 
     .. note::
 
@@ -303,7 +309,7 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
         the mirroring system. Just add ".md5" or ".sha1" or ".sha256" at the end of any link or
         enter the folder with the browser and click "Details" link.
 
-10. Template ticket for sysadmins:
+#. Template ticket for sysadmins:
 
     .. code::
 
@@ -311,7 +317,7 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
 
         Could you please do the final steps for publishing Krita release?
 
-        There are two tasks:
+        There are three tasks:
 
         1) Upload release artifacts (20 files) to download.kde.org:
 
@@ -324,9 +330,9 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
                          
         3) Add `Krita 5.1.0 Beta1` bugzilla version
 
-11. Now the folder on download.kde.org should have 21(!) files. Check if you missed something (and you surely did! :) ).
+#. Now the folder on download.kde.org should have 21(!) files. Check if you missed something (and you surely did! :) ).
 
-12. Verify consistency of all ZSync AppImage update links using the special script:
+#. Verify consistency of all ZSync AppImage update links using the special script:
 
     .. code:: shell
 
@@ -380,18 +386,18 @@ Note that the msix file is only for uploading to the Windows Store, it doesn't n
     If you want to test ZSync manually, don't use the system-provided package. Use 
     this cli-tool provided by AppImage team: https://appimage.github.io/zsync2/
 
-13. If you are doing **the first stable release** after branching-out, e.g. the first release of "Krita 5.3.0", then make sure 
+#. If you are doing **the first stable release** after branching-out, e.g. the first release of "Krita 5.3.0", then make sure 
     ask sysadmins to relink "Krita Plus krita/5.2" zsync file to "Krita Plus krita/5.3"
 
-14. If you are doing **any stable release**, manually switch zsync file of Krita Beta to the Krita Stable, to make sure
+#. If you are doing **any stable release**, manually switch zsync file of Krita Beta to the Krita Stable, to make sure
     users will get updates.
 
-15. If you are doing **Beta_N or RC_N release from a stable branch**, then... **<FIXME>**.
+#. If you are doing **Beta_N or RC_N release from a stable branch**, then... **<FIXME>**.
 
-16. If you are doing **any release from a stable branch**, manually update the version to the next one with suffix "prealpha" to 
+#. If you are doing **any release from a stable branch**, manually update the version to the next one with suffix "prealpha" to 
     make sure that Krita Plus packages correctly show it to the user. You need to do that in ``CMakeLists.txt`` and ``build.gradle``.
 
-17. Manually verify that the previous version of Krita AppImage can update to 
+#. Manually verify that the previous version of Krita AppImage can update to 
     the new one from the GUI. It should use the .zsync file uploaded above.
     
 Release coordination
