@@ -98,26 +98,28 @@ On branching out a stable branch
 When we change the stable branch name, e.g. when changing `krita/5.2` into `krita/5.3` we should update its name in several
 places to keep CI infrastructure working properly:
 
-1. APK signer: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/apksigner-projects.yaml
+#. APK signer: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/apksigner-projects.yaml
 
-2. Windows signer: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/windowsbinariessigner-projects.yaml
+#. Windows signer: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/windowsbinariessigner-projects.yaml
 
-3. MacOS signer: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/macappsigner-projects.yaml
+#. MacOS signer: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/macappsigner-projects.yaml
 
-4. MacOS notarizer: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/macappnotarizer-projects.yaml
+#. MacOS notarizer: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/macappnotarizer-projects.yaml
 
-5. Nightly builds publisher: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/buildpublisher-projects.yaml
+#. Nightly builds publisher: https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/buildpublisher-projects.yaml
 
-6. Translations' "stable" branch: https://invent.kde.org/sysadmin/repo-metadata/-/blob/master/projects-invent/graphics/krita/i18n.json
+#. Translations' "stable" branch: https://invent.kde.org/sysadmin/repo-metadata/-/blob/master/projects-invent/graphics/krita/i18n.json
 
-7. Notify translators about the tranlsations branch switch!
+#. Updates redirect link: https://invent.kde.org/websites/autoconfig-kde-org/-/blob/master/krita/.htaccess?ref_type=heads
 
-8. Update the link to "Krita Plus" ZSync channel in ``build-tools/ci-scripts/show-updates-status.py`` script
+#. Notify translators about the tranlsations branch switch!
+
+#. Update the link to "Krita Plus" ZSync channel in ``build-tools/ci-scripts/show-updates-status.py`` script
 
     * make sure you keep the old link in the script as well, until the branch is fully deprecated and removed 
       from the CDN server (we need to keep the link up for some time to let people update to the new version)
 
-9. Update Krita version in ``master`` branch to be higher than in stable.
+#. Update Krita version in ``master`` branch to be higher than in stable.
 
 
 Before the release
