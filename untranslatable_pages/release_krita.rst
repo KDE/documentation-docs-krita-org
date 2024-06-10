@@ -66,15 +66,14 @@ At any point of time Krita users have access to four(!) versions of Krita. We ca
 
             + krita/5.2 will update to krita/5.3 **after** the first official stable release of krita/5.3 has been made
 
-    * AppImage updater uses link at the corresponding branch at CDN:
+    * AppImage updater uses link at the corresponding branch on CDN via redirects from
+      https://autoconfig.kde.org:
 
-        - krita/5.2 packages use: https://cdn.kde.org/ci-builds/graphics/krita/krita-5.2/linux/Krita-Plus-x86_64.appimage.zsync
+        - https://autoconfig.kde.org/krita/updates/plus/linux/Krita-Plus-x86_64.appimage.zsync links to
+          the corresponding active "stable" branch on CDN site
 
-        - krita/5.3 packages use: https://cdn.kde.org/ci-builds/graphics/krita/krita-5.3/linux/Krita-Plus-x86_64.appimage.zsync
-
-        - after the first version of krita/5.3 has been released, the link in 5.2 branch should be replaced
-
-    * **TODO:** remap these links to some static location at https://updates.krita.org/krita-5.2/linux/Krita-Plus-x86_64.appimage.zsync
+        - after every stable branch change, the redirect on https://autoconfig.kde.org should be
+          manually changed
 
 4. **Krita Next** is the nightly build of the development (``master``) branch of Krita
 
@@ -82,9 +81,11 @@ At any point of time Krita users have access to four(!) versions of Krita. We ca
 
     * AppImage updater will suggest updates every time development branch gets a new nightly build
 
-    * AppImage updater uses link at address: https://cdn.kde.org/ci-builds/graphics/krita/master/linux/Krita-Next-x86_64.appimage.zsync
+    * AppImage updater uses link to the master branch on CDN via redirects from
+      https://autoconfig.kde.org:
 
-    * **TODO:** remap these links to some static location at https://updates.krita.org/master/linux/Krita-Next-x86_64.appimage.zsync
+        - https://autoconfig.kde.org/krita/updates/next/linux/Krita-Next-x86_64.appimage.zsync links to
+          the master branch on CDN site
 
 .. note::
 
