@@ -28,7 +28,7 @@ Android
 |                                                                       |                     |                       |                         |
 | (is set by ``KRITACI_ANDROID_RELEASE_MODE``)                          |                     |                       |                         |
 +-----------------------------------------------------------------------+---------------------+-----------------------+-------------------------+
-| packageId                                                             | ``org.krita``       | ``org.krita.nightly`` | ``org.krita.debug``     |
+| packageId                                                             | ``org.krita``       | ``org.krita.next``    | ``org.krita.debug``     |
 +-----------------------------------------------------------------------+---------------------+-----------------------+-------------------------+
 | Signed by                                                             | Krita Foundation    | KDE e.V.              | default debug signature |
 |                                                                       |                     |                       |                         |
