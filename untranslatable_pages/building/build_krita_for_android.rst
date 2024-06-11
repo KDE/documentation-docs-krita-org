@@ -64,8 +64,9 @@ fetching the dependencies you need to select he target architecture:
     # use bootstrap-krita-deps.sh
     # ./bin/bootstrap-krita-deps.sh --android=x86_64
 
-This script will set up the full SDP environment in ``./persistent/deps`` folder. The 
-deps themselves will be located in ``./persistent/deps/_install``
+This script will set up the dependencies needed for Krita in the 
+``./persistent/deps`` folder. The  deps themselves will be located in 
+``./persistent/deps/_install``
 
 Now build the docker image and run the container. Just pass the ``--android`` flag to 
 the ``build_image`` script and it  will fetch the correct image for you:
