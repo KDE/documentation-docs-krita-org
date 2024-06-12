@@ -20,7 +20,7 @@ package.
 This manual describes the build process for the Linux host system using the docker environment. The process 
 of building deps on Windows, MacOS and Android is almost the same. If the command differs on other systems, you
 will see a note about that inline. If you are not familiar with the docker-based build process, please 
-check the docker environment manual: :ref:`Building krita with Docker on Linux <building_krita_with_docker>`
+check the docker environment manual: :ref:`Building Krita with Docker on Linux <building_krita_with_docker>`
 
 .. warning::
 
