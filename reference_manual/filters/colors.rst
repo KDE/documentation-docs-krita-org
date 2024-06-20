@@ -58,3 +58,38 @@ Minimize Channel
 ----------------
 
 This is reverse to Maximize channel, it checks all the channels of a each single color and sets all but the lowest to 0.
+
+.. _filter_propagate_colors:
+
+Propagate Colors
+----------------
+
+This filter propagates, extends, the colors of [semi]opaque regions into the nearby fully transparent regions. This can be useful, for example, to automatically fill those areas in a way that there is a continuity in terms of color.
+
+.. image:: /images/filters/propagate_colors_00.gif
+   :align: center
+
+Expansion Pattern
+    This option allows to choose in which directions the pixels should propagate.
+
+    .. figure:: /images/filters/propagate_colors_01.png
+       :align: center
+
+       From left to right: original image; rectangle shaped expansion (expand equally to orthogonal and diagonal directions); diamond shaped expansion (expand only to orthogonal directions); octagon shaped expansion (expand to orthogonal directions and a bit less to the diagonal directions).
+
+Expansion Distance
+    The pixels can be propagated only up to a given distance, or indefinitely, so that all the transparent areas end covered.
+
+    .. figure:: /images/filters/propagate_colors_02.png
+       :align: center
+
+       From left to right: original image; expanded image with unrestricted distance; expanded image with restricted distance.
+
+Transparency Behavior
+    This option allows to choose if the alpha channel should be also expanded or remain untouched.
+
+    .. figure:: /images/filters/propagate_colors_03.png
+       :align: center
+
+       From left to right: the original image; the expanded image with expanded alpha channel; the expanded image preserving the alpha channel (note that it looks like the original one, although the color components were actually propagated into the transparent areas); the previous expanded image after applying a levels filter that makes the transparent areas semi-opaque to clearly see how the colors were truly propagated.
+
