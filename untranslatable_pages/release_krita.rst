@@ -133,27 +133,70 @@ Before the release
     
     **TODO:** write actual steps on how to verify the deps are up-to-date
 
-
-Update version in source code
+Two days before branching-out
 -----------------------------
 
-1. !! REMOVE THE SURVEY LINK !! (or, if this is a beta, make a survey and update the survey link)
-2. update the version of krita5.xmlgui
-3. update the CMakeLists.txt version
-4. update the snapcraft.yaml file
-5. update the appstream screenshots: https://invent.kde.org/websites/product-screenshots
-6. update org.kde.krita.appdata.xml 's release tag in the BRANCH
-7. update download_release_artifacts.sh
-8. update Android version (keep in mind that *all* Krita releases on Android are marked as Beta at the moment): packaging/android/apk/build.gradle
-9. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
+Create a merge request for the signer's config repository to add the proposed 
+branch into the list of authorized branches. You need to add the branch into all
+singer files for all the available platforms:
 
-Update versions in the stable branch to avoid XMLGUI conflicts
---------------------------------------------------------------
-1. stable branch is always marked as "alpha" (without a number in the end)
-2. update the version of krita.xmlgui; it should be `$(( $VERSION_IN_RELEASE_BRANCH + 1 ))`
-3. update the CMakeLists.txt version
-4. update org.kde.krita.appdata.xml 's release tag
-5. packaging/android/apk/AndroidManifest.xml 
+Repository: https://invent.kde.org/sysadmin/ci-utilities
+
+    * APK signer: ``signing/apksigner-projects.yaml`` (`link <https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/apksigner-projects.yaml>`_)
+
+    * Windows signer: ``signing/windowsbinariessigner-projects.yaml`` (`link <https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/windowsbinariessigner-projects.yaml>`_)
+
+    * MacOS signer: ``signing/macappsigner-projects.yaml`` (`link <https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/macappsigner-projects.yaml>`_)
+
+    * MacOS notarizer: ``signing/macappnotarizer-projects.yaml`` (`link <https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/macappnotarizer-projects.yaml>`_)
+
+The branch name should be in a form ``release/5.1.0-beta1``. Add that to each platform so 
+that the config would look like that:
+
+.. code:: yaml
+
+    graphics/krita:
+      branches:
+        master:
+        krita/5.2:
+        release/5.1.0-beta1:
+
+On the branching-out day
+------------------------
+
+1) Create a new release branch:
+
+    .. code:: bash
+
+        git checkout -b release/5.1.0-beta1
+
+
+2) Update versions in ``release/5.1.0-beta1`` branch
+
+    #. (TODO: really needed?) update the version of krita5.xmlgui
+    #. update the CMakeLists.txt version
+    #. update the snapcraft.yaml file
+    #. update the appstream screenshots: https://invent.kde.org/websites/product-screenshots
+    #. update org.kde.krita.appdata.xml 's release tag in the BRANCH
+    #. update Android version (keep in mind that *all* Krita releases on Android are marked as Beta at the moment): packaging/android/apk/build.gradle
+    #. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
+
+3) Update versions in the stable branch (``krita/5.2``) to avoid XMLGUI conflicts
+
+    1. stable branch is always marked as "prealpha" (without a number in the end)
+    2. (TODO: really needed?) update the version of krita.xmlgui; it should be ``$(( $VERSION_IN_RELEASE_BRANCH + 1 ))``
+    3. update the CMakeLists.txt version
+    4. update org.kde.krita.appdata.xml 's release tag
+    5. packaging/android/apk/AndroidManifest.xml 
+
+5) Update versions in the unstable branch (``master``) if necessary
+
+    1. stable branch is always marked as "prealpha" (without a number in the end)
+    2. (TODO: really needed?) update the version of krita.xmlgui; it should be ``$(( $VERSION_IN_STABLE_BRANCH + 1 ))``
+    3. update the CMakeLists.txt version
+    4. update org.kde.krita.appdata.xml 's release tag
+    5. packaging/android/apk/AndroidManifest.xml 
+
 
 Create the tarball
 ------------------
@@ -229,7 +272,7 @@ Make Windows, Linux, macOS and Android packages
 
 #. Download all built artifacts using "Krita Atrifacts Download" script (https://invent.kde.org/dkazakov/krita-artifacts-download)
 
-    .. code: bash
+    .. code:: bash
 
         python3 kad.py artifacts -d release-v5.1.0-beta1 -t v5.1.0-beta1 -p
 
