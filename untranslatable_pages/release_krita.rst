@@ -355,7 +355,7 @@ Make Windows, Linux, macOS and Android packages
         the mirroring system. Just add ".md5" or ".sha1" or ".sha256" at the end of any link or
         enter the folder with the browser and click "Details" link.
 
-#. Template ticket for sysadmins:
+#. Template ticket for sysadmins for "Beta" releases (no store uploads):
 
     .. code::
 
@@ -375,6 +375,44 @@ Make Windows, Linux, macOS and Android packages
             * Destination link: https://download.kde.org/unstable/krita/updates/
                          
         3) Add `Krita 5.1.0 Beta1` bugzilla version
+
+#. Template ticket for Halla for a "Stable" release (with all store updates)
+
+    .. code::
+
+        Hi, Halla and Ivan!
+
+        Could you please do the final steps for publishing Krita release?
+
+        #) (@rempt) Sign all .apk packages
+
+        #) (@rempt) Upload .aab package to Google Play
+
+        #) (@rempt) Upload .msix package to Microsoft Store
+
+        #) (@vanyossi) Sign .dmg package
+
+        #) (@rempt) Upload .dmg package to Apple Store
+
+        #) (@rempt) Upload (which?) packages to Epic Store
+
+        #) (@emmetoneill) Upload Windows and Linux packages to Steam
+
+        #) Upload release artifacts to download.kde.org:
+
+            * Source link: https://files.kde.org/krita/.release/5.2.3/
+            * Destination link: https://download.kde.org/stable/krita/5.2.3/
+
+        #) Upload Stable ZSync file to download.kde.org:
+
+            * Source link: https://files.kde.org/krita/.release/5.2.3/Krita-Stable-x86_64.appimage.zsync
+            * Destination link: https://download.kde.org/stable/krita/updates/
+
+        #) Upload Beta ZSync file to download.kde.org (to point to Stable as well):
+
+            * Source link: https://files.kde.org/krita/.release/5.2.3/Krita-Beta-x86_64.appimage.zsync
+            * Destination link: https://download.kde.org/unstable/krita/updates/
+            * Add Krita 5.2.3 bugzilla version
 
 #. Now the folder on download.kde.org should have 21(!) files. Check if you missed something (and you surely did! :) ).
 
@@ -433,19 +471,23 @@ Make Windows, Linux, macOS and Android packages
     this cli-tool provided by AppImage team: https://appimage.github.io/zsync2/
 
 #. If you are doing **the first stable release** after branching-out, e.g. the first release of "Krita 5.3.0", then make sure 
-    ask sysadmins to relink "Krita Plus krita/5.2" zsync file to "Krita Plus krita/5.3"
+   ask sysadmins to relink "Krita Plus krita/5.2" zsync file to "Krita Plus krita/5.3"
 
 #. If you are doing **any stable release**, manually switch zsync file of Krita Beta to the Krita Stable, to make sure
-    users will get updates.
+   users will get updates.
 
 #. If you are doing **Beta_N or RC_N release from a stable branch**, then... **<FIXME>**.
 
 #. If you are doing **any release from a stable branch**, manually update the version to the next one with suffix "prealpha" to 
-    make sure that Krita Plus packages correctly show it to the user. You need to do that in ``CMakeLists.txt`` and ``build.gradle``.
+   make sure that Krita Plus packages correctly show it to the user. You need to do that in ``CMakeLists.txt`` and ``build.gradle``.
 
 #. Manually verify that the previous version of Krita AppImage can update to 
-    the new one from the GUI. It should use the .zsync file uploaded above.
-    
+   the new one from the GUI. It should use the .zsync file uploaded above.
+
+.. warning::
+
+    Make sure that the release on the official site appears at the same moment as it appears in all the stores!
+
 Release coordination
 ~~~~~~~~~~~~~~~~~~~~
 
