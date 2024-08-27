@@ -48,6 +48,10 @@ Ten Brushes
 
     Customize your shortcuts by editing the configurations in :menuselection:`Settings --> Configure Krita --> Keyboard Shortcuts`, and then change the "Activate Brush Preset" actions under "Ten Brushes".
 
+Workflow Buttons
+
+    Docker that allows you to create multi-action buttons. Each button can select a tool, a brush preset, a color, and launch a python script.
+
 Workflow Improvements
 ~~~~~~~~~~~~~~~~~~~~~
 
