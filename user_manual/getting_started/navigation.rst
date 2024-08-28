@@ -10,7 +10,7 @@
              - Halla Rempt <boud@valdyas.org>
    :license: GNU free documentation license 1.3 or later.
 
-.. index:: Navigation, Zoom, Rotate, Pan, Workspace, Pop-up Palette
+.. index:: Navigation, Zoom, Rotate, Pan, Workspace, Pop-up Palette, Interface
 .. _navigation:
 
 ==========
@@ -75,21 +75,11 @@ You can arrange the dockers in almost any permutation and combination according 
 
 Dockers can be prevented from docking by pressing the :kbd:`Ctrl` key before starting to drag the docker.
 
-Sliders
--------
-Krita uses these to control values like brush size, opacity, flow, Hue, Saturation, etc... Below is an example of a Krita slider.
+Custom controls
+---------------
+Krita uses some non-standard controls that have some custom functionality to ease the edition of data in different parts of the interface. These include input sliders, angle selection gauges, or gradient editing controls, among others.
 
-.. image:: /images/Krita_Opacity_Slider.png
-
-The total range is represented from left to right and blue bar gives an indication of where in the possible range the current value is. Clicking anywhere, left or right, of that slider will change the current number to something lower (to the left) or higher (to the right).
-
-To input a specific number, hold |mouseleft| on, or |mouseright| the slider. A number can now be entered directly for even greater precision.
-
-Pressing the :kbd:`Shift` key while dragging the slider changes the values at a smaller increment, and pressing the :kbd:`Ctrl` key while dragging the slider changes the value in whole numbers or multiples of 5.
-
-.. versionchanged:: 5.1
-
-   :kbd:`Shift` while dragging will now also enable "relative mode", which means that the cursor can be dragged outside the slider area.
+See the :ref:`common_widgets` page for more info on those.
 
 Toolbars
 --------

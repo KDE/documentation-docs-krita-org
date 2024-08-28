@@ -78,7 +78,7 @@ $redirect_rules = array(
     "^The_Krita_4_Preset_Bundle" => "reference_manual/krita_4_preset_bundle.html",
     "^Linux_Command_Line" => "reference_manual/linux_command_line.html",
     "^List_of_Tablets_Supported" => "reference_manual/list_supported_tablets.html",
-    "^Maths_input" => "reference_manual/maths_input.html",
+    "^Maths_input" => "reference_manual/special_widgets.html",
     "^Render_Animation" => "reference_manual/render_animation.html",
     "^Stroke_Selection" => "reference_manual/stroke_selection.html",
 
@@ -321,7 +321,8 @@ $redirect_rules = array(
     "^reference_manual/dockers/animation_curve.html" => "reference_manual/dockers/animation_curves.html",
     // Redirect animation docker to timeline docker when we finally remove it.
     // "^reference_manual/dockers/animation_docker.html" => "reference_manual/dockers/animation_timeline.html",
-    "^reference_manual/tools/color_selector.html" => "reference_manual/tools/color_sampler.html"
+    "^reference_manual/tools/color_selector.html" => "reference_manual/tools/color_sampler.html",
+    "^reference_manual/maths_input.html" => "reference_manual/special_widgets.html"
 );
 
 //// SETTINGS END
