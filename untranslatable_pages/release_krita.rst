@@ -128,10 +128,11 @@ places to keep CI infrastructure working properly:
 Before the release
 ------------------
 
-1. Coordinate with #kde-promo
-2. Notify translators of string freeze!
-3. Verify that the release notes page is done, like https://krita.org/en/krita-4-2-release-notes/
-4. Verify that all dependency builds are up to date.
+#. Coordinate with #kde-promo
+#. Notify translators of string freeze! (mailto:kde-i18n-doc@kde.org)
+#. Change string freeze status in ``README.md`` file in the stable branch into "freeze, all new strings must go through mailto:kde-i18n-doc@kde.org"
+#. Verify that the release notes page is done, like https://krita.org/en/krita-4-2-release-notes/
+#. Verify that all dependency builds are up to date.
     
     **TODO:** write actual steps on how to verify the deps are up-to-date
 
