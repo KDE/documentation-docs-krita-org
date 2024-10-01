@@ -344,7 +344,54 @@ If you want to debug krita with lldb:
     (lldb) r
     
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_008-running-success_by-deevad.jpg
-    
+
+Troubleshooting
+~~~~~~~~~~~~~~~
+
+Testing code signing with ``rcodesign``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Our CI system uses ``rcodesign`` to sign the binaries instead of the official tool provided
+by Apple. The reason is, official ``codesign`` tool requires MacOS to run, but KDE's signing
+service uses a dedicated machine with security keys that runs Linux. Hence it can sign our
+binaries with ``rcodesign`` only.
+
+To test signing with ``rcodesign`` use our standard docker container:
+
+.. code:: bash
+
+    # install Rust as a superuser
+    ./bin/sudoenter
+    apt install rust-1.80-all
+
+    # install rcodesign as non-priviliged `appimage` user
+    ./bin/enter
+    cargo-1.80 install apple-codesign
+    prepend PATH /home/appimage/.cargo/bin
+
+    # generate self-signed certificates
+    echo 123456 > test-cert.pass
+    rcodesign generate-self-signed-certificate --p12-file test-cert.p12 --p12-password-file test-cert.pass --person-name "TestDevXX"
+
+    # sign the .app bundle
+    rcodesign sign -v --code-signature-flags runtime --p12-file test-cert.p12 --p12-password-file test-cert.pass ~/persistent/krita.app/ ./signed.app
+
+Now ``./signed.app`` has all the files signed. In the next step our CI copies the signed data **over the original package**
+
+.. code:: bash
+
+    cp -r ./signed.app ~/persistent/krita.app/
+
+I don't really know why it was originaly planned, but it allows catching cases when ``rcodesign`` silently drops the files from the signed package
+(copying the files back will leave some files unsigned, and therefore fail the following verification step).
+
+To verify the final package you need to use a real MacOS device:
+
+.. code:: bash
+
+    # on MacOS!
+    codesign --verify --deep --strict --verbose=2 ./krita.app
+
 Building on Android
 -------------------
 
