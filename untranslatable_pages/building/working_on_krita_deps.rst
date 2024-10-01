@@ -260,3 +260,48 @@ will skip the subprojects that has been successfully built.
 When the build process fails, you can manually rebuild the failing project by running
 ``run-ci-build.py`` script manually in the corresponding folder.
 
+Troubleshooting
+===============
+
+Force verbose output during building
+------------------------------------
+
+When Ninja or GNU Make build your project, they usually hide the actual commands used to build a specific
+object file. Sometimes, especially when triaging bugs **on CI**, it can be helpful to see the exact
+build command lines. Usually it can be done by passing the following options to GNU Make and Ninja:
+
+.. code:: bash
+
+    # for GNU Make
+    make VERBOSE=1 all
+
+    # for Ninja
+    ninja -v
+
+However these commands work only when you start the build manually. On CI the build process is delegated
+to CMake or Meson, so we should pass the options to them instead:
+
+.. code:: bash
+
+    # for CMake you just pass CMAKE_VERBOSE_MAKEFILE option,
+    # works with both, Ninja and GNU Make backends
+    cmake -DCMAKE_VERBOSE_MAKEFILE=ON ...
+    cmake --build . -j${SUBMAKE_JOBS}
+
+    # for Meson you need to pass `-v` option to the compilation command
+    meson setup ...
+    meson compile -v -C . -j${SUBMAKE_JOBS}
+
+When working with Krita dependencies you can activate this options by any of the two methods:
+
+1) Pass ``-DCMAKE_VERBOSE_MAKEFILE=ON`` to the toplevel cmake configuration call. Then **all** external
+projects will be built in verbose mode.
+
+2) Set ``KRITACI_VERBOSE_MAKEFILE`` environment variable before running the toplevel CMake:
+
+    .. code:: bash
+
+        export KRITACI_VERBOSE_MAKEFILE=1
+
+The latter approach is very convenient for fetching the debug output from the WebGUI of our CI system.
+Just start a job with this variable set and get the full output in the log.
