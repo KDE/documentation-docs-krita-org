@@ -491,6 +491,51 @@ Make Windows, Linux, macOS and Android packages
 
     Make sure that the release on the official site appears at the same moment as it appears in all the stores!
 
+Release
+~~~~~~~
+
+#. Publish the announcement and release notes
+
+#. Update ``data/releases.yaml`` file for the new links at the "Download" page
+
+#. (for every release, including betas) Send announcement to the mailing lists to notify packagers
+
+    * to kimageshop@kde.org
+    * to kde-announce-apps@kde.org
+
+    Make sure that you include the fingerprint of the GPG key used to sing the tarball.
+    It is highly important for the packagers.
+
+    Here is the draft-mail:
+
+    .. code::
+
+        Hi, all!
+
+        We have released Krita <krita-version>
+
+        Official announcement:
+        <link-to-announcement>
+
+        Download from: 
+        https://download.kde.org/stable/krita/<krita-version>/
+
+        # if signed by Dmitry
+        Signed with GPG key:
+        E9FB29E74ADEACC5E3035B8AB69EB4CF7468332F
+        Get from: https://files.kde.org/krita/dmitry_kazakov.gpg
+        Public link: http://keyserver.ubuntu.com:11371/pks/lookup?search=E9FB29E74ADEACC5E3035B8AB69EB4CF7468332F&fingerprint=on&op=index
+
+        # if signed by Halla
+        Signed with GPG key:
+        064182440C674D9F8D0F6F8B4DA79EDA231C852B
+        Get from: https://files.kde.org/krita/4DA79EDA231C852B
+        Public link: http://keyserver.ubuntu.com:11371/pks/lookup?search=064182440C674D9F8D0F6F8B4DA79EDA231C852B&fingerprint=on&op=index
+
+#. Add release links to Release History section of the site: https://krita.org/en/about/krita-releases-overview/
+
+#. Add the release to the org.krita.org.appdata.xml file in MASTER.
+
 Release coordination
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -509,14 +554,6 @@ Pre-release
 2. Update press pack and page
 3. Verify if manual pages are updated, if not annoy @woltherav and add undocumented features to Krita: Manual
 4. Notify people that they can start making release demonstrations.
-
-Release
-~~~~~~~
-
-1. Update download page
-2. Publish the announcement and release notes
-3. Add release links to Release History section of the site: https://krita.org/en/about/krita-releases-overview/ 
-4. Add the release to the org.krita.org.appdata.xml file in MASTER.
 
 Post-release
 ~~~~~~~~~~~~
