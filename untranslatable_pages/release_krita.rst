@@ -383,39 +383,27 @@ Make Windows, Linux, macOS and Android packages
 
     .. code::
 
-        Hi, Halla and Ivan!
+        Hi, Halla, Ivan and Emmet!
 
         Could you please do the final steps for publishing Krita release?
 
         #) (@rempt) Sign all .apk packages
-
         #) (@rempt) Upload .aab package to Google Play
-
         #) (@rempt) Upload .msix package to Microsoft Store
-
         #) (@vanyossi) Sign .dmg package
-
-        #) (@rempt) Upload .dmg package to Apple Store
-
-        #) (@rempt) Upload (which?) packages to Epic Store
-
+        #) (@vanyossi) Upload .dmg package to Apple Store
+        #) (@rempt) Upload Windows packages to Epic Store
         #) (@emmetoneill) Upload Windows and Linux packages to Steam
-
-        #) Upload release artifacts to download.kde.org:
-
-            * Source link: https://files.kde.org/krita/.release/5.2.3/
-            * Destination link: https://download.kde.org/stable/krita/5.2.3/
-
-        #) Upload Stable ZSync file to download.kde.org:
-
-            * Source link: https://files.kde.org/krita/.release/5.2.3/Krita-Stable-x86_64.appimage.zsync
+        #) (@rempt) Upload release artifacts to download.kde.org:
+            * Source link: https://files.kde.org/krita/.release/5.2.6/
+            * Destination link: https://download.kde.org/stable/krita/5.2.6/
+        #) (@rempt) Upload Stable ZSync file to download.kde.org:
+            * Source link: https://files.kde.org/krita/.release/5.2.6/Krita-Stable-x86_64.appimage.zsync
             * Destination link: https://download.kde.org/stable/krita/updates/
-
-        #) Upload Beta ZSync file to download.kde.org (to point to Stable as well):
-
-            * Source link: https://files.kde.org/krita/.release/5.2.3/Krita-Beta-x86_64.appimage.zsync
+        #) (@rempt) Upload Beta ZSync file to download.kde.org (to point to Stable as well):
+            * Source link: https://files.kde.org/krita/.release/5.2.6/Krita-Beta-x86_64.appimage.zsync
             * Destination link: https://download.kde.org/unstable/krita/updates/
-            * Add Krita 5.2.3 bugzilla version
+        #) (@rempt) Add Krita 5.2.6 bugzilla version
 
 #. Now the folder on download.kde.org should have 21(!) files. Check if you missed something (and you surely did! :) ).
 
