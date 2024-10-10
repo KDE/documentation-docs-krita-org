@@ -371,7 +371,7 @@ To test signing with ``rcodesign`` use our standard docker container:
 
     # generate self-signed certificates
     echo 123456 > test-cert.pass
-    rcodesign generate-self-signed-certificate --p12-file test-cert.p12 --p12-password-file test-cert.pass --person-name "TestDevXX"
+    rcodesign generate-self-signed-certificate --p12-file test-cert.p12 --p12-password `cat test-cert.pass` --person-name "TestDevXX"
 
     # sign the .app bundle
     rcodesign sign -v --code-signature-flags runtime --p12-file test-cert.p12 --p12-password-file test-cert.pass ~/persistent/krita.app/ ./signed.app
