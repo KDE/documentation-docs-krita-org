@@ -346,6 +346,20 @@ Krita binary is not found after the first build
 
 Either relogin to the container or just execute `source ~/.devenv.inc`
 
+PulseAudio socket fails to start after restarting the host system
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On KDE Neon the pulseaudio socket is sometimes created after the first usage of the
+audio playback. If you have any issues with that, just try to play any audio on your
+**host** system before running/starting the container.
+
+.XAuthority file cannot be mounted on systems with Wayland
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On some systems (e.g. KDE Neon) XWayland in started on-demand. Just start `glxgears`
+on the **host** system before running/starting the container to force your host system
+to initializa XWayland.
+
 OpenGL doesn't work on NVidia GPU with proprietary drivers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
