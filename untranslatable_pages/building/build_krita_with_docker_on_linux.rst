@@ -355,3 +355,19 @@ The docker run script automatically forwards the GPU devices into the container,
 
     ./bin/install_nvidia_drivers.sh
 
+OpenGL doesn't work on Intel/NVidia/AMD GPU with **opensource** drivers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Usually, opensource GPU drivers are already present in the docker container. Though
+sometimes these drivers are outdated in Ubuntu 20.04. In this case you need to update
+the drivers to the version that supports your GPU.
+
+We use a build of opensource GPU drivers provided by Intel. Since they are based on the
+opensource version of Mesa, they will also provide drivers for other GPUs.
+
+To install these drivers, just run this script on the host system:
+
+.. code::
+
+    ./bin/install_intel_drivers.sh
+
