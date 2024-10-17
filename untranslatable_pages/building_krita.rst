@@ -50,17 +50,22 @@ Prerequisites
 ~~~~~~~~~~~~~
 
 1. Git - https://git-scm.com/downloads
-2. CMake 3.16.0 or later, the latest is usually fine - https://cmake.org/download/
+2. CMake 3.21.0 or later, the latest is usually fine - https://cmake.org/download/
 3. Ninja build system - https://github.com/ninja-build/ninja/releases
 
     - Since Ninja is a single executable, you can place it in the bin folder of CMake, next to ``cmake.exe`` for convenience.
 
 4. LLVM MinGW compiler toolchain
 
-    - Can be downloaded here: https://github.com/mstorsjo/llvm-mingw/releases/download/20220906/llvm-mingw-20220906-ucrt-x86_64.zip
+    .. note::
+
+        On 17.10.2024 we updated our Windows toolchain from clang-15 ("llvm-mingw-20220906-ucrt") to clang-18 ("llvm-mingw-20240619-ucrt"). One of the reasons was ASAN support on Windows 11.
+
+    - Can be downloaded here: https://github.com/mstorsjo/llvm-mingw/releases/download/20240619/llvm-mingw-20240619-ucrt-x86_64.zip
     - Unzip the archive with `7zip <https://www.7-zip.org/>`_ into a folder like :file:`C:\\llvm-mingw`; the full path must not contain any spaces.
-    - We are using the tagged release 20220906 with LLVM 15.0.0 on the Binary Factory. In theory a newer version should be compatible, but use at your own risk.
+    - We are using the tagged release 20240619 with LLVM 18.1.8 on the CI workers. In theory a newer version should be compatible, but use at your own risk.
     - If you really want to use other compilers, see below.
+
 
 5. You will also need a release of Python 3.10 (not 3.7, not 3.8, not 3.9, not 3.11) - https://www.python.org.
 
@@ -120,7 +125,7 @@ Donwload the dependencies and generate the environment file. Make sure you repla
 
 .. code:: batch
 
-    python krita-deps-management\tools\setup-env.py --full-krita-env -v PythonEnv -p c:\deps\llvm-mingw-20220906-ucrt-x86_64\bin\ -p c:\deps\llvm-mingw-20220906-ucrt-x86_64\x86_64-w64-mingw32\bin\ -p c:\deps\Ninja\
+    python krita-deps-management\tools\setup-env.py --full-krita-env -v PythonEnv -p c:\deps\llvm-mingw-20240619-ucrt-x86_64\bin\ -p c:\deps\llvm-mingw-20240619-ucrt-x86_64\x86_64-w64-mingw32\bin\ -p c:\deps\Ninja\
 
 
 .. attention::
