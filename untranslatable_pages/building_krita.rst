@@ -260,7 +260,7 @@ on CI. If you have these tools installed separately, then you can skip this step
 .. code:: bash
 
     cd $BUILDROOT
-    python3 $BUILDROOT/krita/build-tools/ci-scripts/download-macos-tools.py
+    python3 $BUILDROOT/krita/krita-deps-management/tools/download-macos-tools.py
     source $BUILDROOT/_krita-tools/activate
 
 Fetching prebuilt dependencies
