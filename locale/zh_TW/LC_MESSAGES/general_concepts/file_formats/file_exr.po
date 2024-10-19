@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-05 12:21+0000\n"
+"POT-Creation-Date: 2024-10-18 01:44+0000\n"
 "PO-Revision-Date: 2021-07-07 18:00+0800\n"
 "Last-Translator: Alvin Wong <alvin@alvinhc.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -18,6 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.6.0\n"
+
+#: ../../general_concepts/file_formats/file_exr.rst:None
+msgid ""
+".. image:: images/default_color_space_for_exr_option.png\n"
+"   :alt: screenshot of Color profile for imported EXR images selector"
+msgstr ""
 
 #: ../../general_concepts/file_formats/file_exr.rst:1
 msgid "The EXR file format as exported by Krita."
@@ -65,4 +71,69 @@ msgid ""
 "Krita can load and save EXR for the purpose of paint-over (yes, Krita can "
 "paint with scene referred values) and interchange with applications like "
 "Blender, Mari, Nuke and Natron."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:24
+msgid "Color Management"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:28
+msgid ""
+"EXR file format does not have any internal color management capabilities, i."
+"e. when saving the data into the file, no color space information is written "
+"into the file. Next time you load the same file into Krita, Krita will "
+"assign the default color space to the file (usually \"Rec 709 Linear\"). It "
+"may cause the file to change visually."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:30
+msgid ""
+"In general, there are two ways to handle the color management for the EXR "
+"files: OCIO and profile-based."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:33
+msgid "OCIO-based workflow"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:35
+msgid ""
+"You need to select OCIO configuration and share it between Krita and other "
+"tools you use (Blender, Natron and etc). When using OCIO Krita will **not** "
+"use the assigned profile and will use the OCIO configuration you selected."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:38
+msgid "Profile-based workflow"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:40
+msgid ""
+"Alternatively, you can assign the necessary ICC profile to the imported "
+"image. If you import the image and you know its color space is not \"Rec 709 "
+"Linear TRC\", just use :menuselection:`Tools --> Scripts --> Assign Profile "
+"to Image` plugin to assign a different profile."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:44
+msgid ""
+"If you do not see Assign Profile plugin, make sure it is activated in the "
+"Python Plugin Manager: :menuselection:`Settings --> Configure Krita... --> "
+"Python Plugin Manager`. After activating the plugin, restart Krita."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:46
+msgid ""
+"If your work is based on some non-default color space (e.g. ACES), then you "
+"can set this color space as the default for loading EXR images. Go to :"
+"menuselection:`Settings --> Configure Krita... --> Color Management` and "
+"select the required color space at `Color profile for imported EXR images` "
+"selector. Next time you load any EXR image, this color space will be "
+"assigned automatically."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:52
+msgid ""
+"If you want to read more about color managed workflows, check :ref:`this "
+"chapter <color_managed_workflow>`."
 msgstr ""
