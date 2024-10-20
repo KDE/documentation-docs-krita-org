@@ -82,10 +82,6 @@ You can create your own bundle from the resources of your choice. Click on the :
 The left hand section is for filling up information about the bundle like author name, website, email, bundle icon, etc.
 The right hand side provides a list of available resources. Choose the type of resource you wish to add in to the bundle from the drop-down above and add it to the bundle by selecting a resource and clicking on the arrow button.
 
-.. warning::
-
-    Make sure you add brush tips for used in the respective paintop presets you are adding to the bundle. If you don't provide the brush tips then the brush presets loaded from this bundle will have a 'X' mark on the thumbnail denoting that the texture is missing. And the brush preset won't be the same.
-
 Once you have added all the resources you can create bundle by clicking on the :guilabel:`Save` button, the bundle will be saved in the location you have specified. You can then share this bundle with other artists or load it on other workstations.
 
 Deleting Imported Bundles
