@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2019, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-18 01:44+0000\n"
-"PO-Revision-Date: 2019-07-30 20:32+0100\n"
+"PO-Revision-Date: 2024-10-19 16:56+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,13 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: ../../general_concepts/file_formats/file_exr.rst:None
 msgid ""
 ".. image:: images/default_color_space_for_exr_option.png\n"
 "   :alt: screenshot of Color profile for imported EXR images selector"
 msgstr ""
+".. image:: images/default_color_space_for_exr_option.png\n"
+"   :alt: skärmbild av färgprofilen för väljaren av importerade EXR-bilder"
 
 #: ../../general_concepts/file_formats/file_exr.rst:1
 msgid "The EXR file format as exported by Krita."
@@ -86,7 +88,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_exr.rst:24
 msgid "Color Management"
-msgstr ""
+msgstr "Färghantering"
 
 #: ../../general_concepts/file_formats/file_exr.rst:28
 msgid ""
@@ -96,16 +98,22 @@ msgid ""
 "assign the default color space to the file (usually \"Rec 709 Linear\"). It "
 "may cause the file to change visually."
 msgstr ""
+"EXR-filformatet har inga interna färghanteringsmöjligheter, det vill säga när "
+"data sparas i filen skrivs ingen färgrymdsinformation in i filen. Nästa gång m"
+"an läser in samma fil i Krita tilldelas filen standardfärgrymden (vanligtvis "
+"\"Rec 709 Linjär\"). Det kan göra att filen ändras visuellt."
 
 #: ../../general_concepts/file_formats/file_exr.rst:30
 msgid ""
 "In general, there are two ways to handle the color management for the EXR "
 "files: OCIO and profile-based."
 msgstr ""
+"I allmänhet finns det två sätt att ta hand om färghanteringen för EXR-filerna:"
+" OCIO och profilbaserad."
 
 #: ../../general_concepts/file_formats/file_exr.rst:33
 msgid "OCIO-based workflow"
-msgstr ""
+msgstr "OCIO-baserat arbetsflöde"
 
 #: ../../general_concepts/file_formats/file_exr.rst:35
 msgid ""
@@ -113,10 +121,13 @@ msgid ""
 "tools you use (Blender, Natron and etc). When using OCIO Krita will **not** "
 "use the assigned profile and will use the OCIO configuration you selected."
 msgstr ""
+"Man måste välja OCIO-inställning och dela den mellan Krita och andra verktyg s"
+"om används (Blender, Natron, etc.). När man utnyttjar OCIO använder Krita **in"
+"te** den tilldelade profilen utan använder den OCIO-inställning man valt."
 
 #: ../../general_concepts/file_formats/file_exr.rst:38
 msgid "Profile-based workflow"
-msgstr ""
+msgstr "Profilbaserat arbetsflöde"
 
 #: ../../general_concepts/file_formats/file_exr.rst:40
 msgid ""
@@ -125,6 +136,10 @@ msgid ""
 "Linear TRC\", just use :menuselection:`Tools --> Scripts --> Assign Profile "
 "to Image` plugin to assign a different profile."
 msgstr ""
+"Alternativt kan man tilldela den nödvändiga ICC-profilen till den importerade "
+"bilden. Om man importerar bilden och vet att dess färgrymd inte är \"Rec 709 l"
+"injär TRC\", använd bara insticksprogrammet :menuselection:`Verktyg --> Skript"
+" --> Tilldela profil till bild` för att tilldela en annan profil."
 
 #: ../../general_concepts/file_formats/file_exr.rst:44
 msgid ""
@@ -132,6 +147,10 @@ msgid ""
 "Python Plugin Manager: :menuselection:`Settings --> Configure Krita... --> "
 "Python Plugin Manager`. After activating the plugin, restart Krita."
 msgstr ""
+"Om insticksprogrammet Tilldela profil inte visas, se till att det är aktiverad"
+" i hanteringen av Python-insticksprogram: :menuselection:`Inställningar --> An"
+"passa Krita... --> Python-instickshanterare`. Starta om Krita efter att ha akt"
+"iverat insticksprogrammet."
 
 #: ../../general_concepts/file_formats/file_exr.rst:46
 msgid ""
@@ -142,9 +161,16 @@ msgid ""
 "selector. Next time you load any EXR image, this color space will be "
 "assigned automatically."
 msgstr ""
+"Om arbetet är baserat på en en färgrymd som inte är standardiserad (t.ex. ACES"
+"), kan man ställa in färgrymd som standardvärde vid inläsning av EXR-bilder. G"
+"å till :menuselection:`Inställningar --> Anpassa Krita... --> Färghantering` o"
+"ch välj önskad färgrymd med väljaren `Färgprofil för importerade EXR-bilder`. "
+"Nästa gång en EXR-bild läses in tilldelas den färgrymden automatiskt."
 
 #: ../../general_concepts/file_formats/file_exr.rst:52
 msgid ""
 "If you want to read more about color managed workflows, check :ref:`this "
 "chapter <color_managed_workflow>`."
 msgstr ""
+"Om du vill läsa mer om färghanterade arbetsflöden, ta en titt på :ref:`det här"
+" kapitlet <color_managed_workflow>`."
