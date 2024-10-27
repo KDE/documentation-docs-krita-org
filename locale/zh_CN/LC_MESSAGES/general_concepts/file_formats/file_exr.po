@@ -23,6 +23,8 @@ msgid ""
 ".. image:: images/default_color_space_for_exr_option.png\n"
 "   :alt: screenshot of Color profile for imported EXR images selector"
 msgstr ""
+".. image:: images/default_color_space_for_exr_option.png\n"
+"   :alt: screenshot of Color profile for imported EXR images selector"
 
 #: ../../general_concepts/file_formats/file_exr.rst:1
 msgid "The EXR file format as exported by Krita."
@@ -82,7 +84,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_exr.rst:24
 msgid "Color Management"
-msgstr ""
+msgstr "色彩管理"
 
 #: ../../general_concepts/file_formats/file_exr.rst:28
 msgid ""
@@ -92,16 +94,21 @@ msgid ""
 "assign the default color space to the file (usually \"Rec 709 Linear\"). It "
 "may cause the file to change visually."
 msgstr ""
+"EXR 文件格式没有内建色彩管理功能，数据保存到 EXR 文件时不会将写入任何色彩空间"
+"信息。如果您关闭文件之后重新打开它，Krita 将为该文件指定默认的色彩空间 (通常"
+"是 Rec 709 Linear)。这可能会导致文件的视觉效果发生变化。"
 
 #: ../../general_concepts/file_formats/file_exr.rst:30
 msgid ""
 "In general, there are two ways to handle the color management for the EXR "
 "files: OCIO and profile-based."
 msgstr ""
+"我们一般可以使用两种方式来处理 EXR 文件的色彩管理：基于 OCIO 和基于色彩特性文"
+"件。"
 
 #: ../../general_concepts/file_formats/file_exr.rst:33
 msgid "OCIO-based workflow"
-msgstr ""
+msgstr "基于 OCIO 的工作流程"
 
 #: ../../general_concepts/file_formats/file_exr.rst:35
 msgid ""
@@ -109,10 +116,13 @@ msgid ""
 "tools you use (Blender, Natron and etc). When using OCIO Krita will **not** "
 "use the assigned profile and will use the OCIO configuration you selected."
 msgstr ""
+"你需要选择 OCIO 配置，并在配合使用的其他程序 (例如 Blender 和 Natron 等) 中使"
+"用同一配置。使用 OCIO 时，Krita **不会** 使用分配的色彩特性文件，而是会使用你"
+"选择的 OCIO 配置。"
 
 #: ../../general_concepts/file_formats/file_exr.rst:38
 msgid "Profile-based workflow"
-msgstr ""
+msgstr "基于色彩特性文件的工作流程"
 
 #: ../../general_concepts/file_formats/file_exr.rst:40
 msgid ""
@@ -121,6 +131,9 @@ msgid ""
 "Linear TRC\", just use :menuselection:`Tools --> Scripts --> Assign Profile "
 "to Image` plugin to assign a different profile."
 msgstr ""
+"您也可以为导入的图像指定所需的 ICC 色彩特性文件。如果您导入了图像且知道其色彩"
+"空间不是 Rec 709 Linear TRC，请使用 :menuselection:`工具 --> 脚本 --> 图像色"
+"彩特性文件指定` 插件来指定一个不同的特性文件。"
 
 #: ../../general_concepts/file_formats/file_exr.rst:44
 msgid ""
@@ -128,6 +141,9 @@ msgid ""
 "Python Plugin Manager: :menuselection:`Settings --> Configure Krita... --> "
 "Python Plugin Manager`. After activating the plugin, restart Krita."
 msgstr ""
+"如果您没在该菜单看到“图像色彩特性文件指定”插件，请在 Krita 的 Python 插件管理"
+"页面中激活它：:menuselection:`设置 --> 配置 Krita... --> Python 插件管理`。激"
+"活该插件后请重启 Krita 以生效。"
 
 #: ../../general_concepts/file_formats/file_exr.rst:46
 msgid ""
@@ -138,9 +154,15 @@ msgid ""
 "selector. Next time you load any EXR image, this color space will be "
 "assigned automatically."
 msgstr ""
+"如果您的文件使用的是某些非默认的色彩空间 (例如 ACES)，您可以将此色彩空间设置"
+"为加载 EXR 图像时使用的默认值。前往 :menuselection:`设置 --> 配置 Krita... --"
+"> 色彩管理` ，在 `EXR 文件导入时的默认色彩特性文件` 选项中选择想要的色彩特性"
+"文件。下次您打开任意 EXR 图像时，Krita 将自动为它分配此色彩空间。"
 
 #: ../../general_concepts/file_formats/file_exr.rst:52
 msgid ""
 "If you want to read more about color managed workflows, check :ref:`this "
 "chapter <color_managed_workflow>`."
 msgstr ""
+"如果您想要了解更多色彩管理的工作流程，请阅读 :ref:`Krita 使用手册的色彩管理流"
+"程章节 <color_managed_workflow>`。"
