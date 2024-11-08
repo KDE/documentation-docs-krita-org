@@ -120,7 +120,7 @@ Getting the dependencies
 
 .. image:: /images/untranslatable/cat_guide/Krita-building_for-cats_003-get-libs_001_by-deevad.jpg
 
-Donwload the dependencies and generate the environment file. Make sure you replace the paths to llvm-mingw and ninja:
+Download the dependencies and generate the environment file. Make sure you replace the paths to llvm-mingw and ninja:
 
 
 .. code:: batch
