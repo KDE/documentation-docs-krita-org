@@ -93,6 +93,22 @@ At any point of time Krita users have access to four(!) versions of Krita. We ca
     variable ``BRANDING``, which is later used to change application's icon and splashscreen. Branding can be one of:
     "default", "Beta", "Plus" or "Next".
 
+.. note::
+
+    Please take into account that we use non-standard filename extension for the zsync files:
+
+        * zsync file extension is all-lower-case: ``.appimage.zsync``
+
+        * appimage file extension is camel-case: ``.AppImage``
+
+    The standard approach is to use camel-case for both the extensions, but we don't do that. Our
+    older releases have the links to download.kde.org baked into the binary, so it is not worth
+    the trouble to switch them.
+
+    We still had to switch the case of the package itself, since it broke desktop integrations.
+    See `this bug <https://bugs.kde.org/show_bug.cgi?id=447445>`_
+
+
 On branching out a stable branch
 --------------------------------
 
