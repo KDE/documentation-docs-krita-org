@@ -169,9 +169,13 @@ Invert Pattern
 
     .. image:: /images/brushes/Krita_2_9_brushengine_texture_06.png
 
-Brightness and Contrast
+Auto Invert For Eraser
+    .. versionadded:: 5.3.0
 
-.. versionadded:: 3.3.1
+    Automatically inverts the pattern when the brush is switched into eraser mode. If "Invert Pattern" option is enabled, then switching to eraser mode disables inversion.
+
+Brightness and Contrast
+    .. versionadded:: 3.3.1
 
     Adjust the pattern with a simple brightness/contrast filter to make it easier to use. Because Subtract and Multiply work differently, it's recommended to use different values with each:
 
