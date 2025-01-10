@@ -353,7 +353,7 @@ latex_elements = {
     \oincludegraphics[#1,max width=\linewidth,max height=\textheight]{#2}
 }
     ''',
-    'tableofcontents':'\sphinxtableofcontents',
+    'tableofcontents':r'\sphinxtableofcontents',
 
     # Latex figure (float) alignment
     #
