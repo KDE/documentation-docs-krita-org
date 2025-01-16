@@ -110,10 +110,10 @@ the build:
 .. code:: bash
 
     # for Android
-    export KDECI_EXTRA_CMAKE_ARGS="-DCMAKE_TOOLCHAIN_FILE=/home/appimage/appimage-workspace/root/krita-deps-management/tools/android-toolchain.cmake"
+    export CMAKE_TOOLCHAIN_FILE=/home/appimage/appimage-workspace/root/krita-deps-management/tools/android-toolchain.cmake
 
     # for MacOS
-    export KDECI_EXTRA_CMAKE_ARGS="-DCMAKE_TOOLCHAIN_FILE=/home/appimage/appimage-workspace/root/krita-deps-management/tools/macos-toolchain.cmake"
+    export CMAKE_TOOLCHAIN_FILE=/home/appimage/appimage-workspace/root/krita-deps-management/tools/macos-toolchain.cmake
 
 You should manually set this variable every time you enter the container. It is neceesary because the toolchain file 
 for building Krita itself differs. If you need to build Krita in the same environment, you should
