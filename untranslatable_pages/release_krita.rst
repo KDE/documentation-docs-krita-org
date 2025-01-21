@@ -306,7 +306,7 @@ Make Windows, Linux, macOS and Android packages
 
     .. code::
 
-        gpg --detach-sign --output krita-5.1.0-beta-x86_64.appimage.sig krita-5.1.0-beta-x86_64.appimage
+        gpg --detach-sign --output krita-5.1.0-beta-x86_64.AppImage.sig krita-5.1.0-beta-x86_64.AppImage
 
 
 #. Sign four Android packages (or send them to Halla for signing)
@@ -345,8 +345,8 @@ Make Windows, Linux, macOS and Android packages
         * krita-5.1.0-beta1.tar.gz.sig
         * krita-5.1.0-beta1.tar.xz
         * krita-5.1.0-beta1.tar.xz.sig
-        * krita-5.1.0-beta1-x86_64.appimage
-        * krita-5.1.0-beta1-x86_64.appimage.sig
+        * krita-5.1.0-beta1-x86_64.AppImage
+        * krita-5.1.0-beta1-x86_64.AppImage.sig
         * krita-x64-5.1.0-beta1-dbg.zip
         * krita-x64-5.1.0-beta1-setup.exe
         * krita-x64-5.1.0-beta1.zip
@@ -439,8 +439,8 @@ Make Windows, Linux, macOS and Android packages
         ZSync exists: True
         AppImage exists: False
             MTime:  Wed, 06 Dec 2023 13:28:16 +0000
-            Filename:  krita-5.2.2-x86_64.appimage
-            URL:  https://binary-factory.kde.org/job/Krita_Release_Appimage_Build/124//artifact/krita-5.2.2-x86_64.appimage
+            Filename:  krita-5.2.2-x86_64.AppImage
+            URL:  https://binary-factory.kde.org/job/Krita_Release_Appimage_Build/124//artifact/krita-5.2.2-x86_64.AppImage
             SHA-1:  16a1a640084446b45ea078d8b81cffc075144a02
 
         == Channel: Beta (unstable) FAILED ==
@@ -448,8 +448,8 @@ Make Windows, Linux, macOS and Android packages
         ZSync exists: True
         AppImage exists: False
             MTime:  Thu, 14 Sep 2023 09:26:05 +0000
-            Filename:  krita-5.2.0-rc1-x86_64.appimage
-            URL:  https://binary-factory.kde.org/job/Krita_Release_Appimage_Build/121//artifact/krita-5.2.0-rc1-x86_64.appimage
+            Filename:  krita-5.2.0-rc1-x86_64.AppImage
+            URL:  https://binary-factory.kde.org/job/Krita_Release_Appimage_Build/121//artifact/krita-5.2.0-rc1-x86_64.AppImage
             SHA-1:  4bd0f522c22f41e504bf1e9ced540fa11ed5ec53
 
         == Channel: Plus FAILED ==
@@ -462,8 +462,8 @@ Make Windows, Linux, macOS and Android packages
         ZSync exists: True
         AppImage exists: True
             MTime:  Tue, 02 Apr 2024 22:30:57 +0000
-            Filename:  krita-5.3.0-prealpha-64b33ed808-x86_64.appimage
-            URL:  https://cdn.kde.org/ci-builds/graphics/krita/master/linux/krita-5.3.0-prealpha-64b33ed808-x86_64.appimage
+            Filename:  krita-5.3.0-prealpha-64b33ed808-x86_64.AppImage
+            URL:  https://cdn.kde.org/ci-builds/graphics/krita/master/linux/krita-5.3.0-prealpha-64b33ed808-x86_64.AppImage
             SHA-1:  e360127c3c956499ed0266ad8eb9bcdad3789956
 
     Check the following:
