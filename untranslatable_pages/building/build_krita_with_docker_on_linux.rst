@@ -71,6 +71,10 @@ Second, make sure that you have python3 and python3-venv packages installed:
 ``python3-venv`` package is used for bootstrapping the dependencies on the host system before 
 building the docker image, so you need to have it preinstalled.
 
+.. note::
+
+    Please take it into account that Krita's build system currently supports **Python 3.10.x only**.
+    The usage of a newer version of Python can cause issues (patches to fix that are welcome!).
 
 .. _building_krita_with_docker_download_sources:
 

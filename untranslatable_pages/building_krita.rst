@@ -67,7 +67,7 @@ Prerequisites
     - If you really want to use other compilers, see below.
 
 
-5. You will also need a release of Python 3.10 (not 3.7, not 3.8, not 3.9, not 3.11) - https://www.python.org.
+5. You will also need a release of Python 3.10 (not 3.7, not 3.8, not 3.9, not 3.11, not 3.12, not 3.13) - https://www.python.org.
 
     - Make sure to have that version of python.exe in your path. This version of Python will be used for two things to configure Qt and to build the Python scripting module.  Do not set PYTHONHOME or PYTHONPATH.
     - Make sure that your Python will have the correct architecture for the version you are trying to build. If building for 32-bit target, you need the 32-bit release of Python.
@@ -227,6 +227,11 @@ You will need to install:
 * Python 3.10 or higher
 * XCode: get it from the app store
 * Qt Creator: https://download.qt.io/official_releases/qtcreator/
+
+.. note::
+
+    Please take it into account that Krita's build system currently supports **Python 3.10.x only**.
+    The usage of a newer version of Python can cause issues (patches to fix that are welcome!).
 
 Preparation
 ~~~~~~~~~~~
