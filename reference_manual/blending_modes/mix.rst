@@ -84,7 +84,7 @@ the current opacity (and flow) value against the alpha channel of the existing p
 making the stroke look smooth, without circular pattern that you can see in "Build-Up" painting mode.
 
 .. hint:: In Alpha Darken mode the blending of the **color** channels happens without taking Opacity or Flow
-   values into accound. They are blended as if Opacity and Flow were set to 100%. Only blending of the **alpha** channel
+   values into account. They are blended as if Opacity and Flow were set to 100%. Only blending of the **alpha** channel
    uses Opacity and flow values.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Alpha_Darken_Sample_image_with_dots.png
