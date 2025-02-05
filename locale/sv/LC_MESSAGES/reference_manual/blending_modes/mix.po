@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-05 12:21+0000\n"
-"PO-Revision-Date: 2021-09-14 20:33+0200\n"
+"POT-Creation-Date: 2025-02-04 01:51+0000\n"
+"PO-Revision-Date: 2025-02-04 16:38+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: ../../reference_manual/blending_modes/mix.rst:None
 msgid ".. image:: images/blending_modes/mix/Greaterblendmode.gif"
@@ -141,13 +141,34 @@ msgstr "Blandningsläget kallas \"Alpha Darken\" på engelska."
 
 #: ../../reference_manual/blending_modes/mix.rst:81
 msgid ""
-"As far as I can tell this seems to premultiply the alpha, as is common in "
-"some file-formats."
+"Alpha Darken is a technical blending mode that is used internally in the "
+"\"Wash\" painting mode of the brushes. The main idea of the mode is to make "
+"sure that the line doesn't get darker when you cross it again and again. It "
+"compares the current opacity (and flow) value against the alpha channel of "
+"the existing pixel and does not let the alpha value to decrease, making the "
+"stroke look smooth, without circular pattern that you can see in \"Build-Up"
+"\" painting mode."
 msgstr ""
-"Så vitt jag kan se, verkar det multiplicera alfa i förväg, som är vanligt i "
-"vissa filformat."
+"Gör alfa mörkare är ett tekniskt blandningsläge som används internt i målnings"
+"läget \"Sprid ut\" för penslarna. Huvudtanken med läget är att se till att lin"
+"jen inte blir mörkare när man korsar den gång på gång. Den jämför det aktuella"
+" ogenomskinlighetsvärdet (och flödet) med alfakanalen för den befintliga bildp"
+"unkten och låter inte alfavärdet minska, vilket gör att strecket ser jämnt ut,"
+" utan cirkulärt mönster som man kan se i målningsläget \"Bygg upp\"."
 
 #: ../../reference_manual/blending_modes/mix.rst:86
+msgid ""
+"In Alpha Darken mode the blending of the **color** channels happens without "
+"taking Opacity or Flow values into account. They are blended as if Opacity "
+"and Flow were set to 100%. Only blending of the **alpha** channel uses "
+"Opacity and flow values."
+msgstr ""
+"Med Gör alfa mörkare sker blandningen av **färgkanalerna** utan att ta hänsyn "
+"till ogenomskinlighets- eller flödesvärden. De blandas som om Ogenomskinlighet"
+" och Flöde var inställda på 100 %. Endast blandning av **alfakanalen** använde"
+"r ogenomskinlighets- och flödesvärden."
+
+#: ../../reference_manual/blending_modes/mix.rst:93
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Alpha_Darken_Sample_image_with_dots.png"
@@ -155,20 +176,20 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Alpha_Darken_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:86
+#: ../../reference_manual/blending_modes/mix.rst:93
 msgid "Left: **Normal**. Right: **Alpha Darken**."
 msgstr "Vänster: **Normal**. Höger: **Gör alfa mörkare**."
 
-#: ../../reference_manual/blending_modes/mix.rst:88
-#: ../../reference_manual/blending_modes/mix.rst:92
+#: ../../reference_manual/blending_modes/mix.rst:95
+#: ../../reference_manual/blending_modes/mix.rst:99
 msgid "Behind"
 msgstr "Bakom"
 
-#: ../../reference_manual/blending_modes/mix.rst:96
+#: ../../reference_manual/blending_modes/mix.rst:103
 msgid "This blending mode is called \"Behind\" in English."
 msgstr "Blandningsläget kallas \"Behind\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:98
+#: ../../reference_manual/blending_modes/mix.rst:105
 msgid ""
 "Does the opposite of Normal, and tries to have the upper layer rendered "
 "below the lower layer."
@@ -176,7 +197,7 @@ msgstr ""
 "Gör motsatsen av Normal, och försöker återge det övre lagret bakom det undre "
 "lagret."
 
-#: ../../reference_manual/blending_modes/mix.rst:103
+#: ../../reference_manual/blending_modes/mix.rst:110
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Behind_Sample_image_with_dots.png"
@@ -184,23 +205,23 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Behind_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:103
+#: ../../reference_manual/blending_modes/mix.rst:110
 msgid "Left: **Normal**. Right: **Behind**."
 msgstr "Vänster: **Normal**. Höger: **Bakom**."
 
-#: ../../reference_manual/blending_modes/mix.rst:105
+#: ../../reference_manual/blending_modes/mix.rst:112
 msgid "Erase (Blending Mode)"
 msgstr "Radera (blandningsläge)"
 
-#: ../../reference_manual/blending_modes/mix.rst:109
+#: ../../reference_manual/blending_modes/mix.rst:116
 msgid "Erase"
 msgstr "Radera"
 
-#: ../../reference_manual/blending_modes/mix.rst:113
+#: ../../reference_manual/blending_modes/mix.rst:120
 msgid "This blending mode is called \"Erase\" in English."
 msgstr "Blandningsläget kallas \"Erase\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:115
+#: ../../reference_manual/blending_modes/mix.rst:122
 msgid ""
 "This subtracts the opaque pixels of the upper layer from the lower layer, "
 "effectively erasing."
@@ -208,7 +229,7 @@ msgstr ""
 "Subtraherar de ogenomskinliga bildpunkterna på det övre lagret från det "
 "undre lagret, vilket betyder att de raderas."
 
-#: ../../reference_manual/blending_modes/mix.rst:120
+#: ../../reference_manual/blending_modes/mix.rst:127
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Erase_Sample_image_with_dots.png"
@@ -216,20 +237,20 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Erase_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:120
+#: ../../reference_manual/blending_modes/mix.rst:127
 msgid "Left: **Normal**. Right: **Erase**."
 msgstr "Vänster: **Normal**. Höger: **Radera**."
 
-#: ../../reference_manual/blending_modes/mix.rst:122
-#: ../../reference_manual/blending_modes/mix.rst:126
+#: ../../reference_manual/blending_modes/mix.rst:129
+#: ../../reference_manual/blending_modes/mix.rst:133
 msgid "Geometric Mean"
 msgstr "Geometriskt medelvärde"
 
-#: ../../reference_manual/blending_modes/mix.rst:130
+#: ../../reference_manual/blending_modes/mix.rst:137
 msgid "This blending mode is called \"Geometric Mean\" in English."
 msgstr "Blandningsläget kallas \"Geometric Mean\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:132
+#: ../../reference_manual/blending_modes/mix.rst:139
 msgid ""
 "This blending mode multiplies the top layer with the bottom, and then "
 "outputs the square root of that."
@@ -237,7 +258,7 @@ msgstr ""
 "Blandningsläget multiplicerar det övre lagret med det undre, och matar sedan "
 "ut kvadratroten av det."
 
-#: ../../reference_manual/blending_modes/mix.rst:137
+#: ../../reference_manual/blending_modes/mix.rst:144
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Geometric_Mean_Sample_image_with_dots.png"
@@ -245,20 +266,20 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Geometric_Mean_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:137
+#: ../../reference_manual/blending_modes/mix.rst:144
 msgid "Left: **Normal**. Right: **Geometric Mean**."
 msgstr "Vänster: **Normal**. Höger: **Geometriskt medelvärde**."
 
-#: ../../reference_manual/blending_modes/mix.rst:139
-#: ../../reference_manual/blending_modes/mix.rst:143
+#: ../../reference_manual/blending_modes/mix.rst:146
+#: ../../reference_manual/blending_modes/mix.rst:150
 msgid "Grain Extract"
 msgstr "Extrahera ådring"
 
-#: ../../reference_manual/blending_modes/mix.rst:147
+#: ../../reference_manual/blending_modes/mix.rst:154
 msgid "This blending mode is called \"Grain Extract\" in English."
 msgstr "Blandningsläget kallas \"Grain Extract\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:149
+#: ../../reference_manual/blending_modes/mix.rst:156
 msgid ""
 "Similar to Subtract, the colors of the upper layer are subtracted from the "
 "colors of the lower layer, and then 50% gray is added."
@@ -266,7 +287,7 @@ msgstr ""
 "I likhet med Subtraktion, subtraheras färgerna på det övre lagret från "
 "färgerna på det undre lagret, och sedan adderas 50 % grått."
 
-#: ../../reference_manual/blending_modes/mix.rst:154
+#: ../../reference_manual/blending_modes/mix.rst:161
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Grain_Extract_Sample_image_with_dots.png"
@@ -274,20 +295,20 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Grain_Extract_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:154
+#: ../../reference_manual/blending_modes/mix.rst:161
 msgid "Left: **Normal**. Right: **Grain Extract**."
 msgstr "Vänster: **Normal**. Höger: **Extrahera ådring**."
 
-#: ../../reference_manual/blending_modes/mix.rst:156
-#: ../../reference_manual/blending_modes/mix.rst:160
+#: ../../reference_manual/blending_modes/mix.rst:163
+#: ../../reference_manual/blending_modes/mix.rst:167
 msgid "Grain Merge"
 msgstr "Sammanfoga ådring"
 
-#: ../../reference_manual/blending_modes/mix.rst:164
+#: ../../reference_manual/blending_modes/mix.rst:171
 msgid "This blending mode is called \"Grain Merge\" in English."
 msgstr "Blandningsläget kallas \"Grain Merge\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:166
+#: ../../reference_manual/blending_modes/mix.rst:173
 msgid ""
 "Similar to Addition, the colors of the upper layer are added to the colors, "
 "and then 50% gray is subtracted."
@@ -295,7 +316,7 @@ msgstr ""
 "I likhet med Addition, adderas färgerna på det övre lagret från färgerna på "
 "det undre lagret, och sedan subtraheras 50 % grått."
 
-#: ../../reference_manual/blending_modes/mix.rst:171
+#: ../../reference_manual/blending_modes/mix.rst:178
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Grain_Merge_Sample_image_with_dots.png"
@@ -303,23 +324,23 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Grain_Merge_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:171
+#: ../../reference_manual/blending_modes/mix.rst:178
 msgid "Left: **Normal**. Right: **Grain Merge**."
 msgstr "Vänster: **Normal**. Höger: **Sammanfoga ådring**."
 
-#: ../../reference_manual/blending_modes/mix.rst:173
+#: ../../reference_manual/blending_modes/mix.rst:180
 msgid "Greater (Blending Mode)"
 msgstr "Större än (blandningsläge)"
 
-#: ../../reference_manual/blending_modes/mix.rst:177
+#: ../../reference_manual/blending_modes/mix.rst:184
 msgid "Greater"
 msgstr "Större än"
 
-#: ../../reference_manual/blending_modes/mix.rst:181
+#: ../../reference_manual/blending_modes/mix.rst:188
 msgid "This blending mode is called \"Greater\" in English."
 msgstr "Blandningsläget kallas \"Greater\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:183
+#: ../../reference_manual/blending_modes/mix.rst:190
 msgid ""
 "A blending mode which checks whether the painted color is painted with a "
 "higher opacity than the existing colors. If so, it paints over them, if not, "
@@ -329,20 +350,20 @@ msgstr ""
 "ogenomskinlighet än de befintliga färgerna, och om så är fallet målar det "
 "över dem. Om inte, målar det inte alls."
 
-#: ../../reference_manual/blending_modes/mix.rst:188
-#: ../../reference_manual/blending_modes/mix.rst:192
+#: ../../reference_manual/blending_modes/mix.rst:195
+#: ../../reference_manual/blending_modes/mix.rst:199
 msgid "Hard Mix"
 msgstr "Hård blandning"
 
-#: ../../reference_manual/blending_modes/mix.rst:196
+#: ../../reference_manual/blending_modes/mix.rst:203
 msgid "This blending mode is called \"Hard Mix\" in English."
 msgstr "Blandningsläget kallas \"Hard Mix\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:198
+#: ../../reference_manual/blending_modes/mix.rst:205
 msgid "Similar to Overlay."
 msgstr "Liknar Överlagra."
 
-#: ../../reference_manual/blending_modes/mix.rst:200
+#: ../../reference_manual/blending_modes/mix.rst:207
 msgid ""
 "Mixes both Color Dodge and Burn blending modes. If the color of the upper "
 "layer is darker than 50%, the blending mode will be Burn, if not the "
@@ -352,7 +373,7 @@ msgstr ""
 "lagret är mörkare än 50 %, är blandningsläget bränn, om inte är "
 "blandningsläget färgblekning."
 
-#: ../../reference_manual/blending_modes/mix.rst:206
+#: ../../reference_manual/blending_modes/mix.rst:213
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Hard_Mix_Sample_image_with_dots.png"
@@ -360,30 +381,30 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Hard_Mix_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:206
+#: ../../reference_manual/blending_modes/mix.rst:213
 msgid "Left: **Normal**. Right: **Hard Mix**."
 msgstr "Vänster: **Normal**. Höger: **Hårt blandning**."
 
-#: ../../reference_manual/blending_modes/mix.rst:208
-#: ../../reference_manual/blending_modes/mix.rst:212
+#: ../../reference_manual/blending_modes/mix.rst:215
+#: ../../reference_manual/blending_modes/mix.rst:219
 msgid "Hard Mix (Photoshop)"
 msgstr "Hård blandning (Photoshop)"
 
-#: ../../reference_manual/blending_modes/mix.rst:216
+#: ../../reference_manual/blending_modes/mix.rst:223
 msgid "This blending mode is called \"Hard Mix (Photoshop)\" in English."
 msgstr "Blandningsläget kallas \"Hard Mix (Photoshop)\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:218
+#: ../../reference_manual/blending_modes/mix.rst:225
 msgid "This is the Hard Mix blending mode as it is implemented in Photoshop."
 msgstr ""
 "Det här är blandningsläget Hård blandning som det är implementerat i "
 "Photoshop."
 
-#: ../../reference_manual/blending_modes/mix.rst:224
+#: ../../reference_manual/blending_modes/mix.rst:231
 msgid ".. image:: images/blending_modes/mix/Krita_4_0_hard_mix_ps.png"
 msgstr ".. image:: images/blending_modes/mix/Krita_4_0_hard_mix_ps.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:224
+#: ../../reference_manual/blending_modes/mix.rst:231
 msgid ""
 "**Left**: Dots are mixed in with the normal blending mode, on the **Right**: "
 "Dots are mixed in with hardmix."
@@ -391,7 +412,7 @@ msgstr ""
 "**Vänster**: Punkter blandas in med det normala blandningsläget, till "
 "**Höger**: Punkter blandas in med hård blandning."
 
-#: ../../reference_manual/blending_modes/mix.rst:226
+#: ../../reference_manual/blending_modes/mix.rst:233
 msgid ""
 "This add the two values, and then checks if the value is above the maximum. "
 "If so it will output the maximum, otherwise the minimum."
@@ -399,17 +420,17 @@ msgstr ""
 "Det lägger ihop de två värdena och kontrollerar sedan om resultatet är "
 "ovanför maximum. I så fall matas maximum ut, annars minimum."
 
-#: ../../reference_manual/blending_modes/mix.rst:228
-#: ../../reference_manual/blending_modes/mix.rst:232
+#: ../../reference_manual/blending_modes/mix.rst:235
+#: ../../reference_manual/blending_modes/mix.rst:239
 msgid "Hard Mix Softer (Photoshop)"
 msgstr "Hård blandning mjukare (Photoshop)"
 
-#: ../../reference_manual/blending_modes/mix.rst:236
+#: ../../reference_manual/blending_modes/mix.rst:243
 msgid ""
 "This blending mode is called \"Hard Mix Softer (Photoshop)\" in English."
 msgstr "Blandningsläget kallas \"Hard Mix Softer (Photoshop)\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:240
+#: ../../reference_manual/blending_modes/mix.rst:247
 msgid ""
 "This is the Hard Mix blending mode as it is implemented in Photoshop for "
 "texturing brushes. It produces softer edges than the normal *Hard Mix "
@@ -419,7 +440,7 @@ msgstr ""
 "Photoshop för strukturpenslar. Den ger mjukare kanter än det vanliga *Hård "
 "blandning (Photoshop)*."
 
-#: ../../reference_manual/blending_modes/mix.rst:247
+#: ../../reference_manual/blending_modes/mix.rst:254
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Hard_Mix_Softer_Photoshop_Sample_image_with_dots.png"
@@ -427,7 +448,7 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Hard_Mix_Softer_Photoshop_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:247
+#: ../../reference_manual/blending_modes/mix.rst:254
 msgid ""
 "**Left**: Dots are mixed in with the normal blending mode, on the **Right**: "
 "Dots are mixed in with hard mix softer."
@@ -435,7 +456,7 @@ msgstr ""
 "**Vänster**: Punkter blandas in med det normala blandningsläget, till "
 "**Höger**: Punkter blandas in med hård blandning mjukare."
 
-#: ../../reference_manual/blending_modes/mix.rst:249
+#: ../../reference_manual/blending_modes/mix.rst:256
 msgid ""
 "This is like the Inverse Subtract mode but the two terms are scaled up to "
 "increase the contrast. This is not really a Hard Mix mode in the sense that "
@@ -449,16 +470,16 @@ msgstr ""
 "resultatet ser ut som det vanliga *Hård blandning (Photoshop)* men med "
 "mjukare kanter i de flesta fall."
 
-#: ../../reference_manual/blending_modes/mix.rst:253
-#: ../../reference_manual/blending_modes/mix.rst:257
+#: ../../reference_manual/blending_modes/mix.rst:260
+#: ../../reference_manual/blending_modes/mix.rst:264
 msgid "Hard Overlay"
 msgstr "Hård överlagring"
 
-#: ../../reference_manual/blending_modes/mix.rst:261
+#: ../../reference_manual/blending_modes/mix.rst:268
 msgid "This blending mode is called \"Hard Overlay\" in English."
 msgstr "Blandningsläget kallas \"Hard Overlay\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:265
+#: ../../reference_manual/blending_modes/mix.rst:272
 msgid ""
 "Similar to Hard Light but Hard Light use Screen when the value is above 50%. "
 "Divide gives better results than Screen, especially on floating point images."
@@ -466,7 +487,7 @@ msgstr ""
 "Liknar Hårt ljus, men Hårt ljus använder Skärm när värdet är över 50 %. "
 "Dividera ger bättre resultat än Skärm, särskilt för flyttalsbilder."
 
-#: ../../reference_manual/blending_modes/mix.rst:270
+#: ../../reference_manual/blending_modes/mix.rst:277
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Hard_Overlay_Sample_image_with_dots.png"
@@ -474,32 +495,32 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Hard_Overlay_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:270
+#: ../../reference_manual/blending_modes/mix.rst:277
 msgid "Left: **Normal**. Right: **Hard Overlay**."
 msgstr "Vänster: **Normal**. Höger: **Hård överlagring**."
 
-#: ../../reference_manual/blending_modes/mix.rst:272
+#: ../../reference_manual/blending_modes/mix.rst:279
 msgid "Normal (Blending Mode)"
 msgstr "Normal (blandningsläge)"
 
-#: ../../reference_manual/blending_modes/mix.rst:272
+#: ../../reference_manual/blending_modes/mix.rst:279
 msgid "Source Over"
 msgstr "Källa över"
 
-#: ../../reference_manual/blending_modes/mix.rst:276
+#: ../../reference_manual/blending_modes/mix.rst:283
 msgid "Normal"
 msgstr "Normal"
 
-#: ../../reference_manual/blending_modes/mix.rst:280
+#: ../../reference_manual/blending_modes/mix.rst:287
 msgid "This blending mode is called \"Normal\" in English."
 msgstr "Blandningsläget kallas \"Normal\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:282
+#: ../../reference_manual/blending_modes/mix.rst:289
 msgid ""
 "As you may have guessed this is the default Blending mode for all layers."
 msgstr "Som man kan gissa är det standardblandningsläge för alla lager."
 
-#: ../../reference_manual/blending_modes/mix.rst:284
+#: ../../reference_manual/blending_modes/mix.rst:291
 msgid ""
 "In this mode, the computer checks on the upper layer how transparent a pixel "
 "is, which color it is, and then mixes the color of the upper layer with the "
@@ -509,7 +530,7 @@ msgstr ""
 "bildpunkt är, vilken färg den har, och blandar det övre lagrets färg med det "
 "undre lagret proportionellt mot genomskinligheten."
 
-#: ../../reference_manual/blending_modes/mix.rst:289
+#: ../../reference_manual/blending_modes/mix.rst:296
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Normal_50_Opacity_Sample_image_with_dots.png"
@@ -517,25 +538,25 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Normal_50_Opacity_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:289
+#: ../../reference_manual/blending_modes/mix.rst:296
 msgid "Left: **Normal** 100% Opacity. Right: **Normal** 50% Opacity."
 msgstr ""
 "Vänster: **Normal** 100 % ogenomskinlighet. Höger: **Normal** 50 % "
 "ogenomskinlighet."
 
-#: ../../reference_manual/blending_modes/mix.rst:291
+#: ../../reference_manual/blending_modes/mix.rst:298
 msgid "Overlay (Blending Mode)"
 msgstr "Överlagra (blandningsläge)"
 
-#: ../../reference_manual/blending_modes/mix.rst:295
+#: ../../reference_manual/blending_modes/mix.rst:302
 msgid "Overlay"
 msgstr "Överlagra"
 
-#: ../../reference_manual/blending_modes/mix.rst:299
+#: ../../reference_manual/blending_modes/mix.rst:306
 msgid "This blending mode is called \"Overlay\" in English."
 msgstr "Blandningsläget kallas \"Overlay\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:301
+#: ../../reference_manual/blending_modes/mix.rst:308
 msgid ""
 "A combination of the Multiply and Screen blending modes, switching between "
 "both at a middle-lightness."
@@ -543,7 +564,7 @@ msgstr ""
 "En kombination av blandningslägena Multiplicera och Skärm, som byter mellan "
 "de båda vid mittljushet."
 
-#: ../../reference_manual/blending_modes/mix.rst:303
+#: ../../reference_manual/blending_modes/mix.rst:310
 msgid ""
 "Overlay checks if the color on the upper layer has a lightness above 0.5. If "
 "so, the pixel is blended like in Screen mode, if not the pixel is blended "
@@ -553,11 +574,11 @@ msgstr ""
 "Om så är fallet, blandas bildpunkten som i läget Skärm, annars blandas "
 "bildpunkten som i läget Multiplikation."
 
-#: ../../reference_manual/blending_modes/mix.rst:305
+#: ../../reference_manual/blending_modes/mix.rst:312
 msgid "This is useful for deepening shadows and highlights."
 msgstr "Det är användbart för att göra skuggor och dagrar djupare."
 
-#: ../../reference_manual/blending_modes/mix.rst:310
+#: ../../reference_manual/blending_modes/mix.rst:317
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Overlay_Sample_image_with_dots.png"
@@ -565,20 +586,20 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Overlay_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:310
+#: ../../reference_manual/blending_modes/mix.rst:317
 msgid "Left: **Normal**. Right: **Overlay**."
 msgstr "Vänster: **Normal**. Höger: **Överlagra**."
 
-#: ../../reference_manual/blending_modes/mix.rst:312
-#: ../../reference_manual/blending_modes/mix.rst:316
+#: ../../reference_manual/blending_modes/mix.rst:319
+#: ../../reference_manual/blending_modes/mix.rst:323
 msgid "Parallel"
 msgstr "Parallell"
 
-#: ../../reference_manual/blending_modes/mix.rst:320
+#: ../../reference_manual/blending_modes/mix.rst:327
 msgid "This blending mode is called \"Parallel\" in English."
 msgstr "Blandningsläget kallas \"Parallel\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:322
+#: ../../reference_manual/blending_modes/mix.rst:329
 msgid ""
 "This one first takes the percentage in decimals for both layers. It then "
 "adds the two values. Divides 2 by the sum."
@@ -586,7 +607,7 @@ msgstr ""
 "Detta tar först procentvärdet med två decimaler för båda lagren, och adderar "
 "därefter de två värdena. Dividerar summan med 2."
 
-#: ../../reference_manual/blending_modes/mix.rst:329
+#: ../../reference_manual/blending_modes/mix.rst:336
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Parallel_Sample_image_with_dots.png"
@@ -594,20 +615,20 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Parallel_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:329
+#: ../../reference_manual/blending_modes/mix.rst:336
 msgid "Left: **Normal**. Right: **Parallel**."
 msgstr "Vänster: **Normal**. Höger: **Parallel**."
 
-#: ../../reference_manual/blending_modes/mix.rst:331
-#: ../../reference_manual/blending_modes/mix.rst:335
+#: ../../reference_manual/blending_modes/mix.rst:338
+#: ../../reference_manual/blending_modes/mix.rst:342
 msgid "Penumbra A"
 msgstr "Halvskugga A"
 
-#: ../../reference_manual/blending_modes/mix.rst:339
+#: ../../reference_manual/blending_modes/mix.rst:346
 msgid "This blending mode is called \"Penumbra A\" in English."
 msgstr "Blandningsläget kallas \"Penumbra A\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:341
+#: ../../reference_manual/blending_modes/mix.rst:348
 msgid ""
 "Creates a linear penumbra falloff. This means most tones will be in the "
 "midtone ranges."
@@ -615,7 +636,7 @@ msgstr ""
 "Skapar en linjär avtagande halvskugga. Det betyder att de flesta toner är i "
 "medelintervallet."
 
-#: ../../reference_manual/blending_modes/mix.rst:346
+#: ../../reference_manual/blending_modes/mix.rst:353
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Penumbra_A_Sample_image_with_dots.png"
@@ -623,24 +644,24 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Penumbra_A_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:346
+#: ../../reference_manual/blending_modes/mix.rst:353
 msgid "Left: **Normal**. Right: **Penumbra A**."
 msgstr "Vänster: **Normal**. Höger: **Halvskugga A**."
 
-#: ../../reference_manual/blending_modes/mix.rst:348
-#: ../../reference_manual/blending_modes/mix.rst:352
+#: ../../reference_manual/blending_modes/mix.rst:355
+#: ../../reference_manual/blending_modes/mix.rst:359
 msgid "Penumbra B"
 msgstr "Halvskugga B"
 
-#: ../../reference_manual/blending_modes/mix.rst:356
+#: ../../reference_manual/blending_modes/mix.rst:363
 msgid "This blending mode is called \"Penumbra B\" in English."
 msgstr "Blandningsläget kallas \"Penumbra B\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:358
+#: ../../reference_manual/blending_modes/mix.rst:365
 msgid "Penumbra A with source and destination layer swapped."
 msgstr "Halvskugga A med källa och mål utbytta."
 
-#: ../../reference_manual/blending_modes/mix.rst:363
+#: ../../reference_manual/blending_modes/mix.rst:370
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Penumbra_B_Sample_image_with_dots.png"
@@ -648,20 +669,20 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Penumbra_B_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:363
+#: ../../reference_manual/blending_modes/mix.rst:370
 msgid "Left: **Normal**. Right: **Penumbra B**."
 msgstr "Vänster: **Normal**. Höger: **Halvskugga B**."
 
-#: ../../reference_manual/blending_modes/mix.rst:365
-#: ../../reference_manual/blending_modes/mix.rst:369
+#: ../../reference_manual/blending_modes/mix.rst:372
+#: ../../reference_manual/blending_modes/mix.rst:376
 msgid "Penumbra C"
 msgstr "Halvskugga C"
 
-#: ../../reference_manual/blending_modes/mix.rst:373
+#: ../../reference_manual/blending_modes/mix.rst:380
 msgid "This blending mode is called \"Penumbra C\" in English."
 msgstr "Blandningsläget kallas \"Penumbra C\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:375
+#: ../../reference_manual/blending_modes/mix.rst:382
 msgid ""
 "Creates a penumbra-like falloff using arc-tangent formula. This means most "
 "tones will be in the midtone ranges."
@@ -669,7 +690,7 @@ msgstr ""
 "Skapar en avtagande halvskugga med användning av en arcus tangens formel. "
 "Det betyder att de flesta toner är i medelintervallet."
 
-#: ../../reference_manual/blending_modes/mix.rst:380
+#: ../../reference_manual/blending_modes/mix.rst:387
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Penumbra_C_Sample_image_with_dots.png"
@@ -677,24 +698,24 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Penumbra_C_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:380
+#: ../../reference_manual/blending_modes/mix.rst:387
 msgid "Left: **Normal**. Right: **Penumbra C**."
 msgstr "Vänster: **Normal**. Höger: **Halvskugga C**."
 
-#: ../../reference_manual/blending_modes/mix.rst:382
-#: ../../reference_manual/blending_modes/mix.rst:386
+#: ../../reference_manual/blending_modes/mix.rst:389
+#: ../../reference_manual/blending_modes/mix.rst:393
 msgid "Penumbra D"
 msgstr "Halvskugga D"
 
-#: ../../reference_manual/blending_modes/mix.rst:390
+#: ../../reference_manual/blending_modes/mix.rst:397
 msgid "This blending mode is called \"Penumbra D\" in English."
 msgstr "Blandningsläget kallas \"Penumbra D\" på engelska."
 
-#: ../../reference_manual/blending_modes/mix.rst:392
+#: ../../reference_manual/blending_modes/mix.rst:399
 msgid "Penumbra C with source and destination layer swapped."
 msgstr "Halvskugga C med källa och mål utbytta."
 
-#: ../../reference_manual/blending_modes/mix.rst:397
+#: ../../reference_manual/blending_modes/mix.rst:404
 msgid ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Penumbra_D_Sample_image_with_dots.png"
@@ -702,9 +723,16 @@ msgstr ""
 ".. image:: images/blending_modes/mix/"
 "Blending_modes_Penumbra_D_Sample_image_with_dots.png"
 
-#: ../../reference_manual/blending_modes/mix.rst:397
+#: ../../reference_manual/blending_modes/mix.rst:404
 msgid "Left: **Normal**. Right: **Penumbra D**."
 msgstr "Vänster: **Normal**. Höger: **Halvskugga D**."
+
+#~ msgid ""
+#~ "As far as I can tell this seems to premultiply the alpha, as is common in "
+#~ "some file-formats."
+#~ msgstr ""
+#~ "Så vitt jag kan se, verkar det multiplicera alfa i förväg, som är vanligt "
+#~ "i vissa filformat."
 
 #~ msgid "Hard OVerlay"
 #~ msgstr "Hård överlagring"
