@@ -39,7 +39,12 @@ Brush Speed Smoothing
     With some devices the speed samples can be very erratic. This can be reduced by instead of using each sample on its own, several samples are compared to find a smoother value. This controls how many speed samples should be taken into account. Note that too many samples can result in the loss of subtle speed changes.
 
     .. versionadded:: 5.1
-    
+
+Pen Tilt Direction Offset
+    This lets you adjust the reported pen tilt direction by a fixed amount in either the left or the right direction. It may be useful to change how the brush tip rotation feels based on your hand preference, or if your pointing device does not support tilt and the default brush tip rotation does not work well for you.
+
+    .. versionadded:: 5.3
+
 For Krita 3.3 or later:Tablet Input API
     On Windows 8 or above only.
 

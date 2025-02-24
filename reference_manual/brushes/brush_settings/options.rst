@@ -52,7 +52,27 @@ Some examples of mirroring and using it in combination with :ref:`option_rotatio
 Rotation
 --------
 
-This allows you to affect Angle of your brush tip with Sensors.
+The final brush tip rotation depends on the enabled Rotation Sensors. Let's first review the basic behavior of the brush tip with an example brush that uses the text "BRUSH" as the brush tip texture. If no Sensors are presnet, and the brush tip rotation is 0 degrees, the brush looks like this:
+
+.. image:: /images/brushes/brush_tip_rotation_0.png
+
+As the brush tip rotation is increased, the tip rotates counter-clockwise:
+
+.. image:: /images/brushes/brush_tip_rotation_30.png
+
+When a Rotation Sensor is enabled, it adds its angle contribution to the base tip angle shown above. Particularly, if a tilt direction Sensor is enabled on a brush with 0 degrees rotation, the brush tip will appear rotated 90 degrees clockwise:
+
+.. image:: /images/brushes/brush_tip_rotation_0_tilt_direction.png
+
+This rotation is the *neutral point* of the pen tilt, and corresponds to the pen being held in the right hand at a 3 o'clock position. Additionally, this neutral point is used if the pen is reporting zero tilt (in X and Y directions), or if it's lifted too far from the tablet surface.
+
+.. note:: For left-handed users, there's an option to adjust the global tilt offset in the :ref:`Tablet Settings <tablet_settings>`. To get the same neutral point rotation but with the left hand, the global tilt offset should be set to 180 degrees.
+
+To get a natural looking brush tip with the tilt direction Sensor enabled, the brush tip rotation angle needs to be adjusted by 90 degrees:
+
+.. image:: /images/brushes/brush_tip_rotation_90_tilt_direction.png
+
+In addition to the basic tilt direction described above, there are many other Rotation Sensors available that allow for a variety of effects.
 
 .. image:: /images/brushes/Krita_2_9_brushengine_rotation.png
 
