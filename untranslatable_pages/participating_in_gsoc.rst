@@ -46,9 +46,9 @@ How to create a proper proposal?
 +++++++++++++++++++++++++++++++++
 * Divide your proposal into separate sections as directed by the KDE `student proposal guidelines <https://community.kde.org/GSoC#Student_proposal_guidelines>`_.
 * The most important parts are the Goals, Implementation and the Timeline, pay attention to them.
-* Goals are the requirements of the project, the features introduced and the bug fixed from the perspective of an user.
+* Goals are the requirements of the project, the features introduced and the bug fixed from the perspective of a user.
 * Implementation, as the name says should tell us how are you going to implement the requirements. Put the classes or methods you are going to use, mockups of the UIs here.
-* TimeLine would indicate how much time would you devote behind each feature you would be working on. Beware this would later become the yardstick for evaluations.
+* Timeline would indicate how much time would you devote behind each feature you would be working on. Beware this would later become the yardstick for evaluations.
 
 Tips:
 
