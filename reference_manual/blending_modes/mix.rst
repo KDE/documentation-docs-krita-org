@@ -8,6 +8,7 @@
              - Maria Luisac
              - Reptorian <reptillia39@live.com>
              - Deif Lou <ginoba@gmail.com>
+             - Carsten Hartenfels <carsten.hartenfels@pm.me>
    :license: GNU free documentation license 1.3 or later.
 
 
@@ -86,6 +87,9 @@ making the stroke look smooth, without circular pattern that you can see in "Bui
 .. hint:: In Alpha Darken mode the blending of the **color** channels happens without taking Opacity or Flow
    values into account. They are blended as if Opacity and Flow were set to 100%. Only blending of the **alpha** channel
    uses Opacity and flow values.
+
+   For technical reasons, this mode does not adhere to alpha lock or inherit alpha and may cause color artifacts when you use it
+   as a brush or layer mode. The `Marker`_ or `Greater`_ modes are likely a better choice.
 
 .. figure:: /images/blending_modes/mix/Blending_modes_Alpha_Darken_Sample_image_with_dots.png
    :align: center
@@ -189,6 +193,8 @@ Greater
 
 A blending mode which checks whether the painted color is painted with a higher opacity than the existing colors. If so, it paints over them, if not, it doesn't paint at all.
 
+A similar mode is `Marker`_, which has the same behavior in regards to opacity, but will always mix the colors.
+
 .. image:: /images/blending_modes/mix/Greaterblendmode.gif
    :align: center
 
@@ -275,6 +281,27 @@ Similar to Hard Light but Hard Light use Screen when the value is above 50%. Div
    :align: center
 
    Left: **Normal**. Right: **Hard Overlay**.
+
+.. index:: ! Marker
+.. _bm_marker:
+
+Marker
+~~~~~~
+
+.. only:: non_english
+
+   .. hint:: This blending mode is called "Marker" in English.
+
+.. versionadded:: 5.3
+
+Marker is similar to `Alpha Darken`_, but adheres to alpha lock/inherit alpha and interpolates between colors cleanly. It's most
+useful when you use it on a brush in "Build-Up" mode painting mode, wheere it will only increase the opacity on your layer if the
+opacity of your stroke is higher and mixes the colors, like the marker tool in Paint Tool SAI.
+
+It's also conceptually similar to `Greater`_, which in turn only mixes the colors if your stroke's opacity is higher.
+
+.. hint:: The Opacity and Flow behavior is identical to `Alpha Darken`_, they only affect the blending of the **alpha** channel,
+   but the **color** channels are blended as if they were set to 100%.
 
 .. index:: ! Normal (Blending Mode), Source Over
 .. _bm_normal:
