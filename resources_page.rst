@@ -21,6 +21,9 @@
 Resources
 #########
 
+Note that, in addition to the resources listed below, the `"Resources" category of krita-artists.org <https://krita-artists.org/c/resources/10/l/top>`_ is probably the best place to find new brush packs, textures, and other Krita resources. The community is very active and is always adding new and interesting content.
+
+Additionally, the `official Krita YouTube channel <https://www.youtube.com/@KritaOrgPainting>`_ often features new brush packs, complete with demos and free downloads.
 
 Brush Packs
 ===========
