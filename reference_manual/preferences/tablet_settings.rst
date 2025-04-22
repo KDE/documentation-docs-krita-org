@@ -100,6 +100,8 @@ The blue line represents the tablet events. The tablet events only show up when 
 
 When you draw a line, the output on the right will show all sorts of text output. This text output can be attached to a help request or a bug report to figure out what is going on.
 
+Note that the Tablet Tester **does not** take into account any tablet configuration changes you might have made in Krita, for example with the "Input Pressure Global Curve". It only displays the **raw events** directly from the tablet.
+
 External Links
 --------------
 
