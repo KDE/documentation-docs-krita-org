@@ -52,7 +52,10 @@ Some examples of mirroring and using it in combination with :ref:`option_rotatio
 Rotation
 --------
 
-The final brush tip rotation depends on the enabled Rotation Sensors. Let's first review the basic behavior of the brush tip with an example brush that uses the text "BRUSH" as the brush tip texture. If no Sensors are presnet, and the brush tip rotation is 0 degrees, the brush looks like this:
+Brush Tip Angle
+~~~~~~~~~~~~~~~
+
+The final brush tip rotation depends on the enabled Rotation Sensors. Let's first review the basic behavior of the brush tip with an example brush that uses the text "BRUSH" as the brush tip texture. If no Sensor is active, and the brush tip rotation is 0 degrees, the brush looks like this:
 
 .. image:: /images/brushes/brush_tip_rotation_0.png
 
@@ -60,19 +63,61 @@ As the brush tip rotation is increased, the tip rotates counter-clockwise:
 
 .. image:: /images/brushes/brush_tip_rotation_30.png
 
-When a Rotation Sensor is enabled, it adds its angle contribution to the base tip angle shown above. Particularly, if a tilt direction Sensor is enabled on a brush with 0 degrees rotation, the brush tip will appear rotated 90 degrees clockwise:
+When the Rotation option is enabled, it adds its angle contribution to the base tip angle shown above.
+Though the way how each sensor affects the brush rotation is different.
 
-.. image:: /images/brushes/brush_tip_rotation_0_tilt_direction.png
+Pressure sensor
+~~~~~~~~~~~~~~~
 
-This rotation is the *neutral point* of the pen tilt, and corresponds to the pen being held in the right hand at a 3 o'clock position. Additionally, this neutral point is used if the pen is reporting zero tilt (in X and Y directions), or if it's lifted too far from the tablet surface.
+For the Pressure sensor, the original non-rotated brush state is linked to the pressure value of 50%. When the user increases the pressure,
+the brush rotation increases (i.e. rotates counter-clockwise). When the user decreases the pressure, the brush rotation
+decreases (i.e. rotates clockwise).
 
-.. note:: For left-handed users, there's an option to adjust the global tilt offset in the :ref:`Tablet Settings <tablet_settings>`. To get the same neutral point rotation but with the left hand, the global tilt offset should be set to 180 degrees.
+Most of the sensors behave like the Pressure sensor, i.e. non-rotated state is at sensor value of 50%, increasing the sensor value increases
+the rotation, decreasing the sensor value decreases the rotation.
 
-To get a natural looking brush tip with the tilt direction Sensor enabled, the brush tip rotation angle needs to be adjusted by 90 degrees:
+There are two notable exceptions to this rule: Tilt Direction and Drawing Angle sensors.
+
+Tilt Direction
+~~~~~~~~~~~~~~
+
+Tilt Direction sensor is linked to the physical direction of the stylus in space. It links the vertical axis of the brush to the direction of the stylus:
+
+.. image:: /images/brushes/brush_tip_rotation_tilt_direction_anchor_0.png
+.. image:: /images/brushes/brush_tip_rotation_tilt_direction_anchor_30.png
+.. image:: /images/brushes/brush_tip_rotation_tilt_direction_anchor_60.png
+
+When Krita cannot detect stylus' tilt direction, it puts the brush into *neutral position*. The *neutral position* of the pen tilt corresponds to the pen being held in the right hand at a 3 o'clock position
+
+.. image:: /images/brushes/brush_tip_rotation_tilt_direction_anchor_mouse.png
+
+The neutral position is used in one of the following cases:
+
+* the stylus stands strictly vertically
+* the tablet device doesn't support tilt
+* the mouse is used (which doesn't support tilt either)
+
+.. note:: For left-handed users, there's an option to adjust the global tilt offset in the :ref:`Tablet Settings <tablet_settings_tilt_direction_offset>`. To get the same neutral point rotation but with the left hand, the global tilt offset should be set to 180 degrees.
+
+To get a natural looking brush tip with the Tilt Direction sensor enabled, the brush tip rotation angle needs to be set to 90 degrees:
 
 .. image:: /images/brushes/brush_tip_rotation_90_tilt_direction.png
 
-In addition to the basic tilt direction described above, there are many other Rotation Sensors available that allow for a variety of effects.
+Drawing Angle
+~~~~~~~~~~~~~
+
+Drawing Angle sensor is commonly used in combination with rake-type brushes. It is especially useful because it does not rely on tablet-specific sensors.
+
+In contrast to Tilt Direction it links the **horizontal** axis of the brush to the direction of the direction of the painting stroke:
+
+.. image:: /images/brushes/brush_tip_rotation_drawing_angle_anchor_0.png
+.. image:: /images/brushes/brush_tip_rotation_drawing_angle_anchor_30.png
+.. image:: /images/brushes/brush_tip_rotation_drawing_angle_anchor_60.png
+
+Other sensors
+~~~~~~~~~~~~~
+
+In addition to the sensors discussed above, there are many other Rotation Sensors available that allow for a variety of effects.
 
 .. image:: /images/brushes/Krita_2_9_brushengine_rotation.png
 
@@ -80,7 +125,6 @@ In addition to the basic tilt direction described above, there are many other Ro
 
 In the above example, several applications of the parameter.
 
-#. Drawing Angle -- A common one, usually used in combination with rake-type brushes. Especially effect because it does not rely on tablet-specific sensors. Sometimes, Tilt-Direction or Rotation is used to achieve a similar-more tablet focused effect, where with Tilt the 0° is at 12 o'clock, Drawing angle uses 3 o'clock as 0°.
 #. Fuzzy -- Also very common, this gives a nice bit of randomness for texture.
 #. Distance -- With careful editing of the Sensor curve, you can create nice patterns.
 #. Fade -- This slowly fades the rotation from one into another.
