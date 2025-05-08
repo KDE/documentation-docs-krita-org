@@ -29,7 +29,7 @@ First make sure you have Docker installed
 
 .. code::
 
-    sudo apt install docker docker.io
+    sudo apt install docker.io
 
 Decide where you want to store your Docker images. All the docker images and containers are by default stored in a special docker-daemon controlled folder under */var* directory. You might not have enough space there for building Krita (it needs about 10 GiB). In such a case it is recommended to move the docker images
 folder into another location, where there is enough space.
