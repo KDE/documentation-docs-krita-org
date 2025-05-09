@@ -110,6 +110,13 @@ You need to manually set up a few environment variables and folders
 Then create the build directory and enter it (don't change the location, since it
 is tightly linked to ``$KDECI_WORKDIR_PATH`` in the packaging scripts)
 
+.. warning::
+
+    Do **not** try to build without setting ``KDECI_WORKDIR_PATH``, i.e. in the
+    source tree, like we do on other platforms. It will not work! ``androiddeployqt``
+    will skip all the Qt's QML modules since "they are in the source tree, hence are
+    not needed as dependencies"
+
 .. code::
 
     mkdir -p /home/appimage/appimage-workspace/krita/_build
