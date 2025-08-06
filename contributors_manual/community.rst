@@ -36,6 +36,7 @@ You’ll find that there are a number of people are almost always around: the co
 * Wolthera (irc: Wolthera_laptop): developer, writes the manual and tutorials, triages bugs, helps people out. Works full-time on Krita.
 * Ivan Yossi (irc: ivanyossi|log): developer. Works full-time on Krita.
 * Agata Cacko (irc: tiar): developer, user supporter. Works full-time on Krita. Also on reddit as u/-tiar- .
+* Emmet O'Neil (irc: emmetpdx): developer, works mostly on animation. Works full-time on Krita.
 * Scott Petrovic (irc: scottyp): UX designer, developer, webmaster.
 * David Revoy (irc: deevad): expert user, creates Pepper & Carrot, maintains the preset bundle.
 * Alvin Wong (irc: windragon): windows guru.
