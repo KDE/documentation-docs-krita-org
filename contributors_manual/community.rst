@@ -17,10 +17,9 @@ The Krita Community
 
 Get in touch! Apart from the website at https://www.krita.org, the Krita project has several main communication channels:
 
-* Internet Relay Chat (IRC)
+* Internet Relay Chat (IRC) or webchat.kde.org
 * The mailing list
 * GitLab (KDE Invent)
-* Phabricator
 * Krita Artists community forum
 
 While Krita developers and users are present on social media such as Twitter, Mastodon, Reddit, Google+, Tumblr or Facebook, those are not the place where we discuss new features, bugs, development or where we make plans for the future.
@@ -53,7 +52,7 @@ The Krita Foundation was created to support development of Krita. The Krita Foun
 Internet Relay Chat
 -------------------
 
-IRC is the main communication channel. There are IRC clients for every operating system out there, as well as a web client on the krita website.
+IRC is the main communication channel. There are IRC clients for every operating system out there.
 
 * Joining IRC: connect to Libera.Chat, select a unique nickname and join the #krita and ##krita-chat channels. #krita is for on-topic talk, ##krita-chat for off-topic chat.
 * Don’t ask to ask: if you’ve got a question, just ask it.
@@ -91,14 +90,6 @@ GitLab serves the following purposes for the Krita team:
 
 **Do** put all your code submissions (merge requests) on GitLab. **Do not** attach patches to bugs in the bug tracker.
 
-Phabricator
------------
-
-Phabricator serves the following purposes for the Krita team:
-
-* Track what we are working on: https://phabricator.kde.org/maniphest/ This includes development tasks, designing new features and UX design, as well as tasks related to the website.
-
-**Do not** report bugs as tasks on Phabricator. Phabricator is where we organize our work.
 
 Krita Artists
 -------------
