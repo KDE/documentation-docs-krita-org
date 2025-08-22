@@ -17,7 +17,7 @@ Krita is, together with many other projects, part of the KDE community. Therefor
 
 The bug tracker contains two kinds of reports: bugs and wishes. Bugs are errors in Krita's code that interrupt using Krita. Wishes are feature requests: the reporter thinks some functionality is missing or would be cool to have.
 
-Do not just create a feature request in the bug tracker: follow `Feature Requests <https://krita.org/en/item/ways-to-help-krita-work-on-feature-requests/>`_ to learn how to create a good feature request.
+Do not just create a feature request in the bug tracker: follow `Feature Requests <https://docs.krita.org/en/untranslatable_pages/new_features.html>`_ to learn how to create a good feature request.
 
 This guide will help you create a good bug report. If you take the time to create a good bug report, you have a much better chance of getting a developer to work on the issue. If there is not enough information to work with, or if the bug report is unreadable, a developer will not be able to understand and fix the issue.
 
