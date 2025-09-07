@@ -301,7 +301,7 @@ Imagine Board
 
     - Directory images can be filtered by Keywords then displayed in Preview, Grid or Slide-Show.
     - Reference board uses Pins from various sources and can bind them to the KRA save file.
-    - Function>> can preform File Management operations using a standard nomenclature.
+    - Function>> can perform File Management operations using a standard nomenclature.
     - Includes other small utilities and support to KRA, GIF/WEBP and SVG file formats.
 
     https://github.com/EyeOdin/imagine_board

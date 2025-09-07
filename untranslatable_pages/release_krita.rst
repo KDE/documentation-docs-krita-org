@@ -131,7 +131,7 @@ places to keep CI infrastructure working properly:
 
 #. Documentation branch (discuss with the documentation team first!): https://invent.kde.org/documentation/docs-krita-org
 
-#. Notify translators about the tranlsations branch switch!
+#. Notify translators about the translations branch switch!
 
 #. Update the link to "Krita Plus" ZSync channel in ``build-tools/ci-scripts/show-updates-status.py`` script
 

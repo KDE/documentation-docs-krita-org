@@ -67,7 +67,7 @@ Lock
 
 Arrange
     A drop-down menu which provides options for changing `View` and `Mode` settings. These settings change the 
-    arrangement of scenes withhin the docker. For additional details, see :ref:`storyboard_views_and_modes`
+    arrangement of scenes within the docker. For additional details, see :ref:`storyboard_views_and_modes`
 
     .. image:: /images/dockers/Storyboard_arrange.png
 

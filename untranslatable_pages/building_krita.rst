@@ -218,8 +218,8 @@ Building on macOS
 
 We will build Krita on macOS with the same scripts that are used to build the nightly builds and the releases. We will *NOT* be building krita from within XCode, but from within the terminal.
 
-Prequisites
-~~~~~~~~~~~
+Prerequisites
+~~~~~~~~~~~~~
 
 You will need to install:
 
@@ -259,7 +259,7 @@ Now fetch Krita sources, build scripts and set up virtual environment for Python
     git clone https://invent.kde.org/packaging/krita-deps-management.git krita-deps-management --depth=1
     git clone https://invent.kde.org/packaging/krita-ci-utilities.git krita-deps-management/ci-utilities --depth=1
 
-    # create venv environemnt for running build scripts
+    # create venv environment for running build scripts
     python3 -m venv $BUILDROOT/venv --upgrade-deps
     source $BUILDROOT/venv/bin/activate
     pip install -r krita-deps-management/requirements.txt
@@ -295,7 +295,7 @@ The script will generate the following environment for you:
     * ``$BUILDROOT/krita/env`` --- a script for build environment activation
     * ``$BUILDROOT/krita/env_deactivate`` --- a script for build environment de-activation
 
-The steps above should be done only once when you set up the environement for the first time. Next time
+The steps above should be done only once when you set up the environment for the first time. Next time
 you open the console you should just source the env-file at ``$BUILDROOT/krita/env``, you don't have to 
 repeat all these steps with craft and python's environment.
 
@@ -374,7 +374,7 @@ To test signing with ``rcodesign`` use our standard docker container:
     ./bin/sudoenter
     apt install rust-1.80-all
 
-    # install rcodesign as non-priviliged `appimage` user
+    # install rcodesign as non-privileged `appimage` user
     ./bin/enter
     cargo-1.80 install apple-codesign
     prepend PATH /home/appimage/.cargo/bin
@@ -392,7 +392,7 @@ Now ``./signed.app`` has all the files signed. In the next step our CI copies th
 
     cp -r ./signed.app ~/persistent/krita.app/
 
-I don't really know why it was originaly planned, but it allows catching cases when ``rcodesign`` silently drops the files from the signed package
+I don't really know why it was originally planned, but it allows catching cases when ``rcodesign`` silently drops the files from the signed package
 (copying the files back will leave some files unsigned, and therefore fail the following verification step).
 
 To verify the final package you need to use a real MacOS device:

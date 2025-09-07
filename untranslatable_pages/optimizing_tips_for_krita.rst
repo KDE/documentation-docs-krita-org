@@ -96,7 +96,7 @@ Do:
 
         }
 
-It might seems insignificant, but really it's not, on a loop of a milion of 
+It might seems insignificant, but really it's not, on a loop of a million
 iterations, this is expensive as hell.
 
 An other example:
@@ -162,4 +162,4 @@ Links
 
 * `Design for Performance <https://es.scribd.com/document/53483851/Design-for-Performance>`_: great read about performance optimization (aimed at game developers, but many tricks apply for Krita).
 * `TCMalloc <http://goog-perftools.sourceforge.net/doc/tcmalloc.html>`_: a malloc replacement which make faster allocation of objects by caching some reserved part of the memory.
-* `Optmizing CPP <http://www.agner.org/optimize/optimizing_cpp.pdf>`_: extensive manual on writing optimized code.
+* `Optimizing CPP <http://www.agner.org/optimize/optimizing_cpp.pdf>`_: extensive manual on writing optimized code.

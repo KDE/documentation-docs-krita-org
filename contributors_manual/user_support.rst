@@ -28,7 +28,7 @@ Introduction to User Support
 .. + animation (how to debug)
 
 .. + crashes
-.. + advices
+.. + advice
 .. useful links to quickly answer people
 
 
@@ -136,7 +136,7 @@ In case of crash try to determine if the problem is known, if not, instruct user
 
 #. Is it possible to reproduce (repeat)? If yes, provide a step-by-step instruction to get the crash.
 
-#. Backtrace (crashlog) -- the instruction for Windows is here: :ref:`dr_minw`, and the debug symbols can be found in the annoucement of the version of Krita that the user has. But it could be easier to just point the user to `https://download.kde.org/stable/krita <https://download.kde.org/stable/krita>`_.
+#. Backtrace (crashlog) -- the instruction for Windows is here: :ref:`dr_minw`, and the debug symbols can be found in the announcement of the version of Krita that the user has. But it could be easier to just point the user to `https://download.kde.org/stable/krita <https://download.kde.org/stable/krita>`_.
 
 
 Other possible questions with quick solutions
@@ -151,7 +151,7 @@ Other possible questions with quick solutions
          Telling people to disable canvas acceleration to get better performance is something we shouldn't do, ever.
 
 
-Advices for supporters
+Advice for supporters
 ----------------------
 
 #. If you don't understand the question, ask for clarification -- asking for a screen recording or a screenshot is perfectly fine.

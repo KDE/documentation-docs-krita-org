@@ -69,7 +69,7 @@ The following options have an option for :guilabel:`Include Contour Regions`, wh
    Topleft: :guilabel:`Regions of a Specific Color` set to cream white, topright: :guilabel:`Transparent Regions`, bottom: :guilabel:`Regions of a specific color or transparent`.
 
 Regions of a Specific Color.
-    Only regions that are a specific color will be filled. If you have a complex image where separate figures have their whole silhouette in a seperate color, this can be used to only affect the silhouette of a single figure.
+    Only regions that are a specific color will be filled. If you have a complex image where separate figures have their whole silhouette in a separate color, this can be used to only affect the silhouette of a single figure.
 Transparent Regions.
     Only regions that are transparent will be filled. Useful for filling a line art.
 Regions of a specific color or transparent.

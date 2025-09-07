@@ -46,14 +46,14 @@ Even though all groups had the same assignment, each group's result looks differ
    :align: center
 
 
-Group 1 had vermillion red, citron yellow and ultramarine blue to their disposal. This means their triangle looks nice and red, but their circle's green is muddy. This is because ultramarine is too dark of a blue to create nice greens with.
+Group 1 had vermilion red, citron yellow and ultramarine blue to their disposal. This means their triangle looks nice and red, but their circle's green is muddy. This is because ultramarine is too dark of a blue to create nice greens with.
 
 .. figure:: /images/color_category/Krita_2_9_colormanagement_group2.png
    :figwidth: 500
    :align: center
 
 
-Group 2 had magenta red, citron yellow and cerulean blue. Magenta is a type of red that is closer to pink, opposed to vermillion, which is closer to orange. However, their green looks nice because cerulean is a much lighter blue.
+Group 2 had magenta red, citron yellow and cerulean blue. Magenta is a type of red that is closer to pink, opposed to vermilion, which is closer to orange. However, their green looks nice because cerulean is a much lighter blue.
 
 
 .. figure:: /images/color_category/Krita_2_9_colormanagement_group3.png
@@ -61,14 +61,14 @@ Group 2 had magenta red, citron yellow and cerulean blue. Magenta is a type of r
    :align: center
 
 
-Group 3 had vermillion red, citron yellow, emerald green and cerulean blue. They didn't mix their green, and thus ended up with a purer color.
+Group 3 had vermilion red, citron yellow, emerald green and cerulean blue. They didn't mix their green, and thus ended up with a purer color.
 
 .. figure:: /images/color_category/Krita_2_9_colormanagement_group4.png
    :figwidth: 500
    :align: center
 
 
-Finally, group 4 has vermillion red, citron yellow and cerulean blue. Their colors probably look like what you imagined.
+Finally, group 4 has vermilion red, citron yellow and cerulean blue. Their colors probably look like what you imagined.
 
 Now, these are kindergarteners, so this isn't the largest problem in the world. However, imagine that something like this happened at a printing company? Imagine four printers printing the same magazine with wildly different results? That would be disastrous!
 

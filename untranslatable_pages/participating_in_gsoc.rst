@@ -72,7 +72,7 @@ Done with the proposal, what should I do now?
 +++++++++++++++++++++++++++++++++++++++++++++
 * Try fixing some more bugs or implement a wishlist item.
 * If anything is missing from the manual, do make a Merge Request to it.
-* Help other students with their proposal, GSoC is not a competetion.
+* Help other students with their proposal, GSoC is not a competition.
 
 ++++++++++++++++++++++++
 I am selected what now?

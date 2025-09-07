@@ -50,7 +50,7 @@ more interesting strokes.
 Supported Tablets
 -----------------
 
-Suporting tablets is the job of the operating system. If the tablet drivers are implemented correctly, and, on Windows, the correct protocol (WinTab/Windows 8 Pointer API) is used, the tablet will work.
+Supporting tablets is the job of the operating system. If the tablet drivers are implemented correctly, and, on Windows, the correct protocol (WinTab/Windows 8 Pointer API) is used, the tablet will work.
 
 If you're looking for information about iPad or Android tablets, :ref:`look here <krita_android>`.
 

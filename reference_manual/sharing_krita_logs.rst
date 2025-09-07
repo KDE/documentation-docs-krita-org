@@ -333,7 +333,7 @@ To get the text output of Krita on Windows using the graphical program, you need
 
 #. `Download DebugView <https://docs.microsoft.com/en-us/sysinternals/downloads/debugview>`_ if you haven't already. Click on the blue bold :guilabel:`Download DebugView` text with underline, downloading should start immediately.
 
-#. The file you download is a .zip archive. Windows 10 has a zip archive opener already included. Just extract all of the files somewhere. You can learn more about extracing on `Windows extracting manual page <https://support.microsoft.com/en-us/help/4028088/windows-zip-and-unzip-files>`_.
+#. The file you download is a .zip archive. Windows 10 has a zip archive opener already included. Just extract all of the files somewhere. You can learn more about extracting on `Windows extracting manual page <https://support.microsoft.com/en-us/help/4028088/windows-zip-and-unzip-files>`_.
 
 #. There is a file inside the archive that is called :file:`DbgView.exe` (which you can see as :file:`DbgView`, depending on your system settings). Double-click on it.
 

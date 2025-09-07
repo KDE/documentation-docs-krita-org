@@ -92,7 +92,7 @@ Auto levels is a quick way to adjust tone of an image. You can update the levels
 * :guilabel:`Midtones`: In this group of widgets you can select how the midtones are enhanced.
 
     * :guilabel:`Method`: here you can choose not to enhance the midtones or a method to find the midtone point of the image using the median or the mean of the histogram.
-    * :guilabel:`Amount`: with this parameter you can choose how much the final midtone point used to adjust the image differs from the center of the histogram. If you choose 0% then the center of the histogram is used as midtone point (which means no correction except for the output color). If you choose 100% then the median or mean is used (depending on the method selected). And if you choose a value inbetween then a midtone point between those is used by linearly interpolating them.
+    * :guilabel:`Amount`: with this parameter you can choose how much the final midtone point used to adjust the image differs from the center of the histogram. If you choose 0% then the center of the histogram is used as midtone point (which means no correction except for the output color). If you choose 100% then the median or mean is used (depending on the method selected). And if you choose a value in between then a midtone point between those is used by linearly interpolating them.
     * :guilabel:`Color`: allows you to choose which color should be used for the output midtones.
     
 If you want to change the settings later you can click on the :guilabel:`Create Filter Mask` button to add the levels as a filter mask.

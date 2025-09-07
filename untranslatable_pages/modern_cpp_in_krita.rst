@@ -183,7 +183,7 @@ Recommendation:
 ~~~~~~~~~~~
 
 Motivation:
-    A handwritten loop that looks for occurences of the number 20 and replaces it with 99 is routine, and will take several lines to write, including defining local variables. Instead, something like
+    A handwritten loop that looks for occurrences of the number 20 and replaces it with 99 is routine, and will take several lines to write, including defining local variables. Instead, something like
 
     .. code:: cpp
 

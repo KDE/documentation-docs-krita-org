@@ -141,7 +141,7 @@ There are two important switches that are unique to Android platform:
    scripts cannot search in separate directories.
 
 2) ``CMAKE_TOOLCHAIN_FILE`` should point to a special toolchain file that will read
-   custom environment variables (pre-set in the docker containter) and locates
+   custom environment variables (pre-set in the docker container) and locates
    SDK and NDK paths.
 
 3) Enable ``ANDROID_ENABLE_STDIO_FORWARDING`` to get proper logging in 'logcat'. This
@@ -209,9 +209,9 @@ of `android studio page <https://developer.android.com/studio>`__.
 Download and extract the tools into ``$ANDROID_ROOT``.
 
 .. hint::
-    Theoretocally, you can try installing the whole Android Studio and configure
+    Theoretically, you can try installing the whole Android Studio and configure
     everything within the Studio itself, but this way is not supported currently 
-    (noone just tried that).
+    (no one just tried that).
 
     If you go with the Android Studio approach then open SDK manager and download 
     ``Android SDK Build-Tools`` (`more info in the official documentation 
@@ -281,7 +281,7 @@ Install SDKs and build tools:
 .. hint::
 
     Krita's current minimal API-level is ``android-23``. We can theoretically 
-    install the latest avalable SDK and NDK that still supports this API-level. Though
+    install the latest available SDK and NDK that still supports this API-level. Though
     we update not that often, so our versions may drag a little behind.
 
     The backwards compatibility of NDK and SDK can be checked here:
@@ -368,7 +368,7 @@ Set up working directory and environment:
 
 .. note::
 
-    Next time you enter the environment, you just neet to perform the latest
+    Next time you enter the environment, you just need to perform the latest
     environment set up using ``source ./env``. It will activate all your manual
     configurations as well, like Python's ``venv``, ``KDECI_ANDROID_SDK_ROOT`` 
     and ``KDECI_ANDROID_ABI``.
@@ -393,7 +393,7 @@ There are two important switches that are unique to Android platform:
    scripts cannot search in separate directories.
 
 2) ``CMAKE_TOOLCHAIN_FILE`` should point to a special toolchain file that will read
-   custom environment variables (pre-set in the docker containter) and locates
+   custom environment variables (pre-set in the docker container) and locates
    SDK and NDK paths.
 
 3) Enable ``ANDROID_ENABLE_STDIO_FORWARDING`` to get proper logging in 'logcat'. This
@@ -512,7 +512,7 @@ and edit the following values:
     # increase the amount of RAM available for the device
     hw.ramSize=4096M
 
-    # set up teh SD card
+    # set up the SD card
     sdcard.size=512 MB
     sdcard.path=<path to your sd card>/sdcard.img
 
@@ -531,7 +531,7 @@ Install Krita on the device:
 
     adb install ./krita-x86_64-5.2.0-prealpha-debug.apk
 
-When the container it not needed anymore, it can be removed with the follwoing command:
+When the container it not needed anymore, it can be removed with the following command:
 
 .. code:: shell
 
@@ -540,7 +540,7 @@ When the container it not needed anymore, it can be removed with the follwoing c
 Iteratively rebuild Krita and its package after making changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you change something in the Krita's code, you should rebuild the pacakge and 
+When you change something in the Krita's code, you should rebuild the package and 
 reinstall it onto your device (or emulator).
 
 Firstly, you need to manually set up environment variables, that are usually set

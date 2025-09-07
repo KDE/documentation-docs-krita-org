@@ -307,7 +307,7 @@ QtCreator is usually installed into the docker image into ``~/qtcreator/`` folde
 happens when you run ``./bin/bootstrap-deps.sh`` script. That is, if you skipped installing deps QtCreator will not be installed
 and you will have to download it manually from `this location <https://files.kde.org/krita/build/qtcreator-package.tar.gz>`_.
 
-You may also try to dowload the official QtCreator installer from `<https://download.qt.io/official_releases/qtcreator/>`_. In 
+You may also try to download the official QtCreator installer from `<https://download.qt.io/official_releases/qtcreator/>`_. In 
 case you decide to use it, just enter the container and install it. Make sure you install it into '~/qtcreator' directory without 
 any version suffixes, then you will be able to run it directly from the host system using the script below:
 
@@ -362,7 +362,7 @@ audio playback. If you have any issues with that, just try to play any audio on 
 
 On some systems (e.g. KDE Neon) XWayland in started on-demand. Just start `glxgears`
 on the **host** system before running/starting the container to force your host system
-to initializa XWayland.
+to initialize XWayland.
 
 OpenGL doesn't work on NVidia GPU with proprietary drivers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

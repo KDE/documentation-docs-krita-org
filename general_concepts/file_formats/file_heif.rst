@@ -28,7 +28,7 @@ Krita supports all the color spaces that these formats can handle, and will conv
 
 Images that are HDR images, so the ones that have the Perceptual Quantizer, Hybrid Log Gamma or SMPTE ST 428 transfer functions, will be converted to a linear 32 bit floating point version of that color space.
 
-However, Hybrid Log Gamma needs an extra conversion step inbetween, as Krita currently does not support sending HLG data to the display. For this :dfn:`Scene Linear to Display Linear` conversion, it would need to know your :dfn:`display gamma` and :dfn:`maximum brightness`. The default brightness and gamma values are the ones used for a HLG to PQ conversion, and probably your best bet when your monitor is able to display Krita's HDR. When exporting this image with HLG, it's recommended to reuse the same values for the reverse OOTF there.
+However, Hybrid Log Gamma needs an extra conversion step in between, as Krita currently does not support sending HLG data to the display. For this :dfn:`Scene Linear to Display Linear` conversion, it would need to know your :dfn:`display gamma` and :dfn:`maximum brightness`. The default brightness and gamma values are the ones used for a HLG to PQ conversion, and probably your best bet when your monitor is able to display Krita's HDR. When exporting this image with HLG, it's recommended to reuse the same values for the reverse OOTF there.
 
 Apply Hybrid Log Gamma OOTF
     Whether to apply the extra conversion step. This will convert scene linear values to display linear, and thus it's necessity is completely dependent on your HDR workflow. If in doubt, apply.

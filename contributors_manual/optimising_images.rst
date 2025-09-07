@@ -28,7 +28,7 @@ So, instead, we'll make a screenshot. Depending on your operating system, there 
 Windows
 ~~~~~~~
 
-Windows has a build-in screenshot tool. It is by default on the :kbd:`Print Screen` key. On laptops you will sometimes need to use the :kbd:`Fn` key.
+Windows has a built-in screenshot tool. It is by default on the :kbd:`Print Screen` key. On laptops you will sometimes need to use the :kbd:`Fn` key.
 
 Linux
 ~~~~~

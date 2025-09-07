@@ -107,7 +107,7 @@ spot
 
 The ``Position`` element is the position of the swatch inside the parent group grid. Krita doesn't store empty swatches.
 
-The other child element is a Create Swatch defintion. Krita supports `Gray`, `sRGB`, `RGB`, `XYZ`, `CMYK`, `Lab` and in theory `YCrCb`. Note that Krita supports unbounded colors as long as the bitdepth is F32.
+The other child element is a Create Swatch definition. Krita supports `Gray`, `sRGB`, `RGB`, `XYZ`, `CMYK`, `Lab` and in theory `YCrCb`. Note that Krita supports unbounded colors as long as the bitdepth is F32.
 
 Color swatch definition from the Create Wiki:
 ---------------------------------------------

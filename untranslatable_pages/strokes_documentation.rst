@@ -734,7 +734,7 @@ Implementation of ``KisProcessingApplicator``
 The applicator is based on the "undo command"-based stroke
 (``KisStrokeStrategyUndoCommandBased``). It starts the stroke in the
 constructor and adds undo commands to it on every user request. The
-processings are inernally wrapped into a special command
+processings are internally wrapped into a special command
 (``KisProcessingCommand``). This command has its own undo stack that
 collects the transactions executed by the processing. This can be easily
 achieved with our undo adapters interface. The command just defines its

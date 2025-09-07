@@ -55,7 +55,7 @@ Get Started
 Beta Testing
 ~~~~~~~~~~~~
 
-To validate an upcoming stable version will work as expected, there is the beta version. You can help by dowloading the beta, trying it out and sharing your feedback. Every beta comes with a survey, which will ask for some basic information about your setup (all anonymized, of course) and guide you through testing latest features and bug fixes. You can find link to the survey on Krita's welcome page.
+To validate an upcoming stable version will work as expected, there is the beta version. You can help by downloading the beta, trying it out and sharing your feedback. Every beta comes with a survey, which will ask for some basic information about your setup (all anonymized, of course) and guide you through testing latest features and bug fixes. You can find link to the survey on Krita's welcome page.
 
 To know when there is a new beta, watch out for the news on the welcome page, or in the News section on Krita website.
 

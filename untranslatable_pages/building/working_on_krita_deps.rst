@@ -24,7 +24,7 @@ check the docker environment manual: :ref:`Building Krita with Docker on Linux <
 
 .. warning::
 
-    Buillding the Linux deps on the host system without the docker environment 
+    Building the Linux deps on the host system without the docker environment 
     is **not supported** and is not going to be supported. It is almost impossible
     to do.
     
@@ -74,8 +74,8 @@ Just create a symlink for it:
     ln -s ~/persistent/deps/cache /home/appimage/appimage-workspace/root/cache
 
 
-Setting up the environement
----------------------------
+Setting up the environment
+--------------------------
 
 Now you need to create the development environment:
 
@@ -159,7 +159,7 @@ script.
     * ``KDECI_ENV_ACTIVATION_SCRIPT``
     * ``KDECI_ENV_DEACTIVATION_SCRIPT``
 
-    Hence, to deactivate the current environement you can just call:
+    Hence, to deactivate the current environment you can just call:
 
     .. code:: bash
 
@@ -204,7 +204,7 @@ When testing dependency build scripts you might need to test if each package can
 independently in an isolated encironment. In such a case, the "shared install folder"
 method will not work. Instead, you needs to use "publish to cache" method. With 
 this method, each subproject is built in an isolated environment, with only 
-minimally necessary depenencies present. Each subproject is then packaged and 
+minimally necessary dependencies present. Each subproject is then packaged and 
 "uploaded" into the package cache. By the end of the build process the local cache
 is "forcefully" populated with the locally built packages, which are newer than 
 the ones in the registry. These local packages will later be used for building Krita 
@@ -241,7 +241,7 @@ It will disable the "shared install feature":
 
 Set up ``KDECI_EXTRA_CMAKE_ARGS`` if you are on MacOS or Android.
 
-Make sure your pacakges cache is clean:
+Make sure your packages cache is clean:
 
 .. code:: bash
 
