@@ -38,6 +38,32 @@ Beyond editing the contents, you can also move the text. To do so, hover over th
 
 When editing a inline-size wrapped shape, you can also edit the wrapping area. Two handles will appear on each side of the text, showing the limits at which the text will wrap. By doing |mouseleft| :kbd:`+ drag` on these handles, you can increase or decrease the wrapping area. When the text is aligned to one of the handles, moving one of the other will swap the text alignment so it stays aligned to that handle. When the alignment is set to the middle, the text will stay in between the two bars. If you want the text to stay at the same place when editing a centered text and only change the wrapping area width, hold :kbd:`Ctrl` while dragging.
 
+To change the styling of text, use the :ref:`text_properties_docker`.
+
+.. _glyph_palette:
+Glyph Palette
+-------------
+
+The glyph palette dialog provides a grid view of alternative characters available in a font through opentype features or unicode character variants. It is meant as a companion to the :ref:`text_property_open_type` in the text property docker.
+
+Glyph Alternates
+~~~~~~~~~~~~~~~~
+
+This shows any available alternates for the current code point. There's two kinds of alternates:
+
+Unicode Character Variants
+    These are officially defined character variants. Simple examples of these include slashed 0 as an alternative to 0, but more commonly these are used for Han ideographs. In particular, place and people names require certain glyph variants to be used to look recognisable, and character variants provide this access. Krita will only show variants that are available in the font itself.
+Open Type features
+    These are glyph alternates that are available via a number of open type features, such as the character variants, access all alternates or stylistic alternates.
+
+Character Map
+~~~~~~~~~~~~~
+
+This provides a character map for the given font. At the left there is a list of unicode blocks that can be used to filter the character map.
+
+At the top there's a search bar, where typing a character will show that character or the codepoints that decompose to that character (That is, A will show 'Á', 'Å' and even 'Ấ'). This input also accepts characters in U+HEXCODE format.
+
+The remaining area is dedicated to the character map itself. Clicking a character will show a pop-up with glyph alternates (if available), and double clicking will add said character at the cursor position in the active text.
 
 Tool Options
 ------------

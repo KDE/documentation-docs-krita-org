@@ -54,7 +54,7 @@ Shape Selection Tool
 
 The shape selection tool used to be called the "default" tool. This had to do with Krita being part of an office suite once upon a time. But this is no longer the case, so we renamed it to its purpose in Krita: Selecting shapes! This tool only works on vector layers, so trying to use it on a paint layer will give a notification.
 
-After you create vector shapes, you can use this tool to select, transform, and access the shape's options in the tool options docker. There are a lot of different properties and things you can do with each vector shape. 
+After you create vector shapes, you can use this tool to select, transform, and access the shape's options in the tool options docker. There are a lot of different properties and things you can do with each vector shape. If you have text shapes selected, you can edit their properties with the :ref:`text_properties_docker`.
 
 Selection
 ---------
