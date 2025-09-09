@@ -177,8 +177,12 @@ CMYK Blending Mode
 Switch Control/Alt Selection Modifiers
     This switches the function of the :kbd:`Ctrl` and :kbd:`Alt` keys when modifying selections. Useful for those used to Gimp instead of Photoshop, or Lefties without a right :kbd:`Alt` key on their keyboard.
 
-Enable Touch painting
-    This allows finger painting with capacitive screens. Some devices have both capacitive touch and a stylus, and then this can interfere. In that case, just toggle this.
+Touch Painting
+    Toggles whether to allow painting by touching on a capacitive screen. :guilabel:`Enabled` will let you draw via touch and :guilabel:`Disabled` will let you pan the canvas instead. :guilabel:`Auto` (the default) will automatically detect whether you have a stylus available and enable or disable touch painting accordingly.
+
+    .. versionchanged:: 5.2.13
+    
+        The Auto option was added and became the default.
 
     .. versionchanged:: 5.0
     
