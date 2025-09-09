@@ -20,7 +20,7 @@ By default, the docker will show only a handful of basic properties, while all o
 
 The revert button before a given property will give an indicator of whether a property is set, and clicking it will unset the property, reverting it to either the default or inherited value. When a mixture of style properties are selected, you will see a multi-headed arrow, while the control itself will show the default or inherited value. Modifying the control will set the same value on all properties, while clicking the revert button will unset the property on all text.
 
-New properties can be added with the "add property" dropdown below. The text input allows for searching the current text properties, with each property having a number of alternate keywords.
+New properties can be added with the "add property" drop down below. The text input allows for searching the current text properties, with each property having a number of alternate keywords.
 
 The visibility state of each property can be configured by pressing the "configure button" next to the "add properties" dropdown. When the default visibility is set to "always show" and none of the individual properties are set to show conditionally, the "add property" dropdown is replaced with a filter input. The current visibility states are possible:
 
@@ -40,6 +40,12 @@ Inheritance
 
 Krita's text shape uses CSS, and thus allows for properties to be inherited. This means that properties like the font size can be set over a whole text shape, and ranges of text within the shape will default to the inherited value if it is not explicitly set on the range.
 
+Conversely, some properties do not inherit at all. These properties usually get added on top of one another, but the precise behaviour is described in their entry.
+
+.. _font_relative_units:
+Font Relative Units
+~~~~~~~~~~~~~~~~~~~
+
 Some properties allow for font relative units. The meaning of these units also depend on inheritance mechanics. All font relative units will try to use the current font metrics. However, when said font metric is :ref:`_text_property_font_size` or :ref:`_text_property_line_height` related, and the property being edited is one of those itself, it will instead be relative to the inherited size.
 
 Em
@@ -52,10 +58,8 @@ Lh
     The line-height. This is either relative to the current line height or, in the case of :ref:`_text_property_line_height`, the inherited line height.
 Ic
     Relative to ideographic character advance. The advance of a single CJK character. 
-Char
+Ch
     Advance of the number '0'.
-
-Conversely, some properties do not inherit at all. These properties usually get added on top of one another, but the precise behaviour is described in their entry:
 
 Character Properties
 --------------------
@@ -67,7 +71,9 @@ Character properties are properties that can be applied on a range of text or th
 Font Size
 ~~~~~~~~~
 
-Font size allows setting the size of the characters.
+Font size allows setting the size of the characters. What this does in particular is that it scales the whole font so that its design size (the "em size") is the same as the font size.
+
+When using :ref:`font_relative_units`, font size will always use the inherited font size and family as the reference font. This can be used to ensure a range of the text is always a bit bigger or a bit smaller than the surrounding text, which can be useful for superscript or titling.
 
 By default, this property is always visible.
 
@@ -76,7 +82,13 @@ By default, this property is always visible.
 Font Size Adjust
 ~~~~~~~~~~~~~~~~
 
-Font size adjust allows setting a ratio that the x-height must be matched by.
+Font size adjust allows setting a ratio that the x-height must be matched by. The x-height is the height of the small latin x in Latin fonts, and it is a value that is derived from the font metrics.
+
+This is particularly useful with font-fallback, but can also be useful in general to force some consistency into the x-height. There’s a :guilabel:`calculate` button, which allows you to calculate the font-size ratio of the current font family.
+
+.. figure:: /images/text/font-size-adjust-example.png
+
+   Script fonts frequently have a much smaller x-height than typical body text fonts. By using :guilabel:`Font Size Adjust` and pressing :guilabel:`calculate`, we can set the text to use the same x-height ratio
 
 .. _text_property_font_family:
 
@@ -84,6 +96,10 @@ Font Family
 ~~~~~~~~~~~
 
 Font family allows selecting a list of fonts that should be used for the current text. The first font family is the primary font used, while each font family after that is used for fallback.
+
+.. figure:: /images/text/font-selection-fallback-arabic.png
+
+   The font family list allows us to control the fallback. Many fonts only have glyphs for a subset of unicode, so controlling fallback can allow us to select fonts that seem to be in a similar tradition, like using a Serif Latin font for a Naskh Arabic font.
 
 See :ref:`resource_fonts` for more information about the font picker and font families.
 
@@ -98,11 +114,15 @@ Font style allows setting the sub style of the given font family, such as italic
 
 The main control is a drop down that shows a list of predefined styles. These are determined either by the fonts within a family, or by the instances inside a variable font. Clicking any of these will set the corresponding CSS properties for that style.
 
+.. figure:: /images/text/font-style-examples.png
+
+   This showcases a number of styles. The top row shows the effects of width, weight and slant, while the bottom row shows the effect of toggling optical size at different font sizes.
+
 When unfolding this property, the following settings are available:
 
 Weight
     This controls the thickness of the glyph outlines.
-Synthesize Weight
+Synthesize Bold
     This allows synthesizing thick glyphs when there's no support for bold in the font family.
 Width
     This controls how much horizontal space a glyph takes. Not all fonts support this, and there's no synthesis for this.
@@ -124,28 +144,35 @@ This property is by default, always visible.
 Letter Spacing
 ~~~~~~~~~~~~~~
 
-Letter spacing controls the spacing between visible clusters of characters.
+Letter spacing controls the spacing between visible clusters of characters. Letter spacing is implemented subtly different in all programs supporting CSS. Krita's implementation follows CSS-Text-3 and thus does not apply to single characters. Letter spacing is mostly intended to apply to whole spans of characters.
 
 .. _text_property_word_spacing:
 
 Word Spacing
 ~~~~~~~~~~~~
 
-Word spacing controls the size of word-break characters, such as the space character.
+Word spacing controls the size of word separator characters, such as the space character. It also provides spacing for other word separator characters, like the Ethiopian word space, Aegean word separators, Ugaric word divider as well as Phoenician word separators.
 
 .. _text_property_line_height:
 
 Line Height
 ~~~~~~~~~~~
 
-Line Height controls the line height used for the range of text.
+Line Height controls the line height used for the range of text. It does not work for pre-positioned SVG 1.1 text, but does apply for pre-formatted text that uses hard line breaks, or wrapped text.
+
+Normal
+    When this is on, Krita will try to determine the line height by taking each character in a line, and determining its ascent, descent, and also the line gap metric. The maximum of these is used as the line height.
+Ln
+    Line height has one unique unit: :guilabel:`Ln`, this is similar to "normal", except it uses the font size.
+
+When using relative units, Line Height will take the current font size and family as reference. However, when using the line height unit, Line height will use the inheritend line height as reference.
 
 .. _text_property_line_break:
 
 Line Break
 ~~~~~~~~~~
 
-Line Break allows choosing a strictness for the line breaking algorithm. Mostly used for CJK scripts, requires language being set.
+Line Break allows choosing a strictness for the line breaking algorithm. Mostly used for CJK scripts, requires :ref:`text_property_language` being set to work. Krita at this moment does not support :guilabel:`Loose`.
 
 .. _text_property_word_break:
 
@@ -154,14 +181,25 @@ Word Break
 
 Word Break allows fine-tuning the line breaking by toggling whether to only break at words or also allow breaking at characters. Useful for Korean or Ethiopian.
 
+.. figure:: /images/text/word-break-korean.png 
+
+   Krita slogan in Korean. On the left side there's the default behaviour, which breaks after every hangul cluster. This looks rather old fashioned. By setting word break to :guilabel:`Keep-all`, breaks will happen only at word boundaries.
+
 .. _text_property_text_transform:
 
 Text Transform
 ~~~~~~~~~~~~~~
 
-Text Transform allows transforming the given range of characters, for example, by setting them uppercase, or switching out half-width forms for full-width forms.
+Text Transform allows transforming the given range of characters, for example, by setting them uppercase, or switching out half-width forms for full-width forms. This is useful in that it is applied as a stylistic effect, meaning any text written is automatically transformed.
 
-Text Decoration does not inherit. Instead it is applied over each range of text it is defined on, with later defined text decoration being drawn on top of earlier defined text decoration.
+:guilabel:`Text Transform` is sensitive to the :ref:`text_property_language` being set. For example, the Turkish undotted i will be transformed with the I while regular i will be transformed to dotted I.
+
+Case
+    Whether to transform all text to upper or lower case. In the case of :guilabel:`Capitalize` the first letter after each word separator is uppercased, which the rest is lowercased.
+Full-width
+    Full-width refers to the “Fullwidth” code points in the Halfwidth and Fullwidth unicode block. Toggling this will mean that proportional or halfwidth glyphs will be replaced with those fullwidth glyphs if possible. Typically, in vertical text, proportional glyphs are rotated, but when this isn’t possible or required, using full width glyphs can look a lot neater. The full width opentype feature does something similar, but not every font supports that.
+Full-size Kana
+    In Japanese Kana scripts, there are some instances of small and big kana, which have subtly different pronunciation. However, when the text is really small, it can be useful to replace small kana with big kana to aid in readability.
 
 .. _text_property_text_decoration:
 
@@ -170,12 +208,36 @@ Text Decoration
 
 Text Decoration allows drawing underlines, overlines and striking through text.
 
+Line:
+    Toggles whether underline, overline or strikthrough is enabled. Multiple can be enabled at once.
+Color:
+    By default, the color of the decoration will follow the text color. This control allows it to be set explicitly.
+Style:
+    The style of the lines. Shared between all enabled lines, these can be made dashed, dotted, wavy and even double lines can be drawn.
+
+Text Decoration does not inherit. Instead it is applied over each range of text it is defined on, with later defined text decoration being drawn on top of earlier defined text decoration.
+
 .. _text_property_underline_position:
 
 Underline Position
 ~~~~~~~~~~~~~~~~~~
 
 Specify the position of the underline for text-decoration.
+
+Horizontal:
+    Behaviour in horizontal writing modes
+    
+    Auto
+        Underlines will be positioned according to the metrics of the font.
+    Bottom
+        Underlines will be aligned to the descender.
+Vertical:
+    Behaviour in vertical writing modes.
+    
+    Vertical left
+        Underlines will be at the left of the characters. Overlines at the right.
+    Vertical right
+        Underlines will be at the right of the characters, and overlines left.
 
 .. _text_property_open_type:
 
@@ -184,28 +246,78 @@ OpenType Features
 
 OpenType Feature Settings
 
-This provides precise control over Open Type features. OpenType features are usually defined by tags, and whether they are on or off. The dropdown will provide a list of features in the primary font in the :ref:`text_property_font_family` list.
+This provides precise control over Open Type features. OpenType features are usually defined by tags, and whether they are on or off. The drop down will provide a list of features in the primary font in the :ref:`text_property_font_family` list.
 
 For where it is feasible, a small preview is rendered, but for some features it can be hard to provide this.
 
-Typing in a feature name or tag into the search will show a filtered list of all official features that match the search. This way, features that are not shown in the drop down can still be selected and enabled.
+Typing in a feature name or tag into the search will show a filtered list of all official features that match the search. This way, features that are not in the primary font can still be selected and enabled (which is useful when inheriting).
 
 See also the :ref:`glyph_palette` for an alternate way of selecting glyph alternates in the current text.
 
 OpenType features, while they inherit, inherit as one list. If you want to give general hints for a given feature to be enabled over the whole text, use the Glyph properties:
 
+.. _text_property_glyphs_ligatures:
+
 Glyphs: Ligatures
-    Enable or disable ligatures and contextual alternates on the text.
+^^^^^^^^^^^^^^^^^
+Enable or disable ligatures and contextual alternates on the text.
+
+.. figure:: /images/text/opentype-ligatures.png
+
+   Ligatures in “Noto Serif” and “Junicode”, with the ligatures marked in blue, and the lack of ligatures marked in orange. “ffi” is a common ligature in Noto Serif, and contextual in Junicode, “st” is a discretionary ligature in Junicode and “al” is a historical ligature in Junicode.
+
+.. _text_property_glyphs_position:
+
 Glyphs: Position
-    Enable super or subscripts on the text.
+^^^^^^^^^^^^^^^^
+
+Enable super or subscripts on the text.
+
+.. figure:: /images/text/opentype-position.png
+
+   Showing sub and superscripts in the font “EB Garamond”.
+
+.. _text_property_glyphs_numeric:
+
 Glyphs: Numeric
-    Enable number-related glyph forms on the text.
+^^^^^^^^^^^^^^^
+
+Enable number-related glyph forms on the text.
+
+
+
+.. figure:: /images/text/opentype-numeric.png
+
+   Showing numeric opentype features in the font “EB Garamond”. Selected is a fraction “1/2”, beyond that it shows old style figures for “12345” in green, tabular spacing for those old style figures in orange, and ordinals in blue.
+
+.. _text_property_glyphs_caps:
+
 Glyphs: Caps
-    Enable opentype features related to capitals, such as small caps.
+^^^^^^^^^^^^
+
+Enable opentype features related to capitals, such as small caps.
+
+.. figure:: /images/text/opentype-caps.png
+
+   Capital related opentype features in “EB Garamond” for small and petite caps, “Estonia” for Titling caps and in a custom comic font for unicase features.
+
+.. _text_property_glyphs_east_asian:
+
 Glyphs: East-Asian
-    Enable glyph forms related to East Asian text layout.
+^^^^^^^^^^^^^^^^^^
+
+Enable glyph forms related to East Asian text layout.
+
+.. figure:: /images/text/opentype-east-asian.png
+
+   Showing the east-asian font variants in orange, using the font “Yu Gothic”. Full-width is typically used for vertical text, JIS78 refers to a Japanese industry standard that specifies certain glyph shapes. Ruby in this case means glyphs meant for ruby annotations.
+
+.. _text_property_font_kerning:
+
 Font Kerning
-    Turn font kerning on or off. Font kerning enables per-glyph spacing adjustments.
+^^^^^^^^^^^^
+
+Turn font kerning on or off. Font kerning enables per-glyph spacing adjustments.
 
 .. _text_property_direction:
 
@@ -227,18 +339,30 @@ In some script traditions, the alignment point of text of different sizes are di
 
 This feature will try to use data encoded in the fonts' baseline table. If there's no such data, the baseline metrics will be auto-generated.
 
+.. _text_property_dominant_baseline:
+
 Dominant Baseline
-    Dominant Baseline specifies how stretches of text of different sizes are aligned, it is also the default for Alignment Baseline.
+^^^^^^^^^^^^^^^^^
+
+Dominant Baseline specifies how stretches of text of different sizes are aligned, it is also the default for Alignment Baseline.
+
+.. _text_property_alignment_baseline:
 
 Alignment Baseline
-    Alignment Baseline allows control over how this range of text is aligned to the parent text.
+^^^^^^^^^^^^^^^^^^
+
+Alignment Baseline allows control over how this range of text is aligned to the parent text.
     
-    Alignment baseline does not inherit. Instead, child text will try to align to the specified baseline of the parent text.
+Alignment baseline does not inherit. Instead, child text will try to align to the specified baseline of the parent text.
+
+.. _text_property_baseline_shift:
 
 Baseline Shift
-    Baseline shift allows moving the text away from the baseline, either by predefined super and subscript values, or by a fixed amount.
+^^^^^^^^^^^^^^
+
+Baseline shift allows moving the text away from the baseline, either by predefined super and subscript values, or by a fixed amount.
     
-    Baseline shift does not inherit. What instead happens is that shifts will be added to one another, allowing the following:
+Baseline shift does not inherit. What instead happens is that shifts will be added to one another, allowing the following:
 
 .. _text_property_white_space:
 
@@ -256,6 +380,10 @@ Language
 
 The language of this text shape. Language affects a number of properties, like glyph shape, upper- and lowercase and line breaking.
 
+The text input allows typing any valid `BCP 47 <https://en.wikipedia.org/wiki/BCP47>`_ code. Pressing :key:`enter` will cause Krita to parse the code. Typing a language name or code into the text input will show a filtered search pop-up.
+
+Pressing on the down arrow will show all previously used locales this session, as well as stored locales. By toggling the check box in front of a locale, you can indicate that they need to be stored for future sessions.
+
 
 Paragraph Properties
 --------------------
@@ -271,14 +399,19 @@ Writing Mode sets whether the text flows horizontally or vertically, and in the 
 
 See also :ref:`text_property_direction`.
 
-A related feature is "Text Orientation", which allows rotating horizontal text when it is typeset vertically. Krita does not current support this feature, but it is planned in the future.
+.. note:: A related feature is "Text Orientation", which allows rotating horizontal text when it is typeset vertically. Krita does not current support this feature, but it is planned in the future.
 
 .. _text_property_text_indent:
 
 Text Indent
 ~~~~~~~~~~~
 
-Text Indent allows setting indentation at the line start. Only works when the text is wrapping.
+Text Indent allows setting indentation at the line start. Only works when the text is wrapping. The main control is a slider defining the size of the indent. There's two more advanced controls:
+
+Hanging Indentation
+    This does not apply indentation to the stating line, but instead the subsequent lines.
+Indent after hard breaks
+    This makes it so each line after a hard break qualifies as a starting lines. Frequently used for poetry.
 
 .. _text_property_text_align:
 
@@ -289,6 +422,17 @@ Text Align sets the alignment for the given block of characters.
 
 The main control of this shows three buttons that correspond to start, middle and end. These properties are affected by direction, meaning that right to left text, start will be the same as align right. The final button is the justification toggle.
 
+Opening the advanced settings shows the following:
+
+Text Align
+    This allows you to set the text alignment when text is wrapped in a shape.
+Align Last
+    When :guilabel:`Text Align` is set to :guilabel:`Justified`, this controls what to do with the final line.
+Text Anchor
+    Text anchor controls how the text is anchored, instead of aligned. It somewhat resembles :guilabel:`Text Align` in that it allows text to flow from the left or right, but where :guilabel:`Text Align` is alignment within a space, :guilabel:`Text Anchor` is relative to the starting point of the text. You can use :guilabel:`Text Anchor` to set the anchor for each line, as long as the text is not being auto wrapped.
+    
+This means that there's no justification for text that is not wrapped in shape.
+
 By default, this property is always visible, even when not set.
 
 .. _text_property_hanging_punctuation:
@@ -298,12 +442,22 @@ Hanging Punctuation
 
 Hanging punctuation allows hanging opening and closing punctuation as well as commas. This implementation only implements East-Asian style hanging punctuation.
 
+Hang first
+    Opening punctuation such as opening quotes or opening brackets at the start of the paragraph will be hung.
+Line end
+    This toggle will allow or force commas and periods to hang at the end of any line.
+Hang last
+    Closing punctuation such as closing quotes or closing brackets at the end of the paragraph will be hung.
+    
+
 .. _text_property_tab_size:
 
 Tab Size
 ~~~~~~~~
 
 Tab Size allows defining the size of tabulation characters. Tabulation characters (inserted with :key:`tab`) are a type of white space that snaps to the nearest multiple of the reference size. Its main use case is to align columns of information without resorting to tables.
+
+Tab size has one unique unit: :guilabel:`Sp`. This means the tab size uses the current advance of the space character as unit.
 
 .. _text_property_text_rendering:
 
