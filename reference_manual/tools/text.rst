@@ -41,6 +41,7 @@ When editing a inline-size wrapped shape, you can also edit the wrapping area. T
 To change the styling of text, use the :ref:`text_properties_docker`.
 
 .. _glyph_palette:
+
 Glyph Palette
 -------------
 
@@ -48,6 +49,10 @@ The glyph palette dialog provides a grid view of alternative characters availabl
 
 Glyph Alternates
 ~~~~~~~~~~~~~~~~
+
+.. figure:: /images/text/glyph_palette_alternates.png
+
+   Glyph alternates for the character "A" in the font “Junicode”. Not all fonts have this many alternates available.
 
 This shows any available alternates for the current code point. There's two kinds of alternates:
 

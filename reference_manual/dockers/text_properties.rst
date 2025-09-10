@@ -43,10 +43,11 @@ Krita's text shape uses CSS, and thus allows for properties to be inherited. Thi
 Conversely, some properties do not inherit at all. These properties usually get added on top of one another, but the precise behaviour is described in their entry.
 
 .. _font_relative_units:
+
 Font Relative Units
 ~~~~~~~~~~~~~~~~~~~
 
-Some properties allow for font relative units. The meaning of these units also depend on inheritance mechanics. All font relative units will try to use the current font metrics. However, when said font metric is :ref:`_text_property_font_size` or :ref:`_text_property_line_height` related, and the property being edited is one of those itself, it will instead be relative to the inherited size.
+Some properties allow for font relative units. The meaning of these units also depend on inheritance mechanics. All font relative units will try to use the current font metrics. However, when said font metric is :ref:`_text_property_font_size` or :ref:`_text_property_line_height` related, and the property being edited is one of those itself, it will instead be relative to the inherited size. The word :term:`Advance` is a technical term that refers to how much a glyph will advance the line. It is similar to the glyph width in horizontal and glyph height in vertical writing modes.
 
 Em
     The current font size (or inherited font size in the case of Font Size).
@@ -88,7 +89,7 @@ This is particularly useful with font-fallback, but can also be useful in genera
 
 .. figure:: /images/text/font-size-adjust-example.png
 
-   Script fonts frequently have a much smaller x-height than typical body text fonts. By using :guilabel:`Font Size Adjust` and pressing :guilabel:`calculate`, we can set the text to use the same x-height ratio
+   Script fonts frequently have a much smaller x-height than typical body text fonts. By using :guilabel:`Font Size Adjust` and pressing :guilabel:`calculate`, we can set the text to have a similarly sized x-height.
 
 .. _text_property_font_family:
 
@@ -165,7 +166,9 @@ Normal
 Ln
     Line height has one unique unit: :guilabel:`Ln`, this is similar to "normal", except it uses the font size.
 
-When using relative units, Line Height will take the current font size and family as reference. However, when using the line height unit, Line height will use the inheritend line height as reference.
+All other units will define a fixed offset. Even the font relative units are fixed to the current font and size of the element the line height is defined on.
+
+When using relative units, Line Height will take the current font size and family as reference. However, when using the line height unit, Line height will use the inherited line height as reference.
 
 .. _text_property_line_break:
 
@@ -209,13 +212,17 @@ Text Decoration
 Text Decoration allows drawing underlines, overlines and striking through text.
 
 Line:
-    Toggles whether underline, overline or strikthrough is enabled. Multiple can be enabled at once.
+    Toggles whether underline, overline or line through is enabled. Multiple can be enabled at once.
 Color:
-    By default, the color of the decoration will follow the text color. This control allows it to be set explicitly.
+    Set the color of the underline. When unset, the color of the decoration will follow the text color.
 Style:
     The style of the lines. Shared between all enabled lines, these can be made dashed, dotted, wavy and even double lines can be drawn.
 
 Text Decoration does not inherit. Instead it is applied over each range of text it is defined on, with later defined text decoration being drawn on top of earlier defined text decoration.
+
+.. figure:: /images/text/text-decoration-nested.png
+
+   Nested text decorations definitions. While something this complicated is only possible with the SVG source editor, you can see a similar result if you define a text decoration on the paragraph, and one on a range of characters.
 
 .. _text_property_underline_position:
 
@@ -244,7 +251,14 @@ Vertical:
 OpenType Features
 ~~~~~~~~~~~~~~~~~
 
+Some fonts include OpenType features. This can be something like :term:`Kerning`, :term:`Ligatures` or :term:`Small Caps`, but can also involve a variety of alternative glyphs, or even contextual glyphs so that complex joined scripts render correctly. The latter type is generally always enabled, and Krita provides control for the former.
+
 OpenType Feature Settings
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: /images/text/opentype_features_ui.png
+
+   Some features enabled in the medievalist font “Junicode”. The first four letters are the "OpenType feature tag", which is the way these features are stored in the font. The name can be retrieved from the font if defined, otherwise Krita will provide its own name.
 
 This provides precise control over Open Type features. OpenType features are usually defined by tags, and whether they are on or off. The drop down will provide a list of features in the primary font in the :ref:`text_property_font_family` list.
 
@@ -262,6 +276,15 @@ Glyphs: Ligatures
 ^^^^^^^^^^^^^^^^^
 Enable or disable ligatures and contextual alternates on the text.
 
+Common
+    Enables `liga` and `clig`, which are commonly used ligatures.
+Discretionary
+    Enables `dlig`, which are ligatures of a more decorative nature.
+Historical
+    Enables `hlig`, which is intended for old-fashioned ligatures.
+Contextual Alternates
+    Enables `calt`, which is frequently used by script fonts and decorative fonts to select appropriate glyphs depending on their context.
+
 .. figure:: /images/text/opentype-ligatures.png
 
    Ligatures in “Noto Serif” and “Junicode”, with the ligatures marked in blue, and the lack of ligatures marked in orange. “ffi” is a common ligature in Noto Serif, and contextual in Junicode, “st” is a discretionary ligature in Junicode and “al” is a historical ligature in Junicode.
@@ -272,6 +295,11 @@ Glyphs: Position
 ^^^^^^^^^^^^^^^^
 
 Enable super or subscripts on the text.
+
+Super
+    Enables superscript glyphs.
+Sub
+    Enables subscript glyphs.
 
 .. figure:: /images/text/opentype-position.png
 
@@ -284,7 +312,31 @@ Glyphs: Numeric
 
 Enable number-related glyph forms on the text.
 
-
+Style
+    Normal
+        Does not explicitly enable either style, showing the font default.
+    Lining
+        Requests figures that fit within an upper case text, using `lnum`.
+    Old Style
+        Requests asks for figures that fit within an upper case text, using `onum`.
+Proportion
+    Normal
+        Does not explicitly enable either style, showing the font default.
+    Proportional
+        Requests proportional figures, using `pnum`.
+    Tabular
+        Requests tabular figures, using `tnum`, these figures all share the same advance.
+Fraction
+    Normal
+        Does not explicitly enable either style, showing the font default.
+    Diagonal
+        Replaces figures separated by a slash with a proper diagonal fraction form. If a font has the numerator and denominator features, and the numbers are separated by a 'fraction slash' (U+2044), then this will replace the figures with numerators before the slash and denominators after the slash. 
+    Stacked
+        Replaces figures separated by a slash with a nut fraction form.
+Ordinals
+    Replaces letters that follow figures with their ordinal forms.
+Slashed Zero
+    Replaces the number zero with one that has a slash in the middle, which can help prevent confusion with similar glyphs like the letter 'O'.
 
 .. figure:: /images/text/opentype-numeric.png
 
@@ -297,6 +349,21 @@ Glyphs: Caps
 
 Enable opentype features related to capitals, such as small caps.
 
+Normal
+    Don't use any particular capitals.
+Small Caps
+    Sets uppercase to small caps. Typically used for abbreviations.
+All Small Caps
+    Sets all text to small caps. Typically used for formal text.
+Petite Caps
+    Sets uppercase to petite caps. Alternative to small caps that is exactly the same as the x height.
+All Petite Caps
+    Sets all text to petite caps.
+Titling Caps
+    Sets uppercase to use titling caps. Titling caps frequently are larger and more dramatic, and best suited for headers instead of body text.
+Unicase
+    Enables the unicase feature.
+
 .. figure:: /images/text/opentype-caps.png
 
    Capital related opentype features in “EB Garamond” for small and petite caps, “Estonia” for Titling caps and in a custom comic font for unicase features.
@@ -308,9 +375,32 @@ Glyphs: East-Asian
 
 Enable glyph forms related to East Asian text layout.
 
+Style
+    Normal
+        Use font default.
+    Traditional
+        Use traditional glyphs.
+    Simplified
+        Use simplifies glyphs.
+    JIS78
+        Use glyphs as specified by JIS78
+    JIS83
+        Use glyphs as specified by JIS83
+    JIS90
+        Use glyphs as specified by JIS90
+    JIS04
+        Use glyphs as specified by JIS04
+Width
+    Full Width
+        Use full width glyphs.
+    Proportional
+        Use proportional glyphs.
+Ruby
+    Enable glyphs meant for ruby annotations.
+
 .. figure:: /images/text/opentype-east-asian.png
 
-   Showing the east-asian font variants in orange, using the font “Yu Gothic”. Full-width is typically used for vertical text, JIS78 refers to a Japanese industry standard that specifies certain glyph shapes. Ruby in this case means glyphs meant for ruby annotations.
+   Showing the east-asian font variants in orange, using the font “Yu Gothic”. Full-width is typically used for vertical text, JIS78 refers to a Japanese industry standard that specifies certain glyph shapes.
 
 .. _text_property_font_kerning:
 
@@ -319,6 +409,7 @@ Font Kerning
 
 Turn font kerning on or off. Font kerning enables per-glyph spacing adjustments.
 
+
 .. _text_property_direction:
 
 Direction
@@ -326,9 +417,24 @@ Direction
 
 Direction sets whether the text is left-to-right or right-to-left.
 
-Unicode Bidi:
+Unicode Bidi
+^^^^^^^^^^^^
+Unicode bidi gives extra control over how a shifted direction should be interpreted. Typically the default algorithm is fine, but in some specific cases, it cannot tell whether a sequence should be left to right or right to left.
 
-Unicode bidi is one of the properties that does not inherit. The reason for this is that it works by inserting bi directional algorithm controls at the ends of the given range. When setting the unicode bidi controls inside another set of unicode bidi controls, multiple sets of controls will be added inside each other.
+Normal
+    No controls are inserted. All text inside is reordered according to its implicit direction (which is derived from the characters used).
+Embed
+    The sequence is directionally embedded. This means that the bidirectional algorithm will assume the explicit direction is that of the :guilabel: `direction` property, but the text itself is ordered by implicit direction.
+Override
+    Override means that the given section will use the current :guilabel: `direction` as the explicit direction as well as the direction of the text.
+Isolate
+    Isolate controls are inserted. Isolate means that the bidirectional algorithm treats the sequence as if it were a completely independent paragraph. Due this, the ordering has no effect on the ordering of text on either side.
+Isolate-Override
+    Both isolate and override are applied. This means that the text is ordered explicitely by direction, but said ordering has no effect
+Plain Text
+    :guilabel: `direction` property is unused and bididirectional algorithm will instead guess at the direction.
+
+Unicode bidi is one of the properties that does not inherit. The reason for this is that it works by inserting bi directional algorithm controls at the ends of the given range.
 
 .. _text_property_baseline:
 
@@ -339,19 +445,42 @@ In some script traditions, the alignment point of text of different sizes are di
 
 This feature will try to use data encoded in the fonts' baseline table. If there's no such data, the baseline metrics will be auto-generated.
 
+Dominant and Alignment baseline share the following options:
+
+Alphabetic
+    Uses the baseline used by most scripts. Default.
+Ideographic
+    Uses the Ideographic design square and selects the bottom end in horizontal mode, and the left side in vertical mode.
+Central
+    Uses the Ideographic design square and selects the vertical center in horizontal mode, and the horizontal center in vertical mode.
+Hanging
+    Align to the headstroke as used by North-Brahmic scripts.
+Middle
+    Align to the center between the alphabetic baseline and x-height when laying out horizontally, in vertical this is the central baseline.
+Mathematical
+    Align to the mathematical baseline, so that operator symbols align.
+Text Top
+    Align to the ascender.
+Text Bottom
+    Align to the descender.
+
 .. _text_property_dominant_baseline:
 
 Dominant Baseline
 ^^^^^^^^^^^^^^^^^
 
-Dominant Baseline specifies how stretches of text of different sizes are aligned, it is also the default for Alignment Baseline.
+.. figure:: /images/text/baseline-example-devanagari.png
+
+   In North Brahmic scripts like Devanagari, letters of different sizes align at the headstroke. The here, the top sample shows the default behaviour, while the bottom sample uses :guilabel:`hanging` over the whole text.
+
+Dominant Baseline specifies how stretches of text of different sizes are aligned, it is also the default for :ref:`text_property_alignment_baseline`. It has one unique value, :guilabel:`Auto`, which translates to :guilabel:`Alphabetic` in horizontal and :guilabel:`Central` in vertical :ref:`text_property_writing_mode`.
 
 .. _text_property_alignment_baseline:
 
 Alignment Baseline
 ^^^^^^^^^^^^^^^^^^
 
-Alignment Baseline allows control over how this range of text is aligned to the parent text.
+Alignment Baseline allows control over how this range of text is aligned to the parent text. It has one unique property :guilabel:`Baseline`, which means it will take its value from the :ref:`text_property_dominant_baseline` property.
     
 Alignment baseline does not inherit. Instead, child text will try to align to the specified baseline of the parent text.
 
@@ -361,8 +490,19 @@ Baseline Shift
 ^^^^^^^^^^^^^^
 
 Baseline shift allows moving the text away from the baseline, either by predefined super and subscript values, or by a fixed amount.
+
+Length
+    Shift text by a specified amount.
+Super
+    Shift text so it aligns to the inherited super script offset. Said value is retrieved from the font.
+Sub
+    Shift text so it aligns to the inherited sub script offset. Said value is retrieved from the font.
     
 Baseline shift does not inherit. What instead happens is that shifts will be added to one another, allowing the following:
+
+.. figure:: /images/text/baseline-nested-super-script.png
+
+   Nested baseline-shift super definitions. This is only possible by editing the text with the SVG source editor.
 
 .. _text_property_white_space:
 
@@ -380,10 +520,11 @@ Language
 
 The language of this text shape. Language affects a number of properties, like glyph shape, upper- and lowercase and line breaking.
 
-The text input allows typing any valid `BCP 47 <https://en.wikipedia.org/wiki/BCP47>`_ code. Pressing :key:`enter` will cause Krita to parse the code. Typing a language name or code into the text input will show a filtered search pop-up.
+The text input allows typing any valid `BCP 47 <https://en.wikipedia.org/wiki/BCP47>`_ code. Pressing :kbd:`enter` will cause Krita to parse the code. Typing a language name or code into the text input will show a filtered search pop-up.
 
 Pressing on the down arrow will show all previously used locales this session, as well as stored locales. By toggling the check box in front of a locale, you can indicate that they need to be stored for future sessions.
 
+There is also a :guilabel:`Script` dropdown. Normally, it is possible to guess the script from the language and country. However, in some places, different scripts can be used for the same language, and sometimes the main script being used has changed over the years. The script dropdown allows setting the script in these cases.
 
 Paragraph Properties
 --------------------
@@ -455,7 +596,7 @@ Hang last
 Tab Size
 ~~~~~~~~
 
-Tab Size allows defining the size of tabulation characters. Tabulation characters (inserted with :key:`tab`) are a type of white space that snaps to the nearest multiple of the reference size. Its main use case is to align columns of information without resorting to tables.
+Tab Size allows defining the size of tabulation characters. Tabulation characters (inserted with :kbd:`tab`) are a type of white space that snaps to the nearest multiple of the reference size. Its main use case is to align columns of information without resorting to tables.
 
 Tab size has one unique unit: :guilabel:`Sp`. This means the tab size uses the current advance of the space character as unit.
 
@@ -467,13 +608,17 @@ Text Rendering
 Text Rendering controls the hinting and rendering style for the text shape.
 
 Optimize Speed
-    The hinting style used for monochrome bitmaps is used, and anti-aliasing is turned off. Krita will also take care to snap the glyphs to the nearest pixel. This allows for pixel art fonts to look good, as well as being the most performant option.
+    The hinting style used for monochrome bitmaps is used, and anti-aliasing is turned off. Krita will also take care to snap the glyphs to the nearest pixel. This allows for pixel art fonts to look good, as well as being the fastest to render option.
 Optimize Legibility
     In vertical writing modes, full hinting is enabled, while for horizontal, hinting only happens vertically. Krita will additionally snap relevant metrics in these directions.
 Geometric Precision
     No hinting is performed at all.
 Auto
     Same as :term:`Geometric Precision`.
+    
+.. figure:: /images/text/unifont-text-rendering-example.png
+
+   The Krita slogan in various scripts, typeset with the “Unifont” pixel font. By using :guilabel:`Optimize Speed`, Krita knows to not just disable anti-aliasing, but it will also try to snap the glyphs so that :ref:`text_property_baseline_shift`, :ref:`text_property_letter_spacing` and :ref:`text_property_line_height` will look good.
 
 .. _text_docker_style_presets:
 
