@@ -14,6 +14,10 @@
 Style Presets
 =============
 
+.. figure:: /images/text/style_preset_window.png
+
+   The style preset edit dialog.
+
 Style presets allow you to store prefered text properties into a resource. They can be found inside the :ref:`text_properties_docker`, where you can also create new ones or edit preexisting ones:
 
 Name

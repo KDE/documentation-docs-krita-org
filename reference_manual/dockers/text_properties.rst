@@ -209,6 +209,10 @@ Full-size Kana
 Text Decoration
 ~~~~~~~~~~~~~~~
 
+.. figure:: /images/text/text-decoration-sample.png
+
+   Sample showing all the possible decorations as well as the line styles.
+
 Text Decoration allows drawing underlines, overlines and striking through text.
 
 Line:
