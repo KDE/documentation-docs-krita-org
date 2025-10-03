@@ -1,21 +1,21 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# SPDX-FileCopyrightText: 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2023, 2025 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-14 01:57+0000\n"
-"PO-Revision-Date: 2023-12-25 13:31+0300\n"
+"PO-Revision-Date: 2025-10-01 06:13+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
-"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language-Team: Turkish <kde-i18n-doc@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.85\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: ../../general_concepts/file_formats/file_exr.rst:-1
 msgid "The EXR file format as exported by Krita."
@@ -23,11 +23,11 @@ msgstr "Krita tarafından dışa aktarılan EXR dosya biçimi."
 
 #: ../../general_concepts/file_formats/file_exr.rst:-1
 msgid "screenshot of Color profile for imported EXR images selector"
-msgstr ""
+msgstr "İçe aktarılan EXR görsel seçicisi için renk profili ekran görüntüsü"
 
 #: ../../general_concepts/file_formats/file_exr.rst:-1
 msgid ".. image:: /images/default_color_space_for_exr_option.png"
-msgstr ""
+msgstr ".. image:: /images/default_color_space_for_exr_option.png"
 
 #: ../../general_concepts/file_formats/file_exr.rst:10
 msgid "*.exr"
@@ -58,7 +58,7 @@ msgstr ""
 "``.exr``, :ref:`kayan noktalı bit derinlikleri <bit_depth>` kaydetmek ve "
 "yüklemek için birincil dosya biçimidir ve bu görselleri yüklemek ve "
 "kaydetmek için yapılan kitaplığın tamamen açık kaynak olması nedeniyle ana "
-"dosya alış-veriş biçimii olarak da kullanılır."
+"dosya alış-veriş biçimi olarak da kullanılır."
 
 #: ../../general_concepts/file_formats/file_exr.rst:19
 msgid ""
@@ -83,13 +83,13 @@ msgid ""
 "paint with scene referred values) and interchange with applications like "
 "Blender, Mari, Nuke and Natron."
 msgstr ""
-"Krita, EXR'yi üzerini boyama amacıyla yükleyebilir ve kaydedebilir (evet, "
+"Krita, EXR’yi üzerini boyama amacıyla yükleyebilir ve kaydedebilir (evet, "
 "Krita sahne başvurulu değerlerle boyayabilir) ve Blender, Mari, Nuke ve "
 "Natron gibi uygulamalarla değişim yapabilir."
 
 #: ../../general_concepts/file_formats/file_exr.rst:24
 msgid "Color Management"
-msgstr ""
+msgstr "Renk Yönetimi"
 
 #: ../../general_concepts/file_formats/file_exr.rst:28
 msgid ""
@@ -99,16 +99,23 @@ msgid ""
 "assign the default color space to the file (usually \"Rec 709 Linear\"). It "
 "may cause the file to change visually."
 msgstr ""
+"EXR dosya biçiminin içsel renk yönetimi özelliği yoktur; yani, veriler "
+"dosyaya kaydedilirken dosyaya hiçbir renk uzayı bilgisi yazılmaz. Aynı "
+"dosyayı bir dahaki sefere Krita’ya yüklediğinizde, Krita dosyaya öntanımlı "
+"renk uzayını (genellikle “Rec 709 Linear”) atayacaktır. Bu, dosyanın görsel "
+"olarak değişmesine neden olabilir."
 
 #: ../../general_concepts/file_formats/file_exr.rst:30
 msgid ""
 "In general, there are two ways to handle the color management for the EXR "
 "files: OCIO and profile-based."
 msgstr ""
+"EXR dosyaları için renk yönetimini ele almanın genel olarak iki yolu vardır: "
+"OCIO ve profil tabanlı."
 
 #: ../../general_concepts/file_formats/file_exr.rst:33
 msgid "OCIO-based workflow"
-msgstr ""
+msgstr "OCIO tabanlı iş akışı"
 
 #: ../../general_concepts/file_formats/file_exr.rst:35
 msgid ""
@@ -116,10 +123,14 @@ msgid ""
 "tools you use (Blender, Natron and etc). When using OCIO Krita will **not** "
 "use the assigned profile and will use the OCIO configuration you selected."
 msgstr ""
+"OCIO yapılandırmasını seçmeniz ve bunu Krita ile kullandığınız diğer araçlar "
+"(Blender, Natron vb.) arasında paylaşmanız gerekir. OCIO kullanıldığında "
+"Krita, atanan profili **kullanmayacak** ve seçtiğiniz OCIO yapılandırmasını "
+"kullanacaktır."
 
 #: ../../general_concepts/file_formats/file_exr.rst:38
 msgid "Profile-based workflow"
-msgstr ""
+msgstr "Profil tabanlı iş akışı"
 
 #: ../../general_concepts/file_formats/file_exr.rst:40
 msgid ""
@@ -128,6 +139,10 @@ msgid ""
 "Linear TRC\", just use :menuselection:`Tools --> Scripts --> Assign Profile "
 "to Image` plugin to assign a different profile."
 msgstr ""
+"Alternatif olarak, içe aktarılan görsele gerekli ICC profilini "
+"atayabilirsiniz. Görsele içe aktarırsanız ve renk uzayının “Rec 709 Linear "
+"TRC” olmadığını biliyorsanız farklı bir profil atamak için :menuselection:"
+"`Araçlar → Betikler → Görsele Profil Ata` eklentisini kullanmanız yeterlidir."
 
 #: ../../general_concepts/file_formats/file_exr.rst:44
 msgid ""
@@ -135,6 +150,10 @@ msgid ""
 "Python Plugin Manager: :menuselection:`Settings --> Configure Krita... --> "
 "Python Plugin Manager`. After activating the plugin, restart Krita."
 msgstr ""
+"Profil atama eklentisini görmüyorsanız Python Eklenti Yöneticisi’nde "
+"etkinleştirildiğinden emin olun: :menuselection:`Ayarlar → Krita’yı "
+"Yapılandır… → Python Eklenti Yöneticisi`. Eklentiyi etkinleştirdikten sonra "
+"Krita’yı yeniden başlatın."
 
 #: ../../general_concepts/file_formats/file_exr.rst:46
 msgid ""
@@ -145,9 +164,17 @@ msgid ""
 "selector. Next time you load any EXR image, this color space will be "
 "assigned automatically."
 msgstr ""
+"Çalışmanız öntanımlı olmayan bir renk uzayına (örneğin ACES) dayanıyorsa bu "
+"renk uzayını EXR görselleri yüklerken öntanımlı olarak ayarlayabilirsiniz. :"
+"menuselection:`Ayarlar → Krita’yı Yapılandır… → Renk Yönetimi`’ne gidin ve "
+"`İçe aktarılan EXR görselleri için renk profili` seçicisinden gerekli renk "
+"uzayını seçin. Bir dahaki sefere herhangi bir EXR görselini yüklediğinizde, "
+"bu renk uzayı kendiliğinden atanacaktır."
 
 #: ../../general_concepts/file_formats/file_exr.rst:52
 msgid ""
 "If you want to read more about color managed workflows, check :ref:`this "
 "chapter <color_managed_workflow>`."
 msgstr ""
+"Renk yönetimli iş akışları ile ilgili daha fazla bilgi almak istiyorsanız :"
+"ref:`bu fasıla <color_managed_workflow>` bir göz atın."
