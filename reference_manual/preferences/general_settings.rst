@@ -362,6 +362,11 @@ Automatic Layer Suffixes
     
     .. versionadded:: 5.2
     
+Long-press to open context menus
+
+    Allows you to summon context menus by pressing and holding, useful when you don't have an easy way to make a right-click. This is enabled by default on Android.
+    
+    .. versionadded:: 5.2.14
     
 .. _resource_settings:
 
