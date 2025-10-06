@@ -56,7 +56,7 @@ Conversion Rendering Intent
         Left: Soft proofed image with Absolute Intent Chromatic Adaptation enabled. Right: Soft proofed image with Absolute Intent Chromatic Adaptation disabled.
 
 Conversion Black Point Compensation
-    Enables the black point compensation when converting image to the **proofed output device** profile. Turning this off will crunch the shadow values to the minimum the screen and the proofing profile can handle, while turning this on will scale the black to the screen-range, showing you the full range of grays in the image. Like :guilabel:`Conversion Rendering Intent`, this value should coincide with the value used by the pring house when performing conversion to the device.
+    Enables the black point compensation when converting image to the **proofed output device** profile. Turning this off will crunch the shadow values to the minimum the screen and the proofing profile can handle, while turning this on will scale the black to the screen-range, showing you the full range of grays in the image. Like :guilabel:`Conversion Rendering Intent`, this value should coincide with the value used by the printing house when performing conversion to the device.
 
 Display Model
     Defines the way how the proofed (and possibly clipped) space will be shown on the screen.
@@ -65,7 +65,7 @@ Display Model
 
     * :guilabel:`Simulate paper white and black` is used to preview the white point (or "color tint") of the paper on the current display. In other words, if the paper is matte, or metallic, or has some sort of sepia effect, this will be visible on your screen. Please take it into account that the viewing conditions' white point will still be adjusted to the one of the screen. It means that you cannot visually compare the physical print and the image on the screen, unless all three white points coincide: the one in the paper profile, the one the display is configured to and the white point of the light bulb that illuminates your physical print.
 
-    * :guilabel:`Custom` alows you to configure the final conversion step manually. You may want to configure the pipeline depending on your goal:
+    * :guilabel:`Custom` allows you to configure the final conversion step manually. You may want to configure the pipeline depending on your goal:
 
         Preview color gamut (or "color variety") of the image
             * :guilabel:`Rendering Intent` --> :guilabel:`Relative Colorimetric`
@@ -84,7 +84,7 @@ Display Model
 
                 In KWin 6.5.x and later, :guilabel:`Absolute Colorimetric` will behave as if :guilabel:`Absolute Intent Chromatic Adaptation` is **always Enabled**. Given that you **keep the checkbox set**, the feature will work correctly and will let you preview contrast degradations, but you will not be able to get advanced effects of disabling color adaptation to the display space.
 
-                This is a problem of the Wayland protocol specification, the fix is `dicussed here <https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/439>`_.
+                This is a problem of the Wayland protocol specification, the fix is `discussed here <https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/439>`_.
 
 Gamut Warning
     Set the color of :guilabel:`Out of Gamut Warnings`.
