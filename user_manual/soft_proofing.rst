@@ -36,28 +36,60 @@ So ideally, you would do the image in RGB, and use all your favorite RGB tools, 
     
     On the left, the original, on the right, a view where soft proofing is turned on. The difference is subtle due to the lack of really bright colors, but the soft proofed version is slightly less blueish in the whites of the flowers and slightly less saturated in the greens of the leaves.
 
-You can toggle soft proofing on any image using the :kbd:`Ctrl + Y` shortcut. Unlike other programs, this is per-view, so that you can look at your image non-proofed and proofed, side by side. The settings are also per image, and saved into the ``.kra`` file. You can set the proofing options in :menuselection:`Image --> Image Properties --> Soft Proofing`.
+You can toggle soft proofing on any image using the :kbd:`Ctrl + Y` shortcut. Unlike other programs, this is per-view, so that you can look at your image non-proofed and proofed, side by side. The proofing configuration can also be set per image, and saved into the ``.kra`` file. Just enable :guilabel:`Store Softproofing configuration in the image` in the proofing options in :menuselection:`Image --> Image Properties --> Soft Proofing`. If the checkbox is unchecked, then Krita will use global settings from :menuselection:`Settings --> Configure Krita... --> Color Management --> Soft Proofing`
+
+.. note::
+    When :guilabel:`Store Softproofing configuration in the image` is enabled, Krita embeds the entire proofing ICC profile into ``.kra`` file. This ICC profile can be big for some output devices, especially CMYK ones.
 
 There you can set the following options:
 
-Profile, Depth, Space
+Model, Profile
     Of these, only the profile is really important. This will serve as the profile you are proofing to. In a professional print workflow, this profile should be determined by the printing house.
-Intent
-    Set the proofing Intent. It uses the same intents as the intents mentioned in the :ref:`color managed workflow <color_managed_workflow>`.
+
+Conversion Rendering Intent
+    Set the intent used to convert the image into the **proofed output device** profile. It uses the same intents as the intents mentioned in the :ref:`color managed workflow <color_managed_workflow>`. This intent should coincide with the conversion intent used by your print house before printing. If your print house does not do any conversion internally, then you should perform the conversion yourself before sending the file to them.
 
     .. figure:: /images/softproofing/Softproofing_adaptationstate.png
         :align: center
         :figwidth: 800
     
-        Left: Soft proofed image with Adaptation state slider set to max. Right: Soft proofed image with Adaptation State set to minimum.
-Adaptation State
-    A feature which allows you to set whether :guilabel:`Absolute Colorimetric` will make the white in the image screen-white during proofing (the slider set to max), or whether it will use the white point of the profile (the slider set to minimum). Often CMYK profiles have a different white as the screen, or amongst one another due to the paper color being different.
-Black Point Compensation
-    Set the black point compensation. Turning this off will crunch the shadow values to the minimum the screen and the proofing profile can handle, while turning this on will scale the black to the screen-range, showing you the full range of grays in the image.
-Gamut Warning
-    Set the color of the out-of-gamut warning.
+        Left: Soft proofed image with Absolute Intent Chromatic Adaptation enabled. Right: Soft proofed image with Absolute Intent Chromatic Adaptation disabled.
 
-You can set the defaults that Krita uses in :menuselection:`Settings --> Configure Krita... --> Color Management`.
+Conversion Black Point Compensation
+    Enables the black point compensation when converting image to the **proofed output device** profile. Turning this off will crunch the shadow values to the minimum the screen and the proofing profile can handle, while turning this on will scale the black to the screen-range, showing you the full range of grays in the image. Like :guilabel:`Conversion Rendering Intent`, this value should coincide with the value used by the pring house when performing conversion to the device.
+
+Display Model
+    Defines the way how the proofed (and possibly clipped) space will be shown on the screen.
+
+    * :guilabel:`Use global display settings` instructs Krita to render the proofed space using the global settings, set in :menuselection:`Settings --> Configure Krita... --> Color Management --> Display`.
+
+    * :guilabel:`Simulate paper white and black` is used to preview the white point (or "color tint") of the paper on the current display. In other words, if the paper is matte, or metallic, or has some sort of sepia effect, this will be visible on your screen. Please take it into account that the viewing conditions' white point will still be adjusted to the one of the screen. It means that you cannot visually compare the physical print and the image on the screen, unless all three white points coincide: the one in the paper profile, the one the display is configured to and the white point of the light bulb that illuminates your physical print.
+
+    * :guilabel:`Custom` alows you to configure the final conversion step manually. You may want to configure the pipeline depending on your goal:
+
+        Preview color gamut (or "color variety") of the image
+            * :guilabel:`Rendering Intent` --> :guilabel:`Relative Colorimetric`
+            * :guilabel:`Black Point Compensation` --> `Enabled`
+
+            .. note:: If you want to use :guilabel:`Out of Gamut Warnings`, it is best to use them in this mode
+
+        Preview contrast degradations caused by the color of the paper
+            * :guilabel:`Rendering Intent` --> :guilabel:`Absolute Colorimetric`
+            * :guilabel:`Absolute Intent Chromatic Adaptation` --> `Enabled`
+
+            .. warning::
+                If you are using Wayland compositor, Absolute Colorimetric intent may be **broken** (even in XWayland mode). More than that, it may be broken differently in different versions.
+
+                In KWin 6.4.x and earlier, :guilabel:`Absolute Colorimetric` will behave as if :guilabel:`Absolute Intent Chromatic Adaptation` is **always Disabled**. It will cause severe color tint if white points (`sigChromaticAdaptationTag`) of the printer and display profiles do not coincide.
+
+                In KWin 6.5.x and later, :guilabel:`Absolute Colorimetric` will behave as if :guilabel:`Absolute Intent Chromatic Adaptation` is **always Enabled**. Given that you **keep the checkbox set**, the feature will work correctly and will let you preview contrast degradations, but you will not be able to get advanced effects of disabling color adaptation to the display space.
+
+                This is a problem of the Wayland protocol specification, the fix is `dicussed here <https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/439>`_.
+
+Gamut Warning
+    Set the color of :guilabel:`Out of Gamut Warnings`.
+
+You can set the defaults that Krita uses in :menuselection:`Settings --> Configure Krita... --> Color Management --> Soft Proofing`.
 
 To configure this properly, it's recommended to make a test image to print (and that is printed by a properly set-up printer) and compare against, and then approximate in the proofing options how the image looks compared to the real-life copy you have made.
 
