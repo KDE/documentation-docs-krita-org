@@ -1,0 +1,241 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+#
+# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-14 01:57+0000\n"
+"PO-Revision-Date: 2025-10-11 12:53-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 25.08.1\n"
+
+#: ../../reference_manual/dr_minw_debugger.rst:-1
+msgid "How to get a backtrace in Krita using the dr. MinGW debugger."
+msgstr "Como obter um backtrace no Krita usando o depurador dr. MinGW."
+
+#: ../../reference_manual/dr_minw_debugger.rst:0
+msgid ".. image:: /images/Mingw-crash-screen.png"
+msgstr ".. image:: /images/Mingw-crash-screen.png"
+
+#: ../../reference_manual/dr_minw_debugger.rst:0
+msgid ".. image:: /images/Mingw-crash-log-start.png"
+msgstr ".. image:: /images/Mingw-crash-log-start.png"
+
+#: ../../reference_manual/dr_minw_debugger.rst:0
+msgid ".. image:: /images/Mingw-crash-log-end.png"
+msgstr ".. image:: /images/Mingw-crash-log-end.png"
+
+#: ../../reference_manual/dr_minw_debugger.rst:13
+msgid "Backtrace"
+msgstr "Backtrace"
+
+#: ../../reference_manual/dr_minw_debugger.rst:13
+msgid "Debug"
+msgstr "Depuração"
+
+#: ../../reference_manual/dr_minw_debugger.rst:18
+msgid "Dr. MinGW Debugger"
+msgstr "Deputador Dr. MinGW"
+
+#: ../../reference_manual/dr_minw_debugger.rst:22
+msgid ""
+"The information on this page applies only to the Windows release of Krita. Usu"
+"ally, the %LOCALAPPDATA%\\kritacrash.log log file will contain enough informat"
+"ion for the developers to get an idea of why Krita crashed. Using the debug pa"
+"ckage is only needed when more precise information is needed."
+msgstr ""
+"As informações nesta página se aplicam apenas à versão do Krita para Windows. "
+"Normalmente, o arquivo de log %LOCALAPPDATA%\\kritacrash.log contém "
+"informações suficientes para que os desenvolvedores tenham uma ideia do "
+"motivo do travamento do Krita. O uso do pacote de depuração só é necessário "
+"quando informações mais precisas são necessárias."
+
+#: ../../reference_manual/dr_minw_debugger.rst:26
+msgid "Using the Debug Package"
+msgstr "Usando o pacote de depuração"
+
+#: ../../reference_manual/dr_minw_debugger.rst:28
+msgid ""
+"If you have your Krita version installed and you want to get a backtrace, it's"
+" best to download a portable version (either the latest release, or the one th"
+"at someone told you to try, for example Krita Next or Krita Plus package). Alo"
+"ngside downloading the portable version, download the debug symbols package, t"
+"oo. It should be located in the same place you download Krita. You can see whi"
+"ch is which by checking the end of the name of the ZIP file - debug symbols pa"
+"ckage always ends with *-dbg.zip*."
+msgstr ""
+"Se você tiver a versão do Krita instalada e quiser obter um backtrace, é "
+"melhor baixar uma versão portátil (a versão mais recente ou aquela que "
+"alguém recomendou, por exemplo, o pacote Krita Next ou Krita Plus). Além de "
+"baixar a versão portátil, baixe também o pacote de símbolos de depuração. "
+"Ele deve estar localizado no mesmo local em que você baixou o Krita. Você "
+"pode ver qual é qual verificando o final do nome do arquivo ZIP — o pacote "
+"de símbolos de depuração sempre termina com *-dbg.zip*."
+
+#: ../../reference_manual/dr_minw_debugger.rst:33
+msgid ""
+"Links to the debug packages should be available on the release announcement ne"
+"ws item on https://krita.org/, along with the release packages. You can find d"
+"ebug packages for any release either in https://download.kde.org/stable/krita "
+"for stable releases or in https://download.kde.org/unstable/krita for unstable"
+" releases (for example beta versions). Portable ZIP and debug ZIP are found ne"
+"xt to each other."
+msgstr ""
+"Os links para os pacotes de depuração devem estar disponíveis no anúncio de "
+"lançamento em https://krita.org/, juntamente com os pacotes de lançamento. "
+"Você pode encontrar os pacotes de depuração para qualquer versão em "
+"https://download.kde.org/stable/krita para versões estáveis ​​ou em "
+"https://download.kde.org/unstable/krita para versões instáveis ​​(por "
+"exemplo, versões beta). O ZIP portátil e de depuração estão localizados um "
+"ao lado do outro."
+
+#: ../../reference_manual/dr_minw_debugger.rst:34
+msgid ""
+"Make sure you’ve downloaded the same version of debug package for the portable"
+" package you intend to debug / get a better backtrace."
+msgstr ""
+"Certifique-se de ter baixado a mesma versão do pacote de depuração para o "
+"pacote portátil que você pretende depurar / obter um backtrace melhor."
+
+#: ../../reference_manual/dr_minw_debugger.rst:35
+msgid "Extract the portable Krita."
+msgstr "Extrair o portátil do Krita."
+
+#: ../../reference_manual/dr_minw_debugger.rst:36
+msgid ""
+"Extract the files from the debug symbols package inside the portable Krita mai"
+"n directory, where the sub-directories *bin*, *lib* and *share* is located, li"
+"ke in the figures below:"
+msgstr ""
+"Extraia os arquivos do pacote de símbolos de depuração dentro da pasta "
+"principal portátil do Krita, onde as subpastas *bin*, *lib* e *share* estão "
+"localizadas, como nas figuras abaixo:"
+
+#: ../../reference_manual/dr_minw_debugger.rst:38
+msgid ".. image:: /images/Mingw-dbg7zip.png"
+msgstr ".. image:: /images/Mingw-dbg7zip.png"
+
+#: ../../reference_manual/dr_minw_debugger.rst:38
+msgid ".. image:: /images/Mingw-dbg7zip-dir.png"
+msgstr ".. image:: /images/Mingw-dbg7zip-dir.png"
+
+#: ../../reference_manual/dr_minw_debugger.rst:42
+msgid ""
+"After extracting the files, check the ``bin`` dir and make sure you see the ``"
+".debug`` dir inside. If you don't see it, you probably extracted to the wrong "
+"place."
+msgstr ""
+"Após extrair os arquivos, verifique a pasta ``bin`` e certifique-se de que a "
+"pasta ``.debug`` esteja presente. Se não a encontrar, provavelmente você "
+"extraiu para o local errado."
+
+#: ../../reference_manual/dr_minw_debugger.rst:46
+msgid "Getting a Backtrace"
+msgstr "Obtendo um backtrace"
+
+#: ../../reference_manual/dr_minw_debugger.rst:51
+msgid ""
+"When there is a crash, Krita might appear to be unresponsive for a short time,"
+" ranging from a few seconds to a few minutes, before the crash dialog appears."
+msgstr ""
+"Quando ocorre uma falha, o Krita pode parecer não responder por um curto "
+"período, variando de alguns segundos a alguns minutos, antes que a janela de "
+"falha apareça."
+
+#: ../../reference_manual/dr_minw_debugger.rst:55
+msgid "An example of the crash dialog."
+msgstr "Um exemplo da janela de falha."
+
+#: ../../reference_manual/dr_minw_debugger.rst:57
+msgid ""
+"If Krita keeps on being unresponsive for more than a few minutes, it might act"
+"ually be locked up, which may not give a backtrace. In that situation, you hav"
+"e to close Krita manually. Continue to follow the following instructions to ch"
+"eck whether it was a crash or not."
+msgstr ""
+"Se o Krita continuar sem responder por mais de alguns minutos, ele pode "
+"estar travado, o que pode não gerar um backtrace. Nessa situação, você "
+"precisa fechar o Krita manualmente. Continue seguindo as instruções a seguir "
+"para verificar se houve uma falha ou não."
+
+#: ../../reference_manual/dr_minw_debugger.rst:59
+msgid ""
+"Open Windows Explorer and type ``%LocalAppData%`` (without quotes) on the addr"
+"ess bar and press the :kbd:`Enter` key."
+msgstr ""
+"Abra o Windows Explorer e digite ``%LocalAppData%`` (sem aspas) na barra de "
+"endereço e pressione a tecla :kbd:`Enter`."
+
+#: ../../reference_manual/dr_minw_debugger.rst:61
+msgid ".. image:: /images/Mingw-explorer-path.png"
+msgstr ".. image:: /images/Mingw-explorer-path.png"
+
+#: ../../reference_manual/dr_minw_debugger.rst:63
+msgid ""
+"Find the file ``kritacrash.log`` (it might appear as simply ``kritacrash`` dep"
+"ending on your settings.)"
+msgstr ""
+"Encontre o arquivo ``kritacrash.log`` (pode aparecer simplesmente como "
+"``kritacrash`` dependendo das suas configurações)."
+
+#: ../../reference_manual/dr_minw_debugger.rst:64
+msgid ""
+"Open the file with Notepad and scroll to the bottom, then scroll up to the fir"
+"st occurrence of “Error occurred on <time>” or the dashes."
+msgstr ""
+"Abra o arquivo com o Bloco de Notas e role até o final, depois role para "
+"cima até a primeira ocorrência de “Ocorreu erro em <hora>” ou os travessões."
+
+#: ../../reference_manual/dr_minw_debugger.rst:68
+msgid "Start of backtrace."
+msgstr "Início do backtrace."
+
+#: ../../reference_manual/dr_minw_debugger.rst:70
+msgid "Check the time and make sure it matches the time of the crash."
+msgstr ""
+"Verifique a hora e certifique-se de que ela coincide com a hora do travamento."
+
+#: ../../reference_manual/dr_minw_debugger.rst:74
+msgid "End of backtrace."
+msgstr "Fim do backtrace."
+
+#: ../../reference_manual/dr_minw_debugger.rst:76
+msgid ""
+"The text starting from this line to the end of the file is the most recent bac"
+"ktrace."
+msgstr ""
+"O texto que começa nesta linha e vai até o final do arquivo é o backtrace "
+"mais recente."
+
+#: ../../reference_manual/dr_minw_debugger.rst:78
+msgid ""
+"If ``kritacrash.log`` does not exist, or a backtrace with a matching time does"
+" not exist, then you don’t have a backtrace. This means Krita was very likely "
+"locked up, and a crash didn’t actually happen. In this case, make a bug report"
+" too."
+msgstr ""
+"Se ``kritacrash.log`` não existir, ou não houver um backtrace com um horário "
+"correspondente, então você não tem um backtrace. Isso significa que o Krita "
+"provavelmente estava travado e não houve uma falha. Nesse caso, faça um "
+"relatório de bug também."
+
+#: ../../reference_manual/dr_minw_debugger.rst:79
+msgid ""
+"If the backtrace looks truncated, or there is nothing after the time, it means"
+" there was a crash and the crash handler was creating the stack trace before b"
+"eing closed manually. In this case, try to re-trigger the crash and wait longe"
+"r until the crash dialog appears."
+msgstr ""
+"Se o backtrace parecer truncado ou não houver nada após a hora do "
+"travamento, significa que houve uma falha e que o manipulador de falhas "
+"estava criando o rastreamento de pilha antes de ser fechado manualmente. "
+"Nesse caso, tente reativar a falha e aguarde mais tempo até que a janela de "
+"falha apareça."
