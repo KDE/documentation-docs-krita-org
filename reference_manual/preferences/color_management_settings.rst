@@ -79,6 +79,14 @@ Screen Profiles
 Rendering Intent
     Your choice of rendering intents is a way of telling Littlecms how you want colors mapped from one color space to another. There are four options available, all are explained on the :ref:`icc_profiles` manual page.
 
+    .. warning::
+
+        If you use Wayland-compatible compositor (Linux-only) and properly configured ICC profile for
+        your display in the compositor itself, then don't use `Perceptual` rendering intent and prefer
+        `Relative Colorimetric` instead. In `Perceptual` mode, the compositor is allowed to change your
+        colors in arbitrary ways, e.g. stretch sRGB space into something wider to make colors "look better"
+        on wide gamut displays. So `Perceptual` may be not suitable for color critical work.
+
 Softproofing options
 --------------------
 
