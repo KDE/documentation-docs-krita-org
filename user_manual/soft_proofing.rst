@@ -15,6 +15,9 @@
 Soft Proofing
 =============
 
+.. note::
+    Soft Proofing works only with :ref:`Canvas Graphics Acceleration <display_settings>` enabled.
+
 When we make an image in Krita, and print that out with a printer, the image tends to look different. The colors are darker, or less dark than expected, maybe the reds are more aggressive, maybe contrast is lost. For simple documents, this isn’t much of a problem, but for professional prints, this can be very sad, as it can change the look and feel of an image drastically.
 
 The reason this happens is simply because the printer uses a different color model (CMYK) and it has often access to a lower range of colors (called a gamut).
