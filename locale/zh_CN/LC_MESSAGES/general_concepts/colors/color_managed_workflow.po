@@ -645,7 +645,7 @@ msgstr ""
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:174
 msgid "Perceptual"
-msgstr "可感知"
+msgstr "感知"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:174
 msgid ""
@@ -658,11 +658,11 @@ msgstr ""
 "此模式把工作空间中的数值进行挤压，然后塞进要转换到的目标空间里。这种转换手段"
 "对于重现可感知的全部明度范围很有用，但不适合需要精确重现颜色的用途。如果你想"
 "分清一个图像中的各种颜色，或者想要完整表达原图各种光色之间的明暗关系，可以选"
-"用此模式。此模式不兼容阶调矩阵特性文件，它默认给相对比色模式使用。"
+"用此模式。此模式不兼容阶调矩阵特性文件，它默认给相对色度模式使用。"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:177
 msgid "Absolute Colorimetric"
-msgstr "绝对比色"
+msgstr "绝对色度"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:177
 msgid ""
@@ -671,13 +671,13 @@ msgid ""
 "colors. Recommended only for reproduction work. Doesn't work with Matrix "
 "Shaper profiles in Krita due to ICC v4 workflow standards."
 msgstr ""
-"与可感知模式相反，绝对比色模式会牺牲一切其他因素来保持正确的颜色数值，这样有"
-"可能产生难看的颜色。建议仅用于色彩重现工作。由于 ICC v4 色彩管理流程标准的限"
+"与感知模式相反，绝对色度模式会牺牲一切其他因素来保持正确的颜色数值，这样有可"
+"能产生难看的颜色。建议仅用于色彩重现工作。由于 ICC v4 色彩管理流程标准的限"
 "制，此模式不兼容阶调矩阵特性文件。"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:180
 msgid "Relative Colorimetric"
-msgstr "相对比色"
+msgstr "相对色度"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:180
 msgid ""
@@ -688,10 +688,10 @@ msgid ""
 "during conversion, because the ICC v4 workflow specifies to only use "
 "Relative Colorimetric for matrix shaper profiles."
 msgstr ""
-"这是一个介于可感知模式和绝对比色模式之间的模式。相对比色模式会首先尝试匹配两"
-"个色彩空间中相同的颜色。要做到这一点，它首先对齐两个空间的白点和黑点，然后沿"
-"着两个空间的相对边界进行切除。由于 ICC v4 色彩管理流程规范只允许为阶调矩阵特"
-"性文件使用相对比色模式，因此所有阶调矩阵特性文件都默认使用此模式。"
+"这是一个介于感知模式和绝对色度模式之间的模式。相对色度模式会首先尝试匹配两个"
+"色彩空间中相同的颜色。要做到这一点，它首先对齐两个空间的白点和黑点，然后沿着"
+"两个空间的相对边界进行切除。由于 ICC v4 色彩管理流程规范只允许为阶调矩阵特性"
+"文件使用相对色度模式，因此所有阶调矩阵特性文件都默认使用此模式。"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:183
 msgid "Saturation"
@@ -704,7 +704,7 @@ msgid ""
 "colorimetric."
 msgstr ""
 "此模式会不惜一切代价来保持颜色的鲜艳程度，为此可以牺牲色相的一致性。用于信息"
-"图。此模式不兼容阶调矩阵特性文件，那些特性文件会默认使用相对比色模式。"
+"图。此模式不兼容阶调矩阵特性文件，那些特性文件会默认使用相对色度模式。"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:185
 msgid ""
@@ -742,7 +742,7 @@ msgid ""
 msgstr ""
 "你可以在“输入色彩空间”处设置图像的工作空间，然后把“显示设备”设为 sRGB 或者你"
 "添加到配置中的自定义 LUT 文件。在此场景下的“视图”选单可以用来模拟某种显示设备"
-"进行软打样。"
+"进行色彩校样。"
 
 #: ../../general_concepts/colors/color_managed_workflow.rst:200
 msgid ""
