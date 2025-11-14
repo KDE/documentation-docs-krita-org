@@ -20,7 +20,7 @@
 
 Due to ``.psd`` being used as an interchange format, this leads to confusion amongst people using these programs, as to why not all programs support opening these. Sometimes, you might even see users saying that a certain program is terrible because it doesn't support opening PSDs properly. But as PSD is an internal file-format without online specs, it is impossible to have any program outside it support it 100%.
 
-Krita supports loading and saving raster layers, blending modes, layerstyles, layer groups, and transparency masks from PSD. It will likely never support vector and text layers, as these are just too difficult to program properly.
+Krita supports loading and saving raster layers, blending modes, layerstyles, layer groups, and transparency masks from PSD, and since Krita 5.3, vector and text.
 
 We recommend using any other file format instead of PSD if possible, with a strong preference towards :ref:`file_ora` or :ref:`file_tif`.
 

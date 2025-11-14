@@ -54,7 +54,7 @@ Shape Selection Tool
 
 The shape selection tool used to be called the "default" tool. This had to do with Krita being part of an office suite once upon a time. But this is no longer the case, so we renamed it to its purpose in Krita: Selecting shapes! This tool only works on vector layers, so trying to use it on a paint layer will give a notification.
 
-After you create vector shapes, you can use this tool to select, transform, and access the shape's options in the tool options docker. There are a lot of different properties and things you can do with each vector shape. If you have text shapes selected, you can edit their properties with the :ref:`text_properties_docker`.
+After you create vector shapes, you can use this tool to select, transform, and access the shape's options in the tool options docker. There are a lot of different properties and things you can do with each vector shape. If you have text shapes selected, you can edit their properties with the :ref:`text_properties_docker`, :ref:`_shape_selection_tool_text` section for more information.
 
 Selection
 ---------
@@ -342,3 +342,36 @@ The shape selection tool has a nice right click menu that gives you several feat
 .. image:: /images/vector/Vector-right-click-menu.png
 
 If you have multiple objects selected you can perform "Logical Operators" on them, or boolean operations as they are commonly called. It will be the last item on the right-click menu. You can unite, intersect, subtract, or split the selected objects.
+
+.. _shape_selection_tool_text:
+
+Shape Selection Text Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When text shapes are selected, their paragraph properties can be edited all at once with the :ref:`text_properties_docker`. Beyond that, there's a number of extra actions available:
+
+Convert...
+    See :ref:`text_type` for more information.
+Flow Text in Shape
+    Flows the first selected text into all the selected shapes. The visual order determines the initial text flow order.
+Subtract Shape from Text Flow Area
+    Adds all selected shapes to the first selected text shape as subtraction areas. See :ref:`text_in_shape` for more information.
+Put Text On Path
+    Puts the whole text on the first selected path. This function will replace any pre-existing paths.
+
+When a :ref:`text_in_shape` is selected, a button appears in the top right. Clicking this will switch the tool into text contour mode. In this mode you can select, move, scale and rotate the shapes that belong with a text. It is also available in the :ref:`shape_edit_tool`, but automatically disables in the :ref:`text_tool`. When in this mode, the text properties docker will edit the text regardless of what is selected.
+
+A number of extra actions become available in the right click menu when in in text contour mode:
+
+Remove Shapes from Text Flow
+    Remove all selected shapes from the current text.
+Toggle Flow Shape Type
+    Switches the shape type between Subtract and Inside.
+Set Flow Shape as Last
+    Make selected flow shapes the last in the flow shape order as used by text layout.
+Decrease Flow Shape Index
+    Make this flow shape be evaluated later in the flow shape order as used by text layout.
+Increase Flow Shape Index
+    Make this flow shape be evaluated earlier in the flow shape order as used by text layout.
+Set Flow Shape as First
+    Make this flow shape the first in the flow shape order as used by text layout.

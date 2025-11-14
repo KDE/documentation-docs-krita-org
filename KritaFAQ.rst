@@ -188,7 +188,7 @@ Nvidia
 I can't edit text from PSD files created by Photoshop
 -----------------------------------------------------
 
-There is no text support for PSD file yet. The text will appear rasterized and converted into a paint layer.
+Since Krita 5.3, PSD text loading is supported. However, because there's significant differences between photoshop and Krita, Krita will prompt whether it should load the text data as text or as a paint layer. Try reloading the psd and ensure you confirm you wish to load text as editable objects.
 
 How much memory does my image take?
 -----------------------------------

@@ -17,9 +17,9 @@ Text Tool
 
 |tooltext|
 
-This tool allows you to add text to your artwork.
+This tool allows you to add text to your artwork. It is used in conjunction with the :ref:`text_properties_docker`. Some text operations can also be handled by the :ref:`shape_selection_tool`.
 
-To create a text, click on the canvas with |mouseleft| and a text with "Placeholder Text" will appear. To create a simple wrapped text ("inline-size", doing |mouseleft| :kbd:`+ drag` to create a rectangular area. When the area is larger than the currently selected font's line height, the cursor image will start showing the cursor for inline-size. Releasing the mouse button will then add the default text with wrapping enabled. To avoid creating a wrapped text while dragging, press :kbd:`Ctrl` while dragging.
+To create a text, click on the canvas with |mouseleft| and a text with "Placeholder Text" will appear, ready for editing.
 
 Editing Text
 ------------
@@ -36,39 +36,61 @@ To finish editing text, click outside the text box, or start editing a different
 
 Beyond editing the contents, you can also move the text. To do so, hover over the bounding box so the cursor will switch to a move cursor. Then |mouseleft| :kbd:`+ drag` will move the text.
 
-When editing a inline-size wrapped shape, you can also edit the wrapping area. Two handles will appear on each side of the text, showing the limits at which the text will wrap. By doing |mouseleft| :kbd:`+ drag` on these handles, you can increase or decrease the wrapping area. When the text is aligned to one of the handles, moving one of the other will swap the text alignment so it stays aligned to that handle. When the alignment is set to the middle, the text will stay in between the two bars. If you want the text to stay at the same place when editing a centered text and only change the wrapping area width, hold :kbd:`Ctrl` while dragging.
-
 To change the styling of text, use the :ref:`text_properties_docker`.
 
-.. _glyph_palette:
+.. _text_type:
 
-Glyph Palette
--------------
+Text Types
+----------
 
-The glyph palette dialog provides a grid view of alternative characters available in a font through opentype features or unicode character variants. It is meant as a companion to the :ref:`text_property_open_type` in the text property docker.
+Krita has full SVG 2 text support, which means there's support for various text types, which can be subdivided into roughly 5 categories:
 
-Glyph Alternates
-~~~~~~~~~~~~~~~~
+Preformatted
+~~~~~~~~~~~~
 
-.. figure:: /images/text/glyph_palette_alternates.png
+The most basic type of text. This type does not auto wrap. However, white spaces are not collapsed, meaning that new lines can be created by pressing the :kbd:`Enter` key.
 
-   Glyph alternates for the character "A" in the font “Junicode”. Not all fonts have this many alternates available.
+Pre-positioned
+~~~~~~~~~~~~~~
 
-This shows any available alternates for the current code point. There's two kinds of alternates:
+This is an SVG 1.1 text, where each line is positioned absolutely, and the white-space rule is set to collapse any extra spaces. Older versions of Krita created such texts, and it is still useful for SVGs that will be exported and used in other SVG 1.1 renderers.
 
-Unicode Character Variants
-    These are officially defined character variants. Simple examples of these include slashed 0 as an alternative to 0, but more commonly these are used for Han ideographs. In particular, place and people names require certain glyph variants to be used to look recognisable, and character variants provide this access. Krita will only show variants that are available in the font itself.
-Open Type features
-    These are glyph alternates that are available via a number of open type features, such as the character variants, access all alternates or stylistic alternates.
+.. tip::
 
-Character Map
+   When handling text coming from old versions of Krita, use the text type conversion to switch them to either :term:`Preformatted` or :term:`Inline Wrapped` to make editing text easier. :term:`Pre-positioned` is only useful when you intend to use the SVG representation later, such as for EPUB3 or web use.
+
+Text on Path
+~~~~~~~~~~~~
+
+To create Text on Path, hover over the an existing shape. When hovering over the boundary, the cursor will change to a text-on-path cursor, and clicking will create a text on path.
+
+To edit a text on path, set the blinking cursor within said text. A handle will appear to edit the start offset and the side of the path the text is laid out on. By dragging this handle, the text can be moved along the path, and by flipping it to the other side, the text will be set to use the other side of the path.
+
+.. note::
+
+    All text types without auto-wrap can in theory be used mixed in a single text shape. Creating such a shape requires using the SVG source editor to edit the SVG directly, but it does mean that the division between them is not as strict as this typology might make them seem. Krita will do it's best to inform you which text type it thinks the shape is for the conversion functions in the tool options, but keep in mind that it might guess wrong.
+
+Inline Wrapped
+~~~~~~~~~~~~~~
+
+To create a simple wrapped text (:term:`Inline Wrapped`), doing |mouseleft| :kbd:`+ drag` to create a rectangular area. When the area is larger than the currently selected font's line height, the cursor image will start showing the cursor for inline-size. Releasing the mouse button will then add the default text with wrapping enabled. To avoid creating a wrapped text while dragging, press :kbd:`Ctrl` while dragging.
+
+When editing a :term:`Inline Wrapped` shape, you can also edit the wrapping area. Two handles will appear on each side of the text, showing the limits at which the text will wrap. By doing |mouseleft| :kbd:`+ drag` on these handles, you can increase or decrease the wrapping area. When the text is aligned to one of the handles, moving one of the other will swap the text alignment so it stays aligned to that handle. When the alignment is set to the middle, the text will stay in between the two bars. If you want the text to stay at the same place when editing a centered text and only change the wrapping area width, hold :kbd:`Ctrl` while dragging.
+
+
+.. _text_in_shape:
+
+Text in Shape
 ~~~~~~~~~~~~~
 
-This provides a character map for the given font. At the left there is a list of unicode blocks that can be used to filter the character map.
+To create Text on Path or Text in Shape, hover over the an existing shape. When hovering over the boundary, the cursor will change to a text-on-path cursor, and clicking will create a text on path. Similarly, hovering over the fill of a shape will change the cursor to a text-in-shape cursor, and clicking will flow the text into that shape. Both text on path and text in shape will show a new icon to the top right of the shape. Clicking this will switch to the :ref:`shape_selection_tool`, where the shapes can be modified. 
 
-At the top there's a search bar, where typing a character will show that character or the codepoints that decompose to that character (That is, A will show 'Á', 'Å' and even 'Ấ'). This input also accepts characters in U+HEXCODE format.
+Text can be wrapped into one or multiple shapes. When flowing in multiple shapes, each 'inside' shape is first filled up with as much text as possible before the next shape is started. Then there's also 'subtract' shapes. These are subtracted from the 'inside' shapes to create the text areas.
 
-The remaining area is dedicated to the character map itself. Clicking a character will show a pop-up with glyph alternates (if available), and double clicking will add said character at the cursor position in the active text.
+When editing text in shape, the final text area border is drawn on the screen. Arrows will be drawn between text areas to show the order in which the areas are evaluated. The :ref:`shape padding and margin <text_property_text_area>` can be modified by hovering over the text area border and |mouseleft| :kbd:`+ drag` it. If the cursor was closer to a subtraction shape when starting to drag, the margin will be modified. Conversely, when the cursor is closer to an inside shape when starting the drag, the shape padding will be modified.
+
+Editing the order of the text areas is done in :ref:`shape_selection_tool`, as is adding and removing shapes from a text.
+
 
 Tool Options
 ------------
@@ -76,37 +98,67 @@ Tool Options
 .. image:: /images/tools/Krita-tool-options-text.png
 
 Create new texts with...
-    This contains features with which to create new texts, the following items are available:
+    This allows choosing which properties to use when creating new texts. Text can be made with any :ref:`resource_style_presets`, or use the current properties in the text properties docker by toggling :guilabel:`Current Text Properties`.
 
-    Font
-        The letter type used by newly created texts.
-    Size in pt
-        The letter-size used by newly created texts. It is in pts (points), which is a common standard for fonts that is measured 72 points per inch. It therefore will stay proportionally the same size if you increase or decrease canvas dpi.
-    Anchor/Align text to the left/middle/right
-        Text alignment. This allows you to align text to the left, center it, or to the right. This is called text-anchor because SVG 1.1's multiline text only uses text-anchor, and this is a slight bit different than text-align (and also the reason justify isn't available at the moment).
-    Letter Spacing
-        The letter spacing used by newly created texts.
+Options
+    Use Visual Cursor
+        Use the visual order for the text caret bidirectional text. When text is bidirectional, the logical order of the letters can go left or right depending on where it is in the text, with the paragraph direction determining which of :kbd:`←` and :kbd:`→` is the forward key. When visual order is enabled, the caret will ignore the logical order in favour of the visual order.
+    Paste Rich Text by Default
+        Krita can read styled text like SVG and HTML from the system clipboard, and has separate actions in the shortcuts for pasting either this 'rich' text or to paste plain text. This toggle controls whether to also paste rich text when using the regular :kbd:`Ctrl + V` :guilabel:`Paste` action from the edit menu.
+Open Text Properties
+    Opens the :ref:`text_properties_docker`. The text properties docker is where the majority of text styling functionality is located.
+Type Setting Mode
+    Toggles :ref:`type_setting_mode`.
+Dialogs:
+    Edit SVG Source
+        Opens the :ref:`svg_source_editor`.
+    Glyph Palette
+        Opens the :ref:`glyph_palette`.
+        
 
-Edit Text
-    This will summon the text editor for the currently selected shape. This can be quickly invoked with either pressing the :kbd:`Enter` key or :kbd:`double-click +` |mouseleft| shortcut on the shape.
+Convert Type...
+    These buttons allow converting a selected text. Said conversion functions are also available as shortcut actions under "Interaction Tool" in the shortcut preferences.
 
-Text Editor
------------
+    Preformatted
+        Converts text so that it does not wrap automatically. In addition, the CSS :ref:`text_property_white_space` collapse rule is applied so that any hidden white space is removed, and the rule is switched so that additional white spaces are not removed. Any absolute SVG 1.1 character transforms are changed to become new lines.
+    
+    Inline Wrapped
+        Converts text so that it wraps around a maximum inline length (width for horizontal text, and height for vertical text). As with :guilabel:`Preformatted`, the CSS :ref:`text_property_white_space` rule and character transforms are processed to create line breaks and avoid the collapse of additional white spaces.
+    
+    Pre-positioned
+        Converts text to SVG 1.1 style text, where additional :ref:`text_property_white_space` get collapsed and new lines are positioned absolutely. This is how previous versions of Krita handled text, as well as the dominant way to handle SVG text. Use this to prepare text for export when the end result should show in a SVG 1.1 compatible renderer.
+        
+    Text in shape and text on path are not among the conversion options. Instead, use :guilabel:`Flow Text in Shape` and :guilabel:`Put Text On Path` from the rightclick menu in the :ref:`shape_selection_tool_text`.
 
-A small window for all your text editing needs. The Text Editor has two tabs: Rich text and SVG source.
+.. _type_setting_mode:
+
+Type Setting Mode
+-----------------
+
+This mode enables on-canvas text styling for a number of text properties.
+
+When enabled, the selection will be replaced with a number of metric lines. When there's no selection, these lines are drawn for the paragraph, and uses the paragraph's font metrics, while with a selection, it will use the selected glyphs font metrics as retrieved during the text layout.
+
+Hovering over the lines will highlight them, and show the name of the relevant metric. |mouseleft| :kbd:`+ drag` on these lines will increase or decrease the size of this metric. This way, :ref:`text_property_font_size`, :ref:`text_property_line_height` and :ref:`text_property_baseline_shift` can be modified directly on canvas. Pressing :kbd:`Shift` will display a different set of metrics: the :ref:`text_property_baseline`. Clicking a baseline will set :ref:`text_property_dominant_baseline` and :ref:`text_property_alignment_baseline` to that baseline, allowing the alignment of text of different sizes to said baseline.
+
+When text is :term:`Preformatted` or :term:`Prepositioned`, two additional controls are visible at the start and end of a selection. These allow modifying the position and rotation of each cluster. The square handle allows moving the whole selection, while the round handle scales and rotates the selection. There's a series of actions for moving the square handle available in the shortcuts configuration for the text tool. These (for each direction) :guilabel:`Move Text Selection Down By 1 Pixel`, and will move the selected text in the given direction. There's also :guilabel:`Remove Character Transforms` which will remove all character transforms, (relative, absolute and rotation) from the given range.
+
+.. note::
+
+   For fine-tuned typographic adjustments, like manual kerning, it's recommended to use these two handles over CSS :ref:`text_property_letter_spacing`. The latter is intended for spacing letters over a whole chunk of text, and implemented in subtly different ways in every implementation.
+   
+   Internally, these modify SVG 1.1 relative character transforms, which means they don't break the shaping, and are supported in all the major browsers.
+
+.. _svg_source_editor:
+
+SVG Source Editor
+-----------------
+
+A small window to directly edit the SVG source of the text. The text layout is capable of more complex text than the text tool can edit on-canvas. If you are familiar with SVG, you will be able to edit it directly and use powerful features like nested :ref:`text_property_baseline_shift`, :ref:`text_property_text_decoration` and :ref:`text_property_direction`.
 
 .. image:: /images/tools/Text-editor-example.png
 
-Activating
-    You can use the Text tool to first create a text box. There are a few options in the tool options if you want to customize how the text will be adding. You will need to drag a rectangle on the canvas to create the text area. Once your text is created, you can edit the text from two ways:
-    
-    #. Select the text with the shape selection tool (first tool). Press the :kbd:`Enter` key. The text editor will appear.
-    #. Select the text with the shape selection tool (first tool). Then click the Text tool. In the tool options there is an :guilabel:`Edit Text` button. When you click that the text editor window will appear. 
-
 Editing
-    If you are unfamiliar with the way SVG text works, use the rich text tab, it will allow you to edit the text as you see it, at the cost of not having all functionality.
-
-    If you are a little bit more familiar with SVG text, you can directly edit the SVG source. Do note that not all attributes and properties are converted back to the rich text editor, so do be careful when switching back.
 
     Press :guilabel:`Save` as you're done with your edits to preview them on canvas.
 
@@ -148,126 +200,35 @@ View
     Zoom In :kbd:`Ctrl + +`
         Zoom in the text.
 
-Insert
-    Special Character... :kbd:`Alt + Shift + C`
-        Pops up a dialog that allows you to search for special characters that are difficult to type in with your keyboard.
-
-Format
-    Bold :kbd:`Ctrl + B`
-        Set the font-weight to **bold**.
-    Italic :kbd:`Ctrl + I`
-        Sets the selected text *italic*.
-    Underline :kbd:`Ctrl + U`
-        Underline the selected text.
-    Strike-Through
-        Adds a strike-through text decoration.
-    Superscript :kbd:`Ctrl + Shift + P`
-        Sets the text to super-script baseline.
-    Subscript :kbd:`Ctrl + Shift + B`
-        Sets the text to subscript baseline.
-    Weight
-        Sets the font weight a little more specifically. Possibilities are... Light, Normal, Bold, and Black.
-    Align Left
-        Align the selected paragraph to the left.
-    Align Center :kbd:`Ctrl + Alt + C`
-        Center the selected paragraph.
-    Align Right :kbd:`Ctrl + Alt + R`
-        Align the selected paragraph to the right.
-    Kerning
-        Toggles kerning for selected text.
-
 Settings
-    Settings...
-        Calls up the text-editor settings dialog.
+    Here you can edit the colors used for code formatting.
 
-Text Editor Settings
-~~~~~~~~~~~~~~~~~~~~
+.. _glyph_palette:
 
-The settings that can be configured for the text editor.
+Glyph Palette
+-------------
 
-Editor Mode
-    Whether you want both the Rich Text Editor and the SVG Source Editor, or only one of either.
-Colors
-    Here you can configure the syntax highlighting for the SVG source.
+The glyph palette dialog provides a grid view of alternative characters available in a font through opentype features or unicode character variants. It is meant as a companion to the :ref:`text_property_open_type` in the text property docker.
 
-    Keyword
-        These highlights important characters like <, /, and >.
-    Element
-        The format for highlighting the element tag name. **text** and **tspan** are examples of element names.
-    Attribute
-        The format for highlighting the attributes of the tag. For example, ``font-family``, when it isn't in the ``style`` tag is usually written as an attribute.
-    Value
-        The format for highlighting value of attributes.
-    Comment
-        This highlights XML comments, which are written as following: ``<!-- This is an XML comment -->``. Comments are pieces of text that never get interpreted.
-    Editor Text Color
-        The main color of the editor.
-    Editor background color
-        The main background color of the editor.
+Glyph Alternates
+~~~~~~~~~~~~~~~~
 
-Fonts
-    This allows you to filter the selection of fonts in the editor by writing system. Some systems have a lot of fonts specifically for showing foreign languages properly, but these might not be useful for you. You just tick the writing systems which you use yourself, and the font drop-down will only show fonts that have full support for that language.
+.. figure:: /images/text/glyph_palette_alternates.png
 
-Fine typographic control with the SVG Source tab
-------------------------------------------------
+   Glyph alternates for the character "A" in the font “Junicode”. Not all fonts have this many alternates available.
 
-So, the rich text editor cannot control all functionality that SVG text allows for. For that, you will need to touch the SVG source directly. But to do that, you will first need to go to the text editor settings and enable either :guilabel:`SVG Source` or :guilabel:`Both` editor mode. The Rich Text editor will lose some information, so if you go all out, use :guilabel:`SVG Source`.
+This shows any available alternates for the current code point. There's two kinds of alternates:
 
-Word-spacing, Letter-spacing and Kerning
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unicode Character Variants
+    These are officially defined character variants. Simple examples of these include slashed 0 as an alternative to 0, but more commonly these are used for Han ideographs. In particular, place and people names require certain glyph variants to be used to look recognisable, and character variants provide this access. Krita will only show variants that are available in the font itself.
+Open Type features
+    These are glyph alternates that are available via a number of open type features, such as the character variants, access all alternates or stylistic alternates.
 
-These three are written and read from the rich text tab, but only two of them can be controlled from Rich Text tab.
+Character Map
+~~~~~~~~~~~~~
 
-Kerning
-    `Kerning, in SVG 1.1 <https://www.w3.org/TR/SVG/text.html#KerningProperty>`_ behaves slightly differently than ``font-kerning`` in CSS. Krita by default uses the ``auto`` property for this, which means it is on. To turn it off use ``kerning: 0;`` in the ``style`` section of the text. Any other numeric value will be added to current ``letter-spacing``.
+This provides a character map for the given font. At the left there is a list of unicode blocks that can be used to filter the character map.
 
-    .. image:: /images/tools/Krita_4_0_text_kerning.png
-       :align: center
+At the top there's a search bar, where typing a character will show that character or the codepoints that decompose to that character (That is, A will show 'Á', 'Å' and even 'Ấ'). This input also accepts characters in U+HEXCODE format.
 
-    ::
-
-        <text style="kerning:0; font-family:Dancing Script; font-size:18pt; font-size-adjust:0.265625">
-            <tspan>No Kerning on Valhalla Tower.</tspan>
-        </text>
-
-Letter-spacing
-    This is the distance between letters in pts, usually. Just write ``letter-spacing`` in the ``style`` and add a distance in pts behind it. A negative value will decrease the value between letters.
-
-Word-spacing
-    This is the extra distance between words, defaulting to pts. By default, ``word-spacing: 0;`` will have it use only the width of the space character for that font. A negative value will decrease the amount of space between words:
-
-    .. image:: /images/tools/Krita_4_0_letter_and_word_spacing.png
-       :align: center
-
-    ::
-
-        <text style="font-family:Noto Serif; font-size:12pt; font-size-adjust:0.389915; text-anchor:middle">
-            <tspan>No Adjustment.</tspan>
-            <tspan style="letter-spacing:2" x="0" dy="22pt">Letter spacing: 2</tspan>
-            <tspan style="letter-spacing:-2" x="0" dy="22pt">Letter spacing: -2</tspan>
-            <tspan style="word-spacing:5" x="0" dy="22pt">Word spacing: 5</tspan>
-            <tspan style="word-spacing:-5" x="0" dy="22pt">Word spacing: -5</tspan>
-        </text>
-
-
-x, y, dx, dy
-~~~~~~~~~~~~
-
-These are even finer-grained controls that can be used to position text. However, they CANNOT be reliably converted to the format of the rich text editor, because the rich text editor uses these to figure out if a line is a new-line and thus writes to these.
-
-X and Y
-    X and Y are absolute coordinates. But because you cannot change the absolute coordinates of the text from the editor, these get added to the position when they show up in a tspan.
-dx and dy
-    These are relative coordinates to the position of the previous letter.
-
-Font-stretch and Small-caps
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-These can also be stored and written to the rich text tab's internal format, but they don't get used in the on screen text object.
-
-Dominant Baseline, Alignment baseline, Font-size-adjust, Writing mode, Glyph-orientation, rotate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-These are not stored in the rich text right now, and while they can be written into the SVG text, the SVG text-shape doesn't do anything with them. 
-
-Krita generates ``font-size-adjust`` for the font when coming from rich text, as this can help designers when they want to use the SVG source as a basis for later adjustments.
+The remaining area is dedicated to the character map itself. Clicking a character will show a pop-up with glyph alternates (if available), and double clicking will add said character at the cursor position in the active text.

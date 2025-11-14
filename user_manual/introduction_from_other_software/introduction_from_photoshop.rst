@@ -362,7 +362,25 @@ Macro recording and playback exists in Krita, but it is not working well at this
 Text Tool
 ~~~~~~~~~
 
-The text tool in Krita is less advanced than the similar tool in Photoshop.
+Since Krita 5.3, the :ref:`text_tool` is quite advanced. The underlying text layout engines are quite different however, and in some places one is better than the other. A small overview:
+
+Photoshop has...
+
+- A different way of handling :ref:`text_property_letter_spacing`, which sometimes is used to do manual kerning. Within Krita, it's best to use :ref:`type_setting_mode` for this purpose.
+- An option where the whole paragraph is taken into account when line breaking, this is not available within Krita.
+- Similarly, all types (European, East Asian and Middle Eastern) of justification are more advanced.
+- Latin text that rotates when typeset vertically.
+- Width and height stretching of glyphs.
+
+While Krita has...
+
+- The ability to lay out text in multiple shapes.
+- :ref:`type_setting_mode` has more flexibility in positioning glyphs arbitrarily.
+- Better support for bi-directional text, with unicode bidi selection.
+- The ability to align text by their hanging baseline.
+- A more flexible opentype feature selection system.
+
+Beyond that, Photoshop's engine is one where ranges of text are styled, while Krita's uses a tree system styled with CSS. This means that within Krita ranges can inherit properties, and some properties can be applied in a nested manner. See the :ref:`text_properties_docker` for precise descriptions of each property.
 
 Blending Modes While Transforming
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

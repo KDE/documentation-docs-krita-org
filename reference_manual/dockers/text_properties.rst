@@ -624,6 +624,18 @@ Auto
 
    The Krita slogan in various scripts, typeset with the “Unifont” pixel font. By using :guilabel:`Optimize Speed`, Krita knows to not just disable anti-aliasing, but it will also try to snap the glyphs so that :ref:`text_property_baseline_shift`, :ref:`text_property_letter_spacing` and :ref:`text_property_line_height` will look good.
 
+.. _text_property_text_area:
+   
+Text Area
+~~~~~~~~~
+
+These properties are related to :ref:`text_in_shape`.
+
+Shape Padding
+    This is the padding that is calculated on the Inside shapes.
+Shape Margin
+    This is margin around the "Subtract" shapes that is added before they are removed from the "Inside" shapes.
+
 .. _text_docker_style_presets:
 
 Style Presets
