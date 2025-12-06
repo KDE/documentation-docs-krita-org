@@ -28,13 +28,13 @@ If you have just created a text, a blinking cursor will be visible on the text. 
 
 .. Note::
 
-   Because you need the keys on your keyboard to type text, many shortcuts will be disabled. If you want to use a particular shortcut while editing text, it is best to set it up to use either with :kbd:`Ctrl`, :kbd:`Alt` or :kbd:`Ctrl + Shift` as modifiers, as Krita will consider others text to be input. Canvas input gestures like touch rotate, |mousemiddle| pan, or |mousescroll| will work by virtue of not having any text associated.
+   Because you need the keys on your keyboard to type text, many shortcuts will be disabled. If you want to use a particular shortcut while editing text, it is best to set it up to use either with :kbd:`Ctrl`, :kbd:`Alt` or :kbd:`Ctrl + Shift` as modifiers, as Krita will consider others text to be input. Canvas input gestures like touch rotate, |mousemiddle| pan, or |mousescroll| will work by virtue of not having any keyoard keys associated.
    
-   In addition Krita supports all of `Qt's default text movement shortcuts <https://doc.qt.io/qt-5/qkeysequence.html#standard-shortcuts>`_. These correspond to the default for a given operating system, so for example, :kbd:`Ctrl + →` will move the cursor to the end of words on Windows, while on MacOS the same action corresponds to :kbd:`Alt + arrow keys`. Because Krita supports vertical text, we will also check against the appropriate keys for the given writing mode, meaning that in vertical, :kbd:`Ctrl + ↓` will move to the end of the word.
+   In addition Krita supports all of `Qt's default text movement shortcuts <https://doc.qt.io/qt-5/qkeysequence.html#standard-shortcuts>`_. These correspond to the default for a given operating system, so for example, :kbd:`Ctrl + →` will move the cursor to the end of words on Windows, while on MacOS the same action corresponds to :kbd:`Alt + →`. Because Krita supports vertical text, we will also check against the appropriate keys for the given writing mode, meaning that in vertical, :kbd:`Ctrl + ↓` will move to the end of the word.
 
 To finish editing text, click outside the text box, or start editing a different text. To do so, hover over any other text. This can be on the same layer or on any other editable vector layer. When hovering over the text, its bounding box will be highlighted. Clicking on it will then select the layer, and enter the editing mode on that text.
 
-Beyond editing the contents, you can also move the text. To do so, hover over the bounding box so the cursor will switch to a move cursor. Then |mouseleft| :kbd:`+ drag` will move the text.
+Beyond editing the contents, you can also move the text. To move a text, hover over the bounding box so the cursor will switch to a move cursor. Then |mouseleft| :kbd:`+ drag` will move the text.
 
 To change the styling of text, use the :ref:`text_properties_docker`.
 

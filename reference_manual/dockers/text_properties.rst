@@ -16,13 +16,21 @@ Text Properties Docker
 
 The text properties docker allows you to edit text properties of text objects currently selected with either the :ref:`shape_selection_tool` or :ref:`text_tool`.
 
-By default, the docker will show only a handful of basic properties, while all other properties are only shown when they are relevant, with relevant meaning they are currently set, or :term:`inherited`.
+The docker has three tabs: :guilabel:`Paragraph`, :guilabel:`Character` and :guilabel:`Preset`.
+
+:guilabel:`Paragraph` will edit the default properties for the whole paragraph, and contain both :ref:`text_paragraph_properties` and :ref:`text_character_properties`. You can edit these with both the :ref:`shape_selection_tool` and :ref:`text_tool`.
+
+:guilabel:`Character` will edit the properties for the selected range, or the word the cursor is on, and edits only :ref:`text_character_properties`. These are disabled unless you are editing with the :ref:`text_tool`.
+
+Finally, :guilabel:`Preset` allows you to create and apply style presets onto the text. See :ref:`text_docker_style_presets` for more information.
+
+By default, the first two tabs will show only a handful of basic properties, while all other properties are only shown when they are relevant, with relevant meaning they are currently set, or :term:`inherited`.
 
 The revert button before a given property will give an indicator of whether a property is set, and clicking it will unset the property, reverting it to either the default or inherited value. When a mixture of style properties are selected, you will see a multi-headed arrow, while the control itself will show the default or inherited value. Modifying the control will set the same value on all properties, while clicking the revert button will unset the property on all text.
 
-New properties can be added with the "add property" drop down below. The text input allows for searching the current text properties, with each property having a number of alternate keywords.
+New properties can be added with the :guilabel:`add property` drop down below. The text input allows for searching the current text properties, with each property having a number of alternate keywords.
 
-The visibility state of each property can be configured by pressing the "configure button" next to the "add properties" dropdown. When the default visibility is set to "always show" and none of the individual properties are set to show conditionally, the "add property" dropdown is replaced with a filter input. The current visibility states are possible:
+The visibility state of each property can be configured by pressing the :guilabe:`configure button` next to the :guilabel:`add property` dropdown. When the default visibility is set to "always show" and none of the individual properties are set to show conditionally, the :guilabel:`add property` dropdown is replaced with a filter input. The current visibility states are possible:
 
 Follow Default
     The property will follow the default visibility state at the top of the configuration window.
@@ -61,6 +69,8 @@ Ic
     Relative to ideographic character advance. The advance of a single CJK character. 
 Ch
     Advance of the number '0'.
+    
+.. _text_character_properties:
 
 Character Properties
 --------------------
@@ -529,6 +539,8 @@ The text input allows typing any valid `BCP 47 <https://en.wikipedia.org/wiki/BC
 Pressing on the down arrow will show all previously used locales this session, as well as stored locales. By toggling the check box in front of a locale, you can indicate that they need to be stored for future sessions.
 
 There is also a :guilabel:`Script` dropdown. Normally, it is possible to guess the script from the language and country. However, in some places, different scripts can be used for the same language, and sometimes the main script being used has changed over the years. The script dropdown allows setting the script in these cases.
+
+.. _text_paragraph_properties:
 
 Paragraph Properties
 --------------------
