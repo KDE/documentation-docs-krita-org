@@ -55,7 +55,7 @@ Conversely, some properties do not inherit at all. These properties usually get 
 Font Relative Units
 ~~~~~~~~~~~~~~~~~~~
 
-Some properties allow for font relative units. The meaning of these units also depend on inheritance mechanics. All font relative units will try to use the current font metrics. However, when said font metric is :ref:`_text_property_font_size` or :ref:`_text_property_line_height` related, and the property being edited is one of those itself, it will instead be relative to the inherited size. The word :term:`Advance` is a technical term that refers to how much a glyph will advance the line. It is similar to the glyph width in horizontal and glyph height in vertical writing modes.
+Some properties allow for font relative units. The meaning of these units also depend on inheritance mechanics. All font relative units will try to use the current font metrics. However, when said font metric is :ref:`text_property_font_size` or :ref:`text_property_line_height` related, and the property being edited is one of those itself, it will instead be relative to the inherited size. The word :term:`Advance` is a technical term that refers to how much a glyph will advance the line. It is similar to the glyph width in horizontal and glyph height in vertical writing modes.
 
 Em
     The current font size (or inherited font size in the case of Font Size).
@@ -64,7 +64,7 @@ Ex
 Cap
     The current capital height. This metric is retrieved from the font, and affected by font size.
 Lh
-    The line-height. This is either relative to the current line height or, in the case of :ref:`_text_property_line_height`, the inherited line height.
+    The line-height. This is either relative to the current line height or, in the case of :ref:`text_property_line_height`, the inherited line height.
 Ic
     Relative to ideographic character advance. The advance of a single CJK character. 
 Ch
@@ -539,6 +539,20 @@ The text input allows typing any valid `BCP 47 <https://en.wikipedia.org/wiki/BC
 Pressing on the down arrow will show all previously used locales this session, as well as stored locales. By toggling the check box in front of a locale, you can indicate that they need to be stored for future sessions.
 
 There is also a :guilabel:`Script` dropdown. Normally, it is possible to guess the script from the language and country. However, in some places, different scripts can be used for the same language, and sometimes the main script being used has changed over the years. The script dropdown allows setting the script in these cases.
+
+.. _text_property_fill:
+
+Fill
+~~~~
+
+Fill can currently not be set with the text properties docker. You will need to use the :ref:`shape_selection_tool` to set it on the paragraph, or change the foreground color with any of the color selectors.
+
+.. _text_property_stroke:
+
+Stroke
+~~~~~~
+
+Stroke can currently not be configured with the text properties docker. You will need to use the :ref:`shape_selection_tool` to set it, or use the :ref:`svg_source_editor` in the text tool to manually set a stroke.
 
 .. _text_paragraph_properties:
 
