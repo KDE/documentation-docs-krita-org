@@ -78,7 +78,7 @@ Expansion Pattern
        From left to right: original image; rectangle shaped expansion (expand equally to orthogonal and diagonal directions); diamond shaped expansion (expand only to orthogonal directions); octagon shaped expansion (expand to orthogonal directions and a bit less to the diagonal directions).
 
 Expansion Distance
-    The pixels can be propagated only up to a given distance, or indefinitely, so that all the transparent areas end covered.
+    The pixels can be propagated only up to a given distance, or indefinitely, so that all the transparent areas are covered end-to-end.
 
     .. figure:: /images/filters/propagate_colors_02.png
        :align: center
@@ -86,10 +86,10 @@ Expansion Distance
        From left to right: original image; expanded image with unrestricted distance; expanded image with restricted distance.
 
 Transparency Behavior
-    This option allows to choose if the alpha channel should be also expanded or remain untouched.
+    This option allows control over whether the alpha channel should also be expanded or remain untouched.
 
     .. figure:: /images/filters/propagate_colors_03.png
        :align: center
 
-       From left to right: the original image; the expanded image with expanded alpha channel; the expanded image preserving the alpha channel (note that it looks like the original one, although the color components were actually propagated into the transparent areas); the previous expanded image after applying a levels filter that makes the transparent areas semi-opaque to clearly see how the colors were truly propagated.
+       From left to right: the original image; the expanded image with expanded alpha channel; the expanded image preserving the alpha channel (note that it looks like the original one, although the color components were actually propagated into the transparent areas); image demonstrating the behavior of the previous example by applying a levels filter that makes the transparent areas semi-opaque to clearly see how the colors were truly propagated.
 
