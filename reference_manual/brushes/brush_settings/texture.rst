@@ -42,7 +42,9 @@ Texturing mode
     Soft Texturing
         .. versionadded:: 5.3
         
-        When the *strength* option is on, it's value is used as a factor on how the texture is applied using the selected texturing mode. By toggling the *soft texturing* option you can alter this behavior. With 100% strength the texturing looks the same no matter the state of the *soft texturing* option, which is the same as when the strength option is off. But when using lower values for the strength, it does matter the state of the *soft texturing* option: if it is off then, for lower strength values, the texturing is applied normally but the stroke seems to disappear, giving an effect similar to rubbing some drawing tool against some textured surface with more or less pressure; on the other hand, if the *soft texturing* option is on then, for lower strength values, the stroke looks more like if the texture was not applied at all, leaving the stroke with the un-textured look.
+        When the :guilabel:`strength` option is on, its value is used as a factor on how the texture is applied using the selected texturing mode. By toggling the :guilabel:`soft texturing` option you can alter this behavior.
+
+With 100% strength the texturing looks the same no matter the state of the :guilabel:`soft texturing` option, which is the same as when the strength option is off. But when using lower values for the strength, :guilabel:`soft texturing` will take effect: if it is off then, for lower strength values, the texturing is applied normally but the stroke seems to disappear, giving an effect similar to rubbing a drawing tool against some textured surface with more or less pressure. On the other hand, if the :guilabel:`soft texturing` option is on then, for lower strength values, the stroke looks more like as if the texture was not applied at all, leaving the stroke with the un-textured look.
 
         The soft texturing can be activated to better replicate the Photoshop brushes for the modes other than height and linear height.
 
