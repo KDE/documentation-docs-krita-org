@@ -106,8 +106,8 @@ Beyond these, a number of features are shared with the fill tool, amongst which 
 Close Gap
     .. versionadded:: 5.3
 
-    This option is essentially the same as in the fill tool and sets the minimum gap size that the enclose and fill tool will be able to propagate into for some modes.
+    This option is essentially the same as in the :ref:`fill_tool` and sets the minimum gap size that the enclose and fill tool will be able to propagate into for some modes.
 
     .. figure:: /images/tools/enclose_and_fill_tool_close_gap.png
 
-        Left: The original image (black over white) and an enclosing region that restricts the fill operation. Center: The image after an enclose and fill operation using a gap size of 0 pixels. Right: The image after an enclose and fill operation using a gap size of 8 pixels. The *target regions* option was set to "All".
+        Left: The original image (black over white) and an enclosing region that restricts the fill operation. Center: The image after an enclose and fill operation using a gap size of 0 pixels. Right: The image after an enclose and fill operation using a gap size of 8 pixels. The :guilabel:`target regions` option was set to :guilabel:`All`.
