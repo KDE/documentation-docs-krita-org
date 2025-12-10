@@ -73,8 +73,8 @@ building the docker image, so you need to have it preinstalled.
 
 .. note::
 
-    Please take it into account that Krita's build system currently supports **Python 3.10.x only**.
-    The usage of a newer version of Python can cause issues (patches to fix that are welcome!).
+    This python is used for build scripts only. Python 3.10.x or higher can be used for that.
+    Krita internally will use Python 3.13, which is built as part of the deps build process.
 
 .. _building_krita_with_docker_download_sources:
 

@@ -254,12 +254,17 @@ for ``javac`` **and the runtime** (no idea how to check that).
     javac --version
     ls -l /usr/lib/jvm/*
 
-Make sure that you have Python of version **3.10** installed:
+Make sure that you have Python of at least version 3.10 installed:
 
 .. code::
 
     > python --version
     Python 3.10.13
+
+.. note::
+
+    This python is used for build scripts only. Krita does not have embedded
+    python on Android platform. 
 
 .. note::
 
@@ -320,7 +325,7 @@ Install python dependencies. You might want to use Python's ``venv`` feature for
 .. code:: shell
 
     # set up venv
-    python3.10 -m venv --upgrade-deps $WORKDIR/PythonEnv
+    python3 -m venv --upgrade-deps $WORKDIR/PythonEnv
     source $WORKDIR/PythonEnv/bin/activate
 
     # install requirements
