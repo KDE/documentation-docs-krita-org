@@ -67,7 +67,24 @@ Prerequisites
     - If you really want to use other compilers, see below.
 
 
-5. You will also need a release of Python 3.10 (not 3.7, not 3.8, not 3.9, not 3.11, not 3.12, not 3.13) - https://www.python.org.
+5. You will also need a release of Python 3.13 (not 3.7, not 3.8, not 3.9, not 3.11, not 3.12, not 3.14) - https://www.python.org.
+
+    .. note::
+
+        On 01.12.2025 we updated our Python version to from Python 3.10 to Python 3.13. If you download the prebuilt deps after this date, 
+        make sure you have the updated version of Python (otherwise PyQt will not be found)
+
+    .. note::
+
+        As of 01.12.2025, the stable branch (`krita/5.2`) continues to use the older version: Python 3.10. If you want to work on both branches of Krita,
+        you need to install two versions of Python without adding them to `%PATH%`. Python 3.13 for `master` and Python 3.10 for `krita/5.2`. You can do 
+        that with this `choco` script:
+
+        .. code::
+
+            choco install -y python310 --params "/InstallDir:C:\tools\Python-3.10" --install-arguments="PrependPath=0 AppendPath=0 Include_doc=0 Include_test=0 Include_launcher=0"
+            choco install -y python313 --params "/InstallDir:C:\tools\Python-3.13" --install-arguments="PrependPath=0 AppendPath=0 Include_doc=0 Include_test=0 Include_launcher=0"
+        
 
     - Make sure to have that version of python.exe in your path. This version of Python will be used for two things to configure Qt and to build the Python scripting module.  Do not set PYTHONHOME or PYTHONPATH.
     - Make sure that your Python will have the correct architecture for the version you are trying to build. If building for 32-bit target, you need the 32-bit release of Python.
@@ -111,7 +128,7 @@ Set up python environment (you don't need to hand-craft the bat file with the pr
     git clone https://invent.kde.org/packaging/krita-deps-management.git
     git clone https://invent.kde.org/packaging/krita-ci-utilities.git krita-deps-management/ci-utilities
 
-    c:\Python310\python.exe -m venv PythonEnv --upgrade-deps
+    C:\tools\Python-3.13\python.exe -m venv PythonEnv --upgrade-deps
     PythonEnv\Scripts\activate.bat
     python -m pip install -r krita-deps-management\requirements.txt
 
@@ -230,8 +247,17 @@ You will need to install:
 
 .. note::
 
-    Please take it into account that Krita's build system currently supports **Python 3.10.x only**.
-    The usage of a newer version of Python can cause issues (patches to fix that are welcome!).
+    The Python installed into the system is used for build scripts only. Internally Krita
+    builds its own Python of version 3.13.x as part of the deps build process. This version
+    of the embedded Python is fixed and the only officially supported version. The usage of
+    a different Python version embedded into Krita is not officially supported.
+
+.. note::
+
+    The stable branch (`krita/5.2`) continues to use the older version Python 3.10 for
+    backward compatibility reasons. If you use prebuilt deps, you shouldn't worry about
+    that on MacOS platform (in contrast to Windows), the necessary version will be shipped
+    with the deps.
 
 Preparation
 ~~~~~~~~~~~
