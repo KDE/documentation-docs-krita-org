@@ -85,7 +85,7 @@ Conversion Settings
 
 Color profile
     (Lossless) Use CICP instead of ICC if possible
-        If enabled, Krita will attempt to convert document ICC profile into equivalent CICP profile to save more space when exporting lossless JPEG XL. If there's no equivalent CICP profile, ICC will still be saved instead. This is particularly useful for web delivery.
+        If enabled, Krita will attempt to convert document ICC profile into equivalent CICP values to save more space when exporting lossless JPEG XL. If there's no equivalent CICP values, ICC will still be saved instead. This is particularly useful for web delivery.
     
     .. versionadded:: 5.3
 HDR conversion
