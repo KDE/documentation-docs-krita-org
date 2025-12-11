@@ -19,3 +19,7 @@ Krita has ways to set mouse and keyboard combinations for different actions. The
 
 Profile
     The user can make different profiles of combinations and save them.
+
+Tool Invocation
+    Activate with Other Color
+        Same as Activate, but with the tool treating the foreground and background colors as if they were flipped.
