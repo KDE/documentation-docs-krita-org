@@ -40,6 +40,10 @@ Trade Off
     A slider that allows you to select whether saving speed is more important than quality.
 Dithering:
     This enables dithering, which allows storing fewer colors while still keeping good gradients.
+Force convert to sRGB:
+    This option will convert document color profile into sRGB before exporting, usually for better web upload and sharing compatibility.
+Save ICC Profile:
+    By default, ICC will be preserved during export. Disabling this option will not save ICC to the exported image and can possibly result in smaller file. However it is recommended to convert the color profile to sRGB to prevent color mismatch, as an (WebP) image without color profile will usually considered as sRGB.
 
 Advanced
 ~~~~~~~~
