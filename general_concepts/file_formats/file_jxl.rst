@@ -34,22 +34,33 @@ General
 
 JPEG XL's encoder is designed to be fairly hands-off. Where in the case of JPEG you'd have to select the appropriate quality, JPEG XL instead tries to find the best quality for your image. What you instead choose is whether the preferred compression is :ref:`lossy or lossless <lossless_compression>`, and how much effort the encoder should put into finding the best compression for your image, with more effort also meaning longer saving times.
 
-Save as animated JPEG XL
-    JPEG XL has the ability to store small animations like :ref:`file_gif`. Its animation capabilities are simple though, and specifically designed for stylized content that doesn't have a lot of colors, like cel-animation. This is because JPEG XL doesn't have intra-frame prediction, which is the best way to store video files with a lot of colors like 3D animation, film and painterly animation. We recommend you try using video rendering for painterly animation instead.
-Flatten the image
-    If disabled, JPEG XL has the ability to store frames as layers if it's not being used as animation, this can be useful to store multi-page images like :ref:`file_tif`.
+
+Save as
+    Flattened image
+        Flatten the image and save as single layer image (default). This is the recommended option for static image web delivery and sharing in general.
+    Animated image
+        Flatten the image and render animation frames as animated image. JPEG XL has the ability to store small animations like :ref:`file_gif`. Its animation capabilities are simple though, and specifically designed for stylized content that doesn't have a lot of colors, like cel-animation. This is because JPEG XL doesn't have intra-frame prediction, which is the best way to store video files with a lot of colors like 3D animation, film and painterly animation. We recommend you try using video rendering for painterly animation instead. This is the recommended option for animated image web delivery and sharing in general.
+    Multi-layered image
+        Rasterize layers (including group and filter layers) and save as multi-layered image.
+        
+        JPEG XL has the ability to store frames as layers if it's not being used as animation, this can be useful to store multi-layered images like :ref:`file_tif`.
+        
+        Its layered capabilities are very basic, and not designed to store complex layer stacks like :ref:`file_psd` and :ref:`file_kra` does. Some of its limitations are:
+        
+        - Only raster paint layers are supported, any other type of layer will get rasterized and group layers will be flattened.
+        - Limited blending modes, only Normal and Addition while other modes will get converted to Normal.
+        - No partial layer opacity, will only export visible layers with full opacity setting (100%).
+        - No layer styles, these will get rasterized with Normal blending mode for outside pixels.
+        - Layer masks will be flattened and rasterized, but Colorize Mask won't get rendered.
+    Multi-paged image
+        Rasterize layers (including group and filter layers) and save as multi-page image.
+        
+        Similar to multi-layered image, but this option saves the layers as animated frames with maximum duration instead. This is a compatibility option for editor/viewer that didn't support opening multi-layered JPEG XL images.
+        
+        Same layering limitations above also applied to this option.
     
-    Its layered capabilities are very basic, and not designed to store complex layer stacks like :ref:`file_psd` and :ref:`file_kra` does. Some of its limitations are:
-    
-    - Only raster paint layers are supported, any other type of layer will get rasterized and group layers will be flattened.
-    - Limited blending modes, only Normal and Addition while other modes will get converted to Normal.
-    - No partial layer opacity, will only export visible layers with full opacity setting (100%).
-    - No layer styles, these will get rasterized with Normal blending mode for outside pixels.
-    - Layer masks will be flattened and rasterized, but Colorize Mask won't get rendered.
-    
-    We recommend you leave this option enabled for web delivery.
-    
-    .. versionadded:: 5.2
+    .. versionadded:: 5.3
+
 Encoding Options
     Lossy encoding
         Whether to use :ref:`Lossy compression <lossy_compression>`. Like :ref:`file_webp`, JPEG XL has a different way of encoding the images in lossless and lossy mode, with the latter being closer to the way the original :ref:`file_jpeg` encodes.
