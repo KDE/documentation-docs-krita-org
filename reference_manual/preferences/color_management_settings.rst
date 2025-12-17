@@ -82,10 +82,10 @@ Rendering Intent
     .. warning::
 
         If you use Wayland-compatible compositor (Linux-only) and properly configured ICC profile for
-        your display in the compositor itself, then don't use :term:`Perceptual` rendering intent and prefer
-        :term:`Relative Colorimetric` instead. In :term:`Perceptual` mode, the compositor is allowed to change your
+        your display in the compositor itself, then don't use :guilabel:`Perceptual` rendering intent and prefer
+        :guilabel:`Relative Colorimetric` instead. In :guilabel:`Perceptual` mode, the compositor is allowed to change your
         colors in arbitrary ways, e.g. stretch sRGB space into something wider to make colors "look better"
-        on wide gamut displays. So :term:`Perceptual` may be not suitable for color critical work.
+        on wide gamut displays. So :guilabel:`Perceptual` may be not suitable for color critical work.
 
 .. _color_management_settings_softproofing:
 
