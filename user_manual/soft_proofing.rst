@@ -80,9 +80,9 @@ Display Model
             .. warning::
                 If you are using Wayland compositor, Absolute Colorimetric intent may be **broken** (even in XWayland mode). More than that, it may be broken differently in different versions.
 
-                In KWin 6.4.x and earlier, :guilabel:`Absolute Colorimetric` will behave as if :guilabel:`Absolute Intent Chromatic Adaptation` is **always Disabled**. It will cause severe color tint if white points (`sigChromaticAdaptationTag`) of the printer and display profiles do not coincide.
+                In KWin 6.4.x and earlier, :guilabel:`Absolute Colorimetric` will behave as if :guilabel:`Absolute Intent Chromatic Adaptation` is **always disabled**. It will cause severe color tint if white points (`sigChromaticAdaptationTag`) of the printer and display profiles do not coincide.
 
-                In KWin 6.5.x and later, :guilabel:`Absolute Colorimetric` will behave as if :guilabel:`Absolute Intent Chromatic Adaptation` is **always Enabled**. Given that you **keep the checkbox set**, the feature will work correctly and will let you preview contrast degradations, but you will not be able to get advanced effects of disabling color adaptation to the display space.
+                In KWin 6.5.x and later, :guilabel:`Absolute Colorimetric` will behave as if :guilabel:`Absolute Intent Chromatic Adaptation` is **always enabled**. Given that you **keep the checkbox set**, the feature will work correctly and will let you preview contrast degradations, but you will not be able to get advanced effects of disabling color adaptation to the display space.
 
                 This is a problem of the Wayland protocol specification, the fix is `discussed here <https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/439>`_.
 
