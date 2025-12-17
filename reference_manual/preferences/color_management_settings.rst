@@ -87,6 +87,8 @@ Rendering Intent
         colors in arbitrary ways, e.g. stretch sRGB space into something wider to make colors "look better"
         on wide gamut displays. So :term:`Perceptual` may be not suitable for color critical work.
 
+.. _color_management_settings_softproofing:
+
 Softproofing options
 --------------------
 
