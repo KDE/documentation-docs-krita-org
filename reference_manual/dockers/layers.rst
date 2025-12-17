@@ -96,8 +96,8 @@ You can select the active layer here. Using the :kbd:`Shift` and :kbd:`Ctrl` key
         In Krita layers can have a color space different from the color space of the image. It usually happens when you import an external file as a layer. Such difference is a perfectly valid state for Krita, but it may cause visible slowdowns, because Krita will have convert color space of such layers on the fly. When layer's color space is different from the color space a small warning icon is shown next to the layer's properties.
 
         .. figure:: /images/layers/layer-color-space-mismatch.png
-            :align: center
-            :figwidth: 800
+           :align: center
+           :figwidth: 800
 
             "Paint Layer 2" has a color space different from the rest of the image
 
