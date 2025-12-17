@@ -93,9 +93,9 @@ You can select the active layer here. Using the :kbd:`Shift` and :kbd:`Ctrl` key
 
     Layer Color Space Mismatch Warning
         .. versionadded:: 5.3
-        In Krita layers can have a color space different from the color space of the image. It usually happens when the user imports an external file as a layer. Such difference is a perfectly valid state for Krita, but it may cause visible slowdowns, because Krita will have convert color space of such layers on the fly. When layer's color space is different from the color space a small warning icon is shown next to the layer's properties.
+        In Krita layers can have a color space different from the color space of the image. It usually happens when you import an external file as a layer. Such difference is a perfectly valid state for Krita, but it may cause visible slowdowns, because Krita will have convert color space of such layers on the fly. When layer's color space is different from the color space a small warning icon is shown next to the layer's properties.
 
-        To remove the warning you can either manually convert it using :menuselection:`Layer --> Convert --> Convert Layer Color Space` dialog or use :guilabel:`Unify Layers Color Space` action (available via :kbd:`Ctrl + Enter` menu)
+        To remove the warning you can either manually convert it using :menuselection:`Layer --> Convert --> Convert Layer Color Space` dialog or use :guilabel:`Unify Layers Color Space` action (available via :kbd:`Ctrl + Enter` menu).
 
 To edit these properties on multiple layers at once, press the properties option when you have multiple layers selected or press the :kbd:`F3` key.
 There, to change the names of all layers, the checkbox before :guilabel:`Name` should be ticked after which you can type in a name. Krita will automatically add a number behind the layer names. You can change other layer properties like visibility, opacity, lock states, etc. too.
