@@ -62,11 +62,11 @@ folder into another location, where there is enough space.
 
         sudo systemctl start docker
 
-Second, make sure that you have python3 and python3-venv packages installed:
+Second, make sure that you have utility packages installed (python and wget):
 
 .. code::
 
-    sudo apt install python3 python3-venv
+    sudo apt install python3 python3-venv python3-pip wget
 
 ``python3-venv`` package is used for bootstrapping the dependencies on the host system before 
 building the docker image, so you need to have it preinstalled.
