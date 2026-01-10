@@ -25,6 +25,16 @@ Use Mouse Events for Right and Middle clicks.
     
     .. versionadded:: 4.2
 
+Treat page up/down keys as right/middle mouse buttons (workaround for Xiaomi styluses)
+    Only on Android. This is a workaround for Xiaomi styluses, which for some reason input the Page Up and Page Down keyboard keys when you press the buttons on the side. Enabling this will translate them to right and middle mouse buttons instead.
+    
+    .. versionadded:: 5.2.15
+
+Disregard tablet position history (workaround for jagged lines with Xiaomi styluses)
+    Only on Android. This is a workaround for Xiaomi styluses reporting incorrect positions that cause the lines you make with them to come out jagged even when enabling brush smoothing. Enabling this will ignore those wrong positions.
+    
+    .. versionadded:: 5.2.15
+
 Use Tablet Driver Stamps For Brush Speed
     This changes the way freehand brush smoothing works in Krita by using the driver's timestamps instead of a timer-based one.
     
