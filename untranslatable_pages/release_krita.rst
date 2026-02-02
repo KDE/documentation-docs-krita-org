@@ -140,6 +140,18 @@ places to keep CI infrastructure working properly:
 
 #. Update Krita version in ``master`` branch to be higher than in stable.
 
+#. In the stable branch, replace the the contents of ``org.kde.krita.appdata.xml`` file with a stub:
+
+    .. code:: xml
+    
+        <!--
+        This file is normally used by https://invent.kde.org/websites/apps-kde-org
+        to retrieve metadata about KDE applications and publish that on the website
+        (https://apps.kde.org). The crawler uses **master** branch of the application!
+        Hence the file in stable branches must be null to avoid confusion.
+        -->
+    
+
 
 Before the release
 ------------------
@@ -195,18 +207,16 @@ On the branching-out day
     #. (TODO: really needed?) update the version of krita5.xmlgui
     #. update the CMakeLists.txt version
     #. update the snapcraft.yaml file
-    #. update the appstream screenshots: https://invent.kde.org/websites/product-screenshots
-    #. update org.kde.krita.appdata.xml 's release tag in the BRANCH
+    #. make sure that ``org.kde.krita.appdata.xml`` file is still empty
     #. update Android version (keep in mind that *all* Krita releases on Android are marked as Beta at the moment): packaging/android/apk/build.gradle
     #. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
 
 3) Update versions in the stable branch (``krita/5.2``) to avoid XMLGUI conflicts
 
-    1. stable branch is always marked as "prealpha" (without a number in the end)
-    2. (TODO: really needed?) update the version of krita.xmlgui; it should be ``$(( $VERSION_IN_RELEASE_BRANCH + 1 ))``
-    3. update the CMakeLists.txt version
-    4. update org.kde.krita.appdata.xml 's release tag
-    5. packaging/android/apk/AndroidManifest.xml 
+    #. stable branch is always marked as "prealpha" (without a number in the end)
+    #. (TODO: really needed?) update the version of krita.xmlgui; it should be ``$(( $VERSION_IN_RELEASE_BRANCH + 1 ))``
+    #. update the CMakeLists.txt version
+    #. packaging/android/apk/AndroidManifest.xml 
 
 5) Update versions in the unstable branch (``master``) if necessary
 
@@ -215,6 +225,22 @@ On the branching-out day
     3. update the CMakeLists.txt version
     4. update org.kde.krita.appdata.xml 's release tag
     5. packaging/android/apk/AndroidManifest.xml 
+
+6) Make a MR against ``master`` branch updating ``org.kde.krita.appdata.xml`` file with a new ``<release>``
+   entry, which is used for publishing Krita binaries on https://apps.kde.org
+
+    * the release entry should have the planned release date set
+    * the release entry should have a ``<url>`` object pointing to the release notes
+    * the release entry should have an ``<artifacts>`` object pointing to all the artifacts of the release
+    * only the latest release should keep the artifacts section
+    * the appstream screenshots are stored here, update if necessary: https://invent.kde.org/websites/product-screenshots
+
+    .. note::
+
+        This file is normally used by https://invent.kde.org/websites/apps-kde-org
+        to retrieve metadata about KDE applications and publish that on the KDE Apps 
+        website (https://apps.kde.org). The crawler uses **master** branch of 
+        the application, so we should keep the list of releases there up to date.
 
 
 Create the tarball
@@ -517,6 +543,8 @@ Release
 #. Publish the announcement and release notes
 
 #. Update ``data/releases.yaml`` file for the new links at the "Download" page
+
+#. Merge the MR you made for ``org.kde.krita.appdata.xml`` to publish on https://apps.kde.org
 
 #. (for every release, including betas) Send announcement to the mailing lists to notify packagers
 
