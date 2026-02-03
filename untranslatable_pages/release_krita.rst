@@ -140,18 +140,11 @@ places to keep CI infrastructure working properly:
 
 #. Update Krita version in ``master`` branch to be higher than in stable.
 
-#. In the stable branch, replace the the contents of ``org.kde.krita.appdata.xml`` file with a stub:
-
-    .. code:: xml
-    
-        <!--
-        This file is normally used by https://invent.kde.org/websites/apps-kde-org
-        to retrieve metadata about KDE applications and publish that on the website
-        (https://apps.kde.org). The crawler uses **master** branch of the application!
-        Hence the file in stable branches must be null to avoid confusion.
-        -->
-    
-
+#. In the stable branch, remove ``<artifacts>`` and ``<bundle>`` sections from 
+   ``org.kde.krita.appdata.xml`` file. We don't link to artifacts in the stable 
+   branch, because our platform names are not standard and are used only 
+   by `apps.kde.org store <https://apps.kde.org/krita>`_. Otherwise the appdata-file
+   should be exactly the same as in ``master`` branch.
 
 Before the release
 ------------------
@@ -207,7 +200,26 @@ On the branching-out day
     #. (TODO: really needed?) update the version of krita5.xmlgui
     #. update the CMakeLists.txt version
     #. update the snapcraft.yaml file
-    #. make sure that ``org.kde.krita.appdata.xml`` file is still empty
+    #. add a new release into ``org.kde.krita.appdata.xml`` file, the
+       section should contain the following elements:
+
+        * ``<release>`` entry should have the planned release date set
+        * ``<description>`` should have a short version of release notes
+        * ``<url>`` should point to (not yet published) release notes
+          
+          .. warning::
+
+              The release notes URL should follow this pattern:
+
+              ``https://krita.org/en/posts/$YEAR/krita-$VERSION_TRIPLET-released/``
+
+              For example:
+
+              ``https://krita.org/en/posts/2026/krita-5.2.15-released/``
+        
+        * the stable and release branches should NOT have ``<artifacts>`` and ``<bundle>`` sections
+
+
     #. update Android version (keep in mind that *all* Krita releases on Android are marked as Beta at the moment): packaging/android/apk/build.gradle
     #. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
 
@@ -216,32 +228,47 @@ On the branching-out day
     #. stable branch is always marked as "prealpha" (without a number in the end)
     #. (TODO: really needed?) update the version of krita.xmlgui; it should be ``$(( $VERSION_IN_RELEASE_BRANCH + 1 ))``
     #. update the CMakeLists.txt version
-    #. packaging/android/apk/AndroidManifest.xml 
+    #. Copy the ``org.kde.krita.appdata.xml`` file from the release branch. They should be exactly the same.
 
 5) Update versions in the unstable branch (``master``) if necessary
 
-    1. stable branch is always marked as "prealpha" (without a number in the end)
+    1. unstable branch is always marked as "prealpha" (without a number in the end)
     2. (TODO: really needed?) update the version of krita.xmlgui; it should be ``$(( $VERSION_IN_STABLE_BRANCH + 1 ))``
     3. update the CMakeLists.txt version
-    4. update org.kde.krita.appdata.xml 's release tag
-    5. packaging/android/apk/AndroidManifest.xml 
+    4. update ``org.kde.krita.appdata.xml`` file
+       
+       * copy the already added release section from the stable branch
+       * add ``<artifacts>`` section pointing to all the artifacts of the release
+       * add or modify ``<bundle type="appimage">`` section
+       * only the latest release should keep the artifacts section
+       * the appstream screenshots are stored here, update if necessary: https://invent.kde.org/websites/product-screenshots
 
-6) Make a MR against ``master`` branch updating ``org.kde.krita.appdata.xml`` file with a new ``<release>``
-   entry, which is used for publishing Krita binaries on https://apps.kde.org
+       .. note::
 
-    * the release entry should have the planned release date set
-    * the release entry should have a ``<url>`` object pointing to the release notes
-    * the release entry should have an ``<artifacts>`` object pointing to all the artifacts of the release
-    * only the latest release should keep the artifacts section
-    * the appstream screenshots are stored here, update if necessary: https://invent.kde.org/websites/product-screenshots
+           AppStream file format is a bit complicated and not very strictly followed, here are 
+           some notes on its usage in Krita:
 
-    .. note::
+           * official specification is `here <https://www.freedesktop.org/software/appstream/docs/index.html>`_
 
-        This file is normally used by https://invent.kde.org/websites/apps-kde-org
-        to retrieve metadata about KDE applications and publish that on the KDE Apps 
-        website (https://apps.kde.org). The crawler uses **master** branch of 
-        the application, so we should keep the list of releases there up to date.
+           * KDE's manual on the usage is `here <https://community.kde.org/Guidelines_and_HOWTOs/AppStream>`_
 
+           * artifacts in our appdata file use non-standard names for platforms, it is limited
+             by the names understood by `apps.kde.org store <https://apps.kde.org/krita>`_
+
+               * win32
+               * win64
+               * macOS
+               * android-x86_64
+               * android-arm64-v8a
+               * android-armeabi-v7a
+               
+               
+
+           * to validate the file use the official tool:
+
+             .. code::
+    
+                 appstreamcli validate krita/org.kde.krita.appdata.xml
 
 Create the tarball
 ------------------
