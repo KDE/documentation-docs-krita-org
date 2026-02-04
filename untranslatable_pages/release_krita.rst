@@ -204,12 +204,12 @@ On the branching-out day
        section should contain the following elements:
 
         * ``<release>`` entry should have the planned release date set
-        * ``<description>`` should have a short version of release notes
-        * ``<url>`` should point to (not yet published) release notes
+        * ``<description>`` should have a short version of release announcement
+        * ``<url>`` should point to (not yet published) release announcement
           
           .. warning::
 
-              The release notes URL should follow this pattern:
+              The release announcement URL should follow this pattern:
 
               ``https://krita.org/en/posts/$YEAR/krita-$VERSION_TRIPLET-released/``
 
