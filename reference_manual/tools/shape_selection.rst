@@ -95,16 +95,16 @@ Placement
 
     .. tip::
 
-        You can lock move on a vertical or horizontal axis: hold |mouseleft| and then press :kbd:`Shift` key while moving.
+        You can lock movement to the vertical or horizontal axis: hold |mouseleft| and then press :kbd:`Shift` key while moving.
 
 Scale
     |mouseleft| and hold inside any of the square handles, move to adjust the dimensions of the object. 
 
     .. tip::
 
-       You can lock width/height ratio when resizing shape: hold |mouseleft| and then press :kbd:`Shift` while resizing.
+       You can lock width/height ratio when resizing the shape: hold |mouseleft| and then press :kbd:`Shift` while resizing.
 
-       You can resize around shape center: hold |mouseleft| and then press :kbd:`Ctrl` while resizing.
+       You can resize around the shape center: hold |mouseleft| and then press :kbd:`Ctrl` while resizing.
 
        Combination of :kbd:`Ctrl + Shift` is possible.
 
@@ -113,7 +113,7 @@ Angle
 
     .. tip::
 
-       You can constrain 45° rotation: hold |mouseleft| and then press :kbd:`Ctrl` while rotating.
+       You can constrain rotation to 45°: hold |mouseleft| and then press :kbd:`Ctrl` while rotating.
 
 Distortion
    Place the cursor slightly outside any of the middle handles. |mouseleft| and drag to skew the shape.
@@ -145,24 +145,24 @@ Position
 
     .. image:: /images/tools/shape-selection-menu-geometry-origin.png
 
-    Provided position coordinates are always relative to origin: if origin is modified, :guilabel:`X` and :guilabel:`Y` coordinates are updated in consequence.
+    Provided position coordinates are always relative to the origin: if the origin is modified, :guilabel:`X` and :guilabel:`Y` coordinates are updated by consequence.
 
 
     .. tip::
 
-        You can also use :ref:`Docker Arrange <arrange_docker>` tools to easily
+        You can also use :ref:`Docker Arrange <arrange_docker>` tools to easily:
 
         - Align shapes
         - Distribute shapes
         - Normalize distances between shapes
 
 Size
-    Size of a shape is defined by width and height.
+    Size of a shape is defined by its width and height.
 
     .. image:: /images/tools/shape-selection-menu-geometry-size.png
 
     | Aspect ratio of a shape can be locked |icon_chain| or unlocked |icon_chain-broken|.
-    | When locked, modifying width value will automatically update height, modifying height value will automatically update width.
+    | When locked, modifying the width value will automatically update the height, modifying the height value will automatically update the width.
 
 
 Scale Styles
@@ -174,9 +174,9 @@ Global coordinates
     Determines whether the width and height bars use the width and height of the object, while taking transforms into account.
 
 Fill, Stroke, Markers
-    Like there's a *z-Order* for shapes, there's also a *z-Order* to render shape elements (Fill, Stroke, Markers).
+    Like there's a *Z-Order* for painting shapes, there's also an order to render shape elements (Fill, Stroke, Markers).
 
-    Which element is drawn first can change final shape render.
+    Which element is drawn first can change the final look of the shape.
 
     .. table:: A polygon, solid Red fill, Blue 25px solid stroke, Blue bullet markers
 
@@ -193,7 +193,7 @@ Opacity
 
 .. warning:: 
 
-    As Anchor Lock is not implemented at the moment, checkbox is disabled.
+    As Anchor Lock is not implemented at the moment, this checkbox is disabled.
 
     
 Stroke
@@ -213,7 +213,7 @@ Thickness
     Sets the width of the stroke. When creating a shape, Krita will use the current brush size to determine the width of the stroke.
 
 Cap and corner style
-    Line Cap define how the end of a stroke is rendered, while Line Corner define how segments jonction (from a polyline or polygon) are rendered.
+    Line Cap defines how the ends of a stroke are drawn, while Line Corner defines how segments joins (from a polyline or polygon) are drawn.
 
     Options can be accessed by pressing the three dots button next to the thickness entry.
 

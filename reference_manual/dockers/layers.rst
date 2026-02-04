@@ -72,50 +72,50 @@ Layers
 The Layers docker is for one of the core concepts of Krita: :ref:`Layer Management <layers_and_masks>`. You can add, delete, rename, duplicate and do many other things to layers here.
 
 
-The interface is splitted in 3 main parts:
+The interface is split in three main parts:
 
-- The controls
-- The layer strack
-- The operations bar
+- Controls
+- The Layer Stack
+- Operations Bar
 
 
-The controls
-------------
+Controls
+--------
 
 At the top there are four controls.
 
 .. image:: /images/dockers/Krita_Layers_Docker_areatop.png
-   :alt: Top area of layer docker, with 4 controls
+   :alt: Top area of layer docker, with four controls
 
 
 Blending mode
     .. image:: /images/dockers/Krita_Layers_Docker_blendingmode.png
         :alt: The blending mode dropdown list
 
-    A dropdown list to set :ref:`Blending mode <blending_modes>` for the active layer.
+    A dropdown list to set the :ref:`Blending mode <blending_modes>` for the active layer.
 
 
 Opacity
     .. image:: /images/dockers/Krita_Layers_Docker_opacity.png
         :alt: The opacity slider
 
-    A slider to set opacity for the active layer.
+    A slider to set the opacity for the active layer.
 
 
 Filter
     .. image:: /images/dockers/Krita_Layers_Docker_filter.png
         :alt: The filter button
 
-    This allows you to filter all existing layers, can be useful if you have a lot (can be hundreds!) of layers.
+    This allows you to filter all existing layers, which can be useful if you have a lot (say, hundreds!) of layers.
 
     .. figure:: /images/dockers/Krita_Layers_Docker_filterui.png
 
         Filter option popup from filter button
 
-    Filter can be applied on:
+    Filtering can be applied on:
 
-    - Color label (available only if there's color label used, and only used color label can be filtered)
-    - Layer name
+    - Color labels (available only if there are color label being used, and only used color labels can be filtered)
+    - Layer names
 
 
 Display settings
@@ -132,7 +132,7 @@ Display settings
 
     - :guilabel:`Thumbnail size` slider, to let you control the size of layer's thumbnail preview
 
-    - :guilabel:`Tree indentation` slider, to let you control the indentation of sub-layer's, to get a more or less compact view
+    - :guilabel:`Tree indentation` slider, lets you control the indentation of sub-layers, for either an expanded or compacted view
 
     .. _iref-layer_detailmode:
 
@@ -145,18 +145,18 @@ Display settings
         +---------------+-----------------------------------------------------------------------------------------------+
         | Mode          | Description                                                                                   |
         +===============+===============================================================================================+
-        | **None**      | No extra information is shown.                                                                |
+        | :guilabel:`None`      | No extra information is shown.                                                                |
         +---------------+-----------------------------------------------------------------------------------------------+
-        | **Simple**    | This will only display the opacity or the blending mode when they're not 100% and 'Normal'.   |
+        | :guilabel:`Simple`    | This will only display the opacity or the blending mode when these are not 100% and :guilabel:`Normal`.   |
         +---------------+-----------------------------------------------------------------------------------------------+
-        | **Balanced**  | This will display both the opacity and the blending mode for layers where either the opacity  |
-        |               | is below 100%, or the blending mode is not 'normal'.                                          |
+        | :guilabel:`Balanced`  | This will display both the opacity and the blending mode for layers where either the opacity  |
+        |               | is below 100%, or the blending mode is not :guilabel:`Normal`.                                          |
         +---------------+-----------------------------------------------------------------------------------------------+
-        | **Detailed**  | This will always show the opacity and blending options for all layers.                        |
+        | :guilabel:`Detailed`  | This will always show the opacity and blending options for all layers.                        |
         +---------------+-----------------------------------------------------------------------------------------------+
 
-      - The :guilabel:`Opacity` slider (enabled if mode is not **None**) allows you to control the opacity of the extra blending info label.
-      - The :guilabel:`Inline` checkbox (enabled if mode is not **None**) will provide information on a single compact line.
+      - The :guilabel:`Opacity` slider (enabled if mode is not :guilabel:`None`) allows you to control the opacity of the extra blending info label.
+      - The :guilabel:`Inline` checkbox (enabled if mode is not :guilabel:`None`) will provide information on a single compact line.
 
     .. _iref-layer_checkbox:
 
@@ -177,11 +177,11 @@ You can select the active layer here. Using the :kbd:`Shift` and :kbd:`Ctrl` key
 .. image:: /images/dockers/Krita_Layers_Docker_arealayerstack.png
    :alt: Layer stack
 
-The Layer Stack is organized in 3 parts:
+The Layer Stack is organized in three parts:
 
 - Left side: an eye-icon and :ref:`optional checkbox <iref-layer_checkbox>`
-- Middle: layer name and :ref:`optional informations <iref-layer_detailmode>`
-- Right side: miscellaneous icons (icons will vary according to layer type)
+- Middle: layer name and :ref:`optional information <iref-layer_detailmode>`
+- Right side: Property controls (available controls will vary according to layer type)
 
 
 .. glossary::
@@ -189,26 +189,26 @@ The Layer Stack is organized in 3 parts:
     Alpha Inheritance
         *Only available on* :ref:`Layers <types_of_layers>`.
 
-        Clicking the alpha inheritance-icon allow to activate |icon_transparency-enabled| or disable |icon_transparency-disabled| how the content of mode affect the layers.
+        Clicking the alpha inheritance-icon allows you to activate |icon_transparency-enabled| or disable |icon_transparency-disabled|.
 
-        This will use the alpha of all the peers of this layer as a transparency mask.
+        This will use the alpha of all the layers under the active layer, but within the same group, as a transparency mask.
 
         *Check* :ref:`inherit_alpha_or_clipping_layers` *or* :ref:`clipping_masks_and_alpha_inheritance` *for detailled explanations and examples.*
 
     Alpha Lock
         *Only available on* :ref:`paint_layers`.
 
-        Clicking the alpha lock-icon allow to lock |icon_alphalocked| or unlock |icon_alphaunlocked| the alpha channel.
+        Clicking the alpha lock-icon will let you lock |icon_alphalocked| or unlock |icon_alphaunlocked| the alpha channel.
 
-        Lock the alpha channel prevent the transparency of a layer being changed. Useful in coloring images.
+        Lock the alpha channel to prevent the transparency of a layer being changed. Useful when coloring images.
 
-    Anti aliasing
+    Anti-aliasing
         *Only available on* :ref:`vector_layers`.
 
-        Clicking the anti aliasing-icon to activate |icon_select-shape| or deactivate |icon_select-pixel| the anti aliasing mode.
+        Clicking the anti-aliasing icon to activate |icon_select-shape| or deactivate |icon_select-pixel| the anti aliasing mode.
 
     Blending Mode
-        *Only available on* :ref:`Layers <types_of_layers>`.
+        *Available on all type of* :ref:`Layers <types_of_layers>`.
 
         This will set the :ref:`blending_modes` of the layer.
 
@@ -222,7 +222,7 @@ The Layer Stack is organized in 3 parts:
 
         Clicking the lock-icon allow to lock |icon_locked| or unlock |icon_unlocked| the layer.
 
-        Lock the layer prevent any modification to be made on layer. Useful when handling large amounts of layers or to ensure to not modify a layer content by mistake.
+        Lock the layer prevents any modifications to be made on layer. Useful when handling large amounts of layers or to ensure not modifying a layer's content by mistake.
 
     Expand or Collapse layers
         *Only available on non-empty* :ref:`group_layers` and :ref:`Layers <types_of_layers>` for which masks are defined.
@@ -235,7 +235,7 @@ The Layer Stack is organized in 3 parts:
         Clicking the FX-icon allow to quickly activate |icon_layerfx-on| or deactivate |icon_layerfx-off| the layer style.
 
     Name
-        The Layer name, just do double- |mouseleft| to make it editable, and press the :kbd:`Enter` key to finish editing.
+        The Layer name, double- |mouseleft| to make it editable, and press the :kbd:`Enter` key to finish editing.
 
     Onion Skin
         *Only available on* :ref:`animated layers <animation>`
@@ -250,7 +250,7 @@ The Layer Stack is organized in 3 parts:
     Pass-through mode
         *Only available on* :ref:`group_layers`.
 
-        Clicking the pass-through mode-icon allow to activate |icon_passthrough-enabled| or deactivate |icon_passthrough-disabled| how the blending mode affect the contained layers.
+        Clicking the pass-through mode icon allows you to activate |icon_passthrough-enabled| or deactivate |icon_passthrough-disabled|, which in turns affects how blending modes are composited.
 
         When active, this allows you to have the blending modes of the layers within affect the layers outside the group.
 
@@ -289,8 +289,8 @@ There, to change the names of all layers, the checkbox before :guilabel:`Name` s
 .. image:: /images/layers/Krita-multi-layer-edit.png
 
 
-The operations bar
-------------------
+Operations bar
+--------------
 
 These are buttons for doing layer operations.
 

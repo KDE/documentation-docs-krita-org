@@ -157,7 +157,7 @@ By default, vector layer content are rendered using an anti-aliasing algorithm.
 .. image:: /images/vector/antialiasing.png
     :width: 800
 
-- | In the :ref:`Layers docker <layer_docker>` the vector layer icon |selectpixel| indicate the anti-aliasing is disabled
+- | In the :ref:`Layers docker <layer_docker>` the vector layer icon |selectpixel| indicates the anti-aliasing is disabled
   | On blue vector shapes, you can see aliased pixels in magnified view
 
 - | In the :ref:`Layers docker <layer_docker>` the vector layer icon |selectshape| indicate the anti-aliasing is enabled
