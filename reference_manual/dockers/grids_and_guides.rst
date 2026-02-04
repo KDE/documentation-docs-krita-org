@@ -58,7 +58,7 @@ Orthogonal grid
 ~~~~~~~~~~~~~~~
 
 
-Overview of docker options for *Rectangular* grid with rendered grid:
+The following options are available for the :guilabel:`Rectangular` grid:
 
     .. image:: /images/dockers/grid_rectangle-overview.png
         :width: 800
@@ -98,9 +98,9 @@ Subdivision Style
 Isometric (Legacy) grid
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The *Isometric (Legacy)* grid is how isometric grids were rendered for Krita 5.2 and before. Cell size is calculated from *Cell spacing* option.
+The :guilabel:`Isometric (Legacy)` grid is how isometric grids were rendered for Krita 5.2 and before. Cell size is calculated from :guilabel:`Cell spacing` option.
 
-Overview of docker options for *Isometric (Legacy)* grid with rendered grid:
+The following options are available for the :guilabel:`Isometric (Legacy)` grid:
 
 .. image:: /images/dockers/grid_isometric_legacy-overview.png
     :width: 800
@@ -139,9 +139,9 @@ Main Style
 Isometric grid
 ~~~~~~~~~~~~~~
 
-The *Isometric* grid use a different method than *Isometric (Legacy)* to generate cells. Size is defined by the *Cell size* option. It also provides additional parameters to render grid.
+The :guilabel:`Isometric` grid use a different method than :guilabel:`Isometric (Legacy)` to generate cells. Size is defined by the :guilabel:`Cell size` option. It also provides additional parameters to render the grid.
 
-Overview of docker options for *Isometric* grid with rendered grid:
+The following options are available for the :guilabel:`Isometric` grid:
 
 .. figure:: /images/dockers/grid_isometric-overview.png
 
@@ -182,7 +182,7 @@ Vertical Style
 
     Vertical lines are drawn only if both :guilabel:`Left Angle` and :guilabel:`Right Angle` have the same value.
 
-    It's possible to force vertical lines to not be drawn by selecting "None" as line style.
+    It's possible to force vertical lines to not be drawn by selecting :guilabel:`None` as line style.
 
 
 .. tip::
