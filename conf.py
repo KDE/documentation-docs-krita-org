@@ -257,6 +257,15 @@ rst_epilog = """
 
 .. |toolenclosefill| image:: /images/icons/enclose_and_fill_tool.svg
 
+.. |toolcomicpanelediting| image:: /images/icons/dark_tool_comic_panel.svg
+                              :width: 50px
+
+.. |toolcomicpanelediting_cutting| image:: /images/icons/dark_tool_comic_panel_cut.svg
+                              :width: 50px
+
+.. |toolcomicpanelediting_merging| image:: /images/icons/dark_tool_comic_panel_merge.svg
+                              :width: 50px
+
 """
 
 # -- Options for HTML output -------------------------------------------------

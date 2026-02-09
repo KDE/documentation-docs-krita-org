@@ -15,6 +15,7 @@ The contents of the toolbox docker.
    tools/gradient_edit
    tools/pattern_edit
    tools/calligraphy
+   tools/comic_panel_editing_tool
    tools/freehand_brush
    tools/line
    tools/rectangle
