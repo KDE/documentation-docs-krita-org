@@ -190,6 +190,8 @@ Tries to adjust the contrast to universally acceptable levels.
 
 .. index:: Hue, Saturation, Lightness, Value, Brightness, Chroma
 
+.. _hsv_adjustment:
+
 HSV/HSL Adjustment
 ------------------
 

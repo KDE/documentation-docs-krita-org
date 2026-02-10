@@ -412,3 +412,12 @@ Checks whether the upper layer's pixel has a lower Saturation than the lower lay
    :align: center
 
    Left: **Normal**. Right: **Decrease Saturation**.
+
+.. _bm_hsy_tint:
+
+Tint
+^^^^
+
+.. versionadded:: 5.3
+
+Tint applies the destination by taking the input and interpolating it between white and the destination color. This is useful for images where you want to preserve any mid-tones while still colorizing them, and allows colorizing with black.

@@ -34,3 +34,10 @@ Unlike applying a filter to a section of a paint layer directly, filter masks do
 Unlike filter layers, filter masks apply only to the area you have selected (the mask).
 
 You can edit the settings for a filter mask at any time by double clicking on it in the Layers docker. You can also change the selection that the filter mask affects by selecting the filter mask in the Layers docker and then using the paint tools in the main window. Painting white includes the area, painting black excludes it, and all other colors are turned into a shade of gray which applies proportionally.
+
+.. _color_overlay_mask:
+
+Color Overlayer Mask
+--------------------
+
+The color overlay mask option is a convenience option to apply a regular filter mask with a :ref:`fast_color_overlay` filter, which is very useful in a variety of sketching workflows. This filter has a color selection button right inside the filter docker.

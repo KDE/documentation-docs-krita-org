@@ -35,6 +35,29 @@ For example, with threshold set to 255, and the removed color set to white, a 50
 
 This filter is really useful in separating line art from the white background.
 
+.. _fast_color_overlay:
+
+Fast Color Overlay
+------------------
+
+.. versionadded:: 5.3
+
+This is a special filter for tinting an image with a single color. It is similar to :ref:`hsv_adjustment` with :guilabel:`Colorize` enabled, but much faster.
+
+Color
+   The color to tint the image with.
+Blend Mode
+   The blend mode to use to mix the color with the existing image.
+   
+   Normal
+      This applied the color like a regular layer onto the input. This is useful for images where you want to have all opaque pixels the specified color.
+   Tint
+      Tint applies the current color by taking the input and interpolating it between white and the current color. This is useful for images where you want to preserve any mid-tones.
+   Custom
+      Select any other blending mode you prefer.
+Opacity
+   The rate at which the tinting is applied to the image.
+
 .. _filter_color_transfer:
 
 Color Transfer
