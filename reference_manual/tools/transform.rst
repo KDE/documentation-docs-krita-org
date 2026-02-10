@@ -43,6 +43,15 @@ If you look at the bottom, there are quick buttons for flipping horizontally, ve
 
 `Video of how to use the anchor point for resizing. <https://www.youtube.com/watch?v=grzccBVd0O8>`_
 
+Rotating the Transformation Bounds
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It is possible to rotate the visual transformation bounds without transforming the image itself. This is particularly useful when dealing with sections of an image that were drawn diagonally, like for example, a stick at an angle.
+
+By pressing :kbd:`Ctrl + Alt` before trying to rotate, the cursor will switch to a bounds-rotation cursor, at which point a |mouseleft|+ drag will rotate the visual bounds. Then, releasing the keys, a regular transformation can be performed. By rotating the transformation bounds to the actual image being transformed, it can be easier to transform the image after wards, especially for aligning with a certain angle.
+
+.. versionadded:: 5.3
+
 Perspective
 -----------
 
