@@ -39,6 +39,11 @@ Custom Color:
 
 .. versionadded:: 5.0
 
+Control Widget Options
+   This allows you to configure which buttons are visible on the on-canvas widget for assistants.
+   
+   .. versionadded:: 5.3
+
 Limit assistant to area
 
     .. figure:: /images/assistants/Assistants_2_pointperspective_03.png
