@@ -66,9 +66,13 @@ Weighted smoothing:
 
 Stabilizer
     This option averages all inputs from the tablet. It is different from weighted smoothing in that it allows for always completing the line. It will draw a circle around your cursor and the line will be a bit behind your cursor while painting.
+    
+    .. versionchanged:: 5.3, distance is replaced by smoothing at max and min speed.
 
-    Distance
-        This is the strength of the smoothing.
+    Sample Count at Max Speed
+        This is the strength of the smoothing when drawing as fast as possible. For the best results, this one can be set much lower than that of min speed. The idea being that a fast stroke needs less smoothing than a slow stroke.
+    Sample Count at Min Speed
+        This is the strength of the smoothing when drawing as slow as possible. For best results, this one can be set much higher than that of max speed.
     Delay
         This toggles and determines the size of the dead zone around the cursor. This can be used to create sharp corners with more control.
     Finish Line
@@ -77,6 +81,10 @@ Stabilizer
         Similar to :guilabel:`Smooth Pressure`, this allows the input (pressure, speed, tilt) to be smoother.
     Scalable Distance
         This makes it so that the numbers involved will be scaled along the zoom level.
+Pixel
+    This mode will adjust the brush stroke so it will provide clean results when using a single pixel brush.
+    
+    .. versionadded:: 5.3
 
 .. index:: Painting Assistants
 
