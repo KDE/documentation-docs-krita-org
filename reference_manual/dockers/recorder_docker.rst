@@ -47,6 +47,10 @@ Compression:
    Control the compression of the PNG snapshots. Greater value will produce smaller files, but will take more processing power. This is recommended to be set to be between 1 and 3 for a good balance between speed and file size.
 Resolution:
    Lower the resolution of the snapshot. This can drastically reduce size without losing too much quality.
+Threads
+   How many of your computer's processing threads can be used to record in the background. A value above 1 will give smoother results on most PCs. However, it is always recommended to have one or two threads less than the maximum, as you always want to have a thread available to process your drawing, or to handle background software like a music player.
+Real Time Capture Mode
+   Enable :guilabel:`Real Time Capture Mode`. This enables recording to be real time. Instead of configuring a capture interval, Real Time Capture Mode has you set a frames per second value (:guilabel:`Video FPS`). The recorder will then aim to match the specified FPS. Depending on your computer and the selected FPS, this can slow down the drawing process, in which case it is best disabled.
 Record in Isolate Mode.
    Record when :ref:`layer isolate mode <layer_docker>` is on. As isolate mode hides all the other layers, it can result in a lot of flickering during the resulting time lapse. Only turn this on when you are not in the habit of switching layers often when in isolate mode.
 Record automatically
