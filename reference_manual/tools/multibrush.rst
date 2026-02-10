@@ -38,5 +38,16 @@ Snowflake
     This works as a mirrored symmetry, but is a bit slower than symmetry+toolbar mirror mode.
 Copy Translate
     This allows you to set the position of the copies relative to your own cursor. To set the position of the copies, first toggle :guilabel:`Add`, and then |mouseleft| the canvas to place copies relative to the multibrush origin. Finally, press :guilabel:`Add` again, and start drawing to see the copy translate in action.
+Copy Translate at Interval
+
+    .. versionadded:: 5.3
+
+    This allows for brushes to be applied at an orthogonal interval. The max amount of brushes allowed is 50, so you will need to set the interval high enough to allow for less than 50 brushes to appear over the whole document.
+    
+    Interval X
+        The interval in the horizontal direction.
+    Interval Y
+        The interval in the vertical direction.
+    
 
 The assistant and smoothing options work the same as in the :ref:`freehand_brush_tool`, though only on the real brush and not its copies.
