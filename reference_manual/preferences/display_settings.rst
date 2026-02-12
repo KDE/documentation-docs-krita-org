@@ -68,7 +68,10 @@ HDR
 
 .. versionadded:: 4.2
 
-    These settings are only available when using Windows.
+.. note::
+
+    These settings are only available when using Windows. For configuring HDR on Linux see
+    :ref:`this page<color_management_settings_wayland>`
     
 Since 4.2 Krita can not just edit floating point images, but also render them on screen in a way that an HDR capable setup can show them as HDR images.
 

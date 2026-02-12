@@ -100,8 +100,12 @@ Display Profiles
 Rendering Intent
     Your choice of rendering intents is a way of telling Littlecms how you want colors mapped from one color space to another. There are four options available, all are explained on the :ref:`icc_profiles` manual page.
 
+.. _color_management_settings_wayland:
+
 On systems using Wayland
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 6.0
 
 .. note::
 
