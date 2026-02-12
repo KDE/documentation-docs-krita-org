@@ -29,7 +29,7 @@ How to work with alpha channel of the layer
 How to save a PNG texture and keep color values in fully transparent areas
 --------------------------------------------------------------------------
 
-Normally, when saving an image to a file, all fully transparent areas of the image are filled with black color. It happens because when composing the layers of the image, Krita drop color data of fully transparent pixels for efficiency reason. To avoid this of color data loss you can either avoid compositing of the image i.e. limit image to only one layer without any masks or effects, or use the following method:
+Normally, when saving an image to a file, all fully transparent areas of the image are filled with black color. It happens because when compositing the layers of the image, Krita drop color data of fully transparent pixels for efficiency reason. To avoid this of color data loss you can either avoid compositing of the image i.e. limit image to only one layer without any masks or effects, or use the following method:
 
 #. |mouseright| the layer in the layers docker.
 #. Choose :menuselection:`Split Alpha --> Alpha into Mask`.
