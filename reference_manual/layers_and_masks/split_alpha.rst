@@ -49,6 +49,8 @@ When erasing pixels with an eraser brush or when clearing a selection with :menu
 
 To actually clear the color channels of transparent areas you need to apply a :ref:`Reset Transparent Filter<reset_transparent_filter>` on the image. It will zero-out all color channels of fully transparent pixels.
 
+Krita also has a special :ref:`Propagate Colors Filter<filter_propagate_colors>`.  It fills the fully transparent areas with neighboring colors instead of just zeroing them out, which might be useful in some workflows.
+
 Example 2: compositing layers with color data inside fully transparent areas
 ............................................................................
 
