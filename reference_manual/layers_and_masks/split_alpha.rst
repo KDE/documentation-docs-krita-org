@@ -34,3 +34,26 @@ Normally, when saving an image to a file, all fully transparent areas of the ima
 #. |mouseright| the layer in the layers docker.
 #. Choose :menuselection:`Split Alpha --> Alpha into Mask`.
 #. |mouseright| on the created mask and select :menuselection:`Split Alpha --> Save Merged...`.
+
+.. _color_channels_in_transparent_areas:
+
+Color channel values in transparent areas
+-----------------------------------------
+
+Krita treats all color channel values in fully transparent pixels as **undefined**. Effectively, it means that Krita will try to skip writing to (or reading from) a fully transparent pixel, unless it is really needed or explicitly requested by the user. That is done for optimization purposes and allows Krita to speed up compositing the image a lot.
+
+Example 1: erasing pixels on the image
+......................................
+
+When erasing pixels with an eraser brush or when clearing a selection with :menuselection:`Edit --> Clear` action, the color data **is not actually cleared**. It is only the alpha channel that is zeroed, but color channels are kept intact. You can see it yourself if you try to apply :menuselection:`Split Alpha --> Alpha into Mask` on a layer after erasing with an eraser brush on it.
+
+To actually clear the color channels of transparent areas you need to apply a :ref:`Reset Transparent Filter<reset_transparent_filter>` on the image. It will zero-out all color channels of fully transparent pixels.
+
+Example 2: compositing layers with color data inside fully transparent areas
+..........................................................................
+
+If you have multiple layers, which have any color data inside their fully transparent areas, the result of their merge **will not include this color data**. The resulting pixels will be just zeroed out. Obviously, you cannot blend two pixels with zero alpha, because you would have to divide by zero for that.
+
+For a normal user it just means that you should use :menuselection:`Split Alpha --> Save Merged...` action to properly save the result of this split alpha work. When exporting the result via :menuselection:`File --> Export...`, a compositing operation may (or may not) happen, clearing out the transparent areas.
+
+

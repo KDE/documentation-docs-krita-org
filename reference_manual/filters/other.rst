@@ -28,6 +28,13 @@ Random Noise
 
 Gives Random Noise to input image.
 
+.. _reset_transparent_filter:
+
+Reset Transparent
+-----------------
+
+Resets color channels of fully transparent pixels to zero. Might be necessary in some game development workflows. See :ref:`this page <color_channels_in_transparent_areas>` for more information on how Krita handles transparent pixels.
+
 Random Pick
 -----------
 
