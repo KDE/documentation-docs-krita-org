@@ -40,6 +40,10 @@ This filter is really useful in separating line art from the white background.
 Fast Color Overlay
 ------------------
 
+.. figure:: /images/filters/fast-color-overlay-example.png
+
+   Left: original sketch. Center: Sketch with :guilabel:`Fast Color Overlay` filter and :guilabel:`Normal` blending, Right: Sketch with :guilabel:`Fast Color Overlay` filter and :guilabel:`Tint` blending.
+
 .. versionadded:: 5.3
 
 This is a special filter for tinting an image with a single color. It is similar to :ref:`hsv_adjustment` with :guilabel:`Colorize` enabled, but much faster.
@@ -50,7 +54,7 @@ Blend Mode
    The blend mode to use to mix the color with the existing image.
    
    Normal
-      This applied the color like a regular layer onto the input. This is useful for images where you want to have all opaque pixels the specified color.
+      This applied the color like a regular layer onto the input. This is useful for images where you want to have all opaque pixels the specified color, asif the layer were a single-color layer.
    Tint
       Tint applies the current color by taking the input and interpolating it between white and the current color. This is useful for images where you want to preserve any mid-tones.
    Custom
