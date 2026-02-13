@@ -79,10 +79,29 @@ You can create your own bundle from the resources of your choice. Click on the :
 
 .. image:: /images/resources/Creating-bundle.png
 
-The left hand section is for filling up information about the bundle like author name, website, email, bundle icon, etc.
-The right hand side provides a list of available resources. Choose the type of resource you wish to add in to the bundle from the drop-down above and add it to the bundle by selecting a resource and clicking on the arrow button.
+What follows is a so-called wizard, that is, Krita will run you through bundle creation, step-by-step.
 
-Once you have added all the resources you can create bundle by clicking on the :guilabel:`Save` button, the bundle will be saved in the location you have specified. You can then share this bundle with other artists or load it on other workstations.
+1. Choosing Resources
+
+   Krita will ask you which resources you want to use. Double-tap a resource to add it to the bundle.
+
+2. Choosing tags
+
+   Krita will ask you which tags you want to include inside the bundle. Click the :guilabel:`+` button to select a dropdown of tags.
+
+3. Enter Bundle Details
+
+   Here you can set the bundle title, icons and some info about you as the author.
+
+4. Choose Save Location
+
+   Finally, Krita will present you with a summary of the bundle you've created. All that's left is to select a spot where you want to save the bundle and clicking on the :guilabel:`Save` button
+
+You can now share this bundle with other artists or load it on other workstations.
+
+.. versionchanged:: 5.3
+
+   The bundle creator was overhauled for 5.3.
 
 Deleting Imported Bundles
 ~~~~~~~~~~~~~~~~~~~~~~~~~
