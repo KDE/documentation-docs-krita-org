@@ -16,7 +16,10 @@ On-Canvas Brush Editor
 ======================
 
 
-Krita's brush editor is, as you may know, on the :kbd:`F5` key. However, sometimes you just want to modify a single parameter quickly. Perhaps even in canvas-only mode. The on canvas brush editor or brush HUD allows you to do this. It's accessible from the pop-up palette, by ticking the lower-right arrow button.
+Krita's brush editor is, as you may know, on the :kbd:`F5` key. However, sometimes you just want to modify a single parameter quickly. Perhaps even in canvas-only mode.
+
+The on canvas brush editor or brush HUD allows you to do this. It can be accessed like other dockers, via :menuchoice:`Settings -> Dockers -> On-Canvas Brush Editor`.
+
 
 .. image:: /images/On_canvas_brush_editor.png
 
@@ -30,3 +33,6 @@ On the left are all unused settings, on the right are all used settings. You use
 
 These set-ups are *per* brush engine, so different :ref:`category_brush_engines` can have different configurations.
 
+.. versionchanged:: 5.3
+
+   Since 5.3, this is now a docker.

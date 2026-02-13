@@ -25,7 +25,7 @@ As shown in the image above, the pop-up palette has the following tools and quic
 - Color Selector with which you can select the hue from the circular ring and lightness and saturation from the triangular area in the middle.
 - Color history area shows the most recent color swatches that you have used while painting.
 - The tag list for brush preset will show you the list of both custom and default tags to choose from, selecting a tag from this list will show the corresponding brush presets in the palette.
-- The common brush options such as size, opacity, angle et cetera will be shown when you click the **>** icon. A dialog box will appear which will have the sliders to adjust the brush options. You can choose which options are shown in this dialog box by clicking on the settings icon.
+- You can access dockers directly on-canvas by using the **>** icon. By default this is only the :ref:`oncanvas_brush_editor`, but any of Krita's dockers can be added in with the settings button on the top left of the docker area.
 - The zoom slider allows you to quickly zoom the canvas.
 - The 100% button sets the zoom to the 100% of the image size.
 - The button with the canvas icon switches to the canvas only mode, where the toolbar and dockers are hidden.
