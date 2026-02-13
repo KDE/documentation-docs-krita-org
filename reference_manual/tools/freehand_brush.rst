@@ -84,6 +84,10 @@ Stabilizer
 Pixel
     This mode will adjust the brush stroke so it will provide clean results when using a single pixel brush.
     
+    .. figure:: /images/tools/stablizer_pixel_result.png
+    
+       Left: result without smoothing. Right: result with :guilabel:`Pixel` smoothing.
+    
     .. versionadded:: 5.3
 
 .. index:: Painting Assistants
