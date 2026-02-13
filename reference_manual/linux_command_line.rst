@@ -89,25 +89,25 @@ This legacy option does not do anything anymore.
 Open template
 -------------
 
-Open krita and automatically open the given template(s). This allows you to, for example, create a shortcut to Krita that opens a given template, so you can get to work immediately!
+Open krita and automatically open the given image file as a template. This allows you to, for example, create a shortcut to Krita that opens a given template, so you can get to work immediately!
 
-``krita --template templatename.desktop``
+``krita --template path/to/the/templatename.kra``
 
 .. program:: krita
 
-.. option:: --template templatename.desktop
+.. option:: --template path/to/the/templatename.kra
 
-   Selects the template option.
+   Open the target image file as a template.
 
-   All templates are saved with the .desktop extension. You can find templates in the .local/share/krita/template or in the install folder of Krita.
+   Supported format: all the one already supported by Krita (eg. PNG, JPG, KRA, etc...).
 
-   ``krita --template BD-EuroTemplate.desktop``
+   ``krita --template /home/username/sketchbook/sketch-template-page.kra``
 
-   This opens the European BD comic template with Krita.
+   This opens the file sketch-template-page.kra as a template.
 
-   ``krita --template BD-EuroTemplate.desktop BD-EuroTemplate.desktop``
+   ``krita --template /home/username/sketchbook/sketch-template-page.kra /home/username/sketchbook/sketch-template-page.kra``
 
-   This opens the European BD template twice, in separate documents.
+   This opens the file sketch-template-page.kra as a template twice, in separate documents.
 
 Start up
 --------
