@@ -164,6 +164,15 @@ Transform Tools
 
 All tools can be found in the toolbox, and information about individual tools can be found in the :ref:`tools <cat_tools>` section of the manual.
 
+Preset and Tool Opacity
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Some types of tools store the opacity property differently than others.
+
+All the paint tools share one opacity value, which is dependent on the brush preset. This allows you to alternate between the freehand brush, line tool, etc. without having to restore your brush settings with each switch. When changing brush presets, the opacity value of each one is saved when you return to it.
+
+The other tools have individual opacity values, which are not dependent on the brush preset. Each tool remembers its own opacity when you switch tools, and this value stays constant when you change presets.
+
 Brush Engines
 -------------
 
