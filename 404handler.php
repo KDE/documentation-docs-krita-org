@@ -319,8 +319,7 @@ $redirect_rules = array(
 
     "^reference_manual/dockers/timeline.html" => "reference_manual/dockers/animation_timeline.html",
     "^reference_manual/dockers/animation_curve.html" => "reference_manual/dockers/animation_curves.html",
-    // Redirect animation docker to timeline docker when we finally remove it.
-    // "^reference_manual/dockers/animation_docker.html" => "reference_manual/dockers/animation_timeline.html",
+    "^reference_manual/dockers/animation_docker.html" => "reference_manual/dockers/animation_timeline.html",
     "^reference_manual/tools/color_selector.html" => "reference_manual/tools/color_sampler.html",
     "^reference_manual/maths_input.html" => "reference_manual/special_widgets.html",
     "^user_manual/oncanvas_brush_editor.html" -> "reference_manual/dockers/oncanvas_brush_editor.html"
