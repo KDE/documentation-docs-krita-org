@@ -18,9 +18,9 @@ The text properties docker allows you to edit text properties of text objects cu
 
 The docker has three tabs: :guilabel:`Paragraph`, :guilabel:`Character` and :guilabel:`Preset`.
 
-:guilabel:`Paragraph` will edit the default properties for the whole paragraph, and contain both :ref:`text_paragraph_properties` and :ref:`text_character_properties`. You can edit these with both the :ref:`shape_selection_tool` and :ref:`text_tool`.
+:guilabel:`Paragraph` will edit the default properties for the whole paragraph, and contains both :ref:`text_paragraph_properties` and :ref:`text_character_properties`. These can be edited with both tools.
 
-:guilabel:`Character` will edit the properties for the selected range, or the word the cursor is on, and edits only :ref:`text_character_properties`. These are disabled unless you are editing with the :ref:`text_tool`.
+:guilabel:`Character` will edit the properties for the selected word or range and edits only :ref:`text_character_properties`. These are only available when editing with the :ref:`text_tool`.
 
 Finally, :guilabel:`Preset` allows you to create and apply style presets onto the text. See :ref:`text_docker_style_presets` for more information.
 
@@ -52,10 +52,10 @@ Conversely, some properties do not inherit at all. These properties usually get 
 
 .. _font_relative_units:
 
-Font Relative Units
+Font-Relative Units
 ~~~~~~~~~~~~~~~~~~~
 
-Some properties allow for font relative units. The meaning of these units also depend on inheritance mechanics. All font relative units will try to use the current font metrics. However, when said font metric is :ref:`text_property_font_size` or :ref:`text_property_line_height` related, and the property being edited is one of those itself, it will instead be relative to the inherited size. The word :term:`Advance` is a technical term that refers to how much a glyph will advance the line. It is similar to the glyph width in horizontal and glyph height in vertical writing modes.
+Some properties allow for font-relative units. The meaning of these units also depend on inheritance mechanics. All font-relative units will try to use the current font metrics. However, when said font metric is :ref:`text_property_font_size` or :ref:`text_property_line_height` related, and the property being edited is one of those itself, it will instead be relative to the inherited size. The word :term:`Advance` is a technical term that refers to how much a glyph will advance the line. It is similar to the glyph width in horizontal and glyph height in vertical writing modes.
 
 Em
     The current font size (or inherited font size in the case of Font Size).
@@ -64,7 +64,7 @@ Ex
 Cap
     The current capital height. This metric is retrieved from the font, and affected by font size.
 Lh
-    The line-height. This is either relative to the current line height or, in the case of :ref:`text_property_line_height`, the inherited line height.
+    The line height. This is either relative to the current line height or, in the case of :ref:`text_property_line_height`, the inherited line height.
 Ic
     Relative to ideographic character advance. The advance of a single CJK character. 
 Ch
@@ -82,7 +82,7 @@ Character properties are properties that can be applied on a range of text or th
 Font Size
 ~~~~~~~~~
 
-Font size allows setting the size of the characters. What this does in particular is that it scales the whole font so that its design size (the "em size") is the same as the font size.
+Font size allows setting the size of the characters. Particularly it scales the whole font so that its design size (the "em size") is the same as the font size.
 
 When using :ref:`font_relative_units`, font size will always use the inherited font size and family as the reference font. This can be used to ensure a range of the text is always a bit bigger or a bit smaller than the surrounding text, which can be useful for superscript or titling.
 
@@ -106,11 +106,11 @@ This is particularly useful with font-fallback, but can also be useful in genera
 Font Family
 ~~~~~~~~~~~
 
-Font family allows selecting a list of fonts that should be used for the current text. The first font family is the primary font used, while each font family after that is used for fallback.
+Font family allows selecting a list of fonts that should be used for the current text. The first item in the list is the primary font used, while each subsequent font may be used as a fallback.
 
 .. figure:: /images/text/font-selection-fallback-arabic.png
 
-   The font family list allows us to control the fallback. Many fonts only have glyphs for a subset of unicode, so controlling fallback can allow us to select fonts that seem to be in a similar tradition, like using a Serif Latin font for a Naskh Arabic font.
+   Many fonts only have glyphs for a subset of unicode, so controlling fallback can allow us to select fonts that seem to be in a similar tradition, like using a Serif Latin font for a Naskh Arabic font.
 
 See :ref:`resource_fonts` for more information about the font picker and font families.
 
@@ -127,7 +127,7 @@ The main control is a drop down that shows a list of predefined styles. These ar
 
 .. figure:: /images/text/font-style-examples.png
 
-   This showcases a number of styles. The top row shows the effects of width, weight and slant, while the bottom row shows the effect of toggling optical size at different font sizes.
+   The image above showcases a number of styles. The top row shows the effects of width, weight and slant, while the bottom row shows the effect of toggling optical size at different font sizes.
 
 When unfolding this property, the following settings are available:
 
@@ -148,14 +148,14 @@ Optical Size
 
 Finally, there's a place for the extra axes. These are for use with variable fonts, which can provide more configuration for the font style.
 
-This property is by default, always visible.
+This property is, by default, always visible.
 
 .. _text_property_letter_spacing:
 
 Letter Spacing
 ~~~~~~~~~~~~~~
 
-Letter spacing controls the spacing between visible clusters of characters. Letter spacing is implemented subtly different in all programs supporting CSS. Krita's implementation follows CSS-Text-3 and thus does not apply to single characters. Letter spacing is mostly intended to apply to whole spans of characters.
+Letter spacing controls the spacing between visible clusters of characters. There are subtle differences in how letter spacing is implemented by programs that support CSS. Krita's implementation follows CSS-Text-3 and thus does not apply to single characters. Letter spacing is mostly intended to apply to whole spans of characters.
 
 .. _text_property_word_spacing:
 
@@ -174,9 +174,9 @@ Line Height controls the line height used for the range of text. It does not wor
 Normal
     When this is on, Krita will try to determine the line height by taking each character in a line, and determining its ascent, descent, and also the line gap metric. The maximum of these is used as the line height.
 Ln
-    Line height has one unique unit: :guilabel:`Ln`, this is similar to "normal", except it uses the font size.
+    Line Height has one unique unit: :guilabel:`Ln`, this is similar to "normal", except it uses the font size.
 
-All other units will define a fixed offset. Even the font relative units are fixed to the current font and size of the element the line height is defined on.
+All other units will define a fixed offset. Even the :ref:`font_relative_units` are fixed to the current font and size of the element the line height is defined on.
 
 When using relative units, Line Height will take the current font size and family as reference. However, when using the line height unit, Line height will use the inherited line height as reference.
 
@@ -265,7 +265,7 @@ Vertical:
 OpenType Features
 ~~~~~~~~~~~~~~~~~
 
-Some fonts include OpenType features. This can be something like :term:`Kerning`, :term:`Ligatures` or :term:`Small Caps`, but can also involve a variety of alternative glyphs, or even contextual glyphs so that complex joined scripts render correctly. The latter type is generally always enabled, and Krita provides control for the former.
+Some fonts include OpenType features like kerning, ligatures or small caps, and can also involve a variety of alternative glyphs (or even contextual glyphs) so that complex joined scripts render correctly. The latter type is generally always enabled, and Krita provides control for the former.
 
 OpenType Feature Settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -433,7 +433,7 @@ Direction sets whether the text is left-to-right or right-to-left.
 
 Unicode Bidi
 ^^^^^^^^^^^^
-Unicode bidi gives extra control over how a shifted direction should be interpreted. Typically the default algorithm is fine, but in some specific cases, it cannot tell whether a sequence should be left to right or right to left.
+Unicode bidi gives extra control over how a shifted direction should be interpreted. Typically the default algorithm is fine, but in some specific cases, it cannot tell whether a sequence should be left-to-right or right-to-left.
 
 Normal
     No controls are inserted. All text inside is reordered according to its implicit direction (which is derived from the characters used).
@@ -512,7 +512,7 @@ Super
 Sub
     Shift text so it aligns to the inherited sub script offset. Said value is retrieved from the font.
     
-Baseline shift does not inherit. What instead happens is that shifts will be added to one another, allowing the following:
+Baseline shift does not inherit. Instead, shifts will be added to one another, allowing the following:
 
 .. figure:: /images/text/baseline-nested-super-script.png
 
@@ -566,7 +566,7 @@ Paragraph properties are the properties that can only be applied over a whole te
 Writing Mode
 ~~~~~~~~~~~~
 
-Writing Mode sets whether the text flows horizontally or vertically, and in the latter case, whether the block flows right to left or left to right.
+Writing Mode sets whether the text flows horizontally or vertically, and in the latter case, whether the block flows right-to-left or left-to-right.
 
 See also :ref:`text_property_direction`.
 
@@ -591,7 +591,7 @@ Text Align
 
 Text Align sets the alignment for the given block of characters.
 
-The main control of this shows three buttons that correspond to start, middle and end. These properties are affected by direction, meaning that right to left text, start will be the same as align right. The final button is the justification toggle.
+The main control of this shows three buttons that correspond to start, middle and end. These properties are affected by direction, meaning that for right-to-left text, start will be the same as align right. The final button is the justification toggle.
 
 Opening the advanced settings shows the following:
 
