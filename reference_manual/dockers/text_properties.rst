@@ -24,13 +24,13 @@ The docker has three tabs: :guilabel:`Paragraph`, :guilabel:`Character` and :gui
 
 Finally, :guilabel:`Preset` allows you to create and apply style presets onto the text. See :ref:`text_docker_style_presets` for more information.
 
-By default, the first two tabs will show only a handful of basic properties, while all other properties are only shown when they are relevant, with relevant meaning they are currently set, or :term:`inherited`.
+By default, the first two tabs will show only a handful of basic properties, while all other properties are only shown when they are relevant, with relevant meaning they are currently set, or :ref:`inherited <text_inheritance>`.
 
 The revert button before a given property will give an indicator of whether a property is set, and clicking it will unset the property, reverting it to either the default or inherited value. When a mixture of style properties are selected, you will see a multi-headed arrow, while the control itself will show the default or inherited value. Modifying the control will set the same value on all properties, while clicking the revert button will unset the property on all text.
 
 New properties can be added with the :guilabel:`add property` drop down below. The text input allows for searching the current text properties, with each property having a number of alternate keywords.
 
-The visibility state of each property can be configured by pressing the :guilabe:`configure button` next to the :guilabel:`add property` dropdown. When the default visibility is set to "always show" and none of the individual properties are set to show conditionally, the :guilabel:`add property` dropdown is replaced with a filter input. The current visibility states are possible:
+The visibility state of each property can be configured by pressing the :guilabel:`configure button` next to the :guilabel:`add property` dropdown. When the default visibility is set to "always show" and none of the individual properties are set to show conditionally, the :guilabel:`add property` dropdown is replaced with a filter input. The current visibility states are possible:
 
 Follow Default
     The property will follow the default visibility state at the top of the configuration window.
@@ -42,6 +42,8 @@ When Relevant
     The property will be visible when it is set or when it is inherited.
 Never Show
     The property is never shown.
+
+.. _text_inheritance:
 
 Inheritance
 -----------
@@ -55,7 +57,7 @@ Conversely, some properties do not inherit at all. These properties usually get 
 Font-Relative Units
 ~~~~~~~~~~~~~~~~~~~
 
-Some properties allow for font-relative units. The meaning of these units also depend on inheritance mechanics. All font-relative units will try to use the current font metrics. However, when said font metric is :ref:`text_property_font_size` or :ref:`text_property_line_height` related, and the property being edited is one of those itself, it will instead be relative to the inherited size. The word :term:`Advance` is a technical term that refers to how much a glyph will advance the line. It is similar to the glyph width in horizontal and glyph height in vertical writing modes.
+Some properties allow for font-relative units. The meaning of these units also depend on inheritance mechanics. All font-relative units will try to use the current font metrics. However, when said font metric is :ref:`text_property_font_size` or :ref:`text_property_line_height` related, and the property being edited is one of those itself, it will instead be relative to the inherited size. The word **Advance** is a technical term that refers to how much a glyph will advance the line. It is similar to the glyph width in horizontal and glyph height in vertical writing modes.
 
 Em
     The current font size (or inherited font size in the case of Font Size).
@@ -438,15 +440,15 @@ Unicode bidi gives extra control over how a shifted direction should be interpre
 Normal
     No controls are inserted. All text inside is reordered according to its implicit direction (which is derived from the characters used).
 Embed
-    The sequence is directionally embedded. This means that the bidirectional algorithm will assume the explicit direction is that of the :guilabel: `direction` property, but the text itself is ordered by implicit direction.
+    The sequence is directionally embedded. This means that the bidirectional algorithm will assume the explicit direction is that of the :guilabel:`direction` property, but the text itself is ordered by implicit direction.
 Override
-    Override means that the given section will use the current :guilabel: `direction` as the explicit direction as well as the direction of the text.
+    Override means that the given section will use the current :guilabel:`direction` as the explicit direction as well as the direction of the text.
 Isolate
     Isolate controls are inserted. Isolate means that the bidirectional algorithm treats the sequence as if it were a completely independent paragraph. Due this, the ordering has no effect on the ordering of text on either side.
 Isolate-Override
     Both isolate and override are applied. This means that the text is ordered explicitely by direction, but said ordering has no effect
 Plain Text
-    :guilabel: `direction` property is unused and bididirectional algorithm will instead guess at the direction.
+    :guilabel:`direction` property is unused and bididirectional algorithm will instead guess at the direction.
 
 Unicode bidi is one of the properties that does not inherit. The reason for this is that it works by inserting bi directional algorithm controls at the ends of the given range.
 
@@ -485,7 +487,7 @@ Dominant Baseline
 
 .. figure:: /images/text/baseline-example-devanagari.png
 
-   In North Brahmic scripts like Devanagari, letters of different sizes align at the headstroke. The here, the top sample shows the default behaviour, while the bottom sample uses :guilabel:`hanging` over the whole text.
+   In North Brahmic scripts like Devanagari, letters of different sizes align at the headstroke. In the examples here, the top sample shows the default behaviour, while the bottom sample uses :guilabel:`hanging` over the whole text, which provides the traditional headstroke alignment.
 
 Dominant Baseline specifies how stretches of text of different sizes are aligned, it is also the default for :ref:`text_property_alignment_baseline`. It has one unique value, :guilabel:`Auto`, which translates to :guilabel:`Alphabetic` in horizontal and :guilabel:`Central` in vertical :ref:`text_property_writing_mode`.
 
@@ -644,7 +646,7 @@ Optimize Legibility
 Geometric Precision
     No hinting is performed at all.
 Auto
-    Same as :term:`Geometric Precision`.
+    Same as :guilabel:`Geometric Precision`.
     
 .. figure:: /images/text/unifont-text-rendering-example.png
 

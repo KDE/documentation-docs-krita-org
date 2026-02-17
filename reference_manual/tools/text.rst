@@ -57,7 +57,7 @@ This is an SVG 1.1 text, where each line is positioned absolutely, and the white
 
 .. tip::
 
-   When handling text coming from old versions of Krita, use the text type conversion to switch them to either :term:`Preformatted` or :term:`Inline Wrapped` to make editing text easier. :term:`Pre-positioned` is only useful when you intend to use the SVG representation later, such as for EPUB3 or web use.
+   When handling text coming from old versions of Krita, use the text type conversion to switch them to either :guilabel:`Preformatted` or :guilabel:`Inline Wrapped` to make editing text easier. :guilabel:`Pre-positioned` is only useful when you intend to use the SVG representation later, such as for EPUB3 or web use.
 
 Text on Path
 ~~~~~~~~~~~~
@@ -73,9 +73,9 @@ To edit a text on path, set the blinking cursor within said text. A handle will 
 Inline Wrapped
 ~~~~~~~~~~~~~~
 
-To create a simple wrapped text (:term:`Inline Wrapped`), doing |mouseleft| :kbd:`+ drag` to create a rectangular area. When the area is larger than the currently selected font's line height, the cursor image will start showing the cursor for inline-size. Releasing the mouse button will then add the default text with wrapping enabled. To avoid creating a wrapped text while dragging, press :kbd:`Ctrl` while dragging.
+To create a simple wrapped text (:guilabel:`Inline Wrapped`), doing |mouseleft| :kbd:`+ drag` to create a rectangular area. When the area is larger than the currently selected font's line height, the cursor image will start showing the cursor for inline-size. Releasing the mouse button will then add the default text with wrapping enabled. To avoid creating a wrapped text while dragging, press :kbd:`Ctrl` while dragging.
 
-When editing a :term:`Inline Wrapped` shape, you can also edit the wrapping area. Two handles will appear on each side of the text, showing the limits at which the text will wrap. By doing |mouseleft| :kbd:`+ drag` on these handles, you can increase or decrease the wrapping area. When the text is aligned to one of the handles, moving one of the other will swap the text alignment so it stays aligned to that handle. When the alignment is set to the middle, the text will stay in between the two bars. If you want the text to stay at the same place when editing a centered text and only change the wrapping area width, hold :kbd:`Ctrl` while dragging.
+When editing a :guilabel:`Inline Wrapped` shape, you can also edit the wrapping area. Two handles will appear on each side of the text, showing the limits at which the text will wrap. By doing |mouseleft| :kbd:`+ drag` on these handles, you can increase or decrease the wrapping area. When the text is aligned to one of the handles, moving one of the other will swap the text alignment so it stays aligned to that handle. When the alignment is set to the middle, the text will stay in between the two bars. If you want the text to stay at the same place when editing a centered text and only change the wrapping area width, hold :kbd:`Ctrl` while dragging.
 
 
 .. _text_in_shape:
@@ -141,7 +141,7 @@ When enabled, the selection will be replaced with a number of metric lines. When
 
 Hovering over the lines will highlight them, and show the name of the relevant metric. |mouseleft| :kbd:`+ drag` on these lines will increase or decrease the size of this metric. This way, :ref:`text_property_font_size`, :ref:`text_property_line_height` and :ref:`text_property_baseline_shift` can be modified directly on canvas. Pressing :kbd:`Shift` will display a different set of metrics: the :ref:`text_property_baseline`. Clicking a baseline will set :ref:`text_property_dominant_baseline` and :ref:`text_property_alignment_baseline` to that baseline, allowing the alignment of text of different sizes to said baseline.
 
-When text is :term:`Preformatted` or :term:`Prepositioned`, two additional controls are visible at the start and end of a selection. These allow modifying the position and rotation of each cluster. The square handle allows moving the whole selection, while the round handle scales and rotates the selection. There's a series of actions for moving the square handle available in the shortcuts configuration for the text tool. These (for each direction) :guilabel:`Move Text Selection Down By 1 Pixel`, and will move the selected text in the given direction. There's also :guilabel:`Remove Character Transforms` which will remove all character transforms, (relative, absolute and rotation) from the given range.
+When text is :guilabel:`Preformatted` or :guilabel:`Prepositioned`, two additional controls are visible at the start and end of a selection. These allow modifying the position and rotation of each cluster. The square handle allows moving the whole selection, while the round handle scales and rotates the selection. There's a series of actions for moving the square handle available in the shortcuts configuration for the text tool. These (for each direction) :guilabel:`Move Text Selection Down By 1 Pixel`, and will move the selected text in the given direction. There's also :guilabel:`Remove Character Transforms` which will remove all character transforms, (relative, absolute and rotation) from the given range.
 
 .. note::
 
