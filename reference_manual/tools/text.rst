@@ -85,11 +85,11 @@ Text in Shape
 
 To create Text on Path or Text in Shape, hover over the an existing shape. When hovering over the boundary, the cursor will change to a text-on-path cursor, and clicking will create a text on path. Similarly, hovering over the fill of a shape will change the cursor to a text-in-shape cursor, and clicking will flow the text into that shape. Both text on path and text in shape will show a new icon to the top right of the shape. Clicking this will switch to the :ref:`shape_selection_tool`, where the shapes can be modified. 
 
-Text can be wrapped into one or multiple shapes. When flowing in multiple shapes, each 'inside' shape is first filled up with as much text as possible before the next shape is started. Then there's also 'subtract' shapes. These are subtracted from the 'inside' shapes to create the text areas.
+Text can be wrapped into one or multiple shapes. When flowing in multiple shapes, each 'inside' shape is first filled up with as much text as possible before the next shape in the chain is started. Then there's also 'subtract' shapes. These are subtracted from the 'inside' shapes to create the text areas.
 
-When editing text in shape, the final text area border is drawn on the screen. Arrows will be drawn between text areas to show the order in which the areas are evaluated. The :ref:`shape padding and margin <text_property_text_area>` can be modified by hovering over the text area border and |mouseleft| :kbd:`+ drag` it. If the cursor was closer to a subtraction shape when starting to drag, the margin will be modified. Conversely, when the cursor is closer to an inside shape when starting the drag, the shape padding will be modified.
+When editing text in shape, the final text area border is drawn on the screen. A chain of arrows is drawn between text areas to show the order in which the areas are evaluated. The :ref:`shape padding and margin <text_property_text_area>` can be modified by hovering over the text area border and |mouseleft| :kbd:`+ drag` it. If the cursor was closer to a subtraction shape when starting to drag, the margin will be modified. Conversely, when the cursor is closer to an inside shape when starting the drag, the shape padding will be modified.
 
-Editing the order of the text areas is done in :ref:`shape_selection_tool`, as is adding and removing shapes from a text.
+Editing the order of the text areas in the chain is done in :ref:`shape_selection_tool`, as is adding and removing shapes from a text.
 
 
 Tool Options

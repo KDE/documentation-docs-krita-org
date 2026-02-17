@@ -368,10 +368,10 @@ Remove Shapes from Text Flow
 Toggle Flow Shape Type
     Switches the shape type between Subtract and Inside.
 Set Flow Shape as Last
-    Make selected flow shapes the last in the flow shape order as used by text layout.
-Decrease Flow Shape Index
-    Make this flow shape be evaluated later in the flow shape order as used by text layout.
-Increase Flow Shape Index
-    Make this flow shape be evaluated earlier in the flow shape order as used by text layout.
-Set Flow Shape as First
-    Make this flow shape the first in the flow shape order as used by text layout.
+    Make this flow shape the last in the text chain as used by text layout.
+Earlier In Chain
+    Move this shape earlier in the text chain.
+Later In Chain
+    Move this shape later in the text chain.
+First In Chain
+    Make this flow shape the first in the text chain as used by text layout.
