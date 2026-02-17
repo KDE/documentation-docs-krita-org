@@ -66,6 +66,8 @@
     --palette-red-59: #ed7669;
     --palette-red-47: #e74c3c;
     
+    --admonition-title: var(--palette-grey-100);
+    
 }
 
 @media (prefers-color-scheme: dark) {
@@ -132,8 +134,18 @@
             --palette-red-71: #e43322;
             --palette-red-59: #e74b3a;
             --palette-red-47: #f16051;
+            
+            --admonition-title: var(--palette-grey-0);
 		
 		}
+		
+		.caution .admonition-title, .warning .admonition-title, .attention .admonition-title {
+            --admonition-title: var(--palette-grey-100);
+        }
+        
+        .highlight {
+            color: var(--palette-grey-100);
+        }
 }
 
 
@@ -4125,7 +4137,7 @@ a .icon {
 
 .wy-alert-title,
 .rst-content .admonition-title {
-    color: var(--palette-grey-100);
+    color: var(--admonition-title);
     font-weight: bold;
     display: block;
     background: var(--palette-blue-62);
