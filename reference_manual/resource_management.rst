@@ -83,7 +83,7 @@ What follows is a so-called wizard, that is, Krita will run you through bundle c
 
 1. Choosing Resources
 
-   Krita will ask you which resources you want to use. Double-tap a resource to add it to the bundle.
+   Krita will ask you which resources you want to use. Double-click a resource to add it to the bundle.
 
 2. Choosing tags
 

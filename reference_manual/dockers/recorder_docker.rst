@@ -48,9 +48,9 @@ Compression:
 Resolution:
    Lower the resolution of the snapshot. This can drastically reduce size without losing too much quality.
 Threads
-   How many of your computer's processing threads can be used to record in the background. A value above 1 will give smoother results on most PCs. However, it is always recommended to have one or two threads less than the maximum, as you always want to have a thread available to process your drawing, or to handle background software like a music player.
+   How many of your device's processing threads can be used to record in the background. A value above 1 improves performance on most devices and helps avoids skips in your recordings. However, it is always recommended to have one or two threads less than the maximum possible, as you still need some processing power for your drawing or to handle other programs running on your computer, like a music player.
 Real Time Capture Mode
-   Enable :guilabel:`Real Time Capture Mode`. This enables recording to be real time. Instead of configuring a capture interval, Real Time Capture Mode has you set a frames per second value (:guilabel:`Video FPS`). The recorder will then aim to match the specified FPS. Depending on your computer and the selected FPS, this can slow down the drawing process, in which case it is best disabled.
+   Enable :guilabel:`Real Time Capture Mode`. Instead of configuring a capture interval, Real Time Capture Mode has you set a frames per second value (:guilabel:`Video FPS`). The recorder will then aim to match the specified FPS so that the video plays at the same speed you were drawing. Depending on how powerful your device is and the FPS you selected, this can make Krita's performance while you are drawing much worse! It's not recommended to use this on weaker hardware.
 Record in Isolate Mode.
    Record when :ref:`layer isolate mode <layer_docker>` is on. As isolate mode hides all the other layers, it can result in a lot of flickering during the resulting time lapse. Only turn this on when you are not in the habit of switching layers often when in isolate mode.
 Record automatically

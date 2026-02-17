@@ -48,7 +48,7 @@ Rotating the Transformation Bounds
 
 It is possible to rotate the visual transformation bounds without transforming the image itself. This is particularly useful when dealing with sections of an image that were drawn diagonally, like for example, a stick at an angle.
 
-By pressing :kbd:`Ctrl + Alt` before trying to rotate, the cursor will switch to a bounds-rotation cursor, at which point a |mouseleft|+ drag will rotate the visual bounds. Then, releasing the keys, a regular transformation can be performed. By rotating the transformation bounds to the actual image being transformed, it can be easier to transform the image after wards, especially for aligning with a certain angle.
+By pressing :kbd:`Ctrl + Alt` before trying to rotate, the cursor will switch to a bounds-rotation cursor, at which point a |mouseleft|+ drag will rotate the visual bounds. Then, releasing the keys, a regular transformation can be performed. By rotating the transformation bounds to the actual image being transformed, it can be easier to transform the image afterwards, especially when aligning at a certain angle.
 
 .. versionadded:: 5.3
 

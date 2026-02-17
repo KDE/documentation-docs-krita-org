@@ -46,7 +46,7 @@ Fast Color Overlay
 
 .. versionadded:: 5.3
 
-This is a special filter for tinting an image with a single color. It is similar to :ref:`hsv_adjustment` with :guilabel:`Colorize` enabled, but much faster.
+Tints an image with a single color. It is similar to :ref:`hsv_adjustment` with :guilabel:`Colorize` enabled, but much faster.
 
 Color
    The color to tint the image with.
@@ -56,11 +56,11 @@ Blend Mode
    Normal
       This applied the color like a regular layer onto the input. This is useful for images where you want to have all opaque pixels the specified color, asif the layer were a single-color layer.
    Tint
-      Tint applies the current color by taking the input and interpolating it between white and the current color. This is useful for images where you want to preserve any mid-tones.
+      Interpolates between white and the current color. This is useful for images where you want to preserve any mid-tones.
    Custom
       Select any other blending mode you prefer.
 Opacity
-   The rate at which the tinting is applied to the image.
+   How opaque or transparent the selected color should be.
 
 .. _filter_color_transfer:
 

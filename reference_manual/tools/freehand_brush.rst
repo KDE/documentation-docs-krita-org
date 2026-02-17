@@ -70,7 +70,7 @@ Stabilizer
     .. versionchanged:: 5.3, distance is replaced by smoothing at max and min speed.
 
     Sample Count at Max Speed
-        This is the strength of the smoothing when drawing as fast as possible. For the best results, this one can be set much lower than that of min speed. The idea being that a fast stroke needs less smoothing than a slow stroke.
+        This is the strength of the smoothing when drawing as fast as possible. For the best results, set it much lower than that of min speed. The idea being that a fast stroke needs less smoothing than a slow stroke.
     Sample Count at Min Speed
         This is the strength of the smoothing when drawing as slow as possible. For best results, this one can be set much higher than that of max speed.
     Delay
@@ -82,7 +82,7 @@ Stabilizer
     Scalable Distance
         This makes it so that the numbers involved will be scaled along the zoom level.
 Pixel
-    This mode will adjust the brush stroke so it will provide clean results when using a single pixel brush.
+    Keeps lines drawn with a single-pixel brush at single-pixel width, avoiding L-shaped corners or doubling-up of pixels.
     
     .. figure:: /images/tools/stablizer_pixel_result.png
     

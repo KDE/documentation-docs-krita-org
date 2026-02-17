@@ -40,4 +40,4 @@ You can edit the settings for a filter mask at any time by double clicking on it
 Color Overlayer Mask
 --------------------
 
-The color overlay mask option is a convenience option to apply a regular filter mask with a :ref:`fast_color_overlay` filter, which is very useful in a variety of sketching workflows. This filter has a color selection button right inside the filter docker.
+A convenience option to apply a regular filter mask with a :ref:`fast_color_overlay` filter, useful to quickly prepare your sketch for inking or similar workflows. This filter has a color selection button inside the filter docker.
