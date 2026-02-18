@@ -16,12 +16,14 @@ Comic Panel Editing Tool
 
 |toolcomicpanelediting|
 
-The Comic Panel Editing Tool allows you to slice through vector shapes, adding a gap or gutter in between the resulting halves. Then it also allows you to remove the gaps.
+The Comic Panel Editing Tool allows the user to create comic panels by either slicing through shapes and adding a gutter in between the resulting halves, or merging the shapes by removing the gaps.
+
 
 Tool Options
 ------------
 
-**Cutting mode**
+Cutting mode
+~~~~~~~~~~~~
 
 |toolcomicpanelediting_cutting|
 
@@ -38,17 +40,13 @@ Thick Gap, Thin Gap, Special Gap
     Three presets for your three most used gap widths.
 Automatic
    This option allows Krita to select the most appropriate gap width preset based on the angle of the line.
-Horizontal
-   In :guilabel:`Automatic` mode, if the line is horizontal based on the :guilabel:`Angle`, choose the specified gap width preset for the gap.
-Vertical
-   In :guilabel:`Automatic` mode, if the line is vertical based on the :guilabel:`Angle`, choose the specified gap width preset for the gap.
-Diagonal
-   In :guilabel:`Automatic` mode, if the line is diagonal based on the :guilabel:`Angle`, choose the specified gap width preset for the gap.
-Angle
-   In :guilabel:`Automatic` mode, if the angle between the line and a perfectly horizontal line is smaller than the :guilabel:`Angle`, use the preset specified by :guilabel:`Horizontal`; 
-   if the angle between the line and a perfectly vertical line is smaller than the :guilabel:`Angle`, use the preset specified by :guilabel:`Vertical`; otherwise, use the preset specified by :guilabel:`Diagonal`.
 
-**Merging mode**
+   Horizontal, Vertical, Diagonal, Angle
+      In :guilabel:`Automatic` mode, if the angle between the line and a perfectly horizontal line is smaller than the :guilabel:`Angle`, use the preset specified by :guilabel:`Horizontal`; 
+      if the angle between the line and a perfectly vertical line is smaller than the :guilabel:`Angle`, use the preset specified by :guilabel:`Vertical`; otherwise, use the preset specified by :guilabel:`Diagonal`.
+
+Merging mode
+~~~~~~~~~~~~
 
 |toolcomicpanelediting_merging|
 
