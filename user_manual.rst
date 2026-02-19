@@ -26,6 +26,7 @@ Discover Krita’s features through an online manual. Guides to help you transit
    user_manual/tag_management
    user_manual/soft_proofing
    user_manual/vector_graphics
+   user_manual/working_with_text
    user_manual/snapping
    user_manual/animation
    user_manual/japanese_animation_template

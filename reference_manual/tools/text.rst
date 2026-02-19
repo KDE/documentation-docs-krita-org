@@ -70,6 +70,8 @@ To edit a text on path, set the blinking cursor within said text. A handle will 
 
     All text types without auto-wrap can in theory be used mixed in a single text shape. Creating such a shape requires using the SVG source editor to edit the SVG directly, but it does mean that the division between them is not as strict as this typology might make them seem. Krita will do it's best to inform you which text type it thinks the shape is for the conversion functions in the tool options, but keep in mind that it might guess wrong.
 
+.. _text_inline_wrapped:
+    
 Inline Wrapped
 ~~~~~~~~~~~~~~
 

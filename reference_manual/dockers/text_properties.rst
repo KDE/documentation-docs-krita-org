@@ -50,6 +50,8 @@ Inheritance
 
 Krita's text shape uses CSS, and thus allows for properties to be inherited. This means that properties like the font size can be set over a whole text shape, and ranges of text within the shape will default to the inherited value if it is not explicitly set on the range.
 
+Inheritance is useful because it allows us to only set the properties that are important on a given section. So, we can emphasis a range of text with italics in the :guilabel:`Character` tab, and then use the :guilabel:`Paragraph` tab to change the font size or font family on the whole text without losing the emphasis on the range of text.
+
 Conversely, some properties do not inherit at all. These properties usually get added on top of one another, but the precise behaviour is described in their entry.
 
 .. _font_relative_units:
@@ -57,7 +59,9 @@ Conversely, some properties do not inherit at all. These properties usually get 
 Font-Relative Units
 ~~~~~~~~~~~~~~~~~~~
 
-Some properties allow for font-relative units. The meaning of these units also depend on inheritance mechanics. All font-relative units will try to use the current font metrics. However, when said font metric is :ref:`text_property_font_size` or :ref:`text_property_line_height` related, and the property being edited is one of those itself, it will instead be relative to the inherited size. The word **Advance** is a technical term that refers to how much a glyph will advance the line. It is similar to the glyph width in horizontal and glyph height in vertical writing modes.
+Some properties allow for font-relative units. The meaning of these units also depend on inheritance mechanics. All font-relative units will try to use the current font metrics. However, when said font metric is :ref:`text_property_font_size` or :ref:`text_property_line_height` related, and the property being edited is one of those itself, it will instead be relative to the inherited size.
+
+Font relative units are particularly useful for :ref:`text_property_letter_spacing`, which is often done relative to the Em size. Similarly, it is very common to have super scripted text to be set to 0.5 Em (so it is half the regular font size), or to have :ref:`Shape Padding <text_property_text_area>` to be 1 Ex.
 
 Em
     The current font size (or inherited font size in the case of Font Size).
@@ -68,9 +72,9 @@ Cap
 Lh
     The line height. This is either relative to the current line height or, in the case of :ref:`text_property_line_height`, the inherited line height.
 Ic
-    Relative to ideographic character advance. The advance of a single CJK character. 
+    Relative to ideographic character :term:`Advance`. The advance of a single CJK character. 
 Ch
-    Advance of the number '0'.
+    :term:`Advance` of the number '0'.
     
 .. _text_character_properties:
 
@@ -640,7 +644,7 @@ Text Rendering
 Text Rendering controls the hinting and rendering style for the text shape.
 
 Optimize Speed
-    The hinting style used for monochrome bitmaps is used, and anti-aliasing is turned off. Krita will also take care to snap the glyphs to the nearest pixel. This allows for pixel art fonts to look good, as well as being the fastest to render option.
+    The hinting style for monochrome bitmaps is used, and anti-aliasing is turned off. Krita will also take care to snap the glyphs to the nearest pixel. This allows for pixel art fonts to look good, as well as being the fastest to render option.
 Optimize Legibility
     In vertical writing modes, full hinting is enabled, while for horizontal, hinting only happens vertically. Krita will additionally snap relevant metrics in these directions.
 Geometric Precision
@@ -671,7 +675,7 @@ Style Presets
 
 :ref:`resource_style_presets` allow storing combinations of properties for later use. See that page for information about editing style presets.
 
-Clicking an entry will select it for editing, while double clicking will apply the active properties onto the text.
+|mouseleft| an entry will select it for editing, while double |mouseleft| will apply the active properties onto the text.
 
 The buttons at the bottom allow modifying the style presets:
 
