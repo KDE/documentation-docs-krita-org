@@ -15,7 +15,7 @@
  Working with Text
 ====================
 
-Krita has a number of features for creating and editing text. While basic use is straightforward, there's a number of advanced features that make working with text really fast. This chapter will give an overview of how the different parts work together.
+Krita has a number of features for creating and editing text. While basic use is straightforward, there's many advanced features that make working with text really fast. This chapter will give an overview of how the different parts work together.
 
 Overview
 --------
@@ -24,7 +24,7 @@ The main tool for text is the :ref:`text_tool`, which allows you to create text 
 
 The Text Tool is used together with the :ref:`text_properties_docker`, which gives you full control over all text properties. It also has :ref:`resource_style_presets` to make it easy to reuse certain property combinations.
 
-However, the Text Tool can only edit a single text at a time. To edit multiple texts, you can use the :ref:`shape_selection_tool`. The text properties docker will edit all selected text objects when using the Shape Selection Tool. Similarly, the Shape Selection Tool can be used to set text on path, or put text into multiple shapes.
+However, the Text Tool can only edit a single text at a time. To edit multiple texts, you can use the :ref:`shape_selection_tool`. The Text Properties Docker will edit all selected text objects when using the Shape Selection Tool. Additionally, the Shape Selection Tool can be used to set text on path, or put text into multiple shapes.
 
 To show how these tools are used together, lets go over some examples:
 
