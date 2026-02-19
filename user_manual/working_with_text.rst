@@ -61,7 +61,7 @@ Now when you go back to the :guilabel:`Paragraph` tab, and adjust the font, the 
 
 .. figure:: /images/text/working_text_decorative_5.png
 
-   Same as above. Each of these samples uses a different font, but because this is only adjusted on the :guilabel:`Paragraph` tab, the underline, which was set in the :guilabel:`Character` tab is left alone.
+   Same as above. Each of these samples uses a different font. Because in the :guilabel:`Character` tab we only adjusted the underline, we can change the font family for the whole text in the :guilabel:`Paragraph` tab.
 
 This can be used with any of the :ref:`text_character_properties`, and can be used to keep consistency in a text while still being able to style each character individually.
 
@@ -168,6 +168,23 @@ An alternative manner of putting text in a shape is to create a text, and a shap
 
 When you have a text in shape, you can adjust it's size by resizing with the shape selection tool, but you can also switch into contour mode (by clicking the new button at the top right) to move the shapes individually.
 
+Vertical Text
+-------------
+
+To make a vertical text, create a text with the Text Tool. Then go to the :ref:`text_properties_docker`, into the :guilabel:`Paragraph` tab. Go to :guilabel:`Add Property` at the bottom, and select :ref:`text_property_writing_mode`. There you can switch it to :guilabel:`Vertical, Right to Left` to set the whole text vertical.
+
+It can be useful to create a Style Preset for this if you use it frequently.
+
+.. note::
+
+   At this moment, Krita does not support mixed writing modes or text orientations.
+
+Right To Left Text
+------------------
+
+While Krita does implement a :term:`Bidirectional` algorithm, you do need to explicitly set the direction of the paragraph. For a right-to-left paragraph, create a text. Then go to the :ref:`text_properties_docker`, into the :guilabel:`Paragraph` tab. Go to :guilabel:`Add Property` at the bottom, and select :ref:`text_property_direction`. Set that to :guilabel:`Right To Left`.
+
+This will initialize the Bidirectional algorithm properly. It will also make sure that :ref:`text_property_text_align` will switch the meaning of :guilabel:`Start` and :guilabel:`End`. Finally, it will show the :ref:`Unicode Bidi <text_property_direction>` property in the :guilabel:`Character` tab, which can be used to fine-tune the behaviour of the Bidirectional algorithm.
 
 Text Term Glossary
 ------------------
@@ -190,3 +207,6 @@ There's a number of technical terms that are used throughout the manual to descr
         
     Kerning
         When you have a line of text, you put the glyphs next to one another. Sometimes this can lead to little gaps appearing between some glyph combinations. Fonts usually have a list of places where this happens and instruct the text layout to pull the glyphs back a little, so the gap closes. This is called Kerning.
+
+    Bidirectional
+        Some scripts are written left-to-right, while others are written right-to-left. When a text has a mix of both, it needs to sort and adjust each segment so the words in each script stay together. For this there's the Unicode bidirectional algorithm.
