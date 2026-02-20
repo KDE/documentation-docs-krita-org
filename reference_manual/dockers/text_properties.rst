@@ -14,7 +14,7 @@
 Text Properties Docker
 ======================
 
-The text properties docker allows you to edit text properties of text objects currently selected with either the :ref:`shape_selection_tool` or :ref:`text_tool`. See :ref:`working_with_text` for an overview of all text features.
+The :dfn:`Text Properties Docker` allows you to edit text properties of text objects currently selected with either the :ref:`shape_selection_tool` or :ref:`text_tool`. See :ref:`working_with_text` for an overview of all text features.
 
 The docker has three tabs: :guilabel:`Paragraph`, :guilabel:`Character` and :guilabel:`Preset`.
 
@@ -24,11 +24,11 @@ The docker has three tabs: :guilabel:`Paragraph`, :guilabel:`Character` and :gui
 
 Finally, :guilabel:`Preset` allows you to create and apply style presets onto the text. See :ref:`text_docker_style_presets` for more information.
 
-By default, the first two tabs will show only a handful of basic properties, while all other properties are only shown when they are relevant, with relevant meaning they are currently set, or :ref:`inherited <text_inheritance>`.
+By default, the first two tabs will show only a handful of basic properties, while all other properties are only shown when they are currently set, or :ref:`inherited <text_inheritance>`.
 
-The revert button before a given property will give an indicator of whether a property is set, and clicking it will unset the property, reverting it to either the default or inherited value. When a mixture of style properties are selected, you will see a multi-headed arrow, while the control itself will show the default or inherited value. Modifying the control will set the same value on all properties, while clicking the revert button will unset the property on all text.
+The revert button left of a given property will give an indicator of whether a property is changed, and clicking it will undo said change. When a mixture of style properties are selected, you will see a multi-headed arrow, while the control itself will show the default or inherited value. Modifying the control will set the same value on all properties, while clicking the revert button will unset the property on all text.
 
-New properties can be added with the :guilabel:`add property` drop down below. The text input allows for searching the current text properties, with each property having a number of alternate keywords.
+New properties can be added with the :guilabel:`add property` drop down below. The text input allows for searching the current text properties, with each property having a number of alternate keywords. For example, typing "underline" will list the :ref:`text_property_text_decoration`, which the :guilabel:`Underline` option is part of. Selecting :guilabel:`Text Decoration` will add the property to the list, so it can be set.
 
 The visibility state of each property can be configured by pressing the :guilabel:`configure button` next to the :guilabel:`add property` dropdown. When the default visibility is set to "always show" and none of the individual properties are set to show conditionally, the :guilabel:`add property` dropdown is replaced with a filter input. The current visibility states are possible:
 
@@ -52,14 +52,14 @@ Krita's text shape uses CSS, and thus allows for properties to be inherited. Thi
 
 Inheritance is useful because it allows us to only set the properties that are important on a given section. So, we can emphasis a range of text with italics in the :guilabel:`Character` tab, and then use the :guilabel:`Paragraph` tab to change the font size or font family on the whole text without losing the emphasis on the range of text.
 
-Conversely, some properties do not inherit at all. These properties usually get added on top of one another, but the precise behaviour is described in their entry.
+Conversely, some properties do not inherit at all, :ref:`text_property_baseline_shift` for example. These properties usually get added on top of one another, but the precise behaviour is described in their entry.
 
 .. _font_relative_units:
 
 Font-Relative Units
 ~~~~~~~~~~~~~~~~~~~
 
-Some properties allow for font-relative units. The meaning of these units also depend on inheritance mechanics. All font-relative units will try to use the current font metrics. However, when said font metric is :ref:`text_property_font_size` or :ref:`text_property_line_height` related, and the property being edited is one of those itself, it will instead be relative to the inherited size.
+Some properties allow for font-relative units. The meaning of these units also depend on inheritance mechanics. All font-relative units will try to use the current font metrics. However, when said font metric is :guilabel:`Em` and the property being edited is :ref:`text_property_font_size`, it will be relative to the inherited font size. Similar with :guilabel:`Lh` and :ref:`text_property_line_height`.
 
 Font relative units are particularly useful for :ref:`text_property_letter_spacing`, which is often done relative to the Em size. Similarly, it is very common to have super scripted text to be set to 0.5 Em (so it is half the regular font size), or to have :ref:`Shape Padding <text_property_text_area>` to be 1 Ex.
 
@@ -129,7 +129,7 @@ Font Style
 
 Font style allows setting the sub style of the given font family, such as italics and bold.
 
-The main control is a drop down that shows a list of predefined styles. These are determined either by the fonts within a family, or by the instances inside a variable font. Clicking any of these will set the corresponding CSS properties for that style.
+The main control is a drop down that shows a list of predefined styles. These are determined either by the fonts within a family, or by the instances inside a :term:`Variable Font`. Clicking any of these will set the corresponding CSS properties for that style.
 
 .. figure:: /images/text/font-style-examples.png
 

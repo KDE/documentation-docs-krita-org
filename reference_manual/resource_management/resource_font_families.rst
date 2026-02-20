@@ -25,9 +25,23 @@ As resources, font families can be searched and tagged, as well as disabled in t
 Font Types
 ----------
 
-The font family picker will show whether the font is an old fashioned bitmap font, a postscript font or an OpenType font (Which can be ether ttf or otf files). Furthermore, it will also show an icon to indicate whether the font is a variable font, or, for color fonts, to indicate which color technologies are available.
+The font family picker will show whether the font is an old fashioned bitmap font, a postscript font or an :term:`OpenType` font (Which can be ether ttf or otf files). Furthermore, it will also show an icon to indicate whether the font is a variable font, or, for color fonts, to indicate which color technologies are available.
 
-Krita doesn't support all color fonts at this time, with only Bitmap and Colrv0 tables supported. Fonts with only SVG and Colrv1 tables will display hex blocks when used.
+.. glossary::
+
+   Bitmap Font
+      A variety of formats just pixel bitmaps instead of vector shapes for their :term:`Glyphs`. Krita supports these through :program:`FreeType`.
+      
+   PostScript Font
+      An older vector font format, using the PostScript vector format. These fonts are much more limited than :term:`OpenType` fonts.
+
+   Variable Font
+      :term:`OpenType` variable fonts are special in that unlike normal font families, simple variations like width and weights are all included into a single font. Variable fonts are able to smoothly interpolate between the different variations, with width and weight becoming an :dfn:`axis` of variation. It is not limited to these either, other examples include :guilabel:`Slant` or :guilabel:`Optical Size`. Krita has full support for these fonts, and their axes can be modified in the :ref:`text_property_font_style` section of the Text Properties Docker.
+
+   Color Font
+      A font that doesn't just define :term:`Glyphs`, but also the colors on those glyphs.
+
+      Krita doesn't support all color fonts at this time, with only Bitmap and Colrv0 tables supported. Fonts with only SVG and Colrv1 tables will display hex blocks when used.
 
 Adding new fonts
 ----------------
