@@ -12,8 +12,6 @@ The contents of the toolbox docker.
    tools/shape_selection
    tools/shape_edit
    tools/text
-   tools/gradient_edit
-   tools/pattern_edit
    tools/calligraphy
    tools/comic_panel_editing_tool
    tools/freehand_brush

@@ -117,7 +117,7 @@ $redirect_rules = array(
     // Dockers
     "^Category:Dockers" => "reference_manual/dockers.html",
 
-    "^Add_Shape" => "reference_manual/dockers/add_shape.html",
+    "^Add_Shape" => "reference_manual/dockers/vector_library.html",
     "^Advanced_Color_Selector" => "reference_manual/dockers/advanced_color_selector.html",
     "^Animation_Curves" => "reference_manual/dockers/animation_curves.html",
     "^Animation_Docker" => "reference_manual/dockers/animation_docker.html",
@@ -136,7 +136,7 @@ $redirect_rules = array(
     "^Palette" => "reference_manual/dockers/palette_docker.html",
     "^Patterns" => "reference_manual/dockers/pattern_docker.html",
     "^Reference_Images" => "reference_manual/dockers/reference_images_docker.html",
-    "^Shape_Properties" => "reference_manual/dockers/shape_properties_docker.html",
+    "^Shape_Properties" => "reference_manual/tools/shape_edit.html",
     "^Small_Color_Selector" => "reference_manual/dockers/small_color_selector.html",
     "^Snap_Settings" => "reference_manual/dockers/snap_settings_docker.html",
     "^Specific_Color_Selector" => "reference_manual/dockers/specific_color_selector.html",
@@ -217,8 +217,8 @@ $redirect_rules = array(
     "^Shape_Handling_Tool" => "reference_manual/tools/shape_selection.html",
     "^Edit_Shapes_Tool" => "reference_manual/tools/shape_edit.html",
     "^Text_Tool" => "reference_manual/tools/text.html",
-    "^Gradient_Editing_Tool" => "reference_manual/tools/gradient_edit.html",
-    "^Pattern_Editing_Tool" => "reference_manual/tools/pattern_edit.html",
+    "^Gradient_Editing_Tool" => "reference_manual/tools/shape_selection.html",
+    "^Pattern_Editing_Tool" => "reference_manual/tools/shape_selection.html",
     "^Calligraphy" => "reference_manual/tools/calligraphy.html",
     "^Freehand_Brush_Tool" => "reference_manual/tools/freehand_brush.html",
     "^Straight_Line_Tool" => "reference_manual/tools/line.html",
@@ -322,7 +322,13 @@ $redirect_rules = array(
     "^reference_manual/dockers/animation_docker.html" => "reference_manual/dockers/animation_timeline.html",
     "^reference_manual/tools/color_selector.html" => "reference_manual/tools/color_sampler.html",
     "^reference_manual/maths_input.html" => "reference_manual/special_widgets.html",
-    "^user_manual/oncanvas_brush_editor.html" -> "reference_manual/dockers/oncanvas_brush_editor.html"
+    "^user_manual/oncanvas_brush_editor.html" -> "reference_manual/dockers/oncanvas_brush_editor.html",
+    
+    "^reference_manual/tools/gradient_edit.html" => "reference_manual/tools/shape_selection.html",
+    "^reference_manual/tools/pattern_edit.html" => "reference_manual/tools/shape_selection.html",
+    
+    "^reference_manual/dockers/add_shape.html" => "reference_manual/dockers/vector_library.html",
+    "^reference_manual/dockers/shape_properties_docker.html" => "reference_manual/tools/shape_edit.html"
 );
 
 //// SETTINGS END

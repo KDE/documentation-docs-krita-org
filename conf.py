@@ -185,10 +185,6 @@ rst_epilog = """
 
 .. |toolcalligraphy| image:: /images/icons/calligraphy_tool.svg
 
-.. |toolgradientedit| image:: /images/icons/gradient_edit_tool.svg
-
-.. |toolpatternedit| image:: /images/icons/pattern_tool.svg
-
 .. |toolfreehandbrush| image:: /images/icons/freehand_brush_tool.svg
 
 .. |toolline| image:: /images/icons/line_tool.svg
@@ -214,8 +210,6 @@ rst_epilog = """
 .. |toolmove| image:: /images/icons/move_tool.svg
 
 .. |tooltransform| image:: /images/icons/transform_tool.svg
-
-.. |toolgrid| image:: /images/icons/grid_tool.svg
 
 .. |toolperspectivegrid| image:: /images/icons/perspectivegrid_tool.svg
 
