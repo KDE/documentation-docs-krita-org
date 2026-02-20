@@ -8,6 +8,7 @@
              - Wolthera van Hövell tot Westerflier <griffinvalley@gmail.com>
              - Hulmanen
              - Raghavendra Kamath <raghu@raghukamath.com>
+             - Ross Rosales <ross.erosales@gmail.com>
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Selection
@@ -133,6 +134,31 @@ vector selection to get these benefits. Go to :menuselection:`Select --> Convert
 
 .. note::
     If you have multiple levels of transparency when you convert a selection to vector, you will lose the semi-transparent values.
+
+.. _selection_action_bar:
+
+Selection Action Bar
+--------------------
+
+This assistant toolbar is used to perform actions on selections. It appears when you have a selection active, and it provides quick access to common selection-related actions.
+
+Go to :menuselection:`Settings --> Configure Krita.. --> General --> Tools`, to enable or disable the Selection Action Bar.
+
+Actions
+    Select All
+        Select all content in the current layer.
+    Deselect
+        Deselect the current selection.
+    Invert Selection
+        Invert the current selection, selecting everything that was not selected before.
+    Crop to Selection
+        Crop to the current selection, removing everything outside of it.
+    Fill with Foreground Color
+        Fill the current selection with the foreground color.
+    Copy to New Layer
+        Copy the current selection to a new layer.
+    Drag Handle
+        Click and drag this handle to move the selection around the canvas.
 
 Common Shortcuts while Using Selections
 ---------------------------------------
