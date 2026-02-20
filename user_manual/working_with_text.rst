@@ -36,10 +36,12 @@ Say you want to add some text to an illustration, like you would do for a poster
 Select the :ref:`text_tool` and |mouseleft| the canvas to create a new text. You can now type your text.
 
 .. figure:: /images/text/working_text_decorative_1.png
+   :alt: Text saying "Secrets of the Rose Garden" in a plain black sans-serif font.
 
-To adjust the colors and stroke, you can select a color directly from any of Krita's color pickers. For the font and text size however, you will need to use the :ref:`text_properties_docker`.
+To adjust the colors and stroke, you can select a color directly from any of Krita's color selectors. For the font and text size however, you will need to use the :ref:`text_properties_docker`.
 
 .. figure:: /images/text/working_text_decorative_2.png
+   :alt: Text saying "Secrets of the Rose Garden", the font has been switched to a cursive one, the text is made green, while "Rose Garden" was made pink.
 
 In the Text Properties Docker, the :guilabel:`Paragraph` tab will change the properties over the whole text, while the :guilabel:`Character` tab will only change properties for the current selection.
 
@@ -49,7 +51,7 @@ When you have changed a property in the character tab, the button on the left wi
 
 .. figure:: /images/text/working_text_decorative_3.png
 
-   Here we added an underline in the :guilabel:`Character` tab.
+   An underline was added the :guilabel:`Character` tab.
 
 For example, lets underline this bit of text. Select the text. Then go to the :guilabel:`Character` tab and to :guilabel:`Add Property` at the bottom, and type "underline". You will see :guilabel:`Text Decoration` in the list. Select this. Now, toggle :guilabel:`Underline`.
 
@@ -73,10 +75,11 @@ Some fonts have alternate :term:`glyphs` for specific characters for decorative 
 To open the glyph palette, go to the Text Tool options, and press :guilabel:`Glyph Palette`.
 
 .. figure:: /images/text/working_text_palette.png
+    :alt: The text "Secrets of the Rose Garden", with the "R" of "Rose" changed to one with a dramatic swash. The glyph palette is visible underneath, showing all the glyph alternates for "R".
 
 If there's a text active, and the font supports glyph alternates for the given glyph, it will be show in the palette.
 
-Double click an alternate glyph to select it.
+Double |mouseleft| an alternate glyph to select it.
 
 Curving And Per-Character Positioning
 -------------------------------------
@@ -84,30 +87,36 @@ Curving And Per-Character Positioning
 Sometimes you want to have more control over the position of the :term:`glyphs`. You can do this with the :ref:`type_setting_mode` in the Text Tool options. First ensure that the text is preformatted by selecting :guilabel:`Preformatted` in the Text Tool options. Then, click the :guilabel:`Type Setting Mode` button to enable it.
 
 .. figure:: /images/text/working_text_adjust_typeset_mode_1.png
+   :alt: The text "Secrets of the Rose Garden", with "Rose Garden" selected.
 
 .. figure:: /images/text/working_text_adjust_typeset_mode_2.png
+   :alt: Same as above, however, the selection has changed to a series of lines, with a handle at the start and end.
 
 The selection area on canvas will now have been replaced with a series of lines. And two dots will be at the start and end of the selection area. You can |mouseleft| + drag the dots to move the whole selection.
 
 .. figure:: /images/text/working_text_adjust_typeset_mode_3.png
+   :alt: Same as above, but handles have been selected to drag "Rose Garden" so it slots tightly under "Secrets of the".
 
 While this is powerful, sometimes you want to have the whole text follow a path without having to adjust every character individually.
 
 To do so, first, create a path on a vector layer.
 
 .. figure:: /images/text/working_text_adjust_path.png
+   :alt: A curved path, outlined in red, with a cursor over it. The cursor shape has changed to a "T" standing on a curve.
 
 Then hover over the path with the :ref:`text_tool`, and press |mouseleft|.
 
 .. figure:: /images/text/working_text_adjust_path_2.png
+   :alt: The text "Secrets of the Rose Garden", following the curled path.
 
 You will now be able to adjust the text postion on the path, and with the :ref:`shape_edit_tool` you can adjust the path. You will first need to go into contour mode (the top right icon) and then select and edit the path as usual.
 
 To hide the path, use the :ref:`shape_selection_tool` to select it and set the opacity to 0%.
 
 .. figure:: /images/text/working_text_to_path.png
+   :alt: A close up of the letter "R", now converted to a path.
 
-Finally, if these two functions don't do what you need them to do, there's always :guilabel:`Convert to Path` in the :ref:`shape_edit_tool` options. Clicking this will convert the text into a regular vector shape (if you have multiple colors in use, it will produce a group shape, so you will need to ungroup with the :ref:`shape_selection_tool` context menu).
+Finally, if these two functions don't do what you need them to do, there's always :guilabel:`Convert to Path` in the :ref:`shape_edit_tool` options. Using this will convert the text into a regular vector shape (if you have multiple colors in use, it will produce a group shape, so you will need to ungroup with the :ref:`shape_selection_tool` context menu).
 
 Comics
 ------
@@ -117,6 +126,7 @@ When creating a comic, you can add text at any given moment. The examples here f
 Now, when creating a comic, it is important that the text is consistent and and easy to read. To ensure that, you can use :ref:`resource_style_presets`. First, create a text. Then, with the :ref:`text_properties_docker`, set the preferred font, and the font size. Finally, create a style preset by going to the :guilabel:`Preset` tab, and there selecting :guilabel:`New Preset`. A dialog will pop up, where you can set the name and the style sample.
 
 .. figure:: /images/text/working_text_comics_preset.png
+   :alt: Window for creating a style preset. It shows a "Comic Text" style, using the font "Komika Text" at 11 points.
 
 Now, you can go into the tool options for the Text Tool, and untick :guilabel:`Current Text Properties`, then select your new preset in the dropdown. New texts will now be created with that preset, making it easy to keep everything consistent.
 
@@ -133,34 +143,38 @@ Planning A Comic
 
 Methods that put text onto a comic at the very start do so because the artist wants to make sure that the text has enough room, and they plan the images around the text.
 
-Now, you might be working off a script or a very rough sketch. The first thing you do then is create new texts. You can do this with the :ref:`text_tool`, by doing |mouseleft| + drag a large rectangle to create a :ref:`text_inline_wrapped` area. Then type your text. This inline-wrapped length is useful here because it doesn't cut off at any given point, so you can focus on typing text and adjusting it afterwards.
+Now, you might be working off a script or a very rough sketch. The first thing you do then is create new texts. You can do this with the :ref:`text_tool`, by |mouseleft| + dragging a large rectangle to create a :ref:`text_inline_wrapped` area. Then type your text. This inline-wrapped length is useful here because it doesn't cut off at any given point, so you can focus on typing text and adjusting it afterwards.
 
 You can use the :ref:`shape_selection_tool` to select multiple text shapes and adjust them with the :ref:`text_properties_docker`. This will only affect the :guilabel:`Paragraph` level properties.
 
 .. figure:: /images/text/working_text_planning_comics.png
+   :alt: A rough layout of a comic of five panels. Panel 1: Boy sees something, and says "Huh?". Panel 2: A girl's back. Panel 3: Boy yells "Hey, don't go there!". Panel 4: Girl turns, looks confused, "What do you mean?". Panel 5: We see boy's face, past the girl's back of the head. "You don't know?", "It's super dangerous over there!".
 
-   With all the texts in place, this comic page is ready to be pencilled. By having the texts laid out like this, it becomes straightforward to see how much space there is left for the images.
+   With all the texts in place, this comic page is ready to be pencilled. By having the texts laid out like this, it becomes clear to see how much space there is left for the images.
 
 Type Setting A Comic
 ~~~~~~~~~~~~~~~~~~~~
 
 The other method of putting text on comics is at the very end, after all colors and images are finished. This is usually referred to as "Type Setting" a comic, as it is not just about putting the text in place, but also making it look good together with the images.
 
-Now, all the previous examples already showed how we can make the kind of decorative text for titles and onomatopoeia. For this section, we'll be focusing on flowing text directly into a balloon.
+Now, all the previous examples already showed how we can make the kind of decorative text for titles and onomatopoeia. For this section, we'll be focusing on flowing text directly into a speech bubble.
 
 .. figure:: /images/text/working_text_typeset_comics_1.png
+   :alt: Image of a witch on a broom, looking at some houses below. An empty speech bubble is pointing at her head.
 
    Image (and later example text) courtesy of Pepper and Carrot, CC-BY David Revoy
 
 First, create a closed shape on a vector layer.
 
 .. figure:: /images/text/working_text_typeset_comics_2.png
+   :alt: Same image of the witch. The empty speech bubble is outlined in red, and the cursor that now hovers over the balloon is showing a "T" in a shape.
 
 Then hover over the center with the :ref:`text_tool` and |mouseleft|.
 
 You can now type the text.
 
 .. figure:: /images/text/working_text_typeset_comics_3.png
+   :alt: Same image of the witch. Her speech bubble is now filled with "Let's halt for the night down there." There's some padding, outlined by a red dashed line, and the cursor is hovering over it, indicating the line can be adjusted.
 
 If you want to add some padding, hover over the border of the shape, and |mouseleft| + drag inwards to add some padding.
 

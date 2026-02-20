@@ -17,7 +17,7 @@ Text Tool
 
 |tooltext|
 
-This tool allows you to add text to your artwork. It is used in conjunction with the :ref:`text_properties_docker`. Some text operations can also be handled by the :ref:`shape_selection_tool`.
+This tool allows you to add text to your artwork. It is used in conjunction with the :ref:`text_properties_docker`. Some text operations can also be handled by the :ref:`shape_selection_tool`. See :ref:`working_with_text` for an overview of all text features.
 
 To create a text, click on the canvas with |mouseleft| and a text with "Placeholder Text" will appear, ready for editing.
 
@@ -28,7 +28,7 @@ If you have just created a text, a blinking cursor will be visible on the text. 
 
 .. Note::
 
-   Because you need the keys on your keyboard to type text, many shortcuts will be disabled. If you want to use a particular shortcut while editing text, it is best to set it up to use either with :kbd:`Ctrl`, :kbd:`Alt` or :kbd:`Ctrl + Shift` as modifiers, as Krita will consider others text to be input. Canvas input gestures like touch rotate, |mousemiddle| pan, or |mousescroll| will work by virtue of not having any keyoard keys associated.
+   Because you need the keys on your keyboard to type text, many shortcuts will be disabled. If you want to use a particular shortcut while editing text, it is best to set it up to use either with :kbd:`Ctrl`, :kbd:`Alt` or :kbd:`Ctrl + Shift` as modifiers, as Krita will consider others text to be input. Canvas input gestures like touch rotate, |mousemiddle| pan, or |mousescroll| will work by virtue of not having any keyboard keys associated.
    
    In addition Krita supports all of `Qt's default text movement shortcuts <https://doc.qt.io/qt-5/qkeysequence.html#standard-shortcuts>`_. These correspond to the default for a given operating system, so for example, :kbd:`Ctrl + →` will move the cursor to the end of words on Windows, while on MacOS the same action corresponds to :kbd:`Alt + →`. Because Krita supports vertical text, we will also check against the appropriate keys for the given writing mode, meaning that in vertical, :kbd:`Ctrl + ↓` will move to the end of the word.
 

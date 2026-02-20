@@ -14,7 +14,7 @@
 Text Properties Docker
 ======================
 
-The text properties docker allows you to edit text properties of text objects currently selected with either the :ref:`shape_selection_tool` or :ref:`text_tool`.
+The text properties docker allows you to edit text properties of text objects currently selected with either the :ref:`shape_selection_tool` or :ref:`text_tool`. See :ref:`working_with_text` for an overview of all text features.
 
 The docker has three tabs: :guilabel:`Paragraph`, :guilabel:`Character` and :guilabel:`Preset`.
 
