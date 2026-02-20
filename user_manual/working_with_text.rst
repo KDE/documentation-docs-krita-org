@@ -162,7 +162,7 @@ Now, all the previous examples already showed how we can make the kind of decora
 .. figure:: /images/text/working_text_typeset_comics_1.png
    :alt: Image of a witch on a broom, looking at some houses below. An empty speech bubble is pointing at her head.
 
-   Image (and later example text) courtesy of Pepper and Carrot, CC-BY David Revoy
+   Image (and later example text) courtesy of Pepper and Carrot, CC-BY David Revoy.
 
 First, create a closed shape on a vector layer.
 
