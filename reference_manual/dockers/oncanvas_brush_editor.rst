@@ -18,7 +18,7 @@ On-Canvas Brush Editor
 
 Krita's brush editor is on the :kbd:`F5` key by default. However, sometimes you just want to modify a single parameter quickly. Perhaps even in canvas-only mode.
 
-The on canvas brush editor or brush HUD allows you to do this. It can be accessed like other dockers, via :menuchoice:`Settings -> Dockers -> On-Canvas Brush Editor`.
+The on canvas brush editor or brush HUD allows you to do this. It can be accessed like other dockers, via :menuselection:`Settings -> Dockers -> On-Canvas Brush Editor`.
 
 
 .. image:: /images/On_canvas_brush_editor.png
