@@ -11,7 +11,7 @@
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: ! Layers, Passthrough Mode, Alpha Inheritance, Blending Mode, Label, Onion Skin, Layer Style, Alpha Lock, Vector Layer, Anti-aliasing
-.. _layer_docker:
+
 .. |icon_visible| image:: /images/icons/visible.svg
     :width: 18
 .. |icon_novisible| image:: /images/icons/novisible.svg
@@ -59,6 +59,7 @@
 .. |icon_deletelayer| image:: /images/icons/deletelayer.svg
     :width: 18
 
+.. _layer_docker:
 
 ======
 Layers
@@ -141,19 +142,20 @@ Display settings
       .. versionadded:: 5.2
 
       - Drowpdown :guilabel:`Detail mode`
-
-        +---------------+-----------------------------------------------------------------------------------------------+
-        | Mode          | Description                                                                                   |
-        +===============+===============================================================================================+
-        | :guilabel:`None`      | No extra information is shown.                                                                |
-        +---------------+-----------------------------------------------------------------------------------------------+
-        | :guilabel:`Simple`    | This will only display the opacity or the blending mode when these are not 100% and :guilabel:`Normal`.   |
-        +---------------+-----------------------------------------------------------------------------------------------+
-        | :guilabel:`Balanced`  | This will display both the opacity and the blending mode for layers where either the opacity  |
-        |               | is below 100%, or the blending mode is not :guilabel:`Normal`.                                          |
-        +---------------+-----------------------------------------------------------------------------------------------+
-        | :guilabel:`Detailed`  | This will always show the opacity and blending options for all layers.                        |
-        +---------------+-----------------------------------------------------------------------------------------------+
+      
+        .. list-table::
+           :header-rows: 1
+            
+           - * Mode
+             * Description
+           - * :guilabel:`None`
+             * No extra information is shown.
+           - * :guilabel:`Simple`
+             * This will only display the opacity or the blending mode when these are not 100% and :guilabel:`Normal`.
+           - * :guilabel:`Balanced`
+             * This will display both the opacity and the blending mode for layers where either the opacity is below 100%, or the blending mode is not :guilabel:`Normal`.
+           - * :guilabel:`Detailed`
+             * This will always show the opacity and blending options for all layers.
 
       - The :guilabel:`Opacity` slider (enabled if mode is not :guilabel:`None`) allows you to control the opacity of the extra blending info label.
       - The :guilabel:`Inline` checkbox (enabled if mode is not :guilabel:`None`) will provide information on a single compact line.
@@ -269,13 +271,14 @@ The Layer Stack is organized in three parts:
 
     Layer Color Space Mismatch Warning
         .. versionadded:: 5.3
+        
         In Krita layers can have a color space different from the color space of the image. It usually happens when you import an external file as a layer. Such difference is a perfectly valid state for Krita, but it may cause visible slowdowns, because Krita will have convert color space of such layers on the fly. When layer's color space is different from the color space a small warning icon is shown next to the layer's properties.
 
         .. figure:: /images/layers/layer-color-space-mismatch.png
            :align: center
            :figwidth: 800
 
-            "Paint Layer 2" has a color space different from the rest of the image
+           "Paint Layer 2" has a color space different from the rest of the image
 
         To remove the warning you can either manually convert it using :menuselection:`Layer --> Convert --> Convert Layer Color Space` dialog or use :guilabel:`Unify Layers Color Space` action (available via :kbd:`Ctrl + Enter` menu).
 

@@ -70,10 +70,12 @@ Encoding Options
         Use the alternative Modular mode for lossy compression. By default, JPEG XL encodes lossy image with VarDCT mode.
     
     .. versionadded:: 5.2
+    
     Lossless alpha
         By default, alpha channel (transparency) will also be compressed when using Lossy encoding. If enabled, this option will set alpha channel to lossless (uncompressed). Useful to reduce transparency artifact on lossy export.
     
     .. versionadded:: 5.3
+    
     Tradeoff
         The encoder can give a better result if it is given more time. This slider allows you to decide how much the encoder should prioritize quality over speed. The different modes can be seen as presets [1]_:
     

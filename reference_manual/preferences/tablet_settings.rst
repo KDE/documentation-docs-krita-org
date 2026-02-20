@@ -51,6 +51,7 @@ Brush Speed Smoothing
     .. versionadded:: 5.1
 
 .. _tablet_settings_tilt_direction_offset:
+
 Pen Tilt Direction Offset
     This lets you adjust the reported pen tilt direction by a fixed amount in either the left or the right direction. It may be useful to change how the brush tip rotation feels based on your hand preference, or if your pointing device does not support tilt and the default brush tip rotation does not work well for you.
 

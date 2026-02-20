@@ -191,7 +191,7 @@ If you chose to build on your host system, you will have much more troubles to r
 you need to set up all SDK and NDK things.
 
 Setting up Android SDK and NDK
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 First configure prefix variable where we install our SDKs:
 
@@ -543,7 +543,7 @@ When the container it not needed anymore, it can be removed with the following c
     avdmanager delete avd -n $device_name
 
 Iteratively rebuild Krita and its package after making changes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------------
 
 When you change something in the Krita's code, you should rebuild the package and 
 reinstall it onto your device (or emulator).
@@ -571,6 +571,6 @@ This command will do four things:
 4) Run Krita on the currently connected device (or emulator)
 
 Debugging crashes
-~~~~~~~~~~~~~~~~~
+-----------------
 
 If Krita crashes you can look up the logs using ``adb logcat``

@@ -181,7 +181,7 @@ Changing duration
 
 Working with multiple layers
     When working with multiple layers, if you want to change only one of the scene thumbnails when drawing on canvas, you should insert keyframes at that scene's time in the current layer. 
-    An easy way to do this is to turn the :guilabel:`Auto Frame` mode on in the :ref:`animation docker <animation_docker>`. That way any changes that you make with the scene selected will insert a keyframe at the scene's time in the current layer and thus would change the thumbnail for that scene.
+    An easy way to do this is to turn the :guilabel:`Auto Frame` mode on in the :ref:`animation docker <timeline_docker>`. That way any changes that you make with the scene selected will insert a keyframe at the scene's time in the current layer and thus would change the thumbnail for that scene.
 
 .. _exporting_storyboard:
 

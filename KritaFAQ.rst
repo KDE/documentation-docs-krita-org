@@ -368,8 +368,6 @@ Krita isn’t much fun without a pressure sensitive tablet. If the tablet has be
 
 On Windows, you need to either install the WinTab drivers for your tablet, or enable the :guilabel:`Windows 8+ Pointer Input` option in Krita's settings.
 
-You can find a community curated list of tablets supported by krita :ref:`here <list_supported_tablets>`.
-
 If you're looking for information about tablets like the iPad or Android tablets, look :ref:`here <krita_android>`.
 
 

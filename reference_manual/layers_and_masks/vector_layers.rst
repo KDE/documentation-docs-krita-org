@@ -14,7 +14,7 @@
    :license: GNU free documentation license 1.3 or later.
 
 .. index:: Vector, Layers
-.. _vector_layers:
+
 .. |icon_vectorlayer| image:: /images/icons/vectorLayer.svg
     :width: 18
 .. |icon_add| image:: /images/icons/list-add.svg
@@ -32,7 +32,7 @@
 .. |selectpixel| image:: /images/icons/select-pixel.svg
     :width: 18
 
-
+.. _vector_layers:
 
 =============
 Vector Layers

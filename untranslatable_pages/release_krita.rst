@@ -106,7 +106,7 @@ At any point of time Krita users have access to four(!) versions of Krita. We ca
     the trouble to switch them.
 
     We still had to switch the case of the package itself, since it broke desktop integrations.
-    See `this bug <https://bugs.kde.org/show_bug.cgi?id=447445>`_
+    See `bug 447445 <https://bugs.kde.org/show_bug.cgi?id=447445>`_
 
 
 On branching out a stable branch
@@ -166,13 +166,13 @@ singer files for all the available platforms:
 
 Repository: https://invent.kde.org/sysadmin/ci-utilities
 
-    * APK signer: ``signing/apksigner-projects.yaml`` (`link <https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/apksigner-projects.yaml>`_)
+    * APK signer: ``signing/apksigner-projects.yaml`` (`link to apk-signer <https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/apksigner-projects.yaml>`_)
 
-    * Windows signer: ``signing/windowsbinariessigner-projects.yaml`` (`link <https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/windowsbinariessigner-projects.yaml>`_)
+    * Windows signer: ``signing/windowsbinariessigner-projects.yaml`` (`link to windows-signer <https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/windowsbinariessigner-projects.yaml>`_)
 
-    * MacOS signer: ``signing/macappsigner-projects.yaml`` (`link <https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/macappsigner-projects.yaml>`_)
+    * MacOS signer: ``signing/macappsigner-projects.yaml`` (`link to MacOS-signer <https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/macappsigner-projects.yaml>`_)
 
-    * MacOS notarizer: ``signing/macappnotarizer-projects.yaml`` (`link <https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/macappnotarizer-projects.yaml>`_)
+    * MacOS notarizer: ``signing/macappnotarizer-projects.yaml`` (`link to MacOS-notarizer <https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/macappnotarizer-projects.yaml>`_)
 
 The branch name should be in a form ``release/5.1.0-beta1``. Add that to each platform so 
 that the config would look like that:
@@ -248,9 +248,9 @@ On the branching-out day
            AppStream file format is a bit complicated and not very strictly followed, here are 
            some notes on its usage in Krita:
 
-           * official specification is `here <https://www.freedesktop.org/software/appstream/docs/index.html>`_
+           * official specification is `at freedesktop.org <https://www.freedesktop.org/software/appstream/docs/index.html>`_
 
-           * KDE's manual on the usage is `here <https://community.kde.org/Guidelines_and_HOWTOs/AppStream>`_
+           * KDE's manual on the usage is `at the kde community wiki <https://community.kde.org/Guidelines_and_HOWTOs/AppStream>`_
 
            * artifacts in our appdata file use non-standard names for platforms, it is limited
              by the names understood by `apps.kde.org store <https://apps.kde.org/krita>`_

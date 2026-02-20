@@ -14,9 +14,9 @@
 .. _common_widgets:
 
 
-=========================
-Special interface controls
-=========================
+============================
+ Special interface controls
+============================
 
 .. index:: Interface, Widgets, Controls, Maths
 .. _maths_input:
