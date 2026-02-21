@@ -1,6 +1,6 @@
 .. meta::
    :description:
-        Page about the mix blending modes in Krita: Allanon, Alpha Darken, Behind, Erase, Geometric Mean, Grain Extract, Grain Merge, Greater, Hard Mix, Hard Overlay, Interpolation, Interpolation2x, Normal, Overlay, Parallel, Penumbra A, B, C and D.
+        Page about the mix blending modes in Krita: Allanon, Alpha Darken, Behind, Erase, Geometric Mean, Grain Extract, Grain Merge, Greater, Hard Mix, Hard Overlay, Interpolation, Interpolation2x, Normal, Marker, Overlay, Parallel, Penumbra A, B, C and D.
 
 .. metadata-placeholder
 
@@ -238,6 +238,13 @@ This is the Hard Mix blending mode as it is implemented in Photoshop.
    
 This add the two values, and then checks if the value is above the maximum. If so it will output the maximum, otherwise the minimum.
 
+.. _bm_hard_mix_hdr:
+
+Hard Mix HDR
+~~~~~~~~~~~~
+
+Special variant of :guilabel:`Hard Mix` for floating point spaces.
+
 .. index:: ! Hard Mix Softer (Photoshop)
 .. _bm_hard_mix_softer_photoshop:
 
@@ -281,6 +288,15 @@ Similar to Hard Light but Hard Light use Screen when the value is above 50%. Div
    :align: center
 
    Left: **Normal**. Right: **Hard Overlay**.
+
+.. _bm_hard_overlay_hdr:
+
+Hard Overlay HDR
+~~~~~~~~~~~~~~~~
+
+Special variant of :guilabel:`Hard Overlay` for floating point spaces.
+
+Hard Overlay
 
 .. index:: ! Marker
 .. _bm_marker:

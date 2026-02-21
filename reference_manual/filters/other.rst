@@ -28,6 +28,13 @@ Random Noise
 
 Gives Random Noise to input image.
 
+Level
+   Maximum level of noise. The higher, the more noise is added onto the source image.
+Opacity
+   The maximum opacity of the noise.
+Grayscale
+   Whether to randomize all channels separately, or to make the noise grayscale.
+
 .. _reset_transparent_filter:
 
 Reset Transparent
