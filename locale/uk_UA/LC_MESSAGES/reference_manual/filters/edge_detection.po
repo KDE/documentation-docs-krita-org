@@ -1,0 +1,670 @@
+# Translation of docs_krita_org_reference_manual___filters___edge_detection.po to Ukrainian
+# Copyright (C) 2019-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: "
+"docs_krita_org_reference_manual___filters___edge_detection\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"PO-Revision-Date: 2020-04-23 08:27+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.07.70\n"
+
+#: ../../reference_manual/filters/edge_detection.rst:-1
+msgid "Overview of the edge detection filters."
+msgstr "Огляд фільтрів виявлення країв."
+
+#: ../../reference_manual/filters/edge_detection.rst:-1
+msgid ".. image:: /images/filters/Krita_4_0_height_to_normal_map.png"
+msgstr ".. image:: /images/filters/Krita_4_0_height_to_normal_map.png"
+
+#: ../../reference_manual/filters/edge_detection.rst:11
+#: ../../reference_manual/filters/edge_detection.rst:16
+#: ../../reference_manual/filters/edge_detection.rst:23
+msgid "Edge Detection"
+msgstr "Виявлення країв"
+
+#: ../../reference_manual/filters/edge_detection.rst:11
+#: ../../reference_manual/filters/edge_detection.rst:40
+#: ../../reference_manual/filters/edge_detection.rst:110
+msgid "Prewitt"
+msgstr "Прюїтт"
+
+#: ../../reference_manual/filters/edge_detection.rst:11
+#: ../../reference_manual/filters/edge_detection.rst:43
+#: ../../reference_manual/filters/edge_detection.rst:113
+msgid "Sobel"
+msgstr "Собель"
+
+#: ../../reference_manual/filters/edge_detection.rst:18
+msgid ""
+"Edge detection filters focus on finding sharp contrast or border between "
+"colors in an image to create edges or lines."
+msgstr ""
+"Акцент у фільтрах виявлення країв зроблено на виявленні різкого контрасту "
+"або межі між кольоровими областями на зображенні і створенні там країв або "
+"ліній."
+
+#: ../../reference_manual/filters/edge_detection.rst:20
+msgid "Since 4.0 there are only two edge detection filters."
+msgstr "Починаючи з версії 4.0, передбачено лише два фільтри виявлення країв."
+
+#: ../../reference_manual/filters/edge_detection.rst:27
+msgid ""
+"A general edge detection filter that encapsulates all other filters. Edge "
+"detection filters that were separate before 4.0 have been folded into this "
+"one. It is also available for filter layers and filter brushes."
+msgstr ""
+"Загальний набір фільтрів виявлення країв, до якого включено усі інші "
+"фільтри. У цьому наборі зібрано усі окремі фільтри, які були у програмі до "
+"версії 4.0. Фільтри можна використовувати у шарах фільтрування та у пензлях "
+"фільтрування."
+
+#: ../../reference_manual/filters/edge_detection.rst:33
+msgid ".. image:: /images/filters/Krita_4_0_edge_detection.png"
+msgstr ".. image:: /images/filters/Krita_4_0_edge_detection.png"
+
+#: ../../reference_manual/filters/edge_detection.rst:33
+msgid ""
+"From left to right: Original, with Prewitt edge detection applied, with "
+"Prewitt edge detection applied and result applied to alpha channel, and "
+"finally the original with an edge detection filter layer with the same "
+"settings as 3, and the filter layer blending mode set to multiply."
+msgstr ""
+"Зліва праворуч: оригінал, зображення із застосуванням виявлення країв "
+"Прюїтта, із виявлення країв Прюїтта, яке застосовано до каналу прозорості, "
+"і, нарешті, оригінал із шаром фільтра з виявленням країв із тими самими "
+"параметрами, що і у 3, режим змішування для шару фільтрування «Множення»."
+
+#: ../../reference_manual/filters/edge_detection.rst:36
+#: ../../reference_manual/filters/edge_detection.rst:106
+msgid ""
+"The convolution kernel formula for the edge detection. The difference "
+"between these is subtle, but still worth experimenting with."
+msgstr ""
+"Формула ядра згортки для виявлення країв. Відмінність між цими варіантами "
+"ледве помітка, але варта того, щоб поекспериментувати."
+
+#: ../../reference_manual/filters/edge_detection.rst:38
+#: ../../reference_manual/filters/edge_detection.rst:108
+msgid "Simple"
+msgstr "Просте"
+
+#: ../../reference_manual/filters/edge_detection.rst:39
+#: ../../reference_manual/filters/edge_detection.rst:109
+msgid ""
+"A Kernel that is not square unlike the other two, and while this makes it "
+"fast, it doesn't take diagonal pixels into account."
+msgstr ""
+"Ядро, яке не є квадратним, на відміну від двох інших. Хоча це робить його "
+"швидшим, його використання призводить до ігнорування діагональних пікселів."
+
+#: ../../reference_manual/filters/edge_detection.rst:41
+#: ../../reference_manual/filters/edge_detection.rst:111
+msgid ""
+"A square kernel that includes the diagonal pixels just as strongly as the "
+"orthogonal pixels. Gives a very strong effect."
+msgstr ""
+"Квадратне ядро, використання якого призводить до враховування діагональних "
+"пікселів у тій самій пропорції, що і ортогональних пікселів. Дає дуже "
+"сильний ефект."
+
+#: ../../reference_manual/filters/edge_detection.rst:43
+#: ../../reference_manual/filters/edge_detection.rst:113
+msgid "Formula"
+msgstr "Формула"
+
+#: ../../reference_manual/filters/edge_detection.rst:43
+#: ../../reference_manual/filters/edge_detection.rst:113
+msgid ""
+"A square kernel that includes the diagonal pixels slightly less strong than "
+"the orthogonal pixels. Gives a more subtle effect than Prewitt."
+msgstr ""
+"Квадратне ядро, використання якого призводить до враховування діагональних "
+"пікселів у дещо меншій пропорції, порівняно із ортогональними пікселями. Дає "
+"дещо тонший ефект за ядро Прюїтта."
+
+#: ../../reference_manual/filters/edge_detection.rst:46
+msgid "The output."
+msgstr "Результати використання."
+
+#: ../../reference_manual/filters/edge_detection.rst:48
+msgid "All sides"
+msgstr "З усіх боків"
+
+#: ../../reference_manual/filters/edge_detection.rst:49
+msgid ""
+"Convolves the edge detection into all directions and combines the result "
+"with the Pythagorean theorem. This will be good for most uses."
+msgstr ""
+"Виконує виявлення меж у всіх напрямках і поєднує результат за допомогою "
+"теореми Піфагора. Дає непогані результати у більшості випадків."
+
+#: ../../reference_manual/filters/edge_detection.rst:50
+msgid "Top Edge"
+msgstr "Верхній край"
+
+#: ../../reference_manual/filters/edge_detection.rst:51
+msgid ""
+"This only detects changes going from top to bottom and thus only has top "
+"lines."
+msgstr ""
+"Виявляє зміни, які відбуваються у напрямку згори вниз, тому виявляє лише "
+"верхні лінії."
+
+#: ../../reference_manual/filters/edge_detection.rst:52
+msgid "Bottom Edge"
+msgstr "Нижній край"
+
+#: ../../reference_manual/filters/edge_detection.rst:53
+msgid ""
+"This only detects changes going from bottom to top and thus only has bottom "
+"lines."
+msgstr ""
+"Виявляє зміни, які відбуваються у напрямку знизу вгору, тому виявляє лише "
+"нижні лінії."
+
+#: ../../reference_manual/filters/edge_detection.rst:54
+msgid "Right Edge"
+msgstr "Правий край"
+
+#: ../../reference_manual/filters/edge_detection.rst:55
+msgid ""
+"This only detects changes going from right to left and thus only has right "
+"lines."
+msgstr ""
+"Виявляє зміни, які відбуваються у напрямку справа ліворуч, тому виявляє лише "
+"праві лінії."
+
+#: ../../reference_manual/filters/edge_detection.rst:56
+msgid "Left Edge"
+msgstr "Лівий край"
+
+#: ../../reference_manual/filters/edge_detection.rst:57
+msgid ""
+"This only detects changes going from left to right and thus only has left "
+"lines."
+msgstr ""
+"Виявляє зміни, які відбуваються у напрямку зліва праворуч, тому виявляє лише "
+"ліві лінії."
+
+#: ../../reference_manual/filters/edge_detection.rst:59
+msgid "Output"
+msgstr "Вивід"
+
+#: ../../reference_manual/filters/edge_detection.rst:59
+msgid "Direction in Radians"
+msgstr "Напрямок у радіанах"
+
+#: ../../reference_manual/filters/edge_detection.rst:59
+msgid ""
+"This convolves into all directions and then tries to output the direction of "
+"the line in radians."
+msgstr ""
+"Згортає за усіма напрямками, а потім намагається вивести напрямок лінії у "
+"радіанах."
+
+#: ../../reference_manual/filters/edge_detection.rst:61
+#: ../../reference_manual/filters/edge_detection.rst:117
+msgid "Horizontal/Vertical radius"
+msgstr "Горизонтальний/Вертикальний радіус"
+
+#: ../../reference_manual/filters/edge_detection.rst:62
+msgid ""
+"The radius of the edge detection. Default is 1 and going higher will "
+"increase the thickness of the lines."
+msgstr ""
+"Радіус кругу виявлення меж. Типовим є значення 1. Збільшення цього значення "
+"збільшує товщину ліній."
+
+#: ../../reference_manual/filters/edge_detection.rst:64
+msgid "Apply result to Alpha Channel."
+msgstr "Застосувати результат до альфа-каналу."
+
+#: ../../reference_manual/filters/edge_detection.rst:64
+msgid ""
+"The edge detection will be used on a grayscale copy of the image, and the "
+"output will be onto the alpha channel of the image, meaning it will output "
+"lines only."
+msgstr ""
+"Виявлення країв буде застосовано до копії зображення у відтінках сірого, а "
+"дані буде виведено до альфа-каналу зображення, тобто буде виведено лише "
+"лінії країв."
+
+#: ../../reference_manual/filters/edge_detection.rst:66
+msgid "High Pass"
+msgstr "Високі частоти"
+
+#: ../../reference_manual/filters/edge_detection.rst:69
+msgid "Gaussian High Pass"
+msgstr "Гаусів фільтр високих частот"
+
+#: ../../reference_manual/filters/edge_detection.rst:71
+msgid ""
+"A High Pass filter is a type of edge detection filter. It is usually used to "
+"enhance contrasts, much like a sharpen filter, but within a texture editing "
+"workflow it is also used to remove local gradients."
+msgstr ""
+"Фільтр високих частот є типом фільтра виявлення меж. Ним, зазвичай, "
+"користуються для поліпшення контрастності, подібно до фільтра збільшення "
+"різкості, але у межах процедури редагування текстур він також "
+"використовується для вилучення локальних градієнтів."
+
+#: ../../reference_manual/filters/edge_detection.rst:74
+msgid "Radius"
+msgstr "Радіус"
+
+#: ../../reference_manual/filters/edge_detection.rst:74
+msgid ""
+"The radius within the Gaussian High Pass filter is similar to the radius in "
+"the Edge Detection filter."
+msgstr ""
+"Радіус у фільтрі високих частот Гауса подібний до радіуса у фільтрі "
+"виявлення меж."
+
+#: ../../reference_manual/filters/edge_detection.rst:76
+msgid ""
+"To use this as a sharpen filter, create a filter layer with this filter, and "
+"then set the blending mode to modes like 'soft light', 'overlay', 'hard "
+"light', 'linear light'. Different blending modes give different results."
+msgstr ""
+"Щоб скористатися цим як фільтром збільшення різкості, створіть шар "
+"фільтрування з цим фільтром і встановіть режим змішування з набору «м'яке "
+"світло», «накладка», «жорстке світло», «лінійне світло». Різні режими "
+"змішування даватимуть різні результати."
+
+#: ../../reference_manual/filters/edge_detection.rst:82
+msgid ".. image:: /images/filters/highpass_filter_sharpen.png"
+msgstr ".. image:: /images/filters/highpass_filter_sharpen.png"
+
+#: ../../reference_manual/filters/edge_detection.rst:82
+msgid ""
+"**Top left**: Original, **top right**: Gaussian Highpass Result with radius "
+"3, **bottom left**: Gaussian High Pass Result with radius 3 blended over the "
+"original with to Linear Light, **bottom right**: Gaussian High Pass result "
+"with radius 3 blended over the original with Soft Light."
+msgstr ""
+"**Згори ліворуч**: оригінал, **згори праворуч**: результат застосування "
+"гаусового фільтра високих частот із радіусом 3, **внизу ліворуч**: результат "
+"застосування гаусового фільтра високих частот із радіусом 3 із змішуванням з "
+"оригіналом з використанням режиму лінійного світла, **внизу праворуч**: "
+"результат застосування гаусового фільтра високих частот із радіусом 3 із "
+"змішуванням з оригіналом з використанням режиму м'якого світла."
+
+#: ../../reference_manual/filters/edge_detection.rst:84
+msgid ""
+"To remove local gradients from a texture, create a clone layer, and apply "
+"this filter as a filter mask. Then, put a filter layer with gaussian blur "
+"set to the full amount in between the clone layer and the original. Finally, "
+"set the clone layer to luminosity or multiply (in this case an extra filter "
+"mask needs to be added to reduce the levels so that the multiplication "
+"result will not be as strong)."
+msgstr ""
+"Щоб усунути локальні градієнти з текстури, створіть шар клонування і "
+"застосуйте цей фільтр як маску фільтрування. Далі, розташуйте шар "
+"фільтрування із встановленим повним гаусовим розмиванням між шаром "
+"клонування і початковим зображенням. Нарешті, встановіть для шару клонування "
+"режим змішування світності або множення (у цьому випадку потрібна додаткова "
+"маска фільтрування для зменшення рівнів так, щоб результат множення не був "
+"надто сильним)."
+
+#: ../../reference_manual/filters/edge_detection.rst:90
+msgid ".. image:: /images/filters/highpass_filter_local_gradient_removal.png"
+msgstr ".. image:: /images/filters/highpass_filter_local_gradient_removal.png"
+
+#: ../../reference_manual/filters/edge_detection.rst:90
+msgid ""
+"**Left**: Original, **top right**: Gaussian High Pass Result blended with "
+"luminosity to remove the local gradients but keep the sharp details. In this "
+"specific example the lack of local gradients removes some character, but the "
+"gaussian high pass result could also be used to create a heightmap."
+msgstr ""
+"**Ліворуч**: оригінал, **вгорі праворуч**: результат застосування гаусового "
+"фільтра високих частот, змішаний з використанням режиму світності для "
+"вилучення локальних градієнтів, але збереження різких деталей. У цьому "
+"прикладі прибирання локальних градієнтів вилучає певну характерність "
+"зображення, але гаусовим фільтром високих частот можна скористатися і для "
+"створення карти висот."
+
+#: ../../reference_manual/filters/edge_detection.rst:93
+msgid "Height Map"
+msgstr "Карта висот"
+
+#: ../../reference_manual/filters/edge_detection.rst:93
+msgid "Normal Map"
+msgstr "Нормальне картографування"
+
+#: ../../reference_manual/filters/edge_detection.rst:96
+msgid "Height to Normal Map"
+msgstr "Висоту у нормальну карту"
+
+#: ../../reference_manual/filters/edge_detection.rst:103
+msgid ""
+"A filter that converts Height maps to Normal maps through the power of edge "
+"detection. It is also available for the filter layer or filter brush."
+msgstr ""
+"Фільтр, який виконує перетворення карт висоти на нормальні карти за "
+"допомогою виявлення країв. Ним можна також користуватися для шарів "
+"фільтрування та пензлів фільтрування."
+
+#: ../../reference_manual/filters/edge_detection.rst:115
+msgid "Channel"
+msgstr "Канал"
+
+#: ../../reference_manual/filters/edge_detection.rst:116
+msgid ""
+"Which channel of the layer should be interpreted as the grayscale heightmap."
+msgstr ""
+"Визначає канал шару, який слід вважати картою висот у відтінках сірого."
+
+#: ../../reference_manual/filters/edge_detection.rst:118
+msgid ""
+"The radius of the edge detection. Default is 1 and going higher will "
+"increase the strength of the normal map. Adjust this if the effect of the "
+"resulting normal map is too weak."
+msgstr ""
+"Радіус кругу виявлення меж. Типовим є значення 1. Збільшення цього значення "
+"збільшує потужність нормальної карти. Скоригуйте це значення, якщо результат "
+"застосування ефекту нормальної карти є надто слабким."
+
+#: ../../reference_manual/filters/edge_detection.rst:120
+msgid ""
+"An XYZ swizzle, that allows you to map Red, Green and Blue to different 3d "
+"normal vector coordinates. This is necessary mostly for the difference "
+"between MikkT-space normal maps (+X, +Y, +Z) and the OpenGL standard normal "
+"map (+X, -Y, +Z)."
+msgstr ""
+"Змішувалка XYZ за допомогою якої ви можете пов'язати канали червоного, "
+"зеленого та синього із іншими координатами, які задаються нормалізованим "
+"просторовим вектором. Таке перетворення є необхідним здебільшого для "
+"виправлення різниці між нормальними картами у просторі МіккТ (+X, +Y, +Z) та "
+"стандартною нормальною картою OpenGL (+X, -Y, +Z)."
+
+#: ../../reference_manual/filters/edge_detection.rst:121
+msgid "XYZ"
+msgstr "XYZ"
+
+#~ msgid "mouseleft"
+#~ msgstr "mouseleft"
+
+#~ msgid ".. image:: images/icons/Krita_mouse_left.png"
+#~ msgstr ".. image:: images/icons/Krita_mouse_left.png"
+
+#~ msgid "mouseright"
+#~ msgstr "mouseright"
+
+#~ msgid ".. image:: images/icons/Krita_mouse_right.png"
+#~ msgstr ".. image:: images/icons/Krita_mouse_right.png"
+
+#~ msgid "mousemiddle"
+#~ msgstr "mousemiddle"
+
+#~ msgid ".. image:: images/icons/Krita_mouse_middle.png"
+#~ msgstr ".. image:: images/icons/Krita_mouse_middle.png"
+
+#~ msgid "mousescroll"
+#~ msgstr "mousescroll"
+
+#~ msgid ".. image:: images/icons/Krita_mouse_scroll.png"
+#~ msgstr ".. image:: images/icons/Krita_mouse_scroll.png"
+
+#~ msgid "toolshapeselection"
+#~ msgstr "toolshapeselection"
+
+#~ msgid ".. image:: images/icons/shape_select_tool.svg"
+#~ msgstr ".. image:: images/icons/shape_select_tool.svg"
+
+#~ msgid "toolshapeedit"
+#~ msgstr "toolshapeedit"
+
+#~ msgid ".. image:: images/icons/shape_edit_tool.svg"
+#~ msgstr ".. image:: images/icons/shape_edit_tool.svg"
+
+#~ msgid "tooltext"
+#~ msgstr "tooltext"
+
+#~ msgid ".. image:: images/icons/text-tool.svg"
+#~ msgstr ".. image:: images/icons/text-tool.svg"
+
+#~ msgid "toolcalligraphy"
+#~ msgstr "toolcalligraphy"
+
+#~ msgid ".. image:: images/icons/calligraphy_tool.svg"
+#~ msgstr ".. image:: images/icons/calligraphy_tool.svg"
+
+#~ msgid "toolgradientedit"
+#~ msgstr "toolgradientedit"
+
+#~ msgid ".. image:: images/icons/gradient_edit_tool.svg"
+#~ msgstr ".. image:: images/icons/gradient_edit_tool.svg"
+
+#~ msgid "toolpatternedit"
+#~ msgstr "toolpatternedit"
+
+#~ msgid ".. image:: images/icons/pattern_tool.svg"
+#~ msgstr ".. image:: images/icons/pattern_tool.svg"
+
+#~ msgid "toolfreehandbrush"
+#~ msgstr "toolfreehandbrush"
+
+#~ msgid ".. image:: images/icons/freehand_brush_tool.svg"
+#~ msgstr ".. image:: images/icons/freehand_brush_tool.svg"
+
+#~ msgid "toolline"
+#~ msgstr "toolline"
+
+#~ msgid ".. image:: images/icons/line_tool.svg"
+#~ msgstr ".. image:: images/icons/line_tool.svg"
+
+#~ msgid "toolrectangle"
+#~ msgstr "toolrectangle"
+
+#~ msgid ".. image:: images/icons/rectangle_tool.svg"
+#~ msgstr ".. image:: images/icons/rectangle_tool.svg"
+
+#~ msgid "toolellipse"
+#~ msgstr "toolellipse"
+
+#~ msgid ".. image:: images/icons/ellipse_tool.svg"
+#~ msgstr ".. image:: images/icons/ellipse_tool.svg"
+
+#~ msgid "toolpolygon"
+#~ msgstr "toolpolygon"
+
+#~ msgid ".. image:: images/icons/polygon_tool.svg"
+#~ msgstr ".. image:: images/icons/polygon_tool.svg"
+
+#~ msgid "toolpolyline"
+#~ msgstr "toolpolyline"
+
+#~ msgid ".. image:: images/icons/polyline_tool.svg"
+#~ msgstr ".. image:: images/icons/polyline_tool.svg"
+
+#~ msgid "toolbeziercurve"
+#~ msgstr "toolbeziercurve"
+
+#~ msgid ".. image:: images/icons/bezier_curve.svg"
+#~ msgstr ".. image:: images/icons/bezier_curve.svg"
+
+#~ msgid "toolfreehandpath"
+#~ msgstr "toolfreehandpath"
+
+#~ msgid ".. image:: images/icons/freehand_path_tool.svg"
+#~ msgstr ".. image:: images/icons/freehand_path_tool.svg"
+
+#~ msgid "tooldyna"
+#~ msgstr "tooldyna"
+
+#~ msgid ".. image:: images/icons/dyna_tool.svg"
+#~ msgstr ".. image:: images/icons/dyna_tool.svg"
+
+#~ msgid "toolmultibrush"
+#~ msgstr "toolmultibrush"
+
+#~ msgid ".. image:: images/icons/multibrush_tool.svg"
+#~ msgstr ".. image:: images/icons/multibrush_tool.svg"
+
+#~ msgid "toolassistant"
+#~ msgstr "toolassistant"
+
+#~ msgid ".. image:: images/icons/assistant_tool.svg"
+#~ msgstr ".. image:: images/icons/assistant_tool.svg"
+
+#~ msgid "toolmove"
+#~ msgstr "toolmove"
+
+#~ msgid ".. image:: images/icons/move_tool.svg"
+#~ msgstr ".. image:: images/icons/move_tool.svg"
+
+#~ msgid "tooltransform"
+#~ msgstr "tooltransform"
+
+#~ msgid ".. image:: images/icons/transform_tool.svg"
+#~ msgstr ".. image:: images/icons/transform_tool.svg"
+
+#~ msgid "toolgrid"
+#~ msgstr "toolgrid"
+
+#~ msgid ".. image:: images/icons/grid_tool.svg"
+#~ msgstr ".. image:: images/icons/grid_tool.svg"
+
+#~ msgid "toolperspectivegrid"
+#~ msgstr "toolperspectivegrid"
+
+#~ msgid ".. image:: images/icons/perspectivegrid_tool.svg"
+#~ msgstr ".. image:: images/icons/perspectivegrid_tool.svg"
+
+#~ msgid "toolmeasure"
+#~ msgstr "toolmeasure"
+
+#~ msgid ".. image:: images/icons/measure_tool.svg"
+#~ msgstr ".. image:: images/icons/measure_tool.svg"
+
+#~ msgid "toolcolorsampler"
+#~ msgstr "toolcolorsampler"
+
+#~ msgid ".. image:: images/icons/color_sampler_tool.svg"
+#~ msgstr ".. image:: images/icons/color_sampler_tool.svg"
+
+#~ msgid "toolfill"
+#~ msgstr "toolfill"
+
+#~ msgid ".. image:: images/icons/fill_tool.svg"
+#~ msgstr ".. image:: images/icons/fill_tool.svg"
+
+#~ msgid "toolgradient"
+#~ msgstr "toolgradient"
+
+#~ msgid ".. image:: images/icons/gradient_drawing_tool.svg"
+#~ msgstr ".. image:: images/icons/gradient_drawing_tool.svg"
+
+#~ msgid "toolcolorizemask"
+#~ msgstr "toolcolorizemask"
+
+#~ msgid ".. image:: images/icons/colorizemask_tool.svg"
+#~ msgstr ".. image:: images/icons/colorizemask_tool.svg"
+
+#~ msgid "toolsmartpatch"
+#~ msgstr "toolsmartpatch"
+
+#~ msgid ".. image:: images/icons/smart_patch_tool.svg"
+#~ msgstr ".. image:: images/icons/smart_patch_tool.svg"
+
+#~ msgid "toolcrop"
+#~ msgstr "toolcrop"
+
+#~ msgid ".. image:: images/icons/crop_tool.svg"
+#~ msgstr ".. image:: images/icons/crop_tool.svg"
+
+#~ msgid "toolselectrect"
+#~ msgstr "toolselectrect"
+
+#~ msgid ".. image:: images/icons/rectangular_select_tool.svg"
+#~ msgstr ".. image:: images/icons/rectangular_select_tool.svg"
+
+#~ msgid "toolselectellipse"
+#~ msgstr "toolselectellipse"
+
+#~ msgid ".. image:: images/icons/elliptical_select_tool.svg"
+#~ msgstr ".. image:: images/icons/elliptical_select_tool.svg"
+
+#~ msgid "toolselectpolygon"
+#~ msgstr "toolselectpolygon"
+
+#~ msgid ".. image:: images/icons/polygonal_select_tool.svg"
+#~ msgstr ".. image:: images/icons/polygonal_select_tool.svg"
+
+#~ msgid "toolselectmagnetic"
+#~ msgstr "toolselectmagnetic"
+
+#~ msgid ".. image:: images/icons/magnetic_select_tool.svg"
+#~ msgstr ".. image:: images/icons/magnetic_select_tool.svg"
+
+#~ msgid "toolselectpath"
+#~ msgstr "toolselectpath"
+
+#~ msgid ".. image:: images/icons/path_select_tool.svg"
+#~ msgstr ".. image:: images/icons/path_select_tool.svg"
+
+#~ msgid "toolselectfreehand"
+#~ msgstr "toolselectfreehand"
+
+#~ msgid ".. image:: images/icons/freehand_select_tool.svg"
+#~ msgstr ".. image:: images/icons/freehand_select_tool.svg"
+
+#~ msgid "toolselectcontiguous"
+#~ msgstr "toolselectcontiguous"
+
+#~ msgid ".. image:: images/icons/contiguous_select_tool.svg"
+#~ msgstr ".. image:: images/icons/contiguous_select_tool.svg"
+
+#~ msgid "toolselectsimilar"
+#~ msgstr "toolselectsimilar"
+
+#~ msgid ".. image:: images/icons/similar_select_tool.svg"
+#~ msgstr ".. image:: images/icons/similar_select_tool.svg"
+
+#~ msgid "toolpan"
+#~ msgstr "toolpan"
+
+#~ msgid ".. image:: images/icons/pan_tool.svg"
+#~ msgstr ".. image:: images/icons/pan_tool.svg"
+
+#~ msgid "toolzoom"
+#~ msgstr "toolzoom"
+
+#~ msgid ".. image:: images/icons/zoom_tool.svg"
+#~ msgstr ".. image:: images/icons/zoom_tool.svg"
+
+#~ msgid "toolreference"
+#~ msgstr "toolreference"
+
+#~ msgid ".. image:: images/icons/reference_images_tool.svg"
+#~ msgstr ".. image:: images/icons/reference_images_tool.svg"
+
+#~ msgid "toolenclosefill"
+#~ msgstr "toolenclosefill"
+
+#~ msgid ".. image:: images/icons/enclose_and_fill_tool.svg"
+#~ msgstr ".. image:: images/icons/enclose_and_fill_tool.svg"
+
+#~ msgid "Sobol"
+#~ msgstr "Соболь"
+
+#~ msgid ""
+#~ "The convolution kernel formula for the edgedetection. The difference "
+#~ "between these is subtle, but still worth experimenting with."
+#~ msgstr ""
+#~ "Формула ядра згортки для виявлення країв Відмінність між цими варіантами "
+#~ "ледве помітка, але варта того, щоб поекспериментувати."

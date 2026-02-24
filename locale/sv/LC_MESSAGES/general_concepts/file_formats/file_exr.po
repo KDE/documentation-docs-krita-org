@@ -1,0 +1,178 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+#
+# SPDX-FileCopyrightText: 2019, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"PO-Revision-Date: 2025-08-13 13:56+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.04.3\n"
+
+#: ../../general_concepts/file_formats/file_exr.rst:-1
+msgid "The EXR file format as exported by Krita."
+msgstr "EXR-filformatet som exporteras av Krita."
+
+#: ../../general_concepts/file_formats/file_exr.rst:-1
+msgid "screenshot of Color profile for imported EXR images selector"
+msgstr "skärmbild av färgprofilen för väljaren av importerade EXR-bilder"
+
+#: ../../general_concepts/file_formats/file_exr.rst:-1
+msgid ".. image:: /images/default_color_space_for_exr_option.png"
+msgstr ".. image:: /images/default_color_space_for_exr_option.png"
+
+#: ../../general_concepts/file_formats/file_exr.rst:10
+msgid "*.exr"
+msgstr "*.exr"
+
+#: ../../general_concepts/file_formats/file_exr.rst:10
+msgid "EXR"
+msgstr "EXR"
+
+#: ../../general_concepts/file_formats/file_exr.rst:10
+msgid "HDR Fileformat"
+msgstr "HDR-filformat"
+
+#: ../../general_concepts/file_formats/file_exr.rst:10
+msgid "OpenEXR"
+msgstr "OpenEXR"
+
+#: ../../general_concepts/file_formats/file_exr.rst:15
+msgid "\\*.exr"
+msgstr "\\*.exr"
+
+#: ../../general_concepts/file_formats/file_exr.rst:17
+msgid ""
+"``.exr`` is the prime file format for saving and loading :ref:`floating "
+"point bit depths <bit_depth>`, and due to the library made to load and save "
+"these images being fully open source, the main interchange format as well."
+msgstr ""
+"Filformatet ``.exr`` är huvudformatet för att spara och läsa in :ref: "
+"`floating point bit depths <bit_depth>`, och på grund att biblioteket för "
+"att läsa och spara bilderna är öppen källkod, är det också det huvudsakliga "
+"utbytesformatet."
+
+#: ../../general_concepts/file_formats/file_exr.rst:19
+msgid ""
+"Floating point bit-depths are used by the computer graphics industry to "
+"record scene referred values, which can be made via a camera or a computer "
+"renderer. Scene referred values means that the file can have values whiter "
+"than white, which in turn means that such a file can record lighting "
+"conditions, such as sunsets very accurately. These EXR files can then be "
+"used inside a renderer to create realistic lighting."
+msgstr ""
+"Flyttalsbitdjup används av datorgrafikindustrin för att spela in "
+"scenbaserade värden, som kan skapas via en kamera eller datoråtergivning. "
+"Scenbaserade värden betyder att filen kan ha värden vitare än vitt, vilket i "
+"sin tur betyder att en sådan fil kan spela in ljusförhållanden som "
+"solnedgångar mycket noggrant. Sådana EXR-filer kan därefter användas inne i "
+"ett återgivningsprogram för att skapa realistisk ljussättning."
+
+#: ../../general_concepts/file_formats/file_exr.rst:21
+msgid ""
+"Krita can load and save EXR for the purpose of paint-over (yes, Krita can "
+"paint with scene referred values) and interchange with applications like "
+"Blender, Mari, Nuke and Natron."
+msgstr ""
+"Krita kan läsa in och spara EXR i överskrivningssyftet (ja, Krita kan måla "
+"med scenbaserade värden) och utbyte med program som Blender, Mari, Nuke och "
+"Natron."
+
+#: ../../general_concepts/file_formats/file_exr.rst:24
+msgid "Color Management"
+msgstr "Färghantering"
+
+#: ../../general_concepts/file_formats/file_exr.rst:28
+msgid ""
+"EXR file format does not have any internal color management capabilities, i."
+"e. when saving the data into the file, no color space information is written "
+"into the file. Next time you load the same file into Krita, Krita will "
+"assign the default color space to the file (usually \"Rec 709 Linear\"). It "
+"may cause the file to change visually."
+msgstr ""
+"EXR-filformatet har inga interna färghanteringsmöjligheter, det vill säga "
+"när data sparas i filen skrivs ingen färgrymdsinformation in i filen. Nästa "
+"gång man läser in samma fil i Krita tilldelas filen standardfärgrymden "
+"(vanligtvis \"Rec 709 Linjär\"). Det kan göra att filen ändras visuellt."
+
+#: ../../general_concepts/file_formats/file_exr.rst:30
+msgid ""
+"In general, there are two ways to handle the color management for the EXR "
+"files: OCIO and profile-based."
+msgstr ""
+"I allmänhet finns det två sätt att ta hand om färghanteringen för EXR-"
+"filerna: OCIO och profilbaserad."
+
+#: ../../general_concepts/file_formats/file_exr.rst:33
+msgid "OCIO-based workflow"
+msgstr "OCIO-baserat arbetsflöde"
+
+#: ../../general_concepts/file_formats/file_exr.rst:35
+msgid ""
+"You need to select OCIO configuration and share it between Krita and other "
+"tools you use (Blender, Natron and etc). When using OCIO Krita will **not** "
+"use the assigned profile and will use the OCIO configuration you selected."
+msgstr ""
+"Man måste välja OCIO-inställning och dela den mellan Krita och andra verktyg "
+"som används (Blender, Natron, etc.). När man utnyttjar OCIO använder Krita "
+"**inte** den tilldelade profilen utan använder den OCIO-inställning man valt."
+
+#: ../../general_concepts/file_formats/file_exr.rst:38
+msgid "Profile-based workflow"
+msgstr "Profilbaserat arbetsflöde"
+
+#: ../../general_concepts/file_formats/file_exr.rst:40
+msgid ""
+"Alternatively, you can assign the necessary ICC profile to the imported "
+"image. If you import the image and you know its color space is not \"Rec 709 "
+"Linear TRC\", just use :menuselection:`Tools --> Scripts --> Assign Profile "
+"to Image` plugin to assign a different profile."
+msgstr ""
+"Alternativt kan man tilldela den nödvändiga ICC-profilen till den "
+"importerade bilden. Om man importerar bilden och vet att dess färgrymd inte "
+"är \"Rec 709 linjär TRC\", använd bara insticksprogrammet :menuselection:"
+"`Verktyg --> Skript --> Tilldela profil till bild` för att tilldela en annan "
+"profil."
+
+#: ../../general_concepts/file_formats/file_exr.rst:44
+msgid ""
+"If you do not see Assign Profile plugin, make sure it is activated in the "
+"Python Plugin Manager: :menuselection:`Settings --> Configure Krita... --> "
+"Python Plugin Manager`. After activating the plugin, restart Krita."
+msgstr ""
+"Om insticksprogrammet Tilldela profil inte visas, se till att det är "
+"aktiverad i hanteringen av Python-insticksprogram: :menuselection:"
+"`Inställningar --> Anpassa Krita... --> Python-instickshanterare`. Starta om "
+"Krita efter att ha aktiverat insticksprogrammet."
+
+#: ../../general_concepts/file_formats/file_exr.rst:46
+msgid ""
+"If your work is based on some non-default color space (e.g. ACES), then you "
+"can set this color space as the default for loading EXR images. Go to :"
+"menuselection:`Settings --> Configure Krita... --> Color Management` and "
+"select the required color space at `Color profile for imported EXR images` "
+"selector. Next time you load any EXR image, this color space will be "
+"assigned automatically."
+msgstr ""
+"Om arbetet är baserat på en en färgrymd som inte är standardiserad (t.ex. "
+"ACES), kan man ställa in färgrymd som standardvärde vid inläsning av EXR-"
+"bilder. Gå till :menuselection:`Inställningar --> Anpassa Krita... --> "
+"Färghantering` och välj önskad färgrymd med väljaren `Färgprofil för "
+"importerade EXR-bilder`. Nästa gång en EXR-bild läses in tilldelas den "
+"färgrymden automatiskt."
+
+#: ../../general_concepts/file_formats/file_exr.rst:52
+msgid ""
+"If you want to read more about color managed workflows, check :ref:`this "
+"chapter <color_managed_workflow>`."
+msgstr ""
+"Om du vill läsa mer om färghanterade arbetsflöden, ta en titt på :ref:`det "
+"här kapitlet <color_managed_workflow>`."

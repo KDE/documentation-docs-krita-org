@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"PO-Revision-Date: 2024-04-21 04:52\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/documentation-docs-krita-org/"
+"docs_krita_org_general_concepts___file_formats___lossy_lossless.pot\n"
+"X-Crowdin-File-ID: 54230\n"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:-1
+msgid "The difference between lossy and lossless compression."
+msgstr "有损压缩和无损压缩的差异。"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:10
+msgid "lossy"
+msgstr "有损"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:10
+msgid "lossless"
+msgstr "无损"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:10
+msgid "compression"
+msgstr "压缩"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:17
+msgid "Lossy and Lossless Image Compression"
+msgstr "有损和无损图像压缩"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:20
+msgid ""
+"When we compress a file, we do this because we want to temporarily make it "
+"smaller (like for sending over email), or we want to permanently make it "
+"smaller (like for showing images on the internet)."
+msgstr ""
+"我们在压缩一个图像时，我们要么想暂时把它的体积变小 (通过电子邮件发送工作文件"
+"时)，要么想永久性地把它的体积变小 (在互联网上展示图像时)。"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:22
+msgid ""
+"*Lossless* compression techniques are for when we want to *temporarily* "
+"reduce information. As the name implies, they compress without losing "
+"information. In text, the use of abbreviations is a good example of a "
+"lossless compression technique. Everyone knows 'etc.' expands to 'etcetera', "
+"meaning that you can half the 8 character long 'etcetera' to the four "
+"character long 'etc.'."
+msgstr ""
+"**无损** 压缩技术是为了 **暂时且可逆地** 减少信息量而开发的。正如名字所述，它"
+"们在压缩时不会损失信息。我们对文字的缩写就是一种无损压缩技术的例子。人们都知"
+"道“开源”展开成“开放源代码”，所以你可以在文章里用两个字的“开源”取代五个字的“开"
+"放源代码”。"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:24
+msgid ""
+"Within image formats, examples of such compression is by for example "
+"'indexed' color, where we make a list of available colors in an image, and "
+"then assign a single number to them. Then, when describing the pixels, we "
+"only write down said number, so that we don't need to write the color "
+"definition over and over."
+msgstr ""
+"在图像格式中，类似上面例子的压缩方式是通过“索引颜色”进行的。我们先列出图像的"
+"所有颜色，然后为每种颜色指定一个编号。我们在描述像素的颜色时只需给出颜色编"
+"号，而无需反复描述颜色的具体数值。"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:26
+msgid ""
+"*Lossy* compression techniques are for when we want to *permanently* reduce "
+"the file size of an image. This is necessary for final products where having "
+"a small filesize is preferable such as a website. That the image will not be "
+"edited anymore after this allows for the use of the context of a pixel to be "
+"taken into account when compressing, meaning that we can rely on "
+"psychological and statistical tricks."
+msgstr ""
+"**有损** 压缩是用来 **永久且不可逆地** 减少图像体积的。这对于网站上展示的成品"
+"图像而言非常有用，因为这些输出到网站的图像不是用来再次编辑的，所以我们大可以"
+"使用心理学和统计学手段去有选择性地抛弃一部分对观感影响不大的图像数据。"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:28
+msgid ""
+"One of the primary things JPEG for example does is chroma sub-sampling, that "
+"is, to split up the image into a grayscale and two color versions (one "
+"containing all red-green contrast and the other containing all blue-yellow "
+"contrast), and then it makes the latter two versions smaller. This works "
+"because humans are much more sensitive to differences in lightness than we "
+"are to differences in hue and saturation."
+msgstr ""
+"JPEG 的基本处理之一就是基于色品数据的二次取样，它会把图像数据拆分成一条明度通"
+"道和两条色品通道 (红绿对比和蓝黄对比)，然后只对两条色品通道的数据进行压缩。这"
+"是因为人类对明度变化的敏感程度要远高于对色相、饱和度变化的敏感程度。"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:30
+msgid ""
+"Another thing it does is to use cosine waves to describe contrasts in an "
+"image. What this means is that JPEG and other lossy formats using this are "
+"*very good at describing gradients, but not very good at describing sharp "
+"contrasts*."
+msgstr ""
+"JPEG 和其他有损格式还会使用余弦波来描述图像的明暗反差，它们也因此 **擅长描述"
+"颜色渐变，却不擅长描述锐利的颜色反差** 。"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:32
+msgid ""
+"Conversely, lossless image compression techniques are *really good at "
+"describing images with few colors thus sharp contrasts, but are not good to "
+"compress images with a lot of gradients*."
+msgstr ""
+"而无损图像压缩则与此相反，它们 **擅长描述颜色数目较少的高反差图像，但却不擅长"
+"压缩颜色渐变较多的图像** 。"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:34
+msgid ""
+"Another big difference between lossy and lossless images is that lossy file "
+"formats will degrade if you re-encode them, that is, if you load a JPEG into "
+"Krita edit a little, resave, edit a little, resave, each subsequent save "
+"will lose some data. This is a fundamental part of lossy image compression, "
+"and the primary reason we use working files."
+msgstr ""
+"有损和无损格式的另一个重要区别是，有损格式的每次编码都会劣化图像品质，而无损"
+"格式能保证每次编码前后的图像品质一致。如果你在 Krita 里面打开一张 JPEG 图像，"
+"进行少许编辑然后进行保存，如此反复操作几次，你会发现图像的品质会越来越差。这"
+"是有损图像压缩的一个基本特性，因此我们应当使用无损的工作文件格式来编辑图像。"
+
+#: ../../general_concepts/file_formats/lossy_lossless.rst:38
+msgid ""
+"If you're interested in different compression techniques, `Wikipedia's "
+"page(s) on image compression <https://en.wikipedia.org/wiki/"
+"Image_compression>`_ are very good, if not a little technical."
+msgstr ""
+"如果你想学习各种压缩技术的特性，可以访问 `维基百科的图像压缩页面 <https://en."
+"wikipedia.org/wiki/Image_compression>`_ 。这个页面比较技术化，但非常有用。"

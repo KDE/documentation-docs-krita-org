@@ -1,0 +1,403 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"PO-Revision-Date: 2020-08-30 16:55+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-POFile-SpellExtra: layers multigrid Penrose Krita Rhombs image dimension\n"
+"X-POFile-SpellExtra: examples offset images Quasicristal example\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: multigrelha Bruijn hiperdimensional quasicristais\n"
+"X-POFile-SpellExtra: hipermalha tentaedros pentaedros multigrelhas\n"
+"X-POFile-SpellExtra: Multigrelha px color\n"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:-1
+msgid "How to use the Multigrid generation in Krita."
+msgstr "Como usar a geração de Grelhas Múltiplas no Krita."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:0
+#, fuzzy
+#| msgid ".. image:: images/layers/multigrid-dimension-example.png"
+msgid ".. image:: /images/layers/multigrid-dimension-example.png"
+msgstr ".. image:: images/layers/multigrid-dimension-example.png"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:0
+#, fuzzy
+#| msgid ".. image:: images/layers/multigrid-offset-examples.png"
+msgid ".. image:: /images/layers/multigrid-offset-examples.png"
+msgstr ".. image:: images/layers/multigrid-offset-examples.png"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:10
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:14
+msgid "Multigrid"
+msgstr "Multi-grelha"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:10
+msgid "Penrose"
+msgstr "Penrose"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:10
+msgid "Rhombs"
+msgstr "Rhombs"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:10
+msgid "Quasicrystal"
+msgstr "Quasicristal"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:16
+msgid ""
+"A fill layer based on de Bruijn's 1981 multigrid method to generate `Penrose "
+"Tilings <https://en.wikipedia.org/wiki/Penrose_tiling>`_ . This generator "
+"projects a hyperdimensional grid lattice onto a 2d plane, giving some pretty "
+"cool patterns. Besides looking cool, there's a few interesting and "
+"potentially useful features the resulting patterns have:"
+msgstr ""
+"Uma camada de preenchimento com base no método multigrelha de 1981 de de "
+"Bruijn para gerar `Padrões de Penrose <https://en.wikipedia.org/wiki/"
+"Penrose_tiling>`_ . Este gerador aplica uma malha em grelha hiperdimensional "
+"sobre um plano 2D, gerando alguns padrões bastante giros. Para além de "
+"parecer giro, existem algumas funcionalidades potencialmente úteis que os "
+"padrões resultantes têm:"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:18
+msgid ""
+"It always produces rhombs, that is diamond or rectangle shapes. This is "
+"particularly useful for 3d artists."
+msgstr ""
+"Ela produz sempre rombos, ou seja formas rectangulares ou em diamante. Isto "
+"é particularmente útil para os artistas 3D."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:19
+msgid ""
+"For all dimensions but 3, 4 and 6 the results are aperiodic, this means that "
+"it will never repeat itself in the width or height of the image."
+msgstr ""
+"Para todas as dimensões, excepto as 3, 4 e 6, os resultados não são "
+"periódicos, o que significa que nunca se irá repetir ao longo da largura ou "
+"altura da imagem."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:20
+msgid ""
+"The results do repeat symmetrically around the center. The amount of "
+"symmetric repetitions is the same as the amount of dimensions projected."
+msgstr ""
+"Os resultados repetem-se sim em torno do centro. A quantidade de repetições "
+"simétricas é igual à quantidade de dimensões projectadas."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:22
+msgid ""
+"The resulting patterns are also known to show up in nature as quasicrystals."
+msgstr ""
+"Os padrões resultantes também são conhecidos na natureza como quasicristais."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:25
+msgid "Shapes"
+msgstr "Formas"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:27
+msgid ""
+"The meat of the algorithm. The default values for this produce the Star "
+"Penrose tiling."
+msgstr ""
+"A base do algoritmo. Os valores predefinidos produzem o padrão em estrela "
+"Penrose."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:31
+msgid ""
+"The amount of dimensions the hyperlattice has. 3 is a lattice of cubes, 4 is "
+"a lattice of tesseracts, 5 is a lattice of penteracts, and so forth."
+msgstr ""
+"A quantidade de dimensões que a hipermalha tem. O 3 é uma malha de cubos, o "
+"4 é uma malha de tentaedros, o 5 é uma malha de pentaedros e assim por "
+"diante."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:35
+msgid "Dimensions"
+msgstr "Dimensões"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:35
+msgid ""
+"Multigrid with different dimensions, starting at 3 and ending at 12. 3d, 4d "
+"and 6d are colored with the intersect color factor while the rest uses ratio "
+"exclusively. In 3d, 4d and 6d, all the rhombs have the same ratio."
+msgstr ""
+"As multigrelhas com diferentes dimensões, começando em 3 e terminando em 12. "
+"As grelhas 3D, 4D e 6D são coloridas com o factor de cor da intersecção, "
+"enquanto os restantes usam a proporção em exclusivo. No 3D, 4D e 6D, todos "
+"os rombos têm a mesma proporção."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:37
+msgid "Divisions"
+msgstr "Divisões"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:38
+msgid ""
+"Effectively a zoom-out. This is the subdivisions of the length of the width "
+"between the center and the corner of the image. This is then used to "
+"determine how many lines are projected for each dimension."
+msgstr ""
+"É efectivamente uma redução. Estas são as subdivisões da largura entre o "
+"centro e o canto da imagem. Isto é então usado para determinar quantas "
+"linhas são projectadas para cada dimensão."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:40
+msgid ""
+"This controls how much each set of lines is offset from the center of the "
+"image. Changing this value changes the pattern within the same dimension "
+"significantly."
+msgstr ""
+"Isto controla quanto é que cada conjunto de linhas se encontra deslocado "
+"face ao centro da imagem. A alteração deste valor altera o padrão, dentro da "
+"mesma dimensão, de forma significativa."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:44
+msgid ""
+"Multigrid with 5 dimensions and 20 divisions. The offsets from left to right "
+"are: 0.3, 0.1, 0.2 (Star Penrose tiling), 0.3, 0.4 (Sun Penrose Tiling), "
+"0.48."
+msgstr ""
+"Multigrelha com 5 dimensões e 20 divisões. Os deslocamentos da esquerda para "
+"a direita são: 0,3, 0,1, 0,2 (padrão em estrela Penrose), 0,3, 0,4 (padrão "
+"de Sol Penrose), 0,48."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:45
+msgid "Offset"
+msgstr "Posição"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:48
+msgid "Lines"
+msgstr "Linhas"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:50
+msgid "Line Width"
+msgstr "Largura da Linha"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:51
+msgid ""
+"The width of the outlines of the rhombs in image pixels. Due to the way the "
+"rhombs are drawn, there is still a hairfine line visible at 0 px."
+msgstr ""
+"A largura dos contornos dos rombos nos pixels das imagens. Devido à forma "
+"como estes rombos são desenhados, existe ainda uma fina linha visível com 0 "
+"px."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:53
+msgid ""
+"This optionally draws lines between the different sides of the shape. This "
+"is typically used to show that a specific tiling has certain matching rules, "
+"but it also gives cool looking results."
+msgstr ""
+"Isto opcionalmente desenha linhas entre os diferentes lados da forma. Isto é "
+"tipicamente usado para mostrar que um dado padrão tem certas regras "
+"correspondentes, mas também gera alguns resultados com bom aspecto."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:55
+msgid "Acute Angle"
+msgstr "Ângulo Agudo"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:56
+msgid "Draws an arc between the sides that connect to an acute angle."
+msgstr "Desenha um arco entre os lados que se liga a um ângulo agudo."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:57
+msgid "Obtuse Angle"
+msgstr "Ângulo Obtuso"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:58
+msgid "Draws an arc between the sides that connect to an obtuse angle."
+msgstr "Desenha um arco entre os lados que se liga a um ângulo obtuso."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:60
+msgid ""
+"Draws two lines crossed between the sides of each rhomb. Particularly "
+"interesting with 0 line width."
+msgstr ""
+"Desenha duas linhas cruzadas entre os lados de cada rombo. É particularmente "
+"interessante com uma espessura de linha igual a 0."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:61
+msgid "Connector Lines"
+msgstr "Linhas de Ligação"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:61
+msgid "Cross"
+msgstr "Cruz"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:64
+msgid "Colors"
+msgstr "Cores"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:68
+#, fuzzy
+#| msgid ".. image:: images/layers/multigrid-color-examples.png"
+msgid ".. image:: /images/layers/multigrid-color-examples.png"
+msgstr ".. image:: images/layers/multigrid-color-examples.png"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:68
+msgid ""
+"Image showing the Star Penrose Tiling with 29 divisions and connector lines "
+"at the acute angles. The complex gradient and the combination of ratio and "
+"index to color the image results in some of the more impressive results that "
+"can be gotten from this fill layer."
+msgstr ""
+"Uma imagem que mostra o padrão em estrela Penrose com 29 divisões e linhas "
+"de ligação nos ângulos agudos. O gradiente complexo e a combinação de "
+"proporções e índices para colorir a imagem resulta num dos padrões mais "
+"impressionantes que podem ser obtidos com esta camada de preenchimento."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:70
+msgid ""
+"This section controls all the colors, all grouped together because Krita's "
+"color buttons allow drag and dropping colors to one another. You can change "
+"the color for the outlines and the connector lines, and there is a gradient "
+"for coloring the individual rhombs."
+msgstr ""
+"Esta secção controla todas as cores, todas agrupadas em conjunto porque os "
+"botões de cores do Krita permitem arrastar e largar as cores uma na outra. "
+"Poderá mudar a cor dos contornos e das linhas de ligação, assim como existe "
+"um gradiente para colorir os rombos individuais."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:72
+msgid ""
+"The color factors determine which properties of each rhomb is used to "
+"determine its coloring. This value is used as a multiplier, to finally "
+"result in a value that can be used to get the value from the gradient."
+msgstr ""
+"Os factores de cores determinam quais as propriedades de cada rombo de forma "
+"a determinar a sua coloração. Este valor é usado como um multiplicador, "
+"resultando finalmente num valor que poderá ser usado para obter o valor do "
+"gradiente."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:74
+msgid "Ratio"
+msgstr "Proporção"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:75
+msgid ""
+"This colors the rhombs based on their ratio. Thin rhombs have a low ratio, "
+"thick rhombs have a high ratio, and perfect squares have the largest ratio."
+msgstr ""
+"Isto aplica uma cor nos rombos com base nas suas proporções. Os rombos finos "
+"têm uma proporção baixa, enquanto os quadrados perfeitos têm proporções "
+"maiores."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:76
+msgid "Intersect"
+msgstr "Intersecção"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:77
+msgid ""
+"This colors the rhombs based on which intersecting lines resulted in this "
+"rhomb. In effect, this colors the rhomb depending on which side of the "
+"hyperlattice the rhomb is on, as is especially clear when setting the "
+"dimension to 3."
+msgstr ""
+"Isto aplica uma cor nos rombos com base nas linhas em intersecção "
+"resultantes neste rombo. De facto, isto aplica a cor no rombo dependendo do "
+"lado da hipermalha em que se encontra o rombo, o que é particularmente claro "
+"quando se configurar a dimensão como 3."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:79
+msgid ""
+"This colors the rhombs based on the index of the intersecting lines from the "
+"center. In effect, rhombs closer to the center will have a lower value, "
+"while rhombs further from the center will have a higher value."
+msgstr ""
+"Isto aplica uma cor nos rombos com base no índice das linhas em intersecção "
+"face ao centro. De facto, os rombos mais próximos do centro terão um valor "
+"menor, enquanto os mais distantes terão um valor maior."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:84
+msgid "Index"
+msgstr "Índice"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-offset-examples.png"
+#~ msgid ".. image:: images/icons/Krita_mouse_left.png"
+#~ msgstr ".. image:: images/layers/multigrid-offset-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-offset-examples.png"
+#~ msgid ".. image:: images/icons/Krita_mouse_right.png"
+#~ msgstr ".. image:: images/layers/multigrid-offset-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-offset-examples.png"
+#~ msgid ".. image:: images/icons/Krita_mouse_middle.png"
+#~ msgstr ".. image:: images/layers/multigrid-offset-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-offset-examples.png"
+#~ msgid ".. image:: images/icons/Krita_mouse_scroll.png"
+#~ msgstr ".. image:: images/layers/multigrid-offset-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-color-examples.png"
+#~ msgid ".. image:: images/icons/text-tool.svg"
+#~ msgstr ".. image:: images/layers/multigrid-color-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-dimension-example.png"
+#~ msgid ".. image:: images/icons/gradient_edit_tool.svg"
+#~ msgstr ".. image:: images/layers/multigrid-dimension-example.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-color-examples.png"
+#~ msgid ".. image:: images/icons/line_tool.svg"
+#~ msgstr ".. image:: images/layers/multigrid-color-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-color-examples.png"
+#~ msgid ".. image:: images/icons/multibrush_tool.svg"
+#~ msgstr ".. image:: images/layers/multigrid-color-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-color-examples.png"
+#~ msgid ".. image:: images/icons/move_tool.svg"
+#~ msgstr ".. image:: images/layers/multigrid-color-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-color-examples.png"
+#~ msgid ".. image:: images/icons/grid_tool.svg"
+#~ msgstr ".. image:: images/layers/multigrid-color-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-color-examples.png"
+#~ msgid ".. image:: images/icons/perspectivegrid_tool.svg"
+#~ msgstr ".. image:: images/layers/multigrid-color-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-color-examples.png"
+#~ msgid ".. image:: images/icons/measure_tool.svg"
+#~ msgstr ".. image:: images/layers/multigrid-color-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-color-examples.png"
+#~ msgid ".. image:: images/icons/color_sampler_tool.svg"
+#~ msgstr ".. image:: images/layers/multigrid-color-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-color-examples.png"
+#~ msgid ".. image:: images/icons/fill_tool.svg"
+#~ msgstr ".. image:: images/layers/multigrid-color-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-color-examples.png"
+#~ msgid ".. image:: images/icons/colorizemask_tool.svg"
+#~ msgstr ".. image:: images/layers/multigrid-color-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/layers/multigrid-color-examples.png"
+#~ msgid ".. image:: images/icons/zoom_tool.svg"
+#~ msgstr ".. image:: images/layers/multigrid-color-examples.png"

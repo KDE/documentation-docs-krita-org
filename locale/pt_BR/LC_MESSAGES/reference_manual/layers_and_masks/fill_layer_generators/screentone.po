@@ -1,0 +1,834 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+#
+# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"PO-Revision-Date: 2025-10-21 10:16-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 25.08.2\n"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:-1
+msgid "How to use Screen Tone generation in Krita."
+msgstr "Como usar a geração de tons de tela no Krita."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:11
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:15
+msgid "Screentone"
+msgstr "Tom da tela"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:11
+msgid "Halftone"
+msgstr "Meio-tom"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:19
+msgid ""
+"Fills the layer with simple regular patterns like dots and lines like the "
+"ones used in traditional `screentone <https://en.wikipedia.org/wiki/"
+"Screentone>`_ or `halftone <https://en.wikipedia.org/wiki/Halftone>`_ "
+"techniques."
+msgstr ""
+"Preenche a camada com padrões regulares simples, como pontos e linhas, como "
+"os usados ​​nas técnicas tradicionais de `screentone <https://en.wikipedia.org/"
+"wiki/Screentone>`_ ou `halftone <https://en.wikipedia.org/wiki/Halftone>`_."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:22
+msgid "Contents"
+msgstr "Conteúdo"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:25
+msgid "General Concepts"
+msgstr "Conceitos gerais"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:27
+msgid ""
+"The screentone generator is based on traditional and digital halftoning "
+"principles. Following are some explanations of basic concepts used through "
+"this page."
+msgstr ""
+"O gerador de tons de tela baseia-se nos princípios de meio-tom tradicional e "
+"digital. A seguir, algumas explicações dos conceitos básicos utilizados "
+"nesta página."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:30
+msgid "Pixel Grid"
+msgstr "Grade de pixel"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:32
+msgid ""
+"The pixel grid is the grid formed by the regular positioning of each pixel "
+"in the image. Each cell in this grid is formed by a single pixel."
+msgstr ""
+"A grade de pixels é a grade formada pelo posicionamento regular de cada "
+"pixel na imagem. Cada célula dessa grade é formada por um único pixel."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:33
+msgid "Screen"
+msgstr "Tela"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:35
+msgid ""
+"The term screen comes from the days when analog halftoning was invented. It "
+"is also used for example when talking about screen printing. Traditionally "
+"it was some kind of sheet with very small holes (a fabric for example) "
+"through which the light passed. Here we use the term to refer to the "
+"unbounded regular pattern formed by repeating some shape."
+msgstr ""
+"O termo tela vem da época em que o meio-tom analógico foi inventado. Também "
+"é usado, por exemplo, quando se fala em serigrafia. Tradicionalmente, era "
+"uma espécie de folha com furos muito pequenos (um tecido, por exemplo) por "
+"onde a luz passava. Aqui, usamos o termo para nos referirmos ao padrão "
+"regular ilimitado formado pela repetição de alguma forma."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:36
+msgid "Screen Cell"
+msgstr "Célula de tela"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:38
+msgid ""
+"A screen cell is the minimum rectangular area in the :term:`screen<Screen>` "
+"that contains a repeatable shape or image (commonly a dot, but can be a part "
+"of a line or other shape). In principle every cell contains the same shape, "
+"and the arrangement of the cells, in a regular and orthogonal grid, forms "
+"the screen."
+msgstr ""
+"Uma célula de tela é a área retangular mínima na :term:`tela<Screen>` que "
+"contém uma forma ou imagem repetível (geralmente um ponto, mas pode ser "
+"parte de uma linha ou outra forma). Em princípio, cada célula contém a mesma "
+"forma, e o arranjo das células, em uma grade regular e ortogonal, forma a "
+"tela."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:39
+msgid "Screen Grid"
+msgstr "Grade de tela"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:41
+msgid ""
+"The screen grid is the grid formed by the regular positioning of :term:"
+"`screen cells<Screen Cell>`."
+msgstr ""
+"A grade de tela é a grade formada pelo posicionamento regular de :term:"
+"`células de tela<Screen Cell>`."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:42
+msgid "Macrocell"
+msgstr "Macrocélula"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:44
+msgid ""
+"Because this filter needs to align the :term:`screen<Screen>` image to the :"
+"term:`pixel grid<Pixel Grid>` (the rasterization process) it may happen that "
+"not all the :term:`cells<Screen Cell>` contain exactly the same shape (in "
+"terms of pixel values). This can produce artifacts such as moire patterns. "
+"To solve this, the :term:`screen grid<Screen Grid>` can be aligned to the "
+"pixel grid in such a way that some screen cell corners fall at integer pixel "
+"coordinates. You can select every how many screen cells horizontally and "
+"vertically this should happen. The effect is that the shapes of the set of "
+"cells between such aligned corners will repeat. For example, if you align "
+"the screen grid every 2 cells horizontally and every 1 cell vertically, "
+"every 2 by 1 block of cells will be identical (although the cells inside the "
+"block can be slightly different with respect to each other). This set of "
+"contiguous cells that repeat along the screen is sometimes called a :dfn:"
+"`macrocell` or :dfn:`supercell`. Similarly the single cell is sometimes "
+"called :dfn:`microcell`."
+msgstr ""
+"Como esse filtro precisa alinhar a imagem da :term:`tela<Screen>` à :term:"
+"`grade de pixel<Pixel Grid>` (o processo de rasterização), pode acontecer "
+"que nem todas as :term:`células<Screen Cell>` contenham exatamente o mesmo "
+"formato (em termos de valores de pixel). Isso pode produzir artefatos como "
+"padrões moiré. Para resolver isso, a :term:`grade de tela<Screen Grid>` pode "
+"ser alinhada à grade de pixels de forma que alguns cantos das células da "
+"tela caiam em coordenadas de pixel inteiras. Você pode selecionar quantas "
+"células da tela horizontalmente e verticalmente isso deve acontecer. O "
+"efeito é que as formas do conjunto de células entre esses cantos alinhados "
+"se repetirão. Por exemplo, se você alinhar a grade da tela a cada 2 células "
+"horizontalmente e a cada 1 célula verticalmente, cada bloco de células 2 por "
+"1 será idêntico (embora as células dentro do bloco possam ser ligeiramente "
+"diferentes entre si). Esse conjunto de células contíguas que se repetem ao "
+"longo da tela às vezes é chamado de :dfn:`macrocélula` ou :dfn:"
+"`supercélula`. Da mesma forma, a célula única às vezes é chamada de :dfn:"
+"`microcélula`."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:45
+msgid "Spot Function"
+msgstr "Funçaõ de ponto"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:47
+msgid ""
+"A spot function is a kind of function that generates the shapes analytically "
+"inside every :term:`screen cell<Screen Cell>` (a circle, a line, etc.)."
+msgstr ""
+"Uma função de ponto é um tipo de função que gera as formas analiticamente "
+"dentro de cada :term:`célula da tela<Screen Cell>` (um círculo, uma linha, "
+"etc.)."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:51
+msgid ".. image:: /images/layers/fill_layer_screentone_grids.png"
+msgstr ".. image:: /images/layers/fill_layer_screentone_grids.png"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:51
+msgid ""
+"In this figure we can see a magnified screentone with an overlay marking "
+"the :term:`pixel grid<Pixel Grid>` in blue and the :term:`screen grid<Screen "
+"Grid>` in green. As shown they may not align. The red outline is a :term:"
+"`macrocell<Macrocell>` border. The four cells that compose it are repeated "
+"in contiguous macrocells but may differ slightly in shape between them. Note "
+"how the corners of the macrocell align with the pixel grid."
+msgstr ""
+"Nesta figura, podemos ver uma tela ampliada com uma sobreposição marcando a :"
+"term:`grade de pixel<Pixel Grid>` em azul e a :term:`grade de tela<Screen "
+"Grid>` em verde. Como mostrado, elas podem não estar alinhadas. O contorno "
+"vermelho é uma borda de :term:`macrocélula<Macrocell>`. As quatro células "
+"que a compõem se repetem em macrocélulas contíguas, mas podem diferir "
+"ligeiramente em formato entre si. Observe como os cantos da macrocélula se "
+"alinham com a grade de pixels."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:54
+msgid "Description of the Parameters"
+msgstr "Descrição dos parâmetros"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:57
+msgid "Screentone Type"
+msgstr "Tipo de tom de tela"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:59
+msgid "Pattern"
+msgstr "Padrão"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:60
+msgid "Select the global appearance (dots, lines)."
+msgstr "Selecione a aparência global (pontos, linhas)."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:61
+msgid "Shape"
+msgstr "Forma"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:62
+msgid ""
+"Select the specific appearance of the pattern (for example: round dots, "
+"diamond dots, straight lines, sine wave lines)."
+msgstr ""
+"Selecione a aparência específica do padrão (por exemplo: pontos redondos, "
+"pontos de diamante, linhas retas, linhas de onda senoidal)."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:64
+msgid ""
+"Select how the pattern transitions from the foreground to the background."
+msgstr ""
+"Selecione como o padrão faz a transição do primeiro plano para o plano de "
+"fundo."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:65
+msgid "Interpolation"
+msgstr "Interpolação"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:66
+msgid ""
+"In most cases but the dot pattern with round shape combination, the effect "
+"of the interpolation mode is not very noticeable."
+msgstr ""
+"Na maioria dos casos, exceto na combinação de padrões de pontos com formas "
+"redondas, o efeito do modo de interpolação não é muito perceptível."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:70
+msgid ""
+"The :term:`spot functions<Spot Function>` are simple periodic 2D functions "
+"that output a value between black and white. Every one cycle in the width "
+"and height forms a :term:`screentone cell<Screen Cell>` and all the cells "
+"combined form the :term:`screentone grid<Screen Grid>`. The spot functions "
+"are designed to be simple and fast to compute, but for some functions this "
+"means that they don't have a uniform distribution of values. Suppose we "
+"threshold the function (contrast value equal to 100%, the usual in "
+"traditional halftoning). This lack of uniform distribution has the downside "
+"of not producing shapes that have a direct relationship between the "
+"brightness of the input and the coverage of the black areas. The effect is a "
+"mismatch between the input brightness and the perceived brightness. If the "
+"function has a uniform distribution of values, for example choosing a "
+"brightness of 40% will produce a shape that has 40% of the pixels *white* "
+"and 60% *black*. To solve this the user can select between three "
+"equalization modes:"
+msgstr ""
+"As :term:`funções de ponto<Spot Function>` são funções 2D periódicas simples "
+"que produzem um valor entre preto e branco. Cada ciclo na largura e altura "
+"forma uma :term:`célula de tom de tela<Screen Cell>` e todas as células "
+"combinadas formam a :term:`grade de tom de tela<Screen Grid>`. As funções de "
+"ponto são projetadas para serem simples e rápidas de calcular, mas para "
+"algumas funções isso significa que elas não têm uma distribuição uniforme de "
+"valores. Suponha que limitemos a função (valor de contraste igual a 100%, o "
+"usual em meio-tom tradicional). Essa falta de distribuição uniforme tem a "
+"desvantagem de não produzir formas que tenham uma relação direta entre o "
+"brilho da entrada e a cobertura das áreas pretas. O efeito é uma "
+"incompatibilidade entre o brilho da entrada e o brilho percebido. Se a "
+"função tiver uma distribuição uniforme de valores, por exemplo, escolher um "
+"brilho de 40% produzirá uma forma que tem 40% dos pixels *brancos* e 60% "
+"*pretos*. Para resolver isso, o usuário pode selecionar entre três modos de "
+"equalização:"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:72
+msgid ""
+":guilabel:`None`: by selecting this mode the generator will use the :term:"
+"`functions<Spot Function>` as is, it will not enforce a uniform distribution "
+"of values if the function is not already equalized. This is the same "
+"behavior as in versions prior to 5.1."
+msgstr ""
+":guilabel:`Nenhum`: ao selecionar este modo, o gerador usará as :term:"
+"`funções<Spot Function>` como estão, não impondo uma distribuição uniforme "
+"de valores se a função ainda não estiver equalizada. Este é o mesmo "
+"comportamento das versões anteriores à 5.1."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:74
+msgid ""
+":guilabel:`Function based equalization`: this mode will perform something "
+"similar to histogram equalization to the :term:`function<Spot Function>`."
+msgstr ""
+":guilabel:`Equalização baseada em função`: este modo executará algo "
+"semelhante à equalização do histograma para a :term:`função<Spot Function>`."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:76
+msgid "Equalization"
+msgstr "Equalização"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:76
+msgid ""
+":guilabel:`Template based equalization`: this mode is a bit more involved. "
+"It tries to replicate the traditional :term:`screen<Screen>` generation "
+"methods on digital halftoning. This achieves equalization in a very "
+"different way. First the original :term:`spot function<Spot Function>` is "
+"used along with the transformation parameters to create a template (a small "
+"image) that contains a set of one or more contiguous :term:`cells<Screen "
+"Cell>` (:term:`macrocell<Macrocell>`) and is used as a reference later to "
+"paint the :term:`screentone grid<Screen Grid>`. To equalize the template, "
+"all the pixels in the macrocell are then sorted from darker to lighter over "
+"all the macrocells and from top-left to bottom-right over each cell. This "
+"step will produce an equalized macrocell that grows 1 pixel at a time (or a "
+"bit more if the number of pixels in it is greater than 256), avoiding the "
+"sudden jumps in brightness."
+msgstr ""
+":guilabel:`Equalização baseada em modelo`: este modo é um pouco mais "
+"complexo. Ele tenta replicar os métodos tradicionais de geração de :term:"
+"`tela<Screen>` em meio-tom digital. Isso alcança a equalização de uma "
+"maneira muito diferente. Primeiro, a :term:`função de ponto<Spot Function>` "
+"original é usada junto com os parâmetros de transformação para criar um "
+"modelo (uma pequena imagem) que contém um conjunto de uma ou mais :term:"
+"`células<Screen Cell>` contíguas (:term:`macrocélula<Macrocell>`) e é usada "
+"como referência posteriormente para pintar a :term:`grade de tons de "
+"tela<Screen Grid>`. Para equalizar o modelo, todos os pixels na macrocélula "
+"são então classificados do mais escuro para o mais claro em todas as "
+"macrocélulas e do canto superior esquerdo para o canto inferior direito em "
+"cada célula. Esta etapa produzirá uma macrocélula equalizada que cresce 1 "
+"pixel por vez (ou um pouco mais se o número de pixels for maior que 256), "
+"evitando os saltos repentinos de brilho."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:80
+msgid ".. image:: /images/layers/fill_layer_screentone_type.png"
+msgstr ".. image:: /images/layers/fill_layer_screentone_type.png"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:80
+msgid ""
+"From left to right, top to bottom: dot pattern with round shape, dot pattern "
+"with ellipse shape, dot pattern with a diamond shape, dot pattern with a "
+"square shape, line pattern with straight shape, line pattern with sine wave "
+"shape, line pattern with triangular wave shape, line pattern with sawtooth "
+"wave shape and line pattern with a curtain shape."
+msgstr ""
+"Da esquerda para a direita, de cima para baixo: padrão de pontos com formato "
+"redondo, padrão de pontos com formato de elipse, padrão de pontos com "
+"formato de diamante, padrão de pontos com formato quadrado, padrão de linhas "
+"com formato reto, padrão de linhas com formato de onda senoidal, padrão de "
+"linhas com formato de onda triangular, padrão de linhas com formato de onda "
+"dente de serra e padrão de linhas com formato de cortina."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:87
+msgid "Transformation"
+msgstr "Transformação"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:89
+msgid ""
+"Select how the pattern is arranged geometrically in the image (position, "
+"size, rotation, shear). Some patterns benefit from the capability of "
+"choosing horizontal and vertical sizes separately. For example, the sin wave "
+"lines pattern has a small period by default and by choosing a large "
+"horizontal size the period will look also larger."
+msgstr ""
+"Selecione como o padrão é organizado geometricamente na imagem (posição, "
+"tamanho, rotação, inclinação). Alguns padrões se beneficiam da capacidade de "
+"escolher tamanhos horizontais e verticais separadamente. Por exemplo, o "
+"padrão de linhas de onda senoidal tem um período pequeno por padrão e, ao "
+"escolher um tamanho horizontal grande, o período também parecerá maior."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:95
+msgid "Size Mode"
+msgstr "Modo de tamanho"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:95
+msgid ""
+"You can choose between a resolution based mode and a pixel based mode to "
+"adjust the geometric transformations of the screen. In the resolution mode "
+"you set a resolution and change the frequency of the patterns in lines per "
+"inch/cm. The pixel mode is the old one in which you set the size of the "
+"cells manually. Those two modes are synched so changing the frequency will "
+"change the cell size and vice versa."
+msgstr ""
+"Você pode escolher entre um modo baseado em resolução e um modo baseado em "
+"pixels para ajustar as transformações geométricas da tela. No modo de "
+"resolução, você define a resolução e altera a frequência dos padrões em "
+"linhas por polegada/cm. O modo de pixel é o antigo, no qual você definia o "
+"tamanho das células manualmente. Esses dois modos são sincronizados, "
+"portanto, alterar a frequência alterará o tamanho da célula e vice-versa."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:100
+msgid "Align to Pixel Grid"
+msgstr "Alinhar à grade de pixels"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:100
+msgid ""
+"If the alignment is set on, all the cells (or macrocells if the alignment is "
+"every more than 1 cell) will have the same shapes in terms of pixels, "
+"producing a more pleasant and regular tiled structure. The downside is that "
+"the range of possible transformations is reduced."
+msgstr ""
+"Se o alinhamento estiver ativado, todas as células (ou macrocélulas, se o "
+"alinhamento for maior que uma célula) terão o mesmo formato em termos de "
+"pixels, produzindo uma estrutura de mosaico mais agradável e regular. A "
+"desvantagem é que o intervalo de transformações possíveis é reduzido."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:104
+msgid ".. image:: /images/layers/fill_layer_screentone_transformation.png"
+msgstr ".. image:: /images/layers/fill_layer_screentone_transformation.png"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:104
+msgid ""
+"From left to right: dot pattern with round shape without rotation, dot "
+"pattern with round shape and rotated 45 degrees, line pattern with sine wave "
+"shape and a size of 20px horizontally and vertically, line pattern with sine "
+"wave shape and a size of 50px horizontally and 20px vertically."
+msgstr ""
+"Da esquerda para a direita: padrão de pontos com formato redondo sem "
+"rotação, padrão de pontos com formato redondo e girado 45 graus, padrão de "
+"linhas com formato de onda senoidal e tamanho de 20px horizontalmente e "
+"verticalmente, padrão de linhas com formato de onda senoidal e tamanho de "
+"50px horizontalmente e 20px verticalmente."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:110
+msgid "Postprocessing"
+msgstr "Pós-processamento"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:112
+msgid "Background & Foreground"
+msgstr "Plano de fundo e primeiro plano"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:113
+msgid ""
+"Allows you to choose the color and opacity of the foreground (dots, lines) "
+"and the background."
+msgstr ""
+"Permite escolher a cor e a opacidade do primeiro plano (pontos, linhas) e do "
+"fundo."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:114
+msgid "Invert"
+msgstr "Inverter"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:115
+msgid "This flips what is treated as foreground and background."
+msgstr "Isso inverte o que é tratado como primeiro plano e plano de fundo."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:117
+msgid ""
+"The brightness controls how close to the foreground or background color the "
+"pattern appears (how *dark* or *light* in the case of black foreground and "
+"white background). So if you want to simulate small dots, for example, set "
+"the brightness to a high value and to obtain big dots set it to a low value."
+msgstr ""
+"O brilho controla o quão próximo da cor do primeiro plano ou do plano de "
+"fundo o padrão aparece (quão *escuro* ou *claro* no caso de primeiro plano "
+"preto e fundo branco). Portanto, se você quiser simular pontos pequenos, por "
+"exemplo, defina o brilho para um valor alto e, para obter pontos grandes, "
+"defina-o para um valor baixo."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:120
+msgid ""
+"The contrast controls how smooth or sharp is the transition between the "
+"foreground and background colors. By default, the contrast is set to 50% "
+"(smooth). To achieve the typical sharp borders the contrast must be set to a "
+"higher value."
+msgstr ""
+"O contraste controla o quão suave ou nítida é a transição entre as cores de "
+"primeiro plano e de fundo. Por padrão, o contraste é definido como 50% "
+"(suave). Para obter as bordas nítidas típicas, o contraste deve ser definido "
+"para um valor mais alto."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:121
+msgid "Brightness & Contrast"
+msgstr "Brilho e contraste"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:125
+msgid ".. image:: /images/layers/fill_layer_screentone_postprocessing.png"
+msgstr ".. image:: /images/layers/fill_layer_screentone_postprocessing.png"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:125
+msgid ""
+"First row: different combinations of foreground and background colors. "
+"Second row, from left to right: 25%, 50% and 75% brightness with 90% "
+"contrast. Third row, from left to right: 25%, 50% and 75% contrast with 50% "
+"brightness."
+msgstr ""
+"Primeira linha: diferentes combinações de cores de primeiro plano e de "
+"fundo. Segunda linha, da esquerda para a direita: 25%, 50% e 75% de brilho "
+"com 90% de contraste. Terceira linha, da esquerda para a direita: 25%, 50% e "
+"75% de contraste com 50% de brilho."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:130
+msgid "Usage Tips"
+msgstr "Dicas de uso"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:133
+msgid "What Interpolation to Use?"
+msgstr "Qual interpolação usar?"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:135
+msgid ""
+"The interpolation sets how the shape of the pattern should vary from dark to "
+"light."
+msgstr ""
+"A interpolação define como a forma do padrão deve variar do escuro para o "
+"claro."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:137
+msgid ""
+"You will only have to worry about the interpolation in the case of the round "
+"and elliptical dots and the line patterns, although if you use some "
+"equalization mode the interpolation will look the same in the case of the "
+"line patterns."
+msgstr ""
+"Você só terá que se preocupar com a interpolação no caso dos pontos redondos "
+"e elípticos e dos padrões de linhas, embora se você usar algum modo de "
+"equalização, a interpolação parecerá a mesma no caso dos padrões de linhas."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:139
+msgid ""
+"So, in summary, change the interpolation if you use round or elliptical dots "
+"to vary how they change shape when changing the brightness. If you use "
+"linear interpolation the dots will look as black circles/ellipses that grow "
+"radially until they cover the :term:`cells<Screen Cell>`. If you use the "
+"sinusoidal interpolation, the round/elliptical dot pattern will change "
+"*symmetrically*. This means that at low brightness values the pattern will "
+"look as small white circles/ellipses and at high brightness values it will "
+"look as small black circles/ellipses. At mid-brightness values the pattern "
+"will look as a checkerboard."
+msgstr ""
+"Portanto, em resumo, altere a interpolação se usar pontos redondos ou "
+"elípticos para variar a forma como eles mudam ao alterar o brilho. Se usar a "
+"interpolação linear, os pontos parecerão círculos/elipses pretos que crescem "
+"radialmente até cobrirem as :term:`células<Screen Cell>`. Se usar a "
+"interpolação sinusoidal, o padrão de pontos redondos/elípticos mudará "
+"*simetricamente*. Isso significa que, em valores de brilho baixo, o padrão "
+"parecerá pequenos círculos/elipses brancos e, em valores de brilho alto, "
+"parecerá pequenos círculos/elipses pretos. Em valores de brilho médio, o "
+"padrão parecerá um tabuleiro de xadrez."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:142
+msgid "What Equalization Mode to Use?"
+msgstr "Qual modo de equalização usar?"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:144
+msgid ""
+"Most of the time you will be fine using the default :dfn:`template based "
+"equalization`. It is the mode that gives better tone representation when "
+"using small :term:`cell<Screen Cell>` sizes. Here is a comparison of the "
+"modes:"
+msgstr ""
+"Na maioria das vezes, você se sairá bem usando a equalização padrão :dfn:"
+"`baseada em modelo`. É o modo que proporciona melhor representação de tons "
+"ao usar tamanhos pequenos de :term:`célula<Screen Cell>`. Aqui está uma "
+"comparação dos modos:"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:146
+msgid ":guilabel:`No Equalization`:"
+msgstr ":guilabel:`Sem equalização`:"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:148
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:162
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:173
+msgid "Pros:"
+msgstr "Prós:"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:150
+msgid "It is the fastest mode."
+msgstr "É o modo mais rápido."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:151
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:165
+msgid "Nice smoothing of the edges."
+msgstr "Boa suavização das bordas."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:153
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:178
+msgid "Cons:"
+msgstr "Contras:"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:155
+msgid ""
+"There is a mismatch between the brightness parameter and the perceived "
+"brightness."
+msgstr ""
+"Há uma incompatibilidade entre o parâmetro de brilho e o brilho percebido."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:156
+msgid ""
+"Since it is an analytical approach it may not produce a wide range of "
+"brightness variations when the cells are small. For example, the round dot "
+"shape grows radially. This means that if the radius grows 1 pixel, then a "
+"bunch of pixels are added all around the dot. This produces a big jump on "
+"the perceived brightness."
+msgstr ""
+"Por se tratar de uma abordagem analítica, ela pode não produzir uma ampla "
+"gama de variações de brilho quando as células são pequenas. Por exemplo, o "
+"formato redondo do ponto cresce radialmente. Isso significa que, se o raio "
+"aumentar 1 pixel, vários pixels serão adicionados ao redor do ponto. Isso "
+"produz um grande salto no brilho percebido."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:158
+msgid ""
+"When to use: use this mode when you need the most speed and don't care about "
+"the perceived brightness or the shapes at small cell sizes."
+msgstr ""
+"Quando usar: use este modo quando precisar de mais velocidade e não se "
+"importar com o brilho percebido ou com as formas em tamanhos de células "
+"pequenos."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:160
+msgid ":guilabel:`Function based equalization`:"
+msgstr ":guilabel:`Equalização baseada em função`:"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:164
+msgid "It produces better-perceived tones."
+msgstr "Produz tons mais bem percebidos."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:167
+msgid ""
+"Cons: Since it is still an analytical approach it may not produce a wide "
+"range of brightness variations when the cells are small."
+msgstr ""
+"Contras: Como ainda é uma abordagem analítica, ela pode não produzir uma "
+"ampla gama de variações de brilho quando as células são pequenas."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:169
+msgid ""
+"When to use: use this mode if you need accurate tone representation and you "
+"use big cell sizes, or if you need nice smoothing. For example, if you use "
+"the screentone on graphic design works."
+msgstr ""
+"Quando usar: use este modo se precisar de uma representação precisa dos tons "
+"e usar células grandes, ou se precisar de uma boa suavização. Por exemplo, "
+"se você usar o tom de tela em trabalhos de design gráfico."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:171
+msgid ":guilabel:`Template based equalization`:"
+msgstr ":guilabel:`Equalização baseada em modelo`:"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:175
+msgid "It produces better perceived tones."
+msgstr "Produz tons melhor percebidos."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:176
+msgid "No sudden jumps in perceived brightness."
+msgstr "Sem saltos repentinos na percepção de brilho."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:180
+msgid ""
+"The shape may not be as correct as in the other cases, although it is "
+"difficult to perceive."
+msgstr ""
+"A forma pode não ser tão correta quanto nos outros casos, embora seja "
+"difícil de perceber."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:181
+msgid "The smoothing of the edges is worst."
+msgstr "O alisamento das bordas é pior."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:183
+msgid "When to use:"
+msgstr "Quando usar:"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:185
+msgid ""
+"Use this mode whenever possible, especially if you want small cell sizes or "
+"if you want smooth transitions between perceived brightness values."
+msgstr ""
+"Use este modo sempre que possível, especialmente se você quiser tamanhos de "
+"células pequenos ou se quiser transições suaves entre os valores de brilho "
+"percebidos."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:186
+msgid "Use this mode if you use 100% contrast."
+msgstr "Use este modo se você usar contraste de 100%."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:187
+msgid ""
+"Use this mode if you use the screentone generator with the halftone filter."
+msgstr ""
+"Use este modo se você usar o gerador de tons de tela com o filtro de meio-"
+"tom."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:190
+msgid "What Size Mode to Use?"
+msgstr "Qual modo de tamanho usar?"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:192
+msgid ""
+"At the end of the day choosing what size mode to use is a matter of how many "
+"size-related calculations you want to avoid, and this usually has to be with "
+"the final medium you intend the image to be displayed on."
+msgstr ""
+"No final das contas, escolher qual modo de tamanho usar é uma questão de "
+"quantos cálculos relacionados ao tamanho você quer evitar, e isso geralmente "
+"tem que ser feito com base no meio final em que você pretende que a imagem "
+"seja exibida."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:194
+msgid ""
+"If you intend to print the image you are making, then you will find it "
+"easier to set the :term:`cells<Screen Cell>` size in terms of resolution and "
+"cell frequency. If you choose the same resolution as the resolution of the "
+"image then you can easily map the frequency values to real-life measures."
+msgstr ""
+"Se você pretende imprimir a imagem que está criando, será mais fácil definir "
+"o tamanho de :term:`células<Screen Cell>` em termos de resolução e "
+"frequência da célula. Se você escolher a mesma resolução da imagem, poderá "
+"facilmente mapear os valores de frequência para medidas reais."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:196
+msgid ""
+"On the other hand, if you just want to produce digital images, then you may "
+"find it easier to work with pixel sizes directly, as they are easier to "
+"compare to the image size. In the case you don't really care about the exact "
+"size of the pattern, this mode allows you to easily try different sizes "
+"while looking at the image to see the changes."
+msgstr ""
+"Por outro lado, se você deseja apenas produzir imagens digitais, pode ser "
+"mais fácil trabalhar diretamente com os tamanhos de pixel, pois é mais fácil "
+"compará-los ao tamanho da imagem. Caso você não se importe com o tamanho "
+"exato do padrão, este modo permite que você experimente facilmente tamanhos "
+"diferentes enquanto observa a imagem para ver as alterações."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:199
+msgid "Using the Align to Pixel Grid Options"
+msgstr "Usando as opções de alinhamento à grade de pixels"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:201
+msgid ""
+"This option is key to achieve the maximum :term:`cell<Screen Cell>` "
+"regularity and to avoid moire patterns. Usually you won't have to change the "
+"default values."
+msgstr ""
+"Esta opção é essencial para atingir a regularidade máxima da :term:"
+"`célula<Screen Cell>` e evitar padrões moiré. Normalmente, você não "
+"precisará alterar os valores padrão."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:203
+msgid ""
+"The downside of aligning to the :term:`pixel grid<Pixel Grid>` is that the "
+"available range of transformations is reduced. So, if you want to use a "
+"specific rotation, cell size or shear, but you can't achieve it with the "
+"selected alignment options, you can try to upper every how many cells to "
+"align using the sliders. Always prefer first changing those values than to "
+"disabling the alignment. In fact, disabling the alignment has the same "
+"effect as aligning the grid at infinity."
+msgstr ""
+"A desvantagem de alinhar à :term:`grade de pixel<Pixel Grid>` é que o "
+"intervalo disponível de transformações é reduzido. Portanto, se você quiser "
+"usar uma rotação, tamanho de célula ou inclinação específica, mas não "
+"conseguir com as opções de alinhamento selecionadas, pode tentar aumentar o "
+"número de células a serem alinhadas usando os controles deslizantes. Sempre "
+"prefira alterar esses valores primeiro do que desabilitar o alinhamento. Na "
+"verdade, desabilitar o alinhamento tem o mesmo efeito que alinhar a grade ao "
+"infinito."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:205
+msgid ""
+"Keep in mind that the greater the distance between alignment points (with "
+"respect to the :term:`screen grid<Screen Grid>`), the more likely the "
+"appearance of moire patterns will be."
+msgstr ""
+"Tenha em mente que quanto maior a distância entre os pontos de alinhamento "
+"(em relação à :term:`grade da tela<Screen Grid>`), maior será a "
+"probabilidade de aparecimento de padrões moiré."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:208
+msgid "Using the Brightness and Contrast Options"
+msgstr "Usando as opções de brilho e contraste"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:210
+msgid ""
+"Most of the time, to achieve the classical screentone/halftone look, you "
+"will have to set the contrast slider to a high value and then change how "
+"dark/light the pattern looks with the brightness slider."
+msgstr ""
+"Na maioria das vezes, para obter a aparência clássica de tons de tela/meio-"
+"tom, você terá que definir o controle deslizante de contraste para um valor "
+"alto e, em seguida, alterar o quão escuro/claro o padrão parece com o "
+"controle deslizante de brilho."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:212
+msgid ""
+"At 100% contrast the shapes will look aliased, binary. This is the classic "
+"approach to digital halftoning, since printers can only output black or "
+"white (ink or absence of ink)."
+msgstr ""
+"Com contraste de 100%, as formas parecerão serrilhadas, binárias. Essa é a "
+"abordagem clássica para meios-tons digitais, já que as impressoras só "
+"conseguem imprimir em preto ou branco (com ou sem tinta)."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:214
+msgid ""
+"If you want sharp edges but also want antialiased edges, you can try "
+"choosing a contrast value around 80% to 95%."
+msgstr ""
+"Se você quiser bordas nítidas, mas também bordas suavizadas, você pode "
+"tentar escolher um valor de contraste em torno de 80% a 95%."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:216
+msgid ""
+"Sometimes you will need to have extra soft shapes. For example, if you use "
+"the screentone generator with the halftone filter, you better use a 50% "
+"contrast and 50% brightness. The reason is that the halftone filter performs "
+"its own contrast adjustment. You can take advantage of these soft shapes to "
+"then apply your own contrast adjustment filter and achieve even more unique "
+"looks as shown in the following image."
+msgstr ""
+"Às vezes, você precisará de formas mais suaves. Por exemplo, se você usar o "
+"gerador de tons de tela com o filtro de meio-tom, é melhor usar 50% de "
+"contraste e 50% de brilho. Isso ocorre porque o filtro de meio-tom realiza "
+"seu próprio ajuste de contraste. Você pode aproveitar essas formas suaves "
+"para aplicar seu próprio filtro de ajuste de contraste e obter visuais ainda "
+"mais exclusivos, como mostrado na imagem a seguir."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:220
+msgid ""
+".. image:: /images/layers/fill_layer_screentone_brightness_contrast_example."
+"png"
+msgstr ""
+".. image:: /images/layers/fill_layer_screentone_brightness_contrast_example."
+"png"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/screentone.rst:220
+msgid ""
+"On the left: a simple screentone layer with 50 pixels wide elliptical dots, "
+"sinusoidal interpolation and 50% brightness and contrast. In the middle: The "
+"layer with a curves filter mask applied to it. On the right: the curve used "
+"on the filter."
+msgstr ""
+"À esquerda: uma camada de tons de tela simples com pontos elípticos de 50 "
+"pixels de largura, interpolação senoidal e 50% de brilho e contraste. No "
+"meio: a camada com uma máscara de filtro de curvas aplicada. À direita: a "
+"curva usada no filtro."

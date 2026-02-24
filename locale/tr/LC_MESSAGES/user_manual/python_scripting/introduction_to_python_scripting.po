@@ -1,0 +1,565 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+#
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"PO-Revision-Date: 2025-10-08 04:38+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.7\n"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:-1
+msgid "Introduction to using Krita's python plugin API."
+msgstr "Krita’nın Python eklenti API’si kullanımına giriş."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
+msgid "Python"
+msgstr "Python"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
+msgid "Python Scripting"
+msgstr "Python ile Betik Yazımı"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
+msgid "Scripting"
+msgstr "Betik Yazımı"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
+msgid "Plugin"
+msgstr "Eklenti"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
+msgid "Debug"
+msgstr "Hata Ayıklama"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:18
+msgid "Introduction to Python Scripting"
+msgstr "Python ile Betik Yazımına Giriş"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:22
+msgid ""
+"When we offered python scripting as one of Kickstarter Stretchgoals we could "
+"implement next to vectors and text, it won the backer vote by a landslide. "
+"Some people even only picked python and nothing else. So what exactly is "
+"python scripting?"
+msgstr ""
+"Kickstarter Stretch Goal’larımızdan biri olarak vektörler ve metnin yanında "
+"Python ile Betik Yazımı’nı önerdiğimizde, destekçilerin oylarını açık farkla "
+"kazandı. Hatta kimisi yalnızca Python’u seçti ve başka hiçbir şey seçmedi. "
+"Peki Python ile Betik Yazımı tam olarak nedir?"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:25
+msgid "What is Python Scripting?"
+msgstr "Python ile Betik Yazımı Nedir?"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:27
+msgid ""
+"Python is a scripting language, that can be used to automate tasks. What "
+"python scripting in Krita means is that we added an API to krita, which is a "
+"bit of programming that allows python to access to parts of Krita. With this "
+"we can make dockers, perform menial tasks on a lot of different files and "
+"even write our own exporters. People who work with computer graphics, like "
+"VFX and video game artists use python a lot to make things like sprite "
+"sheets, automate parts of export and more."
+msgstr ""
+"Python, görevleri otomatikleştirmek için kullanılabilen bir betik yazımı "
+"dilidir. Krita’daki Python ile betik yazımının anlamı, Krita’ya bir API "
+"eklememizdir; bu, Python'un Krita’nın bazı bölümlerine erişmesine izin veren "
+"bir programlama parçasıdır. Bununla paneller yapabilir, birçok farklı dosya "
+"üzerinde önemsiz görevler gerçekleştirebilir ve hatta kendi dışa "
+"aktarıcılarımızı yazabiliriz. VFX ve video oyunu sanatçıları gibi bilgisayar "
+"grafikleriyle çalışan insanlar, görüntü sayfaları gibi şeyler yapmak, dışa "
+"aktarma bölümlerini otomatikleştirmek ve daha fazlası için Python’u çok sık "
+"kullanıyor."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:29
+msgid ""
+"It is outside the scope of this manual to teach you python itself. However, "
+"as python is an extremely popular programming language and great for "
+"beginners, there's tons of learning material around that can be quickly "
+"found with a simple 'learn python' internet search."
+msgstr ""
+"Size Python’un kendisini öğretmek bu kılavuzun kapsamı dışındadır. Ancak, "
+"Python son derece popüler bir programlama dili olduğundan ve yeni "
+"başlayanlar için harika olduğundan, basit bir “python öğren” internet "
+"aramasıyla hızlı bir şekilde bulunabilecek tonlarca öğrenme malzemesi vardır."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:31
+msgid ""
+"This manual will instead focus on how to use python to automate and extend "
+"Krita. For that we'll first start with the basics: How to run Python "
+"commands in the scripter."
+msgstr ""
+"Bu kılavuz bunun yerine Krita’yı otomatikleştirmek ve genişletmek için "
+"Python’un nasıl kullanılacağına odaklanacaktır. Bunun için önce temel "
+"bilgilerle başlayacağız: Python komutlarının betikte nasıl çalıştırılacağı."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:35
+msgid "How to Enable the Scripter Plugin"
+msgstr "Betikleyici Eklentisini Etkinleştirme"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:37
+msgid ""
+"The scripter plugin is not necessary to use python, but it is very useful "
+"for testing and playing around with python. It is a python console, written "
+"in python, which can be used to write small scripts and execute them on the "
+"fly."
+msgstr ""
+"Betikleyici eklentisi Python kullanmak için gerekli değildir; ancak Python "
+"ile sınamak ve oynamak için çok yararlıdır. Küçük betikler yazmak ve bunları "
+"anında çalıştırmak için kullanılabilen, Python ile yazılmış bir Python "
+"konsoludur."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:39
+msgid ""
+"To open the scripter, navigate to :menuselection:`Tools --> Scripts --> "
+"Scripter`. If you don't see it listed, go to :menuselection:`Settings --> "
+"Configure Krita... --> Python Plugin Manager` and toggle \"Scripter\" in the "
+"list to enable it. If you don't see the scripter plugin, make sure you are "
+"using an up-to-date version of Krita."
+msgstr ""
+"Betikleyiciyi açmak için :menuselection:`Araçlar → Betikler → Betikleyici` "
+"yolunu izleyin. Eğer listede yoksa :menuselection:`Ayarlar → Krita’yı "
+"Yapılandır… → Python Eklentisi Yöneticisi` yolunu izleyin ve etkinleştirmek "
+"için listede “Betikleyici”yi tıklayın. Krita’nın güncel bir sürümünü "
+"kullandığınızdan emin olun."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:41
+msgid ""
+"The scripter will pop up with a text editor window on top and an output "
+"window below. Input the following in the text area:"
+msgstr ""
+"Betikleyici, üstte bir metin düzenleyici penceresi ve altta bir çıktı "
+"penceresi ile açılacaktır. Metin alanına aşağıdakileri girin:"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:43
+msgid "print(\"hello world\")"
+msgstr "print(\"merhaba dünya\")"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:48
+msgid ""
+"Press the big play button or press the :kbd:`Ctrl + R` shortcut to run the "
+"script. Then, below, in the output area the following should show up::"
+msgstr ""
+"Betiği çalıştırmak için büyük “Oynat” düğmesine veya :kbd:`Kontrol + R` "
+"kısayoluna basın. Çıktı alanında aşağıdakileri görmelisiniz:"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:50
+msgid ""
+"==== Warning: Script not saved! ====\n"
+"hello world"
+msgstr ""
+"==== Warning: Script not saved! ====\n"
+"merhaba dünya"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:53
+msgid ""
+"Now we have a console that can run functions like print() from the Python "
+"environment - but how do we use it to manage Krita?"
+msgstr ""
+"Artık Python ortamından print() gibi işlevleri çalıştırabileceğimiz bir "
+"konsolumuz var - ancak Krita’yı yönetmek için bunu nasıl kullanabiliriz?"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:56
+msgid "Running basic Krita commands"
+msgstr "Temel Krita komutlarını çalıştırmak"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:58
+msgid ""
+"To allow Python to communicate with Krita, we will use the Krita module. At "
+"the top of every script, we will write ``from krita import *``."
+msgstr ""
+"Python’un Krita ile iletişim kurabilmesini sağlamak için Krita modülünü "
+"kullanacağız; en tepeye ``from krita import *`` yazıyoruz."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:60
+msgid ""
+"This allows us to talk to Krita through ``Krita.instance()``. Let's try to "
+"double our coding abilities with Python."
+msgstr ""
+"Bu, Krita ile ``Krita.instance()`` üzerinden konuşmamızı sağlıyor. Python "
+"ile kodlama yeteneklerimizi geliştirmeye çalışalım."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:62
+msgid ""
+"from krita import *\n"
+"\n"
+"Krita.instance().action('python_scripter').trigger()"
+msgstr ""
+"from krita import *\n"
+"\n"
+"Krita.instance().action('python_scripter').trigger()"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:68
+msgid ""
+"You should see a second scripter window open. Pretty neat! Here is a "
+"slightly more advanced example."
+msgstr ""
+"İkinci bir betikleyici penceresinin açıldığını görmelisiniz. Çok güzel! İşte "
+"biraz daha gelişmiş bir örnek."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:70
+msgid ""
+"from krita import *\n"
+"\n"
+"d = Krita.instance().createDocument(512, 512, \"Python test document\", "
+"\"RGBA\", \"U8\", \"\", 120.0)\n"
+"Krita.instance().activeWindow().addView(d)"
+msgstr ""
+"from krita import *\n"
+"\n"
+"d = Krita.instance().createDocument(512, 512, \"Python test document\", "
+"\"RGBA\", \"U8\", \"\", 120.0)\n"
+"Krita.instance().activeWindow().addView(d)"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:77
+msgid ""
+"This will open up a new document. Clearly Python gives you quite a lot of "
+"control to automate Krita. Over time we expect the community to write all "
+"kinds of scripts that you can use simply by pasting them in the scripter."
+msgstr ""
+"Bu yeni bir belge açacaktır. Açıkçası Python, Krita’yı otomatikleştirmek "
+"için size oldukça fazla denetim sağlıyor. Zaman içinde topluluğun, yalnızca "
+"betiğe yapıştırarak kullanabileceğiniz her türlü betiği yazmasını bekliyoruz."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:79
+msgid ""
+"But what if you want to write new commands for yourself? The best place to "
+"start is very simple: search for examples written by other people! You can "
+"save a lot of time if someone else has written code that you can base your "
+"work on. It's also worth looking through the python plugins, which are "
+"located in /share/krita/pykrita. There's also a step by step guide for :ref:"
+"`krita_python_plugin_howto` here in the manual."
+msgstr ""
+"Peki ya kendiniz için yeni komutlar yazmak istiyorsanız? Başlamak için en "
+"iyi yer çok basittir: Başkalarının yazdığı örnekleri arayın! Eğer bir "
+"başkası sizin çalışmanızı temel alabileceğiniz bir kod yazmışsa çok zaman "
+"kazanabilirsiniz. Ayrıca /share/krita/pykrita konumunda bulunan Python "
+"eklentilerine de bakabilirsiniz. Ayrıca kılavuzda :ref:"
+"`krita_python_plugin_howto` için adım adım bir kılavuz var."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:81
+msgid ""
+"But it's likely that you need more information. For that, we will need see "
+"what's hidden behind the asterisk when you ``import * from Krita``. To learn "
+"what Krita functions that are available and how to use them, you will want "
+"to go for Krita API reference documentation."
+msgstr ""
+"Ancak yine de biraz daha fazla bilgiye gereksiniminiz olacaktır. Bunun için "
+"``import * from Krita`` yazdığınızda yıldız simgesinin ardında neler "
+"olduğunu öğrenmekle başlayabilirsiniz. Hangi Krita işlevlerinin "
+"kullanılabilir olduğunu ve onların nasıl kullanılacağını öğrenmek için Krita "
+"API başvuru belgelendirmesine bakmak isteyeceksiniz."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:84
+msgid "Krita's API"
+msgstr "Krita API’si"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:86
+msgid "`LibKis API Overview <https://api.kde.org/krita/html/index.html>`_"
+msgstr ""
+"`LibKis API Genel Görünümü <https://api.kde.org/krita/html/index.html>`_"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:87
+msgid ""
+"`Krita class documentation <https://api.kde.org/krita/html/annotated.html>`_"
+msgstr ""
+"`Krita sınıfları belgelendirmesi <https://api.kde.org/krita/html/annotated."
+"html>`_"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:89
+msgid ""
+"Those pages may look like a lot of jargon at first. This is because Krita's "
+"API documentation comes from the underlying C++ language that Krita is "
+"written in. The magic happens because of a Python tool called SIP, which "
+"makes it possible for python speak in C++ and talk to Krita. The end result "
+"is that when we ``import krita`` and call functions, we're actually using "
+"the C++ methods listed in that documentation."
+msgstr ""
+"Bu sayfalar ilk başta çok fazla jargon gibi görünebilir. Bunun nedeni "
+"Krita’nın API belgelendirmesinin Krita’nın yazıldığı temel C++ dilinden "
+"geliyor olmasıdır. Sihir, Python’un C++ dilinde konuşmasını ve Krita ile "
+"konuşmasını olanaklı kılan SIP adlı bir Python aracı sayesinde gerçekleşir. "
+"Sonuç olarak, ``import krita`` yaptığımızda ve işlevleri çağırdığımızda, "
+"aslında bu belgelendirmede listelenen C++ yöntemlerini kullanıyoruz."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:91
+msgid ""
+"Let's see how this stuff works in more detail. Let's take a look at the "
+"second link, the `Krita class reference <https://api.kde.org/krita/html/"
+"classKrita.html#aa55507903d088013ced2df8c74f28a63>`_. There we can see all "
+"the functions available to the Krita instance. If you type ``dir(Krita."
+"instance())`` in Python, it should match this page very closely - you can "
+"view the documentation of the functions ``createDocument()``, "
+"``activeWindow()``, and ``action()`` which we used above."
+msgstr ""
+"Bunların nasıl çalıştığına biraz daha ayrıntılı bakalım. İkinci bağlantıdaki "
+"`Krita sınıfları başvurusunu <https://api.kde.org/krita/html/classKrita."
+"html#aa55507903d088013ced2df8c74f28a63>`_ açın. Burada, Krita örneğinin "
+"kullanımına açık olan tüm işlevleri görebiliriz. Python’da ``dir(Krita."
+"instance())`` yazdığınızda, bu sayfa ile hemen hemen aynı olur - "
+"``createDocument()``, ``activeWindow()`` ve yukarıda kullandığımız "
+"``action()`` işlevlerinin belgelendirmesi kullanılabilirdir."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:93
+msgid ""
+"One of the more confusing things is seeing all the C++ classes that Krita "
+"uses, including the Qt classes that start with Q. But here is the beauty of "
+"SIP: it tries to make the translation from these classes into Python as "
+"simple and straightforward as possible. For example, you can see that the "
+"function ``filters()`` returns a ``QStringList``. However, SIP converts "
+"those ``QStringLists`` into regular python list of strings!"
+msgstr ""
+"En kafa karıştırıcı şeylerden biri, Q ile başlayan Qt sınıfları da dahil "
+"olmak üzere Krita’nın kullandığı tüm C++ sınıflarını görmektir. Ancak SIP’in "
+"güzelliği buradadır: Bu sınıflardan Python’a çeviriyi olabildiğince basit ve "
+"anlaşılır hale getirmeye çalışır. Örneğin, ``filters()`` işlevinin bir "
+"``QStringList`` döndürdüğünü görebilirsiniz. Ancak, SIP bu "
+"``QStringList``leri normal python dizi listesine dönüştürür!"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:95
+msgid ""
+"from krita import *\n"
+"\n"
+"print(Krita.instance().filters())"
+msgstr ""
+"from krita import *\n"
+"\n"
+"print(Krita.instance().filters())"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:101
+msgid "Outputs as: ::"
+msgstr "Şu çıktıyı verir: ::"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:103
+msgid ""
+"['asc-cdl', 'autocontrast', 'blur', 'burn', 'colorbalance', 'colortoalpha', "
+"'colortransfer',\n"
+"'desaturate', 'dodge', 'edge detection', 'emboss', 'emboss all directions', "
+"'emboss horizontal and vertical',\n"
+"'emboss horizontal only', 'emboss laplascian', 'emboss vertical only', "
+"'gaussian blur', 'gaussiannoisereducer',\n"
+"'gradientmap', 'halftone', 'height to normal', 'hsvadjustment', "
+"'indexcolors', 'invert', 'lens blur', 'levels',\n"
+"'maximize', 'mean removal', 'minimize', 'motion blur', 'noise', 'normalize', "
+"'oilpaint', 'perchannel', 'phongbumpmap',\n"
+"'pixelize', 'posterize', 'raindrops', 'randompick', 'roundcorners', "
+"'sharpen', 'smalltiles', 'threshold', 'unsharp',\n"
+"'wave', 'waveletnoisereducer']"
+msgstr ""
+"['asc-cdl', 'autocontrast', 'blur', 'burn', 'colorbalance', 'colortoalpha', "
+"'colortransfer',\n"
+"'desaturate', 'dodge', 'edge detection', 'emboss', 'emboss all directions', "
+"'emboss horizontal and vertical',\n"
+"'emboss horizontal only', 'emboss laplascian', 'emboss vertical only', "
+"'gaussian blur', 'gaussiannoisereducer',\n"
+"'gradientmap', 'halftone', 'height to normal', 'hsvadjustment', "
+"'indexcolors', 'invert', 'lens blur', 'levels',\n"
+"'maximize', 'mean removal', 'minimize', 'motion blur', 'noise', 'normalize', "
+"'oilpaint', 'perchannel', 'phongbumpmap',\n"
+"'pixelize', 'posterize', 'raindrops', 'randompick', 'roundcorners', "
+"'sharpen', 'smalltiles', 'threshold', 'unsharp',\n"
+"'wave', 'waveletnoisereducer']"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:112
+msgid "However, sometimes the conversion doesn't go quite as smoothly."
+msgstr "Ancak dönüşüm bazen beklendiği gibi pürüzsüz gitmeyebilir."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:114
+msgid ""
+"from krita import *\n"
+"\n"
+"print(Krita.instance().documents())"
+msgstr ""
+"from krita import *\n"
+"\n"
+"print(Krita.instance().documents())"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:120
+msgid "gives something like this::"
+msgstr "şöyle bir çıktı verir::"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:123
+msgid ""
+"[<PyKrita.krita.Document object at 0x7f7294630b88>,\n"
+"<PyKrita.krita.Document object at 0x7f72946309d8>,\n"
+"<PyKrita.krita.Document object at 0x7f7294630c18>]"
+msgstr ""
+"[<PyKrita.krita.Document object at 0x7f7294630b88>,\n"
+"<PyKrita.krita.Document object at 0x7f72946309d8>,\n"
+"<PyKrita.krita.Document object at 0x7f7294630c18>]"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:127
+msgid ""
+"It is a list of something, sure, but how to use it? If we go back to the "
+"Krita apidocs page and look at the function, documents() we'll see there's "
+"actually a clickable link on the 'Document' class. `If you follow that link "
+"<https://api.kde.org/krita/html/classDocument.html>`_, you'll see that the "
+"document has a function called name() which returns the name of the "
+"document, and functions width() and height() which return the dimensions. So "
+"if we wanted to generate an info report about the documents in Krita, we "
+"could write a script like this:"
+msgstr ""
+"Eğer bu bir şeyler listesiyse tamam, olur; ancak bunu nasıl kullanırız? "
+"Krita API'si sayfalarına gidip documents() işlevine baktığımızda, “Document” "
+"sınıfı için gerçekte tıklanabilir bir bağlantı olduğunu görürüz. `Eğer bu "
+"bağlantıyı izlerseniz <https://api.kde.org/krita/html/classDocument.html>`_ "
+"belgenin, belgenin adını döndüren bir name() ve belgenin boyutlarını "
+"döndüren width() ve height() işlevlerine sahip olduğunu görürsünüz. "
+"Krita’daki belgeler hakkında bir rapor hazırlamak istersek şöyle bir betik "
+"yazabiliriz:"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:129
+msgid ""
+"from krita import *\n"
+"\n"
+"for doc in Krita.instance().documents():\n"
+"    print(doc.name())\n"
+"    print(\" \"+str(doc.width())+\"x\"+str(doc.height()))"
+msgstr ""
+"from krita import *\n"
+"\n"
+"for doc in Krita.instance().documents():\n"
+"    print(doc.name())\n"
+"    print(\" \"+str(doc.width())+\"x\"+str(doc.height()))"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:137
+msgid "We get an output like::"
+msgstr "Şöyle bir çıktı alırız::"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:139
+msgid ""
+"==== Warning: Script not saved! ====\n"
+"Unnamed\n"
+" 2480x3508\n"
+"sketch21\n"
+" 3508x2480\n"
+"Blue morning\n"
+" 1600x900"
+msgstr ""
+"==== Warning: Script not saved! ====\n"
+"Adsız\n"
+" 2480x3508\n"
+"eskiz21\n"
+" 3508x2480\n"
+"Mavi sabah\n"
+" 1600x900"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:147
+msgid ""
+"Hopefully this will give you an idea of how to navigate the API docs now."
+msgstr ""
+"Umarım bu size API belgelerinde nasıl gezineceğiniz konusunda bir fikir "
+"verecektir."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:149
+msgid ""
+"Krita's API has many more classes, you can get to them by going to the top-"
+"left class list, or just clicking their names to get to their API docs. The "
+"functions ``print()`` or ``dir()`` are your friends here as well. This line "
+"will print out a list of all the actions in Krita -- you could swap in one "
+"of these commands instead of 'python_scripter' in the example above."
+msgstr ""
+"Krita API’sinin daha pek çok sınıfları vardır; onlar hakkında ek bilgiyi sol "
+"üstteki sınıf listesine giderek veya API belgelerine ulaşmak için "
+"üzerilerine tıklayarak erişebilirsiniz. ``print()`` veya ``dir()`` işlevleri "
+"de sizin arkadaşlarınız olacaktır. Bu satır, Krita’daki tüm eylemlerin bir "
+"listesini yazdırır — yukarıdaki örnekte “python_scripter” yerine bu "
+"komutların birini koyabilirsiniz."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:151
+msgid "[print([a.objectName(), a.text()]) for a in Krita.instance().actions()]"
+msgstr ""
+"[print([a.objectName(), a.text()]) for a in Krita.instance().actions()]"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:155
+msgid ""
+"The Python module ``inspect`` was designed for this sort of task. Here's a "
+"useful function to print info about a class to the console."
+msgstr ""
+"``inspect`` Python modülü, tam da bu iş için tasarlanmıştır. Konsola bir "
+"sınıf üzerine bilgi yazdırmak için kullanışlı bir işlevi aşağıda "
+"bulabilirsiniz."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:157
+msgid ""
+"import inspect\n"
+"def getInfo(target):\n"
+"    [print(item) for item in inspect.getmembers(target) if not item[0]."
+"startswith('_')]\n"
+"\n"
+"getInfo(Krita.instance())"
+msgstr ""
+"import inspect\n"
+"def getInfo(target):\n"
+"    [print(item) for item in inspect.getmembers(target) if not item[0]."
+"startswith('_')]\n"
+"\n"
+"getInfo(Krita.instance())"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:167
+msgid ""
+"Finally, in addition to the LibKis documentation, the Qt documentation, "
+"since Krita uses PyQt to expose nearly all of the Qt API to Python. You can "
+"build entire windows with buttons and forms this way, using the very same "
+"tools that Krita is using! You can read the `Qt documentation <https://doc."
+"qt.io/>`_ and the `PyQt documentation <https://www.riverbankcomputing.com/"
+"static/Docs/PyQt5/>`_ for more info about this, and also definitely study "
+"the included plugins as well to see how they work."
+msgstr ""
+"Son olarak, LibKis belgelendirmesine ek olmak üzere, Qt belgelendirmesi de "
+"pek yararlıdır; çünkü Krita tüm Qt API’sini Python’a sunmak için PyQt "
+"kullanır. Bu yolla, yalnızca Krita’nın aynısını kullandığı tüm araçları "
+"kullanarak pencereleri ve formları yapabilirsiniz! Bunun hakkında daha fazla "
+"bilgi için `Qt belgelendirmesini <https://doc.qt.io/>`_ ve `PyQt "
+"belgelendirmesine <https://www.riverbankcomputing.com/static/Docs/PyQt5/>`_ "
+"bakabilirsiniz. Eklentilerin nasıl çalıştığını öğrenmek için içerilen "
+"eklentilerin içeriğine de bakmayı unutmayın."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:171
+msgid "Technical Details"
+msgstr "Teknik Ayrıntılar"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:177
+msgid "Python Scripting on Windows"
+msgstr "Windows Üzerine Python ile Betik Yazımı"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:179
+msgid ""
+"To get Python scripting working on Windows 7/8/8.1, you will need to install "
+"the `Universal C Runtime from Microsoft's website <https://www.microsoft.com/"
+"en-us/download/details.aspx?id=48234>`_. (Windows 10 already comes with it.)"
+msgstr ""
+"Python ile betik yazımını Windows 7/8/8.1 üzerinde çalıştırmak için "
+"`Microsoft’un web sayfasından Universal C Runtime’ını <https://www.microsoft."
+"com/en-us/download/details.aspx?id=48234>`_ indirmeniz gerekir (Windows 10 "
+"halihazırda bununla gelir)."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:182
+msgid "Python 2 and 3"
+msgstr "Python 2 ve 3"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:184
+msgid "By default, Krita is compiled for python 3."
+msgstr "Öntanımlı olarak, Krita, Python 3 için derlenir."
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:186
+msgid ""
+"However, it is possible to compile it with python 2. To do so, you will need "
+"to add the following to the :program:`cmake` configuration line::"
+msgstr ""
+"Ancak yine de Python 2 ile derlemek de olanaklıdır. Bunun için :program:"
+"`cmake` yapılandırma satırına şunu ekleyin::"
+
+#: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:188
+msgid "-DENABLE_PYTHON_2=ON"
+msgstr "-DENABLE_PYTHON_2=ON"

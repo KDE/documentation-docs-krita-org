@@ -1,0 +1,604 @@
+# Translation of docs_krita_org_user_manual___soft_proofing.po to Ukrainian
+# Copyright (C) 2019-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2021, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: docs_krita_org_user_manual___soft_proofing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"PO-Revision-Date: 2025-10-31 09:31+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 23.04.3\n"
+
+#: ../../user_manual/soft_proofing.rst:-1
+msgid "How to use soft proofing in Krita."
+msgstr "Проба кольорів у Krita."
+
+#: ../../user_manual/soft_proofing.rst:0
+msgid ".. image:: /images/softproofing/Softproofing_adaptationstate.png"
+msgstr ".. image:: /images/softproofing/Softproofing_adaptationstate.png"
+
+#: ../../user_manual/soft_proofing.rst:11
+msgid "Color"
+msgstr "Колір"
+
+#: ../../user_manual/soft_proofing.rst:11
+msgid "Softproofing"
+msgstr "Проба кольорів"
+
+#: ../../user_manual/soft_proofing.rst:16
+msgid "Soft Proofing"
+msgstr "Проба кольорів"
+
+#: ../../user_manual/soft_proofing.rst:19
+msgid ""
+"Soft Proofing works only with :ref:`Canvas Graphics Acceleration "
+"<display_settings>` enabled."
+msgstr ""
+"Пробою кольорів можна скористатися, лише якщо увімкнено with :ref:"
+"`Прискорення графіки на полотні <display_settings>`."
+
+#: ../../user_manual/soft_proofing.rst:21
+msgid ""
+"When we make an image in Krita, and print that out with a printer, the image "
+"tends to look different. The colors are darker, or less dark than expected, "
+"maybe the reds are more aggressive, maybe contrast is lost. For simple "
+"documents, this isn’t much of a problem, but for professional prints, this "
+"can be very sad, as it can change the look and feel of an image drastically."
+msgstr ""
+"Коли ми створюємо зображення у Krita, а потім друкуємо це зображення на "
+"принтері, результат виглядає дещо інакше, ніж на екрані. Кольори є темнішими "
+"або світлішими за очікувані. Можливо, червоні тони стають агресивнішими, "
+"можливо, втрачається контрастність. Для простих документів це не є "
+"проблемою, але для професійних відбитків такі зміни є неприйнятними, "
+"оскільки можуть радикально змінити вигляд і стиль зображення."
+
+#: ../../user_manual/soft_proofing.rst:23
+msgid ""
+"The reason this happens is simply because the printer uses a different color "
+"model (CMYK) and it has often access to a lower range of colors (called a "
+"gamut)."
+msgstr ""
+"Причиною цього є лише те, що для принтера використано іншу модель кольорів "
+"(CMYK) і у його розпорядженні часто вужчий діапазон кольорів (цей діапазон "
+"називається гамою)."
+
+#: ../../user_manual/soft_proofing.rst:25
+msgid ""
+"A naive person would suggest the following solution: do your work within the "
+"CMYK color model! But there are three problems with that:"
+msgstr ""
+"Наївним вирішенням проблеми було б таке: працювати одразу у моделі кольорів "
+"CMYK! Але тут ми маємо три проблеми:"
+
+#: ../../user_manual/soft_proofing.rst:27
+msgid ""
+"Painting in a CMYK space doesn’t guarantee that the colors will be the same "
+"on your printer. For each combination of Ink, Paper and Printing device, the "
+"resulting gamut of colors you can use is different, which means that each of "
+"these could have a different profile associated with them."
+msgstr ""
+"Малювання у CMYK все одно не гарантує, що кольори на принтері будуть такими "
+"самими, як на екрані. Гама кольорів буде різною для різних поєднань чорнила, "
+"паперу та пристрою для друку. Це означає, що із кожним з цих компонентів "
+"результату можна пов'язати різний профіль."
+
+#: ../../user_manual/soft_proofing.rst:28
+msgid ""
+"Furthermore, even if you have the profile and are working in the exact color "
+"space that your printer can output, the CMYK color space is very irregular, "
+"meaning that the color maths isn’t as nice as in other spaces. Blending "
+"modes are different in CMYK as well."
+msgstr ""
+"До того ж, навіть якщо вами створено профіль обладнання і ви працюєте у тому "
+"самому просторі кольорів, у якому виводить зображення принтер, простір "
+"кольорів CMYK є неправильним, тобто прості математичні дії у ньому "
+"виконуються не настільки добре, як у інших просторах кольорів. Режими "
+"змішування у CMYK також працюють інакше."
+
+#: ../../user_manual/soft_proofing.rst:29
+msgid ""
+"Finally, working in that specific CMYK space means that the image is stuck "
+"to that space. If you are preparing your work for different a CMYK profile, "
+"due to the paper, printer or ink being different, you might have a bigger "
+"gamut with more bright colors that you would like to take advantage of."
+msgstr ""
+"Нарешті, робота у певному просторі CMYK означає, що зображення лишатиметься "
+"у цьому просторі. Якщо ви готуєте роботу для іншого профілю CMYK через інший "
+"папір, принтер або чорнило, у вас може бути ширша гама із ширшим діапазоном "
+"яскравих кольорів, перевагою яких ви захочете скористатися."
+
+#: ../../user_manual/soft_proofing.rst:31
+msgid ""
+"So ideally, you would do the image in RGB, and use all your favorite RGB "
+"tools, and let the computer do a conversion to a given CMYK space on the "
+"fly, just for preview. This is possible, and is what we call ''Soft "
+"Proofing''."
+msgstr ""
+"Отже, за ідеальних умов, варто створити зображення у просторі RGB, "
+"скористатися усіма улюбленими інструментами RGB і надати комп'ютеру "
+"можливість виконати перетворення до заданого простору CMYK на льоту, просто "
+"для попереднього перегляду. Така процедура є можливою, і саме її ми "
+"називаємо ''проба кольорів''."
+
+#: ../../user_manual/soft_proofing.rst:37
+msgid ".. image:: /images/softproofing/Softproofing_regularsoftproof.png"
+msgstr ".. image:: /images/softproofing/Softproofing_regularsoftproof.png"
+
+#: ../../user_manual/soft_proofing.rst:37
+msgid ""
+"On the left, the original, on the right, a view where soft proofing is "
+"turned on. The difference is subtle due to the lack of really bright colors, "
+"but the soft proofed version is slightly less blueish in the whites of the "
+"flowers and slightly less saturated in the greens of the leaves."
+msgstr ""
+"Ліворуч наведено оригінал, а праворуч перегляд із увімкненою пробою "
+"кольорів. Різниця є незначною, оскільки на зображенні немає справді яскравих "
+"кольорів, але помітно, що на версії проби кольорів кольори трохи менш сині у "
+"білуватих частин квіток і трохи менш насичені у зелених ділянках листків."
+
+#: ../../user_manual/soft_proofing.rst:39
+msgid ""
+"You can toggle soft proofing on any image using the :kbd:`Ctrl + Y` "
+"shortcut. Unlike other programs, this is per-view, so that you can look at "
+"your image non-proofed and proofed, side by side. The settings are also per "
+"image, and saved into the ``.kra`` file. You can set the proofing options "
+"in :menuselection:`Image --> Image Properties --> Soft Proofing`."
+msgstr ""
+"Увімкнути пробу кольорів для зображення можна за допомогою натискання "
+"комбінації клавіш :kbd:`Ctrl + Y`. На відміну від інших програм, панель "
+"проби кольорів є окремою панеллю, отже ви зможете одразу бачити зображення "
+"без проби кольорів і зображення з пробою кольорів, обабіч одне від одного. "
+"Параметри теж можна підбирати окремо для кожного зображення, і ці параметри "
+"буде збережено до файла ``.kra``. Ви можете встановити параметри проби "
+"кольорів за допомогою пункту меню :menuselection:`Зображення --> Властивості "
+"зображення --> Проба кольорів`."
+
+#: ../../user_manual/soft_proofing.rst:41
+msgid "There you can set the following options:"
+msgstr "Тут ви можете визначити такі параметри:"
+
+#: ../../user_manual/soft_proofing.rst:43
+msgid "Profile, Depth, Space"
+msgstr "Профіль, глибина, простір"
+
+#: ../../user_manual/soft_proofing.rst:44
+msgid ""
+"Of these, only the profile is really important. This will serve as the "
+"profile you are proofing to. In a professional print workflow, this profile "
+"should be determined by the printing house."
+msgstr ""
+"З усіх цих параметрів справді важливим є лише профіль. Цей профіль є "
+"профілем, із яким виконуватиметься проба. У професійній поліграфії цей "
+"профіль має бути надано друкарнею."
+
+#: ../../user_manual/soft_proofing.rst:46
+msgid ""
+"Set the proofing Intent. It uses the same intents as the intents mentioned "
+"in the :ref:`color managed workflow <color_managed_workflow>`."
+msgstr ""
+"Ціль візуалізації проби кольорів. Використовує ті самі цілі, що і у :ref:"
+"`робочому процесі із керуванням кольорами <color_managed_workflow>`"
+
+#: ../../user_manual/soft_proofing.rst:51
+msgid "Intent"
+msgstr "Відтворення"
+
+#: ../../user_manual/soft_proofing.rst:52
+msgid ""
+"Left: Soft proofed image with Adaptation state slider set to max. Right: "
+"Soft proofed image with Adaptation State set to minimum."
+msgstr ""
+"Ліворуч: проба кольорів зображення із встановленням повзунка стану адаптації "
+"у максимальне значення. Праворуч: Ліворуч: проба кольорів зображення із "
+"встановленням повзунка стану адаптації у мінімальне значення."
+
+#: ../../user_manual/soft_proofing.rst:53
+msgid "Adaptation State"
+msgstr "Стан адаптації"
+
+#: ../../user_manual/soft_proofing.rst:54
+msgid ""
+"A feature which allows you to set whether :guilabel:`Absolute Colorimetric` "
+"will make the white in the image screen-white during proofing (the slider "
+"set to max), or whether it will use the white point of the profile (the "
+"slider set to minimum). Often CMYK profiles have a different white as the "
+"screen, or amongst one another due to the paper color being different."
+msgstr ""
+"Можливість, за допомогою якої визначити, буде :guilabel:`Абсолютне "
+"колориметричне` відтворення кольорів робити білий колір зображення на екрані "
+"білим у пробі кольорів (встановлення максимального значення за допомогою "
+"повзунка), чи використовуватиме точку білого кольору профілю (встановлення "
+"мінімального значення за допомогою повзунка). Часто профілі CMYK мають інший "
+"білий колір, ніж на екрані, або потрібен інший колір через інший колір "
+"паперу."
+
+#: ../../user_manual/soft_proofing.rst:55
+msgid "Black Point Compensation"
+msgstr "Компенсація точки чорного"
+
+#: ../../user_manual/soft_proofing.rst:56
+msgid ""
+"Set the black point compensation. Turning this off will crunch the shadow "
+"values to the minimum the screen and the proofing profile can handle, while "
+"turning this on will scale the black to the screen-range, showing you the "
+"full range of grays in the image."
+msgstr ""
+"Встановити компенсацію точки чорного кольору. Зняття позначки з цього пункту "
+"викрутить значення тіней до мінімуму, який може бути показано на екрані або "
+"відтворено у профілі проби кольорів, а позначення пункту масштабує чорний "
+"колір до діапазону кольорів екрана, показуючи вам повний діапазон сірих "
+"кольорів зображення."
+
+#: ../../user_manual/soft_proofing.rst:58
+msgid "Gamut Warning"
+msgstr "Попередження щодо гами"
+
+#: ../../user_manual/soft_proofing.rst:58
+msgid "Set the color of the out-of-gamut warning."
+msgstr ""
+"Встановлює колір попередження для областей, де кольори виходитимуть за межі "
+"гами."
+
+#: ../../user_manual/soft_proofing.rst:60
+msgid ""
+"You can set the defaults that Krita uses in :menuselection:`Settings --> "
+"Configure Krita... --> Color Management`."
+msgstr ""
+"Типові параметри Krita можна визначити за допомогою сторінки, викликати яку "
+"можна за допомогою пункту меню :menuselection:`Параметри --> Налаштувати "
+"Krita… --> Керування кольорами`."
+
+#: ../../user_manual/soft_proofing.rst:62
+msgid ""
+"To configure this properly, it's recommended to make a test image to print "
+"(and that is printed by a properly set-up printer) and compare against, and "
+"then approximate in the proofing options how the image looks compared to the "
+"real-life copy you have made."
+msgstr ""
+"Щоб налаштувати цю можливість належним чином, рекомендуємо створити тестове "
+"зображення для друку (і переконатися, що його надруковано належним чином на "
+"належним чином налаштованому принтері), порівняти результати, а потім "
+"визначити наближені значення параметрів так, щоб зображення виглядало "
+"приблизно так, як має виглядати у надрукованій формі."
+
+#: ../../user_manual/soft_proofing.rst:65
+msgid "Out of Gamut Warning"
+msgstr "Попередження про гаму"
+
+#: ../../user_manual/soft_proofing.rst:67
+msgid ""
+"The out of gamut warning, or gamut alarm, is an extra option on top of Soft-"
+"Proofing: It allows you to see which colors are being clipped, by replacing "
+"the resulting color with the set alarm color."
+msgstr ""
+"Показ попередження щодо гами є додатковою можливістю на основі проби "
+"кольорів: за її допомогою ви зможете побачити ділянки, де кольори обрізано. "
+"Програма просто замінює обрізаний колір встановленим попереджальним кольором."
+
+#: ../../user_manual/soft_proofing.rst:69
+msgid ""
+"This can be useful to determine where certain contrasts are being lost, and "
+"to allow you to change it slowly to a less contrasted image."
+msgstr ""
+"Ця можливість може бути корисною для визначення, де втрачено певні "
+"контрасти, і змінити контрастність, зменшивши її."
+
+#: ../../user_manual/soft_proofing.rst:75
+msgid ".. image:: /images/softproofing/Softproofing_gamutwarnings.png"
+msgstr ".. image:: /images/softproofing/Softproofing_gamutwarnings.png"
+
+#: ../../user_manual/soft_proofing.rst:75
+msgid ""
+"Left: View with original image, Right: View with soft proofing and gamut "
+"warnings turned on. Krita will save the gamut warning color alongside the "
+"proofing options into the KRA file, so pick a color that you think will "
+"stand out for your current image."
+msgstr ""
+"Ліворуч: панель із початковим зображенням. Праворуч: перегляд із пробою "
+"кольорів та увімкненим попередженням щодо гами. Krita збереже колір "
+"попередження щодо гами разом із параметрами проби до файла KRA, тому "
+"виберіть колір, який буде помітним серед поточних кольорів зображення."
+
+#: ../../user_manual/soft_proofing.rst:77
+msgid ""
+"You can activate Gamut Warnings with the :kbd:`Ctrl + Shift + Y` shortcut, "
+"but it needs soft proofing activated to work fully."
+msgstr ""
+"Ви можете задіяти попередження щодо гами за допомогою комбінації клавіш :kbd:"
+"`Ctrl + Shift + Y`, але для повноцінної роботи цієї можливості слід "
+"увімкнути пробу кольорів."
+
+#: ../../user_manual/soft_proofing.rst:80
+msgid ""
+"Soft Proofing doesn’t work properly in floating-point spaces, and attempting "
+"to force it will cause incorrect gamut alarms. It is therefore disabled."
+msgstr ""
+"Проба кольорів не працює належним чином у просторах кольорів з дійсними "
+"значеннями кольорів. Спроба примусового використання проби кольорів призведе "
+"до некоректних попереджень щодо гами. Тому для таких просторів кольорів "
+"попередження щодо гами показано не буде."
+
+#: ../../user_manual/soft_proofing.rst:83
+msgid ""
+"Gamut Warnings sometimes give odd warnings for linear profiles in the "
+"shadows. This is a bug in LittleCMS, see `here <https://ninedegreesbelow.com/"
+"bug-reports/soft-proofing-problems.html>`_ for more info."
+msgstr ""
+"Попередження щодо гами іноді дає дивні результати для лінійних профілів у "
+"відтінках. Це вада у LittleCMS, див. `цю сторінку <https://ninedegreesbelow."
+"com/bug-reports/soft-proofing-problems.html>`_, щоб дізнатися більше."
+
+#~ msgid "mouseleft"
+#~ msgstr "mouseleft"
+
+#~ msgid ".. image:: images/icons/Krita_mouse_left.png"
+#~ msgstr ".. image:: images/icons/Krita_mouse_left.png"
+
+#~ msgid "mouseright"
+#~ msgstr "mouseright"
+
+#~ msgid ".. image:: images/icons/Krita_mouse_right.png"
+#~ msgstr ".. image:: images/icons/Krita_mouse_right.png"
+
+#~ msgid "mousemiddle"
+#~ msgstr "mousemiddle"
+
+#~ msgid ".. image:: images/icons/Krita_mouse_middle.png"
+#~ msgstr ".. image:: images/icons/Krita_mouse_middle.png"
+
+#~ msgid "mousescroll"
+#~ msgstr "mousescroll"
+
+#~ msgid ".. image:: images/icons/Krita_mouse_scroll.png"
+#~ msgstr ".. image:: images/icons/Krita_mouse_scroll.png"
+
+#~ msgid "toolshapeselection"
+#~ msgstr "toolshapeselection"
+
+#~ msgid ".. image:: images/icons/shape_select_tool.svg"
+#~ msgstr ".. image:: images/icons/shape_select_tool.svg"
+
+#~ msgid "toolshapeedit"
+#~ msgstr "toolshapeedit"
+
+#~ msgid ".. image:: images/icons/shape_edit_tool.svg"
+#~ msgstr ".. image:: images/icons/shape_edit_tool.svg"
+
+#~ msgid "tooltext"
+#~ msgstr "tooltext"
+
+#~ msgid ".. image:: images/icons/text-tool.svg"
+#~ msgstr ".. image:: images/icons/text-tool.svg"
+
+#~ msgid "toolcalligraphy"
+#~ msgstr "toolcalligraphy"
+
+#~ msgid ".. image:: images/icons/calligraphy_tool.svg"
+#~ msgstr ".. image:: images/icons/calligraphy_tool.svg"
+
+#~ msgid "toolgradientedit"
+#~ msgstr "toolgradientedit"
+
+#~ msgid ".. image:: images/icons/gradient_edit_tool.svg"
+#~ msgstr ".. image:: images/icons/gradient_edit_tool.svg"
+
+#~ msgid "toolpatternedit"
+#~ msgstr "toolpatternedit"
+
+#~ msgid ".. image:: images/icons/pattern_tool.svg"
+#~ msgstr ".. image:: images/icons/pattern_tool.svg"
+
+#~ msgid "toolfreehandbrush"
+#~ msgstr "toolfreehandbrush"
+
+#~ msgid ".. image:: images/icons/freehand_brush_tool.svg"
+#~ msgstr ".. image:: images/icons/freehand_brush_tool.svg"
+
+#~ msgid "toolline"
+#~ msgstr "toolline"
+
+#~ msgid ".. image:: images/icons/line_tool.svg"
+#~ msgstr ".. image:: images/icons/line_tool.svg"
+
+#~ msgid "toolrectangle"
+#~ msgstr "toolrectangle"
+
+#~ msgid ".. image:: images/icons/rectangle_tool.svg"
+#~ msgstr ".. image:: images/icons/rectangle_tool.svg"
+
+#~ msgid "toolellipse"
+#~ msgstr "toolellipse"
+
+#~ msgid ".. image:: images/icons/ellipse_tool.svg"
+#~ msgstr ".. image:: images/icons/ellipse_tool.svg"
+
+#~ msgid "toolpolygon"
+#~ msgstr "toolpolygon"
+
+#~ msgid ".. image:: images/icons/polygon_tool.svg"
+#~ msgstr ".. image:: images/icons/polygon_tool.svg"
+
+#~ msgid "toolpolyline"
+#~ msgstr "toolpolyline"
+
+#~ msgid ".. image:: images/icons/polyline_tool.svg"
+#~ msgstr ".. image:: images/icons/polyline_tool.svg"
+
+#~ msgid "toolbeziercurve"
+#~ msgstr "toolbeziercurve"
+
+#~ msgid ".. image:: images/icons/bezier_curve.svg"
+#~ msgstr ".. image:: images/icons/bezier_curve.svg"
+
+#~ msgid "toolfreehandpath"
+#~ msgstr "toolfreehandpath"
+
+#~ msgid ".. image:: images/icons/freehand_path_tool.svg"
+#~ msgstr ".. image:: images/icons/freehand_path_tool.svg"
+
+#~ msgid "tooldyna"
+#~ msgstr "tooldyna"
+
+#~ msgid ".. image:: images/icons/dyna_tool.svg"
+#~ msgstr ".. image:: images/icons/dyna_tool.svg"
+
+#~ msgid "toolmultibrush"
+#~ msgstr "toolmultibrush"
+
+#~ msgid ".. image:: images/icons/multibrush_tool.svg"
+#~ msgstr ".. image:: images/icons/multibrush_tool.svg"
+
+#~ msgid "toolassistant"
+#~ msgstr "toolassistant"
+
+#~ msgid ".. image:: images/icons/assistant_tool.svg"
+#~ msgstr ".. image:: images/icons/assistant_tool.svg"
+
+#~ msgid "toolmove"
+#~ msgstr "toolmove"
+
+#~ msgid ".. image:: images/icons/move_tool.svg"
+#~ msgstr ".. image:: images/icons/move_tool.svg"
+
+#~ msgid "tooltransform"
+#~ msgstr "tooltransform"
+
+#~ msgid ".. image:: images/icons/transform_tool.svg"
+#~ msgstr ".. image:: images/icons/transform_tool.svg"
+
+#~ msgid "toolgrid"
+#~ msgstr "toolgrid"
+
+#~ msgid ".. image:: images/icons/grid_tool.svg"
+#~ msgstr ".. image:: images/icons/grid_tool.svg"
+
+#~ msgid "toolperspectivegrid"
+#~ msgstr "toolperspectivegrid"
+
+#~ msgid ".. image:: images/icons/perspectivegrid_tool.svg"
+#~ msgstr ".. image:: images/icons/perspectivegrid_tool.svg"
+
+#~ msgid "toolmeasure"
+#~ msgstr "toolmeasure"
+
+#~ msgid ".. image:: images/icons/measure_tool.svg"
+#~ msgstr ".. image:: images/icons/measure_tool.svg"
+
+#~ msgid "toolcolorsampler"
+#~ msgstr "toolcolorsampler"
+
+#~ msgid ".. image:: images/icons/color_sampler_tool.svg"
+#~ msgstr ".. image:: images/icons/color_sampler_tool.svg"
+
+#~ msgid "toolfill"
+#~ msgstr "toolfill"
+
+#~ msgid ".. image:: images/icons/fill_tool.svg"
+#~ msgstr ".. image:: images/icons/fill_tool.svg"
+
+#~ msgid "toolgradient"
+#~ msgstr "toolgradient"
+
+#~ msgid ".. image:: images/icons/gradient_drawing_tool.svg"
+#~ msgstr ".. image:: images/icons/gradient_drawing_tool.svg"
+
+#~ msgid "toolcolorizemask"
+#~ msgstr "toolcolorizemask"
+
+#~ msgid ".. image:: images/icons/colorizemask_tool.svg"
+#~ msgstr ".. image:: images/icons/colorizemask_tool.svg"
+
+#~ msgid "toolsmartpatch"
+#~ msgstr "toolsmartpatch"
+
+#~ msgid ".. image:: images/icons/smart_patch_tool.svg"
+#~ msgstr ".. image:: images/icons/smart_patch_tool.svg"
+
+#~ msgid "toolcrop"
+#~ msgstr "toolcrop"
+
+#~ msgid ".. image:: images/icons/crop_tool.svg"
+#~ msgstr ".. image:: images/icons/crop_tool.svg"
+
+#~ msgid "toolselectrect"
+#~ msgstr "toolselectrect"
+
+#~ msgid ".. image:: images/icons/rectangular_select_tool.svg"
+#~ msgstr ".. image:: images/icons/rectangular_select_tool.svg"
+
+#~ msgid "toolselectellipse"
+#~ msgstr "toolselectellipse"
+
+#~ msgid ".. image:: images/icons/elliptical_select_tool.svg"
+#~ msgstr ".. image:: images/icons/elliptical_select_tool.svg"
+
+#~ msgid "toolselectpolygon"
+#~ msgstr "toolselectpolygon"
+
+#~ msgid ".. image:: images/icons/polygonal_select_tool.svg"
+#~ msgstr ".. image:: images/icons/polygonal_select_tool.svg"
+
+#~ msgid "toolselectmagnetic"
+#~ msgstr "toolselectmagnetic"
+
+#~ msgid ".. image:: images/icons/magnetic_select_tool.svg"
+#~ msgstr ".. image:: images/icons/magnetic_select_tool.svg"
+
+#~ msgid "toolselectpath"
+#~ msgstr "toolselectpath"
+
+#~ msgid ".. image:: images/icons/path_select_tool.svg"
+#~ msgstr ".. image:: images/icons/path_select_tool.svg"
+
+#~ msgid "toolselectfreehand"
+#~ msgstr "toolselectfreehand"
+
+#~ msgid ".. image:: images/icons/freehand_select_tool.svg"
+#~ msgstr ".. image:: images/icons/freehand_select_tool.svg"
+
+#~ msgid "toolselectcontiguous"
+#~ msgstr "toolselectcontiguous"
+
+#~ msgid ".. image:: images/icons/contiguous_select_tool.svg"
+#~ msgstr ".. image:: images/icons/contiguous_select_tool.svg"
+
+#~ msgid "toolselectsimilar"
+#~ msgstr "toolselectsimilar"
+
+#~ msgid ".. image:: images/icons/similar_select_tool.svg"
+#~ msgstr ".. image:: images/icons/similar_select_tool.svg"
+
+#~ msgid "toolpan"
+#~ msgstr "toolpan"
+
+#~ msgid ".. image:: images/icons/pan_tool.svg"
+#~ msgstr ".. image:: images/icons/pan_tool.svg"
+
+#~ msgid "toolzoom"
+#~ msgstr "toolzoom"
+
+#~ msgid ".. image:: images/icons/zoom_tool.svg"
+#~ msgstr ".. image:: images/icons/zoom_tool.svg"
+
+#~ msgid "toolreference"
+#~ msgstr "toolreference"
+
+#~ msgid ".. image:: images/icons/reference_images_tool.svg"
+#~ msgstr ".. image:: images/icons/reference_images_tool.svg"
+
+#~ msgid "toolenclosefill"
+#~ msgstr "toolenclosefill"
+
+#~ msgid ".. image:: images/icons/enclose_and_fill_tool.svg"
+#~ msgstr ".. image:: images/icons/enclose_and_fill_tool.svg"

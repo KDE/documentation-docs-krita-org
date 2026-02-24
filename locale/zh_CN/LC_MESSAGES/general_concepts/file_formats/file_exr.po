@@ -1,0 +1,168 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"PO-Revision-Date: 2024-04-21 04:52\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/documentation-docs-krita-org/"
+"docs_krita_org_general_concepts___file_formats___file_exr.pot\n"
+"X-Crowdin-File-ID: 53874\n"
+
+#: ../../general_concepts/file_formats/file_exr.rst:-1
+msgid "The EXR file format as exported by Krita."
+msgstr "Krita 导出的 EXR 文件格式。"
+
+#: ../../general_concepts/file_formats/file_exr.rst:-1
+msgid "screenshot of Color profile for imported EXR images selector"
+msgstr "导入的 EXR 图像选择器的色彩特性文件截图"
+
+#: ../../general_concepts/file_formats/file_exr.rst:-1
+msgid ".. image:: /images/default_color_space_for_exr_option.png"
+msgstr ".. image:: /images/default_color_space_for_exr_option.png"
+
+#: ../../general_concepts/file_formats/file_exr.rst:10
+msgid "*.exr"
+msgstr "*.exr"
+
+#: ../../general_concepts/file_formats/file_exr.rst:10
+msgid "EXR"
+msgstr "EXR"
+
+#: ../../general_concepts/file_formats/file_exr.rst:10
+msgid "HDR Fileformat"
+msgstr "HDR 文件格式"
+
+#: ../../general_concepts/file_formats/file_exr.rst:10
+msgid "OpenEXR"
+msgstr "OpenEXR"
+
+#: ../../general_concepts/file_formats/file_exr.rst:15
+msgid "\\*.exr"
+msgstr "\\*.exr"
+
+#: ../../general_concepts/file_formats/file_exr.rst:17
+msgid ""
+"``.exr`` is the prime file format for saving and loading :ref:`floating "
+"point bit depths <bit_depth>`, and due to the library made to load and save "
+"these images being fully open source, the main interchange format as well."
+msgstr ""
+"``.exr`` 是用来保存和加载 :ref:`浮点位深度 <bit_depth>` 图像的首选文件格式。"
+"由于保存和载入 EXR 的程序库也全都是开源软件，它也是图像交换的最常用格式。"
+
+#: ../../general_concepts/file_formats/file_exr.rst:19
+msgid ""
+"Floating point bit-depths are used by the computer graphics industry to "
+"record scene referred values, which can be made via a camera or a computer "
+"renderer. Scene referred values means that the file can have values whiter "
+"than white, which in turn means that such a file can record lighting "
+"conditions, such as sunsets very accurately. These EXR files can then be "
+"used inside a renderer to create realistic lighting."
+msgstr ""
+"浮点位深度是数字影像工业用于保存场景参照亮度的色彩通道格式，场景参照图像可以"
+"用数码相机或渲染器制作。场景参照亮度意味着文件可以有比白更白的亮度值，使它们"
+"可以准确地记录光照条件，如日落等。EXR 文件可被用在渲染器里，合成出写实的光照"
+"效果。"
+
+#: ../../general_concepts/file_formats/file_exr.rst:21
+msgid ""
+"Krita can load and save EXR for the purpose of paint-over (yes, Krita can "
+"paint with scene referred values) and interchange with applications like "
+"Blender, Mari, Nuke and Natron."
+msgstr ""
+"Krita 可以为临摹、拼接、合成而加载或保存 EXR 文件 (Krita 可以进行场景参照绘"
+"画)，也可以用于与 Blender、Mari、Nuke 和 Natron 等软件进行配合。"
+
+#: ../../general_concepts/file_formats/file_exr.rst:24
+msgid "Color Management"
+msgstr "色彩管理"
+
+#: ../../general_concepts/file_formats/file_exr.rst:28
+msgid ""
+"EXR file format does not have any internal color management capabilities, i."
+"e. when saving the data into the file, no color space information is written "
+"into the file. Next time you load the same file into Krita, Krita will "
+"assign the default color space to the file (usually \"Rec 709 Linear\"). It "
+"may cause the file to change visually."
+msgstr ""
+"EXR 文件格式没有内建色彩管理功能，数据保存到 EXR 文件时不会将写入任何色彩空间"
+"信息。如果您关闭文件之后重新打开它，Krita 将为该文件指定默认的色彩空间 (通常"
+"是 Rec 709 Linear)。这可能会导致文件的视觉效果发生变化。"
+
+#: ../../general_concepts/file_formats/file_exr.rst:30
+msgid ""
+"In general, there are two ways to handle the color management for the EXR "
+"files: OCIO and profile-based."
+msgstr ""
+"我们一般可以使用两种方式来处理 EXR 文件的色彩管理：基于 OCIO 和基于色彩特性文"
+"件。"
+
+#: ../../general_concepts/file_formats/file_exr.rst:33
+msgid "OCIO-based workflow"
+msgstr "基于 OCIO 的工作流程"
+
+#: ../../general_concepts/file_formats/file_exr.rst:35
+msgid ""
+"You need to select OCIO configuration and share it between Krita and other "
+"tools you use (Blender, Natron and etc). When using OCIO Krita will **not** "
+"use the assigned profile and will use the OCIO configuration you selected."
+msgstr ""
+"你需要选择 OCIO 配置，并在配合使用的其他程序 (例如 Blender 和 Natron 等) 中使"
+"用同一配置。使用 OCIO 时，Krita **不会** 使用分配的色彩特性文件，而是会使用你"
+"选择的 OCIO 配置。"
+
+#: ../../general_concepts/file_formats/file_exr.rst:38
+msgid "Profile-based workflow"
+msgstr "基于色彩特性文件的工作流程"
+
+#: ../../general_concepts/file_formats/file_exr.rst:40
+msgid ""
+"Alternatively, you can assign the necessary ICC profile to the imported "
+"image. If you import the image and you know its color space is not \"Rec 709 "
+"Linear TRC\", just use :menuselection:`Tools --> Scripts --> Assign Profile "
+"to Image` plugin to assign a different profile."
+msgstr ""
+"您也可以为导入的图像分配所需的 ICC 色彩特性文件。如果您导入了图像且知道其色彩"
+"空间不是 Rec 709 Linear TRC，请使用 :menuselection:`工具 --> 脚本 --> 分配色"
+"彩特性文件到图像` 插件来分配一个不同的特性文件。"
+
+#: ../../general_concepts/file_formats/file_exr.rst:44
+msgid ""
+"If you do not see Assign Profile plugin, make sure it is activated in the "
+"Python Plugin Manager: :menuselection:`Settings --> Configure Krita... --> "
+"Python Plugin Manager`. After activating the plugin, restart Krita."
+msgstr ""
+"如果您没在该菜单看到“分配色彩特性文件到图像”插件，请在 Krita 的 Python 插件管"
+"理页面中激活它：:menuselection:`设置 --> 配置 Krita... --> Python 插件管理`。"
+"激活该插件后请重启 Krita 以生效。"
+
+#: ../../general_concepts/file_formats/file_exr.rst:46
+msgid ""
+"If your work is based on some non-default color space (e.g. ACES), then you "
+"can set this color space as the default for loading EXR images. Go to :"
+"menuselection:`Settings --> Configure Krita... --> Color Management` and "
+"select the required color space at `Color profile for imported EXR images` "
+"selector. Next time you load any EXR image, this color space will be "
+"assigned automatically."
+msgstr ""
+"如果您的文件使用的是某些非默认的色彩空间 (例如 ACES)，您可以将此色彩空间设置"
+"为加载 EXR 图像时使用的默认值。前往 :menuselection:`设置 --> 配置 Krita... --"
+"> 色彩管理` ，在 `EXR 文件导入时的默认色彩特性文件` 选项中选择想要的色彩特性"
+"文件。下次您打开任意 EXR 图像时，Krita 将自动为它分配此色彩空间。"
+
+#: ../../general_concepts/file_formats/file_exr.rst:52
+msgid ""
+"If you want to read more about color managed workflows, check :ref:`this "
+"chapter <color_managed_workflow>`."
+msgstr ""
+"如果您想要了解更多色彩管理的工作流程，请阅读 :ref:`Krita 使用手册的色彩管理流"
+"程章节 <color_managed_workflow>`。"

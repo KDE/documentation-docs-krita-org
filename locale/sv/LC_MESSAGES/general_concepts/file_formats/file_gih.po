@@ -1,0 +1,341 @@
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+#
+# SPDX-FileCopyrightText: 2019, 2020, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"PO-Revision-Date: 2025-08-13 14:00+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.04.3\n"
+
+#: ../../general_concepts/file_formats/file_gih.rst:-1
+msgid "The GIMP Image Hose file format in Krita."
+msgstr "GIMP-bildslangfilformat i Krita."
+
+#: ../../general_concepts/file_formats/file_gih.rst:-1
+msgid ""
+".. image:: /images/category_filetypes/gih_multi_dimension_explaination.png"
+msgstr ""
+".. image:: /images/category_filetypes/gih_multi_dimension_explaination.png"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "*.gih"
+msgstr "*.gih"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "GIH"
+msgstr "GIH"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "Image Hose"
+msgstr "Bildslang"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "Gimp Image Hose"
+msgstr "GIMP-bildslang"
+
+#: ../../general_concepts/file_formats/file_gih.rst:15
+msgid "\\*.gih"
+msgstr "\\*.gih"
+
+#: ../../general_concepts/file_formats/file_gih.rst:17
+msgid ""
+"The GIMP image hose format. Krita can open and save these, as well as import "
+"via the :ref:`predefined brush tab <predefined_brush_tip>`."
+msgstr ""
+"GIMP-bildslangformatet. Krita kan öppna och spara det, samt importera via :"
+"ref:`fliken fördefinerade penslar tab <predefined_brush_tip>`."
+
+#: ../../general_concepts/file_formats/file_gih.rst:19
+msgid ""
+"Image Hose means that this file format allows you to store multiple images "
+"and then set some options to make it specify how to output the multiple "
+"images."
+msgstr ""
+"Bildslang betyder att filformatet låter dig lagra flera bilder och sedan "
+"ställa in några alternativ för att specificera hur alla bilderna ska matas "
+"ut."
+
+#: ../../general_concepts/file_formats/file_gih.rst:25
+msgid ".. image:: /images/brushes/Gih-examples.png"
+msgstr ".. image:: /images/brushes/Gih-examples.png"
+
+#: ../../general_concepts/file_formats/file_gih.rst:25
+msgid "From top to bottom: Incremental, Pressure and Random"
+msgstr "Från topp till botten: Inkrementell, Tryck och Slumpmässig"
+
+#: ../../general_concepts/file_formats/file_gih.rst:28
+msgid "Dimension and ranks."
+msgstr "Dimensioner och ranger"
+
+#: ../../general_concepts/file_formats/file_gih.rst:30
+msgid ""
+"The GIMP image hose format allows multiple dimensions for a given brush. You "
+"could for example have a dimension that updates incrementally, and one that "
+"updates on pressure, or updates randomly. Upon export, Krita will use the "
+"ranks to subdivide the layers per dimension. If you have a 24 layer image "
+"and three ranks, and the first dimension is set to 2, the second to 4 and "
+"the third to 3, then Krita will divide 24 into 2 groups of 12, each of which "
+"have unique images for the 2 parts of the first dimension. Then those 2 "
+"groups of 12 get divided into 8 groups of 4, each of which have unique brush "
+"tips for the four parts of the second dimension, and finally, the grouped "
+"three images have each a unique brush for the final dimension."
+msgstr ""
+"GIMP-bildslangformatet tillåter flera dimensioner för en given pensel. Man "
+"kan exempelvis ha en dimension som uppdateras inkrementellt, och en som "
+"uppdateras vid tryck, eller uppdateras slumpmässigt. Vid export använder "
+"Krita ranger för att dela upp lagren per dimension. Om man har en 24-lagers "
+"bild och tre ranger, och den första dimensionen är inställd till 2, den "
+"andra till 4 och den tredje till 3, delar Krita upp 24 i två grupper med 12, "
+"var och en som har unika bilder för de två delarna av den första "
+"dimensionen. Därefter delas de två grupperna med 12 upp i 8 grupper med 4, "
+"var och en som har unika penselspetsar för de fyra delarna av den andra "
+"dimensionen, och till sist, har de grupperade tre bilderna vardera en unik "
+"pensel för den slutliga dimensionen. "
+
+#: ../../general_concepts/file_formats/file_gih.rst:32
+msgid ""
+"So, the following image has a table where dimension 1 is unique in one of 4 "
+"numbers, while dimension 2 is unique in one of 3 shapes. So our ranks for "
+"dimension 1 and dimension 2 need to be 4 and 3 respectively. Now, to order "
+"the layers, you need to subdivide the table first by the first dimension, "
+"and then by the second. So we end up with three layers each for a shape in "
+"the second dimension but for the first number, then another three layers, "
+"each for a shape, but then for the second number, and so forth."
+msgstr ""
+"Alltså har följande bild en tabell där dimension 1 är unik i ett av 4 "
+"nummer, medan dimension 2 är unik i en av 3 former. Så våra ranger för "
+"dimension 1 och dimension 2 måste vara respektiva 4 och 3. För att nu ordna "
+"lagren, måste tabellen först delas upp enligt den första dimensionen, och "
+"därefter enligt den andra. Alltså får vi till sist tre lager vardera för en "
+"form i den andra dimensionen men för det första numret, därefter ytterligare "
+"tre lager, vart och ett för en form, men då för det andra numret, och så "
+"vidare."
+
+#: ../../general_concepts/file_formats/file_gih.rst:38
+msgid ""
+"See `the GIMP documentation <https://docs.gimp.org/2.8/en/gimp-using-"
+"animated-brushes.html>`_ for a more thorough explanation."
+msgstr ""
+"Se `GIMP-dokumentationen <https://docs.gimp.org/2.8/en/gimp-using-animated-"
+"brushes.html>`_ för en fullständigare förklaring."
+
+#: ../../general_concepts/file_formats/file_gih.rst:41
+msgid "GIMP image hose format options:"
+msgstr "Alternativ för GIMP-bildslangformatet:"
+
+#: ../../general_concepts/file_formats/file_gih.rst:43
+msgid "Constant"
+msgstr "Konstant"
+
+#: ../../general_concepts/file_formats/file_gih.rst:44
+msgid "This'll use the first image, no matter what."
+msgstr "Använder första bilden oavsett."
+
+#: ../../general_concepts/file_formats/file_gih.rst:45
+msgid "Incremental"
+msgstr "Inkrementell"
+
+#: ../../general_concepts/file_formats/file_gih.rst:46
+msgid ""
+"This'll paint the image layers in sequence. This is good for images that can "
+"be strung together to create a pattern."
+msgstr ""
+"Målar bildlagren i sekvens. Det är bra för bilder som kan knytas samman för "
+"att skapa ett mönster."
+
+#: ../../general_concepts/file_formats/file_gih.rst:47
+msgid "Pressure"
+msgstr "Tryck"
+
+#: ../../general_concepts/file_formats/file_gih.rst:48
+msgid ""
+"This'll paint the images depending on pressure. This is good for brushes "
+"imitating the hairs of a natural brush."
+msgstr ""
+"Målar bilderna beroende på tryck. Det är bra för penslar som imiterar håren "
+"i en naturlig pensel."
+
+#: ../../general_concepts/file_formats/file_gih.rst:49
+msgid "Random"
+msgstr "Slumpmässig"
+
+#: ../../general_concepts/file_formats/file_gih.rst:50
+msgid ""
+"This'll draw the images randomly. This is good for image-collections used in "
+"speedpainting as well as images that generate texture. Or perhaps more "
+"graphical symbols."
+msgstr ""
+"Ritar bilderna slumpmässigt. Det är bra för bildsamlingar använda vid "
+"snabbmålning samt bilder som skapar en struktur. Eller kanske mer grafiska "
+"symboler."
+
+#: ../../general_concepts/file_formats/file_gih.rst:52
+msgid "Angle"
+msgstr "Vinkel"
+
+#: ../../general_concepts/file_formats/file_gih.rst:52
+msgid "This'll use the dragging angle to determine with image to draw."
+msgstr "Det använder dragvinkeln för att bestämma vilken bild som ska ritas."
+
+#: ../../general_concepts/file_formats/file_gih.rst:54
+msgid ""
+"When exporting a Krita file as a ``.gih``, you will also get the option to "
+"set the default spacing, the option to set the name (very important for "
+"looking it up in the UI) and the ability to choose whether or not to "
+"generate the mask from the colors."
+msgstr ""
+"Vid export av en Krita-fil som en ``.gih``, får man också alternativet att "
+"ange standardmellanrummet, alternativet för att ange namnet (mycket viktigt "
+"för att slå upp den i användargränssnittet), och möjlighet att välja om "
+"masken ska genereras från färgerna eller inte."
+
+#: ../../general_concepts/file_formats/file_gih.rst:57
+msgid "Use Color as Mask"
+msgstr "Använd färg som mask"
+
+#: ../../general_concepts/file_formats/file_gih.rst:57
+msgid ""
+"This'll turn the darkest values of the image as the ones that paint, and the "
+"whitest as transparent. Untick this if you are using colored images for the "
+"brush."
+msgstr ""
+"Det ändrar de mörkaste värdena på bilden till de som målar, och de ljusaste "
+"till genomskinliga. Avmarkera det om färglagda bilder används för penseln.."
+
+#: ../../general_concepts/file_formats/file_gih.rst:59
+msgid ""
+"We have a :ref:`Krita Brush tip page <brush_tip_animated_brush>` on how to "
+"create your own GIH brush."
+msgstr ""
+"Det finns en :ref:`Krita penselspetssida <brush_tip_animated_brush>` om hur "
+"man skapar sin egen GIH-pensel."
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/Krita_mouse_left.png"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/Krita_mouse_right.png"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/Krita_mouse_middle.png"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/Krita_mouse_scroll.png"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/shape_select_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/shape_edit_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/text-tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/calligraphy_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/line_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/rectangle_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/ellipse_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/polyline_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/bezier_curve.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/dyna_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/multibrush_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/move_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/grid_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/measure_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/color_sampler_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/fill_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/crop_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/path_select_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/pan_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"
+
+#, fuzzy
+#~| msgid ".. image:: images/brushes/Gih-examples.png"
+#~ msgid ".. image:: images/icons/zoom_tool.svg"
+#~ msgstr ".. image:: images/brushes/Gih-examples.png"

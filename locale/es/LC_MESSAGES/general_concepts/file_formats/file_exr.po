@@ -1,0 +1,157 @@
+# Spanish translations for docs_krita_org_general_concepts___file_formats___file_exr.po package.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# Automatically generated, 2019.
+#
+# SPDX-FileCopyrightText: 2019, 2020 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2025 Sofía Priego <spriego@darksylvania.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: Krita Manual 5.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"PO-Revision-Date: 2025-09-26 00:17+0100\n"
+"Last-Translator: Sofía Priego <spriego@darksylvania.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.08.1\n"
+
+#: ../../general_concepts/file_formats/file_exr.rst:-1
+msgid "The EXR file format as exported by Krita."
+msgstr "El formato de archivo EXR que exporta Krita."
+
+#: ../../general_concepts/file_formats/file_exr.rst:-1
+msgid "screenshot of Color profile for imported EXR images selector"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:-1
+msgid ".. image:: /images/default_color_space_for_exr_option.png"
+msgstr ".. image:: /images/default_color_space_for_exr_option.png"
+
+#: ../../general_concepts/file_formats/file_exr.rst:10
+msgid "*.exr"
+msgstr "*.exr"
+
+#: ../../general_concepts/file_formats/file_exr.rst:10
+msgid "EXR"
+msgstr "EXR"
+
+#: ../../general_concepts/file_formats/file_exr.rst:10
+msgid "HDR Fileformat"
+msgstr "Formato de archivo HDR"
+
+#: ../../general_concepts/file_formats/file_exr.rst:10
+msgid "OpenEXR"
+msgstr "OpenEXR"
+
+#: ../../general_concepts/file_formats/file_exr.rst:15
+msgid "\\*.exr"
+msgstr "\\*.exr"
+
+#: ../../general_concepts/file_formats/file_exr.rst:17
+msgid ""
+"``.exr`` is the prime file format for saving and loading :ref:`floating "
+"point bit depths <bit_depth>`, and due to the library made to load and save "
+"these images being fully open source, the main interchange format as well."
+msgstr ""
+"``.exr`` es el formato de archivo principal para guardar y cargar :ref:"
+"`profundidades de bits de punto flotante <bit_depth>`, y debido a que la "
+"biblioteca creada para cargar y guardar estas imágenes es completamente de "
+"código abierto, el formato de intercambio principal también lo es."
+
+#: ../../general_concepts/file_formats/file_exr.rst:19
+msgid ""
+"Floating point bit-depths are used by the computer graphics industry to "
+"record scene referred values, which can be made via a camera or a computer "
+"renderer. Scene referred values means that the file can have values whiter "
+"than white, which in turn means that such a file can record lighting "
+"conditions, such as sunsets very accurately. These EXR files can then be "
+"used inside a renderer to create realistic lighting."
+msgstr ""
+"Las profundidades de bits de punto flotante se usan en la industria de "
+"gráficos digitales para registrar valores referidos a la escena, que se "
+"pueden crear a través de una cámara o de un renderizador de computadora. Los "
+"valores referidos a la escena significan que el archivo puede tener valores "
+"más blancos que el blanco, lo que a su vez significa que dicho archivo puede "
+"registrar las condiciones de iluminación, como las puestas de sol, con mucha "
+"precisión. Estos archivos EXR se pueden usar dentro de un renderizador para "
+"crear una iluminación realista."
+
+#: ../../general_concepts/file_formats/file_exr.rst:21
+msgid ""
+"Krita can load and save EXR for the purpose of paint-over (yes, Krita can "
+"paint with scene referred values) and interchange with applications like "
+"Blender, Mari, Nuke and Natron."
+msgstr ""
+"Krita puede cargar y guardar EXR con el propósito de pintar (sí, Krita puede "
+"pintar con valores referidos a la escena) y hacer intercambios con "
+"aplicaciones como Blender, Mari, Nuke y Natron."
+
+#: ../../general_concepts/file_formats/file_exr.rst:24
+msgid "Color Management"
+msgstr "Gestión del color"
+
+#: ../../general_concepts/file_formats/file_exr.rst:28
+msgid ""
+"EXR file format does not have any internal color management capabilities, i."
+"e. when saving the data into the file, no color space information is written "
+"into the file. Next time you load the same file into Krita, Krita will "
+"assign the default color space to the file (usually \"Rec 709 Linear\"). It "
+"may cause the file to change visually."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:30
+msgid ""
+"In general, there are two ways to handle the color management for the EXR "
+"files: OCIO and profile-based."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:33
+msgid "OCIO-based workflow"
+msgstr "Flujo de trabajo basado en OCIO"
+
+#: ../../general_concepts/file_formats/file_exr.rst:35
+msgid ""
+"You need to select OCIO configuration and share it between Krita and other "
+"tools you use (Blender, Natron and etc). When using OCIO Krita will **not** "
+"use the assigned profile and will use the OCIO configuration you selected."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:38
+msgid "Profile-based workflow"
+msgstr "Flujo de trabajo basado en perfiles"
+
+#: ../../general_concepts/file_formats/file_exr.rst:40
+msgid ""
+"Alternatively, you can assign the necessary ICC profile to the imported "
+"image. If you import the image and you know its color space is not \"Rec 709 "
+"Linear TRC\", just use :menuselection:`Tools --> Scripts --> Assign Profile "
+"to Image` plugin to assign a different profile."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:44
+msgid ""
+"If you do not see Assign Profile plugin, make sure it is activated in the "
+"Python Plugin Manager: :menuselection:`Settings --> Configure Krita... --> "
+"Python Plugin Manager`. After activating the plugin, restart Krita."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:46
+msgid ""
+"If your work is based on some non-default color space (e.g. ACES), then you "
+"can set this color space as the default for loading EXR images. Go to :"
+"menuselection:`Settings --> Configure Krita... --> Color Management` and "
+"select the required color space at `Color profile for imported EXR images` "
+"selector. Next time you load any EXR image, this color space will be "
+"assigned automatically."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_exr.rst:52
+msgid ""
+"If you want to read more about color managed workflows, check :ref:`this "
+"chapter <color_managed_workflow>`."
+msgstr ""
