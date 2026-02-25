@@ -46,14 +46,14 @@
 
   {# FAVICON #}
   {% if favicon_url %}
-    <link rel="shortcut icon" href="{{ pathto(favicon_url, 1) }}"/>
+    <link rel="shortcut icon" href="{{ pathto(master_doc) }}/{{favicon_url}}"/>
     
   {% endif %}
   {# CANONICAL URL #}
   {% if theme_canonical_url %}
     <link rel="canonical" href="{{ theme_canonical_url }}/{{ pagename }}.html"/>
     <meta property="og:url" content="{{ theme_canonical_url }}/{{ pagename }}.html" />
-    <meta property="og:image" content="{{ theme_canonical_url }}/{{logo_url}}" />
+    <meta property="og:image" content="{{ pathto(master_doc) }}/{{logo_url}}" />
   {% endif %}
 
   {# CSS #}
@@ -133,7 +133,7 @@
        
            <a href="{{ pathto(master_doc) }}" class="icon icon-home">
 
-			<img src="{{ pathto(logo_url, 1) }}" class="logo" alt="Logo"/>
+			<img src="{{ pathto(master_doc) }}/{{logo_url}}" class="logo" alt="Logo"/>
            	
            <!--	{{  project  }} -->
 
