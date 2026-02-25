@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2021-05-20 00:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -98,12 +98,12 @@ msgid "Tools"
 msgstr "도구"
 
 #: ../../user_manual/getting_started/basic_concepts.rst:16
-#: ../../user_manual/getting_started/basic_concepts.rst:247
+#: ../../user_manual/getting_started/basic_concepts.rst:256
 msgid "Masks"
 msgstr "마스크"
 
 #: ../../user_manual/getting_started/basic_concepts.rst:16
-#: ../../user_manual/getting_started/basic_concepts.rst:271
+#: ../../user_manual/getting_started/basic_concepts.rst:280
 msgid "Filters"
 msgstr "필터"
 
@@ -673,10 +673,34 @@ msgstr ""
 "ref:`도구<cat_tools>` 섹션에서 확인할 수 있습니다."
 
 #: ../../user_manual/getting_started/basic_concepts.rst:168
+msgid "Preset and Tool Opacity"
+msgstr ""
+
+#: ../../user_manual/getting_started/basic_concepts.rst:170
+msgid "Some types of tools store the opacity property differently than others."
+msgstr ""
+
+#: ../../user_manual/getting_started/basic_concepts.rst:172
+msgid ""
+"All the paint tools share one opacity value, which is dependent on the brush "
+"preset. This allows you to alternate between the freehand brush, line tool, "
+"etc. without having to restore your brush settings with each switch. When "
+"changing brush presets, the opacity value of each one is saved when you "
+"return to it."
+msgstr ""
+
+#: ../../user_manual/getting_started/basic_concepts.rst:174
+msgid ""
+"The other tools have individual opacity values, which are not dependent on "
+"the brush preset. Each tool remembers its own opacity when you switch tools, "
+"and this value stays constant when you change presets."
+msgstr ""
+
+#: ../../user_manual/getting_started/basic_concepts.rst:177
 msgid "Brush Engines"
 msgstr "브러시 엔진"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:170
+#: ../../user_manual/getting_started/basic_concepts.rst:179
 msgid ""
 "Brush engines, as mentioned before, take a path and tablet information and "
 "add effects to it, making a stroke."
@@ -684,7 +708,7 @@ msgstr ""
 "브러시 엔진은 앞에서 말한 바와 같이 선이 지나는 경로와 태블릿의 정보를 취하"
 "여 스트로크를 만드는 역할을 합니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:172
+#: ../../user_manual/getting_started/basic_concepts.rst:181
 msgid ""
 "Engine is a term Krita developers use to describe a complex interacting set "
 "of code, that is the core for certain functionality and is highly "
@@ -699,7 +723,7 @@ msgstr ""
 "브러시의 모습과 느낌을 결정합니다. 따라서 브러시 엔진이 달라지면 결과 또한 달"
 "라집니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:174
+#: ../../user_manual/getting_started/basic_concepts.rst:183
 msgid ""
 "Krita has :ref:`a LOT of different brush engines <category_brush_engines>`, "
 "all with different effects."
@@ -707,13 +731,13 @@ msgstr ""
 "Krita에는 서로 다른 효과를 구현하는 :ref:`다양한 브러시 엔진"
 "<category_brush_engines>`\\ 이 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:179
+#: ../../user_manual/getting_started/basic_concepts.rst:188
 #, fuzzy
 #| msgid ".. image:: images/brushes/Krita_example_differentbrushengines.png"
 msgid ".. image:: /images/brushes/Krita_example_differentbrushengines.png"
 msgstr ".. image:: images/brushes/Krita_example_differentbrushengines.png"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:179
+#: ../../user_manual/getting_started/basic_concepts.rst:188
 msgid ""
 "**Left:** pixel brush, **Center:** color smudge brush, **Right:** sketch "
 "brush."
@@ -721,7 +745,7 @@ msgstr ""
 "**왼쪽:** 픽셀 브러시, **가운데:** 색상 번짐 브러시, **오른쪽:** 스케치 브러"
 "시."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:181
+#: ../../user_manual/getting_started/basic_concepts.rst:190
 msgid ""
 "For example, the pixel-brush engine is simple and allows you to do most of "
 "your basic work, but if you do a lot of painting, the color smudge brush "
@@ -734,7 +758,7 @@ msgstr ""
 "엔진보다 사용 속도가 느리지만 색상을 섞는 작업은 훨씬 빠르게 할 수 있기 때문"
 "입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:183
+#: ../../user_manual/getting_started/basic_concepts.rst:192
 msgid ""
 "If you want something totally different from that, the sketch brush engine "
 "helps with making messy lines, and the shape brush engine allows you to make "
@@ -746,7 +770,7 @@ msgstr ""
 "Krita의 브러시 엔진에는 멋진 효과가 아주 많으니, 모두 시험해 보고 브러시 엔진"
 "별 설명을 꼭 확인해 보십시오."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:185
+#: ../../user_manual/getting_started/basic_concepts.rst:194
 msgid ""
 "You can configure these effects via the Brush Settings drop-down, which can "
 "be quickly accessed via the :kbd:`F5` key. These configurations can then be "
@@ -757,15 +781,15 @@ msgstr ""
 "수 있습니다. 여기에서 저장된 구성은 :kbd:`F6` 키를 이용해 브러시 사전 설정 도"
 "커로 빠르게 접근할 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:187
+#: ../../user_manual/getting_started/basic_concepts.rst:196
 msgid "Brushes draw with colors, but how do computers understand colors?"
 msgstr "브러시는 색으로 그려지지만, 컴퓨터는 이 색들을 어떻게 이해할까요?"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:190
+#: ../../user_manual/getting_started/basic_concepts.rst:199
 msgid "Colors"
 msgstr "색상"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:192
+#: ../../user_manual/getting_started/basic_concepts.rst:201
 msgid ""
 "Humans can see a few million colors, which are combinations of "
 "electromagnetic waves (light) bouncing off a surface, where the surface "
@@ -774,13 +798,13 @@ msgstr ""
 "인간은 수백만 가지 색을 볼 수 있습니다. 색은 표면에서 반사되어 나오는 빛의 조"
 "합으로, 물체의 표면에서는 그 일부만을 흡수합니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:197
+#: ../../user_manual/getting_started/basic_concepts.rst:206
 #, fuzzy
 #| msgid ".. image:: images/Krita_basics_primaries.png"
 msgid ".. image:: /images/Krita_basics_primaries.png"
 msgstr ".. image:: images/Krita_basics_primaries.png"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:197
+#: ../../user_manual/getting_started/basic_concepts.rst:206
 #, fuzzy
 #| msgid ""
 #| "Subtractive CMY colors on the left and additive RGB colors on the right.  "
@@ -794,7 +818,7 @@ msgstr ""
 "왼쪽은 CMY 감산 혼합, 오른쪽은 RGB 가산 혼합입니다. 이 차이 때문에 프린터가 "
 "인쇄하기 전에 색을 변환해야 합니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:199
+#: ../../user_manual/getting_started/basic_concepts.rst:208
 msgid ""
 "When painting traditionally, we use pigments which also absorb the right "
 "light-waves for the color we want it to have, but the more pigments you "
@@ -811,7 +835,7 @@ msgstr ""
 "할 때 가장 효율적인 색상은 시안(Cyan), 마젠타(Magenta), 노랑(Yellow)의 세 가"
 "지 색상(CMY)입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:201
+#: ../../user_manual/getting_started/basic_concepts.rst:210
 msgid ""
 "A computer also uses three primaries and uses a specific amount of each "
 "primary in a color as the way it stores color. However, a computer is a "
@@ -826,7 +850,7 @@ msgstr ""
 "의 색상 혼합에 있어 가장 효율적인 색상이 빨강, 초록, 파랑(RGB)인 것도 이러한 "
 "이유입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:203
+#: ../../user_manual/getting_started/basic_concepts.rst:212
 msgid ""
 "Per pixel, a computer then stores the value of each of these primaries, with "
 "the maximum depending on the bit-depth. These are called the **components** "
@@ -836,13 +860,13 @@ msgstr ""
 "프로그램이나 문서에 따라서 **구성 요소**\\ 나 **채널**\\ 이라는 이름으로 불립"
 "니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:208
+#: ../../user_manual/getting_started/basic_concepts.rst:217
 #, fuzzy
 #| msgid ".. image:: images/Krita_basic_channel_rose.png"
 msgid ".. image:: /images/Krita_basic_channel_rose.png"
 msgstr ".. image:: images/Krita_basic_channel_rose.png"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:208
+#: ../../user_manual/getting_started/basic_concepts.rst:217
 msgid ""
 "This is the red-channel of an image of a red rose. As you can see, the "
 "petals are white here, indicating that those areas contain full red. The "
@@ -853,7 +877,7 @@ msgstr ""
 "데, 이 부위에 빨간색이 가득 들어 있음을 나타냅니다. 잎 부분은 훨씬 어두운데, "
 "녹색이기 때문에 빨간색이 들어 있지 않음을 나타냅니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:210
+#: ../../user_manual/getting_started/basic_concepts.rst:219
 msgid ""
 "Though by default computers use RGB, they can also convert to CMYK (the "
 "subtractive model), or a perceptual model like LAB. In all cases this is "
@@ -869,7 +893,7 @@ msgstr ""
 "지 만을 기억하면 되기 때문입니다. 따라서 그레이스케일은 메모리 측면에서 효율"
 "적입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:212
+#: ../../user_manual/getting_started/basic_concepts.rst:221
 msgid ""
 "In fact, if you look at each channel separately, they also look like "
 "grayscale images, but instead white just means how much Red, Green or Blue "
@@ -878,7 +902,7 @@ msgstr ""
 "실제로 각 채널을 따로 보면 그레이스케일 이미지로도 보이지만, 사실 흰색은 빨간"
 "색, 녹색, 파란색이 얼마나 있는지만을 나타낼 뿐입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:214
+#: ../../user_manual/getting_started/basic_concepts.rst:223
 msgid ""
 "Krita has a very complex color management system, which you can read more "
 "about :ref:`here <general_concept_color>`."
@@ -886,11 +910,11 @@ msgstr ""
 "Krita는 매우 복잡한 색 관리 시스템을 갖고 있습니다. 이에 관해서는 :ref:`이 문"
 "서<general_concept_color>`\\ 에서 더 자세히 읽을 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:217
+#: ../../user_manual/getting_started/basic_concepts.rst:226
 msgid "Transparency"
 msgstr "투명도"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:219
+#: ../../user_manual/getting_started/basic_concepts.rst:228
 msgid ""
 "Just like Red, Green and Blue, the computer can also store how transparent a "
 "pixel is. This is important for **compositing** as mentioned before. After "
@@ -901,7 +925,7 @@ msgstr ""
 "수 있습니다. 이는 앞에서 언급한 **합성**\\ 에 매우 중요합니다. 투명하지 않다"
 "면 여러 레이어를 갖는 것이 의미가 없기 때문입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:221
+#: ../../user_manual/getting_started/basic_concepts.rst:230
 msgid ""
 "Transparency is stored in the same way as colors, meaning that it's also a "
 "channel. We usually call this channel the **alpha channel** or **alpha** for "
@@ -913,7 +937,7 @@ msgstr ""
 "\\ 라고 부릅니다. 알파라고 불리는 이유는 프로그래밍에서 'α'라는 글자로 나타내"
 "기 때문입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:223
+#: ../../user_manual/getting_started/basic_concepts.rst:232
 msgid ""
 "Some older programs don't always have transparency by default. Krita is the "
 "opposite: it doesn't understand images that don't track transparency, and "
@@ -926,11 +950,11 @@ msgstr ""
 "픽셀이 모든 레이어에서 완전히 투명하다면 Krita는 위에 있는 장미 그림처럼 체커"
 "보드 패턴을 표시합니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:226
+#: ../../user_manual/getting_started/basic_concepts.rst:235
 msgid "Blending modes"
 msgstr "혼합 모드"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:228
+#: ../../user_manual/getting_started/basic_concepts.rst:237
 msgid ""
 "Because colors are stored as numbers you can do math with them. We call this "
 "**Blending Modes** or **Compositing Modes**."
@@ -938,7 +962,7 @@ msgstr ""
 "색은 숫자로 저장되기 때문에 색에 수학적인 계산을 할 수 있습니다. 이를 **혼합 "
 "모드** 또는 **합성 모드**\\ 라고 부릅니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:230
+#: ../../user_manual/getting_started/basic_concepts.rst:239
 msgid ""
 "Blending modes can be done per layer or per brush stroke, and thus are also "
 "part of the compositing of layers."
@@ -946,11 +970,11 @@ msgstr ""
 "혼합 모드는 레이어당, 또는 브러시 스트로크당 수행될 수 있습니다. 따라서 레이"
 "어 합성의 일부라고 할 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:233
+#: ../../user_manual/getting_started/basic_concepts.rst:242
 msgid "Multiply"
 msgstr "곱하기"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:233
+#: ../../user_manual/getting_started/basic_concepts.rst:242
 msgid ""
 "A commonly used blending mode is for example :menuselection:`Multiply` which "
 "multiplies the components, leading to darker colors. This allows you to "
@@ -960,11 +984,11 @@ msgstr ""
 "를 곱하여 어두운 색상으로 만들며, 이를 통해 감산 혼합을 시뮬레이션하여 그림자"
 "를 쉽게 그릴 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:235
+#: ../../user_manual/getting_started/basic_concepts.rst:244
 msgid "Addition"
 msgstr "더하기"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:236
+#: ../../user_manual/getting_started/basic_concepts.rst:245
 msgid ""
 "Another common one is :menuselection:`Addition`, which adds one layer's "
 "components to the other, making it perfect for special glow effects."
@@ -972,11 +996,11 @@ msgstr ""
 "또 다른 흔한 혼합 모드는 :menuselection:`더하기`\\ 입니다. 한 층의 구성 요소"
 "를 다른 층에 첨가하여 빛이 나는 효과를 내기에 제격입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:237
+#: ../../user_manual/getting_started/basic_concepts.rst:246
 msgid "Erasing"
 msgstr "지우기"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:238
+#: ../../user_manual/getting_started/basic_concepts.rst:247
 msgid ""
 ":menuselection:`Erasing` is a blending mode in Krita. There is no eraser "
 "tool, but you can toggle on the brush quickly with the :kbd:`E` key to "
@@ -989,11 +1013,11 @@ msgstr ""
 "습니다. 다른 혼합 모드와 달리 지우개는 알파 채널에만 영향을 주어 사물을 투명"
 "하게 만듭니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:240
+#: ../../user_manual/getting_started/basic_concepts.rst:249
 msgid "Normal"
 msgstr "평균"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:240
+#: ../../user_manual/getting_started/basic_concepts.rst:249
 msgid ""
 "The :menuselection:`Normal` blend mode just averages between colors "
 "depending on how transparent the topmost color is."
@@ -1001,7 +1025,7 @@ msgstr ""
 ":menuselection:`평균` 혼합 모드에서는 맨 위의 색상이 얼마나 투명한지에 따른 "
 "색상 간의 평균을 산출합니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:242
+#: ../../user_manual/getting_started/basic_concepts.rst:251
 msgid ""
 "Krita has 76 blending modes, each doing slightly different things. Head over "
 "to the :ref:`blending_modes` to learn more."
@@ -1009,7 +1033,7 @@ msgstr ""
 "Krita는 이외에도 서로 다른 혼합 모드가 총 76개 있습니다. 자세한 내용은 :ref:`"
 "혼합 모드<blending_modes>` 페이지를 참조하십시오."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:244
+#: ../../user_manual/getting_started/basic_concepts.rst:253
 msgid ""
 "Because we can see channels as grayscale images, we can convert grayscale "
 "images into channels. Like for example, we can use a grayscale image for the "
@@ -1019,7 +1043,7 @@ msgstr ""
 "채널로 변환할 수도 있습니다. 그레이스케일 이미지를 투명도로 사용하는 것이 그 "
 "예시이며, 이를 **마스크**\\ 라고 부릅니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:249
+#: ../../user_manual/getting_started/basic_concepts.rst:258
 msgid ""
 "Masks are a type of sub-effect applied to a layer, usually driven by a "
 "grayscale image."
@@ -1027,7 +1051,7 @@ msgstr ""
 "마스크는 레이어에 적용되는 하위 효과의 일종으로, 일반적으로 그레이스케일 이미"
 "지로 나타냅니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:251
+#: ../../user_manual/getting_started/basic_concepts.rst:260
 msgid ""
 "The primary types of mask are :ref:`transparency_masks`, which allow you to "
 "use a grayscale image to determine transparency, where black makes "
@@ -1037,7 +1061,7 @@ msgstr ""
 "는 :ref:`투명도 마스크<transparency_masks>`\\ 가 있습니다. 투명도 마스크에서 "
 "검은색은 모든 것을 투명하게, 흰색은 완전히 불투명하게 만듭니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:253
+#: ../../user_manual/getting_started/basic_concepts.rst:262
 msgid ""
 "You can paint on masks with any of the brushes, or convert a normal paint-"
 "layer to a mask. The big benefit of masks is that you can make things "
@@ -1049,11 +1073,11 @@ msgstr ""
 "을 투명하게 만들 수 있다는 점이며, 이를 이용해 전체 그룹 레이어를 한번에 드러"
 "내거나 숨길 수도 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:255
+#: ../../user_manual/getting_started/basic_concepts.rst:264
 msgid "For example, we have a white ghost lady here:"
 msgstr "예를 들어, 여기 새하얀 유령이 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:260
+#: ../../user_manual/getting_started/basic_concepts.rst:269
 msgid ""
 "But you can't really tell whether she's a ghost lady or just really really "
 "white. If only we could give the idea that she floats. We right-click the "
@@ -1065,14 +1089,14 @@ msgstr ""
 "투명도 마스크를 추가합니다. 이후 마스크를 선택하고 검은색과 흰색의 선형 그라"
 "데이션을 그려 검은색이 아래로 가도록 합니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:266
+#: ../../user_manual/getting_started/basic_concepts.rst:275
 msgid ""
 "Wherever the black is, there the lady now becomes transparent, turning her "
 "into a real ghost!"
 msgstr ""
 "검은색이 어디에 있든 간에, 이제 이 유령은 투명해져서 정말 귀신처럼 보입니다!"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:268
+#: ../../user_manual/getting_started/basic_concepts.rst:277
 msgid ""
 "The name mask comes from traditional masking fluid and film. You may recall "
 "the earlier comparison of selections to traditional masking fluid. "
@@ -1085,7 +1109,7 @@ msgstr ""
 "택 영역도 내부적으로는 그레이스케일 이미지로 저장되며 마스크의 일종인 로컬 선"
 "택 영역으로 저장하거나 투명도 마스크로 변환할 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:273
+#: ../../user_manual/getting_started/basic_concepts.rst:282
 msgid ""
 "We mentioned earlier that you can do math with colors. But you can also do "
 "math with pixels, or groups of pixels or whole layers. In fact, you can make "
@@ -1097,23 +1121,23 @@ msgstr ""
 "다. Krita에서는 여러 종류의 작은 계산을 여러 레이어에 걸쳐서도 할 수 있습니"
 "다. 이 작업을 **필터**\\ 라고 부릅니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:275
+#: ../../user_manual/getting_started/basic_concepts.rst:284
 msgid "Examples of such operations are:"
 msgstr "작업의 예시는 다음과 같습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:277
+#: ../../user_manual/getting_started/basic_concepts.rst:286
 msgid "Desaturate"
 msgstr "채도 감소"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:278
+#: ../../user_manual/getting_started/basic_concepts.rst:287
 msgid "This makes all the pixels turn gray."
 msgstr "모든 픽셀을 회색으로 만듭니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:279
+#: ../../user_manual/getting_started/basic_concepts.rst:288
 msgid "Blur"
 msgstr "흐림"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:280
+#: ../../user_manual/getting_started/basic_concepts.rst:289
 msgid ""
 "This averages the pixels with their neighbors, which removes sharp contrasts "
 "and makes the whole image look blurry."
@@ -1121,36 +1145,36 @@ msgstr ""
 "이웃한 픽셀의 평균치를 산출하여 날카로운 대비를 없애고 전체 이미지를 흐릿하"
 "게 보이게 합니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:281
+#: ../../user_manual/getting_started/basic_concepts.rst:290
 msgid "Sharpen"
 msgstr "선명하게"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:282
+#: ../../user_manual/getting_started/basic_concepts.rst:291
 msgid ""
 "This increases the contrast between pixels that had a pretty high contrast "
 "to begin with."
 msgstr "픽셀 간의 대비를 증가시킵니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:284
+#: ../../user_manual/getting_started/basic_concepts.rst:293
 msgid "Color to Alpha"
 msgstr "색상을 알파로"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:284
+#: ../../user_manual/getting_started/basic_concepts.rst:293
 msgid "A popular filter which makes all of the chosen color transparent."
 msgstr ""
 "선택한 모든 색을 투명하게 만드는 필터로, 자주 쓰이는 필터 중 하나입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:289
+#: ../../user_manual/getting_started/basic_concepts.rst:298
 #, fuzzy
 #| msgid ".. image:: images/Krita_basic_filter_brush.png"
 msgid ".. image:: /images/Krita_basic_filter_brush.png"
 msgstr ".. image:: images/Krita_basic_filter_brush.png"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:289
+#: ../../user_manual/getting_started/basic_concepts.rst:298
 msgid "Different filter brushes being used on different parts of the image."
 msgstr "이미지의 다른 부분에 각각 다른 필터 브러시를 사용한 예시입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:291
+#: ../../user_manual/getting_started/basic_concepts.rst:300
 msgid ""
 "Krita has many more filters available: you can read about them :ref:`here "
 "<filters>`."
@@ -1158,13 +1182,13 @@ msgstr ""
 "Krita에서 사용할 수 있는 필터에 대해 더 알아보려면 :ref:`이 문서<filters>`\\ "
 "를 참조하십시오."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:294
+#: ../../user_manual/getting_started/basic_concepts.rst:303
 #, fuzzy
 #| msgid "Brush Engines"
 msgid "Filter Brush Engine"
 msgstr "브러시 엔진"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:296
+#: ../../user_manual/getting_started/basic_concepts.rst:305
 msgid ""
 "Because many of these operations are per pixel, Krita allows you to use the "
 "filter as part of the :ref:`filter_brush_engine`."
@@ -1172,7 +1196,7 @@ msgstr ""
 "대부분의 작업은 픽셀 단위로 적용되기 때문에, Krita는 필터를 :ref:`필터 브러"
 "시 엔진<filter_brush_engine>`\\ 의 일부로 사용할 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:298
+#: ../../user_manual/getting_started/basic_concepts.rst:307
 msgid ""
 "In most image manipulation software, these are separate tools, but Krita has "
 "it as a brush engine, allowing much more customization than usual."
@@ -1180,18 +1204,18 @@ msgstr ""
 "대부분의 이미지 편집 소프트웨어에서 필터는 별도의 도구이지만, Krita는 브러시 "
 "엔진을 사용하기 때문에 다른 소프트웨어보다 더 많은 부분을 변경할 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:300
+#: ../../user_manual/getting_started/basic_concepts.rst:309
 msgid ""
 "This means you can make a brush that desaturates pixels, or a brush that "
 "changes the hue of the pixels underneath."
 msgstr ""
 "픽셀을 무채색으로 바꾸거나 색조를 바꾸는 브러시도 만들 수 있다는 의미입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:303
+#: ../../user_manual/getting_started/basic_concepts.rst:312
 msgid "Filter Layers, Filter Masks and Layer Styles"
 msgstr "필터 레이어, 필터 마스크, 레이어 스타일"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:305
+#: ../../user_manual/getting_started/basic_concepts.rst:314
 msgid ""
 "Krita also allows you to let the Filters be part of the layer stack, via :"
 "ref:`filter_layers` and :ref:`filter_masks`. Filter Layers affect all the "
@@ -1204,7 +1228,7 @@ msgstr ""
 "다. 투명도와 필터 레이어에 적용한 투명도 마스크는 레이어가 적용되는 위치에 영"
 "향을 미칩니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:307
+#: ../../user_manual/getting_started/basic_concepts.rst:316
 msgid ""
 "Masks, on the other hand, can affect one single layer and are driven by a "
 "grayscale image. They will also affect all layers in a group, much like a "
@@ -1214,7 +1238,7 @@ msgstr ""
 "그룹에 적용할 경우 투명도 마스크와 마찬가지로 그룹 내의 모든 레이어에 영향을 "
 "미칩니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:309
+#: ../../user_manual/getting_started/basic_concepts.rst:318
 msgid ""
 "We can use these filters to make our ghost lady look even more ethereal, by "
 "selecting the ghost lady's layer, and then creating a clone layer. We then "
@@ -1231,7 +1255,7 @@ msgstr ""
 "나는 것처럼 연출합니다. 원래 레이어에 계속 그림을 그릴 수 있으며, 계속 모든 "
 "것이 자동으로 업데이트됩니다!"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:314
+#: ../../user_manual/getting_started/basic_concepts.rst:323
 msgid ""
 "Layer Effects or Layer Styles are filter masks popularized by :program:"
 "`Photoshop's` that are a little faster than regular masks, but not as "
@@ -1242,11 +1266,11 @@ msgstr ""
 "program:`Photoshop`\\ 에서 널리 사용되는 필터 마스크입니다. 레이어를 마우스 "
 "오른쪽 단추로 클릭한 후 '레이어 스타일'을 선택하여 사용합니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:317
+#: ../../user_manual/getting_started/basic_concepts.rst:326
 msgid "Transformations"
 msgstr "변환"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:319
+#: ../../user_manual/getting_started/basic_concepts.rst:328
 msgid ""
 "**Transformations** are kind of like filters, in that these are operations "
 "done on the pixels of an image. We have a regular image and layer wide "
@@ -1257,7 +1281,7 @@ msgstr ""
 "다. 일반적인 이미지와 레이어 단위 변환은 이미지와 레이어 최상위 메뉴에 있으"
 "며, 전체 이미지의 크기를 조정하거나 회전하고 뒤집을 수도 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:321
+#: ../../user_manual/getting_started/basic_concepts.rst:330
 msgid ""
 "We also have the :ref:`crop_tool`, which only affects the canvas size, and "
 "the :ref:`move_tool` which only moves a given layer. However, if you want "
@@ -1267,7 +1291,7 @@ msgstr ""
 "어만 이동하는 :ref:`이동 도구<move_tool>`\\ 도 있습니다. 이 이상의 변환이 필"
 "요한 경우 :ref:`변형 도구<transform_tool>`\\ 를 사용하십시오."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:327
+#: ../../user_manual/getting_started/basic_concepts.rst:336
 msgid ""
 "With this tool you can rotate and resize on the canvas, or put it in "
 "perspective. Or you can use advanced transform tools, like the warp, cage "
@@ -1279,13 +1303,13 @@ msgstr ""
 "다. 해당 도구를 사용하면 사용자 지정 포인트를 그리거나 변형 브러시처럼 자유로"
 "운 변환을 할 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:330
+#: ../../user_manual/getting_started/basic_concepts.rst:339
 #, fuzzy
 #| msgid "Brush Engines"
 msgid "Deform Brush Engine"
 msgstr "브러시 엔진"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:332
+#: ../../user_manual/getting_started/basic_concepts.rst:341
 #, fuzzy
 #| msgid ""
 #| "Like the filter brush engine, Krita also has a Deform Brush Engine, which "
@@ -1301,13 +1325,13 @@ msgstr ""
 "필터 브러시 엔진과 마찬가지로 Krita에도 왜곡 브러시 엔진이 있습니다. 왜곡 브"
 "러시는 유동화 변형 도구 모드의 빠른 버전 같지만, 결과 품질은 훨씬 낮습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:337
+#: ../../user_manual/getting_started/basic_concepts.rst:346
 #, fuzzy
 #| msgid ".. image:: images/tools/Krita_transforms_deformvsliquefy.png"
 msgid ".. image:: /images/tools/Krita_transforms_deformvsliquefy.png"
 msgstr ".. image:: images/tools/Krita_transforms_deformvsliquefy.png"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:337
+#: ../../user_manual/getting_started/basic_concepts.rst:346
 #, fuzzy
 #| msgid ""
 #| "Apple transformed into a pear with liquify on the left and deform brush "
@@ -1318,18 +1342,18 @@ msgid ""
 msgstr ""
 "왼쪽의 사과는 유동화 변환 도구를, 오른쪽의 배는 왜곡 브러시를 사용했습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:339
+#: ../../user_manual/getting_started/basic_concepts.rst:348
 msgid ""
 "Furthermore, you can't apply the deform brush as a non-destructive mask."
 msgstr "또한 왜곡 브러시는 비파괴 마스크에는 적용할 수 없습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:342
+#: ../../user_manual/getting_started/basic_concepts.rst:351
 #, fuzzy
 #| msgid "Transform"
 msgid "Transform Masks"
 msgstr "변형"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:344
+#: ../../user_manual/getting_started/basic_concepts.rst:353
 #, fuzzy
 #| msgid ""
 #| "Like filters, transforms can be applied as a non-destructive operation "
@@ -1349,13 +1373,13 @@ msgstr ""
 "레이스케일 이미지가 될 수 없습니다. 변형 마스크를 사용해 복제 및 파일 레이어"
 "를 변형하는 것은 가능합니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:347
+#: ../../user_manual/getting_started/basic_concepts.rst:356
 #, fuzzy
 #| msgid "Addition"
 msgid "Animation"
 msgstr "더하기"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:352
+#: ../../user_manual/getting_started/basic_concepts.rst:361
 #, fuzzy
 #| msgid ""
 #| "From version 3.0 onwards, Krita got raster animation support. You can use "
@@ -1372,11 +1396,11 @@ msgstr ""
 "임라인, 애니메이션, 어니언 스킨 도커 외에도 Krita의 다양한 브러시를 사용하여 "
 "래스터 기반 애니메이션을 만든 후 영화나 GIF로 만들 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:355
+#: ../../user_manual/getting_started/basic_concepts.rst:364
 msgid "Assistants, Grids and Guides"
 msgstr "도우미, 격자, 안내선"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:357
+#: ../../user_manual/getting_started/basic_concepts.rst:366
 msgid ""
 "With all this technical stuff, you might forget that Krita is a painting "
 "program. Like how when working with traditional medium, as an illustrator, "
@@ -1387,21 +1411,21 @@ msgstr ""
 "지도 모릅니다. Krita는 일러스트레이터가 전통적인 방식으로 작업할 때처럼 그리"
 "기를 쉽게 도와 주는 다양한 기능을 제공합니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:362
+#: ../../user_manual/getting_started/basic_concepts.rst:371
 #, fuzzy
 #| msgid ".. image:: images/assistants/Krita_basic_assistants.png"
 msgid ".. image:: /images/assistants/Krita_basic_assistants.png"
 msgstr ".. image:: images/assistants/Krita_basic_assistants.png"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:362
+#: ../../user_manual/getting_started/basic_concepts.rst:371
 msgid "Krita's vanishing point assistants in action."
 msgstr "Krita의 소실점 도우미 사용 예시입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:364
+#: ../../user_manual/getting_started/basic_concepts.rst:373
 msgid ":ref:`grids_and_guides_docker`"
 msgstr ":ref:`격자와 안내선 도커<grids_and_guides_docker>`"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:365
+#: ../../user_manual/getting_started/basic_concepts.rst:374
 msgid ""
 "A very straightforward guiding tool which shows grids or guiding lines that "
 "can be configured."
@@ -1409,11 +1433,11 @@ msgstr ""
 "캔버스 위에 격자 또는 안내선을 보여 주는 설정할 수 있는 매우 간단한 안내 도구"
 "입니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:366
+#: ../../user_manual/getting_started/basic_concepts.rst:375
 msgid ":ref:`snapping`"
 msgstr ":ref:`스냅<snapping>`"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:367
+#: ../../user_manual/getting_started/basic_concepts.rst:376
 msgid ""
 "You can snap to all sorts of things. Grids, guides, extensions, orthogonals, "
 "image centers and bounding boxes."
@@ -1421,11 +1445,11 @@ msgstr ""
 "격자, 안내선, 확장, 직교, 이미지의 중심과 경계선 등 모든 종류의 물체에 스냅 "
 "기능을 사용할 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:369
+#: ../../user_manual/getting_started/basic_concepts.rst:378
 msgid ":ref:`painting_with_assistants`"
 msgstr ":ref:`도우미를 이용해 그림 그리기<painting_with_assistants>`"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:369
+#: ../../user_manual/getting_started/basic_concepts.rst:378
 msgid ""
 "Because you can hardly put a ruler against your tablet to help you draw, the "
 "assistants are there to help you draw concentric circles, perspectives, "
@@ -1437,7 +1461,7 @@ msgstr ""
 "는 기능입니다. Krita를 사용하면 도구 옵션을 통해 이러한 옵션에도 스냅 기능을 "
 "사용할 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:371
+#: ../../user_manual/getting_started/basic_concepts.rst:380
 msgid ""
 "These guides are saved into Krita's native format, which means you can pick "
 "up your work easily afterward."
@@ -1445,15 +1469,15 @@ msgstr ""
 "안내선은 Krita의 네이티브 형식으로 저장되므로, 나중에 쉽게 작업을 다시 시작"
 "할 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:374
+#: ../../user_manual/getting_started/basic_concepts.rst:383
 msgid "Customization"
 msgstr "사용자 설정"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:376
+#: ../../user_manual/getting_started/basic_concepts.rst:385
 msgid "This leads to the final concept: customization."
 msgstr "최종 개념인 사용자 설정으로 이어집니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:378
+#: ../../user_manual/getting_started/basic_concepts.rst:387
 msgid ""
 "In addition to rearranging the dockers according to your preferences, Krita "
 "provides and saves your configurations as :ref:`resource_workspaces`. This "
@@ -1463,7 +1487,7 @@ msgstr ""
 "커를 재배열하고 구성을 저장할 수 있습니다. 오른쪽 상단에 있는 단추를 통해 접"
 "근할 수 있습니다."
 
-#: ../../user_manual/getting_started/basic_concepts.rst:380
+#: ../../user_manual/getting_started/basic_concepts.rst:389
 msgid ""
 "You can also configure the toolbar via :menuselection:`Settings --> "
 "Configure Toolbars...`, as well as the shortcuts under both :menuselection:"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2022-06-11 14:14-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -95,12 +95,12 @@ msgid "Tools"
 msgstr "ツール"
 
 #: ../../user_manual/getting_started/basic_concepts.rst:16
-#: ../../user_manual/getting_started/basic_concepts.rst:247
+#: ../../user_manual/getting_started/basic_concepts.rst:256
 msgid "Masks"
 msgstr "マスク"
 
 #: ../../user_manual/getting_started/basic_concepts.rst:16
-#: ../../user_manual/getting_started/basic_concepts.rst:271
+#: ../../user_manual/getting_started/basic_concepts.rst:280
 msgid "Filters"
 msgstr "フィルタ"
 
@@ -667,10 +667,34 @@ msgstr ""
 "情報はマニュアルの :ref:`tools <cat_tools>` で見つけられます。"
 
 #: ../../user_manual/getting_started/basic_concepts.rst:168
+msgid "Preset and Tool Opacity"
+msgstr ""
+
+#: ../../user_manual/getting_started/basic_concepts.rst:170
+msgid "Some types of tools store the opacity property differently than others."
+msgstr ""
+
+#: ../../user_manual/getting_started/basic_concepts.rst:172
+msgid ""
+"All the paint tools share one opacity value, which is dependent on the brush "
+"preset. This allows you to alternate between the freehand brush, line tool, "
+"etc. without having to restore your brush settings with each switch. When "
+"changing brush presets, the opacity value of each one is saved when you "
+"return to it."
+msgstr ""
+
+#: ../../user_manual/getting_started/basic_concepts.rst:174
+msgid ""
+"The other tools have individual opacity values, which are not dependent on "
+"the brush preset. Each tool remembers its own opacity when you switch tools, "
+"and this value stays constant when you change presets."
+msgstr ""
+
+#: ../../user_manual/getting_started/basic_concepts.rst:177
 msgid "Brush Engines"
 msgstr "ブラシエンジン"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:170
+#: ../../user_manual/getting_started/basic_concepts.rst:179
 msgid ""
 "Brush engines, as mentioned before, take a path and tablet information and "
 "add effects to it, making a stroke."
@@ -678,7 +702,7 @@ msgstr ""
 "ブラシエンジンは、上でも述べた通り、線やタブレット情報にエフェクトを追加し描"
 "画します。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:172
+#: ../../user_manual/getting_started/basic_concepts.rst:181
 msgid ""
 "Engine is a term Krita developers use to describe a complex interacting set "
 "of code, that is the core for certain functionality and is highly "
@@ -693,7 +717,7 @@ msgstr ""
 "し、ブラシエンジンが模様や感触に影響し、違うブラシエンジンは違う結果になると"
 "いうことです。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:174
+#: ../../user_manual/getting_started/basic_concepts.rst:183
 msgid ""
 "Krita has :ref:`a LOT of different brush engines <category_brush_engines>`, "
 "all with different effects."
@@ -701,20 +725,20 @@ msgstr ""
 "Krita には :ref:`多くの異なるブラシエンジンが存在し "
 "<category_brush_engines>`、すべてが違う効果を持っています。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:179
+#: ../../user_manual/getting_started/basic_concepts.rst:188
 #, fuzzy
 #| msgid ".. image:: images/brushes/Krita_example_differentbrushengines.png"
 msgid ".. image:: /images/brushes/Krita_example_differentbrushengines.png"
 msgstr ".. image:: images/brushes/Krita_example_differentbrushengines.png"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:179
+#: ../../user_manual/getting_started/basic_concepts.rst:188
 msgid ""
 "**Left:** pixel brush, **Center:** color smudge brush, **Right:** sketch "
 "brush."
 msgstr ""
 "**左:** ピクセルブラシ、**中央:** 色ぼかしブラシ、**右:** スケッチブラシ。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:181
+#: ../../user_manual/getting_started/basic_concepts.rst:190
 msgid ""
 "For example, the pixel-brush engine is simple and allows you to do most of "
 "your basic work, but if you do a lot of painting, the color smudge brush "
@@ -727,7 +751,7 @@ msgstr ""
 "り遅いといっても、色の混ぜ合わせは色の調製混合を必要とする作業を効率的にして"
 "くれます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:183
+#: ../../user_manual/getting_started/basic_concepts.rst:192
 msgid ""
 "If you want something totally different from that, the sketch brush engine "
 "helps with making messy lines, and the shape brush engine allows you to make "
@@ -739,7 +763,7 @@ msgstr ""
 "エンジンの中にもクールな効果がたくさんあり、全部使ってみて、それぞれの章も確"
 "認してみてください。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:185
+#: ../../user_manual/getting_started/basic_concepts.rst:194
 msgid ""
 "You can configure these effects via the Brush Settings drop-down, which can "
 "be quickly accessed via the :kbd:`F5` key. These configurations can then be "
@@ -750,16 +774,16 @@ msgstr ""
 "らでもすぐにアクセスできます。設定はプリセット内に保存でき、:kbd:`F6` キーか"
 "ブラシプリセットドッカーからすぐにアクセスできます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:187
+#: ../../user_manual/getting_started/basic_concepts.rst:196
 msgid "Brushes draw with colors, but how do computers understand colors?"
 msgstr ""
 "ブラシは色を描写しますが、コンピュータはどのように色を理解するのでしょうか？"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:190
+#: ../../user_manual/getting_started/basic_concepts.rst:199
 msgid "Colors"
 msgstr "色"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:192
+#: ../../user_manual/getting_started/basic_concepts.rst:201
 msgid ""
 "Humans can see a few million colors, which are combinations of "
 "electromagnetic waves (light) bouncing off a surface, where the surface "
@@ -768,13 +792,13 @@ msgstr ""
 "人間は数百万色を見ることができ、それは表面に吸収された分を除く、反射された電"
 "磁波(光)の組み合わせです。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:197
+#: ../../user_manual/getting_started/basic_concepts.rst:206
 #, fuzzy
 #| msgid ".. image:: images/Krita_basics_primaries.png"
 msgid ".. image:: /images/Krita_basics_primaries.png"
 msgstr ".. image:: images/Krita_basics_primaries.png"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:197
+#: ../../user_manual/getting_started/basic_concepts.rst:206
 msgid ""
 "Subtractive CMY colors on the left and additive RGB colors on the right. "
 "This difference means that printers benefit from color conversion before "
@@ -783,7 +807,7 @@ msgstr ""
 "左は減法混色 CMY、右は加法混色 RGB です。印刷前にこの違いを考慮して色変換しま"
 "す。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:199
+#: ../../user_manual/getting_started/basic_concepts.rst:208
 msgid ""
 "When painting traditionally, we use pigments which also absorb the right "
 "light-waves for the color we want it to have, but the more pigments you "
@@ -799,7 +823,7 @@ msgstr ""
 "ど光を減じていきます。これにより、伝統的な塗りでは、最も効率的な色には3つあ"
 "り: シアンブルーとマゼンタレッドとイエロー(CMY)です。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:201
+#: ../../user_manual/getting_started/basic_concepts.rst:210
 msgid ""
 "A computer also uses three primaries and uses a specific amount of each "
 "primary in a color as the way it stores color. However, a computer is a "
@@ -813,7 +837,7 @@ msgstr ""
 "混色** する必要があり、色を合わせれば合わせるほど白になっていきます。これによ"
 "りコンピュータで使われる最も効率的な3つの原色は、赤、緑、青(RGB)です。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:203
+#: ../../user_manual/getting_started/basic_concepts.rst:212
 msgid ""
 "Per pixel, a computer then stores the value of each of these primaries, with "
 "the maximum depending on the bit-depth. These are called the **components** "
@@ -823,13 +847,13 @@ msgstr ""
 "緒に保存します。これらは話し手により **コンポーネント** や **チャンネル** と"
 "呼ばれます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:208
+#: ../../user_manual/getting_started/basic_concepts.rst:217
 #, fuzzy
 #| msgid ".. image:: images/Krita_basic_channel_rose.png"
 msgid ".. image:: /images/Krita_basic_channel_rose.png"
 msgstr ".. image:: images/Krita_basic_channel_rose.png"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:208
+#: ../../user_manual/getting_started/basic_concepts.rst:217
 msgid ""
 "This is the red-channel of an image of a red rose. As you can see, the "
 "petals are white here, indicating that those areas contain full red. The "
@@ -840,7 +864,7 @@ msgstr ""
 "部分が完全な赤であることを示しています。葉はより暗く、赤が足りないことを示し"
 "ており、ご想像のとおり緑色であるためです。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:210
+#: ../../user_manual/getting_started/basic_concepts.rst:219
 msgid ""
 "Though by default computers use RGB, they can also convert to CMYK (the "
 "subtractive model), or a perceptual model like LAB. In all cases this is "
@@ -855,7 +879,7 @@ msgstr ""
 "レースケールで、コンピュータはどれだけ色が白いかだけを記録すればよいためで"
 "す。グレースケールがメモリをより効率的に利用する理由でもあります。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:212
+#: ../../user_manual/getting_started/basic_concepts.rst:221
 msgid ""
 "In fact, if you look at each channel separately, they also look like "
 "grayscale images, but instead white just means how much Red, Green or Blue "
@@ -864,7 +888,7 @@ msgstr ""
 "実際、それぞれのチャンネルを分けて見ると、グレースケール画像のように見え、代"
 "わりに白がどれだけ赤であるかを表しており、緑や青も同様です。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:214
+#: ../../user_manual/getting_started/basic_concepts.rst:223
 msgid ""
 "Krita has a very complex color management system, which you can read more "
 "about :ref:`here <general_concept_color>`."
@@ -872,11 +896,11 @@ msgstr ""
 "Krita はとても複雑な色管理システムを持っており、:ref:`ここ"
 "<general_concept_color>` で詳しい情報が読めます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:217
+#: ../../user_manual/getting_started/basic_concepts.rst:226
 msgid "Transparency"
 msgstr "透過"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:219
+#: ../../user_manual/getting_started/basic_concepts.rst:228
 msgid ""
 "Just like Red, Green and Blue, the computer can also store how transparent a "
 "pixel is. This is important for **compositing** as mentioned before. After "
@@ -887,7 +911,7 @@ msgstr ""
 "できます。これは先にも述べた通り **合成** するのに重要です。結局、透過がなけ"
 "ればレイヤーをいくつも持つ意味はありません。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:221
+#: ../../user_manual/getting_started/basic_concepts.rst:230
 msgid ""
 "Transparency is stored in the same way as colors, meaning that it's also a "
 "channel. We usually call this channel the **alpha channel** or **alpha** for "
@@ -899,7 +923,7 @@ msgstr ""
 "す。この呼び方の背景にはプログラミングの世界で'α'文字がそれを意味したことに由"
 "来します。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:223
+#: ../../user_manual/getting_started/basic_concepts.rst:232
 msgid ""
 "Some older programs don't always have transparency by default. Krita is the "
 "opposite: it doesn't understand images that don't track transparency, and "
@@ -912,11 +936,11 @@ msgstr ""
 "定ピクセルがすべてのレイヤーで完全に透明であれば、Krita は上のバラの画像のよ"
 "うに代わりにチェッカーボード柄を表示します。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:226
+#: ../../user_manual/getting_started/basic_concepts.rst:235
 msgid "Blending modes"
 msgstr "合成モード"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:228
+#: ../../user_manual/getting_started/basic_concepts.rst:237
 msgid ""
 "Because colors are stored as numbers you can do math with them. We call this "
 "**Blending Modes** or **Compositing Modes**."
@@ -924,7 +948,7 @@ msgstr ""
 "色は数字で記録されているため計算ができます。これを **合成モード** などと呼び"
 "ます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:230
+#: ../../user_manual/getting_started/basic_concepts.rst:239
 msgid ""
 "Blending modes can be done per layer or per brush stroke, and thus are also "
 "part of the compositing of layers."
@@ -932,11 +956,11 @@ msgstr ""
 "合成モードはレイヤーごとにでもブラシストロークごとにでも適用でき、それゆえに"
 "またレイヤー合成の一部でもあります。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:233
+#: ../../user_manual/getting_started/basic_concepts.rst:242
 msgid "Multiply"
 msgstr "乗算"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:233
+#: ../../user_manual/getting_started/basic_concepts.rst:242
 msgid ""
 "A commonly used blending mode is for example :menuselection:`Multiply` which "
 "multiplies the components, leading to darker colors. This allows you to "
@@ -946,11 +970,11 @@ msgstr ""
 "い色になります。これは減法混色を擬似的に再現でき、絵で使われる陰影をより簡単"
 "に作り出すことができます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:235
+#: ../../user_manual/getting_started/basic_concepts.rst:244
 msgid "Addition"
 msgstr "加算"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:236
+#: ../../user_manual/getting_started/basic_concepts.rst:245
 msgid ""
 "Another common one is :menuselection:`Addition`, which adds one layer's "
 "components to the other, making it perfect for special glow effects."
@@ -958,11 +982,11 @@ msgstr ""
 "もう一つよく使われるのは :menuselection:`加算` で、レイヤー片方の成分をもう一"
 "つに加算し、輝くような効果に最適です。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:237
+#: ../../user_manual/getting_started/basic_concepts.rst:246
 msgid "Erasing"
 msgstr "消しゴム"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:238
+#: ../../user_manual/getting_started/basic_concepts.rst:247
 msgid ""
 ":menuselection:`Erasing` is a blending mode in Krita. There is no eraser "
 "tool, but you can toggle on the brush quickly with the :kbd:`E` key to "
@@ -975,11 +999,11 @@ msgstr ""
 "イヤーにも使用できます。他の合成モードと違い、これはアルファチャンネルにのみ"
 "影響し、より透明にすることができます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:240
+#: ../../user_manual/getting_started/basic_concepts.rst:249
 msgid "Normal"
 msgstr "通常"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:240
+#: ../../user_manual/getting_started/basic_concepts.rst:249
 msgid ""
 "The :menuselection:`Normal` blend mode just averages between colors "
 "depending on how transparent the topmost color is."
@@ -987,7 +1011,7 @@ msgstr ""
 ":menuselection:`通常` 合成モードは一番上の色がどれだけ透明かにより、色の平均"
 "をとるだけです。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:242
+#: ../../user_manual/getting_started/basic_concepts.rst:251
 msgid ""
 "Krita has 76 blending modes, each doing slightly different things. Head over "
 "to the :ref:`blending_modes` to learn more."
@@ -995,7 +1019,7 @@ msgstr ""
 "Krita には76の合成モードがあり、それぞれが少しずつ違ったことをします。より詳"
 "しく学ぶには :ref:`blending_modes` へ行ってください。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:244
+#: ../../user_manual/getting_started/basic_concepts.rst:253
 msgid ""
 "Because we can see channels as grayscale images, we can convert grayscale "
 "images into channels. Like for example, we can use a grayscale image for the "
@@ -1005,7 +1029,7 @@ msgstr ""
 "ルに変換することができます。例えば、グレイスケール画像を透過として使うことが"
 "できます。これらを **マスク** と呼びます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:249
+#: ../../user_manual/getting_started/basic_concepts.rst:258
 msgid ""
 "Masks are a type of sub-effect applied to a layer, usually driven by a "
 "grayscale image."
@@ -1013,7 +1037,7 @@ msgstr ""
 "マスクはレイヤーに適用される効果の一つで、たいていはグレースケール画像によっ"
 "て行われます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:251
+#: ../../user_manual/getting_started/basic_concepts.rst:260
 msgid ""
 "The primary types of mask are :ref:`transparency_masks`, which allow you to "
 "use a grayscale image to determine transparency, where black makes "
@@ -1023,7 +1047,7 @@ msgstr ""
 "透過を決めることができ、黒ければすべて透明に、白ならピクセルを完全に不透明に"
 "します。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:253
+#: ../../user_manual/getting_started/basic_concepts.rst:262
 msgid ""
 "You can paint on masks with any of the brushes, or convert a normal paint-"
 "layer to a mask. The big benefit of masks is that you can make things "
@@ -1035,11 +1059,11 @@ msgstr ""
 "明にできることです。さらにマスクを使って一度にたくさんのレイヤーを隠したり表"
 "示できます！"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:255
+#: ../../user_manual/getting_started/basic_concepts.rst:264
 msgid "For example, we have a white ghost lady here:"
 msgstr "例えば、ここに白いお化けの少女がいます:"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:260
+#: ../../user_manual/getting_started/basic_concepts.rst:269
 msgid ""
 "But you can't really tell whether she's a ghost lady or just really really "
 "white. If only we could give the idea that she floats. We right-click the "
@@ -1051,13 +1075,13 @@ msgstr ""
 "して透過マスクを追加します。それから、そのマスクを選択し黒を下にするように黒"
 "白のグラデーションを描きます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:266
+#: ../../user_manual/getting_started/basic_concepts.rst:275
 msgid ""
 "Wherever the black is, there the lady now becomes transparent, turning her "
 "into a real ghost!"
 msgstr "黒がどこであれ、少女が透明になり、本物のお化けになりました！"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:268
+#: ../../user_manual/getting_started/basic_concepts.rst:277
 msgid ""
 "The name mask comes from traditional masking fluid and film. You may recall "
 "the earlier comparison of selections to traditional masking fluid. "
@@ -1070,7 +1094,7 @@ msgstr ""
 "録され、マスクのようなローカル選択として保存したり、透過マスクに変換すること"
 "ができます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:273
+#: ../../user_manual/getting_started/basic_concepts.rst:282
 msgid ""
 "We mentioned earlier that you can do math with colors. But you can also do "
 "math with pixels, or groups of pixels or whole layers. In fact, you can make "
@@ -1081,23 +1105,23 @@ msgstr ""
 "まりやレイヤーに対しても同じことができます。実際、Krita にレイヤーに対してそ"
 "う言った作業を行わせることができ、これを **フィルタ** と呼んでいます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:275
+#: ../../user_manual/getting_started/basic_concepts.rst:284
 msgid "Examples of such operations are:"
 msgstr "そのような作業の例:"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:277
+#: ../../user_manual/getting_started/basic_concepts.rst:286
 msgid "Desaturate"
 msgstr "脱色"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:278
+#: ../../user_manual/getting_started/basic_concepts.rst:287
 msgid "This makes all the pixels turn gray."
 msgstr "すべてのピクセルをグレーにします。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:279
+#: ../../user_manual/getting_started/basic_concepts.rst:288
 msgid "Blur"
 msgstr "ブラー"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:280
+#: ../../user_manual/getting_started/basic_concepts.rst:289
 msgid ""
 "This averages the pixels with their neighbors, which removes sharp contrasts "
 "and makes the whole image look blurry."
@@ -1105,35 +1129,35 @@ msgstr ""
 "近隣のピクセルで平均を取り、コントラストのシャープさを失わせ画像全体をぼかし"
 "ます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:281
+#: ../../user_manual/getting_started/basic_concepts.rst:290
 msgid "Sharpen"
 msgstr "シャープ化"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:282
+#: ../../user_manual/getting_started/basic_concepts.rst:291
 msgid ""
 "This increases the contrast between pixels that had a pretty high contrast "
 "to begin with."
 msgstr "既にあるピクセル間の差をさらに高めます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:284
+#: ../../user_manual/getting_started/basic_concepts.rst:293
 msgid "Color to Alpha"
 msgstr "色をアルファに"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:284
+#: ../../user_manual/getting_started/basic_concepts.rst:293
 msgid "A popular filter which makes all of the chosen color transparent."
 msgstr "選んだ色のすべてを透明にするよく使われるフィルタです。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:289
+#: ../../user_manual/getting_started/basic_concepts.rst:298
 #, fuzzy
 #| msgid ".. image:: images/Krita_basic_filter_brush.png"
 msgid ".. image:: /images/Krita_basic_filter_brush.png"
 msgstr ".. image:: images/Krita_basic_filter_brush.png"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:289
+#: ../../user_manual/getting_started/basic_concepts.rst:298
 msgid "Different filter brushes being used on different parts of the image."
 msgstr "それぞれのパーツに異なるフィルタブラシを使った画像"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:291
+#: ../../user_manual/getting_started/basic_concepts.rst:300
 msgid ""
 "Krita has many more filters available: you can read about them :ref:`here "
 "<filters>`."
@@ -1141,11 +1165,11 @@ msgstr ""
 "Krita は他にも多くのフィルタが利用できます: それらについては :ref:`ここ "
 "<filters>` を読んでください。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:294
+#: ../../user_manual/getting_started/basic_concepts.rst:303
 msgid "Filter Brush Engine"
 msgstr "ブラシエンジン"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:296
+#: ../../user_manual/getting_started/basic_concepts.rst:305
 msgid ""
 "Because many of these operations are per pixel, Krita allows you to use the "
 "filter as part of the :ref:`filter_brush_engine`."
@@ -1153,7 +1177,7 @@ msgstr ""
 "多くがピクセルごとに適用するのに対し、Krita はフィルタを :ref:"
 "`filter_brush_engine` の一部として使うことができます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:298
+#: ../../user_manual/getting_started/basic_concepts.rst:307
 msgid ""
 "In most image manipulation software, these are separate tools, but Krita has "
 "it as a brush engine, allowing much more customization than usual."
@@ -1162,18 +1186,18 @@ msgstr ""
 "ブラシエンジンとして持っているため通常よりも幅広いカスタマイズが可能になって"
 "います。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:300
+#: ../../user_manual/getting_started/basic_concepts.rst:309
 msgid ""
 "This means you can make a brush that desaturates pixels, or a brush that "
 "changes the hue of the pixels underneath."
 msgstr ""
 "つまりピクセルの色を抜くブラシや、色相を変えるブラシを作ることができます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:303
+#: ../../user_manual/getting_started/basic_concepts.rst:312
 msgid "Filter Layers, Filter Masks and Layer Styles"
 msgstr "フィルタレイヤー、フィルタマスクとレイヤースタイル"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:305
+#: ../../user_manual/getting_started/basic_concepts.rst:314
 msgid ""
 "Krita also allows you to let the Filters be part of the layer stack, via :"
 "ref:`filter_layers` and :ref:`filter_masks`. Filter Layers affect all the "
@@ -1185,7 +1209,7 @@ msgstr ""
 "のレイヤーに適用されます。フィルタレイヤーの透過と透過マスクはレイヤーのどこ"
 "に適用されるかに影響します。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:307
+#: ../../user_manual/getting_started/basic_concepts.rst:316
 msgid ""
 "Masks, on the other hand, can affect one single layer and are driven by a "
 "grayscale image. They will also affect all layers in a group, much like a "
@@ -1194,7 +1218,7 @@ msgstr ""
 "一方マスクはグレースケール画像により単一のレイヤーにのみ影響します。また透過"
 "マスクのようにグループになっているレイヤーすべてに影響します。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:309
+#: ../../user_manual/getting_started/basic_concepts.rst:318
 msgid ""
 "We can use these filters to make our ghost lady look even more ethereal, by "
 "selecting the ghost lady's layer, and then creating a clone layer. We then "
@@ -1210,7 +1234,7 @@ msgstr ""
 "し、合成モードを '**覆い焼き**' に設定すれば、不気味な光を放つようになりま"
 "す。元のレイヤーは残したままで、変更されたすべてのものは自動更新されます!"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:314
+#: ../../user_manual/getting_started/basic_concepts.rst:323
 msgid ""
 "Layer Effects or Layer Styles are filter masks popularized by :program:"
 "`Photoshop's` that are a little faster than regular masks, but not as "
@@ -1221,11 +1245,11 @@ msgstr ""
 "フィルタで、普通のマスクよりそこまで多用途ではないですが、少し早いです。レイ"
 "ヤーを右クリックして'レイヤースタイル'を選択することで利用できます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:317
+#: ../../user_manual/getting_started/basic_concepts.rst:326
 msgid "Transformations"
 msgstr "変形"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:319
+#: ../../user_manual/getting_started/basic_concepts.rst:328
 msgid ""
 "**Transformations** are kind of like filters, in that these are operations "
 "done on the pixels of an image. We have a regular image and layer wide "
@@ -1236,7 +1260,7 @@ msgstr ""
 "や、レイヤートップメニューにあるレイヤーレベルの変形ツールがあり、画像の拡大"
 "縮小、反転や回転をすることができます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:321
+#: ../../user_manual/getting_started/basic_concepts.rst:330
 msgid ""
 "We also have the :ref:`crop_tool`, which only affects the canvas size, and "
 "the :ref:`move_tool` which only moves a given layer. However, if you want "
@@ -1246,7 +1270,7 @@ msgstr ""
 "す :ref:`move_tool` もあります。しかし、より詳しい制御が必要であれば Krita に"
 "は :ref:`transform_tool` があります。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:327
+#: ../../user_manual/getting_started/basic_concepts.rst:336
 msgid ""
 "With this tool you can rotate and resize on the canvas, or put it in "
 "perspective. Or you can use advanced transform tools, like the warp, cage "
@@ -1257,11 +1281,11 @@ msgstr ""
 "に格子点、ケージやゆがみなどの応用的な変形ツールもあり、任意の天を選択して変"
 "形することも変形ブラシのように扱うこともできます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:330
+#: ../../user_manual/getting_started/basic_concepts.rst:339
 msgid "Deform Brush Engine"
 msgstr "形状ブラシエンジン"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:332
+#: ../../user_manual/getting_started/basic_concepts.rst:341
 msgid ""
 "Like the filter brush engine, Krita also has a Deform Brush Engine, which "
 "allows you to transform with a brush. This deform is like a much faster "
@@ -1272,28 +1296,28 @@ msgstr ""
 "使って変形することができます。変形ツールのゆがみモードよりもはるかに早いもの"
 "ですが、品質を引き換えにしています。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:337
+#: ../../user_manual/getting_started/basic_concepts.rst:346
 #, fuzzy
 #| msgid ".. image:: images/tools/Krita_transforms_deformvsliquefy.png"
 msgid ".. image:: /images/tools/Krita_transforms_deformvsliquefy.png"
 msgstr ".. image:: images/tools/Krita_transforms_deformvsliquefy.png"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:337
+#: ../../user_manual/getting_started/basic_concepts.rst:346
 msgid ""
 "Apple transformed into a pear with liquefy on the left and Deform brush on "
 "the right."
 msgstr "ゆがみを使用してリンゴを梨にしたもの(左)と形状ブラシを使ったもの(右)。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:339
+#: ../../user_manual/getting_started/basic_concepts.rst:348
 msgid ""
 "Furthermore, you can't apply the deform brush as a non-destructive mask."
 msgstr "また、形状ブラシは非破壊のマスクとして使うことはできません。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:342
+#: ../../user_manual/getting_started/basic_concepts.rst:351
 msgid "Transform Masks"
 msgstr "変形マスク"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:344
+#: ../../user_manual/getting_started/basic_concepts.rst:353
 msgid ""
 "Like filters, transforms can be applied as a non-destructive operation that "
 "is part of the layer stack. Unlike filter and transparency masks however, :"
@@ -1306,11 +1330,11 @@ msgstr ""
 "画像によることは技術的な理由でできません。変形マスクで複製やファイルレイヤー"
 "の形を変えることはできます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:347
+#: ../../user_manual/getting_started/basic_concepts.rst:356
 msgid "Animation"
 msgstr "アニメーション"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:352
+#: ../../user_manual/getting_started/basic_concepts.rst:361
 msgid ""
 "From version 3.0 onwards, Krita got raster :ref:`animation <animation>` "
 "support. You can use the timeline, animation and onionskin dockers, plus "
@@ -1322,11 +1346,11 @@ msgstr ""
 "にラスターアニメーションに使えるバラエティに富んだ Krita のブラシ、エクスポー"
 "トすれば映像や GIF にできます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:355
+#: ../../user_manual/getting_started/basic_concepts.rst:364
 msgid "Assistants, Grids and Guides"
 msgstr "アシスト、グリッドと基準線"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:357
+#: ../../user_manual/getting_started/basic_concepts.rst:366
 msgid ""
 "With all this technical stuff, you might forget that Krita is a painting "
 "program. Like how when working with traditional medium, as an illustrator, "
@@ -1337,21 +1361,21 @@ msgstr ""
 "現実で絵を描くように、イラストレーターとして、描くのをより簡単にする道具があ"
 "るように、Krita にもいろいろなツールを用意しています:"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:362
+#: ../../user_manual/getting_started/basic_concepts.rst:371
 #, fuzzy
 #| msgid ".. image:: images/assistants/Krita_basic_assistants.png"
 msgid ".. image:: /images/assistants/Krita_basic_assistants.png"
 msgstr ".. image:: images/assistants/Krita_basic_assistants.png"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:362
+#: ../../user_manual/getting_started/basic_concepts.rst:371
 msgid "Krita's vanishing point assistants in action."
 msgstr "Krita の消失点アシストを使ってみたところ。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:364
+#: ../../user_manual/getting_started/basic_concepts.rst:373
 msgid ":ref:`grids_and_guides_docker`"
 msgstr ":ref:`grids_and_guides_docker`"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:365
+#: ../../user_manual/getting_started/basic_concepts.rst:374
 msgid ""
 "A very straightforward guiding tool which shows grids or guiding lines that "
 "can be configured."
@@ -1359,11 +1383,11 @@ msgstr ""
 "グリッドを表示したり設定な農家ガイドラインを引けるとても単純明快なツールで"
 "す。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:366
+#: ../../user_manual/getting_started/basic_concepts.rst:375
 msgid ":ref:`snapping`"
 msgstr ":ref:`snapping`"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:367
+#: ../../user_manual/getting_started/basic_concepts.rst:376
 msgid ""
 "You can snap to all sorts of things. Grids, guides, extensions, orthogonals, "
 "image centers and bounding boxes."
@@ -1371,11 +1395,11 @@ msgstr ""
 "グリッド、ガイド、拡張機能、直交描画、画像の中心やバウンディングボックス、あ"
 "りとあらゆるものにスナップできます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:369
+#: ../../user_manual/getting_started/basic_concepts.rst:378
 msgid ":ref:`painting_with_assistants`"
 msgstr ":ref:`painting_with_assistants`"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:369
+#: ../../user_manual/getting_started/basic_concepts.rst:378
 msgid ""
 "Because you can hardly put a ruler against your tablet to help you draw, the "
 "assistants are there to help you draw concentric circles, perspectives, "
@@ -1386,22 +1410,22 @@ msgstr ""
 "行線や他の忘れやすくしかしトリッキーなディテールを描く手助けになります。"
 "Krita ではツールオプションからでもそれらにスナップできます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:371
+#: ../../user_manual/getting_started/basic_concepts.rst:380
 msgid ""
 "These guides are saved into Krita's native format, which means you can pick "
 "up your work easily afterward."
 msgstr ""
 "ガイドは Krita のネイティブ形式に保存され、後からでも簡単に作業に戻れます。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:374
+#: ../../user_manual/getting_started/basic_concepts.rst:383
 msgid "Customization"
 msgstr "カスタマイズ"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:376
+#: ../../user_manual/getting_started/basic_concepts.rst:385
 msgid "This leads to the final concept: customization."
 msgstr "これで最後の概念: カスタマイズです。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:378
+#: ../../user_manual/getting_started/basic_concepts.rst:387
 msgid ""
 "In addition to rearranging the dockers according to your preferences, Krita "
 "provides and saves your configurations as :ref:`resource_workspaces`. This "
@@ -1410,7 +1434,7 @@ msgstr ""
 "好みに合わせてドッカーを配置するのに加え、Krita は設定を :ref:"
 "`resource_workspaces` として保存できます。これは右上のボタンにあります。"
 
-#: ../../user_manual/getting_started/basic_concepts.rst:380
+#: ../../user_manual/getting_started/basic_concepts.rst:389
 msgid ""
 "You can also configure the toolbar via :menuselection:`Settings --> "
 "Configure Toolbars...`, as well as the shortcuts under both :menuselection:"

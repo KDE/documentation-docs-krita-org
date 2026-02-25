@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2025-10-11 09:15-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -555,11 +555,12 @@ msgstr "Não consigo editar texto de arquivos PSD criados pelo Photoshop"
 
 #: ../../KritaFAQ.rst:191
 msgid ""
-"There is no text support for PSD file yet. The text will appear rasterized "
-"and converted into a paint layer."
+"Since Krita 5.3, PSD text loading is supported. However, because there's "
+"significant differences between photoshop and Krita, Krita will prompt "
+"whether it should load the text data as text or as a paint layer. Try "
+"reloading the psd and ensure you confirm you wish to load text as editable "
+"objects."
 msgstr ""
-"Ainda não há suporte a texto para arquivos PSD. O texto aparecerá "
-"rasterizado e convertido em uma camada de pintura."
 
 #: ../../KritaFAQ.rst:194
 msgid "How much memory does my image take?"
@@ -1207,25 +1208,17 @@ msgstr ""
 
 #: ../../KritaFAQ.rst:371
 msgid ""
-"You can find a community curated list of tablets supported by krita :ref:"
-"`here <list_supported_tablets>`."
-msgstr ""
-"Você pode encontrar uma lista selecionada pela comunidade de tablets "
-"suportados pelo krita :ref:`aqui <list_supported_tablets>`."
-
-#: ../../KritaFAQ.rst:373
-msgid ""
 "If you're looking for information about tablets like the iPad or Android "
 "tablets, look :ref:`here <krita_android>`."
 msgstr ""
 "Se você estiver procurando informações sobre tablets como o iPad ou tablets "
 "Android, procure :ref:`aqui <krita_android>`."
 
-#: ../../KritaFAQ.rst:377
+#: ../../KritaFAQ.rst:375
 msgid "What if your tablet is not recognized by Krita?"
 msgstr "E se o seu tablet não for reconhecido pelo Krita?"
 
-#: ../../KritaFAQ.rst:379
+#: ../../KritaFAQ.rst:377
 msgid ""
 "First, check if you have installed drivers and the like. The :ref:"
 "`drawing_tablets` page has some explanations and descriptions of common "
@@ -1237,7 +1230,7 @@ msgstr ""
 "Se nenhuma delas funcionar, gostaríamos de ter um relatório de bug em bugs."
 "kde.org, com um log do tablet. Veja como criar um log do tablet:"
 
-#: ../../KritaFAQ.rst:381
+#: ../../KritaFAQ.rst:379
 msgid ""
 "You need to have something to output the log to. On 4.2 you can use the :ref:"
 "`log_viewer` docker for this. Just open the log viewer, and enable logging."
@@ -1246,7 +1239,7 @@ msgstr ""
 "painel de :ref:`log_viewer` para isso. Basta abrir o visualizador de logs e "
 "habilitar o registro."
 
-#: ../../KritaFAQ.rst:385
+#: ../../KritaFAQ.rst:383
 msgid ""
 "The log viewer got added to Krita in 4.2, so for older versions of Krita, "
 "you will need to either run Krita in the terminal if you have Linux or "
@@ -1260,12 +1253,12 @@ msgstr ""
 "docs.microsoft.com/en-us/sysinternals/downloads/debugview>`_ do site oficial "
 "da Microsoft, iniciar o DebugView e, em seguida, iniciar o Krita."
 
-#: ../../KritaFAQ.rst:387
+#: ../../KritaFAQ.rst:385
 msgid "When using a terminal, make sure to enable ``unlimited scrollback``."
 msgstr ""
 "Ao usar um terminal, certifique-se de habilitar o ``scrollback ilimitado``."
 
-#: ../../KritaFAQ.rst:389
+#: ../../KritaFAQ.rst:387
 msgid ""
 "Press the :kbd:`Ctrl + Shift + T` shortcut, you will see a message box "
 "telling the logging has started."
@@ -1273,7 +1266,7 @@ msgstr ""
 "Pressione o atalho :kbd:`Ctrl + Shift + T` e você verá uma caixa de mensagem "
 "informando que o registro foi iniciado."
 
-#: ../../KritaFAQ.rst:390
+#: ../../KritaFAQ.rst:388
 msgid ""
 "Try to reproduce your problem, you will be able to see the log being created "
 "in the log viewer as you draw."
@@ -1281,7 +1274,7 @@ msgstr ""
 "Tente reproduzir seu problema. Você poderá ver o log sendo criado no "
 "visualizador de logs enquanto desenha."
 
-#: ../../KritaFAQ.rst:391
+#: ../../KritaFAQ.rst:389
 msgid ""
 "Save the output from the log viewer into a TXT file, and attach it to the "
 "bug report."
@@ -1289,23 +1282,23 @@ msgstr ""
 "Salve a saída do visualizador de log em um arquivo TXT e anexe-o ao "
 "relatório de bug."
 
-#: ../../KritaFAQ.rst:393
+#: ../../KritaFAQ.rst:391
 msgid "On Linux, it is also useful to have the following information:"
 msgstr "No Linux, também é útil ter as seguintes informações:"
 
-#: ../../KritaFAQ.rst:395
+#: ../../KritaFAQ.rst:393
 msgid "``lsmod``"
 msgstr "``lsmod``"
 
-#: ../../KritaFAQ.rst:396
+#: ../../KritaFAQ.rst:394
 msgid "``xinput``"
 msgstr "``xinput``"
 
-#: ../../KritaFAQ.rst:397
+#: ../../KritaFAQ.rst:395
 msgid "``xinput list-props`` (ID can be fetched from the item 2)"
 msgstr "``xinput list-props`` (o ID pode ser obtido do item 2)"
 
-#: ../../KritaFAQ.rst:399
+#: ../../KritaFAQ.rst:397
 msgid ""
 "However, in 100\\% of the cases where Windows users have reported that their "
 "tablet didn't work over the past five years, the problem has been either a "
@@ -1315,13 +1308,13 @@ msgstr ""
 "seus tablets não funcionaram nos últimos cinco anos, o problema foi um "
 "driver com bug ou uma instalação de driver quebrada, mas não um bug no Krita."
 
-#: ../../KritaFAQ.rst:403
+#: ../../KritaFAQ.rst:401
 msgid "How to fix a tablet offset on multiple screen setup on Windows"
 msgstr ""
 "Como corrigir o deslocamento do tablet em configurações de múltiplas telas "
 "no Windows"
 
-#: ../../KritaFAQ.rst:405
+#: ../../KritaFAQ.rst:403
 msgid ""
 "If you see that your tablet pointer has an offset when working with Krita "
 "canvas, it might be highly likely that Krita got an incorrect screen "
@@ -1335,15 +1328,15 @@ msgstr ""
 "quando há um monitor externo presente e quando um monitor ou tablet é "
 "conectado após a inicialização do sistema."
 
-#: ../../KritaFAQ.rst:407
+#: ../../KritaFAQ.rst:405
 msgid "You can configure this by going to the :ref:`tablet_settings`."
 msgstr "Você pode configurar isso acessando as :ref:`tablet_settings`."
 
-#: ../../KritaFAQ.rst:410
+#: ../../KritaFAQ.rst:408
 msgid "Microsoft Surface Pro and N-Trig"
 msgstr "Microsoft Surface Pro e N-Trig"
 
-#: ../../KritaFAQ.rst:412
+#: ../../KritaFAQ.rst:410
 msgid ""
 "Krita 3.3.0 and later supports the Windows Pointer API (Windows Ink) "
 "natively. Your Surface Pro or other N-Trig enabled pen tablet should work "
@@ -1356,11 +1349,11 @@ msgstr ""
 "você habilitar o Windows Ink em :menuselection:`Configurações --> Configurar "
 "Krita... --> Mesa digitalizadora`."
 
-#: ../../KritaFAQ.rst:415
+#: ../../KritaFAQ.rst:413
 msgid "Tablet Pro and the Surface Pro"
 msgstr "Tablet Pro e Surface Pro"
 
-#: ../../KritaFAQ.rst:417
+#: ../../KritaFAQ.rst:415
 msgid ""
 "Unlike Wacom's Companion, the Surface line of tablets doesn't have working "
 "hardware buttons. Tablet Pro is a (non-free) utility that puts virtual "
@@ -1372,15 +1365,15 @@ msgstr ""
 "virtuais na tela. O Krita 3.1 e versões posteriores terão perfis de atalho "
 "predefinidos para funcionar com o Tablet Pro."
 
-#: ../../KritaFAQ.rst:419
+#: ../../KritaFAQ.rst:417
 msgid "https://tabletpro.com/"
 msgstr "https://tabletpro.com/"
 
-#: ../../KritaFAQ.rst:421
+#: ../../KritaFAQ.rst:419
 msgid "See https://www.youtube.com/watch?v=WKXZgYqC3tI for instructions."
 msgstr "Veja em https://www.youtube.com/watch?v=WKXZgYqC3tI para instruções."
 
-#: ../../KritaFAQ.rst:424
+#: ../../KritaFAQ.rst:422
 msgid ""
 "Weird stuff happens on Windows, like ripples, rings, squiggles or "
 "poltergeists"
@@ -1388,7 +1381,7 @@ msgstr ""
 "Coisas estranhas acontecem no Windows, como ondulações, anéis, rabiscos ou "
 "fantasmas"
 
-#: ../../KritaFAQ.rst:426
+#: ../../KritaFAQ.rst:424
 msgid ""
 "Windows comes with a lot of settings to make it work with a pen. All these "
 "settings can be annoying. This tool can help you set the settings correctly "
@@ -1398,15 +1391,15 @@ msgstr ""
 "essas configurações podem ser irritantes. Esta ferramenta pode ajudar você a "
 "definir as configurações corretamente ao usar um tablet:"
 
-#: ../../KritaFAQ.rst:428
+#: ../../KritaFAQ.rst:426
 msgid "https://github.com/saveenr/Fix_My_Pen/releases"
 msgstr "https://github.com/saveenr/Fix_My_Pen/releases"
 
-#: ../../KritaFAQ.rst:431
+#: ../../KritaFAQ.rst:429
 msgid "Touch doesn't seem to work on Windows"
 msgstr "O toque parece não funcionar no Windows"
 
-#: ../../KritaFAQ.rst:433
+#: ../../KritaFAQ.rst:431
 msgid ""
 "You might have to disable and enable the touch driver: go to the device "
 "manager. (Click the :guilabel:`Start` button and type device manager). "
@@ -1420,15 +1413,15 @@ msgstr ""
 "o botão direito do mouse e desabilite. Clique com o botão direito do mouse e "
 "habilite."
 
-#: ../../KritaFAQ.rst:436
+#: ../../KritaFAQ.rst:434
 msgid "Toolbox"
 msgstr "Caixa de ferramentas"
 
-#: ../../KritaFAQ.rst:439
+#: ../../KritaFAQ.rst:437
 msgid "Toolbox missing"
 msgstr "Caixa de ferramentas faltando"
 
-#: ../../KritaFAQ.rst:441
+#: ../../KritaFAQ.rst:439
 msgid ""
 "You can reset the Workspace by pressing the right most button on the "
 "toolbar, the Workspace switcher, and click on a desired Workspace from the "
@@ -1438,7 +1431,7 @@ msgstr ""
 "na barra de ferramentas, o seletor de espaço de trabalho, e clicando no "
 "espaço de trabalho desejado na lista."
 
-#: ../../KritaFAQ.rst:443
+#: ../../KritaFAQ.rst:441
 msgid ""
 "Or you can right-click on any docker title bar or open space in any toolbar, "
 "and select Toolbox. It's the first option."
@@ -1447,7 +1440,7 @@ msgstr ""
 "do painel ou em qualquer espaço aberto em qualquer barra de ferramentas e "
 "selecionar a caixa de ferramentas. Ela é a primeira opção."
 
-#: ../../KritaFAQ.rst:445
+#: ../../KritaFAQ.rst:443
 msgid ""
 "Also, you can check the :guilabel:`Settings` menu, it has got a lot of "
 "interesting stuff, then go to the Dockers menu and select :guilabel:"
@@ -1457,20 +1450,20 @@ msgstr ""
 "coisas interessantes, então vá até o menu de painéis e selecione :guilabel:"
 "`Caixa de ferramentas`."
 
-#: ../../KritaFAQ.rst:448
+#: ../../KritaFAQ.rst:446
 msgid "Tool icons size is too big"
 msgstr "O tamanho dos ícones das ferramentas é muito grande"
 
-#: ../../KritaFAQ.rst:450
+#: ../../KritaFAQ.rst:448
 msgid "Right-click the toolbox to set the size."
 msgstr ""
 "Clique com o botão direito na caixa de ferramentas para definir o tamanho."
 
-#: ../../KritaFAQ.rst:453
+#: ../../KritaFAQ.rst:451
 msgid "Krita can't get maximized"
 msgstr "O Krita não pode ser maximizado"
 
-#: ../../KritaFAQ.rst:455
+#: ../../KritaFAQ.rst:453
 msgid ""
 "This happens when your dockers are placed in such a way that the window "
 "cannot be made less high. Rearrange your Workspace."
@@ -1478,11 +1471,11 @@ msgstr ""
 "Isso acontece quando seus painéis são posicionadas de forma que a janela não "
 "possa ser abaixada. Reorganize sua área de trabalho."
 
-#: ../../KritaFAQ.rst:458
+#: ../../KritaFAQ.rst:456
 msgid "Resources"
 msgstr "Recursos"
 
-#: ../../KritaFAQ.rst:461
+#: ../../KritaFAQ.rst:459
 msgid ""
 "Is there a way to restore a default brush that I have mistakenly overwritten "
 "with new settings to default?"
@@ -1490,15 +1483,15 @@ msgstr ""
 "Existe uma maneira de restaurar um pincel padrão que substituí por engano "
 "com novas configurações padrão?"
 
-#: ../../KritaFAQ.rst:463
+#: ../../KritaFAQ.rst:461
 msgid "See :ref:`resource_version_history`."
 msgstr "Veja :ref:`resource_version_history`."
 
-#: ../../KritaFAQ.rst:466
+#: ../../KritaFAQ.rst:464
 msgid "How do I set favorite presets?"
 msgstr "Como defino predefinições favoritas?"
 
-#: ../../KritaFAQ.rst:468
+#: ../../KritaFAQ.rst:466
 msgid ""
 "Right-click a brush in the brush docker and assign it a tag. Then right-"
 "click on canvas to call popup palette, click the second right-most icon on "
@@ -1511,11 +1504,11 @@ msgstr ""
 "direita no canto inferior direito da paleta. Agora você pode escolher a "
 "etiqueta que contém o pincel atribuído a ela."
 
-#: ../../KritaFAQ.rst:471
+#: ../../KritaFAQ.rst:469
 msgid "Can Krita load Photoshop Brushes?"
 msgstr "O Krita pode carregar pincéis do Photoshop?"
 
-#: ../../KritaFAQ.rst:473
+#: ../../KritaFAQ.rst:471
 msgid ""
 "Yes, but there are limitations. You can load ABR files by using the :"
 "guilabel:`Import` button in the :guilabel:`Predefined brush` tab in the "
@@ -1529,18 +1522,18 @@ msgstr ""
 "dependemos da engenharia reversa para descobrir o que carregar, e atualmente "
 "isso se limita aos recursos básicos."
 
-#: ../../KritaFAQ.rst:476
+#: ../../KritaFAQ.rst:474
 msgid "Krita is slow"
 msgstr "O Krita está lento"
 
-#: ../../KritaFAQ.rst:478
+#: ../../KritaFAQ.rst:476
 msgid ""
 "There is a myriad of reasons why this might be. Below is a short checklist."
 msgstr ""
 "Há uma infinidade de razões pelas quais isso pode acontecer. Abaixo está uma "
 "breve lista de verificação."
 
-#: ../../KritaFAQ.rst:480
+#: ../../KritaFAQ.rst:478
 msgid ""
 "Something else is hogging the CPU or the memory: Spotify and other Electron "
 "apps have been known to do this."
@@ -1548,7 +1541,7 @@ msgstr ""
 "Outra coisa está consumindo muita CPU ou memória: Spotify e outros "
 "aplicativos da Electron são conhecidos por fazer isso."
 
-#: ../../KritaFAQ.rst:481
+#: ../../KritaFAQ.rst:479
 msgid ""
 "You are running Windows, and have 3rdparty security software like Sandboxie "
 "or Total Defender installed"
@@ -1556,7 +1549,7 @@ msgstr ""
 "Você está executando o Windows e tem um software de segurança de terceiros, "
 "como Sandboxie ou Total Defender, instalado"
 
-#: ../../KritaFAQ.rst:482
+#: ../../KritaFAQ.rst:480
 msgid ""
 "You are working on images that are too big for your hardware (dimensions, "
 "channel depth or number of layers)"
@@ -1564,15 +1557,15 @@ msgstr ""
 "Você está trabalhando em imagens que são muito grandes para seu hardware "
 "(dimensões, profundidade do canal ou número de camadas)"
 
-#: ../../KritaFAQ.rst:483
+#: ../../KritaFAQ.rst:481
 msgid "You do not have canvas acceleration enabled"
 msgstr "Você não tem a aceleração de tela habilitada"
 
-#: ../../KritaFAQ.rst:484
+#: ../../KritaFAQ.rst:482
 msgid "You have (NVIDIA) Vertical Sync enabled"
 msgstr "Você está com a sincronização vertical (NVIDIA) ativada"
 
-#: ../../KritaFAQ.rst:485
+#: ../../KritaFAQ.rst:483
 msgid ""
 "On macOS, with some macs, you might need to disable canvas acceleration in "
 "Krita's settings."
@@ -1580,15 +1573,15 @@ msgstr ""
 "No macOS, com alguns Macs, pode ser necessário desabilitar a aceleração da "
 "tela nas configurações do Krita."
 
-#: ../../KritaFAQ.rst:487
+#: ../../KritaFAQ.rst:485
 msgid "Please also check `this page <https://phabricator.kde.org/T7199>`_."
 msgstr "Verifique também `esta página <https://phabricator.kde.org/T7199>`_."
 
-#: ../../KritaFAQ.rst:490
+#: ../../KritaFAQ.rst:488
 msgid "Slow start-up"
 msgstr "Inicialização lenta"
 
-#: ../../KritaFAQ.rst:492
+#: ../../KritaFAQ.rst:490
 msgid ""
 "You probably have too many resources installed. Deactivate some bundles "
 "under the :menuselection:`Settings --> Manage Resource Libraries...` menu "
@@ -1598,7 +1591,7 @@ msgstr ""
 "no item de menu :menuselection:`Configurações --> Gerenciar bibliotecas de "
 "recursos...`."
 
-#: ../../KritaFAQ.rst:494
+#: ../../KritaFAQ.rst:492
 msgid ""
 "If you're using Windows with the portable ZIP file, Windows will scan all "
 "files every time you start Krita. That takes ages. Either use the installer "
@@ -1609,11 +1602,11 @@ msgstr ""
 "eternidade. Use o instalador ou peça ao Microsoft Security Essentials para "
 "abrir uma exceção para o Krita."
 
-#: ../../KritaFAQ.rst:497
+#: ../../KritaFAQ.rst:495
 msgid "Slow Brushes"
 msgstr "Pincéis lentos"
 
-#: ../../KritaFAQ.rst:499
+#: ../../KritaFAQ.rst:497
 msgid ""
 "Check if you accidentally turned on the stabilizer in the tool options "
 "docker."
@@ -1621,7 +1614,7 @@ msgstr ""
 "Verifique se você ligou acidentalmente o estabilizador no painel de opções "
 "da ferramenta."
 
-#: ../../KritaFAQ.rst:500
+#: ../../KritaFAQ.rst:498
 msgid ""
 "Try another scaling mode like trilinear. :menuselection:`Settings --> "
 "Configure Krita... --> Display`."
@@ -1629,15 +1622,15 @@ msgstr ""
 "Tente outro modo de escala, como trilinear. :menuselection:`Configurações --"
 "> Configurar Krita... --> Exibir`."
 
-#: ../../KritaFAQ.rst:501
+#: ../../KritaFAQ.rst:499
 msgid "Try a lower channel depth than 16-bit."
 msgstr "Tente uma profundidade de canal menor que 16 bits."
 
-#: ../../KritaFAQ.rst:502
+#: ../../KritaFAQ.rst:500
 msgid "For NVIDIA, try a 16-bit floating point color space."
 msgstr "Para NVIDIA, tente um espaço de cor de ponto flutuante de 16 bits."
 
-#: ../../KritaFAQ.rst:503
+#: ../../KritaFAQ.rst:501
 msgid ""
 "For older AMD CPU's (Krita 2.9.10 and above), turn off the vector "
 "optimizations that are broken on AMD CPUs. :menuselection:`Settings --> "
@@ -1649,7 +1642,7 @@ msgstr ""
 "`Configurações --> Configurar Krita... --> Desempenho`. Isso não é "
 "necessário se você tiver uma CPU AMD Threadripper™."
 
-#: ../../KritaFAQ.rst:504
+#: ../../KritaFAQ.rst:502
 msgid ""
 "It's a fairly memory-hungry program, so 2 GB of RAM is the minimum, and 4 GB "
 "is the preferable minimum."
@@ -1657,11 +1650,11 @@ msgstr ""
 "É um programa que consome muita memória, então 2 GB de RAM é o mínimo, e 4 "
 "GB é o mínimo preferível."
 
-#: ../../KritaFAQ.rst:505
+#: ../../KritaFAQ.rst:503
 msgid "Check that nothing else is hogging your CPU."
 msgstr "Verifique se nada mais está sobrecarregando sua CPU."
 
-#: ../../KritaFAQ.rst:506
+#: ../../KritaFAQ.rst:504
 msgid ""
 "Check that Instant Preview is enabled if you're using bigger brushes (but "
 "for very small brushes, make sure is disabled)."
@@ -1670,15 +1663,15 @@ msgstr ""
 "pincéis maiores (mas para pincéis muito pequenos, certifique-se de que "
 "esteja desativada)."
 
-#: ../../KritaFAQ.rst:507
+#: ../../KritaFAQ.rst:505
 msgid "Set brush precision to 3 or auto."
 msgstr "Defina a precisão do pincel como 3 ou automático."
 
-#: ../../KritaFAQ.rst:508
+#: ../../KritaFAQ.rst:506
 msgid "Use a larger value for brush spacing."
 msgstr "Use um valor maior para o espaçamento do pincel."
 
-#: ../../KritaFAQ.rst:509
+#: ../../KritaFAQ.rst:507
 msgid ""
 "If all of these fail, record a video and post a link and description on the "
 "`Krita Artists Forum <https://krita-artists.org>`_ in appropriate category."
@@ -1687,7 +1680,7 @@ msgstr ""
 "`Fórum do Krita Artists <https://krita-artists.org>`_ na categoria "
 "apropriada."
 
-#: ../../KritaFAQ.rst:510
+#: ../../KritaFAQ.rst:508
 msgid ""
 "Check whether OpenGL is enabled, and if it isn't, enable it. If it is "
 "enabled, and you are on Windows, try the Angle renderer. Or disable it."
@@ -1696,11 +1689,11 @@ msgstr ""
 "estiver habilitado e você estiver no Windows, tente o renderizador Angle. Ou "
 "desabilite-o."
 
-#: ../../KritaFAQ.rst:513
+#: ../../KritaFAQ.rst:511
 msgid "Slowdown after I've been working for a while"
 msgstr "Desaceleração depois de trabalhar por um tempo"
 
-#: ../../KritaFAQ.rst:515
+#: ../../KritaFAQ.rst:513
 msgid ""
 "Once you have the slowdown, click on the image-dimensions in the status bar. "
 "It will tell you how much RAM Krita is using, if it has hit the limit, or "
@@ -1716,15 +1709,15 @@ msgstr ""
 "aumente a quantidade máxima de RAM em :menuselection:`Configurações --> "
 "Configurar Krita... --> Desempenho --> aba Avançado`."
 
-#: ../../KritaFAQ.rst:518
+#: ../../KritaFAQ.rst:516
 msgid "Animation"
 msgstr "Animação"
 
-#: ../../KritaFAQ.rst:521
+#: ../../KritaFAQ.rst:519
 msgid "Why is my animation black in my video player"
 msgstr "Por que minha animação está preta no meu reprodutor de vídeo?"
 
-#: ../../KritaFAQ.rst:523
+#: ../../KritaFAQ.rst:521
 msgid ""
 "You did not render the animation using the \"baseline\" option, and you are "
 "using the default Windows Media Player. Re-render using the baseline option "
@@ -1738,19 +1731,19 @@ msgstr ""
 "diagrama útil <https://www.deviantart.com/tiarevlyn/art/T-Krita-4-1-7-"
 "rendering-issues-manual-783473428>`_."
 
-#: ../../KritaFAQ.rst:527
+#: ../../KritaFAQ.rst:525
 msgid "Tools"
 msgstr "Ferramentas"
 
-#: ../../KritaFAQ.rst:530
+#: ../../KritaFAQ.rst:528
 msgid "Shortcuts"
 msgstr "Atalhos"
 
-#: ../../KritaFAQ.rst:533
+#: ../../KritaFAQ.rst:531
 msgid "Some shortcuts become useless after drawing for a while"
 msgstr "Alguns atalhos se tornam inutilizáveis depois de desenhar por um tempo"
 
-#: ../../KritaFAQ.rst:535
+#: ../../KritaFAQ.rst:533
 msgid ""
 "Have you loaded any Keyboard or Canvas Shortcut Schemes (e.g. Photoshop/SAI "
 "compatible schemes) other than the Default one? If that's the case, make "
@@ -1769,15 +1762,15 @@ msgstr ""
 "meio do mouse pararem de responder, e até mesmo o pincel às vezes não "
 "conseguir pintar."
 
-#: ../../KritaFAQ.rst:539
+#: ../../KritaFAQ.rst:537
 msgid "License, rights and the Krita Foundation"
 msgstr "Licença, direitos e a Fundação Krita"
 
-#: ../../KritaFAQ.rst:542
+#: ../../KritaFAQ.rst:540
 msgid "Who owns Krita?"
 msgstr "Quem é o dono do Krita?"
 
-#: ../../KritaFAQ.rst:544
+#: ../../KritaFAQ.rst:542
 msgid ""
 "The Stichting Krita Foundation owns the Krita trademark. The copyright on "
 "the source code is owned by everyone who has worked on the source code."
@@ -1785,11 +1778,11 @@ msgstr ""
 "A Fundação Stichting Krita é proprietária da marca registrada Krita. Os "
 "direitos autorais do código-fonte pertencem a todos que trabalharam nele."
 
-#: ../../KritaFAQ.rst:547
+#: ../../KritaFAQ.rst:545
 msgid "Who and what is Kiki?"
 msgstr "Quem e o que é a Kiki?"
 
-#: ../../KritaFAQ.rst:549
+#: ../../KritaFAQ.rst:547
 msgid ""
 "Kiki is a cyber squirrel. She’s our mascot and has been designed by Tyson "
 "Tan. We choose a squirrel when we discovered that ‘krita’ is the Albanian "
@@ -1799,11 +1792,11 @@ msgstr ""
 "Tan. Escolhemos um esquilo quando descobrimos que \"krita\" é a palavra "
 "albanesa para esquilo."
 
-#: ../../KritaFAQ.rst:552
+#: ../../KritaFAQ.rst:550
 msgid "Why is Krita Free?"
 msgstr "Por que o Krita é gratuito?"
 
-#: ../../KritaFAQ.rst:554
+#: ../../KritaFAQ.rst:552
 msgid ""
 "Krita is developed as `free software <https://www.gnu.org/>`_ within the KDE "
 "community. We believe that good tools should be available for all artists. "
@@ -1816,11 +1809,11 @@ msgstr ""
 "quiser apoiar o desenvolvimento do Krita ou se quiser receber atualizações "
 "automáticas para versões mais recentes."
 
-#: ../../KritaFAQ.rst:557
+#: ../../KritaFAQ.rst:555
 msgid "Why isn't Krita on Steam and in the Windows Store Free?"
 msgstr "Por que o Krita não é gratuito no Steam e na Windows Store?"
 
-#: ../../KritaFAQ.rst:559
+#: ../../KritaFAQ.rst:557
 msgid ""
 "Krita on Steam and in the Windows Store is still Free and Open Source "
 "software; the binaries are exactly the ones you can also download from krita."
@@ -1840,11 +1833,11 @@ msgstr ""
 "disponível na Windows Store <https://krita.org/en/item/krita-available-from-"
 "the-windows-store/>`_ para mais informações."
 
-#: ../../KritaFAQ.rst:563
+#: ../../KritaFAQ.rst:561
 msgid "Can I use Krita commercially?"
 msgstr "Posso usar o Krita comercialmente?"
 
-#: ../../KritaFAQ.rst:565
+#: ../../KritaFAQ.rst:563
 msgid ""
 "Yes. What you create with Krita is your sole property. You own your work and "
 "can license your art however you want. Krita’s GPL license applies to "
@@ -1861,7 +1854,7 @@ msgstr ""
 "jogos para trabalhar em jogos comerciais, por cientistas para pesquisas e "
 "por estudantes em instituições de ensino."
 
-#: ../../KritaFAQ.rst:567
+#: ../../KritaFAQ.rst:565
 msgid ""
 "You can also make videos or stream your desktop with Krita's interface "
 "visible (which can be used to make art tutorials or time lapses)."
@@ -1870,7 +1863,7 @@ msgstr ""
 "interface do Krita visível (que pode ser usada para fazer tutoriais de arte "
 "ou lapsos de tempo)."
 
-#: ../../KritaFAQ.rst:569
+#: ../../KritaFAQ.rst:567
 msgid ""
 "If you modify Krita itself, and distribute the result, you have to share "
 "your modifications with us. Krita’s GNU GPL license guarantees you this "
@@ -1880,11 +1873,11 @@ msgstr ""
 "suas modificações conosco. A licença GNU GPL do Krita garante essa "
 "liberdade. Ninguém jamais poderá tirá-la de você."
 
-#: ../../KritaFAQ.rst:575
+#: ../../KritaFAQ.rst:573
 msgid "Can I get Krita for iPad or for Android?"
 msgstr "Posso obter o Krita para iPad ou para Android?"
 
-#: ../../KritaFAQ.rst:577
+#: ../../KritaFAQ.rst:575
 msgid ""
 "Not for iOS or iPadOS at this point in time: there are `problems in any case "
 "with putting an application licensed under the GNU Public License V3 in the "
@@ -1898,11 +1891,11 @@ msgstr ""
 "Android está atualmente em beta `na Google Play Store <https://play.google."
 "com/store/apps/details?id=org.krita>`_. O F-Droid está chegando."
 
-#: ../../KritaFAQ.rst:580
+#: ../../KritaFAQ.rst:578
 msgid "Who translates Krita"
 msgstr "Quem traduz o Krita"
 
-#: ../../KritaFAQ.rst:582
+#: ../../KritaFAQ.rst:580
 msgid ""
 "Krita is a `KDE application <https://www.kde.org/>`_ — and proud of it! That "
 "means that Krita’s translations are done by `KDE localization teams <https://"
@@ -1918,7 +1911,7 @@ msgstr ""
 "uma boa aparência em qualquer idioma: junte-se à equipe de desenvolvimento e "
 "corrija problemas no código que dificultam a tradução do Krita."
 
-#: ../../KritaFAQ.rst:584
+#: ../../KritaFAQ.rst:582
 msgid ""
 "Please refer to https://community.kde.org/Get_Involved/translation for more "
 "general instructions on getting involved in KDE localization."
@@ -1926,10 +1919,24 @@ msgstr ""
 "Consulte https://community.kde.org/Get_Involved/translation para obter "
 "instruções mais gerais sobre como se envolver na localização do KDE."
 
-#: ../../KritaFAQ.rst:587
+#: ../../KritaFAQ.rst:585
 msgid "Reference"
 msgstr "Referência"
 
-#: ../../KritaFAQ.rst:589
+#: ../../KritaFAQ.rst:587
 msgid "https://answers.launchpad.net/krita-ru/+faqs"
 msgstr "https://answers.launchpad.net/krita-ru/+faqs"
+
+#~ msgid ""
+#~ "There is no text support for PSD file yet. The text will appear "
+#~ "rasterized and converted into a paint layer."
+#~ msgstr ""
+#~ "Ainda não há suporte a texto para arquivos PSD. O texto aparecerá "
+#~ "rasterizado e convertido em uma camada de pintura."
+
+#~ msgid ""
+#~ "You can find a community curated list of tablets supported by krita :ref:"
+#~ "`here <list_supported_tablets>`."
+#~ msgstr ""
+#~ "Você pode encontrar uma lista selecionada pela comunidade de tablets "
+#~ "suportados pelo krita :ref:`aqui <list_supported_tablets>`."

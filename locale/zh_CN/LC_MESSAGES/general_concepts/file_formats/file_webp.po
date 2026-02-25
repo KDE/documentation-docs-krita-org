@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2024-04-21 04:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -164,7 +164,7 @@ msgid ""
 "than quality."
 msgstr "用于在保存速度和压缩画质之间作出权衡的滑动条。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:42
+#: ../../general_concepts/file_formats/file_webp.rst:41
 msgid "Dithering:"
 msgstr "抖动"
 
@@ -174,15 +174,38 @@ msgid ""
 "keeping good gradients."
 msgstr "启用抖动可以在颜色数量更少的前提下保持渐变色的视觉效果。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:45
+#: ../../general_concepts/file_formats/file_webp.rst:43
+msgid "Force convert to sRGB:"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_webp.rst:44
+msgid ""
+"This option will convert document color profile into sRGB before exporting, "
+"usually for better web upload and sharing compatibility."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_webp.rst:46
+msgid "Save ICC Profile:"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_webp.rst:46
+msgid ""
+"By default, ICC will be preserved during export. Disabling this option will "
+"not save ICC to the exported image and can possibly result in smaller file. "
+"However it is recommended to convert the color profile to sRGB to prevent "
+"color mismatch, as an (WebP) image without color profile will usually "
+"considered as sRGB."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_webp.rst:49
 msgid "Advanced"
 msgstr "高级"
 
-#: ../../general_concepts/file_formats/file_webp.rst:47
+#: ../../general_concepts/file_formats/file_webp.rst:51
 msgid "SNS Strength:"
 msgstr "空间噪声塑形强度"
 
-#: ../../general_concepts/file_formats/file_webp.rst:48
+#: ../../general_concepts/file_formats/file_webp.rst:52
 msgid ""
 "Specifies the strength of the Spatial Noise Shaping algorithm, which tries "
 "to see if parts of the image can be better compressed than other parts."
@@ -190,11 +213,11 @@ msgstr ""
 "指定空间噪声塑形 (SNS) 算法的检测强度，该算法会尽可能查找图像中能被更好地压缩"
 "的部分。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:49
+#: ../../general_concepts/file_formats/file_webp.rst:53
 msgid "Filter Strength:"
 msgstr "滤镜强度"
 
-#: ../../general_concepts/file_formats/file_webp.rst:50
+#: ../../general_concepts/file_formats/file_webp.rst:54
 msgid ""
 "Strength of the deblocking filter. 0% will mean there's no filtering after "
 "decoding, with increasing filter strength the image will appear smoother."
@@ -202,43 +225,43 @@ msgstr ""
 "去色块滤镜的效果强度。0% 意味着解码后不应用任何后处理滤镜。滤镜强度越高，图像"
 "的视觉效果越平滑。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:51
+#: ../../general_concepts/file_formats/file_webp.rst:55
 msgid "Filter Sharpness:"
 msgstr "滤镜锐度"
 
-#: ../../general_concepts/file_formats/file_webp.rst:52
+#: ../../general_concepts/file_formats/file_webp.rst:56
 msgid ""
 "Defines the sharpness of the deblocking filter, with 0 being the sharpest "
 "and 7 being the least sharp."
 msgstr "指定去色块滤镜的锐度。0 最锐利，7 最模糊。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:53
+#: ../../general_concepts/file_formats/file_webp.rst:57
 msgid "Filter Type:"
 msgstr "滤镜类型"
 
-#: ../../general_concepts/file_formats/file_webp.rst:54
+#: ../../general_concepts/file_formats/file_webp.rst:58
 msgid ""
 "Type of deblocking filter, options are :guilabel:`Strong` and :guilabel:"
 "`Simple`."
 msgstr ""
 "去色块滤镜的类型，包括\\ :guilabel:`强`\\ 和\\ :guilabel:`简单`\\ 两种。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:56
+#: ../../general_concepts/file_formats/file_webp.rst:60
 msgid "Alpha Plane Compression:"
 msgstr "透明度平面压缩"
 
-#: ../../general_concepts/file_formats/file_webp.rst:56
+#: ../../general_concepts/file_formats/file_webp.rst:60
 msgid ""
 "Whether to losslessly compress the alpha channel (Lossless) or outright "
 "discard it (None). None"
 msgstr ""
 "无损意味着对透明度通道 (alpha) 进行无损压缩，而无意味着抛弃整个透明度通道。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:58
+#: ../../general_concepts/file_formats/file_webp.rst:62
 msgid "Predictive Filtering for Alpha Plane:"
 msgstr "透明度平面预测过滤"
 
-#: ../../general_concepts/file_formats/file_webp.rst:59
+#: ../../general_concepts/file_formats/file_webp.rst:63
 msgid ""
 "Whether to use predictive filtering for the alpha/transparency. :guilabel:"
 "`Best` will try all potential predictive filter modes before deciding which "
@@ -249,11 +272,11 @@ msgstr ""
 "试所有预测过滤模式以选出最适合的模式，而\\ :guilabel:`最快`\\ 则会随便挑选一"
 "个使用。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:60
+#: ../../general_concepts/file_formats/file_webp.rst:64
 msgid "Alpha Plane Quality:"
 msgstr "透明度平面压缩质量"
 
-#: ../../general_concepts/file_formats/file_webp.rst:61
+#: ../../general_concepts/file_formats/file_webp.rst:65
 msgid ""
 "Compression quality for the alpha channel. 0% means smallest size, 100% "
 "means no compression. Only with :guilabel:`Alpha Plane Compression` set to "
@@ -262,73 +285,73 @@ msgstr ""
 "透明度通道 (alpha) 的压缩质量。0% 意味着文件体积最小，100% 意味着不进行压缩。"
 "仅在\\  :guilabel:`透明度平面压缩`\\ 设为无损时可用。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:62
+#: ../../general_concepts/file_formats/file_webp.rst:66
 msgid "Show Compressed:"
 msgstr "显示压缩后图像"
 
-#: ../../general_concepts/file_formats/file_webp.rst:63
+#: ../../general_concepts/file_formats/file_webp.rst:67
 msgid ""
 "Tells libwebp to skip the in-loop filtering step. May adversely affect the "
 "quality of the end file."
 msgstr ""
 "指示 libwebp 跳过处理循环内的滤镜步骤，可能会对最终生成的文件造成不良影响。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:64
+#: ../../general_concepts/file_formats/file_webp.rst:68
 msgid "Multithreaded Encoding:"
 msgstr "多线程编码"
 
-#: ../../general_concepts/file_formats/file_webp.rst:65
+#: ../../general_concepts/file_formats/file_webp.rst:69
 msgid "Use multithreading for encoding if possible."
 msgstr "如果可能，则使用多线程编码。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:66
+#: ../../general_concepts/file_formats/file_webp.rst:70
 msgid "Reduce Memory Usage:"
 msgstr "减少内存占用"
 
-#: ../../general_concepts/file_formats/file_webp.rst:67
+#: ../../general_concepts/file_formats/file_webp.rst:71
 msgid "Try to reduce memory usage at the cost of speed."
 msgstr "尝试以拖慢处理速度为代价，降低内存占用。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:68
+#: ../../general_concepts/file_formats/file_webp.rst:72
 msgid "Exact:"
 msgstr "精确"
 
-#: ../../general_concepts/file_formats/file_webp.rst:69
+#: ../../general_concepts/file_formats/file_webp.rst:73
 msgid ""
 "Preserve RGB values in transparent areas instead of defaulting them to "
 "transparent black."
 msgstr "保留透明像素的 RGB 颜色数值，而不是将它们默认为透明的纯黑。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:71
+#: ../../general_concepts/file_formats/file_webp.rst:75
 msgid "Use Sharp YUV:"
 msgstr "使用锐利 YUV"
 
-#: ../../general_concepts/file_formats/file_webp.rst:71
+#: ../../general_concepts/file_formats/file_webp.rst:75
 msgid "Whether to use the slower, but more accurate, RGB to YUV conversion."
 msgstr "是否使用较慢但更精确的 RGB 到 YUV 转换方式。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:74
+#: ../../general_concepts/file_formats/file_webp.rst:78
 msgid "Lossy Compression"
 msgstr "无损压缩"
 
-#: ../../general_concepts/file_formats/file_webp.rst:75
+#: ../../general_concepts/file_formats/file_webp.rst:79
 msgid ""
 "The following options only apply if :guilabel:`Lossless Compression` is off."
 msgstr "以下选项仅在\\ :guilabel:`无损压缩`\\ 关闭时有效。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:77
+#: ../../general_concepts/file_formats/file_webp.rst:81
 msgid "Target Size:"
 msgstr "目标体积"
 
-#: ../../general_concepts/file_formats/file_webp.rst:78
+#: ../../general_concepts/file_formats/file_webp.rst:82
 msgid "Specify the amount of bytes to aim for."
 msgstr "指定目标字节数。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:79
+#: ../../general_concepts/file_formats/file_webp.rst:83
 msgid "Target PSNR:"
 msgstr "目标峰值信噪比"
 
-#: ../../general_concepts/file_formats/file_webp.rst:80
+#: ../../general_concepts/file_formats/file_webp.rst:84
 msgid ""
 "PSNR means `Peak Signal to Noise Ratio <https://en.wikipedia.org/wiki/"
 "Peak_signal-to-noise_ratio_>`, and indicates how much noise the image has. "
@@ -337,11 +360,11 @@ msgstr ""
 "`目标峰值信噪比 (PSNR)<https://en.wikipedia.org/wiki/Peak_signal-to-"
 "noise_ratio_>`\\ 用于指定图像包含多少噪声。信噪比越高，噪声水平越低。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:81
+#: ../../general_concepts/file_formats/file_webp.rst:85
 msgid "Segments:"
 msgstr "片段数目"
 
-#: ../../general_concepts/file_formats/file_webp.rst:82
+#: ../../general_concepts/file_formats/file_webp.rst:86
 msgid ""
 "How many segments the VP8 video codec can divide the image into. VP8 accepts "
 "between 1 and 4 segments."
@@ -349,11 +372,11 @@ msgstr ""
 "指定 VP8 视频编解码器可以将图像分割成多少个片段。VP8 编码可以使用 1 到 4 个片"
 "段。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:83
+#: ../../general_concepts/file_formats/file_webp.rst:87
 msgid "Partitions:"
 msgstr "分区数目"
 
-#: ../../general_concepts/file_formats/file_webp.rst:84
+#: ../../general_concepts/file_formats/file_webp.rst:88
 msgid ""
 "Sets how many partitions can the VP8 codec use for storing decompression "
 "information. Must be between 0 and 3. Default is 0 to make decoding easier."
@@ -361,80 +384,80 @@ msgstr ""
 "指定 VP8 编码器用于存储解压信息的分区数目。分区数目必须在 0 到 3 之间，默认值"
 "为 0，这可以使解码变得更容易。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:85
+#: ../../general_concepts/file_formats/file_webp.rst:89
 msgid "Auto Adjust Filter Strength:"
 msgstr "自动调整滤镜强度"
 
-#: ../../general_concepts/file_formats/file_webp.rst:86
+#: ../../general_concepts/file_formats/file_webp.rst:90
 msgid ""
 "The encoder will spend some time tuning and selecting the best filter "
 "options before encoding."
 msgstr "编码器将在编码之前进行微调以选择最佳滤镜，这会消耗一点时间。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:87
+#: ../../general_concepts/file_formats/file_webp.rst:91
 msgid "Entropy Passes:"
 msgstr "熵分析次数"
 
-#: ../../general_concepts/file_formats/file_webp.rst:88
+#: ../../general_concepts/file_formats/file_webp.rst:92
 msgid ""
 "Number of passes to do for selecting the best option between target size and "
 "target PSNR."
 msgstr "在目标体积和目标峰值信噪比之间寻找最佳选项的分析次数。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:89
+#: ../../general_concepts/file_formats/file_webp.rst:93
 msgid "Emulate JPEG Size:"
 msgstr "模拟 JPEG 文件体积"
 
-#: ../../general_concepts/file_formats/file_webp.rst:90
+#: ../../general_concepts/file_formats/file_webp.rst:94
 msgid "The encoder will try to match the size of a jpeg of similar dimensions."
 msgstr "编码器将尝试匹配类似尺寸的 JPEG 体积大小。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:91
+#: ../../general_concepts/file_formats/file_webp.rst:95
 msgid "Minimum Quality:"
 msgstr "最低画质"
 
-#: ../../general_concepts/file_formats/file_webp.rst:92
+#: ../../general_concepts/file_formats/file_webp.rst:96
 msgid "Used with 'entropy passes', the lowest allowed quality for the image."
 msgstr "允许的图像最低画质，与熵分析次数配合使用。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:93
+#: ../../general_concepts/file_formats/file_webp.rst:97
 msgid "Maximum Quality:"
 msgstr "最高画质"
 
-#: ../../general_concepts/file_formats/file_webp.rst:94
+#: ../../general_concepts/file_formats/file_webp.rst:98
 msgid "Used with 'entropy passes', the highest allowed quality for the image."
 msgstr "允许的图像最高画质，与熵分析次数配合使用。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:96
+#: ../../general_concepts/file_formats/file_webp.rst:100
 msgid ""
 "Whether or not to add :guilabel:`Pseudo Random Dithering` to the image "
 "before converting RGB to YUV."
 msgstr "是否在转换 RGB 到 YUV 时向图像添加\\ :guilabel:`伪随机抖动`\\ 。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:97
+#: ../../general_concepts/file_formats/file_webp.rst:101
 msgid "Preprocessing Filter:"
 msgstr "预处理滤镜"
 
-#: ../../general_concepts/file_formats/file_webp.rst:100
+#: ../../general_concepts/file_formats/file_webp.rst:104
 msgid "Lossless compression"
 msgstr "无损压缩"
 
-#: ../../general_concepts/file_formats/file_webp.rst:101
+#: ../../general_concepts/file_formats/file_webp.rst:105
 msgid ""
 "The following options only work with :guilabel:`Lossless Compression` on."
 msgstr "以下选项仅在\\ :guilabel:`无损压缩`\\ 启用时有效。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:103
+#: ../../general_concepts/file_formats/file_webp.rst:107
 msgid "Partition Limit:"
 msgstr "分区大小上限"
 
-#: ../../general_concepts/file_formats/file_webp.rst:104
+#: ../../general_concepts/file_formats/file_webp.rst:108
 msgid ""
 "Limit how big a given segment is in bytes. The higher this is, the less "
 "possible information is stored per segment."
 msgstr "限制每个片段的大小，单位为字节。此值越小，每个片段能存储的信息就越少。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:106
+#: ../../general_concepts/file_formats/file_webp.rst:110
 msgid ""
 "The encoder is able to minimally adjust pixel-values so they compress better "
 "in lossless compression mode. This enables this feature. Automatically "
@@ -443,10 +466,10 @@ msgstr ""
 "对像素的数值进行微调，以改善无损压缩模式下的压缩比。启用此项将同时启用\\ :"
 "guilabel:`无损压缩`\\ 。"
 
-#: ../../general_concepts/file_formats/file_webp.rst:108
+#: ../../general_concepts/file_formats/file_webp.rst:112
 msgid "Near Lossless:"
 msgstr "近似无损编码"
 
-#: ../../general_concepts/file_formats/file_webp.rst:111
+#: ../../general_concepts/file_formats/file_webp.rst:115
 msgid "https://developers.google.com/speed/webp/docs/compression"
 msgstr "https://developers.google.com/speed/webp/docs/compression"

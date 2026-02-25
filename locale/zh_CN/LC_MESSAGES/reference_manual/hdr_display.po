@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2024-04-21 04:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -39,7 +39,9 @@ msgid "HDR Display"
 msgstr "HDR 显示器"
 
 #: ../../reference_manual/hdr_display.rst:21
-msgid "Currently only available on Windows."
+#, fuzzy
+#| msgid "Currently only available on Windows."
+msgid "Currently only available on Windows and Linux"
 msgstr "目前仅在 Windows 环境可用。"
 
 #: ../../reference_manual/hdr_display.rst:23
@@ -87,21 +89,52 @@ msgstr ""
 #: ../../reference_manual/hdr_display.rst:30
 msgid ""
 "If you can confirm that the system understands your setup as an HDR setup, "
-"you can continue your :ref:`configuration in Krita<hdr_display_settings>`, "
-"in :menuselection:`Settings --> Configure Krita... --> Display`. There, you "
-"need to select the preferred surface, which should be as close to the "
-"display format as possible. Then restart Krita."
+"you can continue your configuration in Krita."
+msgstr ""
+
+#: ../../reference_manual/hdr_display.rst:33
+msgid "Windows"
+msgstr ""
+
+#: ../../reference_manual/hdr_display.rst:37
+#, fuzzy
+#| msgid ""
+#| "If you can confirm that the system understands your setup as an HDR "
+#| "setup, you can continue your :ref:`configuration in "
+#| "Krita<hdr_display_settings>`, in :menuselection:`Settings --> Configure "
+#| "Krita... --> Display`. There, you need to select the preferred surface, "
+#| "which should be as close to the display format as possible. Then restart "
+#| "Krita."
+msgid ""
+"On Windows platform there is :ref:`a special page for HDR "
+"configuration<hdr_display_settings>` in :menuselection:`Settings --> "
+"Configure Krita... --> Display`. There, you need to select the preferred "
+"surface, which should be as close to the display format as possible. Then "
+"restart Krita."
 msgstr ""
 "如果你确认系统已经将你的硬件环境识别为支持 HDR，接下来就可以 :ref:`配置 "
 "Krita<hdr_display_settings>` 了。前往菜单栏的 :menuselection:`设置 --> 配置 "
 "Krita --> 显示` 。选择首选的输出格式，把它设置得尽可能接近显示器支持的格式，"
 "并重启 Krita。"
 
-#: ../../reference_manual/hdr_display.rst:33
+#: ../../reference_manual/hdr_display.rst:40
+msgid "Linux (Wayland only)"
+msgstr ""
+
+#: ../../reference_manual/hdr_display.rst:44
+msgid ""
+"On Linux you can just select :guilabel:`Rec 2020 PQ` for the canvas surface "
+"color space in :ref:`color management settings for "
+"Wayland<color_management_settings_wayland>` in :menuselection:`Settings --> "
+"Configure Krita... --> Color Management --> Display`. It will instantly "
+"enable HDR support in Krita, no restart is necessary."
+msgstr ""
+
+#: ../../reference_manual/hdr_display.rst:47
 msgid "Painting in HDR"
 msgstr "在 HDR 环境下绘画"
 
-#: ../../reference_manual/hdr_display.rst:35
+#: ../../reference_manual/hdr_display.rst:49
 msgid ""
 "To create a proper HDR image, you will need to make a canvas using a profile "
 "with rec 2020 gamut and a linear TRC. :guilabel:`Rec2020-elle-V4-g10.icc` is "
@@ -111,7 +144,7 @@ msgstr ""
 "Krita 自带了 :guilabel:`Rec2020-elle-V4-g10.icc` 作为 HDR 图像的默认特性文"
 "件。"
 
-#: ../../reference_manual/hdr_display.rst:37
+#: ../../reference_manual/hdr_display.rst:51
 msgid ""
 "HDR images are standardized to use the Rec2020 gamut, and the PQ TRC. "
 "However, a linear TRC is easier to edit images in, so we don't convert to PQ "
@@ -120,7 +153,7 @@ msgstr ""
 "HDR 图像标准规定必须使用 Rec. 2020 色域和 PQ TRC。但是线性 TRC 在编辑图像时更"
 "好用，所以我们可以在编辑结束后才把图像转换成 PQ TRC。"
 
-#: ../../reference_manual/hdr_display.rst:39
+#: ../../reference_manual/hdr_display.rst:53
 msgid ""
 "For painting in this new exciting color space, check the :ref:"
 "`scene_linear_painting` page, which covers things like selecting colors, "
@@ -130,21 +163,21 @@ msgstr ""
 "`scene_linear_painting` 页面，它介绍了如何正确拾取颜色、常见问题、混合模式和"
 "滤镜的兼容性、合适的绘画流程等。"
 
-#: ../../reference_manual/hdr_display.rst:42
+#: ../../reference_manual/hdr_display.rst:56
 msgid "Exporting HDR"
 msgstr "导出成 HDR 图像"
 
-#: ../../reference_manual/hdr_display.rst:44
+#: ../../reference_manual/hdr_display.rst:58
 msgid "Now for saving and loading."
 msgstr "下面介绍 HDR 图像的保存和加载。"
 
-#: ../../reference_manual/hdr_display.rst:46
+#: ../../reference_manual/hdr_display.rst:60
 msgid ""
 "The KRA file format can save the floating point image just fine, and is thus "
 "a good working file format."
 msgstr "Krita 的原生 KRA 格式可以保存浮点通道的图像，适合作为 HDR 的工作文件。"
 
-#: ../../reference_manual/hdr_display.rst:48
+#: ../../reference_manual/hdr_display.rst:62
 msgid ""
 "For sharing with other image editors, :ref:`file_exr` is recommended. For "
 "sharing with the web we currently only have :ref:`HDR PNG export "
@@ -155,7 +188,7 @@ msgstr ""
 "上展示 HDR 图像，目前只能 :ref:`导出为 HDR 的 PNG 格式<file_png>` ，但此标准"
 "并不普及。我们寄望于未来 HEIF 和 AVIF 格式能实现更好的 HDR 支持。"
 
-#: ../../reference_manual/hdr_display.rst:50
+#: ../../reference_manual/hdr_display.rst:64
 msgid ""
 "For exporting HDR animations, we support saving HDR to the new codec for mp4 "
 "and mkv: H.265. To use these options..."
@@ -163,58 +196,58 @@ msgstr ""
 "要导出 HDR 动画，我们支持通过 H.265 编码保存 HDR 视频为 MP4 和 MKV 格式。请如"
 "下配置相关选项："
 
-#: ../../reference_manual/hdr_display.rst:52
+#: ../../reference_manual/hdr_display.rst:66
 msgid "Get a version of FFmpeg that supports H.265."
 msgstr "获取支持 H.265 的 FFmpeg 软件包。"
 
-#: ../../reference_manual/hdr_display.rst:53
+#: ../../reference_manual/hdr_display.rst:67
 msgid "Have an animation open."
 msgstr "打开一个动画。"
 
-#: ../../reference_manual/hdr_display.rst:54
+#: ../../reference_manual/hdr_display.rst:68
 msgid ":menuselection:`File --> Render Animation`."
 msgstr "菜单栏： :menuselection:`文件 --> 渲染动画` 。"
 
-#: ../../reference_manual/hdr_display.rst:55
+#: ../../reference_manual/hdr_display.rst:69
 msgid "Select :guilabel:`Video`."
 msgstr "选择 :guilabel:`视频` 。"
 
-#: ../../reference_manual/hdr_display.rst:56
+#: ../../reference_manual/hdr_display.rst:70
 msgid "Select for :guilabel:`Render as`, 'MPEG-4 video' or 'Matroska'."
 msgstr "在 :guilabel:`渲染为` 选单中选取 'MPEG-4 视频' 或者 'Matroska' 。"
 
-#: ../../reference_manual/hdr_display.rst:57
+#: ../../reference_manual/hdr_display.rst:71
 msgid "Press the configure button next to the file format dropdown."
 msgstr "点击在格式下拉选单旁边的配置按钮。"
 
-#: ../../reference_manual/hdr_display.rst:58
+#: ../../reference_manual/hdr_display.rst:72
 msgid "Select at the top 'H.265, MPEG-H Part 2 (HEVC)'."
 msgstr "在对话框顶部的下拉选单中选择“H.265, MPEG-H Part 2 (HEVC)”。"
 
-#: ../../reference_manual/hdr_display.rst:59
+#: ../../reference_manual/hdr_display.rst:73
 msgid "Select for the :guilabel:`Profile`, 'main10 (HDR)'."
 msgstr "在 :guilabel:`配置` 选单中选择 'main10 (HDR)' 。"
 
-#: ../../reference_manual/hdr_display.rst:60
+#: ../../reference_manual/hdr_display.rst:74
 msgid ":guilabel:`HDR Mode` should now enable. Toggle it."
 msgstr "现在 :guilabel:`HDR 模式` 选框已经可用，勾选它。"
 
-#: ../../reference_manual/hdr_display.rst:61
+#: ../../reference_manual/hdr_display.rst:75
 msgid ""
 "click :guilabel:`HDR Metadata` to configure the HDR metadata (options "
 "described below)."
 msgstr ""
 "点击 :guilabel:`HDR 元数据` 按钮，配置 HDR 元数据 (下文将详细介绍各个选项)。"
 
-#: ../../reference_manual/hdr_display.rst:62
+#: ../../reference_manual/hdr_display.rst:76
 msgid "finally, when done, click 'OK'."
 msgstr "配置完成后，点击“确定”按钮。"
 
-#: ../../reference_manual/hdr_display.rst:65
+#: ../../reference_manual/hdr_display.rst:79
 msgid "HDR Metadata"
 msgstr "HDR 元数据"
 
-#: ../../reference_manual/hdr_display.rst:67
+#: ../../reference_manual/hdr_display.rst:81
 msgid ""
 "This is in the render animation screen. It configures the SMPTE ST.2086 or "
 "Master Display Color Volumes metadata and is required for the HDR video to "
@@ -224,11 +257,11 @@ msgstr ""
 "色彩空间的元数据，这是 HDR 视频能够被视频播放器正确解码和被视频线缆正确传输的"
 "前提。"
 
-#: ../../reference_manual/hdr_display.rst:69
+#: ../../reference_manual/hdr_display.rst:83
 msgid "Master Display"
 msgstr "主显示器"
 
-#: ../../reference_manual/hdr_display.rst:70
+#: ../../reference_manual/hdr_display.rst:84
 msgid ""
 "The colorspace characteristics of the display on for which your image was "
 "made, typically also the display that you used to paint the image with. "
@@ -239,7 +272,7 @@ msgstr ""
 "色彩空间可选，如果选择自定义模式，你还可以在下面的 :guilabel:`显示` 区域中输"
 "入相关数值。"
 
-#: ../../reference_manual/hdr_display.rst:72
+#: ../../reference_manual/hdr_display.rst:86
 msgid ""
 "The precise colorspace characteristics for the display for which your image "
 "was made. If you do not have custom selected for :guilabel:`Master Display`, "
@@ -249,58 +282,58 @@ msgstr ""
 "显示器` 选单中并没有选中“自定义”，则此区域的输入框将被禁用，Krita 将使用选中"
 "的特性文件的预设值。"
 
-#: ../../reference_manual/hdr_display.rst:74
+#: ../../reference_manual/hdr_display.rst:88
 msgid "Red/Green/Blue Primary"
 msgstr "红/绿/蓝原色"
 
-#: ../../reference_manual/hdr_display.rst:75
+#: ../../reference_manual/hdr_display.rst:89
 msgid ""
 "The xyY x and xyY y value of the three chromacities of your screen. These "
 "define the gamut."
 msgstr "屏幕的三原色 xyY x 和 xyY y 数值，它们决定了色域的基本特性。"
 
-#: ../../reference_manual/hdr_display.rst:76
+#: ../../reference_manual/hdr_display.rst:90
 msgid "White Point"
 msgstr "白点"
 
-#: ../../reference_manual/hdr_display.rst:77
+#: ../../reference_manual/hdr_display.rst:91
 msgid ""
 "The xyY x and xyY y value of the white point of your screen, this defines "
 "what is considered 'neutral grey'."
 msgstr "屏幕白点的 xyY x 和 xyY y 数值，它们决定了“中间灰”的特性。"
 
-#: ../../reference_manual/hdr_display.rst:78
+#: ../../reference_manual/hdr_display.rst:92
 msgid "Min Luminance"
 msgstr "最小亮度"
 
-#: ../../reference_manual/hdr_display.rst:79
+#: ../../reference_manual/hdr_display.rst:93
 msgid "The darkest value your screen can show in nits."
 msgstr "屏幕可以显示的最暗颜色数值，以 nits 为单位。"
 
-#: ../../reference_manual/hdr_display.rst:81
+#: ../../reference_manual/hdr_display.rst:95
 msgid "Display"
 msgstr "显示"
 
-#: ../../reference_manual/hdr_display.rst:81
+#: ../../reference_manual/hdr_display.rst:95
 msgid "Max Luminance"
 msgstr "最大亮度"
 
-#: ../../reference_manual/hdr_display.rst:81
+#: ../../reference_manual/hdr_display.rst:95
 msgid "The brightest value your screen can show in nits."
 msgstr "屏幕可以显示的最亮颜色数值，以 nits 为单位。"
 
-#: ../../reference_manual/hdr_display.rst:83
+#: ../../reference_manual/hdr_display.rst:97
 msgid "MaxCLL"
 msgstr "MaxCLL"
 
-#: ../../reference_manual/hdr_display.rst:84
+#: ../../reference_manual/hdr_display.rst:98
 msgid "The value of the brightest pixel of your animation in nits."
 msgstr "动画中像素的最亮颜色数值，以 nits 为单位。"
 
-#: ../../reference_manual/hdr_display.rst:86
+#: ../../reference_manual/hdr_display.rst:100
 msgid "The average 'brightest value' of the whole animation."
 msgstr "整段动画的平均最亮颜色数值。"
 
-#: ../../reference_manual/hdr_display.rst:88
+#: ../../reference_manual/hdr_display.rst:102
 msgid "MaxFALL"
 msgstr "MaxFALL"

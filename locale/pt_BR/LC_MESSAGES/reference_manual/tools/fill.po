@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2025-10-15 10:06-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: ../../<rst_epilog>:56
+#: ../../<rst_epilog>:50
 msgid "toolfill"
 msgstr "toolfill"
 
-#: ../../<rst_epilog>:56
+#: ../../<rst_epilog>:50
 msgid ".. image:: /images/icons/fill_tool.svg"
 msgstr ".. image:: /images/icons/fill_tool.svg"
 
@@ -48,6 +48,12 @@ msgstr ".. image:: /images/tools/fill_tool_pixel_selection_policies.png"
 #: ../../reference_manual/tools/fill.rst:0
 msgid ".. image:: /images/tools/opacity_spread.png"
 msgstr ".. image:: /images/tools/opacity_spread.png"
+
+#: ../../reference_manual/tools/fill.rst:0
+#, fuzzy
+#| msgid ".. image:: /images/tools/fill_tool_stop_growing.png"
+msgid ".. image:: /images/tools/fill_tool_close_gap.png"
+msgstr ".. image:: /images/tools/fill_tool_stop_growing.png"
 
 #: ../../reference_manual/tools/fill.rst:0
 msgid ".. image:: /images/tools/fill_selection_boundary.png"
@@ -144,13 +150,21 @@ msgid "Fill Mode"
 msgstr "Modo de preenchimento"
 
 #: ../../reference_manual/tools/fill.rst:41
+#, fuzzy
+#| msgid ""
+#| "a: An image with a selection. The red dot marks where the user clicked to "
+#| "fill. b: The region filled using:guilabel:`Current Selection`. c: The "
+#| "region filled using :guilabel:`Contiguous Pixels`, filling all pixels "
+#| "that are both similar and contiguous to the one the user clicked. d: The "
+#| "region filled with :guilabel:`Regions of Similar Color`, filling pixels "
+#| "similarly colored to the one the user clicked."
 msgid ""
 "a: An image with a selection. The red dot marks where the user clicked to "
-"fill. b: The region filled using:guilabel:`Current Selection`. c: The region "
-"filled using :guilabel:`Contiguous Pixels`, filling all pixels that are both "
-"similar and contiguous to the one the user clicked. d: The region filled "
-"with :guilabel:`Regions of Similar Color`, filling pixels similarly colored "
-"to the one the user clicked."
+"fill. b: The region filled using :guilabel:`Current Selection`. c: The "
+"region filled using :guilabel:`Contiguous Pixels`, filling all pixels that "
+"are both similar and contiguous to the one the user clicked. d: The region "
+"filled with :guilabel:`Regions of Similar Color`, filling pixels similarly "
+"colored to the one the user clicked."
 msgstr ""
 "a: Uma imagem com uma seleção. O ponto vermelho marca onde o usuário clicou "
 "para preencher. b: A região preenchida usando: guilabel: `Seleção atual`. c: "
@@ -313,21 +327,39 @@ msgstr ""
 
 #: ../../reference_manual/tools/fill.rst:104
 msgid ""
+"This option sets the minimum gap size that the contiguous fill will be able "
+"to propagate into."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:108
+msgid "Close Gap"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:108
+msgid ""
+"Left: The original image (black over white) and a green dot marking where "
+"the fill will be initiated. Center: The image after a fill operation using a "
+"gap size of 0 pixels. Right: The image after a fill operation using a gap "
+"size of 8 pixels."
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:113
+msgid ""
 "When checked, this will count the borders of the selection as an extra "
 "boundary on top of the pixel difference."
 msgstr ""
 "Quando marcada, esta opção contará as bordas da seleção como um limite extra "
 "sobre a diferença de pixels."
 
-#: ../../reference_manual/tools/fill.rst:108
+#: ../../reference_manual/tools/fill.rst:117
 msgid "Fill Extent"
 msgstr "Extensão de preenchimento"
 
-#: ../../reference_manual/tools/fill.rst:108
+#: ../../reference_manual/tools/fill.rst:117
 msgid "Use Selection as Boundary"
 msgstr "Usar seleção como borda"
 
-#: ../../reference_manual/tools/fill.rst:108
+#: ../../reference_manual/tools/fill.rst:117
 msgid ""
 "Left: Original selection with a line. Middle: Filled with 'use selection as "
 "boundary' off. Right: Filled with 'use selection as boundary' on."
@@ -336,11 +368,11 @@ msgstr ""
 "\"usar seleção como limite\" desativada. Direita: Preenchido com a opção "
 "\"usar seleção como limite\" ativada."
 
-#: ../../reference_manual/tools/fill.rst:114
+#: ../../reference_manual/tools/fill.rst:123
 msgid "Anti-aliasing"
 msgstr "Suavização de curvas"
 
-#: ../../reference_manual/tools/fill.rst:114
+#: ../../reference_manual/tools/fill.rst:123
 msgid ""
 "This will smooth the jagged edges present in the region. It differs from "
 "feathering in that this will smooth in the direction of the edge instead of "
@@ -351,7 +383,7 @@ msgstr ""
 "borda, em vez de em todas as direções, e somente se a borda for irregular "
 "(alto contraste)."
 
-#: ../../reference_manual/tools/fill.rst:117
+#: ../../reference_manual/tools/fill.rst:126
 msgid ""
 "This value extends (positive values) or contracts (negative values) the "
 "region."
@@ -359,7 +391,7 @@ msgstr ""
 "Este valor estende (valores positivos) ou contrai (valores negativos) a "
 "região."
 
-#: ../../reference_manual/tools/fill.rst:125
+#: ../../reference_manual/tools/fill.rst:134
 msgid ""
 "This option is useful when filling inner regions of a lineart. When the "
 "lines have smooth borders, some unwanted pixels may remain unfilled between "
@@ -372,7 +404,7 @@ msgstr ""
 "preenchida. Para melhorar isso, é comum aumentar um pouco a região para "
 "cobrir esses pixels."
 
-#: ../../reference_manual/tools/fill.rst:127
+#: ../../reference_manual/tools/fill.rst:136
 msgid ""
 "One issue that may arise is that the lines vary in width and the expanded "
 "region exceeds some of the thinner ones. If this option is selected, the "
@@ -386,7 +418,7 @@ msgstr ""
 "pixels começar a ficar mais clara ou menos opaca. Isso efetivamente impede "
 "que a região expandida alcance o lado oposto das linhas."
 
-#: ../../reference_manual/tools/fill.rst:131
+#: ../../reference_manual/tools/fill.rst:140
 msgid ""
 "Comparison of the filled region with and without the option selected. The "
 "filled regions were painted with the multiply blending mode for clarity. a: "
@@ -405,50 +437,50 @@ msgstr ""
 "pontos. d: A região preenchida após ser expandida em doze pixels, mas "
 "parando adaptativamente nos pixels mais escuros."
 
-#: ../../reference_manual/tools/fill.rst:132
+#: ../../reference_manual/tools/fill.rst:141
 msgid "Grow Selection"
 msgstr "Aumentar seleção"
 
-#: ../../reference_manual/tools/fill.rst:132
+#: ../../reference_manual/tools/fill.rst:141
 msgid "Stop Growing at the Darkest and/or More Opaque Pixels"
 msgstr "Pare de crescer nos pixels mais escuros e/ou opacos"
 
-#: ../../reference_manual/tools/fill.rst:135
+#: ../../reference_manual/tools/fill.rst:144
 msgid "Adjustments"
 msgstr "Ajustes"
 
-#: ../../reference_manual/tools/fill.rst:135
+#: ../../reference_manual/tools/fill.rst:144
 msgid "Feathering Radius"
 msgstr "Raio de suavização"
 
-#: ../../reference_manual/tools/fill.rst:135
+#: ../../reference_manual/tools/fill.rst:144
 msgid "This value will add a soft border to the region."
 msgstr "Este valor adicionará uma borda suave à região."
 
-#: ../../reference_manual/tools/fill.rst:140
+#: ../../reference_manual/tools/fill.rst:149
 msgid ""
 "Select which layers to use as a reference for the fill tool. The options are:"
 msgstr ""
 "Selecione quais camadas usar como referência para a ferramenta de "
 "preenchimento. As opções são:"
 
-#: ../../reference_manual/tools/fill.rst:142
+#: ../../reference_manual/tools/fill.rst:151
 msgid "Current Layer"
 msgstr "Camada atual"
 
-#: ../../reference_manual/tools/fill.rst:143
+#: ../../reference_manual/tools/fill.rst:152
 msgid "Only use the currently selected layer."
 msgstr "Usa somente a camada atualmente selecionada."
 
-#: ../../reference_manual/tools/fill.rst:144
+#: ../../reference_manual/tools/fill.rst:153
 msgid "All layers"
 msgstr "Todas as camadas"
 
-#: ../../reference_manual/tools/fill.rst:145
+#: ../../reference_manual/tools/fill.rst:154
 msgid "Use all visible layers."
 msgstr "Usa todas as camadas visíveis."
 
-#: ../../reference_manual/tools/fill.rst:147
+#: ../../reference_manual/tools/fill.rst:156
 msgid ""
 "Use only the layers specified with a certain color label. This is useful for "
 "complex images, where you might have multiple lineart layers. Label them "
@@ -460,21 +492,25 @@ msgstr ""
 "linear. Identifique-as com o rótulo de cor apropriado e use esses rótulos "
 "para marcar quais camadas usar como referência."
 
-#: ../../reference_manual/tools/fill.rst:150
+#: ../../reference_manual/tools/fill.rst:159
+msgid "Reference"
+msgstr "Referência"
+
+#: ../../reference_manual/tools/fill.rst:159
 msgid "Color Labeled Layers"
 msgstr "Camadas com rótulos de cor"
 
-#: ../../reference_manual/tools/fill.rst:150
+#: ../../reference_manual/tools/fill.rst:159
 msgid "Labels Used"
 msgstr "Rótulos usados"
 
-#: ../../reference_manual/tools/fill.rst:150
+#: ../../reference_manual/tools/fill.rst:159
 msgid "Select the color labels of the layers that should be used as reference."
 msgstr ""
 "Selecione os rótulos de cores das camadas que devem ser usadas como "
 "referência."
 
-#: ../../reference_manual/tools/fill.rst:155
+#: ../../reference_manual/tools/fill.rst:164
 msgid ""
 "Select what should happen when one clicks and drags the pointer on the "
 "canvas."
@@ -482,11 +518,29 @@ msgstr ""
 "Selecione o que deve acontecer quando alguém clica e arrasta o ponteiro na "
 "tela."
 
-#: ../../reference_manual/tools/fill.rst:157
+#: ../../reference_manual/tools/fill.rst:166
+msgid "Do not use"
+msgstr ""
+
+#: ../../reference_manual/tools/fill.rst:167
+#, fuzzy
+#| msgid ""
+#| "With this option selected, the tool will fill the regions along path "
+#| "described by the pointer while dragging that have the same color as the "
+#| "first region filled."
+msgid ""
+"With this option selected, dragging won't fill additional regions, only the "
+"one where the user first clicked."
+msgstr ""
+"Com esta opção selecionada, a ferramenta preencherá as regiões ao longo do "
+"caminho descrito pelo ponteiro enquanto arrasta que tenham a mesma cor da "
+"primeira região preenchida."
+
+#: ../../reference_manual/tools/fill.rst:168
 msgid "Fill Regions of Any Color"
 msgstr "Preencher regiões de qualquer cor"
 
-#: ../../reference_manual/tools/fill.rst:158
+#: ../../reference_manual/tools/fill.rst:169
 msgid ""
 "With this option selected, the tool will fill any region along the path "
 "described by the pointer while dragging, regardless of its color."
@@ -494,7 +548,7 @@ msgstr ""
 "Com esta opção selecionada, a ferramenta preencherá qualquer região ao longo "
 "do caminho descrito pelo ponteiro ao arrastar, independentemente da sua cor."
 
-#: ../../reference_manual/tools/fill.rst:160
+#: ../../reference_manual/tools/fill.rst:171
 msgid ""
 "With this option selected, the tool will fill the regions along path "
 "described by the pointer while dragging that have the same color as the "
@@ -504,14 +558,10 @@ msgstr ""
 "caminho descrito pelo ponteiro enquanto arrasta que tenham a mesma cor da "
 "primeira região preenchida."
 
-#: ../../reference_manual/tools/fill.rst:161
-msgid "Reference"
-msgstr "Referência"
-
-#: ../../reference_manual/tools/fill.rst:161
+#: ../../reference_manual/tools/fill.rst:172
 msgid "Drag-Fill Mode"
 msgstr "Modo de arrasto de preenchimento"
 
-#: ../../reference_manual/tools/fill.rst:161
+#: ../../reference_manual/tools/fill.rst:172
 msgid "Fill Regions of Similar Colors"
 msgstr "Preencher regiões com uma cor semelhante"

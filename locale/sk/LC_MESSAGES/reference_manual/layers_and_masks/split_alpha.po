@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: "
 "docs_krita_org_reference_manual___layers_and_masks___split_alpha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2019-05-13 13:13+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -121,7 +121,7 @@ msgstr ""
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:32
 msgid ""
 "Normally, when saving an image to a file, all fully transparent areas of the "
-"image are filled with black color. It happens because when composing the "
+"image are filled with black color. It happens because when compositing the "
 "layers of the image, Krita drop color data of fully transparent pixels for "
 "efficiency reason. To avoid this of color data loss you can either avoid "
 "compositing of the image i.e. limit image to only one layer without any "
@@ -136,6 +136,71 @@ msgstr ""
 msgid ""
 "|mouseright| on the created mask and select :menuselection:`Split Alpha --> "
 "Save Merged...`."
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/split_alpha.rst:41
+msgid "Color channel values in transparent areas"
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/split_alpha.rst:43
+msgid ""
+"Krita treats all color channel values in fully transparent pixels as "
+"**undefined**. Effectively, it means that Krita will try to skip writing to "
+"(or reading from) a fully transparent pixel, unless it is really needed or "
+"explicitly requested. That is done for optimization purposes and allows "
+"Krita to speed up compositing the image by a lot."
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/split_alpha.rst:46
+msgid "Example 1: erasing pixels on the image"
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/split_alpha.rst:48
+msgid ""
+"When erasing pixels with an eraser brush or when clearing a selection with :"
+"menuselection:`Edit --> Clear` action, the color data **is not actually "
+"cleared**. It is only the alpha channel that is zeroed, but color channels "
+"are kept intact. You can see it yourself if you try to apply :menuselection:"
+"`Split Alpha --> Alpha into Mask` on a layer after erasing with an eraser "
+"brush on it."
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/split_alpha.rst:50
+msgid ""
+"To actually clear the color channels of transparent areas you need to apply "
+"a :ref:`Reset Transparent Filter<reset_transparent_filter>` on the image. It "
+"will zero-out all color channels of fully transparent pixels."
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/split_alpha.rst:52
+msgid ""
+"Krita also has a special :ref:`Propagate Colors "
+"Filter<filter_propagate_colors>`.  It fills the fully transparent areas with "
+"neighboring colors instead of just zeroing them out, which might be useful "
+"in some workflows."
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/split_alpha.rst:55
+msgid ""
+"Example 2: compositing layers with color data inside fully transparent areas"
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/split_alpha.rst:57
+msgid ""
+"If you have multiple layers, which have any color data inside their fully "
+"transparent areas, the result of their merge **will not include this color "
+"data**. The resulting pixels will be just zeroed out. Obviously, you cannot "
+"blend two pixels with zero alpha, because you would have to divide by zero "
+"for that."
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/split_alpha.rst:59
+msgid ""
+"For most workflows it just means that you should use :menuselection:`Split "
+"Alpha --> Save Merged...` action to properly save the result of this split "
+"alpha work. When exporting the result via :menuselection:`File --> Export..."
+"`, a compositing operation may (or may not) happen, clearing out the "
+"transparent areas."
 msgstr ""
 
 #, fuzzy

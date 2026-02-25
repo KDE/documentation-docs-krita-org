@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2021-12-12 22:56-0800\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -23,6 +23,22 @@ msgstr ""
 msgid ".. image:: /images/icons/Krita_mouse_left.png"
 msgstr ""
 
+#: ../../<rst_epilog>:6
+msgid "mousemiddle"
+msgstr ""
+
+#: ../../<rst_epilog>:6
+msgid ".. image:: /images/icons/Krita_mouse_middle.png"
+msgstr ""
+
+#: ../../<rst_epilog>:8
+msgid "mousescroll"
+msgstr ""
+
+#: ../../<rst_epilog>:8
+msgid ".. image:: /images/icons/Krita_mouse_scroll.png"
+msgstr ""
+
 #: ../../<rst_epilog>:14
 msgid "tooltext"
 msgstr ""
@@ -35,12 +51,22 @@ msgstr ""
 msgid "Krita's text tool reference."
 msgstr "Krita テキストツールの説明。"
 
-#: ../../reference_manual/tools/text.rst:0
-msgid ".. image:: /images/tools/Krita_4_0_text_kerning.png"
+#: ../../reference_manual/tools/text.rst:-1
+msgid ""
+"A curved path, outlined in red, with a cursor over it. The cursor shape has "
+"changed to a \"T\" standing on a curve."
 msgstr ""
 
-#: ../../reference_manual/tools/text.rst:0
-msgid ".. image:: /images/tools/Krita_4_0_letter_and_word_spacing.png"
+#: ../../reference_manual/tools/text.rst:-1
+msgid ".. image:: /images/text/working_text_adjust_path.png"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:-1
+msgid "The text \"Secrets of the Rose Garden\", following the curled path."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:-1
+msgid ".. image:: /images/text/working_text_adjust_path_2.png"
 msgstr ""
 
 #: ../../reference_manual/tools/text.rst:11
@@ -64,309 +90,650 @@ msgid "|tooltext|"
 msgstr ""
 
 #: ../../reference_manual/tools/text.rst:20
-msgid "This tool allows you to add text to your artwork."
-msgstr "このツールではご自身の作品にテキストを追加することができます。"
-
-#: ../../reference_manual/tools/text.rst:24
 msgid ""
-"The text layout got reworked in Krita 5.2, however the text tool itself has "
-"not yet received an update. For now, if you want to use features like "
-"``inline-size`` for wrapping or ``writing-mode:vertical-rl`` for vertical "
-"text, you will need to use the SVG source editor. We will update the text "
-"tool in future versions of Krita."
+"This tool allows you to add text to your artwork. It is used in conjunction "
+"with the :ref:`text_properties_docker`. Some text operations can also be "
+"handled by the :ref:`shape_selection_tool`. See :ref:`working_with_text` for "
+"an overview of all text features."
 msgstr ""
 
-#: ../../reference_manual/tools/text.rst:26
+#: ../../reference_manual/tools/text.rst:22
 msgid ""
-"You use it by doing |mouseleft| :kbd:`+ drag` to create a rectangular "
-"selection. When releasing |mouseleft| a default text will be created and the "
-"text editor window will pop-up."
-msgstr ""
-"これを使うにはまず |mouseleft| :kbd:`+ drag` をして矩形選択を作成します。|"
-"mouseleft| を離すと既定のテキストが作成されテキストエディタウィンドウが現れま"
-"す。"
-
-#: ../../reference_manual/tools/text.rst:28
-msgid ""
-"Hovering over other text shapes will highlight their bounding box. |"
-"mouseleft| on a highlighted text will select it as the active text."
-msgstr ""
-"他のテキストシェイプにマウスホバーすることで囲まれたボックスをハイライトしま"
-"す。そこで |mouseleft| を押すとアクティブなテキストとして選択します。"
-
-#: ../../reference_manual/tools/text.rst:31
-msgid "Tool Options"
-msgstr "ツールオプション"
-
-#: ../../reference_manual/tools/text.rst:34
-msgid ".. image:: /images/tools/Krita-tool-options-text.png"
+"To create a text, click on the canvas with |mouseleft| and a text with "
+"\"Placeholder Text\" will appear, ready for editing."
 msgstr ""
 
-#: ../../reference_manual/tools/text.rst:36
-msgid ""
-"This contains features with which to create new texts, the following items "
-"are available:"
-msgstr ""
-"ここには新しいテキストを作成する際に使う機能があり、次のものが利用できます:"
-
-#: ../../reference_manual/tools/text.rst:38
-msgid "Font"
-msgstr "フォント"
-
-#: ../../reference_manual/tools/text.rst:39
-msgid "The letter type used by newly created texts."
-msgstr "新しく作成されるテキストで使う文字のタイプです。"
-
-#: ../../reference_manual/tools/text.rst:40
-msgid "Size in pt"
-msgstr "ポイントでのサイズ"
-
-#: ../../reference_manual/tools/text.rst:41
-msgid ""
-"The letter-size used by newly created texts. It is in pts (points), which is "
-"a common standard for fonts that is measured 72 points per inch. It "
-"therefore will stay proportionally the same size if you increase or decrease "
-"canvas dpi."
-msgstr ""
-"テキストで使われる文字のサイズです。pt(ポイント)で表され、1インチ72ポイントと"
-"する標準的なものです。なのでキャンバス DPI を上げたり下げたりしてもそれに合わ"
-"せて同じサイズに留まります。"
-
-#: ../../reference_manual/tools/text.rst:42
-msgid "Anchor/Align text to the left/middle/right"
-msgstr "テキストを左/中/右に揃える"
-
-#: ../../reference_manual/tools/text.rst:43
-msgid ""
-"Text alignment. This allows you to align text to the left, center it, or to "
-"the right. This is called text-anchor because SVG 1.1's multiline text only "
-"uses text-anchor, and this is a slight bit different than text-align (and "
-"also the reason justify isn't available at the moment)."
-msgstr ""
-"テキストの揃えです。テキストを左や中央、右に揃えることができます。SVG 1.1 の"
-"複数行テキストが text-anchor のみを使用したため、正確にはテキストの揃えとは若"
-"干異なります(現時点で揃えが利用できない理由でもあります)。"
-
-#: ../../reference_manual/tools/text.rst:45
-msgid "Create new texts with..."
-msgstr "新しいテキストを作成..."
-
-#: ../../reference_manual/tools/text.rst:45
-msgid "Letter Spacing"
-msgstr "文字の間隔"
-
-#: ../../reference_manual/tools/text.rst:45
-msgid "The letter spacing used by newly created texts."
-msgstr "テキストで使われる文字の間隔です。"
-
-#: ../../reference_manual/tools/text.rst:48
-msgid "Edit Text"
+#: ../../reference_manual/tools/text.rst:25
+#, fuzzy
+#| msgid "Edit Text"
+msgid "Editing Text"
 msgstr "テキスト編集"
 
-#: ../../reference_manual/tools/text.rst:48
+#: ../../reference_manual/tools/text.rst:27
 msgid ""
-"This will summon the text editor for the currently selected shape. This can "
-"be quickly invoked with either pressing the :kbd:`Enter` key or :kbd:`double-"
-"click +` |mouseleft| shortcut on the shape."
+"If you have just created a text, a blinking cursor will be visible on the "
+"text. You will now be able to move it around with the keyboard arrow keys,  "
+"type and remove text with back space and delete keys, as well as use any "
+"system input methods for complex text input. Selecting text can be done by "
+"holding shift while navigating with the arrow keys to the end point of the "
+"selection. You can also use |mouseleft| :kbd:`+ drag` to select text, :kbd:"
+"`double-click +` |mouseleft| to select a word and :kbd:`triple-click +` |"
+"mouseleft| to select the whole text."
 msgstr ""
-"現在選択されているシェイプのテキストエディタを表示します。シェイプ上で :kbd:`"
-"ダブルクリック +` |mouseleft| ショートカットか :kbd:`Enter` キーを押すことで"
-"同じことが素早くできます。"
+
+#: ../../reference_manual/tools/text.rst:31
+msgid ""
+"Because you need the keys on your keyboard to type text, many shortcuts will "
+"be disabled. If you want to use a particular shortcut while editing text, it "
+"is best to set it up to use either with :kbd:`Ctrl`, :kbd:`Alt` or :kbd:"
+"`Ctrl + Shift` as modifiers, as Krita will consider others text to be input. "
+"Canvas input gestures like touch rotate, |mousemiddle| pan, or |mousescroll| "
+"will work by virtue of not having any keyboard keys associated."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:33
+msgid ""
+"In addition Krita supports all of `Qt's default text movement shortcuts "
+"<https://doc.qt.io/qt-5/qkeysequence.html#standard-shortcuts>`_. These "
+"correspond to the default for a given operating system, so for example, :kbd:"
+"`Ctrl + →` will move the cursor to the end of words on Windows, while on "
+"MacOS the same action corresponds to :kbd:`Alt + →`. Because Krita supports "
+"vertical text, we will also check against the appropriate keys for the given "
+"writing mode, meaning that in vertical, :kbd:`Ctrl + ↓` will move to the end "
+"of the word."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:35
+msgid ""
+"To finish editing text, click outside the text box, or start editing a "
+"different text. To do so, hover over any other text. This can be on the same "
+"layer or on any other editable vector layer. When hovering over the text, "
+"its bounding box will be highlighted. Clicking on it will then select the "
+"layer, and enter the editing mode on that text."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:37
+msgid ""
+"Beyond editing the contents, you can also move the text. To move a text, "
+"hover over the bounding box so the cursor will switch to a move cursor. Then "
+"|mouseleft| :kbd:`+ drag` will move the text."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:39
+msgid "To change the styling of text, use the :ref:`text_properties_docker`."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:44
+#, fuzzy
+#| msgid "Text Tool"
+msgid "Text Types"
+msgstr "テキストツール"
+
+#: ../../reference_manual/tools/text.rst:46
+msgid ""
+"Krita has full SVG 2 text support, which means there's support for various "
+"text types, which can be subdivided into roughly five categories:"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:49
+#: ../../reference_manual/tools/text.rst:153
+msgid "Preformatted"
+msgstr ""
 
 #: ../../reference_manual/tools/text.rst:51
-msgid "Text Editor"
-msgstr "テキストエディタ"
-
-#: ../../reference_manual/tools/text.rst:53
 msgid ""
-"A small window for all your text editing needs. The Text Editor has two "
-"tabs: Rich text and SVG source."
+"The most basic type of text. This type does not auto wrap. However, white "
+"spaces are not collapsed, meaning that new lines can be created by pressing "
+"the :kbd:`Enter` key."
 msgstr ""
-"テキスト編集でやりたいことができる小さいウィンドウです。このテキストエディタ"
-"には2つのタブ:リッチテキストと SVG ソースがあります。"
+
+#: ../../reference_manual/tools/text.rst:54
+#: ../../reference_manual/tools/text.rst:159
+msgid "Pre-positioned"
+msgstr ""
 
 #: ../../reference_manual/tools/text.rst:56
-msgid ".. image:: /images/tools/Text-editor-example.png"
-msgstr ""
-
-#: ../../reference_manual/tools/text.rst:58
 msgid ""
-"You can use the Text tool to first create a text box. There are a few "
-"options in the tool options if you want to customize how the text will be "
-"adding. You will need to drag a rectangle on the canvas to create the text "
-"area. Once your text is created, you can edit the text from two ways:"
+":dfn:`Pre-positioned` is an SVG 1.1 text, where each line is positioned "
+"absolutely, and the white-space rule is set to collapse any extra spaces. "
+"Older versions of Krita created such texts, and it is still useful for SVGs "
+"that will be exported and used in other SVG 1.1 renderers."
 msgstr ""
-"テキストボックスを作るにはまずテキストツールを使います。テキスト追加をカスタ"
-"マイズするにはツールのオプションから行います。キャンバス上に四角形をドラッグ"
-"してテキストエリアを作成し、テキストを作成出来たら2つの方法でテキストを編集で"
-"きます:"
 
 #: ../../reference_manual/tools/text.rst:60
 msgid ""
-"Select the text with the shape selection tool (first tool). Press the :kbd:"
-"`Enter` key. The text editor will appear."
+"When handling text coming from old versions of Krita, use the text type "
+"conversion to switch them to either :guilabel:`Preformatted` or :guilabel:"
+"`Inline Wrapped` to make editing text easier. :guilabel:`Pre-positioned` is "
+"only useful when you intend to use the SVG representation later, such as for "
+"EPUB3 or web use."
 msgstr ""
-"形状選択ツール(最初のツール)でテキストを選択します。:kbd:`Enter` キーを押して"
-"ください。テキストエディタが現れます。"
 
-#: ../../reference_manual/tools/text.rst:61
-msgid "Activating"
-msgstr "有効化"
+#: ../../reference_manual/tools/text.rst:63
+msgid "Text on Path"
+msgstr ""
 
-#: ../../reference_manual/tools/text.rst:61
+#: ../../reference_manual/tools/text.rst:65
 msgid ""
-"Select the text with the shape selection tool (first tool). Then click the "
-"Text tool. In the tool options there is an :guilabel:`Edit Text` button. "
-"When you click that the text editor window will appear."
+"To create :dfn:`Text on Path`, hover over the an existing shape. When "
+"hovering over the boundary, the cursor will change to a text-on-path cursor, "
+"and |mouseleft| will create a text on path."
 msgstr ""
-"形状選択ツール(最初のツール)でテキストを選択します。それからテキストツールを"
-"クリックします。ツールのオプションに :guilabel:`テキスト編集` ボタンがありま"
-"す。クリックするとテキストエディタが開きます。"
 
-#: ../../reference_manual/tools/text.rst:64
+#: ../../reference_manual/tools/text.rst:71
 msgid ""
-"If you are unfamiliar with the way SVG text works, use the rich text tab, it "
-"will allow you to edit the text as you see it, at the cost of not having all "
-"functionality."
+"To edit a text on path, set the blinking cursor within said text. A handle "
+"will appear to edit the start offset and the side of the path the text is "
+"laid out on. By dragging this handle, the text can be moved along the path, "
+"and by flipping it to the other side, the text will be set to use the other "
+"side of the path."
 msgstr ""
-"SVG テキストのはたらきがよくわからなければ、リッチテキストタブを使うことで、"
-"すべての機能は利用できませんが見たままの編集ができます。"
 
-#: ../../reference_manual/tools/text.rst:66
+#: ../../reference_manual/tools/text.rst:78
 msgid ""
-"If you are a little bit more familiar with SVG text, you can directly edit "
-"the SVG source. Do note that not all attributes and properties are converted "
-"back to the rich text editor, so do be careful when switching back."
+"All text types without auto-wrap can in theory be used mixed in a single "
+"text shape. Creating such a shape requires using the SVG source editor to "
+"edit the SVG directly, but it does mean that the division between them is "
+"not as strict as this typology might make them seem. Krita will do it's best "
+"to inform you which text type it thinks the shape is for the conversion "
+"functions in the tool options, but keep in mind that it might guess wrong."
 msgstr ""
-"もし SVG テキストを知っているのであれば、直接 SVG ソースを編集できます。すべ"
-"ての要素やプロパティはリッチテキストエディタに変換できないため、戻すときは注"
-"意してください。"
 
-#: ../../reference_manual/tools/text.rst:68
+#: ../../reference_manual/tools/text.rst:83
+#: ../../reference_manual/tools/text.rst:156
+msgid "Inline Wrapped"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:85
+msgid ""
+"To create a simple wrapped text (:dfn:`Inline Wrapped`), doing |mouseleft| :"
+"kbd:`+ drag` to create a rectangular area. When the area is larger than the "
+"currently selected font's line height, the cursor image will start showing "
+"the cursor for inline wrapped. Releasing the mouse button will then add the "
+"default text with wrapping enabled. To avoid creating a wrapped text while "
+"dragging, press :kbd:`Ctrl` while dragging."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:89
+msgid ".. image:: /images/text/inline-wrapped-cursor.png"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:89
+msgid "Dragging a large enough area will show the inline wrapped cursor."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:91
+msgid ""
+"When editing a :guilabel:`Inline Wrapped` text, you can also edit the "
+"wrapping area. Two handles will appear on each side of the text, showing the "
+"limits at which the text will wrap. By doing |mouseleft| :kbd:`+ drag` on "
+"these handles, you can increase or decrease the wrapping area. When the text "
+"is aligned to one of the handles, moving one of the other will swap the text "
+"alignment so it stays aligned to that handle. When the alignment is set to "
+"the middle, the text will stay in between the two bars. If you want the text "
+"to stay at the same place when editing a centered text and only change the "
+"wrapping area width, hold :kbd:`Ctrl` while dragging."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:95
+msgid ".. image:: /images/text/inline-wrapped-text.png"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:95
+msgid ""
+"Inline wrapped will show two handles at each side of the area. These can be "
+"adjusted directly on canvas."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:100
+msgid "Text in Shape"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:102
+msgid ""
+"To create :dfn:`Text in Shape`, hover over the an existing closed shape. "
+"When hovering over the fill will change the cursor to a text-in-shape "
+"cursor, and |mouseleft| will flow the text into that shape. Both text on "
+"path and text in shape will show a new icon to the top right of the shape. "
+"Clicking this will switch to the :ref:`shape_selection_tool`, where the "
+"shapes can be modified."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:106
+msgid ".. image:: /images/text/text-in-shape-cursor.png"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:106
+msgid "Hovering over a closed shape will show the text in shape cursor."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:108
+msgid ""
+"Text can be wrapped into one or multiple shapes. When flowing in multiple "
+"shapes, each :dfn:`inside` shape is first filled up with as much text as "
+"possible before the next shape in the chain is started. Then there's also :"
+"dfn:`subtract` shapes. These are subtracted from the inside shapes to create "
+"the text areas."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:113
+msgid ""
+"Text wrapped into a green rectangle and an orange ellipse. A blue triangle "
+"overlaps both."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:113
+msgid ".. image:: /images/text/text-wrap-multiple-shapes.png"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:113
+msgid ""
+"Example of text wrapped into multiple shapes. The green rectangle and orange "
+"ellipse are inside shapes, while the triangle is a subtract shape. The "
+"outline shows the effect text areas, while arrows between the areas show how "
+"they are chained."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:115
+msgid ""
+"When editing text in shape, the final text area border is drawn on the "
+"screen. A chain of arrows is drawn between text areas to show the order in "
+"which the areas are evaluated. The :ref:`shape padding and margin "
+"<text_property_text_area>` can be modified by hovering over the text area "
+"border and |mouseleft| :kbd:`+ dragging` it. If the cursor was closer to a "
+"subtraction shape when starting to drag, the margin will be modified. "
+"Conversely, when the cursor is closer to an inside shape when starting the "
+"drag, the shape padding will be modified."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:120
+msgid ""
+"Image of a witch on a broom, looking at some houses below. Her speech bubble "
+"says: \"Let's halt for the night down there.\" There's some padding, "
+"outlined by a red dashed line, and the cursor is hovering over it, "
+"indicating the line can be adjusted."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:120
+msgid ".. image:: /images/text/working_text_typeset_comics_3.png"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:120
+msgid ""
+"This speech bubble has shape padding applied, by dragging the hovered "
+"border. Image courtesy of Pepper and Carrot, CC-BY David Revoy."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:122
+msgid ""
+"Editing the order of the text areas in the chain is done in :ref:"
+"`shape_selection_tool`, as is adding and removing shapes from a text."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:126
+msgid "Tool Options"
+msgstr "ツールオプション"
+
+#: ../../reference_manual/tools/text.rst:129
+msgid ".. image:: /images/tools/Krita-tool-options-text.png"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:131
+msgid "Create new texts with..."
+msgstr "新しいテキストを作成..."
+
+#: ../../reference_manual/tools/text.rst:131
+msgid ""
+"This allows choosing which properties to use when creating new texts. Text "
+"can be made with any :ref:`resource_style_presets`, or use the current "
+"properties in the text properties docker by toggling :guilabel:`Current Text "
+"Properties`."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:134
+msgid "Use Visual Cursor"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:135
+msgid ""
+"Use the visual order for the text caret bidirectional text. When text is "
+"bidirectional, the logical order of the letters can go left or right "
+"depending on where it is in the text, with the paragraph direction "
+"determining which of :kbd:`←` and :kbd:`→` is the forward key. When visual "
+"order is enabled, the caret will ignore the logical order in favour of the "
+"visual order."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:136
+#, fuzzy
+#| msgid "Tool Options"
+msgid "Options"
+msgstr "ツールオプション"
+
+#: ../../reference_manual/tools/text.rst:136
+msgid "Paste Rich Text by Default"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:137
+msgid ""
+"Krita can read styled text like SVG and HTML from the system clipboard, and "
+"has separate actions in the shortcuts for pasting either this 'rich' text or "
+"to paste plain text. This toggle controls whether to also paste rich text "
+"when using the regular :kbd:`Ctrl + V` :guilabel:`Paste` action from the "
+"edit menu."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:138
+msgid "Open Text Properties"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:139
+msgid ""
+"Opens the :ref:`text_properties_docker`. The text properties docker is where "
+"the majority of text styling functionality is located."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:140
+#: ../../reference_manual/tools/text.rst:166
+msgid "Type Setting Mode"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:141
+msgid "Toggles :ref:`type_setting_mode`."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:143
+msgid "Edit SVG Source"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:144
+msgid "Opens the :ref:`svg_source_editor`."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:146
+msgid "Opens the :ref:`glyph_palette`."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:147
+msgid "Dialogs"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:147
+#: ../../reference_manual/tools/text.rst:251
+msgid "Glyph Palette"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:150
+msgid ""
+"These buttons allow converting a selected text. Said conversion functions "
+"are also available as shortcut actions under \"Interaction Tool\" in the "
+"shortcut preferences."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:153
+msgid ""
+"Converts text so that it does not wrap automatically. In addition, the CSS :"
+"ref:`text_property_white_space` collapse rule is applied so that any hidden "
+"white space is removed, and the rule is switched so that additional white "
+"spaces are not removed. Any absolute SVG 1.1 character transforms are "
+"changed to become new lines."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:156
+msgid ""
+"Converts text so that it wraps around a maximum inline length (width for "
+"horizontal text, and height for vertical text). As with :guilabel:"
+"`Preformatted`, the CSS :ref:`text_property_white_space` rule and character "
+"transforms are processed to create line breaks and avoid the collapse of "
+"additional white spaces."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:159
+msgid ""
+"Converts text to SVG 1.1 style text, where additional :ref:"
+"`text_property_white_space` get collapsed and new lines are positioned "
+"absolutely. This is how previous versions of Krita handled text, as well as "
+"the dominant way to handle SVG text. Use this to prepare text for export "
+"when the end result should show in a SVG 1.1 compatible renderer."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:161
+msgid "Convert Type..."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:161
+msgid ""
+"Text in shape and text on path are not among the conversion options. "
+"Instead, use :guilabel:`Flow Text in Shape` and :guilabel:`Put Text On Path` "
+"from the rightclick menu in the :ref:`shape_selection_tool_text`."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:168
+msgid ""
+"This mode enables on-canvas text styling for a number of text properties."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:172
+msgid ".. image:: /images/text/type-setting-mode.png"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:172
+msgid ""
+"Text in Type Setting Mode, with \"Setting\" selected, and the cursor "
+"hovering over the :guilabel:`Font Size` metric line."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:174
+msgid ""
+"When enabled, the selection will be replaced with a number of metric lines. "
+"When there's no selection, these lines are drawn for the paragraph, and uses "
+"the paragraph's font metrics, while with a selection, it will use the "
+"selected glyphs font metrics as retrieved during the text layout."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:176
+msgid ""
+"Hovering over the lines will highlight them, and show the name of the "
+"relevant metric. |mouseleft| :kbd:`+ drag` on these lines will increase or "
+"decrease the size of this metric. This way, :ref:`text_property_font_size`, :"
+"ref:`text_property_line_height` and :ref:`text_property_baseline_shift` can "
+"be modified directly on canvas. Pressing :kbd:`Shift` will display a "
+"different set of metrics: the :ref:`text_property_baseline`. Clicking a "
+"baseline will set :ref:`text_property_dominant_baseline` and :ref:"
+"`text_property_alignment_baseline` to that baseline, allowing the alignment "
+"of text of different sizes to said baseline."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:180
+msgid ".. image:: /images/text/type-setting-mode-baselines.png"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:180
+msgid ""
+"The alternate baseline mode. Cursor is hovering over the :guilabel:`Hanging` "
+"baseline."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:182
+msgid ""
+"When text is :guilabel:`Preformatted` or :guilabel:`Pre-positioned`, two "
+"additional controls are visible at the start and end of a selection. These "
+"allow modifying the position and rotation of each cluster. The square handle "
+"allows moving the whole selection, while the round handle scales and rotates "
+"the selection. There's a series of actions for moving the square handle "
+"available in the shortcuts configuration for the text tool. These (for each "
+"direction) :guilabel:`Move Text Selection Down By 1 Pixel`, and will move "
+"the selected text in the given direction. There's also :guilabel:`Remove "
+"Character Transforms` which will remove all character transforms, (relative, "
+"absolute and rotation) from the given range."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:186
+msgid ".. image:: /images/text/type-setting-mode-handle-adjust.png"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:186
+msgid ""
+"The selected word has been rotated by |mouseleft| + dragging the handles."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:190
+msgid ""
+"For fine-tuned typographic adjustments, like manual kerning, it's "
+"recommended to use these two handles over CSS :ref:"
+"`text_property_letter_spacing`. The latter is intended for spacing letters "
+"over a whole chunk of text, and implemented in subtly different ways in "
+"every implementation."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:192
+msgid ""
+"Internally, these modify SVG 1.1 relative character transforms, which means "
+"they don't break the shaping, and are supported in all the major browsers."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:197
+msgid "SVG Source Editor"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:199
+msgid ""
+"A small window to directly edit the SVG source of the text. The text layout "
+"is capable of more complex text than the text tool can edit on-canvas. If "
+"you are familiar with SVG, you will be able to edit it directly and use "
+"powerful features like nested :ref:`text_property_baseline_shift`, :ref:"
+"`text_property_text_decoration` and :ref:`text_property_direction`."
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:202
+msgid ".. image:: /images/tools/Text-editor-example.png"
+msgstr ""
+
+#: ../../reference_manual/tools/text.rst:203
 msgid "Editing"
 msgstr "編集"
 
-#: ../../reference_manual/tools/text.rst:68
+#: ../../reference_manual/tools/text.rst:205
 msgid ""
 "Press :guilabel:`Save` as you're done with your edits to preview them on "
 "canvas."
 msgstr ""
 ":guilabel:`保存` を押せばこれまでにした編集をキャンバス上に反映できます。"
 
-#: ../../reference_manual/tools/text.rst:71
+#: ../../reference_manual/tools/text.rst:208
 msgid "Save :kbd:`Ctrl + S`"
 msgstr "保存 :kbd:`Ctrl + S`"
 
-#: ../../reference_manual/tools/text.rst:72
+#: ../../reference_manual/tools/text.rst:209
 msgid "Save current edits to the text on canvas."
 msgstr "テキストにされた編集をキャンバスに保存する。"
 
-#: ../../reference_manual/tools/text.rst:74
+#: ../../reference_manual/tools/text.rst:211
 msgid "File"
 msgstr "ファイル"
 
-#: ../../reference_manual/tools/text.rst:74
+#: ../../reference_manual/tools/text.rst:211
 msgid "Close :kbd:`Ctrl + W`"
 msgstr "閉じる :kbd:`Ctrl + W`"
 
-#: ../../reference_manual/tools/text.rst:74
+#: ../../reference_manual/tools/text.rst:211
 msgid "Close the editor."
 msgstr "エディタを閉じます。"
 
-#: ../../reference_manual/tools/text.rst:77
+#: ../../reference_manual/tools/text.rst:214
 msgid "Basic editing functions:"
 msgstr "基本的な編集機能:"
 
-#: ../../reference_manual/tools/text.rst:79
+#: ../../reference_manual/tools/text.rst:216
 msgid "Undo :kbd:`Ctrl + Z`"
 msgstr "元に戻す :kbd:`Ctrl + Z`"
 
-#: ../../reference_manual/tools/text.rst:80
+#: ../../reference_manual/tools/text.rst:217
 msgid "Undo the last action in the text editor."
 msgstr "テキストエディタで最後にした動作を元に戻します。"
 
-#: ../../reference_manual/tools/text.rst:81
+#: ../../reference_manual/tools/text.rst:218
 msgid "Redo :kbd:`Ctrl + Shift + Z`"
 msgstr "やり直し :kbd:`Ctrl + Shift + Z`"
 
-#: ../../reference_manual/tools/text.rst:82
+#: ../../reference_manual/tools/text.rst:219
 msgid "Redo the last undone action in the text editor."
 msgstr "テキストエディタで最後に元に戻した動作をやり直します。"
 
-#: ../../reference_manual/tools/text.rst:83
+#: ../../reference_manual/tools/text.rst:220
 msgid "Cut :kbd:`Ctrl + X`"
 msgstr "切り取り :kbd:`Ctrl + X`"
 
-#: ../../reference_manual/tools/text.rst:84
+#: ../../reference_manual/tools/text.rst:221
 msgid "Cut selected text to the clipboard."
 msgstr "選択されたテキストをクリップボードに切り取ります。"
 
-#: ../../reference_manual/tools/text.rst:85
+#: ../../reference_manual/tools/text.rst:222
 msgid "Copy :kbd:`Ctrl + C`"
 msgstr "コピー :kbd:`Ctrl + C`"
 
-#: ../../reference_manual/tools/text.rst:86
+#: ../../reference_manual/tools/text.rst:223
 msgid "Copy selected text to the clipboard."
 msgstr "選択されたテキストをクリップボードにコピーします。"
 
-#: ../../reference_manual/tools/text.rst:87
+#: ../../reference_manual/tools/text.rst:224
 msgid "Paste :kbd:`Ctrl + V`"
 msgstr "貼り付け :kbd:`Ctrl + V`"
 
-#: ../../reference_manual/tools/text.rst:88
+#: ../../reference_manual/tools/text.rst:225
 msgid "Paste text from the clipboard."
 msgstr "テキストをクリップボードから貼り付けます。"
 
-#: ../../reference_manual/tools/text.rst:89
+#: ../../reference_manual/tools/text.rst:226
 msgid "Select all :kbd:`Ctrl + A`"
 msgstr "全選択 :kbd:`Ctrl + A`"
 
-#: ../../reference_manual/tools/text.rst:90
+#: ../../reference_manual/tools/text.rst:227
 msgid "Select all text in the active editor."
 msgstr "アクティブなエディタですべてのテキストを選択します。"
 
-#: ../../reference_manual/tools/text.rst:91
+#: ../../reference_manual/tools/text.rst:228
 msgid "Deselect :kbd:`Ctrl + Shift + A`"
 msgstr "選択解除 :kbd:`Ctrl + Shift + A`"
 
-#: ../../reference_manual/tools/text.rst:92
+#: ../../reference_manual/tools/text.rst:229
 msgid "Deselect any selected text."
 msgstr "選択されたテキストを選択解除します。"
 
-#: ../../reference_manual/tools/text.rst:93
+#: ../../reference_manual/tools/text.rst:230
 msgid "Find :kbd:`Ctrl + F`"
 msgstr "検索 :kbd:`Ctrl + F`"
 
-#: ../../reference_manual/tools/text.rst:94
+#: ../../reference_manual/tools/text.rst:231
 msgid ""
 "Pops up a window with an input to find the given text in the active editor."
 msgstr "入力されたテキストをアクティブなエディタから探すウィンドウを開きます。"
 
-#: ../../reference_manual/tools/text.rst:95
+#: ../../reference_manual/tools/text.rst:232
 msgid "Find Next :kbd:`F3`"
 msgstr "次を検索 :kbd:`F3`"
 
-#: ../../reference_manual/tools/text.rst:96
+#: ../../reference_manual/tools/text.rst:233
 msgid "Searches for the next text using the last search key."
 msgstr "検索キーを使って次のテキストを探します。"
 
-#: ../../reference_manual/tools/text.rst:97
+#: ../../reference_manual/tools/text.rst:234
 msgid "Find Previous :kbd:`Shift + F3`"
 msgstr "前を検索 :kbd:`Shift + F3`"
 
-#: ../../reference_manual/tools/text.rst:98
+#: ../../reference_manual/tools/text.rst:235
 msgid "Searches for the last text using the last search key."
 msgstr "検索キーを使って前のテキストを探します。"
 
-#: ../../reference_manual/tools/text.rst:100
+#: ../../reference_manual/tools/text.rst:237
 msgid "Edit"
 msgstr "編集"
 
-#: ../../reference_manual/tools/text.rst:100
+#: ../../reference_manual/tools/text.rst:237
 msgid "Replace... :kbd:`Ctrl + R`"
 msgstr "置換... :kbd:`Ctrl + R`"
 
-#: ../../reference_manual/tools/text.rst:100
+#: ../../reference_manual/tools/text.rst:237
 msgid ""
 "Pops up a dialog with two inputs: The string you wish to find, and the "
 "string you wish to replace it with. Will always replace ALL found instances."
@@ -374,432 +741,540 @@ msgstr ""
 "二つの入力: 見つけたい文字列と、置き換えたい文字列のダイアログを表示します。"
 "常にすべての該当した文字列を置き換えます。"
 
-#: ../../reference_manual/tools/text.rst:103
+#: ../../reference_manual/tools/text.rst:240
 msgid "Zoom Out :kbd:`Ctrl + -`"
 msgstr "ズームアウト :kbd:`Ctrl + -`"
 
-#: ../../reference_manual/tools/text.rst:104
+#: ../../reference_manual/tools/text.rst:241
 msgid "Zoom out the text."
 msgstr "テキストをズームアウトします。"
 
-#: ../../reference_manual/tools/text.rst:106
+#: ../../reference_manual/tools/text.rst:243
 msgid "View"
 msgstr "表示"
 
-#: ../../reference_manual/tools/text.rst:106
+#: ../../reference_manual/tools/text.rst:243
 msgid "Zoom In :kbd:`Ctrl + +`"
 msgstr "ズームイン :kbd:`Ctrl + +`"
 
-#: ../../reference_manual/tools/text.rst:106
+#: ../../reference_manual/tools/text.rst:243
 msgid "Zoom in the text."
 msgstr "テキストをズームインします。"
 
-#: ../../reference_manual/tools/text.rst:110
-msgid "Insert"
-msgstr "挿入"
-
-#: ../../reference_manual/tools/text.rst:110
-msgid "Special Character... :kbd:`Alt + Shift + C`"
-msgstr "特殊文字... :kbd:`Alt + Shift + C`"
-
-#: ../../reference_manual/tools/text.rst:110
-msgid ""
-"Pops up a dialog that allows you to search for special characters that are "
-"difficult to type in with your keyboard."
-msgstr ""
-"キーボードで入力するのが難しい特殊な文字を検索することができるダイアログを表"
-"示します。"
-
-#: ../../reference_manual/tools/text.rst:113
-msgid "Bold :kbd:`Ctrl + B`"
-msgstr "太字 :kbd:`Ctrl + B`"
-
-#: ../../reference_manual/tools/text.rst:114
-msgid "Set the font-weight to **bold**."
-msgstr "フォントを **太字** に設定します。"
-
-#: ../../reference_manual/tools/text.rst:115
-msgid "Italic :kbd:`Ctrl + I`"
-msgstr "斜体 :kbd:`Ctrl + I`"
-
-#: ../../reference_manual/tools/text.rst:116
-msgid "Sets the selected text *italic*."
-msgstr "選択されたテキストを **斜体** に設定します。"
-
-#: ../../reference_manual/tools/text.rst:117
-msgid "Underline :kbd:`Ctrl + U`"
-msgstr "下線 :kbd:`Ctrl + U`"
-
-#: ../../reference_manual/tools/text.rst:118
-msgid "Underline the selected text."
-msgstr "選択されたテキストに下線を引きます。"
-
-#: ../../reference_manual/tools/text.rst:119
-msgid "Strike-Through"
-msgstr "打ち消し線"
-
-#: ../../reference_manual/tools/text.rst:120
-msgid "Adds a strike-through text decoration."
-msgstr "テキストに打ち消し線を追加します。"
-
-#: ../../reference_manual/tools/text.rst:121
-msgid "Superscript :kbd:`Ctrl + Shift + P`"
-msgstr "上付き文字 :kbd:`Ctrl + Shift + P`"
-
-#: ../../reference_manual/tools/text.rst:122
-msgid "Sets the text to super-script baseline."
-msgstr "テキストを上付き文字に設定します。"
-
-#: ../../reference_manual/tools/text.rst:123
-msgid "Subscript :kbd:`Ctrl + Shift + B`"
-msgstr "下付き文字 :kbd:`Ctrl + Shift + B`"
-
-#: ../../reference_manual/tools/text.rst:124
-msgid "Sets the text to subscript baseline."
-msgstr "テキストを下付き文字に設定します。"
-
-#: ../../reference_manual/tools/text.rst:125
-msgid "Weight"
-msgstr "太さ"
-
-#: ../../reference_manual/tools/text.rst:126
-msgid ""
-"Sets the font weight a little more specifically. Possibilities are... Light, "
-"Normal, Bold, and Black."
-msgstr ""
-"フォントの太さをより具体的に設定します。可能なのは例えば... Light, Normal, "
-"Bold, Black です。"
-
-#: ../../reference_manual/tools/text.rst:127
-msgid "Align Left"
-msgstr "左揃え"
-
-#: ../../reference_manual/tools/text.rst:128
-msgid "Align the selected paragraph to the left."
-msgstr "選択された文章を左に揃えます。"
-
-#: ../../reference_manual/tools/text.rst:129
-msgid "Align Center :kbd:`Ctrl + Alt + C`"
-msgstr "中央揃え :kbd:`Ctrl + Alt + C`"
-
-#: ../../reference_manual/tools/text.rst:130
-msgid "Center the selected paragraph."
-msgstr "選択された文章を中央に揃えます。"
-
-#: ../../reference_manual/tools/text.rst:131
-msgid "Align Right :kbd:`Ctrl + Alt + R`"
-msgstr "右揃え :kbd:`Ctrl + Alt + R`"
-
-#: ../../reference_manual/tools/text.rst:132
-msgid "Align the selected paragraph to the right."
-msgstr "選択された文章を右に揃えます。"
-
-#: ../../reference_manual/tools/text.rst:134
-msgid "Format"
-msgstr "形式"
-
-#: ../../reference_manual/tools/text.rst:134
-#: ../../reference_manual/tools/text.rst:188
-msgid "Kerning"
-msgstr "カーニング"
-
-#: ../../reference_manual/tools/text.rst:134
-msgid "Toggles kerning for selected text."
-msgstr "テキストのカーニングを切り替えます。"
-
-#: ../../reference_manual/tools/text.rst:138
+#: ../../reference_manual/tools/text.rst:246
 msgid "Settings"
 msgstr "設定"
 
-#: ../../reference_manual/tools/text.rst:138
-msgid "Settings..."
-msgstr "設定..."
+#: ../../reference_manual/tools/text.rst:246
+msgid "Here you can edit the colors used for code formatting."
+msgstr ""
 
-#: ../../reference_manual/tools/text.rst:138
-msgid "Calls up the text-editor settings dialog."
-msgstr "テキストエディタ設定ダイアログを呼び出します。"
-
-#: ../../reference_manual/tools/text.rst:141
-msgid "Text Editor Settings"
-msgstr "テキストエディタ設定"
-
-#: ../../reference_manual/tools/text.rst:143
-msgid "The settings that can be configured for the text editor."
-msgstr "テキストエディタの設定ができます。"
-
-#: ../../reference_manual/tools/text.rst:145
-msgid "Editor Mode"
-msgstr "編集モード"
-
-#: ../../reference_manual/tools/text.rst:146
+#: ../../reference_manual/tools/text.rst:253
 msgid ""
-"Whether you want both the Rich Text Editor and the SVG Source Editor, or "
-"only one of either."
+"The glyph palette dialog provides a grid view of alternative characters "
+"available in a font through opentype features or unicode character variants. "
+"It is meant as a companion to the :ref:`text_property_open_type` in the text "
+"property docker."
 msgstr ""
-"リッチテキストエディタと SVG ソースエディタの両方を使うか、または片方を使うか"
-"選びます。"
 
-#: ../../reference_manual/tools/text.rst:148
-msgid "Here you can configure the syntax highlighting for the SVG source."
-msgstr "SVG ソースに対するシンタックスハイライトの設定はここでできます。"
+#: ../../reference_manual/tools/text.rst:256
+msgid "Glyph Alternates"
+msgstr ""
 
-#: ../../reference_manual/tools/text.rst:150
-msgid "Keyword"
-msgstr "キーワード"
+#: ../../reference_manual/tools/text.rst:260
+msgid ".. image:: /images/text/glyph_palette_alternates.png"
+msgstr ""
 
-#: ../../reference_manual/tools/text.rst:151
-msgid "These highlights important characters like <, /, and >."
-msgstr "<, /, > といった重要な文字もハイライトします。"
-
-#: ../../reference_manual/tools/text.rst:152
-msgid "Element"
-msgstr "要素"
-
-#: ../../reference_manual/tools/text.rst:153
+#: ../../reference_manual/tools/text.rst:260
 msgid ""
-"The format for highlighting the element tag name. **text** and **tspan** are "
-"examples of element names."
+"Glyph alternates for the character \"A\" in the font “Junicode”. Not all "
+"fonts have this many alternates available."
 msgstr ""
-"要素タグ名をハイライトする形式です。**text** や **tspan** が要素名の例です。"
 
-#: ../../reference_manual/tools/text.rst:154
-msgid "Attribute"
-msgstr "属性"
-
-#: ../../reference_manual/tools/text.rst:155
+#: ../../reference_manual/tools/text.rst:262
 msgid ""
-"The format for highlighting the attributes of the tag. For example, ``font-"
-"family``, when it isn't in the ``style`` tag is usually written as an "
-"attribute."
+"This shows any available alternates for the current code point. There's two "
+"kinds of alternates:"
 msgstr ""
-"タグの属性をハイライトする形式です。例えば、``style`` タグ内にない時の "
-"``font-family`` は通常属性として書かれます。"
 
-#: ../../reference_manual/tools/text.rst:156
-msgid "Value"
-msgstr "値"
+#: ../../reference_manual/tools/text.rst:264
+msgid "Unicode Character Variants"
+msgstr ""
 
-#: ../../reference_manual/tools/text.rst:157
-msgid "The format for highlighting value of attributes."
-msgstr "属性の値をハイライトする形式です。"
-
-#: ../../reference_manual/tools/text.rst:158
-msgid "Comment"
-msgstr "コメント"
-
-#: ../../reference_manual/tools/text.rst:159
+#: ../../reference_manual/tools/text.rst:265
 msgid ""
-"This highlights XML comments, which are written as following: ``<!-- This is "
-"an XML comment -->``. Comments are pieces of text that never get interpreted."
+"These are officially defined character variants. Simple examples of these "
+"include slashed 0 as an alternative to 0, but more commonly these are used "
+"for Han ideographs. In particular, place and people names require certain "
+"glyph variants to be used to look recognisable, and character variants "
+"provide this access. Krita will only show variants that are available in the "
+"font itself."
 msgstr ""
-"``<!-- This is an XML comment -->`` のように書かれる、XML コメントをハイライ"
-"トします。コメントは処理されることのないテキストのかたまりです。"
 
-#: ../../reference_manual/tools/text.rst:160
-msgid "Editor Text Color"
-msgstr "エディタテキスト色"
+#: ../../reference_manual/tools/text.rst:267
+msgid "Open Type features"
+msgstr ""
 
-#: ../../reference_manual/tools/text.rst:161
-msgid "The main color of the editor."
-msgstr "エディタのメインの色です。"
-
-#: ../../reference_manual/tools/text.rst:163
-msgid "Colors"
-msgstr "色"
-
-#: ../../reference_manual/tools/text.rst:163
-msgid "Editor background color"
-msgstr "エディタの背景"
-
-#: ../../reference_manual/tools/text.rst:163
-msgid "The main background color of the editor."
-msgstr "エディタのメインの背景色です。"
-
-#: ../../reference_manual/tools/text.rst:166
-msgid "Fonts"
-msgstr "フォント"
-
-#: ../../reference_manual/tools/text.rst:166
+#: ../../reference_manual/tools/text.rst:267
 msgid ""
-"This allows you to filter the selection of fonts in the editor by writing "
-"system. Some systems have a lot of fonts specifically for showing foreign "
-"languages properly, but these might not be useful for you. You just tick the "
-"writing systems which you use yourself, and the font drop-down will only "
-"show fonts that have full support for that language."
+"These are glyph alternates that are available via a number of open type "
+"features, such as the character variants, access all alternates or stylistic "
+"alternates."
 msgstr ""
-"エディタの選択で使うフォントをフィルタしておくことができます。システムによっ"
-"ては外国語を正しく表示するためのたくさんのフォントを持っていることがあります"
-"が、それらは有用であるとは限りません。ご自身が使う入力システムにチェックをつ"
-"け、ドロップダウンからその言語を完全にサポートするフォントのみを表示できま"
-"す。"
 
-#: ../../reference_manual/tools/text.rst:169
-msgid "Fine typographic control with the SVG Source tab"
-msgstr "SVG ソースタブでの校閲管理"
+#: ../../reference_manual/tools/text.rst:270
+msgid "Character Map"
+msgstr ""
 
-#: ../../reference_manual/tools/text.rst:171
+#: ../../reference_manual/tools/text.rst:272
 msgid ""
-"So, the rich text editor cannot control all functionality that SVG text "
-"allows for. For that, you will need to touch the SVG source directly. But to "
-"do that, you will first need to go to the text editor settings and enable "
-"either :guilabel:`SVG Source` or :guilabel:`Both` editor mode. The Rich Text "
-"editor will lose some information, so if you go all out, use :guilabel:`SVG "
-"Source`."
+"This provides a character map for the given font. At the left there is a "
+"list of unicode blocks that can be used to filter the character map."
 msgstr ""
-"リッチテキストエディタでは SVG テキストができるすべての機能を使うことができま"
-"せん。そのためには、直接 SVG ソースを触る必要があります。まずテキストエディタ"
-"設定に行き編集モードが :guilabel:`SVG ソースのみ` か :guilabel:`両方` になっ"
-"ている必要があります。リッチテキストエディタは情報をいくらか失いますので、す"
-"べてを使うには、:guilabel:`SVG ソース` を使用します。"
 
-#: ../../reference_manual/tools/text.rst:174
-msgid "Word-spacing, Letter-spacing and Kerning"
-msgstr "単語間隔、文字間隔とカーニング"
-
-#: ../../reference_manual/tools/text.rst:176
+#: ../../reference_manual/tools/text.rst:274
 msgid ""
-"These three are written and read from the rich text tab, but only two of "
-"them can be controlled from Rich Text tab."
+"At the top there's a search bar, where typing a character will show that "
+"character or the codepoints that decompose to that character (That is, A "
+"will show 'Á', 'Å' and even 'Ấ'). This input also accepts characters in U"
+"+HEXCODE format."
 msgstr ""
-"これら3つのものはリッチテキストタブで読み書きができますが、操作できるのはその"
-"うち2つだけです。"
 
-#: ../../reference_manual/tools/text.rst:179
+#: ../../reference_manual/tools/text.rst:276
 msgid ""
-"`Kerning, in SVG 1.1 <https://www.w3.org/TR/SVG/text.html#KerningProperty>`_ "
-"behaves slightly differently than ``font-kerning`` in CSS. Krita by default "
-"uses the ``auto`` property for this, which means it is on. To turn it off "
-"use ``kerning: 0;`` in the ``style`` section of the text. Any other numeric "
-"value will be added to current ``letter-spacing``."
-msgstr ""
-"`SVG 1.1 でのカーニング <https://www.w3.org/TR/SVG/text."
-"html#KerningProperty>`_ は CSS で言う ``font-kerning`` とは少し異なった振る舞"
-"いをします。Krita は既定ではこのプロパティを ``auto``、つまりオンとして使用し"
-"ます。オフにするにはテキストの ``style`` セクションで ``kerning: 0;`` を使用"
-"します。他の数字の値は現在の ``letter-spacing`` に追加されます。"
-
-#: ../../reference_manual/tools/text.rst:186
-msgid ""
-"<text style=\"kerning:0; font-family:Dancing Script; font-size:18pt; font-"
-"size-adjust:0.265625\">\n"
-"    <tspan>No Kerning on Valhalla Tower.</tspan>\n"
-"</text>"
+"The remaining area is dedicated to the character map itself. Clicking a "
+"character will show a pop-up with glyph alternates (if available), and "
+"double clicking will add said character at the cursor position in the active "
+"text."
 msgstr ""
 
-#: ../../reference_manual/tools/text.rst:191
-msgid "Letter-spacing"
-msgstr "文字間隔"
+#~ msgid "This tool allows you to add text to your artwork."
+#~ msgstr "このツールではご自身の作品にテキストを追加することができます。"
 
-#: ../../reference_manual/tools/text.rst:191
-msgid ""
-"This is the distance between letters in pts, usually. Just write ``letter-"
-"spacing`` in the ``style`` and add a distance in pts behind it. A negative "
-"value will decrease the value between letters."
-msgstr ""
-"通常これは pt での文字の距離です。``style`` にある ``letter-spacing`` に後ろ"
-"に続く pt での距離を書くだけです。負の値は文字間の距離を短くします。"
+#~ msgid ""
+#~ "You use it by doing |mouseleft| :kbd:`+ drag` to create a rectangular "
+#~ "selection. When releasing |mouseleft| a default text will be created and "
+#~ "the text editor window will pop-up."
+#~ msgstr ""
+#~ "これを使うにはまず |mouseleft| :kbd:`+ drag` をして矩形選択を作成します。|"
+#~ "mouseleft| を離すと既定のテキストが作成されテキストエディタウィンドウが現"
+#~ "れます。"
 
-#: ../../reference_manual/tools/text.rst:194
-msgid ""
-"This is the extra distance between words, defaulting to pts. By default, "
-"``word-spacing: 0;`` will have it use only the width of the space character "
-"for that font. A negative value will decrease the amount of space between "
-"words:"
-msgstr ""
-"既定では pi 単位での、単語間の追加の間隔です。既定では ``word-spacing: 0;`` "
-"で、そのフォントのスペース文字分の幅のみを使用します。負の値は単語間の間隔を"
-"狭くします:"
+#~ msgid ""
+#~ "Hovering over other text shapes will highlight their bounding box. |"
+#~ "mouseleft| on a highlighted text will select it as the active text."
+#~ msgstr ""
+#~ "他のテキストシェイプにマウスホバーすることで囲まれたボックスをハイライトし"
+#~ "ます。そこで |mouseleft| を押すとアクティブなテキストとして選択します。"
 
-#: ../../reference_manual/tools/text.rst:201
-msgid ""
-"<text style=\"font-family:Noto Serif; font-size:12pt; font-size-"
-"adjust:0.389915; text-anchor:middle\">\n"
-"    <tspan>No Adjustment.</tspan>\n"
-"    <tspan style=\"letter-spacing:2\" x=\"0\" dy=\"22pt\">Letter spacing: 2</"
-"tspan>\n"
-"    <tspan style=\"letter-spacing:-2\" x=\"0\" dy=\"22pt\">Letter spacing: "
-"-2</tspan>\n"
-"    <tspan style=\"word-spacing:5\" x=\"0\" dy=\"22pt\">Word spacing: 5</"
-"tspan>\n"
-"    <tspan style=\"word-spacing:-5\" x=\"0\" dy=\"22pt\">Word spacing: -5</"
-"tspan>\n"
-"</text>"
-msgstr ""
+#~ msgid ""
+#~ "This contains features with which to create new texts, the following "
+#~ "items are available:"
+#~ msgstr ""
+#~ "ここには新しいテキストを作成する際に使う機能があり、次のものが利用できま"
+#~ "す:"
 
-#: ../../reference_manual/tools/text.rst:208
-msgid "Word-spacing"
-msgstr "単語間隔"
+#~ msgid "Font"
+#~ msgstr "フォント"
 
-#: ../../reference_manual/tools/text.rst:211
-msgid "x, y, dx, dy"
-msgstr ""
+#~ msgid "The letter type used by newly created texts."
+#~ msgstr "新しく作成されるテキストで使う文字のタイプです。"
 
-#: ../../reference_manual/tools/text.rst:213
-msgid ""
-"These are even finer-grained controls that can be used to position text. "
-"However, they CANNOT be reliably converted to the format of the rich text "
-"editor, because the rich text editor uses these to figure out if a line is a "
-"new-line and thus writes to these."
-msgstr ""
-"これらはテキストの場所についてより精密な操作をする際に使用できます。しかし、"
-"リッチテキストエディタが改行の有無によって書くため、完全にリッチテキストエ"
-"ディタの形式に変換することはできません。"
+#~ msgid "Size in pt"
+#~ msgstr "ポイントでのサイズ"
 
-#: ../../reference_manual/tools/text.rst:215
-msgid "X and Y"
-msgstr ""
+#~ msgid ""
+#~ "The letter-size used by newly created texts. It is in pts (points), which "
+#~ "is a common standard for fonts that is measured 72 points per inch. It "
+#~ "therefore will stay proportionally the same size if you increase or "
+#~ "decrease canvas dpi."
+#~ msgstr ""
+#~ "テキストで使われる文字のサイズです。pt(ポイント)で表され、1インチ72ポイン"
+#~ "トとする標準的なものです。なのでキャンバス DPI を上げたり下げたりしてもそ"
+#~ "れに合わせて同じサイズに留まります。"
 
-#: ../../reference_manual/tools/text.rst:216
-msgid ""
-"X and Y are absolute coordinates. But because you cannot change the absolute "
-"coordinates of the text from the editor, these get added to the position "
-"when they show up in a tspan."
-msgstr ""
-"XとYは絶対座標です。しかしエディタからテキストの絶対座標を変更することはでき"
-"ないため、tspan 上にある場合のみ座標が追加されます。"
+#~ msgid "Anchor/Align text to the left/middle/right"
+#~ msgstr "テキストを左/中/右に揃える"
 
-#: ../../reference_manual/tools/text.rst:218
-msgid "dx and dy"
-msgstr ""
+#~ msgid ""
+#~ "Text alignment. This allows you to align text to the left, center it, or "
+#~ "to the right. This is called text-anchor because SVG 1.1's multiline text "
+#~ "only uses text-anchor, and this is a slight bit different than text-align "
+#~ "(and also the reason justify isn't available at the moment)."
+#~ msgstr ""
+#~ "テキストの揃えです。テキストを左や中央、右に揃えることができます。SVG 1.1 "
+#~ "の複数行テキストが text-anchor のみを使用したため、正確にはテキストの揃え"
+#~ "とは若干異なります(現時点で揃えが利用できない理由でもあります)。"
 
-#: ../../reference_manual/tools/text.rst:218
-msgid "These are relative coordinates to the position of the previous letter."
-msgstr "この二つは前の文字位置からの相対座標です。"
+#~ msgid "Letter Spacing"
+#~ msgstr "文字の間隔"
 
-#: ../../reference_manual/tools/text.rst:221
-msgid "Font-stretch and Small-caps"
-msgstr ""
+#~ msgid "The letter spacing used by newly created texts."
+#~ msgstr "テキストで使われる文字の間隔です。"
 
-#: ../../reference_manual/tools/text.rst:223
-msgid ""
-"These can also be stored and written to the rich text tab's internal format, "
-"but they don't get used in the on screen text object."
-msgstr ""
-"これらもリッチテキストタブの内部形式に保存されますが、画面上のテキストオブ"
-"ジェクトに使用されることはありません。"
+#~ msgid ""
+#~ "This will summon the text editor for the currently selected shape. This "
+#~ "can be quickly invoked with either pressing the :kbd:`Enter` key or :kbd:"
+#~ "`double-click +` |mouseleft| shortcut on the shape."
+#~ msgstr ""
+#~ "現在選択されているシェイプのテキストエディタを表示します。シェイプ上で :"
+#~ "kbd:`ダブルクリック +` |mouseleft| ショートカットか :kbd:`Enter` キーを押"
+#~ "すことで同じことが素早くできます。"
 
-#: ../../reference_manual/tools/text.rst:226
-msgid ""
-"Dominant Baseline, Alignment baseline, Font-size-adjust, Writing mode, Glyph-"
-"orientation, rotate"
-msgstr ""
+#~ msgid "Text Editor"
+#~ msgstr "テキストエディタ"
 
-#: ../../reference_manual/tools/text.rst:228
-msgid ""
-"These are not stored in the rich text right now, and while they can be "
-"written into the SVG text, the SVG text-shape doesn't do anything with them."
-msgstr ""
-"今のところこれらはリッチテキストタブでは保存されません。SVG テキストでは記述"
-"できますが、SVG テキストシェイプには何も起きません。"
+#~ msgid ""
+#~ "A small window for all your text editing needs. The Text Editor has two "
+#~ "tabs: Rich text and SVG source."
+#~ msgstr ""
+#~ "テキスト編集でやりたいことができる小さいウィンドウです。このテキストエディ"
+#~ "タには2つのタブ:リッチテキストと SVG ソースがあります。"
 
-#: ../../reference_manual/tools/text.rst:230
-msgid ""
-"Krita generates ``font-size-adjust`` for the font when coming from rich "
-"text, as this can help designers when they want to use the SVG source as a "
-"basis for later adjustments."
-msgstr ""
-"リッチテキストからのフォントに Krita は ``font-size-adjust`` を生成し、デザイ"
-"ナーが後の調整で SVG ソースを使用しやすくなるようにしています。"
+#~ msgid ""
+#~ "You can use the Text tool to first create a text box. There are a few "
+#~ "options in the tool options if you want to customize how the text will be "
+#~ "adding. You will need to drag a rectangle on the canvas to create the "
+#~ "text area. Once your text is created, you can edit the text from two ways:"
+#~ msgstr ""
+#~ "テキストボックスを作るにはまずテキストツールを使います。テキスト追加をカス"
+#~ "タマイズするにはツールのオプションから行います。キャンバス上に四角形をド"
+#~ "ラッグしてテキストエリアを作成し、テキストを作成出来たら2つの方法でテキス"
+#~ "トを編集できます:"
+
+#~ msgid ""
+#~ "Select the text with the shape selection tool (first tool). Press the :"
+#~ "kbd:`Enter` key. The text editor will appear."
+#~ msgstr ""
+#~ "形状選択ツール(最初のツール)でテキストを選択します。:kbd:`Enter` キーを押"
+#~ "してください。テキストエディタが現れます。"
+
+#~ msgid "Activating"
+#~ msgstr "有効化"
+
+#~ msgid ""
+#~ "Select the text with the shape selection tool (first tool). Then click "
+#~ "the Text tool. In the tool options there is an :guilabel:`Edit Text` "
+#~ "button. When you click that the text editor window will appear."
+#~ msgstr ""
+#~ "形状選択ツール(最初のツール)でテキストを選択します。それからテキストツール"
+#~ "をクリックします。ツールのオプションに :guilabel:`テキスト編集` ボタンがあ"
+#~ "ります。クリックするとテキストエディタが開きます。"
+
+#~ msgid ""
+#~ "If you are unfamiliar with the way SVG text works, use the rich text tab, "
+#~ "it will allow you to edit the text as you see it, at the cost of not "
+#~ "having all functionality."
+#~ msgstr ""
+#~ "SVG テキストのはたらきがよくわからなければ、リッチテキストタブを使うこと"
+#~ "で、すべての機能は利用できませんが見たままの編集ができます。"
+
+#~ msgid ""
+#~ "If you are a little bit more familiar with SVG text, you can directly "
+#~ "edit the SVG source. Do note that not all attributes and properties are "
+#~ "converted back to the rich text editor, so do be careful when switching "
+#~ "back."
+#~ msgstr ""
+#~ "もし SVG テキストを知っているのであれば、直接 SVG ソースを編集できます。す"
+#~ "べての要素やプロパティはリッチテキストエディタに変換できないため、戻すとき"
+#~ "は注意してください。"
+
+#~ msgid "Insert"
+#~ msgstr "挿入"
+
+#~ msgid "Special Character... :kbd:`Alt + Shift + C`"
+#~ msgstr "特殊文字... :kbd:`Alt + Shift + C`"
+
+#~ msgid ""
+#~ "Pops up a dialog that allows you to search for special characters that "
+#~ "are difficult to type in with your keyboard."
+#~ msgstr ""
+#~ "キーボードで入力するのが難しい特殊な文字を検索することができるダイアログを"
+#~ "表示します。"
+
+#~ msgid "Bold :kbd:`Ctrl + B`"
+#~ msgstr "太字 :kbd:`Ctrl + B`"
+
+#~ msgid "Set the font-weight to **bold**."
+#~ msgstr "フォントを **太字** に設定します。"
+
+#~ msgid "Italic :kbd:`Ctrl + I`"
+#~ msgstr "斜体 :kbd:`Ctrl + I`"
+
+#~ msgid "Sets the selected text *italic*."
+#~ msgstr "選択されたテキストを **斜体** に設定します。"
+
+#~ msgid "Underline :kbd:`Ctrl + U`"
+#~ msgstr "下線 :kbd:`Ctrl + U`"
+
+#~ msgid "Underline the selected text."
+#~ msgstr "選択されたテキストに下線を引きます。"
+
+#~ msgid "Strike-Through"
+#~ msgstr "打ち消し線"
+
+#~ msgid "Adds a strike-through text decoration."
+#~ msgstr "テキストに打ち消し線を追加します。"
+
+#~ msgid "Superscript :kbd:`Ctrl + Shift + P`"
+#~ msgstr "上付き文字 :kbd:`Ctrl + Shift + P`"
+
+#~ msgid "Sets the text to super-script baseline."
+#~ msgstr "テキストを上付き文字に設定します。"
+
+#~ msgid "Subscript :kbd:`Ctrl + Shift + B`"
+#~ msgstr "下付き文字 :kbd:`Ctrl + Shift + B`"
+
+#~ msgid "Sets the text to subscript baseline."
+#~ msgstr "テキストを下付き文字に設定します。"
+
+#~ msgid "Weight"
+#~ msgstr "太さ"
+
+#~ msgid ""
+#~ "Sets the font weight a little more specifically. Possibilities are... "
+#~ "Light, Normal, Bold, and Black."
+#~ msgstr ""
+#~ "フォントの太さをより具体的に設定します。可能なのは例えば... Light, "
+#~ "Normal, Bold, Black です。"
+
+#~ msgid "Align Left"
+#~ msgstr "左揃え"
+
+#~ msgid "Align the selected paragraph to the left."
+#~ msgstr "選択された文章を左に揃えます。"
+
+#~ msgid "Align Center :kbd:`Ctrl + Alt + C`"
+#~ msgstr "中央揃え :kbd:`Ctrl + Alt + C`"
+
+#~ msgid "Center the selected paragraph."
+#~ msgstr "選択された文章を中央に揃えます。"
+
+#~ msgid "Align Right :kbd:`Ctrl + Alt + R`"
+#~ msgstr "右揃え :kbd:`Ctrl + Alt + R`"
+
+#~ msgid "Align the selected paragraph to the right."
+#~ msgstr "選択された文章を右に揃えます。"
+
+#~ msgid "Format"
+#~ msgstr "形式"
+
+#~ msgid "Kerning"
+#~ msgstr "カーニング"
+
+#~ msgid "Toggles kerning for selected text."
+#~ msgstr "テキストのカーニングを切り替えます。"
+
+#~ msgid "Settings..."
+#~ msgstr "設定..."
+
+#~ msgid "Calls up the text-editor settings dialog."
+#~ msgstr "テキストエディタ設定ダイアログを呼び出します。"
+
+#~ msgid "Text Editor Settings"
+#~ msgstr "テキストエディタ設定"
+
+#~ msgid "The settings that can be configured for the text editor."
+#~ msgstr "テキストエディタの設定ができます。"
+
+#~ msgid "Editor Mode"
+#~ msgstr "編集モード"
+
+#~ msgid ""
+#~ "Whether you want both the Rich Text Editor and the SVG Source Editor, or "
+#~ "only one of either."
+#~ msgstr ""
+#~ "リッチテキストエディタと SVG ソースエディタの両方を使うか、または片方を使"
+#~ "うか選びます。"
+
+#~ msgid "Here you can configure the syntax highlighting for the SVG source."
+#~ msgstr "SVG ソースに対するシンタックスハイライトの設定はここでできます。"
+
+#~ msgid "Keyword"
+#~ msgstr "キーワード"
+
+#~ msgid "These highlights important characters like <, /, and >."
+#~ msgstr "<, /, > といった重要な文字もハイライトします。"
+
+#~ msgid "Element"
+#~ msgstr "要素"
+
+#~ msgid ""
+#~ "The format for highlighting the element tag name. **text** and **tspan** "
+#~ "are examples of element names."
+#~ msgstr ""
+#~ "要素タグ名をハイライトする形式です。**text** や **tspan** が要素名の例で"
+#~ "す。"
+
+#~ msgid "Attribute"
+#~ msgstr "属性"
+
+#~ msgid ""
+#~ "The format for highlighting the attributes of the tag. For example, "
+#~ "``font-family``, when it isn't in the ``style`` tag is usually written as "
+#~ "an attribute."
+#~ msgstr ""
+#~ "タグの属性をハイライトする形式です。例えば、``style`` タグ内にない時の "
+#~ "``font-family`` は通常属性として書かれます。"
+
+#~ msgid "Value"
+#~ msgstr "値"
+
+#~ msgid "The format for highlighting value of attributes."
+#~ msgstr "属性の値をハイライトする形式です。"
+
+#~ msgid "Comment"
+#~ msgstr "コメント"
+
+#~ msgid ""
+#~ "This highlights XML comments, which are written as following: ``<!-- This "
+#~ "is an XML comment -->``. Comments are pieces of text that never get "
+#~ "interpreted."
+#~ msgstr ""
+#~ "``<!-- This is an XML comment -->`` のように書かれる、XML コメントをハイラ"
+#~ "イトします。コメントは処理されることのないテキストのかたまりです。"
+
+#~ msgid "Editor Text Color"
+#~ msgstr "エディタテキスト色"
+
+#~ msgid "The main color of the editor."
+#~ msgstr "エディタのメインの色です。"
+
+#~ msgid "Colors"
+#~ msgstr "色"
+
+#~ msgid "Editor background color"
+#~ msgstr "エディタの背景"
+
+#~ msgid "The main background color of the editor."
+#~ msgstr "エディタのメインの背景色です。"
+
+#~ msgid "Fonts"
+#~ msgstr "フォント"
+
+#~ msgid ""
+#~ "This allows you to filter the selection of fonts in the editor by writing "
+#~ "system. Some systems have a lot of fonts specifically for showing foreign "
+#~ "languages properly, but these might not be useful for you. You just tick "
+#~ "the writing systems which you use yourself, and the font drop-down will "
+#~ "only show fonts that have full support for that language."
+#~ msgstr ""
+#~ "エディタの選択で使うフォントをフィルタしておくことができます。システムに"
+#~ "よっては外国語を正しく表示するためのたくさんのフォントを持っていることがあ"
+#~ "りますが、それらは有用であるとは限りません。ご自身が使う入力システムに"
+#~ "チェックをつけ、ドロップダウンからその言語を完全にサポートするフォントのみ"
+#~ "を表示できます。"
+
+#~ msgid "Fine typographic control with the SVG Source tab"
+#~ msgstr "SVG ソースタブでの校閲管理"
+
+#~ msgid ""
+#~ "So, the rich text editor cannot control all functionality that SVG text "
+#~ "allows for. For that, you will need to touch the SVG source directly. But "
+#~ "to do that, you will first need to go to the text editor settings and "
+#~ "enable either :guilabel:`SVG Source` or :guilabel:`Both` editor mode. The "
+#~ "Rich Text editor will lose some information, so if you go all out, use :"
+#~ "guilabel:`SVG Source`."
+#~ msgstr ""
+#~ "リッチテキストエディタでは SVG テキストができるすべての機能を使うことがで"
+#~ "きません。そのためには、直接 SVG ソースを触る必要があります。まずテキスト"
+#~ "エディタ設定に行き編集モードが :guilabel:`SVG ソースのみ` か :guilabel:`両"
+#~ "方` になっている必要があります。リッチテキストエディタは情報をいくらか失い"
+#~ "ますので、すべてを使うには、:guilabel:`SVG ソース` を使用します。"
+
+#~ msgid "Word-spacing, Letter-spacing and Kerning"
+#~ msgstr "単語間隔、文字間隔とカーニング"
+
+#~ msgid ""
+#~ "These three are written and read from the rich text tab, but only two of "
+#~ "them can be controlled from Rich Text tab."
+#~ msgstr ""
+#~ "これら3つのものはリッチテキストタブで読み書きができますが、操作できるのは"
+#~ "そのうち2つだけです。"
+
+#~ msgid ""
+#~ "`Kerning, in SVG 1.1 <https://www.w3.org/TR/SVG/text."
+#~ "html#KerningProperty>`_ behaves slightly differently than ``font-"
+#~ "kerning`` in CSS. Krita by default uses the ``auto`` property for this, "
+#~ "which means it is on. To turn it off use ``kerning: 0;`` in the ``style`` "
+#~ "section of the text. Any other numeric value will be added to current "
+#~ "``letter-spacing``."
+#~ msgstr ""
+#~ "`SVG 1.1 でのカーニング <https://www.w3.org/TR/SVG/text."
+#~ "html#KerningProperty>`_ は CSS で言う ``font-kerning`` とは少し異なった振"
+#~ "る舞いをします。Krita は既定ではこのプロパティを ``auto``、つまりオンとし"
+#~ "て使用します。オフにするにはテキストの ``style`` セクションで ``kerning: "
+#~ "0;`` を使用します。他の数字の値は現在の ``letter-spacing`` に追加されま"
+#~ "す。"
+
+#~ msgid "Letter-spacing"
+#~ msgstr "文字間隔"
+
+#~ msgid ""
+#~ "This is the distance between letters in pts, usually. Just write ``letter-"
+#~ "spacing`` in the ``style`` and add a distance in pts behind it. A "
+#~ "negative value will decrease the value between letters."
+#~ msgstr ""
+#~ "通常これは pt での文字の距離です。``style`` にある ``letter-spacing`` に後"
+#~ "ろに続く pt での距離を書くだけです。負の値は文字間の距離を短くします。"
+
+#~ msgid ""
+#~ "This is the extra distance between words, defaulting to pts. By default, "
+#~ "``word-spacing: 0;`` will have it use only the width of the space "
+#~ "character for that font. A negative value will decrease the amount of "
+#~ "space between words:"
+#~ msgstr ""
+#~ "既定では pi 単位での、単語間の追加の間隔です。既定では ``word-spacing: 0;"
+#~ "`` で、そのフォントのスペース文字分の幅のみを使用します。負の値は単語間の"
+#~ "間隔を狭くします:"
+
+#~ msgid "Word-spacing"
+#~ msgstr "単語間隔"
+
+#~ msgid ""
+#~ "These are even finer-grained controls that can be used to position text. "
+#~ "However, they CANNOT be reliably converted to the format of the rich text "
+#~ "editor, because the rich text editor uses these to figure out if a line "
+#~ "is a new-line and thus writes to these."
+#~ msgstr ""
+#~ "これらはテキストの場所についてより精密な操作をする際に使用できます。しか"
+#~ "し、リッチテキストエディタが改行の有無によって書くため、完全にリッチテキス"
+#~ "トエディタの形式に変換することはできません。"
+
+#~ msgid ""
+#~ "X and Y are absolute coordinates. But because you cannot change the "
+#~ "absolute coordinates of the text from the editor, these get added to the "
+#~ "position when they show up in a tspan."
+#~ msgstr ""
+#~ "XとYは絶対座標です。しかしエディタからテキストの絶対座標を変更することはで"
+#~ "きないため、tspan 上にある場合のみ座標が追加されます。"
+
+#~ msgid ""
+#~ "These are relative coordinates to the position of the previous letter."
+#~ msgstr "この二つは前の文字位置からの相対座標です。"
+
+#~ msgid ""
+#~ "These can also be stored and written to the rich text tab's internal "
+#~ "format, but they don't get used in the on screen text object."
+#~ msgstr ""
+#~ "これらもリッチテキストタブの内部形式に保存されますが、画面上のテキストオブ"
+#~ "ジェクトに使用されることはありません。"
+
+#~ msgid ""
+#~ "These are not stored in the rich text right now, and while they can be "
+#~ "written into the SVG text, the SVG text-shape doesn't do anything with "
+#~ "them."
+#~ msgstr ""
+#~ "今のところこれらはリッチテキストタブでは保存されません。SVG テキストでは記"
+#~ "述できますが、SVG テキストシェイプには何も起きません。"
+
+#~ msgid ""
+#~ "Krita generates ``font-size-adjust`` for the font when coming from rich "
+#~ "text, as this can help designers when they want to use the SVG source as "
+#~ "a basis for later adjustments."
+#~ msgstr ""
+#~ "リッチテキストからのフォントに Krita は ``font-size-adjust`` を生成し、デ"
+#~ "ザイナーが後の調整で SVG ソースを使用しやすくなるようにしています。"
 
 #, fuzzy
 #~| msgid "Weight"

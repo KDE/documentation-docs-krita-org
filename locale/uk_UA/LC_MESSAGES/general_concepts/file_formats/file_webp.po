@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2022-09-15 08:45+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -182,7 +182,7 @@ msgstr ""
 "Повзунок, за допомогою якого ви можете вибрати, чи є швидкість збереження "
 "важливішою за якість."
 
-#: ../../general_concepts/file_formats/file_webp.rst:42
+#: ../../general_concepts/file_formats/file_webp.rst:41
 msgid "Dithering:"
 msgstr "Підмішування шуму:"
 
@@ -194,15 +194,38 @@ msgstr ""
 "Вмикає розмивання, яке уможливлює збереження меншої кількості кольорів, "
 "зберігаючи досить добрі градієнти."
 
-#: ../../general_concepts/file_formats/file_webp.rst:45
+#: ../../general_concepts/file_formats/file_webp.rst:43
+msgid "Force convert to sRGB:"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_webp.rst:44
+msgid ""
+"This option will convert document color profile into sRGB before exporting, "
+"usually for better web upload and sharing compatibility."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_webp.rst:46
+msgid "Save ICC Profile:"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_webp.rst:46
+msgid ""
+"By default, ICC will be preserved during export. Disabling this option will "
+"not save ICC to the exported image and can possibly result in smaller file. "
+"However it is recommended to convert the color profile to sRGB to prevent "
+"color mismatch, as an (WebP) image without color profile will usually "
+"considered as sRGB."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_webp.rst:49
 msgid "Advanced"
 msgstr "Додаткові"
 
-#: ../../general_concepts/file_formats/file_webp.rst:47
+#: ../../general_concepts/file_formats/file_webp.rst:51
 msgid "SNS Strength:"
 msgstr "Потужність ФПШ (SNS):"
 
-#: ../../general_concepts/file_formats/file_webp.rst:48
+#: ../../general_concepts/file_formats/file_webp.rst:52
 msgid ""
 "Specifies the strength of the Spatial Noise Shaping algorithm, which tries "
 "to see if parts of the image can be better compressed than other parts."
@@ -210,11 +233,11 @@ msgstr ""
 "Вказує потужність алгоритму формування просторового шуму, який намагається "
 "визначити, чи можна певні частини зображення стиснути краще за інші."
 
-#: ../../general_concepts/file_formats/file_webp.rst:49
+#: ../../general_concepts/file_formats/file_webp.rst:53
 msgid "Filter Strength:"
 msgstr "Потужність фільтрування:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:50
+#: ../../general_concepts/file_formats/file_webp.rst:54
 msgid ""
 "Strength of the deblocking filter. 0% will mean there's no filtering after "
 "decoding, with increasing filter strength the image will appear smoother."
@@ -223,11 +246,11 @@ msgstr ""
 "фільтрування не виконуватиметься. Зі збільшенням потужності фільтрування "
 "зображення виглядатиме плавнішим."
 
-#: ../../general_concepts/file_formats/file_webp.rst:51
+#: ../../general_concepts/file_formats/file_webp.rst:55
 msgid "Filter Sharpness:"
 msgstr "Різкість фільтрування:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:52
+#: ../../general_concepts/file_formats/file_webp.rst:56
 msgid ""
 "Defines the sharpness of the deblocking filter, with 0 being the sharpest "
 "and 7 being the least sharp."
@@ -235,11 +258,11 @@ msgstr ""
 "Визначає різкість фільтра усування блоковості. 0 — варіант із найбільшою "
 "різкістю, а 7 — із найменшою."
 
-#: ../../general_concepts/file_formats/file_webp.rst:53
+#: ../../general_concepts/file_formats/file_webp.rst:57
 msgid "Filter Type:"
 msgstr "Тип фільтрування:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:54
+#: ../../general_concepts/file_formats/file_webp.rst:58
 msgid ""
 "Type of deblocking filter, options are :guilabel:`Strong` and :guilabel:"
 "`Simple`."
@@ -247,11 +270,11 @@ msgstr ""
 "Тип фільтра усування блоковості. Можливі варіанти: :guilabel:`Сильний` і :"
 "guilabel:`Простий`."
 
-#: ../../general_concepts/file_formats/file_webp.rst:56
+#: ../../general_concepts/file_formats/file_webp.rst:60
 msgid "Alpha Plane Compression:"
 msgstr "Стискання альфа-площини:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:56
+#: ../../general_concepts/file_formats/file_webp.rst:60
 msgid ""
 "Whether to losslessly compress the alpha channel (Lossless) or outright "
 "discard it (None). None"
@@ -259,11 +282,11 @@ msgstr ""
 "Визначає, слід стискати канал прозорості (Без втрат) чи взагалі відкинути "
 "його (Немає). Типовим є варіант «Немає»."
 
-#: ../../general_concepts/file_formats/file_webp.rst:58
+#: ../../general_concepts/file_formats/file_webp.rst:62
 msgid "Predictive Filtering for Alpha Plane:"
 msgstr "Передбачливе фільтрування для альфа-площини:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:59
+#: ../../general_concepts/file_formats/file_webp.rst:63
 msgid ""
 "Whether to use predictive filtering for the alpha/transparency. :guilabel:"
 "`Best` will try all potential predictive filter modes before deciding which "
@@ -277,11 +300,11 @@ msgstr ""
 "`Швидко`, за якого програма намагатиметься вгадати режим і використати його "
 "без перевірки усіх режимів."
 
-#: ../../general_concepts/file_formats/file_webp.rst:60
+#: ../../general_concepts/file_formats/file_webp.rst:64
 msgid "Alpha Plane Quality:"
 msgstr "Якість альфа-площини:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:61
+#: ../../general_concepts/file_formats/file_webp.rst:65
 msgid ""
 "Compression quality for the alpha channel. 0% means smallest size, 100% "
 "means no compression. Only with :guilabel:`Alpha Plane Compression` set to "
@@ -291,11 +314,11 @@ msgstr ""
 "стискання. Працює, лише якщо для параметра :guilabel:`Стискання альфа-"
 "площини` встановлено значення «Без втрат»."
 
-#: ../../general_concepts/file_formats/file_webp.rst:62
+#: ../../general_concepts/file_formats/file_webp.rst:66
 msgid "Show Compressed:"
 msgstr "Показати стиснутим:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:63
+#: ../../general_concepts/file_formats/file_webp.rst:67
 msgid ""
 "Tells libwebp to skip the in-loop filtering step. May adversely affect the "
 "quality of the end file."
@@ -303,28 +326,28 @@ msgstr ""
 "Наказує libwebp пропустити крок фільтрування у циклі. Може негативно "
 "позначитися на якості кінцевого файла."
 
-#: ../../general_concepts/file_formats/file_webp.rst:64
+#: ../../general_concepts/file_formats/file_webp.rst:68
 msgid "Multithreaded Encoding:"
 msgstr "Багатопотокове кодування:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:65
+#: ../../general_concepts/file_formats/file_webp.rst:69
 msgid "Use multithreading for encoding if possible."
 msgstr ""
 "Використовувати, якщо можливо, декілька потоків обробки для кодування даних."
 
-#: ../../general_concepts/file_formats/file_webp.rst:66
+#: ../../general_concepts/file_formats/file_webp.rst:70
 msgid "Reduce Memory Usage:"
 msgstr "Зменшити споживання пам'яті:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:67
+#: ../../general_concepts/file_formats/file_webp.rst:71
 msgid "Try to reduce memory usage at the cost of speed."
 msgstr "Спробувати зменшити споживання пам'яті за рахунок швидкості."
 
-#: ../../general_concepts/file_formats/file_webp.rst:68
+#: ../../general_concepts/file_formats/file_webp.rst:72
 msgid "Exact:"
 msgstr "Точно:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:69
+#: ../../general_concepts/file_formats/file_webp.rst:73
 msgid ""
 "Preserve RGB values in transparent areas instead of defaulting them to "
 "transparent black."
@@ -332,40 +355,40 @@ msgstr ""
 "Зберегти значення RGB у прозорих областях, замість типової заміни їх на "
 "прозорий чорний колір."
 
-#: ../../general_concepts/file_formats/file_webp.rst:71
+#: ../../general_concepts/file_formats/file_webp.rst:75
 msgid "Use Sharp YUV:"
 msgstr "Використовувати різкий YUV:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:71
+#: ../../general_concepts/file_formats/file_webp.rst:75
 msgid "Whether to use the slower, but more accurate, RGB to YUV conversion."
 msgstr ""
 "Визначає, чи слід використовувати повільніше, але точніше перетворення RGB у "
 "YUV."
 
-#: ../../general_concepts/file_formats/file_webp.rst:74
+#: ../../general_concepts/file_formats/file_webp.rst:78
 msgid "Lossy Compression"
 msgstr "Стискання з втратою якості"
 
-#: ../../general_concepts/file_formats/file_webp.rst:75
+#: ../../general_concepts/file_formats/file_webp.rst:79
 msgid ""
 "The following options only apply if :guilabel:`Lossless Compression` is off."
 msgstr ""
 "Наведені нижче параметри застосовуються, лише якщо вимкнено :guilabel:"
 "`Стискання без втрат`."
 
-#: ../../general_concepts/file_formats/file_webp.rst:77
+#: ../../general_concepts/file_formats/file_webp.rst:81
 msgid "Target Size:"
 msgstr "Остаточний розмір:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:78
+#: ../../general_concepts/file_formats/file_webp.rst:82
 msgid "Specify the amount of bytes to aim for."
 msgstr "Вказати цільовий об'єм у байтах."
 
-#: ../../general_concepts/file_formats/file_webp.rst:79
+#: ../../general_concepts/file_formats/file_webp.rst:83
 msgid "Target PSNR:"
 msgstr "Цільове ПВСШ:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:80
+#: ../../general_concepts/file_formats/file_webp.rst:84
 msgid ""
 "PSNR means `Peak Signal to Noise Ratio <https://en.wikipedia.org/wiki/"
 "Peak_signal-to-noise_ratio_>`, and indicates how much noise the image has. "
@@ -375,11 +398,11 @@ msgstr ""
 "wiki/Peak_signal-to-noise_ratio_>`. Це відношення вказує, наскільки шумним є "
 "зображення. Більші значення означають меншу прийнятність шуму."
 
-#: ../../general_concepts/file_formats/file_webp.rst:81
+#: ../../general_concepts/file_formats/file_webp.rst:85
 msgid "Segments:"
 msgstr "Сегменти:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:82
+#: ../../general_concepts/file_formats/file_webp.rst:86
 msgid ""
 "How many segments the VP8 video codec can divide the image into. VP8 accepts "
 "between 1 and 4 segments."
@@ -387,11 +410,11 @@ msgstr ""
 "Кількість сегментів, на які відеокодек VP8 може ділити зображення. VP8 "
 "приймає від 1 до 4 сегментів."
 
-#: ../../general_concepts/file_formats/file_webp.rst:83
+#: ../../general_concepts/file_formats/file_webp.rst:87
 msgid "Partitions:"
 msgstr "Частини:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:84
+#: ../../general_concepts/file_formats/file_webp.rst:88
 msgid ""
 "Sets how many partitions can the VP8 codec use for storing decompression "
 "information. Must be between 0 and 3. Default is 0 to make decoding easier."
@@ -400,11 +423,11 @@ msgstr ""
 "зберігання даних щодо розпаковування. Має бути значенням від 0 до 3. Типовим "
 "значенням є 0 для спрощення декодування."
 
-#: ../../general_concepts/file_formats/file_webp.rst:85
+#: ../../general_concepts/file_formats/file_webp.rst:89
 msgid "Auto Adjust Filter Strength:"
 msgstr "Автоматичне коригування потужності фільтрування:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:86
+#: ../../general_concepts/file_formats/file_webp.rst:90
 msgid ""
 "The encoder will spend some time tuning and selecting the best filter "
 "options before encoding."
@@ -412,11 +435,11 @@ msgstr ""
 "Кодувальний витратить певний час на коригування та вибір найкращих "
 "параметрів фільтрування до кодування."
 
-#: ../../general_concepts/file_formats/file_webp.rst:87
+#: ../../general_concepts/file_formats/file_webp.rst:91
 msgid "Entropy Passes:"
 msgstr "Ентропійні проходи:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:88
+#: ../../general_concepts/file_formats/file_webp.rst:92
 msgid ""
 "Number of passes to do for selecting the best option between target size and "
 "target PSNR."
@@ -424,37 +447,37 @@ msgstr ""
 "Кількість проходів, які слід виконати для вибору найкращого варіанта між "
 "цільовим розміром і цільовим ПВСШ."
 
-#: ../../general_concepts/file_formats/file_webp.rst:89
+#: ../../general_concepts/file_formats/file_webp.rst:93
 msgid "Emulate JPEG Size:"
 msgstr "Емулювати розмір JPEG:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:90
+#: ../../general_concepts/file_formats/file_webp.rst:94
 msgid "The encoder will try to match the size of a jpeg of similar dimensions."
 msgstr ""
 "Кодувальний спробує виконати відповідне кодування для отримання розміру jpeg "
 "подібних вимірів."
 
-#: ../../general_concepts/file_formats/file_webp.rst:91
+#: ../../general_concepts/file_formats/file_webp.rst:95
 msgid "Minimum Quality:"
 msgstr "Мінімальна якість:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:92
+#: ../../general_concepts/file_formats/file_webp.rst:96
 msgid "Used with 'entropy passes', the lowest allowed quality for the image."
 msgstr ""
 "Використовують разом із «Ентропійними проходами», найнижча дозволена якість "
 "зображення."
 
-#: ../../general_concepts/file_formats/file_webp.rst:93
+#: ../../general_concepts/file_formats/file_webp.rst:97
 msgid "Maximum Quality:"
 msgstr "Максимальна якість:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:94
+#: ../../general_concepts/file_formats/file_webp.rst:98
 msgid "Used with 'entropy passes', the highest allowed quality for the image."
 msgstr ""
 "Використовують разом із «Ентропійними проходами», найвища дозволена якість "
 "зображення."
 
-#: ../../general_concepts/file_formats/file_webp.rst:96
+#: ../../general_concepts/file_formats/file_webp.rst:100
 msgid ""
 "Whether or not to add :guilabel:`Pseudo Random Dithering` to the image "
 "before converting RGB to YUV."
@@ -462,26 +485,26 @@ msgstr ""
 "Визначає, чи слід додавати :guilabel:`Псевдовипадкове розмивання` до "
 "зображення перед перетворенням RGB на YUV."
 
-#: ../../general_concepts/file_formats/file_webp.rst:97
+#: ../../general_concepts/file_formats/file_webp.rst:101
 msgid "Preprocessing Filter:"
 msgstr "Фільтр попередньої обробки:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:100
+#: ../../general_concepts/file_formats/file_webp.rst:104
 msgid "Lossless compression"
 msgstr "Стискання без втрат"
 
-#: ../../general_concepts/file_formats/file_webp.rst:101
+#: ../../general_concepts/file_formats/file_webp.rst:105
 msgid ""
 "The following options only work with :guilabel:`Lossless Compression` on."
 msgstr ""
 "Наведені нижче параметри працюють, лише якщо увімкнено :guilabel:`Стискання "
 "без втрат`."
 
-#: ../../general_concepts/file_formats/file_webp.rst:103
+#: ../../general_concepts/file_formats/file_webp.rst:107
 msgid "Partition Limit:"
 msgstr "Обмеження поділу:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:104
+#: ../../general_concepts/file_formats/file_webp.rst:108
 msgid ""
 "Limit how big a given segment is in bytes. The higher this is, the less "
 "possible information is stored per segment."
@@ -489,7 +512,7 @@ msgstr ""
 "Обмежити величину заданого сегмента у байтах. Чим більшим є це значення, тим "
 "менше даних може бути збережено в одному сегменті."
 
-#: ../../general_concepts/file_formats/file_webp.rst:106
+#: ../../general_concepts/file_formats/file_webp.rst:110
 msgid ""
 "The encoder is able to minimally adjust pixel-values so they compress better "
 "in lossless compression mode. This enables this feature. Automatically "
@@ -499,11 +522,11 @@ msgstr ""
 "стискання у режимі стискання без втрат. Цей пункт вмикає таку можливість. "
 "Автоматично вмикає :guilabel:`Стискання без втрат`."
 
-#: ../../general_concepts/file_formats/file_webp.rst:108
+#: ../../general_concepts/file_formats/file_webp.rst:112
 msgid "Near Lossless:"
 msgstr "Майже без втрат:"
 
-#: ../../general_concepts/file_formats/file_webp.rst:111
+#: ../../general_concepts/file_formats/file_webp.rst:115
 msgid "https://developers.google.com/speed/webp/docs/compression"
 msgstr "https://developers.google.com/speed/webp/docs/compression"
 

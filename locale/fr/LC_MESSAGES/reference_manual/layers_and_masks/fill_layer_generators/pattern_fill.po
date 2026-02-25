@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2020-09-29 21:20+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -22,6 +22,12 @@ msgstr "Comme utiliser la génération de remplissage dans Krita."
 #, fuzzy
 #| msgid ".. image:: images/layers/pattern_fill_transform.png"
 msgid ".. image:: /images/layers/pattern_fill_transform.png"
+msgstr ".. image:: images/layers/pattern_fill_transform.png"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:0
+#, fuzzy
+#| msgid ".. image:: images/layers/pattern_fill_transform.png"
+msgid ".. image:: /images/layers/pattern_fill_align_pixel_grid.png"
 msgstr ".. image:: images/layers/pattern_fill_transform.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:11
@@ -80,9 +86,55 @@ msgid "Image showing several transforms applied to a single texture."
 msgstr ""
 "Les images affichant plus transformation appliquées à une texture unique."
 
-#: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:29
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:33
+msgid ""
+"When a geometric transformation is applied to a pattern, the corners of the "
+"repeated image may be displaced to any new position, including fractional "
+"coordinates (sub-pixel, non integer coordinates). This is the default "
+"behavior and it is fine most of the times. But there are times when it is "
+"desirable that the corners end up at integer coordinates. For example when "
+"exact repeatability with pixel accuracy is needed. This can be achieved by "
+"checking the :guilabel:`align to pixel grid` option. By doing so, the "
+"pattern corners are ensured to fall at integer coordinates after the "
+"transformation."
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:35
+msgid ""
+"Keep in mind that this alignment reduces the number of possible "
+"transformations (in fact, all those transformations that map the corners to "
+"fractional coordinates are removed), but the aligned transformation will "
+"approximate the un-aligned one as close as possible. There is also the "
+"possibility of setting this alignment over a number of repetitions of the "
+"pattern the corners should be aligned."
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:37
+msgid ""
+"This option is especially useful when dealing with small patterns, for "
+"example those used for screentones, or when the pattern is scaled down to be "
+"really small, since it helps reducing some artifacts like moiré patterns."
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:41
+msgid ""
+"This image shows a pattern fill layer that uses a smiley face image. It is "
+"being transformed by scaling to 75% and rotating 34 degrees. On the left no "
+"alignment is being applied and on the right the alignment is active and set "
+"to every two repetitions, both horizontally and vertically. The blue lines "
+"are indicators of the pixel grid and the red ones mark a block of two by two "
+"repetitions whose corners are aligned to the pixel grid. Note that, when the "
+"alignment is on, then that block is repeated exactly through the image, but "
+"when it is off, every instance of the pattern is rendered slightly different."
+msgstr ""
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:42
 msgid "Transform"
 msgstr "Transformer"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:42
+msgid "Align to pixel grid"
+msgstr ""
 
 #, fuzzy
 #~| msgid ".. image:: images/layers/pattern_fill_transform.png"

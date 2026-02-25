@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-docs-krita-org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2025-07-12 19:24+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: ../../<rst_epilog>:22
+#: ../../<rst_epilog>:18
 msgid "toolfreehandbrush"
 msgstr "toolfreehandbrush"
 
-#: ../../<rst_epilog>:22
+#: ../../<rst_epilog>:18
 msgid ".. image:: /images/icons/freehand_brush_tool.svg"
 msgstr ".. image:: /images/icons/freehand_brush_tool.svg"
 
@@ -36,6 +36,12 @@ msgid ""
 msgstr ""
 "Referència de l'eina Pinzell a mà alçada del Krita, conté com utilitzar "
 "l'estabilitzador al Krita."
+
+#: ../../reference_manual/tools/freehand_brush.rst:0
+#, fuzzy
+#| msgid ".. image:: /images/icons/freehand_brush_tool.svg"
+msgid ".. image:: /images/tools/stablizer_pixel_result.png"
+msgstr ".. image:: /images/icons/freehand_brush_tool.svg"
 
 #: ../../reference_manual/tools/freehand_brush.rst:12
 msgid "Freehand Brush"
@@ -132,7 +138,7 @@ msgid "Tool Options"
 msgstr "Opcions de l'eina"
 
 #: ../../reference_manual/tools/freehand_brush.rst:41
-#: ../../reference_manual/tools/freehand_brush.rst:79
+#: ../../reference_manual/tools/freehand_brush.rst:82
 msgid "Stabilizer"
 msgstr "Estabilitzador"
 
@@ -204,7 +210,6 @@ msgstr ""
 "suavitzat sigui més fort o més feble:"
 
 #: ../../reference_manual/tools/freehand_brush.rst:58
-#: ../../reference_manual/tools/freehand_brush.rst:70
 msgid "Distance"
 msgstr "Distància"
 
@@ -252,12 +257,12 @@ msgid "Weighted smoothing:"
 msgstr "Amb un suavitzat ponderat"
 
 #: ../../reference_manual/tools/freehand_brush.rst:65
-#: ../../reference_manual/tools/freehand_brush.rst:79
+#: ../../reference_manual/tools/freehand_brush.rst:82
 msgid "Scalable Distance"
 msgstr "Distància escalable"
 
 #: ../../reference_manual/tools/freehand_brush.rst:65
-#: ../../reference_manual/tools/freehand_brush.rst:79
+#: ../../reference_manual/tools/freehand_brush.rst:83
 msgid ""
 "This makes it so that the numbers involved will be scaled along the zoom "
 "level."
@@ -276,15 +281,36 @@ msgstr ""
 "Dibuixarà un cercle al voltant del cursor i la línia restarà una mica al "
 "darrere del cursor mentre pinteu."
 
-#: ../../reference_manual/tools/freehand_brush.rst:71
-msgid "This is the strength of the smoothing."
-msgstr "Aquesta és la intensitat del suavitzat."
+#: ../../reference_manual/tools/freehand_brush.rst:70
+msgid "distance is replaced by smoothing at max and min speed."
+msgstr ""
 
 #: ../../reference_manual/tools/freehand_brush.rst:72
+msgid "Sample Count at Max Speed"
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:73
+msgid ""
+"This is the strength of the smoothing when drawing as fast as possible. For "
+"the best results, set it much lower than that of min speed. The idea being "
+"that a fast stroke needs less smoothing than a slow stroke."
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:74
+msgid "Sample Count at Min Speed"
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:75
+msgid ""
+"This is the strength of the smoothing when drawing as slow as possible. For "
+"best results, this one can be set much higher than that of max speed."
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:76
 msgid "Delay"
 msgstr "Retard"
 
-#: ../../reference_manual/tools/freehand_brush.rst:73
+#: ../../reference_manual/tools/freehand_brush.rst:77
 msgid ""
 "This toggles and determines the size of the dead zone around the cursor. "
 "This can be used to create sharp corners with more control."
@@ -292,19 +318,19 @@ msgstr ""
 "Alterna i determina la mida de la zona morta al voltant del cursor. Es pot "
 "utilitzar per a crear cantonades més definides amb més control."
 
-#: ../../reference_manual/tools/freehand_brush.rst:74
+#: ../../reference_manual/tools/freehand_brush.rst:78
 msgid "Finish Line"
 msgstr "Final de la línia"
 
-#: ../../reference_manual/tools/freehand_brush.rst:75
+#: ../../reference_manual/tools/freehand_brush.rst:79
 msgid "This ensures that the line will be finished."
 msgstr "Assegura que la línia serà acabada."
 
-#: ../../reference_manual/tools/freehand_brush.rst:76
+#: ../../reference_manual/tools/freehand_brush.rst:80
 msgid "Stabilize sensors"
 msgstr "Sensors d'estabilització"
 
-#: ../../reference_manual/tools/freehand_brush.rst:77
+#: ../../reference_manual/tools/freehand_brush.rst:81
 msgid ""
 "Similar to :guilabel:`Smooth Pressure`, this allows the input (pressure, "
 "speed, tilt) to be smoother."
@@ -312,15 +338,31 @@ msgstr ""
 "Similar que la :guilabel:`Pressió del suavitzat`, permet que l'entrada "
 "(pressió, velocitat, inclinació) sigui més suau."
 
-#: ../../reference_manual/tools/freehand_brush.rst:81
+#: ../../reference_manual/tools/freehand_brush.rst:85
+msgid ""
+"Keeps lines drawn with a single-pixel brush at single-pixel width, avoiding "
+"L-shaped corners or doubling-up of pixels."
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:89
+msgid ""
+"Left: result without smoothing. Right: result with :guilabel:`Pixel` "
+"smoothing."
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:91
+msgid "Pixel"
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:93
 msgid "Painting Assistants"
 msgstr "Assistents de pintura"
 
-#: ../../reference_manual/tools/freehand_brush.rst:84
+#: ../../reference_manual/tools/freehand_brush.rst:96
 msgid "Assistants"
 msgstr "Assistents"
 
-#: ../../reference_manual/tools/freehand_brush.rst:86
+#: ../../reference_manual/tools/freehand_brush.rst:98
 msgid ""
 "Ticking this will allow snapping to :ref:`assistant_tool`, and the hotkey to "
 "toggle it is :kbd:`Ctrl + Shift + L`. See :ref:`painting_with_assistants` "
@@ -330,7 +372,7 @@ msgstr ""
 "a alternar és :kbd:`Ctrl + Maj + L`. Per a obtenir més informació, vegeu :"
 "ref:`painting_with_assistants`."
 
-#: ../../reference_manual/tools/freehand_brush.rst:88
+#: ../../reference_manual/tools/freehand_brush.rst:100
 msgid ""
 "The slider will determine the amount of snapping, with 1000 being perfect "
 "snapping, and 0 being no snapping at all. For situations where there is more "
@@ -346,7 +388,7 @@ msgstr ""
 "assistent alhora, evitant el soroll. Desmarcar-la permetrà ajuntar-los i "
 "ajustar-los."
 
-#: ../../reference_manual/tools/freehand_brush.rst:90
+#: ../../reference_manual/tools/freehand_brush.rst:102
 msgid ""
 "You may not always want erasers to snap, especially when using assistants "
 "liberally during the sketching process. :guilabel:`Snap Eraser` will allow "
@@ -356,3 +398,6 @@ msgstr ""
 "especialment quan s'utilitzen els assistents de manera lliure durant el "
 "procés d'esbós. :guilabel:`Ajusta l'esborrador` permetrà desactivar l'ajust "
 "per als pinzells amb el mode de barreja :ref:`bm_erase`."
+
+#~ msgid "This is the strength of the smoothing."
+#~ msgstr "Aquesta és la intensitat del suavitzat."

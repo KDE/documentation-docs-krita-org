@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2021-09-29 13:59+0000\n"
 "Last-Translator: RinalNamori <rinalnamori@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://weblate.slat.org/projects/krita-"
@@ -21,11 +21,11 @@ msgstr ""
 "X-Generator: Weblate 4.8\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: ../../<rst_epilog>:22
+#: ../../<rst_epilog>:18
 msgid "toolfreehandbrush"
 msgstr "手繪筆刷工具"
 
-#: ../../<rst_epilog>:22
+#: ../../<rst_epilog>:18
 msgid ".. image:: /images/icons/freehand_brush_tool.svg"
 msgstr ""
 
@@ -34,6 +34,10 @@ msgid ""
 "Krita's freehand brush tool reference, containing how to use the stabilizer "
 "in krita."
 msgstr "Krita 的手繪筆刷工具參考，包含 Krita 的防抖使用方法。"
+
+#: ../../reference_manual/tools/freehand_brush.rst:0
+msgid ".. image:: /images/tools/stablizer_pixel_result.png"
+msgstr ""
 
 #: ../../reference_manual/tools/freehand_brush.rst:12
 msgid "Freehand Brush"
@@ -117,7 +121,7 @@ msgid "Tool Options"
 msgstr "工具選項"
 
 #: ../../reference_manual/tools/freehand_brush.rst:41
-#: ../../reference_manual/tools/freehand_brush.rst:79
+#: ../../reference_manual/tools/freehand_brush.rst:82
 msgid "Stabilizer"
 msgstr "防抖"
 
@@ -183,7 +187,6 @@ msgid ""
 msgstr "這個選項可以透過接下來的選項來控制平滑強度："
 
 #: ../../reference_manual/tools/freehand_brush.rst:58
-#: ../../reference_manual/tools/freehand_brush.rst:70
 msgid "Distance"
 msgstr "距離"
 
@@ -224,12 +227,12 @@ msgid "Weighted smoothing:"
 msgstr "權衡"
 
 #: ../../reference_manual/tools/freehand_brush.rst:65
-#: ../../reference_manual/tools/freehand_brush.rst:79
+#: ../../reference_manual/tools/freehand_brush.rst:82
 msgid "Scalable Distance"
 msgstr "隨檢視縮放距離"
 
 #: ../../reference_manual/tools/freehand_brush.rst:65
-#: ../../reference_manual/tools/freehand_brush.rst:79
+#: ../../reference_manual/tools/freehand_brush.rst:83
 msgid ""
 "This makes it so that the numbers involved will be scaled along the zoom "
 "level."
@@ -245,47 +248,84 @@ msgstr ""
 "這個選項會平均數位板裡的所有輸入。這個選項和權衡的差異是防抖可以一直完成線"
 "條。防抖會在游標生成一個圓圈，在圓圈範圍外時線條會跟著游標移動上色。"
 
-#: ../../reference_manual/tools/freehand_brush.rst:71
-msgid "This is the strength of the smoothing."
-msgstr "這是平滑筆刷的強度。"
+#: ../../reference_manual/tools/freehand_brush.rst:70
+msgid "distance is replaced by smoothing at max and min speed."
+msgstr ""
 
 #: ../../reference_manual/tools/freehand_brush.rst:72
+msgid "Sample Count at Max Speed"
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:73
+msgid ""
+"This is the strength of the smoothing when drawing as fast as possible. For "
+"the best results, set it much lower than that of min speed. The idea being "
+"that a fast stroke needs less smoothing than a slow stroke."
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:74
+msgid "Sample Count at Min Speed"
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:75
+msgid ""
+"This is the strength of the smoothing when drawing as slow as possible. For "
+"best results, this one can be set much higher than that of max speed."
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:76
 msgid "Delay"
 msgstr "延遲"
 
-#: ../../reference_manual/tools/freehand_brush.rst:73
+#: ../../reference_manual/tools/freehand_brush.rst:77
 msgid ""
 "This toggles and determines the size of the dead zone around the cursor. "
 "This can be used to create sharp corners with more control."
 msgstr "這個可以開關和判定游標範圍死區的大小。這個可以用來控制以畫出銳角。"
 
-#: ../../reference_manual/tools/freehand_brush.rst:74
+#: ../../reference_manual/tools/freehand_brush.rst:78
 msgid "Finish Line"
 msgstr "筆末挑尖"
 
-#: ../../reference_manual/tools/freehand_brush.rst:75
+#: ../../reference_manual/tools/freehand_brush.rst:79
 msgid "This ensures that the line will be finished."
 msgstr "這個會保證線條最終會被完成。"
 
-#: ../../reference_manual/tools/freehand_brush.rst:76
+#: ../../reference_manual/tools/freehand_brush.rst:80
 msgid "Stabilize sensors"
 msgstr "穩定檢測器"
 
-#: ../../reference_manual/tools/freehand_brush.rst:77
+#: ../../reference_manual/tools/freehand_brush.rst:81
 msgid ""
 "Similar to :guilabel:`Smooth Pressure`, this allows the input (pressure, "
 "speed, tilt) to be smoother."
 msgstr "接近\\ :guilabel:`平滑壓力`，這能讓輸入（筆壓、速度、傾斜）變得滑順。"
 
-#: ../../reference_manual/tools/freehand_brush.rst:81
+#: ../../reference_manual/tools/freehand_brush.rst:85
+msgid ""
+"Keeps lines drawn with a single-pixel brush at single-pixel width, avoiding "
+"L-shaped corners or doubling-up of pixels."
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:89
+msgid ""
+"Left: result without smoothing. Right: result with :guilabel:`Pixel` "
+"smoothing."
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:91
+msgid "Pixel"
+msgstr ""
+
+#: ../../reference_manual/tools/freehand_brush.rst:93
 msgid "Painting Assistants"
 msgstr "作畫輔助"
 
-#: ../../reference_manual/tools/freehand_brush.rst:84
+#: ../../reference_manual/tools/freehand_brush.rst:96
 msgid "Assistants"
 msgstr "吸附到輔助尺"
 
-#: ../../reference_manual/tools/freehand_brush.rst:86
+#: ../../reference_manual/tools/freehand_brush.rst:98
 msgid ""
 "Ticking this will allow snapping to :ref:`assistant_tool`, and the hotkey to "
 "toggle it is :kbd:`Ctrl + Shift + L`. See :ref:`painting_with_assistants` "
@@ -294,7 +334,7 @@ msgstr ""
 "勾選這個選項能把線條吸附在\\ :ref:`assistant_tool`\\ 上，快捷鍵是 :kbd:`Ctrl "
 "+ Shift + L`。參閱 :ref:`painting_with_assistants` 以取得更多資訊。"
 
-#: ../../reference_manual/tools/freehand_brush.rst:88
+#: ../../reference_manual/tools/freehand_brush.rst:100
 msgid ""
 "The slider will determine the amount of snapping, with 1000 being perfect "
 "snapping, and 0 being no snapping at all. For situations where there is more "
@@ -307,12 +347,15 @@ msgstr ""
 "有多個輔助尺在畫布上時，預設勾選的\\ :guilabel:`單一吸附`\\ 表示 Krita 在同時"
 "間只會吸附其中一個來防止雜亂。取消勾選來使用多個輔助尺輔助作畫。"
 
-#: ../../reference_manual/tools/freehand_brush.rst:90
+#: ../../reference_manual/tools/freehand_brush.rst:102
 msgid ""
 "You may not always want erasers to snap, especially when using assistants "
 "liberally during the sketching process. :guilabel:`Snap Eraser` will allow "
 "you to turn off snapping for brushes with the blending mode :ref:`bm_erase`."
 msgstr ""
+
+#~ msgid "This is the strength of the smoothing."
+#~ msgstr "這是平滑筆刷的強度。"
 
 #, fuzzy
 #~| msgid "toolfreehandbrush"

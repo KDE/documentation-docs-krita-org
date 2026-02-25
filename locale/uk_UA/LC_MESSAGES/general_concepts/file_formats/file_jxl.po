@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2023-07-26 14:10+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -47,13 +47,22 @@ msgid "\\*.jxl"
 msgstr "\\*.jxl"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:19
+#, fuzzy
+#| msgid ""
+#| "JPEG XL (``.jxl``) is a new royalty-free image file format. It supports :"
+#| "ref:`lossy compression mode <lossless_compression>` designed for "
+#| "photographs similar to the :ref:`JPEG <file_jpeg>` file format, and also :"
+#| "ref:`lossless compression mode <lossless_compression>` similar to formats "
+#| "like :ref:`PNG <file_png>`. In addition, it also supports saving "
+#| "animations with multiple frames like :ref:`GIF <file_gif>`."
 msgid ""
 "JPEG XL (``.jxl``) is a new royalty-free image file format. It supports :ref:"
 "`lossy compression mode <lossless_compression>` designed for photographs "
 "similar to the :ref:`JPEG <file_jpeg>` file format, and also :ref:`lossless "
 "compression mode <lossless_compression>` similar to formats like :ref:`PNG "
 "<file_png>`. In addition, it also supports saving animations with multiple "
-"frames like :ref:`GIF <file_gif>`."
+"frames like :ref:`GIF <file_gif>` or simple multi-layered raster image "
+"without animation."
 msgstr ""
 "JPEG XL (``.jxl``) є новітнім, вільним від патентних відрахувань, форматом "
 "файлів зображень. У ньому передбачено підтримку :ref:`режиму стискання із "
@@ -162,19 +171,42 @@ msgstr ""
 "кодування має шукати найкраще стискання для вашого зображення. Більша "
 "ретельність означає довший час збереження даних."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:37
-msgid "Save as animated JPEG XL"
-msgstr "Зберегти як анімований JPEG-XL"
+#: ../../general_concepts/file_formats/file_jxl.rst:39
+#, fuzzy
+#| msgid "Flatten the image"
+msgid "Flattened image"
+msgstr "Спростити зображення"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:38
+#: ../../general_concepts/file_formats/file_jxl.rst:40
 msgid ""
-"JPEG XL has the ability to store small animations like :ref:`file_gif`. Its "
-"animation capabilities are simple though, and specifically designed for "
-"stylized content that doesn't have a lot of colors, like cel-animation. This "
-"is because JPEG XL doesn't have intra-frame prediction, which is the best "
-"way to store video files with a lot of colors like 3D animation, film and "
+"Flatten the image and save as single layer image (default). This is the "
+"recommended option for static image web delivery and sharing in general."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:41
+msgid "Animated image"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:42
+#, fuzzy
+#| msgid ""
+#| "JPEG XL has the ability to store small animations like :ref:`file_gif`. "
+#| "Its animation capabilities are simple though, and specifically designed "
+#| "for stylized content that doesn't have a lot of colors, like cel-"
+#| "animation. This is because JPEG XL doesn't have intra-frame prediction, "
+#| "which is the best way to store video files with a lot of colors like 3D "
+#| "animation, film and painterly animation. We recommend you try using video "
+#| "rendering for painterly animation instead."
+msgid ""
+"Flatten the image and render animation frames as animated image. JPEG XL has "
+"the ability to store small animations like :ref:`file_gif`. Its animation "
+"capabilities are simple though, and specifically designed for stylized "
+"content that doesn't have a lot of colors, like cel-animation. This is "
+"because JPEG XL doesn't have intra-frame prediction, which is the best way "
+"to store video files with a lot of colors like 3D animation, film and "
 "painterly animation. We recommend you try using video rendering for "
-"painterly animation instead."
+"painterly animation instead. This is the recommended option for animated "
+"image web delivery and sharing in general."
 msgstr ""
 "У JPEG XL передбачено можливість зберігати невеличкі анімації, подібні до :"
 "ref:`file_gif`. Втім, можливості з анімації доволі прості і спеціально "
@@ -185,17 +217,28 @@ msgstr ""
 "живописної анімації. Для живопису ми рекомендуємо спробувати скористатися "
 "створенням звичайного відео."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:40
+#: ../../general_concepts/file_formats/file_jxl.rst:44
 msgid ""
-"If disabled, JPEG XL has the ability to store frames as layers if it's not "
-"being used as animation, this can be useful to store multi-page images like :"
-"ref:`file_tif`."
+"Rasterize layers (including group and filter layers) and save as multi-"
+"layered image."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:46
+#, fuzzy
+#| msgid ""
+#| "If disabled, JPEG XL has the ability to store frames as layers if it's "
+#| "not being used as animation, this can be useful to store multi-page "
+#| "images like :ref:`file_tif`."
+msgid ""
+"JPEG XL has the ability to store frames as layers if it's not being used as "
+"animation, this can be useful to store multi-layered images like :ref:"
+"`file_tif`."
 msgstr ""
 "Якщо вимкнено, JPEG XL має можливість зберігати кадри як шари. Якщо цю "
 "можливість не використано для анімації, нею можна скористатися для "
 "багатосторінкових зображень, зокрема :ref:`file_tif`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:42
+#: ../../general_concepts/file_formats/file_jxl.rst:48
 msgid ""
 "Its layered capabilities are very basic, and not designed to store complex "
 "layer stacks like :ref:`file_psd` and :ref:`file_kra` does. Some of its "
@@ -205,7 +248,7 @@ msgstr ""
 "зберігання складних стосів шарів, як це, зокрема, зроблено у :ref:`file_psd` "
 "і :ref:`file_kra`. Ось деякі з обмежень:"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:44
+#: ../../general_concepts/file_formats/file_jxl.rst:50
 msgid ""
 "Only raster paint layers are supported, any other type of layer will get "
 "rasterized and group layers will be flattened."
@@ -213,7 +256,7 @@ msgstr ""
 "Передбачено підтримку лише растрових шарів малювання, усі інші типи шарів "
 "буде растеризовано, а групові шари буде спрощено."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:45
+#: ../../general_concepts/file_formats/file_jxl.rst:51
 msgid ""
 "Limited blending modes, only Normal and Addition while other modes will get "
 "converted to Normal."
@@ -221,7 +264,7 @@ msgstr ""
 "Обмежені режими змішування, можна використовувати лише звичайний режим і "
 "режим додавання, інші режими буде перетворено на звичайний."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:46
+#: ../../general_concepts/file_formats/file_jxl.rst:52
 msgid ""
 "No partial layer opacity, will only export visible layers with full opacity "
 "setting (100%)."
@@ -229,7 +272,11 @@ msgstr ""
 "Не можна використовувати часткову непрозорість шарів. Буде експортовано лише "
 "видимі шари із параметром повної прозорості (100%)."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:47
+#: ../../general_concepts/file_formats/file_jxl.rst:53
+msgid "Multi-layered image"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:53
 msgid ""
 "No layer styles, these will get rasterized with Normal blending mode for "
 "outside pixels."
@@ -237,7 +284,7 @@ msgstr ""
 "Не можна використовувати стилі шарів, їх буде растеризовано у режимі "
 "змішування «звичайний» для зовнішніх пікселів."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:48
+#: ../../general_concepts/file_formats/file_jxl.rst:54
 msgid ""
 "Layer masks will be flattened and rasterized, but Colorize Mask won't get "
 "rendered."
@@ -245,21 +292,36 @@ msgstr ""
 "Маски шарів буде спрощено і растеризовано, але маску розфарбовування не буде "
 "оброблено."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:50
-msgid "We recommend you leave this option enabled for web delivery."
+#: ../../general_concepts/file_formats/file_jxl.rst:56
+msgid ""
+"Rasterize layers (including group and filter layers) and save as multi-page "
+"image."
 msgstr ""
-"Рекомендуємо лишити цей пункт позначеним для зображень, які буде розміщено в "
-"інтернеті"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:51
-msgid "Flatten the image"
-msgstr "Спростити зображення"
+#: ../../general_concepts/file_formats/file_jxl.rst:58
+msgid ""
+"Similar to multi-layered image, but this option saves the layers as animated "
+"frames with maximum duration instead. This is a compatibility option for "
+"editor/viewer that didn't support opening multi-layered JPEG XL images."
+msgstr ""
 
-#: ../../general_concepts/file_formats/file_jxl.rst:54
+#: ../../general_concepts/file_formats/file_jxl.rst:60
+msgid "Multi-paged image"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:60
+msgid "Same layering limitations above also applied to this option."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:62
+msgid "Save as"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:65
 msgid "Lossy encoding"
 msgstr "Кодування із втратою якості"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:55
+#: ../../general_concepts/file_formats/file_jxl.rst:66
 msgid ""
 "Whether to use :ref:`Lossy compression <lossy_compression>`. Like :ref:"
 "`file_webp`, JPEG XL has a different way of encoding the images in lossless "
@@ -272,11 +334,11 @@ msgstr ""
 "з цих режимів є близьким до способу, у який кодує зображення початкова "
 "версія :ref:`file_jpeg`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:56
+#: ../../general_concepts/file_formats/file_jxl.rst:67
 msgid "Quality"
 msgstr "Якість"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:57
+#: ../../general_concepts/file_formats/file_jxl.rst:68
 msgid ""
 "This option sets the desired quality for lossy compression. Higher values "
 "look better, but lower values have a lower file size."
@@ -285,11 +347,11 @@ msgstr ""
 "дають результат, який виглядає краще, а менші значення дають файли меншого "
 "розміру."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:59
+#: ../../general_concepts/file_formats/file_jxl.rst:70
 msgid "Use modular mode"
 msgstr "Використати модульний розмір"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:59
+#: ../../general_concepts/file_formats/file_jxl.rst:70
 msgid ""
 "Use the alternative Modular mode for lossy compression. By default, JPEG XL "
 "encodes lossy image with VarDCT mode."
@@ -298,7 +360,18 @@ msgstr ""
 "Типово, у JPEG XL буде закодовано зображення з втратою якості за допомогою "
 "режиму VarDCT."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:63
+#: ../../general_concepts/file_formats/file_jxl.rst:75
+msgid "Lossless alpha"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:75
+msgid ""
+"By default, alpha channel (transparency) will also be compressed when using "
+"Lossy encoding. If enabled, this option will set alpha channel to lossless "
+"(uncompressed). Useful to reduce transparency artifact on lossy export."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:80
 msgid ""
 "The encoder can give a better result if it is given more time. This slider "
 "allows you to decide how much the encoder should prioritize quality over "
@@ -309,7 +382,7 @@ msgstr ""
 "засобу кодування має бути якість, а не швидкість. Різні режими можна "
 "розглядати як різні набори налаштувань [1]_:"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:65
+#: ../../general_concepts/file_formats/file_jxl.rst:82
 msgid ""
 "Lightning -- A fast mode useful for lossless mode. Fastest possible values "
 "for lossy compression, for lossless uses gradient predictors and fast "
@@ -319,7 +392,7 @@ msgstr ""
 "значення для стискання із втратами, для режиму без втрат використовує "
 "градієнтне прогнозування та швидкі гістограми, але не дерево MA."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:66
+#: ../../general_concepts/file_formats/file_jxl.rst:83
 msgid ""
 "Thunder -- Both Lightning and Thunder are similar for Lossy, for lossless, "
 "Thunder uses a fixed MA tree and gradient predictors."
@@ -328,11 +401,11 @@ msgstr ""
 "стискання без втрат «грім» використовує фіксоване дерево MA та градієнтне "
 "прогнозування."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:67
+#: ../../general_concepts/file_formats/file_jxl.rst:84
 msgid "Falcon -- Instead of using lossless mode, disables all options."
 msgstr "Сокіл — замість використання режиму без втрат, вимикає усі параметри."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:68
+#: ../../general_concepts/file_formats/file_jxl.rst:85
 msgid ""
 "Cheetah -- Enables coefficient reordering, context clustering, and "
 "heuristics for selecting DCT sizes and quantization steps."
@@ -340,7 +413,7 @@ msgstr ""
 "Гепард — вмикає переупорядкування коефіцієнтів, контекстне групування та "
 "евристику для вибору розмірів DCT та кроків квантизації."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:69
+#: ../../general_concepts/file_formats/file_jxl.rst:86
 msgid ""
 "Hare -- Enables Gaborish Filtering, Chroma from Luma and estimates "
 "quantization steps."
@@ -348,11 +421,11 @@ msgstr ""
 "Заєць — вмикає габорове фільтрування, палітру з освітлення та оцінку кроків "
 "квантизації."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:70
+#: ../../general_concepts/file_formats/file_jxl.rst:87
 msgid "Wombat -- Enables error diffusion quantization and DCT heuristics."
 msgstr "Вомбат — вмикає квантизацію розсіювання похибок та евристику DCT."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:71
+#: ../../general_concepts/file_formats/file_jxl.rst:88
 msgid ""
 "Squirrel -- Enables dots, patches and spline detection as well as context "
 "clustering."
@@ -360,20 +433,20 @@ msgstr ""
 "Білка — вмикає виявлення крапок, плям та сплайнів, а також контекстне "
 "групування."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:72
+#: ../../general_concepts/file_formats/file_jxl.rst:89
 msgid ""
 "Kitten -- Optimizes the adaptive quantization for a psychovisual metric."
 msgstr "Кошеня — оптимізує адаптивну квантизацію для психовізуальної метрики."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:73
+#: ../../general_concepts/file_formats/file_jxl.rst:90
 msgid "Tortoise -- Enables a more thorough adaptive quantization search."
 msgstr "Черепаха — вмикає ретельніший пошук із адаптивною квантизацією."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:74
+#: ../../general_concepts/file_formats/file_jxl.rst:91
 msgid "Tradeoff"
 msgstr "Компроміс"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:75
+#: ../../general_concepts/file_formats/file_jxl.rst:92
 msgid ""
 "You can force-enable several of the options in the :guilabel:`Advanced` "
 "section even if they are disabled by the :guilabel:`Tradeoff` preset."
@@ -382,15 +455,15 @@ msgstr ""
 "`Додатково`, навіть якщо їх вимкнено набором налаштувань :guilabel:"
 "`Компроміс`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:77
+#: ../../general_concepts/file_formats/file_jxl.rst:94
 msgid "Encoding Options"
 msgstr "Параметри кодування"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:77
+#: ../../general_concepts/file_formats/file_jxl.rst:94
 msgid "Decoding Speed"
 msgstr "Швидкість декодування"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:77
+#: ../../general_concepts/file_formats/file_jxl.rst:94
 msgid ""
 "Decoding speed can be improved by allowing certain optimizations. However, "
 "this will lead to some quality loss. For example, if you think your images "
@@ -406,11 +479,31 @@ msgstr ""
 "переглядати лише на звичайних комп'ютерах і якість є дуже важливою, для "
 "цього параметра слід встановити значення 0."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:80
+#: ../../general_concepts/file_formats/file_jxl.rst:97
 msgid "Conversion Settings"
 msgstr "Параметри перетворення"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:82
+#: ../../general_concepts/file_formats/file_jxl.rst:101
+msgid "(Lossless) Use CICP instead of ICC if possible"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:101
+msgid ""
+"If enabled, Krita will attempt to convert document ICC profile into "
+"equivalent CICP values to save more space when exporting lossless JPEG XL. "
+"If there's no equivalent CICP values, ICC will still be saved instead. This "
+"is particularly useful for web delivery."
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:102
+msgid "Color profile"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:105
+msgid "HDR conversion"
+msgstr ""
+
+#: ../../general_concepts/file_formats/file_jxl.rst:105
 msgid ""
 "This option is only enabled when the image is in a floating point color "
 "space, and the options are exactly the same as the conversion settings for :"
@@ -420,19 +513,19 @@ msgstr ""
 "просторі кольорів зі значенням з рухомою крапкою. Параметри повністю "
 "збігаються із параметрами перетворення для :ref:`file_heif`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:87
+#: ../../general_concepts/file_formats/file_jxl.rst:110
 msgid "Advanced"
 msgstr "Додатково"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:89
+#: ../../general_concepts/file_formats/file_jxl.rst:112
 msgid "JPEG XL has two major ways of encoding data:"
 msgstr "У JPEG XL передбачено два основних способи кодування даних:"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:91
+#: ../../general_concepts/file_formats/file_jxl.rst:114
 msgid "VarDCT"
 msgstr "VarDCT"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:92
+#: ../../general_concepts/file_formats/file_jxl.rst:115
 msgid ""
 "This one is in the same family of compression techniques as used by the "
 "original JPEG, and thus best for 'Natural' images, such as photographs and "
@@ -442,11 +535,11 @@ msgstr ""
 "використано у JPEG, а отже, вона найкраще пасує до «природних» зображень, "
 "зокрема фотографій та зображень із багатьма градієнтами та текстурами."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:94
+#: ../../general_concepts/file_formats/file_jxl.rst:117
 msgid "Modular Mode"
 msgstr "Модульний режим"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:94
+#: ../../general_concepts/file_formats/file_jxl.rst:117
 msgid ""
 "This one has specific features for so-called 'synthetic' images, such as "
 "line art and images with a lot of wide patches. Modular mode is always used "
@@ -457,7 +550,7 @@ msgstr ""
 "плям. Модульний режим буде використано завжди, якщо вибрано :guilabel:"
 "`Кодування без втрат`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:96
+#: ../../general_concepts/file_formats/file_jxl.rst:119
 msgid ""
 "You could consider VarDCT to be like 'lossy' compression, while Modular Mode "
 "is like 'lossless' compression. Furthermore, JPEG XL splits up images into "
@@ -469,7 +562,7 @@ msgstr ""
 "які називають групами. Ці групи мають розміри 256 на 256 для VarDCT, а у "
 "«Модульному режимі» ви можете вибрати для них один із декількох розмірів."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:99
+#: ../../general_concepts/file_formats/file_jxl.rst:122
 msgid ""
 "How to sample the color channels. This means that there will be less "
 "information stored, leading to a smaller file. However, because this only "
@@ -483,11 +576,11 @@ msgstr ""
 "масштабування зображення уполовину (для 2x2), четвертину (для 4x4) або до "
 "однієї восьмої (для 8x8), а потім повернення до початкового розміру."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:102
+#: ../../general_concepts/file_formats/file_jxl.rst:125
 msgid "Color channel resampling."
 msgstr "Зміна дискретизації каналів кольорів."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:102
+#: ../../general_concepts/file_formats/file_jxl.rst:125
 msgid ""
 "This feature is particularly useful for images that are deliberately blurry "
 "and devoid of sharp contrast. It's recommended to set this to :guilabel:`No "
@@ -497,11 +590,11 @@ msgstr ""
 "містять різких контрастів. Рекомендуємо встановити значення :guilabel:`Без "
 "зниження дискретизації` в усіх інших випадках."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:104
+#: ../../general_concepts/file_formats/file_jxl.rst:127
 msgid "Alpha channel resampling"
 msgstr "Зміна дискретизації альфа-каналу"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:105
+#: ../../general_concepts/file_formats/file_jxl.rst:128
 msgid ""
 "Same as :guilabel:`Color channel resampling`, but then for the transparency "
 "of the image."
@@ -509,11 +602,11 @@ msgstr ""
 "Те саме, що і :guilabel:`Зміна дискретизації каналів кольорів`, але для "
 "каналу прозорості зображення."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:106
+#: ../../general_concepts/file_formats/file_jxl.rst:129
 msgid "Photon noise"
 msgstr "Фотонний шум"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:107
+#: ../../general_concepts/file_formats/file_jxl.rst:130
 msgid ""
 "This determines whether noise in the image should be abstracted and added "
 "later by the computer, giving a simulation of the noise that cameras "
@@ -523,7 +616,7 @@ msgstr ""
 "пізніше за допомогою комп'ютера, створюючи на зображенні імітацію шуму, який "
 "іноді є на реальних знімках."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:109
+#: ../../general_concepts/file_formats/file_jxl.rst:132
 msgid ""
 "Dots are a form of noise larger than :guilabel:`Photon noise`. Such dots "
 "make images more pleasing to look at, however, they make compressing "
@@ -539,42 +632,42 @@ msgstr ""
 "guilabel:`Створити латки` і засіб кодування знайде латки і крапки, крапки "
 "буде закодовано так, наче вони є латками (плямами)."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:111
-#: ../../general_concepts/file_formats/file_jxl.rst:118
-#: ../../general_concepts/file_formats/file_jxl.rst:127
-#: ../../general_concepts/file_formats/file_jxl.rst:136
-#: ../../general_concepts/file_formats/file_jxl.rst:153
-#: ../../general_concepts/file_formats/file_jxl.rst:165
-#: ../../general_concepts/file_formats/file_jxl.rst:172
-#: ../../general_concepts/file_formats/file_jxl.rst:198
-#: ../../general_concepts/file_formats/file_jxl.rst:210
+#: ../../general_concepts/file_formats/file_jxl.rst:134
+#: ../../general_concepts/file_formats/file_jxl.rst:141
+#: ../../general_concepts/file_formats/file_jxl.rst:150
+#: ../../general_concepts/file_formats/file_jxl.rst:159
+#: ../../general_concepts/file_formats/file_jxl.rst:176
+#: ../../general_concepts/file_formats/file_jxl.rst:188
+#: ../../general_concepts/file_formats/file_jxl.rst:195
+#: ../../general_concepts/file_formats/file_jxl.rst:221
+#: ../../general_concepts/file_formats/file_jxl.rst:233
 msgid ""
 "Default -- Encoder will select this option depending on :guilabel:`Tradeoff`."
 msgstr ""
 "Типовий — засіб кодування вибере цей варіант, залежно від позначення пункту :"
 "guilabel:`Компроміс`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:112
-#: ../../general_concepts/file_formats/file_jxl.rst:119
-#: ../../general_concepts/file_formats/file_jxl.rst:128
+#: ../../general_concepts/file_formats/file_jxl.rst:135
+#: ../../general_concepts/file_formats/file_jxl.rst:142
+#: ../../general_concepts/file_formats/file_jxl.rst:151
 msgid "Enabled -- Always use this regardless :guilabel:`Tradeoff`."
 msgstr ""
 "Увімкнено — завжди використовувати, незалежно від того, чи позначено пункт :"
 "guilabel:`Компроміс`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:113
+#: ../../general_concepts/file_formats/file_jxl.rst:136
 msgid "Generate dots"
 msgstr "Створити крапки"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:113
-#: ../../general_concepts/file_formats/file_jxl.rst:120
-#: ../../general_concepts/file_formats/file_jxl.rst:129
+#: ../../general_concepts/file_formats/file_jxl.rst:136
+#: ../../general_concepts/file_formats/file_jxl.rst:143
+#: ../../general_concepts/file_formats/file_jxl.rst:152
 msgid "Disabled -- Never use this regardless :guilabel:`Tradeoff`."
 msgstr ""
 "Вимкнено — ніколи це не використовувати, незалежно від позначення пункту :"
 "guilabel:`Компроміс`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:116
+#: ../../general_concepts/file_formats/file_jxl.rst:139
 msgid ""
 "This determines whether or not to try and reuse bits and pieces of an image. "
 "This can be useful with images that have a lot of repeating bits, like "
@@ -585,15 +678,15 @@ msgstr ""
 "зокрема спрайтів, зображень з текстом або зображень, на яких багато "
 "візерунків."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:120
+#: ../../general_concepts/file_formats/file_jxl.rst:143
 msgid "Generate patches"
 msgstr "Створити латки"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:122
+#: ../../general_concepts/file_formats/file_jxl.rst:145
 msgid "Edge Preserving Filter"
 msgstr "Фільтр збереження країв"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:123
+#: ../../general_concepts/file_formats/file_jxl.rst:146
 msgid ""
 "The edge preserving filter tries to preserve edges without getting artifacts "
 "like 'rings'."
@@ -601,7 +694,7 @@ msgstr ""
 "Фільтр збереження країв намагається зберегти краї без створення дефектів "
 "типу «кілець»."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:125
+#: ../../general_concepts/file_formats/file_jxl.rst:148
 msgid ""
 "Whether or not to apply a Gabor-like sharpening filter, which can help "
 "emphasize important contrasts that would otherwise be lost during encoding "
@@ -611,15 +704,15 @@ msgstr ""
 "допомогти в акцентуванні важливих контрастів, які інакше було б втрачено під "
 "час кодування або декодування."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:129
+#: ../../general_concepts/file_formats/file_jxl.rst:152
 msgid "Gaborish filter"
 msgstr "Фільтр Ґабора"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:131
+#: ../../general_concepts/file_formats/file_jxl.rst:154
 msgid "Modular encoding"
 msgstr "Модульне кодування"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:132
+#: ../../general_concepts/file_formats/file_jxl.rst:155
 msgid ""
 "Unlike *Modular Mode*, which is the lossless compression method, Modular "
 "encoding instead splits the image into smaller chunks, allowing for multi-"
@@ -635,7 +728,7 @@ msgstr ""
 "методу із втратою якості :guilabel:`VarDCT`, методу без втрати якості :"
 "guilabel:`Модульний режим`, чи надати кодувальнику змогу вибрати автоматично."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:134
+#: ../../general_concepts/file_formats/file_jxl.rst:157
 msgid ""
 "Whether to keep the color values when a pixel is fully transparent or "
 "whether to abstract them away as if they were transparent black."
@@ -643,33 +736,33 @@ msgstr ""
 "Слід зберігати значення кольорів, якщо піксель є повністю прозорим, чи "
 "відкинути ці дані так, наче піксель є прозорим чорним."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:137
-#: ../../general_concepts/file_formats/file_jxl.rst:154
-#: ../../general_concepts/file_formats/file_jxl.rst:166
-#: ../../general_concepts/file_formats/file_jxl.rst:173
-#: ../../general_concepts/file_formats/file_jxl.rst:199
-#: ../../general_concepts/file_formats/file_jxl.rst:211
+#: ../../general_concepts/file_formats/file_jxl.rst:160
+#: ../../general_concepts/file_formats/file_jxl.rst:177
+#: ../../general_concepts/file_formats/file_jxl.rst:189
+#: ../../general_concepts/file_formats/file_jxl.rst:196
+#: ../../general_concepts/file_formats/file_jxl.rst:222
+#: ../../general_concepts/file_formats/file_jxl.rst:234
 msgid "Enabled -- Always use this regardless of :guilabel:`Tradeoff`."
 msgstr ""
 "Увімкнено — завжди використовувати, незалежно від того, чи позначено пункт :"
 "guilabel:`Компроміс`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:138
+#: ../../general_concepts/file_formats/file_jxl.rst:161
 msgid "Keep color of invisible pixels"
 msgstr "Зберігати колір невидимих пікселів"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:138
-#: ../../general_concepts/file_formats/file_jxl.rst:155
-#: ../../general_concepts/file_formats/file_jxl.rst:167
-#: ../../general_concepts/file_formats/file_jxl.rst:174
-#: ../../general_concepts/file_formats/file_jxl.rst:200
-#: ../../general_concepts/file_formats/file_jxl.rst:212
+#: ../../general_concepts/file_formats/file_jxl.rst:161
+#: ../../general_concepts/file_formats/file_jxl.rst:178
+#: ../../general_concepts/file_formats/file_jxl.rst:190
+#: ../../general_concepts/file_formats/file_jxl.rst:197
+#: ../../general_concepts/file_formats/file_jxl.rst:223
+#: ../../general_concepts/file_formats/file_jxl.rst:235
 msgid "Disabled -- Never use this regardless of :guilabel:`Tradeoff`."
 msgstr ""
 "Вимкнено — ніколи це не використовувати, незалежно від позначення пункту :"
 "guilabel:`Компроміс`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:141
+#: ../../general_concepts/file_formats/file_jxl.rst:164
 msgid ""
 "How the groups are stored in :guilabel:`Modular encoding`. This is important "
 "for partially downloaded images and images using :guilabel:`Progressive "
@@ -679,36 +772,36 @@ msgstr ""
 "важливо для частково отриманих зображень і зображень із застосуванням "
 "пункту :guilabel:`Прогресивне кодування`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:143
-#: ../../general_concepts/file_formats/file_jxl.rst:183
+#: ../../general_concepts/file_formats/file_jxl.rst:166
+#: ../../general_concepts/file_formats/file_jxl.rst:206
 msgid "Default"
 msgstr "Типовий"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:144
+#: ../../general_concepts/file_formats/file_jxl.rst:167
 msgid "Depends on :guilabel:`Tradeoff`."
 msgstr "Залежить від стану позначеності пункту :guilabel:`Компроміс`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:145
+#: ../../general_concepts/file_formats/file_jxl.rst:168
 msgid "Scanline order"
 msgstr "Порядок сканування"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:146
+#: ../../general_concepts/file_formats/file_jxl.rst:169
 msgid "Top left of the image is also the first group."
 msgstr "Верхня ліва частина зображення також є першою групою."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:148
+#: ../../general_concepts/file_formats/file_jxl.rst:171
 msgid "Group order"
 msgstr "Порядок груп"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:148
+#: ../../general_concepts/file_formats/file_jxl.rst:171
 msgid "Center first"
 msgstr "Спочатку центр"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:148
+#: ../../general_concepts/file_formats/file_jxl.rst:171
 msgid "The centermost group of the image is the first group."
 msgstr "Найцентральніша група зображення є першою групою."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:151
+#: ../../general_concepts/file_formats/file_jxl.rst:174
 msgid ""
 "JPEG XL can use some algorithmic trickery to predict the color of a given "
 "section from the pixel brightness, meaning it only has to store the pixel "
@@ -718,11 +811,11 @@ msgstr ""
 "кольору заданої частини на основі яскравості пікселів, що означає, що слід "
 "зберігати лише яскравість пікселів, а не колір. Варто поекспериментувати."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:155
+#: ../../general_concepts/file_formats/file_jxl.rst:178
 msgid "Chroma-from-luma"
 msgstr "Інтенсивність з яскравості"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:158
+#: ../../general_concepts/file_formats/file_jxl.rst:181
 msgid ""
 "The core of JPEG's compression is the so-called Discrete Cosine Transform "
 "(DCT). This allows it to simplify a complex gradient of colors to a "
@@ -740,7 +833,7 @@ msgstr ""
 "яке застосовується для цієї математичної функції може коригуватися засобом "
 "кодування, що називається «адаптивною квантизацією»."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:160
+#: ../../general_concepts/file_formats/file_jxl.rst:183
 msgid ""
 "Because the encoder is able to pick the best solution for the compression "
 "(Depending on what you selected for :guilabel:`Tradeoff`), the only thing "
@@ -765,7 +858,7 @@ msgstr ""
 "особливо корисно для зображень поряд із текстом або зображень, які "
 "обслуговуються з використанням повільного інтернет-з'єднання."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:163
+#: ../../general_concepts/file_formats/file_jxl.rst:186
 msgid ""
 "This enables progressive mode and uses advanced color maths to calculate the "
 "fine details of images. This takes more time but generally gives better "
@@ -775,11 +868,11 @@ msgstr ""
 "представлення кольорів для обчислення тонких деталей зображення. Це збільшує "
 "час обробки, але, загалом, дає кращі результати."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:167
+#: ../../general_concepts/file_formats/file_jxl.rst:190
 msgid "Spectral progression"
 msgstr "Спектральна прогресія"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:170
+#: ../../general_concepts/file_formats/file_jxl.rst:193
 msgid ""
 "This enables progressive mode and then uses quantization to compress the "
 "fine details. This leads to a smaller file size at the cost of giving the "
@@ -789,11 +882,11 @@ msgstr ""
 "стискання дрібних деталей. Дає менший файл ціною використання засобом "
 "кодування більшого часу на обробку."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:174
+#: ../../general_concepts/file_formats/file_jxl.rst:197
 msgid "Quantization"
 msgstr "Квантування"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:177
+#: ../../general_concepts/file_formats/file_jxl.rst:200
 msgid ""
 "Where the previous two options covered the fine-grain parts of a progressive-"
 "encoded image, the `DC` is coarse-grain compression, specifically a "
@@ -811,23 +904,23 @@ msgstr ""
 "дати кращий попередній перегляд, хоча розмір файла буде на декілька байтів "
 "більшим."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:184
+#: ../../general_concepts/file_formats/file_jxl.rst:207
 msgid "Let the encoder choose."
 msgstr "Надати змогу засобу кодування вибрати автоматично."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:185
+#: ../../general_concepts/file_formats/file_jxl.rst:208
 msgid "Disable"
 msgstr "Вимкнути"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:186
+#: ../../general_concepts/file_formats/file_jxl.rst:209
 msgid "Do not use a lower-resolution image at all."
 msgstr "Не використовувати зображення із низькою роздільністю взагалі."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:187
+#: ../../general_concepts/file_formats/file_jxl.rst:210
 msgid "64x64 low resolution pass"
 msgstr "Прохід 64⨯64 з низькою роздільністю"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:188
+#: ../../general_concepts/file_formats/file_jxl.rst:211
 msgid ""
 "Create an 64x64 image to use alongside the `DC` values to create the "
 "progressive preview."
@@ -835,19 +928,19 @@ msgstr ""
 "Створити зображення 64x64 для використання разом зі значеннями `DC` з метою "
 "створення прогресивного попереднього перегляду."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:190
+#: ../../general_concepts/file_formats/file_jxl.rst:213
 msgid "VarDCT parameters"
 msgstr "Параметри VarDCT"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:190
+#: ../../general_concepts/file_formats/file_jxl.rst:213
 msgid "Low resolution DC"
 msgstr "DC із низькою роздільністю"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:190
+#: ../../general_concepts/file_formats/file_jxl.rst:213
 msgid "512x512 + 64x64 low resolution pass"
 msgstr "Прохід 512⨯512 + 64⨯64 з низькою роздільністю"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:190
+#: ../../general_concepts/file_formats/file_jxl.rst:213
 msgid ""
 "Create both a 512x512 image and a 64x64 image to use alongside the `DC` "
 "values to create the progressive preview."
@@ -855,7 +948,7 @@ msgstr ""
 "Створити одразу зображення 512⨯512 та 64⨯64 для використання разом зі "
 "значеннями `DC` з метою створення прогресивного попереднього перегляду."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:193
+#: ../../general_concepts/file_formats/file_jxl.rst:216
 msgid ""
 "Extra options for :guilabel:`Modular Mode`. Modular mode uses something akin "
 "to a small programming language by way of predictors to describe image data "
@@ -865,7 +958,7 @@ msgstr ""
 "використано щось подібне до невеличкої мови програмування для засобів "
 "прогнозування з метою стислого і точногоо опису даних зображення."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:196
+#: ../../general_concepts/file_formats/file_jxl.rst:219
 msgid ""
 "Whether or not to enable progressive encoding/decoding. As explained in :"
 "guilabel:`VarDCT parameters`, this means that the image can be saved in such "
@@ -877,15 +970,15 @@ msgstr ""
 "у такий спосіб, що при його отриманні та показі першим буде показано грубий "
 "попередній перегляд."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:199
+#: ../../general_concepts/file_formats/file_jxl.rst:222
 msgid "Progressive encoding"
 msgstr "Прогресивне кодування"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:201
+#: ../../general_concepts/file_formats/file_jxl.rst:224
 msgid "Global channel palette range"
 msgstr "Діапазон загальної палітри каналів"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:202
+#: ../../general_concepts/file_formats/file_jxl.rst:225
 msgid ""
 "Colors will be stored as a palette depending on whether the total amount of "
 "different colors used is smaller than the percentage of all color channel "
@@ -897,22 +990,22 @@ msgstr ""
 "каналів кольорів. Для 8-бітових 100% означає загалом 255 значень, 50% "
 "означало б загалом 128 значень, а 10% означало б загалом 25 значень."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:203
+#: ../../general_concepts/file_formats/file_jxl.rst:226
 msgid "Local channel palette range"
 msgstr "Діапазон локальної палітри каналів"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:204
+#: ../../general_concepts/file_formats/file_jxl.rst:227
 msgid ""
 "Like :guilabel:`Global channel palette range`, but then decided per group."
 msgstr ""
 "Подібний до пункту :guilabel:`Діапазон загальної палітри каналів`, але з "
 "вирішенням за групами."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:205
+#: ../../general_concepts/file_formats/file_jxl.rst:228
 msgid "Use color palette for ... colors or less."
 msgstr "Використовувати палітру кольорів, якщо кольорів не більше за"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:206
+#: ../../general_concepts/file_formats/file_jxl.rst:229
 msgid ""
 "Select the maximum amount of colors that need to be present in a group "
 "before the encoder will try to store them as a palette."
@@ -920,7 +1013,7 @@ msgstr ""
 "Виберіть максимальну кількість кольорів, які мають бути наявними у групі, "
 "перш ніж засіб кодування спробує зберегти їх як палітру."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:208
+#: ../../general_concepts/file_formats/file_jxl.rst:231
 msgid ""
 "Whether to use a Delta-palette, also called a lossy-palette. This compresses "
 "the palette, but there's no official documentation yet on how exactly."
@@ -929,11 +1022,11 @@ msgstr ""
 "палітрою із втратами. Її використання призведе до стискання палітри, але "
 "офіційної документації щодо способу стискання ще немає."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:212
+#: ../../general_concepts/file_formats/file_jxl.rst:235
 msgid "Delta palette"
 msgstr "Дельта-палітра"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:215
+#: ../../general_concepts/file_formats/file_jxl.rst:238
 msgid ""
 "Images can be split into smaller chunks, which can be encoded separately. "
 "You can choose how big these chunks are when using Modular Mode, for VarDCT "
@@ -943,27 +1036,27 @@ msgstr ""
 "Ви можете визначити, наскільки великими будуть ці фрагменти при використанні "
 "модульного режиму. Для VarDCT типовим значенням буде 256x256."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:217
+#: ../../general_concepts/file_formats/file_jxl.rst:240
 msgid "128x128"
 msgstr "128x128"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:218
+#: ../../general_concepts/file_formats/file_jxl.rst:241
 msgid "256x256"
 msgstr "256x256"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:219
+#: ../../general_concepts/file_formats/file_jxl.rst:242
 msgid "512x512"
 msgstr "512x512"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:220
+#: ../../general_concepts/file_formats/file_jxl.rst:243
 msgid "Group size"
 msgstr "Розмір групи"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:220
+#: ../../general_concepts/file_formats/file_jxl.rst:243
 msgid "1024x1024"
 msgstr "1024x1024"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:223
+#: ../../general_concepts/file_formats/file_jxl.rst:246
 msgid ""
 "Which predictor to use in conjunction with the :guilabel:`MA tree`. Where "
 "VarDCT compresses the image by abstracting complex gradients into "
@@ -980,23 +1073,23 @@ msgstr ""
 "вибрати, яким засобом прогнозування ви хочете скористатися. Рекомендуємо "
 "скористатися варіантом :guilabel:`Типовий`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:225
+#: ../../general_concepts/file_formats/file_jxl.rst:248
 msgid "Default -- Let the encoder choose."
 msgstr "Типовий — надати змогу засобу кодування вибрати автоматично."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:226
+#: ../../general_concepts/file_formats/file_jxl.rst:249
 msgid "Zero -- Always returns the value 0."
 msgstr "Нуль — завжди повертати значення 0."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:227
+#: ../../general_concepts/file_formats/file_jxl.rst:250
 msgid "Left -- Always returns the value at the left."
 msgstr "Ліворуч — завжди повертати значення ліворуч."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:228
+#: ../../general_concepts/file_formats/file_jxl.rst:251
 msgid "Top -- Always returns the value at the top."
 msgstr "Згори — завжди повертати значення згори."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:229
+#: ../../general_concepts/file_formats/file_jxl.rst:252
 msgid ""
 "Avg0 -- Returns the average of the values to the immediate left and top of "
 "the current location."
@@ -1004,7 +1097,7 @@ msgstr ""
 "Сер0 — повертати середнє значень безпосередньо ліворуч і згори від поточного "
 "місця."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:230
+#: ../../general_concepts/file_formats/file_jxl.rst:253
 msgid ""
 "Select  -- Subtracts the left and top neighbour from the top-left, and "
 "returns the neighbour whose difference is lower."
@@ -1012,7 +1105,7 @@ msgstr ""
 "Вибрати — відняти ліве і верхнє від лівого верхнього за діагоналлю і "
 "повернути сусіднє, для якого різниця є найменшою."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:231
+#: ../../general_concepts/file_formats/file_jxl.rst:254
 msgid ""
 "Gradient -- Returns the value of the top-left neighbour minus the values of "
 "the top and left neighbours."
@@ -1020,7 +1113,7 @@ msgstr ""
 "Градієнт — повернути значення для верхнього лівого сусіднього мінус значення "
 "верхнього і лівого сусідніх."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:232
+#: ../../general_concepts/file_formats/file_jxl.rst:255
 msgid ""
 "Weighted -- A complex predictor that weights the top, left and top-left "
 "pixels in certain ways to achieve the result."
@@ -1028,21 +1121,21 @@ msgstr ""
 "Зважений — складний засіб прогнозування, який зважує верхній, лівий і "
 "верхній лівий пікселі у певний спосіб для отримання результату."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:233
+#: ../../general_concepts/file_formats/file_jxl.rst:256
 msgid "Top Right -- Returns the value topright of the current location."
 msgstr ""
 "Згори праворуч — повертає значення верхнього правого у поточному місці."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:234
+#: ../../general_concepts/file_formats/file_jxl.rst:257
 msgid "Top Left -- Returns the value topleft of the current location."
 msgstr "Згори ліворуч — повертає значення верхнього лівого у поточному місці."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:235
+#: ../../general_concepts/file_formats/file_jxl.rst:258
 msgid "Left Left -- Returns the value topright of the current location."
 msgstr ""
 "Ліворуч ліворуч — повертає значення верхнього правого у поточному місці."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:236
+#: ../../general_concepts/file_formats/file_jxl.rst:259
 msgid ""
 "Avg1 -- Returns the average of the values to the immediate left and top-left "
 "of the current location."
@@ -1050,7 +1143,7 @@ msgstr ""
 "Сер1 — повертати середнє значень безпосередньо ліворуч і згори ліворуч від "
 "поточного місця."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:237
+#: ../../general_concepts/file_formats/file_jxl.rst:260
 msgid ""
 "Avg2 -- Returns the average of the values to the immediate top-left and top "
 "of the current location."
@@ -1058,7 +1151,7 @@ msgstr ""
 "Сер2 — повертати середнє значень безпосередньо згори ліворуч і згори від "
 "поточного місця."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:238
+#: ../../general_concepts/file_formats/file_jxl.rst:261
 msgid ""
 "Avg3 -- Returns the average of the values to the immediate left and top-"
 "right of the current location."
@@ -1066,7 +1159,7 @@ msgstr ""
 "Сер3 — повертати середнє значень безпосередньо ліворуч і згори праворуч від "
 "поточного місця."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:239
+#: ../../general_concepts/file_formats/file_jxl.rst:262
 msgid ""
 "Toptop predictive average -- Weights the value of 6 neighbours: the top, "
 "left, topright, and their immediately adjacent neighbours in the same "
@@ -1076,27 +1169,27 @@ msgstr ""
 "лівого, верхнього правого та їхніх безпосередніх сусідів у тому самому "
 "напрямку."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:240
+#: ../../general_concepts/file_formats/file_jxl.rst:263
 msgid "Gradient + Weighted -- Mixes gradient and weighted."
 msgstr "Градієнт + зважений — суміш градієнта і зваженого."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:241
+#: ../../general_concepts/file_formats/file_jxl.rst:264
 msgid "Predictor"
 msgstr "Засіб прогнозування"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:241
+#: ../../general_concepts/file_formats/file_jxl.rst:264
 msgid "Use all predictors"
 msgstr "Використати усі засоби прогнозування"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:244
+#: ../../general_concepts/file_formats/file_jxl.rst:267
 msgid "Modular Parameters"
 msgstr "Параметри модульності"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:244
+#: ../../general_concepts/file_formats/file_jxl.rst:267
 msgid "Pixels for MA tree learning."
 msgstr "Кількість пікселів для навчання дерева MA"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:244
+#: ../../general_concepts/file_formats/file_jxl.rst:267
 msgid ""
 "Fraction of pixels used for the Meta-Adaptive Context tree. The MA tree is a "
 "way of analyzing the pixels surrounding the current pixel, and depending on "
@@ -1111,15 +1204,15 @@ msgstr ""
 "отже, кращим є стискання, але це також потребуватиме більше ресурсів під час "
 "кодування."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:247
+#: ../../general_concepts/file_formats/file_jxl.rst:270
 msgid "Metadata"
 msgstr "Метадані"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:248
+#: ../../general_concepts/file_formats/file_jxl.rst:271
 msgid "Store document metadata."
 msgstr "Зберегти метадані документа."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:249
+#: ../../general_concepts/file_formats/file_jxl.rst:272
 msgid ""
 "Whether to store any metadata at all. You can individually toggle :guilabel:"
 "`Exif`, :guilabel:`IPTC` and :guilabel:`XMP`."
@@ -1127,38 +1220,38 @@ msgstr ""
 "Визначає, чи слід взагалі зберігати метадані. Ви можете окремо увімкнути або "
 "вимкнути збереження :guilabel:`Exif`, :guilabel:`IPTC` та :guilabel:`XMP`."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:250
+#: ../../general_concepts/file_formats/file_jxl.rst:273
 msgid "Anonymizer"
 msgstr "Анонімізатор"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:251
+#: ../../general_concepts/file_formats/file_jxl.rst:274
 msgid "Whether to remove author information."
 msgstr "Чи слід вилучати дані щодо автора."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:253
+#: ../../general_concepts/file_formats/file_jxl.rst:276
 msgid "Tool information"
 msgstr "Інформація про інструмент"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:253
+#: ../../general_concepts/file_formats/file_jxl.rst:276
 msgid "Whether to add tool information."
 msgstr "Чи слід додавати відомості щодо інструмента обробки."
 
-#: ../../general_concepts/file_formats/file_jxl.rst:257
+#: ../../general_concepts/file_formats/file_jxl.rst:280
 msgid "`JPEG XL official website <https://jpeg.org/jpegxl/>`_"
 msgstr "`Офіційний сайт JPEG XL <https://jpeg.org/jpegxl/>`_"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:258
+#: ../../general_concepts/file_formats/file_jxl.rst:281
 msgid "`JPEG XL community website <https://jpegxl.info/>`_"
 msgstr "`Сайт спільноти JPEG XL <https://jpegxl.info/>`_"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:259
+#: ../../general_concepts/file_formats/file_jxl.rst:282
 msgid ""
 "`libjxl -- JPEG XL reference implementation <https://github.com/libjxl/"
 "libjxl>`_"
 msgstr ""
 "`libjxl — еталонна реалізація JPEG XL <https://github.com/libjxl/libjxl>`_"
 
-#: ../../general_concepts/file_formats/file_jxl.rst:261
+#: ../../general_concepts/file_formats/file_jxl.rst:284
 msgid ""
 "`Copied from this libjxl readme <https://github.com/libjxl/libjxl/"
 "blob/315247f000cff01fbc7ee2dd8252ea8fb82d0769/doc/benchmarking.md>`_ as well "
@@ -1167,6 +1260,14 @@ msgstr ""
 "`Скопійовано з цього файла readme libjxl <https://github.com/libjxl/libjxl/"
 "blob/315247f000cff01fbc7ee2dd8252ea8fb82d0769/doc/benchmarking.md>`_, а "
 "також коментарів у початковому коді libjxl."
+
+#~ msgid "Save as animated JPEG XL"
+#~ msgstr "Зберегти як анімований JPEG-XL"
+
+#~ msgid "We recommend you leave this option enabled for web delivery."
+#~ msgstr ""
+#~ "Рекомендуємо лишити цей пункт позначеним для зображень, які буде "
+#~ "розміщено в інтернеті"
 
 #~ msgid "mouseleft"
 #~ msgstr "mouseleft"

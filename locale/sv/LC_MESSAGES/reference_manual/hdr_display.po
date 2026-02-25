@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2021-08-26 19:51+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -38,7 +38,9 @@ msgid "HDR Display"
 msgstr "HDR-bildskärm"
 
 #: ../../reference_manual/hdr_display.rst:21
-msgid "Currently only available on Windows."
+#, fuzzy
+#| msgid "Currently only available on Windows."
+msgid "Currently only available on Windows and Linux"
 msgstr "För närvarande bara tillgängligt på Windows."
 
 #: ../../reference_manual/hdr_display.rst:23
@@ -92,10 +94,28 @@ msgstr ""
 #: ../../reference_manual/hdr_display.rst:30
 msgid ""
 "If you can confirm that the system understands your setup as an HDR setup, "
-"you can continue your :ref:`configuration in Krita<hdr_display_settings>`, "
-"in :menuselection:`Settings --> Configure Krita... --> Display`. There, you "
-"need to select the preferred surface, which should be as close to the "
-"display format as possible. Then restart Krita."
+"you can continue your configuration in Krita."
+msgstr ""
+
+#: ../../reference_manual/hdr_display.rst:33
+msgid "Windows"
+msgstr ""
+
+#: ../../reference_manual/hdr_display.rst:37
+#, fuzzy
+#| msgid ""
+#| "If you can confirm that the system understands your setup as an HDR "
+#| "setup, you can continue your :ref:`configuration in "
+#| "Krita<hdr_display_settings>`, in :menuselection:`Settings --> Configure "
+#| "Krita... --> Display`. There, you need to select the preferred surface, "
+#| "which should be as close to the display format as possible. Then restart "
+#| "Krita."
+msgid ""
+"On Windows platform there is :ref:`a special page for HDR "
+"configuration<hdr_display_settings>` in :menuselection:`Settings --> "
+"Configure Krita... --> Display`. There, you need to select the preferred "
+"surface, which should be as close to the display format as possible. Then "
+"restart Krita."
 msgstr ""
 "Om man kan bekräfta att systemet förstår inställningen som en HDR-"
 "inställning, kan man fortsätta med :ref:`inställning av "
@@ -103,11 +123,24 @@ msgstr ""
 "Krita... --> Skärm`. Där måste man välja föredragen yta, vilken bör vara så "
 "nära skärmformatet som möjligt. Starta därefter om Krita."
 
-#: ../../reference_manual/hdr_display.rst:33
+#: ../../reference_manual/hdr_display.rst:40
+msgid "Linux (Wayland only)"
+msgstr ""
+
+#: ../../reference_manual/hdr_display.rst:44
+msgid ""
+"On Linux you can just select :guilabel:`Rec 2020 PQ` for the canvas surface "
+"color space in :ref:`color management settings for "
+"Wayland<color_management_settings_wayland>` in :menuselection:`Settings --> "
+"Configure Krita... --> Color Management --> Display`. It will instantly "
+"enable HDR support in Krita, no restart is necessary."
+msgstr ""
+
+#: ../../reference_manual/hdr_display.rst:47
 msgid "Painting in HDR"
 msgstr "Måla med HDR"
 
-#: ../../reference_manual/hdr_display.rst:35
+#: ../../reference_manual/hdr_display.rst:49
 msgid ""
 "To create a proper HDR image, you will need to make a canvas using a profile "
 "with rec 2020 gamut and a linear TRC. :guilabel:`Rec2020-elle-V4-g10.icc` is "
@@ -117,7 +150,7 @@ msgstr ""
 "profil med rek. 2020 färgomfång och en linjär TRK. :guilabel:`Rec2020-elle-"
 "V4-g10.icc` är den som vi normalt levererar."
 
-#: ../../reference_manual/hdr_display.rst:37
+#: ../../reference_manual/hdr_display.rst:51
 msgid ""
 "HDR images are standardized to use the Rec2020 gamut, and the PQ TRC. "
 "However, a linear TRC is easier to edit images in, so we don't convert to PQ "
@@ -127,7 +160,7 @@ msgstr ""
 "TRK. Dock är en linjär TRK enklare att redigera bilder med, så vi "
 "konverterar inte till PQ förrän vi är nöjda med vår bild."
 
-#: ../../reference_manual/hdr_display.rst:39
+#: ../../reference_manual/hdr_display.rst:53
 msgid ""
 "For painting in this new exciting color space, check the :ref:"
 "`scene_linear_painting` page, which covers things like selecting colors, "
@@ -137,15 +170,15 @@ msgstr ""
 "`scene_linear_painting`, som täcker saker som att välja färger, trubbel, "
 "vilka filter man ska arbeta med och häftiga arbetsflöden."
 
-#: ../../reference_manual/hdr_display.rst:42
+#: ../../reference_manual/hdr_display.rst:56
 msgid "Exporting HDR"
 msgstr "Exportera HDR"
 
-#: ../../reference_manual/hdr_display.rst:44
+#: ../../reference_manual/hdr_display.rst:58
 msgid "Now for saving and loading."
 msgstr "Nu gäller det spara och läsa in."
 
-#: ../../reference_manual/hdr_display.rst:46
+#: ../../reference_manual/hdr_display.rst:60
 msgid ""
 "The KRA file format can save the floating point image just fine, and is thus "
 "a good working file format."
@@ -153,7 +186,7 @@ msgstr ""
 "Filformatet KRA kan spara flyttalsbilder utan problem, och är sålunda ett "
 "bra arbetsfilformat."
 
-#: ../../reference_manual/hdr_display.rst:48
+#: ../../reference_manual/hdr_display.rst:62
 msgid ""
 "For sharing with other image editors, :ref:`file_exr` is recommended. For "
 "sharing with the web we currently only have :ref:`HDR PNG export "
@@ -165,7 +198,7 @@ msgstr ""
 "men det finns för närvarande inte mycket stöd för standarden. I framtiden "
 "hoppas vi få heif- and avif-stöd."
 
-#: ../../reference_manual/hdr_display.rst:50
+#: ../../reference_manual/hdr_display.rst:64
 msgid ""
 "For exporting HDR animations, we support saving HDR to the new codec for mp4 "
 "and mkv: H.265. To use these options..."
@@ -173,43 +206,43 @@ msgstr ""
 "För att exportera HDR-animeringar, stöder vi att spara HDR för den nya "
 "kodaren av mp4 och mkv: H.265. För att använda alternativen ..."
 
-#: ../../reference_manual/hdr_display.rst:52
+#: ../../reference_manual/hdr_display.rst:66
 msgid "Get a version of FFmpeg that supports H.265."
 msgstr "Hämta en version av FFMpeg som stöder H.265."
 
-#: ../../reference_manual/hdr_display.rst:53
+#: ../../reference_manual/hdr_display.rst:67
 msgid "Have an animation open."
 msgstr "Låt en animering vara öppen."
 
-#: ../../reference_manual/hdr_display.rst:54
+#: ../../reference_manual/hdr_display.rst:68
 msgid ":menuselection:`File --> Render Animation`."
 msgstr ":menuselection:`Arkiv --> Återge animering`."
 
-#: ../../reference_manual/hdr_display.rst:55
+#: ../../reference_manual/hdr_display.rst:69
 msgid "Select :guilabel:`Video`."
 msgstr "Välj :guilabel:`Video`."
 
-#: ../../reference_manual/hdr_display.rst:56
+#: ../../reference_manual/hdr_display.rst:70
 msgid "Select for :guilabel:`Render as`, 'MPEG-4 video' or 'Matroska'."
 msgstr "Välj 'MPEG-4 video' eller 'Matroska' för :guilabel:`Återge som`."
 
-#: ../../reference_manual/hdr_display.rst:57
+#: ../../reference_manual/hdr_display.rst:71
 msgid "Press the configure button next to the file format dropdown."
 msgstr "Klicka på inställningsknappen intill kombinationsrutan med filformat."
 
-#: ../../reference_manual/hdr_display.rst:58
+#: ../../reference_manual/hdr_display.rst:72
 msgid "Select at the top 'H.265, MPEG-H Part 2 (HEVC)'."
 msgstr "Välj 'H.265, MPEG-H Part 2 (HEVC)' längst upp."
 
-#: ../../reference_manual/hdr_display.rst:59
+#: ../../reference_manual/hdr_display.rst:73
 msgid "Select for the :guilabel:`Profile`, 'main10 (HDR)'."
 msgstr "Välj 'main10 (HDR)' som :guilabel:`Profil`."
 
-#: ../../reference_manual/hdr_display.rst:60
+#: ../../reference_manual/hdr_display.rst:74
 msgid ":guilabel:`HDR Mode` should now enable. Toggle it."
 msgstr ":guilabel:`HDR-läge` ska nu vara aktiverat. Sätt på det."
 
-#: ../../reference_manual/hdr_display.rst:61
+#: ../../reference_manual/hdr_display.rst:75
 msgid ""
 "click :guilabel:`HDR Metadata` to configure the HDR metadata (options "
 "described below)."
@@ -217,15 +250,15 @@ msgstr ""
 "klicka på :guilabel:`HDR-metadata` för att ställa in HDR-metadata "
 "(alternativ beskrivs nedan)."
 
-#: ../../reference_manual/hdr_display.rst:62
+#: ../../reference_manual/hdr_display.rst:76
 msgid "finally, when done, click 'OK'."
 msgstr "till sist, när allt är klart, klicka på 'Ok'."
 
-#: ../../reference_manual/hdr_display.rst:65
+#: ../../reference_manual/hdr_display.rst:79
 msgid "HDR Metadata"
 msgstr "HDR-metadata"
 
-#: ../../reference_manual/hdr_display.rst:67
+#: ../../reference_manual/hdr_display.rst:81
 msgid ""
 "This is in the render animation screen. It configures the SMPTE ST.2086 or "
 "Master Display Color Volumes metadata and is required for the HDR video to "
@@ -235,11 +268,11 @@ msgstr ""
 "ST.2086 eller huvudskärm färgvolymer metadata och krävs för att HDR-video "
 "ska överföras på riktigt sätt till bildskärmen av videospelare och kabeln."
 
-#: ../../reference_manual/hdr_display.rst:69
+#: ../../reference_manual/hdr_display.rst:83
 msgid "Master Display"
 msgstr "Huvudskärm"
 
-#: ../../reference_manual/hdr_display.rst:70
+#: ../../reference_manual/hdr_display.rst:84
 msgid ""
 "The colorspace characteristics of the display on for which your image was "
 "made, typically also the display that you used to paint the image with. "
@@ -251,7 +284,7 @@ msgstr ""
 "standardvärden för vanliga bildskärmsfärgrymder, och ett eget värde, som "
 "aktiverar alternativen under :guilabel:`Skärm`."
 
-#: ../../reference_manual/hdr_display.rst:72
+#: ../../reference_manual/hdr_display.rst:86
 msgid ""
 "The precise colorspace characteristics for the display for which your image "
 "was made. If you do not have custom selected for :guilabel:`Master Display`, "
@@ -261,11 +294,11 @@ msgstr ""
 "Om man inte har valt egen för :guilabel:`Huvudskärm`, är de inaktiverade "
 "eftersom vi kan använda fördefinierade värden."
 
-#: ../../reference_manual/hdr_display.rst:74
+#: ../../reference_manual/hdr_display.rst:88
 msgid "Red/Green/Blue Primary"
 msgstr "Röd, grön, blå grundfärg"
 
-#: ../../reference_manual/hdr_display.rst:75
+#: ../../reference_manual/hdr_display.rst:89
 msgid ""
 "The xyY x and xyY y value of the three chromacities of your screen. These "
 "define the gamut."
@@ -273,11 +306,11 @@ msgstr ""
 "Värden på skärmens tre kromaticiteter xyY x och xyY y. De definierar "
 "färgomfånget."
 
-#: ../../reference_manual/hdr_display.rst:76
+#: ../../reference_manual/hdr_display.rst:90
 msgid "White Point"
 msgstr "Vitpunkt"
 
-#: ../../reference_manual/hdr_display.rst:77
+#: ../../reference_manual/hdr_display.rst:91
 msgid ""
 "The xyY x and xyY y value of the white point of your screen, this defines "
 "what is considered 'neutral grey'."
@@ -285,38 +318,38 @@ msgstr ""
 "Värden på skärmens vitpunkt xyY x och xyY y, som definierar vad som anses "
 "vara 'neutralt grå'."
 
-#: ../../reference_manual/hdr_display.rst:78
+#: ../../reference_manual/hdr_display.rst:92
 msgid "Min Luminance"
 msgstr "Minimal luminans"
 
-#: ../../reference_manual/hdr_display.rst:79
+#: ../../reference_manual/hdr_display.rst:93
 msgid "The darkest value your screen can show in nits."
 msgstr "Det mörkaste värdet som bildskärmen kan visa i cd/m²."
 
-#: ../../reference_manual/hdr_display.rst:81
+#: ../../reference_manual/hdr_display.rst:95
 msgid "Display"
 msgstr "Visning"
 
-#: ../../reference_manual/hdr_display.rst:81
+#: ../../reference_manual/hdr_display.rst:95
 msgid "Max Luminance"
 msgstr "Maximal luminans"
 
-#: ../../reference_manual/hdr_display.rst:81
+#: ../../reference_manual/hdr_display.rst:95
 msgid "The brightest value your screen can show in nits."
 msgstr "Det ljusaste värdet som bildskärmen kan visa i cd/m²."
 
-#: ../../reference_manual/hdr_display.rst:83
+#: ../../reference_manual/hdr_display.rst:97
 msgid "MaxCLL"
 msgstr "MaxCLL"
 
-#: ../../reference_manual/hdr_display.rst:84
+#: ../../reference_manual/hdr_display.rst:98
 msgid "The value of the brightest pixel of your animation in nits."
 msgstr "Animeringens ljusaste värde i cd/m²."
 
-#: ../../reference_manual/hdr_display.rst:86
+#: ../../reference_manual/hdr_display.rst:100
 msgid "The average 'brightest value' of the whole animation."
 msgstr "Hela animeringens 'ljusaste medelvärde'."
 
-#: ../../reference_manual/hdr_display.rst:88
+#: ../../reference_manual/hdr_display.rst:102
 msgid "MaxFALL"
 msgstr "MaxFALL"

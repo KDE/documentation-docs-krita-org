@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 08:58+0000\n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
 "PO-Revision-Date: 2023-10-18 23:17+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -570,12 +570,12 @@ msgstr ""
 
 #: ../../KritaFAQ.rst:191
 msgid ""
-"There is no text support for PSD file yet. The text will appear rasterized "
-"and converted into a paint layer."
+"Since Krita 5.3, PSD text loading is supported. However, because there's "
+"significant differences between photoshop and Krita, Krita will prompt "
+"whether it should load the text data as text or as a paint layer. Try "
+"reloading the psd and ensure you confirm you wish to load text as editable "
+"objects."
 msgstr ""
-"Er is nog geen mogelijkheid aanwezig om tekst in een PSD-bestand te "
-"bewerken. De tekst zal gerasterd te zien zijn en geconverteerd worden naar "
-"een tekenlaag."
 
 #: ../../KritaFAQ.rst:194
 msgid "How much memory does my image take?"
@@ -1236,25 +1236,17 @@ msgstr ""
 
 #: ../../KritaFAQ.rst:371
 msgid ""
-"You can find a community curated list of tablets supported by krita :ref:"
-"`here <list_supported_tablets>`."
-msgstr ""
-"U kunt een door de gemeenschap bijgehouden lijst van tabletten die met krita "
-"werken, kijk :ref:`hier <list_supported_tablets>`."
-
-#: ../../KritaFAQ.rst:373
-msgid ""
 "If you're looking for information about tablets like the iPad or Android "
 "tablets, look :ref:`here <krita_android>`."
 msgstr ""
 "Als u zoekt naar informatie over tabletten zoals de iPad of Android "
 "tabletten, kijk :ref:`hier <krita_android>`."
 
-#: ../../KritaFAQ.rst:377
+#: ../../KritaFAQ.rst:375
 msgid "What if your tablet is not recognized by Krita?"
 msgstr "Wat als uw tablet niet word herkent door Krita?"
 
-#: ../../KritaFAQ.rst:379
+#: ../../KritaFAQ.rst:377
 msgid ""
 "First, check if you have installed drivers and the like. The :ref:"
 "`drawing_tablets` page has some explanations and descriptions of common "
@@ -1267,7 +1259,7 @@ msgstr ""
 "graag een bugrapport op bugs.kde.org ontvangen met een tablet log. Hier is "
 "een beschrijving hoe u een tablet log maakt:"
 
-#: ../../KritaFAQ.rst:381
+#: ../../KritaFAQ.rst:379
 msgid ""
 "You need to have something to output the log to. On 4.2 you can use the :ref:"
 "`log_viewer` docker for this. Just open the log viewer, and enable logging."
@@ -1276,7 +1268,7 @@ msgstr ""
 "ref:`log_viewer` docker hiervoor gebruiken. Open de logviewer, en schakel "
 "het loggen in."
 
-#: ../../KritaFAQ.rst:385
+#: ../../KritaFAQ.rst:383
 msgid ""
 "The log viewer got added to Krita in 4.2, so for older versions of Krita, "
 "you will need to either run Krita in the terminal if you have Linux or "
@@ -1290,13 +1282,13 @@ msgstr ""
 "sysinternals/downloads/debugview>` _ van de officiële Microsoft site "
 "installeren, start eerst DebugView en start daarna Krita."
 
-#: ../../KritaFAQ.rst:387
+#: ../../KritaFAQ.rst:385
 msgid "When using a terminal, make sure to enable ``unlimited scrollback``."
 msgstr ""
 "Als u een terminal gebruikt, zorg er dan voor dat u ``onbeperkt "
 "terugschuiven`` heeft ingeschakeld."
 
-#: ../../KritaFAQ.rst:389
+#: ../../KritaFAQ.rst:387
 msgid ""
 "Press the :kbd:`Ctrl + Shift + T` shortcut, you will see a message box "
 "telling the logging has started."
@@ -1304,7 +1296,7 @@ msgstr ""
 "Toets de :kbd:`Ctrl + Shift + T` sneltoets in, u zal dan een melding te zien "
 "krijgen dat vertelt dat het loggen is gestart."
 
-#: ../../KritaFAQ.rst:390
+#: ../../KritaFAQ.rst:388
 msgid ""
 "Try to reproduce your problem, you will be able to see the log being created "
 "in the log viewer as you draw."
@@ -1312,7 +1304,7 @@ msgstr ""
 "Probeer om uw probleem te reproduceren, u zal tijdens het tekenen in de "
 "logviewer kunnen zien hoe de log gecreëerd wordt."
 
-#: ../../KritaFAQ.rst:391
+#: ../../KritaFAQ.rst:389
 msgid ""
 "Save the output from the log viewer into a TXT file, and attach it to the "
 "bug report."
@@ -1320,23 +1312,23 @@ msgstr ""
 "Sla de uitvoer van de log viewer op als een TXT-bestand, en upload het naar "
 "het bugreport."
 
-#: ../../KritaFAQ.rst:393
+#: ../../KritaFAQ.rst:391
 msgid "On Linux, it is also useful to have the following information:"
 msgstr "Bij Linux, is het ook handig als u de volgende informatie heeft:"
 
-#: ../../KritaFAQ.rst:395
+#: ../../KritaFAQ.rst:393
 msgid "``lsmod``"
 msgstr "``lsmod``"
 
-#: ../../KritaFAQ.rst:396
+#: ../../KritaFAQ.rst:394
 msgid "``xinput``"
 msgstr "``xinput``"
 
-#: ../../KritaFAQ.rst:397
+#: ../../KritaFAQ.rst:395
 msgid "``xinput list-props`` (ID can be fetched from the item 2)"
 msgstr "``xinput list-props`` (ID kunt u bij item 2 krijgen)"
 
-#: ../../KritaFAQ.rst:399
+#: ../../KritaFAQ.rst:397
 msgid ""
 "However, in 100\\% of the cases where Windows users have reported that their "
 "tablet didn't work over the past five years, the problem has been either a "
@@ -1347,13 +1339,13 @@ msgstr ""
 "buggy driver of een mislukte driver installatie, maar geen bug in Krita."
 
 # offset is soms in het menu vertaald met ´verschuiving´ en soms met ´offset´
-#: ../../KritaFAQ.rst:403
+#: ../../KritaFAQ.rst:401
 msgid "How to fix a tablet offset on multiple screen setup on Windows"
 msgstr ""
 "Hoe u een offset (verschuiving) van een tablet in Windows met meerdere "
 "schermen herstelt"
 
-#: ../../KritaFAQ.rst:405
+#: ../../KritaFAQ.rst:403
 msgid ""
 "If you see that your tablet pointer has an offset when working with Krita "
 "canvas, it might be highly likely that Krita got an incorrect screen "
@@ -1367,15 +1359,15 @@ msgstr ""
 "op als een extern beeldscherm aanwezig is en een beeldscherm of een tablet "
 "wordt verbonden nadat het besturingssysteem is opgestart."
 
-#: ../../KritaFAQ.rst:407
+#: ../../KritaFAQ.rst:405
 msgid "You can configure this by going to the :ref:`tablet_settings`."
 msgstr "U kunt dit instellen door naar de :ref:`tablet_settings` te gaan."
 
-#: ../../KritaFAQ.rst:410
+#: ../../KritaFAQ.rst:408
 msgid "Microsoft Surface Pro and N-Trig"
 msgstr "Microsoft Surface Pro en N-Trig"
 
-#: ../../KritaFAQ.rst:412
+#: ../../KritaFAQ.rst:410
 msgid ""
 "Krita 3.3.0 and later supports the Windows Pointer API (Windows Ink) "
 "natively. Your Surface Pro or other N-Trig enabled pen tablet should work "
@@ -1387,11 +1379,11 @@ msgstr ""
 "problemen met Krita moeten werken nadat u Windows Ink heeft ingeschakeld in :"
 "menuselection:`Instellingen --> Krita configureren... --> Tablet`."
 
-#: ../../KritaFAQ.rst:415
+#: ../../KritaFAQ.rst:413
 msgid "Tablet Pro and the Surface Pro"
 msgstr "Tablet Pro en de Surface Pro"
 
-#: ../../KritaFAQ.rst:417
+#: ../../KritaFAQ.rst:415
 msgid ""
 "Unlike Wacom's Companion, the Surface line of tablets doesn't have working "
 "hardware buttons. Tablet Pro is a (non-free) utility that puts virtual "
@@ -1403,15 +1395,15 @@ msgstr ""
 "virtuele knoppen op het scherm plaatst. Krita 3.1 en moderner hebben "
 "voorgedefinieerde profielen om met Tablet Pro te kunnen werken."
 
-#: ../../KritaFAQ.rst:419
+#: ../../KritaFAQ.rst:417
 msgid "https://tabletpro.com/"
 msgstr "https://tabletpro.com/"
 
-#: ../../KritaFAQ.rst:421
+#: ../../KritaFAQ.rst:419
 msgid "See https://www.youtube.com/watch?v=WKXZgYqC3tI for instructions."
 msgstr "Zie https://www.youtube.com/watch?v=WKXZgYqC3tI voor instructies."
 
-#: ../../KritaFAQ.rst:424
+#: ../../KritaFAQ.rst:422
 msgid ""
 "Weird stuff happens on Windows, like ripples, rings, squiggles or "
 "poltergeists"
@@ -1419,7 +1411,7 @@ msgstr ""
 "Rare verschijnselen bij Windows, zoals rimpels, ringen, krullen of "
 "poltergeist"
 
-#: ../../KritaFAQ.rst:426
+#: ../../KritaFAQ.rst:424
 msgid ""
 "Windows comes with a lot of settings to make it work with a pen. All these "
 "settings can be annoying. This tool can help you set the settings correctly "
@@ -1429,15 +1421,15 @@ msgstr ""
 "Al deze instellingen kunnen lastig zijn. Dit hulpprogramma kan u helpen om "
 "deze correct in te stellen zodat u een tablet kunt gebruiken:"
 
-#: ../../KritaFAQ.rst:428
+#: ../../KritaFAQ.rst:426
 msgid "https://github.com/saveenr/Fix_My_Pen/releases"
 msgstr "https://github.com/saveenr/Fix_My_Pen/releases"
 
-#: ../../KritaFAQ.rst:431
+#: ../../KritaFAQ.rst:429
 msgid "Touch doesn't seem to work on Windows"
 msgstr "Touch lijkt niet te werken op Windows"
 
-#: ../../KritaFAQ.rst:433
+#: ../../KritaFAQ.rst:431
 msgid ""
 "You might have to disable and enable the touch driver: go to the device "
 "manager. (Click the :guilabel:`Start` button and type device manager). "
@@ -1450,15 +1442,15 @@ msgstr ""
 "dergelijks). Selecteer Intel(R) Precise Touch Device. Rechtsklik, Schakel "
 "het uit. Rechtsklik, Schakel het in."
 
-#: ../../KritaFAQ.rst:436
+#: ../../KritaFAQ.rst:434
 msgid "Toolbox"
 msgstr "Gereedschapskisten"
 
-#: ../../KritaFAQ.rst:439
+#: ../../KritaFAQ.rst:437
 msgid "Toolbox missing"
 msgstr "Gereedschapskist ontbreken"
 
-#: ../../KritaFAQ.rst:441
+#: ../../KritaFAQ.rst:439
 msgid ""
 "You can reset the Workspace by pressing the right most button on the "
 "toolbar, the Workspace switcher, and click on a desired Workspace from the "
@@ -1468,7 +1460,7 @@ msgstr ""
 "werkbalk te drukken, de Workspace switcher, en klik in de lijst op de "
 "gewenste werkruimte."
 
-#: ../../KritaFAQ.rst:443
+#: ../../KritaFAQ.rst:441
 msgid ""
 "Or you can right-click on any docker title bar or open space in any toolbar, "
 "and select Toolbox. It's the first option."
@@ -1477,7 +1469,7 @@ msgstr ""
 "elke werkbalk, om daarna Gereedschapskist te selecteren. het is de eerste "
 "optie."
 
-#: ../../KritaFAQ.rst:445
+#: ../../KritaFAQ.rst:443
 msgid ""
 "Also, you can check the :guilabel:`Settings` menu, it has got a lot of "
 "interesting stuff, then go to the Dockers menu and select :guilabel:"
@@ -1487,20 +1479,20 @@ msgstr ""
 "interessants te vinden, om daarna naar het Dockers menu te gaan om :guilabel:"
 "`Gereedschapskist` te selecteren."
 
-#: ../../KritaFAQ.rst:448
+#: ../../KritaFAQ.rst:446
 msgid "Tool icons size is too big"
 msgstr "De pictogrammen zijn te groot"
 
-#: ../../KritaFAQ.rst:450
+#: ../../KritaFAQ.rst:448
 msgid "Right-click the toolbox to set the size."
 msgstr ""
 "Rechtsklik op het palet met het gereedschap om de grootte in te stellen."
 
-#: ../../KritaFAQ.rst:453
+#: ../../KritaFAQ.rst:451
 msgid "Krita can't get maximized"
 msgstr "Ik kan Krita niet maximaliseren"
 
-#: ../../KritaFAQ.rst:455
+#: ../../KritaFAQ.rst:453
 msgid ""
 "This happens when your dockers are placed in such a way that the window "
 "cannot be made less high. Rearrange your Workspace."
@@ -1508,11 +1500,11 @@ msgstr ""
 "Dit kan gebeuren als uw dockers zodanig zijn geplaatst dat het venster niet "
 "minder hoog gemaakt kan worden. Deel uw werkruimte opnieuw in."
 
-#: ../../KritaFAQ.rst:458
+#: ../../KritaFAQ.rst:456
 msgid "Resources"
 msgstr "Hulpdata"
 
-#: ../../KritaFAQ.rst:461
+#: ../../KritaFAQ.rst:459
 msgid ""
 "Is there a way to restore a default brush that I have mistakenly overwritten "
 "with new settings to default?"
@@ -1521,15 +1513,15 @@ msgstr ""
 "zetten naar hun standaardinstellingen omdat ik ze per ongeluk met nieuwe "
 "instellingen heb overschreven?"
 
-#: ../../KritaFAQ.rst:463
+#: ../../KritaFAQ.rst:461
 msgid "See :ref:`resource_version_history`."
 msgstr "Zie :ref:`resource_version_history`."
 
-#: ../../KritaFAQ.rst:466
+#: ../../KritaFAQ.rst:464
 msgid "How do I set favorite presets?"
 msgstr "Hoe maak ik een bladwijzer voor een ingesteld penseel?"
 
-#: ../../KritaFAQ.rst:468
+#: ../../KritaFAQ.rst:466
 msgid ""
 "Right-click a brush in the brush docker and assign it a tag. Then right-"
 "click on canvas to call popup palette, click the second right-most icon on "
@@ -1541,11 +1533,11 @@ msgstr ""
 "klik op de ééna rechtse pictogram net onder het palet, klik vervolgens op de "
 "tag die u maakte voor de gewenste penseel."
 
-#: ../../KritaFAQ.rst:471
+#: ../../KritaFAQ.rst:469
 msgid "Can Krita load Photoshop Brushes?"
 msgstr "Kan Krita de penselen van Photoshop laden?"
 
-#: ../../KritaFAQ.rst:473
+#: ../../KritaFAQ.rst:471
 msgid ""
 "Yes, but there are limitations. You can load ABR files by using the :"
 "guilabel:`Import` button in the :guilabel:`Predefined brush` tab in the "
@@ -1560,18 +1552,18 @@ msgstr ""
 "engineering om te bepalen wat we moeten laden, en op dit moment is dat "
 "beperkt tot de basis-mogelijkheden."
 
-#: ../../KritaFAQ.rst:476
+#: ../../KritaFAQ.rst:474
 msgid "Krita is slow"
 msgstr "Krita is traag"
 
-#: ../../KritaFAQ.rst:478
+#: ../../KritaFAQ.rst:476
 msgid ""
 "There is a myriad of reasons why this might be. Below is a short checklist."
 msgstr ""
 "Er is een waslijst van redenen waarom dat kan zijn. hieronder is een korte "
 "lijst van mogelijkheden."
 
-#: ../../KritaFAQ.rst:480
+#: ../../KritaFAQ.rst:478
 msgid ""
 "Something else is hogging the CPU or the memory: Spotify and other Electron "
 "apps have been known to do this."
@@ -1579,7 +1571,7 @@ msgstr ""
 "Iets anders neemt de CPU of het geheugen in beslag: Spotify en andere "
 "Electron apps staan erom bekend."
 
-#: ../../KritaFAQ.rst:481
+#: ../../KritaFAQ.rst:479
 msgid ""
 "You are running Windows, and have 3rdparty security software like Sandboxie "
 "or Total Defender installed"
@@ -1587,7 +1579,7 @@ msgstr ""
 "U gebruikt Windows, en u heeft 3rdparty veiligheid software zoals Sandboxie "
 "of Total Defender geïnstalleerd."
 
-#: ../../KritaFAQ.rst:482
+#: ../../KritaFAQ.rst:480
 msgid ""
 "You are working on images that are too big for your hardware (dimensions, "
 "channel depth or number of layers)"
@@ -1595,15 +1587,15 @@ msgstr ""
 "U bewerkt afbeeldingen die te groot zijn voor uw hardware (dimensies, "
 "kanaaldiepte of het aantal lagen)"
 
-#: ../../KritaFAQ.rst:483
+#: ../../KritaFAQ.rst:481
 msgid "You do not have canvas acceleration enabled"
 msgstr "U heeft de grafische versnelling van het werkveld niet ingeschakeld"
 
-#: ../../KritaFAQ.rst:484
+#: ../../KritaFAQ.rst:482
 msgid "You have (NVIDIA) Vertical Sync enabled"
 msgstr "U heeft (NVIDIA) Vertical Sync ingeschakeld"
 
-#: ../../KritaFAQ.rst:485
+#: ../../KritaFAQ.rst:483
 msgid ""
 "On macOS, with some macs, you might need to disable canvas acceleration in "
 "Krita's settings."
@@ -1611,15 +1603,15 @@ msgstr ""
 "Met macOS, bij sommige macs, kan het nodig zijn om de grafische versnelling "
 "uit te schakelen in de instellingen van Krita."
 
-#: ../../KritaFAQ.rst:487
+#: ../../KritaFAQ.rst:485
 msgid "Please also check `this page <https://phabricator.kde.org/T7199>`_."
 msgstr "Bestudeer ook deze `pagina <https://phabricator.kde.org/T7199>`_"
 
-#: ../../KritaFAQ.rst:490
+#: ../../KritaFAQ.rst:488
 msgid "Slow start-up"
 msgstr "Trage start"
 
-#: ../../KritaFAQ.rst:492
+#: ../../KritaFAQ.rst:490
 msgid ""
 "You probably have too many resources installed. Deactivate some bundles "
 "under the :menuselection:`Settings --> Manage Resource Libraries...` menu "
@@ -1629,7 +1621,7 @@ msgstr ""
 "bundels onder het menu-item :menuselection:`Instellingen --> Hulpbronnen "
 "beheren`."
 
-#: ../../KritaFAQ.rst:494
+#: ../../KritaFAQ.rst:492
 msgid ""
 "If you're using Windows with the portable ZIP file, Windows will scan all "
 "files every time you start Krita. That takes ages. Either use the installer "
@@ -1640,11 +1632,11 @@ msgstr ""
 "Krita of vertel Microsoft Security Essentials dat het een uitzondering moet "
 "maken voor Krita."
 
-#: ../../KritaFAQ.rst:497
+#: ../../KritaFAQ.rst:495
 msgid "Slow Brushes"
 msgstr "Trage penselen"
 
-#: ../../KritaFAQ.rst:499
+#: ../../KritaFAQ.rst:497
 msgid ""
 "Check if you accidentally turned on the stabilizer in the tool options "
 "docker."
@@ -1653,7 +1645,7 @@ msgstr ""
 "voor penseelstreek¨ op ¨stabilisator¨ heeft gezet."
 
 # schalingmodus of verschalingsmodus
-#: ../../KritaFAQ.rst:500
+#: ../../KritaFAQ.rst:498
 msgid ""
 "Try another scaling mode like trilinear. :menuselection:`Settings --> "
 "Configure Krita... --> Display`."
@@ -1661,15 +1653,15 @@ msgstr ""
 "Probeer een andere schalingsmodus zoals trilinear. :menuselection:"
 "`Instellingen --> Krita configureren... --> Weergave`."
 
-#: ../../KritaFAQ.rst:501
+#: ../../KritaFAQ.rst:499
 msgid "Try a lower channel depth than 16-bit."
 msgstr "Probeer een kleinere kanaaldiepte dan 16-bit."
 
-#: ../../KritaFAQ.rst:502
+#: ../../KritaFAQ.rst:500
 msgid "For NVIDIA, try a 16-bit floating point color space."
 msgstr "Voor NVIDIA, probeer een 16-bit drijvende komma kleurruimte."
 
-#: ../../KritaFAQ.rst:503
+#: ../../KritaFAQ.rst:501
 msgid ""
 "For older AMD CPU's (Krita 2.9.10 and above), turn off the vector "
 "optimizations that are broken on AMD CPUs. :menuselection:`Settings --> "
@@ -1681,7 +1673,7 @@ msgstr ""
 "`Instellingen --> Krita configureren... --> Prestatie`. Dit is niet nodig "
 "als u een AMD Threadripper™ CPU heeft."
 
-#: ../../KritaFAQ.rst:504
+#: ../../KritaFAQ.rst:502
 msgid ""
 "It's a fairly memory-hungry program, so 2 GB of RAM is the minimum, and 4 GB "
 "is the preferable minimum."
@@ -1689,11 +1681,11 @@ msgstr ""
 "Het is een programma dat veel geheugen gebruikt, dus is 2 GB RAM is het "
 "absolute minimum, en 4 GB is het gewenste minimum."
 
-#: ../../KritaFAQ.rst:505
+#: ../../KritaFAQ.rst:503
 msgid "Check that nothing else is hogging your CPU."
 msgstr "Controleer of dat iets anders uw CPU in beslag neemt."
 
-#: ../../KritaFAQ.rst:506
+#: ../../KritaFAQ.rst:504
 msgid ""
 "Check that Instant Preview is enabled if you're using bigger brushes (but "
 "for very small brushes, make sure is disabled)."
@@ -1702,15 +1694,15 @@ msgstr ""
 "gebruikt (maar bij erg kleine penselen moet u ervoor zorgen dat het is "
 "uitgeschakeld)."
 
-#: ../../KritaFAQ.rst:507
+#: ../../KritaFAQ.rst:505
 msgid "Set brush precision to 3 or auto."
 msgstr "Stel de penseel-precisie in op 3 of auto."
 
-#: ../../KritaFAQ.rst:508
+#: ../../KritaFAQ.rst:506
 msgid "Use a larger value for brush spacing."
 msgstr "Gebruik een grotere waarde voor de penseel spatiëring."
 
-#: ../../KritaFAQ.rst:509
+#: ../../KritaFAQ.rst:507
 msgid ""
 "If all of these fail, record a video and post a link and description on the "
 "`Krita Artists Forum <https://krita-artists.org>`_ in appropriate category."
@@ -1719,7 +1711,7 @@ msgstr ""
 "met een beschrijving op het `Krita Artists Forum <https://krita-artists."
 "org>`_ in de passende categorie."
 
-#: ../../KritaFAQ.rst:510
+#: ../../KritaFAQ.rst:508
 msgid ""
 "Check whether OpenGL is enabled, and if it isn't, enable it. If it is "
 "enabled, and you are on Windows, try the Angle renderer. Or disable it."
@@ -1728,11 +1720,11 @@ msgstr ""
 "het dan in. Als het is ingeschakeld, en u gebruikt Windows, probeer dan de "
 "Angle renderer, of schakel het uit."
 
-#: ../../KritaFAQ.rst:513
+#: ../../KritaFAQ.rst:511
 msgid "Slowdown after I've been working for a while"
 msgstr "Nadat het een tijdje gebruikt te hebben wordt het trager"
 
-#: ../../KritaFAQ.rst:515
+#: ../../KritaFAQ.rst:513
 msgid ""
 "Once you have the slowdown, click on the image-dimensions in the status bar. "
 "It will tell you how much RAM Krita is using, if it has hit the limit, or "
@@ -1748,16 +1740,16 @@ msgstr ""
 "of maak het maximale te gebruiken hoeveelheid RAM groter in :menuselection:"
 "`Instellingen --> Krita configureren... --> Prestatie --> Geavanceerd Tab`."
 
-#: ../../KritaFAQ.rst:518
+#: ../../KritaFAQ.rst:516
 msgid "Animation"
 msgstr "Animatie"
 
-#: ../../KritaFAQ.rst:521
+#: ../../KritaFAQ.rst:519
 msgid "Why is my animation black in my video player"
 msgstr "Waarom is mijn animatie zwart in mijn video speler"
 
 # soms in menu als ¨baseline¨ en soms als ¨basislijn¨
-#: ../../KritaFAQ.rst:523
+#: ../../KritaFAQ.rst:521
 msgid ""
 "You did not render the animation using the \"baseline\" option, and you are "
 "using the default Windows Media Player. Re-render using the baseline option "
@@ -1771,19 +1763,19 @@ msgstr ""
 "<https://www.deviantart.com/tiarevlyn/art/T-Krita-4-1-7-rendering-issues-"
 "manual-783473428>`_"
 
-#: ../../KritaFAQ.rst:527
+#: ../../KritaFAQ.rst:525
 msgid "Tools"
 msgstr "Hulpmiddelen"
 
-#: ../../KritaFAQ.rst:530
+#: ../../KritaFAQ.rst:528
 msgid "Shortcuts"
 msgstr "Sneltoetsen"
 
-#: ../../KritaFAQ.rst:533
+#: ../../KritaFAQ.rst:531
 msgid "Some shortcuts become useless after drawing for a while"
 msgstr "Sommige sneltoetsen worden nutteloos na een poosje tekenen"
 
-#: ../../KritaFAQ.rst:535
+#: ../../KritaFAQ.rst:533
 msgid ""
 "Have you loaded any Keyboard or Canvas Shortcut Schemes (e.g. Photoshop/SAI "
 "compatible schemes) other than the Default one? If that's the case, make "
@@ -1802,15 +1794,15 @@ msgstr ""
 "rondkijken/rotatie van werkvlak reageert niet meer, zelfs het penseel kan "
 "soms niet meer schilderen."
 
-#: ../../KritaFAQ.rst:539
+#: ../../KritaFAQ.rst:537
 msgid "License, rights and the Krita Foundation"
 msgstr "Licentie, rechten en de Krita Stichting"
 
-#: ../../KritaFAQ.rst:542
+#: ../../KritaFAQ.rst:540
 msgid "Who owns Krita?"
 msgstr "Wie is de eigenaar van Krita?"
 
-#: ../../KritaFAQ.rst:544
+#: ../../KritaFAQ.rst:542
 msgid ""
 "The Stichting Krita Foundation owns the Krita trademark. The copyright on "
 "the source code is owned by everyone who has worked on the source code."
@@ -1819,11 +1811,11 @@ msgstr ""
 "auteursrecht op de broncode is eigendom van iedereen die aan de broncode "
 "heeft gewerkt."
 
-#: ../../KritaFAQ.rst:547
+#: ../../KritaFAQ.rst:545
 msgid "Who and what is Kiki?"
 msgstr "Wie en wat is Kiki?"
 
-#: ../../KritaFAQ.rst:549
+#: ../../KritaFAQ.rst:547
 msgid ""
 "Kiki is a cyber squirrel. She’s our mascot and has been designed by Tyson "
 "Tan. We choose a squirrel when we discovered that ‘krita’ is the Albanian "
@@ -1833,11 +1825,11 @@ msgstr ""
 "Tan. We kozen voor een eekhoorn omdat we ontdekte dat ‘krita’ het Albanese "
 "woord is voor Eekhoorn."
 
-#: ../../KritaFAQ.rst:552
+#: ../../KritaFAQ.rst:550
 msgid "Why is Krita Free?"
 msgstr "Waarom is Krita vrij?"
 
-#: ../../KritaFAQ.rst:554
+#: ../../KritaFAQ.rst:552
 msgid ""
 "Krita is developed as `free software <https://www.gnu.org/>`_ within the KDE "
 "community. We believe that good tools should be available for all artists. "
@@ -1850,11 +1842,11 @@ msgstr ""
 "ontwikkeling van Krita wilt steunen of als u automatisch updates naar "
 "nieuwere versies wilt hebben."
 
-#: ../../KritaFAQ.rst:557
+#: ../../KritaFAQ.rst:555
 msgid "Why isn't Krita on Steam and in the Windows Store Free?"
 msgstr "Waarom is Krita on Steam en in de Windows Store niet gratis?"
 
-#: ../../KritaFAQ.rst:559
+#: ../../KritaFAQ.rst:557
 msgid ""
 "Krita on Steam and in the Windows Store is still Free and Open Source "
 "software; the binaries are exactly the ones you can also download from krita."
@@ -1874,11 +1866,11 @@ msgstr ""
 "programmeurs. Lees `Krita Available from the Windows Store <https://krita."
 "org/en/item/krita-available-from-the-windows-store/>`_ voor meer informatie."
 
-#: ../../KritaFAQ.rst:563
+#: ../../KritaFAQ.rst:561
 msgid "Can I use Krita commercially?"
 msgstr "Kan ik Krita commercieel gebruiken?"
 
-#: ../../KritaFAQ.rst:565
+#: ../../KritaFAQ.rst:563
 msgid ""
 "Yes. What you create with Krita is your sole property. You own your work and "
 "can license your art however you want. Krita’s GPL license applies to "
@@ -1894,7 +1886,7 @@ msgstr ""
 "of VFX, door game artiesten om aan commerciële games te werken, door "
 "wetenschappers voor onderzoek, en door studenten in educatieve instituten."
 
-#: ../../KritaFAQ.rst:567
+#: ../../KritaFAQ.rst:565
 msgid ""
 "You can also make videos or stream your desktop with Krita's interface "
 "visible (which can be used to make art tutorials or time lapses)."
@@ -1903,7 +1895,7 @@ msgstr ""
 "Krita zichtbaar (wat gebruikt kan worden om illustratielessen of time lapses "
 "te maken)."
 
-#: ../../KritaFAQ.rst:569
+#: ../../KritaFAQ.rst:567
 msgid ""
 "If you modify Krita itself, and distribute the result, you have to share "
 "your modifications with us. Krita’s GNU GPL license guarantees you this "
@@ -1913,11 +1905,11 @@ msgstr ""
 "modificaties met ons delen. Krita’s GNU GPL license garandeert u deze "
 "vrijheid. Het is niemand toegestaan om dit weg te nemen."
 
-#: ../../KritaFAQ.rst:575
+#: ../../KritaFAQ.rst:573
 msgid "Can I get Krita for iPad or for Android?"
 msgstr "Kan ik Krita voor iPad of voor Android krijgen?"
 
-#: ../../KritaFAQ.rst:577
+#: ../../KritaFAQ.rst:575
 msgid ""
 "Not for iOS or iPadOS at this point in time: there are `problems in any case "
 "with putting an application licensed under the GNU Public License V3 in the "
@@ -1932,11 +1924,11 @@ msgstr ""
 "<https://play.google.com/store/apps/details?id=org.krita>`_ F-Droid komt "
 "eraan."
 
-#: ../../KritaFAQ.rst:580
+#: ../../KritaFAQ.rst:578
 msgid "Who translates Krita"
 msgstr "Wie vertaalt Krita"
 
-#: ../../KritaFAQ.rst:582
+#: ../../KritaFAQ.rst:580
 msgid ""
 "Krita is a `KDE application <https://www.kde.org/>`_ — and proud of it! That "
 "means that Krita’s translations are done by `KDE localization teams <https://"
@@ -1953,7 +1945,7 @@ msgstr ""
 "te sluiten bij het ontwikkel team en issues in de code te fixxen die het "
 "moeilijker maken om het te vertalen."
 
-#: ../../KritaFAQ.rst:584
+#: ../../KritaFAQ.rst:582
 msgid ""
 "Please refer to https://community.kde.org/Get_Involved/translation for more "
 "general instructions on getting involved in KDE localization."
@@ -1961,13 +1953,28 @@ msgstr ""
 "Kijk op https://community.kde.org/Get_Involved/translation voor meer "
 "algemene instructies over meedoen in lokalisatie van KDE."
 
-#: ../../KritaFAQ.rst:587
+#: ../../KritaFAQ.rst:585
 msgid "Reference"
 msgstr "Referentie"
 
-#: ../../KritaFAQ.rst:589
+#: ../../KritaFAQ.rst:587
 msgid "https://answers.launchpad.net/krita-ru/+faqs"
 msgstr "https://answers.launchpad.net/krita-ru/+faqs"
+
+#~ msgid ""
+#~ "There is no text support for PSD file yet. The text will appear "
+#~ "rasterized and converted into a paint layer."
+#~ msgstr ""
+#~ "Er is nog geen mogelijkheid aanwezig om tekst in een PSD-bestand te "
+#~ "bewerken. De tekst zal gerasterd te zien zijn en geconverteerd worden "
+#~ "naar een tekenlaag."
+
+#~ msgid ""
+#~ "You can find a community curated list of tablets supported by krita :ref:"
+#~ "`here <list_supported_tablets>`."
+#~ msgstr ""
+#~ "U kunt een door de gemeenschap bijgehouden lijst van tabletten die met "
+#~ "krita werken, kijk :ref:`hier <list_supported_tablets>`."
 
 #, fuzzy
 #~| msgid "Reference"
