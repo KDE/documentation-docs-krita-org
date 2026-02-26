@@ -561,7 +561,11 @@ var Search = {
       ((start + 240 - text.length) ? '...' : '');
     var rv = $('<div class="context"></div>').text(excerpt);
     $.each(hlwords, function() {
-      rv = rv.highlightText(this, 'highlighted');
+      try {
+        rv = rv.highlightText(this, 'highlighted');
+      } catch (error) {
+        console.error(error);
+      }
     });
     return rv;
   }
