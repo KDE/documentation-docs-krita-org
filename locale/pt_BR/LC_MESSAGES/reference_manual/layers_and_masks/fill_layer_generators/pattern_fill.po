@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2025-10-21 10:19-0300\n"
+"PO-Revision-Date: 2026-02-25 08:57-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:-1
 msgid "How to use Pattern fill generation in Krita."
@@ -26,10 +26,8 @@ msgid ".. image:: /images/layers/pattern_fill_transform.png"
 msgstr ".. image:: /images/layers/pattern_fill_transform.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:0
-#, fuzzy
-#| msgid ".. image:: /images/layers/pattern_fill_transform.png"
 msgid ".. image:: /images/layers/pattern_fill_align_pixel_grid.png"
-msgstr ".. image:: /images/layers/pattern_fill_transform.png"
+msgstr ".. image:: /images/layers/pattern_fill_align_pixel_grid.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:11
 msgid "Pattern"
@@ -98,6 +96,15 @@ msgid ""
 "pattern corners are ensured to fall at integer coordinates after the "
 "transformation."
 msgstr ""
+"Quando uma transformação geométrica é aplicada a um padrão, os cantos da "
+"imagem repetida podem ser deslocados para qualquer nova posição, incluindo "
+"coordenadas fracionárias (subpixel, coordenadas não inteiras). Este é o "
+"comportamento padrão e, na maioria das vezes, funciona bem. No entanto, há "
+"situações em que é desejável que os cantos fiquem em coordenadas inteiras. "
+"Por exemplo, quando é necessária repetibilidade exata com precisão de pixel. "
+"Isso pode ser obtido marcando a opção :guilabel:`alinhar à grade de pixels`. "
+"Dessa forma, garante-se que os cantos do padrão fiquem em coordenadas "
+"inteiras após a transformação."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:35
 msgid ""
@@ -108,6 +115,12 @@ msgid ""
 "possibility of setting this alignment over a number of repetitions of the "
 "pattern the corners should be aligned."
 msgstr ""
+"Lembre-se de que esse alinhamento reduz o número de transformações possíveis "
+"(na verdade, todas as transformações que mapeiam os cantos para coordenadas "
+"fracionárias são removidas), mas a transformação alinhada aproximará a "
+"transformação não alinhada o máximo possível. Há também a possibilidade de "
+"definir esse alinhamento em várias repetições do padrão em que os cantos "
+"devem ser alinhados."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:37
 msgid ""
@@ -115,6 +128,10 @@ msgid ""
 "example those used for screentones, or when the pattern is scaled down to be "
 "really small, since it helps reducing some artifacts like moiré patterns."
 msgstr ""
+"Essa opção é especialmente útil ao lidar com padrões pequenos, por exemplo, "
+"aqueles usados ​​para retículas, ou quando o padrão é reduzido para ficar "
+"realmente pequeno, pois ajuda a reduzir alguns artefatos, como padrões de "
+"moiré."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:41
 msgid ""
@@ -127,6 +144,16 @@ msgid ""
 "alignment is on, then that block is repeated exactly through the image, but "
 "when it is off, every instance of the pattern is rendered slightly different."
 msgstr ""
+"Esta imagem mostra uma camada de preenchimento de padrão que usa a imagem de "
+"um rosto sorridente. Ela está sendo transformada por meio de uma escala de "
+"75% e uma rotação de 34 graus. À esquerda, nenhum alinhamento está sendo "
+"aplicado e, à direita, o alinhamento está ativo e definido para cada duas "
+"repetições, tanto horizontal quanto verticalmente. As linhas azuis são "
+"indicadores da grade de pixels e as vermelhas marcam um bloco de repetições "
+"de dois por dois cujos cantos estão alinhados à grade de pixels. Observe "
+"que, quando o alinhamento está ativado, esse bloco é repetido exatamente por "
+"toda a imagem, mas quando está desativado, cada instância do padrão é "
+"renderizada de forma ligeiramente diferente."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:42
 msgid "Transform"
@@ -134,4 +161,4 @@ msgstr "Transformação"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:42
 msgid "Align to pixel grid"
-msgstr ""
+msgstr "Alinhar à grade de pixels"

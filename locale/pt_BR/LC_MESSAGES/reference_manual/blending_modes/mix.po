@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2025-10-28 18:42-0300\n"
+"PO-Revision-Date: 2026-02-25 09:27-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -15,15 +15,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: ../../reference_manual/blending_modes/mix.rst:-1
-#, fuzzy
-#| msgid ""
-#| "Page about the mix blending modes in Krita: Allanon, Alpha Darken, "
-#| "Behind, Erase, Geometric Mean, Grain Extract, Grain Merge, Greater, Hard "
-#| "Mix, Hard Overlay, Interpolation, Interpolation2x, Normal, Overlay, "
-#| "Parallel, Penumbra A, B, C and D."
 msgid ""
 "Page about the mix blending modes in Krita: Allanon, Alpha Darken, Behind, "
 "Erase, Geometric Mean, Grain Extract, Grain Merge, Greater, Hard Mix, Hard "
@@ -32,7 +26,7 @@ msgid ""
 msgstr ""
 "Página sobre os modos de mesclagem no Krita: Allanon, Escurecer alfa, Atrás, "
 "Apagar, Média geométrica, Extrair grão, Mesclar grão, Maior que, Mistura "
-"dura, Sobreposição dura, Interpolação, Interpolação 2x, Normal, "
+"dura, Sobreposição dura, Interpolação, Interpolação 2x, Normal, Marcador, "
 "Sobreposição, Paralela, Penumbra A, B, C e D."
 
 #: ../../reference_manual/blending_modes/mix.rst:-1
@@ -180,6 +174,9 @@ msgid ""
 "alpha and may cause color artifacts when you use it as a brush or layer "
 "mode. The `Marker`_ or `Greater`_ modes are likely a better choice."
 msgstr ""
+"Por razões técnicas, este modo não respeita o bloqueio alfa nem herda o alfa "
+"e pode causar artefatos de cor quando usado como pincel ou modo de camada. "
+"Os modos `Marcador`_ ou `Maior`_ provavelmente são uma escolha melhor."
 
 #: ../../reference_manual/blending_modes/mix.rst:97
 msgid ""
@@ -368,6 +365,8 @@ msgid ""
 "A similar mode is `Marker`_, which has the same behavior in regards to "
 "opacity, but will always mix the colors."
 msgstr ""
+"Um modo semelhante é o `Marcador`_, que tem o mesmo comportamento em relação "
+"à opacidade, mas sempre misturará as cores."
 
 #: ../../reference_manual/blending_modes/mix.rst:201
 #: ../../reference_manual/blending_modes/mix.rst:205
@@ -441,14 +440,14 @@ msgstr ""
 "máximo. Em caso positivo, retornará o máximo; caso contrário, o mínimo."
 
 #: ../../reference_manual/blending_modes/mix.rst:244
-#, fuzzy
-#| msgid "Hard Mix"
 msgid "Hard Mix HDR"
-msgstr "Mistura dura"
+msgstr "Mistura dura HDR"
 
 #: ../../reference_manual/blending_modes/mix.rst:246
 msgid "Special variant of :guilabel:`Hard Mix` for floating point spaces."
 msgstr ""
+"Variante especial de :guilabel:`Mistura dura` para espaços de ponto "
+"flutuante."
 
 #: ../../reference_manual/blending_modes/mix.rst:248
 #: ../../reference_manual/blending_modes/mix.rst:252
@@ -534,25 +533,23 @@ msgid "Left: **Normal**. Right: **Hard Overlay**."
 msgstr "Esquerda: **Normal**. Direita: **Sobreposição dura**."
 
 #: ../../reference_manual/blending_modes/mix.rst:295
-#, fuzzy
-#| msgid "Hard Overlay"
 msgid "Hard Overlay HDR"
-msgstr "Sobreposição dura"
+msgstr "Sobreposição dura HDR"
 
 #: ../../reference_manual/blending_modes/mix.rst:297
 msgid "Special variant of :guilabel:`Hard Overlay` for floating point spaces."
 msgstr ""
+"Variante especial de :guilabel:`Sobreposição dura` para espaços de ponto "
+"flutuante."
 
 #: ../../reference_manual/blending_modes/mix.rst:301
 #: ../../reference_manual/blending_modes/mix.rst:305
 msgid "Marker"
-msgstr ""
+msgstr "Marcador"
 
 #: ../../reference_manual/blending_modes/mix.rst:309
-#, fuzzy
-#| msgid "This blending mode is called \"Greater\" in English."
 msgid "This blending mode is called \"Marker\" in English."
-msgstr "Este modo de mesclagem é chamado de \"Greater\" em inglês."
+msgstr "Este modo de mesclagem é chamado de \"Marker\" em inglês."
 
 #: ../../reference_manual/blending_modes/mix.rst:313
 msgid ""
@@ -562,12 +559,19 @@ msgid ""
 "increase the opacity on your layer if the opacity of your stroke is higher "
 "and mixes the colors, like the marker tool in Paint Tool SAI."
 msgstr ""
+"O marcador é semelhante ao `Escurecer alfa`_, mas respeita o bloqueio/"
+"herança alfa e interpola entre as cores de forma limpa. É mais útil quando "
+"usado em um pincel no modo de pintura \"Build-Up\", onde só aumentará a "
+"opacidade da sua camada se a opacidade do seu traço for maior e mistura as "
+"cores, como a ferramenta marcador no Paint Tool SAI."
 
 #: ../../reference_manual/blending_modes/mix.rst:317
 msgid ""
 "It's also conceptually similar to `Greater`_, which in turn only mixes the "
 "colors if your stroke's opacity is higher."
 msgstr ""
+"É também conceitualmente semelhante a `Maior`_, que por sua vez só mistura "
+"as cores se a opacidade do seu traço for maior."
 
 #: ../../reference_manual/blending_modes/mix.rst:319
 msgid ""
@@ -575,6 +579,9 @@ msgid ""
 "affect the blending of the **alpha** channel, but the **color** channels are "
 "blended as if they were set to 100%."
 msgstr ""
+"O comportamento de Opacidade e Fluxo é idêntico ao de `Escurecer alfa`_, "
+"eles afetam apenas a mistura do canal **alfa**, mas os canais de **cor** são "
+"misturados como se estivessem definidos em 100%."
 
 #: ../../reference_manual/blending_modes/mix.rst:322
 msgid "Normal (Blending Mode)"

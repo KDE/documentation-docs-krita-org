@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2025-10-21 08:05-0300\n"
+"PO-Revision-Date: 2026-02-25 09:20-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: ../../<rst_epilog>:2
 msgid "mouseleft"
@@ -127,14 +127,6 @@ msgstr ""
 "transparentes"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:32
-#, fuzzy
-#| msgid ""
-#| "Normally, when saving an image to a file, all fully transparent areas of "
-#| "the image are filled with black color. It happens because when composing "
-#| "the layers of the image, Krita drop color data of fully transparent "
-#| "pixels for efficiency reason. To avoid this of color data loss you can "
-#| "either avoid compositing of the image i.e. limit image to only one layer "
-#| "without any masks or effects, or use the following method:"
 msgid ""
 "Normally, when saving an image to a file, all fully transparent areas of the "
 "image are filled with black color. It happens because when compositing the "
@@ -164,13 +156,8 @@ msgstr ""
 "> Salvar mesclado...`."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:41
-#, fuzzy
-#| msgid ""
-#| "How to save a PNG texture and keep color values in fully transparent areas"
 msgid "Color channel values in transparent areas"
-msgstr ""
-"Como salvar uma textura PNG e manter os valores de cor em áreas totalmente "
-"transparentes"
+msgstr "Valores do canal de cor em áreas transparentes"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:43
 msgid ""
@@ -180,10 +167,16 @@ msgid ""
 "explicitly requested. That is done for optimization purposes and allows "
 "Krita to speed up compositing the image by a lot."
 msgstr ""
+"O Krita trata todos os valores de canal de cor em pixels totalmente "
+"transparentes como **indefinidos**. Na prática, isso significa que o Krita "
+"tentará evitar escrever (ou ler) em um pixel totalmente transparente, a "
+"menos que seja realmente necessário ou explicitamente solicitado. Isso é "
+"feito para fins de otimização e permite que o Krita acelere bastante a "
+"composição da imagem."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:46
 msgid "Example 1: erasing pixels on the image"
-msgstr ""
+msgstr "Exemplo 1: apagando pixels na imagem"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:48
 msgid ""
@@ -194,6 +187,12 @@ msgid ""
 "`Split Alpha --> Alpha into Mask` on a layer after erasing with an eraser "
 "brush on it."
 msgstr ""
+"Ao apagar pixels com a ferramenta de borracha ou ao limpar uma seleção com a "
+"ação :menuselection:`Editar --> Limpar`, os dados de cor **não são realmente "
+"apagados**. Apenas o canal alfa é zerado, mas os canais de cor permanecem "
+"intactos. Você pode verificar isso aplicando a opção :menuselection:`Dividir "
+"alfa --> Alfa em máscara` em uma camada após apagá-la com a ferramenta de "
+"borracha."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:50
 msgid ""
@@ -201,6 +200,10 @@ msgid ""
 "a :ref:`Reset Transparent Filter<reset_transparent_filter>` on the image. It "
 "will zero-out all color channels of fully transparent pixels."
 msgstr ""
+"Para realmente limpar os canais de cor das áreas transparentes, você precisa "
+"aplicar um :ref:`Redefinir filtro de "
+"transparência<reset_transparent_filter>` na imagem. Isso zerará todos os "
+"canais de cor dos pixels totalmente transparentes."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:52
 msgid ""
@@ -209,11 +212,17 @@ msgid ""
 "neighboring colors instead of just zeroing them out, which might be useful "
 "in some workflows."
 msgstr ""
+"O Krita também possui um filtro especial :ref:`Propagar "
+"cores<filter_propagate_colors>`. Ele preenche as áreas totalmente "
+"transparentes com cores vizinhas em vez de simplesmente zerá-las, o que pode "
+"ser útil em alguns fluxos de trabalho."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:55
 msgid ""
 "Example 2: compositing layers with color data inside fully transparent areas"
 msgstr ""
+"Exemplo 2: composição de camadas com dados de cor dentro de áreas totalmente "
+"transparentes"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:57
 msgid ""
@@ -223,6 +232,10 @@ msgid ""
 "blend two pixels with zero alpha, because you would have to divide by zero "
 "for that."
 msgstr ""
+"Se você tiver várias camadas com dados de cor em suas áreas totalmente "
+"transparentes, o resultado da mesclagem **não incluirá esses dados de cor**. "
+"Os pixels resultantes serão simplesmente zerados. Obviamente, você não pode "
+"mesclar dois pixels com alfa zero, pois isso exigiria uma divisão por zero."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:59
 msgid ""
@@ -232,3 +245,8 @@ msgid ""
 "`, a compositing operation may (or may not) happen, clearing out the "
 "transparent areas."
 msgstr ""
+"Para a maioria dos fluxos de trabalho, isso significa que você deve usar a "
+"ação :menuselection:`Dividir alfa --> Salvar mesclado...` ​​para salvar "
+"corretamente o resultado dessa divisão alfa. Ao exportar o resultado por "
+"meio de :menuselection:`Arquivo --> Exportar...`, uma operação de composição "
+"pode (ou não) ocorrer, removendo as áreas transparentes."
