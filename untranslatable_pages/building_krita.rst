@@ -352,7 +352,8 @@ will be activated automatically.
     cd _build
 
     # configure Krita as usual
-    cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+    cmake -G Ninja \
+          -DCMAKE_BUILD_TYPE=RelWithDebInfo \
           -DHIDE_SAFE_ASSERTS=OFF \
           -DBUILD_TESTING=ON \
           -DCMAKE_INSTALL_PREFIX=$BUILDROOT/krita/_install \
