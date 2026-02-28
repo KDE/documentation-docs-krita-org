@@ -1,17 +1,17 @@
 # Translation of docs_krita_org_reference_manual___layers_and_masks___split_alpha.po to Catalan
-# Copyright (C) 2019-2025 This_file_is_part_of_KDE
+# Copyright (C) 2019-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 # or the same license as the source of its messages in English.
 #
 # SPDX-FileCopyrightText: 2019, 2021 Antoni Bella Pérez <antonibella5@yahoo.com>
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-docs-krita-org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2025-06-19 20:36+0200\n"
+"PO-Revision-Date: 2026-02-26 09:29+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ../../<rst_epilog>:2
 msgid "mouseleft"
@@ -134,14 +134,6 @@ msgstr ""
 "totalment transparents"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:32
-#, fuzzy
-#| msgid ""
-#| "Normally, when saving an image to a file, all fully transparent areas of "
-#| "the image are filled with black color. It happens because when composing "
-#| "the layers of the image, Krita drop color data of fully transparent "
-#| "pixels for efficiency reason. To avoid this of color data loss you can "
-#| "either avoid compositing of the image i.e. limit image to only one layer "
-#| "without any masks or effects, or use the following method:"
 msgid ""
 "Normally, when saving an image to a file, all fully transparent areas of the "
 "image are filled with black color. It happens because when compositing the "
@@ -152,11 +144,11 @@ msgid ""
 msgstr ""
 "Normalment, en desar una imatge en un fitxer, totes les àrees totalment "
 "transparents de la imatge s'emplenaran amb el color negre. Això passa perquè "
-"en compondre les capes de la imatge, el Krita elimina les dades de color "
-"dels píxels totalment transparents per raons d'eficiència. Per a evitar "
-"això, la pèrdua de les dades de color pot evitar la composició de la imatge, "
-"és a dir, limita la imatge a una sola capa sense cap màscara o efecte, o "
-"utilitzant el mètode següent:"
+"en fer la composició de les capes de la imatge, el Krita elimina les dades "
+"de color dels píxels totalment transparents per raons d'eficiència. Per a "
+"evitar això, la pèrdua de les dades de color pot evitar la composició de la "
+"imatge, és a dir, limita la imatge a una sola capa sense cap màscara o "
+"efecte, o utilitzant el mètode següent:"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:34
 msgid "|mouseright| the layer in the layers docker."
@@ -171,13 +163,8 @@ msgstr ""
 "`Divideix l'alfa --> Desa la fusió...`»."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:41
-#, fuzzy
-#| msgid ""
-#| "How to save a PNG texture and keep color values in fully transparent areas"
 msgid "Color channel values in transparent areas"
-msgstr ""
-"Com desar una textura PNG i mantenir els valors de color en les àrees "
-"totalment transparents"
+msgstr "Els valors dels canals de color en les àrees transparents"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:43
 msgid ""
@@ -187,10 +174,16 @@ msgid ""
 "explicitly requested. That is done for optimization purposes and allows "
 "Krita to speed up compositing the image by a lot."
 msgstr ""
+"El Krita tracta tots els valors dels canals de color en píxels totalment "
+"transparents com a **no definits**. Efectivament, significa que el Krita "
+"intentarà ometre escriure (o llegir) un píxel totalment transparent, tret "
+"que sigui realment necessari o sol·licitat explícitament. Això es fa amb "
+"finalitats d'optimització i permet al Krita accelerar molt la composició de "
+"la imatge."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:46
 msgid "Example 1: erasing pixels on the image"
-msgstr ""
+msgstr "Exemple 1: esborrat de pixels on the image"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:48
 msgid ""
@@ -201,6 +194,12 @@ msgid ""
 "`Split Alpha --> Alpha into Mask` on a layer after erasing with an eraser "
 "brush on it."
 msgstr ""
+"En esborrar els píxels amb un pinzell d'esborrador o en netejar una selecció "
+"amb l'acció :menuselection:`Edita --> Neteja`, les dades de color **no "
+"s'esborraran**. És només el canal alfa que està zero, però els canals de "
+"color es mantenen intactes. Podeu veure-ho vosaltres mateixos si intenteu "
+"aplicar :menuselection:`Divideix l'alfa --> Alfa en una màscara` en una capa "
+"després d'esborrar-la amb un pinzell d'esborrador."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:50
 msgid ""
@@ -208,6 +207,10 @@ msgid ""
 "a :ref:`Reset Transparent Filter<reset_transparent_filter>` on the image. It "
 "will zero-out all color channels of fully transparent pixels."
 msgstr ""
+"Per a netejar els canals de color de les àrees transparents, heu d'aplicar :"
+"ref:`Filtre de reinicialització del transparent<reset_transparent_filter>` a "
+"la imatge. Deixa a zero tots els canals de color dels píxels totalment "
+"transparents."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:52
 msgid ""
@@ -216,11 +219,17 @@ msgid ""
 "neighboring colors instead of just zeroing them out, which might be useful "
 "in some workflows."
 msgstr ""
+"El Krita també té un :ref:`Filtre de propagació de "
+"colors<filter_propagate_colors>` especial.  Omple les àrees totalment "
+"transparents amb colors veïns en lloc de simplement deixa-los a zero, cosa "
+"que podria ser útil en alguns fluxos de treball."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:55
 msgid ""
 "Example 2: compositing layers with color data inside fully transparent areas"
 msgstr ""
+"Exemple 2: composició de capes amb dades de color dins d'àrees completament "
+"transparents"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:57
 msgid ""
@@ -230,6 +239,11 @@ msgid ""
 "blend two pixels with zero alpha, because you would have to divide by zero "
 "for that."
 msgstr ""
+"Si teniu diverses capes que tenen qualsevol dada de color dins de les seves "
+"àrees completament transparents, el resultat de la seva fusió **no inclourà "
+"aquestes dades de color**. Els píxels resultants es deixaran a zero. "
+"Òbviament, no podeu barrejar dos píxels amb alfa zero, perquè per a això "
+"haureu de dividir per zero."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:59
 msgid ""
@@ -239,3 +253,9 @@ msgid ""
 "`, a compositing operation may (or may not) happen, clearing out the "
 "transparent areas."
 msgstr ""
+"Per a la majoria dels fluxos de treball, només vol dir que haureu "
+"d'utilitzar l'acció :menuselection:`Divideix l'alfa --> Desa la fusió...` "
+"per a desar correctament el resultat d'aquest treball de divisió de l'alfa. "
+"Quan s'exporta el resultat a través de :menuselection:`Fitxer --> Exporta..."
+"`, pot haver-hi una operació de composició (o no), netejant les àrees "
+"transparents."

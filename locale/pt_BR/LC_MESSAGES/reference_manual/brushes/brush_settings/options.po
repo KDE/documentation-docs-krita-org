@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2025-10-25 09:31-0300\n"
+"PO-Revision-Date: 2026-02-26 16:26-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: ../../<rst_epilog>:1
 msgid ".. image:: /images/brushes/Krita_3_0_1_Brush_engine_ratio.png"
@@ -95,7 +95,7 @@ msgstr "Rotação"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:56
 msgid "Brush Tip Angle"
-msgstr ""
+msgstr "Ângulo da ponta do pincel"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:58
 msgid ""
@@ -104,23 +104,26 @@ msgid ""
 "uses the text \"BRUSH\" as the brush tip texture. If no Sensor is active, "
 "and the brush tip rotation is 0 degrees, the brush looks like this:"
 msgstr ""
+"A rotação final da ponta do pincel depende dos sensores de rotação ativados. "
+"Vamos primeiro revisar o comportamento básico da ponta do pincel com um "
+"exemplo que usa o texto \"BRUSH\" como textura da ponta. Se nenhum sensor "
+"estiver ativo e a rotação da ponta do pincel for de 0 graus, o pincel terá "
+"esta aparência:"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:61
-#, fuzzy
-#| msgid ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
 msgid ".. image:: /images/brushes/brush_tip_rotation_0.png"
-msgstr ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
+msgstr ".. image:: /images/brushes/brush_tip_rotation_0.png"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:62
 msgid ""
 "As the brush tip rotation is increased, the tip rotates counter-clockwise:"
 msgstr ""
+"À medida que a rotação da ponta do pincel aumenta, a ponta gira no sentido "
+"anti-horário:"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:65
-#, fuzzy
-#| msgid ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
 msgid ".. image:: /images/brushes/brush_tip_rotation_30.png"
-msgstr ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
+msgstr ".. image:: /images/brushes/brush_tip_rotation_30.png"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:66
 msgid ""
@@ -128,10 +131,13 @@ msgid ""
 "base tip angle shown above. Though the way how each sensor affects the brush "
 "rotation is different."
 msgstr ""
+"Quando a opção de rotação está ativada, ela adiciona sua contribuição "
+"angular ao ângulo da ponta do pincel mostrado acima. No entanto, a forma "
+"como cada sensor afeta a rotação da escova é diferente."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:70
 msgid "Pressure sensor"
-msgstr ""
+msgstr "Sensor de pressão"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:72
 msgid ""
@@ -140,6 +146,11 @@ msgid ""
 "rotation increases (i.e. rotates counter-clockwise). When the user decreases "
 "the pressure, the brush rotation decreases (i.e. rotates clockwise)."
 msgstr ""
+"Para o sensor de pressão, o estado original da escova, sem rotação, está "
+"associado ao valor de pressão de 50%. Quando o usuário aumenta a pressão, a "
+"rotação da escova aumenta (ou seja, gira no sentido anti-horário). Quando o "
+"usuário diminui a pressão, a rotação da escova diminui (ou seja, gira no "
+"sentido horário)."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:76
 msgid ""
@@ -147,16 +158,22 @@ msgid ""
 "is at sensor value of 50%, increasing the sensor value increases the "
 "rotation, decreasing the sensor value decreases the rotation."
 msgstr ""
+"A maioria dos sensores se comporta como o sensor de pressão, ou seja, o "
+"estado não rotacionado corresponde a um valor de 50% do sensor, o aumento do "
+"valor do sensor aumenta a rotação e a diminuição do valor do sensor diminui "
+"a rotação."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:79
 msgid ""
 "There are two notable exceptions to this rule: Tilt Direction and Drawing "
 "Angle sensors."
 msgstr ""
+"Existem duas exceções notáveis ​​a essa regra: os sensores de direção de "
+"inclinação e de ângulo de desenho."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:82
 msgid "Tilt Direction"
-msgstr ""
+msgstr "Direção da inclinação"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:84
 msgid ""
@@ -164,27 +181,26 @@ msgid ""
 "space. It links the vertical axis of the brush to the direction of the "
 "stylus:"
 msgstr ""
+"O sensor de direção de inclinação está vinculado à direção física da caneta "
+"no espaço. Ele relaciona o eixo vertical do pincel à direção da caneta:"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:86
-#, fuzzy
-#| msgid ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
 msgid ""
 ".. image:: /images/brushes/brush_tip_rotation_tilt_direction_anchor_0.png"
-msgstr ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
+msgstr ""
+".. image:: /images/brushes/brush_tip_rotation_tilt_direction_anchor_0.png"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:87
-#, fuzzy
-#| msgid ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
 msgid ""
 ".. image:: /images/brushes/brush_tip_rotation_tilt_direction_anchor_30.png"
-msgstr ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
+msgstr ""
+".. image:: /images/brushes/brush_tip_rotation_tilt_direction_anchor_30.png"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:89
-#, fuzzy
-#| msgid ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
 msgid ""
 ".. image:: /images/brushes/brush_tip_rotation_tilt_direction_anchor_60.png"
-msgstr ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
+msgstr ""
+".. image:: /images/brushes/brush_tip_rotation_tilt_direction_anchor_60.png"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:90
 msgid ""
@@ -192,29 +208,32 @@ msgid ""
 "*neutral position*. The *neutral position* of the pen tilt corresponds to "
 "the pen being held in the right hand at a 3 o'clock position"
 msgstr ""
+"Quando o Krita não consegue detectar a direção da inclinação da caneta, ele "
+"coloca o pincel em *posição neutra*. A *posição neutra* da inclinação da "
+"caneta corresponde à caneta sendo segurada na mão direita na posição das 3 "
+"horas."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:93
-#, fuzzy
-#| msgid ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
 msgid ""
 ".. image:: /images/brushes/brush_tip_rotation_tilt_direction_anchor_mouse.png"
-msgstr ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
+msgstr ""
+".. image:: /images/brushes/brush_tip_rotation_tilt_direction_anchor_mouse.png"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:94
 msgid "The neutral position is used in one of the following cases:"
-msgstr ""
+msgstr "A posição neutra é utilizada em um dos seguintes casos:"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:96
 msgid "the stylus stands strictly vertically"
-msgstr ""
+msgstr "a caneta fica estritamente na vertical"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:97
 msgid "the tablet device doesn't support tilt"
-msgstr ""
+msgstr "o tablet não suporta inclinação"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:98
 msgid "the mouse is used (which doesn't support tilt either)"
-msgstr ""
+msgstr "o mouse é usado (que também não suporta inclinação)"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:100
 msgid ""
@@ -223,65 +242,74 @@ msgid ""
 "the same neutral point rotation but with the left hand, the global tilt "
 "offset should be set to 180 degrees."
 msgstr ""
+"Para usuários canhotos, existe uma opção para ajustar a inclinação global "
+"nas :ref:`Configurações do Tablet <tablet_settings_tilt_direction_offset>`. "
+"Para obter a mesma rotação do ponto neutro, mas com a mão esquerda, a "
+"inclinação global deve ser definida para 180 graus."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:102
 msgid ""
 "To get a natural looking brush tip with the Tilt Direction sensor enabled, "
 "the brush tip rotation angle needs to be set to 90 degrees:"
 msgstr ""
+"Para obter uma ponta de pincel com aparência natural com o sensor de direção "
+"de inclinação ativado, o ângulo de rotação da ponta da escova precisa ser "
+"definido em 90 graus:"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:105
-#, fuzzy
-#| msgid ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
 msgid ".. image:: /images/brushes/brush_tip_rotation_90_tilt_direction.png"
-msgstr ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
+msgstr ".. image:: /images/brushes/brush_tip_rotation_90_tilt_direction.png"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:107
 msgid "Drawing Angle"
-msgstr ""
+msgstr "Ângulo de desenho"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:109
 msgid ""
 "Drawing Angle sensor is commonly used in combination with rake-type brushes. "
 "It is especially useful because it does not rely on tablet-specific sensors."
 msgstr ""
+"O sensor de ângulo de desenho é comumente usado em combinação com pincéis "
+"tipo rastelo. Ele é especialmente útil porque não depende de sensores "
+"específicos do tablet."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:111
 msgid ""
 "In contrast to Tilt Direction it links the **horizontal** axis of the brush "
 "to the direction of the direction of the painting stroke:"
 msgstr ""
+"Em contraste com a direção de inclinação, ela vincula o eixo **horizontal** "
+"do pincel à direção da pincelada:"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:113
-#, fuzzy
-#| msgid ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
 msgid ""
 ".. image:: /images/brushes/brush_tip_rotation_drawing_angle_anchor_0.png"
-msgstr ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
+msgstr ""
+".. image:: /images/brushes/brush_tip_rotation_drawing_angle_anchor_0.png"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:114
-#, fuzzy
-#| msgid ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
 msgid ""
 ".. image:: /images/brushes/brush_tip_rotation_drawing_angle_anchor_30.png"
-msgstr ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
+msgstr ""
+".. image:: /images/brushes/brush_tip_rotation_drawing_angle_anchor_30.png"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:116
-#, fuzzy
-#| msgid ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
 msgid ""
 ".. image:: /images/brushes/brush_tip_rotation_drawing_angle_anchor_60.png"
-msgstr ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
+msgstr ""
+".. image:: /images/brushes/brush_tip_rotation_drawing_angle_anchor_60.png"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:118
 msgid "Other sensors"
-msgstr ""
+msgstr "Outros sensores"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:120
 msgid ""
 "In addition to the sensors discussed above, there are many other Rotation "
 "Sensors available that allow for a variety of effects."
 msgstr ""
+"Além dos sensores discutidos acima, existem muitos outros sensores de "
+"rotação disponíveis que permitem uma variedade de efeitos."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:123
 msgid ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
