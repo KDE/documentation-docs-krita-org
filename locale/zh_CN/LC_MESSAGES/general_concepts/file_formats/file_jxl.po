@@ -56,6 +56,11 @@ msgid ""
 "frames like :ref:`GIF <file_gif>` or simple multi-layered raster image "
 "without animation."
 msgstr ""
+"JPEG XL (``.jxl``) 是一种新型的图像文件格式，它无需专利费用。它既能像 :ref:"
+"`JPEG <file_jpeg>` 格式一样支持适用于照片图像的\\ :ref:`有损压缩模式"
+"<lossless_compression>`\\ ，也能和 :ref:`PNG <file_png>` 格式一样支持\\ :ref:"
+"`无损压缩模式<lossless_compression>`\\ ，还能和 :ref:`GIF <file_gif>` 格式一"
+"样支持保存动图，或者保存非动图的简单多图层栅格图像。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:21
 msgid ""
@@ -138,17 +143,19 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:39
 msgid "Flattened image"
-msgstr ""
+msgstr "单层图像"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:40
 msgid ""
 "Flatten the image and save as single layer image (default). This is the "
 "recommended option for static image web delivery and sharing in general."
 msgstr ""
+"将图像的图层全部合并，保存为单层图像 (默认选项)。这是静态图像的网页展示和一般"
+"作品分享的推荐选项。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:41
 msgid "Animated image"
-msgstr ""
+msgstr "动画图像"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:42
 msgid ""
@@ -162,12 +169,17 @@ msgid ""
 "painterly animation instead. This is the recommended option for animated "
 "image web delivery and sharing in general."
 msgstr ""
+"将图像的图层全部合并，将动画帧保存为动图。JPEG XL 可以像 :ref:`file_gif` 那样"
+"保存动图，但它的动画功能非常简单，不支持帧内预测，因此更适合颜色数量少，风格"
+"化明显的动画使用，例如赛璐璐上色风格的动画，而不适合颜色层次丰富的 3D 动画、"
+"手绘颜料风格明显的动画等使用。这是动态图像的网页展示和一般作品分享的推荐选"
+"项。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:44
 msgid ""
 "Rasterize layers (including group and filter layers) and save as multi-"
 "layered image."
-msgstr ""
+msgstr "栅格化图层 (包括图层组和滤镜图层) 并保存为多图层图像"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:46
 msgid ""
@@ -175,6 +187,8 @@ msgid ""
 "animation, this can be useful to store multi-layered images like :ref:"
 "`file_tif`."
 msgstr ""
+"如果没有使用动画帧来保存动图，则 JPEG XL 可以通过动画帧来保存图层，从而实现类"
+"似于 :ref:`file_tif` 的多图层功能。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:48
 msgid ""
@@ -208,7 +222,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:53
 msgid "Multi-layered image"
-msgstr ""
+msgstr "多层图像"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:53
 msgid ""
@@ -228,7 +242,7 @@ msgstr "图层蒙版将在合并后光栅化。智能填色蒙版的自动填充
 msgid ""
 "Rasterize layers (including group and filter layers) and save as multi-page "
 "image."
-msgstr ""
+msgstr "栅格化图层 (包括图层组和滤镜图层) 并保存为多页图像"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:58
 msgid ""
@@ -236,18 +250,20 @@ msgid ""
 "frames with maximum duration instead. This is a compatibility option for "
 "editor/viewer that didn't support opening multi-layered JPEG XL images."
 msgstr ""
+"与多层图像类似，但此选项会将每个图层保存为具有最大持续时间的动画帧。这是为不"
+"支持打开多层 JPEG XL 图像的编辑器和查看器提供的兼容性选项。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:60
 msgid "Multi-paged image"
-msgstr ""
+msgstr "多页图像"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:60
 msgid "Same layering limitations above also applied to this option."
-msgstr ""
+msgstr "上面提到过的图层功能限制同样适用于此选项。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:62
 msgid "Save as"
-msgstr ""
+msgstr "保存为"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:65
 msgid "Lossy encoding"
@@ -289,7 +305,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:75
 msgid "Lossless alpha"
-msgstr ""
+msgstr "无损透明度"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:75
 msgid ""
@@ -297,6 +313,9 @@ msgid ""
 "Lossy encoding. If enabled, this option will set alpha channel to lossless "
 "(uncompressed). Useful to reduce transparency artifact on lossy export."
 msgstr ""
+"默认情况下，在使用有损编码时，alpha 通道 (透明度) 也会被压缩。如果启用此选"
+"项，将把 alpha 通道设置为无损 (不压缩) 模式。这有助于减少有损导出时的透明度伪"
+"影。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:80
 msgid ""
@@ -398,7 +417,7 @@ msgstr "色彩空间转换设置"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:101
 msgid "(Lossless) Use CICP instead of ICC if possible"
-msgstr ""
+msgstr "(无损) 尽可能使用 CICP 而不是 ICC"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:101
 msgid ""
@@ -407,14 +426,17 @@ msgid ""
 "If there's no equivalent CICP values, ICC will still be saved instead. This "
 "is particularly useful for web delivery."
 msgstr ""
+"如果启用，Krita 将尝试将文档的 ICC 特性文件转换为等效的 CICP 值，以便在导出无"
+"损 JPEG XL 时节省更多空间。如果没有等效的 CICP 值，则仍会保存 ICC 特性文件。"
+"这特别适合用于网页展示的图像。"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:102
 msgid "Color profile"
-msgstr ""
+msgstr "色彩特性文件"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:105
 msgid "HDR conversion"
-msgstr ""
+msgstr "HDR 转换"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:105
 msgid ""
