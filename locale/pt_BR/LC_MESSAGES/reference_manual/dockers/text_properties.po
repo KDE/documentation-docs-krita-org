@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 5.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2026-02-27 17:16-0300\n"
+"PO-Revision-Date: 2026-02-28 09:59-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -771,10 +771,14 @@ msgid ""
 "being set. For example, the Turkish undotted i will be transformed with the "
 "I while regular i will be transformed to dotted I."
 msgstr ""
+":guilabel:`Transformação de texto` é sensível à :ref:"
+"`text_property_language` definida. Por exemplo, o \"i\" turco sem ponto será "
+"transformado em \"I\", enquanto o \"i\" normal será transformado em \"I\" "
+"com ponto."
 
 #: ../../reference_manual/dockers/text_properties.rst:216
 msgid "Case"
-msgstr ""
+msgstr "Capitalização"
 
 #: ../../reference_manual/dockers/text_properties.rst:217
 msgid ""
@@ -782,10 +786,13 @@ msgid ""
 "guilabel:`Capitalize` the first letter after each word separator is "
 "uppercased, which the rest is lowercased."
 msgstr ""
+"Se deseja converter todo o texto para maiúsculas ou minúsculas. No caso de :"
+"guilabel:`Capitalizar`, a primeira letra após cada separador de palavras é "
+"maiúscula, e o restante é minúsculo."
 
 #: ../../reference_manual/dockers/text_properties.rst:218
 msgid "Full-width"
-msgstr ""
+msgstr "Largura total"
 
 #: ../../reference_manual/dockers/text_properties.rst:219
 msgid ""
@@ -797,10 +804,18 @@ msgid ""
 "The full width opentype feature does something similar, but not every font "
 "supports that."
 msgstr ""
+"A largura total refere-se aos pontos de código \"Fullwidth\" no bloco "
+"Unicode Halfwidth e Fullwidth. Ativar essa opção significa que os glifos "
+"proporcionais ou de meia largura serão substituídos por esses glifos de "
+"largura total, se possível. Normalmente, em textos verticais, os glifos "
+"proporcionais são rotacionados, mas quando isso não é possível ou "
+"necessário, usar glifos de largura total pode ter uma aparência muito mais "
+"organizada. O recurso OpenType de largura total faz algo semelhante, mas nem "
+"todas as fontes o suportam."
 
 #: ../../reference_manual/dockers/text_properties.rst:221
 msgid "Full-size Kana"
-msgstr ""
+msgstr "Tamanho total de Kana"
 
 #: ../../reference_manual/dockers/text_properties.rst:221
 msgid ""
@@ -809,54 +824,67 @@ msgid ""
 "small, it can be useful to replace small kana with big kana to aid in "
 "readability."
 msgstr ""
+"Na escrita japonesa Kana, existem alguns casos de kana pequeno e grande, que "
+"possuem pronúncias ligeiramente diferentes. No entanto, quando o texto é "
+"muito pequeno, pode ser útil substituir o kana pequeno pelo kana grande para "
+"facilitar a leitura."
 
 #: ../../reference_manual/dockers/text_properties.rst:226
 msgid "Text Decoration"
-msgstr ""
+msgstr "Decoração do texto"
 
 #: ../../reference_manual/dockers/text_properties.rst:230
 msgid ".. image:: /images/text/text-decoration-sample.png"
-msgstr ""
+msgstr ".. image:: /images/text/text-decoration-sample.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:230
 msgid "Sample showing all the possible decorations as well as the line styles."
 msgstr ""
+"Exemplo mostrando todas as decorações possíveis, bem como os estilos de "
+"linha."
 
 #: ../../reference_manual/dockers/text_properties.rst:232
 msgid ""
 "Text Decoration allows drawing underlines, overlines and striking through "
 "text."
-msgstr ""
+msgstr "A decoração de texto permite sublinhar, sobrelinhar e riscar o texto."
 
 #: ../../reference_manual/dockers/text_properties.rst:234
 msgid "Line:"
-msgstr ""
+msgstr "Linha:"
 
 #: ../../reference_manual/dockers/text_properties.rst:235
 msgid ""
 "Toggles whether underline, overline or line through is enabled. Multiple can "
 "be enabled at once."
 msgstr ""
+"Alterna entre sublinhado, sobrelinhado ou riscado. Vários podem ser ativados "
+"simultaneamente."
 
 #: ../../reference_manual/dockers/text_properties.rst:236
 msgid "Color:"
-msgstr ""
+msgstr "Cor:"
 
 #: ../../reference_manual/dockers/text_properties.rst:237
 msgid ""
 "Set the color of the underline. When unset, the color of the decoration will "
 "follow the text color."
 msgstr ""
+"Defina a cor do sublinhado. Se não estiver definida, a cor da decoração "
+"seguirá a cor do texto."
 
 #: ../../reference_manual/dockers/text_properties.rst:239
 msgid "Style:"
-msgstr ""
+msgstr "Estilo:"
 
 #: ../../reference_manual/dockers/text_properties.rst:239
 msgid ""
 "The style of the lines. Shared between all enabled lines, these can be made "
 "dashed, dotted, wavy and even double lines can be drawn."
 msgstr ""
+"O estilo das linhas. Comum a todas as linhas habilitadas, este estilo pode "
+"ser tracejado, pontilhado, ondulado e até mesmo linhas duplas podem ser "
+"desenhadas."
 
 #: ../../reference_manual/dockers/text_properties.rst:241
 msgid ""
@@ -864,10 +892,14 @@ msgid ""
 "text it is defined on, with later defined text decoration being drawn on top "
 "of earlier defined text decoration."
 msgstr ""
+"A decoração de texto não é herdada. Em vez disso, ela é aplicada a cada "
+"intervalo de texto em que é definida, com a decoração de texto definida "
+"posteriormente sendo desenhada sobre a decoração de texto definida "
+"anteriormente."
 
 #: ../../reference_manual/dockers/text_properties.rst:245
 msgid ".. image:: /images/text/text-decoration-nested.png"
-msgstr ""
+msgstr ".. image:: /images/text/text-decoration-nested.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:245
 msgid ""
@@ -876,68 +908,75 @@ msgid ""
 "you define a text decoration on the paragraph, and one on a range of "
 "characters."
 msgstr ""
+"Definições de decorações de texto aninhadas. Embora algo tão complexo só "
+"seja possível com o editor de código-fonte SVG, você pode ver um resultado "
+"semelhante se definir uma decoração de texto no parágrafo e outra em um "
+"intervalo de caracteres."
 
 #: ../../reference_manual/dockers/text_properties.rst:250
 msgid "Underline Position"
-msgstr ""
+msgstr "Posição do sublinhado"
 
 #: ../../reference_manual/dockers/text_properties.rst:252
 msgid "Specify the position of the underline for text-decoration."
-msgstr ""
+msgstr "Especifica a posição do sublinhado para decoração de texto."
 
 #: ../../reference_manual/dockers/text_properties.rst:255
 msgid "Behaviour in horizontal writing modes"
-msgstr ""
+msgstr "Comportamento nos modos de escrita horizontal"
 
 #: ../../reference_manual/dockers/text_properties.rst:257
 #: ../../reference_manual/dockers/text_properties.rst:653
 msgid "Auto"
-msgstr ""
+msgstr "Automático"
 
 #: ../../reference_manual/dockers/text_properties.rst:258
 msgid "Underlines will be positioned according to the metrics of the font."
-msgstr ""
+msgstr "Os sublinhados serão posicionados de acordo com as métricas da fonte."
 
 #: ../../reference_manual/dockers/text_properties.rst:259
 msgid "Horizontal:"
-msgstr ""
+msgstr "Horizontal:"
 
 #: ../../reference_manual/dockers/text_properties.rst:259
 msgid "Bottom"
-msgstr ""
+msgstr "Inferior"
 
 #: ../../reference_manual/dockers/text_properties.rst:260
 msgid "Underlines will be aligned to the descender."
-msgstr ""
+msgstr "Os sublinhados serão alinhados à haste descendente."
 
 #: ../../reference_manual/dockers/text_properties.rst:262
 msgid "Behaviour in vertical writing modes."
-msgstr ""
+msgstr "Comportamento nos modos de escrita vertical."
 
 #: ../../reference_manual/dockers/text_properties.rst:264
 msgid "Vertical left"
-msgstr ""
+msgstr "Esquerda vertical"
 
 #: ../../reference_manual/dockers/text_properties.rst:265
 msgid ""
 "Underlines will be at the left of the characters. Overlines at the right."
 msgstr ""
+"Os sublinhados ficarão à esquerda dos caracteres. Os sobrelinhados, à "
+"direita."
 
 #: ../../reference_manual/dockers/text_properties.rst:267
 msgid "Vertical:"
-msgstr ""
+msgstr "Vertical:"
 
 #: ../../reference_manual/dockers/text_properties.rst:267
 msgid "Vertical right"
-msgstr ""
+msgstr "Direita vertical"
 
 #: ../../reference_manual/dockers/text_properties.rst:267
 msgid "Underlines will be at the right of the characters, and overlines left."
 msgstr ""
+"Os sublinhados ficarão à direita dos caracteres Os sobrelinhados, à esquerda."
 
 #: ../../reference_manual/dockers/text_properties.rst:272
 msgid "OpenType Features"
-msgstr ""
+msgstr "Funcionalidades OpenType"
 
 #: ../../reference_manual/dockers/text_properties.rst:274
 msgid ""
@@ -946,14 +985,19 @@ msgid ""
 "glyphs) so that complex joined scripts render correctly. The latter type is "
 "generally always enabled, and Krita provides control for the former."
 msgstr ""
+"Algumas fontes incluem recursos OpenType, como kerning, ligaduras ou "
+"versaletes, e também podem envolver uma variedade de glifos alternativos (ou "
+"até mesmo glifos contextuais) para que scripts complexos compostos sejam "
+"renderizados corretamente. Este último tipo geralmente está sempre ativado, "
+"e o Krita oferece controle para o primeiro."
 
 #: ../../reference_manual/dockers/text_properties.rst:277
 msgid "OpenType Feature Settings"
-msgstr ""
+msgstr "Configurações de funcionalidades OpenType"
 
 #: ../../reference_manual/dockers/text_properties.rst:281
 msgid ".. image:: /images/text/opentype_features_ui.png"
-msgstr ""
+msgstr ".. image:: /images/text/opentype_features_ui.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:281
 msgid ""
@@ -962,6 +1006,11 @@ msgid ""
 "are stored in the font. The name can be retrieved from the font if defined, "
 "otherwise Krita will provide its own name."
 msgstr ""
+"Algumas funcionalidades estão habilitadas na fonte medievalista “Junicode”. "
+"As quatro primeiras letras são a “etiqueta de funcionalidade OpenType”, que "
+"é a forma como essas funcionalidades são armazenadas na fonte. O nome pode "
+"ser obtido da fonte, se definido; caso contrário, o Krita fornecerá um nome "
+"próprio."
 
 #: ../../reference_manual/dockers/text_properties.rst:283
 msgid ""
@@ -970,12 +1019,18 @@ msgid ""
 "provide a list of features in the primary font in the :ref:"
 "`text_property_font_family` list."
 msgstr ""
+"Isso proporciona controle preciso sobre as funcionalidades OpenType. As "
+"funcionalidades OpenType geralmente são definidos por tags, indicando se "
+"estão ativados ou desativados. O menu suspenso exibirá uma lista dos "
+"recursos da fonte principal na lista :ref:`text_property_font_family`."
 
 #: ../../reference_manual/dockers/text_properties.rst:285
 msgid ""
 "For where it is feasible, a small preview is rendered, but for some features "
 "it can be hard to provide this."
 msgstr ""
+"Sempre que possível, uma pequena pré-visualização é exibida, mas para "
+"algumas funcionalidades pode ser difícil fornecê-la."
 
 #: ../../reference_manual/dockers/text_properties.rst:287
 msgid ""
@@ -984,12 +1039,18 @@ msgid ""
 "in the primary font can still be selected and enabled (which is useful when "
 "inheriting)."
 msgstr ""
+"Ao digitar o nome ou a tag de uma funcionalidade na pesquisa, será exibida "
+"uma lista filtrada de todas funcionalidades oficiais que correspondem à "
+"pesquisa. Dessa forma, funcionalidades que não estão na fonte principal "
+"ainda podem ser selecionadas e ativadas (o que é útil ao herdar)."
 
 #: ../../reference_manual/dockers/text_properties.rst:289
 msgid ""
 "See also the :ref:`glyph_palette` for an alternate way of selecting glyph "
 "alternates in the current text."
 msgstr ""
+"Veja também a :ref:`glyph_palette` para uma forma alternativa de selecionar "
+"glifos alternativos no texto atual."
 
 #: ../../reference_manual/dockers/text_properties.rst:291
 msgid ""
@@ -997,52 +1058,58 @@ msgid ""
 "give general hints for a given feature to be enabled over the whole text, "
 "use the Glyph properties:"
 msgstr ""
+"As funcionalidades OpenType, embora herdem entre si, são herdadas como uma "
+"única lista. Se você quiser fornecer dicas gerais para que uma determinada "
+"funcionalidade seja ativada em todo o texto, use as propriedades do Glyph:"
 
 #: ../../reference_manual/dockers/text_properties.rst:296
 msgid "Glyphs: Ligatures"
-msgstr ""
+msgstr "Glifos: Ligaduras"
 
 #: ../../reference_manual/dockers/text_properties.rst:297
 msgid "Enable or disable ligatures and contextual alternates on the text."
-msgstr ""
+msgstr "Habilita ou desabilita ligaduras e alternativas contextuais no texto."
 
 #: ../../reference_manual/dockers/text_properties.rst:299
 msgid "Common"
-msgstr ""
+msgstr "Comum"
 
 #: ../../reference_manual/dockers/text_properties.rst:300
 msgid "Enables `liga` and `clig`, which are commonly used ligatures."
-msgstr ""
+msgstr "Habilita as ligaduras `liga` e `clig`, que são comumente utilizadas."
 
 #: ../../reference_manual/dockers/text_properties.rst:301
 msgid "Discretionary"
-msgstr ""
+msgstr "Discricionária"
 
 #: ../../reference_manual/dockers/text_properties.rst:302
 msgid "Enables `dlig`, which are ligatures of a more decorative nature."
 msgstr ""
+"Habilita o uso de `dlig`, que são ligaduras de natureza mais decorativa."
 
 #: ../../reference_manual/dockers/text_properties.rst:303
 msgid "Historical"
-msgstr ""
+msgstr "Histórico"
 
 #: ../../reference_manual/dockers/text_properties.rst:304
 msgid "Enables `hlig`, which is intended for old-fashioned ligatures."
-msgstr ""
+msgstr "Habilita `hlig`, que se destina a ligaduras à moda antiga."
 
 #: ../../reference_manual/dockers/text_properties.rst:306
 msgid "Contextual Alternates"
-msgstr ""
+msgstr "Alternativas contextuais"
 
 #: ../../reference_manual/dockers/text_properties.rst:306
 msgid ""
 "Enables `calt`, which is frequently used by script fonts and decorative "
 "fonts to select appropriate glyphs depending on their context."
 msgstr ""
+"Habilita `calt`, frequentemente usado por fontes de script e fontes "
+"decorativas, para selecionar os glifos apropriados dependendo do contexto."
 
 #: ../../reference_manual/dockers/text_properties.rst:310
 msgid ".. image:: /images/text/opentype-ligatures.png"
-msgstr ""
+msgstr ".. image:: /images/text/opentype-ligatures.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:310
 msgid ""
@@ -1051,103 +1118,110 @@ msgid ""
 "Noto Serif, and contextual in Junicode, “st” is a discretionary ligature in "
 "Junicode and “al” is a historical ligature in Junicode."
 msgstr ""
+"Ligaduras em “Noto Serif” e “Junicode”, com as ligaduras marcadas em azul e "
+"a ausência de ligaduras marcada em laranja. “ffi” é uma ligadura comum em "
+"Noto Serif e contextual em Junicode, “st” é uma ligadura discricionária em "
+"Junicode e “al” é uma ligadura histórica em Junicode."
 
 #: ../../reference_manual/dockers/text_properties.rst:315
 msgid "Glyphs: Position"
-msgstr ""
+msgstr "Glifos: Posição"
 
 #: ../../reference_manual/dockers/text_properties.rst:317
 msgid "Enable super or subscripts on the text."
-msgstr ""
+msgstr "Habilita sobre ou subscritos no texto."
 
 #: ../../reference_manual/dockers/text_properties.rst:319
 #: ../../reference_manual/dockers/text_properties.rst:516
 msgid "Super"
-msgstr ""
+msgstr "Super"
 
 #: ../../reference_manual/dockers/text_properties.rst:320
 msgid "Enables superscript glyphs."
-msgstr ""
+msgstr "Habilita glifos sobrescritos."
 
 #: ../../reference_manual/dockers/text_properties.rst:322
 #: ../../reference_manual/dockers/text_properties.rst:519
 msgid "Sub"
-msgstr ""
+msgstr "Sub"
 
 #: ../../reference_manual/dockers/text_properties.rst:322
 msgid "Enables subscript glyphs."
-msgstr ""
+msgstr "Habilita glifos subscritos."
 
 #: ../../reference_manual/dockers/text_properties.rst:326
 msgid ".. image:: /images/text/opentype-position.png"
-msgstr ""
+msgstr ".. image:: /images/text/opentype-position.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:326
 msgid "Showing sub and superscripts in the font “EB Garamond”."
-msgstr ""
+msgstr "Exibição de subscritos e sobrescritos na fonte “EB Garamond”."
 
 #: ../../reference_manual/dockers/text_properties.rst:331
 msgid "Glyphs: Numeric"
-msgstr ""
+msgstr "Glifos: Numérico"
 
 #: ../../reference_manual/dockers/text_properties.rst:333
 msgid "Enable number-related glyph forms on the text."
-msgstr ""
+msgstr "Habilita formas de glifos relacionadas a números no texto."
 
 #: ../../reference_manual/dockers/text_properties.rst:337
 #: ../../reference_manual/dockers/text_properties.rst:344
 #: ../../reference_manual/dockers/text_properties.rst:351
 msgid "Does not explicitly enable either style, showing the font default."
-msgstr ""
+msgstr "Não ativa explicitamente nenhum dos estilos, exibindo a fonte padrão."
 
 #: ../../reference_manual/dockers/text_properties.rst:338
 msgid "Lining"
-msgstr ""
+msgstr "Alinhado"
 
 #: ../../reference_manual/dockers/text_properties.rst:339
 msgid "Requests figures that fit within an upper case text, using `lnum`."
-msgstr ""
+msgstr "Solicita números que caibam em um texto em maiúsculas, usando `lnum`."
 
 #: ../../reference_manual/dockers/text_properties.rst:340
 #: ../../reference_manual/dockers/text_properties.rst:411
 msgid "Style"
-msgstr ""
+msgstr "Estilo"
 
 #: ../../reference_manual/dockers/text_properties.rst:340
 msgid "Old Style"
-msgstr ""
+msgstr "Estilo antigo"
 
 #: ../../reference_manual/dockers/text_properties.rst:341
 msgid ""
 "Requests asks for figures that fit within an upper case text, using `onum`."
 msgstr ""
+"Solicita por números que caibam em um texto em maiúsculas, usando `onum`."
 
 #: ../../reference_manual/dockers/text_properties.rst:345
 #: ../../reference_manual/dockers/text_properties.rst:416
 msgid "Proportional"
-msgstr ""
+msgstr "Proporcional"
 
 #: ../../reference_manual/dockers/text_properties.rst:346
 msgid "Requests proportional figures, using `pnum`."
-msgstr ""
+msgstr "Solicita valores proporcionais, usando `pnum`."
 
 #: ../../reference_manual/dockers/text_properties.rst:347
 msgid "Proportion"
-msgstr ""
+msgstr "Proporção"
 
 #: ../../reference_manual/dockers/text_properties.rst:347
 msgid "Tabular"
-msgstr ""
+msgstr "Tabular"
 
 #: ../../reference_manual/dockers/text_properties.rst:348
 msgid ""
 "Requests tabular figures, using `tnum`, these figures all share the same "
 "advance."
 msgstr ""
+"Solicita figuras tabulares, usando `tnum`, essas figuras compartilham o "
+"mesmo avanço."
 
 #: ../../reference_manual/dockers/text_properties.rst:352
 msgid "Diagonal"
-msgstr ""
+msgstr "Diagonal"
 
 #: ../../reference_manual/dockers/text_properties.rst:353
 msgid ""
@@ -1156,40 +1230,47 @@ msgid ""
 "separated by a 'fraction slash' (U+2044), then this will replace the figures "
 "with numerators before the slash and denominators after the slash."
 msgstr ""
+"Substitui algarismos separados por uma barra por uma forma de fração "
+"diagonal adequada. Se uma fonte tiver os recursos de numerador e "
+"denominador, e os números forem separados por uma 'barra de fração' (U"
+"+2044), isso substituirá os algarismos com numeradores antes da barra e "
+"denominadores depois da barra."
 
 #: ../../reference_manual/dockers/text_properties.rst:354
 msgid "Fraction"
-msgstr ""
+msgstr "Fração"
 
 #: ../../reference_manual/dockers/text_properties.rst:354
 msgid "Stacked"
-msgstr ""
+msgstr "Empilhado"
 
 #: ../../reference_manual/dockers/text_properties.rst:355
 msgid "Replaces figures separated by a slash with a nut fraction form."
-msgstr ""
+msgstr "Substitui números separados por uma barra por uma fração de nut."
 
 #: ../../reference_manual/dockers/text_properties.rst:356
 msgid "Ordinals"
-msgstr ""
+msgstr "Ordinais"
 
 #: ../../reference_manual/dockers/text_properties.rst:357
 msgid "Replaces letters that follow figures with their ordinal forms."
-msgstr ""
+msgstr "Substitui letras que seguem algarismos por suas formas ordinais."
 
 #: ../../reference_manual/dockers/text_properties.rst:359
 msgid "Slashed Zero"
-msgstr ""
+msgstr "Zero cortado"
 
 #: ../../reference_manual/dockers/text_properties.rst:359
 msgid ""
 "Replaces the number zero with one that has a slash in the middle, which can "
 "help prevent confusion with similar glyphs like the letter 'O'."
 msgstr ""
+"Substitui o número zero por um que tenha uma barra no meio, o que pode "
+"ajudar a evitar confusão com glifos semelhantes, como a letra \"O\"."
 
 #: ../../reference_manual/dockers/text_properties.rst:363
 msgid ".. image:: /images/text/opentype-numeric.png"
-msgstr ""
+msgstr ".. image:: /images/text/opentype-numeric.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:363
 msgid ""
@@ -1197,74 +1278,88 @@ msgid ""
 "fraction “1/2”, beyond that it shows old style figures for “12345” in green, "
 "tabular spacing for those old style figures in orange, and ordinals in blue."
 msgstr ""
+"Exibição dos recursos numéricos OpenType da fonte “EB Garamond”. A fração "
+"“1/2” está selecionada; além dela, são exibidos os algarismos no estilo "
+"antigo para “12345” em verde, o espaçamento tabular desses algarismos em "
+"laranja e os números ordinais em azul."
 
 #: ../../reference_manual/dockers/text_properties.rst:368
 msgid "Glyphs: Caps"
-msgstr ""
+msgstr "Glifos: Caps"
 
 #: ../../reference_manual/dockers/text_properties.rst:370
 msgid "Enable opentype features related to capitals, such as small caps."
 msgstr ""
+"Habilita funcionalidades OpenType relacionados a capitulares, como "
+"versaletes."
 
 #: ../../reference_manual/dockers/text_properties.rst:373
 msgid "Don't use any particular capitals."
-msgstr ""
+msgstr "Não usar nenhuma capitular específica."
 
 #: ../../reference_manual/dockers/text_properties.rst:374
 msgid "Small Caps"
-msgstr ""
+msgstr "Capitulares pequenas"
 
 #: ../../reference_manual/dockers/text_properties.rst:375
 msgid "Sets uppercase to small caps. Typically used for abbreviations."
 msgstr ""
+"Converte letras maiúsculas em versaletes. Normalmente usado para abreviações."
 
 #: ../../reference_manual/dockers/text_properties.rst:376
 msgid "All Small Caps"
-msgstr ""
+msgstr "Todas capitulares pequenas"
 
 #: ../../reference_manual/dockers/text_properties.rst:377
 msgid "Sets all text to small caps. Typically used for formal text."
 msgstr ""
+"Converte todo o texto para letras maiúsculas pequenas. Normalmente usado "
+"para textos formais."
 
 #: ../../reference_manual/dockers/text_properties.rst:378
 msgid "Petite Caps"
-msgstr ""
+msgstr "Capitulares minúsculas"
 
 #: ../../reference_manual/dockers/text_properties.rst:379
 msgid ""
 "Sets uppercase to petite caps. Alternative to small caps that is exactly the "
 "same as the x height."
 msgstr ""
+"Define letras maiúsculas como capitulares minúsculas. Alternativa às "
+"capitulares pequenas que tem exatamente a mesma altura que a letra x."
 
 #: ../../reference_manual/dockers/text_properties.rst:380
 msgid "All Petite Caps"
-msgstr ""
+msgstr "Todas capitulares minúsculas"
 
 #: ../../reference_manual/dockers/text_properties.rst:381
 msgid "Sets all text to petite caps."
-msgstr ""
+msgstr "Converte todo o texto para capitulares minúsculas."
 
 #: ../../reference_manual/dockers/text_properties.rst:382
 msgid "Titling Caps"
-msgstr ""
+msgstr "Capitular de titulação"
 
 #: ../../reference_manual/dockers/text_properties.rst:383
 msgid ""
 "Sets uppercase to use titling caps. Titling caps frequently are larger and "
 "more dramatic, and best suited for headers instead of body text."
 msgstr ""
+"Define o uso de capitular de titulação. As capitulares em títulos costumam "
+"ser maiores e mais dramáticas, sendo mais adequadas para cabeçalhos do que "
+"para o corpo do texto."
 
 #: ../../reference_manual/dockers/text_properties.rst:385
 msgid "Unicase"
-msgstr ""
+msgstr "Unicase"
 
 #: ../../reference_manual/dockers/text_properties.rst:385
 msgid "Enables the unicase feature."
-msgstr ""
+msgstr "Habilita a funcionalidade de unicase."
 
 #: ../../reference_manual/dockers/text_properties.rst:389
 msgid ".. image:: /images/text/opentype-caps.png"
-msgstr ""
+msgstr ".. image:: /images/text/opentype-caps.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:389
 msgid ""
@@ -1272,90 +1367,94 @@ msgid ""
 "caps, “Estonia” for Titling caps and in a custom comic font for unicase "
 "features."
 msgstr ""
+"Funcionalidades OpenType relacionadas a capitulares em “EB Garamond” para "
+"capitulares pequenas e minúsculas, “Estonia” para capitulares de títulos e "
+"em uma fonte personalizada para quadrinhos para funcionalidades unicase."
 
 #: ../../reference_manual/dockers/text_properties.rst:394
 msgid "Glyphs: East-Asian"
-msgstr ""
+msgstr "Glifos: Leste Asiático"
 
 #: ../../reference_manual/dockers/text_properties.rst:396
 msgid "Enable glyph forms related to East Asian text layout."
 msgstr ""
+"Habilita formas de glifos relacionadas ao layout de texto do Leste Asiático."
 
 #: ../../reference_manual/dockers/text_properties.rst:400
 msgid "Use font default."
-msgstr ""
+msgstr "Usar fonte padrão."
 
 #: ../../reference_manual/dockers/text_properties.rst:401
 msgid "Traditional"
-msgstr ""
+msgstr "Tradicional"
 
 #: ../../reference_manual/dockers/text_properties.rst:402
 msgid "Use traditional glyphs."
-msgstr ""
+msgstr "Usar glifos tradicionais."
 
 #: ../../reference_manual/dockers/text_properties.rst:403
 msgid "Simplified"
-msgstr ""
+msgstr "Simplificado"
 
 #: ../../reference_manual/dockers/text_properties.rst:404
 msgid "Use simplifies glyphs."
-msgstr ""
+msgstr "Usar glifos simplificados."
 
 #: ../../reference_manual/dockers/text_properties.rst:405
 msgid "JIS78"
-msgstr ""
+msgstr "JIS78"
 
 #: ../../reference_manual/dockers/text_properties.rst:406
 msgid "Use glyphs as specified by JIS78"
-msgstr ""
+msgstr "Usar glifos conforme especificado pela norma JIS78"
 
 #: ../../reference_manual/dockers/text_properties.rst:407
 msgid "JIS83"
-msgstr ""
+msgstr "JIS83"
 
 #: ../../reference_manual/dockers/text_properties.rst:408
 msgid "Use glyphs as specified by JIS83"
-msgstr ""
+msgstr "Usar glifos conforme especificado pela norma JIS83"
 
 #: ../../reference_manual/dockers/text_properties.rst:409
 msgid "JIS90"
-msgstr ""
+msgstr "JIS90"
 
 #: ../../reference_manual/dockers/text_properties.rst:410
 msgid "Use glyphs as specified by JIS90"
-msgstr ""
+msgstr "Usar glifos conforme especificado pela norma JIS90"
 
 #: ../../reference_manual/dockers/text_properties.rst:411
 msgid "JIS04"
-msgstr ""
+msgstr "JIS04"
 
 #: ../../reference_manual/dockers/text_properties.rst:412
 msgid "Use glyphs as specified by JIS04"
-msgstr ""
+msgstr "Usar glifos conforme especificado pela norma JIS04"
 
 #: ../../reference_manual/dockers/text_properties.rst:414
 msgid "Full Width"
-msgstr ""
+msgstr "Largura total"
 
 #: ../../reference_manual/dockers/text_properties.rst:415
 msgid "Use full width glyphs."
-msgstr ""
+msgstr "Usar glifos de largura total."
 
 #: ../../reference_manual/dockers/text_properties.rst:417
 msgid "Use proportional glyphs."
-msgstr ""
+msgstr "Usar glifos proporcionais."
 
 #: ../../reference_manual/dockers/text_properties.rst:419
 msgid "Ruby"
-msgstr ""
+msgstr "Ruby"
 
 #: ../../reference_manual/dockers/text_properties.rst:419
 msgid "Enable glyphs meant for ruby annotations."
-msgstr ""
+msgstr "Habilitar glifos destinados a anotações Ruby."
 
 #: ../../reference_manual/dockers/text_properties.rst:423
 msgid ".. image:: /images/text/opentype-east-asian.png"
-msgstr ""
+msgstr ".. image:: /images/text/opentype-east-asian.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:423
 msgid ""
@@ -1363,28 +1462,36 @@ msgid ""
 "Full-width is typically used for vertical text, JIS78 refers to a Japanese "
 "industry standard that specifies certain glyph shapes."
 msgstr ""
+"Exibindo as variantes de fontes do leste asiático em laranja, usando a fonte "
+"“Yu Gothic”. A largura total é normalmente usada para texto vertical; JIS78 "
+"refere-se a um padrão da indústria japonesa que especifica certos formatos "
+"de glifos."
 
 #: ../../reference_manual/dockers/text_properties.rst:428
 msgid "Font Kerning"
-msgstr ""
+msgstr "Kerning da fonte"
 
 #: ../../reference_manual/dockers/text_properties.rst:430
 msgid ""
 "Turn font kerning on or off. Font kerning enables per-glyph spacing "
 "adjustments."
 msgstr ""
+"Ative ou desative o kerning de fonte. O kerning de fonte permite ajustes de "
+"espaçamento por glifo."
 
 #: ../../reference_manual/dockers/text_properties.rst:436
 msgid "Direction"
-msgstr ""
+msgstr "Direção"
 
 #: ../../reference_manual/dockers/text_properties.rst:438
 msgid "Direction sets whether the text is left-to-right or right-to-left."
 msgstr ""
+"A direção define se o texto será da esquerda para a direita ou da direita "
+"para a esquerda."
 
 #: ../../reference_manual/dockers/text_properties.rst:441
 msgid "Unicode Bidi"
-msgstr ""
+msgstr "Bidi unicode"
 
 #: ../../reference_manual/dockers/text_properties.rst:442
 msgid ""
@@ -1393,16 +1500,23 @@ msgid ""
 "cases, it cannot tell whether a sequence should be left-to-right or right-to-"
 "left."
 msgstr ""
+"O Unicode bidirecional oferece controle adicional sobre como uma direção "
+"deslocada deve ser interpretada. Normalmente, o algoritmo padrão funciona "
+"bem, mas em alguns casos específicos, ele não consegue determinar se uma "
+"sequência deve ser lida da esquerda para a direita ou da direita para a "
+"esquerda."
 
 #: ../../reference_manual/dockers/text_properties.rst:445
 msgid ""
 "No controls are inserted. All text inside is reordered according to its "
 "implicit direction (which is derived from the characters used)."
 msgstr ""
+"Nenhum controle é inserido. Todo o texto interno é reordenado de acordo com "
+"sua direção implícita (que é derivada dos caracteres utilizados)."
 
 #: ../../reference_manual/dockers/text_properties.rst:446
 msgid "Embed"
-msgstr ""
+msgstr "Embutido"
 
 #: ../../reference_manual/dockers/text_properties.rst:447
 msgid ""
@@ -1410,20 +1524,25 @@ msgid ""
 "algorithm will assume the explicit direction is that of the :guilabel:"
 "`direction` property, but the text itself is ordered by implicit direction."
 msgstr ""
+"A sequência está direcionalmente embutida. Isso significa que o algoritmo "
+"bidirecional assumirá que a direção explícita é a da propriedade guilabel:"
+"`direção`, mas o próprio texto está ordenado por uma direção implícita."
 
 #: ../../reference_manual/dockers/text_properties.rst:448
 msgid "Override"
-msgstr ""
+msgstr "Substituir"
 
 #: ../../reference_manual/dockers/text_properties.rst:449
 msgid ""
 "Override means that the given section will use the current :guilabel:"
 "`direction` as the explicit direction as well as the direction of the text."
 msgstr ""
+"\"Substituir\" significa que a seção em questão usará o :guilabel:`direção` "
+"atual como a direção explícita, bem como a direção do texto."
 
 #: ../../reference_manual/dockers/text_properties.rst:450
 msgid "Isolate"
-msgstr ""
+msgstr "Isolar"
 
 #: ../../reference_manual/dockers/text_properties.rst:451
 msgid ""
@@ -1432,26 +1551,35 @@ msgid ""
 "paragraph. Due this, the ordering has no effect on the ordering of text on "
 "either side."
 msgstr ""
+"Os controles de isolamento são inseridos. Isolar significa que o algoritmo "
+"bidirecional trata a sequência como se fosse um parágrafo completamente "
+"independente. Por isso, a ordem não afeta a ordem do texto em nenhum dos "
+"lados."
 
 #: ../../reference_manual/dockers/text_properties.rst:452
 msgid "Isolate-Override"
-msgstr ""
+msgstr "Isolar-Substituir"
 
 #: ../../reference_manual/dockers/text_properties.rst:453
 msgid ""
 "Both isolate and override are applied. This means that the text is ordered "
 "explicitely by direction, but said ordering has no effect"
 msgstr ""
+"Tanto o isolamento quanto a sobreposição são aplicados. Isso significa que o "
+"texto é ordenado explicitamente por direção, mas essa ordenação não tem "
+"efeito."
 
 #: ../../reference_manual/dockers/text_properties.rst:455
 msgid "Plain Text"
-msgstr ""
+msgstr "Texto simples"
 
 #: ../../reference_manual/dockers/text_properties.rst:455
 msgid ""
 ":guilabel:`direction` property is unused and bididirectional algorithm will "
 "instead guess at the direction."
 msgstr ""
+"A propriedade :guilabel:`direção` não é usada e o algoritmo bidirecional irá "
+"tentar adivinhar a direção."
 
 #: ../../reference_manual/dockers/text_properties.rst:457
 msgid ""
@@ -1459,10 +1587,13 @@ msgid ""
 "this is that it works by inserting bi directional algorithm controls at the "
 "ends of the given range."
 msgstr ""
+"O Unicode bidirecional é uma das propriedades que não são herdadas. O motivo "
+"é que ele funciona inserindo controles de algoritmo bidirecional nas "
+"extremidades do intervalo especificado."
 
 #: ../../reference_manual/dockers/text_properties.rst:462
 msgid "Baseline"
-msgstr ""
+msgstr "Linha base"
 
 #: ../../reference_manual/dockers/text_properties.rst:464
 msgid ""
@@ -1472,94 +1603,114 @@ msgid ""
 "properly with Latin text. To achieve a more traditional alignment, dominant "
 "and alignment baseline can be used."
 msgstr ""
+"Em algumas tradições de escrita, o ponto de alinhamento de textos de "
+"tamanhos diferentes difere do ponto de alinhamento com o texto latino. Para "
+"fins de compatibilidade, as fontes dessas escritas geralmente são criadas de "
+"forma que os glifos se alinhem corretamente com o texto latino. Para obter "
+"um alinhamento mais tradicional, podem ser usados ​​os pontos dominantes e de "
+"linha de base de alinhamento."
 
 #: ../../reference_manual/dockers/text_properties.rst:466
 msgid ""
 "This feature will try to use data encoded in the fonts' baseline table. If "
 "there's no such data, the baseline metrics will be auto-generated."
 msgstr ""
+"Essa funcionalidade tentará usar os dados codificados na tabela de linha de "
+"base das fontes. Caso não existam esses dados, as métricas de linha de base "
+"serão geradas automaticamente."
 
 #: ../../reference_manual/dockers/text_properties.rst:468
 msgid "Dominant and Alignment baseline share the following options:"
 msgstr ""
+"As linhas de base Dominante e de Alinhamento compartilham as seguintes "
+"opções:"
 
 #: ../../reference_manual/dockers/text_properties.rst:470
 msgid "Alphabetic"
-msgstr ""
+msgstr "Alfabético"
 
 #: ../../reference_manual/dockers/text_properties.rst:471
 msgid "Uses the baseline used by most scripts. Default."
-msgstr ""
+msgstr "Utiliza a linha de base usada pela maioria dos scripts. Padrão."
 
 #: ../../reference_manual/dockers/text_properties.rst:472
 msgid "Ideographic"
-msgstr ""
+msgstr "Ideográfico"
 
 #: ../../reference_manual/dockers/text_properties.rst:473
 msgid ""
 "Uses the Ideographic design square and selects the bottom end in horizontal "
 "mode, and the left side in vertical mode."
 msgstr ""
+"Utiliza o quadrado de desenho ideográfico e seleciona a extremidade inferior "
+"no modo horizontal e o lado esquerdo no modo vertical."
 
 #: ../../reference_manual/dockers/text_properties.rst:474
 msgid "Central"
-msgstr ""
+msgstr "Central"
 
 #: ../../reference_manual/dockers/text_properties.rst:475
 msgid ""
 "Uses the Ideographic design square and selects the vertical center in "
 "horizontal mode, and the horizontal center in vertical mode."
 msgstr ""
+"Utiliza o quadrado de desenho ideográfico e seleciona o centro vertical no "
+"modo horizontal e o centro horizontal no modo vertical."
 
 #: ../../reference_manual/dockers/text_properties.rst:476
 msgid "Hanging"
-msgstr ""
+msgstr "Pendurado"
 
 #: ../../reference_manual/dockers/text_properties.rst:477
 msgid "Align to the headstroke as used by North-Brahmic scripts."
 msgstr ""
+"Alinha-se com o traço de cabeça usado pelos escritos brahmicos do norte."
 
 #: ../../reference_manual/dockers/text_properties.rst:478
 msgid "Middle"
-msgstr ""
+msgstr "Meio"
 
 #: ../../reference_manual/dockers/text_properties.rst:479
 msgid ""
 "Align to the center between the alphabetic baseline and x-height when laying "
 "out horizontally, in vertical this is the central baseline."
 msgstr ""
+"Alinha ao centro entre a linha de base alfabética e a altura x ao dispor "
+"horizontalmente. Na vertical, esta é a linha de base central."
 
 #: ../../reference_manual/dockers/text_properties.rst:480
 msgid "Mathematical"
-msgstr ""
+msgstr "Matemático"
 
 #: ../../reference_manual/dockers/text_properties.rst:481
 msgid "Align to the mathematical baseline, so that operator symbols align."
 msgstr ""
+"Alinha à linha base matemática para que os símbolos do operador fiquem "
+"alinhados."
 
 #: ../../reference_manual/dockers/text_properties.rst:482
 msgid "Text Top"
-msgstr ""
+msgstr "Topo do texto"
 
 #: ../../reference_manual/dockers/text_properties.rst:483
 msgid "Align to the ascender."
-msgstr ""
+msgstr "Alinha com o ascensor."
 
 #: ../../reference_manual/dockers/text_properties.rst:485
 msgid "Text Bottom"
-msgstr ""
+msgstr "Base do texto"
 
 #: ../../reference_manual/dockers/text_properties.rst:485
 msgid "Align to the descender."
-msgstr ""
+msgstr "Alinha com o descensor."
 
 #: ../../reference_manual/dockers/text_properties.rst:490
 msgid "Dominant Baseline"
-msgstr ""
+msgstr "Linha base dominante"
 
 #: ../../reference_manual/dockers/text_properties.rst:494
 msgid ".. image:: /images/text/baseline-example-devanagari.png"
-msgstr ""
+msgstr ".. image:: /images/text/baseline-example-devanagari.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:494
 msgid ""
@@ -1568,6 +1719,11 @@ msgid ""
 "behaviour, while the bottom sample uses :guilabel:`hanging` over the whole "
 "text, which provides the traditional headstroke alignment."
 msgstr ""
+"Em escritas brâhmicas do norte, como o devanágari, letras de tamanhos "
+"diferentes se alinham na linha de cabeçalho. Nos exemplos aqui apresentados, "
+"o exemplo superior mostra o comportamento padrão, enquanto o exemplo "
+"inferior usa :guilabel:`hanging` sobre todo o texto, o que proporciona o "
+"alinhamento tradicional da linha de cabeçalho."
 
 #: ../../reference_manual/dockers/text_properties.rst:496
 msgid ""
@@ -1577,10 +1733,15 @@ msgid ""
 "`Alphabetic` in horizontal and :guilabel:`Central` in vertical :ref:"
 "`text_property_writing_mode`."
 msgstr ""
+"A linha de base dominante especifica como trechos de texto de tamanhos "
+"diferentes são alinhados. Ela também é o padrão para :ref:"
+"`text_property_alignment_baseline`. Possui um valor único, :guilabel:`Auto`, "
+"que se traduz em :guilabel:`Alfabético` na horizontal e :guilabel:`Central` "
+"na vertical em :ref:`text_property_writing_mode`."
 
 #: ../../reference_manual/dockers/text_properties.rst:501
 msgid "Alignment Baseline"
-msgstr ""
+msgstr "Linha base de alinhamento"
 
 #: ../../reference_manual/dockers/text_properties.rst:503
 msgid ""
@@ -1589,82 +1750,103 @@ msgid ""
 "means it will take its value from the :ref:`text_property_dominant_baseline` "
 "property."
 msgstr ""
+"A linha de base de alinhamento permite controlar como esse intervalo de "
+"texto é alinhado ao texto principal. Ela possui uma propriedade única, :"
+"guilabel:`Linha de base`, que significa que seu valor será proveniente da "
+"propriedade `:ref:`text_property_dominant_baseline`."
 
 #: ../../reference_manual/dockers/text_properties.rst:505
 msgid ""
 "Alignment baseline does not inherit. Instead, child text will try to align "
 "to the specified baseline of the parent text."
 msgstr ""
+"A linha de base de alinhamento não é herdada. Em vez disso, o texto filho "
+"tentará se alinhar à linha de base especificada do texto pai."
 
 #: ../../reference_manual/dockers/text_properties.rst:510
 msgid "Baseline Shift"
-msgstr ""
+msgstr "Deslocamento da linha base"
 
 #: ../../reference_manual/dockers/text_properties.rst:512
 msgid ""
 "Baseline shift allows moving the text away from the baseline, either by "
 "predefined super and subscript values, or by a fixed amount."
 msgstr ""
+"O deslocamento da linha base permite mover o texto para longe da linha base, "
+"seja por valores predefinidos de sobre e subscrito, ou por uma quantidade "
+"fixa."
 
 #: ../../reference_manual/dockers/text_properties.rst:514
 msgid "Length"
-msgstr ""
+msgstr "Comprimento"
 
 #: ../../reference_manual/dockers/text_properties.rst:515
 msgid "Shift text by a specified amount."
-msgstr ""
+msgstr "Desloca o texto por uma quantidade específica."
 
 #: ../../reference_manual/dockers/text_properties.rst:517
 msgid ""
 "Shift text so it aligns to the inherited super script offset. Said value is "
 "retrieved from the font."
 msgstr ""
+"Desloca o texto para que fique alinhado ao deslocamento do sobrescrito "
+"herdado. Esse valor é obtido da fonte."
 
 #: ../../reference_manual/dockers/text_properties.rst:519
 msgid ""
 "Shift text so it aligns to the inherited sub script offset. Said value is "
 "retrieved from the font."
 msgstr ""
+"Desloca o texto para que fique alinhado ao deslocamento do subscrito "
+"herdado. Esse valor é obtido da fonte."
 
 #: ../../reference_manual/dockers/text_properties.rst:521
 msgid ""
 "Baseline shift does not inherit. Instead, shifts will be added to one "
 "another, allowing the following:"
 msgstr ""
+"O deslocamento de linha de base não é herdado. Em vez disso, as mudanças "
+"serão adicionadas umas às outras, permitindo o seguinte:"
 
 #: ../../reference_manual/dockers/text_properties.rst:525
 msgid ".. image:: /images/text/baseline-nested-super-script.png"
-msgstr ""
+msgstr ".. image:: /images/text/baseline-nested-super-script.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:525
 msgid ""
 "Nested baseline-shift super definitions. This is only possible by editing "
 "the text with the SVG source editor."
 msgstr ""
+"Superdefinições de deslocamento de linha de base aninhadas. Isso só é "
+"possível editando o texto com o editor de código-fonte SVG."
 
 #: ../../reference_manual/dockers/text_properties.rst:530
 msgid "White Space"
-msgstr ""
+msgstr "Espaço em Branco"
 
 #: ../../reference_manual/dockers/text_properties.rst:532
 msgid ""
 "The CSS white space rule controls how multiples of spaces are handled, and "
 "whether the text can wrap."
 msgstr ""
+"A regra de espaço em branco do CSS controla como múltiplos de espaços são "
+"tratados e se o texto pode ser quebrado."
 
 #: ../../reference_manual/dockers/text_properties.rst:534
 msgid "By default, this property is hidden."
-msgstr ""
+msgstr "Por padrão, essa propriedade está oculta."
 
 #: ../../reference_manual/dockers/text_properties.rst:539
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
 
 #: ../../reference_manual/dockers/text_properties.rst:541
 msgid ""
 "The language of this text shape. Language affects a number of properties, "
 "like glyph shape, upper- and lowercase and line breaking."
 msgstr ""
+"O idioma desta forma de texto. O idioma afeta uma série de propriedades, "
+"como formato do glifo, letras maiúsculas e minúsculas e quebra de linha."
 
 #: ../../reference_manual/dockers/text_properties.rst:543
 msgid ""
@@ -1673,6 +1855,10 @@ msgid ""
 "code. Typing a language name or code into the text input will show a "
 "filtered search pop-up."
 msgstr ""
+"O campo de entrada de texto permite digitar qualquer código `BCP 47 <https://"
+"en.wikipedia.org/wiki/BCP47>` válido. Ao pressionar :kbd:`enter`, o Krita "
+"analisará o código. Digitar o nome ou código de um idioma no campo de "
+"entrada de texto exibirá uma janela de pesquisa filtrada."
 
 #: ../../reference_manual/dockers/text_properties.rst:545
 msgid ""
@@ -1680,6 +1866,11 @@ msgid ""
 "session, as well as stored locales. By toggling the check box in front of a "
 "locale, you can indicate that they need to be stored for future sessions."
 msgstr ""
+"Ao pressionar a seta para baixo, serão exibidas todas as configurações "
+"regionais usadas anteriormente nesta sessão, bem como as configurações "
+"regionais armazenadas. Ao marcar a caixa de seleção em frente a uma "
+"configuração regional, você pode indicar que ela precisa ser armazenada para "
+"sessões futuras."
 
 #: ../../reference_manual/dockers/text_properties.rst:547
 msgid ""
@@ -1689,10 +1880,15 @@ msgid ""
 "script being used has changed over the years. The script dropdown allows "
 "setting the script in these cases."
 msgstr ""
+"Há também um menu suspenso :guilabel:`Script`. Normalmente, é possível "
+"deduzir o alfabeto a partir do idioma e do país. No entanto, em alguns "
+"lugares, alfabetos diferentes podem ser usados ​​para o mesmo idioma e, às "
+"vezes, o alfabeto principal usado mudou ao longo dos anos. O menu suspenso "
+"de alfabeto permite definir o alfabeto nesses casos."
 
 #: ../../reference_manual/dockers/text_properties.rst:552
 msgid "Fill"
-msgstr ""
+msgstr "Preenchimento"
 
 #: ../../reference_manual/dockers/text_properties.rst:554
 msgid ""
@@ -1700,10 +1896,14 @@ msgid ""
 "to use the :ref:`shape_selection_tool` to set it on the paragraph, or change "
 "the foreground color with any of the color selectors."
 msgstr ""
+"Atualmente, não é possível definir a cor de preenchimento com o painel de "
+"propriedades de texto. Você precisará usar a :ref:`shape_selection_tool` "
+"para defini-la no parágrafo ou alterar a cor de primeiro plano com qualquer "
+"um dos seletores de cor."
 
 #: ../../reference_manual/dockers/text_properties.rst:559
 msgid "Stroke"
-msgstr ""
+msgstr "Traço"
 
 #: ../../reference_manual/dockers/text_properties.rst:561
 msgid ""
@@ -1711,30 +1911,39 @@ msgid ""
 "will need to use the :ref:`shape_selection_tool` to set it, or use the :ref:"
 "`svg_source_editor` in the text tool to manually set a stroke."
 msgstr ""
+"Atualmente, não é possível configurar o traço com o painel de propriedades "
+"de texto. Você precisará usar a :ref:`shape_selection_tool` para configurá-"
+"lo ou usar o editor de código-fonte SVG na ferramenta de texto para definir "
+"o traço manualmente."
 
 #: ../../reference_manual/dockers/text_properties.rst:566
 msgid "Paragraph Properties"
-msgstr ""
+msgstr "Propriedades de parágrafo"
 
 #: ../../reference_manual/dockers/text_properties.rst:568
 msgid ""
 "Paragraph properties are the properties that can only be applied over a "
 "whole text shape."
 msgstr ""
+"As propriedades de parágrafo são propriedades que só podem ser aplicadas a "
+"uma forma de texto completo."
 
 #: ../../reference_manual/dockers/text_properties.rst:573
 msgid "Writing Mode"
-msgstr ""
+msgstr "Modo de escrita"
 
 #: ../../reference_manual/dockers/text_properties.rst:575
 msgid ""
 "Writing Mode sets whether the text flows horizontally or vertically, and in "
 "the latter case, whether the block flows right-to-left or left-to-right."
 msgstr ""
+"O modo de escrita define se o texto flui horizontalmente ou verticalmente e, "
+"neste último caso, se o bloco flui da direita para a esquerda ou da esquerda "
+"para a direita."
 
 #: ../../reference_manual/dockers/text_properties.rst:577
 msgid "See also :ref:`text_property_direction`."
-msgstr ""
+msgstr "Veja também :ref:`text_property_direction`."
 
 #: ../../reference_manual/dockers/text_properties.rst:579
 msgid ""
@@ -1742,10 +1951,13 @@ msgid ""
 "text when it is typeset vertically. Krita does not current support this "
 "feature, but it is planned in the future."
 msgstr ""
+"Um recurso relacionado é a \"Orientação do texto\", que permite girar o "
+"texto horizontal quando ele é formatado verticalmente. O Krita não oferece "
+"suporte a esse recurso atualmente, mas está planejado para o futuro."
 
 #: ../../reference_manual/dockers/text_properties.rst:584
 msgid "Text Indent"
-msgstr ""
+msgstr "Recuo de texto"
 
 #: ../../reference_manual/dockers/text_properties.rst:586
 msgid ""
@@ -1753,35 +1965,43 @@ msgid ""
 "the text is wrapping. The main control is a slider defining the size of the "
 "indent. There's two more advanced controls:"
 msgstr ""
+"O recuo de texto permite definir o recuo no início da linha. Funciona apenas "
+"quando o texto está sendo quebrado em várias linhas. O controle principal é "
+"um controle deslizante que define o tamanho do recuo. Existem dois controles "
+"mais avançados:"
 
 #: ../../reference_manual/dockers/text_properties.rst:588
 msgid "Hanging Indentation"
-msgstr ""
+msgstr "Recuo suspenso"
 
 #: ../../reference_manual/dockers/text_properties.rst:589
 msgid ""
 "This does not apply indentation to the stating line, but instead the "
 "subsequent lines."
-msgstr ""
+msgstr "Isso não aplica recuo à linha inicial, mas sim às linhas subsequentes."
 
 #: ../../reference_manual/dockers/text_properties.rst:591
 msgid "Indent after hard breaks"
-msgstr ""
+msgstr "Recuo após quebras rígidas"
 
 #: ../../reference_manual/dockers/text_properties.rst:591
 msgid ""
 "This makes it so each line after a hard break qualifies as a starting lines. "
 "Frequently used for poetry."
 msgstr ""
+"Isso faz com que cada linha após uma quebra rígida seja considerada uma "
+"linha inicial. Frequentemente usado em poesia."
 
 #: ../../reference_manual/dockers/text_properties.rst:596
 #: ../../reference_manual/dockers/text_properties.rst:604
 msgid "Text Align"
-msgstr ""
+msgstr "Alinhamento do texto"
 
 #: ../../reference_manual/dockers/text_properties.rst:598
 msgid "Text Align sets the alignment for the given block of characters."
 msgstr ""
+"Alinhamento de texto define o alinhamento para o bloco de caracteres "
+"fornecido."
 
 #: ../../reference_manual/dockers/text_properties.rst:600
 msgid ""
@@ -1790,29 +2010,37 @@ msgid ""
 "right-to-left text, start will be the same as align right. The final button "
 "is the justification toggle."
 msgstr ""
+"O controle principal exibe três botões que correspondem a início, meio e "
+"fim. Essas propriedades são afetadas pela direção, o que significa que, para "
+"texto da direita para a esquerda, o botão de início será o mesmo que o de "
+"alinhamento à direita. O último botão ativa/desativa a justificação."
 
 #: ../../reference_manual/dockers/text_properties.rst:602
 msgid "Opening the advanced settings shows the following:"
-msgstr ""
+msgstr "Ao abrir as configurações avançadas, é exibido o seguinte:"
 
 #: ../../reference_manual/dockers/text_properties.rst:605
 msgid ""
 "This allows you to set the text alignment when text is wrapped in a shape."
 msgstr ""
+"Isso permite definir o alinhamento do texto quando ele estiver inserido em "
+"uma forma."
 
 #: ../../reference_manual/dockers/text_properties.rst:606
 msgid "Align Last"
-msgstr ""
+msgstr "Alinhar por último"
 
 #: ../../reference_manual/dockers/text_properties.rst:607
 msgid ""
 "When :guilabel:`Text Align` is set to :guilabel:`Justified`, this controls "
 "what to do with the final line."
 msgstr ""
+"Quando :guilabel:`Alinhamento de texto` está definido como :guilabel:"
+"`Justificado`, isso controla o que fazer com a última linha."
 
 #: ../../reference_manual/dockers/text_properties.rst:609
 msgid "Text Anchor"
-msgstr ""
+msgstr "Âncora do texto"
 
 #: ../../reference_manual/dockers/text_properties.rst:609
 msgid ""
@@ -1823,20 +2051,31 @@ msgid ""
 "text. You can use :guilabel:`Text Anchor` to set the anchor for each line, "
 "as long as the text is not being auto wrapped."
 msgstr ""
+"A âncora de texto controla como o texto é ancorado, em vez de alinhado. Ela "
+"se assemelha um pouco a :guilabel:`Alinhamento de texto`, pois permite que o "
+"texto flua da esquerda para a direita, mas enquanto :guilabel:`Alinhamento "
+"de texto` alinha dentro de um espaço, :guilabel:`Âncora de texto` é relativa "
+"ao ponto inicial do texto. Você pode usar :guilabel:`Âncora de texto` para "
+"definir a âncora de cada linha, desde que o texto não esteja sendo quebrado "
+"automaticamente."
 
 #: ../../reference_manual/dockers/text_properties.rst:611
 msgid ""
 "This means that there's no justification for text that is not wrapped in "
 "shape."
 msgstr ""
+"Isso significa que não há justificativa para texto que não esteja delimitado "
+"por uma forma."
 
 #: ../../reference_manual/dockers/text_properties.rst:613
 msgid "By default, this property is always visible, even when not set."
 msgstr ""
+"Por padrão, essa propriedade está sempre visível, mesmo quando não está "
+"definida."
 
 #: ../../reference_manual/dockers/text_properties.rst:618
 msgid "Hanging Punctuation"
-msgstr ""
+msgstr "Pontuação deslocada"
 
 #: ../../reference_manual/dockers/text_properties.rst:620
 msgid ""
@@ -1844,40 +2083,49 @@ msgid ""
 "as commas. This implementation only implements East-Asian style hanging "
 "punctuation."
 msgstr ""
+"A pontuação deslocada permite a suspensão de pontuação de abertura e "
+"fechamento, bem como vírgulas. Esta implementação implementa apenas a "
+"pontuação deslocada no estilo do Leste Asiático."
 
 #: ../../reference_manual/dockers/text_properties.rst:622
 msgid "Hang first"
-msgstr ""
+msgstr "Primeiro deslocamento"
 
 #: ../../reference_manual/dockers/text_properties.rst:623
 msgid ""
 "Opening punctuation such as opening quotes or opening brackets at the start "
 "of the paragraph will be hung."
 msgstr ""
+"A pontuação inicial, como aspas ou parênteses no início do parágrafo, será "
+"mantida."
 
 #: ../../reference_manual/dockers/text_properties.rst:624
 msgid "Line end"
-msgstr ""
+msgstr "Fim da linha"
 
 #: ../../reference_manual/dockers/text_properties.rst:625
 msgid ""
 "This toggle will allow or force commas and periods to hang at the end of any "
 "line."
 msgstr ""
+"Esta opção permite ou força a exibição de vírgulas e pontos no final de "
+"qualquer linha."
 
 #: ../../reference_manual/dockers/text_properties.rst:627
 msgid ""
 "Closing punctuation such as closing quotes or closing brackets at the end of "
 "the paragraph will be hung."
 msgstr ""
+"A pontuação final, como aspas ou parênteses, no final do parágrafo, será "
+"mantida."
 
 #: ../../reference_manual/dockers/text_properties.rst:628
 msgid "Hang last"
-msgstr ""
+msgstr "Último deslocamento"
 
 #: ../../reference_manual/dockers/text_properties.rst:633
 msgid "Tab Size"
-msgstr ""
+msgstr "Tamanho da tabulação"
 
 #: ../../reference_manual/dockers/text_properties.rst:635
 msgid ""
@@ -1886,25 +2134,35 @@ msgid ""
 "to the nearest multiple of the reference size. Its main use case is to align "
 "columns of information without resorting to tables."
 msgstr ""
+"O tamanho da tabulação permite definir o tamanho dos caracteres de "
+"tabulação. Os caracteres de tabulação (inseridos com `:kbd:`tab`) são um "
+"tipo de espaço em branco que se ajusta ao múltiplo mais próximo do tamanho "
+"de referência. Sua principal utilidade é alinhar colunas de informações sem "
+"recorrer a tabelas."
 
 #: ../../reference_manual/dockers/text_properties.rst:637
 msgid ""
 "Tab size has one unique unit: :guilabel:`Sp`. This means the tab size uses "
 "the current advance of the space character as unit."
 msgstr ""
+"O tamanho da tabulação tem uma unidade única: :guilabel:`Sp`. Isso significa "
+"que o tamanho da tabulação usa o avanço atual do caractere de espaço como "
+"unidade."
 
 #: ../../reference_manual/dockers/text_properties.rst:642
 msgid "Text Rendering"
-msgstr ""
+msgstr "Renderização de texto"
 
 #: ../../reference_manual/dockers/text_properties.rst:644
 msgid ""
 "Text Rendering controls the hinting and rendering style for the text shape."
 msgstr ""
+"A renderização de texto controla o estilo de hinting e renderização da forma "
+"do texto."
 
 #: ../../reference_manual/dockers/text_properties.rst:646
 msgid "Optimize Speed"
-msgstr ""
+msgstr "Otimizar velocidade"
 
 #: ../../reference_manual/dockers/text_properties.rst:647
 msgid ""
@@ -1913,10 +2171,14 @@ msgid ""
 "pixel. This allows for pixel art fonts to look good, as well as being the "
 "fastest to render option."
 msgstr ""
+"O estilo de hinting para bitmaps monocromáticos é usado e o anti-aliasing é "
+"desativado. O Krita também se encarregará de alinhar os glifos ao pixel mais "
+"próximo. Isso permite que as fontes de arte de pixel tenham uma boa "
+"aparência, além de ser a opção de renderização mais rápida."
 
 #: ../../reference_manual/dockers/text_properties.rst:648
 msgid "Optimize Legibility"
-msgstr ""
+msgstr "Otimizar legibilidade"
 
 #: ../../reference_manual/dockers/text_properties.rst:649
 msgid ""
@@ -1924,22 +2186,26 @@ msgid ""
 "hinting only happens vertically. Krita will additionally snap relevant "
 "metrics in these directions."
 msgstr ""
+"Nos modos de escrita vertical, o hinting completo está ativado, enquanto "
+"que, para escrita horizontal, a sugestão de formatação ocorre apenas "
+"verticalmente. O Krita também ajustará as métricas relevantes nessas "
+"direções."
 
 #: ../../reference_manual/dockers/text_properties.rst:650
 msgid "Geometric Precision"
-msgstr ""
+msgstr "Precisão geométrica"
 
 #: ../../reference_manual/dockers/text_properties.rst:651
 msgid "No hinting is performed at all."
-msgstr ""
+msgstr "Nenhum hinting é executado."
 
 #: ../../reference_manual/dockers/text_properties.rst:653
 msgid "Same as :guilabel:`Geometric Precision`."
-msgstr ""
+msgstr "O mesmo que :guilabel:`Precisão geométrica`."
 
 #: ../../reference_manual/dockers/text_properties.rst:657
 msgid ".. image:: /images/text/unifont-text-rendering-example.png"
-msgstr ""
+msgstr ".. image:: /images/text/unifont-text-rendering-example.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:657
 msgid ""
@@ -1949,89 +2215,105 @@ msgid ""
 "`text_property_baseline_shift`, :ref:`text_property_letter_spacing` and :ref:"
 "`text_property_line_height` will look good."
 msgstr ""
+"O slogan do Krita em vários scripts, tipografado com a fonte pixelada "
+"“Unifont”. Ao usar :guilabel:`Otimizar velocidade`, o Krita sabe que não "
+"deve apenas desativar o anti-aliasing, mas também tentará ajustar os glifos "
+"para que :ref:`text_property_baseline_shift`, :ref:"
+"`text_property_letter_spacing` e :ref:`text_property_line_height` fiquem com "
+"boa aparência."
 
 #: ../../reference_manual/dockers/text_properties.rst:662
 msgid "Text Area"
-msgstr ""
+msgstr "Área de texto"
 
 #: ../../reference_manual/dockers/text_properties.rst:664
 msgid "These properties are related to :ref:`text_in_shape`."
-msgstr ""
+msgstr "Essas propriedades estão relacionadas a :ref:`text_in_shape`."
 
 #: ../../reference_manual/dockers/text_properties.rst:666
 msgid "Shape Padding"
-msgstr ""
+msgstr "Espaçamento da forma"
 
 #: ../../reference_manual/dockers/text_properties.rst:667
 msgid "This is the padding that is calculated on the Inside shapes."
-msgstr ""
+msgstr "Este é o espaçamento calculado nas formas internas."
 
 #: ../../reference_manual/dockers/text_properties.rst:669
 msgid "Shape Margin"
-msgstr ""
+msgstr "Margem da forma"
 
 #: ../../reference_manual/dockers/text_properties.rst:669
 msgid ""
 "This is margin around the \"Subtract\" shapes that is added before they are "
 "removed from the \"Inside\" shapes."
 msgstr ""
+"Esta é a margem em torno das formas \"Subtrair\" que é adicionada antes de "
+"serem removidas das formas \"Internas\"."
 
 #: ../../reference_manual/dockers/text_properties.rst:674
 msgid "Style Presets"
-msgstr ""
+msgstr "Predefinições do estilo"
 
 #: ../../reference_manual/dockers/text_properties.rst:676
 msgid ""
 ":ref:`resource_style_presets` allow storing combinations of properties for "
 "later use. See that page for information about editing style presets."
 msgstr ""
+":ref:`resource_style_presets` permitem armazenar combinações de propriedades "
+"para uso posterior. Consulte essa página para obter informações sobre como "
+"editar predefinições de estilo."
 
 #: ../../reference_manual/dockers/text_properties.rst:678
 msgid ""
 "|mouseleft| an entry will select it for editing, while double |mouseleft| "
 "will apply the active properties onto the text."
 msgstr ""
+"|mouseleft| para selecionar uma entrada para edição, enquanto |mouseleft| "
+"duplo para aplicar as propriedades ativas ao texto."
 
 #: ../../reference_manual/dockers/text_properties.rst:680
 msgid "The buttons at the bottom allow modifying the style presets:"
 msgstr ""
+"Os botões na parte inferior permitem modificar as predefinições de estilo:"
 
 #: ../../reference_manual/dockers/text_properties.rst:682
 msgid "Import Style Presets"
-msgstr ""
+msgstr "Importar predefinições de estilo"
 
 #: ../../reference_manual/dockers/text_properties.rst:683
 msgid "Import an SVG with a style preset definition inside."
 msgstr ""
+"Importa um arquivo SVG com uma definição de estilo predefinida em seu "
+"interior."
 
 #: ../../reference_manual/dockers/text_properties.rst:684
 msgid "Delete Style Presets"
-msgstr ""
+msgstr "Excluir predefinições de estilo"
 
 #: ../../reference_manual/dockers/text_properties.rst:685
 msgid "Disable a given style preset."
-msgstr ""
+msgstr "Desativa uma determinada predefinição de estilo."
 
 #: ../../reference_manual/dockers/text_properties.rst:686
 msgid "Create Style Preset"
-msgstr ""
+msgstr "Criar predefinição de estilo"
 
 #: ../../reference_manual/dockers/text_properties.rst:687
 msgid "Creates a style preset from the current settings."
-msgstr ""
+msgstr "Cria uma predefinição de estilo a partir das configurações atuais."
 
 #: ../../reference_manual/dockers/text_properties.rst:688
 msgid "Clone Preset"
-msgstr ""
+msgstr "Clonar predefinição"
 
 #: ../../reference_manual/dockers/text_properties.rst:689
 msgid "Clones the current presets and shows the edit window."
-msgstr ""
+msgstr "Clona as predefinições atuais e exibe a janela de edição."
 
 #: ../../reference_manual/dockers/text_properties.rst:691
 msgid "Edits the current selected presets."
-msgstr ""
+msgstr "Edita as predefinições selecionadas no momento."
 
 #: ../../reference_manual/dockers/text_properties.rst:693
 msgid "Edit Preset"
-msgstr ""
+msgstr "Editar predefinição"
