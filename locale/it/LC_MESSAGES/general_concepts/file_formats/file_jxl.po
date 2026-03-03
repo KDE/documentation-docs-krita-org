@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
-# Valter Mura <valtermura@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2026 Valter Mura <valtermura@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2023-07-28 12:03+0200\n"
+"PO-Revision-Date: 2026-03-01 00:29+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:-1
 msgid "The JPEG XL file format in Krita."
@@ -46,14 +46,6 @@ msgid "\\*.jxl"
 msgstr "\\*.jxl"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:19
-#, fuzzy
-#| msgid ""
-#| "JPEG XL (``.jxl``) is a new royalty-free image file format. It supports :"
-#| "ref:`lossy compression mode <lossless_compression>` designed for "
-#| "photographs similar to the :ref:`JPEG <file_jpeg>` file format, and also :"
-#| "ref:`lossless compression mode <lossless_compression>` similar to formats "
-#| "like :ref:`PNG <file_png>`. In addition, it also supports saving "
-#| "animations with multiple frames like :ref:`GIF <file_gif>`."
 msgid ""
 "JPEG XL (``.jxl``) is a new royalty-free image file format. It supports :ref:"
 "`lossy compression mode <lossless_compression>` designed for photographs "
@@ -69,7 +61,8 @@ msgstr ""
 "`JPEG <file_jpeg>`, e anche la :ref:`modalità di compressione senza perdita "
 "di dati <lossless_compression>`, simile ai formati come :ref:`PNG "
 "<file_png>`. In aggiunta, supporta anche il salvataggio delle animazioni con "
-"fotogrammi multipli come :ref:`GIF <file_gif>`."
+"fotogrammi multipli come :ref:`GIF <file_gif>` o dell'immagine raster "
+"semplice con più livelli senza animazione."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:21
 msgid ""
@@ -171,31 +164,23 @@ msgstr ""
 "lunghi."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:39
-#, fuzzy
-#| msgid "Flatten the image"
 msgid "Flattened image"
-msgstr "Appiattisci l'immagine"
+msgstr "Immagine appiattita"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:40
 msgid ""
 "Flatten the image and save as single layer image (default). This is the "
 "recommended option for static image web delivery and sharing in general."
 msgstr ""
+"Appiattisce l'immagine e la salva come livello singolo (predefinito). È "
+"l'opzione raccomandata per l'invio web e la condivisione di immagini animate "
+"in generale."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:41
 msgid "Animated image"
-msgstr ""
+msgstr "Immagine animata"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:42
-#, fuzzy
-#| msgid ""
-#| "JPEG XL has the ability to store small animations like :ref:`file_gif`. "
-#| "Its animation capabilities are simple though, and specifically designed "
-#| "for stylized content that doesn't have a lot of colors, like cel-"
-#| "animation. This is because JPEG XL doesn't have intra-frame prediction, "
-#| "which is the best way to store video files with a lot of colors like 3D "
-#| "animation, film and painterly animation. We recommend you try using video "
-#| "rendering for painterly animation instead."
 msgid ""
 "Flatten the image and render animation frames as animated image. JPEG XL has "
 "the ability to store small animations like :ref:`file_gif`. Its animation "
@@ -207,35 +192,34 @@ msgid ""
 "painterly animation instead. This is the recommended option for animated "
 "image web delivery and sharing in general."
 msgstr ""
-"JPEG XL ha la capacità di memorizzare piccole animazioni come :ref:"
+"Appiattisce l'immagine e rende i fotogrammi di animazione come immagine "
+"animata. JPEG XL ha la capacità di memorizzare piccole animazioni come :ref:"
 "`file_gif`. Le sue capacità di animazione sono tuttavia semplici, e studiate "
 "principalmente per contenuti stilizzati con pochi colori, come l'animazione "
 "su rodovetro (cel-animation). Questo perché JPEG XL non possiede una "
 "predizione intra-fotogramma, che è il modo migliore per memorizzare file "
 "video con un sacco di colori tipo l'animazione in 3D, film e l'animazione "
 "pittorica. Per l'animazione pittorica raccomandiamo invece di provare "
-"utilizzando la resa video."
+"utilizzando la resa video. È l'opzione raccomandata per l'invio web e la "
+"condivisione di immagini animate in generale."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:44
 msgid ""
 "Rasterize layers (including group and filter layers) and save as multi-"
 "layered image."
 msgstr ""
+"Rasterizza i livelli (inclusi i livelli filtro e di gruppo) e salva come "
+"immagine con più livelli."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:46
-#, fuzzy
-#| msgid ""
-#| "If disabled, JPEG XL has the ability to store frames as layers if it's "
-#| "not being used as animation, this can be useful to store multi-page "
-#| "images like :ref:`file_tif`."
 msgid ""
 "JPEG XL has the ability to store frames as layers if it's not being used as "
 "animation, this can be useful to store multi-layered images like :ref:"
 "`file_tif`."
 msgstr ""
-"Se disattivata, JPEG XL ha la capacità di memorizzare i fotogrammi come "
-"livelli, se non si stanno utilizzando come animazione; può risultare utile "
-"per memorizzare immagini a più pagine tipo :ref:`file_tif`."
+"JPEG XL ha la capacità di memorizzare i fotogrammi come livelli, se non si "
+"stanno utilizzando come animazione; può risultare utile per memorizzare "
+"immagini con più livelli tipo :ref:`file_tif`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:48
 msgid ""
@@ -273,7 +257,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:53
 msgid "Multi-layered image"
-msgstr ""
+msgstr "Immagine con più livelli"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:53
 msgid ""
@@ -296,6 +280,8 @@ msgid ""
 "Rasterize layers (including group and filter layers) and save as multi-page "
 "image."
 msgstr ""
+"Rasterizza i livelli (inclusi i livelli filtro e di gruppo) e salva come "
+"immagine con più pagine."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:58
 msgid ""
@@ -303,18 +289,22 @@ msgid ""
 "frames with maximum duration instead. This is a compatibility option for "
 "editor/viewer that didn't support opening multi-layered JPEG XL images."
 msgstr ""
+"Simile all'immagine con più livelli, ma questa opzione salva invece i "
+"livelli come fotogrammi animati con durata massima. Questa è un'opzione di "
+"compatibilità per i visori/editor che non supportano l'apertura di immagini "
+"JPEG XL con più livelli."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:60
 msgid "Multi-paged image"
-msgstr ""
+msgstr "Immagine con più pagine"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:60
 msgid "Same layering limitations above also applied to this option."
-msgstr ""
+msgstr "Le stesse limitazioni sui livelli si applicano anche a questa opzione."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:62
 msgid "Save as"
-msgstr ""
+msgstr "Salva come"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:65
 msgid "Lossy encoding"
@@ -361,7 +351,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:75
 msgid "Lossless alpha"
-msgstr ""
+msgstr "Alfa senza perdita di dati"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:75
 msgid ""
@@ -369,6 +359,11 @@ msgid ""
 "Lossy encoding. If enabled, this option will set alpha channel to lossless "
 "(uncompressed). Useful to reduce transparency artifact on lossy export."
 msgstr ""
+"Per impostazione predefinita, anche il canale alfa (trasparenza) sarà "
+"compresso quando si utilizza la codifica «con perdita di dati». Se "
+"abilitata, questa opzione imposterà il canale alfa a «senza perdita di "
+"dati» (non compresso). Utile per ridurre gli artefatti di trasparenza "
+"nell'esportazione con perdita di dati."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:80
 msgid ""
@@ -493,7 +488,7 @@ msgstr "Impostazioni di conversione"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:101
 msgid "(Lossless) Use CICP instead of ICC if possible"
-msgstr ""
+msgstr "(Senza perdita di dati) Usa CICP al posto di ICC, se possibile"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:101
 msgid ""
@@ -502,14 +497,19 @@ msgid ""
 "If there's no equivalent CICP values, ICC will still be saved instead. This "
 "is particularly useful for web delivery."
 msgstr ""
+"Se abilitata, Krita tenterà di convertire il profilo ICC del documento nei "
+"valori CICP equivalenti per risparmiare più spazio quando si esporta nel "
+"formato JPEG XL senza perdita di dati. Se non ci sono valori CICP "
+"equivalenti, verrà comunque salvato il valore ICC. Ciò è particolarmente "
+"utile per l'invio via web."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:102
 msgid "Color profile"
-msgstr ""
+msgstr "Profilo del colore"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:105
 msgid "HDR conversion"
-msgstr ""
+msgstr "Conversione HDR"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:105
 msgid ""
