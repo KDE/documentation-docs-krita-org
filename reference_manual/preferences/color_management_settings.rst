@@ -144,7 +144,7 @@ Canvas surface color space
 
     Preferred by operating system
         The image data will be sent to the compositor in the format preferred 
-        by the compositor itself. In most of the cases it wil be the most
+        by the compositor itself. In most of the cases it will be the most
         efficient way of communication between Krita and the compositor.
         
         The exact format preferred by the compositor can be seen at the bottom
