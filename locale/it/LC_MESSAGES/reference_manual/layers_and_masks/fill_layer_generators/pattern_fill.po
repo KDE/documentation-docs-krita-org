@@ -1,14 +1,14 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2020.
-# SPDX-FileCopyrightText: 2025 Valter Mura <valtermura@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Valter Mura <valtermura@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2025-06-14 18:23+0200\n"
+"PO-Revision-Date: 2026-03-03 12:58+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:-1
 msgid "How to use Pattern fill generation in Krita."
@@ -27,10 +27,8 @@ msgid ".. image:: /images/layers/pattern_fill_transform.png"
 msgstr ".. image:: /images/layers/pattern_fill_transform.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:0
-#, fuzzy
-#| msgid ".. image:: /images/layers/pattern_fill_transform.png"
 msgid ".. image:: /images/layers/pattern_fill_align_pixel_grid.png"
-msgstr ".. image:: /images/layers/pattern_fill_transform.png"
+msgstr ".. image:: /images/layers/pattern_fill_align_pixel_grid.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:11
 msgid "Pattern"
@@ -100,6 +98,16 @@ msgid ""
 "pattern corners are ensured to fall at integer coordinates after the "
 "transformation."
 msgstr ""
+"Quando a un motivo viene applicata una trasformazione geometrica, gli angoli "
+"dell'immagine ripetuta potrebbero essere spostati in una nuova posizione, "
+"incluse le coordinate frazionali (sotto-pixel, non coordinate di interi). "
+"Questo è il comportamento predefinito e va bene la maggior parte delle "
+"volte. Ma vi sono casi in cui è preferibile che gli angoli terminino alle "
+"coordinate di interi. Per esempio, quando è necessaria la ripetibilità "
+"esatta con precisione del pixel. Questo risultato può essere raggiunto "
+"attivando l'opzione :guilabel:`Allinea alla griglia dei pixel`. In questo "
+"modo, è certo che gli angoli dei motivi ricadono nelle coordinate degli "
+"interi dopo la trasformazione."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:35
 msgid ""
@@ -110,6 +118,12 @@ msgid ""
 "possibility of setting this alignment over a number of repetitions of the "
 "pattern the corners should be aligned."
 msgstr ""
+"Tieni presente questo allineamento riduce il numero di trasformazioni "
+"possibili (di fatto, tutte quelle trasformazioni che mappano gli angoli alle "
+"coordinate frazionali sono rimosse), la trasformazioni allineata "
+"approssimerà quella non allineata il più vicino possibile. Esiste anche la "
+"possibilità di impostare questo allineamento su un numero di ripetizioni del "
+"motivo a cui gli angoli devono essere allineati."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:37
 msgid ""
@@ -117,6 +131,10 @@ msgid ""
 "example those used for screentones, or when the pattern is scaled down to be "
 "really small, since it helps reducing some artifacts like moiré patterns."
 msgstr ""
+"Questa opzione è particolarmente utile quando si lavoro con motivi piccoli, "
+"per esempio quelli utilizzati per i retini, o quando il motivo è ridotto a "
+"dimensioni piuttosto piccole, in quanto aiuta a ridurre certi artefatti come "
+"i motivi moiré."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:41
 msgid ""
@@ -129,6 +147,16 @@ msgid ""
 "alignment is on, then that block is repeated exactly through the image, but "
 "when it is off, every instance of the pattern is rendered slightly different."
 msgstr ""
+"Questa immagine mostra un livello Riempimento a motivo che utilizza "
+"l'immagine di una faccina. Essa viene trasformata riducendola al 75% e "
+"ruotandola di 34 gradi. Sulla sinistra non viene applicato alcun "
+"allineamento, sulla destra l'allineamento è attivo e impostato ogni due "
+"ripetizioni, sia orizzontalmente sia verticalmente. Le linee blu sono gli "
+"indicatori della griglia dei pixel e quelli rossi indicano un blocco di due "
+"per due ripetizioni, i cui angoli sono allineati alla griglia dei pixel. "
+"Nota che, quando l'allineamento è attivo il blocco viene ripetuto "
+"esattamente attraverso l'immagine; quando l'allineamento è disattivo ogni "
+"istanza del motivo viene resa in modo leggermente differente."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:42
 msgid "Transform"
@@ -136,7 +164,7 @@ msgstr "Trasforma"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:42
 msgid "Align to pixel grid"
-msgstr ""
+msgstr "Allinea alla griglia dei pixel"
 
 #, fuzzy
 #~| msgid ".. image:: images/layers/pattern_fill_transform.png"
