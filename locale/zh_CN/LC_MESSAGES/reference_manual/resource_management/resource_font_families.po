@@ -15,33 +15,32 @@ msgstr ""
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-trunk/messages/documentation-docs-krita-org/"
-"docs_krita_org_reference_manual___resource_management___resource_font_families."
-"pot\n"
+"docs_krita_org_reference_manual___resource_management___resource_font_families.pot\n"
 "X-Crowdin-File-ID: 60010\n"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:-1
 msgid "Understanding font families inside Krita."
-msgstr ""
+msgstr "介绍 Krita 的字体系列资源。"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:10
 msgid "Resources"
-msgstr ""
+msgstr "资源"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:10
 msgid "Text"
-msgstr ""
+msgstr "文本"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:10
 msgid "Fonts"
-msgstr ""
+msgstr "字体"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:15
 msgid "Font Families"
-msgstr ""
+msgstr "字体系列"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:17
 msgid "Since Krita 5.3, Font Families are a resource inside Krita."
-msgstr ""
+msgstr "自 Krita 5.3 版本起，字体系列已成为 Krita 内部的一种资源。"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:19
 msgid ""
@@ -51,6 +50,9 @@ msgid ""
 "you can select fonts as desired while using the text properties like font-"
 "weight and font-style to indicate the weight and width you need."
 msgstr ""
+"字体系列并不只是单个字体文件，它们可以是包含了不同类型的一系列字体的集合。"
+"Krita 会扫描系统中安装的所有字体，将它们整理成合适的层次结构，让您可以按照具"
+"体的文本属性 (如字体粗细和字体样式) 来选择对应的字体。"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:21
 msgid ""
@@ -59,6 +61,9 @@ msgid ""
 "the UI. It will also try to get an appropriate sample for all the scripts "
 "the font supports and display that per-locale."
 msgstr ""
+"字体系列资源的本地化处理与 Krita 的其他部分不同。Krita 会尝试按照给定的区域设"
+"置检索对应的 OpenType 名称，并在用户界面中显示这些本地化名称。它还会尝试获取"
+"字体支持的所有语言的适当示例，并按照给定的区域设置进行显示。"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:23
 msgid ""
@@ -66,10 +71,12 @@ msgid ""
 "in the resource manager. Embedding of Font Families is not supported at this "
 "moment."
 msgstr ""
+"作为资源，字体系列可以在 Krita 的资源管理器中进行搜索、分配标签以及禁用。目"
+"前 Krita 尚不支持在图像中嵌入字体系列资源。"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:26
 msgid "Font Types"
-msgstr ""
+msgstr "字体类型"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:28
 msgid ""
@@ -79,30 +86,37 @@ msgid ""
 "the font is a variable font, or, for color fonts, to indicate which color "
 "technologies are available."
 msgstr ""
+"字体系列选择器会显示字体是老式的位图字体、PostScript 字体还"
+"是 :term:`OpenType` 字体 (可以是 ttf 或 otf 文件)。此外，它还会显示一个图标，"
+"以表明字体是否为可变字体，或者对于彩色字体，表明可用的彩色字体技术。"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:31
 msgid "Bitmap Font"
-msgstr ""
+msgstr "位图字体"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:33
 msgid ""
-"A variety of formats just pixel bitmaps instead of vector shapes for their :"
-"term:`Glyphs`. Krita supports these through :program:`FreeType`."
+"A variety of formats just pixel bitmaps instead of vector shapes for "
+"their :term:`Glyphs`. Krita supports these through :program:`FreeType`."
 msgstr ""
+"涵盖了各种使用位图而不是矢量形状来描述其 :term:`字形` 的字体。Krita 通"
+"过 :program:`FreeType` 来支持位图字体。"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:34
 msgid "PostScript Font"
-msgstr ""
+msgstr "PostScript 字体"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:36
 msgid ""
 "An older vector font format, using the PostScript vector format. These fonts "
 "are much more limited than :term:`OpenType` fonts."
 msgstr ""
+"一种较旧的矢量字体格式，使用 PostScript 矢量格式。这些字体"
+"比 :term:`OpenType` 字体的局限性大得多。"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:37
 msgid "Variable Font"
-msgstr ""
+msgstr "可变字体"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:39
 msgid ""
@@ -110,21 +124,26 @@ msgid ""
 "families, simple variations like width and weights are all included into a "
 "single font. Variable fonts are able to smoothly interpolate between the "
 "different variations, with width and weight becoming an :dfn:`axis` of "
-"variation. It is not limited to these either, other examples include :"
-"guilabel:`Slant` or :guilabel:`Optical Size`. Krita has full support for "
-"these fonts, and their axes can be modified in the :ref:"
-"`text_property_font_style` section of the Text Properties Docker."
+"variation. It is not limited to these either, other examples "
+"include :guilabel:`Slant` or :guilabel:`Optical Size`. Krita has full "
+"support for these fonts, and their axes can be modified in "
+"the :ref:`text_property_font_style` section of the Text Properties Docker."
 msgstr ""
+":term:`OpenType` 可变字体具有特殊性，与普通字体系列不同，诸如宽度和粗细之类的"
+"简单变化都包含在一个字体中。可变字体能够在不同的变化之间平滑地插值，宽度和粗"
+"细成为可变的“轴”，还有 :guilabel:`斜度` 或 :guilabel:`视觉大小` 等属性。"
+"Krita 完全支持这类字体，并且可以在文本属性面板"
+"的 :ref:`text_property_font_style` 部分调整它们的轴。"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:40
 msgid "Color Font"
-msgstr ""
+msgstr "彩色字体"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:42
 msgid ""
 "A font that doesn't just define :term:`Glyphs`, but also the colors on those "
 "glyphs."
-msgstr ""
+msgstr "此类字体不仅定义了 :term:`字形` ，还定义了这些字形的颜色。"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:44
 msgid ""
@@ -132,10 +151,12 @@ msgid ""
 "Colrv0 tables supported. Fonts with only SVG and Colrv1 tables will display "
 "hex blocks when used."
 msgstr ""
+"目前 Krita 并不支持所有彩色字体，仅支持彩色位图字体和 Colrv0 表。仅包含 SVG "
+"和 Colrv1 表的字体在使用时会被显示为十六进制方块。"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:47
 msgid "Adding new fonts"
-msgstr ""
+msgstr "添加新字体"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:49
 msgid ""
@@ -143,6 +164,8 @@ msgid ""
 "the \"fonts\" folder inside the Krita resource directory. The latter is "
 "useful when on a system that doesn't allow installing fonts."
 msgstr ""
+"您可以通过在系统上安装新字体，或者将字体添加到 Krita 资源目录内的“fonts”文件"
+"夹中来添加字体。后一种方法在不允许安装字体的系统上很有用。"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:51
 msgid ""
@@ -150,3 +173,5 @@ msgid ""
 "dynamically. However, while new fonts will appear in the fonts list, "
 "updating old fonts will require a restart of Krita."
 msgstr ""
+"在添加新字体时，Krita 会动态重建内部字体列表。不过，虽然新增的字体会在字体列"
+"表重建后显示，但更新旧字体后则需要重启 Krita 才能生效。"
