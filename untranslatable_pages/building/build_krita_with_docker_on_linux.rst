@@ -108,6 +108,13 @@ Downloading prebuilt Krita dependencies
     # download the deps archive
     ./bin/bootstrap-deps.sh
 
+If you want to build a Qt6 version of krita, instead use this command:
+
+.. code::
+
+    # download the qt6 deps archive
+    ./bin/bootstrap-deps.sh -b transition.now/qt6
+
 .. note::
 
     If you want to build and ASAN-capable build of Krita, then you should make sure that this
@@ -179,6 +186,13 @@ Enter the container and build Krita
 
     # start Krita
     ../krita.appdir/usr/bin/krita
+
+If you have the Qt6 dependencies, you need to pass an aditional CMake argument:
+
+.. code::
+
+   -DBUILD_WITH_QT6=ON
+You can do that by editing the ``~/bin/run_cmake.sh`` file
 
 .. note::
 
