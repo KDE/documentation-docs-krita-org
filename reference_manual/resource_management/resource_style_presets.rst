@@ -37,7 +37,7 @@ Sample Text:
    Sample
       The portion of the sample that the preset is applied to.
    After
-      Only visible when the type is "character". Displays some default text before the current text.
+      Only visible when the type is "character". Displays some default text after the current text.
    
    Width and Height
       Only visible when type is "paragraph", determines the width and height of the paragraph that the sample is flowed into.
