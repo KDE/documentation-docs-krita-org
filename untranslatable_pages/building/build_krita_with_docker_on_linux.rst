@@ -191,8 +191,7 @@ If you have the Qt6 dependencies, you need to pass an aditional CMake argument:
 
 .. code::
 
-   -DBUILD_WITH_QT6=ON
-You can do that by editing the ``~/bin/run_cmake.sh`` file
+   run_cmake.sh -DBUILD_WITH_QT6=ON ~/persistent/krita/
 
 .. note::
 
