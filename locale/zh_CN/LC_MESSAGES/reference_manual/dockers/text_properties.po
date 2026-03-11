@@ -180,7 +180,7 @@ msgstr "属性将始终隐藏。"
 
 #: ../../reference_manual/dockers/text_properties.rst:49
 msgid "Inheritance"
-msgstr ""
+msgstr "属性继承"
 
 #: ../../reference_manual/dockers/text_properties.rst:51
 msgid ""
@@ -189,6 +189,9 @@ msgid ""
 "shape, and ranges of text within the shape will default to the inherited "
 "value if it is not explicitly set on the range."
 msgstr ""
+"Krita 的文本形状使用 CSS，因此允许属性继承。这意味着像字体大小这样的属性可以"
+"在整段文本形状的级别上进行设置，而在此形状内部的部分文本除非进行明确设置，否"
+"则将默认使用从整段文本中继承的属性。"
 
 #: ../../reference_manual/dockers/text_properties.rst:53
 msgid ""
@@ -198,6 +201,10 @@ msgid ""
 "`Paragraph` tab to change the font size or font family on the whole text "
 "without losing the emphasis on the range of text."
 msgstr ""
+"属性继承让我们可避免重复设置属性。例如，我们可以在 :guilabel:`段落` 标签页中"
+"统一设置整段文本的字体系列和大小，再在 :guilabel:`字符` 标签页中为选中文本单"
+"独启用斜体以作强调。此后修改段落字体时，已设斜体的文本会自动继承新字体，仅保"
+"留自身斜体样式，无需重新设置。"
 
 #: ../../reference_manual/dockers/text_properties.rst:55
 msgid ""
@@ -206,10 +213,12 @@ msgid ""
 "added on top of one another, but the precise behaviour is described in their "
 "entry."
 msgstr ""
+"某些属性不会发生继承，例如 :ref:`text_property_baseline_shift` 。这类属性通常"
+"会相互叠加，其具体行为在后文中各个属性的具体介绍中有详细描述。"
 
 #: ../../reference_manual/dockers/text_properties.rst:60
 msgid "Font-Relative Units"
-msgstr ""
+msgstr "字体相对单位"
 
 #: ../../reference_manual/dockers/text_properties.rst:62
 msgid ""
