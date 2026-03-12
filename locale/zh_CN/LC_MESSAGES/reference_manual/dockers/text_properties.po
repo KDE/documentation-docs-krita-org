@@ -218,7 +218,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:60
 msgid "Font-Relative Units"
-msgstr "字体相对单位"
+msgstr "字体相对长度单位"
 
 #: ../../reference_manual/dockers/text_properties.rst:62
 msgid ""
@@ -229,6 +229,11 @@ msgid ""
 "will be relative to the inherited font size. Similar with :guilabel:`Lh` "
 "and :ref:`text_property_line_height`."
 msgstr ""
+"某些属性允许使用字体相对单位，这些单位的含义也取决于属性继承机制。所有字体相"
+"对长度单位都将尝试使用当前字体的长度单位。但当所述单位为 :guilabel:`em` 且正"
+"在编辑的属性为 :ref:`text_property_font_size` 时，此值将是相对于继承的字体大"
+"小的单位——例如对于 16 pt 的字体，1 em = 1 个字身的大小 = 16 pt。与之类似的还"
+"有单位 :guilabel:`lh` 用于 :ref:`text_property_line_height` 属性的场合等。"
 
 #: ../../reference_manual/dockers/text_properties.rst:64
 msgid ""
@@ -238,63 +243,83 @@ msgid ""
 "(so it is half the regular font size), or to have :ref:`Shape Padding "
 "<text_property_text_area>` to be 1 Ex."
 msgstr ""
+"字体相对长度单位对于 :ref:`text_property_letter_spacing` 特别有用，此属性通常"
+"相对于 em 大小设置。与之类似的还有上标文本，它通常被设置为 0.5 em (即为正常字"
+"体大小的一半)， :ref:`形状内边距 <text_property_text_area>` 则通常被设置为 1 "
+"ex。"
 
 #: ../../reference_manual/dockers/text_properties.rst:66
 msgid "Em"
-msgstr ""
+msgstr "em"
 
 #: ../../reference_manual/dockers/text_properties.rst:67
 msgid ""
 "The current font size (or inherited font size in the case of Font Size)."
 msgstr ""
+"数值上等于当前字体大小的相对单位 (当用于字体大小属性本身时，则表示继承的字体"
+"大小)。其历史渊源为 M 字母的宽度。1 em 等于当前字体 1 个字符的点尺寸，如 16 "
+"pt 的字体中 1 em = 16 pt。可理解为“字身单位”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:68
 msgid "Ex"
-msgstr ""
+msgstr "ex"
 
 #: ../../reference_manual/dockers/text_properties.rst:69
 msgid ""
 "The current x height. This metric is retrieved from the font, and affected "
 "by font size."
 msgstr ""
+"当前的 x 高度 (x height)。此长度单位来自字体，并受字体大小影响。其历史渊源是 "
+"x 字母的高度，实际含义是小写字母高度。1 ex 等于 1 个小写字母高度。可理解为“小"
+"写字母高度单位”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:70
 msgid "Cap"
-msgstr ""
+msgstr "cap"
 
 #: ../../reference_manual/dockers/text_properties.rst:71
 msgid ""
 "The current capital height. This metric is retrieved from the font, and "
 "affected by font size."
 msgstr ""
+"当前的大写字母高度 (capital height)。此长度单位来自字体，并受字体大小影响。1 "
+"cap 等于 1 个大写字母高度。可理解为“大写字母高度单位”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:72
 msgid "Lh"
-msgstr ""
+msgstr "lh"
 
 #: ../../reference_manual/dockers/text_properties.rst:73
 msgid ""
 "The line height. This is either relative to the current line height or, in "
 "the case of :ref:`text_property_line_height`, the inherited line height."
 msgstr ""
+"行高 (line height)。这要么是相对于当前行高，要么在 :ref:"
+"`text_property_line_height` 中是继承的行高。1 lh 等于 1 行的行高。可理解为“行"
+"高单位”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:74
 msgid "Ic"
-msgstr ""
+msgstr "ic"
 
 #: ../../reference_manual/dockers/text_properties.rst:75
 msgid ""
 "Relative to ideographic character :term:`Advance`. The advance of a single "
 "CJK character."
 msgstr ""
+"CJK 表意文字的 :term:`字幅` (ideographic character)，1 ic 等于 1 个汉字的宽"
+"度。可理解为“汉字宽度单位”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:77
 msgid "Ch"
-msgstr ""
+msgstr "ch"
 
 #: ../../reference_manual/dockers/text_properties.rst:77
 msgid ":term:`Advance` of the number '0'."
 msgstr ""
+"字符宽度 (character width)，1 ch 相当于 1 个字符的宽度，但在比例字体中，不同"
+"字符宽度各异，因此 CSS 规范选择数字“0”的 :term:`字幅` 作为参考基准。可理解"
+"为“字符宽度单位”或“零字符宽度单位”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:82
 msgid "Character Properties"

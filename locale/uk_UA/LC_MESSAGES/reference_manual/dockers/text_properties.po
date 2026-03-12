@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 5.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2026-03-09 22:14+0200\n"
+"PO-Revision-Date: 2026-03-10 21:36+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -108,6 +108,12 @@ msgid ""
 "control will set the same value on all properties, while clicking the revert "
 "button will unset the property on all text."
 msgstr ""
+"Кнопка скасування ліворуч від поля певної властивості покаже, чи змінено "
+"властивість, а натискання на неї скасує цю зміну. ​​Якщо вибрано кілька "
+"властивостей стилю, ви побачите багатонаправлену стрілку, а сам елемент "
+"керування показуватиме типове значення або успадковане значення. Зміна "
+"елемента керування встановить однакове значення для всіх властивостей, а "
+"натискання кнопки скасування скасує властивість для всього тексту."
 
 #: ../../reference_manual/dockers/text_properties.rst:31
 msgid ""
@@ -118,6 +124,13 @@ msgid ""
 "guilabel:`Underline` option is part of. Selecting :guilabel:`Text "
 "Decoration` will add the property to the list, so it can be set."
 msgstr ""
+"Нові властивості можна додавати за допомогою спадного списку :guilabel:"
+"`Додати властивість` нижче. Введення тексту надає змогу шукати поточні "
+"властивості тексту, причому кожна властивість має кілька альтернативних "
+"ключових слів. Наприклад, введення «підкреслення» призведе до показу :ref:"
+"`text_property_text_decoration`, частиною якої є опція :guilabel:"
+"`Підкреслення`. Вибір :guilabel:`Оформлення тексту` додасть властивість до "
+"списку, щоб її можна було встановити."
 
 #: ../../reference_manual/dockers/text_properties.rst:33
 msgid ""
@@ -128,6 +141,12 @@ msgid ""
 "property` dropdown is replaced with a filter input. The current visibility "
 "states are possible:"
 msgstr ""
+"Стан видимості кожної властивості можна налаштувати, натиснувши кнопку :"
+"guilabel:`Налаштувати` поруч зі спадним списком :guilabel:`Додати "
+"властивість`. Якщо типовий режим видимості встановлено на «завжди "
+"показувати» і жодна з окремих властивостей не налаштована на умовний показ, "
+"спадний список :guilabel:`Додати властивість` буде замінено фільтром. "
+"Можливі поточні стани видимості:"
 
 #: ../../reference_manual/dockers/text_properties.rst:35
 msgid "Follow Default"
@@ -186,6 +205,11 @@ msgid ""
 "shape, and ranges of text within the shape will default to the inherited "
 "value if it is not explicitly set on the range."
 msgstr ""
+"Текстова форма Krita використовує CSS, що надає змогу успадковувати "
+"властивості. Це означає, що такі властивості, як розмір шрифту, можна "
+"встановити для всієї текстової фігури, а фрагменти тексту всередині форми "
+"типово матимуть успадковане значення, якщо воно явно не встановлено для "
+"фрагмента."
 
 #: ../../reference_manual/dockers/text_properties.rst:53
 msgid ""
@@ -195,6 +219,12 @@ msgid ""
 "`Paragraph` tab to change the font size or font family on the whole text "
 "without losing the emphasis on the range of text."
 msgstr ""
+"Успадкування корисне, оскільки надає нам змогу встановлювати лише ті "
+"властивості, які важливі для певного розділу. Таким чином, ми можемо "
+"виокремити фрагмент тексту курсивом на вкладці :guilabel:`Символ`, а потім "
+"скористатися вкладкою :guilabel:`Абзац`, щоб змінити розмір шрифту або "
+"гарнітуру шрифтів для всього тексту, не втрачаючи позначення фрагмента "
+"тексту."
 
 #: ../../reference_manual/dockers/text_properties.rst:55
 msgid ""
@@ -203,6 +233,9 @@ msgid ""
 "added on top of one another, but the precise behaviour is described in their "
 "entry."
 msgstr ""
+"І навпаки, деякі властивості взагалі не успадковуються, наприклад, :ref:"
+"`text_property_baseline_shift`. Ці властивості зазвичай додаються одна "
+"поверх одної, але точна поведінка описана у відповідному записі."
 
 #: ../../reference_manual/dockers/text_properties.rst:60
 msgid "Font-Relative Units"
@@ -217,6 +250,14 @@ msgid ""
 "will be relative to the inherited font size. Similar with :guilabel:`Lh` "
 "and :ref:`text_property_line_height`."
 msgstr ""
+"Деякі властивості дозволяють використовувати одиниці вимірювання, що "
+"залежать від шрифту. Значення цих одиниць також залежить від механізму "
+"успадкування. Усі одиниці вимірювання, що залежать від шрифту, "
+"намагатимуться використовувати поточні метрики шрифту. Однак, коли зазначена "
+"метрика шрифту дорівнює :guilabel:`Em`, а властивість, яку редагують, "
+"дорівнює :ref:`text_property_font_size`, вона буде відносною до "
+"успадкованого розміру шрифту. Подібно до :guilabel:`Lh` та :ref:"
+"`text_property_line_height`."
 
 #: ../../reference_manual/dockers/text_properties.rst:64
 msgid ""
@@ -226,6 +267,11 @@ msgid ""
 "(so it is half the regular font size), or to have :ref:`Shape Padding "
 "<text_property_text_area>` to be 1 Ex."
 msgstr ""
+"Одиниці вимірювання шрифту особливо корисні для :ref:"
+"`text_property_letter_spacing`, який часто вимірюється відносно розміру Em. "
+"Аналогічно, дуже часто для тексту верхніх індексів встановлюється значення "
+"0,5 Em (тобто це половина звичайного розміру шрифту) або для :ref:`Фаски "
+"форми <text_property_text_area>` встановлюють значення 1 Ex."
 
 #: ../../reference_manual/dockers/text_properties.rst:66
 msgid "Em"
@@ -259,6 +305,8 @@ msgid ""
 "The current capital height. This metric is retrieved from the font, and "
 "affected by font size."
 msgstr ""
+"Поточна висота прописних літер. Цей показник буде отримано зі шрифту, він "
+"залежить від розміру шрифту."
 
 #: ../../reference_manual/dockers/text_properties.rst:72
 msgid "Lh"
@@ -269,6 +317,8 @@ msgid ""
 "The line height. This is either relative to the current line height or, in "
 "the case of :ref:`text_property_line_height`, the inherited line height."
 msgstr ""
+"Висота рядка. Це значення або відносно поточної висоти рядка, або, у "
+"випадку :ref:`text_property_line_height`, успадкованої висоти рядка."
 
 #: ../../reference_manual/dockers/text_properties.rst:74
 msgid "Ic"
@@ -279,6 +329,8 @@ msgid ""
 "Relative to ideographic character :term:`Advance`. The advance of a single "
 "CJK character."
 msgstr ""
+"Відносно до ідеографічного символу :term:`Поступ`. Просування одного символу "
+"китайсько-японської ієрогліфії."
 
 #: ../../reference_manual/dockers/text_properties.rst:77
 msgid "Ch"
@@ -286,7 +338,7 @@ msgstr "Ch"
 
 #: ../../reference_manual/dockers/text_properties.rst:77
 msgid ":term:`Advance` of the number '0'."
-msgstr ""
+msgstr ":term:`Поступ` цифри «0»."
 
 #: ../../reference_manual/dockers/text_properties.rst:82
 msgid "Character Properties"
@@ -297,6 +349,8 @@ msgid ""
 "Character properties are properties that can be applied on a range of text "
 "or the whole paragraph."
 msgstr ""
+"Властивості символів – це властивості, які можна застосовувати до фрагмента "
+"тексту або до всього абзацу."
 
 #: ../../reference_manual/dockers/text_properties.rst:89
 msgid "Font Size"
@@ -308,6 +362,9 @@ msgid ""
 "the whole font so that its design size (the \"em size\") is the same as the "
 "font size."
 msgstr ""
+"Розмір шрифту надає змогу встановити розмір символів. Зокрема, він масштабує "
+"весь шрифт так, щоб його запрограмований розмір («em size») збігався з "
+"розміром шрифту."
 
 #: ../../reference_manual/dockers/text_properties.rst:93
 msgid ""
@@ -316,6 +373,11 @@ msgid ""
 "ensure a range of the text is always a bit bigger or a bit smaller than the "
 "surrounding text, which can be useful for superscript or titling."
 msgstr ""
+"При використанні :ref:`font_relative_units`, розмір шрифту завжди "
+"використовуватиме успадкований розмір та гарнітуру шрифтів як еталонний "
+"шрифт. Цим можна скористатися, щоб зробити фрагмент тексту завжди трохи "
+"більшим або трохи меншим за навколишній текст, що може бути корисним для "
+"верхніх індексів або заголовків."
 
 #: ../../reference_manual/dockers/text_properties.rst:95
 #: ../../reference_manual/dockers/text_properties.rst:123
@@ -332,6 +394,9 @@ msgid ""
 "by. The x-height is the height of the small latin x in Latin fonts, and it "
 "is a value that is derived from the font metrics."
 msgstr ""
+"За допомогою коригування розміру шрифту можна встановити коефіцієнт, на який "
+"має бути помножено висоту x. Висота «x» — висота малої латинської літери x у "
+"шрифтах латиниці, значення визначається на основі метрики шрифту."
 
 #: ../../reference_manual/dockers/text_properties.rst:104
 msgid ""
@@ -340,6 +405,10 @@ msgid ""
 "`calculate` button, which allows you to calculate the font-size ratio of the "
 "current font family."
 msgstr ""
+"Це особливо корисно з використанням резервних шрифтів, але також може бути "
+"корисним загалом для забезпечення певної узгодженості висоти x. Передбачено "
+"кнопку :guilabel:`Обчислити`, за допомогою якої можна обчислити "
+"співвідношення розмірів шрифту поточної гарнітури шрифтів."
 
 #: ../../reference_manual/dockers/text_properties.rst:108
 msgid ".. image:: /images/text/font-size-adjust-example.png"
@@ -351,6 +420,10 @@ msgid ""
 "fonts. By using :guilabel:`Font Size Adjust` and pressing :guilabel:"
 "`calculate`, we can set the text to have a similarly sized x-height."
 msgstr ""
+"Рукописні шрифти часто мають набагато меншу висоту x, ніж типові шрифти "
+"основного тексту. За допомогою пункту :guilabel:`Коригування розміру шрифту` "
+"та натискаючи :guilabel:`Обчислити`, ми можемо встановити текст з подібним "
+"розміром висоти x."
 
 #: ../../reference_manual/dockers/text_properties.rst:113
 msgid "Font Family"
@@ -362,6 +435,10 @@ msgid ""
 "current text. The first item in the list is the primary font used, while "
 "each subsequent font may be used as a fallback."
 msgstr ""
+"Гарнітура шрифту надає змогу вибрати список шрифтів, які слід "
+"використовувати для поточного тексту. Першим пунктом у списку буде "
+"використаний основний шрифт, а шрифти з усіх наступних пунктів може бути "
+"використано як резервні."
 
 #: ../../reference_manual/dockers/text_properties.rst:119
 msgid ".. image:: /images/text/font-selection-fallback-arabic.png"
@@ -373,12 +450,18 @@ msgid ""
 "can allow us to select fonts that seem to be in a similar tradition, like "
 "using a Serif Latin font for a Naskh Arabic font."
 msgstr ""
+"Багато шрифтів мають гліфи лише для підмножини Unicode, тому контроль "
+"резервного використання може надати нам змогу вибирати шрифти, які, "
+"здається, мають подібну традицію, наприклад, використати шрифт Serif Latin "
+"для шрифту Naskh Arabic."
 
 #: ../../reference_manual/dockers/text_properties.rst:121
 msgid ""
 "See :ref:`resource_fonts` for more information about the font picker and "
 "font families."
 msgstr ""
+"Див. :ref:`resource_fonts`, щоб дізнатися більше про вибір шрифту та "
+"гарнітури шрифтів."
 
 #: ../../reference_manual/dockers/text_properties.rst:128
 msgid "Font Style"
@@ -399,6 +482,10 @@ msgid ""
 "instances inside a :term:`Variable Font`. Clicking any of these will set the "
 "corresponding CSS properties for that style."
 msgstr ""
+"Основний елемент керування — це спадний список, у якому зібрано попередньо "
+"визначені стилі. Вони визначаються або шрифтами у гарнітурі, або "
+"екземплярами всередині :term:`Змінного шрифту`. Клацання на будь-якому з них "
+"встановить відповідні властивості CSS для всього стилю."
 
 #: ../../reference_manual/dockers/text_properties.rst:136
 msgid ".. image:: /images/text/font-style-examples.png"
@@ -410,10 +497,13 @@ msgid ""
 "of width, weight and slant, while the bottom row shows the effect of "
 "toggling optical size at different font sizes."
 msgstr ""
+"На зображенні вище показано кілька стилів. У верхньому рядку показано вплив "
+"ширини, товщини та нахилу, а в нижньому рядку — ефект зміни оптичного "
+"розміру для різних розмірів шрифту."
 
 #: ../../reference_manual/dockers/text_properties.rst:138
 msgid "When unfolding this property, the following settings are available:"
-msgstr ""
+msgstr "Після розгортання цієї властивості доступні такі параметри:"
 
 #: ../../reference_manual/dockers/text_properties.rst:140
 msgid "Weight"
@@ -421,7 +511,7 @@ msgstr "Вага"
 
 #: ../../reference_manual/dockers/text_properties.rst:141
 msgid "This controls the thickness of the glyph outlines."
-msgstr ""
+msgstr "Керує товщиною контурів гліфів."
 
 #: ../../reference_manual/dockers/text_properties.rst:142
 msgid "Synthesize Bold"
@@ -432,6 +522,8 @@ msgid ""
 "This allows synthesizing thick glyphs when there's no support for bold in "
 "the font family."
 msgstr ""
+"Надає змогу синтезувати товсті гліфи, коли в сімействі шрифтів не "
+"передбачено підтримки напівжирного шрифту."
 
 #: ../../reference_manual/dockers/text_properties.rst:144
 #: ../../reference_manual/dockers/text_properties.rst:416
@@ -443,6 +535,8 @@ msgid ""
 "This controls how much horizontal space a glyph takes. Not all fonts support "
 "this, and there's no synthesis for this."
 msgstr ""
+"Це визначає, скільки місця за горизонталлю займає гліф. Підтримку цієї "
+"можливості передбачено не в усіх шрифтах, і для неї не передбачено синтезу."
 
 #: ../../reference_manual/dockers/text_properties.rst:147
 msgid ""
@@ -451,6 +545,10 @@ msgid ""
 "corresponds to a glyph style remniscent of the Italic calligraphy style, "
 "while the latter is a slanted version of the normal glyphs."
 msgstr ""
+"Це може бути :guilabel:`Звичайний`, :guilabel:`Курсив` або :guilabel:"
+"`Нахилений`. Різниця між курсивом та нахиленим шрифтом полягає у тому, що "
+"перший відповідає стилю гліфів, що нагадує стиль каліграфії курсивом, тоді "
+"як другий є нахиленою версією звичайних гліфів."
 
 #: ../../reference_manual/dockers/text_properties.rst:148
 msgid "Slant"
@@ -461,6 +559,9 @@ msgid ""
 "When :guilabel:`Oblique` is selected, the angle can also be configured. This "
 "is primarily for use with variable fonts that support the slant axis."
 msgstr ""
+"Якщо вибрано :guilabel:`Нахилений`, кут також можна налаштувати. Цей пункт у "
+"першу чергу призначено для використання зі змінними шрифтами, у яких "
+"передбачено підтримку всі нахилу."
 
 #: ../../reference_manual/dockers/text_properties.rst:150
 msgid "Synthesize Slant"
@@ -471,6 +572,8 @@ msgid ""
 "This allows synthesizing slanted glyphs where there's no italic or oblique "
 "version of the glyphs available."
 msgstr ""
+"Надає змогу синтезувати нахилені гліфи там, де немає курсивних або нахилених "
+"версій гліфів."
 
 #: ../../reference_manual/dockers/text_properties.rst:153
 msgid "Optical Size"
@@ -482,12 +585,18 @@ msgid ""
 "synced to the font size. Note that Krita interprets the axis value to be in "
 "points."
 msgstr ""
+"Визначає, чи буде синхронізовано оптичну вісь розміру у змінних шрифтах із "
+"розміром шрифту. Зауважте, що Krita інтерпретує значення осі як значення в "
+"пунктах."
 
 #: ../../reference_manual/dockers/text_properties.rst:155
 msgid ""
 "Finally, there's a place for the extra axes. These are for use with variable "
 "fonts, which can provide more configuration for the font style."
 msgstr ""
+"Зрештою, є місце для додаткових осей. Вони призначені для використання зі "
+"змінними шрифтами, що може забезпечити більше можливостей для налаштовування "
+"стилю шрифту."
 
 #: ../../reference_manual/dockers/text_properties.rst:157
 msgid "This property is, by default, always visible."
@@ -505,6 +614,12 @@ msgid ""
 "thus does not apply to single characters. Letter spacing is mostly intended "
 "to apply to whole spans of characters."
 msgstr ""
+"Міжлітерний інтервал контролює відстань між видимими кластерами символів. "
+"Існують незначні відмінності у тому, як реалізовано показ інтервалів між "
+"літерами у різних програмах, де передбачено підтримку CSS. Реалізація Krita "
+"відповідає CSS-Text-3 і тому не застосовується до окремих символів. "
+"Міжлітерний інтервал здебільшого призначений для застосування до цілих "
+"проміжків символів."
 
 #: ../../reference_manual/dockers/text_properties.rst:169
 msgid "Word Spacing"
@@ -517,6 +632,10 @@ msgid ""
 "characters, like the Ethiopian word space, Aegean word separators, Ugaric "
 "word divider as well as Phoenician word separators."
 msgstr ""
+"Інтервал між словами контролює розмір символів роздільників слів, зокрема "
+"пробілів. Він також забезпечує інтервал для інших символів роздільників "
+"слів, зокрема ефіопського пробілу, егейський роздільника слів, угаритський "
+"роздільник слів, а також фінікійський роздільник слів."
 
 #: ../../reference_manual/dockers/text_properties.rst:176
 msgid "Line Height"
@@ -528,6 +647,10 @@ msgid ""
 "work for pre-positioned SVG 1.1 text, but does apply for pre-formatted text "
 "that uses hard line breaks, or wrapped text."
 msgstr ""
+"Висота рядка контролює висоту рядка, яка використовується для фрагмента "
+"тексту. Вона не працює для попередньо розміщеного тексту SVG 1.1, але "
+"застосовується до попередньо відформатованого тексту, який використовує "
+"жорсткі розриви рядків або текст із перенесенням рядків."
 
 #: ../../reference_manual/dockers/text_properties.rst:180
 #: ../../reference_manual/dockers/text_properties.rst:336
@@ -545,6 +668,10 @@ msgid ""
 "character in a line, and determining its ascent, descent, and also the line "
 "gap metric. The maximum of these is used as the line height."
 msgstr ""
+"Якщо увімкнено, Krita намагатиметься визначити висоту рядка, враховуючи "
+"кожен символ у рядку та визначаючи його підйом, спуск, а також метрику "
+"проміжку між рядками. Максимальне з цих значень використовується як висота "
+"рядка."
 
 #: ../../reference_manual/dockers/text_properties.rst:183
 msgid "Ln"
@@ -555,6 +682,8 @@ msgid ""
 "Line Height has one unique unit: :guilabel:`Ln`, this is similar to \"normal"
 "\", except it uses the font size."
 msgstr ""
+"Висота рядка має одну унікальну одиницю вимірювання: :guilabel:`Ln`, це "
+"схоже на «звичайний», за винятком використання розміру шрифту."
 
 #: ../../reference_manual/dockers/text_properties.rst:185
 msgid ""
@@ -562,6 +691,9 @@ msgid ""
 "`font_relative_units` are fixed to the current font and size of the element "
 "the line height is defined on."
 msgstr ""
+"Усі інші одиниці вимірювання визначатимуть фіксований зсув. Навіть :ref:"
+"`font_relative_units` є фіксованими до поточного шрифту та розміру елемента, "
+"для якого визначено висоту рядка."
 
 #: ../../reference_manual/dockers/text_properties.rst:187
 msgid ""
@@ -569,6 +701,10 @@ msgid ""
 "family as reference. However, when using the line height unit, Line height "
 "will use the inherited line height as reference."
 msgstr ""
+"При використанні відносних одиниць вимірювання, для висоти рядка буде "
+"використано як орієнтир поточний розмір та гарнітуру шрифтів. Однак, при "
+"використанні одиниці вимірювання висоти рядка, для висоти рядка буде "
+"використано як орієнтир успадковану висоту рядка."
 
 #: ../../reference_manual/dockers/text_properties.rst:192
 msgid "Line Break"
@@ -580,6 +716,10 @@ msgid ""
 "Mostly used for CJK scripts, requires :ref:`text_property_language` being "
 "set to work. Krita at this moment does not support :guilabel:`Loose`."
 msgstr ""
+"За допомогою параметра розриву рядка можна вибрати строгість для алгоритму "
+"розриву рядків. Здебільшого використовують для східноазійських писемностей, "
+"потребує працездатних налаштувань :ref:`text_property_language`. У поточній "
+"версії Krita не передбачено підтримки :guilabel:`Вільний`."
 
 #: ../../reference_manual/dockers/text_properties.rst:199
 msgid "Word Break"
@@ -606,6 +746,10 @@ msgid ""
 "setting word break to :guilabel:`Keep-all`, breaks will happen only at word "
 "boundaries."
 msgstr ""
+"Слоган Krita корейською мовою. Ліворуч використано типову поведінку, яка "
+"призводить до перенесення слів після кожного кластера хангиля. Це виглядає "
+"досить старомодно. Якщо встановити розрив слів на :guilabel:`Зберігати усі`, "
+"розриви відбуватимуться лише на межах слів."
 
 #: ../../reference_manual/dockers/text_properties.rst:210
 msgid "Text Transform"
@@ -618,6 +762,11 @@ msgid ""
 "full-width forms. This is useful in that it is applied as a stylistic "
 "effect, meaning any text written is automatically transformed."
 msgstr ""
+"Перетворення тексту надає змогу перетворювати заданий діапазон символів, "
+"наприклад, встановлюючи для них верхній регістр або замінюючи форми "
+"половинної ширини на форми повної ширини. Це корисно тим, що застосовується "
+"як стилістичний ефект, тобто будь-який написаний текст буде автоматично "
+"перетворено."
 
 #: ../../reference_manual/dockers/text_properties.rst:214
 msgid ""
