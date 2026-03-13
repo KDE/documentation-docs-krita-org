@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 5.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2026-03-10 21:36+0200\n"
+"PO-Revision-Date: 2026-03-11 21:51+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -774,6 +774,9 @@ msgid ""
 "being set. For example, the Turkish undotted i will be transformed with the "
 "I while regular i will be transformed to dotted I."
 msgstr ""
+":guilabel:`Перетворення тексту` залежить від встановленого значення :ref:"
+"`text_property_language`. Наприклад, турецька i без крапки буде перетворена "
+"на i, тоді як звичайна i буде перетворена на i без крапки."
 
 #: ../../reference_manual/dockers/text_properties.rst:216
 msgid "Case"
@@ -785,6 +788,9 @@ msgid ""
 "guilabel:`Capitalize` the first letter after each word separator is "
 "uppercased, which the rest is lowercased."
 msgstr ""
+"Визначає, чи слід перетворювати весь текст у верхній чи нижній регістр. У "
+"випадку позначення :guilabel:`З великої літери` першу літеру після кожного "
+"роздільника слів буде записано верхнім регістром, а решта — нижнім."
 
 #: ../../reference_manual/dockers/text_properties.rst:218
 msgid "Full-width"
@@ -800,6 +806,13 @@ msgid ""
 "The full width opentype feature does something similar, but not every font "
 "supports that."
 msgstr ""
+"Термін «повна ширина» стосується кодових позицій «Повна ширина» у блоці "
+"Unicode Halfwidth та Fullwidth. Перемикання цього пункту означатиме, що "
+"пропорційні або половинні гліфи будуть замінені цими гліфами повної ширини, "
+"якщо це можливо. Зазвичай у вертикальному тексті пропорційні гліфи "
+"обертаються, але коли це неможливо або не потрібно, використання гліфів "
+"повної ширини може виглядати набагато акуратніше. Можливість OpenType повної "
+"ширини робить щось подібне, але її підтримку передбачено не в усіх шрифтах."
 
 #: ../../reference_manual/dockers/text_properties.rst:221
 msgid "Full-size Kana"
@@ -812,6 +825,10 @@ msgid ""
 "small, it can be useful to replace small kana with big kana to aid in "
 "readability."
 msgstr ""
+"У японській писемності кана є кілька випадків використання малої та великої "
+"кани, які мають дещо різну вимову. Однак, коли текст дуже маленький, може "
+"бути корисним замінити малу кану на велику кану, щоб текст було зручніше "
+"читати."
 
 #: ../../reference_manual/dockers/text_properties.rst:226
 msgid "Text Decoration"
@@ -824,6 +841,8 @@ msgstr ".. image:: /images/text/text-decoration-sample.png"
 #: ../../reference_manual/dockers/text_properties.rst:230
 msgid "Sample showing all the possible decorations as well as the line styles."
 msgstr ""
+"Зразок з демонстрацією усіх можливих варіантів декорування, а також стилів "
+"ліній."
 
 #: ../../reference_manual/dockers/text_properties.rst:232
 msgid ""
@@ -842,6 +861,8 @@ msgid ""
 "Toggles whether underline, overline or line through is enabled. Multiple can "
 "be enabled at once."
 msgstr ""
+"Увімкнути або вимкнути надкреслення, підкреслення або перекреслення. Можна "
+"одночасно вмикати декілька ліній."
 
 #: ../../reference_manual/dockers/text_properties.rst:236
 msgid "Color:"
@@ -852,6 +873,8 @@ msgid ""
 "Set the color of the underline. When unset, the color of the decoration will "
 "follow the text color."
 msgstr ""
+"Встановити колір підкреслення. Якщо не встановлено, колір декорування буде "
+"збігатися з кольором тексту."
 
 #: ../../reference_manual/dockers/text_properties.rst:239
 msgid "Style:"
@@ -862,6 +885,8 @@ msgid ""
 "The style of the lines. Shared between all enabled lines, these can be made "
 "dashed, dotted, wavy and even double lines can be drawn."
 msgstr ""
+"Стиль ліній. Спільний для всіх увімкнених ліній, їх можна зробити "
+"штриховими, пунктирними, хвилястими, і навіть подвійними лініями."
 
 #: ../../reference_manual/dockers/text_properties.rst:241
 msgid ""
@@ -869,6 +894,10 @@ msgid ""
 "text it is defined on, with later defined text decoration being drawn on top "
 "of earlier defined text decoration."
 msgstr ""
+"Декорування тексту не успадковується. Натомість воно застосовується до "
+"кожного фрагмента тексту, для якого його визначено, причому пізніше "
+"визначене декорування тексту буде накладено на раніше визначене декорування "
+"тексту."
 
 #: ../../reference_manual/dockers/text_properties.rst:245
 msgid ".. image:: /images/text/text-decoration-nested.png"
@@ -881,6 +910,10 @@ msgid ""
 "you define a text decoration on the paragraph, and one on a range of "
 "characters."
 msgstr ""
+"Визначення вкладених декорувань тексту. Хоча щось таке складне можливе лише "
+"за допомогою редактора початкового коду SVG, ви можете побачити подібний "
+"результат, якщо визначите декорування тексту для абзацу та для діапазону "
+"символів."
 
 #: ../../reference_manual/dockers/text_properties.rst:250
 msgid "Underline Position"
@@ -892,7 +925,7 @@ msgstr "Вказати розташування підкреслювання д�
 
 #: ../../reference_manual/dockers/text_properties.rst:255
 msgid "Behaviour in horizontal writing modes"
-msgstr ""
+msgstr "Поведінка у режимах горизонтального запису"
 
 #: ../../reference_manual/dockers/text_properties.rst:257
 #: ../../reference_manual/dockers/text_properties.rst:653
@@ -901,7 +934,7 @@ msgstr "Авто"
 
 #: ../../reference_manual/dockers/text_properties.rst:258
 msgid "Underlines will be positioned according to the metrics of the font."
-msgstr ""
+msgstr "Лінії підкреслення буде розташовано відповідно до метрики шрифту."
 
 #: ../../reference_manual/dockers/text_properties.rst:259
 msgid "Horizontal:"
@@ -913,11 +946,11 @@ msgstr "Внизу"
 
 #: ../../reference_manual/dockers/text_properties.rst:260
 msgid "Underlines will be aligned to the descender."
-msgstr ""
+msgstr "Підкреслення буде вирівняно за нижнім елементом літери."
 
 #: ../../reference_manual/dockers/text_properties.rst:262
 msgid "Behaviour in vertical writing modes."
-msgstr ""
+msgstr "Поведінка у режимах вертикального запису."
 
 #: ../../reference_manual/dockers/text_properties.rst:264
 msgid "Vertical left"
@@ -927,6 +960,8 @@ msgstr "Вертикально ліворуч"
 msgid ""
 "Underlines will be at the left of the characters. Overlines at the right."
 msgstr ""
+"Підкреслення буде намальовано ліворуч від літер. Надкреслення буде "
+"намальовано праворуч."
 
 #: ../../reference_manual/dockers/text_properties.rst:267
 msgid "Vertical:"
@@ -939,6 +974,8 @@ msgstr "Вертикально праворуч"
 #: ../../reference_manual/dockers/text_properties.rst:267
 msgid "Underlines will be at the right of the characters, and overlines left."
 msgstr ""
+"Підкреслення буде намальовано праворуч від літер. Надкреслення буде "
+"намальовано ліворуч."
 
 #: ../../reference_manual/dockers/text_properties.rst:272
 msgid "OpenType Features"
@@ -954,7 +991,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:277
 msgid "OpenType Feature Settings"
-msgstr ""
+msgstr "Параметри можливостей OpenType"
 
 #: ../../reference_manual/dockers/text_properties.rst:281
 msgid ".. image:: /images/text/opentype_features_ui.png"
@@ -1018,7 +1055,7 @@ msgstr "Загальні"
 
 #: ../../reference_manual/dockers/text_properties.rst:300
 msgid "Enables `liga` and `clig`, which are commonly used ligatures."
-msgstr ""
+msgstr "Вмикає `liga` і `clig`, тобто лігатури загального використання."
 
 #: ../../reference_manual/dockers/text_properties.rst:301
 msgid "Discretionary"
@@ -1026,7 +1063,7 @@ msgstr "Дискреційні"
 
 #: ../../reference_manual/dockers/text_properties.rst:302
 msgid "Enables `dlig`, which are ligatures of a more decorative nature."
-msgstr ""
+msgstr "Вмикає `dlig`, тобто лігатури декоративнішої природи."
 
 #: ../../reference_manual/dockers/text_properties.rst:303
 msgid "Historical"
@@ -1034,7 +1071,7 @@ msgstr "Історичні"
 
 #: ../../reference_manual/dockers/text_properties.rst:304
 msgid "Enables `hlig`, which is intended for old-fashioned ligatures."
-msgstr ""
+msgstr "Вмикає `hlig`, тобто старовинні лігатури."
 
 #: ../../reference_manual/dockers/text_properties.rst:306
 msgid "Contextual Alternates"
@@ -1090,7 +1127,7 @@ msgstr ".. image:: /images/text/opentype-position.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:326
 msgid "Showing sub and superscripts in the font “EB Garamond”."
-msgstr ""
+msgstr "Показ нижніх і верхніх індексів у шрифті «EB Garamond»."
 
 #: ../../reference_manual/dockers/text_properties.rst:331
 msgid "Glyphs: Numeric"
@@ -1104,7 +1141,7 @@ msgstr "Увімкнути пов'язані з числами форми глі
 #: ../../reference_manual/dockers/text_properties.rst:344
 #: ../../reference_manual/dockers/text_properties.rst:351
 msgid "Does not explicitly enable either style, showing the font default."
-msgstr ""
+msgstr "Не вмикати явним чином жоден стиль, показ типового шрифту."
 
 #: ../../reference_manual/dockers/text_properties.rst:338
 msgid "Lining"
@@ -1220,7 +1257,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:373
 msgid "Don't use any particular capitals."
-msgstr ""
+msgstr "Не використовувати особливих прописних літер."
 
 #: ../../reference_manual/dockers/text_properties.rst:374
 msgid "Small Caps"
@@ -1797,7 +1834,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:591
 msgid "Indent after hard breaks"
-msgstr ""
+msgstr "Відступ після жорсткого розриву рядка"
 
 #: ../../reference_manual/dockers/text_properties.rst:591
 msgid ""
@@ -1825,7 +1862,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:602
 msgid "Opening the advanced settings shows the following:"
-msgstr ""
+msgstr "Відкриття додаткових параметрів призведе до показу такого:"
 
 #: ../../reference_manual/dockers/text_properties.rst:605
 msgid ""
@@ -1966,11 +2003,11 @@ msgstr "Геометрична точність"
 
 #: ../../reference_manual/dockers/text_properties.rst:651
 msgid "No hinting is performed at all."
-msgstr ""
+msgstr "Без жодного гінтінґу."
 
 #: ../../reference_manual/dockers/text_properties.rst:653
 msgid "Same as :guilabel:`Geometric Precision`."
-msgstr ""
+msgstr "Те саме, що і :guilabel:`Геометрична точність`."
 
 #: ../../reference_manual/dockers/text_properties.rst:657
 msgid ".. image:: /images/text/unifont-text-rendering-example.png"
@@ -1991,7 +2028,7 @@ msgstr "Область тексту"
 
 #: ../../reference_manual/dockers/text_properties.rst:664
 msgid "These properties are related to :ref:`text_in_shape`."
-msgstr ""
+msgstr "Ці властивості пов'язані із :ref:`text_in_shape`."
 
 #: ../../reference_manual/dockers/text_properties.rst:666
 msgid "Shape Padding"

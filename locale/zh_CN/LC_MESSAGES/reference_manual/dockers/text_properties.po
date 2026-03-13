@@ -189,9 +189,9 @@ msgid ""
 "shape, and ranges of text within the shape will default to the inherited "
 "value if it is not explicitly set on the range."
 msgstr ""
-"Krita 的文本形状使用 CSS，因此允许属性继承。这意味着像字体大小这样的属性可以"
-"在整段文本形状的级别上进行设置，而在此形状内部的部分文本除非进行明确设置，否"
-"则将默认使用从整段文本中继承的属性。"
+"Krita 的文本形状使用 CSS，因此允许属性继承 (Inheritance)。这意味着像字体大小"
+"这样的属性可以在整段文本形状的级别上进行设置，而在此形状内部的部分文本除非进"
+"行明确设置，否则将默认使用从整段文本中继承的属性。"
 
 #: ../../reference_manual/dockers/text_properties.rst:53
 msgid ""
@@ -229,11 +229,12 @@ msgid ""
 "will be relative to the inherited font size. Similar with :guilabel:`Lh` "
 "and :ref:`text_property_line_height`."
 msgstr ""
-"某些属性允许使用字体相对单位，这些单位的含义也取决于属性继承机制。所有字体相"
-"对长度单位都将尝试使用当前字体的长度单位。但当所述单位为 :guilabel:`em` 且正"
-"在编辑的属性为 :ref:`text_property_font_size` 时，此值将是相对于继承的字体大"
-"小的单位——例如对于 16 pt 的字体，1 em = 1 个字身的大小 = 16 pt。与之类似的还"
-"有单位 :guilabel:`lh` 用于 :ref:`text_property_line_height` 属性的场合等。"
+"某些属性允许使用字体相对单位 (Font-Relative Units)，这些单位的含义也取决于属"
+"性继承机制。所有字体相对长度单位都将尝试使用当前字体的长度单位。但当所述单位"
+"为 :guilabel:`em` 且正在编辑的属性为 :ref:`text_property_font_size` 时，此值"
+"将是相对于继承的字体大小的单位——例如对于 16 pt 的字体，1 em = 1 个字身的大小 "
+"= 16 pt。与之类似的还有单位 :guilabel:`lh` 用于 :ref:"
+"`text_property_line_height` 属性的场合等。"
 
 #: ../../reference_manual/dockers/text_properties.rst:64
 msgid ""
@@ -323,17 +324,18 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:82
 msgid "Character Properties"
-msgstr ""
+msgstr "字符属性"
 
 #: ../../reference_manual/dockers/text_properties.rst:84
 msgid ""
 "Character properties are properties that can be applied on a range of text "
 "or the whole paragraph."
 msgstr ""
+"字符属性 (character properties) 是可以应用于任意一段文本或整个段落的属性。"
 
 #: ../../reference_manual/dockers/text_properties.rst:89
 msgid "Font Size"
-msgstr ""
+msgstr "字体大小"
 
 #: ../../reference_manual/dockers/text_properties.rst:91
 msgid ""
@@ -341,6 +343,8 @@ msgid ""
 "the whole font so that its design size (the \"em size\") is the same as the "
 "font size."
 msgstr ""
+"字体大小 (font size) 用于设置字符的大小。它会对整个字体进行缩放，使字身大小 "
+"(em) 与字体大小保持一致。"
 
 #: ../../reference_manual/dockers/text_properties.rst:93
 msgid ""
@@ -349,15 +353,18 @@ msgid ""
 "ensure a range of the text is always a bit bigger or a bit smaller than the "
 "surrounding text, which can be useful for superscript or titling."
 msgstr ""
+"当使用 :ref:`font_relative_units` 时，字体大小属性将始终以继承的字体大小和字"
+"体系列作为参考字体。这可用于确保文本中的某个范围始终比周围文本稍大或稍小，例"
+"如标题或上标等。"
 
 #: ../../reference_manual/dockers/text_properties.rst:95
 #: ../../reference_manual/dockers/text_properties.rst:123
 msgid "By default, this property is always visible."
-msgstr ""
+msgstr "默认情况下，此属性始终显示。"
 
 #: ../../reference_manual/dockers/text_properties.rst:100
 msgid "Font Size Adjust"
-msgstr ""
+msgstr "字体大小调整"
 
 #: ../../reference_manual/dockers/text_properties.rst:102
 msgid ""
@@ -365,6 +372,10 @@ msgid ""
 "by. The x-height is the height of the small latin x in Latin fonts, and it "
 "is a value that is derived from the font metrics."
 msgstr ""
+"字体大小调整 (font size adjust) 属性设置的是一个比例值，当前字体的 x 高度 (x-"
+"height) 必须符合该比例，从而确保不同字体混排时保持统一的视觉大小。x 高度是拉"
+"丁字母中小写 x 字母的高度，也可以理解为小写字母高度，此字体长度单位由字体提"
+"供。"
 
 #: ../../reference_manual/dockers/text_properties.rst:104
 msgid ""
@@ -373,10 +384,13 @@ msgid ""
 "`calculate` button, which allows you to calculate the font-size ratio of the "
 "current font family."
 msgstr ""
+"此属性常与 font-fallback 属性配合使用，但也可用于对 x 高度进行强制统一以提高"
+"不同字体混用时保持统一的视觉大小。属性中包含一个 :guilabel:`计算` 按钮，可以"
+"用它计算当前字体系列的字体大小比例。"
 
 #: ../../reference_manual/dockers/text_properties.rst:108
 msgid ".. image:: /images/text/font-size-adjust-example.png"
-msgstr ""
+msgstr ".. image:: /images/text/font-size-adjust-example.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:108
 msgid ""
@@ -384,10 +398,13 @@ msgid ""
 "fonts. By using :guilabel:`Font Size Adjust` and pressing :guilabel:"
 "`calculate`, we can set the text to have a similarly sized x-height."
 msgstr ""
+"手写体字体的 x 高度通常比普通正文字体小得多。通过使用 :guilabel:`字体大小调整"
+"` 属性中的 :guilabel:`计算` 按钮，我们可以将使用不同字体的文本的 x 高度进行统"
+"一。"
 
 #: ../../reference_manual/dockers/text_properties.rst:113
 msgid "Font Family"
-msgstr ""
+msgstr "字体系列"
 
 #: ../../reference_manual/dockers/text_properties.rst:115
 msgid ""
@@ -395,10 +412,12 @@ msgid ""
 "current text. The first item in the list is the primary font used, while "
 "each subsequent font may be used as a fallback."
 msgstr ""
+"字体系列 (font family) 属性用于选择应用于当前文本的一系列字体。列表中的第一个"
+"字体是主要使用的字体，而列表中的后续字体系列则可用作备选字体。"
 
 #: ../../reference_manual/dockers/text_properties.rst:119
 msgid ".. image:: /images/text/font-selection-fallback-arabic.png"
-msgstr ""
+msgstr ".. image:: /images/text/font-selection-fallback-arabic.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:119
 msgid ""
@@ -406,22 +425,24 @@ msgid ""
 "can allow us to select fonts that seem to be in a similar tradition, like "
 "using a Serif Latin font for a Naskh Arabic font."
 msgstr ""
+"许多字体仅包含某些 Unicode 子集的字形，通过精心安排备选字体，我们可以在跨语言"
+"混排时确保文本风格统一。例如上图中阿拉伯字体与拉丁字体的混排。"
 
 #: ../../reference_manual/dockers/text_properties.rst:121
 msgid ""
 "See :ref:`resource_fonts` for more information about the font picker and "
 "font families."
-msgstr ""
+msgstr "关于字体列表和字体系列资源的详情请参阅 :ref:`resource_fonts` 页面。"
 
 #: ../../reference_manual/dockers/text_properties.rst:128
 msgid "Font Style"
-msgstr ""
+msgstr "字体样式"
 
 #: ../../reference_manual/dockers/text_properties.rst:130
 msgid ""
 "Font style allows setting the sub style of the given font family, such as "
 "italics and bold."
-msgstr ""
+msgstr "字体样式用于设置字体的子样式，如斜体或粗体等。"
 
 #: ../../reference_manual/dockers/text_properties.rst:132
 msgid ""
@@ -430,10 +451,13 @@ msgid ""
 "instances inside a :term:`Variable Font`. Clicking any of these will set the "
 "corresponding CSS properties for that style."
 msgstr ""
+"此属性的主要控件是一个下拉菜单，其中列出了当前字体可用的所有预设样式。这些样"
+"式要么通过一个字体系列中的不同字体确定，要么通过单个可变字体中的样式实例确"
+"定。点击列表中的任意一种样式即可设置为对应的 CSS 属性。"
 
 #: ../../reference_manual/dockers/text_properties.rst:136
 msgid ".. image:: /images/text/font-style-examples.png"
-msgstr ""
+msgstr ".. image:: /images/text/font-style-examples.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:136
 msgid ""
@@ -441,39 +465,45 @@ msgid ""
 "of width, weight and slant, while the bottom row shows the effect of "
 "toggling optical size at different font sizes."
 msgstr ""
+"上图展示了几种字体的不同样式。靠上的一组反映了宽度、字重和斜度的效果，靠下的"
+"一组反映了不同字体大小下打开/关闭光学尺寸选项的效果。"
 
 #: ../../reference_manual/dockers/text_properties.rst:138
 msgid "When unfolding this property, the following settings are available:"
-msgstr ""
+msgstr "展开此属性后有以下选项可供设置："
 
 #: ../../reference_manual/dockers/text_properties.rst:140
 msgid "Weight"
-msgstr ""
+msgstr "粗细"
 
 #: ../../reference_manual/dockers/text_properties.rst:141
 msgid "This controls the thickness of the glyph outlines."
-msgstr ""
+msgstr "粗细 (Weight)，此项控制字形轮廓的粗细。"
 
 #: ../../reference_manual/dockers/text_properties.rst:142
 msgid "Synthesize Bold"
-msgstr ""
+msgstr "允许合成粗体"
 
 #: ../../reference_manual/dockers/text_properties.rst:143
 msgid ""
 "This allows synthesizing thick glyphs when there's no support for bold in "
 "the font family."
 msgstr ""
+"允许合成粗体 (Synthesize Bold)，勾选此项后，当字体系列不支持加粗或不包含粗体"
+"时，允许合成加粗的字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:144
 #: ../../reference_manual/dockers/text_properties.rst:416
 msgid "Width"
-msgstr ""
+msgstr "宽度"
 
 #: ../../reference_manual/dockers/text_properties.rst:145
 msgid ""
 "This controls how much horizontal space a glyph takes. Not all fonts support "
 "this, and there's no synthesis for this."
 msgstr ""
+"宽度 (Width)，此项用于控制一个字形占据的水平空间大小。并非所有字体都支持此功"
+"能，也不支持合成此功能的效果。"
 
 #: ../../reference_manual/dockers/text_properties.rst:147
 msgid ""
@@ -482,30 +512,37 @@ msgid ""
 "corresponds to a glyph style remniscent of the Italic calligraphy style, "
 "while the latter is a slanted version of the normal glyphs."
 msgstr ""
+"倾斜 (slant)，此项可以选择 :guilabel:`正常` 、 :guilabel:`斜体` 或 :guilabel:"
+"`伪斜体` 。斜体 (Italic) 是类似于意大利体的专门字形，而伪斜体 (Oblique) 只是"
+"将正常字体的倾斜版本。"
 
 #: ../../reference_manual/dockers/text_properties.rst:148
 msgid "Slant"
-msgstr ""
+msgstr "倾斜"
 
 #: ../../reference_manual/dockers/text_properties.rst:149
 msgid ""
 "When :guilabel:`Oblique` is selected, the angle can also be configured. This "
 "is primarily for use with variable fonts that support the slant axis."
 msgstr ""
+"当选择了 :guilabel:`伪斜体` 时，可以设置倾斜角度。此功能主要用于支持倾斜轴的"
+"可变字体。"
 
 #: ../../reference_manual/dockers/text_properties.rst:150
 msgid "Synthesize Slant"
-msgstr ""
+msgstr "允许合成斜体"
 
 #: ../../reference_manual/dockers/text_properties.rst:151
 msgid ""
 "This allows synthesizing slanted glyphs where there's no italic or oblique "
 "version of the glyphs available."
 msgstr ""
+"允许合成斜体 (Synthesize Slant)，勾选此项后，当字体系列不包含斜体或伪斜体时，"
+"允许合成倾斜的字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:153
 msgid "Optical Size"
-msgstr ""
+msgstr "光学尺寸"
 
 #: ../../reference_manual/dockers/text_properties.rst:153
 msgid ""
@@ -513,20 +550,23 @@ msgid ""
 "synced to the font size. Note that Krita interprets the axis value to be in "
 "points."
 msgstr ""
+"光学尺寸 (Optical Size)，此项用于设置可变字体中的光学尺寸轴是否与字体大小同"
+"步。请注意：Krita 解析可变字体轴时使用的单位是点 (pt)。"
 
 #: ../../reference_manual/dockers/text_properties.rst:155
 msgid ""
 "Finally, there's a place for the extra axes. These are for use with variable "
 "fonts, which can provide more configuration for the font style."
 msgstr ""
+"此属性的最下方还能显示额外可变轴，只要字体支持，就能进行更多的字体样式配置。"
 
 #: ../../reference_manual/dockers/text_properties.rst:157
 msgid "This property is, by default, always visible."
-msgstr ""
+msgstr "默认情况下，此属性始终显示。"
 
 #: ../../reference_manual/dockers/text_properties.rst:162
 msgid "Letter Spacing"
-msgstr ""
+msgstr "字符间距"
 
 #: ../../reference_manual/dockers/text_properties.rst:164
 msgid ""
@@ -536,10 +576,13 @@ msgid ""
 "thus does not apply to single characters. Letter spacing is mostly intended "
 "to apply to whole spans of characters."
 msgstr ""
+"字符间距 (Letter spacing) 属性用于调整可见字符簇之间的间距。支持 CSS 的程序对"
+"字符间距的实现存在细微差异。Krita 的字符间距实现遵循 CSS-Text-3，因此不适用于"
+"单个字符，而是主要适用于整个字符段。"
 
 #: ../../reference_manual/dockers/text_properties.rst:169
 msgid "Word Spacing"
-msgstr ""
+msgstr "单词间距"
 
 #: ../../reference_manual/dockers/text_properties.rst:171
 msgid ""
@@ -548,10 +591,13 @@ msgid ""
 "characters, like the Ethiopian word space, Aegean word separators, Ugaric "
 "word divider as well as Phoenician word separators."
 msgstr ""
+"单词间距 (Word spacing) 属性用于控制字隔符 (如空格) 的大小。它还为其他字隔符"
+"提供间距，例如埃塞俄比亚字空格、爱琴海字隔符、乌加里特字分隔符以及腓尼基字隔"
+"符。"
 
 #: ../../reference_manual/dockers/text_properties.rst:176
 msgid "Line Height"
-msgstr ""
+msgstr "行高"
 
 #: ../../reference_manual/dockers/text_properties.rst:178
 msgid ""
@@ -559,6 +605,8 @@ msgid ""
 "work for pre-positioned SVG 1.1 text, but does apply for pre-formatted text "
 "that uses hard line breaks, or wrapped text."
 msgstr ""
+"行高 (Line Height) 属性用于控制所选文本范围的行高。它对绝对定位换行类型的 "
+"SVG 1.1 文本不起作用，但适用于使用硬回车的回车换行文本或自动换行文本。"
 
 #: ../../reference_manual/dockers/text_properties.rst:180
 #: ../../reference_manual/dockers/text_properties.rst:336
@@ -603,7 +651,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:192
 msgid "Line Break"
-msgstr ""
+msgstr "换行"
 
 #: ../../reference_manual/dockers/text_properties.rst:194
 msgid ""
@@ -614,7 +662,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:199
 msgid "Word Break"
-msgstr ""
+msgstr "单词换行"
 
 #: ../../reference_manual/dockers/text_properties.rst:201
 msgid ""
@@ -637,7 +685,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:210
 msgid "Text Transform"
-msgstr ""
+msgstr "文本转换"
 
 #: ../../reference_manual/dockers/text_properties.rst:212
 msgid ""
@@ -694,7 +742,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:226
 msgid "Text Decoration"
-msgstr ""
+msgstr "文本装饰"
 
 #: ../../reference_manual/dockers/text_properties.rst:230
 msgid ".. image:: /images/text/text-decoration-sample.png"
@@ -761,7 +809,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:250
 msgid "Underline Position"
-msgstr ""
+msgstr "下划线位置"
 
 #: ../../reference_manual/dockers/text_properties.rst:252
 msgid "Specify the position of the underline for text-decoration."
@@ -819,7 +867,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:272
 msgid "OpenType Features"
-msgstr ""
+msgstr "OpenType 特性"
 
 #: ../../reference_manual/dockers/text_properties.rst:274
 msgid ""
@@ -882,7 +930,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:296
 msgid "Glyphs: Ligatures"
-msgstr ""
+msgstr "字形：连字"
 
 #: ../../reference_manual/dockers/text_properties.rst:297
 msgid "Enable or disable ligatures and contextual alternates on the text."
@@ -890,7 +938,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:299
 msgid "Common"
-msgstr ""
+msgstr "标准连字"
 
 #: ../../reference_manual/dockers/text_properties.rst:300
 msgid "Enables `liga` and `clig`, which are commonly used ligatures."
@@ -898,7 +946,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:301
 msgid "Discretionary"
-msgstr ""
+msgstr "可选连字"
 
 #: ../../reference_manual/dockers/text_properties.rst:302
 msgid "Enables `dlig`, which are ligatures of a more decorative nature."
@@ -906,7 +954,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:303
 msgid "Historical"
-msgstr ""
+msgstr "历史连字"
 
 #: ../../reference_manual/dockers/text_properties.rst:304
 msgid "Enables `hlig`, which is intended for old-fashioned ligatures."
@@ -914,7 +962,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:306
 msgid "Contextual Alternates"
-msgstr ""
+msgstr "上下文连字"
 
 #: ../../reference_manual/dockers/text_properties.rst:306
 msgid ""
@@ -936,7 +984,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:315
 msgid "Glyphs: Position"
-msgstr ""
+msgstr "字形：定位"
 
 #: ../../reference_manual/dockers/text_properties.rst:317
 msgid "Enable super or subscripts on the text."
@@ -945,7 +993,7 @@ msgstr ""
 #: ../../reference_manual/dockers/text_properties.rst:319
 #: ../../reference_manual/dockers/text_properties.rst:516
 msgid "Super"
-msgstr ""
+msgstr "上标"
 
 #: ../../reference_manual/dockers/text_properties.rst:320
 msgid "Enables superscript glyphs."
@@ -954,7 +1002,7 @@ msgstr ""
 #: ../../reference_manual/dockers/text_properties.rst:322
 #: ../../reference_manual/dockers/text_properties.rst:519
 msgid "Sub"
-msgstr ""
+msgstr "下标"
 
 #: ../../reference_manual/dockers/text_properties.rst:322
 msgid "Enables subscript glyphs."
@@ -970,7 +1018,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:331
 msgid "Glyphs: Numeric"
-msgstr ""
+msgstr "字形：数字"
 
 #: ../../reference_manual/dockers/text_properties.rst:333
 msgid "Enable number-related glyph forms on the text."
