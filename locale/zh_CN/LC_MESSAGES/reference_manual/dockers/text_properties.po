@@ -616,7 +616,7 @@ msgstr ""
 #: ../../reference_manual/dockers/text_properties.rst:399
 #: ../../reference_manual/dockers/text_properties.rst:444
 msgid "Normal"
-msgstr ""
+msgstr "正常"
 
 #: ../../reference_manual/dockers/text_properties.rst:181
 msgid ""
@@ -624,16 +624,20 @@ msgid ""
 "character in a line, and determining its ascent, descent, and also the line "
 "gap metric. The maximum of these is used as the line height."
 msgstr ""
+"启用此选项时，Krita 将检测一行中每个字符的上升部 (ascent)、下降部 (descent) "
+"以及行间距 (line gap) 等字体长度数据，取这些值的最大值作为行高。"
 
 #: ../../reference_manual/dockers/text_properties.rst:183
 msgid "Ln"
-msgstr ""
+msgstr "ln"
 
 #: ../../reference_manual/dockers/text_properties.rst:183
 msgid ""
 "Line Height has one unique unit: :guilabel:`Ln`, this is similar to \"normal"
 "\", except it uses the font size."
 msgstr ""
+"行高具有一个独占的单位： :guilabel:`ln` ，此值与“正常”类似，但使用字体大小来"
+"进行计算。"
 
 #: ../../reference_manual/dockers/text_properties.rst:185
 msgid ""
@@ -641,6 +645,8 @@ msgid ""
 "`font_relative_units` are fixed to the current font and size of the element "
 "the line height is defined on."
 msgstr ""
+"所有其他的单位都将设置一个固定的偏移量。 :ref:`font_relative_units` 也固定为"
+"定义行高的元素的当前字体和字体大小。"
 
 #: ../../reference_manual/dockers/text_properties.rst:187
 msgid ""
@@ -648,10 +654,12 @@ msgid ""
 "family as reference. However, when using the line height unit, Line height "
 "will use the inherited line height as reference."
 msgstr ""
+"使用相对单位时，行高将以当前字体大小和字体系列作为参照。而使用行高单位时，行"
+"高将使用继承的行高作为参照。"
 
 #: ../../reference_manual/dockers/text_properties.rst:192
 msgid "Line Break"
-msgstr "换行"
+msgstr "换行规则"
 
 #: ../../reference_manual/dockers/text_properties.rst:194
 msgid ""
@@ -659,10 +667,13 @@ msgid ""
 "Mostly used for CJK scripts, requires :ref:`text_property_language` being "
 "set to work. Krita at this moment does not support :guilabel:`Loose`."
 msgstr ""
+"换行规则 (Link Break) 属性用于选择换行算法的严格程度，主要应用于中日韩 (CJK) "
+"文本排版，需预先设置 :ref:`text_property_language` 属性才能工作。Krita 当前尚"
+"未支持 :guilabel:`宽松` 模式。"
 
 #: ../../reference_manual/dockers/text_properties.rst:199
 msgid "Word Break"
-msgstr "单词换行"
+msgstr "单词换行规则"
 
 #: ../../reference_manual/dockers/text_properties.rst:201
 msgid ""
@@ -670,10 +681,13 @@ msgid ""
 "break at words or also allow breaking at characters. Useful for Korean or "
 "Ethiopian."
 msgstr ""
+"单词换行规则 (Word Break) 属性用于精细调整换行行为，通过切换是否仅允许在单词"
+"之间断行还是允许在字符之间断行来实现，适用于韩语或埃塞俄比亚语等非拉丁语言场"
+"景。"
 
 #: ../../reference_manual/dockers/text_properties.rst:205
 msgid ".. image:: /images/text/word-break-korean.png"
-msgstr ""
+msgstr ".. image:: /images/text/word-break-korean.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:205
 msgid ""
@@ -682,6 +696,9 @@ msgid ""
 "setting word break to :guilabel:`Keep-all`, breaks will happen only at word "
 "boundaries."
 msgstr ""
+"上图文本是 Krita 的朝鲜语宣传口号。左侧的是默认换行规则的效果，允许在每个朝鲜"
+"语字母组合后方换行，这种换行方式已经落伍。右侧的是将单词换行规则改为 :"
+"guilabel:`禁止单词内部换行` ，只允许在单词边界处换行。"
 
 #: ../../reference_manual/dockers/text_properties.rst:210
 msgid "Text Transform"
@@ -694,6 +711,9 @@ msgid ""
 "full-width forms. This is useful in that it is applied as a stylistic "
 "effect, meaning any text written is automatically transformed."
 msgstr ""
+"文本转换 (Text Transform) 属性可以对选定范围的字符进行转换，例如将其设置为大"
+"写，或将半角形式转换为全角形式等。因为这些转换是作为样式效果被应用的，这意味"
+"着所输入的任何文本都会自动进行转换。"
 
 #: ../../reference_manual/dockers/text_properties.rst:214
 msgid ""
@@ -701,10 +721,13 @@ msgid ""
 "being set. For example, the Turkish undotted i will be transformed with the "
 "I while regular i will be transformed to dotted I."
 msgstr ""
+":guilabel:`文本转换` 受 :ref:`text_property_language` 属性的设置影响。例如，"
+"土耳其语的无点字母“i”将转换为大写的“I”，而普通的小写字母“i”则会转换为带点的大"
+"写字母“I”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:216
 msgid "Case"
-msgstr ""
+msgstr "大小写"
 
 #: ../../reference_manual/dockers/text_properties.rst:217
 msgid ""
@@ -712,10 +735,12 @@ msgid ""
 "guilabel:`Capitalize` the first letter after each word separator is "
 "uppercased, which the rest is lowercased."
 msgstr ""
+"大小写 (Case)，是否将所有文本转换为大写或小写。选择 :guilabel:`首字母大写` "
+"时，每个单词分隔符后的第一个字母将大写，其余字母小写。"
 
 #: ../../reference_manual/dockers/text_properties.rst:218
 msgid "Full-width"
-msgstr ""
+msgstr "全角"
 
 #: ../../reference_manual/dockers/text_properties.rst:219
 msgid ""
@@ -727,10 +752,15 @@ msgid ""
 "The full width opentype feature does something similar, but not every font "
 "supports that."
 msgstr ""
+"全角 (full-width) 指 Unicode 半角与全角字符块中的“全角”码点。启用该选项后，若"
+"字体支持，比例字形 (proportional) 或半角字形 (halfwidth) 将被替换为对应的全角"
+"字形。通常，在竖排文本中比例字形会被旋转显示，但当无法或不需要旋转时，使用全"
+"角字形可使排版更整齐。OpenType 特性中的全角 (fwid) 有类似效果，但并非所有字体"
+"都支持该特性。"
 
 #: ../../reference_manual/dockers/text_properties.rst:221
 msgid "Full-size Kana"
-msgstr ""
+msgstr "全角假名"
 
 #: ../../reference_manual/dockers/text_properties.rst:221
 msgid ""
@@ -739,6 +769,9 @@ msgid ""
 "small, it can be useful to replace small kana with big kana to aid in "
 "readability."
 msgstr ""
+"全角假名 (full-size kana)，在日语假名 (Kana) 书写体系中，存在部分小写假名与全"
+"形假名的差异，这些假名的发音有细微区别。但当文本字号过小时，将小写假名替换为"
+"全形假名有助于提升可读性。"
 
 #: ../../reference_manual/dockers/text_properties.rst:226
 msgid "Text Decoration"
@@ -746,47 +779,50 @@ msgstr "文本装饰"
 
 #: ../../reference_manual/dockers/text_properties.rst:230
 msgid ".. image:: /images/text/text-decoration-sample.png"
-msgstr ""
+msgstr ".. image:: /images/text/text-decoration-sample.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:230
 msgid "Sample showing all the possible decorations as well as the line styles."
-msgstr ""
+msgstr "上图展示了所有可用的文本装饰类型和线条样式。"
 
 #: ../../reference_manual/dockers/text_properties.rst:232
 msgid ""
 "Text Decoration allows drawing underlines, overlines and striking through "
 "text."
-msgstr ""
+msgstr "文本装饰 (Text Decoration) 用于为文本绘制下划线、上划线和删除线。"
 
 #: ../../reference_manual/dockers/text_properties.rst:234
 msgid "Line:"
-msgstr ""
+msgstr "线条类型："
 
 #: ../../reference_manual/dockers/text_properties.rst:235
 msgid ""
 "Toggles whether underline, overline or line through is enabled. Multiple can "
 "be enabled at once."
 msgstr ""
+"线条类型 (line)：启用或禁用下划线、上划线或删除线，可以同时启用多种线条。"
 
 #: ../../reference_manual/dockers/text_properties.rst:236
 msgid "Color:"
-msgstr ""
+msgstr "颜色："
 
 #: ../../reference_manual/dockers/text_properties.rst:237
 msgid ""
 "Set the color of the underline. When unset, the color of the decoration will "
 "follow the text color."
-msgstr ""
+msgstr "颜色 (color)：设置线条的颜色。当未设置时，装饰线的颜色将使用文本颜色。"
 
 #: ../../reference_manual/dockers/text_properties.rst:239
 msgid "Style:"
-msgstr ""
+msgstr "样式："
 
 #: ../../reference_manual/dockers/text_properties.rst:239
 msgid ""
 "The style of the lines. Shared between all enabled lines, these can be made "
 "dashed, dotted, wavy and even double lines can be drawn."
 msgstr ""
+"样式 (style)：线条的样式，启用的所有线条都将共用此样式，可用的样式有：实线、"
+"点线、虚线、双线、波浪线。"
 
 #: ../../reference_manual/dockers/text_properties.rst:241
 msgid ""
@@ -794,10 +830,12 @@ msgid ""
 "text it is defined on, with later defined text decoration being drawn on top "
 "of earlier defined text decoration."
 msgstr ""
+"文本装饰不会继承。它被应用于定义在的每个文本范围上，并且后来定义的文本装饰会"
+"绘制在先前定义的文本装饰之上。"
 
 #: ../../reference_manual/dockers/text_properties.rst:245
 msgid ".. image:: /images/text/text-decoration-nested.png"
-msgstr ""
+msgstr ".. image:: /images/text/text-decoration-nested.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:245
 msgid ""
@@ -806,6 +844,9 @@ msgid ""
 "you define a text decoration on the paragraph, and one on a range of "
 "characters."
 msgstr ""
+"上图显示了嵌套的文本装饰效果。虽然如此复杂的效果通常只能通过 SVG 源代码编辑器"
+"实现，但如果先在段落层级定义文本装饰，再对字符范围单独定义文本装饰，也可达成"
+"类似效果。"
 
 #: ../../reference_manual/dockers/text_properties.rst:250
 msgid "Underline Position"
@@ -813,57 +854,57 @@ msgstr "下划线位置"
 
 #: ../../reference_manual/dockers/text_properties.rst:252
 msgid "Specify the position of the underline for text-decoration."
-msgstr ""
+msgstr "下划线位置 (underline position)：指定文本装饰中下划线的位置。"
 
 #: ../../reference_manual/dockers/text_properties.rst:255
 msgid "Behaviour in horizontal writing modes"
-msgstr ""
+msgstr "横排文本中的行为。"
 
 #: ../../reference_manual/dockers/text_properties.rst:257
 #: ../../reference_manual/dockers/text_properties.rst:653
 msgid "Auto"
-msgstr ""
+msgstr "自动"
 
 #: ../../reference_manual/dockers/text_properties.rst:258
 msgid "Underlines will be positioned according to the metrics of the font."
-msgstr ""
+msgstr "下划线位置将根据字体长度数值设置。"
 
 #: ../../reference_manual/dockers/text_properties.rst:259
 msgid "Horizontal:"
-msgstr ""
+msgstr "横排："
 
 #: ../../reference_manual/dockers/text_properties.rst:259
 msgid "Bottom"
-msgstr ""
+msgstr "字符底端"
 
 #: ../../reference_manual/dockers/text_properties.rst:260
 msgid "Underlines will be aligned to the descender."
-msgstr ""
+msgstr "下划线将对齐到字符 (如 j、y) 的下行部分 (descender)。"
 
 #: ../../reference_manual/dockers/text_properties.rst:262
 msgid "Behaviour in vertical writing modes."
-msgstr ""
+msgstr "竖排文本中的行为。"
 
 #: ../../reference_manual/dockers/text_properties.rst:264
 msgid "Vertical left"
-msgstr ""
+msgstr "竖排左划线"
 
 #: ../../reference_manual/dockers/text_properties.rst:265
 msgid ""
 "Underlines will be at the left of the characters. Overlines at the right."
-msgstr ""
+msgstr "下划线在字符左侧绘制，上划线在字符右侧绘制。"
 
 #: ../../reference_manual/dockers/text_properties.rst:267
 msgid "Vertical:"
-msgstr ""
+msgstr "竖排："
 
 #: ../../reference_manual/dockers/text_properties.rst:267
 msgid "Vertical right"
-msgstr ""
+msgstr "竖排右划线"
 
 #: ../../reference_manual/dockers/text_properties.rst:267
 msgid "Underlines will be at the right of the characters, and overlines left."
-msgstr ""
+msgstr "下划线在字符右侧绘制，上划线在字符左侧绘制。"
 
 #: ../../reference_manual/dockers/text_properties.rst:272
 msgid "OpenType Features"
