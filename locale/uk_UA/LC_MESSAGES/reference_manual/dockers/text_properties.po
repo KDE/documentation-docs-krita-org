@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 5.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2026-03-12 21:07+0200\n"
+"PO-Revision-Date: 2026-03-13 13:15+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -1744,6 +1744,11 @@ msgid ""
 "`Alphabetic` in horizontal and :guilabel:`Central` in vertical :ref:"
 "`text_property_writing_mode`."
 msgstr ""
+"Домінантна базова лінія визначає, як вирівнюються фрагменти тексту різних "
+"розмірів, вона також є типовим значенням для :ref:"
+"`text_property_alignment_baseline`. Вона має одне унікальне значення, :"
+"guilabel:`Авто`, яке перетворюється на :guilabel:`Абеткове` по горизонталі "
+"та :guilabel:`Центральне` по вертикалі :ref:`text_property_writing_mode`."
 
 #: ../../reference_manual/dockers/text_properties.rst:501
 msgid "Alignment Baseline"
@@ -1756,6 +1761,10 @@ msgid ""
 "means it will take its value from the :ref:`text_property_dominant_baseline` "
 "property."
 msgstr ""
+"Базова лінія вирівнювання надає змогу контролювати вирівнювання цього "
+"фрагмента тексту відносно батьківського тексту. Вона має одну унікальну "
+"властивість :guilabel:`Базова лінія`, що означає, що її значення береться з "
+"властивості :ref:`text_property_dominant_baseline`."
 
 #: ../../reference_manual/dockers/text_properties.rst:505
 msgid ""
@@ -1791,18 +1800,24 @@ msgid ""
 "Shift text so it aligns to the inherited super script offset. Said value is "
 "retrieved from the font."
 msgstr ""
+"Зсуває текст, щоб він вирівнювався за успадкованим зміщенням верхнього "
+"індексу шрифту. Зазначене значення буде отримано зі шрифту."
 
 #: ../../reference_manual/dockers/text_properties.rst:519
 msgid ""
 "Shift text so it aligns to the inherited sub script offset. Said value is "
 "retrieved from the font."
 msgstr ""
+"Зсуває текст, щоб він вирівнювався за успадкованим зміщенням нижнього "
+"індексу. Це значення буде отримано зі шрифту."
 
 #: ../../reference_manual/dockers/text_properties.rst:521
 msgid ""
 "Baseline shift does not inherit. Instead, shifts will be added to one "
 "another, allowing the following:"
 msgstr ""
+"Зсув базової лінії не успадковується. Натомість, зсуви будуть додаватися "
+"один до одного, що надасть змогу:"
 
 #: ../../reference_manual/dockers/text_properties.rst:525
 msgid ".. image:: /images/text/baseline-nested-super-script.png"
@@ -1813,6 +1828,8 @@ msgid ""
 "Nested baseline-shift super definitions. This is only possible by editing "
 "the text with the SVG source editor."
 msgstr ""
+"Вкладені надвизначення зсуву базової лінії. Реалізувати їх можна лише шляхом "
+"редагування тексту за допомогою редактора початкового коду SVG."
 
 #: ../../reference_manual/dockers/text_properties.rst:530
 msgid "White Space"
@@ -1849,6 +1866,10 @@ msgid ""
 "code. Typing a language name or code into the text input will show a "
 "filtered search pop-up."
 msgstr ""
+"У текстове поле можна ввести будь-який дійсний код `BCP 47 <https://en."
+"wikipedia.org/wiki/BCP47>`_. Натискання :kbd:`Enter` призведе до того, що "
+"Krita обробить код. Введення назви мови або коду в текстове поле призведе до "
+"показу контекстного вікна з фільтрованими результатами пошуку."
 
 #: ../../reference_manual/dockers/text_properties.rst:545
 msgid ""
@@ -1856,6 +1877,10 @@ msgid ""
 "session, as well as stored locales. By toggling the check box in front of a "
 "locale, you can indicate that they need to be stored for future sessions."
 msgstr ""
+"Натискання стрілки вниз призведе до показу усіх раніше використаних локалей "
+"цього сеансу, а також збережених локалей. Встановивши прапорець перед "
+"пунктом локалі, ви можете вказати, що локальн потрібно зберегти для "
+"майбутніх сеансів."
 
 #: ../../reference_manual/dockers/text_properties.rst:547
 msgid ""
@@ -1865,6 +1890,11 @@ msgid ""
 "script being used has changed over the years. The script dropdown allows "
 "setting the script in these cases."
 msgstr ""
+"Також передбачено спадний список :guilabel:`Писемність`. Зазвичай можна "
+"вгадати шрифт за мовою та країною. Однак у деяких місцях для однієї й тієї ж "
+"мови можуть використовуватися різні шрифти, а іноді основний шрифт, що "
+"використовується, змінювався протягом багатьох років. У таких випадках за "
+"допомогою спадного списку шрифтів можна налаштувати шрифт."
 
 #: ../../reference_manual/dockers/text_properties.rst:552
 msgid "Fill"
@@ -1876,6 +1906,10 @@ msgid ""
 "to use the :ref:`shape_selection_tool` to set it on the paragraph, or change "
 "the foreground color with any of the color selectors."
 msgstr ""
+"У поточній версії залиття неможливо встановити за допомогою бічної панелі "
+"властивостей тексту. Вам доведеться скористатися інструментом :ref:"
+"`shape_selection_tool`, щоб встановити його на абзаці, або змінити колір "
+"переднього плану за допомогою будь-якого із засобів вибору кольорів."
 
 #: ../../reference_manual/dockers/text_properties.rst:559
 msgid "Stroke"
@@ -1887,6 +1921,10 @@ msgid ""
 "will need to use the :ref:`shape_selection_tool` to set it, or use the :ref:"
 "`svg_source_editor` in the text tool to manually set a stroke."
 msgstr ""
+"У поточній версії штрих не можна налаштувати за допомогою бічної панелі "
+"властивостей тексту. Щоб налаштувати його, слід скористатися інструментом :"
+"ref:`shape_selection_tool` або інструментом :ref:`svg_source_editor` у "
+"тексті, щоб встановити параметри штриха вручну."
 
 #: ../../reference_manual/dockers/text_properties.rst:566
 msgid "Paragraph Properties"
@@ -1897,6 +1935,8 @@ msgid ""
 "Paragraph properties are the properties that can only be applied over a "
 "whole text shape."
 msgstr ""
+"Властивості абзацу — це властивості, які можна застосовувати лише до всієї "
+"текстової форми."
 
 #: ../../reference_manual/dockers/text_properties.rst:573
 msgid "Writing Mode"
@@ -1907,6 +1947,8 @@ msgid ""
 "Writing Mode sets whether the text flows horizontally or vertically, and in "
 "the latter case, whether the block flows right-to-left or left-to-right."
 msgstr ""
+"Режим запису визначає, як розташовано текст — горизонтально чи вертикально, "
+"а в останньому випадку – буде вписано блок справа ліворуч чи зліва праворуч."
 
 #: ../../reference_manual/dockers/text_properties.rst:577
 msgid "See also :ref:`text_property_direction`."
@@ -1918,6 +1960,10 @@ msgid ""
 "text when it is typeset vertically. Krita does not current support this "
 "feature, but it is planned in the future."
 msgstr ""
+"Пов'язана функція — «Орієнтація тексту», яка надає змогу обертати "
+"горизонтальний текст, якщо його набрано вертикально. У поточній версії Krita "
+"не передбачено підтримки цієї можливості, але її планують додати у "
+"майбутньому."
 
 #: ../../reference_manual/dockers/text_properties.rst:584
 msgid "Text Indent"
@@ -1929,6 +1975,10 @@ msgid ""
 "the text is wrapping. The main control is a slider defining the size of the "
 "indent. There's two more advanced controls:"
 msgstr ""
+"Абзацний відступ надає змогу визначити відступ на початку абзацу. Працює, "
+"лише якщо увімкнено перенесення рядків. Основним засобом керування є "
+"повзунок, що визначає розмір відступу. Передбачено також два додаткових "
+"засоби керування:"
 
 #: ../../reference_manual/dockers/text_properties.rst:588
 msgid "Hanging Indentation"
@@ -1939,6 +1989,7 @@ msgid ""
 "This does not apply indentation to the stating line, but instead the "
 "subsequent lines."
 msgstr ""
+"Відступ не буде застосовано до початкового рядка, лише до наступних рядків."
 
 #: ../../reference_manual/dockers/text_properties.rst:591
 msgid "Indent after hard breaks"
@@ -1949,6 +2000,8 @@ msgid ""
 "This makes it so each line after a hard break qualifies as a starting lines. "
 "Frequently used for poetry."
 msgstr ""
+"Кожен рядок після жорсткого розриву буде вважатися початковим рядком. Часто "
+"використовується для поезії."
 
 #: ../../reference_manual/dockers/text_properties.rst:596
 #: ../../reference_manual/dockers/text_properties.rst:604
@@ -1967,6 +2020,10 @@ msgid ""
 "right-to-left text, start will be the same as align right. The final button "
 "is the justification toggle."
 msgstr ""
+"Основний елемент керування містить три кнопки, що відповідають початку, "
+"середині і кінцю. Ці властивості залежать від напрямку, тобто для тексту "
+"справа ліворуч початок буде таким самим, як і для вирівнювання за правим "
+"краєм. Остання кнопка — це перемикач вирівнювання."
 
 #: ../../reference_manual/dockers/text_properties.rst:602
 msgid "Opening the advanced settings shows the following:"
@@ -1976,6 +2033,7 @@ msgstr "Відкриття додаткових параметрів призв�
 msgid ""
 "This allows you to set the text alignment when text is wrapped in a shape."
 msgstr ""
+"Надає змогу встановити вирівнювання тексту, якщо текст вписано у форму."
 
 #: ../../reference_manual/dockers/text_properties.rst:606
 msgid "Align Last"
@@ -1986,6 +2044,8 @@ msgid ""
 "When :guilabel:`Text Align` is set to :guilabel:`Justified`, this controls "
 "what to do with the final line."
 msgstr ""
+"Якщо для параметра :guilabel:`Вирівнювання тексту` встановлено значення :"
+"guilabel:`За шириною`, цей параметр визначає спосіб обробки останнього рядка."
 
 #: ../../reference_manual/dockers/text_properties.rst:609
 msgid "Text Anchor"
@@ -2000,16 +2060,24 @@ msgid ""
 "text. You can use :guilabel:`Text Anchor` to set the anchor for each line, "
 "as long as the text is not being auto wrapped."
 msgstr ""
+"Прив'язка тексту контролює спосіб прив'язки тексту, а не вирівнювання. Це "
+"дещо нагадує :guilabel:`Вирівнювання тексту` тим, що дозволяє тексту "
+"переміщатися ліворуч або праворуч, але де :guilabel:`Вирівнювання тексту` — "
+"це вирівнювання в межах порожнього простору, :guilabel:`Прив'язка тексту` "
+"обчислюється відносно початкової точки тексту. Ви можете використовувати :"
+"guilabel:`Прив'язку тексту` для встановлення прив'язки для кожного рядка, "
+"якщо текст не переноситься автоматично."
 
 #: ../../reference_manual/dockers/text_properties.rst:611
 msgid ""
 "This means that there's no justification for text that is not wrapped in "
 "shape."
-msgstr ""
+msgstr "Це означає, що немає вирівнювання для тексту, який не вписано у форму."
 
 #: ../../reference_manual/dockers/text_properties.rst:613
 msgid "By default, this property is always visible, even when not set."
 msgstr ""
+"Типово, ця властивість буде видимою завжди, навіть якщо її не встановлено."
 
 #: ../../reference_manual/dockers/text_properties.rst:618
 msgid "Hanging Punctuation"
@@ -2034,22 +2102,28 @@ msgid ""
 "Opening punctuation such as opening quotes or opening brackets at the start "
 "of the paragraph will be hung."
 msgstr ""
+"Початкові розділові знаки, зокрема початкові лапки або початкові дужки на "
+"початку абзацу, будуть повисати."
 
 #: ../../reference_manual/dockers/text_properties.rst:624
 msgid "Line end"
-msgstr "Кінчик лінії"
+msgstr "Кінець рядка"
 
 #: ../../reference_manual/dockers/text_properties.rst:625
 msgid ""
 "This toggle will allow or force commas and periods to hang at the end of any "
 "line."
 msgstr ""
+"Цей перемикач надає змогу або примусово встановлює коми та крапки в кінці "
+"будь-якого рядка."
 
 #: ../../reference_manual/dockers/text_properties.rst:627
 msgid ""
 "Closing punctuation such as closing quotes or closing brackets at the end of "
 "the paragraph will be hung."
 msgstr ""
+"Кінцеві розділові знаки, зокрема кінцеві лапки або кінцеві дужки у кінці "
+"абзацу, будуть повисати."
 
 #: ../../reference_manual/dockers/text_properties.rst:628
 msgid "Hang last"
@@ -2066,12 +2140,19 @@ msgid ""
 "to the nearest multiple of the reference size. Its main use case is to align "
 "columns of information without resorting to tables."
 msgstr ""
+"Розмір табуляції надає змогу визначити ширину символів табуляції. Символи "
+"табуляції (вставляються за допомогою :kbd:`Tab`) – це тип пробілу, який "
+"прив’язується до найближчого кратного еталонного розміру. Його основним "
+"використанням є вирівнювання стовпців інформації без використання таблиць."
 
 #: ../../reference_manual/dockers/text_properties.rst:637
 msgid ""
 "Tab size has one unique unit: :guilabel:`Sp`. This means the tab size uses "
 "the current advance of the space character as unit."
 msgstr ""
+"Розмір табуляції має одну унікальну одиницю вимірювання: :guilabel:`Sp`. Це "
+"означає, що розмір табуляції використовує як одиницю вимірювання поточне "
+"переміщення символу пробілу."
 
 #: ../../reference_manual/dockers/text_properties.rst:642
 msgid "Text Rendering"
@@ -2080,7 +2161,7 @@ msgstr "Обробка тексту"
 #: ../../reference_manual/dockers/text_properties.rst:644
 msgid ""
 "Text Rendering controls the hinting and rendering style for the text shape."
-msgstr ""
+msgstr "Обробка тексту керує гінтінґом та стилем обробки для текстової форми."
 
 #: ../../reference_manual/dockers/text_properties.rst:646
 msgid "Optimize Speed"
@@ -2093,6 +2174,10 @@ msgid ""
 "pixel. This allows for pixel art fonts to look good, as well as being the "
 "fastest to render option."
 msgstr ""
+"Використано стиль гінтінґу для монохромних растрових зображень, а "
+"згладжування вимкнено. Krita також подбає про прив'язку гліфів до "
+"найближчого пікселя. Це надає змогу шрифтам піксельної графіки виглядати "
+"добре, а також є найшвидшим варіантом для обробки."
 
 #: ../../reference_manual/dockers/text_properties.rst:648
 msgid "Optimize Legibility"
@@ -2104,6 +2189,9 @@ msgid ""
 "hinting only happens vertically. Krita will additionally snap relevant "
 "metrics in these directions."
 msgstr ""
+"У вертикальних режимах запису увімкнено повний гінтінґ, тоді як у "
+"горизонтальних — лише вертикальний. Krita додатково прив’язуватиме у цих "
+"напрямках відповідні метрики."
 
 #: ../../reference_manual/dockers/text_properties.rst:650
 msgid "Geometric Precision"
@@ -2129,6 +2217,12 @@ msgid ""
 "`text_property_baseline_shift`, :ref:`text_property_letter_spacing` and :ref:"
 "`text_property_line_height` will look good."
 msgstr ""
+"Слоган Krita різними шрифтами, набраний піксельним шрифтом «Unifont». Коли "
+"позначено пункт :guilabel:`Оптимізувати швидкість`, Krita знатиме, що "
+"потрібно не лише вимкнути згладжування, але й спробувати прив’язати гліфи "
+"так, щоб :ref:`text_property_baseline_shift`, :ref:"
+"`text_property_letter_spacing` та :ref:`text_property_line_height` виглядали "
+"добре."
 
 #: ../../reference_manual/dockers/text_properties.rst:662
 msgid "Text Area"
@@ -2144,7 +2238,7 @@ msgstr "Фаска форми"
 
 #: ../../reference_manual/dockers/text_properties.rst:667
 msgid "This is the padding that is calculated on the Inside shapes."
-msgstr ""
+msgstr "Це відступ, який розраховується для вписування всередину форм."
 
 #: ../../reference_manual/dockers/text_properties.rst:669
 msgid "Shape Margin"
@@ -2155,6 +2249,8 @@ msgid ""
 "This is margin around the \"Subtract\" shapes that is added before they are "
 "removed from the \"Inside\" shapes."
 msgstr ""
+"Це поле навколо форм «Відняти», яке додається перед тим, як їх буде вилучено "
+"з форм «Всередині»."
 
 #: ../../reference_manual/dockers/text_properties.rst:674
 msgid "Style Presets"
@@ -2165,12 +2261,17 @@ msgid ""
 ":ref:`resource_style_presets` allow storing combinations of properties for "
 "later use. See that page for information about editing style presets."
 msgstr ""
+":ref:`resource_style_presets` дозволяють зберігати комбінації властивостей "
+"для подальшого використання. Див. відповідну сторінку, щоб дізнатися більше "
+"про редагування наборів стилів."
 
 #: ../../reference_manual/dockers/text_properties.rst:678
 msgid ""
 "|mouseleft| an entry will select it for editing, while double |mouseleft| "
 "will apply the active properties onto the text."
 msgstr ""
+"Клацання |mouseleft| на записі вибере його для редагування, тоді як подвійне "
+"клацання |mouseleft| застосує активні властивості до тексту."
 
 #: ../../reference_manual/dockers/text_properties.rst:680
 msgid "The buttons at the bottom allow modifying the style presets:"

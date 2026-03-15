@@ -156,19 +156,19 @@ msgstr "属性将始终显示。"
 
 #: ../../reference_manual/dockers/text_properties.rst:39
 msgid "When Set"
-msgstr "被设置过时显示"
+msgstr "有设置时显示"
 
 #: ../../reference_manual/dockers/text_properties.rst:40
 msgid "The property will be visible only when set."
-msgstr "属性将只在被设置过时才显示。"
+msgstr "属性将只在有设置时才显示。"
 
 #: ../../reference_manual/dockers/text_properties.rst:41
 msgid "When Relevant"
-msgstr "相关时显示"
+msgstr "有设置或被继承时显示"
 
 #: ../../reference_manual/dockers/text_properties.rst:42
 msgid "The property will be visible when it is set or when it is inherited."
-msgstr "属性将在被设置过或被继承时显示。"
+msgstr "属性将在有设置或被继承时显示。"
 
 #: ../../reference_manual/dockers/text_properties.rst:44
 msgid "Never Show"
@@ -917,14 +917,17 @@ msgid ""
 "glyphs) so that complex joined scripts render correctly. The latter type is "
 "generally always enabled, and Krita provides control for the former."
 msgstr ""
+"某些字体包含 OpenType 特性，例如字距微调、连字或小写字母，还可能包含各种替代"
+"字形、上下文替代字形，以便复杂的连笔字形能够正确呈现。上下文替代字形通常始终"
+"启用，而 Krita 提供了对各种其他替代字形的控制。"
 
 #: ../../reference_manual/dockers/text_properties.rst:277
 msgid "OpenType Feature Settings"
-msgstr ""
+msgstr "OpenType 特性设置"
 
 #: ../../reference_manual/dockers/text_properties.rst:281
 msgid ".. image:: /images/text/opentype_features_ui.png"
-msgstr ""
+msgstr ".. image:: /images/text/opentype_features_ui.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:281
 msgid ""
@@ -933,6 +936,9 @@ msgid ""
 "are stored in the font. The name can be retrieved from the font if defined, "
 "otherwise Krita will provide its own name."
 msgstr ""
+"仿中世纪字体“Junicode”中启用的一些功能。前四个字母是“OpenType 功能标签”，这是"
+"这些功能在字体中的存储方式。如果字体中定义了这些功能的名称，Krita 将从字体中"
+"获取它们，否则 Krita 将提供自己的名称。"
 
 #: ../../reference_manual/dockers/text_properties.rst:283
 msgid ""
@@ -941,12 +947,15 @@ msgid ""
 "provide a list of features in the primary font in the :ref:"
 "`text_property_font_family` list."
 msgstr ""
+"这提供了对 OpenType 特性的精确控制。OpenType 特性通常由标签定义，并且表明其是"
+"开启还是关闭。 :ref:`text_property_font_family` 列表中的主要字体的特性会在下"
+"拉菜单中被列出。"
 
 #: ../../reference_manual/dockers/text_properties.rst:285
 msgid ""
 "For where it is feasible, a small preview is rendered, but for some features "
 "it can be hard to provide this."
-msgstr ""
+msgstr "可用特性下拉列表会尽量所有特性的预览，但不是每种特性都能提供预览。"
 
 #: ../../reference_manual/dockers/text_properties.rst:287
 msgid ""
@@ -955,12 +964,15 @@ msgid ""
 "in the primary font can still be selected and enabled (which is useful when "
 "inheriting)."
 msgstr ""
+"在搜索框中输入功能名称或标签，列表将过滤显示所有与搜索条件匹配的官方功能。这"
+"样，即使不在主要字体中的功能也能被选中并启用 (可用于属性继承)。"
 
 #: ../../reference_manual/dockers/text_properties.rst:289
 msgid ""
 "See also the :ref:`glyph_palette` for an alternate way of selecting glyph "
 "alternates in the current text."
 msgstr ""
+"除此之外，还可以使用 :ref:`glyph_palette` ，为当前文本的字符选择替代字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:291
 msgid ""
@@ -968,6 +980,8 @@ msgid ""
 "give general hints for a given feature to be enabled over the whole text, "
 "use the Glyph properties:"
 msgstr ""
+"OpenType 特性虽可继承，但会以单一列表形式继承。若需为整个文本启用某特性的常规"
+"提示，应使用“字形”系列属性："
 
 #: ../../reference_manual/dockers/text_properties.rst:296
 msgid "Glyphs: Ligatures"
@@ -975,7 +989,7 @@ msgstr "字形：连字"
 
 #: ../../reference_manual/dockers/text_properties.rst:297
 msgid "Enable or disable ligatures and contextual alternates on the text."
-msgstr ""
+msgstr "启用或禁用连字和上下文连字的替代字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:299
 msgid "Common"
@@ -983,7 +997,7 @@ msgstr "标准连字"
 
 #: ../../reference_manual/dockers/text_properties.rst:300
 msgid "Enables `liga` and `clig`, which are commonly used ligatures."
-msgstr ""
+msgstr "启用 `liga` 和 `clig` ，这些是常用的连字。"
 
 #: ../../reference_manual/dockers/text_properties.rst:301
 msgid "Discretionary"
@@ -991,7 +1005,7 @@ msgstr "可选连字"
 
 #: ../../reference_manual/dockers/text_properties.rst:302
 msgid "Enables `dlig`, which are ligatures of a more decorative nature."
-msgstr ""
+msgstr "启用 `dlig` ，这是一种更偏向装饰性的连字。"
 
 #: ../../reference_manual/dockers/text_properties.rst:303
 msgid "Historical"
@@ -999,7 +1013,7 @@ msgstr "历史连字"
 
 #: ../../reference_manual/dockers/text_properties.rst:304
 msgid "Enables `hlig`, which is intended for old-fashioned ligatures."
-msgstr ""
+msgstr "启用 `hlig` ，这是用于营造古典文献排版效果的连字。"
 
 #: ../../reference_manual/dockers/text_properties.rst:306
 msgid "Contextual Alternates"
@@ -1010,10 +1024,12 @@ msgid ""
 "Enables `calt`, which is frequently used by script fonts and decorative "
 "fonts to select appropriate glyphs depending on their context."
 msgstr ""
+"启用 `calt` ，这是手写体和花体中经常使用的连字形式，根据上下文选择合适的字"
+"形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:310
 msgid ".. image:: /images/text/opentype-ligatures.png"
-msgstr ""
+msgstr ".. image:: /images/text/opentype-ligatures.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:310
 msgid ""
@@ -1022,6 +1038,9 @@ msgid ""
 "Noto Serif, and contextual in Junicode, “st” is a discretionary ligature in "
 "Junicode and “al” is a historical ligature in Junicode."
 msgstr ""
+"Noto Serif 和 Junicode 字体中的连字，连字用蓝色标记，未使用连字用橙色标"
+"记。“ffi” 在 Noto Serif 字体是标准连字，在 Junicode 字体则是上下文连字，“st” "
+"在 Junicode 字体中是可选连字，而 “al” 在 Junicode 字体中的是历史连字。"
 
 #: ../../reference_manual/dockers/text_properties.rst:315
 msgid "Glyphs: Position"
@@ -1029,7 +1048,7 @@ msgstr "字形：定位"
 
 #: ../../reference_manual/dockers/text_properties.rst:317
 msgid "Enable super or subscripts on the text."
-msgstr ""
+msgstr "对文本启用上标和下标。"
 
 #: ../../reference_manual/dockers/text_properties.rst:319
 #: ../../reference_manual/dockers/text_properties.rst:516
@@ -1038,7 +1057,7 @@ msgstr "上标"
 
 #: ../../reference_manual/dockers/text_properties.rst:320
 msgid "Enables superscript glyphs."
-msgstr ""
+msgstr "启用上标字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:322
 #: ../../reference_manual/dockers/text_properties.rst:519
@@ -1047,15 +1066,15 @@ msgstr "下标"
 
 #: ../../reference_manual/dockers/text_properties.rst:322
 msgid "Enables subscript glyphs."
-msgstr ""
+msgstr "启用下标字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:326
 msgid ".. image:: /images/text/opentype-position.png"
-msgstr ""
+msgstr ".. image:: /images/text/opentype-position.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:326
 msgid "Showing sub and superscripts in the font “EB Garamond”."
-msgstr ""
+msgstr "上图显示了 EB Garamond 字体的下标和上标效果。"
 
 #: ../../reference_manual/dockers/text_properties.rst:331
 msgid "Glyphs: Numeric"
@@ -1063,17 +1082,17 @@ msgstr "字形：数字"
 
 #: ../../reference_manual/dockers/text_properties.rst:333
 msgid "Enable number-related glyph forms on the text."
-msgstr ""
+msgstr "在文本上启用与数字相关的字形形式。"
 
 #: ../../reference_manual/dockers/text_properties.rst:337
 #: ../../reference_manual/dockers/text_properties.rst:344
 #: ../../reference_manual/dockers/text_properties.rst:351
 msgid "Does not explicitly enable either style, showing the font default."
-msgstr ""
+msgstr "不明确启用任何样式，使用字体的默认样式。"
 
 #: ../../reference_manual/dockers/text_properties.rst:338
 msgid "Lining"
-msgstr ""
+msgstr "等高数字"
 
 #: ../../reference_manual/dockers/text_properties.rst:339
 msgid "Requests figures that fit within an upper case text, using `lnum`."
@@ -1082,11 +1101,11 @@ msgstr ""
 #: ../../reference_manual/dockers/text_properties.rst:340
 #: ../../reference_manual/dockers/text_properties.rst:411
 msgid "Style"
-msgstr ""
+msgstr "样式"
 
 #: ../../reference_manual/dockers/text_properties.rst:340
 msgid "Old Style"
-msgstr ""
+msgstr "旧体数字"
 
 #: ../../reference_manual/dockers/text_properties.rst:341
 msgid ""
@@ -1096,7 +1115,7 @@ msgstr ""
 #: ../../reference_manual/dockers/text_properties.rst:345
 #: ../../reference_manual/dockers/text_properties.rst:416
 msgid "Proportional"
-msgstr ""
+msgstr "比例宽度数字"
 
 #: ../../reference_manual/dockers/text_properties.rst:346
 msgid "Requests proportional figures, using `pnum`."
@@ -1104,11 +1123,11 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:347
 msgid "Proportion"
-msgstr ""
+msgstr "比例"
 
 #: ../../reference_manual/dockers/text_properties.rst:347
 msgid "Tabular"
-msgstr ""
+msgstr "等宽数字"
 
 #: ../../reference_manual/dockers/text_properties.rst:348
 msgid ""
@@ -1118,7 +1137,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:352
 msgid "Diagonal"
-msgstr ""
+msgstr "斜式分数"
 
 #: ../../reference_manual/dockers/text_properties.rst:353
 msgid ""
@@ -1130,11 +1149,11 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:354
 msgid "Fraction"
-msgstr ""
+msgstr "分数"
 
 #: ../../reference_manual/dockers/text_properties.rst:354
 msgid "Stacked"
-msgstr ""
+msgstr "层叠分数"
 
 #: ../../reference_manual/dockers/text_properties.rst:355
 msgid "Replaces figures separated by a slash with a nut fraction form."
@@ -1142,7 +1161,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:356
 msgid "Ordinals"
-msgstr ""
+msgstr "序数词形式"
 
 #: ../../reference_manual/dockers/text_properties.rst:357
 msgid "Replaces letters that follow figures with their ordinal forms."
@@ -1150,7 +1169,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:359
 msgid "Slashed Zero"
-msgstr ""
+msgstr "带斜线零"
 
 #: ../../reference_manual/dockers/text_properties.rst:359
 msgid ""
@@ -1160,7 +1179,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:363
 msgid ".. image:: /images/text/opentype-numeric.png"
-msgstr ""
+msgstr ".. image:: /images/text/opentype-numeric.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:363
 msgid ""
@@ -1171,7 +1190,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:368
 msgid "Glyphs: Caps"
-msgstr ""
+msgstr "字形：大写"
 
 #: ../../reference_manual/dockers/text_properties.rst:370
 msgid "Enable opentype features related to capitals, such as small caps."
@@ -1183,7 +1202,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:374
 msgid "Small Caps"
-msgstr ""
+msgstr "小型大写字母"
 
 #: ../../reference_manual/dockers/text_properties.rst:375
 msgid "Sets uppercase to small caps. Typically used for abbreviations."
@@ -1191,7 +1210,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:376
 msgid "All Small Caps"
-msgstr ""
+msgstr "全部小型大写字母"
 
 #: ../../reference_manual/dockers/text_properties.rst:377
 msgid "Sets all text to small caps. Typically used for formal text."
@@ -1199,7 +1218,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:378
 msgid "Petite Caps"
-msgstr ""
+msgstr "微型大写字母"
 
 #: ../../reference_manual/dockers/text_properties.rst:379
 msgid ""
@@ -1209,7 +1228,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:380
 msgid "All Petite Caps"
-msgstr ""
+msgstr "全部微型大写字母"
 
 #: ../../reference_manual/dockers/text_properties.rst:381
 msgid "Sets all text to petite caps."
@@ -1217,7 +1236,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:382
 msgid "Titling Caps"
-msgstr ""
+msgstr "标题专用字形"
 
 #: ../../reference_manual/dockers/text_properties.rst:383
 msgid ""
@@ -1227,7 +1246,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:385
 msgid "Unicase"
-msgstr ""
+msgstr "统一大小写"
 
 #: ../../reference_manual/dockers/text_properties.rst:385
 msgid "Enables the unicase feature."
@@ -1235,7 +1254,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:389
 msgid ".. image:: /images/text/opentype-caps.png"
-msgstr ""
+msgstr ".. image:: /images/text/opentype-caps.png"
 
 #: ../../reference_manual/dockers/text_properties.rst:389
 msgid ""
@@ -1246,7 +1265,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:394
 msgid "Glyphs: East-Asian"
-msgstr ""
+msgstr "字形：东亚文字"
 
 #: ../../reference_manual/dockers/text_properties.rst:396
 msgid "Enable glyph forms related to East Asian text layout."
@@ -1258,7 +1277,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:401
 msgid "Traditional"
-msgstr ""
+msgstr "繁体"
 
 #: ../../reference_manual/dockers/text_properties.rst:402
 msgid "Use traditional glyphs."
@@ -1266,7 +1285,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:403
 msgid "Simplified"
-msgstr ""
+msgstr "简体"
 
 #: ../../reference_manual/dockers/text_properties.rst:404
 msgid "Use simplifies glyphs."
