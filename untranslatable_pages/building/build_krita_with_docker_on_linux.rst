@@ -187,11 +187,11 @@ Enter the container and build Krita
     # start Krita
     ../krita.appdir/usr/bin/krita
 
-If you have the Qt6 dependencies, you need to pass an aditional CMake argument:
+If you have the Qt6 dependencies, you need to pass additional CMake arguments:
 
 .. code::
 
-   run_cmake.sh -DBUILD_WITH_QT6=ON ~/persistent/krita/
+   run_cmake.sh -DBUILD_WITH_QT6=ON -DALLOW_UNSTABLE=QT6 ~/persistent/krita/
 
 .. note::
 
