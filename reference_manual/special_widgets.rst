@@ -128,9 +128,9 @@ Krita uses these to control values like brush size, opacity, flow, Hue, Saturati
 
 The total range is represented from left to right and the colored bar gives an indication of where in the possible range the current value is. Clicking anywhere, left or right, of that slider will change the current number to something lower (to the left) or higher (to the right). You can also use :kbd:`Down` or :kbd:`Left`, to decrease the value, and :kbd:`Up` or :kbd:`Right` to increase it.
 
-Some sliders may have a *soft* range to choose from, in addition to the full range. The *soft* range is a sug-range formed by the most common values in the full range. When a slider has the ability to toggle between the full range and the sub-range then a small button with a circle icon is shown to the side of the increase/decrease buttons. Clicking that button will toggle between full range and sub-range.
+Some sliders may have a *soft* range to choose from, in addition to the full range. The *soft* range is a sub-range formed by the most common values in the full range. When a slider has the ability to toggle between the full range and the sub-range then a small button with a circle icon is shown to the side of the increase/decrease buttons. Clicking that button will toggle between full range and sub-range.
 
-To input a specific number with the keyboard, hold |mouseleft| on, |mouseright| the slider, press :kbd:`Enter`, or press a number key. A number can now be entered directly for even greater precision. This control is also a :ref:`maths input <maths_input>`, so you can enter complex mathematical expressions. To commit the new value, press :kbd:`Enter`. To cancel the editing without committing and returning to the value that was set before entering the editing mode, press :kbd:`Escape`.
+To input a specific number with the keyboard, you can either double-click |mouseleft| , right click |mouseright| on the slider, or press any number key. Press :kbd:`Enter` to accept. A number can now be entered directly for even greater precision. This control is also a :ref:`maths input <maths_input>`, so you can enter complex mathematical expressions. To commit the new value, press :kbd:`Enter`. To cancel the editing without committing and returning to the value that was set before entering the editing mode, press :kbd:`Escape`.
 
 Pressing the :kbd:`Shift` key while dragging the slider changes the values at a smaller increment, and pressing the :kbd:`Ctrl` key while dragging the slider will snap the value to the nearest value step (the exact value step may vary from slider to slider).
 
@@ -243,7 +243,6 @@ General UI Breakdown
    8. :dfn:`Handle properties area` - In this area will appear some widgets you can use to change the different properties of the selected handle.
 
 Segment Handle UI Breakdown
-
    .. image:: /images/gradients/segment_gradient_editor_segment_handle_breakdown.png
       :align: center
 
@@ -293,7 +292,6 @@ Stop Handle UI Breakdown
    7. :guilabel:`Position` - you can use this slider to fine-tune the position of the stop. This changes the end position of the segment on the left and the start position of the segment on the right.
 
 Middle Point Handle UI Breakdown
-
    .. image:: /images/gradients/segment_gradient_editor_midpoint_handle_breakdown.png
       :align: center
 
