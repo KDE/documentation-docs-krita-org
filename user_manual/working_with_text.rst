@@ -123,7 +123,7 @@ Comics
 
 When creating a comic, you can add text at any given moment. The examples here focus on the most common moments: At the very start, when planning a comic, or at the very end, when type setting a comic.
 
-Now, when creating a comic, it is important that the text is consistent and and easy to read. To ensure that, you can use :ref:`resource_style_presets`. First, create a text. Then, with the :ref:`text_properties_docker`, set the preferred font, and the font size. Finally, create a style preset by going to the :guilabel:`Preset` tab, and there selecting :guilabel:`New Preset`. A dialog will pop up, where you can set the name and the style sample.
+Now, when creating a comic, it is important that the text is consistent and easy to read. To ensure that, you can use :ref:`resource_style_presets`. First, create a text. Then, with the :ref:`text_properties_docker`, set the preferred font, and the font size. Finally, create a style preset by going to the :guilabel:`Preset` tab, and there selecting :guilabel:`New Preset`. A dialog will pop up, where you can set the name and the style sample.
 
 .. figure:: /images/text/working_text_comics_preset.png
    :alt: Window for creating a style preset. It shows a "Comic Text" style, using the font "Komika Text" at 11 points.
@@ -217,7 +217,7 @@ There's a number of technical terms that are used throughout the manual to descr
         Fonts are not just collections of glyphs for each character and cluster, but also contain a tiny program that instructs the text layout how to use the glyphs. OpenType is a standard for these programs, and Krita allows you to configure the features of the program via various OpenType feature controls.
         
     Advance
-        This refers to how much space a glyph takes up in the line its laid out in. Sometimes this is bigger or smaller than the size of the glyph itself, and is influenced by properties like Kerning and Letter spacing.
+        This refers to how much space a glyph takes up in the line it's laid out in. Sometimes this is bigger or smaller than the size of the glyph itself, and is influenced by properties like Kerning and Letter spacing.
         
     Kerning
         When you have a line of text, you put the glyphs next to one another. Sometimes this can lead to little gaps appearing between some glyph combinations. Fonts usually have a list of places where this happens and instruct the text layout to pull the glyphs back a little, so the gap closes. This is called Kerning.

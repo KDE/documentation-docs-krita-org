@@ -361,7 +361,7 @@ Put Text On Path
 
 When a :ref:`text_in_shape` is selected, a button appears in the top right. Clicking this will switch the tool into text contour mode. In this mode you can select, move, scale and rotate the shapes that belong with a text. It is also available in the :ref:`shape_edit_tool`, but automatically disables in the :ref:`text_tool`. When in this mode, the text properties docker will edit the text regardless of what is selected.
 
-A number of extra actions become available in the right click menu when in in text contour mode:
+A number of extra actions become available in the right click menu when in the text contour mode:
 
 Remove Shapes from Text Flow
     Remove all selected shapes from the current text.

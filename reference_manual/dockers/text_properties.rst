@@ -59,7 +59,7 @@ Conversely, some properties do not inherit at all, :ref:`text_property_baseline_
 Font-Relative Units
 ~~~~~~~~~~~~~~~~~~~
 
-Some properties allow for font-relative units. The meaning of these units also depend on inheritance mechanics. All font-relative units will try to use the current font metrics. However, when said font metric is :guilabel:`Em` and the property being edited is :ref:`text_property_font_size`, it will be relative to the inherited font size. Similar with :guilabel:`Lh` and :ref:`text_property_line_height`.
+Some properties allow for font-relative units. The meaning of these units also depends on inheritance mechanics. All font-relative units will try to use the current font metrics. However, when said font metric is :guilabel:`Em` and the property being edited is :ref:`text_property_font_size`, it will be relative to the inherited font size. Similar with :guilabel:`Lh` and :ref:`text_property_line_height`.
 
 Font relative units are particularly useful for :ref:`text_property_letter_spacing`, which is often done relative to the Em size. Similarly, it is very common to have super scripted text to be set to 0.5 Em (so it is half the regular font size), or to have :ref:`Shape Padding <text_property_text_area>` to be 1 Ex.
 
@@ -144,7 +144,7 @@ Synthesize Bold
 Width
     This controls how much horizontal space a glyph takes. Not all fonts support this, and there's no synthesis for this.
 Slant
-    This can be either :guilabel:`Normal`, :guilabel:`Italic` or :guilabel:`Oblique`. The difference between Italic and Oblique is that the former corresponds to a glyph style remniscent of the Italic calligraphy style, while the latter is a slanted version of the normal glyphs.
+    This can be either :guilabel:`Normal`, :guilabel:`Italic` or :guilabel:`Oblique`. The difference between Italic and Oblique is that the former corresponds to a glyph style reminiscent of the Italic calligraphy style, while the latter is a slanted version of the normal glyphs.
     
     When :guilabel:`Oblique` is selected, the angle can also be configured. This is primarily for use with variable fonts that support the slant axis.
 Synthesize Slant
