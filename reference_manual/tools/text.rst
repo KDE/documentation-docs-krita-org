@@ -62,7 +62,7 @@ Pre-positioned
 Text on Path
 ~~~~~~~~~~~~
 
-To create :dfn:`Text on Path`, hover over the an existing shape. When hovering over the boundary, the cursor will change to a text-on-path cursor, and |mouseleft| will create a text on path.
+To create :dfn:`Text on Path`, hover over an existing shape. When hovering over the boundary, the cursor will change to a text-on-path cursor, and |mouseleft| will create a text on path.
 
 .. figure:: /images/text/working_text_adjust_path.png
    :alt: A curved path, outlined in red, with a cursor over it. The cursor shape has changed to a "T" standing on a curve.
