@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
-# SPDX-FileCopyrightText: 2022, 2025 Valter Mura <valtermura@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2025, 2026 Valter Mura <valtermura@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2025-06-14 18:24+0200\n"
+"PO-Revision-Date: 2026-03-14 20:50+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: ../../<rst_epilog>:2
 msgid "mouseleft"
@@ -129,14 +129,6 @@ msgstr ""
 "trasparenti"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:32
-#, fuzzy
-#| msgid ""
-#| "Normally, when saving an image to a file, all fully transparent areas of "
-#| "the image are filled with black color. It happens because when composing "
-#| "the layers of the image, Krita drop color data of fully transparent "
-#| "pixels for efficiency reason. To avoid this of color data loss you can "
-#| "either avoid compositing of the image i.e. limit image to only one layer "
-#| "without any masks or effects, or use the following method:"
 msgid ""
 "Normally, when saving an image to a file, all fully transparent areas of the "
 "image are filled with black color. It happens because when compositing the "
@@ -166,13 +158,8 @@ msgstr ""
 "alfa --> Salva l'unione...`."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:41
-#, fuzzy
-#| msgid ""
-#| "How to save a PNG texture and keep color values in fully transparent areas"
 msgid "Color channel values in transparent areas"
-msgstr ""
-"Salvare una trama PNG e mantenere i valori dei colori in aree completamente "
-"trasparenti"
+msgstr "Valori dei canali del colore nelle aree trasparenti"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:43
 msgid ""
@@ -182,10 +169,16 @@ msgid ""
 "explicitly requested. That is done for optimization purposes and allows "
 "Krita to speed up compositing the image by a lot."
 msgstr ""
+"Krita tratta tutti i valori dei canali del colore in pixel completamente "
+"trasparenti come **indefiniti**. In realtà, ciò significa che Krita tenterà "
+"di saltare la scrittura (o la lettura) di un pixel completamente "
+"trasparente, a meno che non davvero necessario o sia esplicitamente "
+"richiesto. Tale operazione è eseguita per questioni di prestazioni e "
+"permette a Krita di velocizzare molto la composizione dell'immagine."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:46
 msgid "Example 1: erasing pixels on the image"
-msgstr ""
+msgstr "Esempio 1: cancellazione dei pixel sull'immagine"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:48
 msgid ""
@@ -196,6 +189,12 @@ msgid ""
 "`Split Alpha --> Alpha into Mask` on a layer after erasing with an eraser "
 "brush on it."
 msgstr ""
+"Quando si cancellano i pixel con un pennello gomma o quando si azzera una "
+"selezione con l'azione :menuselection:`Modifica --> Pulisci`, i dati del "
+"colore **non vengono realmente ripuliti**. Viene azzerato solo il canale "
+"alfa, ma i canali del colore sono mantenuti intatti. Puoi osservare da te se "
+"provi ad applicare il comando :menuselection:`Dividi alfa --> Alfa nella "
+"maschera` su un livello dopo aver cancellato su di esso con una gomma."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:50
 msgid ""
@@ -203,6 +202,10 @@ msgid ""
 "a :ref:`Reset Transparent Filter<reset_transparent_filter>` on the image. It "
 "will zero-out all color channels of fully transparent pixels."
 msgstr ""
+"Per azzerare realmente i canali del colore delle aree trasparenti devi "
+"applicare un :ref:`filtro Azzera trasparente<reset_transparent_filter>` "
+"sull'immagine: azzererà tutti i canali dei colori dei pixel completamente "
+"trasparenti."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:52
 msgid ""
@@ -211,11 +214,17 @@ msgid ""
 "neighboring colors instead of just zeroing them out, which might be useful "
 "in some workflows."
 msgstr ""
+"Krita possiede anche un :ref:`filtro Propaga i "
+"colori<filter_propagate_colors>` speciale. Riempie le aree completamente "
+"trasparenti con i colori adiacenti anziché semplicemente azzerarli, che "
+"potrebbe risultare utile in certi flussi di lavoro."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:55
 msgid ""
 "Example 2: compositing layers with color data inside fully transparent areas"
 msgstr ""
+"Esempio 2: comporre i livelli con dati dei colori all'interno di aree "
+"completamente trasparenti"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:57
 msgid ""
@@ -225,6 +234,11 @@ msgid ""
 "blend two pixels with zero alpha, because you would have to divide by zero "
 "for that."
 msgstr ""
+"Se hai più livelli che contengono qualsiasi dato del colore all'interno "
+"delle loro aree completamente trasparenti, il risultato della loro unione "
+"**non includerà questi dati del colore**. I pixel ottenuti saranno "
+"semplicemente azzerati. Naturalmente non potrai fondere due pixel con zero "
+"alfa, perché per farlo dovrai dividere per zero."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:59
 msgid ""
@@ -234,6 +248,12 @@ msgid ""
 "`, a compositing operation may (or may not) happen, clearing out the "
 "transparent areas."
 msgstr ""
+"Per la maggior parte dei flussi di lavoro ciò significa semplicemente che "
+"devi usare l'azione :menuselection:`Dividi alfa --> Salva l'unione...` per "
+"salvare correttamente il risultato lavoro di questo lavoro di divisione "
+"alfa. Quando esporti il risultato tramite :menuselection:`File --> Esporta..."
+"` potrebbe (o non potrebbe) verificarsi un'operazione di composizione che "
+"elimina le aree trasparenti."
 
 #, fuzzy
 #~| msgid ""
