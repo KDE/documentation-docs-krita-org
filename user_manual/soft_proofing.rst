@@ -46,7 +46,7 @@ There you can set the following options:
 Model, Profile
     Of these, only the profile is really important. This will serve as the profile you are proofing to. In a professional print workflow, this profile should be determined by the printing house.
 
-Conversion Rendering Intent
+Rendering Intent
     Set the intent used to convert the image to the **proofed output device** profile. It uses the same options as the intents mentioned in the :ref:`color managed workflow <color_managed_workflow>`. This intent should coincide with the conversion intent used by your print house before printing. If your print house does not do any conversion internally, then you should perform the conversion yourself before sending the file to them.
 
     .. figure:: /images/softproofing/Softproofing_adaptationstate.png
@@ -55,11 +55,11 @@ Conversion Rendering Intent
     
         Left: Soft proofed image with Absolute Intent Chromatic Adaptation enabled. Right: Soft proofed image with Absolute Intent Chromatic Adaptation disabled.
 
-Conversion Black Point Compensation
+Black Point Compensation
     Enables the black point compensation when converting image to the **proofed output device** profile. Turning this off will clip the shadow values to the minimum that either the screen and the proofing profile can handle, while turning this on will scale the black to the screen-range, showing you the full range of grays in the image. Like :guilabel:`Conversion Rendering Intent`, this value should coincide with the value used by the printing house when performing conversion to the device.
 
-Display Model
-    Defines the way how the proofed (and possibly clipped) space will be shown on the screen.
+Display Mode
+    Defines the way how the proofed (and possibly clipped) space will be shown on the screen, i.e. what rendering intent and flags will be used to convert colors from the **proofed output device** profile into the **screen** profile.
 
     * :guilabel:`Use global display settings` instructs Krita to render the proofed space using the global settings, set in :menuselection:`Settings --> Configure Krita... --> Color Management --> Display`.
 
