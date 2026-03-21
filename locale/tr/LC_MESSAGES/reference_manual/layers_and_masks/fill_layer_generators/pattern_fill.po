@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 #
-# SPDX-FileCopyrightText: 2023, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2023, 2025, 2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2025-10-25 13:33+0300\n"
+"PO-Revision-Date: 2026-03-19 17:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.11.70\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:-1
 msgid "How to use Pattern fill generation in Krita."
@@ -26,10 +26,8 @@ msgid ".. image:: /images/layers/pattern_fill_transform.png"
 msgstr ".. image:: /images/layers/pattern_fill_transform.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:0
-#, fuzzy
-#| msgid ".. image:: /images/layers/pattern_fill_transform.png"
 msgid ".. image:: /images/layers/pattern_fill_align_pixel_grid.png"
-msgstr ".. image:: /images/layers/pattern_fill_transform.png"
+msgstr ".. image:: /images/layers/pattern_fill_align_pixel_grid.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:11
 msgid "Pattern"
@@ -98,6 +96,14 @@ msgid ""
 "pattern corners are ensured to fall at integer coordinates after the "
 "transformation."
 msgstr ""
+"Bir desene geometrik bir dönüşüm uygulandığında, yinelenen görselin "
+"köşeleri, kesirli koordinatlar (alt piksel, tamsayı olmayan koordinatlar) "
+"içerilmek üzere herhangi bir yeni konuma kaydırılabilir. Bu öntanımlı "
+"davranıştır ve çoğu zaman sorun teşkil etmez. Ancak köşelerin tamsayı "
+"koordinatlarında sonuçlanmasının istendiği zamanlar vardır. Örneğin, piksel "
+"hassasiyetinde tam yinelenebilirlik gerektiğinde. Bu, :guilabel:`Piksel "
+"ızgarasına hizala` seçeneği işaretlenerek elde edilebilir. Bu sayede, "
+"dönüşümden sonra desen köşelerinin tamsayı koordinatlarına düşmesi sağlanır."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:35
 msgid ""
@@ -108,6 +114,11 @@ msgid ""
 "possibility of setting this alignment over a number of repetitions of the "
 "pattern the corners should be aligned."
 msgstr ""
+"Unutmayın ki bu hizalama, olası dönüşüm sayısını azaltır (aslında, köşeleri "
+"kesirli koordinatlara eşleyen tüm dönüşümler ortadan kalkar); ancak "
+"hizalanmış dönüşüm, hizalanmamış olana olabildiğince yakın bir şekilde "
+"yaklaşacaktır. Ayrıca, köşelerin hizalanması gereken desenin yineleme sayısı "
+"üzerinden bu hizalamayı ayarlama olasılığı da vardır."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:37
 msgid ""
@@ -115,6 +126,10 @@ msgid ""
 "example those used for screentones, or when the pattern is scaled down to be "
 "really small, since it helps reducing some artifacts like moiré patterns."
 msgstr ""
+"Bu seçenek, özellikle küçük desenlerle uğraşırken, örneğin ekran tonları "
+"için kullanılan desenlerde veya desen gerçekten küçük boyutlara "
+"küçültüldüğünde, moiré desenleri gibi bazı bozulmaları azaltmaya yardımcı "
+"olduğu için oldukça kullanışlıdır."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:41
 msgid ""
@@ -127,6 +142,15 @@ msgid ""
 "alignment is on, then that block is repeated exactly through the image, but "
 "when it is off, every instance of the pattern is rendered slightly different."
 msgstr ""
+"Bu görsel, gülen yüz resmi kullanan bir desen dolgu katmanını "
+"göstermektedir. Resim %75 oranında ölçeklendirilerek ve 34 derece "
+"döndürülerek dönüştürülmüştür. Solda hizalama uygulanmamış, sağda ise "
+"hizalama etkin ve hem yatay hem de dikey olarak her iki yinelemede bir "
+"olacak şekilde ayarlanmıştır. Mavi çizgiler piksel ızgarasının "
+"göstergeleridir ve kırmızı çizgiler köşeleri piksel ızgarasına hizalanmış "
+"ikiye iki yinelemeden oluşan bir bloku işaretler. Hizalama açık olduğunda, "
+"bu blok görselin tamamında tam olarak yinelenir; ancak kapalı olduğunda, "
+"desenin her örneği biraz farklı şekilde oluşturulur."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:42
 msgid "Transform"
@@ -134,7 +158,7 @@ msgstr "Dönüşüm"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:42
 msgid "Align to pixel grid"
-msgstr ""
+msgstr "Piksel ızgarasına hizala"
 
 #, fuzzy
 #~| msgid ".. image:: images/layers/pattern_fill_transform.png"
