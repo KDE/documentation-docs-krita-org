@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 02:04+0000\n"
+"POT-Creation-Date: 2026-03-21 02:06+0000\n"
 "PO-Revision-Date: 2024-04-21 04:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -148,6 +148,14 @@ msgid ""
 "Proofing` (for more details see :ref:`here "
 "<color_management_settings_softproofing>`)."
 msgstr ""
+"您可以使用 :kbd:`Ctrl + Y` 快捷键在任意图像上打开/关闭色彩校样。与其他程序不"
+"同，Krita 支持为每个视图设置不同的色彩校样，因此您可以并排查看色彩校样开、关"
+"状态的两个视图。每个 ``.kra``图像本身也可以保存自己的色彩校样配置，前往主菜单"
+"的 :menuselection:`图像 --> 图像属性 --> 色彩校样` 页面，启用 :guilabel:`存储"
+"色彩校样设置到图像` 即可。如果不启用该选项，那么 Krita 将使用主菜单的 :"
+"menuselection:`设置 --> 配置 Krita... --> 色彩管理 --> 色彩校样` 页面中的全局"
+"设置。更多相关信息请参见 :ref:`此页面 "
+"<color_management_settings_softproofing>` 。"
 
 #: ../../user_manual/soft_proofing.rst:42
 msgid ""
@@ -155,6 +163,9 @@ msgid ""
 "Krita embeds the entire proofing ICC profile into ``.kra`` file. This ICC "
 "profile can be big for some output devices, especially CMYK ones."
 msgstr ""
+"启用 :guilabel:`存储色彩校样设置到图像` 时，Krita 将把整个色彩校样 ICC 特性文"
+"件嵌入到 ``.kra`` 文件中。某些输出设备的 ICC 特性文件可能体积较大，尤其是 "
+"CMYK 特性文件。"
 
 #: ../../user_manual/soft_proofing.rst:44
 msgid "There you can set the following options:"
@@ -162,7 +173,7 @@ msgstr "色彩校样功能有下列选项："
 
 #: ../../user_manual/soft_proofing.rst:47
 msgid "Model, Profile"
-msgstr ""
+msgstr "色彩模型、特性文件"
 
 #: ../../user_manual/soft_proofing.rst:47
 msgid ""
@@ -182,20 +193,30 @@ msgid ""
 "printing. If your print house does not do any conversion internally, then "
 "you should perform the conversion yourself before sending the file to them."
 msgstr ""
+"在此选择色彩校样使用 **已校准输出设备特性文件** 转换图像时的渲染意图，每种意"
+"图的具体含义在 :ref:`色彩管理流程 <color_managed_workflow>` 页面中有详细介"
+"绍。此意图应与您的印刷厂使用的印前转换意图一致。如果您的印刷厂内部不进行印前"
+"转换，则您应在发送文件给他们之前自行完成转换。"
 
 #: ../../user_manual/soft_proofing.rst:56
-msgid "Conversion Rendering Intent"
-msgstr ""
+#, fuzzy
+#| msgid "Conversion Rendering Intent"
+msgid "Rendering Intent"
+msgstr "渲染意图"
 
 #: ../../user_manual/soft_proofing.rst:56
 msgid ""
 "Left: Soft proofed image with Absolute Intent Chromatic Adaptation enabled. "
 "Right: Soft proofed image with Absolute Intent Chromatic Adaptation disabled."
 msgstr ""
+"左图：启用绝对色度意图颜色适应的已校样图像；右图：禁用绝对色度意图颜色适应的"
+"已校样图像。"
 
 #: ../../user_manual/soft_proofing.rst:59
-msgid "Conversion Black Point Compensation"
-msgstr ""
+#, fuzzy
+#| msgid "Conversion Black Point Compensation"
+msgid "Black Point Compensation"
+msgstr "黑点补偿"
 
 #: ../../user_manual/soft_proofing.rst:59
 msgid ""
@@ -207,11 +228,17 @@ msgid ""
 "Intent`, this value should coincide with the value used by the printing "
 "house when performing conversion to the device."
 msgstr ""
+"在将图像转换到 **已校准输出设备特性文件** 时启用黑点补偿。关闭此选项会将深色"
+"值裁剪为屏幕和色彩校样特性文件所能处理的最小值，而开启此选项则会将黑色以屏幕"
+"的亮度范围进行缩放，从而呈现图像完整的灰度范围。和 :guilabel:`渲染意图` 一"
+"样，此值应与印刷厂将图像转换到设备特性文件时使用的值一致。"
 
 #: ../../user_manual/soft_proofing.rst:62
 msgid ""
 "Defines the way how the proofed (and possibly clipped) space will be shown "
-"on the screen."
+"on the screen, i.e. what rendering intent and flags will be used to convert "
+"colors from the **proofed output device** profile into the **screen** "
+"profile."
 msgstr ""
 
 #: ../../user_manual/soft_proofing.rst:64
@@ -220,6 +247,8 @@ msgid ""
 "proofed space using the global settings, set in :menuselection:`Settings --> "
 "Configure Krita... --> Color Management --> Display`."
 msgstr ""
+":guilabel:`使用全局显示设置` 指示 Krita 使用在主菜单的 :menuselection:`设置 "
+"--> 配置 Krita... --> 色彩管理 --> 显示` 页面设置的全局设置。"
 
 #: ../../user_manual/soft_proofing.rst:66
 msgid ""
@@ -233,38 +262,44 @@ msgid ""
 "paper profile, the one the display is configured to and the white point of "
 "the light bulb that illuminates your physical print."
 msgstr ""
+":guilabel:`模拟纸张白点和黑点` 用于在当前显示器上预览纸张的白点 (或“色调”)。"
+"换句话说，不管纸张是哑光的、金属光泽的，亦或是带有复古褐色照片的特性，都可以"
+"在屏幕上进行模拟。请注意，观察条件的白点仍将调整为屏幕的白点。这意味着您无法"
+"直观地比较物理打印件和屏幕显示的图像，除非这三个白点一致：纸张特性文件的白"
+"点、显示器特性文件的白点以及照亮您的物理打印件的灯泡的白点。"
 
 #: ../../user_manual/soft_proofing.rst:68
 msgid ""
 ":guilabel:`Custom` allows you to configure the final conversion step "
 "manually. You may want to configure the pipeline depending on your goal:"
 msgstr ""
+":guilabel:`自定义` 允许手动配置最终的转换步骤。您可以根据目标配置转换管线："
 
 #: ../../user_manual/soft_proofing.rst:71
 msgid ":guilabel:`Rendering Intent` --> :guilabel:`Relative Colorimetric`"
-msgstr ""
+msgstr ":guilabel:`渲染意图` --> :guilabel:`相对色度`"
 
 #: ../../user_manual/soft_proofing.rst:72
 msgid ":guilabel:`Black Point Compensation` --> `Enabled`"
-msgstr ""
+msgstr ":guilabel:`黑点补偿` --> `启用`"
 
 #: ../../user_manual/soft_proofing.rst:74
 msgid "Preview color gamut (or \"color variety\") of the image"
-msgstr ""
+msgstr "预览图像的色域 (色彩丰富程度)"
 
 #: ../../user_manual/soft_proofing.rst:74
 msgid ""
 "If you want to use :guilabel:`Out of Gamut Warnings`, it is best to use them "
 "in this mode"
-msgstr ""
+msgstr "如果您想要使用 :guilabel:`色域超出警告色` ，最好在此模式下使用它们。"
 
 #: ../../user_manual/soft_proofing.rst:77
 msgid ":guilabel:`Rendering Intent` --> :guilabel:`Absolute Colorimetric`"
-msgstr ""
+msgstr ":guilabel:`渲染意图` --> :guilabel:`绝对色度`"
 
 #: ../../user_manual/soft_proofing.rst:78
 msgid ":guilabel:`Absolute Intent Chromatic Adaptation` --> `Enabled`"
-msgstr ""
+msgstr ":guilabel:`绝对色度意图颜色适应` --> `启用`"
 
 #: ../../user_manual/soft_proofing.rst:81
 msgid ""
@@ -272,6 +307,9 @@ msgid ""
 "**broken** (even in XWayland mode). More than that, it may be broken "
 "differently in different versions."
 msgstr ""
+"如果您正在使用 Wayland 显示合成器，绝对色度意图可能会工作异常 (即使在 "
+"XWayland 模式下也是如此)。不仅如此，在不同的版本中，异常的表现形式也可能各不"
+"相同。"
 
 #: ../../user_manual/soft_proofing.rst:83
 msgid ""
@@ -281,6 +319,9 @@ msgid ""
 "(`sigChromaticAdaptationTag`) of the printer and display profiles do not "
 "coincide."
 msgstr ""
+"在 KWin 6.4.x 及更早版本中， :guilabel:`绝对色度` 将按照 :guilabel:`绝对色度"
+"意图颜色适应` 被 **始终禁用** 的状态工作。如果打印机和显示器特性文件的白点 "
+"(`sigChromaticAdaptationTag`) 不一致，这将导致严重的颜色偏移。"
 
 #: ../../user_manual/soft_proofing.rst:85
 msgid ""
@@ -290,14 +331,20 @@ msgid ""
 "and will let you preview contrast degradations, but you will not be able to "
 "get advanced effects of disabling color adaptation to the display space."
 msgstr ""
+"在 KWin 6.5.x 及更高版本中， :guilabel:`绝对色度` 将按照 :guilabel:`绝对色度"
+"意图颜色适应` 被 **始终启用** 的状态工作。只要您 **保持该复选框被选中** ，该"
+"功能将正常工作，并允许您预览对比度降低后的效果，但您将无法获得禁用对显示器空"
+"间进行颜色适应所带来的高级效果。"
 
 #: ../../user_manual/soft_proofing.rst:87
-msgid "Display Model"
-msgstr ""
+#, fuzzy
+#| msgid "Display Model"
+msgid "Display Mode"
+msgstr "显示模式"
 
 #: ../../user_manual/soft_proofing.rst:87
 msgid "Preview contrast degradations caused by the color of the paper"
-msgstr ""
+msgstr "预览由纸张颜色导致的对比度下降情况"
 
 #: ../../user_manual/soft_proofing.rst:87
 msgid ""
@@ -305,20 +352,25 @@ msgid ""
 "`discussed here <https://gitlab.freedesktop.org/wayland/wayland-protocols/-/"
 "merge_requests/439>`_."
 msgstr ""
+"这是 Wayland 协议规范中存在的问题。此问题的修复思路 `在此页面 <https://"
+"gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/439>`_ 有所"
+"讨论。"
 
 #: ../../user_manual/soft_proofing.rst:90
 msgid "Gamut Warning"
-msgstr "色域警告"
+msgstr "色域超出警告色"
 
 #: ../../user_manual/soft_proofing.rst:90
 msgid "Set the color of :guilabel:`Out of Gamut Warnings`."
-msgstr ""
+msgstr "设置 :guilabel:`色域超出警告色` 的颜色。"
 
 #: ../../user_manual/soft_proofing.rst:92
 msgid ""
 "You can set the defaults that Krita uses in :menuselection:`Settings --> "
 "Configure Krita... --> Color Management --> Soft Proofing`."
 msgstr ""
+"要更改 Krita 的默认色域超出警告色，请前往菜单栏的 :menuselection:`设置 --> 配"
+"置 Krita --> 色彩管理 --> 色彩校样` 页面进行配置。"
 
 #: ../../user_manual/soft_proofing.rst:94
 msgid ""
@@ -388,3 +440,8 @@ msgstr ""
 "色域警告色有时候会在线性特性文件下面对暗部颜色给出莫名其妙的警告。这是 "
 "LittleCMS 的一个程序缺陷，你可以 `在此 <https://ninedegreesbelow.com/bug-"
 "reports/soft-proofing-problems.html>`_ 阅读相关信息。"
+
+#~ msgid ""
+#~ "Defines the way how the proofed (and possibly clipped) space will be "
+#~ "shown on the screen."
+#~ msgstr "选择色彩校样后 (且可能已裁剪) 的色彩空间在屏幕上显示的方式。"

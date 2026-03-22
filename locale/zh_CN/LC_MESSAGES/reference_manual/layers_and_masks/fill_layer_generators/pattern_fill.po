@@ -29,7 +29,7 @@ msgstr ".. image:: /images/layers/pattern_fill_transform.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:0
 msgid ".. image:: /images/layers/pattern_fill_align_pixel_grid.png"
-msgstr ""
+msgstr ".. image:: /images/layers/pattern_fill_align_pixel_grid.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:11
 msgid "Pattern"
@@ -90,6 +90,11 @@ msgid ""
 "pattern corners are ensured to fall at integer coordinates after the "
 "transformation."
 msgstr ""
+"当对图案应用几何变形时，循环图像的角点可能会被移动到分数坐标 (次像素坐标、非"
+"整数坐标) 上。这是默认行为，在大多数情况下不会造成太大问题，但有时您可能想要"
+"角点在移动后还能对齐整数坐标——例如在需要精确到像素单位的图案循环时。要做到这"
+"一点，请选中 :guilabel:`对齐到像素网格` ，这样将强制变形后图案的角点在整数坐"
+"标上。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:35
 msgid ""
@@ -100,6 +105,9 @@ msgid ""
 "possibility of setting this alignment over a number of repetitions of the "
 "pattern the corners should be aligned."
 msgstr ""
+"请注意：对齐到像素网格会限制变形的自由度 (所有将角点映射到分数坐标的变形都会"
+"被跳过)，但对齐后的变形结果会尽可能接近对齐前的状态。这种对齐方式还可以确保在"
+"图案循环多次后角点仍然可以对齐。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:37
 msgid ""
@@ -107,6 +115,8 @@ msgid ""
 "example those used for screentones, or when the pattern is scaled down to be "
 "really small, since it helps reducing some artifacts like moiré patterns."
 msgstr ""
+"此选项有助于减轻网花、摩尔纹这类视觉瑕疵的发生。这在处理小图案时特别有用——例"
+"如网点图案，或者在图案被缩小到非常小时。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:41
 msgid ""
@@ -119,6 +129,11 @@ msgid ""
 "alignment is on, then that block is repeated exactly through the image, but "
 "when it is off, every instance of the pattern is rendered slightly different."
 msgstr ""
+"上图是一个使用笑脸图像的图案填充图层，它被缩放至 75% 并旋转了 34 度。左侧样图"
+"没有对齐像素网格，而右侧样图启用了对齐，并设置每 1 次水平和垂直循环后对齐一"
+"次。蓝色线条代表像素网格，红框中是一个 2x2 格的循环图块，其角点与像素网格对"
+"齐。请注意：当对齐功能开启时，该图块会在整张图像中精确循环，而当对齐功能关闭"
+"时，每个循环图块的细节都会略有不同。"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:42
 msgid "Transform"
@@ -126,4 +141,4 @@ msgstr "变形"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:42
 msgid "Align to pixel grid"
-msgstr ""
+msgstr "对齐像素网格"

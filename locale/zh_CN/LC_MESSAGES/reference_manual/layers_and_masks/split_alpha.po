@@ -129,6 +129,9 @@ msgid ""
 "compositing of the image i.e. limit image to only one layer without any "
 "masks or effects, or use the following method:"
 msgstr ""
+"一般来说，当 Krita 把图像保存为 PNG 文件时，为了提高处理效率，软件会在合并所"
+"有图层时把完全透明的区域的颜色信息丢弃并替换成黑色。要想不丢失颜色信息，你要"
+"么在制作图像时只使用单一图层且不使用任何蒙版或特效，要么使用下面的方法："
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:34
 msgid "|mouseright| the layer in the layers docker."
@@ -144,7 +147,7 @@ msgstr ""
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:41
 msgid "Color channel values in transparent areas"
-msgstr ""
+msgstr "透明区域的颜色通道值"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:43
 msgid ""
@@ -154,10 +157,12 @@ msgid ""
 "explicitly requested. That is done for optimization purposes and allows "
 "Krita to speed up compositing the image by a lot."
 msgstr ""
+"Krita 将完全透明像素的所有颜色通道值视为 **未定义** ，并尽量避免读取或写入完"
+"全透明的像素数据，除非确实需要或有明确请求。这可以大幅提升图像合成的速度。"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:46
 msgid "Example 1: erasing pixels on the image"
-msgstr ""
+msgstr "示例 1：擦除图像中的像素"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:48
 msgid ""
@@ -168,6 +173,11 @@ msgid ""
 "`Split Alpha --> Alpha into Mask` on a layer after erasing with an eraser "
 "brush on it."
 msgstr ""
+"使用橡皮擦工具擦除像素或通过主菜单的 :menuselection:`编辑 --> 清除` 操作清除"
+"选区内容时，像素的颜色数据 **实际上并未被清除** ——这些操作只是将透明度通道清"
+"零，而颜色通道的数据依然保持不变。您可以在用橡皮擦擦除图层上的内容后，尝试在"
+"该图层上应用 :menuselection:`透明度通道操作 --> 拆分透明度到蒙版` 操作来确认"
+"这一点。"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:50
 msgid ""
@@ -175,6 +185,8 @@ msgid ""
 "a :ref:`Reset Transparent Filter<reset_transparent_filter>` on the image. It "
 "will zero-out all color channels of fully transparent pixels."
 msgstr ""
+"要想真正清除透明区域的颜色通道数据，您需要对图像应用 :ref:`重置透明度滤镜"
+"<reset_transparent_filter>` ，它会将完全透明像素的所有颜色通道数据清零。"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:52
 msgid ""
@@ -183,11 +195,14 @@ msgid ""
 "neighboring colors instead of just zeroing them out, which might be useful "
 "in some workflows."
 msgstr ""
+"Krita 还提供了一个特殊的 :ref:`颜色向外扩展滤镜<filter_propagate_colors>` 。"
+"它会用相邻的颜色填充完全透明的区域，而不是直接将颜色通道数据清零，这在某些工"
+"作流程中可能会很有用。"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:55
 msgid ""
 "Example 2: compositing layers with color data inside fully transparent areas"
-msgstr ""
+msgstr "示例 2：图层在完全透明区域中存在颜色数据时的合成"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:57
 msgid ""
@@ -197,6 +212,9 @@ msgid ""
 "blend two pixels with zero alpha, because you would have to divide by zero "
 "for that."
 msgstr ""
+"如果图像包含多个图层，且这些图层在其完全透明的区域内包含颜色数据，那么合并这"
+"些图层时 **透明区域的颜色数据将被清零** 。Krita 无法混合两个透明度为零的像素"
+"——因为混合后的值将被除以零。"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:59
 msgid ""
@@ -206,3 +224,7 @@ msgid ""
 "`, a compositing operation may (or may not) happen, clearing out the "
 "transparent areas."
 msgstr ""
+"对于大多数工作流程而言，这仅仅意味着您应当使用 :menuselection:`透明度通道操"
+"作 --> 合并保存透明度...` 操作来正确保存此拆分透明度的处理结果。当使用主菜单"
+"的 :menuselection:`文件 --> 导出...` 操作导出处理结果时，Krita 可能会 (也可能"
+"不会) 进行图层合成操作以清除透明区域的颜色数据。"

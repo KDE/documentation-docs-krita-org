@@ -144,7 +144,7 @@ msgstr "遵循默认配置"
 msgid ""
 "The property will follow the default visibility state at the top of the "
 "configuration window."
-msgstr "属性将遵循配置窗口顶部的默认显示状态设置。"
+msgstr "属性将遵循配置窗口顶部的“默认显示状态”设置进行显示或隐藏。"
 
 #: ../../reference_manual/dockers/text_properties.rst:37
 msgid "Always Visible"
@@ -221,14 +221,6 @@ msgid "Font-Relative Units"
 msgstr "字体相对长度单位"
 
 #: ../../reference_manual/dockers/text_properties.rst:62
-#, fuzzy
-#| msgid ""
-#| "Some properties allow for font-relative units. The meaning of these units "
-#| "also depend on inheritance mechanics. All font-relative units will try to "
-#| "use the current font metrics. However, when said font metric is :guilabel:"
-#| "`Em` and the property being edited is :ref:`text_property_font_size`, it "
-#| "will be relative to the inherited font size. Similar with :guilabel:`Lh` "
-#| "and :ref:`text_property_line_height`."
 msgid ""
 "Some properties allow for font-relative units. The meaning of these units "
 "also depends on inheritance mechanics. All font-relative units will try to "
@@ -265,9 +257,10 @@ msgstr "em"
 msgid ""
 "The current font size (or inherited font size in the case of Font Size)."
 msgstr ""
-"数值上等于当前字体大小的相对单位 (当用于字体大小属性本身时，则表示继承的字体"
-"大小)。其历史渊源为 M 字母的宽度。1 em 等于当前字体 1 个字符的点尺寸，如 16 "
-"pt 的字体中 1 em = 16 pt。可理解为“字身单位”。"
+"字身大小或 M 宽度 (em quadrat)：数值上等于当前字体大小的相对单位 (当用于字体"
+"大小属性本身时，则表示继承的字体大小)。其历史渊源为 M 字母嵌块的宽度。1 em 等"
+"于当前字体 1 个字符的点尺寸，如 16 pt 的字体中 1 em = 16 pt。在实际运用中可理"
+"解为“字身相对单位”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:68
 msgid "Ex"
@@ -278,9 +271,9 @@ msgid ""
 "The current x height. This metric is retrieved from the font, and affected "
 "by font size."
 msgstr ""
-"当前的 x 高度 (x height)。此长度单位来自字体，并受字体大小影响。其历史渊源是 "
-"x 字母的高度，实际含义是小写字母高度。1 ex 等于 1 个小写字母高度。可理解为“小"
-"写字母高度单位”。"
+"x 高度 (x height)：此长度单位来自字体，并受字体大小影响。其历史渊源是 x 字母"
+"的高度，在实际应用中指小写字母高度。1 ex 等于 1 个小写字母高度。在实际运用中"
+"可理解为“小写字母高度相对单位”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:70
 msgid "Cap"
@@ -291,8 +284,8 @@ msgid ""
 "The current capital height. This metric is retrieved from the font, and "
 "affected by font size."
 msgstr ""
-"当前的大写字母高度 (capital height)。此长度单位来自字体，并受字体大小影响。1 "
-"cap 等于 1 个大写字母高度。可理解为“大写字母高度单位”。"
+"大写字母高度 (capital height)：此长度单位来自字体，并受字体大小影响。1 cap 等"
+"于 1 个大写字母高度。在实际运用中可理解为“大写字母高度相对单位”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:72
 msgid "Lh"
@@ -303,9 +296,9 @@ msgid ""
 "The line height. This is either relative to the current line height or, in "
 "the case of :ref:`text_property_line_height`, the inherited line height."
 msgstr ""
-"行高 (line height)。这要么是相对于当前行高，要么在 :ref:"
-"`text_property_line_height` 中是继承的行高。1 lh 等于 1 行的行高。可理解为“行"
-"高单位”。"
+"行高 (line height)：这要么是相对于当前行高，要么在 :ref:"
+"`text_property_line_height` 中是继承的行高。1 lh 等于 1 行的行高。在实际运用"
+"中可理解为“行高相对单位”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:74
 msgid "Ic"
@@ -316,8 +309,8 @@ msgid ""
 "Relative to ideographic character :term:`Advance`. The advance of a single "
 "CJK character."
 msgstr ""
-"CJK 表意文字的 :term:`字幅` (ideographic character)，1 ic 等于 1 个汉字的宽"
-"度。可理解为“汉字宽度单位”。"
+"CJK 表意文字 :term:`字幅` (ideographic character)：1 ic 等于 1 个汉字的宽度。"
+"在实际运用中可理解为“汉字宽度相对单位”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:77
 msgid "Ch"
@@ -326,9 +319,9 @@ msgstr "ch"
 #: ../../reference_manual/dockers/text_properties.rst:77
 msgid ":term:`Advance` of the number '0'."
 msgstr ""
-"字符宽度 (character width)，1 ch 相当于 1 个字符的宽度，但在比例字体中，不同"
+"字符宽度 (character width)：1 ch 相当于 1 个字符的宽度，但在比例字体中，不同"
 "字符宽度各异，因此 CSS 规范选择数字“0”的 :term:`字幅` 作为参考基准。可理解"
-"为“字符宽度单位”或“零字符宽度单位”。"
+"为“字符宽度相对单位”或“零字符宽度相对单位”。"
 
 #: ../../reference_manual/dockers/text_properties.rst:82
 msgid "Character Properties"
@@ -351,7 +344,7 @@ msgid ""
 "the whole font so that its design size (the \"em size\") is the same as the "
 "font size."
 msgstr ""
-"字体大小 (font size) 用于设置字符的大小。它会对整个字体进行缩放，使字身大小 "
+"字体大小 (font size)：用于设置字符的大小。它会对整个字体进行缩放，使字身大小 "
 "(em) 与字体大小保持一致。"
 
 #: ../../reference_manual/dockers/text_properties.rst:93
@@ -380,7 +373,7 @@ msgid ""
 "by. The x-height is the height of the small latin x in Latin fonts, and it "
 "is a value that is derived from the font metrics."
 msgstr ""
-"字体大小调整 (font size adjust) 属性设置的是一个比例值，当前字体的 x 高度 (x-"
+"字体大小调整 (font size adjust)：此属性是一个比例值，当前字体的 x 高度 (x-"
 "height) 必须符合该比例，从而确保不同字体混排时保持统一的视觉大小。x 高度是拉"
 "丁字母中小写 x 字母的高度，也可以理解为小写字母高度，此值来自字体度量。"
 
@@ -419,8 +412,8 @@ msgid ""
 "current text. The first item in the list is the primary font used, while "
 "each subsequent font may be used as a fallback."
 msgstr ""
-"字体系列 (font family) 属性用于选择应用于当前文本的一系列字体。列表中的第一个"
-"字体是主要使用的字体，而列表中的后续字体系列则可用作备选字体。"
+"字体系列 (font family)：用于选择应用于当前文本的一系列字体。列表中的第一个字"
+"体是主要使用的字体，而列表中的后续字体系列则可用作备选字体。"
 
 #: ../../reference_manual/dockers/text_properties.rst:119
 msgid ".. image:: /images/text/font-selection-fallback-arabic.png"
@@ -432,7 +425,7 @@ msgid ""
 "can allow us to select fonts that seem to be in a similar tradition, like "
 "using a Serif Latin font for a Naskh Arabic font."
 msgstr ""
-"许多字体仅包含某些 Unicode 子集的字形，通过精心安排备选字体，我们可以在跨语言"
+"许多字体仅包含某些 Unicode 子集的字形，通过精心安排备选字体，我们可以在跨语种"
 "混排时确保文本风格统一。例如上图中阿拉伯字体与拉丁字体的混排。"
 
 #: ../../reference_manual/dockers/text_properties.rst:121
@@ -449,7 +442,7 @@ msgstr "字体样式"
 msgid ""
 "Font style allows setting the sub style of the given font family, such as "
 "italics and bold."
-msgstr "字体样式 (font style) 用于设置字体的子样式，如斜体或粗体等。"
+msgstr "字体样式 (font style)：用于设置字体的子样式，如斜体或粗体等。"
 
 #: ../../reference_manual/dockers/text_properties.rst:132
 msgid ""
@@ -472,7 +465,7 @@ msgid ""
 "of width, weight and slant, while the bottom row shows the effect of "
 "toggling optical size at different font sizes."
 msgstr ""
-"上图展示了几种字体的不同样式。靠上的一组反映了宽度、字重和斜度的效果，靠下的"
+"上图展示了几种字体的不同样式。靠上的一组反映了宽度、粗细和倾斜的效果，靠下的"
 "一组反映了不同字体大小下打开/关闭光学尺寸选项的效果。"
 
 #: ../../reference_manual/dockers/text_properties.rst:138
@@ -485,7 +478,7 @@ msgstr "粗细"
 
 #: ../../reference_manual/dockers/text_properties.rst:141
 msgid "This controls the thickness of the glyph outlines."
-msgstr "粗细 (Weight)，此项控制字形轮廓的粗细。"
+msgstr "粗细 (Weight)：控制字形轮廓的粗细。"
 
 #: ../../reference_manual/dockers/text_properties.rst:142
 msgid "Synthesize Bold"
@@ -496,7 +489,7 @@ msgid ""
 "This allows synthesizing thick glyphs when there's no support for bold in "
 "the font family."
 msgstr ""
-"允许合成粗体 (Synthesize Bold)，勾选此项后，当字体系列不支持加粗或不包含粗体"
+"允许合成粗体 (Synthesize Bold)：勾选此项后，当字体系列不支持加粗或不包含粗体"
 "时，允许合成加粗的字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:144
@@ -509,25 +502,19 @@ msgid ""
 "This controls how much horizontal space a glyph takes. Not all fonts support "
 "this, and there's no synthesis for this."
 msgstr ""
-"宽度 (Width)，此项用于控制一个字形占据的水平空间大小。并非所有字体都支持此功"
-"能，也不支持合成此功能的效果。"
+"宽度 (Width)：用于控制一个字形占据的水平空间大小。并非所有字体都支持此功能，"
+"也不支持合成此功能的效果。"
 
 #: ../../reference_manual/dockers/text_properties.rst:147
-#, fuzzy
-#| msgid ""
-#| "This can be either :guilabel:`Normal`, :guilabel:`Italic` or :guilabel:"
-#| "`Oblique`. The difference between Italic and Oblique is that the former "
-#| "corresponds to a glyph style remniscent of the Italic calligraphy style, "
-#| "while the latter is a slanted version of the normal glyphs."
 msgid ""
 "This can be either :guilabel:`Normal`, :guilabel:`Italic` or :guilabel:"
 "`Oblique`. The difference between Italic and Oblique is that the former "
 "corresponds to a glyph style reminiscent of the Italic calligraphy style, "
 "while the latter is a slanted version of the normal glyphs."
 msgstr ""
-"倾斜 (slant)，此项可以选择 :guilabel:`正常` 、 :guilabel:`斜体` 或 :guilabel:"
-"`伪斜体` 。斜体 (Italic) 是类似于意大利体的专门字形，而伪斜体 (Oblique) 只是"
-"将正常字体的倾斜版本。"
+"倾斜 (slant)：用于将字体样式设为 :guilabel:`正常` 、 :guilabel:`斜体` 或 :"
+"guilabel:`伪斜体` 。斜体 (Italic) 是基于意大利体设计的专门字形，而伪斜体 "
+"(Oblique) 只是将正常字体的倾斜版本。"
 
 #: ../../reference_manual/dockers/text_properties.rst:148
 msgid "Slant"
@@ -550,7 +537,7 @@ msgid ""
 "This allows synthesizing slanted glyphs where there's no italic or oblique "
 "version of the glyphs available."
 msgstr ""
-"允许合成斜体 (Synthesize Slant)，勾选此项后，当字体系列不包含斜体或伪斜体时，"
+"允许合成斜体 (Synthesize Slant)：勾选此项后，当字体系列不包含斜体或伪斜体时，"
 "允许合成倾斜的字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:153
@@ -563,8 +550,8 @@ msgid ""
 "synced to the font size. Note that Krita interprets the axis value to be in "
 "points."
 msgstr ""
-"光学尺寸 (Optical Size)，此项用于设置可变字体中的光学尺寸轴是否与字体大小同"
-"步。请注意：Krita 解析可变字体轴时使用的单位是点 (pt)。"
+"光学尺寸 (Optical Size)：用于设置可变字体中的光学尺寸轴是否与字体大小同步。请"
+"注意：Krita 解析可变字体轴时使用的单位是点 (pt)。"
 
 #: ../../reference_manual/dockers/text_properties.rst:155
 msgid ""
@@ -590,9 +577,9 @@ msgid ""
 "thus does not apply to single characters. Letter spacing is mostly intended "
 "to apply to whole spans of characters."
 msgstr ""
-"字符间距 (Letter spacing) 属性用于调整可见字符簇之间的间距。支持 CSS 的程序对"
-"字符间距的实现存在细微差异。Krita 的字符间距实现遵循 CSS-Text-3，因此不适用于"
-"单个字符，而是主要适用于整个字符段。"
+"字符间距 (Letter spacing)：用于调整可见字符簇之间的间距。支持 CSS 的程序对字"
+"符间距的实现存在细微差异。Krita 的字符间距实现遵循 CSS-Text-3，因此不适用于单"
+"个字符，而是主要适用于整个字符段。"
 
 #: ../../reference_manual/dockers/text_properties.rst:169
 msgid "Word Spacing"
@@ -605,9 +592,8 @@ msgid ""
 "characters, like the Ethiopian word space, Aegean word separators, Ugaric "
 "word divider as well as Phoenician word separators."
 msgstr ""
-"单词间距 (Word spacing) 属性用于控制字隔符 (如空格) 的大小。它还为其他字隔符"
-"提供间距，例如埃塞俄比亚字空格、爱琴海字隔符、乌加里特字分隔符以及腓尼基字隔"
-"符。"
+"单词间距 (Word spacing)：用于控制字隔符 (如空格) 的大小。它还为其他字隔符提供"
+"间距，例如埃塞俄比亚字空格、爱琴海字隔符、乌加里特字分隔符以及腓尼基字隔符。"
 
 #: ../../reference_manual/dockers/text_properties.rst:176
 msgid "Line Height"
@@ -619,8 +605,8 @@ msgid ""
 "work for pre-positioned SVG 1.1 text, but does apply for pre-formatted text "
 "that uses hard line breaks, or wrapped text."
 msgstr ""
-"行高 (Line Height) 属性用于控制所选文本范围的行高。它对绝对定位换行类型的 "
-"SVG 1.1 文本不起作用，但适用于使用硬回车的回车换行文本或自动换行文本。"
+"行高 (Line Height)：用于控制所选文本范围的行高。它对绝对定位换行类型的 SVG "
+"1.1 文本不起作用，但适用于使用硬回车的回车换行文本或自动换行文本。"
 
 #: ../../reference_manual/dockers/text_properties.rst:180
 #: ../../reference_manual/dockers/text_properties.rst:336
@@ -681,9 +667,9 @@ msgid ""
 "Mostly used for CJK scripts, requires :ref:`text_property_language` being "
 "set to work. Krita at this moment does not support :guilabel:`Loose`."
 msgstr ""
-"换行规则 (Link Break) 属性用于选择换行算法的严格程度，主要应用于中日韩 (CJK) "
-"文本排版，需预先设置 :ref:`text_property_language` 属性才能工作。Krita 当前尚"
-"未支持 :guilabel:`宽松` 模式。"
+"换行规则 (Link Break)：用于选择换行算法的严格程度，主要应用于中日韩 (CJK) 文"
+"本排版，需预先设置 :ref:`text_property_language` 属性才能工作。Krita 当前尚未"
+"支持 :guilabel:`宽松` 模式。"
 
 #: ../../reference_manual/dockers/text_properties.rst:199
 msgid "Word Break"
@@ -695,9 +681,8 @@ msgid ""
 "break at words or also allow breaking at characters. Useful for Korean or "
 "Ethiopian."
 msgstr ""
-"单词换行规则 (Word Break) 属性用于精细调整换行行为，通过切换是否仅允许在单词"
-"之间断行还是允许在字符之间断行来实现，适用于韩语或埃塞俄比亚语等非拉丁语言场"
-"景。"
+"单词换行规则 (Word Break)：用于精细调整换行行为，通过切换是否仅允许在单词之间"
+"断行还是允许在字符之间断行来实现，适用于韩语或埃塞俄比亚语等非拉丁语言场景。"
 
 #: ../../reference_manual/dockers/text_properties.rst:205
 msgid ".. image:: /images/text/word-break-korean.png"
@@ -725,9 +710,9 @@ msgid ""
 "full-width forms. This is useful in that it is applied as a stylistic "
 "effect, meaning any text written is automatically transformed."
 msgstr ""
-"文本转换 (Text Transform) 属性可以对选定范围的字符进行转换，例如将其设置为大"
-"写，或将半角形式转换为全角形式等。因为这些转换是作为样式效果被应用的，这意味"
-"着所输入的任何文本都会自动进行转换。"
+"文本转换 (Text Transform)：用于对选定范围的字符进行转换，例如将其设置为大写，"
+"或将半角形式转换为全角形式等。因为这些转换是作为样式效果被应用的，这意味着所"
+"输入的任何文本都会自动进行转换。"
 
 #: ../../reference_manual/dockers/text_properties.rst:214
 msgid ""
@@ -749,7 +734,7 @@ msgid ""
 "guilabel:`Capitalize` the first letter after each word separator is "
 "uppercased, which the rest is lowercased."
 msgstr ""
-"大小写 (Case)，是否将所有文本转换为大写或小写。选择 :guilabel:`首字母大写` "
+"大小写 (Case)：是否将所有文本转换为大写或小写。选择 :guilabel:`首字母大写` "
 "时，每个单词分隔符后的第一个字母将大写，其余字母小写。"
 
 #: ../../reference_manual/dockers/text_properties.rst:218
@@ -766,11 +751,11 @@ msgid ""
 "The full width opentype feature does something similar, but not every font "
 "supports that."
 msgstr ""
-"全角 (full-width) 指 Unicode 半角与全角字符块中的“全角”码点。启用该选项后，若"
-"字体支持，比例字形 (proportional) 或半角字形 (halfwidth) 将被替换为对应的全角"
-"字形。通常，在竖排文本中比例字形会被旋转显示，但当无法或不需要旋转时，使用全"
-"角字形可使排版更整齐。OpenType 特性中的全角 (fwid) 有类似效果，但并非所有字体"
-"都支持该特性。"
+"全角 (full-width)：Unicode 半角与全角字符块中的“全角”码点。启用该选项后，若字"
+"体支持，比例字形 (proportional) 或半角字形 (halfwidth) 将被替换为对应的全角字"
+"形。通常，在竖排文本中比例字形会被旋转显示，但当无法或不需要旋转时，使用全角"
+"字形可使排版更整齐。OpenType 特性中的全角 (fwid) 有类似效果，但并非所有字体都"
+"支持该特性。"
 
 #: ../../reference_manual/dockers/text_properties.rst:221
 msgid "Full-size Kana"
@@ -783,9 +768,9 @@ msgid ""
 "small, it can be useful to replace small kana with big kana to aid in "
 "readability."
 msgstr ""
-"全角假名 (full-size kana)，在日语假名 (Kana) 书写体系中，存在部分小写假名与全"
-"形假名的差异，这些假名的发音有细微区别。但当文本字号过小时，将小写假名替换为"
-"全形假名有助于提升可读性。"
+"全角假名 (full-size kana)：在日语假名 (Kana) 书写体系中，存在部分小写假名与全"
+"角假名的差异，这些假名的发音有细微区别。但当文本字号过小时，将小写假名替换为"
+"全角假名有助于提升可读性。"
 
 #: ../../reference_manual/dockers/text_properties.rst:226
 msgid "Text Decoration"
@@ -803,11 +788,11 @@ msgstr "上图展示了所有可用的文本装饰类型和线条样式。"
 msgid ""
 "Text Decoration allows drawing underlines, overlines and striking through "
 "text."
-msgstr "文本装饰 (Text Decoration) 用于为文本绘制下划线、上划线和删除线。"
+msgstr "文本装饰 (Text Decoration)：用于为文本绘制下划线、上划线和删除线。"
 
 #: ../../reference_manual/dockers/text_properties.rst:234
 msgid "Line:"
-msgstr "线条类型："
+msgstr "线条类型"
 
 #: ../../reference_manual/dockers/text_properties.rst:235
 msgid ""
@@ -818,7 +803,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/text_properties.rst:236
 msgid "Color:"
-msgstr "颜色："
+msgstr "颜色"
 
 #: ../../reference_manual/dockers/text_properties.rst:237
 msgid ""
@@ -828,7 +813,7 @@ msgstr "颜色 (color)：设置线条的颜色。当未设置时，装饰线的�
 
 #: ../../reference_manual/dockers/text_properties.rst:239
 msgid "Style:"
-msgstr "样式："
+msgstr "样式"
 
 #: ../../reference_manual/dockers/text_properties.rst:239
 msgid ""
@@ -885,7 +870,7 @@ msgstr "下划线位置将根据字体度量值设置。"
 
 #: ../../reference_manual/dockers/text_properties.rst:259
 msgid "Horizontal:"
-msgstr "横排："
+msgstr "横排"
 
 #: ../../reference_manual/dockers/text_properties.rst:259
 msgid "Bottom"
@@ -894,7 +879,7 @@ msgstr "字符底端"
 #: ../../reference_manual/dockers/text_properties.rst:260
 msgid "Underlines will be aligned to the descender."
 msgstr ""
-"字符底端 (Bottom)，下划线将对齐到字符 (如 j、y) 的下行部分 (descender)。"
+"字符底端 (Bottom)：下划线将对齐到字符 (如 j、y) 的下行部分 (descender)。"
 
 #: ../../reference_manual/dockers/text_properties.rst:262
 msgid "Behaviour in vertical writing modes."
@@ -908,11 +893,11 @@ msgstr "竖排左划线"
 msgid ""
 "Underlines will be at the left of the characters. Overlines at the right."
 msgstr ""
-"竖排左划线 (Vertical Left)，下划线在字符左侧绘制，上划线在字符右侧绘制。"
+"竖排左划线 (Vertical Left)：下划线在字符左侧绘制，上划线在字符右侧绘制。"
 
 #: ../../reference_manual/dockers/text_properties.rst:267
 msgid "Vertical:"
-msgstr "竖排："
+msgstr "竖排"
 
 #: ../../reference_manual/dockers/text_properties.rst:267
 msgid "Vertical right"
@@ -921,7 +906,7 @@ msgstr "竖排右划线"
 #: ../../reference_manual/dockers/text_properties.rst:267
 msgid "Underlines will be at the right of the characters, and overlines left."
 msgstr ""
-"竖排右划线 (Vertical Right)，下划线在字符右侧绘制，上划线在字符左侧绘制。"
+"竖排右划线 (Vertical Right)：下划线在字符右侧绘制，上划线在字符左侧绘制。"
 
 #: ../../reference_manual/dockers/text_properties.rst:272
 msgid "OpenType Features"
@@ -1006,7 +991,7 @@ msgstr "字形：连字"
 
 #: ../../reference_manual/dockers/text_properties.rst:297
 msgid "Enable or disable ligatures and contextual alternates on the text."
-msgstr "字形：连字 (Glyphs: Ligatures)，启用或禁用连字和上下文连字的替代字形。"
+msgstr "字形：连字 (Glyphs: Ligatures)：启用或禁用连字和上下文连字的替代字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:299
 msgid "Common"
@@ -1015,7 +1000,7 @@ msgstr "标准连字"
 #: ../../reference_manual/dockers/text_properties.rst:300
 msgid "Enables `liga` and `clig`, which are commonly used ligatures."
 msgstr ""
-"标准连字 (Common/Standard Ligatures)，启用 `liga` 和 `clig` 特性，这些是常用"
+"标准连字 (Common/Standard Ligatures)：启用 `liga` 和 `clig` 特性，它们是常用"
 "的连字。"
 
 #: ../../reference_manual/dockers/text_properties.rst:301
@@ -1024,7 +1009,9 @@ msgstr "可选连字"
 
 #: ../../reference_manual/dockers/text_properties.rst:302
 msgid "Enables `dlig`, which are ligatures of a more decorative nature."
-msgstr "启用 `dlig` ，这是一种更偏向装饰性的连字。"
+msgstr ""
+"可选连字 (Discretionary Ligatures)：启用 `dlig` 特性，这是一种更偏向装饰性的"
+"连字。"
 
 #: ../../reference_manual/dockers/text_properties.rst:303
 msgid "Historical"
@@ -1033,7 +1020,7 @@ msgstr "历史连字"
 #: ../../reference_manual/dockers/text_properties.rst:304
 msgid "Enables `hlig`, which is intended for old-fashioned ligatures."
 msgstr ""
-"历史连字 (Historical Forms)，启用 `hlig` 特性，这是用于营造古典文献排版效果的"
+"历史连字 (Historical Forms)：启用 `hlig` 特性，这是用于营造古典文献排版效果的"
 "连字。"
 
 #: ../../reference_manual/dockers/text_properties.rst:306
@@ -1045,7 +1032,7 @@ msgid ""
 "Enables `calt`, which is frequently used by script fonts and decorative "
 "fonts to select appropriate glyphs depending on their context."
 msgstr ""
-"上下文连字 (Contextual Alternates，也称上下文替代)，启用 `calt` 特性，这是手"
+"上下文连字 (Contextual Alternates，也称上下文替代)：启用 `calt` 特性，这是手"
 "写体和花体中经常使用的连字形式，根据上下文选择合适的字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:310
@@ -1069,7 +1056,7 @@ msgstr "字形：定位"
 
 #: ../../reference_manual/dockers/text_properties.rst:317
 msgid "Enable super or subscripts on the text."
-msgstr "字形：定位 (Glyphs: Position)，对文本启用上标和下标。"
+msgstr "字形：定位 (Glyphs: Position)：对文本启用上标和下标。"
 
 #: ../../reference_manual/dockers/text_properties.rst:319
 #: ../../reference_manual/dockers/text_properties.rst:516
@@ -1078,7 +1065,7 @@ msgstr "上标"
 
 #: ../../reference_manual/dockers/text_properties.rst:320
 msgid "Enables superscript glyphs."
-msgstr "上标 (Superscript)，启用上标字形。"
+msgstr "上标 (Superscript)：启用上标字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:322
 #: ../../reference_manual/dockers/text_properties.rst:519
@@ -1087,7 +1074,7 @@ msgstr "下标"
 
 #: ../../reference_manual/dockers/text_properties.rst:322
 msgid "Enables subscript glyphs."
-msgstr "下标 (Subscript)，启用下标字形。"
+msgstr "下标 (Subscript)：启用下标字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:326
 msgid ".. image:: /images/text/opentype-position.png"
@@ -1103,13 +1090,13 @@ msgstr "字形：数字"
 
 #: ../../reference_manual/dockers/text_properties.rst:333
 msgid "Enable number-related glyph forms on the text."
-msgstr "字形：数字 (Glyphs: Numeric)，在文本上启用与数字相关的字形形式。"
+msgstr "字形：数字 (Glyphs: Numeric)：在文本上启用与数字相关的字形形式。"
 
 #: ../../reference_manual/dockers/text_properties.rst:337
 #: ../../reference_manual/dockers/text_properties.rst:344
 #: ../../reference_manual/dockers/text_properties.rst:351
 msgid "Does not explicitly enable either style, showing the font default."
-msgstr "正常 (Normal)，不明确启用任何样式，使用字体的默认样式。"
+msgstr "正常 (Normal)：不明确启用任何样式，使用字体的默认样式。"
 
 #: ../../reference_manual/dockers/text_properties.rst:338
 msgid "Lining"
@@ -1118,7 +1105,7 @@ msgstr "等高数字"
 #: ../../reference_manual/dockers/text_properties.rst:339
 msgid "Requests figures that fit within an upper case text, using `lnum`."
 msgstr ""
-"等高数字 (Lining Figures)，使用 `lnum` 特性，将不齐线的旧体数字替换为等高数"
+"等高数字 (Lining Figures)：使用 `lnum` 特性，将不齐线的旧体数字替换为等高数"
 "字，像一排大写字母一样整齐地排列在基线上，与大写字母混排时更和谐。"
 
 #: ../../reference_manual/dockers/text_properties.rst:340
@@ -1134,7 +1121,7 @@ msgstr "旧体数字"
 msgid ""
 "Requests asks for figures that fit within an upper case text, using `onum`."
 msgstr ""
-"旧体数字 (Oldstyle Figures)，使用 `onum` 特性，将齐线的等高数字替换为不齐线的"
+"旧体数字 (Oldstyle Figures)：使用 `onum` 特性，将齐线的等高数字替换为不齐线的"
 "旧体数字，具有升部和降部，更有韵律。与小写字母混排时更和谐。"
 
 #: ../../reference_manual/dockers/text_properties.rst:345
@@ -1145,7 +1132,7 @@ msgstr "比例宽度"
 #: ../../reference_manual/dockers/text_properties.rst:346
 msgid "Requests proportional figures, using `pnum`."
 msgstr ""
-"比例宽度数字 (Proportional Figures)，使用 `pnum` 特性，将等宽数字替换为比例宽"
+"比例宽度数字 (Proportional Figures)：使用 `pnum` 特性，将等宽数字替换为比例宽"
 "度数字。"
 
 #: ../../reference_manual/dockers/text_properties.rst:347
@@ -1161,7 +1148,7 @@ msgid ""
 "Requests tabular figures, using `tnum`, these figures all share the same "
 "advance."
 msgstr ""
-"等宽数字 (Tabular Figures)，使用 `tnum` 特性，将比例宽度数字替换为等宽数字。"
+"等宽数字 (Tabular Figures)：使用 `tnum` 特性，将比例宽度数字替换为等宽数字。"
 
 #: ../../reference_manual/dockers/text_properties.rst:352
 msgid "Diagonal"
@@ -1174,7 +1161,7 @@ msgid ""
 "separated by a 'fraction slash' (U+2044), then this will replace the figures "
 "with numerators before the slash and denominators after the slash."
 msgstr ""
-"斜式分数 (Diagonal Fractions)，将用斜杠分隔的数字替换为斜式分数形式。如果字体"
+"斜式分数 (Diagonal Fractions)：将用斜杠分隔的数字替换为斜式分数形式。如果字体"
 "包含分子和分母功能，并且数字由“分数斜杠”(U+2044) 分隔，则将斜杠前的数字替换为"
 "分子形式，斜杠后的数字替换为分母形式。"
 
@@ -1188,7 +1175,7 @@ msgstr "层叠分数"
 
 #: ../../reference_manual/dockers/text_properties.rst:355
 msgid "Replaces figures separated by a slash with a nut fraction form."
-msgstr "层叠分数 (Stacked/Alternative Fractions)，将斜式分数替换为层叠分数。"
+msgstr "层叠分数 (Stacked/Alternative Fractions)：将斜式分数替换为层叠分数。"
 
 #: ../../reference_manual/dockers/text_properties.rst:356
 msgid "Ordinals"
@@ -1197,7 +1184,7 @@ msgstr "序数词形式"
 #: ../../reference_manual/dockers/text_properties.rst:357
 msgid "Replaces letters that follow figures with their ordinal forms."
 msgstr ""
-"序数词形式 (Ordinals)，将序数词数字的后缀字母替换为专门设计的、与数字搭配的序"
+"序数词形式 (Ordinals)：将序数词数字的后缀字母替换为专门设计的、与数字搭配的序"
 "数词形式。"
 
 #: ../../reference_manual/dockers/text_properties.rst:359
@@ -1209,7 +1196,7 @@ msgid ""
 "Replaces the number zero with one that has a slash in the middle, which can "
 "help prevent confusion with similar glyphs like the letter 'O'."
 msgstr ""
-"带斜线零 (Slashed Zero)，将默认的数字零替换为中间带有一条斜线的零，这有助于避"
+"带斜线零 (Slashed Zero)：将默认的数字零替换为中间带有一条斜线的零，这有助于避"
 "免与类似形状的字符 (如字母“O”) 混淆。"
 
 #: ../../reference_manual/dockers/text_properties.rst:363
@@ -1232,11 +1219,11 @@ msgstr "字形：大写"
 #: ../../reference_manual/dockers/text_properties.rst:370
 msgid "Enable opentype features related to capitals, such as small caps."
 msgstr ""
-"字形：大写 (Glyphs: Caps)，启用与大小相关的 OpenType 特性，例如小型大写字母。"
+"字形：大写 (Glyphs: Caps)：启用与大小相关的 OpenType 特性，例如小型大写字母。"
 
 #: ../../reference_manual/dockers/text_properties.rst:373
 msgid "Don't use any particular capitals."
-msgstr "正常 (Normal)，不使用任意特定的大写字形。"
+msgstr "正常 (Normal)：不使用任意特定的大写字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:374
 msgid "Small Caps"
@@ -1245,7 +1232,7 @@ msgstr "小型大写字母"
 #: ../../reference_manual/dockers/text_properties.rst:375
 msgid "Sets uppercase to small caps. Typically used for abbreviations."
 msgstr ""
-"小型大写字母 (Small Capitals)，将小写字母替换为小型大写字母。通常用于缩写。"
+"小型大写字母 (Small Capitals)：将小写字母替换为小型大写字母。通常用于缩写。"
 
 #: ../../reference_manual/dockers/text_properties.rst:376
 msgid "All Small Caps"
@@ -1254,7 +1241,7 @@ msgstr "全部小型大写字母"
 #: ../../reference_manual/dockers/text_properties.rst:377
 msgid "Sets all text to small caps. Typically used for formal text."
 msgstr ""
-"全部小型大写字母 (All Small Caps)，将整段文本设置为小型大写字母。通常用于正式"
+"全部小型大写字母 (All Small Caps)：将整段文本设置为小型大写字母。通常用于正式"
 "文本。"
 
 #: ../../reference_manual/dockers/text_properties.rst:378
@@ -1266,7 +1253,7 @@ msgid ""
 "Sets uppercase to petite caps. Alternative to small caps that is exactly the "
 "same as the x height."
 msgstr ""
-"微型大写字母 (Petite Capitals)，将小写字母替换为微型大写字母。这种形式比小型"
+"微型大写字母 (Petite Capitals)：将小写字母替换为微型大写字母。这种形式比小型"
 "大写字母形式更更小，通常严格等于字体的 x 高度。"
 
 #: ../../reference_manual/dockers/text_properties.rst:380
@@ -1275,7 +1262,7 @@ msgstr "全部微型大写字母"
 
 #: ../../reference_manual/dockers/text_properties.rst:381
 msgid "Sets all text to petite caps."
-msgstr "全部微型大写字母 (All Petite Caps)，将整段文本设置为微型大写字母。"
+msgstr "全部微型大写字母 (All Petite Caps)：将整段文本设置为微型大写字母。"
 
 #: ../../reference_manual/dockers/text_properties.rst:382
 msgid "Titling Caps"
@@ -1286,7 +1273,7 @@ msgid ""
 "Sets uppercase to use titling caps. Titling caps frequently are larger and "
 "more dramatic, and best suited for headers instead of body text."
 msgstr ""
-"标题专用字形 (Titling Caps)，将字形替换为专为大字号标题设计的字形变体。这些字"
+"标题专用字形 (Titling Caps)：将字形替换为专为大字号标题设计的字形变体。这些字"
 "形通常比普通的大写字母设计得更轻盈、更紧凑，有时升部 (ascenders) 会缩短，以便"
 "在有限的行高中容纳更紧密的行距。其目的是在大字号下获得更优雅、更协调的视觉效"
 "果。"
@@ -1298,7 +1285,7 @@ msgstr "统一大小写"
 #: ../../reference_manual/dockers/text_properties.rst:385
 msgid "Enables the unicase feature."
 msgstr ""
-"统一大小写 (Unicase)，将大写和小写字形替换为统一大小写字形，原本的小写字母会"
+"统一大小写 (Unicase)：将大写和小写字形替换为统一大小写字形，原本的小写字母会"
 "保留其形态，而原本的大写字母则会被替换为形态类似大写、但高度与小写字母齐平的"
 "字形。"
 
@@ -1322,11 +1309,11 @@ msgstr "字形：东亚文字"
 #: ../../reference_manual/dockers/text_properties.rst:396
 msgid "Enable glyph forms related to East Asian text layout."
 msgstr ""
-"字形：东亚文字 (Glyphs: East-Asian)，启用与东亚文字布局相关的字形形式。"
+"字形：东亚文字 (Glyphs: East-Asian)：启用与东亚文字布局相关的字形形式。"
 
 #: ../../reference_manual/dockers/text_properties.rst:400
 msgid "Use font default."
-msgstr "正常 (Normal)，使用字体的默认值。"
+msgstr "正常 (Normal)：使用字体的默认值。"
 
 #: ../../reference_manual/dockers/text_properties.rst:401
 msgid "Traditional"
@@ -1334,7 +1321,7 @@ msgstr "繁体字形"
 
 #: ../../reference_manual/dockers/text_properties.rst:402
 msgid "Use traditional glyphs."
-msgstr "繁体字形 (Traditional Forms)，将 CJK 字体中的简体字形替换为繁体字形。"
+msgstr "繁体字形 (Traditional Forms)：将 CJK 字体中的简体字形替换为繁体字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:403
 msgid "Simplified"
@@ -1342,7 +1329,7 @@ msgstr "简体字形"
 
 #: ../../reference_manual/dockers/text_properties.rst:404
 msgid "Use simplifies glyphs."
-msgstr "简体字形 (Simplified Forms)，将 CJK 字体中的繁体字形替换为简体字形。"
+msgstr "简体字形 (Simplified Forms)：将 CJK 字体中的繁体字形替换为简体字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:405
 msgid "JIS78"
@@ -1351,7 +1338,7 @@ msgstr "JIS78 字形"
 #: ../../reference_manual/dockers/text_properties.rst:406
 msgid "Use glyphs as specified by JIS78"
 msgstr ""
-"JIS78 字形 (JIS78 Forms)，将日文字体中的标准汉字字形替换为 JIS78 规范的字形。"
+"JIS78 字形 (JIS78 Forms)：将日文字体中的标准汉字字形替换为 JIS78 规范的字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:407
 msgid "JIS83"
@@ -1360,7 +1347,7 @@ msgstr "JIS83 字形"
 #: ../../reference_manual/dockers/text_properties.rst:408
 msgid "Use glyphs as specified by JIS83"
 msgstr ""
-"JIS83 字形 (JIS83 Forms)，将日文字体中的标准汉字字形替换为 JIS83 规范的字形。"
+"JIS83 字形 (JIS83 Forms)：将日文字体中的标准汉字字形替换为 JIS83 规范的字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:409
 msgid "JIS90"
@@ -1369,7 +1356,7 @@ msgstr "JIS90 字形"
 #: ../../reference_manual/dockers/text_properties.rst:410
 msgid "Use glyphs as specified by JIS90"
 msgstr ""
-"JIS90 字形 (JIS90 Forms)，将日文字体中的标准汉字字形替换为 JIS90 规范的字形。"
+"JIS90 字形 (JIS90 Forms)：将日文字体中的标准汉字字形替换为 JIS90 规范的字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:411
 msgid "JIS04"
@@ -1378,7 +1365,7 @@ msgstr "JIS2004 字形"
 #: ../../reference_manual/dockers/text_properties.rst:412
 msgid "Use glyphs as specified by JIS04"
 msgstr ""
-"JIS2004 字形 (JIS2004 Forms)，将日文字体中的标准汉字字形替换为 JIS2004 规范的"
+"JIS2004 字形 (JIS2004 Forms)：将日文字体中的标准汉字字形替换为 JIS2004 规范的"
 "字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:414
@@ -1388,13 +1375,13 @@ msgstr "全角字形"
 #: ../../reference_manual/dockers/text_properties.rst:415
 msgid "Use full width glyphs."
 msgstr ""
-"全角字形 (Full Widths)，将比例宽度字形替换为全角字形，或按照全角标准调整它们"
+"全角字形 (Full Widths)：将比例宽度字形替换为全角字形，或按照全角标准调整它们"
 "的间距。"
 
 #: ../../reference_manual/dockers/text_properties.rst:417
 msgid "Use proportional glyphs."
 msgstr ""
-"半角字形 (Half Widths，或 Proportional，比例宽度字形)，将全角字形替换为半角，"
+"半角字形 (Half Widths，或 Proportional，比例宽度字形)：将全角字形替换为半角，"
 "常见的例子包括 CJK 全角括号和其他标点符号。"
 
 #: ../../reference_manual/dockers/text_properties.rst:419
@@ -1404,7 +1391,7 @@ msgstr "注音标示字形"
 #: ../../reference_manual/dockers/text_properties.rst:419
 msgid "Enable glyphs meant for ruby annotations."
 msgstr ""
-"注音标示字形 (Ruby Notation Forms)，将 CJK 字体中的字形替换为适合用于注音标注"
+"注音标示字形 (Ruby Notation Forms)：将 CJK 字体中的字形替换为适合用于注音标注"
 "的较小尺寸字形。"
 
 #: ../../reference_manual/dockers/text_properties.rst:423
@@ -1429,7 +1416,7 @@ msgid ""
 "Turn font kerning on or off. Font kerning enables per-glyph spacing "
 "adjustments."
 msgstr ""
-"字距调整 (Kerning)，开启/关闭字距调整。字距调整功可以根据字体设置对特定字形组"
+"字距调整 (Kerning)：开启/关闭字距调整。字距调整功可以根据字体设置对特定字形组"
 "合进行间距调整。"
 
 #: ../../reference_manual/dockers/text_properties.rst:436
@@ -1438,7 +1425,7 @@ msgstr "文本方向"
 
 #: ../../reference_manual/dockers/text_properties.rst:438
 msgid "Direction sets whether the text is left-to-right or right-to-left."
-msgstr "文本方向 (Direction) 属性用于设置文本方向是从左到右还是从右到左。"
+msgstr "文本方向 (Direction)：用于设置文本方向是从左到右还是从右到左。"
 
 #: ../../reference_manual/dockers/text_properties.rst:441
 msgid "Unicode Bidi"
@@ -1451,17 +1438,17 @@ msgid ""
 "cases, it cannot tell whether a sequence should be left-to-right or right-to-"
 "left."
 msgstr ""
-"Unicode 双向 (unicode-bidi) 是 CSS 的一个属性，用于与文本方向 (direction) 属"
-"性配合，控制文档中双向文本 (bidi) 的算法，解决混合方向文本嵌套显示异常、强制"
-"文本块阅读方向等问题。通常使用默认算法即可，但它无法判断某些特定的文本序列应"
-"是从左到右还是从右到左排列。"
+"Unicode 双向 (unicode-bidi)：CSS 属性之一，用于与文本方向 (direction) 属性配"
+"合，控制文档中双向文本 (bidi) 的算法，解决混合方向文本嵌套显示异常、强制文本"
+"块阅读方向等问题。通常使用默认算法即可，但它无法判断某些特定的文本序列应是从"
+"左到右还是从右到左排列。"
 
 #: ../../reference_manual/dockers/text_properties.rst:445
 msgid ""
 "No controls are inserted. All text inside is reordered according to its "
 "implicit direction (which is derived from the characters used)."
 msgstr ""
-"正常 (Normal)，不插入任何控制符。内部所有文本均根据其隐含方向 (由所用字符推导"
+"正常 (Normal)：不插入任何控制符。内部所有文本均根据其隐含方向 (由所用字符推导"
 "得出) 重新排序。"
 
 #: ../../reference_manual/dockers/text_properties.rst:446
@@ -1474,8 +1461,8 @@ msgid ""
 "algorithm will assume the explicit direction is that of the :guilabel:"
 "`direction` property, but the text itself is ordered by implicit direction."
 msgstr ""
-"嵌入 (Embed) 控制符意味着该文本序列已嵌入了方向，双向算法将假定显式方向为 :"
-"guilabel:`文本方向` 属性的方向，但文本本身是按隐式方向排序的。"
+"嵌入 (Embed)：插入此控制符意味着该文本序列已嵌入了方向，双向算法将假定显式方"
+"向为 :guilabel:`文本方向` 属性的方向，但文本本身是按隐式方向排序的。"
 
 #: ../../reference_manual/dockers/text_properties.rst:448
 msgid "Override"
@@ -1486,8 +1473,8 @@ msgid ""
 "Override means that the given section will use the current :guilabel:"
 "`direction` as the explicit direction as well as the direction of the text."
 msgstr ""
-"覆盖 (Override) 控制符意味着给定的文本部分将使用当前的 :guilabel:`文本方向` "
-"作为显式方向以及文本的方向。"
+"覆盖 (Override)：插入此控制符意味着给定的文本部分将使用当前的 :guilabel:`文本"
+"方向` 作为显式方向以及文本的方向。"
 
 #: ../../reference_manual/dockers/text_properties.rst:450
 msgid "Isolate"
@@ -1500,8 +1487,8 @@ msgid ""
 "paragraph. Due this, the ordering has no effect on the ordering of text on "
 "either side."
 msgstr ""
-"隔离 (Isolate) 控制符意味着双向算法会将该序列视为一个完全独立的段落。因此，排"
-"序不会对两侧文本的排序产生影响。"
+"隔离 (Isolate)：插入此控制符意味着双向算法会将该序列视为一个完全独立的段落。"
+"因此，排序不会对两侧文本的排序产生影响。"
 
 #: ../../reference_manual/dockers/text_properties.rst:452
 msgid "Isolate-Override"
@@ -1512,8 +1499,8 @@ msgid ""
 "Both isolate and override are applied. This means that the text is ordered "
 "explicitely by direction, but said ordering has no effect"
 msgstr ""
-"隔离-覆盖 (Isolate-Override) 控制符意味着同时应用了“隔离”和“覆盖”，文本是按文"
-"本方向显式排序的，但这种排序没有效果。"
+"隔离-覆盖 (Isolate-Override)：插入此控制符意味着同时应用了“隔离”和“覆盖”，文"
+"本是按文本方向显式排序的，但这种排序没有效果。"
 
 #: ../../reference_manual/dockers/text_properties.rst:455
 msgid "Plain Text"
@@ -1523,7 +1510,9 @@ msgstr "纯文本"
 msgid ""
 ":guilabel:`direction` property is unused and bididirectional algorithm will "
 "instead guess at the direction."
-msgstr ":guilabel:`文本方向`属性未被使用，双向算法将自行猜测方向。"
+msgstr ""
+"纯文本 (Plain Text)：不使用 :guilabel:`文本方向`属性，双向算法将自行猜测方"
+"向。"
 
 #: ../../reference_manual/dockers/text_properties.rst:457
 msgid ""
@@ -1667,10 +1656,10 @@ msgid ""
 "`Alphabetic` in horizontal and :guilabel:`Central` in vertical :ref:"
 "`text_property_writing_mode`."
 msgstr ""
-"主导基线 (Dominant Baseline ) 指定了不同大小的文本段落如何对齐，它也是 :ref:"
-"`text_property_alignment_baseline` 的默认值。它有一个独特的值： :guilabel:`自"
-"动` ，:ref:`text_property_writing_mode` 为横排时等同于 :guilabel:`字母基线` "
-"；竖排时则等同于 :guilabel:`中央基线` 。"
+"主导基线 (Dominant Baseline )：用于指定不同大小的文本段落如何对齐，它也是 :"
+"ref:`text_property_alignment_baseline` 的默认值。它有一个独特的值： :"
+"guilabel:`自动` ，:ref:`text_property_writing_mode` 为横排时等同于 :guilabel:"
+"`字母基线` ；竖排时则等同于 :guilabel:`中央基线` 。"
 
 #: ../../reference_manual/dockers/text_properties.rst:501
 msgid "Alignment Baseline"
@@ -1683,7 +1672,7 @@ msgid ""
 "means it will take its value from the :ref:`text_property_dominant_baseline` "
 "property."
 msgstr ""
-"对齐基线 (Alignment Baseline) 用于控制选定的文本范围相对于父文本的对齐方式。"
+"对齐基线 (Alignment Baseline)：用于控制选定的文本范围相对于父文本的对齐方式。"
 "它有一个独特的属性： :guilabel:`基线` ，这意味着它将从 :ref:"
 "`text_property_dominant_baseline` 属性获取其值。"
 
@@ -1702,8 +1691,8 @@ msgid ""
 "Baseline shift allows moving the text away from the baseline, either by "
 "predefined super and subscript values, or by a fixed amount."
 msgstr ""
-"基线偏移 (Baseline shift) 允许将文本垂直移动使其偏离基线，可通过预定义的上标/"
-"下标值或固定数值实现。"
+"基线偏移 (Baseline shift)：将文本垂直移动使其偏离基线，可通过预定义的上标/下"
+"标值或固定数值实现。"
 
 #: ../../reference_manual/dockers/text_properties.rst:514
 msgid "Length"
@@ -1711,21 +1700,21 @@ msgstr "长度值"
 
 #: ../../reference_manual/dockers/text_properties.rst:515
 msgid "Shift text by a specified amount."
-msgstr "长度值 (Length)，将文本按指定的长度值进行移位。"
+msgstr "长度值 (Length)：将文本按指定的长度值进行移位。"
 
 #: ../../reference_manual/dockers/text_properties.rst:517
 msgid ""
 "Shift text so it aligns to the inherited super script offset. Said value is "
 "retrieved from the font."
 msgstr ""
-"上标 (Super)，将文本进行移动，使其与继承的上标偏移量对齐。该值从字体中获取。"
+"上标 (Super)：将文本进行移动，使其与继承的上标偏移量对齐。该值从字体中获取。"
 
 #: ../../reference_manual/dockers/text_properties.rst:519
 msgid ""
 "Shift text so it aligns to the inherited sub script offset. Said value is "
 "retrieved from the font."
 msgstr ""
-"下标 (Sub)，将文本进行移动，使其与继承的下标偏移量对齐。该值从字体中获取。"
+"下标 (Sub)：将文本进行移动，使其与继承的下标偏移量对齐。该值从字体中获取。"
 
 #: ../../reference_manual/dockers/text_properties.rst:521
 msgid ""
@@ -1753,8 +1742,8 @@ msgid ""
 "The CSS white space rule controls how multiples of spaces are handled, and "
 "whether the text can wrap."
 msgstr ""
-"CSS 的空白符 (white-space) 属性用于控制对多个空白符的处理方式，以及文本是否允"
-"许自动换行。"
+"空白符 (white-space)：CSS 属性之一，用于控制对多个空白符的处理方式，以及文本"
+"是否允许自动换行。"
 
 #: ../../reference_manual/dockers/text_properties.rst:534
 msgid "By default, this property is hidden."
@@ -1769,8 +1758,8 @@ msgid ""
 "The language of this text shape. Language affects a number of properties, "
 "like glyph shape, upper- and lowercase and line breaking."
 msgstr ""
-"语言 (Language) 属性用于指定文本的语言。语言会对许多属性产生影响，例如字形、"
-"大小写以及换行。"
+"语言 (Language)：用于指定文本的语言。语言会对许多属性产生影响，例如字形、大小"
+"写以及换行。"
 
 #: ../../reference_manual/dockers/text_properties.rst:543
 msgid ""
@@ -1815,8 +1804,8 @@ msgid ""
 "to use the :ref:`shape_selection_tool` to set it on the paragraph, or change "
 "the foreground color with any of the color selectors."
 msgstr ""
-"目前无法通过文本属性面板设置填充。请使用 :ref:`shape_selection_tool` 设置段落"
-"填充色，或使用拾色器更改前景色。"
+"填充 (Fill)：目前无法通过文本属性面板设置填充。请使用 :ref:"
+"`shape_selection_tool` 设置段落填充色，或使用拾色器更改前景色。"
 
 #: ../../reference_manual/dockers/text_properties.rst:559
 msgid "Stroke"
@@ -1828,8 +1817,9 @@ msgid ""
 "will need to use the :ref:`shape_selection_tool` to set it, or use the :ref:"
 "`svg_source_editor` in the text tool to manually set a stroke."
 msgstr ""
-"目前无法通过文本属性面板来设置描边。请使用 :ref:`shape_selection_tool` 进行设"
-"置，或者在文本工具的  :ref:`svg_source_editor` 中手动设置描边。"
+"描边 (Stroke)：目前无法通过文本属性面板来设置描边。请使用 :ref:"
+"`shape_selection_tool` 进行设置，或者在文本工具的  :ref:`svg_source_editor` "
+"中手动设置描边。"
 
 #: ../../reference_manual/dockers/text_properties.rst:566
 msgid "Paragraph Properties"
@@ -1850,8 +1840,8 @@ msgid ""
 "Writing Mode sets whether the text flows horizontally or vertically, and in "
 "the latter case, whether the block flows right-to-left or left-to-right."
 msgstr ""
-"书写方向 (Writing Mode) 决定文本是横排还是竖排；竖排时则决定文本是从右到左还"
-"是从左到右排列。"
+"书写方向 (Writing Mode)：用于控制文本是横排还是竖排；竖排时则决定文本是从右到"
+"左还是从左到右排列。"
 
 #: ../../reference_manual/dockers/text_properties.rst:577
 msgid "See also :ref:`text_property_direction`."
@@ -1876,8 +1866,8 @@ msgid ""
 "the text is wrapping. The main control is a slider defining the size of the "
 "indent. There's two more advanced controls:"
 msgstr ""
-"文本缩进 (Text Indent) 特性用于设置行首缩进。仅在自动换行文本类型中生效。主要"
-"控制项是一个滑动条，用于定义缩进的大小。还有两个更高级的控制项："
+"文本缩进 (Text Indent)：用于设置行首缩进。仅在自动换行文本类型中生效。主要控"
+"制项是一个滑动条，用于定义缩进的大小。还有两个更高级的控制项："
 
 #: ../../reference_manual/dockers/text_properties.rst:588
 msgid "Hanging Indentation"
@@ -1908,7 +1898,7 @@ msgstr "文本对齐"
 
 #: ../../reference_manual/dockers/text_properties.rst:598
 msgid "Text Align sets the alignment for the given block of characters."
-msgstr "文本对齐 (Text Align) 用于设置字符块的水平对齐方式。"
+msgstr "文本对齐 (Text Align)：用于设置字符块的水平对齐方式。"
 
 #: ../../reference_manual/dockers/text_properties.rst:600
 msgid ""
@@ -1955,9 +1945,9 @@ msgid ""
 "text. You can use :guilabel:`Text Anchor` to set the anchor for each line, "
 "as long as the text is not being auto wrapped."
 msgstr ""
-"文本锚点 (Text Anchor) 控制文本的锚定方式，而非对齐方式。尽管它在某种程度上类"
-"似于 :guilabel:`文本对齐` ，允许文本从左到右或从右到左编排，但是 :guilabel:`"
-"文本对齐` 是在一个空间范围内进行对齐，而 :guilabel:`文本锚点` 则是相对于文本"
+"文本锚点 (Text Anchor)：控制文本的锚定方式，而非对齐方式。尽管它在某种程度上"
+"类似于 :guilabel:`文本对齐` ，允许文本从左到右或从右到左编排，但是 :guilabel:"
+"`文本对齐` 是在一个空间范围内进行对齐，而 :guilabel:`文本锚点` 则是相对于文本"
 "开头对齐。只要文本不是自动换行类型，您就可以使用 :guilabel:`文本锚点` 为每一"
 "行设置锚点。"
 
@@ -2027,7 +2017,7 @@ msgid ""
 "to the nearest multiple of the reference size. Its main use case is to align "
 "columns of information without resorting to tables."
 msgstr ""
-"制表符大小 (Tab Size) 用于定义制表符的大小。制表符 (通过按 :kbd:`Tab` 键插"
+"制表符大小 (Tab Size)：用于定义制表符的大小。制表符 (通过按 :kbd:`Tab` 键插"
 "入) 是一种空白符，会自动对齐到最接近的参考大小的倍数的位置。其主要用途是无需"
 "使用表格即可对齐信息列。"
 
@@ -2087,7 +2077,7 @@ msgstr "几何精确性优先 (Geometric Precision)：不进行任何字体轮�
 
 #: ../../reference_manual/dockers/text_properties.rst:653
 msgid "Same as :guilabel:`Geometric Precision`."
-msgstr "与 :guilabel:`几何精确性优先` 相同。"
+msgstr "自动 (Auto)：与 :guilabel:`几何精确性优先` 相同。"
 
 #: ../../reference_manual/dockers/text_properties.rst:657
 msgid ".. image:: /images/text/unifont-text-rendering-example.png"
@@ -2113,7 +2103,7 @@ msgstr "文本区域"
 
 #: ../../reference_manual/dockers/text_properties.rst:664
 msgid "These properties are related to :ref:`text_in_shape`."
-msgstr "文本区域 (Text Area) 属性与 :ref:`text_in_shape` 有关。"
+msgstr "文本区域 (Text Area)：这些属性与 :ref:`text_in_shape` 有关。"
 
 #: ../../reference_manual/dockers/text_properties.rst:666
 msgid "Shape Padding"
@@ -2144,8 +2134,8 @@ msgid ""
 ":ref:`resource_style_presets` allow storing combinations of properties for "
 "later use. See that page for information about editing style presets."
 msgstr ""
-"您可以使用 :ref:`resource_style_presets` (Style Presets) 存储属性组合以备后"
-"用。有关编辑文本样式预设的信息，请参阅该页面。"
+":ref:`resource_style_presets` (Style Presets)：用于存储属性组合以备后用的预设"
+"资源。有关编辑文本样式预设的信息，请参阅该页面。"
 
 #: ../../reference_manual/dockers/text_properties.rst:678
 msgid ""

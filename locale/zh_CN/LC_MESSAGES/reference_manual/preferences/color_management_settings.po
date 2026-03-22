@@ -203,7 +203,7 @@ msgstr "显示标签页"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:76
 msgid "On systems providing direct access to the display"
-msgstr ""
+msgstr "系统允许直接访问显示器信息的环境"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:78
 msgid ""
@@ -211,6 +211,8 @@ msgid ""
 "access to the screen. In this mode, you can basically need to select three "
 "simple options to set display color management right."
 msgstr ""
+"在除原生 Wayland 之外的所有平台上，Krita 会假定其可直接访问屏幕信息。在此模式"
+"下，您基本上只需配置三个简单选项即可对显示器进行色彩管理。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:83
 msgid "Use System Monitor Profile"
@@ -230,6 +232,8 @@ msgid ""
 "ICC profile which Krita will use independent of the monitor profile set in "
 "system preferences. The default is ``sRGB built-in``."
 msgstr ""
+"每台连接的显示器对应一个特性文件，可以使用独立于来自系统配置的显示器特性文"
+"件。默认值是 ``sRGB built-in`` (Krita 自带的标准 sRGB 特性文件)。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:88
 msgid ""
@@ -238,6 +242,9 @@ msgid ""
 "displays, these profiles are usually decently good (at least in linearizing "
 "gradients)."
 msgstr ""
+"要正确进行色彩管理，理想的做法是使用硬件校色仪生成显示器的色彩特性文件。如果"
+"没有校色仪，也可以尝试使用显示器厂商提供的特性文件。对于高端显示器，厂商提供"
+"的特性文件一般不会太离谱，起码能减轻渐变过渡中的色带和偏色现象。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:94
 msgid ""
@@ -245,10 +252,13 @@ msgid ""
 "then you should select ``sRGB built-in`` as the display profile, since "
 "Wayland will treat Krita's window as \"unmanaged sRGB surface\"."
 msgstr ""
+"如果您使用的是兼容 Wayland 的显示合成器，但在 XWayland 模式下运行 Krita，则应"
+"选择 ``sRGB built-in`` 作为显示器特性文件，因为 Wayland 会将 Krita 的窗口作"
+"为“不进行色彩管理的 sRGB 表面”进行处理。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:98
 msgid "Display Profiles"
-msgstr ""
+msgstr "显示器特性文件"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:98
 msgid ""
@@ -257,6 +267,10 @@ msgid ""
 "stored in Krita preference folder, $~/.local/share/krita/profiles will be "
 "visible only in Krita."
 msgstr ""
+"在类 Unix 系统上，系统和 Krita 将自动识别以下位置中的色彩特性文件：$/usr/"
+"share/color/icc (系统特性文件) 或 $~/.local/share/color/icc (用户特性文件)。"
+"Krita 的配置文件夹中也有存储特性文件的位置：$~/.local/share/krita/profiles，"
+"它们只能被 Krita 识别。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:101
 #: ../../reference_manual/preferences/color_management_settings.rst:134
@@ -274,7 +288,7 @@ msgstr ""
 
 #: ../../reference_manual/preferences/color_management_settings.rst:106
 msgid "On systems using Wayland"
-msgstr ""
+msgstr "Wayland 环境"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:112
 msgid ""
@@ -283,10 +297,13 @@ msgid ""
 "To force Krita use native Wayland protocol, run it with ``QT_QPA_PLATFORM`` "
 "environment set:"
 msgstr ""
+"到 Krita 6.0.0 版为止，即使 Wayland 显示合成器可用，Krita 在默认情况下也不会"
+"使用 Wayland 协议，而是优先使用 XWayland 协议。要强制 Krita 使用原生 Wayland "
+"协议，请使用 ``QT_QPA_PLATFORM`` 环境设置运行它。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:116
 msgid "QT_QPA_PLATFORM=wayland krita"
-msgstr ""
+msgstr "QT_QPA_PLATFORM=wayland krita"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:121
 msgid ""
@@ -298,6 +315,11 @@ msgid ""
 "will be adjusted to the corresponding points of your display and the entire "
 "color volume will be scaled to fit your display space."
 msgstr ""
+"此选项指示 Wayland 应该如何将图像的色彩空间映射到显示器的色彩空间。如果您已经"
+"在 Wayland 显示合成器中正确设置了显示器的特性文件，您应该将此值设为 :"
+"guilabel:`相对色度` 并启用 :guilabel:`使用黑点补偿` 。这将确保图像的黑点和白"
+"点被调整为显示器色彩空间中对应的位置，且整个色彩空间将缩放以适应显示器的空"
+"间。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:128
 msgid ""
@@ -310,6 +332,12 @@ msgid ""
 "into something wider to make colors \"look better\" on wide gamut displays. "
 "So :guilabel:`Perceptual` intent may be not suitable for color critical work."
 msgstr ""
+"如果您没有在 Wayland 显示合成器中正确设置显示器的特性文件，或者您想要使用显示"
+"合成器的某些颜色调整特性，那么请将渲染意图设为 :guilabel:`感知` 。不过请注"
+"意，在这种情况下，屏幕上呈现的颜色的色度可能会不准确。 :guilabel:`感知` 模式"
+"允许显示合成器以任意方式调整显示的颜色，例如将 sRGB 空间拉伸到更宽的空间中，"
+"使得颜色在宽色域显示器上看起来更加鲜艳。因此， :guilabel:`感知` 模式可能不适"
+"合对色彩精度有严格要求的场合。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:137
 msgid ""
@@ -318,15 +346,18 @@ msgid ""
 "Instead, it reused the main sRGB surface of the application. It means that "
 "the canvas effectively switches into sRGB mode."
 msgstr ""
+"此开关仅用于调试目的。当未选中时，Krita 的画布将停止使用单独的宽色域原生表面"
+"进行图像渲染。相反，它会对应用程序的主 sRGB 表面进行复用。这意味着画布实际上"
+"切换到了 sRGB 模式。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:140
 msgid "Enable canvas color management"
-msgstr ""
+msgstr "启用画布色彩管理"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:143
 msgid ""
 "Selects the color space in which the image data is sent to the compositor."
-msgstr ""
+msgstr "选择图像数据发送到显示合成器时使用的色彩空间。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:146
 msgid ""
@@ -334,30 +365,32 @@ msgid ""
 "compositor itself. In most of the cases it will be the most efficient way of "
 "communication between Krita and the compositor."
 msgstr ""
+"图像数据将以显示合成器偏好的格式发送给它。在大多数情况下，这将是 Krita 与显示"
+"合成器之间最高效的通信方式。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:150
 msgid ""
 "The exact format preferred by the compositor can be seen at the bottom of "
 "the page."
-msgstr ""
+msgstr "显示合成器所偏好的确切格式显示在该配置页面底部。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:153
 msgid "Preferred by operating system"
-msgstr ""
+msgstr "操作系统首选色彩空间"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:153
 msgid "Use this option unless you have reasons not to."
-msgstr ""
+msgstr "如果没有特殊的理由，建议使用此项。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:156
 msgid ""
 "This is an SDR color space with color primaries equal to sRGB and transfer "
 "function set to \"gamma 2.2\"."
-msgstr ""
+msgstr "这是一个 SDR 色彩空间，其原色与 sRGB 相同，传递函数设置为 gamma 2.2。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:157
 msgid "Rec 709 Gamma 2.2"
-msgstr ""
+msgstr "Rec 709 Gamma 2.2"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:160
 msgid ""
@@ -365,16 +398,20 @@ msgid ""
 "transfer function. Unless your system supports 16-bit floating point surface "
 "bit depth, use this option for debugging purposes only."
 msgstr ""
+"这是一个 SDR 色彩空间，其原色与 sRGB 相同，并采用线性传递函数。除非您的系统支"
+"持 16 位浮点表面位深度，否则请仅将此选项用于调试目的。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:162
 msgid "Rec 709 Linear"
-msgstr ""
+msgstr "Rec 709 Linear"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:165
 msgid ""
 "This is an HDR color space as defined by Rec. 2100 specification. This is "
 "the only color space in which Krita can pass HDR data to the compositor!"
 msgstr ""
+"这是由 Rec. 2100 规范定义的 HDR 色彩空间，也是 Krita 能够将 HDR 数据传递给显"
+"示合成器的唯一色彩空间。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:170
 msgid ""
@@ -384,6 +421,10 @@ msgid ""
 "it into Rec 2020 PQ, then RGB color value ``(1.0, 1.0, 1.0)`` of this image "
 "will be mapped to 80 cd/m² value in the PQ-range."
 msgstr ""
+"在 Krita 当前的 HDR 转换实现中，此 HDR 色彩空间的 *漫反射白点* 始终固定为 80 "
+"cd/m²。换句话说，如果您将处于场景参考线性空间 (例如 ACEScg) 中的图像转换为 "
+"Rec 2020 PQ，那么此图像的 RGB 颜色值 ``(1.0, 1.0, 1.0)`` 将被映射到 PQ 范围内"
+"的 80 cd/m²值。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:176
 msgid ""
@@ -393,10 +434,13 @@ msgid ""
 "\"SDR brightness level\" selected by the user in the system-wide HDR "
 "configuration page."
 msgstr ""
+"当 Krita 将 Rec 2020 PQ 格式的图像数据传输给显示合成器时，它会按照规定向合成"
+"器声明上述的 *漫反射白点* 。反过来，显示合成器则会对图像应用一条额外的曲线，"
+"以将此亮度级别调整为用户在系统全局 HDR 配置页面中选择的 SDR 亮度级别。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:179
 msgid "Rec 2020 PQ"
-msgstr ""
+msgstr "Rec 2020 PQ"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:182
 msgid ""
@@ -404,14 +448,16 @@ msgid ""
 "surface. This basically lets the compositor do with the colors whatever it "
 "prefers."
 msgstr ""
+"此选项会禁用在画布表面设置任何色彩空间元数据。这实际上会让显示合成器自行决定"
+"如何处理颜色。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:183
 msgid "Canvas surface color space"
-msgstr ""
+msgstr "画布表面色彩空间"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:183
 msgid "Unmanaged (testing only)"
-msgstr ""
+msgstr "不进行色彩管理 (仅用于测试)"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:186
 msgid ""
@@ -419,10 +465,12 @@ msgid ""
 "depth of all the surfaces in the application should be the same, hence "
 "changing the value requires full Krita restart."
 msgstr ""
+"选择画布表面的色彩位深度。由于 Qt 的限制，应用程序中所有表面的位深度必须一"
+"致，因此更改此设置后需要重启 Krita。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:188
 msgid "Canvas surface bit depth (needs restart)"
-msgstr ""
+msgstr "画布表面位深度 (需要重启)"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:191
 msgid ""
@@ -430,10 +478,12 @@ msgid ""
 "canvas is selected on Krita start up, and will not change while Krita is "
 "running."
 msgstr ""
+"当前画布表面所使用的色彩位深度。画布的位深度在 Krita 启动时选定，在 Krita 运"
+"行期间不会改变。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:192
 msgid "Current canvas surface bit depth"
-msgstr ""
+msgstr "当前画布表面位深度"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:195
 msgid ""
@@ -441,6 +491,8 @@ msgid ""
 "space will be used when :guilabel:`Preferred by operating system` color "
 "space is selected."
 msgstr ""
+"显示合成器所偏好的色彩空间的信息。选中 :guilabel:`操作系统首选色彩空间` 时将"
+"使用此空间。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:198
 msgid ""
@@ -448,10 +500,13 @@ msgid ""
 "value of ``Color Space->Luminance``. If ``maxLuminance`` is higher than "
 "``referenceLuminance``, then your compositor has HDR mode enabled."
 msgstr ""
+"此数据可反映您的显示合成器当前是否处于 HDR 模式。请检查 ``色彩空间 -> 亮度`` "
+"的值，如果 ``最大亮度`` 高于 ``参考亮度`` ，则表示的显示合成器已启用 HDR 模"
+"式。"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:200
 msgid "Color space preferred by the operating system"
-msgstr ""
+msgstr "操作系统首选色彩空间"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:205
 msgid "Softproofing options"

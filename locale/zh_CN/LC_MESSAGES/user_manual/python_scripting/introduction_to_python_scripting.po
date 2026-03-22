@@ -256,13 +256,14 @@ msgstr "Krita 的 API"
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:86
 msgid ""
 "`LibKis API Overview <https://api.kde.org/legacy/krita/html/index.html>`_"
-msgstr ""
+msgstr "`LibKis API 概览 <https://api.kde.org/legacy/krita/html/index.html>`_"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:87
 msgid ""
 "`Krita class documentation <https://api.kde.org/legacy/krita/html/annotated."
 "html>`_"
 msgstr ""
+"`Krita 程序类文档 <https://api.kde.org/legacy/krita/html/annotated.html>`_"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:89
 msgid ""
@@ -287,6 +288,12 @@ msgid ""
 "view the documentation of the functions ``createDocument()``, "
 "``activeWindow()``, and ``action()`` which we used above."
 msgstr ""
+"让我们仔细观察一下这些功能是如何工作的。在 `Krita 程序类参考文档 <https://"
+"api.kde.org/legacy/krita/html/classKrita."
+"html#aa55507903d088013ced2df8c74f28a63>`_ 页面列出了 Krita 进程的所有可用功"
+"能。如果你在 Python 里输入 ``dir(Krita.instance())`` ，它返回的结果应该和该页"
+"非常相近。你可以研究一下前面例子使用过的功能：\\ ``createDocument()``\\ 、\\ "
+"``activeWindow()``\\ 、\\ ``action()``\\ 。"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:93
 msgid ""
@@ -385,6 +392,12 @@ msgid ""
 "if we wanted to generate an info report about the documents in Krita, we "
 "could write a script like this:"
 msgstr ""
+"它列出了一坨不知道是什么玩意，这下怎么办？我们可以回头参考一下 Krita API 文档"
+"页面，看看 documents() 是怎么回事。你会看到在“Document”程序类那里其实是一个链"
+"接， `点进去该页面 <https://api.kde.org/legacy/krita/html/classDocument."
+"html>`_ 你便会发现 document 类下面有个叫做 name() 的功能用来返回文档名称，"
+"width() 和 height() 则会返回文档尺寸。如果我们想要生成 Krita 已打开文件的信息"
+"报表，我们可以编写下面的脚本："
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:129
 msgid ""
