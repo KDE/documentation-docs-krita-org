@@ -30,6 +30,11 @@ Treat page up/down keys as right/middle mouse buttons (workaround for Xiaomi sty
     
     .. versionadded:: 5.2.15
 
+Treat F21 key as middle mouse button (workaround for OnePlus styluses)
+    Only on Android. Similar to the above, OnePlus styluses inexplicably input the F21 key (that's not a typo, most keyboards have only F1 to F12, but F13 to F24 exist internally) when you press the stylus side button. Enabling this will translate it to middle mouse button instead.
+    
+    .. versionadded:: 6.1.0
+
 Disregard tablet position history (workaround for jagged lines with Xiaomi styluses)
     Only on Android. This is a workaround for Xiaomi styluses reporting incorrect positions that cause the lines you make with them to come out jagged even when enabling brush smoothing. Enabling this will ignore those wrong positions.
     
