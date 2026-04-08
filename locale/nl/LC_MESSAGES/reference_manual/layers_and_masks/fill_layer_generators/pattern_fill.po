@@ -2,34 +2,33 @@
 # This file is distributed under the same license as the Krita Manual package.
 #
 # SPDX-FileCopyrightText: 2020, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2026 Ronald Stroethoff <stroet43@zonnet.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2025-07-16 14:03+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-04-03 08:00+0200\n"
+"Last-Translator: Ronald Stroethoff <stroet43@zonnet.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:-1
 msgid "How to use Pattern fill generation in Krita."
-msgstr "Hoe generatie van patroonvullen in Krita gebruiken."
+msgstr "Hoe generatie van patroonvullen in Krita te gebruiken."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:0
 msgid ".. image:: /images/layers/pattern_fill_transform.png"
 msgstr ".. image:: /images/layers/pattern_fill_transform.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:0
-#, fuzzy
-#| msgid ".. image:: /images/layers/pattern_fill_transform.png"
 msgid ".. image:: /images/layers/pattern_fill_align_pixel_grid.png"
-msgstr ".. image:: /images/layers/pattern_fill_transform.png"
+msgstr ".. image:: /images/layers/pattern_fill_align_pixel_grid.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:11
 msgid "Pattern"
@@ -55,11 +54,11 @@ msgstr ""
 "geladen via het interface Hulpbronnenbeheer. Patronen kunnen een eenvoudige "
 "en interessante manier zijn om textuur aan uw tekening of schilderij toe te "
 "voegen, en daarmee u helpen om het uiterlijk van waterverfpapier, linnen, "
-"canvas, hardboard, steen of een oneindig aantal andere opties.  Als u "
+"canvas, hardboard, steen of een oneindig aantal andere opties. Als u "
 "bijvoorbeeld een digitaal schilderij wilt nemen en het af wilt werken met "
 "het uiterlijk van wat het is op canvas, dan kunt u een Vullaag met de "
 "canvastextuur uit het pakket textuur onderaan toevoegen en de dekking heel "
-"laag instellen zodat de \"draden\" van het patroon net zichtbaar zijn.  Het "
+"laag instellen zodat de \"draden\" van het patroon net zichtbaar zijn. Het "
 "effect is zeer overtuigend."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:19
@@ -69,7 +68,7 @@ msgid ""
 "great friend of Krita, David Revoy's free texture pack (https://www."
 "davidrevoy.com/article156/texture-pack-1)."
 msgstr ""
-"U kunt uw eigen maken en die ook gebruiken.  Voor een grootse set van goed "
+"U kunt uw eigen maken en die ook gebruiken. Voor een grootse set van goed "
 "ontworpen en bruikbare patronen bekijk u een van onze favoriete kunstenaars "
 "en een grote vriend van Krita, het vrije textuurpakket van David Revoy "
 "(https://www.davidrevoy.com/article156/texture-pack-1)."
@@ -80,7 +79,7 @@ msgid ""
 "as scaling or rotating it."
 msgstr ""
 "Dit biedt het instellen van een aantal transformatie-opties op het patroon, "
-"zoals schalen of draaien."
+"zoals verschalen of draaien."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:28
 msgid "Image showing several transforms applied to a single texture."
@@ -100,6 +99,16 @@ msgid ""
 "pattern corners are ensured to fall at integer coordinates after the "
 "transformation."
 msgstr ""
+"Als een geometrische transformatie is toegepast op een patroon, dan kunnen "
+"wellicht de hoekpunten van de repeterende afbeelding naar een nieuwe positie "
+"worden verplaatst, inclusief fractionele coördinaten (sub-pixel, coördinaten "
+"met niet gehele getallen). Dit is het standaard gedrag en is meestal goed "
+"genoeg. Maar er zijn momenten dat gewenst is dat de hoekpunten op "
+"coördinaten met een geheel getal liggen. Bijvoorbeeld als exacte herhaling "
+"met exacte nauwkeurigheid nodig is. Dit kan bereikt worden door :guilabel:"
+"`Uitlijnen op Pixelraster` in te schakelen. Door dit te doen, bent u er "
+"zeker van dat de hoekpunten na de transformatie op integer coördinaten "
+"terecht komen."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:35
 msgid ""
@@ -110,6 +119,12 @@ msgid ""
 "possibility of setting this alignment over a number of repetitions of the "
 "pattern the corners should be aligned."
 msgstr ""
+"Houdt wel in gedachte dat deze uitlijning het aantal mogelijke "
+"transformaties beperkt (alle transformaties die de hoekpunten op fractionele "
+"coördinaten plaatsen, worden verwijderd), maar de uitgelijnde transformatie "
+"zal de niet-uitgelijnde zo dicht mogelijk benaderen. Er is ook de "
+"mogelijkheid om bij deze uitlijning het aantal herhalingen in te stellen "
+"waarbij de hoekpunten uitgelijnd moeten worden."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:37
 msgid ""
@@ -117,6 +132,10 @@ msgid ""
 "example those used for screentones, or when the pattern is scaled down to be "
 "really small, since it helps reducing some artifacts like moiré patterns."
 msgstr ""
+"Deze optie is met name handig bij de hantering van kleine patronen, "
+"bijvoorbeeld als die gebruikt worden bij screentoons, of als die heel klein "
+"worden verschaald, omdat dit helpt bij het voorkomen van artefacten zoals "
+"moiré patronen."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:41
 msgid ""
@@ -129,6 +148,16 @@ msgid ""
 "alignment is on, then that block is repeated exactly through the image, but "
 "when it is off, every instance of the pattern is rendered slightly different."
 msgstr ""
+"Deze afbeelding toont een vullaag met een patroon dat een afbeelding met een "
+"lachend gezicht gebruikt. Het is getransformeerd door het tot 75% te "
+"verschalen en 34 graden te roteren. Links is geen uitlijning toegepast "
+"terwijl rechts de uitlijning wel actief is en ingesteld op elke 2 "
+"herhalingen, zowel horizontaal als verticaal. De blauwe lijnen zijn een "
+"indicatie van het pixelraster en de rode markeren een blok van twee bij twee "
+"herhalingen waarvan de hoeken zijn uitgelijnd op het pixelraster. Merk op "
+"dat als de uitlijning ingeschakeld is, het blok in de afbeelding nauwkeurig "
+"wordt herhaald, maar als het uitgeschakeld is, elk exemplaar van het patroon "
+"een beetje verschillend gerenderd wordt."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:42
 msgid "Transform"
@@ -136,7 +165,7 @@ msgstr "Transformeren"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/pattern_fill.rst:42
 msgid "Align to pixel grid"
-msgstr ""
+msgstr "Uitlijnen op Pixelraster"
 
 #, fuzzy
 #~| msgid ".. image:: images/layers/pattern_fill_transform.png"
