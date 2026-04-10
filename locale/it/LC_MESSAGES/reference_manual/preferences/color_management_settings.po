@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
-# SPDX-FileCopyrightText: 2021, 2025 Valter Mura <valtermura@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2025, 2026 Valter Mura <valtermura@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-10 02:08+0000\n"
-"PO-Revision-Date: 2025-06-14 18:25+0200\n"
+"PO-Revision-Date: 2026-04-04 00:07+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:-1
 msgid "The color management settings in Krita."
@@ -222,7 +222,7 @@ msgstr "Vista"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:76
 msgid "On systems providing direct access to the display"
-msgstr ""
+msgstr "Nei sistemi che forniscono accesso diretto allo schermo"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:78
 msgid ""
@@ -230,6 +230,10 @@ msgid ""
 "access to the screen. In this mode, you can basically need to select three "
 "simple options to set display color management right."
 msgstr ""
+"In tutti le piattaforme, ad eccezione di Wayland nativo, Krita presume di "
+"avere accesso diretto allo schermo. In questa modalità, puoi "
+"fondamentalmente aver bisogno di selezionare tre semplici opzioni per "
+"configurare correttamente la gestione del colore dello schermo."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:83
 msgid "Use System Monitor Profile"
@@ -249,6 +253,9 @@ msgid ""
 "ICC profile which Krita will use independent of the monitor profile set in "
 "system preferences. The default is ``sRGB built-in``."
 msgstr ""
+"Ci sono tanti profili quanti monitor hai collegato. Puoi selezionare un "
+"profilo ICC che Krita utilizzerà indipendentemente dal profilo del monitor "
+"impostato nelle preferenze di sistema. Il predefinito è ``sRGB incorporato``."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:88
 msgid ""
@@ -257,6 +264,10 @@ msgid ""
 "displays, these profiles are usually decently good (at least in linearizing "
 "gradients)."
 msgstr ""
+"Se non possiedi un colorimetro fisico, prova a usare il profilo fornito dal "
+"produttore del tuo schermo. Per gli schermi di buona qualità, questi profili "
+"sono in genere di qualità decente (per lo meno nelle linearizzazione delle "
+"sfumature)."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:94
 msgid ""
@@ -264,37 +275,26 @@ msgid ""
 "then you should select ``sRGB built-in`` as the display profile, since "
 "Wayland will treat Krita's window as \"unmanaged sRGB surface\"."
 msgstr ""
+"Se utilizzi un compositore compatibile con Wayland, ma esegui Krita in "
+"modalità XWayland, allora devi selezionare ``sRGB incorporato`` come profilo "
+"del monitor, poiché Wayland considererà la finestra di Krita come "
+"\"superficie sRGB non gestita\"."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:98
-#, fuzzy
-#| msgid "Display"
 msgid "Display Profiles"
-msgstr "Vista"
+msgstr "Profili del monitor"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:98
-#, fuzzy
-#| msgid ""
-#| "There are as many of these as you have screens connected. The user can "
-#| "select an ICC profile which Krita will use independent of the monitor "
-#| "profile set in system preferences. The default is sRGB built-in. On Unix "
-#| "systems, profile stored in $/usr/share/color/icc (system location) or $~/."
-#| "local/share/color/icc (local location) will be proposed. Profile stored "
-#| "in Krita preference folder, $~/.local/share/krita/profiles will be "
-#| "visible only in Krita."
 msgid ""
 "On Unix systems, profile stored in $/usr/share/color/icc (system location) "
 "or $~/.local/share/color/icc (local location) will be proposed. Profile "
 "stored in Krita preference folder, $~/.local/share/krita/profiles will be "
 "visible only in Krita."
 msgstr ""
-"Sono presenti tanti profili quanti monitor hai collegato. L'utente può "
-"selezionare un profilo ICC che Krita userà in modo indipendente dal profilo "
-"del monitor impostato nelle preferenze di sistema. Il profilo predefinito è "
-"quello incorporato sRGB. Nei sistemi Unix verrà proposto il profilo "
-"memorizzato in $/usr/share/color/icc (posizione di sistema) o $~/.local/"
-"share/color/icc (posizione locale). I profili memorizzati nella cartella "
-"delle preferenze di Krita, $~/.local/share/krita/profiles sarà visibile solo "
-"in Krita."
+"Nei sistemi Unix verrà proposto il profilo memorizzato in $/usr/share/color/"
+"icc (posizione di sistema) o $~/.local/share/color/icc (posizione locale). I "
+"profili memorizzati nella cartella delle preferenze di Krita, $~/.local/"
+"share/krita/profiles sarà visibile solo in Krita."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:101
 #: ../../reference_manual/preferences/color_management_settings.rst:134
@@ -314,7 +314,7 @@ msgstr ""
 
 #: ../../reference_manual/preferences/color_management_settings.rst:106
 msgid "On systems using Wayland"
-msgstr ""
+msgstr "Nei sistemi che usano Wayland"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:112
 msgid ""
@@ -323,10 +323,15 @@ msgid ""
 "To force Krita use native Wayland protocol, run it with ``QT_QPA_PLATFORM`` "
 "environment set:"
 msgstr ""
+"A partire da Krita 6.0.0, per impostazione predefinita il programma non usa "
+"il protocollo Wayland anche quando è disponibile un compositore Wayland. "
+"Krita preferisce il vecchio protocollo XWayland. Per forzare Krita usa il "
+"protocollo Wayland nativo, eseguilo con la seguente configurazione "
+"d'ambiente ``QT_QPA_PLATFORM``:"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:116
 msgid "QT_QPA_PLATFORM=wayland krita"
-msgstr ""
+msgstr "QT_QPA_PLATFORM=wayland krita"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:121
 msgid ""
@@ -338,6 +343,14 @@ msgid ""
 "will be adjusted to the corresponding points of your display and the entire "
 "color volume will be scaled to fit your display space."
 msgstr ""
+"Questa opzione istruisce Wayland sul modo di mappare i colori delle immagini "
+"all'interno dello spazio dei colori dello schermo. Se hai configurato "
+"correttamente il profilo dello schermo nello stesso compositore Wayland, "
+"allora dovresti mantenere questo valore impostato a :guilabel:`Colorimetrico "
+"relativo` e tenere abilitata l'opzione :guilabel:`Usa compensazione del "
+"punto nero`. Ciò garantirà che i punti di bianco e nero della tua immagine "
+"verranno regolati ai punti corrispondenti del tuo schermo e l'intero volume "
+"dei colori sarà ridimensionato per adattarsi allo spazio del tuo schermo."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:128
 msgid ""
@@ -350,6 +363,16 @@ msgid ""
 "into something wider to make colors \"look better\" on wide gamut displays. "
 "So :guilabel:`Perceptual` intent may be not suitable for color critical work."
 msgstr ""
+"Se non hai impostato correttamente il profilo dello schermo nel compositore "
+"Wayland o preferisci usare le funzionalità di regolazione personalizzate del "
+"colore del tuo compositore, allora puoi impostare :guilabel:`Percettivo` "
+"come obiettivo di resa. Fai attenzione che in questo caso i colori resi sul "
+"tuo schermo potrebbero risultare colorimetricamente non corretti. Nella "
+"modalità :guilabel:`percettiva`, al compositore è permesso cambiare i colori "
+"in maniera arbitraria, per esempio, stirare lo spazio sRGB in qualcosa di "
+"più ampio per rendere i colori di «aspetto migliore» sugli schermi con gamut "
+"ampio. L'obiettivo di resa :guilabel:`Percettivo` potrebbe dunque non essere "
+"adatto per il lavoro critico sul colore."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:137
 msgid ""
@@ -358,17 +381,22 @@ msgid ""
 "Instead, it reused the main sRGB surface of the application. It means that "
 "the canvas effectively switches into sRGB mode."
 msgstr ""
+"Questo interruttore è presente solo a scopo di debug. Quando disattivata, la "
+"tela di Krita smette di utilizzare una superficie nativa di gamut ampio "
+"separata per la resa delle immagini. Al suo posto, riutilizza la superficie "
+"sRGB principale dell'applicazione. Questo implica che la tela cambia "
+"realmente in modalità sRGB."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:140
-#, fuzzy
-#| msgid "Color Management"
 msgid "Enable canvas color management"
-msgstr "Gestione dei colori"
+msgstr "Abilita la gestione del colore della tela"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:143
 msgid ""
 "Selects the color space in which the image data is sent to the compositor."
 msgstr ""
+"Seleziona lo spazio dei colori in cui i dati dell'immagine sono inviati al "
+"compositore."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:146
 msgid ""
@@ -376,30 +404,37 @@ msgid ""
 "compositor itself. In most of the cases it will be the most efficient way of "
 "communication between Krita and the compositor."
 msgstr ""
+"I dati dell'immagine saranno inviati al compositore nel formato preferito "
+"dallo stesso compositore. Nella maggior parte dei casi, risulterà essere il "
+"metodo più efficiente di comunicazione tra Krita e il compositore."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:150
 msgid ""
 "The exact format preferred by the compositor can be seen at the bottom of "
 "the page."
 msgstr ""
+"L'esatto formato preferito dal compositore può essere osservato nella parte "
+"inferiore della pagina."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:153
 msgid "Preferred by operating system"
-msgstr ""
+msgstr "Preferito dal sistema operativo"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:153
 msgid "Use this option unless you have reasons not to."
-msgstr ""
+msgstr "Usa questa opzione a meno che non abbia una ragione per non farlo."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:156
 msgid ""
 "This is an SDR color space with color primaries equal to sRGB and transfer "
 "function set to \"gamma 2.2\"."
 msgstr ""
+"Questo è uno spazio dei colori SDR con colori primari uguali a sRGB e "
+"funzione di trasferimento impostata a «gamma 2.2»."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:157
 msgid "Rec 709 Gamma 2.2"
-msgstr ""
+msgstr "Rec 709 Gamma 2.2"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:160
 msgid ""
@@ -407,16 +442,23 @@ msgid ""
 "transfer function. Unless your system supports 16-bit floating point surface "
 "bit depth, use this option for debugging purposes only."
 msgstr ""
+"Questo è uno spazio dei colori SDR con colori primari uguali a sRGB e una "
+"funzione di trasferimento lineare. A meno che il tuo sistema non supporti la "
+"profondità di 16 bit in virgola mobile della superficie, usa questa opzione "
+"solo per scopi di debug."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:162
 msgid "Rec 709 Linear"
-msgstr ""
+msgstr "Rec 709 Linear"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:165
 msgid ""
 "This is an HDR color space as defined by Rec. 2100 specification. This is "
 "the only color space in which Krita can pass HDR data to the compositor!"
 msgstr ""
+"Questo è uno spazio dei colori HDR come definito dalla specifica Rec. 2100. "
+"È l'unico spazio dei colori nel quale Krita può passare i dati HDR al "
+"compositore!"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:170
 msgid ""
@@ -426,6 +468,12 @@ msgid ""
 "it into Rec 2020 PQ, then RGB color value ``(1.0, 1.0, 1.0)`` of this image "
 "will be mapped to 80 cd/m² value in the PQ-range."
 msgstr ""
+"Nell'attuale implementazione delle conversioni HDR in Krita, il *bianco "
+"diffuso* di questo spazio dei colori HDR è sempre fissato a 80 cd/m². In "
+"altre parole, se se scatti un'immagine in uno spazio lineare «scene-"
+"referred» (es. ACEScg), la converti in Rec 2020 PQ, il valore dei colori RGB "
+"``(1.0, 1.0, 1.0)`` di questa immagine saranno poi mappati al valore di 80 "
+"cd/m² nell'intervallo PQ."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:176
 msgid ""
@@ -435,10 +483,15 @@ msgid ""
 "\"SDR brightness level\" selected by the user in the system-wide HDR "
 "configuration page."
 msgstr ""
+"Quando Krita passa i dati «Rec 2020 PQ» al compositore, gli dichiara "
+"correttamente questo punto di *bianco diffuso*. Il compositore, a sua volta, "
+"applica una curva aggiuntiva all'immagine, per adattare questo livello al "
+"\"livello di luminosità SDR\" selezionata dall'utente nella pagina di "
+"configurazione HDR a livello di sistema."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:179
 msgid "Rec 2020 PQ"
-msgstr ""
+msgstr "Rec 2020 PQ"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:182
 msgid ""
@@ -446,14 +499,17 @@ msgid ""
 "surface. This basically lets the compositor do with the colors whatever it "
 "prefers."
 msgstr ""
+"Questa opzione disabilita l'impostazione di qualsiasi metadato dello spazio "
+"dei colori sulla superficie della tela. Sostanzialmente lascia che il "
+"compositore lavori con i colori come preferisce."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:183
 msgid "Canvas surface color space"
-msgstr ""
+msgstr "Spazio dei colori superficie della tela"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:183
 msgid "Unmanaged (testing only)"
-msgstr ""
+msgstr "Non gestito (solo per prova)"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:186
 msgid ""
@@ -461,10 +517,14 @@ msgid ""
 "depth of all the surfaces in the application should be the same, hence "
 "changing the value requires full Krita restart."
 msgstr ""
+"Seleziona la profondità di bit della superficie della tela. A causa di "
+"limitazioni in Qt, nell'applicazione la profondità in bit dovrà essere "
+"uguale per tutte le superfici, quindi la modifica del valore richiede il "
+"riavvio di Krita."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:188
 msgid "Canvas surface bit depth (needs restart)"
-msgstr ""
+msgstr "Profondità in bit della superficie della tela (richiede il riavvio)"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:191
 msgid ""
@@ -472,10 +532,13 @@ msgid ""
 "canvas is selected on Krita start up, and will not change while Krita is "
 "running."
 msgstr ""
+"L'attuale profondità in bit utilizzata per la superficie della tela. Questa "
+"profondità viene selezionata all'avvio di Krita, e non cambierà durante la "
+"sua esecuzione."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:192
 msgid "Current canvas surface bit depth"
-msgstr ""
+msgstr "Profondità in bit attuale della superficie della tela"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:195
 msgid ""
@@ -483,6 +546,9 @@ msgid ""
 "space will be used when :guilabel:`Preferred by operating system` color "
 "space is selected."
 msgstr ""
+"Mostra le informazioni sullo spazio dei colori preferito dal compositore. "
+"Questo spazio verrà utilizzato quando è selezionato lo spazio dei colori :"
+"guilabel:`Preferito dal sistema operativo`."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:198
 msgid ""
@@ -490,10 +556,14 @@ msgid ""
 "value of ``Color Space->Luminance``. If ``maxLuminance`` is higher than "
 "``referenceLuminance``, then your compositor has HDR mode enabled."
 msgstr ""
+"Questi dati possono mostrare se il tuo compositore funziona attualmente in "
+"modalità HDR. Verifica il valore di ``Spazio dei colori -> Luminanza``. Se "
+"``Luminanza max`` è più alta della ``Luminanza di riferimento``, allora nel "
+"compositore è abilitata la modalità HDR."
 
 #: ../../reference_manual/preferences/color_management_settings.rst:200
 msgid "Color space preferred by the operating system"
-msgstr ""
+msgstr "Spazio dei colori preferito dal sistema operativo"
 
 #: ../../reference_manual/preferences/color_management_settings.rst:205
 msgid "Softproofing options"

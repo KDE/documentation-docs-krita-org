@@ -1,25 +1,26 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
 # SPDX-FileCopyrightText: 2026 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2026 Valter Mura <valtermura@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2026-02-28 08:01+0100\n"
-"Last-Translator: Vincenzo Reale <>\n"
+"PO-Revision-Date: 2026-04-05 21:06+0200\n"
+"Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:-1
 msgid "Understanding font families inside Krita."
-msgstr ""
+msgstr "Comprendere le famiglie di caratteri all'interno di Krita."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:10
 msgid "Resources"
@@ -51,6 +52,13 @@ msgid ""
 "you can select fonts as desired while using the text properties like font-"
 "weight and font-style to indicate the weight and width you need."
 msgstr ""
+"Le famiglie di caratteri non corrispondono a singoli file di tipi di "
+"carattere. Possono invece rappresentare una raccolta di tipi di carattere di "
+"vario tipo. Krita occuperà un po' di tempo per organizzare tutti i tipi di "
+"carattere presenti nel tuo sistema in forma gerarchica adeguata, in modo che "
+"tu possa selezionare i caratteri come voluto mentre utilizzi le proprietà "
+"del testo tipo il peso-carattere e lo stile-carattere per indicare il peso e "
+"la larghezza di cui hai bisogno."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:21
 msgid ""
@@ -59,6 +67,11 @@ msgid ""
 "the UI. It will also try to get an appropriate sample for all the scripts "
 "the font supports and display that per-locale."
 msgstr ""
+"Le famiglie di caratteri sono univoche all'interno del supporto di "
+"localizzazione. Krita tenterà di recuperare i nomi OpenType corretti per "
+"un'impostazione locale determinata, e di mostrarli nell'interfaccia. Tenterà "
+"anche di ottenere un campione appropriato per tutte le scritture che il tipo "
+"di carattere supporta e di visualizzarlo per impostazione locale."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:23
 msgid ""
@@ -66,6 +79,9 @@ msgid ""
 "in the resource manager. Embedding of Font Families is not supported at this "
 "moment."
 msgstr ""
+"In quanto risorse, le famiglie di caratteri possono essere ricercate e "
+"contrassegnate con tag, così come disattivate nel gestore delle risorse. "
+"L'incorporazione di famiglie di caratteri al momento non è supportato."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:26
 msgid "Font Types"
@@ -79,6 +95,11 @@ msgid ""
 "the font is a variable font, or, for color fonts, to indicate which color "
 "technologies are available."
 msgstr ""
+"La finestra di scelta della famiglia di caratteri mostrerà se il carattere è "
+"di tipo bitmap datato, di tipo postscript o :term:`OpenType` (che possono "
+"essere file ttf o otf). Inoltre, mostrerà anche un'icona per indicare se il "
+"tipo di carattere è variabile o, per i caratteri a colori, per indicare "
+"quali tecnologie di colore sono disponibili."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:31
 msgid "Bitmap Font"
@@ -89,6 +110,9 @@ msgid ""
 "A variety of formats just pixel bitmaps instead of vector shapes for their :"
 "term:`Glyphs`. Krita supports these through :program:`FreeType`."
 msgstr ""
+"Una varietà di formati semplicemente di bitmap di pixel anziché di forme "
+"vettoriali per i loro :term:`Glifi`. Krita li supporta tramite :program:"
+"`FreeType`."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:34
 msgid "PostScript Font"
@@ -99,6 +123,9 @@ msgid ""
 "An older vector font format, using the PostScript vector format. These fonts "
 "are much more limited than :term:`OpenType` fonts."
 msgstr ""
+"Un formato vettoriale più vecchio, che utilizza il formato vettoriale "
+"PostScript. Questi tipi di carattere sono molto più limitati rispetto a "
+"quelli :term:`OpenType`."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:37
 msgid "Variable Font"
@@ -115,16 +142,28 @@ msgid ""
 "these fonts, and their axes can be modified in the :ref:"
 "`text_property_font_style` section of the Text Properties Docker."
 msgstr ""
+"I tipi di carattere variabili :term:`OpenType` risultano caratteri speciali "
+"nel senso che, a differenza delle normali famiglie di caratteri, le "
+"variazioni semplici quali larghezza e peso sono tutte incluse all'interno di "
+"un singolo tipo di carattere. Essi sono in grado di interpolare in modo "
+"fluido tra le diverse variationi, con larghezza e peso che diventano un :dfn:"
+"`asse` di variatione. Non sono tuttavia limitati queste funzioni, altri "
+"esempi includono :guilabel:`Inclinazione` o :guilabel:`Dimensione ottica`. "
+"Krita supporta in modo completo questi tipi di carattere, e i loro assi "
+"possono essere modificati nella sezione :ref:`text_property_font_style` "
+"dell'area di aggancio Proprietà del testo."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:40
 msgid "Color Font"
-msgstr ""
+msgstr "Carattere a colori"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:42
 msgid ""
 "A font that doesn't just define :term:`Glyphs`, but also the colors on those "
 "glyphs."
 msgstr ""
+"Un tipo di carattere che definisce soltanto i :term:`Glifi`, ma anche i "
+"colori su di essi."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:44
 msgid ""
@@ -132,6 +171,9 @@ msgid ""
 "Colrv0 tables supported. Fonts with only SVG and Colrv1 tables will display "
 "hex blocks when used."
 msgstr ""
+"Krita al momento non supporta tutti i caratteri colorati, ma soltanto le "
+"tabelle Bitmap e Colrv0. I tipi di carattere soltanto con tabelle SVG e "
+"Colrv1 mostreranno blocchi esadecimali, quando utilizzati."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:47
 msgid "Adding new fonts"
@@ -143,6 +185,10 @@ msgid ""
 "the \"fonts\" folder inside the Krita resource directory. The latter is "
 "useful when on a system that doesn't allow installing fonts."
 msgstr ""
+"Puoi aggiungere caratteri installando nuovi tipi di carattere sul tuo "
+"sistema, oppure aggiungendoli alla cartella \"fonts\" all'interno della "
+"cartella delle risorse di Krita. Quest'ultimo metodo è utile quando utilizzi "
+"un sistema che non permette l'installazione di caratteri."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:51
 msgid ""
@@ -150,3 +196,7 @@ msgid ""
 "dynamically. However, while new fonts will appear in the fonts list, "
 "updating old fonts will require a restart of Krita."
 msgstr ""
+"All'aggiunta di nuovi tipi di carattere, Krita ricostruisce dinamicamente "
+"l'elenco interno dei tipi di carattere. Tuttavia, mentre i nuovi tipi di "
+"carattere appariranno subito nell'elenco, l'aggiornamento dei vecchi "
+"richiede il riavvio di Krita."
