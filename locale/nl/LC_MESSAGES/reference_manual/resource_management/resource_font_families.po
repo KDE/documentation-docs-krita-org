@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the Krita Manual package.
 #
 # SPDX-FileCopyrightText: 2026 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2026 Ronald Stroethoff <stroet43@zonnet.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 5.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2026-02-24 12:13+0100\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-04-12 07:00+0200\n"
+"Last-Translator: Ronald Stroethoff <stroet43@zonnet.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:-1
 msgid "Understanding font families inside Krita."
@@ -39,7 +40,7 @@ msgstr "Lettertypefamilies"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:17
 msgid "Since Krita 5.3, Font Families are a resource inside Krita."
-msgstr ""
+msgstr "Vanaf Krita 5.3, zijn lettertypefamilies een hulpbron in Krita."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:19
 msgid ""
@@ -49,6 +50,12 @@ msgid ""
 "you can select fonts as desired while using the text properties like font-"
 "weight and font-style to indicate the weight and width you need."
 msgstr ""
+"Lettertypefamilies stellen niet een enkele lettertype-bestand voor. Echter, "
+"ze kunneneen verzameling van verschillende soorten lettertypen voorstellen. "
+"Krita zal wat tijd spenderen om alle lettertypen in uw systeem in een goede "
+"hiërarchie te organiseren, zodat de gewenste lettertypen geselecteerd kunnen "
+"worden op de gewenste eigenschappen zoals het gewenste gewicht en "
+"lettertypestijl."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:21
 msgid ""
@@ -57,6 +64,11 @@ msgid ""
 "the UI. It will also try to get an appropriate sample for all the scripts "
 "the font supports and display that per-locale."
 msgstr ""
+"Lettertypefamilies zijn uniek in hun ondersteuning voor lokalisatie. Krita "
+"zal proberen om voor een opgegeven taal de correcte OpenType namen te "
+"verkrijgen en deze in het UI te tonen. Het zal ook proberen om een "
+"toepasselijk voorbeeld voor alle varianten van het lettertype te creëren en "
+"deze per-locale te tonen."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:23
 msgid ""
@@ -64,10 +76,13 @@ msgid ""
 "in the resource manager. Embedding of Font Families is not supported at this "
 "moment."
 msgstr ""
+"Als hulpdata, kunnen lettertypefamilies in de hulpdata-beheervenster "
+"doorzocht en getagd worden, maar ook uitgeschakeld worden. Embedding van "
+"lettertypefamilies is op dit moment niet mogelijk."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:26
 msgid "Font Types"
-msgstr ""
+msgstr "Lettertypen"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:28
 msgid ""
@@ -77,30 +92,42 @@ msgid ""
 "the font is a variable font, or, for color fonts, to indicate which color "
 "technologies are available."
 msgstr ""
+"Het selectievenster voor lettertypefamilies zal aangeven of het lettertype "
+"een ouderwets bitmap lettertype, een postscript lettertype of een :term:"
+"`OpenType` lettertype (die een ttf of otf-bestand kan zijn). Daarnaast zal "
+"het met een pictogram aangeven of het lettertype een variabele lettertype "
+"is, en voor gekleurde lettertypen aangeven welke kleuren technisch "
+"beschikbaar zijn."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:31
 msgid "Bitmap Font"
-msgstr ""
+msgstr "Bitmap lettertype"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:33
 msgid ""
 "A variety of formats just pixel bitmaps instead of vector shapes for their :"
 "term:`Glyphs`. Krita supports these through :program:`FreeType`."
 msgstr ""
+"Een groep van bestandstypen met alleen maar pixel bitmaps in plaats van "
+"vectorvormen voor hun :term:`Glyphs`. Krita kan via :program:`FreeType` met "
+"deze overweg."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:34
 msgid "PostScript Font"
-msgstr ""
+msgstr "PostScript lettertype"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:36
 msgid ""
 "An older vector font format, using the PostScript vector format. These fonts "
 "are much more limited than :term:`OpenType` fonts."
 msgstr ""
+"Een ouder vector lettertype-opmaak, dat het PostScript vector-opmaak "
+"gebruikt. Deze lettertypen zijn veel beperkter dan de :term:`OpenType`-"
+"lettertypen."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:37
 msgid "Variable Font"
-msgstr ""
+msgstr "Variabele lettertype"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:39
 msgid ""
@@ -113,16 +140,28 @@ msgid ""
 "these fonts, and their axes can be modified in the :ref:"
 "`text_property_font_style` section of the Text Properties Docker."
 msgstr ""
+"De variabele :term:`OpenType` lettertypen zijn speciaal omdat in "
+"tegenstelling tot normale lettertypefamilies, eenvoudige variaties zoals "
+"breedte en gewicht allemaal in een enkele lettertype zitten. Variable "
+"lettertypen zijn in staat om een vloeiende interpolatie te maken tussen "
+"verschillende variaties, met breedte en gewicht een :dfn:`as` van de "
+"variaties wordend. Het is echter niet beperkt tot deze, andere voorbeelden "
+"zijn :guilabel:`Hellend` of :guilabel:`Optische grootte`. Krita heeft "
+"complete ondersteuning voor deze lettertypes, en hun assen kunnen aangepast "
+"worden in de :ref:`text_property_font_style`-sectie van het paneel voor "
+"teksteigenschappen."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:40
 msgid "Color Font"
-msgstr ""
+msgstr "Gekleurde lettertype"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:42
 msgid ""
 "A font that doesn't just define :term:`Glyphs`, but also the colors on those "
 "glyphs."
 msgstr ""
+"Een lettertype dat niet alleen de :term:`Glyphs` definieert, maar ook de "
+"kleuren van deze glyphs."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:44
 msgid ""
@@ -130,10 +169,13 @@ msgid ""
 "Colrv0 tables supported. Fonts with only SVG and Colrv1 tables will display "
 "hex blocks when used."
 msgstr ""
+"Krita kan op dit moment niet met alle gekleurde lettertypen overweg, het kan "
+"op dit moment alleen met Bitmap en Colrv0 tabellen overweg. Lettertypen met "
+"alleen SVG en Colrv1 tabellen zullen bij gebruik hex blokken tonen."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:47
 msgid "Adding new fonts"
-msgstr ""
+msgstr "Nieuwe lettertypen toevoegen"
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:49
 msgid ""
@@ -141,6 +183,11 @@ msgid ""
 "the \"fonts\" folder inside the Krita resource directory. The latter is "
 "useful when on a system that doesn't allow installing fonts."
 msgstr ""
+"Men kan lettertypen toevoegen door nieuwe lettertypen aan uw "
+"besturingssysteem toe te voegen, maar ook door ze in de map \"fonts\" in de "
+"hulpbronmap van Krita te plaatsen. Dit laatste is bruikbaar bij een systeem "
+"waar het niet toegestaan is om lettertypen aan het besturingssysteem toe te "
+"voegen."
 
 #: ../../reference_manual/resource_management/resource_font_families.rst:51
 msgid ""
@@ -148,3 +195,7 @@ msgid ""
 "dynamically. However, while new fonts will appear in the fonts list, "
 "updating old fonts will require a restart of Krita."
 msgstr ""
+"Na het toevoegen van nieuwe lettertypen zal Krita automatisch de interne "
+"lijst met lettertypen weer opbouwen. Echter, ofschoon nieuwe lettertypen "
+"automatisch in lijst met lettertypen verschijnen, vereist het updaten van "
+"bestaande lettertypen een herstart van Krita."
