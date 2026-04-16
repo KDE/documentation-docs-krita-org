@@ -6,7 +6,7 @@ msgstr ""
 "docs_krita_org_reference_manual___layers_and_masks___split_alpha\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2019-05-13 13:13+0200\n"
+"PO-Revision-Date: 2026-04-14 17:15+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../<rst_epilog>:2
 msgid "mouseleft"
-msgstr ""
+msgstr "mouseleft"
 
 #: ../../<rst_epilog>:2
 msgid ".. image:: /images/icons/Krita_mouse_left.png"
@@ -28,7 +28,7 @@ msgstr ""
 
 #: ../../<rst_epilog>:4
 msgid "mouseright"
-msgstr ""
+msgstr "mouseright"
 
 #: ../../<rst_epilog>:4
 msgid ".. image:: /images/icons/Krita_mouse_right.png"
@@ -41,6 +41,7 @@ msgid ""
 "Split Alpha: how to work with color and alpha channels of the layer "
 "separately."
 msgstr ""
+"Rozdeliť Alfu: ako pracovat s farebnymi a alfa kanalmi vrstvy oddelene."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:11
 msgid "Layers"
@@ -71,19 +72,25 @@ msgid ""
 "`transparency_masks`. The artist can work on the transparency mask in an "
 "isolated environment and merge it back when he has finished working."
 msgstr ""
+"Niekedy, zvlastte v oblasti vyvoja hier, musia umelci pracovat s alfa "
+"kanalom textury oddelene. Na pomoc takemuto pracovnemu postupu ma Krita "
+"specialnu funkcionalitu nazvantu :menuselection:`Rozdelit Alfu`. Umoznuje "
+"rozdelit alfa kanal maliarskej vrstvy na oddelene :ref:`transparency_masks`. "
+"Umelec moze pracovat na maske priehladnosti v izolovanom prostredí a zlucit "
+"ju spat po dokonceni prace."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:21
 msgid "How to work with alpha channel of the layer"
-msgstr ""
+msgstr "Ako pracovat s alfa kanalnom vrstvy"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:23
 msgid "|mouseright| the paint layer in the layers docker."
-msgstr ""
+msgstr "|mouseright| na maliarsku vrstvu v dockeri vrstiev."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:24
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:35
 msgid "Choose :menuselection:`Split Alpha --> Alpha into Mask`."
-msgstr ""
+msgstr "Zvolte :menuselection:`Rozdelit Alfu --> Alfa do masky`."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:25
 msgid ""
@@ -91,6 +98,9 @@ msgid ""
 "paints transparency (see-through), white paints opacity (visible). Gray "
 "values paint semi-transparency."
 msgstr ""
+"Pouzite preferovany maliarsky nastroj na malovanie na Masku priehladnosti. "
+"Cierna farba malueje priehladnost (presvitajuca), biela malueje "
+"nepriehladnost (viditelnu). Odtiene sedi maluuju polopriehladnost."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:26
 msgid ""
@@ -98,12 +108,17 @@ msgid ""
 "mouseright| + :menuselection:`Isolate Layer` (or the :kbd:`Alt +` |"
 "mouseleft| shortcut)."
 msgstr ""
+"Ak chcete izolovat alfa kanal, vstupte do Izolovaného rezimu pomocou |"
+"mouseright| + :menuselection:`Izolovat vrstvu` (alebo skratky :kbd:`Alt +` |"
+"mouseleft|)."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:27
 msgid ""
 "When finished editing the Transparency Mask, |mouseright| on it and select :"
 "menuselection:`Split Alpha --> Write as Alpha`."
 msgstr ""
+"Po dokonceni upravy Masky priehladnosti kliknite |mouseright| na nu a "
+"vyberte :menuselection:`Rozdelit Alfu --> Zapisat ako Alfu`."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:30
 msgid ""
@@ -119,20 +134,29 @@ msgid ""
 "compositing of the image i.e. limit image to only one layer without any "
 "masks or effects, or use the following method:"
 msgstr ""
+"Za normalnych okolnosti pri ukladani obrazku do suboru su vsetky plne "
+"priehladne oblasti obrazku vyplnene ciernou farbou. Stane sa to preto, ze "
+"pri kompozicii vrstiev obrazku Krita zahoduje farebne udaje plne "
+"priehladnych pixelov z dovodu efektivity. Aby ste sa vyhli tejto strate "
+"farebnych udajov, mozete bud vylucit kompoziciu obrazku, t.j. obmedzit "
+"obrazok iba na jednu vrstvu bez masiek alebo efektov, alebo pouzit "
+"nasledujucu metodu:"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:34
 msgid "|mouseright| the layer in the layers docker."
-msgstr ""
+msgstr "|mouseright| na vrstvu v dockeri vrstiev."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:36
 msgid ""
 "|mouseright| on the created mask and select :menuselection:`Split Alpha --> "
 "Save Merged...`."
 msgstr ""
+"|mouseright| na vytvorenu masku a vyberte :menuselection:`Rozdelit Alfu --> "
+"Ulozit zlucene...`."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:41
 msgid "Color channel values in transparent areas"
-msgstr ""
+msgstr "Hodnoty farebnych kanalov v priehladnych oblastiach"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:43
 msgid ""
@@ -142,10 +166,15 @@ msgid ""
 "explicitly requested. That is done for optimization purposes and allows "
 "Krita to speed up compositing the image by a lot."
 msgstr ""
+"Krita pova vsetky hodnoty farebnych kanalov v plne priehladnych pixeloch za "
+"**nedefinovane**. V podstate to znamena, ze Krita sa pokusi preskocit zapis "
+"do (alebo citanie z) plne priehladneho pixelu, pokial to nie je naozaj "
+"potrebne alebo explicitne pozadovane. To sa robi na optimalizacne ucely a "
+"umoznuje Krite vyrazne urychlit kompoziciu obrazku."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:46
 msgid "Example 1: erasing pixels on the image"
-msgstr ""
+msgstr "Priklad 1: mazanie pixelov na obrazku"
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:48
 msgid ""
@@ -156,6 +185,11 @@ msgid ""
 "`Split Alpha --> Alpha into Mask` on a layer after erasing with an eraser "
 "brush on it."
 msgstr ""
+"Pri vymazavani pixelov pomocou gumy alebo pri cisteni vyberu akciou :"
+"menuselection:`Upravit --> Vymazat` farebne udaje **nie su v skutocnosti "
+"vymazane**. Nuluje sa iba alfa kanal, ale farebne kanaly zostanu neporusene. "
+"Mozete to vidiet sami, ak sa pokusíte pouzit :menuselection:`Rozdelit Alfu --"
+"> Alfa do masky` na vrstvu po vymazani pomocou gumy na nej."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:50
 msgid ""
@@ -163,6 +197,9 @@ msgid ""
 "a :ref:`Reset Transparent Filter<reset_transparent_filter>` on the image. It "
 "will zero-out all color channels of fully transparent pixels."
 msgstr ""
+"Na skutocne vymazanie farebnych kanalov priehladnych oblasti je potrebne "
+"pouzit :ref:`Obnovit priehladny filter<reset_transparent_filter>` na "
+"obrazku. Vynuluje vsetky farebne kanaly plne priehladnych pixelov."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:52
 msgid ""
@@ -171,6 +208,10 @@ msgid ""
 "neighboring colors instead of just zeroing them out, which might be useful "
 "in some workflows."
 msgstr ""
+"Krita ma tiez specialny :ref:`Filter Sirenia "
+"farieb<filter_propagate_colors>`. Vyplni plne priehladne oblasti susedn&#237;"
+"mi farbami namiesto ich jednoduchého nuleovania, co moze byt uzitocne v "
+"niektorych pracovnych tokoch."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:55
 msgid ""
@@ -185,6 +226,10 @@ msgid ""
 "blend two pixels with zero alpha, because you would have to divide by zero "
 "for that."
 msgstr ""
+"Ak mate viac vrstiev, ktore maju farebne udaje v plne priehladnych "
+"oblastiach, vysledok ich zlucenia **nebude obsahovat tieto farebne udaje**. "
+"Vysledne pixely budu jednoducho vynulovane. Je jasne, ze nemozete zmiesat "
+"dva pixely s nulovou alfou, pretoze by ste museli delit nulou."
 
 #: ../../reference_manual/layers_and_masks/split_alpha.rst:59
 msgid ""
@@ -194,6 +239,11 @@ msgid ""
 "`, a compositing operation may (or may not) happen, clearing out the "
 "transparent areas."
 msgstr ""
+"Pre vacsinu pracovnych tokov to len znamena, ze by ste mali pouzit akciu :"
+"menuselection:`Rozdelit Alfu --> Ulozit zlucene...` na spravne uloženie "
+"vysledku tejto pracej so vzdelit alfa. Pri exporte vysledku cez :"
+"menuselection:`Subor --> Exportovat...`, moze (alebo nemusi) nastat "
+"kompozicna operacia, ktora vycistí priehladne oblasti."
 
 #, fuzzy
 #~ msgid ".. image:: images/icons/Krita_mouse_middle.png"

@@ -6,7 +6,7 @@ msgstr ""
 "docs_krita_org_general_concepts___file_formats___file_gih\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2019-03-01 13:49+0100\n"
+"PO-Revision-Date: 2026-04-14 17:15+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_gih.rst:-1
 msgid "The GIMP Image Hose file format in Krita."
-msgstr ""
+msgstr "Format suboru GIMP Image Hose v Krite."
 
 #: ../../general_concepts/file_formats/file_gih.rst:-1
 msgid ""
@@ -31,15 +31,15 @@ msgstr "\\*.gih"
 
 #: ../../general_concepts/file_formats/file_gih.rst:10
 msgid "GIH"
-msgstr ""
+msgstr "GIH"
 
 #: ../../general_concepts/file_formats/file_gih.rst:10
 msgid "Image Hose"
-msgstr ""
+msgstr "Image Hose"
 
 #: ../../general_concepts/file_formats/file_gih.rst:10
 msgid "Gimp Image Hose"
-msgstr ""
+msgstr "Gimp Image Hose"
 
 #: ../../general_concepts/file_formats/file_gih.rst:15
 msgid "\\*.gih"
@@ -50,6 +50,8 @@ msgid ""
 "The GIMP image hose format. Krita can open and save these, as well as import "
 "via the :ref:`predefined brush tab <predefined_brush_tip>`."
 msgstr ""
+"Format GIMP image hose. Krita ich moze otvaratr a ukladat, ako aj importovat "
+"cez :ref:`zalozku predefinovanych stetcov <predefined_brush_tip>`."
 
 #: ../../general_concepts/file_formats/file_gih.rst:19
 msgid ""
@@ -57,18 +59,20 @@ msgid ""
 "and then set some options to make it specify how to output the multiple "
 "images."
 msgstr ""
+"Image Hose znamena, ze tento format suboru umoznuje ulozit viacero obrazkov "
+"a nastavit niektoré moznosti urcujuce, ako sa ma viac obrazkov vystupovat."
 
 #: ../../general_concepts/file_formats/file_gih.rst:25
 msgid ".. image:: /images/brushes/Gih-examples.png"
-msgstr ""
+msgstr ".. image:: /images/brushes/Gih-examples.png"
 
 #: ../../general_concepts/file_formats/file_gih.rst:25
 msgid "From top to bottom: Incremental, Pressure and Random"
-msgstr ""
+msgstr "Zhora dole: Prikrastkovy, Tlakovy a Nahodny"
 
 #: ../../general_concepts/file_formats/file_gih.rst:28
 msgid "Dimension and ranks."
-msgstr ""
+msgstr "Dimenzie a rady."
 
 #: ../../general_concepts/file_formats/file_gih.rst:30
 msgid ""
@@ -83,6 +87,16 @@ msgid ""
 "tips for the four parts of the second dimension, and finally, the grouped "
 "three images have each a unique brush for the final dimension."
 msgstr ""
+"Format GIMP image hose umoznuje viacero dimenzii pre dany stetec. Napriklad "
+"mozete mat dimenziu, ktora sa aktualizuje postupne, a jednu, ktora sa "
+"aktualizuje podla tlaku alebo nahodne. Pri exporte Krita pouzije rady na "
+"rozdelenie vrstiev na dimenziu. Ak mate obrazok s 24 vrstvami a tromi radmi "
+"a prva dimenzia je nastavena na 2, druha na 4 a tretia na 3, Krita rozdelí "
+"24 na 2 skupiny po 12, z ktorych kazda ma jedinecne obrazky pre 2 casti "
+"prvej dimenzie. Potom sa tieto 2 skupiny po 12 rozdelia na 8 skupin po 4, z "
+"ktorych kazda ma jedinecne tipy stetcov pre styri casti druhej dimenzie, a "
+"nakoniec tri zoskupene obrazky maju kazdy jedinecny stetec pre poslednu "
+"dimenziu."
 
 #: ../../general_concepts/file_formats/file_gih.rst:32
 msgid ""
@@ -94,16 +108,24 @@ msgid ""
 "the second dimension but for the first number, then another three layers, "
 "each for a shape, but then for the second number, and so forth."
 msgstr ""
+"Nasledujuci obrazok ma tabulku, kde dimenzia 1 je jedinecna v jednom zo 4 "
+"cisel, zatial co dimenzia 2 je jedinecna v jednom z 3 tvarov. Rady pre "
+"dimenziu 1 a dimenziu 2 musia byt teda 4 a 3. Na zoradenie vrstiev je "
+"potrebne rozdelit tabulku najprv podla prvej dimenzie a potom podla druhej. "
+"Takze skoncime s tromi vrstvami pre kazdy tvar v druhej dimenzii, ale pre "
+"prve cislo, potom dalsie tri vrstvy, kazda pre tvar, ale pre druhe cislo atd."
 
 #: ../../general_concepts/file_formats/file_gih.rst:38
 msgid ""
 "See `the GIMP documentation <https://docs.gimp.org/2.8/en/gimp-using-"
 "animated-brushes.html>`_ for a more thorough explanation."
 msgstr ""
+"Pre podrobnejsie vysvetlenie pozrite `dokumentaciu GIMP <https://docs.gimp."
+"org/2.8/en/gimp-using-animated-brushes.html>`_."
 
 #: ../../general_concepts/file_formats/file_gih.rst:41
 msgid "GIMP image hose format options:"
-msgstr ""
+msgstr "Moznosti formatu GIMP image hose:"
 
 #: ../../general_concepts/file_formats/file_gih.rst:43
 msgid "Constant"
@@ -111,7 +133,7 @@ msgstr "Konštanta"
 
 #: ../../general_concepts/file_formats/file_gih.rst:44
 msgid "This'll use the first image, no matter what."
-msgstr ""
+msgstr "Pouzije prvy obrazok bez ohladu na co."
 
 #: ../../general_concepts/file_formats/file_gih.rst:45
 msgid "Incremental"
@@ -122,6 +144,8 @@ msgid ""
 "This'll paint the image layers in sequence. This is good for images that can "
 "be strung together to create a pattern."
 msgstr ""
+"Namaluej vrstvy obrazku v poradi. Je to vhodne pre obrazky, ktore mozno "
+"spajat a vytvarat vzorku."
 
 #: ../../general_concepts/file_formats/file_gih.rst:47
 msgid "Pressure"
@@ -132,6 +156,8 @@ msgid ""
 "This'll paint the images depending on pressure. This is good for brushes "
 "imitating the hairs of a natural brush."
 msgstr ""
+"Namaluej obrazky v zavislosti od tlaku. Je to vhodne pre stetce napodobujuce "
+"chlupy prirodneho stetca."
 
 #: ../../general_concepts/file_formats/file_gih.rst:49
 msgid "Random"
@@ -143,6 +169,9 @@ msgid ""
 "speedpainting as well as images that generate texture. Or perhaps more "
 "graphical symbols."
 msgstr ""
+"Namalueje obrazky nahodne. Je to vhodne pre zbierky obrazkov pouzivane pri "
+"rychlom malcovani, ako aj obrazky generujuce texturu. Alebo mozno graficke "
+"symboly."
 
 #: ../../general_concepts/file_formats/file_gih.rst:52
 msgid "Angle"
@@ -150,7 +179,7 @@ msgstr "Uhol"
 
 #: ../../general_concepts/file_formats/file_gih.rst:52
 msgid "This'll use the dragging angle to determine with image to draw."
-msgstr ""
+msgstr "Pouzije uhol tiahninia na urcenie, ktory obrazok nakreslit."
 
 #: ../../general_concepts/file_formats/file_gih.rst:54
 msgid ""
@@ -159,10 +188,14 @@ msgid ""
 "looking it up in the UI) and the ability to choose whether or not to "
 "generate the mask from the colors."
 msgstr ""
+"Pri exporte suboru Krita ako ``.gih`` budete mat tiez moznost nastavit "
+"predvolené rozostupenie, moznost nastavit nazov (velmi dolezite pre "
+"vyhladanie v pouzivatelskom rozhrani) a moznost zvolit, ci generovat masku z "
+"farieb alebo nie."
 
 #: ../../general_concepts/file_formats/file_gih.rst:57
 msgid "Use Color as Mask"
-msgstr ""
+msgstr "Pouzit farbu ako masku"
 
 #: ../../general_concepts/file_formats/file_gih.rst:57
 msgid ""
@@ -170,9 +203,13 @@ msgid ""
 "whitest as transparent. Untick this if you are using colored images for the "
 "brush."
 msgstr ""
+"Najtmavse hodnoty obrazku sa pouzivaju na malovanie a najbelasie su "
+"priehladne. Zruste zaskrtnutie, ak pouzivate farebne obrazky pre stetec."
 
 #: ../../general_concepts/file_formats/file_gih.rst:59
 msgid ""
 "We have a :ref:`Krita Brush tip page <brush_tip_animated_brush>` on how to "
 "create your own GIH brush."
 msgstr ""
+"Mame stranku :ref:`Krita o tipoch stetcov <brush_tip_animated_brush>` o tom, "
+"ako vytvorit vlastny GIH stetec."
