@@ -50,7 +50,7 @@ Prerequisites
 ~~~~~~~~~~~~~
 
 1. Git - https://git-scm.com/downloads
-2. CMake 3.21.0 or later, the latest is usually fine - https://cmake.org/download/
+2. CMake 3.31.x, CMake 4.x is not yet supported! - https://cmake.org/download/
 3. Ninja build system - https://github.com/ninja-build/ninja/releases
 
     - Since Ninja is a single executable, you can place it in the bin folder of CMake, next to ``cmake.exe`` for convenience.
@@ -59,9 +59,12 @@ Prerequisites
 
     .. note::
 
+        On 21.04.2026 we updated our Windows toolchain from clang-18 ("llvm-mingw-20240619-ucrt") to clang-21 ("llvm-mingw-20251118-ucrt"). The main reason was ASAN support on Windows 11.
+        
         On 17.10.2024 we updated our Windows toolchain from clang-15 ("llvm-mingw-20220906-ucrt") to clang-18 ("llvm-mingw-20240619-ucrt"). One of the reasons was ASAN support on Windows 11.
 
-    - Can be downloaded here: https://github.com/mstorsjo/llvm-mingw/releases/download/20240619/llvm-mingw-20240619-ucrt-x86_64.zip
+
+    - Can be downloaded here: https://github.com/mstorsjo/llvm-mingw/releases/download/20251118/llvm-mingw-20251118-ucrt-x86_64.zip
     - Unzip the archive with `7zip <https://www.7-zip.org/>`_ into a folder like :file:`C:\\llvm-mingw`; the full path must not contain any spaces.
     - We are using the tagged release 20240619 with LLVM 18.1.8 on the CI workers. In theory a newer version should be compatible, but use at your own risk.
     - If you really want to use other compilers, see below.
@@ -76,7 +79,7 @@ Prerequisites
 
     .. note::
 
-        As of 01.12.2025, the stable branch (`krita/5.2`) continues to use the older version: Python 3.10. If you want to work on both branches of Krita,
+        As of 01.12.2025, the legacy stable branch (`krita/5.2`) continues to use the older version: Python 3.10. If you want to work on both branches of Krita,
         you need to install two versions of Python without adding them to `%PATH%`. Python 3.13 for `master` and Python 3.10 for `krita/5.2`. You can do 
         that with this `choco` script:
 
@@ -142,7 +145,7 @@ Download the dependencies and generate the environment file. Make sure you repla
 
 .. code:: batch
 
-    python krita-deps-management\tools\setup-env.py --full-krita-env -v PythonEnv -p c:\deps\llvm-mingw-20240619-ucrt-x86_64\bin\ -p c:\deps\llvm-mingw-20240619-ucrt-x86_64\x86_64-w64-mingw32\bin\ -p c:\deps\Ninja\
+    python krita-deps-management\tools\setup-env.py --full-krita-env -v PythonEnv -p c:\deps\llvm-mingw-20251118-ucrt-x86_64\bin\ -p c:\deps\llvm-mingw-20251118-ucrt-x86_64\x86_64-w64-mingw32\bin\ -p c:\deps\Ninja\
 
 
 .. attention::
