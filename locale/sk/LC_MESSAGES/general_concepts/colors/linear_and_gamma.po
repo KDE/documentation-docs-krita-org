@@ -18,23 +18,23 @@ msgstr ""
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:-1
 msgid "The effect of gamma and linear."
-msgstr ""
+msgstr "Efekt gama a lineárneho priestoru."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:-1
 msgid ".. image:: /images/color_category/trc_gray_gradients.svg"
-msgstr ""
+msgstr ".. image:: /images/color_category/trc_gray_gradients.svg"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:-1
 msgid ".. image:: /images/color_category/Basicreading3trcsv2.svg"
-msgstr ""
+msgstr ".. image:: /images/color_category/Basicreading3trcsv2.svg"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:-1
 msgid ".. image:: /images/color_category/red_green_mixes_trc.svg"
-msgstr ""
+msgstr ".. image:: /images/color_category/red_green_mixes_trc.svg"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:-1
 msgid ".. image:: /images/color_category/3trcsresult.png"
-msgstr ""
+msgstr ".. image:: /images/color_category/3trcsresult.png"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:11
 msgid "Gamma"
@@ -42,7 +42,7 @@ msgstr "Gama"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:11
 msgid "Linear Color Space"
-msgstr ""
+msgstr "Lineárny farebný priestor"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:11
 msgid "Linear"
@@ -50,19 +50,19 @@ msgstr "Lineárny"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:11
 msgid "Tone Response curve"
-msgstr ""
+msgstr "Krivka tónovej odozvy"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:11
 msgid "EOTF"
-msgstr ""
+msgstr "EOTF"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:11
 msgid "Transfer Curve"
-msgstr ""
+msgstr "Prenosová krivka"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:17
 msgid "Gamma and Linear"
-msgstr ""
+msgstr "Gama a lineárny priestor"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:19
 msgid ""
@@ -71,6 +71,9 @@ msgid ""
 "perceive linearly. Rather, we find it more easy to distinguish between "
 "darker grays than we do between lighter grays."
 msgstr ""
+"Situácia, o ktorej hovoríme pri teórii, sa nazýva 'lineárna'. Každý krok "
+"jasu má rovnakú hodnotu. Naše oči nevnímajú lineárne. Skôr nám je ľahšie "
+"rozlišovať medzi tmavšími odtieňmi sivej ako medzi svetlejšími."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:22
 msgid ""
@@ -82,10 +85,17 @@ msgid ""
 "color management specialists hate themselves), which tells your computer or "
 "printer how much color corresponds to a certain value."
 msgstr ""
+"Keďže počítače používajú ľudia, zariadili sme, aby počítače dávali viac "
+"priestoru tmavším hodnotám v súradnicovom systéme obrazu. Toto nazývame "
+"'gama-kódovanie', pretože aplikuje gama funkciu na TRC alebo prenosovú "
+"funkciu obrazu. TRC je v tomto prípade Krivka tónovej odozvy alebo Krivka "
+"tónovej reprodukcie alebo Prenosová funkcia (pretože špecialisti na správu "
+"farieb si to sami znepríjemňujú), ktorá hovorí vášmu počítaču alebo "
+"tlačiarni, koľko farby zodpovedá určitej hodnote."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:28
 msgid ".. image:: /images/color_category/Pepper_tonecurves.png"
-msgstr ""
+msgstr ".. image:: /images/color_category/Pepper_tonecurves.png"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:28
 msgid ""
@@ -96,6 +106,12 @@ msgid ""
 "and to the right we have a Pepper encoded with a linear TRC and assigned an "
 "sRGB TRC. Image from `Pepper & Carrot <https://www.peppercarrot.com/>`_."
 msgstr ""
+"Jeden z najčastejších problémov, ktoré ľudia majú so správou farieb v Krite, "
+"je priradenie správneho farebného priestoru ku kódovanej TRC. Vyššie je "
+"stredný Pepper správny, kde sú kódovaná a priradená TRC rovnaké. Vľavo máme "
+"Peppera kódovaného v sRGB, ale s priradeným lineárnym profilom, a vpravo "
+"máme Peppera kódovaného s lineárnou TRC a priradenou sRGB TRC. Obrázok z "
+"`Pepper & Carrot <https://www.peppercarrot.com/>`_."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:30
 msgid ""
@@ -103,6 +119,9 @@ msgid ""
 "values in a linear space compared to the default sRGB TRC of our modern "
 "computers and other TRCs available in our delivered profiles:"
 msgstr ""
+"Nasledujúca tabuľka ukazuje, ako sa v lineárnom priestore využíva veľa "
+"priestoru svetlejšími hodnotami v porovnaní s predvolenou sRGB TRC našich "
+"moderných počítačov a ďalšími TRC dostupnými v našich dodávaných profiloch:"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:35
 msgid ""
@@ -115,42 +134,57 @@ msgid ""
 "always use something like the Lab L\\*, sRGB or Gamma 2.2 TRCs to encode the "
 "image with."
 msgstr ""
+"Ak sa pozriete na lineárne TRC Rec. 709, môžete vidieť pomerne veľký skok "
+"medzi tmavšími a svetlejšími odtieňmi, zatiaľ čo Lab L* TRC alebo sRGB TRC "
+"sa zdajú rovnomernejšie rozložené. Je to spôsobené citlivosťou našich očí na "
+"tmavšie hodnoty. To tiež znamená, že ak nemáte dostatočnú bitovú hĺbku, "
+"obraz v lineárnom priestore bude vyzerať, ako by mal škaredé pruhovanie. "
+"Preto, keď vytvárame obrazy na zobrazenie na obrazovke, vždy používame niečo "
+"ako Lab L\\*, sRGB alebo Gamma 2.2 TRC na kódovanie obrazu."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:38
 msgid ""
 "However, this modification to give more space to darker values does lead to "
 "wonky color maths when mixing the colors."
 msgstr ""
+"Táto úprava na poskytnutie väčšieho priestoru tmavším hodnotám však vedie k "
+"nepresnej matematike farieb pri ich miešaní."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:40
 msgid "We can see this with the following experiment:"
-msgstr ""
+msgstr "Môžeme to vidieť s nasledujúcim experimentom:"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:46
 msgid ""
 ".. image:: /images/color_category/Krita_2_9_colormanagement_blending_1.png"
 msgstr ""
+".. image:: /images/color_category/Krita_2_9_colormanagement_blending_1.png"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:46
 msgid ""
 "**Left:** Colored circles blurred in a regular sRGB space. **Right:** "
 "Colored circles blurred in a linear space."
 msgstr ""
+"**Vľavo:** Farebné kruhy rozmazané v bežnom priestore sRGB. **Vpravo:** "
+"Farebné kruhy rozmazané v lineárnom priestore."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:48
 msgid ""
 "Colored circles, half blurred. In a gamma-corrected environment, this gives "
 "an odd black border. In a linear environment, this gives us a nice gradation."
 msgstr ""
+"Farebné kruhy, napoly rozmazané. V prostredí s gama korekciou to dáva "
+"zvláštny čierny okraj. V lineárnom prostredí nám to dáva pekné prechody."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:50
 msgid "This also counts for Krita's color smudge brush:"
-msgstr ""
+msgstr "Toto platí aj pre štetec rozmazávania farieb Krity:"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:56
 msgid ""
 ".. image:: /images/color_category/Krita_2_9_colormanagement_blending_2.png"
 msgstr ""
+".. image:: /images/color_category/Krita_2_9_colormanagement_blending_2.png"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:56
 msgid ""
@@ -159,20 +193,26 @@ msgid ""
 "your colors. If you had been working in LAB to avoid this, be sure to try "
 "out a linear rgb color space."
 msgstr ""
+"Presne tak, 'zakaľovanie' farieb, čo je bežná sťažnosť digitálnych maliarov "
+"všade, je v skutočnosti farebný priestor s gama korekciou, ktorý kazí vaše "
+"farby. Ak ste pracovali v LAB, aby ste sa tomu vyhli, určite vyskúšajte "
+"lineárny farebný priestor rgb."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:59
 msgid "What is happening under the hood"
-msgstr ""
+msgstr "Čo sa deje v zákulisí"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:62
 msgid "Imagine we want to mix red and green."
-msgstr ""
+msgstr "Predstavte si, že chceme zmiešať červenú a zelenú."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:64
 msgid ""
 "First, we would need the color coordinates of red and green inside our color "
 "space's color model. So, that'd be..."
 msgstr ""
+"Najprv by sme potrebovali farebné súradnice červenej a zelenej vo farebnom "
+"modeli nášho farebného priestoru. Teda..."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:67
 msgid "Color"
@@ -214,7 +254,7 @@ msgstr "0.0"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:73
 msgid "We then average these coordinates over three mixes:"
-msgstr ""
+msgstr "Tieto súradnice potom spriemerujeme cez tri miešania:"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:76
 msgid "Mix1"
@@ -248,12 +288,16 @@ msgid ""
 "But to figure out how these colors look on screen, we first put the "
 "individual values through the TRC of the color-space we're working with:"
 msgstr ""
+"Aby sme však zistili, ako tieto farby vyzerajú na obrazovke, musíme najprv "
+"jednotlivé hodnoty previesť cez TRC farebného priestoru, v ktorom pracujeme:"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:93
 msgid ""
 "Then we fill in the values into the correct spot. Compare these to the "
 "values of the mixture table above!"
 msgstr ""
+"Potom doplníme hodnoty na správne miesto. Porovnajte ich s hodnotami v "
+"tabuľke miešania vyššie!"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:99
 msgid ""
@@ -263,6 +307,11 @@ msgid ""
 "case this still doesn't make sense: *sRGB gives largely* **darker** *values "
 "than linear space for the same coordinates*."
 msgstr ""
+"A preto sú farebné miešaniny v lineárnom priestore svetlejšie a jemnejšie. "
+"Lineárny priestor je fyzikálne správnejší, ale sRGB je priestorovo "
+"úspornejší, preto mnohé obrázky majú zakódovanú sRGB TRC. Ak to stále nedáva "
+"zmysel: *sRGB poskytuje prevažne* **tmavšie** *hodnoty ako lineárny priestor "
+"pre rovnaké súradnice*."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:102
 msgid ""
@@ -270,6 +319,9 @@ msgid ""
 "example, every set of gradients is in order a mix using linear TRC, a mix "
 "using sRGB TRC and a mix using Lab L* TRC."
 msgstr ""
+"Rôzne TRC teda dávajú rôzne miešania farieb; v nasledujúcom príklade je "
+"každá sada prechodov v poradí: miešanie pomocou lineárnej TRC, miešanie "
+"pomocou sRGB TRC a miešanie pomocou Lab L* TRC."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:110
 msgid ""
@@ -277,6 +329,9 @@ msgid ""
 "somewhere? The answer is that we have several ICC profiles that can be used "
 "for this kind of work:"
 msgstr ""
+"Možno sa pýtate, ako tuto možnosť zapnúť? Je to niekde v nastaveniach? "
+"Odpoveď je, že máme niekoľko ICC profilov, ktoré možno použiť pre tento druh "
+"práce:"
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:112
 msgid "scRGB (linear)"
@@ -285,6 +340,7 @@ msgstr "scRGB (lineárne)"
 #: ../../general_concepts/colors/linear_and_gamma.rst:113
 msgid "All 'elle'-profiles ending in 'g10', such as *sRGB-elle-v2-g10.icc*."
 msgstr ""
+"Všetky profily 'elle' končiace na 'g10', napríklad *sRGB-elle-v2-g10.icc*."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:115
 msgid ""
@@ -292,6 +348,9 @@ msgid ""
 "1.0 is linear, higher is gamma-corrected and 'srgbtrc' is a special gamma "
 "correction for the original sRGB profile."
 msgstr ""
+"V skutočnosti vo všetkých profiloch 'elle' posledné číslo udáva gamu. 1.0 je "
+"lineárna, vyššia hodnota je gama-korigovaná a 'srgbtrc' je špeciálna gama "
+"korekcia pre pôvodný sRGB profil."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:117
 msgid ""
@@ -299,6 +358,9 @@ msgid ""
 "gamma'(if it's 1.0, it's linear), or from the TRC widget in Krita 3.0, which "
 "looks exactly like the curve graphs above."
 msgstr ""
+"Ak používate prehliadač farebných priestorov, TRC môžete identifikovať podľa "
+"'odhadovanej gamy' (ak je 1.0, je lineárna), alebo podľa widgetu TRC v Krite "
+"3.0, ktorý vyzerá presne ako grafy kriviek vyššie."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:119
 msgid ""
@@ -307,6 +369,9 @@ msgid ""
 "speed up the renderer a little, for it won't have to convert images on its "
 "own."
 msgstr ""
+"Dokonca aj keď veľa nemaľujete, ale napríklad vytvárate textúry pre videohru "
+"alebo rendering, používanie lineárneho priestoru je veľmi výhodné a trochu "
+"zrýchli renderer, pretože nebude musieť sám konvertovať obrázky."
 
 #: ../../general_concepts/colors/linear_and_gamma.rst:121
 msgid ""
@@ -317,3 +382,9 @@ msgid ""
 "videogames and raytracing, Krita is a tool and no-one will hunt you down for "
 "preferring the dark mixing of the sRGB TRC."
 msgstr ""
+"Nevýhodou lineárneho priestoru je samozrejme to, že biela sa zdá byť veľmi "
+"dominantná pri miešaní s čiernou, pretože v lineárnom priestore dostávajú "
+"svetlé šedé viac miesta. Nakoniec, hoci je lineárny priestor fyzikálne "
+"správny a výhodný na prácu s fyzikálne správnymi renderermi pre videohry a "
+"raytracingom, Krita je nástroj a nikto vás nebude prenasledovať za to, že "
+"uprednostňujete tmavé miešanie sRGB TRC."

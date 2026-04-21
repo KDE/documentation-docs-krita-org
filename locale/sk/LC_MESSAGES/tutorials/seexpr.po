@@ -17,15 +17,15 @@ msgstr ""
 
 #: ../../tutorials/seexpr.rst:-1 ../../tutorials/seexpr.rst:12
 msgid "Introduction to SeExpr"
-msgstr ""
+msgstr "Úvod do SeExpr"
 
 #: ../../tutorials/seexpr.rst:16
 msgid "This document will introduce you to the SeExpr expression language."
-msgstr ""
+msgstr "Tento dokument vás oboznámi s výrazovým jazykom SeExpr."
 
 #: ../../tutorials/seexpr.rst:20
 msgid "What is SeExpr?"
-msgstr ""
+msgstr "Čo je SeExpr?"
 
 #: ../../tutorials/seexpr.rst:22
 msgid ""
@@ -35,22 +35,27 @@ msgid ""
 "RenderMan_20/PxrSeExpr.html>`_ a \"scriptable pattern generator and combiner"
 "\"."
 msgstr ""
+"SeExpr je vložiteľný výrazový jazyk navrhnutý spoločnosťou Disney Animation, "
+"ktorý umožňuje hostiteľským aplikáciám vykresľovať dynamicky generovaný "
+"obsah. Pixar ho vo `svojej dokumentácii <https://renderman.pixar.com/"
+"resources/RenderMan_20/PxrSeExpr.html>`_ nazýva \"skriptovateľný generátor a "
+"kombinovač vzorov\"."
 
 #: ../../tutorials/seexpr.rst:27
 msgid "SeExpr is available within Krita as a Fill Layer."
-msgstr ""
+msgstr "SeExpr je v Krite dostupný ako vrstva výplne."
 
 #: ../../tutorials/seexpr.rst:30
 msgid ":ref:`seexpr`"
-msgstr ""
+msgstr ":ref:`seexpr`"
 
 #: ../../tutorials/seexpr.rst:31
 msgid ":ref:`seexpr_fill_layer`"
-msgstr ""
+msgstr ":ref:`seexpr_fill_layer`"
 
 #: ../../tutorials/seexpr.rst:32
 msgid ":ref:`resource_seexpr_scripts`"
-msgstr ""
+msgstr ":ref:`resource_seexpr_scripts`"
 
 #: ../../tutorials/seexpr.rst:33
 msgid ""
@@ -58,14 +63,17 @@ msgid ""
 "<https://krita-artists.org/t/procedural-texture-generator-example-and-"
 "wishes/7638>`_"
 msgstr ""
+"`\"Procedural texture generator (example and wishes)\" na Krita Artists "
+"<https://krita-artists.org/t/procedural-texture-generator-example-and-"
+"wishes/7638>`_"
 
 #: ../../tutorials/seexpr.rst:34
 msgid "`Inigo Quilez's articles <https://iquilezles.org/www/index.htm>`_"
-msgstr ""
+msgstr "`Články Iniga Quileza <https://iquilezles.org/www/index.htm>`_"
 
 #: ../../tutorials/seexpr.rst:35
 msgid "`The Book of Shaders <https://thebookofshaders.com/>`_"
-msgstr ""
+msgstr "`The Book of Shaders <https://thebookofshaders.com/>`_"
 
 #: ../../tutorials/seexpr.rst:39
 msgid "Background"
@@ -76,6 +84,8 @@ msgid ""
 "To understand what SeExpr is about, we need to differentiate between two "
 "types of graphics, *raster* and *procedural*."
 msgstr ""
+"Aby sme pochopili, o čom SeExpr je, musíme rozlišovať medzi dvoma typmi "
+"grafiky: *rastrovou* a *procedurálnou*."
 
 #: ../../tutorials/seexpr.rst:44
 msgid ""
@@ -84,6 +94,10 @@ msgid ""
 "memes, are all a multitude of tiny little dots of color, or *pixels*, "
 "arranged into a grid."
 msgstr ""
+"Obrovská väčšina počítačom generovaných vecí, ktoré každý deň vidíte, patrí "
+"k prvému typu – obrázky ako fotografie, screenshoty vašich obľúbených anime, "
+"mémy sú všetky množinou drobných farebných bodiek, alebo *pixelov*, "
+"usporiadaných do mriežky."
 
 #: ../../tutorials/seexpr.rst:49
 msgid ""
@@ -93,6 +107,11 @@ msgid ""
 "sample it again (which is sometimes impossible), or edit it with a raster "
 "graphics program, like Krita."
 msgstr ""
+"Rastrová grafika má dve nevýhody. Po prvé, akonáhle ju vytvoríte, jej "
+"rozlíšenie je **pevné**. Nemôžete priblížiť a magicky získať viac detailov. "
+"A ak ju potrebujete zmeniť, buď sa vrátite k zdroju a opäť ho nasnímate (čo "
+"je niekedy nemožné), alebo ju upravíte v programe na rastrovú grafiku, "
+"napríklad v Krite."
 
 #: ../../tutorials/seexpr.rst:55
 msgid ""
@@ -105,6 +124,15 @@ msgid ""
 "three bits of information: its size in pixels, the size of the pixel itself, "
 "and *the total memory needed*."
 msgstr ""
+"Jedným z najväčších problémov je však to, že sme vždy obmedzení "
+"**priestorom**, ktorý môžu naše programy používať; buď sekundárnym "
+"úložiskom, napríklad SD kartami, alebo pamäťou RAM. Pokiaľ nie sú "
+"komprimované, pamäťové nároky obrázkov sú `kvadratické v závislosti od "
+"veľkosti obrázka <https://blender.stackexchange.com/questions/112505/why-is-"
+"my-half-resolution-render-taking-a-quarter-of-the-time-of-the-full-one>`_. "
+"Pre rýchly príklad, dialóg :ref:`create_new_document` v Krite vám poskytne "
+"tri informácie: veľkosť v pixeloch, veľkosť samotného pixela a *celkovú "
+"potrebnú pamäť*."
 
 #: ../../tutorials/seexpr.rst:64
 msgid ".. image:: /images/Krita_newfile.png"
@@ -115,6 +143,8 @@ msgid ""
 "Here's a summary for square textures. Note that the memory needed is for "
 "*one layer only*:"
 msgstr ""
+"Tu je prehľad pre štvorcové textúry. Všimnite si, že potrebná pamäť je len "
+"pre *jednu vrstvu*:"
 
 #: ../../tutorials/seexpr.rst:69
 msgid "Size"
@@ -122,7 +152,7 @@ msgstr "Veľkosť"
 
 #: ../../tutorials/seexpr.rst:69
 msgid "Memory needed"
-msgstr ""
+msgstr "Potrebná pamäť"
 
 #: ../../tutorials/seexpr.rst:71
 msgid "256"
@@ -171,6 +201,10 @@ msgid ""
 "describe a shape. As they are mathematically defined, they can be resized to "
 "suit your needs without losing resolution."
 msgstr ""
+"Alternatívou je použitie :ref:`vector_graphics`. Vektorová grafika, "
+"napríklad SVG, využíva matematické vzorce ako spliny a Bézierove krivky na "
+"opísanie tvaru. Keďže sú matematicky definované, možno ich zmeniť na veľkosť "
+"podľa vašich potrieb bez straty rozlíšenia."
 
 #: ../../tutorials/seexpr.rst:83
 msgid ""
@@ -181,16 +215,24 @@ msgid ""
 "the texture. And, because it is not limited in its precision, you can render "
 "complex patterns in your layers at completely arbitrary resolution."
 msgstr ""
+"SeExpr patrí do inej triedy, *procedurálna grafika*. Podobne ako vektorová "
+"grafika, procedurálna grafika potrebuje na svoju definíciu len niekoľko KB "
+"sekundárneho úložiska. Nie je však definovaná matematickými vzorcami; "
+"skutočne *kódujete*, ako sa farba vypočítava v každom bode textúry. A keďže "
+"nie je obmedzená v svojej presnosti, môžete v svojich vrstvách vykresľovať "
+"zložité vzory pri úplne ľubovoľnom rozlíšení."
 
 #: ../../tutorials/seexpr.rst:92
 msgid "Writing a script"
-msgstr ""
+msgstr "Písanie skriptu"
 
 #: ../../tutorials/seexpr.rst:94
 msgid ""
 "In this tutorial, we'll show you how to write a script in SeExpr, render it "
 "to a layer, and then save it as a preset."
 msgstr ""
+"V tomto návode vám ukážeme, ako napísať skript v SeExpr, vykresliť ho do "
+"vrstvy a potom ho uložiť ako predvoľbu."
 
 #: ../../tutorials/seexpr.rst:97
 msgid ""
@@ -198,6 +240,8 @@ msgid ""
 "Layer. Then select the SeExpr generator from the list. You'll be greeted by "
 "this window:"
 msgstr ""
+"Začneme tým, že prejdeme do :ref:`layer_docker` a pridáme novú vrstvu "
+"výplne. Potom zo zoznamu vyberte generátor SeExpr. Zobrazí sa vám toto okno:"
 
 #: ../../tutorials/seexpr.rst:101 ../../tutorials/seexpr.rst:206
 msgid ".. image:: /images/seexpr/SeExpr_editor.png"
@@ -208,14 +252,16 @@ msgid ""
 "The SeExpr generator dialog is divided into two tabs. For now, we'll stay "
 "on :guilabel:`Options`."
 msgstr ""
+"Dialóg generátora SeExpr je rozdelený do dvoch kariet. Zatiaľ zostaneme na :"
+"guilabel:`Options`."
 
 #: ../../tutorials/seexpr.rst:107
 msgid ":ref:`fill_layers` describes these tabs in more detail."
-msgstr ""
+msgstr ":ref:`fill_layers` opisuje tieto karty podrobnejšie."
 
 #: ../../tutorials/seexpr.rst:109
 msgid "Let's start by painting a layer in light blue."
-msgstr ""
+msgstr "Začnime namaľovaním vrstvy v svetlomodrej farbe."
 
 #: ../../tutorials/seexpr.rst:111
 msgid ""
@@ -225,6 +271,10 @@ msgid ""
 "as a *vector*. We'll start by defining the ``$color`` variable and giving it "
 "a value."
 msgstr ""
+"Po prvé, skripty SeExpr musia definovať výstupnú premennú, nazvime ju ``"
+"$color``. Keďže SeExpr uvažuje o farbách v :ref:`farebnom priestore "
+"RGB<model_rgb>`, farebné premenné sú definované trojicou čísel známych ako "
+"*vektor*. Začneme definovaním premennej ``$color`` a priradením hodnoty."
 
 #: ../../tutorials/seexpr.rst:116
 msgid ""
@@ -232,6 +282,9 @@ msgid ""
 "$color`` to something like ``[0.5, 0.5, 1]`` (half lit red, half lit green, "
 "fully lit blue)::"
 msgstr ""
+"Prejdite do textového poľa a ak obsahuje nejaký text, vymažte ho. Potom "
+"definujte a nastavte ``$color`` na niečo ako ``[0.5, 0.5, 1]`` (polovične "
+"osvetlená červená, polovične osvetlená zelená, plne osvetlená modrá)::"
 
 #: ../../tutorials/seexpr.rst:120
 msgid "$color = [0.5, 0.5, 1];"
@@ -242,6 +295,8 @@ msgid ""
 "SeExpr needs to know which variable holds the final color value. This is "
 "done by writing at the end, on its own line, the name of the variable::"
 msgstr ""
+"SeExpr potrebuje vedieť, ktorá premenná obsahuje konečnú farebnú hodnotu. "
+"Toto sa realizuje zápisom názvu premennej na konci, na vlastnom riadku::"
 
 #: ../../tutorials/seexpr.rst:125
 msgid "$color"
@@ -249,17 +304,19 @@ msgstr "Farba"
 
 #: ../../tutorials/seexpr.rst:127
 msgid "The script should now look like this::"
-msgstr ""
+msgstr "Skript by teraz mal vyzerať takto::"
 
 #: ../../tutorials/seexpr.rst:129
 msgid ""
 "$color = [0.5, 0.5, 1];\n"
 "$color"
 msgstr ""
+"$color = [0.5, 0.5, 1];\n"
+"$color"
 
 #: ../../tutorials/seexpr.rst:132
 msgid "Click :guilabel:`OK`, and you'll render your first script!"
-msgstr ""
+msgstr "Kliknite na :guilabel:`OK` a vykreslíte svoj prvý skript!"
 
 #: ../../tutorials/seexpr.rst:134
 msgid ".. image:: /images/seexpr/SeExpr_first_render.png"
@@ -272,14 +329,19 @@ msgid ""
 "<linear_and_gamma>`, sRGB images. Krita transforms them into your document's "
 "color space using the sRGB-elle-V2-srgbtrc.icc profile."
 msgstr ""
+"Aby sme boli úplne presní, SeExpr **nemá správu farieb**. Vždy vykreslí "
+"textúry ako :ref:`32-bitové s pohyblivou desatinnou čiarkou <bit_depth>`, :"
+"ref:`gama korigované <linear_and_gamma>`, obrázky sRGB. Krita ich "
+"transformuje do farebného priestoru vášho dokumentu pomocou profilu sRGB-"
+"elle-V2-srgbtrc.icc."
 
 #: ../../tutorials/seexpr.rst:143
 msgid "See :ref:`color_managed_workflow` for what this means."
-msgstr ""
+msgstr "Pozrite si :ref:`color_managed_workflow`, čo to znamená."
 
 #: ../../tutorials/seexpr.rst:147
 msgid "Managing your script using widgets"
-msgstr ""
+msgstr "Správa skriptu pomocou widgetov"
 
 #: ../../tutorials/seexpr.rst:149
 msgid ""
@@ -287,6 +349,9 @@ msgid ""
 "layer's properties by right-clicking on :guilabel:`Fill Layer 1`, and "
 "selecting :guilabel:`Layer Properties...`."
 msgstr ""
+"Existuje aj ďalší spôsob definovania a úpravy premenných. Otvorte vlastnosti "
+"vrstvy výplne kliknutím pravým tlačidlom myši na :guilabel:`Fill Layer 1` a "
+"výberom :guilabel:`Layer Properties...`."
 
 #: ../../tutorials/seexpr.rst:154
 msgid ".. image:: /images/seexpr/SeExpr_prop_1.png"
@@ -298,26 +363,34 @@ msgid ""
 "SeExpr enables a whole chunk of knobs to manage individual variables. In our "
 "example above, you can change ``$color``'s in three ways:"
 msgstr ""
+"Všimli ste si stredné pole? Akonáhle deteguje syntakticky správny skript, "
+"SeExpr povolí celý rad ovládačov na správu jednotlivých premenných. V našom "
+"príklade vyššie môžete zmeniť ``$color`` tromi spôsobmi:"
 
 #: ../../tutorials/seexpr.rst:159
 msgid "enter the red, green, or blue channel's value in the input fields"
 msgstr ""
+"zadajte hodnotu červeného, zeleného alebo modrého kanálu do vstupných polí"
 
 #: ../../tutorials/seexpr.rst:160
 msgid "move the little colored sliders to change the respective channel"
-msgstr ""
+msgstr "pohybujte malými farebnými posuvníkmi na zmenu príslušného kanálu"
 
 #: ../../tutorials/seexpr.rst:161
 msgid ""
 "click on the preview square to the left of the boxes, to select a completely "
 "new color."
 msgstr ""
+"kliknite na náhľadový štvorec naľavo od polí, aby ste vybrali úplne novú "
+"farbu."
 
 #: ../../tutorials/seexpr.rst:163
 msgid ""
 "The last button on the middle box is always :guilabel:`Add new variable`. "
 "Click it and this dialog will open:"
 msgstr ""
+"Posledné tlačidlo na strednom poli je vždy :guilabel:`Add new variable`. "
+"Kliknite naň a otvorí sa tento dialóg:"
 
 #: ../../tutorials/seexpr.rst:167
 msgid ".. image:: /images/seexpr/SeExpr_add_variable.png"
@@ -325,31 +398,36 @@ msgstr ".. image:: images/Krita_newfile.png"
 
 #: ../../tutorials/seexpr.rst:168
 msgid "This dialog shows you all the types of variables that SeExpr accepts:"
-msgstr ""
+msgstr "Tento dialóg zobrazuje všetky typy premenných, ktoré SeExpr prijíma:"
 
 #: ../../tutorials/seexpr.rst:171
 msgid "Curve and Color curve"
-msgstr ""
+msgstr "Krivka a farebná krivka"
 
 #: ../../tutorials/seexpr.rst:173
 msgid ""
 "They are the SeExpr version of :ref:`Stop Gradients <resource_gradients>`: "
 "they interpolate a ramp given by a set of values."
 msgstr ""
+"Sú to verzie :ref:`Stop Gradients <resource_gradients>` v SeExpr: "
+"interpolujú rampu zadanú súborom hodnôt."
 
 #: ../../tutorials/seexpr.rst:175
 msgid ""
 "Curves represent 1D gradients, returning a single float at each evaluation "
 "point."
 msgstr ""
+"Krivky predstavujú 1D gradienty, ktoré vracajú jedinú hodnotu typu float v "
+"každom bode vyhodnotenia."
 
 #: ../../tutorials/seexpr.rst:177
 msgid "Color curves represent RGB gradients, returning a Color at each point."
 msgstr ""
+"Farebné krivky predstavujú RGB gradienty, ktoré vracajú farbu v každom bode."
 
 #: ../../tutorials/seexpr.rst:178
 msgid "Integers and Floats"
-msgstr ""
+msgstr "Celé čísla a desatinné čísla"
 
 #: ../../tutorials/seexpr.rst:180
 msgid "Numbers."
@@ -361,7 +439,7 @@ msgstr "Vektor"
 
 #: ../../tutorials/seexpr.rst:183
 msgid "A triplet of floats."
-msgstr ""
+msgstr "Trojica hodnôt typu float."
 
 #: ../../tutorials/seexpr.rst:184
 msgid "Color"
@@ -369,7 +447,7 @@ msgstr "Farba"
 
 #: ../../tutorials/seexpr.rst:186
 msgid "A vector representing an RGB color."
-msgstr ""
+msgstr "Vektor predstavujúci farbu RGB."
 
 #: ../../tutorials/seexpr.rst:187
 msgid "Swatch"
@@ -377,7 +455,7 @@ msgstr "Vzorkovník"
 
 #: ../../tutorials/seexpr.rst:189
 msgid "A list of Colors."
-msgstr ""
+msgstr "Zoznam farieb."
 
 #: ../../tutorials/seexpr.rst:190
 msgid "String"
@@ -385,12 +463,12 @@ msgstr "Reťazec"
 
 #: ../../tutorials/seexpr.rst:192
 msgid "Usually single words."
-msgstr ""
+msgstr "Zvyčajne jednotlivé slová."
 
 #: ../../tutorials/seexpr.rst:194
 msgid ""
 "For instance, you could replicate ``$color`` in the :guilabel:`Vector` tab:"
-msgstr ""
+msgstr "Napríklad môžete replikovať ``$color`` na karte :guilabel:`Vector`:"
 
 #: ../../tutorials/seexpr.rst:197
 msgid ".. image:: /images/seexpr/SeExpr_add_variable_vector.png"
@@ -398,21 +476,24 @@ msgstr ".. image:: images/Krita_newfile.png"
 
 #: ../../tutorials/seexpr.rst:200
 msgid "Creating your first preset"
-msgstr ""
+msgstr "Vytvorenie prvého predvoľby"
 
 #: ../../tutorials/seexpr.rst:202
 msgid "Once your script is ready, you can reuse it by making a preset."
 msgstr ""
+"Keď je váš skript pripravený, môžete ho znova použiť vytvorením predvoľby."
 
 #: ../../tutorials/seexpr.rst:204
 msgid "You can create one through the top bar of the :guilabel:`Options` tab:"
 msgstr ""
+"Môžete ju vytvoriť prostredníctvom horného panela karty :guilabel:`Options`:"
 
 #: ../../tutorials/seexpr.rst:208
 msgid ""
 "Select :guilabel:`Save New SeExpr Preset...` and the following dialog will "
 "open:"
 msgstr ""
+"Vyberte :guilabel:`Save New SeExpr Preset...` a otvorí sa nasledujúci dialóg:"
 
 #: ../../tutorials/seexpr.rst:211
 msgid ".. image:: /images/seexpr/SeExpr_save.png"
@@ -423,16 +504,20 @@ msgid ""
 "You can edit the name of the preset in the top line edit box, and set a  "
 "thumbnail for easy identification."
 msgstr ""
+"Názov predvoľby môžete upraviť v hornom poli na úpravu textu a nastaviť "
+"miniatúru pre ľahkú identifikáciu."
 
 #: ../../tutorials/seexpr.rst:215
 msgid ""
 "The dialog will append \"Copy\" to the preset's name if it is a copy of an "
 "existing one. You can change it at will."
 msgstr ""
+"Dialóg pripojí „Kópia\" k názvu predvoľby, ak ide o kópiu existujúcej. "
+"Môžete to ľubovoľne zmeniť."
 
 #: ../../tutorials/seexpr.rst:217
 msgid "The dialog provides the following choices for setting a thumbnail:"
-msgstr ""
+msgstr "Dialóg poskytuje nasledujúce možnosti nastavenia miniatúry:"
 
 #: ../../tutorials/seexpr.rst:220
 msgid "Load Existing Thumbnail"
@@ -443,6 +528,8 @@ msgid ""
 "If the preset already has a thumbnail (for instance, if you created it from "
 "an existing preset), this button will load and apply it."
 msgstr ""
+"Ak predvoľba už má miniatúru (napríklad, ak ste ju vytvorili z existujúcej "
+"predvoľby), toto tlačidlo ju načíta a použije."
 
 #: ../../tutorials/seexpr.rst:223
 msgid "Load Image"
@@ -450,17 +537,17 @@ msgstr "Načítať obrázok"
 
 #: ../../tutorials/seexpr.rst:225
 msgid "Applies an image from the filesystem as a thumbnail."
-msgstr ""
+msgstr "Použije obrázok zo súborového systému ako miniatúru."
 
 #: ../../tutorials/seexpr.rst:226
 msgid "Render Script to Thumbnail"
-msgstr ""
+msgstr "Vykresliť skript do miniatúry"
 
 #: ../../tutorials/seexpr.rst:228
 msgid ""
 "Renders your script to a 256x256 texture, and applies the latter as a "
 "thumbnail."
-msgstr ""
+msgstr "Vykreslí váš skript na textúru 256x256 a použije ju ako miniatúru."
 
 #: ../../tutorials/seexpr.rst:229
 msgid "Clear Thumbnail"
@@ -471,16 +558,20 @@ msgid ""
 "Deletes the thumbnail. Note that, if the preset is a copy of an existing "
 "one, this can be reverted by clicking :guilabel:`Load Existing Thumbnail`."
 msgstr ""
+"Odstráni miniatúru. Upozorňujeme, že ak je predvoľba kópiou existujúcej, "
+"možno to vrátiť kliknutím na :guilabel:`Load Existing Thumbnail`."
 
 #: ../../tutorials/seexpr.rst:235
 msgid "Changing existing presets"
-msgstr ""
+msgstr "Zmena existujúcich predvolieb"
 
 #: ../../tutorials/seexpr.rst:237
 msgid ""
 "If you change a preset's script, you will notice two new buttons in the top "
 "bar of the :guilabel:`Options` tab:"
 msgstr ""
+"Ak zmeníte skript predvoľby, na hornom paneli karty :guilabel:`Options` si "
+"všimnete dve nové tlačidlá:"
 
 #: ../../tutorials/seexpr.rst:239
 msgid ".. image:: /images/seexpr/SeExpr_overwrite_preset.png"
@@ -491,12 +582,16 @@ msgid ""
 "The reload button will restore the preset to its original properties, while "
 "clicking on :guilabel:`Overwrite Preset` will save your changes."
 msgstr ""
+"Tlačidlo znovu načítania obnoví predvoľbu na jej pôvodné vlastnosti, zatiaľ "
+"čo kliknutie na :guilabel:`Overwrite Preset` uloží vaše zmeny."
 
 #: ../../tutorials/seexpr.rst:243
 msgid ""
 "Additionally, you can edit the preset's name by clicking on the rename "
 "button, entering the new name, and clicking on :guilabel:`Save`:"
 msgstr ""
+"Okrem toho môžete upraviť názov predvoľby kliknutím na tlačidlo "
+"premenovania, zadaním nového názvu a kliknutím na :guilabel:`Save`:"
 
 #: ../../tutorials/seexpr.rst:246
 msgid ".. image:: /images/seexpr/SeExpr_rename_preset.png"
@@ -504,7 +599,7 @@ msgstr ".. image:: images/Krita_newfile.png"
 
 #: ../../tutorials/seexpr.rst:251
 msgid "Bundling your presets"
-msgstr ""
+msgstr "Zoskupovanie predvolieb"
 
 #: ../../tutorials/seexpr.rst:253
 msgid ""
@@ -512,6 +607,9 @@ msgid ""
 "resource in Krita. Follow the instructions in :ref:`resource_management` to "
 "create your own bundles."
 msgstr ""
+"Zdieľanie skriptov je jednoduché! Predvoľby skriptov SeExpr sú ako každý iný "
+"zdroj v Krite. Postupujte podľa pokynov v :ref:`resource_management` a "
+"vytvorte vlastné balíky."
 
 #, fuzzy
 #~ msgid ".. image:: images/icons/Krita_mouse_right.png"

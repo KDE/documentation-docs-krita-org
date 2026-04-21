@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:-1
 msgid "Introduction to using Krita's python plugin API."
-msgstr ""
+msgstr "Úvod do používania pythonového plugin API Krity."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
 msgid "Python"
@@ -26,7 +26,7 @@ msgstr "Python"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
 msgid "Python Scripting"
-msgstr ""
+msgstr "Skriptovanie v Pythone"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:13
 msgid "Scripting"
@@ -42,7 +42,7 @@ msgstr "Ladenie"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:18
 msgid "Introduction to Python Scripting"
-msgstr ""
+msgstr "Úvod do skriptovania v Pythone"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:22
 msgid ""
@@ -51,10 +51,14 @@ msgid ""
 "Some people even only picked python and nothing else. So what exactly is "
 "python scripting?"
 msgstr ""
+"Keď sme ponúkli skriptovanie v Pythone ako jeden z cieľov Kickstarter "
+"Stretchgoals, ktoré sme mohli implementovať okrem vektorov a textu, vyhralo "
+"hlasovanie podporovateľov drvivou väčšinou. Niektorí ľudia si dokonca "
+"vybrali iba Python a nič iné. Čo teda presne je skriptovanie v Pythone?"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:25
 msgid "What is Python Scripting?"
-msgstr ""
+msgstr "Čo je skriptovanie v Pythone?"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:27
 msgid ""
@@ -66,6 +70,13 @@ msgid ""
 "VFX and video game artists use python a lot to make things like sprite "
 "sheets, automate parts of export and more."
 msgstr ""
+"Python je skriptovací jazyk, ktorý možno použiť na automatizáciu úloh. "
+"Skriptovanie v Pythone v Krite znamená, že sme do Krity pridali API, čo je "
+"kus programovania umožňujúci Pythonu prístup k častiach Krity. Vďaka tomu "
+"môžeme vytvárať dockery, vykonávať rutinné úlohy na mnohých rôznych súboroch "
+"a dokonca písať vlastné exportéry. Ľudia pracujúci s počítačovou grafikou, "
+"ako sú VFX a herní umelci, používajú Python veľmi intenzívne na tvorbu vecí, "
+"ako sú sprite sheets, automatizáciu častí exportu a oveľa viac."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:29
 msgid ""
@@ -74,6 +85,10 @@ msgid ""
 "beginners, there's tons of learning material around that can be quickly "
 "found with a simple 'learn python' internet search."
 msgstr ""
+"Naučiť vás samotný Python je mimo rozsahu tohto manuálu. Keďže je však "
+"Python nesmierne populárny programovací jazyk a skvelý pre začiatočníkov, "
+"existuje veľa vzdelávacích materiálov, ktoré možno rýchlo nájsť jednoduchým "
+"internetovým vyhľadaním „learn python\"."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:31
 msgid ""
@@ -81,10 +96,13 @@ msgid ""
 "Krita. For that we'll first start with the basics: How to run Python "
 "commands in the scripter."
 msgstr ""
+"Tento manuál sa namiesto toho zameria na to, ako používať Python na "
+"automatizáciu a rozširovanie Krity. Na to najprv začneme so základmi: Ako "
+"spúšťať príkazy Pythonu v skriptéri."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:35
 msgid "How to Enable the Scripter Plugin"
-msgstr ""
+msgstr "Ako povoliť plugin skriptéra"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:37
 msgid ""
@@ -93,6 +111,10 @@ msgid ""
 "in python, which can be used to write small scripts and execute them on the "
 "fly."
 msgstr ""
+"Plugin skriptéra nie je nevyhnutný na používanie Pythonu, ale je veľmi "
+"užitočný na testovanie a hranie sa s Pythonom. Je to pythonová konzola, "
+"napísaná v Pythone, ktorú možno použiť na písanie malých skriptov a ich "
+"okamžité spúšťanie."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:39
 msgid ""
@@ -102,50 +124,68 @@ msgid ""
 "list to enable it. If you don't see the scripter plugin, make sure you are "
 "using an up-to-date version of Krita."
 msgstr ""
+"Na otvorenie skriptéra prejdite na :menuselection:`Tools --> Scripts --> "
+"Scripter`. Ak ho v zozname nevidíte, prejdite na :menuselection:`Settings --"
+"> Configure Krita... --> Python Plugin Manager` a prepnite \"Scripter\" v "
+"zozname, aby ste ho povolili. Ak plugin skriptéra nevidíte, uistite sa, že "
+"používate aktuálnu verziu Krity."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:41
 msgid ""
 "The scripter will pop up with a text editor window on top and an output "
 "window below. Input the following in the text area:"
 msgstr ""
+"Skriptér sa zobrazí s oknom textového editora navrchu a výstupným oknom "
+"nižšie. Do textovej oblasti zadajte nasledovné:"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:43
 msgid "print(\"hello world\")"
-msgstr ""
+msgstr "print(\"hello world\")"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:48
 msgid ""
 "Press the big play button or press the :kbd:`Ctrl + R` shortcut to run the "
 "script. Then, below, in the output area the following should show up::"
 msgstr ""
+"Stlačte veľké tlačidlo play alebo stlačte skratku :kbd:`Ctrl + R` na "
+"spustenie skriptu. Potom by sa nižšie, vo výstupnej oblasti, malo zobraziť "
+"nasledovné::"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:50
 msgid ""
 "==== Warning: Script not saved! ====\n"
 "hello world"
 msgstr ""
+"==== Warning: Script not saved! ====\n"
+"hello world"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:53
 msgid ""
 "Now we have a console that can run functions like print() from the Python "
 "environment - but how do we use it to manage Krita?"
 msgstr ""
+"Teraz máme konzolu, ktorá môže spúšťať funkcie ako print() z prostredia "
+"Python – ale ako ju použijeme na správu Krity?"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:56
 msgid "Running basic Krita commands"
-msgstr ""
+msgstr "Spúšťanie základných príkazov Krity"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:58
 msgid ""
 "To allow Python to communicate with Krita, we will use the Krita module. At "
 "the top of every script, we will write ``from krita import *``."
 msgstr ""
+"Aby mohol Python komunikovať s Kritou, použijeme modul Krita. Na začiatku "
+"každého skriptu napíšeme ``from krita import *``."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:60
 msgid ""
 "This allows us to talk to Krita through ``Krita.instance()``. Let's try to "
 "double our coding abilities with Python."
 msgstr ""
+"To nám umožňuje hovoriť s Kritou prostredníctvom ``Krita.instance()``. "
+"Skúsme zdvojnásobiť naše programovacie schopnosti pomocou Pythonu."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:62
 msgid ""
@@ -153,12 +193,17 @@ msgid ""
 "\n"
 "Krita.instance().action('python_scripter').trigger()"
 msgstr ""
+"from krita import *\n"
+"\n"
+"Krita.instance().action('python_scripter').trigger()"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:68
 msgid ""
 "You should see a second scripter window open. Pretty neat! Here is a "
 "slightly more advanced example."
 msgstr ""
+"Mali by ste vidieť otvorené druhé okno skriptéra. Celkom pekné! Tu je mierne "
+"pokročilejší príklad."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:70
 msgid ""
@@ -168,6 +213,11 @@ msgid ""
 "\"RGBA\", \"U8\", \"\", 120.0)\n"
 "Krita.instance().activeWindow().addView(d)"
 msgstr ""
+"from krita import *\n"
+"\n"
+"d = Krita.instance().createDocument(512, 512, \"Python test document\", "
+"\"RGBA\", \"U8\", \"\", 120.0)\n"
+"Krita.instance().activeWindow().addView(d)"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:77
 msgid ""
@@ -175,6 +225,9 @@ msgid ""
 "control to automate Krita. Over time we expect the community to write all "
 "kinds of scripts that you can use simply by pasting them in the scripter."
 msgstr ""
+"Toto otvorí nový dokument. Python vám jasne dáva dosť veľkú kontrolu na "
+"automatizáciu Krity. Časom očakávame, že komunita napíše všetky druhy "
+"skriptov, ktoré môžete použiť jednoducho tak, že ich vložíte do skriptéra."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:79
 msgid ""
@@ -185,6 +238,12 @@ msgid ""
 "located in /share/krita/pykrita. There's also a step by step guide for :ref:"
 "`krita_python_plugin_howto` here in the manual."
 msgstr ""
+"Čo ale ak chcete písať nové príkazy pre seba? Najlepšie miesto na začiatok "
+"je veľmi jednoduché: hľadajte príklady napísané inými ľuďmi! Môžete ušetriť "
+"veľa času, ak niekto iný napísal kód, na ktorom môžete zakladať svoju prácu. "
+"Oplatí sa tiež prezrieť si pythonové pluginy, ktoré sa nachádzajú v /share/"
+"krita/pykrita. V manuáli je tiež krok za krokom sprievodca pre :ref:"
+"`krita_python_plugin_howto`."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:81
 msgid ""
@@ -193,6 +252,10 @@ msgid ""
 "what Krita functions that are available and how to use them, you will want "
 "to go for Krita API reference documentation."
 msgstr ""
+"Je však pravdepodobné, že potrebujete viac informácií. Na to budeme musieť "
+"zistiť, čo sa skrýva za hviezdičkou, keď ``import * from Krita``. Aby ste sa "
+"dozvedeli, aké funkcie Krity sú dostupné a ako ich používať, budete chcieť "
+"prejsť na referenčnú dokumentáciu API Krity."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:84
 msgid "Krita's API"
@@ -202,12 +265,15 @@ msgstr "Krita API"
 msgid ""
 "`LibKis API Overview <https://api.kde.org/legacy/krita/html/index.html>`_"
 msgstr ""
+"`Prehľad LibKis API <https://api.kde.org/legacy/krita/html/index.html>`_"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:87
 msgid ""
 "`Krita class documentation <https://api.kde.org/legacy/krita/html/annotated."
 "html>`_"
 msgstr ""
+"`Dokumentácia tried Krity <https://api.kde.org/legacy/krita/html/annotated."
+"html>`_"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:89
 msgid ""
@@ -218,6 +284,12 @@ msgid ""
 "is that when we ``import krita`` and call functions, we're actually using "
 "the C++ methods listed in that documentation."
 msgstr ""
+"Tieto stránky môžu na prvý pohľad vyzerať ako veľa žargónu. Je to preto, že "
+"dokumentácia API Krity pochádza z podkladového jazyka C++, v ktorom je Krita "
+"napísaná. Kúzlo sa deje kvôli pythonovému nástroju SIP, ktorý umožňuje "
+"Pythonu hovoriť v C++ a komunikovať s Kritou. Konečným výsledkom je, že keď "
+"``import krita`` a voláme funkcie, v skutočnosti používame metódy C++ "
+"uvedené v tejto dokumentácii."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:91
 msgid ""
@@ -229,6 +301,13 @@ msgid ""
 "view the documentation of the functions ``createDocument()``, "
 "``activeWindow()``, and ``action()`` which we used above."
 msgstr ""
+"Pozrime sa, ako tieto veci fungujú podrobnejšie. Pozrime sa na druhý odkaz, "
+"`referenciu tried Krity <https://api.kde.org/legacy/krita/html/classKrita."
+"html#aa55507903d088013ced2df8c74f28a63>`_. Tam uvidíme všetky funkcie "
+"dostupné pre inštanciu Krity. Ak zadáte ``dir(Krita.instance())`` v Pythone, "
+"malo by to veľmi presne zodpovedať tejto stránke – môžete si pozrieť "
+"dokumentáciu funkcií ``createDocument()``, ``activeWindow()`` a "
+"``action()``, ktoré sme použili vyššie."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:93
 msgid ""
@@ -239,6 +318,11 @@ msgid ""
 "function ``filters()`` returns a ``QStringList``. However, SIP converts "
 "those ``QStringLists`` into regular python list of strings!"
 msgstr ""
+"Jednou z mätúcejších vecí je vidieť všetky triedy C++, ktoré Krita používa, "
+"vrátane tried Qt začínajúcich na Q. Tu je ale krása SIP: snaží sa čo najviac "
+"zjednodušiť a priamočiaro urobiť preklad z týchto tried do Pythonu. "
+"Napríklad môžete vidieť, že funkcia ``filters()`` vracia ``QStringList``. "
+"SIP však tieto ``QStringListy`` prevádza na bežný pythonový zoznam reťazcov!"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:95
 msgid ""
@@ -246,10 +330,13 @@ msgid ""
 "\n"
 "print(Krita.instance().filters())"
 msgstr ""
+"from krita import *\n"
+"\n"
+"print(Krita.instance().filters())"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:101
 msgid "Outputs as: ::"
-msgstr ""
+msgstr "Výstup: ::"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:103
 msgid ""
@@ -267,10 +354,23 @@ msgid ""
 "'sharpen', 'smalltiles', 'threshold', 'unsharp',\n"
 "'wave', 'waveletnoisereducer']"
 msgstr ""
+"['asc-cdl', 'autocontrast', 'blur', 'burn', 'colorbalance', 'colortoalpha', "
+"'colortransfer',\n"
+"'desaturate', 'dodge', 'edge detection', 'emboss', 'emboss all directions', "
+"'emboss horizontal and vertical',\n"
+"'emboss horizontal only', 'emboss laplascian', 'emboss vertical only', "
+"'gaussian blur', 'gaussiannoisereducer',\n"
+"'gradientmap', 'halftone', 'height to normal', 'hsvadjustment', "
+"'indexcolors', 'invert', 'lens blur', 'levels',\n"
+"'maximize', 'mean removal', 'minimize', 'motion blur', 'noise', 'normalize', "
+"'oilpaint', 'perchannel', 'phongbumpmap',\n"
+"'pixelize', 'posterize', 'raindrops', 'randompick', 'roundcorners', "
+"'sharpen', 'smalltiles', 'threshold', 'unsharp',\n"
+"'wave', 'waveletnoisereducer']"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:112
 msgid "However, sometimes the conversion doesn't go quite as smoothly."
-msgstr ""
+msgstr "Niekedy však prevod neprebehne úplne hladko."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:114
 msgid ""
@@ -278,10 +378,13 @@ msgid ""
 "\n"
 "print(Krita.instance().documents())"
 msgstr ""
+"from krita import *\n"
+"\n"
+"print(Krita.instance().documents())"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:120
 msgid "gives something like this::"
-msgstr ""
+msgstr "dá niečo takéto::"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:123
 msgid ""
@@ -289,6 +392,9 @@ msgid ""
 "<PyKrita.krita.Document object at 0x7f72946309d8>,\n"
 "<PyKrita.krita.Document object at 0x7f7294630c18>]"
 msgstr ""
+"[<PyKrita.krita.Document object at 0x7f7294630b88>,\n"
+"<PyKrita.krita.Document object at 0x7f72946309d8>,\n"
+"<PyKrita.krita.Document object at 0x7f7294630c18>]"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:127
 msgid ""
@@ -301,6 +407,13 @@ msgid ""
 "if we wanted to generate an info report about the documents in Krita, we "
 "could write a script like this:"
 msgstr ""
+"Je to zoznam niečoho, to je isté, ale ako ho použiť? Ak sa vrátime na "
+"stránku apidocs Krity a pozrieme sa na funkciu documents(), uvidíme, že na "
+"triede 'Document' je skutočne klikateľný odkaz. `Ak budete sledovať tento "
+"odkaz <https://api.kde.org/legacy/krita/html/classDocument.html>`_, uvidíte, "
+"že dokument má funkciu name(), ktorá vracia názov dokumentu, a funkcie "
+"width() a height(), ktoré vracajú rozmery. Ak by sme teda chceli vygenerovať "
+"informačný prehľad o dokumentoch v Krite, mohli by sme napísať skript takto:"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:129
 msgid ""
@@ -310,10 +423,15 @@ msgid ""
 "    print(doc.name())\n"
 "    print(\" \"+str(doc.width())+\"x\"+str(doc.height()))"
 msgstr ""
+"from krita import *\n"
+"\n"
+"for doc in Krita.instance().documents():\n"
+"    print(doc.name())\n"
+"    print(\" \"+str(doc.width())+\"x\"+str(doc.height()))"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:137
 msgid "We get an output like::"
-msgstr ""
+msgstr "Dostaneme výstup ako::"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:139
 msgid ""
@@ -325,11 +443,20 @@ msgid ""
 "Blue morning\n"
 " 1600x900"
 msgstr ""
+"==== Warning: Script not saved! ====\n"
+"Unnamed\n"
+" 2480x3508\n"
+"sketch21\n"
+" 3508x2480\n"
+"Blue morning\n"
+" 1600x900"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:147
 msgid ""
 "Hopefully this will give you an idea of how to navigate the API docs now."
 msgstr ""
+"Dúfame, že vám to teraz dá predstavu o tom, ako sa orientovať v dokumentácii "
+"API."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:149
 msgid ""
@@ -339,16 +466,24 @@ msgid ""
 "will print out a list of all the actions in Krita -- you could swap in one "
 "of these commands instead of 'python_scripter' in the example above."
 msgstr ""
+"API Krity má oveľa viac tried, dostanete sa k nim prechodom na zoznam tried "
+"v ľavom hornom rohu alebo kliknutím na ich názvy, aby ste sa dostali k ich "
+"dokumentácii API. Funkcie ``print()`` alebo ``dir()`` sú tu tiež vašimi "
+"priateľmi. Tento riadok vypíše zoznam všetkých akcií v Krite -- v príklade "
+"vyššie môžete namiesto 'python_scripter' dosadiť jeden z týchto príkazov."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:151
 msgid "[print([a.objectName(), a.text()]) for a in Krita.instance().actions()]"
 msgstr ""
+"[print([a.objectName(), a.text()]) for a in Krita.instance().actions()]"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:155
 msgid ""
 "The Python module ``inspect`` was designed for this sort of task. Here's a "
 "useful function to print info about a class to the console."
 msgstr ""
+"Modul Pythonu ``inspect`` bol navrhnutý práve pre tento typ úloh. Tu je "
+"užitočná funkcia na výpis informácií o triede do konzoly."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:157
 msgid ""
@@ -359,6 +494,12 @@ msgid ""
 "\n"
 "getInfo(Krita.instance())"
 msgstr ""
+"import inspect\n"
+"def getInfo(target):\n"
+"    [print(item) for item in inspect.getmembers(target) if not item[0]."
+"startswith('_')]\n"
+"\n"
+"getInfo(Krita.instance())"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:167
 msgid ""
@@ -370,6 +511,13 @@ msgid ""
 "static/Docs/PyQt5/>`_ for more info about this, and also definitely study "
 "the included plugins as well to see how they work."
 msgstr ""
+"Nakoniec, okrem dokumentácie LibKis, aj dokumentácia Qt, keďže Krita používa "
+"PyQt na sprístupnenie takmer celého API Qt pre Python. Takto môžete vytvárať "
+"celé okná s tlačidlami a formulármi pomocou rovnakých nástrojov, ktoré "
+"používa Krita! Môžete si prečítať `dokumentáciu Qt <https://doc.qt.io/>`_ a "
+"`dokumentáciu PyQt <https://www.riverbankcomputing.com/static/Docs/PyQt5/>`_ "
+"pre viac informácií o tom, a tiež si určite preštudujte zahrnuté pluginy, "
+"aby ste videli, ako fungujú."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:171
 msgid "Technical Details"
@@ -377,7 +525,7 @@ msgstr "Technické detaily"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:177
 msgid "Python Scripting on Windows"
-msgstr ""
+msgstr "Skriptovanie v Pythone vo Windowse"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:179
 msgid ""
@@ -385,6 +533,10 @@ msgid ""
 "the `Universal C Runtime from Microsoft's website <https://www.microsoft.com/"
 "en-us/download/details.aspx?id=48234>`_. (Windows 10 already comes with it.)"
 msgstr ""
+"Aby skriptovanie v Pythone fungovalo vo Windows 7/8/8.1, budete musieť "
+"nainštalovať `Universal C Runtime z webovej stránky Microsoft <https://www."
+"microsoft.com/en-us/download/details.aspx?id=48234>`_. (Windows 10 ho už "
+"obsahuje.)"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:182
 msgid "Python 2 and 3"
@@ -392,14 +544,16 @@ msgstr "Python 2 a 3"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:184
 msgid "By default, Krita is compiled for python 3."
-msgstr ""
+msgstr "Krita je predvolene kompilovaná pre Python 3."
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:186
 msgid ""
 "However, it is possible to compile it with python 2. To do so, you will need "
 "to add the following to the :program:`cmake` configuration line::"
 msgstr ""
+"Je však možné skompilovať ju s Pythonom 2. Na to budete musieť pridať "
+"nasledovné do konfiguračného riadku :program:`cmake`::"
 
 #: ../../user_manual/python_scripting/introduction_to_python_scripting.rst:188
 msgid "-DENABLE_PYTHON_2=ON"
-msgstr ""
+msgstr "-DENABLE_PYTHON_2=ON"

@@ -17,7 +17,7 @@ msgstr ""
 
 #: ../../reference_manual/hdr_display.rst:-1
 msgid "How to configure Krita for HDR displays."
-msgstr ""
+msgstr "Ako nakonfigurovať Krita pre HDR displeje."
 
 #: ../../reference_manual/hdr_display.rst:10
 msgid "HDR"
@@ -25,19 +25,19 @@ msgstr "HDR"
 
 #: ../../reference_manual/hdr_display.rst:10
 msgid "High Dynamic Range"
-msgstr ""
+msgstr "Vysoký dynamický rozsah"
 
 #: ../../reference_manual/hdr_display.rst:10
 msgid "HDR display"
-msgstr ""
+msgstr "HDR displej"
 
 #: ../../reference_manual/hdr_display.rst:15
 msgid "HDR Display"
-msgstr ""
+msgstr "HDR displej"
 
 #: ../../reference_manual/hdr_display.rst:21
 msgid "Currently only available on Windows and Linux"
-msgstr ""
+msgstr "Momentálne k dispozícii iba pre Windows a Linux"
 
 #: ../../reference_manual/hdr_display.rst:23
 msgid ""
@@ -53,10 +53,22 @@ msgid ""
 "spectacular! It also shows more subtle shadows and has a better contrast in "
 "lower color values, but this requires a sharper eye."
 msgstr ""
+"Od verzie 4.2 Krita dokáže nielen upravovať obrázky s vysokou bitovou "
+"hĺbkou, ale aj ich vykresľovať na obrazovke tak, aby ich zostava s podporou "
+"HDR zobrazovala ako HDR obrázky. HDR obrázky sú jednoducho povedané obrázky "
+"s naozaj jasnými farbami. Dosahujú to tým, že majú k dispozícii veľmi veľký "
+"rozsah farieb, 16 bitov a vyššie, a chápu hornú hranicu dostupných farieb "
+"ako jasnejšiu, než je najjasnejšia biela, ktorú väčšina obrazoviek dokáže "
+"zobraziť. HDR obrazovky sú zasa obrazovky, ktoré dokážu zobraziť jasnejšie "
+"farby než väčšina obrazoviek, a teda dokážu zobraziť super jasné farby v "
+"týchto HDR obrázkoch. To umožňuje obrázky, kde jasné veci, ako oheň, západ "
+"slnka, mágia, vyzerajú naozaj spektakulárne! Tiež zobrazuje jemnejšie tiene "
+"a má lepší kontrast pri nižších farebných hodnotách, ale to si vyžaduje "
+"ostrejšie oko."
 
 #: ../../reference_manual/hdr_display.rst:26
 msgid "Configuring HDR"
-msgstr ""
+msgstr "Konfigurácia HDR"
 
 #: ../../reference_manual/hdr_display.rst:28
 msgid ""
@@ -68,12 +80,21 @@ msgid ""
 "suitable drivers. You then also need to configure the system settings for "
 "HDR."
 msgstr ""
+"Krita nemôže zobrazovať HDR na ľubovoľnom monitore, budete potrebovať "
+"zostavu s podporou HDR. Zostavy s podporou HDR sú obrazovky, ktoré dokážu "
+"zobraziť viac ako 100 nitov, najlepšie hodnotu ako 1000, a dokážu zobraziť "
+"priestor rec 2020 PQ. Budete potrebovať vhodný kábel displeja (inak sa "
+"hodnoty jednoducho prevedú na bežné SDR), grafickú kartu s podporou HDR a "
+"vhodné ovládače. Potom budete tiež musieť nakonfigurovať systémové "
+"nastavenia pre HDR."
 
 #: ../../reference_manual/hdr_display.rst:30
 msgid ""
 "If you can confirm that the system understands your setup as an HDR setup, "
 "you can continue your configuration in Krita."
 msgstr ""
+"Ak môžete potvrdiť, že systém rozumie vašej zostave ako HDR zostave, môžete "
+"pokračovať v konfigurácii v Krite."
 
 #: ../../reference_manual/hdr_display.rst:33
 msgid "Windows"
@@ -87,10 +108,14 @@ msgid ""
 "surface, which should be as close to the display format as possible. Then "
 "restart Krita."
 msgstr ""
+"Na platforme Windows existuje :ref:`špeciálna stránka pre konfiguráciu "
+"HDR<hdr_display_settings>` v :menuselection:`Settings --> Configure Krita... "
+"--> Display`. Tam musíte vybrať preferovaný povrch, ktorý by mal byť čo "
+"najbližšie k formátu displeja. Potom reštartujte Krita."
 
 #: ../../reference_manual/hdr_display.rst:40
 msgid "Linux (Wayland only)"
-msgstr ""
+msgstr "Linux (len Wayland)"
 
 #: ../../reference_manual/hdr_display.rst:44
 msgid ""
@@ -100,10 +125,15 @@ msgid ""
 "Configure Krita... --> Color Management --> Display`. It will instantly "
 "enable HDR support in Krita, no restart is necessary."
 msgstr ""
+"Na Linuxe môžete jednoducho vybrať :guilabel:`Rec 2020 PQ` pre farebný "
+"priestor povrchu plátna v :ref:`nastaveniach správy farieb pre "
+"Wayland<color_management_settings_wayland>` v :menuselection:`Settings --> "
+"Configure Krita... --> Color Management --> Display`. Okamžite to aktivuje "
+"podporu HDR v Krite, reštart nie je potrebný."
 
 #: ../../reference_manual/hdr_display.rst:47
 msgid "Painting in HDR"
-msgstr ""
+msgstr "Maľovanie v HDR"
 
 #: ../../reference_manual/hdr_display.rst:49
 msgid ""
@@ -111,6 +141,9 @@ msgid ""
 "with rec 2020 gamut and a linear TRC. :guilabel:`Rec2020-elle-V4-g10.icc` is "
 "the one we ship by default."
 msgstr ""
+"Na vytvorenie správneho HDR obrázka budete musieť vytvoriť plátno pomocou "
+"profilu s gamutem rec 2020 a lineárnym TRC. :guilabel:`Rec2020-elle-V4-g10."
+"icc` je ten, ktorý dodávame predvolene."
 
 #: ../../reference_manual/hdr_display.rst:51
 msgid ""
@@ -118,6 +151,9 @@ msgid ""
 "However, a linear TRC is easier to edit images in, so we don't convert to PQ "
 "until we're satisfied with our image."
 msgstr ""
+"HDR obrázky sú štandardizované na používanie gametu Rec2020 a PQ TRC. "
+"Lineárny TRC je však jednoduchší na úpravu obrázkov, preto nekonvertujeme na "
+"PQ, kým nie sme spokojní s naším obrázkom."
 
 #: ../../reference_manual/hdr_display.rst:53
 msgid ""
@@ -125,20 +161,25 @@ msgid ""
 "`scene_linear_painting` page, which covers things like selecting colors, "
 "gotchas, which filters work and cool workflows."
 msgstr ""
+"Pre maľovanie v tomto novom vzrušujúcom farebnom priestore si pozrite "
+"stránku :ref:`scene_linear_painting`, ktorá sa venuje veciam ako výber "
+"farieb, záludnosti, ktoré filtre fungujú a zaujímavé pracovné postupy."
 
 #: ../../reference_manual/hdr_display.rst:56
 msgid "Exporting HDR"
-msgstr ""
+msgstr "Export HDR"
 
 #: ../../reference_manual/hdr_display.rst:58
 msgid "Now for saving and loading."
-msgstr ""
+msgstr "A teraz ukladanie a načítavanie."
 
 #: ../../reference_manual/hdr_display.rst:60
 msgid ""
 "The KRA file format can save the floating point image just fine, and is thus "
 "a good working file format."
 msgstr ""
+"Formát súborov KRA dokáže uložiť obrázok s pohyblivou rádovou čiarkou bez "
+"problémov, a preto je dobrým pracovným formátom súborov."
 
 #: ../../reference_manual/hdr_display.rst:62
 msgid ""
@@ -147,62 +188,71 @@ msgid ""
 "<file_png>`, but there's currently very little support for this standard. In "
 "the future we hope to see heif and avif support."
 msgstr ""
+"Na zdieľanie s inými obrazovými editormi sa odporúča :ref:`file_exr`. Na "
+"zdieľanie na webe momentálne máme iba :ref:`HDR PNG export <file_png>`, ale "
+"momentálne je pre tento štandard veľmi malá podpora. V budúcnosti dúfame v "
+"podporu heif a avif."
 
 #: ../../reference_manual/hdr_display.rst:64
 msgid ""
 "For exporting HDR animations, we support saving HDR to the new codec for mp4 "
 "and mkv: H.265. To use these options..."
 msgstr ""
+"Na export HDR animácií podporujeme ukladanie HDR do nového kodeku pre mp4 a "
+"mkv: H.265. Na použitie týchto možností..."
 
 #: ../../reference_manual/hdr_display.rst:66
 msgid "Get a version of FFmpeg that supports H.265."
-msgstr ""
+msgstr "Získajte verziu FFmpeg s podporou H.265."
 
 #: ../../reference_manual/hdr_display.rst:67
 msgid "Have an animation open."
-msgstr ""
+msgstr "Otvorte animáciu."
 
 #: ../../reference_manual/hdr_display.rst:68
 msgid ":menuselection:`File --> Render Animation`."
-msgstr ""
+msgstr ":menuselection:`File --> Render Animation`."
 
 #: ../../reference_manual/hdr_display.rst:69
 msgid "Select :guilabel:`Video`."
-msgstr ""
+msgstr "Vyberte :guilabel:`Video`."
 
 #: ../../reference_manual/hdr_display.rst:70
 msgid "Select for :guilabel:`Render as`, 'MPEG-4 video' or 'Matroska'."
-msgstr ""
+msgstr "Pre :guilabel:`Render as` vyberte 'MPEG-4 video' alebo 'Matroska'."
 
 #: ../../reference_manual/hdr_display.rst:71
 msgid "Press the configure button next to the file format dropdown."
 msgstr ""
+"Stlačte tlačidlo konfigurácie vedľa rozbaľovacieho zoznamu formátu súboru."
 
 #: ../../reference_manual/hdr_display.rst:72
 msgid "Select at the top 'H.265, MPEG-H Part 2 (HEVC)'."
-msgstr ""
+msgstr "Navrchu vyberte 'H.265, MPEG-H Part 2 (HEVC)'."
 
 #: ../../reference_manual/hdr_display.rst:73
 msgid "Select for the :guilabel:`Profile`, 'main10 (HDR)'."
-msgstr ""
+msgstr "Pre :guilabel:`Profile` vyberte 'main10 (HDR)'."
 
 #: ../../reference_manual/hdr_display.rst:74
 msgid ":guilabel:`HDR Mode` should now enable. Toggle it."
-msgstr ""
+msgstr ":guilabel:`HDR Mode` by sa teraz malo aktivovať. Prepnite ho."
 
 #: ../../reference_manual/hdr_display.rst:75
 msgid ""
 "click :guilabel:`HDR Metadata` to configure the HDR metadata (options "
 "described below)."
 msgstr ""
+"kliknite na :guilabel:`HDR Metadata` a nakonfigurujte metadáta HDR (možnosti "
+"popísané nižšie)."
 
 #: ../../reference_manual/hdr_display.rst:76
 msgid "finally, when done, click 'OK'."
-msgstr ""
+msgstr "nakoniec, keď skončíte, kliknite na 'OK'."
 
 #: ../../reference_manual/hdr_display.rst:79
 msgid "HDR Metadata"
-msgstr ""
+msgstr "Metadáta HDR"
 
 #: ../../reference_manual/hdr_display.rst:81
 msgid ""
@@ -210,10 +260,13 @@ msgid ""
 "Master Display Color Volumes metadata and is required for the HDR video to "
 "be transferred properly to the screen by video players and the cable."
 msgstr ""
+"Toto sa nachádza na obrazovke vykresľovania animácie. Konfiguruje metadáta "
+"SMPTE ST.2086 alebo Master Display Color Volumes a je potrebné na správne "
+"prenesenie HDR videa na obrazovku video prehrávačmi a káblom."
 
 #: ../../reference_manual/hdr_display.rst:83
 msgid "Master Display"
-msgstr ""
+msgstr "Master Display"
 
 #: ../../reference_manual/hdr_display.rst:84
 msgid ""
@@ -222,6 +275,10 @@ msgid ""
 "There are two default values for common display color spaces, and a custom "
 "value, which will enable the :guilabel:`Display` options."
 msgstr ""
+"Charakteristiky farebného priestoru displeja, pre ktorý bol váš obrázok "
+"vytvorený, zvyčajne aj displeja, ktorý ste použili na maľovanie obrázka. "
+"Existujú dve predvolené hodnoty pre bežné farebné priestory displeja a "
+"vlastná hodnota, ktorá aktivuje možnosti :guilabel:`Display`."
 
 #: ../../reference_manual/hdr_display.rst:86
 msgid ""
@@ -229,16 +286,22 @@ msgid ""
 "was made. If you do not have custom selected for :guilabel:`Master Display`, "
 "these are disabled as we can use predetermined values."
 msgstr ""
+"Presné charakteristiky farebného priestoru displeja, pre ktorý bol váš "
+"obrázok vytvorený. Ak nemáte pre :guilabel:`Master Display` vybranú vlastnú "
+"hodnotu, sú tieto možnosti zakázané, keďže môžeme použiť vopred určené "
+"hodnoty."
 
 #: ../../reference_manual/hdr_display.rst:88
 msgid "Red/Green/Blue Primary"
-msgstr ""
+msgstr "Primárna červená/zelená/modrá"
 
 #: ../../reference_manual/hdr_display.rst:89
 msgid ""
 "The xyY x and xyY y value of the three chromacities of your screen. These "
 "define the gamut."
 msgstr ""
+"Hodnoty xyY x a xyY y troch chromaticít vašej obrazovky. Tieto definujú "
+"gamut."
 
 #: ../../reference_manual/hdr_display.rst:90
 msgid "White Point"
@@ -249,14 +312,16 @@ msgid ""
 "The xyY x and xyY y value of the white point of your screen, this defines "
 "what is considered 'neutral grey'."
 msgstr ""
+"Hodnota xyY x a xyY y bieleho bodu vašej obrazovky, toto definuje, čo sa "
+"považuje za 'neutrálnu šedú'."
 
 #: ../../reference_manual/hdr_display.rst:92
 msgid "Min Luminance"
-msgstr ""
+msgstr "Minimálna svietivosť"
 
 #: ../../reference_manual/hdr_display.rst:93
 msgid "The darkest value your screen can show in nits."
-msgstr ""
+msgstr "Najtemnejšia hodnota, ktorú môže vaša obrazovka zobraziť v nitoch."
 
 #: ../../reference_manual/hdr_display.rst:95
 msgid "Display"
@@ -264,11 +329,11 @@ msgstr "Obrazovka"
 
 #: ../../reference_manual/hdr_display.rst:95
 msgid "Max Luminance"
-msgstr ""
+msgstr "Maximálna svietivosť"
 
 #: ../../reference_manual/hdr_display.rst:95
 msgid "The brightest value your screen can show in nits."
-msgstr ""
+msgstr "Najjasnejšia hodnota, ktorú môže vaša obrazovka zobraziť v nitoch."
 
 #: ../../reference_manual/hdr_display.rst:97
 msgid "MaxCLL"
@@ -276,11 +341,11 @@ msgstr "MaxCLL"
 
 #: ../../reference_manual/hdr_display.rst:98
 msgid "The value of the brightest pixel of your animation in nits."
-msgstr ""
+msgstr "Hodnota najjasnejšieho pixelu vašej animácie v nitoch."
 
 #: ../../reference_manual/hdr_display.rst:100
 msgid "The average 'brightest value' of the whole animation."
-msgstr ""
+msgstr "Priemerná 'najjasnejšia hodnota' celej animácie."
 
 #: ../../reference_manual/hdr_display.rst:102
 msgid "MaxFALL"

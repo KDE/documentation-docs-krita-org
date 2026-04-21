@@ -17,7 +17,7 @@ msgstr ""
 
 #: ../../reference_manual/dr_minw_debugger.rst:-1
 msgid "How to get a backtrace in Krita using the dr. MinGW debugger."
-msgstr ""
+msgstr "Ako získať spätné trasovanie v Krita pomocou debuggera dr. MinGW."
 
 #: ../../reference_manual/dr_minw_debugger.rst:0
 msgid ".. image:: /images/Mingw-crash-screen.png"
@@ -50,10 +50,14 @@ msgid ""
 "information for the developers to get an idea of why Krita crashed. Using "
 "the debug package is only needed when more precise information is needed."
 msgstr ""
+"Informácie na tejto stránke sa vzťahujú iba na vydanie Krity pre Windows. "
+"Zvyčajne súbor denníka %LOCALAPPDATA%\\kritacrash.log obsahuje dostatok "
+"informácií, aby vývojári dokázali zistiť, prečo Krita zlyhala. Ladiaci balík "
+"je potrebný len vtedy, keď sú potrebné presnejšie informácie."
 
 #: ../../reference_manual/dr_minw_debugger.rst:26
 msgid "Using the Debug Package"
-msgstr ""
+msgstr "Použitie ladiaceho balíka"
 
 #: ../../reference_manual/dr_minw_debugger.rst:28
 msgid ""
@@ -65,6 +69,13 @@ msgid ""
 "Krita. You can see which is which by checking the end of the name of the ZIP "
 "file - debug symbols package always ends with *-dbg.zip*."
 msgstr ""
+"Ak máte nainštalovanú svoju verziu Krita a chcete získať spätné trasovanie, "
+"najlepšie je stiahnuť prenosnú verziu (buď najnovšie vydanie, alebo to, "
+"ktoré vám niekto odporučil vyskúšať, napríklad balík Krita Next alebo Krita "
+"Plus). Spolu s prenosnou verziou si stiahnite aj balík ladiacich symbolov. "
+"Mal by byť na rovnakom mieste, odkiaľ sťahujete Krita. Zistíte to podľa "
+"konca názvu súboru ZIP – balík ladiacich symbolov vždy končí príponou *-dbg."
+"zip*."
 
 #: ../../reference_manual/dr_minw_debugger.rst:33
 msgid ""
@@ -75,16 +86,23 @@ msgid ""
 "krita for unstable releases (for example beta versions). Portable ZIP and "
 "debug ZIP are found next to each other."
 msgstr ""
+"Odkazy na ladiace balíky by mali byť dostupné v správe o vydaní na https://"
+"krita.org/ spolu s vydanými balíkmi. Ladiace balíky pre akékoľvek vydanie "
+"nájdete buď na https://download.kde.org/stable/krita pre stabilné vydania "
+"alebo na https://download.kde.org/unstable/krita pre nestabilné vydania "
+"(napríklad beta verzie). Prenosný ZIP a ladiaci ZIP sú umiestnené vedľa seba."
 
 #: ../../reference_manual/dr_minw_debugger.rst:34
 msgid ""
 "Make sure you’ve downloaded the same version of debug package for the "
 "portable package you intend to debug / get a better backtrace."
 msgstr ""
+"Uistite sa, že ste stiahli rovnakú verziu ladiaceho balíka pre prenosný "
+"balík, ktorý chcete ladiť / získať lepšie spätné trasovanie."
 
 #: ../../reference_manual/dr_minw_debugger.rst:35
 msgid "Extract the portable Krita."
-msgstr ""
+msgstr "Rozbaľte prenosnú Krita."
 
 #: ../../reference_manual/dr_minw_debugger.rst:36
 msgid ""
@@ -92,6 +110,9 @@ msgid ""
 "main directory, where the sub-directories *bin*, *lib* and *share* is "
 "located, like in the figures below:"
 msgstr ""
+"Rozbaľte súbory z balíka ladiacich symbolov do hlavného adresára prenosnej "
+"Krita, kde sa nachádzajú podadresáre *bin*, *lib* a *share*, ako je "
+"znázornené na obrázkoch nižšie:"
 
 #: ../../reference_manual/dr_minw_debugger.rst:38
 msgid ".. image:: /images/Mingw-dbg7zip.png"
@@ -107,10 +128,13 @@ msgid ""
 "``.debug`` dir inside. If you don't see it, you probably extracted to the "
 "wrong place."
 msgstr ""
+"Po rozbalení súborov skontrolujte adresár ``bin`` a uistite sa, že v ňom "
+"vidíte adresár ``.debug``. Ak ho nevidíte, pravdepodobne ste rozbalili na "
+"nesprávne miesto."
 
 #: ../../reference_manual/dr_minw_debugger.rst:46
 msgid "Getting a Backtrace"
-msgstr ""
+msgstr "Získanie spätného trasovania"
 
 #: ../../reference_manual/dr_minw_debugger.rst:51
 msgid ""
@@ -118,10 +142,12 @@ msgid ""
 "time, ranging from a few seconds to a few minutes, before the crash dialog "
 "appears."
 msgstr ""
+"Pri páde sa Krita môže na krátky čas zdať nereagujúca, od niekoľkých sekúnd "
+"po niekoľko minút, pred zobrazením dialógu pádu."
 
 #: ../../reference_manual/dr_minw_debugger.rst:55
 msgid "An example of the crash dialog."
-msgstr ""
+msgstr "Príklad dialógu pádu."
 
 #: ../../reference_manual/dr_minw_debugger.rst:57
 msgid ""
@@ -130,12 +156,18 @@ msgid ""
 "you have to close Krita manually. Continue to follow the following "
 "instructions to check whether it was a crash or not."
 msgstr ""
+"Ak Krita zostáva nereagujúca dlhšie ako niekoľko minút, môže byť skutočne "
+"zamrznutá, čo nemusí poskytnúť spätné trasovanie. V takejto situácii musíte "
+"Krita zavrieť ručne. Pokračujte v nasledujúcich pokynoch a zistite, či išlo "
+"o pád alebo nie."
 
 #: ../../reference_manual/dr_minw_debugger.rst:59
 msgid ""
 "Open Windows Explorer and type ``%LocalAppData%`` (without quotes) on the "
 "address bar and press the :kbd:`Enter` key."
 msgstr ""
+"Otvorte Prieskumník Windows, zadajte ``%LocalAppData%`` (bez úvodzoviek) do "
+"panela s adresou a stlačte kláves :kbd:`Enter`."
 
 #: ../../reference_manual/dr_minw_debugger.rst:61
 msgid ".. image:: /images/Mingw-explorer-path.png"
@@ -146,30 +178,35 @@ msgid ""
 "Find the file ``kritacrash.log`` (it might appear as simply ``kritacrash`` "
 "depending on your settings.)"
 msgstr ""
+"Nájdite súbor ``kritacrash.log`` (v závislosti od vašich nastavení sa môže "
+"zobrazovať jednoducho ako ``kritacrash``)."
 
 #: ../../reference_manual/dr_minw_debugger.rst:64
 msgid ""
 "Open the file with Notepad and scroll to the bottom, then scroll up to the "
 "first occurrence of “Error occurred on <time>” or the dashes."
 msgstr ""
+"Otvorte súbor v programe Poznámkový blok, posuňte sa na koniec a potom sa "
+"posuňte nahor k prvému výskytu textu „Error occurred on <time>“ alebo "
+"pomlčiek."
 
 #: ../../reference_manual/dr_minw_debugger.rst:68
 msgid "Start of backtrace."
-msgstr ""
+msgstr "Začiatok spätného trasovania."
 
 #: ../../reference_manual/dr_minw_debugger.rst:70
 msgid "Check the time and make sure it matches the time of the crash."
-msgstr ""
+msgstr "Skontrolujte čas a uistite sa, že sa zhoduje s časom pádu."
 
 #: ../../reference_manual/dr_minw_debugger.rst:74
 msgid "End of backtrace."
-msgstr ""
+msgstr "Koniec spätného sledovania."
 
 #: ../../reference_manual/dr_minw_debugger.rst:76
 msgid ""
 "The text starting from this line to the end of the file is the most recent "
 "backtrace."
-msgstr ""
+msgstr "Text od tohto riadku až po koniec súboru je najnovší backtrace."
 
 #: ../../reference_manual/dr_minw_debugger.rst:78
 msgid ""
@@ -178,6 +215,10 @@ msgid ""
 "likely locked up, and a crash didn’t actually happen. In this case, make a "
 "bug report too."
 msgstr ""
+"Ak ``kritacrash.log`` neexistuje, alebo neexistuje backtrace so zhodujúcim "
+"sa časom, nemáte backtrace. To znamená, že Krita sa s najväčšou "
+"pravdepodobnosťou zasekla a k pádu v skutočnosti nedošlo. V takom prípade "
+"taktiež podajte hlásenie o chybe."
 
 #: ../../reference_manual/dr_minw_debugger.rst:79
 msgid ""
@@ -186,6 +227,10 @@ msgid ""
 "before being closed manually. In this case, try to re-trigger the crash and "
 "wait longer until the crash dialog appears."
 msgstr ""
+"Ak backtrace vyzerá skrátene, alebo po čase nenasleduje nič, znamená to, že "
+"prišlo k pádu a obsluha pádu vytvárala zásobník sledovania, kým bol ručne "
+"zatvorený. V takom prípade sa pokúste znovu spustiť pád a počkajte dlhšie, "
+"kým sa zobrazí dialóg pádu."
 
 #, fuzzy
 #~ msgid ".. image:: images/icons/Krita_mouse_left.png"

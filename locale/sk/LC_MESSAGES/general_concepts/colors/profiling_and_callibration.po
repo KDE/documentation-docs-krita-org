@@ -42,14 +42,17 @@ msgid ""
 "colors inside a pure XYZ color cube. This \"color set\" can be used to "
 "define different things:"
 msgstr ""
+"Zjednodušene povedané, farebný profil je iba súbor definujúci sadu farieb "
+"vnútri čistej XYZ farebnej kocky. Táto \"sada farieb\" môže slúžiť na "
+"definovanie rôznych vecí:"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:23
 msgid "the colors inside an image"
-msgstr ""
+msgstr "farby v obrázku"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:25
 msgid "the colors a device can output"
-msgstr ""
+msgstr "farby, ktoré môže zariadenie vydávať"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:27
 msgid ""
@@ -64,6 +67,16 @@ msgid ""
 "color change steps and have a big number of values looking the same (leading "
 "to posterization effect)."
 msgstr ""
+"Výber správneho profilu pracovného priestoru závisí od toho, koľko farieb "
+"potrebujete a akú bitovú hĺbku plánujete použiť. Predstavte si čiaru s celým "
+"farebným spektrom od čistej čiernej (0,0,0) po čistú modrú (0,0,1) v čistej "
+"XYZ farebnej kocke. Ak ju rozdelíte výberom krokov v pravidelných "
+"intervaloch, získate to, čo sa nazýva lineárny profil, s krivkou gamma=1 "
+"znázornenou ako priamka od 0 do 1. Pri bitovej hĺbke 8 bitov/kanál máme na "
+"uloženie celej tejto čiary iba 256 hodnôt. Ak použijeme lineárny profil "
+"opísaný vyššie na definovanie týchto farebných hodnôt, prídeme o niektoré "
+"dôležité viditeľné kroky zmeny farby a budeme mať veľké množstvo hodnôt "
+"vyzerajúcich rovnako (čo vedie k efektu posterizácie)."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:33
 msgid ""
@@ -82,6 +95,21 @@ msgid ""
 "RGB workspace first and then convert the output to the appropriate CMYK "
 "profile."
 msgstr ""
+"Preto bol vytvorený profil sRGB, aby sa do tohto obmedzeného množstva hodnôt "
+"zmestilo viac rôznych farieb, v perceptuálne pravidelnom rozložení, "
+"aplikovaním vlastnej gama krivky (pozri obrázok tu: https://en.wikipedia.org/"
+"wiki/SRGB), aby sa napodobnila štandardná odozva starých CRT obrazoviek. "
+"Profil sRGB je teda optimalizovaný tak, aby sa do 256 hodnôt na R/G/B kanál "
+"zmestili všetky farby, ktoré dokáže reprodukovať väčšina bežných obrazoviek. "
+"Niektoré iné profily, ako napríklad Adobe RGB, sú optimalizované tak, aby sa "
+"do tohto obmedzeného rozsahu zmestilo viac tlačiteľných farieb, pričom "
+"primárne rozširujú cyan-zelené odtiene. Práca s takýmto profilom môže byť "
+"užitočná na zlepšenie výsledkov tlače, ale je nebezpečná, ak sa nepoužíva s "
+"riadne profilovaným a/alebo kalibrovaným kvalitným displejom. Väčšina "
+"bežných profilov pracovného priestoru CMYK dokáže zvyčajne zmestiť všetky "
+"svoje farby v hĺbke 8 bitov/kanál, ale sú všetky tak rozdielne a špecifické, "
+"že zvyčajne je lepšie najprv pracovať s bežným pracovným priestorom RGB a "
+"potom skonvertovať výstup na príslušný profil CMYK."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:38
 msgid ""
@@ -89,6 +117,9 @@ msgid ""
 "we can use workspace profiles with higher gamut range like Wide-gamut RGB or "
 "Pro-photo RGB, or even unlimited gamut like scRGB."
 msgstr ""
+"Počnúc 16 bitmi/kanál máme namiesto 256 hodnôt už 65 536, takže môžeme "
+"použiť profily pracovného priestoru s vyšším rozsahom gamut, ako je Wide-"
+"gamut RGB alebo Pro-photo RGB, alebo dokonca neobmedzený gamut, ako je scRGB."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:40
 msgid ""
@@ -100,12 +131,21 @@ msgid ""
 "space, and converts those sRGB values to corresponding color values from "
 "your monitor profile to display the canvas."
 msgstr ""
+"Keďže sRGB je všeobecný profil (ešte viac, keďže pochádza zo starých "
+"špecifikácií CRT...), je veľká pravdepodobnosť, že váš monitor má v "
+"skutočnosti inú krivku farebnú odozvu, a teda farebný profil. Takže keď "
+"používate pracovný priestor sRGB a máte načítaný správny profil obrazovky "
+"(pozri nasledujúci bod), Krita vie, že farby obsiahnuté v súbore sú v rámci "
+"farebného priestoru sRGB, a konvertuje tieto hodnoty sRGB na zodpovedajúce "
+"farebné hodnoty z profilu monitora na zobrazenie plátna."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:43
 msgid ""
 "Note that when you export your file and view it in another software, this "
 "software has to do two things:"
 msgstr ""
+"Upozorňujeme, že keď exportujete súbor a zobrazíte ho v inom softvéri, tento "
+"softvér musí urobiť dve veci:"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:45
 msgid ""
@@ -113,6 +153,9 @@ msgid ""
 "(which most software do nowadays; when they don't they usually default to "
 "sRGB, so in the case described here we're safe )"
 msgstr ""
+"prečítať vložený profil, aby zistil \"správne\" farebné hodnoty zo súboru "
+"(čo väčšina softvéru v dnešnej dobe robí; keď to nerobia, zvyčajne "
+"predvolene používajú sRGB, takže v prípade opísanom tu sme v bezpečí)"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:46
 msgid ""
@@ -120,10 +163,13 @@ msgid ""
 "software actually does, and just output to sRGB.. so this can explain some "
 "viewing differences most of the time)."
 msgstr ""
+"a potom ho skonvertovať na profil priradený k monitoru (čo skutočne robí len "
+"veľmi málo softvéru a len výstup do sRGB.. čo väčšinu času môže vysvetliť "
+"niektoré rozdiely pri zobrazovaní)."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:48
 msgid "Krita uses profiles extensively, and comes bundled with many."
-msgstr ""
+msgstr "Krita používa profily vo veľkej miere a je dodávaná s mnohými z nich."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:50
 msgid ""
@@ -133,10 +179,15 @@ msgid ""
 "management as intended. However, Krita does allow the luxury of picking any "
 "of the other bundled profiles as working spaces."
 msgstr ""
+"Najdôležitejší je profil vašej vlastnej obrazovky. Nie je súčasťou balenia a "
+"musíte ho vytvoriť pomocou zariadenia na profilovanie farieb. Ak nemáte "
+"prístup k takémuto zariadeniu, nemôžete využívať správu farieb Krity podľa "
+"zamýšľaného účelu. Krita však umožňuje luxus výberu ľubovoľného z ostatných "
+"priložených profilov ako pracovných priestorov."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:54
 msgid "Profiling devices"
-msgstr ""
+msgstr "Zariadenia na profilovanie"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:56
 msgid ""
@@ -144,12 +195,17 @@ msgid ""
 "that you connect to your computer via an usb, and then you run a profiling "
 "software (often delivered alongside of the device)."
 msgstr ""
+"Profilovacie zariadenia, nazývané kolorimetrické, sú akési malé kamery, "
+"ktoré pripojíte k počítaču cez USB a potom spustíte profilovací softvér "
+"(zvyčajne dodávaný spolu so zariadením)."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:60
 msgid ""
 "If you don't have software packaged with your colorimeter, or are unhappy "
 "with the results, we recommend `ArgyllCMS <https://www.argyllcms.com/>`_."
 msgstr ""
+"Ak nemáte softvér pribalený k vášmu kolorimetru alebo nie ste spokojní s "
+"výsledkami, odporúčame `ArgyllCMS <https://www.argyllcms.com/>`_."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:62
 msgid ""
@@ -157,12 +213,17 @@ msgid ""
 "and black are like on your screen using a predefined white as base. It also "
 "measures how gray the color gray is."
 msgstr ""
+"Malá kamera potom zmeria, aká je najjasnejšia červená, zelená, modrá, biela "
+"a čierna na vašej obrazovke pomocou preddefinovanej bielej ako základu. Tiež "
+"meria, aká šedá je farba šedá."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:64
 msgid ""
 "It then puts all this information into an ICC profile, which can be used by "
 "the computer to correct your colors."
 msgstr ""
+"Potom uloží všetky tieto informácie do ICC profilu, ktorý môže počítač "
+"použiť na korekciu vašich farieb."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:66
 msgid ""
@@ -171,12 +232,17 @@ msgid ""
 "profile useless, as the qualities of the screen change significantly while "
 "calibrating."
 msgstr ""
+"Odporúčame nemeniť \"kalibráciu\" (kontrast, jas, viete, tú ponuku) "
+"obrazovky po profilovaní. Ak tak urobíte, profil sa stane zbytočným, pretože "
+"vlastnosti obrazovky sa pri kalibrácii výrazne zmenia."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:68
 msgid ""
 "To make your screen display more accurate colors, you can do one or two "
 "things: profile your screen or calibrate and profile it."
 msgstr ""
+"Ak chcete, aby vaša obrazovka zobrazovala presnejšie farby, môžete urobiť "
+"jednu alebo dve veci: profilovať obrazovku alebo ju kalibrovať a profilovať."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:71
 msgid ""
@@ -189,14 +255,23 @@ msgid ""
 "hardware controls (lightness, contrast, gamma curves), and then with "
 "software that creates a vcgt (video card gamma table) to load in the GPU."
 msgstr ""
+"Samotné profilovanie obrazovky znamená meranie farieb monitora s jeho "
+"natívnymi nastaveniami a uloženie týchto hodnôt do farebného profilu, ktorý "
+"môžu aplikácie so správou farieb použiť na prispôsobenie zdrojových farieb "
+"obrazovke pre optimálny výsledok. Kalibrácia a profilovanie znamená to isté, "
+"až na to, že najprv sa pokúsite kalibrovať farby obrazovky tak, aby "
+"zodpovedali určitému štandardnému nastaveniu, napríklad sRGB alebo iným "
+"špecifickejším profilom. Kalibrácia sa vykonáva najprv hardvérovými "
+"ovládačmi (svetlosť, kontrast, gama krivky) a potom softvérom, ktorý vytvorí "
+"vcgt (tabuľku gama videokárty) na načítanie do GPU."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:75
 msgid "So when or why should you do just one or both?"
-msgstr ""
+msgstr "Kedy alebo prečo by ste teda mali urobiť jedno alebo oboje?"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:77
 msgid "Profiling only:"
-msgstr ""
+msgstr "Iba profilovanie:"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:79
 msgid "With a good monitor"
@@ -207,6 +282,8 @@ msgid ""
 "You can get most of the sRGB colors and lot of extra colors not inside sRGB. "
 "So this can be good to have more visible colors."
 msgstr ""
+"Môžete získať väčšinu farieb sRGB a veľa ďalších farieb, ktoré nie sú v "
+"sRGB. Takže môže byť dobré mať viac viditeľných farieb."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:82
 msgid "With a bad monitor"
@@ -218,10 +295,13 @@ msgid ""
 "have hue shifts. Trying to calibrate it before profiling can help to get "
 "closer to full-sRGB colors."
 msgstr ""
+"Získate iba podmnožinu skutočného sRGB a prídete o veľa detailov alebo "
+"môžete mať dokonca posuny odtieňov. Pokus o kalibráciu pred profilovaním "
+"môže pomôcť priblížiť sa k plným farbám sRGB."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:84
 msgid "Calibration+profiling:"
-msgstr ""
+msgstr "Kalibrácia+profilovanie:"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:86
 msgid "Bad monitors"
@@ -229,11 +309,11 @@ msgstr "zlé monitory"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:87
 msgid "As explained just before."
-msgstr ""
+msgstr "Ako bolo vysvetlené tesne predtým."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:88
 msgid "Multi-monitor setup"
-msgstr ""
+msgstr "Nastavenie viacerých monitorov"
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:89
 msgid ""
@@ -243,6 +323,11 @@ msgid ""
 "profile (or another standard for high-end monitors if they both support it) "
 "can be a good solution."
 msgstr ""
+"Pri používaní viacerých monitorov, najmä v zrkadle, kde oba monitory "
+"zobrazujú rovnaký obsah, nemôžete mať tento obsah spravovaný farbami pre oba "
+"profily obrazoviek. V takom prípade môže byť dobrým riešením kalibrácia "
+"oboch obrazoviek tak, aby zodpovedali profilu sRGB (alebo inému štandardu "
+"pre špičkové monitory, ak ho oba podporujú)."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:91
 msgid ""
@@ -251,6 +336,10 @@ msgid ""
 "through several monitor calibration and profiles should be done extremely "
 "carefully."
 msgstr ""
+"Keď potrebujete priradiť presný kontext vykresľovania pre soft-proofing, "
+"kalibrácia môže pomôcť priblížiť sa k očakávanému výsledku. Prepínanie medzi "
+"rôznymi kalibráciami a profilmi monitorov by sa však malo vykonávať "
+"mimoriadne opatrne."
 
 #: ../../general_concepts/colors/profiling_and_callibration.rst:92
 msgid "Soft-proofing"

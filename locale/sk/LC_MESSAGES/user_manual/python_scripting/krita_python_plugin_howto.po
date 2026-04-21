@@ -19,6 +19,7 @@ msgstr ""
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:-1
 msgid "Guide on all the specifics of creating Krita python plugins."
 msgstr ""
+"Sprievodca všetkými podrobnosťami tvorby python zásuvných modulov pre Krita."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:14
 msgid "Python"
@@ -26,7 +27,7 @@ msgstr "Python"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:14
 msgid "Python Scripting"
-msgstr ""
+msgstr "Skriptovanie v Pythone"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:14
 msgid "Scripting"
@@ -38,7 +39,7 @@ msgstr "Plugin"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:19
 msgid "How to make a Krita Python plugin"
-msgstr ""
+msgstr "Ako vytvoriť Python zásuvný modul pre Krita"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:21
 msgid ""
@@ -47,6 +48,10 @@ msgid ""
 "instance. Wrapping your script in a plugin can give you much more "
 "flexibility and power than running scripts from the Scripter editor."
 msgstr ""
+"Možno máte niekoľko pekných skriptov napísaných v spúšťači Python Scripter, "
+"ale možno chcete robiť viac a napríklad ich spúšťať automaticky. Zabalenie "
+"skriptu do zásuvného modulu vám môže poskytnúť oveľa väčšiu flexibilitu a "
+"silu ako spúšťanie skriptov z editora Scripter."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:23
 msgid ""
@@ -54,6 +59,10 @@ msgid ""
 "to getting Krita to recognize a python plugin. So this page will give an "
 "overview how to create the various types of python script unique to Krita."
 msgstr ""
+"Dobre, aj keď python naozaj dobre ovládate, existujú niektoré drobné "
+"detaily, aby Krita rozpoznala python zásuvný modul. Táto stránka teda "
+"poskytne prehľad o tom, ako vytvoriť rôzne typy python skriptov jedinečných "
+"pre Krita."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:25
 msgid ""
@@ -61,10 +70,13 @@ msgid ""
 "python, and in such a way to encourage experimentation instead of plainly "
 "copy and pasting code, so read the text carefully."
 msgstr ""
+"Tieto mini-tutoriály sú napísané pre ľudí so základnými znalosťami pythonu a "
+"spôsobom, ktorý povzbudzuje k experimentovaniu namiesto prostého kopírovania "
+"a vkladania kódu, preto text čítajte pozorne."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:28
 msgid "Getting Krita to recognize your plugin"
-msgstr ""
+msgstr "Ako prinútiť Krita rozpoznať váš zásuvný modul"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:30
 msgid ""
@@ -81,22 +93,38 @@ msgid ""
 "there is no :file:`pykrita` subfolder in the Krita resources directory use "
 "your file manager to create one."
 msgstr ""
+"Skript v Krita má dve súčasti -- adresár skriptu (obsahujúci Python súbory "
+"vášho skriptu) a súbor \".desktop\", ktorý Krita používa na načítanie a "
+"registráciu vášho skriptu. Aby Krita načítala váš skript, oba musia byť "
+"umiestnené v podadresári :file:`pykrita` priečinka zdrojov Krita (pozri :ref:"
+"`resource_management` pre cesty podľa operačného systému). Na nájdenie "
+"priečinka zdrojov spustite Krita a kliknite na položku ponuky :menuselection:"
+"`Settings --> Manage Resources...`. Otvorí sa dialógové okno. Kliknite na "
+"tlačidlo :guilabel:`Open Resources Folder`. Tým by sa mal otvoriť správca "
+"súborov vo vašom systéme na priečinku zdrojov Krita. Pozrite si dokumenty "
+"`API <https://api.kde.org/legacy/krita/html/index.html>`_ v časti \"Auto "
+"starting scripts\". Ak v adresári zdrojov Krita nie je podpriečinok :file:"
+"`pykrita`, vytvorte ho pomocou správcu súborov."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:32
 msgid ""
 "Scripts are identified by a file that ends in a ``.desktop`` extension that "
 "contain information about the script itself."
 msgstr ""
+"Skripty sú identifikované súborom s príponou ``.desktop``, ktorý obsahuje "
+"informácie o samotnom skripte."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:34
 msgid ""
 "Therefore, for each proper plugin you will need to create a folder, and a "
 "desktop file."
 msgstr ""
+"Pre každý riadny zásuvný modul teda budete musieť vytvoriť priečinok a súbor "
+"desktop."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:36
 msgid "The desktop file should look as follows::"
-msgstr ""
+msgstr "Súbor desktop by mal vyzerať nasledovne::"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:38
 msgid ""
@@ -109,6 +137,14 @@ msgid ""
 "Name=My Own Plugin\n"
 "Comment=Our very own plugin."
 msgstr ""
+"[Desktop Entry]\n"
+"Type=Service\n"
+"ServiceTypes=Krita/PythonPlugin\n"
+"X-KDE-Library=myplugin\n"
+"X-Python-2-Compatible=false\n"
+"X-Krita-Manual=myPluginManual.html\n"
+"Name=My Own Plugin\n"
+"Comment=Our very own plugin."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:47
 msgid "Type"
@@ -116,27 +152,29 @@ msgstr "Typ"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:48
 msgid "This should always be service."
-msgstr ""
+msgstr "Toto by malo byť vždy service."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:49
 msgid "ServiceTypes"
-msgstr ""
+msgstr "ServiceTypes"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:50
 msgid "This should always be ``Krita/PythonPlugin`` for python plugins."
 msgstr ""
+"Pre python zásuvné moduly by toto malo byť vždy ``Krita/PythonPlugin``."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:51
 msgid "X-KDE-Library"
-msgstr ""
+msgstr "X-KDE-Library"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:52
 msgid "This should be the name of the plugin folder you just created."
 msgstr ""
+"Toto by mal byť názov priečinka zásuvného modulu, ktorý ste práve vytvorili."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:53
 msgid "X-Python-2-Compatible"
-msgstr ""
+msgstr "X-Python-2-Compatible"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:54
 msgid ""
@@ -144,10 +182,13 @@ msgid ""
 "of 3 (``-DENABLE_PYTHON_2=ON`` in the cmake configuration), then this plugin "
 "will not show up in the list."
 msgstr ""
+"Či je kompatibilný s pythonom 2. Ak bola Krita zostavená s pythonom 2 "
+"namiesto 3 (``-DENABLE_PYTHON_2=ON`` v konfigurácii cmake), tento zásuvný "
+"modul sa v zozname nezobrazí."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:55
 msgid "X-Krita-Manual"
-msgstr ""
+msgstr "X-Krita-Manual"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:56
 msgid ""
@@ -156,6 +197,10 @@ msgid ""
 "<https://doc.qt.io/qt-5/richtext-html-subset.html>`_, if not, it'll be shown "
 "as plain text."
 msgstr ""
+"Voliteľná hodnota, ktorá bude odkazovať na položku manuálu. Zobrazuje sa v "
+"správcovi Python zásuvných modulov. Ak je to `súbor HTML, zobrazí sa ako "
+"formátovaný text <https://doc.qt.io/qt-5/richtext-html-subset.html>`_, inak "
+"sa zobrazí ako prostý text."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:57
 msgid "Name"
@@ -163,7 +208,7 @@ msgstr "Názov"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:58
 msgid "The name that will show up in the Python Plugin Manager."
-msgstr ""
+msgstr "Názov, ktorý sa zobrazí v správcovi Python zásuvných modulov."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:60
 msgid "Comment"
@@ -171,18 +216,20 @@ msgstr "Komentár"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:60
 msgid "The description that will show up in the Python Plugin Manager."
-msgstr ""
+msgstr "Popis, ktorý sa zobrazí v správcovi Python zásuvných modulov."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:62
 msgid ""
 "Krita python plugins need to be python modules, so make sure there's an "
 "``__init__.py`` script, containing something like..."
 msgstr ""
+"Python zásuvné moduly pre Krita musia byť python moduly, preto sa uistite, "
+"že existuje skript ``__init__.py`` obsahujúci niečo ako..."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:64
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:86
 msgid "from .myplugin import *"
-msgstr ""
+msgstr "from .myplugin import *"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:69
 msgid ""
@@ -191,6 +238,10 @@ msgid ""
 "but it will be grayed out, because there's no myplugin.py. If you hover over "
 "disabled plugins, you can see the error with them."
 msgstr ""
+"Kde .myplugin je názov hlavného súboru vášho zásuvného modulu. Ak "
+"reštartujete Krita, mal by sa teraz zobraziť v správcovi Python zásuvných "
+"modulov v nastaveniach, ale bude sivý, pretože neexistuje myplugin.py. Ak "
+"umiestnite kurzor nad zakázané zásuvné moduly, zobrazí sa chyba s nimi."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:71
 msgid ""
@@ -198,6 +249,9 @@ msgid ""
 "the :guilabel:`Configure Krita` dialog and go to the Python Plugin Manager "
 "page and enable your plugin."
 msgstr ""
+"Váš zásuvný modul musíte explicitne povoliť. Prejdite do ponuky Settings, "
+"otvorte dialóg :guilabel:`Configure Krita` a prejdite na stránku správcu "
+"Python zásuvných modulov a povoľte váš zásuvný modul."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:74
 msgid "Summary"
@@ -205,39 +259,39 @@ msgstr "Súhrn"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:76
 msgid "In summary, if you want to create a script called ``myplugin``:"
-msgstr ""
+msgstr "Stručne povedané, ak chcete vytvoriť skript s názvom ``myplugin``:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:79
 msgid "in your Krita :file:`resources/pykrita` directory create"
-msgstr ""
+msgstr "v adresári :file:`resources/pykrita` vašej Krita vytvorte"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:79
 msgid "a folder called :file:`myplugin`"
-msgstr ""
+msgstr "priečinok s názvom :file:`myplugin`"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:80
 msgid "a file called :file:`myplugin.desktop`"
-msgstr ""
+msgstr "súbor s názvom :file:`myplugin.desktop`"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:82
 msgid "in the :file:`myplugin` folder create"
-msgstr ""
+msgstr "v priečinku :file:`myplugin` vytvorte"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:82
 msgid "a file called :file:`__init__.py`"
-msgstr ""
+msgstr "súbor s názvom :file:`__init__.py`"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:83
 msgid "a file called :file:`myplugin.py`"
-msgstr ""
+msgstr "súbor s názvom :file:`myplugin.py`"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:84
 msgid "in the :file:`__init__.py` file put this code:"
-msgstr ""
+msgstr "do súboru :file:`__init__.py` vložte tento kód:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:90
 msgid "in the desktop file put this code::"
-msgstr ""
+msgstr "do súboru desktop vložte tento kód::"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:92
 msgid ""
@@ -249,14 +303,21 @@ msgid ""
 "Name=My Own Plugin\n"
 "Comment=Our very own plugin."
 msgstr ""
+"[Desktop Entry]\n"
+"Type=Service\n"
+"ServiceTypes=Krita/PythonPlugin\n"
+"X-KDE-Library=myplugin\n"
+"X-Python-2-Compatible=false\n"
+"Name=My Own Plugin\n"
+"Comment=Our very own plugin."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:100
 msgid "write your script in the :file:`myplugin/myplugin.py` file."
-msgstr ""
+msgstr "napíšte váš skript do súboru :file:`myplugin/myplugin.py`."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:103
 msgid "Creating an extension"
-msgstr ""
+msgstr "Vytvorenie rozšírenia"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:105
 msgid ""
@@ -265,6 +326,10 @@ msgid ""
 "by extending the Extension class, and the most barebones extension looks "
 "like this:"
 msgstr ""
+"`Rozšírenia <https://api.kde.org/legacy/krita/html/classExtension.html>`_ sú "
+"relatívne jednoduché python skripty, ktoré sa spúšťajú pri štarte Krita. "
+"Vytvárajú sa rozšírením triedy Extension a najzákladnejšie rozšírenie vyzerá "
+"takto:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:107
 msgid ""
@@ -286,6 +351,23 @@ msgid ""
 "# And add the extension to Krita's list of extensions:\n"
 "Krita.instance().addExtension(MyExtension(Krita.instance()))"
 msgstr ""
+"from krita import *\n"
+"\n"
+"class MyExtension(Extension):\n"
+"\n"
+"    def __init__(self, parent):\n"
+"        # This is initialising the parent, always important when "
+"subclassing.\n"
+"        super().__init__(parent)\n"
+"\n"
+"    def setup(self):\n"
+"        pass\n"
+"\n"
+"    def createActions(self, window):\n"
+"        pass\n"
+"\n"
+"# And add the extension to Krita's list of extensions:\n"
+"Krita.instance().addExtension(MyExtension(Krita.instance()))"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:126
 msgid ""
@@ -293,6 +375,8 @@ msgid ""
 "actions to Krita, so we can access our script from the :guilabel:`Tools` "
 "menu."
 msgstr ""
+"Tento kód samozrejme nič nerobí. Zvyčajne v createActions pridávame akcie do "
+"Krita, aby sme mohli pristupovať k nášmu skriptu z ponuky :guilabel:`Tools`."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:128
 msgid ""
@@ -303,10 +387,15 @@ msgid ""
 "every Window that is created and pass the right window object that we have "
 "to use."
 msgstr ""
+"Najprv vytvorme `akciu <https://api.kde.org/legacy/krita/html/classAction."
+"html>`_. Môžeme to jednoducho urobiť pomocou `Window.createAction() <https://"
+"api.kde.org/legacy/krita/html/classWindow."
+"html#a72ec58e53844076c1461966c34a9115c>`_. Krita zavolá createActions pre "
+"každé vytvorené okno a odovzdá správny objekt okna, ktorý musíme použiť."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:130
 msgid "So..."
-msgstr ""
+msgstr "Takže..."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:132
 msgid ""
@@ -314,36 +403,46 @@ msgid ""
 "    action = window.createAction(\"myAction\", \"My Script\", \"tools/scripts"
 "\")"
 msgstr ""
+"def createActions(self, window):\n"
+"    action = window.createAction(\"myAction\", \"My Script\", \"tools/scripts"
+"\")"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:138
 msgid "\"myAction\""
-msgstr ""
+msgstr "\"myAction\""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:139
 msgid ""
 "This should be replaced with a unique ID that Krita will use to find the "
 "action."
 msgstr ""
+"Toto by malo byť nahradené jedinečným ID, ktoré Krita použije na nájdenie "
+"akcie."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:141
 msgid "\"My Script\""
-msgstr ""
+msgstr "\"My Script\""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:141
 msgid "This is what will be visible in the :ref:`tools_menu`."
-msgstr ""
+msgstr "Toto bude viditeľné v :ref:`tools_menu`."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:143
 msgid ""
 "If you now restart Krita, you will have an action called \"My Script\". It "
 "still doesn't do anything, because we haven't connected it to a script."
 msgstr ""
+"Ak teraz reštartujete Krita, budete mať akciu nazvanú \"My Script\". Stále "
+"nič nerobí, pretože sme ju nepripojili k skriptu."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:145
 msgid ""
 "So, let's make a simple export document script. Add the following to the "
 "extension class, make sure it is above where you add the extension to Krita:"
 msgstr ""
+"Vytvorme teda jednoduchý skript na export dokumentu. Pridajte nasledujúce do "
+"triedy rozšírenia, uistite sa, že je to nad miestom, kde pridávate "
+"rozšírenie do Krita:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:147
 msgid ""
@@ -360,20 +459,34 @@ msgid ""
 "we make an empty one Krita will use the export defaults.\n"
 "        doc.exportImage(fileName, InfoObject())"
 msgstr ""
+"def exportDocument(self):\n"
+"    # Get the document:\n"
+"    doc =  Krita.instance().activeDocument()\n"
+"    # Saving a non-existent document causes crashes, so lets check for that "
+"first.\n"
+"    if doc is not None:\n"
+"        # This calls up the save dialog. The save dialog returns a tuple.\n"
+"        fileName = QFileDialog.getSaveFileName()[0]\n"
+"        # And export the document to the fileName location.\n"
+"        # InfoObject is a dictionary with specific export options, but when "
+"we make an empty one Krita will use the export defaults.\n"
+"        doc.exportImage(fileName, InfoObject())"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:161
 msgid "And add the import for QFileDialog above with the imports:"
-msgstr ""
+msgstr "A pridajte import pre QFileDialog vyššie k importom:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:163
 msgid ""
 "from krita import *\n"
 "from PyQt5.QtWidgets import QFileDialog"
 msgstr ""
+"from krita import *\n"
+"from PyQt5.QtWidgets import QFileDialog"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:168
 msgid "Then, to connect the action to the new export document:"
-msgstr ""
+msgstr "Potom, na prepojenie akcie s novým exportom dokumentu:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:170
 msgid ""
@@ -381,6 +494,9 @@ msgid ""
 "    action = window.createAction(\"myAction\", \"My Script\")\n"
 "    action.triggered.connect(self.exportDocument)"
 msgstr ""
+"def createActions(self, window):\n"
+"    action = window.createAction(\"myAction\", \"My Script\")\n"
+"    action.triggered.connect(self.exportDocument)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:177
 msgid ""
@@ -388,20 +504,25 @@ msgid ""
 "signalsandslots.html>`_, which Qt applications like Krita use a lot. We'll "
 "go over how to make our own signals and slots a bit later."
 msgstr ""
+"Toto je príklad `prepojenia signálu/slotu <https://doc.qt.io/qt-5/"
+"signalsandslots.html>`_, ktoré aplikácie Qt ako Krita hojne využívajú. "
+"Neskôr si ukážeme, ako vytvoriť vlastné signály a sloty."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:179
 msgid "Restart Krita and your new action ought to now export the document."
-msgstr ""
+msgstr "Reštartujte Krita a vaša nová akcia by teraz mala exportovať dokument."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:182
 msgid "Creating configurable keyboard shortcuts"
-msgstr ""
+msgstr "Vytváranie konfigurovateľných klávesových skratiek"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:184
 msgid ""
 "Now, your new action doesn't show up in :menuselection:`Settings --> "
 "Configure Krita --> Keyboard Shortcuts`."
 msgstr ""
+"Vaša nová akcia sa teraz nezobrazuje v :menuselection:`Settings --> "
+"Configure Krita --> Keyboard Shortcuts`."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:186
 msgid ""
@@ -409,6 +530,9 @@ msgid ""
 "`shortcut_settings` when they are present in an ``.action`` file. The action "
 "file to get our action to be added to the shortcuts should look like this:"
 msgstr ""
+"Krita z rôznych dôvodov pridáva akcie do :ref:`shortcut_settings` len vtedy, "
+"keď sú prítomné v súbore ``.action``. Súbor akcií, aby bola naša akcia "
+"pridaná ku skratkám, by mal vyzerať takto:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:188
 msgid ""
@@ -432,16 +556,37 @@ msgid ""
 "    </Actions>\n"
 "</ActionCollection>"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+"<ActionCollection version=\"2\" name=\"Scripts\">\n"
+"    <Actions category=\"Scripts\">\n"
+"        <text>My Scripts</text>\n"
+"\n"
+"        <Action name=\"myAction\">\n"
+"        <icon></icon>\n"
+"        <text>My Script</text>\n"
+"        <whatsThis></whatsThis>\n"
+"        <toolTip></toolTip>\n"
+"        <iconText></iconText>\n"
+"        <activationFlags>10000</activationFlags>\n"
+"        <activationConditions>0</activationConditions>\n"
+"        <shortcut>ctrl+alt+shift+p</shortcut>\n"
+"        <isCheckable>false</isCheckable>\n"
+"        <statusTip></statusTip>\n"
+"        </Action>\n"
+"    </Actions>\n"
+"</ActionCollection>"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:211
 msgid "<text>My Scripts</text>"
-msgstr ""
+msgstr "<text>My Scripts</text>"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:212
 msgid ""
 "This will create a sub-category under scripts called \"My Scripts\" to add "
 "your shortcuts to."
 msgstr ""
+"Tým sa vytvorí podkategória pod skriptami nazvaná \"My Scripts\", do ktorej "
+"môžete pridávať skratky."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:213
 msgid "name"
@@ -452,6 +597,8 @@ msgid ""
 "This should be the unique ID you made for your action when creating it in "
 "the setup of the extension."
 msgstr ""
+"Toto by malo byť jedinečné ID, ktoré ste vytvorili pre svoju akciu pri jej "
+"tvorbe v nastavení rozšírenia."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:215
 msgid "icon"
@@ -462,6 +609,8 @@ msgid ""
 "The name of a possible icon. These will only show up on KDE plasma, because "
 "Gnome and Windows users complained they look ugly."
 msgstr ""
+"Názov možnej ikony. Tieto sa zobrazia len v KDE Plasma, pretože používatelia "
+"Gnome a Windows sa sťažovali, že vyzerajú škaredé."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:217
 msgid "text"
@@ -469,17 +618,19 @@ msgstr "text"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:218
 msgid "The text that it will show in the shortcut editor."
-msgstr ""
+msgstr "Text, ktorý sa zobrazí v editore skratiek."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:219
 msgid "whatsThis"
-msgstr ""
+msgstr "whatsThis"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:220
 msgid ""
 "The text it will show when a Qt application specifically calls for 'what is "
 "this', which is a help action."
 msgstr ""
+"Text, ktorý sa zobrazí, keď aplikácia Qt konkrétne zavolá 'what is this', čo "
+"je pomocná akcia."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:221
 msgid "toolTip"
@@ -487,11 +638,11 @@ msgstr "popisok"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:222
 msgid "The tool tip, this will show up on hover-over."
-msgstr ""
+msgstr "Popis nástroja, ktorý sa zobrazí pri najazdení kurzorom."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:223
 msgid "iconText"
-msgstr ""
+msgstr "iconText"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:224
 msgid ""
@@ -499,18 +650,21 @@ msgid ""
 "Image to New Size\" could be shortened to \"Resize Image\" to save space, so "
 "we'd put that in here."
 msgstr ""
+"Text, ktorý sa zobrazí pri zobrazení na paneli nástrojov. Napríklad \"Resize "
+"Image to New Size\" by sa mohlo skrátiť na \"Resize Image\", aby sa ušetrilo "
+"miesto, a tak by sme to vložili sem."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:225
 msgid "activationFlags"
-msgstr ""
+msgstr "activationFlags"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:226
 msgid "This determines when an action is disabled or not."
-msgstr ""
+msgstr "Toto určuje, kedy je akcia zakázaná alebo nie."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:227
 msgid "activationConditions"
-msgstr ""
+msgstr "activationConditions"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:228
 msgid ""
@@ -518,6 +672,9 @@ msgid ""
 "editable). See `the code <https://invent.kde.org/graphics/krita/-/blob/"
 "master/libs/ui/kis_action.h#L41>`_ for examples."
 msgstr ""
+"Toto určuje podmienky aktivácie (napr. aktivovať len keď je výber "
+"upraviteľný). Príklady nájdete v `kóde <https://invent.kde.org/graphics/"
+"krita/-/blob/master/libs/ui/kis_action.h#L41>`_."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:229
 msgid "shortcut"
@@ -529,19 +686,19 @@ msgstr "Štandardný odkaz"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:231
 msgid "isCheckable"
-msgstr ""
+msgstr "isCheckable"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:232
 msgid "Whether it is a checkbox or not."
-msgstr ""
+msgstr "Či je to zaškrtávacie políčko alebo nie."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:234
 msgid "statusTip"
-msgstr ""
+msgstr "statusTip"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:234
 msgid "The status tip that is displayed on a status bar."
-msgstr ""
+msgstr "Tip stavu, ktorý sa zobrazuje na stavovom riadku."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:236
 msgid ""
@@ -552,10 +709,16 @@ msgid ""
 "actions`` is where the action files go) Restart Krita. The shortcut should "
 "now show up in the shortcut action list."
 msgstr ""
+"Uložte tento súbor ako ``myplugin.action``, kde myplugin je názov vášho "
+"zásuvného modulu. Súbor akcií by nemal byť uložený v priečinku zdrojov "
+"pykrita, ale v priečinku zdrojov s názvom \"actions\". (Takže ``share/"
+"pykrita`` je miesto pre python zásuvné moduly a súbory desktop, a ``share/"
+"actions`` je miesto pre súbory akcií.) Reštartujte Krita. Skratka by sa "
+"teraz mala zobraziť v zozname akcií skratiek."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:239
 msgid "Creating a docker"
-msgstr ""
+msgstr "Vytvorenie dockeru"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:241
 msgid ""
@@ -564,6 +727,10 @@ msgid ""
 "some ways a little easier, but they also require more use of widgets. This "
 "is the barebones docker code:"
 msgstr ""
+"Vytvorenie vlastného `dockeru <https://api.kde.org/legacy/krita/html/"
+"classDockWidget.html>`_ je veľmi podobné vytváraniu rozšírenia. Dockery sú v "
+"niektorých ohľadoch trochu jednoduchšie, ale tiež vyžadujú väčšie použitie "
+"widgetov. Toto je základný kód dockeru:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:243
 msgid ""
@@ -582,6 +749,20 @@ msgid ""
 "Krita.instance().addDockWidgetFactory(DockWidgetFactory(\"myDocker\", "
 "DockWidgetFactoryBase.DockRight, MyDocker))"
 msgstr ""
+"from PyQt5.QtWidgets import *\n"
+"from krita import *\n"
+"\n"
+"class MyDocker(DockWidget):\n"
+"\n"
+"    def __init__(self):\n"
+"        super().__init__()\n"
+"        self.setWindowTitle(\"My Docker\")\n"
+"\n"
+"    def canvasChanged(self, canvas):\n"
+"        pass\n"
+"\n"
+"Krita.instance().addDockWidgetFactory(DockWidgetFactory(\"myDocker\", "
+"DockWidgetFactoryBase.DockRight, MyDocker))"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:259
 msgid ""
@@ -589,38 +770,45 @@ msgid ""
 "canvasChanged always needs to be present, but you don't have to do anything "
 "with it, so hence just 'pass'."
 msgstr ""
+"Názov okna určuje, ako sa bude zobrazovať v zozname dockerov v Krita. "
+"canvasChanged musí byť vždy prítomný, ale nemusíte s ním nič robiť, preto "
+"len 'pass'."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:261
 msgid "For the addDockWidgetFactory..."
-msgstr ""
+msgstr "Pre addDockWidgetFactory..."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:263
 msgid "\"myDocker\""
-msgstr ""
+msgstr "\"myDocker\""
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:264
 msgid ""
 "Replace this with a unique ID for your docker that Krita uses to keep track "
 "of it."
 msgstr ""
+"Nahraďte toto jedinečným ID pre váš docker, ktoré Krita používa na jeho "
+"sledovanie."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:265
 msgid "DockWidgetFactoryBase.DockRight"
-msgstr ""
+msgstr "DockWidgetFactoryBase.DockRight"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:266
 msgid ""
 "The location. These can be ``DockTornOff``, ``DockTop``, ``DockBottom``, "
 "``DockRight``, ``DockLeft``, or ``DockMinimized``"
 msgstr ""
+"Umiestnenie. Môže to byť ``DockTornOff``, ``DockTop``, ``DockBottom``, "
+"``DockRight``, ``DockLeft`` alebo ``DockMinimized``"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:268
 msgid "MyDocker"
-msgstr ""
+msgstr "MyDocker"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:268
 msgid "Replace this with the class name of the docker you want to add."
-msgstr ""
+msgstr "Nahraďte toto názvom triedy dockeru, ktorý chcete pridať."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:270
 msgid ""
@@ -628,6 +816,9 @@ msgid ""
 "section to this docker code, how do we allow the user to activate it? First, "
 "we'll need to do some Qt GUI coding: Let's add a button!"
 msgstr ""
+"Takže, ak do tohto kódu dockeru pridáme funkciu exportu dokumentu, ktorú sme "
+"vytvorili v sekcii rozšírení, ako umožníme používateľovi ju aktivovať? "
+"Najprv budeme musieť trochu naprogramovať Qt GUI: Pridajme tlačidlo!"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:272
 msgid ""
@@ -638,26 +829,36 @@ msgid ""
 "like a weird copy of the regular `Qt documentation <https://doc.qt.io/qt-5/"
 "qwidget.html>`_ for that class."
 msgstr ""
+"Krita štandardne používa PyQt, ale jeho dokumentácia je dosť slabá, väčšinou "
+"preto, že bežná dokumentácia Qt je naozaj dobrá, a často zistíte, že "
+"dokumentácia PyQt pre triedu, povedzme `QWidget <https://www."
+"riverbankcomputing.com/static/Docs/PyQt5/api/qtwidgets/qwidget.html>`_ je "
+"ako čudná kópia bežnej `dokumentácie Qt <https://doc.qt.io/qt-5/qwidget."
+"html>`_ pre túto triedu."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:274
 msgid ""
 "Anyway, what we need to do first is that we need to create a ``QWidget``, "
 "it's not very complicated, under ``setWindowTitle``, add:"
 msgstr ""
+"V každom prípade, prvé čo musíme urobiť, je vytvoriť ``QWidget``, nie je to "
+"veľmi komplikované, pod ``setWindowTitle`` pridajte:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:276
 msgid ""
 "mainWidget = QWidget(self)\n"
 "self.setWidget(mainWidget)"
 msgstr ""
+"mainWidget = QWidget(self)\n"
+"self.setWidget(mainWidget)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:281
 msgid "Then, we create a button:"
-msgstr ""
+msgstr "Potom vytvoríme tlačidlo:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:283
 msgid "buttonExportDocument = QPushButton(\"Export Document\", mainWidget)"
-msgstr ""
+msgstr "buttonExportDocument = QPushButton(\"Export Document\", mainWidget)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:287
 msgid ""
@@ -668,28 +869,39 @@ msgid ""
 "qabstractbutton.html#signals>`_, which means that we can use those too. In "
 "our case, we want clicked."
 msgstr ""
+"Teraz, na prepojenie tlačidla s našou funkciou, budeme musieť pozrieť na "
+"signály v dokumentácii. `QPushButton <https://doc.qt.io/qt-5/qpushbutton."
+"html>`_ nemá žiadne vlastné jedinečné signály, ale uvádza, že dedí 4 signály "
+"od `QAbstractButton <https://doc.qt.io/qt-5/qabstractbutton.html#signals>`_, "
+"čo znamená, že môžeme použiť aj tie. V našom prípade chceme clicked."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:289
 msgid "buttonExportDocument.clicked.connect(self.exportDocument)"
-msgstr ""
+msgstr "buttonExportDocument.clicked.connect(self.exportDocument)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:293
 msgid ""
 "If we now restart Krita, we'll have a new docker and in that docker there's "
 "a button. Clicking on the button will call up the export function."
 msgstr ""
+"Ak teraz reštartujeme Krita, budeme mať nový docker a v ňom tlačidlo. "
+"Kliknutím na tlačidlo sa zavolá funkcia exportu."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:295
 msgid ""
 "However, the button looks aligned a bit oddly. That's because our "
 "``mainWidget`` has no layout. Let's quickly do that:"
 msgstr ""
+"Tlačidlo však vyzerá trochu zvláštne zarovnané. Je to preto, že náš "
+"``mainWidget`` nemá rozloženie. Rýchlo to napravme:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:297
 msgid ""
 "mainWidget.setLayout(QVBoxLayout())\n"
 "mainWidget.layout().addWidget(buttonExportDocument)"
 msgstr ""
+"mainWidget.setLayout(QVBoxLayout())\n"
+"mainWidget.layout().addWidget(buttonExportDocument)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:302
 msgid ""
@@ -697,14 +909,18 @@ msgid ""
 "`QHBoxLayout and the QVBoxLayout <https://doc.qt.io/qt-5/qboxlayout.html>`_ "
 "are the easiest to use, they just arrange widgets horizontally or vertically."
 msgstr ""
+"Qt má niekoľko `rozložení <https://doc.qt.io/qt-5/qlayout.html>`_, ale "
+"`QHBoxLayout a QVBoxLayout <https://doc.qt.io/qt-5/qboxlayout.html>`_ sú "
+"najjednoduchšie na použitie, jednoducho usporadúvajú widgety horizontálne "
+"alebo vertikálne."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:304
 msgid "Restart Krita and the button should now be laid out nicely."
-msgstr ""
+msgstr "Reštartujte Krita a tlačidlo by teraz malo byť pekne rozložené."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:307
 msgid "PyQt Signals and Slots"
-msgstr ""
+msgstr "Signály a sloty PyQt"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:309
 msgid ""
@@ -714,6 +930,11 @@ msgid ""
 "Docs/PyQt5/signals_slots.html>`_, and the way how signals and slots are "
 "created is very different from C++ Qt, we're explaining it here:"
 msgstr ""
+"Signály a sloty PyQt sme už používali, ale sú chvíle, kedy si chcete "
+"vytvoriť vlastné signály a sloty. `Keďže dokumentácia PyQt je dosť ťažko "
+"zrozumiteľná <https://www.riverbankcomputing.com/static/Docs/PyQt5/"
+"signals_slots.html>`_, a spôsob, akým sa signály a sloty vytvárajú, sa veľmi "
+"líši od C++ Qt, tu to vysvetľujeme:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:312
 msgid ""
@@ -722,24 +943,30 @@ msgid ""
 "``QPushButton.clicked``. However, ``QCheckBox`` has a signal for toggled, "
 "which sends a boolean. How do we get our function to accept that boolean?"
 msgstr ""
+"Všetky python funkcie, ktoré vytvoríte v PyQt, možno chápať ako sloty, čo "
+"znamená, že ich možno pripojiť k signálom ako ``Action.triggered`` alebo "
+"``QPushButton.clicked``. ``QCheckBox`` má však signál pre toggled, ktorý "
+"odosiela boolean. Ako prinútiť našu funkciu prijať tento boolean?"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:314
 msgid "First, make sure you have the right import for making custom slots:"
-msgstr ""
+msgstr "Najprv sa uistite, že máte správny import pre tvorbu vlastných slotov:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:316
 msgid "``from PyQt5.QtCore import pyqtSlot``"
-msgstr ""
+msgstr "``from PyQt5.QtCore import pyqtSlot``"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:318
 msgid ""
 "(If there's ``from PyQt5.QtCore import *`` already in the list of imports, "
 "then you won't have to do this, of course.)"
 msgstr ""
+"(Ak je ``from PyQt5.QtCore import *`` už v zozname importov, samozrejme to "
+"nemusíte robiť.)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:320
 msgid "Then, you need to add a PyQt slot definition before your function:"
-msgstr ""
+msgstr "Potom musíte pred svoju funkciu pridať definíciu slotu PyQt:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:322
 msgid ""
@@ -750,16 +977,24 @@ msgid ""
 "        enabledString = \"enabled\"\n"
 "    print(\"The checkbox is\"+enabledString)"
 msgstr ""
+"@pyqtSlot(bool)\n"
+"def myFunction(self, enabled):\n"
+"    enabledString = \"disabled\"\n"
+"    if (enabled == True):\n"
+"        enabledString = \"enabled\"\n"
+"    print(\"The checkbox is\"+enabledString)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:332
 msgid ""
 "Then, when you have created your checkbox, you can do something like "
 "myCheckbox.toggled.connect(self.myFunction)."
 msgstr ""
+"Potom, keď ste vytvorili zaškrtávacie políčko, môžete urobiť niečo ako "
+"myCheckbox.toggled.connect(self.myFunction)."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:334
 msgid "Similarly, to make your own PyQt signals, you do the following:"
-msgstr ""
+msgstr "Podobne, na vytvorenie vlastných signálov PyQt, urobíte nasledovné:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:336
 msgid ""
@@ -770,30 +1005,40 @@ msgid ""
 "    # And this is how you trigger the signal to be emitted.\n"
 "    self.signal_name.emit(True)"
 msgstr ""
+"# signal name is added to the member variables of the class\n"
+"signal_name = pyqtSignal(bool, name='signalName')\n"
+"\n"
+"def emitMySignal(self):\n"
+"    # And this is how you trigger the signal to be emitted.\n"
+"    self.signal_name.emit(True)"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:346
 msgid "And use the right import:"
-msgstr ""
+msgstr "A použite správny import:"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:348
 msgid "``from PyQt5.QtCore import pyqtSignal``"
-msgstr ""
+msgstr "``from PyQt5.QtCore import pyqtSignal``"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:350
 msgid ""
 "To emit or create slots for objects that aren't standard python objects, you "
 "only have to put their names between quotation marks."
 msgstr ""
+"Na emitovanie alebo vytváranie slotov pre objekty, ktoré nie sú štandardnými "
+"python objektmi, stačí vložiť ich názvy do úvodzoviek."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:353
 msgid "A note on unit tests"
-msgstr ""
+msgstr "Poznámka k jednotkovým testom"
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:355
 msgid ""
 "If you want to write unit tests for your plugin, have a look at the `mock "
 "krita module <https://github.com/rbreu/krita-python-mock>`_."
 msgstr ""
+"Ak chcete písať jednotkové testy pre váš zásuvný modul, pozrite sa na `mock "
+"modul krita <https://github.com/rbreu/krita-python-mock>`_."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:359
 msgid "Conclusion"
@@ -806,12 +1051,19 @@ msgid ""
 "with documents, but if you have a little bit of experience with python you "
 "should be able to start creating your own plugins."
 msgstr ""
+"Dobre, to pokrýva všetky špecifické detaily Krita pre tvorbu python "
+"zásuvných modulov. Nerieši sa tu, ako analyzovať pixelové dáta ani osvedčené "
+"postupy s dokumentmi, ale ak máte trochu skúseností s pythonom, mali by ste "
+"byť schopní začať vytvárať vlastné zásuvné moduly."
 
 #: ../../user_manual/python_scripting/krita_python_plugin_howto.rst:363
 msgid ""
 "As always, read the code carefully and read the API docs for python, Krita "
 "and Qt carefully to see what is possible, and you'll get pretty far."
 msgstr ""
+"Ako vždy, čítajte kód pozorne a dôkladne si prečítajte dokumenty API pre "
+"python, Krita a Qt, aby ste videli, čo je možné, a dostanete sa pomerne "
+"ďaleko."
 
 #, fuzzy
 #~ msgid "tooltext"

@@ -23,10 +23,11 @@ msgstr "Súborový formát EXR ako exportovaný z Krita."
 #: ../../general_concepts/file_formats/file_exr.rst:-1
 msgid "screenshot of Color profile for imported EXR images selector"
 msgstr ""
+"snímka obrazovky selektora farebného profilu pre importované obrázky EXR"
 
 #: ../../general_concepts/file_formats/file_exr.rst:-1
 msgid ".. image:: /images/default_color_space_for_exr_option.png"
-msgstr ""
+msgstr ".. image:: /images/default_color_space_for_exr_option.png"
 
 #: ../../general_concepts/file_formats/file_exr.rst:10
 msgid "*.exr"
@@ -34,15 +35,15 @@ msgstr "\\*.exr"
 
 #: ../../general_concepts/file_formats/file_exr.rst:10
 msgid "EXR"
-msgstr ""
+msgstr "EXR"
 
 #: ../../general_concepts/file_formats/file_exr.rst:10
 msgid "HDR Fileformat"
-msgstr ""
+msgstr "Formát súborov HDR"
 
 #: ../../general_concepts/file_formats/file_exr.rst:10
 msgid "OpenEXR"
-msgstr ""
+msgstr "OpenEXR"
 
 #: ../../general_concepts/file_formats/file_exr.rst:15
 msgid "\\*.exr"
@@ -54,6 +55,10 @@ msgid ""
 "point bit depths <bit_depth>`, and due to the library made to load and save "
 "these images being fully open source, the main interchange format as well."
 msgstr ""
+"``.exr`` je hlavný formát súborov na ukladanie a načítavanie :ref:`bitových "
+"hĺbok s pohyblivou rádovou čiarkou <bit_depth>` a vďaka tomu, že knižnica na "
+"načítavanie a ukladanie týchto obrázkov je plne open source, je aj hlavným "
+"výmenným formátom."
 
 #: ../../general_concepts/file_formats/file_exr.rst:19
 msgid ""
@@ -64,6 +69,13 @@ msgid ""
 "conditions, such as sunsets very accurately. These EXR files can then be "
 "used inside a renderer to create realistic lighting."
 msgstr ""
+"Bitové hĺbky s pohyblivou rádovou čiarkou využíva priemysel počítačovej "
+"grafiky na zaznamenávanie hodnôt odkazujúcich na scénu, ktoré môžu vzniknúť "
+"pomocou fotoaparátu alebo počítačového renderera. Hodnoty odkazujúce na "
+"scénu znamenajú, že súbor môže obsahovať hodnoty belšie ako biela, čo "
+"zároveň znamená, že takýto súbor dokáže veľmi presne zaznamenávať svetelné "
+"podmienky, ako sú napríklad západy slnka. Tieto súbory EXR možno potom "
+"použiť v rendereri na vytvorenie realistického osvetlenia."
 
 #: ../../general_concepts/file_formats/file_exr.rst:21
 msgid ""
@@ -71,6 +83,9 @@ msgid ""
 "paint with scene referred values) and interchange with applications like "
 "Blender, Mari, Nuke and Natron."
 msgstr ""
+"Krita dokáže načítavať a ukladať EXR na účely prekreslenia (áno, Krita "
+"dokáže maľovať s hodnotami odkazujúcimi na scénu) a výmeny dát s aplikáciami "
+"ako Blender, Mari, Nuke a Natron."
 
 #: ../../general_concepts/file_formats/file_exr.rst:24
 msgid "Color Management"
@@ -84,16 +99,23 @@ msgid ""
 "assign the default color space to the file (usually \"Rec 709 Linear\"). It "
 "may cause the file to change visually."
 msgstr ""
+"Formát súborov EXR nemá žiadne interné možnosti správy farieb, t. j. pri "
+"ukladaní dát do súboru sa do súboru nezapisujú žiadne informácie o farebnom "
+"priestore. Pri ďalšom načítaní toho istého súboru v Krite jej Krita priradí "
+"predvolený farebný priestor (zvyčajne „Rec 709 Linear\"). Môže to spôsobiť "
+"vizuálnu zmenu súboru."
 
 #: ../../general_concepts/file_formats/file_exr.rst:30
 msgid ""
 "In general, there are two ways to handle the color management for the EXR "
 "files: OCIO and profile-based."
 msgstr ""
+"Vo všeobecnosti existujú dva spôsoby správy farieb pre súbory EXR: OCIO a na "
+"základe profilu."
 
 #: ../../general_concepts/file_formats/file_exr.rst:33
 msgid "OCIO-based workflow"
-msgstr ""
+msgstr "Pracovný postup založený na OCIO"
 
 #: ../../general_concepts/file_formats/file_exr.rst:35
 msgid ""
@@ -101,10 +123,14 @@ msgid ""
 "tools you use (Blender, Natron and etc). When using OCIO Krita will **not** "
 "use the assigned profile and will use the OCIO configuration you selected."
 msgstr ""
+"Musíte vybrať konfiguráciu OCIO a zdieľať ju medzi Kritou a ďalšími "
+"nástrojmi, ktoré používate (Blender, Natron atď.). Pri používaní OCIO Krita "
+"**nebude** používať priradený profil a bude používať vami vybranú "
+"konfiguráciu OCIO."
 
 #: ../../general_concepts/file_formats/file_exr.rst:38
 msgid "Profile-based workflow"
-msgstr ""
+msgstr "Pracovný postup založený na profile"
 
 #: ../../general_concepts/file_formats/file_exr.rst:40
 msgid ""
@@ -113,6 +139,10 @@ msgid ""
 "Linear TRC\", just use :menuselection:`Tools --> Scripts --> Assign Profile "
 "to Image` plugin to assign a different profile."
 msgstr ""
+"Alternatívne môžete importovanému obrázku priradiť potrebný profil ICC. Ak "
+"importujete obrázok a viete, že jeho farebný priestor nie je „Rec 709 Linear "
+"TRC\", jednoducho použite zásuvný modul :menuselection:`Tools --> Scripts --"
+"> Assign Profile to Image` na priradenie iného profilu."
 
 #: ../../general_concepts/file_formats/file_exr.rst:44
 msgid ""
@@ -120,6 +150,10 @@ msgid ""
 "Python Plugin Manager: :menuselection:`Settings --> Configure Krita... --> "
 "Python Plugin Manager`. After activating the plugin, restart Krita."
 msgstr ""
+"Ak nevidíte zásuvný modul Assign Profile, uistite sa, že je aktivovaný v "
+"správcovi zásuvných modulov Python: :menuselection:`Settings --> Configure "
+"Krita... --> Python Plugin Manager`. Po aktivácii zásuvného modulu "
+"reštartujte Kritu."
 
 #: ../../general_concepts/file_formats/file_exr.rst:46
 msgid ""
@@ -130,9 +164,17 @@ msgid ""
 "selector. Next time you load any EXR image, this color space will be "
 "assigned automatically."
 msgstr ""
+"Ak je vaša práca založená na nejakom nepredvolenom farebnom priestore (napr. "
+"ACES), môžete tento farebný priestor nastaviť ako predvolený pre načítavanie "
+"obrázkov EXR. Prejdite do :menuselection:`Settings --> Configure Krita... --"
+"> Color Management` a v selektore `Color profile for imported EXR images` "
+"vyberte požadovaný farebný priestor. Pri ďalšom načítaní akéhokoľvek obrázka "
+"EXR sa tento farebný priestor priradí automaticky."
 
 #: ../../general_concepts/file_formats/file_exr.rst:52
 msgid ""
 "If you want to read more about color managed workflows, check :ref:`this "
 "chapter <color_managed_workflow>`."
 msgstr ""
+"Ak si chcete prečítať viac o pracovných postupoch so správou farieb, pozrite "
+"si :ref:`túto kapitolu <color_managed_workflow>`."

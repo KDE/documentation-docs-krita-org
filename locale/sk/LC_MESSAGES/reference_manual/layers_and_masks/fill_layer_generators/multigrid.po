@@ -18,15 +18,15 @@ msgstr ""
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:-1
 msgid "How to use the Multigrid generation in Krita."
-msgstr ""
+msgstr "Ako používať generovanie Multigrid v Krite."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:0
 msgid ".. image:: /images/layers/multigrid-dimension-example.png"
-msgstr ""
+msgstr ".. image:: /images/layers/multigrid-dimension-example.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:0
 msgid ".. image:: /images/layers/multigrid-offset-examples.png"
-msgstr ""
+msgstr ".. image:: /images/layers/multigrid-offset-examples.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:10
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:14
@@ -35,15 +35,15 @@ msgstr "Viacnásobná mriežka"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:10
 msgid "Penrose"
-msgstr ""
+msgstr "Penrose"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:10
 msgid "Rhombs"
-msgstr ""
+msgstr "Kosoštvorce"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:10
 msgid "Quasicrystal"
-msgstr ""
+msgstr "Kvazikryštál"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:16
 msgid ""
@@ -53,29 +53,42 @@ msgid ""
 "cool patterns. Besides looking cool, there's a few interesting and "
 "potentially useful features the resulting patterns have:"
 msgstr ""
+"Vyplňovacia vrstva založená na Bruijnovej metóde multigrid z roku 1981 na "
+"generovanie `Penroseových dlaždíc <https://en.wikipedia.org/wiki/"
+"Penrose_tiling>`_. Tento generátor projektuje hyperdimenzionálnu mriežku na "
+"2D rovinu, čo dáva niektoré celkom zaujímavé vzory. Okrem toho, že vyzerajú "
+"skvele, výsledné vzory majú niekoľko zaujímavých a potenciálne užitočných "
+"vlastností:"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:18
 msgid ""
 "It always produces rhombs, that is diamond or rectangle shapes. This is "
 "particularly useful for 3d artists."
 msgstr ""
+"Vždy produkuje kosoštvorce, teda tvar diamantu alebo obdĺžnika. To je "
+"obzvlášť užitočné pre 3D umelcov."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:19
 msgid ""
 "For all dimensions but 3, 4 and 6 the results are aperiodic, this means that "
 "it will never repeat itself in the width or height of the image."
 msgstr ""
+"Pre všetky rozmery okrem 3, 4 a 6 sú výsledky aperiodické, čo znamená, že sa "
+"nikdy nezopakujú v šírke alebo výške obrázka."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:20
 msgid ""
 "The results do repeat symmetrically around the center. The amount of "
 "symmetric repetitions is the same as the amount of dimensions projected."
 msgstr ""
+"Výsledky sa symetricky opakujú okolo stredu. Počet symetrických opakovaní je "
+"rovnaký ako počet projektovaných rozmerov."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:22
 msgid ""
 "The resulting patterns are also known to show up in nature as quasicrystals."
 msgstr ""
+"Je tiež známe, že výsledné vzory sa vyskytujú v prírode ako kvazikryštály."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:25
 msgid "Shapes"
@@ -86,12 +99,15 @@ msgid ""
 "The meat of the algorithm. The default values for this produce the Star "
 "Penrose tiling."
 msgstr ""
+"Jadro algoritmu. Predvolené hodnoty pre toto produkujú dlaždice Star Penrose."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:31
 msgid ""
 "The amount of dimensions the hyperlattice has. 3 is a lattice of cubes, 4 is "
 "a lattice of tesseracts, 5 is a lattice of penteracts, and so forth."
 msgstr ""
+"Počet rozmerov, ktoré má hypermriežka. 3 je mriežka kociek, 4 je mriežka "
+"tesseraktov, 5 je mriežka penteraktov a tak ďalej."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:35
 msgid "Dimensions"
@@ -103,6 +119,9 @@ msgid ""
 "and 6d are colored with the intersect color factor while the rest uses ratio "
 "exclusively. In 3d, 4d and 6d, all the rhombs have the same ratio."
 msgstr ""
+"Multigrid s rôznymi rozmermi, začínajúc od 3 a končiac na 12. 3D, 4D a 6D sú "
+"sfarbené faktorom farby prierezu, zatiaľ čo ostatné používajú výhradne "
+"pomer. V 3D, 4D a 6D majú všetky kosoštvorce rovnaký pomer."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:37
 msgid "Divisions"
@@ -114,6 +133,9 @@ msgid ""
 "between the center and the corner of the image. This is then used to "
 "determine how many lines are projected for each dimension."
 msgstr ""
+"Efektívne oddialenie. Toto sú poddivízie dĺžky šírky medzi stredom a rohom "
+"obrázka. Toto sa potom používa na určenie, koľko čiar je projektovaných pre "
+"každý rozmer."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:40
 msgid ""
@@ -121,6 +143,8 @@ msgid ""
 "image. Changing this value changes the pattern within the same dimension "
 "significantly."
 msgstr ""
+"Toto riadi, o koľko je každá sada čiar posunutá od stredu obrázka. Zmena "
+"tejto hodnoty výrazne mení vzor v rámci toho istého rozmeru."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:44
 msgid ""
@@ -128,6 +152,8 @@ msgid ""
 "are: 0.3, 0.1, 0.2 (Star Penrose tiling), 0.3, 0.4 (Sun Penrose Tiling), "
 "0.48."
 msgstr ""
+"Multigrid s 5 rozmermi a 20 divíziami. Posuny zľava doprava sú: 0,3; 0,1; "
+"0,2 (dlaždice Star Penrose); 0,3; 0,4 (dlaždice Sun Penrose); 0,48."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:45
 msgid "Offset"
@@ -146,6 +172,8 @@ msgid ""
 "The width of the outlines of the rhombs in image pixels. Due to the way the "
 "rhombs are drawn, there is still a hairfine line visible at 0 px."
 msgstr ""
+"Šírka obrysov kosoštvorcom v pixeloch obrázka. Vzhľadom na spôsob kreslenia "
+"kosoštvorcom je pri 0 px stále viditeľná vlasová čiara."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:53
 msgid ""
@@ -153,28 +181,33 @@ msgid ""
 "is typically used to show that a specific tiling has certain matching rules, "
 "but it also gives cool looking results."
 msgstr ""
+"Toto voliteľne kreslí čiary medzi rôznymi stranami tvaru. Zvyčajne sa to "
+"používa na ukázanie, že konkrétne dlaždice majú určité pravidlá zhody, ale "
+"tiež to dáva zaujímavé výsledky."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:55
 msgid "Acute Angle"
-msgstr ""
+msgstr "Ostrý uhol"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:56
 msgid "Draws an arc between the sides that connect to an acute angle."
-msgstr ""
+msgstr "Nakreslí oblúk medzi stranami, ktoré sa spájajú v ostrom uhle."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:57
 msgid "Obtuse Angle"
-msgstr ""
+msgstr "Tupý uhol"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:58
 msgid "Draws an arc between the sides that connect to an obtuse angle."
-msgstr ""
+msgstr "Nakreslí oblúk medzi stranami, ktoré sa spájajú v tupom uhle."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:60
 msgid ""
 "Draws two lines crossed between the sides of each rhomb. Particularly "
 "interesting with 0 line width."
 msgstr ""
+"Nakreslí dve skrížené čiary medzi stranami každého kosoštvorcom. Obzvlášť "
+"zaujímavé pri šírke čiary 0."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:61
 msgid "Connector Lines"
@@ -190,7 +223,7 @@ msgstr "Farby"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:68
 msgid ".. image:: /images/layers/multigrid-color-examples.png"
-msgstr ""
+msgstr ".. image:: /images/layers/multigrid-color-examples.png"
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:68
 msgid ""
@@ -199,6 +232,10 @@ msgid ""
 "index to color the image results in some of the more impressive results that "
 "can be gotten from this fill layer."
 msgstr ""
+"Obrázok zobrazujúci dlaždice Star Penrose s 29 divíziami a spojovacími "
+"čiarami v ostrých uhloch. Komplexný prechod a kombinácia pomeru a indexu na "
+"sfarbenie obrázka vedie k niektorým z pôsobivejších výsledkov, ktoré možno "
+"získať z tejto vyplňovacej vrstvy."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:70
 msgid ""
@@ -207,6 +244,9 @@ msgid ""
 "the color for the outlines and the connector lines, and there is a gradient "
 "for coloring the individual rhombs."
 msgstr ""
+"Táto sekcia riadi všetky farby, všetky zoskupené dohromady, pretože tlačidlá "
+"farieb Krity umožňujú presúvanie farieb na seba. Môžete zmeniť farbu obrysov "
+"a spojovacích čiar a existuje prechod na sfarbenie jednotlivých kosoštvorcom."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:72
 msgid ""
@@ -214,6 +254,9 @@ msgid ""
 "determine its coloring. This value is used as a multiplier, to finally "
 "result in a value that can be used to get the value from the gradient."
 msgstr ""
+"Farebné faktory určujú, ktoré vlastnosti každého kosoštvorca sa používajú na "
+"určenie jeho sfarbenia. Táto hodnota sa používa ako multiplikátor, ktorý "
+"nakoniec vedie k hodnote, ktorú možno použiť na získanie hodnoty z prechodu."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:74
 msgid "Ratio"
@@ -224,6 +267,9 @@ msgid ""
 "This colors the rhombs based on their ratio. Thin rhombs have a low ratio, "
 "thick rhombs have a high ratio, and perfect squares have the largest ratio."
 msgstr ""
+"Toto sfarbuje kosoštvorce na základe ich pomeru. Tenké kosoštvorce majú "
+"nízky pomer, hrubé kosoštvorce majú vysoký pomer a dokonalé štvorce majú "
+"najväčší pomer."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:76
 msgid "Intersect"
@@ -236,6 +282,10 @@ msgid ""
 "hyperlattice the rhomb is on, as is especially clear when setting the "
 "dimension to 3."
 msgstr ""
+"Toto sfarbuje kosoštvorce na základe toho, ktoré pretínajúce sa čiary viedli "
+"k tomuto kosoštvorca. V podstate toto sfarbuje kosoštvorca v závislosti od "
+"toho, na ktorej strane hypermriežky sa kosoštvorca nachádza, čo je obzvlášť "
+"zreteľné pri nastavení rozmeru na 3."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:79
 msgid ""
@@ -243,6 +293,9 @@ msgid ""
 "center. In effect, rhombs closer to the center will have a lower value, "
 "while rhombs further from the center will have a higher value."
 msgstr ""
+"Toto sfarbuje kosoštvorce na základe indexu pretínajúcich sa čiar od stredu. "
+"V podstate kosoštvorce bližšie k stredu budú mať nižšiu hodnotu, zatiaľ čo "
+"kosoštvorce ďalej od stredu budú mať vyššiu hodnotu."
 
 #: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:84
 msgid "Index"

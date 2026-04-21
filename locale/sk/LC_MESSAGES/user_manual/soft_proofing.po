@@ -17,7 +17,7 @@ msgstr ""
 
 #: ../../user_manual/soft_proofing.rst:-1
 msgid "How to use soft proofing in Krita."
-msgstr ""
+msgstr "Ako používať simuláciu tlače (soft proofing) v Krite."
 
 #: ../../user_manual/soft_proofing.rst:0
 msgid ".. image:: /images/softproofing/Softproofing_adaptationstate.png"
@@ -40,6 +40,8 @@ msgid ""
 "Soft Proofing works only with :ref:`Canvas Graphics Acceleration "
 "<display_settings>` enabled."
 msgstr ""
+"Simulácia tlače funguje iba s povoleným :ref:`grafickým zrýchlením plátna "
+"<display_settings>`."
 
 #: ../../user_manual/soft_proofing.rst:21
 msgid ""
@@ -49,6 +51,12 @@ msgid ""
 "documents, this isn’t much of a problem, but for professional prints, this "
 "can be very sad, as it can change the look and feel of an image drastically."
 msgstr ""
+"Keď vytvoríme obrázok v Krite a vytlačíme ho tlačiarňou, obrázok má "
+"tendenciu vyzerať inak. Farby sú tmavšie alebo menej tmavé, ako sa "
+"očakávalo, možno sú červené agresívnejšie, možno sa stratí kontrast. Pre "
+"jednoduché dokumenty to nie je veľký problém, ale pre profesionálne tlače to "
+"môže byť veľmi smutné, pretože to môže drasticky zmeniť vzhľad a dojem z "
+"obrázka."
 
 #: ../../user_manual/soft_proofing.rst:23
 msgid ""
@@ -56,12 +64,16 @@ msgid ""
 "model (CMYK) and it has often access to a lower range of colors (called a "
 "gamut)."
 msgstr ""
+"Dôvod, prečo sa to deje, je jednoducho ten, že tlačiareň používa iný farebný "
+"model (CMYK) a má často prístup k menšiemu rozsahu farieb (nazývanému gamut)."
 
 #: ../../user_manual/soft_proofing.rst:25
 msgid ""
 "A naive person would suggest the following solution: do your work within the "
 "CMYK color model! But there are three problems with that:"
 msgstr ""
+"Naivný človek by navrhol nasledujúce riešenie: robte svoju prácu v rámci "
+"farebného modelu CMYK! Ale sú s tým tri problémy:"
 
 #: ../../user_manual/soft_proofing.rst:27
 msgid ""
@@ -70,6 +82,10 @@ msgid ""
 "resulting gamut of colors you can use is different, which means that each of "
 "these could have a different profile associated with them."
 msgstr ""
+"Maľovanie v priestore CMYK nezaručuje, že farby budú na vašej tlačiarni "
+"rovnaké. Pre každú kombináciu atramentu, papiera a tlačového zariadenia je "
+"výsledný gamut farieb, ktoré môžete použiť, iný, čo znamená, že každý z nich "
+"môže mať priradený iný profil."
 
 #: ../../user_manual/soft_proofing.rst:28
 msgid ""
@@ -78,6 +94,10 @@ msgid ""
 "meaning that the color maths isn’t as nice as in other spaces. Blending "
 "modes are different in CMYK as well."
 msgstr ""
+"Okrem toho, aj keď máte profil a pracujete v presnom farebnom priestore, "
+"ktorý vaša tlačiareň dokáže reprodukovať, farebný priestor CMYK je veľmi "
+"nepravidelný, čo znamená, že farebná matematika nie je tak pekná ako v iných "
+"priestoroch. Režimy miešania sú tiež v CMYK odlišné."
 
 #: ../../user_manual/soft_proofing.rst:29
 msgid ""
@@ -86,6 +106,10 @@ msgid ""
 "due to the paper, printer or ink being different, you might have a bigger "
 "gamut with more bright colors that you would like to take advantage of."
 msgstr ""
+"Nakoniec, práca v tomto konkrétnom priestore CMYK znamená, že obrázok je "
+"viazaný na tento priestor. Ak pripravujete svoju prácu pre iný profil CMYK "
+"kvôli odlišnému papieru, tlačiarni alebo atramentu, môžete mať väčší gamut s "
+"jasnejšími farbami, z ktorých by ste chceli ťažiť."
 
 #: ../../user_manual/soft_proofing.rst:31
 msgid ""
@@ -94,6 +118,10 @@ msgid ""
 "fly, just for preview. This is possible, and is what we call ''Soft "
 "Proofing''."
 msgstr ""
+"V ideálnom prípade by ste vytvorili obrázok v RGB, použili všetky svoje "
+"obľúbené nástroje RGB a nechali počítač vykonať konverziu do daného "
+"priestoru CMYK za behu, len pre náhľad. Je to možné a nazývame to "
+"''Simulácia tlače''."
 
 #: ../../user_manual/soft_proofing.rst:37
 msgid ".. image:: /images/softproofing/Softproofing_regularsoftproof.png"
@@ -106,6 +134,10 @@ msgid ""
 "but the soft proofed version is slightly less blueish in the whites of the "
 "flowers and slightly less saturated in the greens of the leaves."
 msgstr ""
+"Vľavo je originál, vpravo je zobrazenie so zapnutou simuláciou tlače. "
+"Rozdiel je jemný kvôli absencii skutočne jasných farieb, ale verzia so "
+"simuláciou tlače je mierne menej namodralá v bielych kvetoch a mierne menej "
+"nasýtená v zeleni listov."
 
 #: ../../user_manual/soft_proofing.rst:39
 msgid ""
@@ -120,6 +152,17 @@ msgid ""
 "Proofing` (for more details see :ref:`here "
 "<color_management_settings_softproofing>`)."
 msgstr ""
+"Simuláciu tlače môžete zapnúť/vypnúť na akomkoľvek obrázku pomocou skratky :"
+"kbd:`Ctrl + Y`. Na rozdiel od iných programov, toto je per-zobrazenie, takže "
+"môžete pozerať na váš obrázok bez simulácie tlače a so simuláciou tlače "
+"vedľa seba. Konfiguráciu simulácie tlače možno tiež nastaviť pre každý "
+"obrázok a uložiť do súboru ``.kra``. Stačí povoliť :guilabel:`Store "
+"Softproofing configuration in the image` v možnostiach simulácie tlače v :"
+"menuselection:`Image --> Image Properties --> Soft Proofing`. Ak nie je "
+"začiarkavacie políčko začiarknuté, Krita použije globálne nastavenia z :"
+"menuselection:`Settings --> Configure Krita... --> Color Management --> Soft "
+"Proofing` (ďalšie podrobnosti nájdete :ref:`tu "
+"<color_management_settings_softproofing>`)."
 
 #: ../../user_manual/soft_proofing.rst:42
 msgid ""
@@ -127,14 +170,17 @@ msgid ""
 "Krita embeds the entire proofing ICC profile into ``.kra`` file. This ICC "
 "profile can be big for some output devices, especially CMYK ones."
 msgstr ""
+"Keď je povolené :guilabel:`Store Softproofing configuration in the image`, "
+"Krita vloží celý ICC profil simulácie tlače do súboru ``.kra``. Tento ICC "
+"profil môže byť veľký pre niektoré výstupné zariadenia, obzvlášť pre CMYK."
 
 #: ../../user_manual/soft_proofing.rst:44
 msgid "There you can set the following options:"
-msgstr ""
+msgstr "Tam môžete nastaviť nasledujúce možnosti:"
 
 #: ../../user_manual/soft_proofing.rst:47
 msgid "Model, Profile"
-msgstr ""
+msgstr "Model, profil"
 
 #: ../../user_manual/soft_proofing.rst:47
 msgid ""
@@ -142,6 +188,9 @@ msgid ""
 "profile you are proofing to. In a professional print workflow, this profile "
 "should be determined by the printing house."
 msgstr ""
+"Z nich je skutočne dôležitý iba profil. Ten bude slúžiť ako profil, na ktorý "
+"simulujete tlač. V profesionálnom tlačovom pracovnom postupe by tento profil "
+"mal určiť tlačový dom."
 
 #: ../../user_manual/soft_proofing.rst:50
 msgid ""
@@ -152,6 +201,12 @@ msgid ""
 "printing. If your print house does not do any conversion internally, then "
 "you should perform the conversion yourself before sending the file to them."
 msgstr ""
+"Nastavte zámer použitý na konverziu obrázka do profilu **výstupného "
+"zariadenia simulácie tlače**. Používa rovnaké možnosti ako zámery uvedené v :"
+"ref:`farebne spravovanom pracovnom postupe <color_managed_workflow>`. Tento "
+"zámer by mal súhlasiť s konverzným zámerom, ktorý váš tlačový dom používa "
+"pred tlačou. Ak váš tlačový dom nevykonáva žiadnu internú konverziu, mali by "
+"ste konverziu vykonať sami pred odoslaním súboru k nim."
 
 #: ../../user_manual/soft_proofing.rst:56
 msgid "Rendering Intent"
@@ -162,6 +217,9 @@ msgid ""
 "Left: Soft proofed image with Absolute Intent Chromatic Adaptation enabled. "
 "Right: Soft proofed image with Absolute Intent Chromatic Adaptation disabled."
 msgstr ""
+"Vľavo: Obrázok so simuláciou tlače so zapnutou chromatickou adaptáciou "
+"absolútneho zámeru. Vpravo: Obrázok so simuláciou tlače s vypnutou "
+"chromatickou adaptáciou absolútneho zámeru."
 
 #: ../../user_manual/soft_proofing.rst:59
 msgid "Black Point Compensation"
@@ -177,6 +235,13 @@ msgid ""
 "Intent`, this value should coincide with the value used by the printing "
 "house when performing conversion to the device."
 msgstr ""
+"Povolí kompenzáciu čierneho bodu pri konverzii obrázka do profilu "
+"**výstupného zariadenia simulácie tlače**. Vypnutím tohto nastavenia sa "
+"odrežú hodnoty tieňov na minimum, ktoré zvládne obrazovka alebo profil "
+"simulácie tlače, pričom zapnutím sa čierna prispôsobí rozsahu obrazovky, čím "
+"sa vám zobrazí celý rozsah šedých odtieňov v obrázku. Rovnako ako :guilabel:"
+"`Conversion Rendering Intent`, táto hodnota by mala súhlasiť s hodnotou, "
+"ktorú tlačový dom používa pri vykonávaní konverzie pre zariadenie."
 
 #: ../../user_manual/soft_proofing.rst:62
 msgid ""
@@ -185,6 +250,10 @@ msgid ""
 "colors from the **proofed output device** profile into the **screen** "
 "profile."
 msgstr ""
+"Definuje spôsob, akým bude simulovaný (a prípadne orezaný) priestor "
+"zobrazený na obrazovke, t.j. aký zámer vykresľovania a príznaky sa použijú "
+"na konverziu farieb z profilu **výstupného zariadenia simulácie tlače** do "
+"profilu **obrazovky**."
 
 #: ../../user_manual/soft_proofing.rst:64
 msgid ""
@@ -192,6 +261,10 @@ msgid ""
 "proofed space using the global settings, set in :menuselection:`Settings --> "
 "Configure Krita... --> Color Management --> Display`."
 msgstr ""
+":guilabel:`Use global display settings` dáva Krite pokyn na vykresľovanie "
+"simulovaného priestoru pomocou globálnych nastavení nastavených v :"
+"menuselection:`Settings --> Configure Krita... --> Color Management --> "
+"Display`."
 
 #: ../../user_manual/soft_proofing.rst:66
 msgid ""
@@ -205,38 +278,52 @@ msgid ""
 "paper profile, the one the display is configured to and the white point of "
 "the light bulb that illuminates your physical print."
 msgstr ""
+":guilabel:`Simulate paper white and black` slúži na zobrazenie náhľadu "
+"bieleho bodu (alebo „farebného odtieňa\") papiera na aktuálnom displeji. "
+"Inými slovami, ak je papier matný, kovový alebo má nejaký sépový efekt, bude "
+"to viditeľné na vašej obrazovke. Majte na pamäti, že biely bod podmienok "
+"zobrazenia bude stále prispôsobený bielemu bodu obrazovky. To znamená, že "
+"nemôžete vizuálne porovnávať fyzickú tlač s obrázkom na obrazovke, pokiaľ sa "
+"všetky tri biele body nezhodujú: ten v profile papiera, ten, na ktorý je "
+"nakonfigurovaný displej, a biely bod žiarovky, ktorá osvetľuje vašu fyzickú "
+"tlač."
 
 #: ../../user_manual/soft_proofing.rst:68
 msgid ""
 ":guilabel:`Custom` allows you to configure the final conversion step "
 "manually. You may want to configure the pipeline depending on your goal:"
 msgstr ""
+":guilabel:`Custom` vám umožňuje nakonfigurovať posledný krok konverzie "
+"manuálne. Možno budete chcieť nakonfigurovať pipeline v závislosti od vášho "
+"cieľa:"
 
 #: ../../user_manual/soft_proofing.rst:71
 msgid ":guilabel:`Rendering Intent` --> :guilabel:`Relative Colorimetric`"
-msgstr ""
+msgstr ":guilabel:`Rendering Intent` --> :guilabel:`Relative Colorimetric`"
 
 #: ../../user_manual/soft_proofing.rst:72
 msgid ":guilabel:`Black Point Compensation` --> `Enabled`"
-msgstr ""
+msgstr ":guilabel:`Black Point Compensation` --> `Enabled`"
 
 #: ../../user_manual/soft_proofing.rst:74
 msgid "Preview color gamut (or \"color variety\") of the image"
-msgstr ""
+msgstr "Náhľad farebného gamutu (alebo \"farebnej rozmanitosti\") obrázka"
 
 #: ../../user_manual/soft_proofing.rst:74
 msgid ""
 "If you want to use :guilabel:`Out of Gamut Warnings`, it is best to use them "
 "in this mode"
 msgstr ""
+"Ak chcete použiť :guilabel:`Out of Gamut Warnings`, je najlepšie ich "
+"používať v tomto režime"
 
 #: ../../user_manual/soft_proofing.rst:77
 msgid ":guilabel:`Rendering Intent` --> :guilabel:`Absolute Colorimetric`"
-msgstr ""
+msgstr ":guilabel:`Rendering Intent` --> :guilabel:`Absolute Colorimetric`"
 
 #: ../../user_manual/soft_proofing.rst:78
 msgid ":guilabel:`Absolute Intent Chromatic Adaptation` --> `Enabled`"
-msgstr ""
+msgstr ":guilabel:`Absolute Intent Chromatic Adaptation` --> `Enabled`"
 
 #: ../../user_manual/soft_proofing.rst:81
 msgid ""
@@ -244,6 +331,9 @@ msgid ""
 "**broken** (even in XWayland mode). More than that, it may be broken "
 "differently in different versions."
 msgstr ""
+"Ak používate kompozitor Wayland, zámer absolútnej kolorimetrie môže byť "
+"**nefunkčný** (dokonca aj v režime XWayland). A čo viac, môže byť nefunkčný "
+"rôznym spôsobom v rôznych verziách."
 
 #: ../../user_manual/soft_proofing.rst:83
 msgid ""
@@ -253,6 +343,10 @@ msgid ""
 "(`sigChromaticAdaptationTag`) of the printer and display profiles do not "
 "coincide."
 msgstr ""
+"V KWin 6.4.x a starším sa :guilabel:`Absolute Colorimetric` bude správať, "
+"akoby bola :guilabel:`Absolute Intent Chromatic Adaptation` **vždy "
+"vypnutá**. Spôsobí to výrazné farebné skreslenie, ak sa biele body "
+"(`sigChromaticAdaptationTag`) profilov tlačiarne a displeja nezhodujú."
 
 #: ../../user_manual/soft_proofing.rst:85
 msgid ""
@@ -262,14 +356,20 @@ msgid ""
 "and will let you preview contrast degradations, but you will not be able to "
 "get advanced effects of disabling color adaptation to the display space."
 msgstr ""
+"V KWin 6.5.x a novšom sa :guilabel:`Absolute Colorimetric` bude správať, "
+"akoby bola :guilabel:`Absolute Intent Chromatic Adaptation` **vždy "
+"zapnutá**. Za predpokladu, že **necháte začiarkavacie políčko začiarknuté**, "
+"funkcia bude fungovať správne a umožní vám zobraziť náhľad degradácií "
+"kontrastu, ale nebudete môcť získať pokročilé efekty vypnutia farebnej "
+"adaptácie na priestor displeja."
 
 #: ../../user_manual/soft_proofing.rst:87
 msgid "Display Mode"
-msgstr ""
+msgstr "Režim zobrazenia"
 
 #: ../../user_manual/soft_proofing.rst:87
 msgid "Preview contrast degradations caused by the color of the paper"
-msgstr ""
+msgstr "Náhľad degradácií kontrastu spôsobených farbou papiera"
 
 #: ../../user_manual/soft_proofing.rst:87
 msgid ""
@@ -277,6 +377,9 @@ msgid ""
 "`discussed here <https://gitlab.freedesktop.org/wayland/wayland-protocols/-/"
 "merge_requests/439>`_."
 msgstr ""
+"Toto je problém so špecifikáciou protokolu Wayland, oprava je `diskutovaná "
+"tu <https://gitlab.freedesktop.org/wayland/wayland-protocols/-/"
+"merge_requests/439>`_."
 
 #: ../../user_manual/soft_proofing.rst:90
 msgid "Gamut Warning"
@@ -284,13 +387,15 @@ msgstr "Upozornenie Gamutu"
 
 #: ../../user_manual/soft_proofing.rst:90
 msgid "Set the color of :guilabel:`Out of Gamut Warnings`."
-msgstr ""
+msgstr "Nastavte farbu :guilabel:`Out of Gamut Warnings`."
 
 #: ../../user_manual/soft_proofing.rst:92
 msgid ""
 "You can set the defaults that Krita uses in :menuselection:`Settings --> "
 "Configure Krita... --> Color Management --> Soft Proofing`."
 msgstr ""
+"Predvolené hodnoty, ktoré Krita používa, môžete nastaviť v :menuselection:"
+"`Settings --> Configure Krita... --> Color Management --> Soft Proofing`."
 
 #: ../../user_manual/soft_proofing.rst:94
 msgid ""
@@ -299,10 +404,14 @@ msgid ""
 "then approximate in the proofing options how the image looks compared to the "
 "real-life copy you have made."
 msgstr ""
+"Na správnu konfiguráciu sa odporúča vytvoriť testovací obrázok na tlač "
+"(ktorý je vytlačený správne nastavenou tlačiarňou), porovnať ho a potom v "
+"možnostiach simulácie tlače približne nastaviť, ako obrázok vyzerá v "
+"porovnaní so skutočnou kópiou, ktorú ste vytvorili."
 
 #: ../../user_manual/soft_proofing.rst:97
 msgid "Out of Gamut Warning"
-msgstr ""
+msgstr "Upozornenie na prekročenie gamutu"
 
 #: ../../user_manual/soft_proofing.rst:99
 msgid ""
@@ -310,12 +419,17 @@ msgid ""
 "Proofing: It allows you to see which colors are being clipped, by replacing "
 "the resulting color with the set alarm color."
 msgstr ""
+"Upozornenie na prekročenie gamutu, alebo gamut alarm, je dodatočná možnosť k "
+"simulácii tlače: umožňuje vám vidieť, ktoré farby sú orezávané, nahradením "
+"výslednej farby nastavenou alarmovou farbou."
 
 #: ../../user_manual/soft_proofing.rst:101
 msgid ""
 "This can be useful to determine where certain contrasts are being lost, and "
 "to allow you to change it slowly to a less contrasted image."
 msgstr ""
+"Toto môže byť užitočné na určenie, kde sa strácajú určité kontrasty, a na "
+"to, aby ste mohli pomaly zmeniť obrázok na menej kontrastný."
 
 #: ../../user_manual/soft_proofing.rst:107
 msgid ".. image:: /images/softproofing/Softproofing_gamutwarnings.png"
@@ -328,18 +442,26 @@ msgid ""
 "proofing options into the KRA file, so pick a color that you think will "
 "stand out for your current image."
 msgstr ""
+"Vľavo: Zobrazenie s pôvodným obrázkom, vpravo: Zobrazenie so zapnutou "
+"simuláciou tlače a upozorneniami na gamut. Krita uloží farbu upozornenia na "
+"gamut spolu s možnosťami simulácie tlače do súboru KRA, takže vyberte farbu, "
+"ktorá bude podľa vás výrazná pre váš aktuálny obrázok."
 
 #: ../../user_manual/soft_proofing.rst:109
 msgid ""
 "You can activate Gamut Warnings with the :kbd:`Ctrl + Shift + Y` shortcut, "
 "but it needs soft proofing activated to work fully."
 msgstr ""
+"Upozornenia na gamut môžete aktivovať skratkou :kbd:`Ctrl + Shift + Y`, ale "
+"na plnú funkčnosť je potrebná aktivovaná simulácia tlače."
 
 #: ../../user_manual/soft_proofing.rst:112
 msgid ""
 "Soft Proofing doesn’t work properly in floating-point spaces, and attempting "
 "to force it will cause incorrect gamut alarms. It is therefore disabled."
 msgstr ""
+"Simulácia tlače nefunguje správne v priestoroch s pohyblivou rádovou čiarkou "
+"a pokus o jej vynútenie spôsobí nesprávne alarmy gamutu. Preto je vypnutá."
 
 #: ../../user_manual/soft_proofing.rst:115
 msgid ""
@@ -347,6 +469,9 @@ msgid ""
 "shadows. This is a bug in LittleCMS, see `here <https://ninedegreesbelow.com/"
 "bug-reports/soft-proofing-problems.html>`_ for more info."
 msgstr ""
+"Upozornenia na gamut niekedy dávajú zvláštne upozornenia pre lineárne "
+"profily v tieňoch. Toto je chyba v LittleCMS, viac informácií nájdete `tu "
+"<https://ninedegreesbelow.com/bug-reports/soft-proofing-problems.html>`_."
 
 #~ msgid "Adaptation State"
 #~ msgstr "Stav adaptácie"

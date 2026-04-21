@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../reference_manual/dockers/recorder_docker.rst:-1
 msgid "The recorder docker allows recording time lapses in Krita."
-msgstr ""
+msgstr "Doker záznamníka umožňuje nahrávanie časozberných záberov v Krite."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:9
 msgid "Recorder"
@@ -26,15 +26,15 @@ msgstr "Záznamník"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:9
 msgid "Time lapse"
-msgstr ""
+msgstr "Časozberný záznam"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:9
 msgid "Speedpaint"
-msgstr ""
+msgstr "Rýchlomaľba"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:14
 msgid "Recorder Docker"
-msgstr ""
+msgstr "Doker záznamníka"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:18
 msgid ""
@@ -47,6 +47,14 @@ msgid ""
 "<render_animation>`. Because this docker relies on FFMpeg, it cannot be used "
 "on Android."
 msgstr ""
+"Možno ste videli umelcov, ako ukazujú malé priebežné videá svojej práce. "
+"Toto sa nazýva časozberný záznam! Zvyčajne sa časozberný záznam nahráva "
+"pomocou externého softvéru, ako je OBS, a potom sa zrýchli asi 16-násobne, "
+"pričom slúži na sprostredkovanie celkového úsilia vloženého do obrázka. "
+"Doker záznamníka zjednodušuje tvorbu časozberného záznamu tým, že uskutoční "
+"snímku pri každom ťahu a potom vám umožní :ref:`vykresliť ho do video súboru "
+"pomocou ffmpeg <render_animation>`. Keďže tento doker závisí od FFMpeg, nie "
+"je možné ho používať na Androide."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:20
 msgid ""
@@ -55,6 +63,10 @@ msgid ""
 "a :guilabel:`recording` symbol in the status bar, which is red when it's "
 "making snapshots and white when it's on standby."
 msgstr ""
+"Doker záznamníka vytvorí snímku plátna každých niekoľko sekúnd alebo na "
+"konci každého ťahu. Môžete zistiť, že je zapnutý, pretože v stavovom riadku "
+"sa zobrazí symbol :guilabel:`recording`, ktorý je červený, keď vytvára "
+"snímky, a biely, keď je v pohotovosti."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:22
 msgid ""
@@ -63,12 +75,18 @@ msgid ""
 "can take up quite a bit of space, so if you are running out of space, don't "
 "forget to check the temporary folder!"
 msgstr ""
+"Keďže uchováva snímky, znamená to, že môžete robiť prestávky, zatvoriť "
+"obrázok, vypnúť počítač a vrátiť sa mesiac neskôr. Snímky však môžu zaberať "
+"pomerne veľa miesta, takže ak vám dochádza miesto, nezabudnite skontrolovať "
+"dočasný priečinok!"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:24
 msgid ""
 "At the end, you can turn the snapshots into a video file, ready for your "
 "favorite video sharing site."
 msgstr ""
+"Na záver môžete snímky premeniť na video súbor, pripravený pre vašu obľúbenú "
+"stránku na zdieľanie videí."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:28
 msgid ""
@@ -78,6 +96,11 @@ msgid ""
 "minutes. People like to record their speed paints, and because both speed "
 "paints and time lapses are videos, people often confuse them."
 msgstr ""
+"Niektorí ľudia tiež nazývajú časozberné záznamy 'rýchlomaľbami', ale tieto "
+"nie sú to isté. Rýchlomaľba je, keď sa pokúsite namaľovať obrázok v oveľa "
+"kratšom čase, ako je pre vás zvyčajné. Napríklad nakreslenie celej krajiny "
+"za 15 až 30 minút. Ľudia radi zaznamenávajú svoje rýchlomaľby a keďže "
+"rýchlomaľby aj časozberné záznamy sú videá, ľudia si ich často mýlia."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:30
 msgid ""
@@ -86,18 +109,21 @@ msgid ""
 "have it play those back at a later date. Krita currently does not have this "
 "functionality."
 msgstr ""
+"Podobne by sa tento nástroj nemal zamieňať so záznamom makier, čo je prípad, "
+"keď poviete programu, aby zaznamenal všetky vaše akcie do súboru a prehrával "
+"ich neskôr. Krita momentálne túto funkciu nemá."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:34
 msgid "Docker Options"
-msgstr ""
+msgstr "Možnosti dokera"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:37
 msgid ".. image:: /images/dockers/recorder_docker.png"
-msgstr ""
+msgstr ".. image:: /images/dockers/recorder_docker.png"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:38
 msgid "Recordings Directory:"
-msgstr ""
+msgstr "Adresár nahrávok:"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:39
 msgid ""
@@ -105,10 +131,12 @@ msgid ""
 "Recordings` button, which will assist you in selecting old recordings to "
 "remove."
 msgstr ""
+"Adresár, kde sú uložené snímky. Všimnite si tlačidlo :guilabel:`Manage "
+"Recordings`, ktoré vám pomôže pri výbere starých nahrávok na odstránenie."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:40
 msgid "Capture Interval:"
-msgstr ""
+msgstr "Interval snímania:"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:41
 msgid ""
@@ -118,6 +146,11 @@ msgid ""
 "snapshot. Increase this if you want less snapshots to be recorded during a "
 "painting session, or if you are experiencing slowdowns."
 msgstr ""
+"Minimálny interval snímania. Doker záznamníka uskutoční snímku, keď sa "
+"obrázok zmení, ale pred vytvorením novej snímky počká, kým tento interval "
+"neuplynie. To znamená, že rýchle ťahy nevyžadujú zakaždým novú snímku. "
+"Zvýšte túto hodnotu, ak chcete, aby sa počas relácie maľovania zaznamenávalo "
+"menej snímok, alebo ak zažívate spomalenie."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:42
 msgid "Format:"
@@ -128,6 +161,8 @@ msgid ""
 "The file format to use for the snap shots. :ref:`file_jpeg` is faster, but :"
 "ref:`file_png` is better for very sharp images."
 msgstr ""
+"Formát súboru pre snímky. :ref:`file_jpeg` je rýchlejší, ale :ref:`file_png` "
+"je lepší pre veľmi ostré obrázky."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:44
 msgid "Quality:"
@@ -138,6 +173,8 @@ msgid ""
 "Control the quality of the JPEG snapshots. The lower the quality, the lower "
 "the file size, but too low and you will get a messy looking recording."
 msgstr ""
+"Ovládate kvalitu snímok JPEG. Čím nižšia kvalita, tým menšia veľkosť súboru, "
+"ale pri príliš nízkej hodnote bude nahrávka vyzerať neporiadne."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:46
 msgid "Compression:"
@@ -149,6 +186,9 @@ msgid ""
 "smaller files, but will take more processing power. This is recommended to "
 "be set to be between 1 and 3 for a good balance between speed and file size."
 msgstr ""
+"Ovládate kompresiu snímok PNG. Vyššia hodnota vytvorí menšie súbory, ale "
+"bude vyžadovať viac výpočtového výkonu. Odporúča sa nastaviť hodnotu medzi 1 "
+"a 3 pre dobrú rovnováhu medzi rýchlosťou a veľkosťou súboru."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:48
 msgid "Resolution:"
@@ -159,6 +199,8 @@ msgid ""
 "Lower the resolution of the snapshot. This can drastically reduce size "
 "without losing too much quality."
 msgstr ""
+"Znížite rozlíšenie snímky. Toto môže výrazne znížiť veľkosť bez príliš "
+"veľkej straty kvality."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:50
 msgid "Threads"
@@ -173,10 +215,16 @@ msgid ""
 "processing power for your drawing or to handle other programs running on "
 "your computer, like a music player."
 msgstr ""
+"Koľko vlákien procesora vášho zariadenia možno použiť na nahrávanie na "
+"pozadí. Hodnota väčšia ako 1 zlepšuje výkon na väčšine zariadení a pomáha "
+"predchádzať výpadkom v nahrávkach. Vždy sa však odporúča mať o jedno alebo "
+"dve vlákna menej, ako je maximálny možný počet, pretože stále potrebujete "
+"určitý výpočtový výkon pre kreslenie alebo na obsluhu iných programov "
+"spustených v počítači, ako je prehrávač hudby."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:52
 msgid "Real Time Capture Mode"
-msgstr ""
+msgstr "Režim snímania v reálnom čase"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:53
 msgid ""
@@ -188,10 +236,17 @@ msgid ""
 "performance while you are drawing much worse! It's not recommended to use "
 "this on weaker hardware."
 msgstr ""
+"Zapnete :guilabel:`Real Time Capture Mode`. Namiesto konfigurácie intervalu "
+"snímania vás Režim snímania v reálnom čase nechá nastaviť hodnotu snímok za "
+"sekundu (:guilabel:`Video FPS`). Záznamník sa potom pokúsi zodpovedať "
+"zadaným FPS, aby sa video prehrávalo rovnakou rýchlosťou, akou ste kreslili. "
+"V závislosti od výkonu vášho zariadenia a vybraného FPS to môže výrazne "
+"zhoršiť výkon Krity počas kreslenia! Neodporúča sa používať toto na slabšom "
+"hardvéri."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:54
 msgid "Record in Isolate Mode."
-msgstr ""
+msgstr "Nahrávať v izolovanom režime."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:55
 msgid ""
@@ -200,6 +255,10 @@ msgid ""
 "resulting time lapse. Only turn this on when you are not in the habit of "
 "switching layers often when in isolate mode."
 msgstr ""
+"Nahrávať, keď je zapnutý :ref:`izolovaný režim vrstvy <layer_docker>`. Keďže "
+"izolovaný režim skrýva všetky ostatné vrstvy, môže to spôsobiť výrazné "
+"blikanie vo výslednom časozbernom zázname. Zapnite toto iba vtedy, keď "
+"nemáte vo zvyku často prepínať vrstvy v izolovanom režime."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:57
 msgid "Record automatically"
@@ -210,6 +269,9 @@ msgid ""
 "Start recording the instant an image is created or loaded. This option is "
 "useful for those who want to record each of their drawings."
 msgstr ""
+"Spustiť nahrávanie v okamihu vytvorenia alebo načítania obrázka. Táto "
+"možnosť je užitočná pre tých, ktorí chcú zaznamenávať každú zo svojich "
+"kresieb."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:59
 msgid ""
@@ -217,16 +279,21 @@ msgid ""
 "starts and stops recording. The latter lets you render the current drawing's "
 "timelapse."
 msgstr ""
+"Nakoniec tu sú tlačidlá :guilabel:`Record` a :guilabel:`Export`. Prvé spúšťa "
+"a zastavuje nahrávanie. Druhé vám umožňuje vykresliť časozberný záznam "
+"aktuálnej kresby."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:64
 msgid ".. image:: /images/dockers/recorder_docker_snapshot_manager.png"
-msgstr ""
+msgstr ".. image:: /images/dockers/recorder_docker_snapshot_manager.png"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:64
 msgid ""
 "The recordings manager window. This is a list of recordings you have, and "
 "how much space they take. You can select recordings to delete them."
 msgstr ""
+"Okno správcu nahrávok. Toto je zoznam nahrávok, ktoré máte, a koľko miesta "
+"zaberajú. Môžete vybrať nahrávky a odstrániť ich."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:67
 msgid "Export Options"
@@ -237,10 +304,12 @@ msgid ""
 "Compare these options with the one on the :ref:`render_animation` page, as "
 "they do largely the same things."
 msgstr ""
+"Porovnajte tieto možnosti s tými na stránke :ref:`render_animation`, pretože "
+"do značnej miery robia to isté."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:71
 msgid "Recording info:"
-msgstr ""
+msgstr "Informácie o nahrávaní:"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:72
 msgid ""
@@ -249,6 +318,9 @@ msgid ""
 "will allow you to open the folder where the recordings are located in your "
 "file browser."
 msgstr ""
+"Zobrazuje, aký druh snímok a koľko snímok sa berie do úvahy pri vytváraní "
+"konečného video súboru. Stlačením :guilabel:`Open Record Directory` môžete "
+"otvoriť priečinok, kde sa nachádzajú nahrávky, vo vašom správcovi súborov."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:73
 msgid "Input FPS:"
@@ -260,6 +332,9 @@ msgid ""
 "lapse twice faster, this value should be double that of the :guilabel:`Video "
 "fps`."
 msgstr ""
+"Koľko snímok za sekundu má byť zahrnutých. Napríklad, aby bol váš časozberný "
+"záznam dvakrát rýchlejší, táto hodnota by mala byť dvojnásobkom hodnoty :"
+"guilabel:`Video fps`."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:75
 msgid "Video FPS:"
@@ -267,27 +342,31 @@ msgstr "Video FPS:"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:76
 msgid "The actual FPS of the video."
-msgstr ""
+msgstr "Skutočné FPS videa."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:78
 msgid ""
 "Whether to hold the last frame and how long to hold the last frame of the "
 "recording. This allows a viewer to take a good long at the end result."
 msgstr ""
+"Či podržať poslednú snímku a ako dlho podržať poslednú snímku nahrávky. To "
+"umožní divákovi dôkladne si prezrieť konečný výsledok."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:80
 msgid "Extend End Result"
-msgstr ""
+msgstr "Predĺžiť záverečný výsledok"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:83
 msgid ""
 "Whether to add a copy of the last frame to the start and how long to hold "
 "this frame. This will show viewers what kind of image is being drawn here."
 msgstr ""
+"Či pridať kópiu poslednej snímky na začiatok a ako dlho túto snímku podržať. "
+"Toto ukáže divákom, aký druh obrázka sa tu kreslí."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:85
 msgid "Enable Result Preview"
-msgstr ""
+msgstr "Zapnúť náhľad výsledku"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:87
 msgid "Resize:"
@@ -295,7 +374,7 @@ msgstr "Zmeniť veľkosť:"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:88
 msgid "Scale the final video."
-msgstr ""
+msgstr "Zmeniť mierku výsledného videa."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:89
 msgid "FFMpeg:"
@@ -303,7 +382,7 @@ msgstr "FFMpeg:"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:90
 msgid "The location of the ffmpeg executable."
-msgstr ""
+msgstr "Umiestnenie spustiteľného súboru ffmpeg."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:91
 msgid "Render As:"
@@ -314,6 +393,8 @@ msgid ""
 "Select the render setting to use. MP4 x264 is sufficient for most drawings "
 "and will be accepted on most video sharing sites."
 msgstr ""
+"Vyberte nastavenie vykreslenia, ktoré sa má použiť. MP4 x264 je postačujúci "
+"pre väčšinu kresieb a bude akceptovaný na väčšine stránok na zdieľanie videí."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:93
 msgid "Video Location:"
@@ -321,30 +402,33 @@ msgstr "Umiestnenie videa:"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:94
 msgid "Where to put the resulting video."
-msgstr ""
+msgstr "Kam umiestniť výsledné video."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:96
 msgid "Video Duration:"
-msgstr ""
+msgstr "Trvanie videa:"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:96
 msgid ""
 "The final video length in seconds. This will change as you change the FPS "
 "settings."
 msgstr ""
+"Konečná dĺžka videa v sekundách. Táto hodnota sa zmení pri zmene nastavení "
+"FPS."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:99
 msgid "After Export"
-msgstr ""
+msgstr "Po exporte"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:101
 msgid "Watch it:"
-msgstr ""
+msgstr "Pozrieť:"
 
 #: ../../reference_manual/dockers/recorder_docker.rst:102
 msgid ""
 "This will open the resulting file in the default video player on your system."
 msgstr ""
+"Toto otvorí výsledný súbor vo predvolenom prehrávači videa vo vašom systéme."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:103
 msgid "Show in folder:"
@@ -354,11 +438,12 @@ msgstr "Zobraziť v priečinku"
 msgid ""
 "This will open the folder where the file is located in your file browser."
 msgstr ""
+"Toto otvorí priečinok, kde sa súbor nachádza, vo vašom správcovi súborov."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:106
 msgid "Remove the snapshots from your computer."
-msgstr ""
+msgstr "Odstrániť snímky z vášho počítača."
 
 #: ../../reference_manual/dockers/recorder_docker.rst:107
 msgid "Remove recordings:"
-msgstr ""
+msgstr "Odstrániť nahrávky:"

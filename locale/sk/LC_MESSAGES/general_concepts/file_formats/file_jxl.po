@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../general_concepts/file_formats/file_jxl.rst:-1
 msgid "The JPEG XL file format in Krita."
-msgstr ""
+msgstr "Formát súboru JPEG XL v Krita."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:12
 msgid "*.jxl"
@@ -54,6 +54,13 @@ msgid ""
 "frames like :ref:`GIF <file_gif>` or simple multi-layered raster image "
 "without animation."
 msgstr ""
+"JPEG XL (``.jxl``) je nový bezlicenčný formát obrazových súborov. Podporuje :"
+"ref:`stratový kompresný režim <lossless_compression>` navrhnutý pre "
+"fotografie podobné formátu :ref:`JPEG <file_jpeg>`, a tiež :ref:`bezstratový "
+"kompresný režim <lossless_compression>` podobný formátom ako :ref:`PNG "
+"<file_png>`. Okrem toho podporuje aj ukladanie animácií s viacerými snímkami "
+"ako :ref:`GIF <file_gif>` alebo jednoduché viacvrstvové rastrové obrázky bez "
+"animácie."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:21
 msgid ""
@@ -64,6 +71,13 @@ msgid ""
 "But for images with a lot of sharp contrasts, like text and comic book "
 "styles, lossless compression is usually the better choice."
 msgstr ""
+"Pri rozhodovaní medzi stratovým a bezstratovým kompresným režimom platia "
+"rovnaké rady ako pre :ref:`JPEG <file_jpeg>` a :ref:`PNG <file_png>`. Pre "
+"obrázky s množstvom prechodov, ako sú maľby v plnom rozsahu, môže stratová "
+"kompresia veľmi dobre fungovať na vytvorenie malých súborov s minimálnou "
+"stratou vizuálnej kvality. Ale pre obrázky s množstvom ostrých kontrastov, "
+"ako sú text a komiksové štýly, je bezstratová kompresia zvyčajne lepšou "
+"voľbou."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:23
 msgid ""
@@ -73,6 +87,11 @@ msgid ""
 "lossy compression methods. Instead you should use the lossless compression "
 "mode, or a working file format while you are working on the image."
 msgstr ""
+"Pre súbory JPEG XL používajúce stratovú kompresiu sa neodporúča ukladať ten "
+"istý súbor viackrát. Stratová kompresia spôsobí, že súbor stratí na kvalite "
+"pri každom uložení. Toto je zásadný problém so stratovými kompresijnými "
+"metódami. Namiesto toho by ste mali používať bezstratový kompresný režim "
+"alebo pracovný formát súboru počas práce na obrázku."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:25
 msgid ""
@@ -86,6 +105,16 @@ msgid ""
 "JPEG XL. Krita always exports files from the raw pixel data, therefore this "
 "does *not* have the same effect as transcoding directly from JPEG to JPEG XL."
 msgstr ""
+"Je možné bezstratovo pretranskódovať obrázky JPEG do JPEG XL. Transkódovanie "
+"zachováva už stratovo komprimované dáta z pôvodného obrázku JPEG bez "
+"akejkoľvek straty kvality spôsobenej opätovným kódovaním, pričom zmenší "
+"veľkosť súboru oproti originálu. Aby ste to urobili, musíte použiť "
+"špecializované nástroje, napríklad nástroj príkazového riadku :program:"
+"`cjxl` z `libjxl <https://github.com/libjxl/libjxl>`_, na vykonanie "
+"konverzie. Majte na pamäti, že to *nemôžete* urobiť otvorením obrázku JPEG v "
+"Krita a jeho opätovným exportom do JPEG XL. Krita vždy exportuje súbory z "
+"nezracovaných pixelových dát, preto to *nemá* rovnaký efekt ako priame "
+"transkódovanie z JPEG do JPEG XL."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:27
 msgid ""
@@ -96,6 +125,12 @@ msgid ""
 "export options. This is different from :ref:`render_animation` in that it "
 "does not use FFmpeg."
 msgstr ""
+"Export animácií z Krita ako JPEG XL je podporovaný, hoci tým sa splošujú "
+"všetky vrstvy v obrázku. Ak chcete exportovať animácie JPEG XL, použite :"
+"term:`Export...` z :ref:`file_menu` a potom uložte alebo exportujte do "
+"súboru ``.jxl``. Uistite sa, že ste v možnostiach exportu povolili :guilabel:"
+"`Save as animated JPEG XL`. Toto sa líši od :ref:`render_animation` tým, že "
+"nepoužíva FFmpeg."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:30
 msgid "Export Options"
@@ -114,6 +149,13 @@ msgid ""
 "and how much effort the encoder should put into finding the best compression "
 "for your image, with more effort also meaning longer saving times."
 msgstr ""
+"Enkodér JPEG XL je navrhnutý tak, aby bol pomerne nenáročný na obsluhu. "
+"Zatiaľ čo v prípade JPEG by ste museli vybrať vhodnú kvalitu, JPEG XL sa "
+"namiesto toho snaží nájsť najlepšiu kvalitu pre váš obrázok. Namiesto toho "
+"si vyberáte, či je preferovaná kompresia :ref:`stratová alebo bezstratová "
+"<lossless_compression>`, a koľko úsilia by mal enkodér vynaložiť na nájdenie "
+"najlepšej kompresie pre váš obrázok, pričom viac úsilia znamená aj dlhšie "
+"časy ukladania."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:39
 msgid "Flattened image"
@@ -124,6 +166,9 @@ msgid ""
 "Flatten the image and save as single layer image (default). This is the "
 "recommended option for static image web delivery and sharing in general."
 msgstr ""
+"Splošiť obrázok a uložiť ako jednorstvový obrázok (predvolené). Toto je "
+"odporúčaná možnosť pre webové doručovanie a zdieľanie statických obrázkov "
+"všeobecne."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:41
 msgid "Animated image"
@@ -141,12 +186,23 @@ msgid ""
 "painterly animation instead. This is the recommended option for animated "
 "image web delivery and sharing in general."
 msgstr ""
+"Splošiť obrázok a renderovať snímky animácie ako animovaný obrázok. JPEG XL "
+"má schopnosť ukladať malé animácie ako :ref:`file_gif`. Jeho animačné "
+"schopnosti sú však jednoduché a špeciálne navrhnuté pre štylizovaný obsah, "
+"ktorý nemá veľa farieb, ako napríklad cel-animácia. Je to preto, že JPEG XL "
+"nemá vnútrosnímkovú predikciu, čo je najlepší spôsob ukladania video súborov "
+"s množstvom farieb, ako je 3D animácia, film a maľovaná animácia. Namiesto "
+"toho odporúčame použiť vykresľovanie videa pre maľovanú animáciu. Toto je "
+"odporúčaná možnosť pre webové doručovanie a zdieľanie animovaných obrázkov "
+"všeobecne."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:44
 msgid ""
 "Rasterize layers (including group and filter layers) and save as multi-"
 "layered image."
 msgstr ""
+"Rastrifikovať vrstvy (vrátane skupinových a filtrovacích vrstiev) a uložiť "
+"ako viacvrstvový obrázok."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:46
 msgid ""
@@ -154,6 +210,9 @@ msgid ""
 "animation, this can be useful to store multi-layered images like :ref:"
 "`file_tif`."
 msgstr ""
+"JPEG XL má schopnosť ukladať snímky ako vrstvy, ak sa nepoužíva ako "
+"animácia; toto môže byť užitočné na ukladanie viacvrstvových obrázkov ako :"
+"ref:`file_tif`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:48
 msgid ""
@@ -161,24 +220,33 @@ msgid ""
 "layer stacks like :ref:`file_psd` and :ref:`file_kra` does. Some of its "
 "limitations are:"
 msgstr ""
+"Jeho vrstvové schopnosti sú veľmi základné a nie sú navrhnuté na ukladanie "
+"zložitých zásobníkov vrstiev ako :ref:`file_psd` a :ref:`file_kra`. Niektoré "
+"z jeho obmedzení sú:"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:50
 msgid ""
 "Only raster paint layers are supported, any other type of layer will get "
 "rasterized and group layers will be flattened."
 msgstr ""
+"Podporované sú iba rastrové maľovacie vrstvy, akýkoľvek iný typ vrstvy bude "
+"rastrifikovaný a skupinové vrstvy budú splošené."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:51
 msgid ""
 "Limited blending modes, only Normal and Addition while other modes will get "
 "converted to Normal."
 msgstr ""
+"Obmedzené režimy miešania, iba Normálny a Sčítanie, pričom ostatné režimy sa "
+"skonvertujú na Normálny."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:52
 msgid ""
 "No partial layer opacity, will only export visible layers with full opacity "
 "setting (100%)."
 msgstr ""
+"Žiadna čiastočná nepriehľadnosť vrstvy, exportujú sa iba viditeľné vrstvy s "
+"plným nastavením nepriehľadnosti (100%)."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:53
 msgid "Multi-layered image"
@@ -189,18 +257,24 @@ msgid ""
 "No layer styles, these will get rasterized with Normal blending mode for "
 "outside pixels."
 msgstr ""
+"Žiadne štýly vrstiev, tieto budú rastrifikované s normálnym režimom miešania "
+"pre vonkajšie pixely."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:54
 msgid ""
 "Layer masks will be flattened and rasterized, but Colorize Mask won't get "
 "rendered."
 msgstr ""
+"Masky vrstiev budú splošené a rastrifikované, ale Maska kolorovania sa "
+"nevykreslí."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:56
 msgid ""
 "Rasterize layers (including group and filter layers) and save as multi-page "
 "image."
 msgstr ""
+"Rastrifikovať vrstvy (vrátane skupinových a filtrovacích vrstiev) a uložiť "
+"ako viacstránkový obrázok."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:58
 msgid ""
@@ -208,6 +282,10 @@ msgid ""
 "frames with maximum duration instead. This is a compatibility option for "
 "editor/viewer that didn't support opening multi-layered JPEG XL images."
 msgstr ""
+"Podobné ako viacvrstvový obrázok, ale táto možnosť ukladá vrstvy ako "
+"animované snímky s maximálnou dobou trvania. Toto je možnosť kompatibility "
+"pre editor/prehliadač, ktorý nepodporoval otváranie viacvrstvových obrázkov "
+"JPEG XL."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:60
 msgid "Multi-paged image"
@@ -215,7 +293,7 @@ msgstr "Viacstránkový obrázok"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:60
 msgid "Same layering limitations above also applied to this option."
-msgstr ""
+msgstr "Rovnaké vrstvové obmedzenia uvedené vyššie platia aj pre túto možnosť."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:62
 msgid "Save as"
@@ -232,6 +310,10 @@ msgid ""
 "and lossy mode, with the latter being closer to the way the original :ref:"
 "`file_jpeg` encodes."
 msgstr ""
+"Či použiť :ref:`Stratovú kompresiu <lossy_compression>`. Podobne ako :ref:"
+"`file_webp`, JPEG XL má odlišný spôsob kódovania obrázkov v bezstratovom a "
+"stratovom režime, pričom ten druhý je bližší spôsobu, akým kóduje pôvodný :"
+"ref:`file_jpeg`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:67
 msgid "Quality"
@@ -242,6 +324,8 @@ msgid ""
 "This option sets the desired quality for lossy compression. Higher values "
 "look better, but lower values have a lower file size."
 msgstr ""
+"Táto možnosť nastavuje požadovanú kvalitu pre stratovú kompresiu. Vyššie "
+"hodnoty vyzerajú lepšie, ale nižšie hodnoty majú menšiu veľkosť súboru."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:70
 msgid "Use modular mode"
@@ -252,6 +336,8 @@ msgid ""
 "Use the alternative Modular mode for lossy compression. By default, JPEG XL "
 "encodes lossy image with VarDCT mode."
 msgstr ""
+"Použiť alternatívny modulárny režim pre stratovú kompresiu. Štandardne JPEG "
+"XL kóduje stratový obrázok v režime VarDCT."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:75
 msgid "Lossless alpha"
@@ -263,6 +349,10 @@ msgid ""
 "Lossy encoding. If enabled, this option will set alpha channel to lossless "
 "(uncompressed). Useful to reduce transparency artifact on lossy export."
 msgstr ""
+"Štandardne bude alfa kanál (priehľadnosť) tiež komprimovaný pri použití "
+"stratového kódovania. Ak je povolená, táto možnosť nastaví alfa kanál na "
+"bezstratový (nekomprimovaný). Užitočné na zníženie artefaktov priehľadnosti "
+"pri stratovom exporte."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:80
 msgid ""
@@ -270,6 +360,9 @@ msgid ""
 "allows you to decide how much the encoder should prioritize quality over "
 "speed. The different modes can be seen as presets [1]_:"
 msgstr ""
+"Enkodér môže dosiahnuť lepší výsledok, ak má k dispozícii viac času. Tento "
+"posuvník vám umožňuje rozhodnúť, do akej miery by mal enkodér uprednostňovať "
+"kvalitu pred rýchlosťou. Rôzne režimy možno považovať za predvoľby [1]_:"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:82
 msgid ""
@@ -277,47 +370,60 @@ msgid ""
 "for lossy compression, for lossless uses gradient predictors and fast "
 "histograms, but no MA tree."
 msgstr ""
+"Lightning -- Rýchly režim užitočný pre bezstratový režim. Najrýchlejšie "
+"možné hodnoty pre stratovú kompresiu, pre bezstratový používa gradientné "
+"prediktory a rýchle histogramy, ale žiadny strom MA."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:83
 msgid ""
 "Thunder -- Both Lightning and Thunder are similar for Lossy, for lossless, "
 "Thunder uses a fixed MA tree and gradient predictors."
 msgstr ""
+"Thunder -- Lightning aj Thunder sú podobné pre stratovú kompresiu; pre "
+"bezstratovú Thunder používa pevný strom MA a gradientné prediktory."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:84
 msgid "Falcon -- Instead of using lossless mode, disables all options."
 msgstr ""
+"Falcon -- Namiesto použitia bezstratového režimu zakáže všetky možnosti."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:85
 msgid ""
 "Cheetah -- Enables coefficient reordering, context clustering, and "
 "heuristics for selecting DCT sizes and quantization steps."
 msgstr ""
+"Cheetah -- Povolí zmenu poradia koeficientov, zhlukование kontextov a "
+"heuristiku pre výber veľkostí DCT a krokov kvantovania."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:86
 msgid ""
 "Hare -- Enables Gaborish Filtering, Chroma from Luma and estimates "
 "quantization steps."
 msgstr ""
+"Hare -- Povolí Gaborishovo filtrovanie, Chroma z Luma a odhaduje kroky "
+"kvantovania."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:87
 msgid "Wombat -- Enables error diffusion quantization and DCT heuristics."
-msgstr ""
+msgstr "Wombat -- Povolí kvantovanie s difúziou chýb a heuristiku DCT."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:88
 msgid ""
 "Squirrel -- Enables dots, patches and spline detection as well as context "
 "clustering."
 msgstr ""
+"Squirrel -- Povolí detekciu bodov, záplat a splajnov, ako aj zhlukovanie "
+"kontextov."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:89
 msgid ""
 "Kitten -- Optimizes the adaptive quantization for a psychovisual metric."
 msgstr ""
+"Kitten -- Optimalizuje adaptívne kvantovanie pre psychovizuálnu metriku."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:90
 msgid "Tortoise -- Enables a more thorough adaptive quantization search."
-msgstr ""
+msgstr "Tortoise -- Povolí dôkladnejšie hľadanie adaptívneho kvantovania."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:91
 msgid "Tradeoff"
@@ -328,14 +434,16 @@ msgid ""
 "You can force-enable several of the options in the :guilabel:`Advanced` "
 "section even if they are disabled by the :guilabel:`Tradeoff` preset."
 msgstr ""
+"Môžete vynútiť povolenie viacerých možností v sekcii :guilabel:`Advanced`, "
+"aj keď sú zakázané predvoľbou :guilabel:`Tradeoff`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:94
 msgid "Encoding Options"
-msgstr ""
+msgstr "Možnosti kódovania"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:94
 msgid "Decoding Speed"
-msgstr ""
+msgstr "Rýchlosť dekódovania"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:94
 msgid ""
@@ -346,10 +454,15 @@ msgid ""
 "by desktop computers and quality is of utmost importance, this should be set "
 "to 0."
 msgstr ""
+"Rýchlosť dekódovania možno zlepšiť povolením určitých optimalizácií. To však "
+"povedie k určitej strate kvality. Napríklad, ak si myslíte, že vaše obrázky "
+"budú väčšinou prezerané na mobilných telefónoch, môže byť dobré "
+"experimentovať s touto možnosťou. Naopak, ak bude váš obrázok zobrazovaný "
+"iba na stolných počítačoch a kvalita je prvoradá, malo by byť nastavené na 0."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:97
 msgid "Conversion Settings"
-msgstr ""
+msgstr "Nastavenia konverzie"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:101
 msgid "(Lossless) Use CICP instead of ICC if possible"
@@ -362,6 +475,10 @@ msgid ""
 "If there's no equivalent CICP values, ICC will still be saved instead. This "
 "is particularly useful for web delivery."
 msgstr ""
+"Ak je povolené, Krita sa pokúsi skonvertovať ICC profil dokumentu na "
+"ekvivalentné hodnoty CICP, aby ušetrila viac miesta pri exporte "
+"bezstratového JPEG XL. Ak neexistujú ekvivalentné hodnoty CICP, ICC sa "
+"namiesto toho stále uloží. Toto je obzvlášť užitočné pre webové doručovanie."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:102
 msgid "Color profile"
@@ -377,6 +494,9 @@ msgid ""
 "space, and the options are exactly the same as the conversion settings for :"
 "ref:`file_heif`."
 msgstr ""
+"Táto možnosť je povolená iba vtedy, keď je obrázok v farebnom priestore s "
+"pohyblivou desatinnou čiarkou, a možnosti sú úplne rovnaké ako nastavenia "
+"konverzie pre :ref:`file_heif`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:110
 msgid "Advanced"
@@ -384,7 +504,7 @@ msgstr "Pokročilé"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:112
 msgid "JPEG XL has two major ways of encoding data:"
-msgstr ""
+msgstr "JPEG XL má dva hlavné spôsoby kódovania dát:"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:114
 msgid "VarDCT"
@@ -396,10 +516,13 @@ msgid ""
 "original JPEG, and thus best for 'Natural' images, such as photographs and "
 "images with a lot of gradients and textures."
 msgstr ""
+"Tento spôsob patrí do rovnakej skupiny kompresných techník ako pôvodný JPEG, "
+"a teda je najlepší pre „prirodzené\" obrázky, ako sú fotografie a obrázky s "
+"množstvom prechodov a textúr."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:117
 msgid "Modular Mode"
-msgstr ""
+msgstr "Modulárny režim"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:117
 msgid ""
@@ -407,6 +530,9 @@ msgid ""
 "line art and images with a lot of wide patches. Modular mode is always used "
 "when selecting :guilabel:`Lossless Encoding`."
 msgstr ""
+"Tento spôsob má špecifické funkcie pre takzvané „syntetické\" obrázky, ako "
+"sú kresby čiar a obrázky s mnohými veľkými plochami. Modulárny režim sa vždy "
+"používa pri výbere :guilabel:`Lossless Encoding`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:119
 msgid ""
@@ -415,6 +541,10 @@ msgid ""
 "smaller chunks called 'Groups', these are 256x256 for VarDCT and you can "
 "choose one of several sizes for Modular Mode."
 msgstr ""
+"VarDCT možno považovať za „stratovú\" kompresiu, zatiaľ čo Modulárny režim "
+"je ako „bezstratová\" kompresia. Okrem toho JPEG XL rozdeľuje obrázky na "
+"menšie časti nazývané „Skupiny\", pre VarDCT sú to 256 x 256 a pre Modulárny "
+"režim si môžete vybrať jednu z niekoľkých veľkostí."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:122
 msgid ""
@@ -424,10 +554,15 @@ msgid ""
 "you'd scale down the image by half (for 2x2), quarter (for 4x4) or to an "
 "eight (for 8x8) and then scaled it back up to the original size."
 msgstr ""
+"Ako vzorkovať farebné kanály. To znamená, že sa uloží menej informácií, čo "
+"povedie k menšiemu súboru. Keďže sa však vzorkuje len niekoľko pixelov, "
+"ostré kontrasty sa stratia. Efekt je podobný, ako keby ste zmenšili obrázok "
+"na polovicu (pre 2x2), štvrtinu (pre 4x4) alebo osminu (pre 8x8) a potom ho "
+"zväčšili späť na pôvodnú veľkosť."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:125
 msgid "Color channel resampling."
-msgstr ""
+msgstr "Prevzorkovanie farebného kanála."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:125
 msgid ""
@@ -435,6 +570,9 @@ msgid ""
 "and devoid of sharp contrast. It's recommended to set this to :guilabel:`No "
 "Downsampling` in any other case."
 msgstr ""
+"Táto funkcia je obzvlášť užitočná pre obrázky, ktoré sú zámerne rozmazané a "
+"postrádajú ostré kontrasty. V akomkoľvek inom prípade sa odporúča nastaviť "
+"toto na :guilabel:`No Downsampling`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:127
 msgid "Alpha channel resampling"
@@ -445,6 +583,8 @@ msgid ""
 "Same as :guilabel:`Color channel resampling`, but then for the transparency "
 "of the image."
 msgstr ""
+"Rovnaké ako :guilabel:`Color channel resampling`, ale pre priehľadnosť "
+"obrázku."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:129
 msgid "Photon noise"
@@ -456,6 +596,8 @@ msgid ""
 "later by the computer, giving a simulation of the noise that cameras "
 "sometimes capture."
 msgstr ""
+"Toto určuje, či má byť šum v obrázku abstrahovaný a neskôr pridaný "
+"počítačom, čím sa simuluje šum, ktorý kamery niekedy zachytia."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:132
 msgid ""
@@ -466,6 +608,11 @@ msgid ""
 "`Generate Patches` is on, and the encoder finds both patches and dots, the "
 "dots will be encoded as if they were patches."
 msgstr ""
+"Bodky sú formou šumu väčšieho ako :guilabel:`Photon noise`. Takéto bodky "
+"robia obrázky príjemnejšie na pohľad, avšak sťažujú kompresiu. Táto možnosť "
+"vám umožňuje vybrať, či tieto bodky abstrahovať a nechať ich neskôr pridať "
+"počítačom. Ak sú toto a :guilabel:`Generate Patches` zapnuté a enkodér nájde "
+"záplaty aj bodky, bodky budú zakódované akoby boli záplaty."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:134
 #: ../../general_concepts/file_formats/file_jxl.rst:141
@@ -479,12 +626,14 @@ msgstr ""
 msgid ""
 "Default -- Encoder will select this option depending on :guilabel:`Tradeoff`."
 msgstr ""
+"Predvolené -- Enkodér vyberie túto možnosť v závislosti od :guilabel:"
+"`Tradeoff`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:135
 #: ../../general_concepts/file_formats/file_jxl.rst:142
 #: ../../general_concepts/file_formats/file_jxl.rst:151
 msgid "Enabled -- Always use this regardless :guilabel:`Tradeoff`."
-msgstr ""
+msgstr "Povolené -- Vždy používajte toto bez ohľadu na :guilabel:`Tradeoff`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:136
 msgid "Generate dots"
@@ -495,6 +644,7 @@ msgstr "Generovať bodky"
 #: ../../general_concepts/file_formats/file_jxl.rst:152
 msgid "Disabled -- Never use this regardless :guilabel:`Tradeoff`."
 msgstr ""
+"Zakázané -- Nikdy nepoužívajte toto bez ohľadu na :guilabel:`Tradeoff`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:139
 msgid ""
@@ -502,6 +652,9 @@ msgid ""
 "This can be useful with images that have a lot of repeating bits, like "
 "sprite art, images with text or images using a lot of patterns."
 msgstr ""
+"Toto určuje, či sa má pokúsiť znova použiť časti a kúsky obrázku. Toto môže "
+"byť užitočné pri obrázkoch, ktoré majú veľa opakujúcich sa bitov, ako je "
+"sprite art, obrázky s textom alebo obrázky používajúce veľa vzorov."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:143
 msgid "Generate patches"
@@ -509,13 +662,15 @@ msgstr "Generovať opravy"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:145
 msgid "Edge Preserving Filter"
-msgstr ""
+msgstr "Filter zachovávajúci hrany"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:146
 msgid ""
 "The edge preserving filter tries to preserve edges without getting artifacts "
 "like 'rings'."
 msgstr ""
+"Filter zachovávajúci hrany sa snaží zachovať hrany bez získania artefaktov "
+"ako „prstene\"."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:148
 msgid ""
@@ -523,6 +678,9 @@ msgid ""
 "emphasize important contrasts that would otherwise be lost during encoding "
 "and decoding."
 msgstr ""
+"Či použiť filter ostrenia podobný Gaborovmu, ktorý môže pomôcť zdôrazniť "
+"dôležité kontrasty, ktoré by inak boli stratené počas kódovania a "
+"dekódovania."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:152
 msgid "Gaborish filter"
@@ -541,12 +699,20 @@ msgid ""
 "method, the lossless :guilabel:`Modular Mode`, or by letting the encoder "
 "itself choose."
 msgstr ""
+"Na rozdiel od *Modulárneho režimu*, ktorý je bezstratovou kompresnou "
+"metódou, Modulárne kódovanie namiesto toho rozdeľuje obrázok na menšie "
+"časti, čo umožňuje viacvláknové kódovanie, ako aj optimalizáciu po častiach. "
+"Táto možnosť vám umožňuje vybrať, či má enkodér použiť stratovú metódu :"
+"guilabel:`VarDCT`, bezstratový :guilabel:`Modular Mode`, alebo nechať "
+"samotný enkodér vybrať."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:157
 msgid ""
 "Whether to keep the color values when a pixel is fully transparent or "
 "whether to abstract them away as if they were transparent black."
 msgstr ""
+"Či zachovať hodnoty farieb, keď je pixel úplne priehľadný, alebo či ich "
+"abstrahovať akoby boli priehľadne čierne."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:160
 #: ../../general_concepts/file_formats/file_jxl.rst:177
@@ -555,7 +721,7 @@ msgstr ""
 #: ../../general_concepts/file_formats/file_jxl.rst:222
 #: ../../general_concepts/file_formats/file_jxl.rst:234
 msgid "Enabled -- Always use this regardless of :guilabel:`Tradeoff`."
-msgstr ""
+msgstr "Povolené -- Vždy používajte toto bez ohľadu na :guilabel:`Tradeoff`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:161
 msgid "Keep color of invisible pixels"
@@ -569,6 +735,7 @@ msgstr "Zachovať farbu neviditeľných pixelov"
 #: ../../general_concepts/file_formats/file_jxl.rst:235
 msgid "Disabled -- Never use this regardless of :guilabel:`Tradeoff`."
 msgstr ""
+"Zakázané -- Nikdy nepoužívajte toto bez ohľadu na :guilabel:`Tradeoff`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:164
 msgid ""
@@ -576,6 +743,9 @@ msgid ""
 "for partially downloaded images and images using :guilabel:`Progressive "
 "Encoding`."
 msgstr ""
+"Ako sú skupiny uložené v :guilabel:`Modular encoding`. Toto je dôležité pre "
+"čiastočne stiahnuté obrázky a obrázky používajúce :guilabel:`Progressive "
+"Encoding`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:166
 #: ../../general_concepts/file_formats/file_jxl.rst:206
@@ -584,7 +754,7 @@ msgstr "Predvolené"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:167
 msgid "Depends on :guilabel:`Tradeoff`."
-msgstr ""
+msgstr "Závisí od :guilabel:`Tradeoff`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:168
 msgid "Scanline order"
@@ -592,7 +762,7 @@ msgstr "Poradie riadkov snímania"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:169
 msgid "Top left of the image is also the first group."
-msgstr ""
+msgstr "Ľavý horný roh obrázku je tiež prvou skupinou."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:171
 msgid "Group order"
@@ -600,11 +770,11 @@ msgstr "Poradie skupiny"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:171
 msgid "Center first"
-msgstr ""
+msgstr "Najprv stred"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:171
 msgid "The centermost group of the image is the first group."
-msgstr ""
+msgstr "Najstrednejšia skupina obrázku je prvou skupinou."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:174
 msgid ""
@@ -612,6 +782,9 @@ msgid ""
 "section from the pixel brightness, meaning it only has to store the pixel "
 "brightness and not the color. Experimentation is recommended."
 msgstr ""
+"JPEG XL môže použiť určité algoritmické triky na predpovedanie farby danej "
+"časti na základe jasu pixelov, čo znamená, že stačí uložiť jas pixelov a nie "
+"farbu. Odporúča sa experimentovanie."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:178
 msgid "Chroma-from-luma"
@@ -627,6 +800,12 @@ msgid ""
 "this mathematical function is also finetuned by the encoder, this is called "
 "`Adaptive Quantization`."
 msgstr ""
+"Jadrom kompresie JPEG je takzvaná Diskrétna kosínusová transformácia (DCT). "
+"Tá umožňuje zjednodušiť zložitý prechod farieb na matematickú funkciu. "
+"Jednou z nových funkcií JPEG XL je, že tieto DCT nemusia byť 8x8, ani "
+"nemusia mať rovnakú veľkosť v celom obrázku. Toto sa nazýva „Variabilné DCT"
+"\". Kompresia aplikovaná na túto matematickú funkciu je tiež doladená "
+"enkodérom, toto sa nazýva `Adaptívne kvantovanie`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:183
 msgid ""
@@ -641,6 +820,16 @@ msgid ""
 "especially useful for images alongside text or images that get served over a "
 "slow internet connection."
 msgstr ""
+"Keďže enkodér je schopný vybrať najlepšie riešenie pre kompresiu (v "
+"závislosti od toho, čo ste vybrali pre :guilabel:`Tradeoff`), jediná vec, o "
+"ktorú sa musíte starať, je či povoliť progresívny režim. Progresívny režim "
+"pre VarDCT berie takzvané hodnoty `DC` (ktoré sú pre každý blok DCT) na "
+"vytvorenie hrubého náhľadového obrázku, ktorý sa zobrazí ako prvý, a potom "
+"berie hodnoty `AC`, ktoré reprezentujú jemné detaily, a posiela ich ako "
+"posledné. V dôsledku toho progresívne obrázky najprv zobrazujú hrubý "
+"rozmazaný obrázok, ktorý sa s dokončením sťahovania *postupne* zostrejuje. "
+"Toto je obzvlášť užitočné pre obrázky vedľa textu alebo obrázky, ktoré sa "
+"poskytujú cez pomalé internetové pripojenie."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:186
 msgid ""
@@ -648,6 +837,9 @@ msgid ""
 "fine details of images. This takes more time but generally gives better "
 "results."
 msgstr ""
+"Toto povolí progresívny režim a používa pokročilú farebnú matematiku na "
+"výpočet jemných detailov obrázkov. Toto trvá dlhšie, ale vo všeobecnosti "
+"dáva lepšie výsledky."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:190
 msgid "Spectral progression"
@@ -659,6 +851,9 @@ msgid ""
 "fine details. This leads to a smaller file size at the cost of giving the "
 "encoder more time to do so."
 msgstr ""
+"Toto povolí progresívny režim a potom používa kvantovanie na kompresiu "
+"jemných detailov. To vedie k menšej veľkosti súboru za cenu toho, že "
+"enkodéru to trvá dlhšie."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:197
 msgid "Quantization"
@@ -673,10 +868,17 @@ msgid ""
 "JPEG XL, you can opt to use a low-resolution image in addition. This should "
 "result in a better preview, though the file size will be a few bytes bigger."
 msgstr ""
+"Zatiaľ čo predchádzajúce dve možnosti pokrývali jemnozrnné časti progresívne "
+"zakódovaného obrázku, `DC` je hrubozrnná kompresia, konkrétne koeficient pre "
+"každý blok DCT, ktorý možno použiť na vytvorenie hrubého náhľadového obrázku "
+"pre progresívne dekódovanie. Keďže DCT môže mať variabilnú veľkosť v JPEG "
+"XL, môžete sa rozhodnúť použiť navyše obrázok s nízkym rozlíšením. To by "
+"malo viesť k lepšiemu náhľadu, hoci veľkosť súboru bude o niekoľko bajtov "
+"väčšia."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:207
 msgid "Let the encoder choose."
-msgstr ""
+msgstr "Nechajte enkodér vybrať."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:208
 msgid "Disable"
@@ -684,17 +886,19 @@ msgstr "Zakázať"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:209
 msgid "Do not use a lower-resolution image at all."
-msgstr ""
+msgstr "Nepoužívajte vôbec obrázok s nižším rozlíšením."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:210
 msgid "64x64 low resolution pass"
-msgstr ""
+msgstr "Prechod s nízkym rozlíšením 64x64"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:211
 msgid ""
 "Create an 64x64 image to use alongside the `DC` values to create the "
 "progressive preview."
 msgstr ""
+"Vytvorte obrázok 64x64 na použitie spolu s hodnotami `DC` na vytvorenie "
+"progresívneho náhľadu."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:213
 msgid "VarDCT parameters"
@@ -706,13 +910,15 @@ msgstr "Nízke rozlíšenie DC"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:213
 msgid "512x512 + 64x64 low resolution pass"
-msgstr ""
+msgstr "Prechod s nízkym rozlíšením 512x512 + 64x64"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:213
 msgid ""
 "Create both a 512x512 image and a 64x64 image to use alongside the `DC` "
 "values to create the progressive preview."
 msgstr ""
+"Vytvorte obrázok 512x512 aj obrázok 64x64 na použitie spolu s hodnotami `DC` "
+"na vytvorenie progresívneho náhľadu."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:216
 msgid ""
@@ -720,6 +926,9 @@ msgid ""
 "to a small programming language by way of predictors to describe image data "
 "succinct and precise."
 msgstr ""
+"Ďalšie možnosti pre :guilabel:`Modular Mode`. Modulárny režim používa niečo "
+"podobné ako malý programovací jazyk prostredníctvom prediktorov na stručný a "
+"presný popis obrazových dát."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:219
 msgid ""
@@ -728,6 +937,9 @@ msgid ""
 "a way that upon downloading and showing it, a rough previews will get shown "
 "first."
 msgstr ""
+"Či povoliť alebo zakázať progresívne kódovanie/dekódovanie. Ako je "
+"vysvetlené v :guilabel:`VarDCT parameters`, to znamená, že obrázok možno "
+"uložiť tak, že pri stiahnutí a zobrazení sa najprv zobrazí hrubý náhľad."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:222
 msgid "Progressive encoding"
@@ -744,6 +956,10 @@ msgid ""
 "values possible. For 8 bit, 100% would mean 255 values total, 50% would mean "
 "128 values total, and 10% would mean a total of 25 values total."
 msgstr ""
+"Farby budú uložené ako paleta v závislosti od toho, či celkový počet "
+"použitých rôznych farieb je menší ako percento všetkých možných hodnôt "
+"farebného kanála. Pre 8 bitov by 100 % znamenalo celkovo 255 hodnôt, 50 % by "
+"znamenalo celkovo 128 hodnôt a 10 % by znamenalo celkovo 25 hodnôt."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:226
 msgid "Local channel palette range"
@@ -753,22 +969,29 @@ msgstr "Rozsah palety lokálnych kanálov"
 msgid ""
 "Like :guilabel:`Global channel palette range`, but then decided per group."
 msgstr ""
+"Podobné ako :guilabel:`Global channel palette range`, ale rozhoduje sa pre "
+"každú skupinu."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:228
 msgid "Use color palette for ... colors or less."
-msgstr ""
+msgstr "Použiť farebnú paletu pre ... farieb alebo menej."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:229
 msgid ""
 "Select the maximum amount of colors that need to be present in a group "
 "before the encoder will try to store them as a palette."
 msgstr ""
+"Vyberte maximálny počet farieb, ktoré musia byť prítomné v skupin, kým sa "
+"ich enkodér pokúsi uložiť ako paletu."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:231
 msgid ""
 "Whether to use a Delta-palette, also called a lossy-palette. This compresses "
 "the palette, but there's no official documentation yet on how exactly."
 msgstr ""
+"Či použiť Delta-paletu, tiež nazývanú stratová paleta. Toto komprimuje "
+"paletu, ale zatiaľ neexistuje žiadna oficiálna dokumentácia o presnom "
+"spôsobe."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:235
 msgid "Delta palette"
@@ -780,6 +1003,9 @@ msgid ""
 "You can choose how big these chunks are when using Modular Mode, for VarDCT "
 "they will default to 256x256."
 msgstr ""
+"Obrázky možno rozdeliť na menšie časti, ktoré možno kódovať samostatne. "
+"Môžete vybrať, aké veľké sú tieto časti pri použití Modulárneho režimu; pre "
+"VarDCT budú predvolene 256x256."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:240
 msgid "128x128"
@@ -810,76 +1036,96 @@ msgid ""
 "pixel to the left'. This is a predictor, and you can select which predictor "
 "you'd prefer to be used. Recommended value is :guilabel:`Default`."
 msgstr ""
+"Ktorý prediktor použiť v spojení so :guilabel:`MA tree`. Zatiaľ čo VarDCT "
+"komprimuje obrázok abstrahovaním zložitých prechodov do matematických "
+"funkcií, Modulárny režim komprimuje sekcie určením, či je možné ich opísať "
+"susednými pixelmi, ako napríklad „rovnaká farba ako pixel naľavo\". Toto je "
+"prediktor a môžete vybrať, ktorý prediktor uprednostníte. Odporúčaná hodnota "
+"je :guilabel:`Default`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:248
 msgid "Default -- Let the encoder choose."
-msgstr ""
+msgstr "Predvolené -- Nechajte enkodér vybrať."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:249
 msgid "Zero -- Always returns the value 0."
-msgstr ""
+msgstr "Zero -- Vždy vracia hodnotu 0."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:250
 msgid "Left -- Always returns the value at the left."
-msgstr ""
+msgstr "Left -- Vždy vracia hodnotu naľavo."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:251
 msgid "Top -- Always returns the value at the top."
-msgstr ""
+msgstr "Top -- Vždy vracia hodnotu hore."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:252
 msgid ""
 "Avg0 -- Returns the average of the values to the immediate left and top of "
 "the current location."
 msgstr ""
+"Avg0 -- Vracia priemer hodnôt bezprostredne naľavo a hore od aktuálneho "
+"miesta."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:253
 msgid ""
 "Select  -- Subtracts the left and top neighbour from the top-left, and "
 "returns the neighbour whose difference is lower."
 msgstr ""
+"Select -- Odčíta ľavého a horného suseda od ľavého horného, a vracia suseda, "
+"ktorého rozdiel je nižší."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:254
 msgid ""
 "Gradient -- Returns the value of the top-left neighbour minus the values of "
 "the top and left neighbours."
 msgstr ""
+"Gradient -- Vracia hodnotu ľavého horného suseda mínus hodnoty horného a "
+"ľavého suseda."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:255
 msgid ""
 "Weighted -- A complex predictor that weights the top, left and top-left "
 "pixels in certain ways to achieve the result."
 msgstr ""
+"Weighted -- Zložitý prediktor, ktorý váži horné, ľavé a ľavé horné pixely "
+"určitými spôsobmi na dosiahnutie výsledku."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:256
 msgid "Top Right -- Returns the value topright of the current location."
-msgstr ""
+msgstr "Top Right -- Vracia hodnotu vpravo hore od aktuálneho miesta."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:257
 msgid "Top Left -- Returns the value topleft of the current location."
-msgstr ""
+msgstr "Top Left -- Vracia hodnotu vľavo hore od aktuálneho miesta."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:258
 msgid "Left Left -- Returns the value topright of the current location."
-msgstr ""
+msgstr "Left Left -- Vracia hodnotu vpravo hore od aktuálneho miesta."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:259
 msgid ""
 "Avg1 -- Returns the average of the values to the immediate left and top-left "
 "of the current location."
 msgstr ""
+"Avg1 -- Vracia priemer hodnôt bezprostredne naľavo a vľavo hore od "
+"aktuálneho miesta."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:260
 msgid ""
 "Avg2 -- Returns the average of the values to the immediate top-left and top "
 "of the current location."
 msgstr ""
+"Avg2 -- Vracia priemer hodnôt bezprostredne vľavo hore a hore od aktuálneho "
+"miesta."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:261
 msgid ""
 "Avg3 -- Returns the average of the values to the immediate left and top-"
 "right of the current location."
 msgstr ""
+"Avg3 -- Vracia priemer hodnôt bezprostredne naľavo a vpravo hore od "
+"aktuálneho miesta."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:262
 msgid ""
@@ -887,10 +1133,12 @@ msgid ""
 "left, topright, and their immediately adjacent neighbours in the same "
 "direction."
 msgstr ""
+"Toptop prediktívny priemer -- Váži hodnotu 6 susedov: horného, ľavého, "
+"pravého horného a ich bezprostredných susedov v rovnakom smere."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:263
 msgid "Gradient + Weighted -- Mixes gradient and weighted."
-msgstr ""
+msgstr "Gradient + Weighted -- Mieša gradientný a váhový prediktor."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:264
 msgid "Predictor"
@@ -902,11 +1150,11 @@ msgstr "Použiť všetky predvídania"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:267
 msgid "Modular Parameters"
-msgstr ""
+msgstr "Modulárne parametre"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:267
 msgid "Pixels for MA tree learning."
-msgstr ""
+msgstr "Pixely na učenie stromu MA."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:267
 msgid ""
@@ -916,6 +1164,11 @@ msgid ""
 "better understood context and thus better compression, but these also take "
 "more resources while encoding."
 msgstr ""
+"Zlomok pixelov použitých pre strom Meta-Adaptive Context. Strom MA je spôsob "
+"analýzy pixelov obklopujúcich aktuálny pixel a v závislosti od kontextu "
+"výber daného prediktora pre tento pixel. Viac pixelov znamená lepšie "
+"pochopený kontext a teda lepšiu kompresiu, ale pri kódovaní tiež spotrebujú "
+"viac zdrojov."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:270
 msgid "Metadata"
@@ -930,6 +1183,8 @@ msgid ""
 "Whether to store any metadata at all. You can individually toggle :guilabel:"
 "`Exif`, :guilabel:`IPTC` and :guilabel:`XMP`."
 msgstr ""
+"Či vôbec ukladať nejaké metadáta. Môžete jednotlivo prepínať :guilabel:"
+"`Exif`, :guilabel:`IPTC` a :guilabel:`XMP`."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:273
 msgid "Anonymizer"
@@ -937,7 +1192,7 @@ msgstr "Anonymizér"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:274
 msgid "Whether to remove author information."
-msgstr ""
+msgstr "Či odstrániť informácie o autorovi."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:276
 msgid "Tool information"
@@ -945,21 +1200,23 @@ msgstr "Informácia nástroja"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:276
 msgid "Whether to add tool information."
-msgstr ""
+msgstr "Či pridať informácie o nástroji."
 
 #: ../../general_concepts/file_formats/file_jxl.rst:280
 msgid "`JPEG XL official website <https://jpeg.org/jpegxl/>`_"
-msgstr ""
+msgstr "`Oficiálna webová stránka JPEG XL <https://jpeg.org/jpegxl/>`_"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:281
 msgid "`JPEG XL community website <https://jpegxl.info/>`_"
-msgstr ""
+msgstr "`Komunitná webová stránka JPEG XL <https://jpegxl.info/>`_"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:282
 msgid ""
 "`libjxl -- JPEG XL reference implementation <https://github.com/libjxl/"
 "libjxl>`_"
 msgstr ""
+"`libjxl -- referenčná implementácia JPEG XL <https://github.com/libjxl/"
+"libjxl>`_"
 
 #: ../../general_concepts/file_formats/file_jxl.rst:284
 msgid ""
@@ -967,3 +1224,6 @@ msgid ""
 "blob/315247f000cff01fbc7ee2dd8252ea8fb82d0769/doc/benchmarking.md>`_ as well "
 "as comments inside the libjxl source code."
 msgstr ""
+"`Skopírované z tohto libjxl readme <https://github.com/libjxl/libjxl/"
+"blob/315247f000cff01fbc7ee2dd8252ea8fb82d0769/doc/benchmarking.md>`_ ako aj "
+"z komentárov v zdrojovom kóde libjxl."
