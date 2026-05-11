@@ -71,6 +71,13 @@ Removing Selections
 If you want to delete the entire selection, the easiest way is to deselect everything. :menuselection:`Select --> Deselect`. Shortcut :kbd:`Ctrl + Shift + A`.
 When you have one of the selection tool active, and the mode of selection is in intersect, replace or symmetric difference then you can also deselect by just |mouseleft| anywhere on the canvas.
 
+Move Selected Content
+-------------------
+
+If you want to move the content within the selection region, enable this setting.
+When clicking inside of a selection region, the selection region can be moved and the content's position on the canvas will be modified.
+The changes will not be saved to the canvas until :kbd:`Enter` is pressed.
+
 Display Modes
 -------------
 
