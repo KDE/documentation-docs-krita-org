@@ -65,6 +65,7 @@ For exporting HDR animations, we support saving HDR to the new codec for mp4 and
 
 * Get a version of FFmpeg that supports H.265.
 * Have an animation open.
+* Setup the HDR metadata in :menuselection:`Image --> Properties`. Options are described below.
 * :menuselection:`File --> Render Animation`.
 * Select :guilabel:`Video`.
 * Select for :guilabel:`Render as`, 'MPEG-4 video' or 'Matroska'.
@@ -72,30 +73,46 @@ For exporting HDR animations, we support saving HDR to the new codec for mp4 and
 * Select at the top 'H.265, MPEG-H Part 2 (HEVC)'.
 * Select for the :guilabel:`Profile`, 'main10 (HDR)'.
 * :guilabel:`HDR Mode` should now enable. Toggle it.
-* click :guilabel:`HDR Metadata` to configure the HDR metadata (options described below).
 * finally, when done, click 'OK'.
 
 HDR Metadata
 ~~~~~~~~~~~~
 
-This is in the render animation screen. It configures the SMPTE ST.2086 or Master Display Color Volumes metadata and is required for the HDR video to be transferred properly to the screen by video players and the cable.
+.. versionchanged:: 6.1
 
-Master Display
-    The colorspace characteristics of the display on for which your image was made, typically also the display that you used to paint the image with. There are two default values for common display color spaces, and a custom value, which will enable the :guilabel:`Display` options.
-Display
-    The precise colorspace characteristics for the display for which your image was made. If you do not have custom selected for :guilabel:`Master Display`, these are disabled as we can use predetermined values.
+   HDR metadata is now stored in the image.
+
+This is in the :menuselection:`Image --> Properties` dialog. It configures the SMPTE ST.2086 or Master Display Color Volumes metadata and is required for the HDR video to be transferred properly to the screen by video players and the cable. Krita will save this when exporting to HDR video.
+
+Diffuse White
+    The nominal diffuse white of the image. This is used to convert to the Perceptual Quantizer curve, as well as to scale the calculated Content Light Levels.
+Content Light Levels
+    Content Light Levels are used by viewing applications to inform the tone mapping.
+
+    Maximum Content Light Level (MaxCLL)
+    The value of the brightest pixel of your image or animation in cd/m².
+    Maximum Frame Average Light Level (MaxFALL)
+        The average 'brightest value' of the whole image or animation.
     
-        Red/Green/Blue Primary
-            The xyY x and xyY y value of the three chromacities of your screen. These define the gamut.
-        White Point
-            The xyY x and xyY y value of the white point of your screen, this defines what is considered 'neutral grey'.
-        Min Luminance
-            The darkest value your screen can show in nits.
-        Max Luminance
-            The brightest value your screen can show in nits.
+    Krita can calculate these values for you, but there's several different approaches:
+    
+    Rec 2020 Per Component
+        This converts the image to linear rec 2020, and then evaluates the maximum of R, G or B. If you export to rec 2100 PQ, this is the method used by broadcasting specifications.
+    RGB Per Component
+        When the image is RGB and can be converted to linear, it is converted to linear, and then it evaluates the maximum of R, G and B. If the image is not RGB nor can it be converted to linear, this uses XYZ Luminance instead.
+    XYZ Luminance
+        This converts the image to XYZ and then takes the Y value. This is the most correct version across color spaces, but may be a lot dimmer than the per-component calculations.
 
-MaxCLL
-    The value of the brightest pixel of your animation in nits.
-MaxFALL
-    The average 'brightest value' of the whole animation.
-            
+Color Volume
+    The colorspace characteristics of the display on for which your image was made, typically also the display that you used to paint the image with. This is used in particular with images made in rec 2020, which has a very large gamut, likely bigger than your display's gamut, so we can estimate that colors outside of your display are not used. That's why it can be useful to signal the color volume in the metadata, so that viewer applications can leave out colors outside of that gamut.
+
+    There's two presets available, Rec 2020, and Display P3. Because displays can be very unique, it is best to use one of these presets instead.
+
+    Red/Green/Blue Primary
+        The xyY x and xyY y value of the three chromacities of your screen. These define the gamut.
+    White Point
+        The xyY x and xyY y value of the white point of your screen, this defines what is considered 'neutral grey'.
+    Min Luminance
+        The darkest value your screen can show in cd/m².
+    Max Luminance
+        The brightest value your screen can show in cd/m².
