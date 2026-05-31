@@ -1,13 +1,13 @@
 # Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
 # This file is distributed under the same license as the Krita Manual package.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2025 Valter Mura <valtermura@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2025, 2026 Valter Mura <valtermura@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-21 02:06+0000\n"
-"PO-Revision-Date: 2025-11-01 19:43+0100\n"
+"PO-Revision-Date: 2026-05-15 12:10+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ../../user_manual/soft_proofing.rst:-1
 msgid "How to use soft proofing in Krita."
@@ -146,14 +146,6 @@ msgstr ""
 "fiori e leggermente meno saturata nei verdi delle foglie."
 
 #: ../../user_manual/soft_proofing.rst:39
-#, fuzzy
-#| msgid ""
-#| "You can toggle soft proofing on any image using the :kbd:`Ctrl + Y` "
-#| "shortcut. Unlike other programs, this is per-view, so that you can look "
-#| "at your image non-proofed and proofed, side by side. The settings are "
-#| "also per image, and saved into the ``.kra`` file. You can set the "
-#| "proofing options in :menuselection:`Image --> Image Properties --> Soft "
-#| "Proofing`."
 msgid ""
 "You can toggle soft proofing on any image using the :kbd:`Ctrl + Y` "
 "shortcut. Unlike other programs, this is per-view, so that you can look at "
@@ -169,9 +161,14 @@ msgstr ""
 "Puoi attivare la prova colore su qualsiasi immagine utilizzando la "
 "scorciatoia :kbd:`Ctrl + Y`. A differenza di altri programmi, essa è «per "
 "vista», ossia puoi osservare la tua immagine con prova e senza prova, fianco "
-"a fianco. Anche le impostazioni sono per immagine e vengono salvate nel file "
-"``.kra``. Puoi impostare le opzioni della prova colore in :menuselection:"
-"`Immagine --> Proprietà dell'immagine --> Prova colore`."
+"a fianco. La configurazione della prova colore può essere impostata anche "
+"per immagine e salvata nel file ``.kra``. Basta attivare :guilabel:"
+"`Memorizza la configurazione di prova colore nell'immagine` nelle opzioni di "
+"prova in :menuselection:`Immagine --> Proprietà dell'immagine --> Prova "
+"colore`. Se la casella di controllo è disattivata, Krita userà invece le "
+"impostazioni globali da :menuselection:`Impostazioni --> Configura Krita... "
+"--> Gestione del colore --> Prova colore` (per ulteriori dettagli vedi :ref:"
+"`qui <color_management_settings_softproofing>`)."
 
 #: ../../user_manual/soft_proofing.rst:42
 msgid ""
@@ -179,6 +176,10 @@ msgid ""
 "Krita embeds the entire proofing ICC profile into ``.kra`` file. This ICC "
 "profile can be big for some output devices, especially CMYK ones."
 msgstr ""
+"Quando l'opzione :guilabel:`Memorizza la configurazione di prova colore "
+"nell'immagine` è attivata, Krita incorpora l'intero profilo ICC della prova "
+"colore nel file ``.kra``. Questo profilo ICC può risultare grande per certi "
+"dispositivi di output, specialmente per quelli CMYK."
 
 #: ../../user_manual/soft_proofing.rst:44
 msgid "There you can set the following options:"
@@ -186,7 +187,7 @@ msgstr "Lì puoi impostare le opzioni seguenti:"
 
 #: ../../user_manual/soft_proofing.rst:47
 msgid "Model, Profile"
-msgstr ""
+msgstr "Modello, Profilo"
 
 #: ../../user_manual/soft_proofing.rst:47
 msgid ""
@@ -207,37 +208,32 @@ msgid ""
 "printing. If your print house does not do any conversion internally, then "
 "you should perform the conversion yourself before sending the file to them."
 msgstr ""
+"Imposta l'obbiettivo utilizzato per convertire l'immagine al profilo del "
+"**dispositivo di output con prova**. Usa le stesse opzioni degli obbiettivi "
+"citati nel :ref:`flusso di lavoro di gestione dei colori "
+"<color_managed_workflow>`. Quest'obbiettivo deve coincidere con l'obbiettivo "
+"di conversione utilizzato dalla tua tipografia prima della stampa. Se la tua "
+"tipografia non esegue alcuna conversione interna, allora devi fare tu la "
+"conversione prima di inviare loro i file."
 
 #: ../../user_manual/soft_proofing.rst:56
 msgid "Rendering Intent"
-msgstr ""
+msgstr "Obbiettivo di resa"
 
 #: ../../user_manual/soft_proofing.rst:56
-#, fuzzy
-#| msgid ""
-#| "Left: Soft proofed image with Adaptation state slider set to max. Right: "
-#| "Soft proofed image with Adaptation State set to minimum."
 msgid ""
 "Left: Soft proofed image with Absolute Intent Chromatic Adaptation enabled. "
 "Right: Soft proofed image with Absolute Intent Chromatic Adaptation disabled."
 msgstr ""
-"Sinistra: immagine con prova colore con Stato di adattamento impostato al "
-"massimo. Destra: immagine con prova colore con Stato di adattamento "
-"impostato al minimo."
+"Sinistra: immagine con prova colore con Adattamento cromatico per "
+"l'obbiettivo assoluto attivato. Destra: immagine con prova colore con "
+"Adattamento cromatico per l'obbiettivo assoluto disattivato."
 
 #: ../../user_manual/soft_proofing.rst:59
-#, fuzzy
-#| msgid "Black Point Compensation"
 msgid "Black Point Compensation"
 msgstr "Compensazione del punto nero"
 
 #: ../../user_manual/soft_proofing.rst:59
-#, fuzzy
-#| msgid ""
-#| "Set the black point compensation. Turning this off will crunch the shadow "
-#| "values to the minimum the screen and the proofing profile can handle, "
-#| "while turning this on will scale the black to the screen-range, showing "
-#| "you the full range of grays in the image."
 msgid ""
 "Enables the black point compensation when converting image to the **proofed "
 "output device** profile. Turning this off will clip the shadow values to the "
@@ -247,11 +243,14 @@ msgid ""
 "Intent`, this value should coincide with the value used by the printing "
 "house when performing conversion to the device."
 msgstr ""
-"Imposta la compensazione del punto nero. Con la sua disattivazione "
-"restringerai i valori di ombra al minimo valore che lo schermo e il profilo "
-"della prova possono gestire, mentre con la sua attivazione il nero verrà "
-"scalato ai valori possibili dello schermo, mostrandoti l'intero intervallo "
-"di grigi nell'immagine."
+"Abilita la compensazione del punto nero quando si converte l'immagine al "
+"profilo del **dispositivo di output con prova colore**. Con la sua "
+"disattivazione ritaglierai i valori di ombra al minimo valore che lo schermo "
+"e il profilo della prova possono gestire, mentre con la sua attivazione il "
+"nero verrà scalato ai valori possibili dello schermo, mostrandoti l'intero "
+"intervallo di grigi nell'immagine. Come l`:guilabel:`obbiettivo di resa "
+"della conversione`, questo valore deve coincidere col valore utilizzato "
+"dalla tipografia quando esegue la conversione verso il dispositivo."
 
 #: ../../user_manual/soft_proofing.rst:62
 msgid ""
@@ -260,19 +259,21 @@ msgid ""
 "colors from the **proofed output device** profile into the **screen** "
 "profile."
 msgstr ""
+"Definisce il modo in cui lo spazio con prova (e possibilmente ritagliato) "
+"verrà mostrato sullo schermo, ossia quale l'obbiettivo di resa e quali flag "
+"verranno utlilizzati per convertire i colori dal profilo del **dispositivo "
+"di output con prova** all'interno del profilo dello **schermo**."
 
 #: ../../user_manual/soft_proofing.rst:64
-#, fuzzy
-#| msgid ""
-#| "You can set the defaults that Krita uses in :menuselection:`Settings --> "
-#| "Configure Krita... --> Color Management`."
 msgid ""
 ":guilabel:`Use global display settings` instructs Krita to render the "
 "proofed space using the global settings, set in :menuselection:`Settings --> "
 "Configure Krita... --> Color Management --> Display`."
 msgstr ""
-"Puoi impostare i valori predefiniti che Krita utilizza in :menuselection:"
-"`Impostazioni --> Configura Krita... --> Gestione dei colori`."
+":guilabel:`Usa le impostazioni globali di visualizzazione` istruisce Krita a "
+"rendere lo spazio con prova tramite le impostazioni globali impostate in :"
+"menuselection:`Impostazioni --> Configura Krita... --> Gestione del colore --"
+"> Vista`."
 
 #: ../../user_manual/soft_proofing.rst:66
 msgid ""
@@ -286,40 +287,54 @@ msgid ""
 "paper profile, the one the display is configured to and the white point of "
 "the light bulb that illuminates your physical print."
 msgstr ""
+":guilabel:`Simula bianco e nero cartaceo` viene utilizzato per eseguire "
+"l'anteprima del punto di bianco (o «tinta colore») della carta sullo schermo "
+"attivo. In altre parole, se la carta è opaca, o metallica, o possiede "
+"qualche effetto seppia, esso sarà visibile sullo schermo. Tieni presente che "
+"il punto di bianco delle condizioni di visualizzazione saranno ancora "
+"regolate a quello dello schermo. Questo significa che non puoi confrontare "
+"visivamente la stampa fisica con l'immagine sullo schermo, a meno che i tre "
+"punti di bianco non coincidano: quello del profilo della carta, quello con "
+"cui è configurato lo schermo e il punto di bianco della lampadina che "
+"illumina la tua stampa fisica."
 
 #: ../../user_manual/soft_proofing.rst:68
 msgid ""
 ":guilabel:`Custom` allows you to configure the final conversion step "
 "manually. You may want to configure the pipeline depending on your goal:"
 msgstr ""
+":guilabel:`Personalizzato` ti permette di configurare manualmente il "
+"passaggio della conversione finale. Potresti voler configurare la pipeline "
+"in base ai tuoi scopi:"
 
 #: ../../user_manual/soft_proofing.rst:71
 msgid ":guilabel:`Rendering Intent` --> :guilabel:`Relative Colorimetric`"
-msgstr ""
+msgstr ":guilabel:`Obbiettivi di resa` --> :guilabel:`Colorimetrico relativo`"
 
 #: ../../user_manual/soft_proofing.rst:72
-#, fuzzy
-#| msgid "Black Point Compensation"
 msgid ":guilabel:`Black Point Compensation` --> `Enabled`"
-msgstr "Compensazione del punto nero"
+msgstr ":guilabel:`Compensazione del punto nero` --> `Abilitata`"
 
 #: ../../user_manual/soft_proofing.rst:74
 msgid "Preview color gamut (or \"color variety\") of the image"
-msgstr ""
+msgstr "Anteprima gamut dei colori (o «varietà dei colori«) dell'immagine"
 
 #: ../../user_manual/soft_proofing.rst:74
 msgid ""
 "If you want to use :guilabel:`Out of Gamut Warnings`, it is best to use them "
 "in this mode"
 msgstr ""
+"Se vuoi utilizzare gli :guilabel:`Avvisi fuori dal gamut` è meglio "
+"utilizzarli in questa modalità"
 
 #: ../../user_manual/soft_proofing.rst:77
 msgid ":guilabel:`Rendering Intent` --> :guilabel:`Absolute Colorimetric`"
-msgstr ""
+msgstr ":guilabel:`Obbiettivi di resa` --> :guilabel:`Colorimetrico assoluto`"
 
 #: ../../user_manual/soft_proofing.rst:78
 msgid ":guilabel:`Absolute Intent Chromatic Adaptation` --> `Enabled`"
 msgstr ""
+":guilabel:`Adattamento cromatico per l'obbiettivo assoluto` --> `Abilitato`"
 
 #: ../../user_manual/soft_proofing.rst:81
 msgid ""
@@ -327,6 +342,9 @@ msgid ""
 "**broken** (even in XWayland mode). More than that, it may be broken "
 "differently in different versions."
 msgstr ""
+"Se stai utilizzando il compositore Wayland, l'obbiettivo Colorimetrico "
+"assoluto potrebbe essere **danneggiato** (anche in modalità XWayland). Oltre "
+"quello, potrebbe essere danneggiato diversamente nelle varie versioni."
 
 #: ../../user_manual/soft_proofing.rst:83
 msgid ""
@@ -336,6 +354,11 @@ msgid ""
 "(`sigChromaticAdaptationTag`) of the printer and display profiles do not "
 "coincide."
 msgstr ""
+"In KWin 6.4.x e versioni precedenti, :guilabel:`Colorimetrico assoluto` si "
+"comporterà come se l'opzione :guilabel:`Adattamento cromatico per "
+"l'obbiettivo assoluto` sia **sempre disabilitata**. Causerà una forte "
+"colorazione se i punti di bianco (`sigChromaticAdaptationTag`) della "
+"stampante e dei profili dello schermo non coincidono."
 
 #: ../../user_manual/soft_proofing.rst:85
 msgid ""
@@ -345,14 +368,21 @@ msgid ""
 "and will let you preview contrast degradations, but you will not be able to "
 "get advanced effects of disabling color adaptation to the display space."
 msgstr ""
+"In KWin 6.5.x e versioni successive, :guilabel:`Colorimetrico assoluto` si "
+"comporterà come se l'opzione :guilabel:`Adattamento cromatico per "
+"l'obbiettivo assoluto` sia **sempre abilitata**. Dato che **mantieni la "
+"casella di controllo impostata**, la funzionalità funzionerà correttamente e "
+"ti permetterà di eseguire l'anteprima delle degradazioni dei contrasti, ma "
+"non potrai ottenere effetti avanzati disattivando l'adattamento dei colori "
+"nello spazio dello schermo."
 
 #: ../../user_manual/soft_proofing.rst:87
 msgid "Display Mode"
-msgstr ""
+msgstr "Modalità di visualizzazione"
 
 #: ../../user_manual/soft_proofing.rst:87
 msgid "Preview contrast degradations caused by the color of the paper"
-msgstr ""
+msgstr "Anteprima del degrado del contrasto causata dal colore della carta"
 
 #: ../../user_manual/soft_proofing.rst:87
 msgid ""
@@ -360,28 +390,26 @@ msgid ""
 "`discussed here <https://gitlab.freedesktop.org/wayland/wayland-protocols/-/"
 "merge_requests/439>`_."
 msgstr ""
+"Questo è un problema delle specifiche del protocollo Wayland, la correzione "
+"viene `discussa qui <https://gitlab.freedesktop.org/wayland/wayland-"
+"protocols/-/merge_requests/439>`_."
 
 #: ../../user_manual/soft_proofing.rst:90
 msgid "Gamut Warning"
 msgstr "Avviso gamut"
 
 #: ../../user_manual/soft_proofing.rst:90
-#, fuzzy
-#| msgid "Set the color of the out-of-gamut warning."
 msgid "Set the color of :guilabel:`Out of Gamut Warnings`."
-msgstr "Imposta il colore dell'avviso di «fuori dal gamut»."
+msgstr "Imposta il colore degli :guilabel:`Avvisi fuori dal gamut`."
 
 #: ../../user_manual/soft_proofing.rst:92
-#, fuzzy
-#| msgid ""
-#| "You can set the defaults that Krita uses in :menuselection:`Settings --> "
-#| "Configure Krita... --> Color Management`."
 msgid ""
 "You can set the defaults that Krita uses in :menuselection:`Settings --> "
 "Configure Krita... --> Color Management --> Soft Proofing`."
 msgstr ""
 "Puoi impostare i valori predefiniti che Krita utilizza in :menuselection:"
-"`Impostazioni --> Configura Krita... --> Gestione dei colori`."
+"`Impostazioni --> Configura Krita... --> Gestione dei colori --> Prova "
+"colore`."
 
 #: ../../user_manual/soft_proofing.rst:94
 msgid ""
