@@ -35,6 +35,10 @@ Docker Options
 
 .. image:: /images/dockers/recorder_docker.png
 
+.. note::
+
+   On Android, :guilabel:`Export` is unavailable. To render a video, you will have to transfer the snapshot files to a computer or find an Android application that can turn a series of images into a video.
+
 Recordings Directory:
    The directory where the snapshots are kept. Note the :guilabel:`Manage Recordings` button, which will assist you in selecting old recordings to remove.
 Capture Interval:
