@@ -77,6 +77,10 @@ Import video file
 
 Video import allows you to import a sample of a video file as an animated paint layer.
 
+.. note::
+
+   On Android, importing video files is unavailable. You have to use a computer to import the video, save it to a KRA file and transfer it to your device.
+
 .. image:: /images/animation/import_video.png
 
 Choose a video file

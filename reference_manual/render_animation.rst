@@ -17,7 +17,7 @@
 Render Animation
 ================ 
 
-Render animation allows you to render your animation to an image sequence, ``.gif``, ``.mp4``, ``.mkv``, or ``.ogg`` file. It replaces :guilabel:`Export Animation`.
+Render animation allows you to render your animation to an image sequence and (on computers) to ``.gif``, ``.mp4``, ``.mkv``, or ``.ogg`` file. It replaces :guilabel:`Export Animation`.
 
 For rendering to an animated file format, Krita will first render to a PNG sequence and then use FFmpeg, which is really good at encoding into video files, to render that sequence to an animated file format. The reason for this two-step process is that animation files can be really complex and really big, and this is the best way to allow you to keep control over the export process. For example, if your computer has a hiccup, and one frame saves out weird, first saving the image sequence allows you to only resave that one weird frame before rendering.
 
@@ -47,6 +47,10 @@ Only Unique Frames
 
 Export as Video
 ---------------
+
+.. note::
+
+   On Android, exporting videos is unavailable. To render a video, you will have to transfer the KRA file to a computer or export an image series and find an Android application that can turn them into a video.
 
 Width
     Set the desired width in pixels.
@@ -126,6 +130,11 @@ For Linux
 ^^^^^^^^^
 
 FFmpeg can be installed from the repositories on most Linux systems. Version 2.6 is required for proper GIF support, as we use the palettegen functionality.
+
+For Android
+^^^^^^^^^
+
+As mentioned above, rendering video on Android is **not supported**. You can download FFmpeg libraries for Android and there are apps that use FFmpeg's name, but **they will not work with Krita**.
 
 Step 2 - Unzipping and Linking to Krita
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
