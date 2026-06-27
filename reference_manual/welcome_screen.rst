@@ -39,3 +39,7 @@ The screen is divided into 4 sections:
 Other than the above sections the welcome screen also acts as a drop area for
 opening any document. You just have to drag and drop a Krita document or any supported
 image files on the empty area around the sections to open it in Krita.
+
+On Android, there may also be a button or graphic for supporter benefits at the
+bottom. Whether this is available depends on which build of Krita you are using
+and whether your device has a connection to Google Play.

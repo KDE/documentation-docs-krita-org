@@ -70,6 +70,8 @@ Importing Bundles
 To import a bundle click on :guilabel:`Import` button on the top right side of the dialog.
 Select ``.bundle`` file format from the file type if it is not already selected, browse to the folder where you have downloaded the bundle, select it and click :guilabel:`Open`. Once the bundle is imported it will be listed in the bundle view. To enable or disable a bundle, select the entry in the view, and then select :guilabel:`Deactivate`.
 
+On Android, you can also get more resource bundles through the application itself in return for supporting Krita, see :ref:`android_supporter_packs`.
+
 .. _create_bundle:
 
 Creating your own Bundle
