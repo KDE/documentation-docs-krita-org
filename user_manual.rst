@@ -31,3 +31,4 @@ Discover Krita’s features through an online manual. Guides to help you transit
    user_manual/animation
    user_manual/japanese_animation_template
    user_manual/gamut_masks
+   user_manual/supporting_krita
