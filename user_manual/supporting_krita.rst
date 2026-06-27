@@ -39,6 +39,19 @@ If you purchase one these versions, you get auto-updates via the store you purch
 
 You can also purchase some resource packs, training materials and more `on the shop page on krita.org <https://krita.org/en/shop/>`__.
 
+.. _android_supporter_packs:
+
+Android Supporter Packs
+=======================
+
+On Android, there are support options in the application itself through Google Play. If you are using a device without Google services, they will not be available. Development or nightly builds do not have them either.
+
+All supporter packs let you download resource bundles with brushes, templates and more directly in the application. There is a subscription available, which gives you access to all resource bundles. If you prefer not entering into a subscription, there is also one-time purchase packs that give you a fixed set of bundles instead.
+
+Subscriptions are managed through Google Play, you can unsubscribe or pause your subscription there. Krita also provides links to manage your subscription that send you directly to the right place in the Google Play application.
+
+As with the versions of Krita you can buy on online stores, no features are locked behind a subscription or purchase, you can still manually import resource bundles. The supporter packs just provide some extra convenience.
+
 Commercial Support
 ==================
 
