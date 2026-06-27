@@ -15,7 +15,7 @@ Recorder Docker
 
 .. versionadded: 5.0
 
-You may have seen artists show little progress movies of their work. This is called a time lapse! Normally a time lapse is recorded using outside software, like OBS, and then sped up around 16 times, and they are used to convey the whole amount of effort that went into an image. The recorder docker simplifies making a time lapse, by taking a snapshot every stroke and then letting you :ref:`render it to a video file with ffmpeg <render_animation>`. Because this docker relies on FFMpeg, it cannot be used on Android.
+You may have seen artists show little progress movies of their work. This is called a time lapse! Normally a time lapse is recorded using outside software, like OBS, and then sped up around 16 times, and they are used to convey the whole amount of effort that went into an image. The recorder docker simplifies making a time lapse, by taking a snapshot every stroke and then letting you :ref:`render it to a video file <render_animation>`.
 
 The recorder docker makes a snapshot of the canvas every few seconds, or at the end of every stroke. You can tell it's turned on because there will be a :guilabel:`recording` symbol in the status bar, which is red when it's making snapshots and white when it's on standby.
 
@@ -34,10 +34,6 @@ Docker Options
 --------------
 
 .. image:: /images/dockers/recorder_docker.png
-
-.. note::
-
-   On Android, :guilabel:`Export` is unavailable. To render a video, you will have to transfer the snapshot files to a computer or find an Android application that can turn a series of images into a video.
 
 Recordings Directory:
    The directory where the snapshots are kept. Note the :guilabel:`Manage Recordings` button, which will assist you in selecting old recordings to remove.
@@ -91,11 +87,11 @@ Enable Result Preview
 Resize:
    Scale the final video.
 FFMpeg:
-   The location of the ffmpeg executable.
+   The location of the ffmpeg executable. On Android, Krita uses the operating system's video encoder instead.
 Render As:
-   Select the render setting to use. MP4 x264 is sufficient for most drawings and will be accepted on most video sharing sites.
+   Select the render setting to use. MP4 x264 (MP4/H.264 on Android) is sufficient for most drawings and will be accepted on most video sharing sites.
 Video Location:
-   Where to put the resulting video.
+   Where to put the resulting video. On Android, you will be prompted for a location when you press the export button instead.
 Video Duration:
    The final video length in seconds. This will change as you change the FPS settings.
 
@@ -105,6 +101,6 @@ After Export
 Watch it:
    This will open the resulting file in the default video player on your system.
 Show in folder:
-   This will open the folder where the file is located in your file browser.
+   This will open the folder where the file is located in your file browser. This is not available on Android.
 Remove recordings:
    Remove the snapshots from your computer.
