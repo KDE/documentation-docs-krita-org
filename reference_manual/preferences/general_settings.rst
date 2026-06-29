@@ -136,6 +136,9 @@ Subwindow mode
         This gives an outline when moving windows to work around ugly glitches with certain graphics-cards.
 Use Custom Interface Font
         This allows you to tweak the interface font and the size. Requires a restart.
+
+.. _hi_dpi_support:
+
 Enable Hi-DPI support
     Attempt to use the Hi-DPI support. It is an option because we are still experiencing bugs on Windows.
     
