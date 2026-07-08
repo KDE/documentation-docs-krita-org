@@ -22,7 +22,7 @@ Android Interface Scale
 
 On Android, you will be prompted to adjust the interface scale when Krita starts. Change the slider to make the interface larger and smaller. 100% is the minimum, you can't make it smaller than that.
 
-After you saw it once, Krita will show you the option to disable the dialog on startup. The option doesn't appear the first time around to make sure you have a way out of setting a wrong scale by closing and reopening Krita.
+After you've seen it once, Krita will show you the option to disable the dialog on startup. The option doesn't appear the first time around to make sure you have a way out of setting a wrong scale by closing and reopening Krita.
 
 You can bring back the dialog manually via :menuselection:`Settings --> Change Interface Scale...` in the top menu bar.
 
