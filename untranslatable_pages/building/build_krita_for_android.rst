@@ -92,6 +92,9 @@ You need to manually set up a few environment variables and folders
 
 .. code::
 
+    # sets ANDROID_ROOT, KDECI_ANDROID_SDK_ROOT, KDECI_ANDROID_NDK_ROOT, ANDROID_HOME, and PATH (for tools necessary for the SDK)
+    source /var/lib/ci-files/setup-environment.sh
+
     # set ABI you are building for
     export KDECI_ANDROID_ABI=x86_64
     
