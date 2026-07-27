@@ -50,7 +50,3 @@ Exporting with Audio
 --------------------
 
 To have audio included with your exported animation video you will need to check enable it in the Render Animation options. In the :menuselection:`File --> Render Animation` options there is a checkbox :guilabel:`Include Audio`. Make sure that is checked before you export and you should be good to go.
-
-.. note::
-
-   On Android, exporting videos is unavailable. To render a video, you will have to transfer the KRA file to a computer or export an image series and find an Android application that can turn them and your audio file into a video.
