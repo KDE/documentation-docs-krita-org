@@ -58,6 +58,13 @@ Height
     Set the desired height in pixels.
 FPS
     Set the desired frames per second.
+
+.. note::
+
+   Widths and heights above 1920 pixels and FPS values beyond 30 are not widely supported. They can cause the video export to fail outright or the resulting video may not play back properly on some devices. Krita will warn you about this, but still allows you to try such exports.
+
+   Some video formats require width and height to be even numbers. Krita will automatically adjust the size if necessary.
+
 Filter
     Set the scaling filter. :guilabel:`Bicubic` is fine for most cases, but if you want to, say, export a pixel art animation at twice the size, :guilabel:`Nearest Neighbour` will preserve the fine details better.
 Render As
