@@ -17,11 +17,15 @@
 Render Animation
 ================ 
 
-Render animation allows you to render your animation to an image sequence and (on computers) to ``.gif``, ``.mp4``, ``.mkv``, or ``.ogg`` file. It replaces :guilabel:`Export Animation`.
+Render animation allows you to render your animation to an image sequence and to ``.gif``, ``.mp4``, ``.mkv``, or other video files.
 
-For rendering to an animated file format, Krita will first render to a PNG sequence and then use FFmpeg, which is really good at encoding into video files, to render that sequence to an animated file format. The reason for this two-step process is that animation files can be really complex and really big, and this is the best way to allow you to keep control over the export process. For example, if your computer has a hiccup, and one frame saves out weird, first saving the image sequence allows you to only resave that one weird frame before rendering.
+For rendering to an animated file format, Krita will first render to a PNG sequence and then use a video encoder to render that sequence to an animated file format. The reason for this two-step process is that animation files can be really complex and really big, and this is the best way to allow you to keep control over the export process. For example, if your computer has a hiccup, and one frame saves out weird, first saving the image sequence allows you to only resave that one weird frame before rendering.
 
 This means that you will need to find a good place to stick your frames before you can start rendering. If you only do throwaway animations, you can use a spot on your hard-drive with enough room and select :guilabel:`Delete Sequence After Rendering`.
+
+.. note::
+
+   On Android, file handling and video rendering works differently. You can only either export an image sequence or a video, not both. FFmpeg is not used, do not attempt to install it.
 
 General
 -------
@@ -35,22 +39,18 @@ Export as Image Sequence
 ------------------------
 
 File Format
-    The file format to export the sequence to. When rendering we enforce PNG. The usual export options can be modified with :guilabel:`...`.
+    The file format to export the sequence to. When rendering we enforce PNG. The usual export options can be modified with the edit button next to the drop-down.
 Image Location
-    Where you render the image sequence to. Some people prefer to use a flash-drive or perhaps a harddrive that is fast.
+    Where you render the image sequence to. Some people prefer to use a flash-drive or perhaps a harddrive that is fast. On Android, you will be prompted for a directory instead.
 Base Name
     The base name of your image sequence. This will get suffixed with a number depending on the frame.
-Start numbering at.
+Start numbering at
     The frames are named by using :guilabel:`Base Name`  above and adding a number for the frame. This allows you to set where the frame number starts, so rendering from 8 to 10 with starting point 3 will give you images named 11 and 15. Useful for programs that don't understand sequences starting with 0, or for precision output.
 Only Unique Frames
     Normally Krita generates a frame for every FPS in the sequence. Ticking this will only generate keyframes, saving space.
 
 Export as Video
 ---------------
-
-.. note::
-
-   On Android, exporting videos is unavailable. To render a video, you will have to transfer the KRA file to a computer or export an image series and find an Android application that can turn them into a video.
 
 Width
     Set the desired width in pixels.
@@ -61,21 +61,21 @@ FPS
 Filter
     Set the scaling filter. :guilabel:`Bicubic` is fine for most cases, but if you want to, say, export a pixel art animation at twice the size, :guilabel:`Nearest Neighbour` will preserve the fine details better.
 Render As
-    The file format to render to. All except GIF have extra options that can be manipulated via :guilabel:`...`.
+    The file format to render to. Some have extra options that can be manipulated via the edit button next to the drop-down.
 Video Location
-    Location and name of the rendered animation.
+    Location and name of the rendered animation. On Android, you will be prompted for a file name instead.
     
     Include Audio
         Include any audio you have added.
     
 FFmpeg
-    The location where your have FFmpeg.
+    The location where your have FFmpeg. On Android, the operating system's video encoder is used instead.
     
     .. versionchanged:: 5.2
         This is now optional. Krita's bundled FFMpeg functionality is able to provide some options, but it is still useful to set this if you want to use a specific version of FFMpeg for rendering videos.
     
 Delete Sequence After Rendering
-    Delete the prerendered image sequence after done rendering. This allows you to choose whether to try and save some space, or to save the sequence for when encoding fails.
+    Delete the prerendered image sequence after done rendering. This allows you to choose whether to try and save some space, or to save the sequence for when encoding fails. On Android, the image sequence is only stored internally and always deleted afterwards.
     
     .. deprecated:: 5.2
     
@@ -134,7 +134,7 @@ FFmpeg can be installed from the repositories on most Linux systems. Version 2.6
 For Android
 ^^^^^^^^^
 
-As mentioned above, rendering video on Android is **not supported**. You can download FFmpeg libraries for Android and there are apps that use FFmpeg's name, but **they will not work with Krita**.
+Krita does not use FFmpeg on Android. Don't attempt to install it.
 
 Step 2 - Unzipping and Linking to Krita
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
