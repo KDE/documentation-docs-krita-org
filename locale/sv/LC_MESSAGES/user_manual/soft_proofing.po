@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-21 02:06+0000\n"
-"PO-Revision-Date: 2026-07-26 22:23+0200\n"
+"PO-Revision-Date: 2026-08-02 17:38+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -42,6 +42,8 @@ msgid ""
 "Soft Proofing works only with :ref:`Canvas Graphics Acceleration "
 "<display_settings>` enabled."
 msgstr ""
+"Bildskärmskorrektur fungerar bara med :ref:`Grafikacceleration för duk "
+"<display_settings>` aktiverad."
 
 #: ../../user_manual/soft_proofing.rst:21
 msgid ""
@@ -153,6 +155,17 @@ msgid ""
 "Proofing` (for more details see :ref:`here "
 "<color_management_settings_softproofing>`)."
 msgstr ""
+"Man kan aktivera/inaktivera bildskärmskorrektur på valfri bild med genvägen :"
+"kbd:`Ctrl + Y`. Till skillnad från andra program är det per vy, så att du "
+"kan titta på bilden både med bildskärmskorrektur och utan, sida vid sida. "
+"Inställningarna av bildskärmskorrektur kan också göras per bild och sparas i "
+"``.kra``-filen. Aktivera bara :guilabel:`Lagra inställningen av "
+"bildskärmskorrektur i bilden` i inställningarna av bildskärmskorrektur "
+"under :menuselection:`Bild --> Bildegenskaper --> Bildskärmskorrektur`. Om "
+"kryssrutan är avmarkerad använder Krita att globala inställningar från :"
+"menuselection:`Inställningar --> Anpassa Krita... --> Färghantering --> "
+"Bildskärmskorrektur` (för mer information se :ref:`här "
+"<color_management_settings_softproofing>`)."
 
 #: ../../user_manual/soft_proofing.rst:42
 msgid ""
@@ -160,6 +173,9 @@ msgid ""
 "Krita embeds the entire proofing ICC profile into ``.kra`` file. This ICC "
 "profile can be big for some output devices, especially CMYK ones."
 msgstr ""
+"När :guilabel:`Lagra inställningen av bildskärmskorrektur i bilden` är "
+"aktiverad, inbäddas hela ICC-korrekturprofilen i ``.kra``-filen av Krita. "
+"ICC-profilen kan vara stor för vissa utdataenheter, särskilt sådana med CMYK."
 
 #: ../../user_manual/soft_proofing.rst:44
 msgid "There you can set the following options:"
@@ -188,6 +204,13 @@ msgid ""
 "printing. If your print house does not do any conversion internally, then "
 "you should perform the conversion yourself before sending the file to them."
 msgstr ""
+"Ställ in det återgivningsalternativ som ska användas för att konvertera "
+"bilden till profilen **utdataenhetskorrektur**. Den använder samma "
+"alternativ som alternativen som nämns i :ref:`arbetsflödet för färghantering "
+"<color_managed_workflow>`. Alternativet bör överensstämma med det "
+"konverteringsalternativ som används av tryckeriet innan utskrift. Om "
+"tryckeriet inte gör någon konvertering internt bör konverteringen utföras "
+"själv innan filen skickas till dem."
 
 #: ../../user_manual/soft_proofing.rst:56
 msgid "Rendering Intent"
@@ -198,6 +221,9 @@ msgid ""
 "Left: Soft proofed image with Absolute Intent Chromatic Adaptation enabled. "
 "Right: Soft proofed image with Absolute Intent Chromatic Adaptation disabled."
 msgstr ""
+"Vänster: Bildskärmskorrektur med Absolut återgivning kromatisk adaption "
+"aktiverad. Höger: Bildskärmskorrektur med Absolut återgivning kromatisk "
+"adaption inaktiverad."
 
 #: ../../user_manual/soft_proofing.rst:59
 msgid "Black Point Compensation"
@@ -213,6 +239,13 @@ msgid ""
 "Intent`, this value should coincide with the value used by the printing "
 "house when performing conversion to the device."
 msgstr ""
+"Aktiverar svartpunktskompensering vid konvertering av bilden till profilen "
+"**utdataenhetskorrektur**. Om det inaktiveras klipps skuggvärdena till det "
+"minimum som antingen skärmen och korrekturprofilen kan hantera, medan om det "
+"aktiveras skalas svart till skärmens omfång, vilket visar hela gråskalan i "
+"bilden. Precis som med :guilabel:`återgivningsalternativ för konvertering` "
+"bör värdet överensstämma med det värde som används av tryckeriet vid "
+"konvertering till enheten."
 
 #: ../../user_manual/soft_proofing.rst:62
 msgid ""
@@ -221,6 +254,10 @@ msgid ""
 "colors from the **proofed output device** profile into the **screen** "
 "profile."
 msgstr ""
+"Definierar hur korrektur- (och eventuellt beskurna) utrymmet ska visas på "
+"skärmen, dvs. vilket återgivningsalternativ och flaggor som ska användas för "
+"att konvertera färger från profilen **utdataenhetskorrektur** till "
+"**bildskärmens** profil."
 
 #: ../../user_manual/soft_proofing.rst:64
 msgid ""
@@ -228,6 +265,10 @@ msgid ""
 "proofed space using the global settings, set in :menuselection:`Settings --> "
 "Configure Krita... --> Color Management --> Display`."
 msgstr ""
+":guilabel:`Använd globala visningsinställningar` talar om för Krita att "
+"återge korrekturrymd med de globala inställningar, inställda med :"
+"menuselection:`Inställningar --> Anpassa Krita... --> Färghantering --> "
+"Bildskärm`."
 
 #: ../../user_manual/soft_proofing.rst:66
 msgid ""
@@ -241,16 +282,26 @@ msgid ""
 "paper profile, the one the display is configured to and the white point of "
 "the light bulb that illuminates your physical print."
 msgstr ""
+":guilabel:`Simulera pappersvitt och svart` används för att förhandsgranska "
+"papprets vitpunkt (eller \"färgton\") på den aktuella skärmen. Med andra "
+"ord, om pappret är matt, metalliskt eller har någon form av sepiaeffekt, "
+"syns det på skärmen. Tänk på att vitpunkten för visningsförhållandena "
+"fortfarande justeras till skärmens. Det betyder att man inte kan jämföra den "
+"fysiska utskriften och bilden på skärmen visuellt, såvida inte alla tre "
+"vitpunkter sammanfaller: den i pappersprofilen, den som skärmen är inställd "
+"till och vitpunkten för lampan som lyser upp den fysiska utskriften."
 
 #: ../../user_manual/soft_proofing.rst:68
 msgid ""
 ":guilabel:`Custom` allows you to configure the final conversion step "
 "manually. You may want to configure the pipeline depending on your goal:"
 msgstr ""
+":guilabel:`Eget` gör det möjligt att ställa in det sista konverteringssteget "
+"manuellt. Man kanske vill ställa in behandlingen beroende på mål:"
 
 #: ../../user_manual/soft_proofing.rst:71
 msgid ":guilabel:`Rendering Intent` --> :guilabel:`Relative Colorimetric`"
-msgstr ""
+msgstr ":guilabel:`Återgivningsalternativ` --> :guilabel:`Relativt färgläge`"
 
 #: ../../user_manual/soft_proofing.rst:72
 msgid ":guilabel:`Black Point Compensation` --> `Enabled`"
@@ -258,21 +309,23 @@ msgstr ":guilabel:`Svartpunktskompensering` --> `Aktiverad`"
 
 #: ../../user_manual/soft_proofing.rst:74
 msgid "Preview color gamut (or \"color variety\") of the image"
-msgstr ""
+msgstr "Förhandsgranska bildens färgomfång (eller \"färgvariation\")"
 
 #: ../../user_manual/soft_proofing.rst:74
 msgid ""
 "If you want to use :guilabel:`Out of Gamut Warnings`, it is best to use them "
 "in this mode"
 msgstr ""
+"Om man vill använda :guilabel:`Varna för utanför färgomfång`, är det bäst "
+"att använda  i det här läget"
 
 #: ../../user_manual/soft_proofing.rst:77
 msgid ":guilabel:`Rendering Intent` --> :guilabel:`Absolute Colorimetric`"
-msgstr ""
+msgstr ":guilabel:`Återgivningsalternativ` --> :guilabel:`Absolut färgläge`"
 
 #: ../../user_manual/soft_proofing.rst:78
 msgid ":guilabel:`Absolute Intent Chromatic Adaptation` --> `Enabled`"
-msgstr ""
+msgstr ":guilabel:`Absolut återgivning kromatisk adaption` --> Aktiverad`"
 
 #: ../../user_manual/soft_proofing.rst:81
 msgid ""
@@ -280,6 +333,9 @@ msgid ""
 "**broken** (even in XWayland mode). More than that, it may be broken "
 "differently in different versions."
 msgstr ""
+"Om man använder Wayland-sammansättning kan alternativet Absolut färgläge "
+"vara **felaktigt** (även i XWayland-läge). Dessutom kan det vara felaktigt "
+"på olika sätt i olika versioner."
 
 #: ../../user_manual/soft_proofing.rst:83
 msgid ""
@@ -289,6 +345,11 @@ msgid ""
 "(`sigChromaticAdaptationTag`) of the printer and display profiles do not "
 "coincide."
 msgstr ""
+"Med KWin 6.4.x och tidigare, beter sig :guilabel:`Absolut färgläge` som om :"
+"guilabel:`Absolut återgivning kromatisk adaption` **alltid är inaktiverat**. "
+"Det orsakar allvarliga färgnyanser om vitpunkterna "
+"(`sigChromaticAdaptationTag`) för skrivarens och skärmens profil inte "
+"sammanfaller."
 
 #: ../../user_manual/soft_proofing.rst:85
 msgid ""
@@ -298,6 +359,12 @@ msgid ""
 "and will let you preview contrast degradations, but you will not be able to "
 "get advanced effects of disabling color adaptation to the display space."
 msgstr ""
+"Med KWin 6.5.x och senare, beter sig :guilabel:`Absolut färgläge` som om :"
+"guilabel:`Absolut återgivning kromatisk adaption` **alltid är aktiverat**. "
+"Förutsatt att man **lämnar kryssrutan aktiverad** fungerar funktionen "
+"korrekt och gör det möjligt att förhandsgranska kontrastförsämringar, men "
+"man kan inte få avancerade effekter av att inaktivera färganpassning till "
+"skärmrymden."
 
 #: ../../user_manual/soft_proofing.rst:87
 msgid "Display Mode"
@@ -305,7 +372,7 @@ msgstr "Visningsläge"
 
 #: ../../user_manual/soft_proofing.rst:87
 msgid "Preview contrast degradations caused by the color of the paper"
-msgstr ""
+msgstr "Förhandsgranska kontrastförsämringar orsakade av papperets färg"
 
 #: ../../user_manual/soft_proofing.rst:87
 msgid ""
@@ -313,6 +380,9 @@ msgid ""
 "`discussed here <https://gitlab.freedesktop.org/wayland/wayland-protocols/-/"
 "merge_requests/439>`_."
 msgstr ""
+"Det är ett problem med Waylands protokollspecifikation, lösningen diskuteras "
+"här. <https://gitlab.freedesktop.org/wayland/wayland-protocols/-/"
+"merge_requests/439>`_."
 
 #: ../../user_manual/soft_proofing.rst:90
 msgid "Gamut Warning"

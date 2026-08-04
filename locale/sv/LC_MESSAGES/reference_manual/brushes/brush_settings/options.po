@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-24 02:04+0000\n"
-"PO-Revision-Date: 2026-07-26 22:25+0200\n"
+"PO-Revision-Date: 2026-08-02 20:16+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -94,7 +94,7 @@ msgstr "Rotation"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:56
 msgid "Brush Tip Angle"
-msgstr ""
+msgstr "Penselspetsvinkel"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:58
 msgid ""
@@ -103,6 +103,11 @@ msgid ""
 "uses the text \"BRUSH\" as the brush tip texture. If no Sensor is active, "
 "and the brush tip rotation is 0 degrees, the brush looks like this:"
 msgstr ""
+"Den slutliga rotationen av penselspetsen beror på de aktiverade "
+"rotationssensorerna. Låt oss först granska penselspetsens grundläggande "
+"beteende med en exempelpensel som använder texten \"BRUSH\" som "
+"penselspetsens struktur. Om ingen sensor är aktiv och penselspetsens "
+"rotation är 0 grader ser penseln ut så här:"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:61
 msgid ".. image:: /images/brushes/brush_tip_rotation_0.png"
@@ -111,7 +116,7 @@ msgstr ".. image:: /images/brushes/brush_tip_rotation_0.png"
 #: ../../reference_manual/brushes/brush_settings/options.rst:62
 msgid ""
 "As the brush tip rotation is increased, the tip rotates counter-clockwise:"
-msgstr ""
+msgstr "När penselspetsens rotation ökar roterar spetsen moturs:"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:65
 msgid ".. image:: /images/brushes/brush_tip_rotation_30.png"
@@ -123,10 +128,13 @@ msgid ""
 "base tip angle shown above. Though the way how each sensor affects the brush "
 "rotation is different."
 msgstr ""
+"När rotationsalternativet är aktiverat, läggs dess vinkelbidrag till "
+"basspetsens vinkel som visas ovan. Dock är sättet som varje sensor påverkar "
+"penselrotationen olika."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:70
 msgid "Pressure sensor"
-msgstr ""
+msgstr "Trycksensor"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:72
 msgid ""
@@ -135,6 +143,10 @@ msgid ""
 "rotation increases (i.e. rotates counter-clockwise). When the user decreases "
 "the pressure, the brush rotation decreases (i.e. rotates clockwise)."
 msgstr ""
+"För trycksensorn är det ursprungliga tillståndet för penslar som inte "
+"roterar kopplat till ett tryckvärde på 50 %. När användaren ökar trycket "
+"ökar penselrotationen (dvs. den roterar moturs). När användaren minskar "
+"trycket minskar penselrotationen (dvs. den roterar medurs)."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:76
 msgid ""
@@ -142,12 +154,17 @@ msgid ""
 "is at sensor value of 50%, increasing the sensor value increases the "
 "rotation, decreasing the sensor value decreases the rotation."
 msgstr ""
+"De flesta sensorer beter sig som trycksensorn, dvs. i tillståndet utan "
+"rotation är sensorvärdet 50 %. Att öka sensorvärdet ökar rotationen, att "
+"minska sensorvärdet minskar rotationen."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:79
 msgid ""
 "There are two notable exceptions to this rule: Tilt Direction and Drawing "
 "Angle sensors."
 msgstr ""
+"Det finns två undantag från regeln värda att nämna: sensorer för "
+"lutningsriktning och ritvinkel."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:82
 msgid "Tilt Direction"
@@ -159,6 +176,8 @@ msgid ""
 "space. It links the vertical axis of the brush to the direction of the "
 "stylus:"
 msgstr ""
+"Lutningsriktningssensorn är kopplad till pennans fysiska riktning i rymden. "
+"Den länkar penselns vertikala axel till pennans riktning:"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:86
 msgid ""
@@ -184,6 +203,9 @@ msgid ""
 "*neutral position*. The *neutral position* of the pen tilt corresponds to "
 "the pen being held in the right hand at a 3 o'clock position"
 msgstr ""
+"När Krita inte kan detektera pennans lutningsriktning, placerar den penseln "
+"i *neutral position*. Pennans lutning i *neutral position* motsvarar att "
+"pennan hålls i höger hand vid klockan tre."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:93
 msgid ""
@@ -193,19 +215,19 @@ msgstr ""
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:94
 msgid "The neutral position is used in one of the following cases:"
-msgstr ""
+msgstr "Neutralläget används i ett av följande fall:"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:96
 msgid "the stylus stands strictly vertically"
-msgstr ""
+msgstr "pennan står strikt vertikalt"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:97
 msgid "the tablet device doesn't support tilt"
-msgstr ""
+msgstr "ritplattan stöder inte lutning"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:98
 msgid "the mouse is used (which doesn't support tilt either)"
-msgstr ""
+msgstr "musen används (som inte heller stöder lutning)"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:100
 msgid ""
@@ -214,12 +236,19 @@ msgid ""
 "the same neutral point rotation but with the left hand, the global tilt "
 "offset should be set to 180 degrees."
 msgstr ""
+"För vänsterhänta användare finns det alternativet att justera den globala "
+"lutningspositionen i :ref:`Inställningar av ritplatta "
+"<tablet_settings_tilt_direction_offset>`. För att få samma rotation av den "
+"neutrala punkten men med vänster hand ska den globala lutningspositionen "
+"ställas in till 180 grader."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:102
 msgid ""
 "To get a natural looking brush tip with the Tilt Direction sensor enabled, "
 "the brush tip rotation angle needs to be set to 90 degrees:"
 msgstr ""
+"För att få en naturlig penselspets med aktiverad sensor av lutningsriktning "
+"måste penselspetsens rotationsvinkel ställas in till 90 grader:"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:105
 msgid ".. image:: /images/brushes/brush_tip_rotation_90_tilt_direction.png"
@@ -234,12 +263,17 @@ msgid ""
 "Drawing Angle sensor is commonly used in combination with rake-type brushes. "
 "It is especially useful because it does not rely on tablet-specific sensors."
 msgstr ""
+"Sensorn för ritvinkel används ofta i kombination med penseltypen kratta. Den "
+"är särskilt användbar eftersom den inte är beroende av ritplattespecifika "
+"sensorer."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:111
 msgid ""
 "In contrast to Tilt Direction it links the **horizontal** axis of the brush "
 "to the direction of the direction of the painting stroke:"
 msgstr ""
+"Till skillnad från lutningsriktning länkar den penselns **horisontella** "
+"axel till penseldragets riktning:"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:113
 msgid ""
@@ -261,13 +295,15 @@ msgstr ""
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:118
 msgid "Other sensors"
-msgstr ""
+msgstr "Andra sensorer"
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:120
 msgid ""
 "In addition to the sensors discussed above, there are many other Rotation "
 "Sensors available that allow for a variety of effects."
 msgstr ""
+"Förutom sensorerna som diskuterats ovan finns det många andra "
+"rotationssensorer tillgängliga som möjliggör en mängd olika effekter."
 
 #: ../../reference_manual/brushes/brush_settings/options.rst:123
 msgid ".. image:: /images/brushes/Krita_2_9_brushengine_rotation.png"
