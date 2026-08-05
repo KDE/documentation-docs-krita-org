@@ -32,7 +32,7 @@ Vector file-formats like ``SVG`` are a typical example of the latter. They are r
 
 :ref:`Non-lossy or lossless formats <lossless_compression>`, like ``PNG``, ``GIF`` or ``BMP`` are in contrast, much heavier on disk, but much more likely to retain quality.
 
-Then, there's proper working file formats like Krita's ``KRA``, Gimp's ``XCF``, Photoshop's ``PSD``, but also interchange formats like ``ORA`` and ``EXR``. These are the heaviest on the hard-drive and often require special programs to open them up, but on the other hand these are meant to keep your working environment intact, and keep all the layers and guides in them.
+Then, there's proper working file formats like Krita's ``KRA``, Photoshop's ``PSD``, but also interchange formats like ``ORA`` and ``EXR``. These are the heaviest on the hard-drive and often require special programs to open them up, but on the other hand these are meant to keep your working environment intact, and keep all the layers and guides in them.
 
 Metadata
 --------
