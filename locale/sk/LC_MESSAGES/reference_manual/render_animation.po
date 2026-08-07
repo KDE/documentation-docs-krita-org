@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docs_krita_org_reference_manual___render_animation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-09 02:05+0000\n"
+"POT-Creation-Date: 2026-08-06 02:11+0000\n"
 "PO-Revision-Date: 2019-03-21 12:55+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -44,23 +44,31 @@ msgstr "Animácia"
 #| "guilabel:`Export Animation`."
 msgid ""
 "Render animation allows you to render your animation to an image sequence "
-"and (on computers) to ``.gif``, ``.mp4``, ``.mkv``, or ``.ogg`` file. It "
-"replaces :guilabel:`Export Animation`."
+"and to ``.gif``, ``.mp4``, ``.mkv``, or other video files."
 msgstr ""
 "Renderovanie animácie vám umožňuje renderovať animáciu do sekvencie "
 "obrázkov, ``.gif``, ``.mp4``, ``.mkv`` alebo ``.ogg``. Nahrádza :guilabel:"
 "`Export Animation`."
 
 #: ../../reference_manual/render_animation.rst:22
+#, fuzzy
+#| msgid ""
+#| "For rendering to an animated file format, Krita will first render to a "
+#| "PNG sequence and then use FFmpeg, which is really good at encoding into "
+#| "video files, to render that sequence to an animated file format. The "
+#| "reason for this two-step process is that animation files can be really "
+#| "complex and really big, and this is the best way to allow you to keep "
+#| "control over the export process. For example, if your computer has a "
+#| "hiccup, and one frame saves out weird, first saving the image sequence "
+#| "allows you to only resave that one weird frame before rendering."
 msgid ""
 "For rendering to an animated file format, Krita will first render to a PNG "
-"sequence and then use FFmpeg, which is really good at encoding into video "
-"files, to render that sequence to an animated file format. The reason for "
-"this two-step process is that animation files can be really complex and "
-"really big, and this is the best way to allow you to keep control over the "
-"export process. For example, if your computer has a hiccup, and one frame "
-"saves out weird, first saving the image sequence allows you to only resave "
-"that one weird frame before rendering."
+"sequence and then use a video encoder to render that sequence to an animated "
+"file format. The reason for this two-step process is that animation files "
+"can be really complex and really big, and this is the best way to allow you "
+"to keep control over the export process. For example, if your computer has a "
+"hiccup, and one frame saves out weird, first saving the image sequence "
+"allows you to only resave that one weird frame before rendering."
 msgstr ""
 "Pri renderovaní do animovaného formátu súboru Krita najprv renderuje do "
 "sekvencie PNG a potom použije FFmpeg, ktorý je naozaj dobrý pri kódovaní do "
@@ -83,15 +91,22 @@ msgstr ""
 "miesto na pevnom disku s dostatkom priestoru a vybrať :guilabel:`Delete "
 "Sequence After Rendering`."
 
-#: ../../reference_manual/render_animation.rst:27
+#: ../../reference_manual/render_animation.rst:28
+msgid ""
+"On Android, file handling and video rendering works differently. You can "
+"only either export an image sequence or a video, not both. FFmpeg is not "
+"used, do not attempt to install it."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:31
 msgid "General"
 msgstr "Hlavné"
 
-#: ../../reference_manual/render_animation.rst:29
+#: ../../reference_manual/render_animation.rst:33
 msgid "First Frame"
 msgstr "Prvá snímka"
 
-#: ../../reference_manual/render_animation.rst:30
+#: ../../reference_manual/render_animation.rst:34
 msgid ""
 "The first frame of the range of frames you wish to adjust. Automatically set "
 "to the first frame of your current selection in the timeline. This is useful "
@@ -101,11 +116,11 @@ msgstr ""
 "na prvú snímku aktuálneho výberu na časovej osi. Je to užitočné, keď chcete "
 "prerenderovať len malú časť."
 
-#: ../../reference_manual/render_animation.rst:32
+#: ../../reference_manual/render_animation.rst:36
 msgid "Last Frame"
 msgstr "Posledná snímka"
 
-#: ../../reference_manual/render_animation.rst:32
+#: ../../reference_manual/render_animation.rst:36
 msgid ""
 "As above, the last frame of the range of frames you wish to adjust. "
 "Automatically set to the last frame of your current selection in the "
@@ -114,40 +129,50 @@ msgstr ""
 "Rovnako ako vyššie, posledná snímka z rozsahu snímok, ktorý chcete upraviť. "
 "Automaticky sa nastaví na poslednú snímku aktuálneho výberu na časovej osi."
 
-#: ../../reference_manual/render_animation.rst:35
+#: ../../reference_manual/render_animation.rst:39
 msgid "Export as Image Sequence"
 msgstr "Exportovať ako sekvenciu obrázkov"
 
-#: ../../reference_manual/render_animation.rst:37
+#: ../../reference_manual/render_animation.rst:41
 msgid "File Format"
 msgstr "Formát súboru"
 
-#: ../../reference_manual/render_animation.rst:38
+#: ../../reference_manual/render_animation.rst:42
+#, fuzzy
+#| msgid ""
+#| "The file format to export the sequence to. When rendering we enforce PNG. "
+#| "The usual export options can be modified with :guilabel:`...`."
 msgid ""
 "The file format to export the sequence to. When rendering we enforce PNG. "
-"The usual export options can be modified with :guilabel:`...`."
+"The usual export options can be modified with the edit button next to the "
+"drop-down."
 msgstr ""
 "Formát súboru, do ktorého sa sekvencia exportuje. Pri renderovaní sa "
 "vynucuje formát PNG. Obvyklé možnosti exportu možno upraviť pomocou :"
 "guilabel:`...`."
 
-#: ../../reference_manual/render_animation.rst:39
+#: ../../reference_manual/render_animation.rst:43
 msgid "Image Location"
 msgstr "Umiestnenie obrázka"
 
-#: ../../reference_manual/render_animation.rst:40
+#: ../../reference_manual/render_animation.rst:44
+#, fuzzy
+#| msgid ""
+#| "Where you render the image sequence to. Some people prefer to use a flash-"
+#| "drive or perhaps a harddrive that is fast."
 msgid ""
 "Where you render the image sequence to. Some people prefer to use a flash-"
-"drive or perhaps a harddrive that is fast."
+"drive or perhaps a harddrive that is fast. On Android, you will be prompted "
+"for a directory instead."
 msgstr ""
 "Miesto, kam sa renderuje obrazová sekvencia. Niektorí ľudia preferujú "
 "použitie flash disku alebo rýchleho pevného disku."
 
-#: ../../reference_manual/render_animation.rst:41
+#: ../../reference_manual/render_animation.rst:45
 msgid "Base Name"
 msgstr "Základný názov"
 
-#: ../../reference_manual/render_animation.rst:42
+#: ../../reference_manual/render_animation.rst:46
 msgid ""
 "The base name of your image sequence. This will get suffixed with a number "
 "depending on the frame."
@@ -155,11 +180,13 @@ msgstr ""
 "Základný názov obrazovej sekvencie. K nemu sa podľa čísla snímky pridá "
 "číselná prípona."
 
-#: ../../reference_manual/render_animation.rst:43
-msgid "Start numbering at."
+#: ../../reference_manual/render_animation.rst:47
+#, fuzzy
+#| msgid "Start numbering at."
+msgid "Start numbering at"
 msgstr "Začať číslovanie od."
 
-#: ../../reference_manual/render_animation.rst:44
+#: ../../reference_manual/render_animation.rst:48
 msgid ""
 "The frames are named by using :guilabel:`Base Name`  above and adding a "
 "number for the frame. This allows you to set where the frame number starts, "
@@ -173,11 +200,11 @@ msgstr ""
 "dá obrázky pomenované 11 a 15. Užitočné pre programy, ktoré nerozumejú "
 "sekvenciám začínajúcim od 0, alebo pre presný výstup."
 
-#: ../../reference_manual/render_animation.rst:46
+#: ../../reference_manual/render_animation.rst:50
 msgid "Only Unique Frames"
 msgstr "Iba jedinečné snímky"
 
-#: ../../reference_manual/render_animation.rst:46
+#: ../../reference_manual/render_animation.rst:50
 msgid ""
 "Normally Krita generates a frame for every FPS in the sequence. Ticking this "
 "will only generate keyframes, saving space."
@@ -185,16 +212,9 @@ msgstr ""
 "Normálne Krita generuje snímku pre každý FPS v sekvencii. Zaškrtnutím tejto "
 "možnosti sa vygenerujú iba kľúčové snímky, čo šetrí miesto."
 
-#: ../../reference_manual/render_animation.rst:49
+#: ../../reference_manual/render_animation.rst:53
 msgid "Export as Video"
 msgstr "Exportovať ako video"
-
-#: ../../reference_manual/render_animation.rst:53
-msgid ""
-"On Android, exporting videos is unavailable. To render a video, you will "
-"have to transfer the KRA file to a computer or export an image series and "
-"find an Android application that can turn them into a video."
-msgstr ""
 
 #: ../../reference_manual/render_animation.rst:55
 msgid "Width"
@@ -212,7 +232,7 @@ msgstr "Výška"
 msgid "Set the desired height in pixels."
 msgstr "Nastavte požadovanú výšku v pixeloch."
 
-#: ../../reference_manual/render_animation.rst:59
+#: ../../reference_manual/render_animation.rst:60
 msgid "FPS"
 msgstr "fps"
 
@@ -220,11 +240,25 @@ msgstr "fps"
 msgid "Set the desired frames per second."
 msgstr "Nastavte požadovaný počet snímok za sekundu."
 
-#: ../../reference_manual/render_animation.rst:61
+#: ../../reference_manual/render_animation.rst:64
+msgid ""
+"Widths and heights above 1920 pixels and FPS values beyond 30 are not widely "
+"supported. They can cause the video export to fail outright or the resulting "
+"video may not play back properly on some devices. Krita will warn you about "
+"this, but still allows you to try such exports."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:66
+msgid ""
+"Some video formats require width and height to be even numbers. Krita will "
+"automatically adjust the size if necessary."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:68
 msgid "Filter"
 msgstr "Filter"
 
-#: ../../reference_manual/render_animation.rst:62
+#: ../../reference_manual/render_animation.rst:69
 msgid ""
 "Set the scaling filter. :guilabel:`Bicubic` is fine for most cases, but if "
 "you want to, say, export a pixel art animation at twice the size, :guilabel:"
@@ -235,39 +269,49 @@ msgstr ""
 "dvojnásobnej veľkosti, :guilabel:`Nearest Neighbour` lepšie zachová jemné "
 "detaily."
 
-#: ../../reference_manual/render_animation.rst:63
+#: ../../reference_manual/render_animation.rst:70
 msgid "Render As"
 msgstr "Vykresliť ako"
 
-#: ../../reference_manual/render_animation.rst:64
+#: ../../reference_manual/render_animation.rst:71
+#, fuzzy
+#| msgid ""
+#| "The file format to render to. All except GIF have extra options that can "
+#| "be manipulated via :guilabel:`...`."
 msgid ""
-"The file format to render to. All except GIF have extra options that can be "
-"manipulated via :guilabel:`...`."
+"The file format to render to. Some have extra options that can be "
+"manipulated via the edit button next to the drop-down."
 msgstr ""
 "Formát súboru, do ktorého sa renderuje. Všetky formáty okrem GIF majú ďalšie "
 "možnosti, ktoré možno upraviť pomocou :guilabel:`...`."
 
-#: ../../reference_manual/render_animation.rst:66
-msgid "Location and name of the rendered animation."
+#: ../../reference_manual/render_animation.rst:73
+#, fuzzy
+#| msgid "Location and name of the rendered animation."
+msgid ""
+"Location and name of the rendered animation. On Android, you will be "
+"prompted for a file name instead."
 msgstr "Umiestnenie a názov vyrenderovanej animácie."
 
-#: ../../reference_manual/render_animation.rst:69
+#: ../../reference_manual/render_animation.rst:76
 msgid "Video Location"
 msgstr "Umiestnenie videa"
 
-#: ../../reference_manual/render_animation.rst:69
+#: ../../reference_manual/render_animation.rst:76
 msgid "Include Audio"
 msgstr "Zahrnúť zvuk"
 
-#: ../../reference_manual/render_animation.rst:69
+#: ../../reference_manual/render_animation.rst:76
 msgid "Include any audio you have added."
 msgstr "Zahrňte všetok zvuk, ktorý ste pridali."
 
-#: ../../reference_manual/render_animation.rst:72
-msgid "The location where your have FFmpeg."
-msgstr "Umiestnenie, kde sa nachádza FFmpeg."
+#: ../../reference_manual/render_animation.rst:79
+msgid ""
+"The location where your have FFmpeg. On Android, the operating system's "
+"video encoder is used instead."
+msgstr ""
 
-#: ../../reference_manual/render_animation.rst:74
+#: ../../reference_manual/render_animation.rst:81
 msgid ""
 "This is now optional. Krita's bundled FFMpeg functionality is able to "
 "provide some options, but it is still useful to set this if you want to use "
@@ -277,25 +321,31 @@ msgstr ""
 "niektoré možnosti, ale stále je užitočné toto nastaviť, ak chcete použiť "
 "konkrétnu verziu FFMpeg na renderovanie videí."
 
-#: ../../reference_manual/render_animation.rst:75
+#: ../../reference_manual/render_animation.rst:82
 msgid "FFmpeg"
 msgstr "FFmpeg"
 
-#: ../../reference_manual/render_animation.rst:78
+#: ../../reference_manual/render_animation.rst:85
+#, fuzzy
+#| msgid ""
+#| "Delete the prerendered image sequence after done rendering. This allows "
+#| "you to choose whether to try and save some space, or to save the sequence "
+#| "for when encoding fails."
 msgid ""
 "Delete the prerendered image sequence after done rendering. This allows you "
 "to choose whether to try and save some space, or to save the sequence for "
-"when encoding fails."
+"when encoding fails. On Android, the image sequence is only stored "
+"internally and always deleted afterwards."
 msgstr ""
 "Odstráňte predrenderovanú obrazovú sekvenciu po dokončení renderovania. "
 "Umožňuje zvoliť, či ušetriť miesto, alebo zachovať sekvenciu pre prípad "
 "zlyhania kódovania."
 
-#: ../../reference_manual/render_animation.rst:82
+#: ../../reference_manual/render_animation.rst:89
 msgid "Delete Sequence After Rendering"
 msgstr "Odstrániť sekvenciu po renderovaní"
 
-#: ../../reference_manual/render_animation.rst:82
+#: ../../reference_manual/render_animation.rst:89
 msgid ""
 "Since 5.2, Krita will always delete the image sequence if :guilabel:`Export "
 "as Image Sequence` is not checked while :guilabel:`Export as Video` is."
@@ -303,7 +353,7 @@ msgstr ""
 "Od verzie 5.2 Krita vždy odstráni obrazovú sekvenciu, ak :guilabel:`Export "
 "as Image Sequence` nie je zaškrtnuté, ale :guilabel:`Export as Video` áno."
 
-#: ../../reference_manual/render_animation.rst:86
+#: ../../reference_manual/render_animation.rst:93
 msgid ""
 "Krita currently does not support rendering video with transparent elements, "
 "and will instead render them as black. To combat this, you can add in a "
@@ -313,11 +363,11 @@ msgstr ""
 "namiesto toho ich vykreslí ako čierne. Aby ste to obišli, môžete pred "
 "renderovaním pridať plne farebnú, nepriehľadnú vrstvu na spodok súboru."
 
-#: ../../reference_manual/render_animation.rst:89
+#: ../../reference_manual/render_animation.rst:96
 msgid "Setting Up Krita for Exporting Animations"
 msgstr "Nastavenie Krity na export animácií"
 
-#: ../../reference_manual/render_animation.rst:93
+#: ../../reference_manual/render_animation.rst:100
 msgid ""
 "Since Krita 5.2, Krita bundles a small part of FFmpeg. This means that you "
 "will not strictly have to download and setup FFMpeg to render animations. "
@@ -330,7 +380,7 @@ msgstr ""
 "Rôzne verzie programu majú však rôzne možnosti a video odborníci môžu chcieť "
 "použiť konkrétnu verziu FFMpeg pre viac možností kodekov."
 
-#: ../../reference_manual/render_animation.rst:95
+#: ../../reference_manual/render_animation.rst:102
 msgid ""
 "The bundled FFmpeg supports the following containers: ``Webm``, ``Matroska`` "
 "and ``OGG``, which are a wrapper around the video data (amongst others), "
@@ -340,27 +390,27 @@ msgstr ""
 "``OGG``, čo sú obaly okolo video dát (okrem iného), ktoré sú kódované "
 "kodekmi, z ktorých pribalený FFMpeg podporuje:"
 
-#: ../../reference_manual/render_animation.rst:97
+#: ../../reference_manual/render_animation.rst:104
 msgid "AOM AV1"
 msgstr "AOM AV1"
 
-#: ../../reference_manual/render_animation.rst:98
+#: ../../reference_manual/render_animation.rst:105
 msgid "VPX VP9"
 msgstr "VPX VP9"
 
-#: ../../reference_manual/render_animation.rst:99
+#: ../../reference_manual/render_animation.rst:106
 msgid "VPX VP8"
 msgstr "VPX VP8"
 
-#: ../../reference_manual/render_animation.rst:100
+#: ../../reference_manual/render_animation.rst:107
 msgid "264 (via openH264)"
 msgstr "264 (cez openH264)"
 
-#: ../../reference_manual/render_animation.rst:101
+#: ../../reference_manual/render_animation.rst:108
 msgid "Theora"
 msgstr "Theora"
 
-#: ../../reference_manual/render_animation.rst:103
+#: ../../reference_manual/render_animation.rst:110
 msgid ""
 "The following instructions will explain how to get a non-bundled version of "
 "FFMpeg and set it up. The setup is a one-time thing so you won't have to do "
@@ -370,22 +420,22 @@ msgstr ""
 "nie je pribalená. Nastavenie je jednorazové, takže ho nebudete musieť "
 "opakovať."
 
-#: ../../reference_manual/render_animation.rst:106
+#: ../../reference_manual/render_animation.rst:113
 msgid "Step 1 - Downloading FFmpeg"
 msgstr "Krok 1 – Stiahnutie FFmpeg"
 
-#: ../../reference_manual/render_animation.rst:109
-#: ../../reference_manual/render_animation.rst:143
+#: ../../reference_manual/render_animation.rst:116
+#: ../../reference_manual/render_animation.rst:150
 msgid "For Windows"
 msgstr "Pre Windows"
 
-#: ../../reference_manual/render_animation.rst:111
+#: ../../reference_manual/render_animation.rst:118
 msgid "Open the FFmpeg `download page. <https://www.gyan.dev/ffmpeg/builds/>`_"
 msgstr ""
 "Otvorte `stránku na stiahnutie FFmpeg. <https://www.gyan.dev/ffmpeg/builds/"
 ">`_"
 
-#: ../../reference_manual/render_animation.rst:113
+#: ../../reference_manual/render_animation.rst:120
 msgid ""
 "Go to :guilabel:`release` section and choose the download link that says "
 "``ffmpeg-release-essentials.zip``."
@@ -393,7 +443,7 @@ msgstr ""
 "Prejdite do sekcie :guilabel:`release` a vyberte odkaz na stiahnutie, ktorý "
 "hovorí ``ffmpeg-release-essentials.zip``."
 
-#: ../../reference_manual/render_animation.rst:117
+#: ../../reference_manual/render_animation.rst:124
 msgid ""
 "**Don't** download the file which filename contains the word ``shared``. It "
 "won't work with Krita."
@@ -401,7 +451,7 @@ msgstr ""
 "**Nesťahujte** súbor, ktorého názov obsahuje slovo ``shared``. S Kritou "
 "nebude fungovať."
 
-#: ../../reference_manual/render_animation.rst:119
+#: ../../reference_manual/render_animation.rst:126
 msgid ""
 "If the filename ends with ``.7z``, you can still use it, but then you need "
 "to have a program that can open 7zip archives (for example `7zip itself "
@@ -413,12 +463,12 @@ msgstr ""
 "7zip <https://www.gyan.dev/ffmpeg/builds/>`_). V prípade súboru ``.zip`` ho "
 "môžete otvoriť priamo pomocou prehliadača súborov Windows."
 
-#: ../../reference_manual/render_animation.rst:123
-#: ../../reference_manual/render_animation.rst:161
+#: ../../reference_manual/render_animation.rst:130
+#: ../../reference_manual/render_animation.rst:168
 msgid "For macOS"
 msgstr "Pre OSX"
 
-#: ../../reference_manual/render_animation.rst:125
+#: ../../reference_manual/render_animation.rst:132
 msgid ""
 "Please see the section above. However, FFmpeg is obtained from `here "
 "<https://evermeet.cx/ffmpeg/>`_ instead. Just pick the big green button on "
@@ -432,7 +482,7 @@ msgstr ""
 "podporuje .7z, keďže FFmpeg poskytuje zostavy pre macOS vo formáte .7z. Ak "
 "taký nemáte, vyskúšajte napríklad `Keka <https://www.kekaosx.com>`_."
 
-#: ../../reference_manual/render_animation.rst:127
+#: ../../reference_manual/render_animation.rst:134
 msgid ""
 "Alternatively you can find the smaller text under the big green button that "
 "says :guilabel:`Download as ZIP`. Then you should be able to extract it just "
@@ -442,12 +492,12 @@ msgstr ""
 "guilabel:`Download as ZIP`. Potom by ste ho mali vedieť rozbaliť priamo "
 "pomocou Findera."
 
-#: ../../reference_manual/render_animation.rst:130
-#: ../../reference_manual/render_animation.rst:166
+#: ../../reference_manual/render_animation.rst:137
+#: ../../reference_manual/render_animation.rst:173
 msgid "For Linux"
 msgstr "Pre Linux"
 
-#: ../../reference_manual/render_animation.rst:132
+#: ../../reference_manual/render_animation.rst:139
 msgid ""
 "FFmpeg can be installed from the repositories on most Linux systems. Version "
 "2.6 is required for proper GIF support, as we use the palettegen "
@@ -457,24 +507,21 @@ msgstr ""
 "správnu podporu GIF je potrebná verzia 2.6, keďže používame funkciu "
 "palettegen."
 
-#: ../../reference_manual/render_animation.rst:135
+#: ../../reference_manual/render_animation.rst:142
 #, fuzzy
 #| msgid "For Windows"
 msgid "For Android"
 msgstr "Pre Windows"
 
-#: ../../reference_manual/render_animation.rst:137
-msgid ""
-"As mentioned above, rendering video on Android is **not supported**. You can "
-"download FFmpeg libraries for Android and there are apps that use FFmpeg's "
-"name, but **they will not work with Krita**."
+#: ../../reference_manual/render_animation.rst:144
+msgid "Krita does not use FFmpeg on Android. Don't attempt to install it."
 msgstr ""
 
-#: ../../reference_manual/render_animation.rst:140
+#: ../../reference_manual/render_animation.rst:147
 msgid "Step 2 - Unzipping and Linking to Krita"
 msgstr "Krok 2 – Rozbalenie a prepojenie s Kritou"
 
-#: ../../reference_manual/render_animation.rst:145
+#: ../../reference_manual/render_animation.rst:152
 msgid ""
 "Once you've downloaded, go to the file location. Right click on the FFmpeg "
 "file, and select ``Extract All...``. Select the file destination, and rename "
@@ -484,18 +531,18 @@ msgstr ""
 "na súbor FFmpeg a vyberte ``Extract All...``. Vyberte cieľový priečinok a "
 "premenujte súbor na 'ffmpeg'."
 
-#: ../../reference_manual/render_animation.rst:147
+#: ../../reference_manual/render_animation.rst:154
 msgid "Hint"
 msgstr "Rada"
 
-#: ../../reference_manual/render_animation.rst:149
+#: ../../reference_manual/render_animation.rst:156
 msgid ""
 "It is easiest to save the file under C: drive, but any location is fine."
 msgstr ""
 "Najjednoduchšie je uložiť súbor na disk C:, ale akékoľvek umiestnenie je v "
 "poriadku."
 
-#: ../../reference_manual/render_animation.rst:151
+#: ../../reference_manual/render_animation.rst:158
 msgid ""
 "Open Krita back up and go to :menuselection:`File --> Render Animation...`. "
 "Under ``Export > Video``, click the file icon next to FFmpeg. Select this "
@@ -506,11 +553,11 @@ msgstr ""
 "FFmpeg. Vyberte súbor ``C:/ffmpeg/bin/ffmpeg.exe`` a kliknite na :guilabel:"
 "`OK`."
 
-#: ../../reference_manual/render_animation.rst:156
+#: ../../reference_manual/render_animation.rst:163
 msgid "Tip"
 msgstr "Hore"
 
-#: ../../reference_manual/render_animation.rst:158
+#: ../../reference_manual/render_animation.rst:165
 msgid ""
 "If you have saved FFmpeg to a different location, choose ``<ffmpeg location>/"
 "ffmpeg/bin/ffmpeg.exe``."
@@ -518,7 +565,7 @@ msgstr ""
 "Ak ste FFmpeg uložili na iné miesto, vyberte ``<ffmpeg location>/ffmpeg/bin/"
 "ffmpeg.exe``."
 
-#: ../../reference_manual/render_animation.rst:163
+#: ../../reference_manual/render_animation.rst:170
 msgid ""
 "After downloading FFmpeg, you just need to extract it and then simply point "
 "to it in the FFmpeg location in Krita like ``/Users/user/Downloads/ffmpeg`` "
@@ -530,7 +577,7 @@ msgstr ""
 "ffmpeg`` (za predpokladu, že ste súbor .7z stiahli a rozbalili do /Users/"
 "user/Downloads)."
 
-#: ../../reference_manual/render_animation.rst:168
+#: ../../reference_manual/render_animation.rst:175
 msgid ""
 "FFmpeg is, if installed from the repositories, usually found in ``/usr/bin/"
 "ffmpeg``."
@@ -538,11 +585,11 @@ msgstr ""
 "FFmpeg, ak je nainštalovaný z repozitárov, sa zvyčajne nachádza v ``/usr/bin/"
 "ffmpeg``."
 
-#: ../../reference_manual/render_animation.rst:171
+#: ../../reference_manual/render_animation.rst:178
 msgid "Step 3 - Testing out an animation"
 msgstr "Krok 3 – Testovanie animácie"
 
-#: ../../reference_manual/render_animation.rst:173
+#: ../../reference_manual/render_animation.rst:180
 msgid ""
 "ffmpeg.exe is what Krita uses to do all of its animation export magic. Now "
 "that it is hooked up, let us test it out."
@@ -550,7 +597,7 @@ msgstr ""
 "ffmpeg.exe je nástroj, ktorý Krita používa na všetku mágiu exportu animácií. "
 "Teraz, keď je prepojený, poďme ho otestovať."
 
-#: ../../reference_manual/render_animation.rst:175
+#: ../../reference_manual/render_animation.rst:182
 msgid ""
 "Let's make an animated GIF. In the Render Animation dialog, change the :"
 "guilabel:`Render As`  field to \"GIF image\". Choose the file location where "
@@ -563,7 +610,7 @@ msgstr ""
 "\" nižšie. Uložil som ho na pracovnú plochu a pomenoval „*export.gif*\". Po "
 "dokončení by ste ho mali vedieť otvoriť a zobraziť animáciu."
 
-#: ../../reference_manual/render_animation.rst:179
+#: ../../reference_manual/render_animation.rst:186
 msgid ""
 "By default, FFmpeg will render MP4 files with a too new codec, which means "
 "that Windows Media Player won't be able to play it. So for Windows, select "
@@ -573,7 +620,7 @@ msgstr ""
 "že Windows Media Player ich nebude vedieť prehrať. Preto pre Windows vyberte "
 "pred renderovaním v profile „baseline\" namiesto „high422\"."
 
-#: ../../reference_manual/render_animation.rst:183
+#: ../../reference_manual/render_animation.rst:190
 msgid ""
 "macOS does not come with any software to play MP4 and MKV files. If you use "
 "Chrome for your web browser, you can drag the video file into that and the "
@@ -584,6 +631,9 @@ msgstr ""
 "používate Chrome ako webový prehliadač, môžete do neho pretiahnuť video "
 "súbor a video by sa malo prehrať. V opačnom prípade budete potrebovať "
 "program, ako napríklad VLC, na zobrazenie videa."
+
+#~ msgid "The location where your have FFmpeg."
+#~ msgstr "Umiestnenie, kde sa nachádza FFmpeg."
 
 #~ msgid "File"
 #~ msgstr "Súbor"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-09 02:05+0000\n"
+"POT-Creation-Date: 2026-08-06 02:11+0000\n"
 "PO-Revision-Date: 2024-04-21 04:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -40,24 +40,37 @@ msgid "Animation"
 msgstr "动画"
 
 #: ../../reference_manual/render_animation.rst:20
+#, fuzzy
+#| msgid ""
+#| "Render animation allows you to render your animation to an image sequence "
+#| "and (on computers) to ``.gif``, ``.mp4``, ``.mkv``, or ``.ogg`` file. It "
+#| "replaces :guilabel:`Export Animation`."
 msgid ""
 "Render animation allows you to render your animation to an image sequence "
-"and (on computers) to ``.gif``, ``.mp4``, ``.mkv``, or ``.ogg`` file. It "
-"replaces :guilabel:`Export Animation`."
+"and to ``.gif``, ``.mp4``, ``.mkv``, or other video files."
 msgstr ""
 "Krita 可以将动画帧处理并输出为视频或者图像序列。目前仅电脑端可输出视频，支持"
 "的格式有 ``.gif`` 、 ``.mp4`` 、 ``.mkv`` 、 ``.ogg`` 等。"
 
 #: ../../reference_manual/render_animation.rst:22
+#, fuzzy
+#| msgid ""
+#| "For rendering to an animated file format, Krita will first render to a "
+#| "PNG sequence and then use FFmpeg, which is really good at encoding into "
+#| "video files, to render that sequence to an animated file format. The "
+#| "reason for this two-step process is that animation files can be really "
+#| "complex and really big, and this is the best way to allow you to keep "
+#| "control over the export process. For example, if your computer has a "
+#| "hiccup, and one frame saves out weird, first saving the image sequence "
+#| "allows you to only resave that one weird frame before rendering."
 msgid ""
 "For rendering to an animated file format, Krita will first render to a PNG "
-"sequence and then use FFmpeg, which is really good at encoding into video "
-"files, to render that sequence to an animated file format. The reason for "
-"this two-step process is that animation files can be really complex and "
-"really big, and this is the best way to allow you to keep control over the "
-"export process. For example, if your computer has a hiccup, and one frame "
-"saves out weird, first saving the image sequence allows you to only resave "
-"that one weird frame before rendering."
+"sequence and then use a video encoder to render that sequence to an animated "
+"file format. The reason for this two-step process is that animation files "
+"can be really complex and really big, and this is the best way to allow you "
+"to keep control over the export process. For example, if your computer has a "
+"hiccup, and one frame saves out weird, first saving the image sequence "
+"allows you to only resave that one weird frame before rendering."
 msgstr ""
 "Krita 在导出动画时会先将动画输出成 PNG 图像序列，然后调用 FFmpeg (一个第三方"
 "的，专门用于视频处理的自由开源视频程序) 将图像序列转换为视频格式。这个流程是"
@@ -75,15 +88,22 @@ msgstr ""
 "因此，动画输出需要在硬盘上指定一个位置用于存储帧序列，而且硬盘分区要有足够大"
 "的空间。"
 
-#: ../../reference_manual/render_animation.rst:27
+#: ../../reference_manual/render_animation.rst:28
+msgid ""
+"On Android, file handling and video rendering works differently. You can "
+"only either export an image sequence or a video, not both. FFmpeg is not "
+"used, do not attempt to install it."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:31
 msgid "General"
 msgstr "常规"
 
-#: ../../reference_manual/render_animation.rst:29
+#: ../../reference_manual/render_animation.rst:33
 msgid "First Frame"
 msgstr "开始帧编号"
 
-#: ../../reference_manual/render_animation.rst:30
+#: ../../reference_manual/render_animation.rst:34
 msgid ""
 "The first frame of the range of frames you wish to adjust. Automatically set "
 "to the first frame of your current selection in the timeline. This is useful "
@@ -92,11 +112,11 @@ msgstr ""
 "指定导出动画范围的第一帧。默认为当前在时间轴选中范围的最前一帧。在只需要导出"
 "动画的一部分时有用。"
 
-#: ../../reference_manual/render_animation.rst:32
+#: ../../reference_manual/render_animation.rst:36
 msgid "Last Frame"
 msgstr "结束帧编号"
 
-#: ../../reference_manual/render_animation.rst:32
+#: ../../reference_manual/render_animation.rst:36
 msgid ""
 "As above, the last frame of the range of frames you wish to adjust. "
 "Automatically set to the last frame of your current selection in the "
@@ -105,47 +125,59 @@ msgstr ""
 "指定渲染动画范围的最后一帧。默认为当前在时间轴选中范围的最后一帧。在只需要渲"
 "染动画的一部分时有用。"
 
-#: ../../reference_manual/render_animation.rst:35
+#: ../../reference_manual/render_animation.rst:39
 msgid "Export as Image Sequence"
 msgstr "导出为图像序列"
 
-#: ../../reference_manual/render_animation.rst:37
+#: ../../reference_manual/render_animation.rst:41
 msgid "File Format"
 msgstr "文件格式"
 
-#: ../../reference_manual/render_animation.rst:38
+#: ../../reference_manual/render_animation.rst:42
+#, fuzzy
+#| msgid ""
+#| "The file format to export the sequence to. When rendering we enforce PNG. "
+#| "The usual export options can be modified with :guilabel:`...`."
 msgid ""
 "The file format to export the sequence to. When rendering we enforce PNG. "
-"The usual export options can be modified with :guilabel:`...`."
+"The usual export options can be modified with the edit button next to the "
+"drop-down."
 msgstr ""
 "导出图像序列所用的文件格式。在导出为视频时将强制为 PNG。点击下拉选单右侧的 :"
 "guilabel:`...` 按钮可以更改当前文件格式的保存选项。"
 
-#: ../../reference_manual/render_animation.rst:39
+#: ../../reference_manual/render_animation.rst:43
 msgid "Image Location"
 msgstr "图像导出位置"
 
-#: ../../reference_manual/render_animation.rst:40
+#: ../../reference_manual/render_animation.rst:44
+#, fuzzy
+#| msgid ""
+#| "Where you render the image sequence to. Some people prefer to use a flash-"
+#| "drive or perhaps a harddrive that is fast."
 msgid ""
 "Where you render the image sequence to. Some people prefer to use a flash-"
-"drive or perhaps a harddrive that is fast."
+"drive or perhaps a harddrive that is fast. On Android, you will be prompted "
+"for a directory instead."
 msgstr "指定导出的图像序列的位置。最好指定写入速度较快的硬盘。"
 
-#: ../../reference_manual/render_animation.rst:41
+#: ../../reference_manual/render_animation.rst:45
 msgid "Base Name"
 msgstr "主文件名"
 
-#: ../../reference_manual/render_animation.rst:42
+#: ../../reference_manual/render_animation.rst:46
 msgid ""
 "The base name of your image sequence. This will get suffixed with a number "
 "depending on the frame."
 msgstr "图像序列的主文件名，在它后面会跟随每帧的帧编号作为后缀。"
 
-#: ../../reference_manual/render_animation.rst:43
-msgid "Start numbering at."
+#: ../../reference_manual/render_animation.rst:47
+#, fuzzy
+#| msgid "Start numbering at."
+msgid "Start numbering at"
 msgstr "序列起点编号"
 
-#: ../../reference_manual/render_animation.rst:44
+#: ../../reference_manual/render_animation.rst:48
 msgid ""
 "The frames are named by using :guilabel:`Base Name`  above and adding a "
 "number for the frame. This allows you to set where the frame number starts, "
@@ -156,11 +188,11 @@ msgstr ""
 "你可以指定主文件名后面跟随的帧编号的起始数字。默认从 0 开始。例如将此数字设"
 "为 3，则帧编号 8 到 10 输出的文件名后缀将是 11 到 15。"
 
-#: ../../reference_manual/render_animation.rst:46
+#: ../../reference_manual/render_animation.rst:50
 msgid "Only Unique Frames"
 msgstr "只生成图像发生变化的帧"
 
-#: ../../reference_manual/render_animation.rst:46
+#: ../../reference_manual/render_animation.rst:50
 msgid ""
 "Normally Krita generates a frame for every FPS in the sequence. Ticking this "
 "will only generate keyframes, saving space."
@@ -168,18 +200,9 @@ msgstr ""
 "Krita 在正常情况下会为时间轴的每一个帧格生成一帧图像。勾选此项后，Krita 将只"
 "生成图像发生变化的帧，以节省空间。"
 
-#: ../../reference_manual/render_animation.rst:49
+#: ../../reference_manual/render_animation.rst:53
 msgid "Export as Video"
 msgstr "导出为视频"
-
-#: ../../reference_manual/render_animation.rst:53
-msgid ""
-"On Android, exporting videos is unavailable. To render a video, you will "
-"have to transfer the KRA file to a computer or export an image series and "
-"find an Android application that can turn them into a video."
-msgstr ""
-"Krita 在安卓系统上无法直接导出视频。您可以将 KRA 文件传输到电脑进行导出，也可"
-"以先导出图像序列，然后使用其他安卓应用将图像序列合成为视频。"
 
 #: ../../reference_manual/render_animation.rst:55
 msgid "Width"
@@ -197,7 +220,7 @@ msgstr "高度"
 msgid "Set the desired height in pixels."
 msgstr "设置导出视频的高度，单位为像素。"
 
-#: ../../reference_manual/render_animation.rst:59
+#: ../../reference_manual/render_animation.rst:60
 msgid "FPS"
 msgstr "每秒帧数"
 
@@ -205,11 +228,25 @@ msgstr "每秒帧数"
 msgid "Set the desired frames per second."
 msgstr "设置导出视频的每秒帧数。"
 
-#: ../../reference_manual/render_animation.rst:61
+#: ../../reference_manual/render_animation.rst:64
+msgid ""
+"Widths and heights above 1920 pixels and FPS values beyond 30 are not widely "
+"supported. They can cause the video export to fail outright or the resulting "
+"video may not play back properly on some devices. Krita will warn you about "
+"this, but still allows you to try such exports."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:66
+msgid ""
+"Some video formats require width and height to be even numbers. Krita will "
+"automatically adjust the size if necessary."
+msgstr ""
+
+#: ../../reference_manual/render_animation.rst:68
 msgid "Filter"
 msgstr "缩放插值方式"
 
-#: ../../reference_manual/render_animation.rst:62
+#: ../../reference_manual/render_animation.rst:69
 msgid ""
 "Set the scaling filter. :guilabel:`Bicubic` is fine for most cases, but if "
 "you want to, say, export a pixel art animation at twice the size, :guilabel:"
@@ -219,39 +256,49 @@ msgstr ""
 "数倍缩放来导出像素画动画，建议使用 :guilabel:`最近邻`\\ ，这将确保缩放后的像"
 "素格的一致性，并避免产生新的颜色。"
 
-#: ../../reference_manual/render_animation.rst:63
+#: ../../reference_manual/render_animation.rst:70
 msgid "Render As"
 msgstr "视频格式"
 
-#: ../../reference_manual/render_animation.rst:64
+#: ../../reference_manual/render_animation.rst:71
+#, fuzzy
+#| msgid ""
+#| "The file format to render to. All except GIF have extra options that can "
+#| "be manipulated via :guilabel:`...`."
 msgid ""
-"The file format to render to. All except GIF have extra options that can be "
-"manipulated via :guilabel:`...`."
+"The file format to render to. Some have extra options that can be "
+"manipulated via the edit button next to the drop-down."
 msgstr ""
 "指定输出的视频格式。点击 :guilabel:`...` 按钮可以调整视频格式的编码选项。GIF "
 "格式没有选项。"
 
-#: ../../reference_manual/render_animation.rst:66
-msgid "Location and name of the rendered animation."
+#: ../../reference_manual/render_animation.rst:73
+#, fuzzy
+#| msgid "Location and name of the rendered animation."
+msgid ""
+"Location and name of the rendered animation. On Android, you will be "
+"prompted for a file name instead."
 msgstr "指定视频输出的位置和文件名。"
 
-#: ../../reference_manual/render_animation.rst:69
+#: ../../reference_manual/render_animation.rst:76
 msgid "Video Location"
 msgstr "视频导出位置"
 
-#: ../../reference_manual/render_animation.rst:69
+#: ../../reference_manual/render_animation.rst:76
 msgid "Include Audio"
 msgstr "包含音频"
 
-#: ../../reference_manual/render_animation.rst:69
+#: ../../reference_manual/render_animation.rst:76
 msgid "Include any audio you have added."
 msgstr "在视频中包含您导入的音频。"
 
-#: ../../reference_manual/render_animation.rst:72
-msgid "The location where your have FFmpeg."
-msgstr "指定 FFmpeg 程序所在的位置。"
+#: ../../reference_manual/render_animation.rst:79
+msgid ""
+"The location where your have FFmpeg. On Android, the operating system's "
+"video encoder is used instead."
+msgstr ""
 
-#: ../../reference_manual/render_animation.rst:74
+#: ../../reference_manual/render_animation.rst:81
 msgid ""
 "This is now optional. Krita's bundled FFMpeg functionality is able to "
 "provide some options, but it is still useful to set this if you want to use "
@@ -260,24 +307,30 @@ msgstr ""
 "这已不再是必填项，因为 Krita 现在已经自带了 FFmpeg 的精简版本。但如果您需要使"
 "用特定版本的 FFmpeg 才具备的某些选项来导出视频，请在此指定 FFmpeg 的位置。"
 
-#: ../../reference_manual/render_animation.rst:75
+#: ../../reference_manual/render_animation.rst:82
 msgid "FFmpeg"
 msgstr "FFmpeg 位置"
 
-#: ../../reference_manual/render_animation.rst:78
+#: ../../reference_manual/render_animation.rst:85
+#, fuzzy
+#| msgid ""
+#| "Delete the prerendered image sequence after done rendering. This allows "
+#| "you to choose whether to try and save some space, or to save the sequence "
+#| "for when encoding fails."
 msgid ""
 "Delete the prerendered image sequence after done rendering. This allows you "
 "to choose whether to try and save some space, or to save the sequence for "
-"when encoding fails."
+"when encoding fails. On Android, the image sequence is only stored "
+"internally and always deleted afterwards."
 msgstr ""
 "在输出视频后自动删除生成的图像序列以节省空间。(译者注：此选框在新版 Krita 中"
 "已不存在)"
 
-#: ../../reference_manual/render_animation.rst:82
+#: ../../reference_manual/render_animation.rst:89
 msgid "Delete Sequence After Rendering"
 msgstr "在输出后删除图像序列"
 
-#: ../../reference_manual/render_animation.rst:82
+#: ../../reference_manual/render_animation.rst:89
 msgid ""
 "Since 5.2, Krita will always delete the image sequence if :guilabel:`Export "
 "as Image Sequence` is not checked while :guilabel:`Export as Video` is."
@@ -286,7 +339,7 @@ msgstr ""
 "选 :guilabel:`导出为图像序列`\\ ，Krita 将总是在导出完成后删除在导出过程中生"
 "成的图像序列。"
 
-#: ../../reference_manual/render_animation.rst:86
+#: ../../reference_manual/render_animation.rst:93
 msgid ""
 "Krita currently does not support rendering video with transparent elements, "
 "and will instead render them as black. To combat this, you can add in a "
@@ -296,11 +349,11 @@ msgstr ""
 "这种情况，你可以先在图像底部插入一个图层，填充完全不透明的纯色，如白色，然后"
 "再进行输出。"
 
-#: ../../reference_manual/render_animation.rst:89
+#: ../../reference_manual/render_animation.rst:96
 msgid "Setting Up Krita for Exporting Animations"
 msgstr "下载和配置 FFmpeg 软件包"
 
-#: ../../reference_manual/render_animation.rst:93
+#: ../../reference_manual/render_animation.rst:100
 msgid ""
 "Since Krita 5.2, Krita bundles a small part of FFmpeg. This means that you "
 "will not strictly have to download and setup FFMpeg to render animations. "
@@ -312,7 +365,7 @@ msgstr ""
 "FFmpeg。如果您是专业用户，需要使用某些自带版本中没有的编码器选项，也可以自行"
 "下载并配置 FFmpeg。"
 
-#: ../../reference_manual/render_animation.rst:95
+#: ../../reference_manual/render_animation.rst:102
 msgid ""
 "The bundled FFmpeg supports the following containers: ``Webm``, ``Matroska`` "
 "and ``OGG``, which are a wrapper around the video data (amongst others), "
@@ -322,27 +375,27 @@ msgstr ""
 "``OGG``\\ 。视频封装格式只是一个外壳，它包装的视频数据是使用独立于封装格式的"
 "视频编码器进行编码的。Krita 自带的 FFmpeg 支持以下视频编码："
 
-#: ../../reference_manual/render_animation.rst:97
+#: ../../reference_manual/render_animation.rst:104
 msgid "AOM AV1"
 msgstr "AOM AV1"
 
-#: ../../reference_manual/render_animation.rst:98
+#: ../../reference_manual/render_animation.rst:105
 msgid "VPX VP9"
 msgstr "VPX VP9"
 
-#: ../../reference_manual/render_animation.rst:99
+#: ../../reference_manual/render_animation.rst:106
 msgid "VPX VP8"
 msgstr "VPX VP8"
 
-#: ../../reference_manual/render_animation.rst:100
+#: ../../reference_manual/render_animation.rst:107
 msgid "264 (via openH264)"
 msgstr "264 (通过 openH264 编码器)"
 
-#: ../../reference_manual/render_animation.rst:101
+#: ../../reference_manual/render_animation.rst:108
 msgid "Theora"
 msgstr "Theora"
 
-#: ../../reference_manual/render_animation.rst:103
+#: ../../reference_manual/render_animation.rst:110
 msgid ""
 "The following instructions will explain how to get a non-bundled version of "
 "FFMpeg and set it up. The setup is a one-time thing so you won't have to do "
@@ -351,22 +404,22 @@ msgstr ""
 "如果您需要自行下载并配置 FFmpeg，请按照以下指引进行操作。完成首次配置后，日后"
 "导出动画时将无需再次配置。"
 
-#: ../../reference_manual/render_animation.rst:106
+#: ../../reference_manual/render_animation.rst:113
 msgid "Step 1 - Downloading FFmpeg"
 msgstr "第 1 步 - 下载 FFmpeg"
 
-#: ../../reference_manual/render_animation.rst:109
-#: ../../reference_manual/render_animation.rst:143
+#: ../../reference_manual/render_animation.rst:116
+#: ../../reference_manual/render_animation.rst:150
 msgid "For Windows"
 msgstr "Windows 系统"
 
-#: ../../reference_manual/render_animation.rst:111
+#: ../../reference_manual/render_animation.rst:118
 msgid "Open the FFmpeg `download page. <https://www.gyan.dev/ffmpeg/builds/>`_"
 msgstr ""
 "访问 FFmpeg 的 `Download (下载) 页面 <https://www.gyan.dev/ffmpeg/builds/"
 ">`_ 。"
 
-#: ../../reference_manual/render_animation.rst:113
+#: ../../reference_manual/render_animation.rst:120
 msgid ""
 "Go to :guilabel:`release` section and choose the download link that says "
 "``ffmpeg-release-essentials.zip``."
@@ -374,14 +427,14 @@ msgstr ""
 "前往网页的 :guilabel:`release` 段落，下载文件名为 ``ffmpeg-release-"
 "essentials.zip`` 的软件包。"
 
-#: ../../reference_manual/render_animation.rst:117
+#: ../../reference_manual/render_animation.rst:124
 msgid ""
 "**Don't** download the file which filename contains the word ``shared``. It "
 "won't work with Krita."
 msgstr ""
 "**请不要** 下载文件名中包含 ``shared`` 字样的软件包，Krita 不能与它配合使用。"
 
-#: ../../reference_manual/render_animation.rst:119
+#: ../../reference_manual/render_animation.rst:126
 msgid ""
 "If the filename ends with ``.7z``, you can still use it, but then you need "
 "to have a program that can open 7zip archives (for example `7zip itself "
@@ -391,12 +444,12 @@ msgstr ""
 "如果你下载的软件包的扩展名为 ``.7z`` ，可使用 `7zip <https://www.7-zip.org/"
 ">`_ 进行解压。如果扩展名为 ``.zip`` ，则可以直接通过 Windows 文件管理器打开。"
 
-#: ../../reference_manual/render_animation.rst:123
-#: ../../reference_manual/render_animation.rst:161
+#: ../../reference_manual/render_animation.rst:130
+#: ../../reference_manual/render_animation.rst:168
 msgid "For macOS"
 msgstr "macOS 系统"
 
-#: ../../reference_manual/render_animation.rst:125
+#: ../../reference_manual/render_animation.rst:132
 msgid ""
 "Please see the section above. However, FFmpeg is obtained from `here "
 "<https://evermeet.cx/ffmpeg/>`_ instead. Just pick the big green button on "
@@ -411,7 +464,7 @@ msgstr ""
 "`Keka <https://www.kekaosx.com>`_ 或者类似的软件。你也可以点击该下载绿色按钮"
 "下面的“Download as ZIP”链接，下载更加通用的 ZIP 格式压缩文件。"
 
-#: ../../reference_manual/render_animation.rst:127
+#: ../../reference_manual/render_animation.rst:134
 msgid ""
 "Alternatively you can find the smaller text under the big green button that "
 "says :guilabel:`Download as ZIP`. Then you should be able to extract it just "
@@ -420,12 +473,12 @@ msgstr ""
 "你也可以下载 ZIP 压缩文件版本，它可以直接通过 Finder (访达) 解压。请点击绿色"
 "下载按钮下方的 :guilabel:`Download as ZIP` 链接下载。"
 
-#: ../../reference_manual/render_animation.rst:130
-#: ../../reference_manual/render_animation.rst:166
+#: ../../reference_manual/render_animation.rst:137
+#: ../../reference_manual/render_animation.rst:173
 msgid "For Linux"
 msgstr "Linux 系统"
 
-#: ../../reference_manual/render_animation.rst:132
+#: ../../reference_manual/render_animation.rst:139
 msgid ""
 "FFmpeg can be installed from the repositories on most Linux systems. Version "
 "2.6 is required for proper GIF support, as we use the palettegen "
@@ -434,25 +487,19 @@ msgstr ""
 "绝大多数 Linux 发行版可以直接从官方软件仓库中下载安装 FFmpeg。有些发行版的 "
 "FFmpeg 版本较旧，请确保它在 2.6 版以上，否则将无法正常输出 GIF。"
 
-#: ../../reference_manual/render_animation.rst:135
+#: ../../reference_manual/render_animation.rst:142
 msgid "For Android"
 msgstr "安卓系统"
 
-#: ../../reference_manual/render_animation.rst:137
-msgid ""
-"As mentioned above, rendering video on Android is **not supported**. You can "
-"download FFmpeg libraries for Android and there are apps that use FFmpeg's "
-"name, but **they will not work with Krita**."
+#: ../../reference_manual/render_animation.rst:144
+msgid "Krita does not use FFmpeg on Android. Don't attempt to install it."
 msgstr ""
-"如上所述，Krita **暂不支持** 在安卓系统上导出视频。 尽管您可以为安卓系统下载 "
-"FFmpeg 程序库，也有某些应用自称 FFmpeg，但因为安卓系统的限制， **Krita 无法调"
-"用它们** 。"
 
-#: ../../reference_manual/render_animation.rst:140
+#: ../../reference_manual/render_animation.rst:147
 msgid "Step 2 - Unzipping and Linking to Krita"
 msgstr "第二步 - 解压并在 Krita 中指定 FFmpeg 位置"
 
-#: ../../reference_manual/render_animation.rst:145
+#: ../../reference_manual/render_animation.rst:152
 msgid ""
 "Once you've downloaded, go to the file location. Right click on the FFmpeg "
 "file, and select ``Extract All...``. Select the file destination, and rename "
@@ -461,17 +508,17 @@ msgstr ""
 "下载完成后，将该 ZIP 压缩文件的内容全部解压到一个目录中。你可以把它们解压到任"
 "意位置。"
 
-#: ../../reference_manual/render_animation.rst:147
+#: ../../reference_manual/render_animation.rst:154
 msgid "Hint"
 msgstr "提示"
 
-#: ../../reference_manual/render_animation.rst:149
+#: ../../reference_manual/render_animation.rst:156
 msgid ""
 "It is easiest to save the file under C: drive, but any location is fine."
 msgstr ""
 "在此例中，我们把文件解压到了 C 盘根目录的 ffmpeg 文件夹，因为这样最好找。"
 
-#: ../../reference_manual/render_animation.rst:151
+#: ../../reference_manual/render_animation.rst:158
 msgid ""
 "Open Krita back up and go to :menuselection:`File --> Render Animation...`. "
 "Under ``Export > Video``, click the file icon next to FFmpeg. Select this "
@@ -481,11 +528,11 @@ msgstr ""
 "中“视频”或者“两者”，然后在对话框下面显示的 FFmpeg 输入框右侧点击“文件夹”按"
 "钮，找到 ``C:/ffmpeg/bin/ffmpeg.exe`` 然后点击 :guilabel:`确定` 。"
 
-#: ../../reference_manual/render_animation.rst:156
+#: ../../reference_manual/render_animation.rst:163
 msgid "Tip"
 msgstr "提示"
 
-#: ../../reference_manual/render_animation.rst:158
+#: ../../reference_manual/render_animation.rst:165
 msgid ""
 "If you have saved FFmpeg to a different location, choose ``<ffmpeg location>/"
 "ffmpeg/bin/ffmpeg.exe``."
@@ -493,7 +540,7 @@ msgstr ""
 "如果你将 FFmpeg 解压到了别的目录，请选择 ``<ffmpeg 文件夹所在目录>/ffmpeg/"
 "bin/ffmpeg.exe`` 。"
 
-#: ../../reference_manual/render_animation.rst:163
+#: ../../reference_manual/render_animation.rst:170
 msgid ""
 "After downloading FFmpeg, you just need to extract it and then simply point "
 "to it in the FFmpeg location in Krita like ``/Users/user/Downloads/ffmpeg`` "
@@ -503,25 +550,25 @@ msgstr ""
 "下载 FFmpeg 的压缩文件后，把它的内容解压到一个容易访问的文件夹中，例如 ``/"
 "Users/user/Downloads/ffmpeg`` 文件夹(user 是你的用户名)。"
 
-#: ../../reference_manual/render_animation.rst:168
+#: ../../reference_manual/render_animation.rst:175
 msgid ""
 "FFmpeg is, if installed from the repositories, usually found in ``/usr/bin/"
 "ffmpeg``."
 msgstr ""
 "如果你从发行版的官方软件仓库安装了 FFmpeg 它的位置在 ``/usr/bin/ffmpeg`` 。"
 
-#: ../../reference_manual/render_animation.rst:171
+#: ../../reference_manual/render_animation.rst:178
 msgid "Step 3 - Testing out an animation"
 msgstr "第三步 - 测试导出动画"
 
-#: ../../reference_manual/render_animation.rst:173
+#: ../../reference_manual/render_animation.rst:180
 msgid ""
 "ffmpeg.exe is what Krita uses to do all of its animation export magic. Now "
 "that it is hooked up, let us test it out."
 msgstr ""
 "完成 ffmpeg 可执行文件的位置指定后，我们便可以测试一下它能否正常工作了。"
 
-#: ../../reference_manual/render_animation.rst:175
+#: ../../reference_manual/render_animation.rst:182
 msgid ""
 "Let's make an animated GIF. In the Render Animation dialog, change the :"
 "guilabel:`Render As`  field to \"GIF image\". Choose the file location where "
@@ -533,7 +580,7 @@ msgstr ""
 "图像”，然后点击在“视频输出位置”右边的按钮，指定为桌面并命名为 *export.gif* 。"
 "检查输出的 GIF 动画是否正常。"
 
-#: ../../reference_manual/render_animation.rst:179
+#: ../../reference_manual/render_animation.rst:186
 msgid ""
 "By default, FFmpeg will render MP4 files with a too new codec, which means "
 "that Windows Media Player won't be able to play it. So for Windows, select "
@@ -544,7 +591,7 @@ msgstr ""
 "击“视频格式”选单右边的“...”按钮，在“特性文件”选单中选中 baseline，而不是 "
 "high422。"
 
-#: ../../reference_manual/render_animation.rst:183
+#: ../../reference_manual/render_animation.rst:190
 msgid ""
 "macOS does not come with any software to play MP4 and MKV files. If you use "
 "Chrome for your web browser, you can drag the video file into that and the "
@@ -554,3 +601,23 @@ msgstr ""
 "如果你的 macOS 无法播放 MP4 或者 MKV 视频文件，而你正在使用 Chrome 浏览器，你"
 "可以把视频文件拖进它的窗口直接播放。你也可以安装 VLC 播放器，它也是一款自由开"
 "源软件。"
+
+#~ msgid ""
+#~ "On Android, exporting videos is unavailable. To render a video, you will "
+#~ "have to transfer the KRA file to a computer or export an image series and "
+#~ "find an Android application that can turn them into a video."
+#~ msgstr ""
+#~ "Krita 在安卓系统上无法直接导出视频。您可以将 KRA 文件传输到电脑进行导出，"
+#~ "也可以先导出图像序列，然后使用其他安卓应用将图像序列合成为视频。"
+
+#~ msgid "The location where your have FFmpeg."
+#~ msgstr "指定 FFmpeg 程序所在的位置。"
+
+#~ msgid ""
+#~ "As mentioned above, rendering video on Android is **not supported**. You "
+#~ "can download FFmpeg libraries for Android and there are apps that use "
+#~ "FFmpeg's name, but **they will not work with Krita**."
+#~ msgstr ""
+#~ "如上所述，Krita **暂不支持** 在安卓系统上导出视频。 尽管您可以为安卓系统下"
+#~ "载 FFmpeg 程序库，也有某些应用自称 FFmpeg，但因为安卓系统的限制， **Krita "
+#~ "无法调用它们** 。"
