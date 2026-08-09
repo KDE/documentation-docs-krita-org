@@ -44,6 +44,8 @@ msgid ""
 "Render animation allows you to render your animation to an image sequence "
 "and to ``.gif``, ``.mp4``, ``.mkv``, or other video files."
 msgstr ""
+"导出动画功能可以将您制作的动画导出为图像序列或 ``.gif``、``.mp4``、``.mkv``或"
+"其他视频文件。"
 
 #: ../../reference_manual/render_animation.rst:22
 msgid ""
@@ -55,6 +57,10 @@ msgid ""
 "hiccup, and one frame saves out weird, first saving the image sequence "
 "allows you to only resave that one weird frame before rendering."
 msgstr ""
+"Krita 的导出动画过程共分两步：首先将动画输出成 PNG 图像序列，然后调用视频编码"
+"器将图像序列转换为视频格式。这是因为动画图像通常结构复杂且数据量庞大，分两步"
+"进行有助于控制动画导出的过程。例如电脑在导出过程中出了点状况，导致某一帧保存"
+"错误，你只需重新保存出错的那一帧即可继续导出。"
 
 #: ../../reference_manual/render_animation.rst:24
 msgid ""
@@ -72,6 +78,8 @@ msgid ""
 "only either export an image sequence or a video, not both. FFmpeg is not "
 "used, do not attempt to install it."
 msgstr ""
+"安卓系统的文件处理和视频渲染方式存在诸多限制，只允许要么导出图像序列，要么导"
+"出视频，而不能同时导出两者。Krita 在安卓系统上不使用 FFmpeg，请不要尝试安装。"
 
 #: ../../reference_manual/render_animation.rst:31
 msgid "General"
@@ -117,6 +125,8 @@ msgid ""
 "The usual export options can be modified with the edit button next to the "
 "drop-down."
 msgstr ""
+"导出图像序列所用的文件格式。在导出为视频时将强制使用 PNG。点击下拉选单旁边的"
+"编辑按钮可以更改当前文件格式的保存选项。"
 
 #: ../../reference_manual/render_animation.rst:43
 msgid "Image Location"
@@ -128,6 +138,8 @@ msgid ""
 "drive or perhaps a harddrive that is fast. On Android, you will be prompted "
 "for a directory instead."
 msgstr ""
+"导出图像序列的保存位置。某些用户偏好使用 U 盘或高速硬盘。在安卓系统上，程序会"
+"提示您选择一个目录。"
 
 #: ../../reference_manual/render_animation.rst:45
 msgid "Base Name"
@@ -141,7 +153,7 @@ msgstr "图像序列的主文件名，在它后面会跟随每帧的帧编号作
 
 #: ../../reference_manual/render_animation.rst:47
 msgid "Start numbering at"
-msgstr ""
+msgstr "序列起点编号"
 
 #: ../../reference_manual/render_animation.rst:48
 msgid ""
@@ -201,12 +213,15 @@ msgid ""
 "video may not play back properly on some devices. Krita will warn you about "
 "this, but still allows you to try such exports."
 msgstr ""
+"大于 1920 像素的宽度和高度、高于 30 的帧率目前并不被广泛支持。这可能导致视频"
+"导出失败，或生成的视频在某些设备上无法正常播放。Krita 会对此发出警告，但仍允"
+"许您尝试导出。"
 
 #: ../../reference_manual/render_animation.rst:66
 msgid ""
 "Some video formats require width and height to be even numbers. Krita will "
 "automatically adjust the size if necessary."
-msgstr ""
+msgstr "某些视频格式要求宽度和高度为偶数。Krita 会根据需要自动调整尺寸。"
 
 #: ../../reference_manual/render_animation.rst:68
 msgid "Filter"
@@ -231,12 +246,14 @@ msgid ""
 "The file format to render to. Some have extra options that can be "
 "manipulated via the edit button next to the drop-down."
 msgstr ""
+"要导出的文件格式。某些格式具有额外选项，可通过下拉菜单旁边的编辑按钮进行调"
+"整。"
 
 #: ../../reference_manual/render_animation.rst:73
 msgid ""
 "Location and name of the rendered animation. On Android, you will be "
 "prompted for a file name instead."
-msgstr ""
+msgstr "导出动画的位置和文件名。在安卓系统上，程序会提示您输入文件名。"
 
 #: ../../reference_manual/render_animation.rst:76
 msgid "Video Location"
@@ -254,7 +271,7 @@ msgstr "在视频中包含您导入的音频。"
 msgid ""
 "The location where your have FFmpeg. On Android, the operating system's "
 "video encoder is used instead."
-msgstr ""
+msgstr "FFmpeg 程序所在的位置。在安卓系统上，程序会使用系统的视频编码器。"
 
 #: ../../reference_manual/render_animation.rst:81
 msgid ""
@@ -276,6 +293,9 @@ msgid ""
 "when encoding fails. On Android, the image sequence is only stored "
 "internally and always deleted afterwards."
 msgstr ""
+"导出完成后自动删除在导出过程中生成的图像序列。您可以选择导出后删除图像序列以"
+"节省存储空间，或选择保留图像序列以备编码失败时复用。在安卓系统上，图像序列只"
+"能存储在程序内部，导出完成后将自动删除。"
 
 #: ../../reference_manual/render_animation.rst:89
 msgid "Delete Sequence After Rendering"
@@ -444,7 +464,7 @@ msgstr "安卓系统"
 
 #: ../../reference_manual/render_animation.rst:144
 msgid "Krita does not use FFmpeg on Android. Don't attempt to install it."
-msgstr ""
+msgstr "Krita 在安卓系统上不使用 FFmpeg，请不要尝试安装。"
 
 #: ../../reference_manual/render_animation.rst:147
 msgid "Step 2 - Unzipping and Linking to Krita"
