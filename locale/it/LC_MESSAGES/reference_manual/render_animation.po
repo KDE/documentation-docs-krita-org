@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Krita Manual 5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-06 02:11+0000\n"
-"PO-Revision-Date: 2026-07-09 10:04+0200\n"
+"PO-Revision-Date: 2026-08-06 22:27+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: ../../reference_manual/render_animation.rst:-1
 msgid "How to use the render animation command in Krita."
@@ -39,31 +39,15 @@ msgid "Animation"
 msgstr "Animazione"
 
 #: ../../reference_manual/render_animation.rst:20
-#, fuzzy
-#| msgid ""
-#| "Render animation allows you to render your animation to an image sequence "
-#| "and (on computers) to ``.gif``, ``.mp4``, ``.mkv``, or ``.ogg`` file. It "
-#| "replaces :guilabel:`Export Animation`."
 msgid ""
 "Render animation allows you to render your animation to an image sequence "
 "and to ``.gif``, ``.mp4``, ``.mkv``, or other video files."
 msgstr ""
 "La Resa animazione ti consente di eseguire la resa della tua animazione in "
-"una sequenza di immagini (sul computer) nei formati di file ``.gif``, ``."
-"mp4``, ``.mkv`` od ``.ogg``. Sostituisce la funzionalità :guilabel:`Esporta "
-"animazione`."
+"una sequenza di immagini nei formati di file ``.gif``, ``.mp4``, ``.mkv`` o "
+"altri file video."
 
 #: ../../reference_manual/render_animation.rst:22
-#, fuzzy
-#| msgid ""
-#| "For rendering to an animated file format, Krita will first render to a "
-#| "PNG sequence and then use FFmpeg, which is really good at encoding into "
-#| "video files, to render that sequence to an animated file format. The "
-#| "reason for this two-step process is that animation files can be really "
-#| "complex and really big, and this is the best way to allow you to keep "
-#| "control over the export process. For example, if your computer has a "
-#| "hiccup, and one frame saves out weird, first saving the image sequence "
-#| "allows you to only resave that one weird frame before rendering."
 msgid ""
 "For rendering to an animated file format, Krita will first render to a PNG "
 "sequence and then use a video encoder to render that sequence to an animated "
@@ -74,13 +58,14 @@ msgid ""
 "allows you to only resave that one weird frame before rendering."
 msgstr ""
 "Per la resa in un formato di file animato, Krita prima eseguirà la resa in "
-"una sequenza PNG, poi utilizzerà FFmpeg, che è ottimo per la codifica in "
-"file video. Il motivo di questo processo a due passaggi è che i file di "
-"animazione possono essere molto complessi e grandi, e questo è il metodo "
-"migliore per mantenere il controllo sul processo di esportazione. Per "
-"esempio, se il tuo computer ha un intoppo e un fotogramma viene salvato in "
-"modo strano, salvare prima la sequenza di immagini ti permetterà di salvare "
-"di nuovo solo il fotogramma strano, prima di eseguire la resa."
+"una sequenza PNG, poi utilizzerà un codificatore video per eseguire la resa "
+"di tale sequenza in un formato di file animato. Il motivo di questo processo "
+"a due passaggi è che i file di animazione possono essere molto complessi e "
+"grandi, e questo è il metodo migliore per mantenere il controllo sul "
+"processo di esportazione. Per esempio, se il tuo computer ha un intoppo e un "
+"fotogramma viene salvato in modo strano, salvare prima la sequenza di "
+"immagini ti permetterà di salvare di nuovo solo il fotogramma strano, prima "
+"di eseguire la resa."
 
 #: ../../reference_manual/render_animation.rst:24
 msgid ""
@@ -100,6 +85,9 @@ msgid ""
 "only either export an image sequence or a video, not both. FFmpeg is not "
 "used, do not attempt to install it."
 msgstr ""
+"In Android, la gestione dei file e la resa dei video funziona in modo "
+"diverso. Puoi soltanto esportare o una sequenza di immagini o un video, ma "
+"non entrambi. FFmpeg non viene utilizzato, non tentare di installarlo."
 
 #: ../../reference_manual/render_animation.rst:31
 msgid "General"
@@ -143,35 +131,28 @@ msgid "File Format"
 msgstr "Formato del file"
 
 #: ../../reference_manual/render_animation.rst:42
-#, fuzzy
-#| msgid ""
-#| "The file format to export the sequence to. When rendering we enforce PNG. "
-#| "The usual export options can be modified with :guilabel:`...`."
 msgid ""
 "The file format to export the sequence to. When rendering we enforce PNG. "
 "The usual export options can be modified with the edit button next to the "
 "drop-down."
 msgstr ""
 "Il formato di file in cui esportare. Durante la resa viene forzato PNG. Le "
-"normali opzioni di esportazione possono essere modificate col pulsante :"
-"guilabel:`...`."
+"normali opzioni di esportazione possono essere modificate col pulsante di "
+"modifica accanto al menu a tendina."
 
 #: ../../reference_manual/render_animation.rst:43
 msgid "Image Location"
 msgstr "Posizione immagine"
 
 #: ../../reference_manual/render_animation.rst:44
-#, fuzzy
-#| msgid ""
-#| "Where you render the image sequence to. Some people prefer to use a flash-"
-#| "drive or perhaps a harddrive that is fast."
 msgid ""
 "Where you render the image sequence to. Some people prefer to use a flash-"
 "drive or perhaps a harddrive that is fast. On Android, you will be prompted "
 "for a directory instead."
 msgstr ""
 "La posizione in cui vengono rese le immagini. Alcuni utenti preferiscono "
-"usare una memoria portatile o un disco rigido, che è veloce."
+"usare una memoria portatile o un disco rigido, che è veloce. In Android ti "
+"verrà chiesto invece la scelta di una cartella."
 
 #: ../../reference_manual/render_animation.rst:45
 msgid "Base Name"
@@ -186,8 +167,6 @@ msgstr ""
 "suffisso numerico in base al fotogramma."
 
 #: ../../reference_manual/render_animation.rst:47
-#, fuzzy
-#| msgid "Start numbering at."
 msgid "Start numbering at"
 msgstr "Inizia la numerazione a"
 
@@ -254,12 +233,19 @@ msgid ""
 "video may not play back properly on some devices. Krita will warn you about "
 "this, but still allows you to try such exports."
 msgstr ""
+"Le larghezze e le altezze sopra i 1920 pixel e i valori FPS oltre i 30 non "
+"sono supportati in modo esteso. Essi possono causare errori "
+"nell'esportazione video o il video risultante potrebbe non essere riprodotto "
+"correttamente in alcuni dispositivi. Krita ti avviserà di questo fatto, ma "
+"ti permetterà comunque di provare queste esportazioni."
 
 #: ../../reference_manual/render_animation.rst:66
 msgid ""
 "Some video formats require width and height to be even numbers. Krita will "
 "automatically adjust the size if necessary."
 msgstr ""
+"Alcuni formati video richiedono che la larghezza e l'altezza siano valori di "
+"numeri pari. Krita regolerà automaticamente la dimensione, se necessario."
 
 #: ../../reference_manual/render_animation.rst:68
 msgid "Filter"
@@ -281,25 +267,21 @@ msgid "Render As"
 msgstr "Rendi come"
 
 #: ../../reference_manual/render_animation.rst:71
-#, fuzzy
-#| msgid ""
-#| "The file format to render to. All except GIF have extra options that can "
-#| "be manipulated via :guilabel:`...`."
 msgid ""
 "The file format to render to. Some have extra options that can be "
 "manipulated via the edit button next to the drop-down."
 msgstr ""
-"Il formato del file con cui eseguire la resa. Tutti i formati, ad eccezione "
-"di GIF, hanno opzioni aggiuntive manipolabili tramite il pulsante :guilabel:"
-"`...`."
+"Il formato del file con cui eseguire la resa. Alcuni hanno opzioni "
+"aggiuntive manipolabili tramite il pulsante di modifica accanto il menu a "
+"tendina."
 
 #: ../../reference_manual/render_animation.rst:73
-#, fuzzy
-#| msgid "Location and name of the rendered animation."
 msgid ""
 "Location and name of the rendered animation. On Android, you will be "
 "prompted for a file name instead."
-msgstr "La posizione e il nome dell'animazione resa."
+msgstr ""
+"La posizione e il nome dell'animazione resa. In Android ti verrà chiesto "
+"invece la scelta di un nome file."
 
 #: ../../reference_manual/render_animation.rst:76
 msgid "Video Location"
@@ -318,6 +300,8 @@ msgid ""
 "The location where your have FFmpeg. On Android, the operating system's "
 "video encoder is used instead."
 msgstr ""
+"La posizione in cui si trova FFmpeg. In Android viene utilizzato invece il "
+"codificatore video del sistema operativo."
 
 #: ../../reference_manual/render_animation.rst:81
 msgid ""
@@ -334,11 +318,6 @@ msgid "FFmpeg"
 msgstr "FFmpeg"
 
 #: ../../reference_manual/render_animation.rst:85
-#, fuzzy
-#| msgid ""
-#| "Delete the prerendered image sequence after done rendering. This allows "
-#| "you to choose whether to try and save some space, or to save the sequence "
-#| "for when encoding fails."
 msgid ""
 "Delete the prerendered image sequence after done rendering. This allows you "
 "to choose whether to try and save some space, or to save the sequence for "
@@ -347,7 +326,8 @@ msgid ""
 msgstr ""
 "Elimina la sequenza di immagini rese, dopo aver eseguito la resa. Ciò ti "
 "permette di scegliere se provare e salvare un po' di spazio o se salvare la "
-"sequenza quando la codifica non riesce."
+"sequenza quando la codifica non riesce. In Android la sequenza di immagini è "
+"memorizzata soltanto internamente e dopo viene sempre eliminata."
 
 #: ../../reference_manual/render_animation.rst:89
 msgid "Delete Sequence After Rendering"
@@ -525,7 +505,7 @@ msgstr "Per Android"
 
 #: ../../reference_manual/render_animation.rst:144
 msgid "Krita does not use FFmpeg on Android. Don't attempt to install it."
-msgstr ""
+msgstr "Krita non utilizza FFmpeg in Android. Non tentare di installarlo."
 
 #: ../../reference_manual/render_animation.rst:147
 msgid "Step 2 - Unzipping and Linking to Krita"
