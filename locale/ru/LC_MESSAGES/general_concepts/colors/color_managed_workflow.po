@@ -1,0 +1,1485 @@
+# Translation of docs_krita_org_general_concepts___colors___color_managed_workflow into Russian.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: "
+"docs_krita_org_general_concepts___colors___color_managed_workflow\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
+"PO-Revision-Date: 2026-10-10 20:44+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:-1
+msgid "How a color managed workflow works."
+msgstr "Принцип работы процесса управления цветом"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:-1
+msgid ".. image:: /images/color_category/Krita_2_9_colormanagement_group1.png"
+msgstr ".. image:: /images/color_category/Krita_2_9_colormanagement_group1.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:-1
+msgid ".. image:: /images/color_category/Krita_2_9_colormanagement_group2.png"
+msgstr ".. image:: /images/color_category/Krita_2_9_colormanagement_group2.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:-1
+msgid ".. image:: /images/color_category/Krita_2_9_colormanagement_group3.png"
+msgstr ".. image:: /images/color_category/Krita_2_9_colormanagement_group3.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:-1
+msgid ".. image:: /images/color_category/Krita_2_9_colormanagement_group4.png"
+msgstr ".. image:: /images/color_category/Krita_2_9_colormanagement_group4.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:-1
+msgid ".. image:: /images/dockers/LUT_Management_Docker.png"
+msgstr ".. image:: /images/dockers/LUT_Management_Docker.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:-1
+msgid ".. image:: /images/color_category/Krita_HDR_1.svg"
+msgstr ".. image:: /images/color_category/Krita_HDR_1.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:-1
+msgid ".. image:: /images/color_category/Krita_HDR2.svg"
+msgstr ".. image:: /images/color_category/Krita_HDR2.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:-1
+msgid ""
+".. image:: /images/color_category/Krita-colormanaged-workflow_webcomic.svg"
+msgstr ""
+".. image:: /images/color_category/Krita-colormanaged-workflow_webcomic.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:-1
+msgid ".. image:: /images/color_category/Krita-colormanaged-workflow_print.svg"
+msgstr ""
+".. image:: /images/color_category/Krita-colormanaged-workflow_print.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:-1
+msgid ".. image:: /images/color_category/Krita-colormanaged-workflow_games.svg"
+msgstr ""
+".. image:: /images/color_category/Krita-colormanaged-workflow_games.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:0
+msgid ".. image:: /images/color_category/Kiki_matrix_profile.png"
+msgstr ".. image:: /images/color_category/Kiki_matrix_profile.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:0
+msgid ".. image:: /images/color_category/Kiki_cLUTprofiles.png"
+msgstr ".. image:: /images/color_category/Kiki_cLUTprofiles.png"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:12
+msgid "Color"
+msgstr "Цвет"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:12
+msgid "Color Management"
+msgstr "Управление цветом"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:12
+msgid "ICC Profiles"
+msgstr "Профили ICC"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:12
+msgid "OCIO"
+msgstr "OCIO"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:17
+msgid "Color Managed Workflow"
+msgstr "Процесс управления цветом"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:19
+msgid ""
+"You may have heard that Krita has something called color-management. Or "
+"maybe you just wondered what all these 'color model' and 'color profile' "
+"things you can find in the menus mean. Color management is pretty useful for "
+"people who work in digital imaging professionally, and hopefully this page "
+"will explain why."
+msgstr ""
+"Возможно, доводилось слышать, что в Krita есть так называемое управление "
+"цветом. А может быть, просто интересно, что означают все эти «цветовые "
+"модели» и «цветовые профили», которые можно найти в меню. Управление цветом "
+"весьма полезно для тех, кто профессионально занимается цифровой обработкой "
+"изображений, и, надеюсь, эта страница объяснит, почему."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:22
+msgid "Basic Info"
+msgstr "Основные сведения"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:24
+msgid ""
+"If you've never worked with color management before, and have no clue what "
+"it is, then know that you've probably been working in the 8bit RGB color "
+"space with the sRGB profile. This means you can choose for *sRGB built-in* "
+"or *sRGB-elle-v2-srgbtrc.icc*. With the new color space browser this profile "
+"is marked with *(default)* when using 8bit."
+msgstr ""
+"Если вы никогда не работали с управлением цветом и не знаете, что это такое, "
+"то, скорее всего, вы работали в 8-битном цветовом пространстве RGB с "
+"профилем sRGB. Это значит, что можно выбрать *sRGB built-in* или *sRGB-elle-"
+"v2-srgbtrc.icc*. В новом обзоре цветовых пространств этот профиль помечается "
+"как *(default)* при использовании 8 бит."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:26
+msgid ""
+"We'll go into what these terms mean in the theory, but if you're here only "
+"for trying to figure out which is the default, you now know it. Maybe, after "
+"reading this, you may feel like changing the default, to get new and "
+"interesting results from filters, blending modes, or just the color smudge "
+"brush."
+msgstr ""
+"Что означают эти термины, будет рассмотрено в теоретической части, но если "
+"нужно было лишь выяснить, какой из них используется по умолчанию, то теперь "
+"это известно. Возможно, после прочтения этого возникнет желание изменить "
+"значение по умолчанию, чтобы получить новые интересные результаты от "
+"фильтров, режимов смешивания или просто кисти «Размазывание цвета»."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:29
+msgid "What is the problem?"
+msgstr "В чём проблема?"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:31
+msgid ""
+"To explain the point of color management, you'd first need to learn which "
+"problem color management tries to solve."
+msgstr ""
+"Чтобы объяснить смысл управления цветом, сначала нужно понять, какую задачу "
+"оно призвано решить."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:33
+msgid "Let us imagine a kinder garden:"
+msgstr "Представим детский сад:"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:35
+msgid ""
+"The class of 28 children is subdivided in groups of 7. Each group has its "
+"own table."
+msgstr "Класс из 28 детей разбит на группы по 7. У каждой группы свой стол."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:37
+msgid ""
+"The teacher gives them a painting assignment: They need to paint a red "
+"triangle, a blue square, a green circle and put a yellow border around the "
+"three. The kids are very experienced with painting already, so the teacher "
+"can confidently leave the smarter ones to their own devices, and spent more "
+"time on those who need help."
+msgstr ""
+"Учитель даёт им задание по рисованию: нарисовать красный треугольник, синий "
+"квадрат, зелёный круг и обвести все три жёлтой рамкой. Дети уже имеют "
+"большой опыт в рисовании, поэтому учитель может уверенно предоставить более "
+"сообразительным действовать самостоятельно и уделить больше времени тем, "
+"кому нужна помощь."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:40
+msgid "The following results come from painting:"
+msgstr "Рисование дало следующие результаты:"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:42
+msgid ""
+"Even though all groups had the same assignment, each group's result looks "
+"different."
+msgstr ""
+"Хотя всем группам было дано одинаковое задание, результат у каждой группы "
+"получается разным."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:49
+msgid ""
+"Group 1 had vermilion red, citron yellow and ultramarine blue to their "
+"disposal. This means their triangle looks nice and red, but their circle's "
+"green is muddy. This is because ultramarine is too dark of a blue to create "
+"nice greens with."
+msgstr ""
+"В распоряжении группы 1 были киноварно-красный, лимонно-жёлтый и "
+"ультрамариновый цвета. Это означает, что их треугольник выглядит красивым и "
+"красным, но зелёный цвет их круга получается мутным. Причина в том, что "
+"ультрамарин — слишком тёмный синий, чтобы создавать с его помощью хорошие "
+"зелёные оттенки."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:56
+msgid ""
+"Group 2 had magenta red, citron yellow and cerulean blue. Magenta is a type "
+"of red that is closer to pink, opposed to vermilion, which is closer to "
+"orange. However, their green looks nice because cerulean is a much lighter "
+"blue."
+msgstr ""
+"В группе 2 были пурпурно-красный, лимонно-жёлтый и лазурно-синий. Пурпурный "
+"— разновидность красного, более близкая к розовому, в отличие от "
+"киноварного, который ближе к оранжевому. Однако их зелёный выглядит хорошо, "
+"поскольку лазурный — гораздо более светлый синий."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:64
+msgid ""
+"Group 3 had vermilion red, citron yellow, emerald green and cerulean blue. "
+"They didn't mix their green, and thus ended up with a purer color."
+msgstr ""
+"В группе 3 были киноварно-красный, лимонно-жёлтый, изумрудно-зелёный и "
+"лазурно-синий. Зелёный не смешивали, поэтому цвет получился более чистым."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:71
+msgid ""
+"Finally, group 4 has vermilion red, citron yellow and cerulean blue. Their "
+"colors probably look like what you imagined."
+msgstr ""
+"Наконец, в группе 4 присутствуют киноварно-красный, лимонно-жёлтый и лазурно-"
+"синий цвета. Их цвета, вероятно, выглядят так, как и представлялось."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:73
+msgid ""
+"Now, these are kindergarteners, so this isn't the largest problem in the "
+"world. However, imagine that something like this happened at a printing "
+"company? Imagine four printers printing the same magazine with wildly "
+"different results? That would be disastrous!"
+msgstr ""
+"Это же детсадовцы, так что это не самая большая проблема на свете. Но "
+"представьте, что нечто подобное произошло в типографии? Представьте четыре "
+"печатные машины, печатающие один и тот же журнал с совершенно разными "
+"результатами? Это была бы катастрофа!"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:75
+msgid "For this purpose, we invented color management."
+msgstr "Именно для этого и было придумано управление цветом."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:78
+msgid "What is color management?"
+msgstr "Что такое управление цветом?"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:80
+msgid ""
+"Color management is, dryly put, a set of systems that tries to have the same "
+"color translate properly between color devices."
+msgstr ""
+"Управление цветом, выражаясь сухо, — это набор систем, которые пытаются "
+"добиться того, чтобы один и тот же цвет правильно передавался между "
+"цветовыми устройствами."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:82
+msgid ""
+"It usually works by attempting to convert a color to the reference color "
+"space XYZ. XYZ is a coordinate system that has a spot for all colors that "
+"the average human eye can see."
+msgstr ""
+"Обычно это работает так: делается попытка преобразовать цвет в опорное "
+"цветовое пространство XYZ. XYZ — это система координат, в которой есть место "
+"для всех цветов, которые способен воспринять среднестатистический "
+"человеческий глаз."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:84
+msgid ""
+"From XYZ it can then be translated back into another device space, such as "
+"RGB (for screens), or CMYK (for printers)."
+msgstr ""
+"Затем из XYZ можно преобразовать обратно в другое пространство устройства, "
+"например RGB (для экранов) или CMYK (для принтеров)."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:86
+msgid ""
+"Krita has two systems dedicated to color management. On the one hand, we "
+"have **lcms2**, which deal with ICC profiles, and on the other, we have "
+"**OCIO**, which deal with LUT color management."
+msgstr ""
+"В Krita есть две системы управления цветом. С одной стороны — **lcms2**, "
+"работающая с профилями ICC, с другой — **OCIO**, работающая с управлением "
+"цветом на основе LUT."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:88
+msgid ""
+"To give a crude estimate, ICC profiles deal with keeping colors consistent "
+"over many interpretations of devices (screens, printers) by using a "
+"reference space, and OCIO deals with manipulating the interpretation of said "
+"colors."
+msgstr ""
+"Грубо говоря, профили ICC обеспечивают согласованность цветов при различных "
+"интерпретациях устройств (экранов, принтеров) за счёт использования опорного "
+"пространства, а OCIO занимается управлением интерпретацией этих цветов."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:90
+msgid "Within both we can identify the following color spaces:"
+msgstr "В обоих случаях можно выделить следующие цветовые пространства:"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:93
+msgid ""
+"Device spaces are those describing your monitor, and have to be made using a "
+"little device that is called \"colorimeter\". This device, in combination "
+"with the right software, measures the strongest red, green and blue your "
+"screen can produce, as well as the white, black and gray it produces. Using "
+"these and several other measurements it creates an ICC profile unique to "
+"your screen. You set these in Krita's color management tab. By default we "
+"assume sRGB for screens, but it's very likely that your screen isn't exactly "
+"fitting sRGB, especially if you have a high quality screen, where it may be "
+"a bigger space instead. Device spaces are also why you should first consult "
+"with your printer what profile they expect. Many printing houses have their "
+"own device profiles for their printers, or may prefer doing color conversion "
+"themselves. You can read more about colorimeter usage :ref:`here "
+"<profiling_and_calibration>`."
+msgstr ""
+"Пространства устройств — это пространства, описывающие монитор; для их "
+"создания нужно небольшое устройство под названием «колориметр». Это "
+"устройство вместе с подходящим программным обеспечением измеряет самые "
+"насыщенные красный, зелёный и синий цвета, которые способен воспроизвести "
+"экран, а также белый, чёрный и серый, которые он воспроизводит. На основе "
+"этих и ряда других измерений создаётся профиль ICC, уникальный для экрана. "
+"Задаются они на вкладке управления цветом в Krita. По умолчанию для экранов "
+"предполагается sRGB, но, скорее всего, экран не в точности соответствует "
+"sRGB, особенно если он высокого качества — тогда это может быть более "
+"широкое пространство. Пространства устройств — ещё и причина того, что "
+"сначала стоит уточнить у типографии, какой профиль она ожидает. У многих "
+"типографий есть собственные профили устройств для своих принтеров, или они "
+"предпочитают сами выполнять преобразование цветов. Подробнее об "
+"использовании колориметра можно прочитать :ref:`здесь "
+"<profiling_and_calibration>`."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:94
+msgid "Device spaces"
+msgstr "Пространства устройств"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:96
+msgid "Working spaces"
+msgstr "Рабочие пространства"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:97
+msgid ""
+"These are delivered alongside Krita for ICC, and downloadable from the OCIO "
+"website for OCIO. Working spaces are particularly nice to do color "
+"calculations in, which programs like Krita do often. It's therefore "
+"recommended to have a working space profile for your image."
+msgstr ""
+"Они поставляются вместе с Krita для ICC, а для OCIO их можно загрузить с "
+"сайта OCIO. В рабочих пространствах особенно удобно выполнять цветовые "
+"расчёты, чем программы вроде Krita занимаются часто. Поэтому для изображения "
+"рекомендуется иметь профиль рабочего пространства."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:99
+msgid "Aesthetic or Look spaces"
+msgstr "Эстетические пространства, или пространства Look"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:99
+msgid ""
+"These are special spaces that have been deformed to give a certain look to "
+"an image. Krita doesn't deliver Look profiles for ICC, nor does it yet "
+"support Look spaces for OCIO."
+msgstr ""
+"Это особые пространства, деформированные для придания изображению "
+"определённого вида. Krita не поставляет профили Look для ICC и пока не "
+"поддерживает пространства Look для OCIO."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:102
+msgid "Color managed workflow"
+msgstr "Процесс управления цветом"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:104
+msgid ""
+"Knowing this about these spaces of course doesn't give you an idea of how to "
+"use them, but it does make it easier to explain how to use them. So let us "
+"look at a typical color management workflow:"
+msgstr ""
+"Знание этого о данных пространствах, конечно, не даёт представления о том, "
+"как их использовать, но зато позволяет проще объяснить, как ими "
+"пользоваться. Итак, рассмотрим типичный рабочий процесс управления цветом:"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:110
+msgid ".. image:: /images/color_category/Krita-colormanaged-workflow_text.svg"
+msgstr ".. image:: /images/color_category/Krita-colormanaged-workflow_text.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:110
+msgid ""
+"A typical example of a color managed workflow. We have input from scanners "
+"and cameras, which we convert to a working space that can be used between "
+"different editing software, and is converted to an output space for viewing "
+"on screen or printing."
+msgstr ""
+"Типичный пример рабочего процесса с управлением цветом. Данные со сканеров и "
+"камер преобразуются в рабочее пространство, которое можно использовать в "
+"разных программах редактирования, а затем — в пространство вывода для "
+"просмотра на экране или печати."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:112
+msgid ""
+"In a traditional color managed workflow, we usually think in terms of real "
+"world colors being converted to computer colors and the other way around. "
+"So, for example photos from a camera or scanned in images. If you have a "
+"device space of such a device, we first assign said device space to the "
+"image, and then convert it to a working space."
+msgstr ""
+"В традиционном процессе управления цветом обычно речь идёт о преобразовании "
+"цветов реального мира в компьютерные цвета и наоборот. Например, фотографии "
+"с камеры или отсканированные изображения. Если имеется пространство "
+"устройства для такого устройства, сначала изображению назначается это "
+"пространство устройства, а затем оно преобразуется в рабочее пространство."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:114
+msgid ""
+"We then do all our editing in the working space, and use the working space "
+"to communicate between editing programs. In Krita's case, due to it having "
+"two color management systems, we use ICC profiles between programs like Gimp "
+"2.9+, Inkscape, digiKam and Scribus, and OCIO configuration between Blender "
+"and Natron."
+msgstr ""
+"Затем всё редактирование выполняется в рабочем пространстве, а само рабочее "
+"пространство служит для обмена данными между программами редактирования. В "
+"случае Krita, поскольку в ней две системы управления цветом, между такими "
+"программами, как Gimp 2.9+, Inkscape, digiKam и Scribus, используются "
+"профили ICC, а между Blender и Natron — конфигурация OCIO."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:116
+msgid ""
+"You also store your working files in the working space, just like how you "
+"have the layers unmerged in the working file, or have it at a very high "
+"resolution."
+msgstr ""
+"Рабочие файлы также хранятся в рабочем пространстве — подобно тому, как в "
+"рабочем файле слои остаются необъединёнными или файл имеет очень высокое "
+"разрешение."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:118
+msgid ""
+"Sometimes, we apply aesthetic or 'look' spaces to an image as part of the "
+"editing process. This is rather advanced, and probably not something to "
+"worry about in Krita's case."
+msgstr ""
+"Иногда в процессе редактирования к изображению применяются эстетические "
+"пространства или пространства «внешнего вида». Это довольно сложная тема, и "
+"в случае Krita, вероятно, беспокоиться не о чем."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:120
+msgid ""
+"Then, when we're done editing, we try to convert to an output space, which "
+"is another device space. This can be CMYK for printers or a special screen "
+"RGB profile. When you are dealing with professional printing houses, it is "
+"best to ask them about this step. They have a lot of experience with doing "
+"the best conversion, and may prefer to do the conversion from your working "
+"space to the device space of their printers."
+msgstr ""
+"Затем, когда редактирование завершено, выполняется попытка преобразования в "
+"пространство вывода — ещё одно пространство устройства. Это может быть CMYK "
+"для принтеров или особый профиль RGB для экрана. Если приходится иметь дело "
+"с профессиональными типографиями, лучше спросить об этом этапе у них. У них "
+"большой опыт выполнения наилучшего преобразования, и они могут предпочесть "
+"выполнить преобразование из рабочего пространства в пространство устройства "
+"своих принтеров."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:122
+msgid ""
+"Another form of output is the way your screen displays the color. Unlike "
+"regular output, this one is done all the time during editing: After all, you "
+"need to be able to see what you are doing, but your screen is still a device "
+"with a device space, so it does distort how the image looks. In this manner, "
+"you can see your screen as a set of binoculars you have to look through to "
+"see your image at all."
+msgstr ""
+"Ещё одна форма вывода — это то, как экран показывает цвет. В отличие от "
+"обычного вывода, этот выполняется постоянно во время редактирования: в конце "
+"концов, нужно видеть, что делаешь, но экран всё ещё остаётся устройством с "
+"пространством устройства, поэтому он искажает вид изображения. Таким "
+"образом, экран можно рассматривать как бинокль, через который приходится "
+"смотреть, чтобы вообще увидеть изображение."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:124
+msgid ""
+"Therefore, without a profiled monitor, you actually don't know what the "
+"actual colors you are working with are like, because the computer doesn't "
+"know the relevant properties of your screen. So if you profiled your "
+"monitor, give Krita the profile in the settings, and select the sRGB space "
+"to draw in, you are for the first time seeing the actual colors of the sRGB "
+"space."
+msgstr ""
+"Поэтому без профилированного монитора вы на самом деле не знаете, как "
+"выглядят действительные цвета, с которыми работаете, — ведь компьютер не "
+"знает соответствующих свойств экрана. Если монитор профилирован, задайте "
+"профиль в параметрах Krita и выберите пространство sRGB для рисования — и вы "
+"впервые увидите действительные цвета пространства sRGB."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:127
+msgid "So what does this mean?"
+msgstr "Что это значит?"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:133
+msgid ""
+".. image:: /images/color_category/Krita-colormanaged-workflow_krita_text.svg"
+msgstr ""
+".. image:: /images/color_category/Krita-colormanaged-workflow_krita_text.svg"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:133
+msgid ""
+"When we paint from scratch, we can see our screen profile as the input "
+"space, because we use it to determine what colors to pick. This somewhat "
+"simplifies the workflow, but makes the screen profile and viewing conditions "
+"more important."
+msgstr ""
+"При рисовании с нуля профиль экрана можно рассматривать как входное "
+"пространство, поскольку с его помощью определяется, какие цвета выбирать. "
+"Это несколько упрощает рабочий процесс, но повышает важность профиля экрана "
+"и условий просмотра."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:135
+msgid ""
+"Now, photographers and people who do a tricky discipline of VFX called "
+"'color grading' will go completely mad over trying to get the colors they "
+"put in to come out 100% correctly, and will even count in factors like the "
+"time of day and the color they painted their walls. For example, if the wall "
+"behind your computer is pure red, your eyes will adjust to be less sensitive "
+"to red, which means that the colors they pick in the program could come out "
+"redder. We call these the *viewing conditions*."
+msgstr ""
+"Фотографы и специалисты, занимающиеся непростой дисциплиной VFX под "
+"названием «цветокоррекция», сходят с ума, пытаясь добиться, чтобы вводимые "
+"цвета выводились на 100 % правильно, и даже принимают в расчёт такие "
+"факторы, как время суток и цвет стен в помещении. Например, если стена за "
+"компьютером чисто красная, глаза адаптируются и становятся менее "
+"чувствительными к красному, а значит, выбранные в программе цвета могут "
+"получиться более красными. Такие факторы называются *условиями просмотра*."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:137
+msgid ""
+"Thankfully, artists have to worry a slight bit less about this. As "
+"illustrations are fully handmade, we are able to identify the important bits "
+"and make appropriate contrasts between colors. This means that even if our "
+"images turn out to be slightly redder than intended, it is less likely the "
+"whole image is ruined. If we look back at the kindergarten example above, we "
+"still understand what the image was supposed to look like, despite there "
+"being different colors on each image. Furthermore, because the colors in "
+"illustrations are deliberately picked, we can correct them more easily on a "
+"later date. Yet, at the same time, it is of course a big drag to do this, "
+"and we might have had much more flexibility had we taken viewing conditions "
+"under consideration."
+msgstr ""
+"К счастью, художникам приходится беспокоиться об этом немного меньше. "
+"Поскольку иллюстрации полностью создаются вручную, можно выделить важные "
+"детали и подобрать подходящие контрасты между цветами. Это означает, что "
+"даже если изображения получатся немного краснее, чем задумано, вероятность "
+"того, что всё изображение будет испорчено, меньше. Если вернуться к примеру "
+"с детским садом выше, всё ещё понятно, как должно было выглядеть "
+"изображение, несмотря на разные цвета на каждом из них. Кроме того, "
+"поскольку цвета в иллюстрациях выбираются намеренно, их можно легче "
+"исправить позже. Однако в то же время делать это, конечно, очень "
+"утомительно, и гибкости было бы гораздо больше, если бы учитывались условия "
+"просмотра."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:139
+msgid ""
+"That said, for artists it is also very useful to understand the working "
+"spaces. Different working spaces give different results with filters and "
+"mixing, and only some working spaces can be used for advanced technology "
+"like HDR."
+msgstr ""
+"Тем не менее художникам также очень полезно разбираться в рабочих "
+"пространствах. Разные рабочие пространства дают разные результаты при работе "
+"с фильтрами и смешивании, и лишь некоторые рабочие пространства можно "
+"использовать для таких передовых технологий, как HDR."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:141
+msgid ""
+"Similarly, Krita, as a program intended to make images from scratch, doesn't "
+"really worry about assigning workspaces after having made the image. But "
+"because you are using the screen as a binocular to look at your image, and "
+"to pick colors, you can see your screen's device space as an input space to "
+"the image. Hence why profiling your monitor and giving the profile to Krita "
+"in the settings can help with preparing your work for print and future "
+"ventures in the long run."
+msgstr ""
+"Аналогично, Krita как программа, предназначенная для создания изображений с "
+"нуля, не особенно заботится о назначении рабочих пространств после создания "
+"изображения. Но поскольку экран используется как бинокль для просмотра "
+"изображения и выбора цветов, пространство устройства экрана можно считать "
+"входным пространством изображения. Именно поэтому профилирование монитора и "
+"указание профиля в параметрах Krita помогает заранее подготовить работу к "
+"печати и к дальнейшим задачам в долгосрочной перспективе."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:143
+msgid ""
+"Overall, it is kinda useful to keep things like viewing conditions in the "
+"back of your mind. Many professional artists use a mid-gray color as their "
+"default canvas background because they find they create much more dynamic "
+"images due to having improved their viewing conditions. It is also why a lot "
+"of graphics programs, including Krita, come with a dark theme nowadays. "
+"(Though, of course this might also be because dark themes can be considered "
+"cool, who knows.)"
+msgstr ""
+"В целом полезно держать в голове такие вещи, как условия просмотра. Многие "
+"профессиональные художники используют серый цвет среднего тона в качестве "
+"цвета фона холста по умолчанию, поскольку считают, что благодаря улучшенным "
+"условиям просмотра создают гораздо более динамичные изображения. Именно "
+"поэтому многие графические программы, включая Krita, сегодня поставляются с "
+"тёмным оформлением. (Хотя, конечно, это может быть и потому, что тёмное "
+"оформление считается стильным, — кто знает.)"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:148
+msgid "ICC profiles"
+msgstr "Профили ICC"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:150
+msgid ""
+"An ICC profile is a set of coordinates describing the extremities of the "
+"device space within XYZ, and it is the color management data you use to "
+"communicate your working space to printers and applications that are "
+"designed for the print industry, such as Gimp, Scribus, Photoshop, "
+"Illustrator, Inkscape, digiKam, RawTheraphee, etc. You have two types of ICC "
+"profiles:"
+msgstr ""
+"Профиль ICC — это набор координат, описывающих границы пространства "
+"устройства в XYZ, и одновременно данные управления цветом, с помощью которых "
+"рабочее пространство передаётся принтерам и приложениям, предназначенным для "
+"полиграфии, таким как Gimp, Scribus, Photoshop, Illustrator, Inkscape, "
+"digiKam, RawTheraphee и т. д. Существует два типа профилей ICC:"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:153
+msgid ""
+"These are delivered alongside Krita. Matrix shaper profiles are made by "
+"setting parameters and interpolating between these to get the exact size of "
+"the color space. Due to this, Krita's color space browser can give you a lot "
+"of information on these profiles. Such profiles are also preferable as "
+"working space."
+msgstr ""
+"Они поставляются вместе с Krita. Профили Matrix Shaper создаются путём "
+"задания параметров и интерполяции между ними, чтобы получить точный размер "
+"цветового пространства. Поэтому обзор цветовых пространств Krita может дать "
+"много информации об этих профилях. Такие профили также предпочтительны в "
+"качестве рабочего пространства."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:159
+msgid "Matrix Shaper profiles"
+msgstr "Профили Matrix Shaper"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:159
+msgid ""
+"Matrix shaper profiles have a few parameters that describe the color space "
+"which are then interpolated between, this requires a lot of maths."
+msgstr ""
+"Профили Matrix Shaper содержат несколько параметров, описывающих цветовое "
+"пространство, между которыми затем выполняется интерполяция; это требует "
+"большого объёма вычислений."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:162
+msgid ""
+"These are fairly rare, and primarily used to describe printer profiles, such "
+"as CMYK. cLUT, or Color Look-up Table profiles store far more data than "
+"Matrix shaper profiles, so they can hold data of little particularities "
+"caused by, for example, unexpected results from mixing pigments. This is a "
+"far more organic approach to describing a color space, hence why a lot of "
+"programs that don't care for color management much don't support these."
+msgstr ""
+"Такие профили довольно редки и в основном используются для описания профилей "
+"принтеров, например CMYK. Профили cLUT (Color Look-up Table — таблица поиска "
+"цветов) хранят гораздо больше данных, чем профили Matrix shaper, поэтому "
+"способны хранить данные о мелких особенностях, вызванных, например, "
+"неожиданными результатами смешивания пигментов. Это гораздо более органичный "
+"подход к описанию цветового пространства, поэтому многие программы, не "
+"уделяющие управлению цветом особого внимания, их не поддерживают."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:168
+msgid ""
+"cLUT profiles work by holding tables of each color in a color space and "
+"their respective coordinates in a reference space. For CMYK this is "
+"typically L\\*A\\*B\\* and for the rest XYZ. These tables are tricky to "
+"make, which means these profiles are a lot rarer."
+msgstr ""
+"Профили cLUT работают так: они содержат таблицы каждого цвета в цветовом "
+"пространстве и соответствующих координат в опорном пространстве. Для CMYK "
+"это обычно L\\*A\\*B\\*, а для остальных — XYZ. Такие таблицы сложно "
+"создавать, поэтому эти профили встречаются гораздо реже."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:169
+msgid "cLUT profiles"
+msgstr "Профили cLUT"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:171
+msgid ""
+"The interesting thing about ICC profiles is that your working space can be "
+"larger than your device space. This is generally not bad. However, when "
+"converting, you do end up with the question of how to translate the working "
+"space values."
+msgstr ""
+"Интересная особенность профилей ICC заключается в том, что рабочее "
+"пространство может быть больше пространства устройства. Как правило, это не "
+"плохо. Однако при преобразовании возникает вопрос о том, как пересчитать "
+"значения рабочего пространства."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:174
+msgid "Perceptual"
+msgstr "Воспринимаемая"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:174
+msgid ""
+"This just squishes the values of the working space into the space it's "
+"converted to. It's a nice method to see all possible values in this, but not "
+"so good if you want accurate color reproduction. Use this if you want to see "
+"all colors in an image, or want to express all possible contrasts. Doesn't "
+"work with Matrix Shaper profiles, defaults to relative colorimetric."
+msgstr ""
+"Это просто сжимает значения рабочего пространства в пространство, в которое "
+"выполняется преобразование. Удобный способ увидеть все возможные значения, "
+"но не лучший, если требуется точная цветопередача. Используйте этот вариант, "
+"если нужно увидеть все цвета изображения или передать все возможные "
+"контрасты. Не работает с профилями Matrix Shaper — по умолчанию применяется "
+"относительный колориметрический метод."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:177
+msgid "Absolute Colorimetric"
+msgstr "Абсолютная колориметрическая"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:177
+msgid ""
+"The opposite to Perceptual, Absolute colorimetric will attempt to retain all "
+"the correct colors at whatever cost, which may result in awful looking "
+"colors. Recommended only for reproduction work. Doesn't work with Matrix "
+"Shaper profiles in Krita due to ICC v4 workflow standards."
+msgstr ""
+"В отличие от воспринимаемой, абсолютная колориметрическая попытается "
+"сохранить все правильные цвета любой ценой, из-за чего цвета могут выглядеть "
+"ужасно. Рекомендуется только для работ по репродуцированию. Не работает с "
+"профилями Matrix Shaper в Krita из-за стандартов рабочего процесса ICC v4."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:180
+msgid "Relative Colorimetric"
+msgstr "Относительная колориметрическая"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:180
+msgid ""
+"An in between solution between perceptual and absolute, relative will try to "
+"fit whatever colors it can match between color spaces. It does this by "
+"aligning the white and black points. It cuts off the rest to their "
+"respective borders. This is what all matrix shaper profiles default to "
+"during conversion, because the ICC v4 workflow specifies to only use "
+"Relative Colorimetric for matrix shaper profiles."
+msgstr ""
+"Промежуточное решение между воспринимаемым и абсолютным: относительный метод "
+"пытается подобрать все цвета, которые можно сопоставить между цветовыми "
+"пространствами. Для этого он выравнивает белую и чёрную точки. Остальные "
+"цвета отсекаются по соответствующим границам. Именно этот метод по умолчанию "
+"применяется всеми профилями Matrix Shaper при преобразовании, поскольку "
+"рабочий процесс ICC v4 предписывает использовать для профилей Matrix Shaper "
+"только относительный колориметрический метод."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:183
+msgid "Saturation"
+msgstr "Насыщенность"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:183
+msgid ""
+"Does anything to retain colorfulness, even hue will be sacrificed. Used in "
+"infographics. Doesn't work with Matrix Shaper profiles, defaults to relative "
+"colorimetric."
+msgstr ""
+"Делает всё возможное для сохранения насыщенности цвета, даже в ущерб "
+"цветовому тону. Используется в инфографике. Не работает с профилями Matrix "
+"Shaper, по умолчанию применяется относительная колориметрическая."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:185
+msgid ""
+"*ICC profile version* is the last thing to keep in mind when dealing with "
+"ICC profiles. Krita delivers both Version 2 and Version 4 profiles, with the "
+"later giving better results in doing color maths, but the former being more "
+"widely supported (as seen below in 'Interaction with other applications'). "
+"This is also why Krita defaults to V2, and we recommend using V2 when you "
+"aren't certain if the other programs you are using support V4."
+msgstr ""
+"*Версия профиля ICC* — последнее, что стоит учитывать при работе с профилями "
+"ICC. Krita поставляет профили как версии 2, так и версии 4: профили версии 4 "
+"дают лучшие результаты при цветовых расчётах, но профили версии 2 "
+"поддерживаются шире (см. ниже раздел «Взаимодействие с другими "
+"приложениями»). Именно поэтому в Krita по умолчанию используется версия 2, и "
+"версию 2 рекомендуется использовать, если нет уверенности, что другие "
+"используемые программы поддерживают версию 4."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:188
+msgid "LUT docker and HDR imaging"
+msgstr "Панель LUT и работа с HDR-изображениями"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:196
+msgid ""
+"The :ref:`lut_docker` is the second important bit of color management in "
+"Krita that is shared between Krita and programs like Blender, Natron and "
+"Nuke, and only uses Look Up Tables that are configured via a config file."
+msgstr ""
+":ref:`lut_docker` — второй важный компонент управления цветом в Krita, общий "
+"для Krita и таких программ, как Blender, Natron и Nuke; он использует только "
+"таблицы поиска, настраиваемые через файл конфигурации."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:198
+msgid ""
+"You can set the workingspace of the image under input color space, and the "
+"display to sRGB or your own LUT if you have added it to the configuration. "
+"View in this case is for proofing transforms to a certain display device."
+msgstr ""
+"Рабочее пространство изображения можно задать как входное цветовое "
+"пространство, а дисплей — как sRGB или собственную LUT, если она добавлена в "
+"параметры. Просмотр в этом случае служит для преобразований цветопробы под "
+"конкретное устройство отображения."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:200
+msgid ""
+"Component, exposure, gamma, whitepoint and blackpoint are knobs which allows "
+"you to modify the display filter."
+msgstr ""
+"Компонент, экспозиция, гамма, точка белого и точка чёрного — это параметры, "
+"позволяющие изменять фильтр отображения."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:208
+msgid ""
+"As explained before, we can see our monitor as a telescope or binocular into "
+"the world of our picture. Which means it distorts our view of the image a "
+"little. But we can modify this binocular, or display filter to see our image "
+"in a different way. For example, to allow us to see the white in an image "
+"that are whiter than the white of our screen. To explain what that means, we "
+"need to think about what white is."
+msgstr ""
+"Как объяснялось ранее, монитор можно рассматривать как телескоп или бинокль, "
+"через который видно мир нашего изображения. Это означает, что он немного "
+"искажает вид изображения. Но этот бинокль, или фильтр отображения, можно "
+"изменить, чтобы увидеть изображение иначе. Например, чтобы увидеть в "
+"изображении белые участки, которые белее белого экрана. Чтобы объяснить, что "
+"это значит, нужно подумать о том, что такое белый цвет."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:210
+msgid ""
+"For example, white, on our monitor is full red, full green and full blue. "
+"But it's certainly different from white on our paper, or the color of milk, "
+"white from the sun, or even the white of our cell-phone displays."
+msgstr ""
+"Например, белый цвет на мониторе — это полный красный, полный зелёный и "
+"полный синий. Но он, конечно, отличается от белого на бумаге, цвета молока, "
+"белого от солнца или даже белого на экранах мобильных телефонов."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:212
+msgid ""
+"Black similarly, is brighter on a LCD display than a LED one, and "
+"incomparable with the black of a carefully sealed room."
+msgstr ""
+"Аналогично, чёрный цвет на ЖК-дисплее ярче, чем на светодиодном, и не идёт "
+"ни в какое сравнение с чернотой тщательно изолированной комнаты."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:214
+msgid ""
+"This means that there's potentially blacker blacks than screen black, and "
+"white whites than screen white. However, for simplicity's sake we still "
+"assign the black-point and the white-point to certain values. From there, we "
+"can determine whether a white is whiter than the white point, or a black "
+"blacker than the black-point."
+msgstr ""
+"Это означает, что потенциально возможны более чёрные чёрные, чем чёрный "
+"экрана, и более белые белые, чем белый экрана. Однако для простоты чёрной и "
+"белой точкам всё же присваиваются определённые значения. Исходя из этого "
+"можно определить, белее ли белый, чем белая точка, или чернее ли чёрный, чем "
+"чёрная точка."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:216
+msgid ""
+"The LUT docker allows us to control this display-filter and modify the "
+"distortion. This is useful when we start modifying images that are made with "
+"scene referred values, such as HDR photos, or images coming out of a render "
+"engine."
+msgstr ""
+"Панель LUT позволяет управлять этим фильтром отображения и изменять "
+"искажение. Это полезно при обработке изображений, созданных со значениями, "
+"отнесёнными к сцене, например HDR-фотографий или изображений, выводимых "
+"системой рендеринга."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:224
+msgid ""
+"So, for example, we can choose to scale whiter-than-screen-white to our "
+"screen-white so we can see the contrasts there."
+msgstr ""
+"Так, например, можно выбрать масштабирование цветов, более белых, чем белый "
+"цвет экрана, к белому цвету экрана, чтобы увидеть контрасты в этой области."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:226
+msgid ""
+"The point of this is that you can take advantage of more lightness detail in "
+"an image. While you can't see the difference between screen white and whiter-"
+"than-screen-white (because your screen can't show the difference), graphics "
+"programs can certainly use it."
+msgstr ""
+"Смысл этого в том, что можно задействовать больше деталей светлоты "
+"изображения. Хотя разницу между белым цветом экрана и белым, более ярким, "
+"чем сам экран, увидеть нельзя (экран не способен её показать), графические "
+"программы вполне могут её использовать."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:228
+msgid ""
+"A common example is matching the lighting between a 3d model and a real "
+"world scene. Others are advanced photo retouching, with much more contrast "
+"information available to the user. In painting itself, this allows you to "
+"create an image where you can be flippant with the contrast, and allow "
+"yourself to go as bright as you'd like."
+msgstr ""
+"Распространённый пример — согласование освещения между трёхмерной моделью и "
+"сценой реального мира. Другие примеры — сложная ретушь фотографий, когда "
+"пользователю доступно гораздо больше информации о контрасте. В самой "
+"живописи это позволяет создавать изображение, в котором можно вольно "
+"обращаться с контрастом и позволять себе такую яркость, какую захочется."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:230
+msgid ""
+"LUT docker manipulations are per view, so you can create a new view and set "
+"it to luminosity. This way you can see the image in both color as well as "
+"grayscale and keep a good eye on your values."
+msgstr ""
+"Манипуляции с панелью LUT выполняются для каждого вида отдельно, поэтому "
+"можно создать новый вид и переключить его в режим яркости. Так изображение "
+"видно и в цвете, и в оттенках серого, что позволяет внимательно следить за "
+"значениями."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:232
+msgid ""
+"Another example is to carefully watch the gradients in a certain section."
+msgstr ""
+"Ещё один пример — внимательно следить за градиентами на определённом участке."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:234
+msgid ""
+"Like ICC, the LUT Docker allows you to create a profile of sorts for your "
+"device. In this case it's the 'LUT', which stands for 'Look Up Table', and "
+"which can be added to OCIO by modifying the configuration file. When OCIO is "
+"turned on, the configuration in :menuselection:`Settings --> Configure "
+"Krita... --> Color Management` is turned off, unless you are using the :"
+"guilabel:`Internal` color engine."
+msgstr ""
+"Как и ICC, панель LUT позволяет создать своего рода профиль для устройства. "
+"В данном случае это «LUT» — сокращение от «Look Up Table» (таблица поиска), "
+"которую можно добавить в OCIO, изменив файл конфигурации. Когда OCIO "
+"включён, параметры в :menuselection:`Настройка --> Настроить Krita... --> "
+"Управление цветом` отключаются, если не используется цветовой механизм :"
+"guilabel:`Встроенный`."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:237
+msgid "In summary"
+msgstr "Резюме"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:239
+msgid "Krita has two modes of color management:"
+msgstr "В Krita есть два режима управления цветом:"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:241
+msgid ""
+"ICC works in terms of spaces relative to the CIEXYZ space, and requires an "
+"ICC profile."
+msgstr ""
+"ICC работает с пространствами относительно пространства CIEXYZ и требует "
+"профиля ICC."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:242
+msgid "OCIO works in terms of interpretation, and makes use of LUTs."
+msgstr "OCIO работает на основе интерпретации и использует LUT."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:243
+msgid "both can be made with a colorimeter."
+msgstr "Оба можно создать с помощью колориметра."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:244
+msgid ""
+"If you want to have a properly color managed workflow, you have one made "
+"customary for the input device (your screen) and the output devices (your "
+"printer, or target screen). For web the output is always sRGB."
+msgstr ""
+"Если требуется правильно организованный рабочий процесс с управлением "
+"цветом, он настраивается под устройство ввода (экран) и устройства вывода "
+"(принтер или целевой экран). Для Интернета вывод всегда выполняется в sRGB."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:245
+msgid ""
+"Set up your screen profiles under :menuselection:`Settings --> Configure "
+"Krita... --> Color management`."
+msgstr ""
+"Настройте профили экрана в разделе :menuselection:`Настройка --> Настроить "
+"Krita... --> Управление цветом`."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:246
+msgid ""
+"Do NOT use screen profiles or other device profiles to draw in. Use a "
+"working space profile such as any of the 'elle' profiles for this, as the "
+"color maths will be much more predictable and pleasant. Krita will convert "
+"between your screen and working space on the fly, allowing you to pick the "
+"correct colors. This turns your screen into binoculars to view the image."
+msgstr ""
+"Не используйте для рисования профили экрана или других устройств. Для этого "
+"используйте профиль рабочего пространства, например любой из профилей "
+"«elle», — цветовые расчёты будут гораздо предсказуемее и приятнее. Krita на "
+"лету преобразует цвета между экраном и рабочим пространством, что позволяет "
+"выбирать правильные цвета. Так экран превращается в бинокль для просмотра "
+"изображения."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:247
+msgid ""
+"Use the appropriate color management for the appropriate workflow. If you "
+"are working with Blender, you will be better off using OCIO, than ICC. If "
+"you are working with Scribus or Photoshop, use ICC."
+msgstr ""
+"Применяйте подходящее управление цветом для конкретного рабочего процесса. "
+"При работе с Blender лучше использовать OCIO, а не ICC. При работе с Scribus "
+"или Photoshop используйте ICC."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:249
+msgid ""
+"Krita does a lot of color maths, often concerning the blending of colors. "
+"This color maths works best in linear color space, and linear color space "
+"requires a bit depth of at the least 16bit to work correctly. The "
+"disadvantage is that linear space can be confusing to work in."
+msgstr ""
+"Krita выполняет большой объём цветовых вычислений, часто связанных со "
+"смешиванием цветов. Такие вычисления лучше всего работают в линейном "
+"цветовом пространстве, а линейное цветовое пространство для корректной "
+"работы требует разрядности не менее 16 бит. Недостаток в том, что работать в "
+"линейном пространстве может сбивать с толку."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:251
+msgid ""
+"If you like painting, have a decent amount of RAM, and are looking to start "
+"your baby-steps in taking advantage of Krita's color management, try "
+"upgrading from having all your images in sRGB built-in to sRGB-v2-elle-g10."
+"icc or rec2020-v2-elle-g10.icc at 16bit float. This'll give you better color "
+"blending while opening up the possibility for you to start working in HDR!"
+msgstr ""
+"Если нравится рисовать, оперативной памяти достаточно и есть желание сделать "
+"первые шаги в использовании управления цветом Krita, попробуйте перейти от "
+"использования sRGB built-in для всех изображений к sRGB-v2-elle-g10.icc или "
+"rec2020-v2-elle-g10.icc в 16-битном формате с плавающей запятой. Это "
+"обеспечит лучшее смешивание цветов и откроет возможность начать работу в HDR!"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:256
+msgid ""
+"Some graphics cards, such as those of the NVidia-brand actually have the "
+"best performance under 16bit float, because NVidia cards convert to floating "
+"point internally. When it does not need to do that, it speeds up!"
+msgstr ""
+"Некоторые графические карты, например от NVidia, на самом деле показывают "
+"наилучшую производительность при 16-битных числах с плавающей запятой, "
+"поскольку карты NVidia внутренне преобразуют данные в числа с плавающей "
+"запятой. Когда преобразование не требуется, скорость возрастает!"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:260
+msgid ""
+"No amount of color management in the world can make the image on your screen "
+"and the image out of the printer have 100% the same color."
+msgstr ""
+"Никакое управление цветом в мире не способно сделать так, чтобы изображение "
+"на экране и изображение, вышедшее из принтера, имели на 100 % одинаковый "
+"цвет."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:263
+msgid "Exporting"
+msgstr "Экспорт"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:265
+msgid ""
+"When you have finished your image and are ready to export it, you can modify "
+"the color space to optimize it:"
+msgstr ""
+"Когда работа над изображением завершена и оно готово к экспорту, можно "
+"изменить цветовое пространство для его оптимизации:"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:267
+msgid "If you are preparing an image for the web:"
+msgstr "Если изображение готовится для размещения в Интернете:"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:269
+msgid ""
+"If you use 16bit color depth or higher, convert the image to 8bit color "
+"depth. This will make the image much smaller."
+msgstr ""
+"Если используется глубина цвета 16 бит или выше, преобразуйте изображение в "
+"глубину цвета 8 бит. Это значительно уменьшит размер изображения."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:271
+msgid ""
+"Krita doesn't have built-in dithering currently, which means that 16 to 8bit "
+"conversions can come out a bit banded. But you can simulate it by adding a "
+"fill layer with a pattern, set this fill layer to overlay, and to 5% "
+"opacity. Then flatten the whole image and convert it to 8bit. The pattern "
+"will function as dithering giving a smoother look to gradients."
+msgstr ""
+"В Krita пока нет встроенного дизеринга, поэтому при преобразовании из 16 бит "
+"в 8 бит может появиться небольшая ступенчатость. Но это можно смоделировать: "
+"добавьте заливаемый слой с текстурой, установите для этого слоя режим "
+"смешивания «Перекрытие» и непрозрачность 5 %. Затем объедините всё "
+"изображение и преобразуйте его в 8 бит. Текстура будет играть роль "
+"дизеринга, придавая градиентам более плавный вид."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:273
+msgid "If it's a gray-scale image, convert it to gray-scale."
+msgstr "Если изображение в оттенках серого, преобразуйте его в оттенки серого."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:274
+msgid ""
+"If it's a color image, keep it in the working space profile: Many web "
+"browsers these days support color profiles embedded into images. Firefox, "
+"for example, will try to convert your image to fit the color profile of the "
+"other monitor (if they have one). That way, the image will look almost "
+"exactly the same on your screen and on other profiled monitors."
+msgstr ""
+"Если изображение цветное, оставляйте его в профиле рабочего пространства: "
+"многие современные веб-браузеры поддерживают цветовые профили, встроенные в "
+"изображения. Firefox, например, попытается преобразовать изображение в "
+"соответствии с цветовым профилем другого монитора (если он у него есть). "
+"Благодаря этому изображение будет выглядеть почти одинаково на экране и на "
+"других профилированных мониторах."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:279
+msgid ""
+"In some versions of Firefox, the colors actually look strange: This is a bug "
+"in Firefox, which is because its `color management system is incomplete "
+"<https://ninedegreesbelow.com/galleries/viewing-photographs-on-the-web."
+"html>`_, save your PNG, JPG or TIFF without an embedded profile to work "
+"around this."
+msgstr ""
+"В некоторых версиях Firefox цвета на самом деле выглядят странно: это ошибка "
+"Firefox, вызванная тем, что его `система управления цветом неполна <https://"
+"ninedegreesbelow.com/galleries/viewing-photographs-on-the-web.html>`_. Чтобы "
+"обойти её, сохраните PNG, JPG или TIFF без встроенного профиля."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:281
+msgid "If you are preparing for print:"
+msgstr "При подготовке к печати:"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:283
+msgid ""
+"You hopefully made the picture in a working space profile instead of the "
+"actual custom profile of your screen, if not, convert it to something like "
+"Adobe RGB, sRGB or Rec. 2020."
+msgstr ""
+"Надеемся, изображение создано в профиле рабочего пространства, а не в "
+"действительном пользовательском профиле экрана; если это не так, "
+"преобразуйте его в пространство наподобие Adobe RGB, sRGB или Rec. 2020."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:284
+msgid ""
+"Check with the printer what kind of image they expect. Maybe they expect "
+"sRGB color space, or perhaps they have their own profile."
+msgstr ""
+"Уточните в типографии, какое изображение от неё ожидают. Возможно, ожидается "
+"цветовое пространство sRGB, а может быть, у типографии есть собственный "
+"профиль."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:287
+msgid "Interaction with other applications"
+msgstr "Взаимодействие с другими приложениями"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:290
+msgid "Blender"
+msgstr "Blender"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:292
+msgid ""
+"If you wish to use Krita's OCIO functionality, and in particular in "
+"combination with Blender's color management, you can try to have it use "
+"Blender's OCIO config."
+msgstr ""
+"Если требуется использовать функциональность OCIO в Krita, в частности в "
+"сочетании с управлением цветом Blender, можно попробовать заставить её "
+"использовать конфигурацию OCIO Blender."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:294
+msgid ""
+"Blender's OCIO config is under ``<Blender-folder>/version number/datafiles/"
+"colormanagement``. Set the LUT docker to use the OCIO engine, and select the "
+"config from the above path. This will give you Blender's input and screen "
+"spaces, but not the looks, as those aren't supported in Krita yet."
+msgstr ""
+"Конфигурация OCIO в Blender находится в ``<Blender-folder>/version number/"
+"datafiles/colormanagement``. Настройте панель LUT на использование механизма "
+"OCIO и выберите конфигурацию по указанному выше пути. Так будут доступны "
+"входные и экранные пространства Blender, но не «looks», поскольку они пока "
+"не поддерживаются в Krita."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:298
+msgid "Windows Photo Viewer"
+msgstr "Средство просмотра фотографий Windows"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:300
+msgid ""
+"You might encounter some issues when using different applications together. "
+"One important thing to note is that the standard Windows Photo Viewer "
+"application does not handle modern ICC profiles. Krita uses version 4 "
+"profiles; Photo Viewer can only handle version 2 profiles. If you export to "
+"JPEG with an embedded profile, Photo Viewer will display your image much too "
+"dark."
+msgstr ""
+"При совместном использовании разных приложений могут возникнуть проблемы. "
+"Важно учитывать, что стандартное приложение Windows Photo Viewer не "
+"поддерживает современные профили ICC. Krita использует профили версии 4, а "
+"Photo Viewer поддерживает только профили версии 2. Если экспортировать в "
+"JPEG со встроенным профилем, Photo Viewer покажет изображение слишком тёмным."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:303
+msgid "Example workflows"
+msgstr "Примеры рабочих процессов"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:305
+msgid ""
+"Here are some example workflows to get a feeling of how your color "
+"management workflow may look like."
+msgstr ""
+"Ниже приведены примеры рабочих процессов, дающие представление о том, как "
+"может выглядеть рабочий процесс управления цветом."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:307
+msgid ""
+"As mentioned before, input for your screen is set via :menuselection:"
+"`Settings --> Configure Krita... --> Color management`, or via the LUT "
+"docker's 'screen space'. Working space is set via new file per document, or "
+"in the LUT docker via 'input space'."
+msgstr ""
+"Как упоминалось ранее, входное пространство для экрана задаётся в разделе :"
+"menuselection:`Настройка --> Настроить Krita... --> Управление цветом` либо "
+"через «пространство экрана» в панели LUT. Рабочее пространство задаётся при "
+"создании нового файла для каждого документа или в панели LUT через «входное "
+"пространство»."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:310
+msgid "Webcomic"
+msgstr "Веб-комиксы"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:317
+#: ../../general_concepts/colors/color_managed_workflow.rst:339
+#: ../../general_concepts/colors/color_managed_workflow.rst:357
+msgid "Input"
+msgstr "Ввод"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:318
+#: ../../general_concepts/colors/color_managed_workflow.rst:340
+#: ../../general_concepts/colors/color_managed_workflow.rst:358
+msgid "Your screen profile. (You pick colors via your screen)"
+msgstr "Профиль экрана. (Цвет выбирается с помощью экрана)"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:319
+#: ../../general_concepts/colors/color_managed_workflow.rst:341
+#: ../../general_concepts/colors/color_managed_workflow.rst:359
+msgid "Workingspace"
+msgstr "Рабочее пространство"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:320
+msgid ""
+"sRGB (the default screen profile) or any larger profile if you can spare the "
+"bit depth and like working in them."
+msgstr ""
+"sRGB (профиль экрана по умолчанию) или любой более широкий профиль, если "
+"позволяет разрядность и нравится работать в таких профилях."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:322
+#: ../../general_concepts/colors/color_managed_workflow.rst:344
+#: ../../general_concepts/colors/color_managed_workflow.rst:362
+msgid "Output"
+msgstr "Вывод"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:322
+msgid ""
+"sRGB, ICC version 2, sRGB TRC for the internet, and a specialized CMYK "
+"profile from the printing house for the printed images."
+msgstr ""
+"sRGB, ICC версии 2, sRGB TRC для Интернета и специализированный профиль CMYK "
+"от типографии для печатных изображений."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:324
+msgid ""
+"Use the sRGB-elle-V2-srgbtrc.icc for going between Inkscape, Photoshop, "
+"Paint Tool SAI, Illustrator, Gimp, Manga Studio, Paintstorm Studio, MyPaint, "
+"Artrage, Scribus, etc. and Krita."
+msgstr ""
+"Используйте sRGB-elle-V2-srgbtrc.icc для перехода между Inkscape, Photoshop, "
+"Paint Tool SAI, Illustrator, Gimp, Manga Studio, Paintstorm Studio, MyPaint, "
+"Artrage, Scribus и т. д. и Krita."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:326
+msgid ""
+"If you are using a larger space via ICC, you will only be able to "
+"interchange it between Krita, Photoshop, Illustrator, Gimp 2.9, Manga Studio "
+"and Scribus. All others assume sRGB for your space, no matter what, because "
+"they don't have color management."
+msgstr ""
+"Если используется более широкое пространство с помощью ICC, обмениваться им "
+"можно будет только между Krita, Photoshop, Illustrator, Gimp 2.9, Manga "
+"Studio и Scribus. Все остальные в любом случае считают, что используется "
+"пространство sRGB, поскольку в них нет управления цветом."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:328
+msgid ""
+"If you are going between Krita and Blender, Nuke or Natron, use OCIO and set "
+"the input space to 'sRGB', but make sure to select the sRGB profile for ICC "
+"when creating a new file."
+msgstr ""
+"При переходе между Krita и Blender, Nuke или Natron используйте OCIO и "
+"установите входное пространство «sRGB», но при создании нового файла "
+"обязательно выберите профиль sRGB для ICC."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:330
+msgid ""
+"For the final for the web, convert the image to sRGB 8bit, 'srgbtrc', do not "
+"embed the ICC profile. Then, if using PNG, put it through something like "
+"'pngcrush' or other PNG optimizers. sRGB in this case is chosen because you "
+"can assume the vast majority of your audience hasn't profiled their screen, "
+"nor do they have screens that are advanced enough for the wide gamut stuff. "
+"So hence why we convert to the screen default for the internet, sRGB."
+msgstr ""
+"Для финального изображения, предназначенного для Интернета, преобразуйте "
+"изображение в sRGB 8 бит, «srgbtrc», и не встраивайте профиль ICC. Затем, "
+"если используется PNG, пропустите его через что-то вроде «pngcrush» или "
+"другие оптимизаторы PNG. sRGB в этом случае выбран потому, что можно "
+"предположить: подавляющее большинство аудитории не профилировало свой экран "
+"и не располагает экранами, достаточно совершенными для широкого цветового "
+"охвата. Именно поэтому для Интернета выполняется преобразование к "
+"стандартному экранному пространству — sRGB."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:333
+msgid "Print"
+msgstr "Печать"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:342
+msgid "sRGB or Rec. 2020 if you can afford the bit-depth being 16bit."
+msgstr "sRGB или Rec. 2020, если можно позволить себе разрядность 16 бит."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:344
+msgid ""
+"Specialized CMYK profile from the printing house for the printed images."
+msgstr ""
+"Специализированный профиль CMYK от типографии для печатных изображений."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:346
+msgid ""
+"The CMYK profiles are different per printer, and even per paper or ink-type "
+"so don't be presumptuous and ask ahead for them, instead of doing something "
+"like trying to paint in any random CMYK profile. As mentioned in the viewing "
+"conditions section, you want to keep your options open."
+msgstr ""
+"Профили CMYK различаются для каждого принтера и даже для каждого типа бумаги "
+"или чернил, поэтому не стоит самонадеянно запрашивать их заранее, вместо "
+"того чтобы пытаться рисовать в произвольном профиле CMYK. Как упоминалось в "
+"разделе об условиях просмотра, лучше сохранять свободу выбора."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:348
+msgid ""
+"You can set the advanced color selector to transform to a given profile via :"
+"menuselection:`Settings --> Configure Krita... --> Color Selector Settings`. "
+"There, tick :guilabel:`Color Selector Uses Different Color Space than Image` "
+"and select the CMYK profile you are aiming for. This will limit your colors "
+"a little bit, but keep all the nice filter and blending options from RGB."
+msgstr ""
+"Можно настроить расширенный выбор цвета на преобразование в заданный профиль "
+"в разделе :menuselection:`Настройка --> Настроить Krita... --> Настройка "
+"выбора цвета`. Там установите флажок :guilabel:`Выбор цвета использует "
+"другое цветовое пространство, чем изображение` и выберите нужный профиль "
+"CMYK. Это немного ограничит набор цветов, но сохранит все удобные "
+"возможности фильтрации и смешивания из RGB."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:351
+msgid "Games"
+msgstr "Игры"
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:360
+msgid "sRGB or grayscale linear for roughness and specular maps."
+msgstr ""
+"sRGB или линейные оттенки серого для карт шероховатости и зеркальности."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:362
+msgid ""
+"This one is tricky, but in the end it'll be sRGB for the regular player."
+msgstr ""
+"Этот случай непрост, но в конечном счёте для обычного пользователя всё "
+"сведётся к sRGB."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:364
+msgid ""
+"So this one is tricky. You can use OCIO and ICC between programs, but "
+"recommended is to have your images to the engine in sRGB or grayscale. Many "
+"physically based renderers these days allow you to set whether an image "
+"should be read as a linear or 'srgbtrc' image, and this is even vital to "
+"have the images being considered properly in the physically based "
+"calculations of the game renderer."
+msgstr ""
+"Этот случай непрост. Можно использовать OCIO и ICC между программами, но "
+"изображения для движка рекомендуется подавать в sRGB или в оттенках серого. "
+"Многие современные системы физически корректного рендеринга позволяют "
+"задать, следует ли считывать изображение как линейное или как «srgbtrc», и "
+"это даже важно для правильного учёта изображений в физически корректных "
+"расчётах системы рендеринга игры."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:366
+msgid ""
+"While game engines need to have optimized content, and it's recommended to "
+"stay within 8bit, future screens may have higher bit depths, and when "
+"renderers will start supporting those, it may be beneficial to develop a "
+"workflow where the working-space files are rather unnecessarily big and you "
+"run some scripts to optimize them for your current render needs, making "
+"updating the game in the future for fancier screens less of a drag."
+msgstr ""
+"Хотя игровым движкам требуется оптимизированное содержимое и рекомендуется "
+"оставаться в пределах 8 бит, в будущем экраны могут иметь более высокую "
+"битовую глубину, и когда средства визуализации начнут её поддерживать, может "
+"оказаться полезным разработать рабочий процесс, в котором файлы рабочего "
+"пространства заведомо больше необходимого, а для оптимизации под текущие "
+"потребности визуализации запускаются сценарии, что сделает обновление игры в "
+"будущем для более совершенных экранов менее обременительным."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:368
+msgid ""
+"Normal maps and heightmaps are officially supposed to be defined with a 'non-"
+"color data' working space, but you'll find that most engines will not care "
+"much for this. Instead, tell the game engine not to do any conversion on the "
+"file when importing."
+msgstr ""
+"Карты нормалей и карты высот официально должны задаваться в рабочем "
+"пространстве «non-color data», однако большинство игровых движков, как "
+"правило, не обращает на это внимания. Вместо этого при импорте укажите "
+"игровому движку не выполнять преобразование файла."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:370
+msgid ""
+"Specular, glossiness, metalness and roughness maps are all based on linear "
+"calculations, and when you find that certain material has a metalness of "
+"0.3, this is 30% gray in a linear space. Therefore, make sure to tell the "
+"game engine renderer that this is a linear space image (or at the very "
+"least, should NOT be converted)."
+msgstr ""
+"Карты зеркальности, глянцевости, металличности и шероховатости основаны на "
+"линейных вычислениях, и если у какого-то материала металличность равна 0,3, "
+"это соответствует 30 % серого в линейном пространстве. Поэтому обязательно "
+"сообщите модулю визуализации игрового движка, что это изображение в линейном "
+"пространстве (или, по крайней мере, что его НЕ следует преобразовывать)."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:374
+msgid ""
+"`Visualizing the XYZ color space <https://www.youtube.com/watch?v=x0-"
+"qoXOCOow>`_."
+msgstr ""
+"`Визуализация цветового пространства XYZ <https://www.youtube.com/watch?v=x0-"
+"qoXOCOow>`_."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:375
+msgid ""
+"`Basics of gamma correction <https://www.cambridgeincolour.com/tutorials/"
+"gamma-correction.htm>`_."
+msgstr ""
+"`Основы гамма-коррекции <https://www.cambridgeincolour.com/tutorials/gamma-"
+"correction.htm>`_."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:376
+msgid ""
+"`Panda3D example of how an image that has gamma encoded without the 3D "
+"renderer being notified of it having gamma-encoding can result in too dark "
+"images <https://www.panda3d.org/blog/the-new-opengl-features-in-panda3d-1-9/"
+">`_."
+msgstr ""
+"`Пример Panda3D того, как изображение с гамма-кодированием, о котором не "
+"уведомлён модуль трёхмерной отрисовки, может привести к слишком тёмным "
+"изображениям <https://www.panda3d.org/blog/the-new-opengl-features-in-"
+"panda3d-1-9/>`_."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:377
+msgid ""
+"`2D examples of the effect of gamma-encoding on color maths <https://"
+"ninedegreesbelow.com/photography/linear-gamma-blur-normal-blend.html>`_."
+msgstr ""
+"`Двумерные примеры влияния гамма-кодирования на цветовые вычисления <https://"
+"ninedegreesbelow.com/photography/linear-gamma-blur-normal-blend.html>`_."
+
+#: ../../general_concepts/colors/color_managed_workflow.rst:378
+msgid ""
+"`Basic overview of color management from ArgyllCMS manual <https://www."
+"argyllcms.com/doc/ColorManagement.html>`_."
+msgstr ""
+"`Краткий обзор управления цветом из руководства ArgyllCMS <https://www."
+"argyllcms.com/doc/ColorManagement.html>`_."

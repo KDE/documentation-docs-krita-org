@@ -1,0 +1,532 @@
+# Translation of docs_krita_org_general_concepts___file_formats___file_webp into Russian.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: "
+"docs_krita_org_general_concepts___file_formats___file_webp\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
+"PO-Revision-Date: 2026-10-10 20:44+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: ../../general_concepts/file_formats/file_webp.rst:-1
+msgid "The WebP file format in Krita."
+msgstr "Формат файлов WebP в Krita"
+
+#: ../../general_concepts/file_formats/file_webp.rst:10
+msgid "*.webp"
+msgstr "*.webp"
+
+#: ../../general_concepts/file_formats/file_webp.rst:10
+msgid "WebP"
+msgstr "WebP"
+
+#: ../../general_concepts/file_formats/file_webp.rst:15
+msgid "\\*.webp"
+msgstr "\\*.webp"
+
+#: ../../general_concepts/file_formats/file_webp.rst:17
+msgid ""
+"WebP is a file format based on the `RIFF container specification <https://"
+"developers.google.com/speed/webp/docs/riff_container>`_ that, like :ref:"
+"`file_heif`, builds upon a video codec (`VP8 <https://developers.google.com/"
+"speed/webp/docs/compression#lossy_webp>`_) to support :ref:"
+"`lossy_compression`. WebP tends to be largely used for websites, though not "
+"all websites support uploading such files. If you self-host you can "
+"investigate whether WebP is an improvement over :ref:`file_jpeg` or :ref:"
+"`file_png`. However, it is not very widely supported by image editors, so if "
+"you are doing collaboration with other artists, it may be better to use a "
+"different file format."
+msgstr ""
+"WebP — это формат файлов, основанный на `спецификации контейнера RIFF "
+"<https://developers.google.com/speed/webp/docs/riff_container>`_, который, "
+"как и :ref:`file_heif`, опирается на видеокодек (`VP8 <https://developers."
+"google.com/speed/webp/docs/compression#lossy_webp>`_) для поддержки :ref:"
+"`lossy_compression`. WebP в основном применяется на веб-сайтах, хотя не все "
+"сайты поддерживают загрузку таких файлов. При самостоятельном размещении "
+"сайта можно выяснить, даёт ли WebP преимущество перед :ref:`file_jpeg` или :"
+"ref:`file_png`. Однако редакторы изображений поддерживают его не очень "
+"широко, поэтому при совместной работе с другими художниками, возможно, лучше "
+"использовать другой формат файла."
+
+#: ../../general_concepts/file_formats/file_webp.rst:19
+msgid ""
+":program:`Krita` has supported simple WebP export for a while, but since 5.1 "
+"it supports all the export options offered by `libwebp <https://chromium."
+"googlesource.com/webm/libwebp>`_."
+msgstr ""
+":program:`Krita` уже давно поддерживает простой экспорт в WebP, но начиная с "
+"версии 5.1 поддерживает все параметры экспорта, предлагаемые `libwebp "
+"<https://chromium.googlesource.com/webm/libwebp>`_."
+
+#: ../../general_concepts/file_formats/file_webp.rst:22
+msgid "Export Options:"
+msgstr "Параметры экспорта:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:24
+msgid ""
+"Instead of making you responsible for the precise settings, the WebP "
+"exporter will try out different techniques to compress better. You give a "
+"goal (a given quality or a certain file size) to aim for, and it will try "
+"its best to reach that goal. To do this, it may actually try to redo a given "
+"step of the encoding process several times. In the end, what you will have "
+"to choose is whether you want a high quality result at the cost of a slow "
+"export, or a quick export at the cost of quality."
+msgstr ""
+"Вместо того чтобы перекладывать на вас заботу о точных параметрах, экспортёр "
+"WebP будет пробовать разные способы для лучшего сжатия. Вы задаёте цель "
+"(определённое качество или заданный размер файла), к которой нужно "
+"стремиться, и он постарается её достичь. Для этого он может несколько раз "
+"повторить определённый этап процесса кодирования. В итоге вам останется "
+"выбрать: либо высокое качество ценой медленного экспорта, либо быстрый "
+"экспорт ценой качества."
+
+#: ../../general_concepts/file_formats/file_webp.rst:27
+msgid "General:"
+msgstr "Общие сведения:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:29
+msgid "Preset:"
+msgstr "Профиль:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:30
+msgid ""
+"WebP offers some presets for a given type of photo. For stylized images, "
+"use :guilabel:`Line Drawing`, for painterly images, use :guilabel:`Portrait` "
+"or :guilabel:`Outdoor Photo`."
+msgstr ""
+"WebP предлагает несколько профилей для определённого типа изображения. Для "
+"стилизованных изображений выберите :guilabel:`Чертёж`, для живописных — :"
+"guilabel:`Портретный` или :guilabel:`Фотография на открытом воздухе`."
+
+#: ../../general_concepts/file_formats/file_webp.rst:31
+msgid "Lossless Compression:"
+msgstr "Сжатие без потерь:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:32
+msgid ""
+"Use the :ref:`lossless compression mode <lossless_compression>`, this is a "
+"slightly different algorithm, which is heavier but gives better results for "
+"sharp contrasts."
+msgstr ""
+"Используйте :ref:`режим сжатия без потерь <lossless_compression>` — это "
+"немного другой алгоритм, более ресурсоёмкий, но дающий лучшие результаты при "
+"резких перепадах контраста."
+
+#: ../../general_concepts/file_formats/file_webp.rst:34
+msgid "Slider for quality."
+msgstr "Ползунок для настройки качества."
+
+#: ../../general_concepts/file_formats/file_webp.rst:36
+msgid ""
+"With :guilabel:`Lossless Compression`, 0% means the library will use the "
+"fewest amount of algorithmic tricks to reduce file size. This means fast "
+"saving times, at the expense of larger files. Conversely, 100% means all "
+"algorithmic tricks will be used, leading to the smallest file size, but "
+"saving will take longer. The first is best for a situation where speed is "
+"more important than size, such as files you share via USB. The latter is "
+"useful for situations where the file size can become a problem, such as "
+"serving it over the Internet."
+msgstr ""
+"Если включён параметр :guilabel:`Сжатие без потерь`, значение 0 % означает, "
+"что библиотека применит минимум алгоритмических приёмов для уменьшения "
+"размера файла. Это обеспечивает быстрое сохранение, но файлы получаются "
+"крупнее. И наоборот, 100 % означает применение всех алгоритмических приёмов: "
+"размер файла будет минимальным, но сохранение займёт больше времени. Первый "
+"вариант лучше подходит, когда скорость важнее размера, например для файлов, "
+"передаваемых через USB. Второй вариант пригодится, когда размер файла может "
+"стать проблемой, например при размещении в Интернете."
+
+#: ../../general_concepts/file_formats/file_webp.rst:37
+msgid "Quality:"
+msgstr "Качество:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:38
+msgid ""
+"Without :guilabel:`Lossless Compression`, image information considered "
+"redundant will be removed, rather than compressed. This means that at 0%, "
+"the most information will be lost and thus the smallest file size is "
+"achieved. This also reduces the overall quality. Conversely, 100% will "
+"remove the least amount of image information and thus maintain quality at "
+"the expense of a large file size."
+msgstr ""
+"Если параметр :guilabel:`Сжатие без потерь` отключён, считающаяся избыточной "
+"информация изображения удаляется, а не сжимается. Это означает, что при 0 % "
+"будет потеряна большая часть информации, а значит, будет достигнут "
+"наименьший размер файла. Это также снижает общее качество. И наоборот, при "
+"100 % будет удалено наименьшее количество информации изображения, и качество "
+"сохранится за счёт большого размера файла."
+
+#: ../../general_concepts/file_formats/file_webp.rst:39
+msgid "Trade Off"
+msgstr "Оптимальное соотношение"
+
+#: ../../general_concepts/file_formats/file_webp.rst:40
+msgid ""
+"A slider that allows you to select whether saving speed is more important "
+"than quality."
+msgstr ""
+"Ползунок, позволяющий выбрать, что важнее — скорость сохранения или качество."
+
+#: ../../general_concepts/file_formats/file_webp.rst:41
+msgid "Dithering:"
+msgstr "Дизеринг:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:42
+msgid ""
+"This enables dithering, which allows storing fewer colors while still "
+"keeping good gradients."
+msgstr ""
+"Включает дизеринг, позволяющий хранить меньше цветов, сохраняя при этом "
+"плавные градиенты."
+
+#: ../../general_concepts/file_formats/file_webp.rst:43
+msgid "Force convert to sRGB:"
+msgstr "Принудительно преобразовать в sRGB:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:44
+msgid ""
+"This option will convert document color profile into sRGB before exporting, "
+"usually for better web upload and sharing compatibility."
+msgstr ""
+"При выборе этого параметра цветовой профиль документа перед экспортом "
+"преобразуется в sRGB — обычно это улучшает совместимость при загрузке в "
+"Интернет и обмене файлами."
+
+#: ../../general_concepts/file_formats/file_webp.rst:46
+msgid "Save ICC Profile:"
+msgstr "Сохранить цветовой профиль ICC:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:46
+msgid ""
+"By default, ICC will be preserved during export. Disabling this option will "
+"not save ICC to the exported image and can possibly result in smaller file. "
+"However it is recommended to convert the color profile to sRGB to prevent "
+"color mismatch, as an (WebP) image without color profile will usually "
+"considered as sRGB."
+msgstr ""
+"По умолчанию профиль ICC сохраняется при экспорте. Если отключить этот "
+"параметр, профиль ICC не будет сохранён в экспортируемом изображении, что "
+"может уменьшить размер файла. Однако рекомендуется преобразовать цветовой "
+"профиль в sRGB, чтобы избежать несоответствия цветов: изображение (WebP) без "
+"цветового профиля обычно считается sRGB."
+
+#: ../../general_concepts/file_formats/file_webp.rst:49
+msgid "Advanced"
+msgstr "Дополнительно"
+
+#: ../../general_concepts/file_formats/file_webp.rst:51
+msgid "SNS Strength:"
+msgstr "Мощность SNS:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:52
+msgid ""
+"Specifies the strength of the Spatial Noise Shaping algorithm, which tries "
+"to see if parts of the image can be better compressed than other parts."
+msgstr ""
+"Задаёт мощность алгоритма пространственного формирования шума, который "
+"пытается определить, можно ли сжать одни части изображения лучше других."
+
+#: ../../general_concepts/file_formats/file_webp.rst:53
+msgid "Filter Strength:"
+msgstr "Мощность фильтра:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:54
+msgid ""
+"Strength of the deblocking filter. 0% will mean there's no filtering after "
+"decoding, with increasing filter strength the image will appear smoother."
+msgstr ""
+"Мощность фильтра устранения блочности. Значение 0 % означает, что после "
+"декодирования фильтрация не выполняется; с увеличением силы фильтра "
+"изображение становится более гладким."
+
+#: ../../general_concepts/file_formats/file_webp.rst:55
+msgid "Filter Sharpness:"
+msgstr "Резкость фильтра:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:56
+msgid ""
+"Defines the sharpness of the deblocking filter, with 0 being the sharpest "
+"and 7 being the least sharp."
+msgstr ""
+"Задаёт резкость фильтра устранения блочности: 0 — максимальная резкость, 7 — "
+"минимальная."
+
+#: ../../general_concepts/file_formats/file_webp.rst:57
+msgid "Filter Type:"
+msgstr "Тип фильтра:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:58
+msgid ""
+"Type of deblocking filter, options are :guilabel:`Strong` and :guilabel:"
+"`Simple`."
+msgstr ""
+"Тип фильтра устранения блочности, доступны варианты :guilabel:`Сильный` и :"
+"guilabel:`Простой`."
+
+#: ../../general_concepts/file_formats/file_webp.rst:60
+msgid "Alpha Plane Compression:"
+msgstr "Сжатие альфа-канала:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:60
+msgid ""
+"Whether to losslessly compress the alpha channel (Lossless) or outright "
+"discard it (None). None"
+msgstr ""
+"Сжимать ли альфа-канал без потерь («Без потерь») или полностью отбросить его "
+"(«Нет»). None"
+
+#: ../../general_concepts/file_formats/file_webp.rst:62
+msgid "Predictive Filtering for Alpha Plane:"
+msgstr "Прогнозирующая фильтрация для альфа-канала:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:63
+msgid ""
+"Whether to use predictive filtering for the alpha/transparency. :guilabel:"
+"`Best` will try all potential predictive filter modes before deciding which "
+"one to use, making it slower than :guilabel:`Fast`, which just makes a guess "
+"and selects that."
+msgstr ""
+"Использовать ли прогнозирующую фильтрацию для альфа-канала (прозрачности). :"
+"guilabel:`Наилучшее` перебирает все возможные режимы прогнозирующей "
+"фильтрации, прежде чем решить, какой из них использовать, поэтому работает "
+"медленнее, чем :guilabel:`Быстрое`, которое просто делает предположение и "
+"выбирает его."
+
+#: ../../general_concepts/file_formats/file_webp.rst:64
+msgid "Alpha Plane Quality:"
+msgstr "Качество альфа-канала:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:65
+msgid ""
+"Compression quality for the alpha channel. 0% means smallest size, 100% "
+"means no compression. Only with :guilabel:`Alpha Plane Compression` set to "
+"Lossless."
+msgstr ""
+"Качество сжатия для альфа-канала. 0 % — наименьший размер, 100 % — без "
+"сжатия. Только если для параметра :guilabel:`Сжатие альфа-канала` выбрано "
+"значение «Без потерь»."
+
+#: ../../general_concepts/file_formats/file_webp.rst:66
+msgid "Show Compressed:"
+msgstr "Показать сжатое:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:67
+msgid ""
+"Tells libwebp to skip the in-loop filtering step. May adversely affect the "
+"quality of the end file."
+msgstr ""
+"Указывает libwebp пропустить этап внутриконтурной фильтрации. Может "
+"отрицательно сказаться на качестве итогового файла."
+
+#: ../../general_concepts/file_formats/file_webp.rst:68
+msgid "Multithreaded Encoding:"
+msgstr "Многопоточная кодировка:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:69
+msgid "Use multithreading for encoding if possible."
+msgstr "По возможности использовать многопоточность при кодировании."
+
+#: ../../general_concepts/file_formats/file_webp.rst:70
+msgid "Reduce Memory Usage:"
+msgstr "Снизить использование памяти:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:71
+msgid "Try to reduce memory usage at the cost of speed."
+msgstr "Сокращать использование памяти в ущерб скорости."
+
+#: ../../general_concepts/file_formats/file_webp.rst:72
+msgid "Exact:"
+msgstr "Точность:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:73
+msgid ""
+"Preserve RGB values in transparent areas instead of defaulting them to "
+"transparent black."
+msgstr ""
+"Сохранять значения RGB в прозрачных областях, а не заменять их прозрачным "
+"чёрным по умолчанию."
+
+#: ../../general_concepts/file_formats/file_webp.rst:75
+msgid "Use Sharp YUV:"
+msgstr "Использовать резкий YUV:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:75
+msgid "Whether to use the slower, but more accurate, RGB to YUV conversion."
+msgstr ""
+"Использовать более медленное, но более точное преобразование RGB в YUV."
+
+#: ../../general_concepts/file_formats/file_webp.rst:78
+msgid "Lossy Compression"
+msgstr "Сжатие с потерями"
+
+#: ../../general_concepts/file_formats/file_webp.rst:79
+msgid ""
+"The following options only apply if :guilabel:`Lossless Compression` is off."
+msgstr ""
+"Следующие параметры применяются, только если :guilabel:`Сжатие без потерь` "
+"отключено."
+
+#: ../../general_concepts/file_formats/file_webp.rst:81
+msgid "Target Size:"
+msgstr "Конечный размер:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:82
+msgid "Specify the amount of bytes to aim for."
+msgstr "Укажите целевой размер в байтах."
+
+#: ../../general_concepts/file_formats/file_webp.rst:83
+msgid "Target PSNR:"
+msgstr "Цель PSNR:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:84
+msgid ""
+"PSNR means `Peak Signal to Noise Ratio <https://en.wikipedia.org/wiki/"
+"Peak_signal-to-noise_ratio_>`, and indicates how much noise the image has. "
+"Higher values mean less noise is accepted."
+msgstr ""
+"PSNR означает `Peak Signal to Noise Ratio <https://en.wikipedia.org/wiki/"
+"Peak_signal-to-noise_ratio_>` и показывает, насколько зашумлено изображение. "
+"Чем выше значение, тем меньший уровень шума допускается."
+
+#: ../../general_concepts/file_formats/file_webp.rst:85
+msgid "Segments:"
+msgstr "Сегменты:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:86
+msgid ""
+"How many segments the VP8 video codec can divide the image into. VP8 accepts "
+"between 1 and 4 segments."
+msgstr ""
+"На сколько сегментов видеокодек VP8 может разбить изображение. VP8 "
+"поддерживает от 1 до 4 сегментов."
+
+#: ../../general_concepts/file_formats/file_webp.rst:87
+msgid "Partitions:"
+msgstr "Разделы:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:88
+msgid ""
+"Sets how many partitions can the VP8 codec use for storing decompression "
+"information. Must be between 0 and 3. Default is 0 to make decoding easier."
+msgstr ""
+"Задаёт число разделов, которые кодек VP8 может использовать для хранения "
+"информации о распаковке. Допустимые значения — от 0 до 3. По умолчанию — 0, "
+"что упрощает декодирование."
+
+#: ../../general_concepts/file_formats/file_webp.rst:89
+msgid "Auto Adjust Filter Strength:"
+msgstr "Мощность автоматической коррекции фильтра:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:90
+msgid ""
+"The encoder will spend some time tuning and selecting the best filter "
+"options before encoding."
+msgstr ""
+"Перед кодированием кодировщик потратит некоторое время на подбор и выбор "
+"наилучших параметров фильтра."
+
+#: ../../general_concepts/file_formats/file_webp.rst:91
+msgid "Entropy Passes:"
+msgstr "Проходы энтропии:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:92
+msgid ""
+"Number of passes to do for selecting the best option between target size and "
+"target PSNR."
+msgstr ""
+"Число проходов для выбора наилучшего варианта между целевым размером и "
+"целевым значением PSNR."
+
+#: ../../general_concepts/file_formats/file_webp.rst:93
+msgid "Emulate JPEG Size:"
+msgstr "Эмулировать размер JPEG:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:94
+msgid "The encoder will try to match the size of a jpeg of similar dimensions."
+msgstr ""
+"Кодировщик попытается сделать размер файла таким же, как у JPEG с "
+"аналогичными размерами изображения."
+
+#: ../../general_concepts/file_formats/file_webp.rst:95
+msgid "Minimum Quality:"
+msgstr "Минимальное качество:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:96
+msgid "Used with 'entropy passes', the lowest allowed quality for the image."
+msgstr ""
+"Используется вместе с параметром «Проходы энтропии»; задаёт минимально "
+"допустимое качество изображения."
+
+#: ../../general_concepts/file_formats/file_webp.rst:97
+msgid "Maximum Quality:"
+msgstr "Максимальное качество:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:98
+msgid "Used with 'entropy passes', the highest allowed quality for the image."
+msgstr ""
+"Используется вместе с параметром «Проходы энтропии»; задаёт наибольшее "
+"допустимое качество изображения."
+
+#: ../../general_concepts/file_formats/file_webp.rst:100
+msgid ""
+"Whether or not to add :guilabel:`Pseudo Random Dithering` to the image "
+"before converting RGB to YUV."
+msgstr ""
+"Добавлять ли :guilabel:`Псевдослучайный дизеринг` к изображению перед "
+"преобразованием RGB в YUV."
+
+#: ../../general_concepts/file_formats/file_webp.rst:101
+msgid "Preprocessing Filter:"
+msgstr "Фильтр предварительной обработки:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:104
+msgid "Lossless compression"
+msgstr "Сжатие без потерь"
+
+#: ../../general_concepts/file_formats/file_webp.rst:105
+msgid ""
+"The following options only work with :guilabel:`Lossless Compression` on."
+msgstr ""
+"Следующие параметры работают, только если :guilabel:`Сжатие без потерь` "
+"включено."
+
+#: ../../general_concepts/file_formats/file_webp.rst:107
+msgid "Partition Limit:"
+msgstr "Ограничение разделов:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:108
+msgid ""
+"Limit how big a given segment is in bytes. The higher this is, the less "
+"possible information is stored per segment."
+msgstr ""
+"Ограничивает размер заданного сегмента в байтах. Чем выше значение, тем "
+"меньше информации помещается в один сегмент."
+
+#: ../../general_concepts/file_formats/file_webp.rst:110
+msgid ""
+"The encoder is able to minimally adjust pixel-values so they compress better "
+"in lossless compression mode. This enables this feature. Automatically "
+"triggers :guilabel:`Lossless Compression`."
+msgstr ""
+"Кодировщик может незначительно корректировать значения пикселов, чтобы они "
+"лучше сжимались в режиме сжатия без потерь. Включает эту возможность. "
+"Автоматически включает :guilabel:`Сжатие без потерь`."
+
+#: ../../general_concepts/file_formats/file_webp.rst:112
+msgid "Near Lossless:"
+msgstr "Почти без потерь:"
+
+#: ../../general_concepts/file_formats/file_webp.rst:115
+msgid "https://developers.google.com/speed/webp/docs/compression"
+msgstr "https://developers.google.com/speed/webp/docs/compression"

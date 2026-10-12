@@ -1,0 +1,715 @@
+# Translation of docs_krita_org_reference_manual___resource_management into Russian.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: docs_krita_org_reference_manual___resource_management\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-09 02:05+0000\n"
+"PO-Revision-Date: 2026-10-10 20:44+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: ../../<rst_epilog>:2
+msgid "mouseleft"
+msgstr "mouseleft"
+
+#: ../../<rst_epilog>:2
+msgid ".. image:: /images/icons/Krita_mouse_left.png"
+msgstr ".. image:: /images/icons/Krita_mouse_left.png"
+
+#: ../../<rst_epilog>:8
+msgid "mousescroll"
+msgstr "mousescroll"
+
+#: ../../<rst_epilog>:8
+msgid ".. image:: /images/icons/Krita_mouse_scroll.png"
+msgstr ".. image:: /images/icons/Krita_mouse_scroll.png"
+
+#: ../../reference_manual/resource_management.rst:-1
+msgid "Overview of Resource Management in Krita."
+msgstr "Обзор управления ресурсами в Krita"
+
+#: ../../reference_manual/resource_management.rst:-1
+msgid ".. image:: /images/resources/Manageresources.png"
+msgstr ".. image:: /images/resources/Manageresources.png"
+
+#: ../../reference_manual/resource_management.rst:-1
+msgid ".. image:: /images/resources/Tags-krita.png"
+msgstr ".. image:: /images/resources/Tags-krita.png"
+
+#: ../../reference_manual/resource_management.rst:11
+msgid "Resources"
+msgstr "Ресурсы"
+
+#: ../../reference_manual/resource_management.rst:11
+msgid "Bundles"
+msgstr "Пакеты"
+
+#: ../../reference_manual/resource_management.rst:11
+msgid "Resource Cache"
+msgstr "Кэш ресурсов"
+
+#: ../../reference_manual/resource_management.rst:11
+msgid "Tagging"
+msgstr "Присвоение тегов"
+
+#: ../../reference_manual/resource_management.rst:11
+msgid "Mass Tagging"
+msgstr "Массовое присвоение тегов"
+
+#: ../../reference_manual/resource_management.rst:16
+msgid "Resource Management"
+msgstr "Управление ресурсами"
+
+#: ../../reference_manual/resource_management.rst:18
+msgid ""
+"Resources are pluggable bits of data, like brush presets or patterns. Krita "
+"has a sophisticated resource management system, which allows tagging, "
+"disabling, sharing and more."
+msgstr ""
+"Ресурсы — это подключаемые фрагменты данных, например профили кистей или "
+"текстуры. В Krita реализована развитая система управления ресурсами, которая "
+"позволяет присваивать теги, отключать ресурсы, предоставлять общий доступ и "
+"многое другое."
+
+#: ../../reference_manual/resource_management.rst:22
+msgid ""
+"All resources are stored in the resource folder. This folder can be "
+"configured in :ref:`the general preferences <resource_settings>`. As keeping "
+"track of all those resources can be a handful, Krita creates a SQLite cache "
+"in which it keeps the tags, names, version and other data about the resource."
+msgstr ""
+"Все ресурсы хранятся в папке ресурсов. Эту папку можно настроить в :ref:"
+"`общих параметрах <resource_settings>`. Так как уследить за всеми этими "
+"ресурсами непросто, Krita создаёт кэш SQLite, в котором хранит теги, имена, "
+"версию и другие данные о ресурсе."
+
+#: ../../reference_manual/resource_management.rst:24
+msgid ""
+"Thanks to this cache, Krita can avoid loading a resource until necessary. "
+"This makes Krita a lot lighter than when it did not have this cache. "
+"Deleting the cache will delete the tags and relationships it keeps track of, "
+"so be careful."
+msgstr ""
+"Благодаря этому кэшу Krita не загружает ресурс, пока он не понадобится. Это "
+"делает Krita намного легче, чем когда этого кэша не было. Удаление кэша "
+"приведёт к удалению тегов и связей, которые он отслеживает, поэтому следует "
+"быть осторожным."
+
+#: ../../reference_manual/resource_management.rst:26
+msgid ""
+"If you have not changed your resource folder location, the resources can be "
+"found at..."
+msgstr "Если расположение папки ресурсов не изменялось, ресурсы находятся в…"
+
+#: ../../reference_manual/resource_management.rst:28
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../reference_manual/resource_management.rst:29
+msgid ":file:`$HOME/.local/share/krita/`"
+msgstr ":file:`$HOME/.local/share/krita/`"
+
+#: ../../reference_manual/resource_management.rst:30
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../reference_manual/resource_management.rst:31
+msgid ":file:`%APPDATA%\\\\krita\\\\`"
+msgstr ":file:`%APPDATA%\\\\krita\\\\`"
+
+#: ../../reference_manual/resource_management.rst:33
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../reference_manual/resource_management.rst:33
+msgid ":file:`~/Library/Application Support/Krita/`"
+msgstr ":file:`~/Library/Application Support/Krita/`"
+
+#: ../../reference_manual/resource_management.rst:36
+msgid ""
+"If you installed Krita in the Windows Store, your custom resources will be "
+"in a location like:"
+msgstr ""
+"Если Krita установлена из Магазина Windows, пользовательские ресурсы будут "
+"находиться в папке следующего вида:"
+
+#: ../../reference_manual/resource_management.rst:36
+msgid ""
+":file:`%LOCALAPPDATA%\\\\Packages\\\\49800Krita_{RANDOM STRING}\\\\LocalCache"
+"\\Roaming\\krita`"
+msgstr ""
+":file:`%LOCALAPPDATA%\\\\Packages\\\\49800Krita_{RANDOM STRING}\\\\LocalCache"
+"\\Roaming\\krita`"
+
+#: ../../reference_manual/resource_management.rst:41
+msgid "Resource Libraries"
+msgstr "Библиотеки ресурсов"
+
+#: ../../reference_manual/resource_management.rst:43
+msgid "Krita can load a variety of resource libraries."
+msgstr "Krita позволяет загружать различные библиотеки ресурсов."
+
+#: ../../reference_manual/resource_management.rst:46
+msgid "Resource Folder"
+msgstr "Папка ресурсов"
+
+#: ../../reference_manual/resource_management.rst:48
+msgid ""
+"The resource folder is considered the primary library. When creating new "
+"resources, they will all end up here. You can configure its location in the :"
+"ref:`general preferences <resource_settings>`."
+msgstr ""
+"Папка ресурсов считается основной библиотекой. При создании новых ресурсов "
+"все они попадут сюда. Расположение папки можно настроить в :ref:`общих "
+"параметрах <resource_settings>`."
+
+#: ../../reference_manual/resource_management.rst:49
+msgid "Resource Bundle"
+msgstr "Пакет ресурсов"
+
+#: ../../reference_manual/resource_management.rst:51
+msgid ""
+"The primary format to share resources is :dfn:`Resource Bundles`, which is a "
+"compressed file containing all the resources together. It also contains some "
+"other information like metadata and a manifest so Krita can check there's no "
+"errors in the file."
+msgstr ""
+"Основной формат для предоставления общего доступа к ресурсам — :dfn:`пакеты "
+"ресурсов`, представляющие собой сжатый файл, в котором собраны все ресурсы. "
+"Он также содержит другие сведения, например метаданные и манифест, чтобы "
+"Krita могла убедиться, что в файле нет ошибок."
+
+#: ../../reference_manual/resource_management.rst:52
+msgid "Adobe Brush Library"
+msgstr "Библиотека кистей Adobe"
+
+#: ../../reference_manual/resource_management.rst:54
+msgid ""
+"An ``ABR`` with multiple images inside. Previous versions of Krita could not "
+"load this, but now Krita will load them as a library of :ref:`brushes "
+"<resource_brush_tips>`."
+msgstr ""
+"Файл ``ABR``, содержащий несколько изображений. Предыдущие версии Krita не "
+"могли его загрузить, но теперь Krita загружает их как библиотеку :ref:"
+"`кистей <resource_brush_tips>`."
+
+#: ../../reference_manual/resource_management.rst:55
+msgid "Adobe Style Library"
+msgstr "Библиотека стилей Adobe"
+
+#: ../../reference_manual/resource_management.rst:57
+msgid ""
+"This is the :program:`Photoshop` ``ASL`` format, which stores :ref:"
+"`layer_style`."
+msgstr ""
+"Это формат ``ASL`` приложения :program:`Photoshop`, в котором хранятся :ref:"
+"`layer_style`."
+
+#: ../../reference_manual/resource_management.rst:58
+msgid "Document Storage"
+msgstr "Хранение документов"
+
+#: ../../reference_manual/resource_management.rst:60
+msgid ""
+"Every Krita document can store resources and act as a resource library. This "
+"is currently only used for palettes."
+msgstr ""
+"Любой документ Krita может хранить ресурсы и выступать в роли библиотеки "
+"ресурсов. Сейчас это используется только для палитр."
+
+#: ../../reference_manual/resource_management.rst:61
+msgid "Memory Storage"
+msgstr "Хранение в памяти"
+
+#: ../../reference_manual/resource_management.rst:63
+msgid ""
+"Finally, the memory library is where temporary resources are kept, which are "
+"generated by Krita and have no physical version on disk. This is currently "
+"used for the fore-to-background gradient."
+msgstr ""
+"Наконец, библиотека памяти — это место, где хранятся временные ресурсы, "
+"создаваемые Krita и не имеющие физической версии на диске. Сейчас она "
+"используется для градиента от переднего плана к фону."
+
+#: ../../reference_manual/resource_management.rst:65
+msgid ""
+"You can manage resource libraries by going to :menuselection:`Settings --> "
+"Manage Resource Libraries`. In this dialog, you can import resource "
+"libraries, deactivate them, and also :ref:`create_bundle`."
+msgstr ""
+"Управлять библиотеками ресурсов можно, выбрав :menuselection:`Настройка --> "
+"Управление библиотеками ресурсов`. В этом диалоговом окне можно "
+"импортировать библиотеки ресурсов, отключать их, а также :ref:"
+"`create_bundle`."
+
+#: ../../reference_manual/resource_management.rst:68
+msgid "Importing Bundles"
+msgstr "Импорт пакетов"
+
+#: ../../reference_manual/resource_management.rst:70
+msgid ""
+"To import a bundle click on :guilabel:`Import` button on the top right side "
+"of the dialog. Select ``.bundle`` file format from the file type if it is "
+"not already selected, browse to the folder where you have downloaded the "
+"bundle, select it and click :guilabel:`Open`. Once the bundle is imported it "
+"will be listed in the bundle view. To enable or disable a bundle, select the "
+"entry in the view, and then select :guilabel:`Deactivate`."
+msgstr ""
+"Чтобы импортировать пакет ресурсов, нажмите кнопку :guilabel:`Импорт` в "
+"правом верхнем углу диалогового окна. В списке типов файлов выберите формат "
+"``.bundle``, если он ещё не выбран, перейдите в папку, в которую загружен "
+"пакет, выберите его и нажмите :guilabel:`Открыть`. После импорта пакет "
+"появится в списке пакетов. Чтобы включить или отключить пакет, выберите "
+"запись в списке и нажмите :guilabel:`Выключить`."
+
+#: ../../reference_manual/resource_management.rst:73
+msgid ""
+"On Android, you can also get more resource bundles through the application "
+"itself in return for supporting Krita, see :ref:`android_supporter_packs`."
+msgstr ""
+"В Android дополнительные пакеты ресурсов можно также получить через само "
+"приложение в обмен на поддержку Krita, см. :ref:`android_supporter_packs`."
+
+#: ../../reference_manual/resource_management.rst:78
+msgid "Creating your own Bundle"
+msgstr "Создание собственного пакета"
+
+#: ../../reference_manual/resource_management.rst:80
+msgid ""
+"You can create your own bundle from the resources of your choice. Click on "
+"the :guilabel:`Create bundle` button. This will open a dialog box as shown "
+"below."
+msgstr ""
+"Собственный пакет ресурсов можно создать из любых ресурсов на выбор. Нажмите "
+"кнопку :guilabel:`Создать пакет ресурсов`. Откроется диалоговое окно, "
+"показанное ниже."
+
+#: ../../reference_manual/resource_management.rst:83
+msgid ".. image:: /images/resources/Creating-bundle.png"
+msgstr ".. image:: /images/resources/Creating-bundle.png"
+
+#: ../../reference_manual/resource_management.rst:84
+msgid ""
+"What follows is a so-called wizard, that is, Krita will run you through "
+"bundle creation, step-by-step."
+msgstr ""
+"Далее запускается так называемый мастер, который пошагово проведёт через "
+"создание пакета ресурсов."
+
+#: ../../reference_manual/resource_management.rst:86
+msgid "Choosing Resources"
+msgstr "Выбор ресурсов"
+
+#: ../../reference_manual/resource_management.rst:88
+msgid ""
+"Krita will ask you which resources you want to use. Double-click a resource "
+"to add it to the bundle."
+msgstr ""
+"Krita запросит, какие ресурсы следует использовать. Чтобы добавить ресурс в "
+"пакет, дважды щёлкните по нему."
+
+#: ../../reference_manual/resource_management.rst:90
+msgid "Choosing tags"
+msgstr "Выбор тегов"
+
+#: ../../reference_manual/resource_management.rst:92
+msgid ""
+"Krita will ask you which tags you want to include inside the bundle. Click "
+"the :guilabel:`+` button to select a dropdown of tags."
+msgstr ""
+"Krita предложит выбрать теги для включения в пакет. Нажмите кнопку :guilabel:"
+"`+`, чтобы открыть раскрывающийся список тегов."
+
+#: ../../reference_manual/resource_management.rst:94
+msgid "Enter Bundle Details"
+msgstr "Ввод сведений о пакете"
+
+#: ../../reference_manual/resource_management.rst:96
+msgid ""
+"Here you can set the bundle title, icons and some info about you as the "
+"author."
+msgstr ""
+"Здесь можно задать название пакета, значки и некоторые сведения об авторе."
+
+#: ../../reference_manual/resource_management.rst:98
+msgid "Choose Save Location"
+msgstr "Выбор папки для сохранения"
+
+#: ../../reference_manual/resource_management.rst:100
+msgid ""
+"Finally, Krita will present you with a summary of the bundle you've created. "
+"All that's left is to select a spot where you want to save the bundle and "
+"clicking on the :guilabel:`Save` button"
+msgstr ""
+"Наконец, Krita покажет сводку созданного пакета ресурсов. Останется только "
+"выбрать место для сохранения пакета и нажать кнопку :guilabel:`Сохранить`."
+
+#: ../../reference_manual/resource_management.rst:102
+msgid ""
+"You can now share this bundle with other artists or load it on other "
+"workstations."
+msgstr ""
+"Теперь этот пакет можно передать другим художникам или загрузить на других "
+"рабочих станциях."
+
+#: ../../reference_manual/resource_management.rst:106
+msgid "The bundle creator was overhauled for 5.3."
+msgstr "В версии 5.3 средство создания пакетов было переработано."
+
+#: ../../reference_manual/resource_management.rst:109
+msgid "Deleting Imported Bundles"
+msgstr "Удаление импортированных пакетов"
+
+#: ../../reference_manual/resource_management.rst:111
+msgid ""
+"In case you wish to delete the bundles you have imported *permanently* click "
+"on the :guilabel:`Open Resource Folder` button in the :guilabel:`Manage "
+"Resources` dialog. This will open the resource folder in your file browser. "
+"Go inside the bundles folder and delete the bundle file which you don't need "
+"any more. The next time you start Krita the bundle and its associated "
+"resources will not be loaded."
+msgstr ""
+"Чтобы удалить импортированные пакеты *безвозвратно*, нажмите кнопку :"
+"guilabel:`Открыть папку ресурсов` в диалоговом окне :guilabel:`Управление "
+"ресурсами`. Откроется папка ресурсов в файловом менеджере. Перейдите в папку "
+"пакетов и удалите файл пакета, который больше не нужен. При следующем "
+"запуске Krita этот пакет и связанные с ним ресурсы загружаться не будут."
+
+#: ../../reference_manual/resource_management.rst:116
+msgid "Managing Resources"
+msgstr "Управление ресурсами"
+
+#: ../../reference_manual/resource_management.rst:118
+msgid ""
+"As mentioned earlier Krita has a flexible resource management system. "
+"Starting from version 2.9 you can share various resources mentioned above by "
+"sharing a single compressed ZIP file created within Krita."
+msgstr ""
+"Как упоминалось ранее, в Krita реализована гибкая система управления "
+"ресурсами. Начиная с версии 2.9 можно предоставлять общий доступ к различным "
+"ресурсам, упомянутым выше, с помощью одного сжатого ZIP-файла, созданного в "
+"Krita."
+
+#: ../../reference_manual/resource_management.rst:120
+msgid ""
+"The manage resources section in the settings was also revamped for making it "
+"easy for the artists to prepare these bundle files. You can open manage "
+"resource section by going to :menuselection:`Settings --> Manage Resources..."
+"` menu item."
+msgstr ""
+"Раздел управления ресурсами в настройках также был переработан, чтобы "
+"художникам было проще подготавливать файлы пакетов ресурсов. Открыть раздел "
+"управления ресурсами можно, выбрав пункт меню :menuselection:`Настройка --> "
+"Управление ресурсами...`."
+
+#: ../../reference_manual/resource_management.rst:125
+msgid ""
+"You can do a variety of things here, like deleting backup files, mass-"
+"tagging, deleting/deactivating the resource itself, importing resources and "
+"open the create bundle dialog."
+msgstr ""
+"Здесь можно выполнить различные действия: удалить резервные копии, присвоить "
+"теги сразу нескольким ресурсам, удалить или отключить сам ресурс, "
+"импортировать ресурсы, а также открыть диалоговое окно создания пакета "
+"ресурсов."
+
+#: ../../reference_manual/resource_management.rst:130
+msgid "Importing resources"
+msgstr "Импорт ресурсов"
+
+#: ../../reference_manual/resource_management.rst:132
+msgid ""
+"To import resources, select the :guilabel:`import` in the resource choosers "
+"or the resource manager."
+msgstr ""
+"Чтобы импортировать ресурсы, выберите :guilabel:`Импорт` в окнах выбора "
+"ресурсов или в диспетчере ресурсов."
+
+#: ../../reference_manual/resource_management.rst:134
+msgid ""
+"The resource chooser import is fairly straight forward. You can only select "
+"certain kinds of files, and all the files you can select are possible to "
+"import for that resource."
+msgstr ""
+"Импорт через средство выбора ресурсов довольно прост. Выбрать можно только "
+"определённые типы файлов, и все доступные для выбора файлы можно "
+"импортировать для этого ресурса."
+
+#: ../../reference_manual/resource_management.rst:136
+msgid ""
+"The import button in the resource manager however sometimes needs to make a "
+"choice on whether an imported :ref:`file_png` file is a brush tip or a "
+"texture. When importing a format that can be used for multiple types of "
+"resources, a window will pop up asking which resource type you intended to "
+"import the file for."
+msgstr ""
+"Однако кнопка импорта в управлении ресурсами иногда требует выбора: является "
+"ли импортируемый файл :ref:`file_png` кончиком кисти или текстурой. При "
+"импорте формата, который может использоваться для нескольких типов ресурсов, "
+"появится окно с вопросом, к какому типу ресурсов относится импортируемый "
+"файл."
+
+#: ../../reference_manual/resource_management.rst:142
+msgid "Activating and Deactivating"
+msgstr "Активация и деактивация"
+
+#: ../../reference_manual/resource_management.rst:144
+msgid ""
+"Deactivating resources is done by selecting them in their respective "
+"resource chooser, and pressing the trashcan icon."
+msgstr ""
+"Чтобы отключить ресурсы, выберите их в соответствующем средстве выбора "
+"ресурсов и нажмите значок корзины."
+
+#: ../../reference_manual/resource_management.rst:146
+msgid ""
+"For activating a resource, go to :menuselection:`Setti&ngs --> Manage "
+"Resources...`, then turn on :guilabel:`&Show Deleted Resources`. The "
+"deactivated resources should now be visible, select them, and then press :"
+"guilabel:`Undelete Resource`."
+msgstr ""
+"Чтобы активировать ресурс, выберите :menuselection:`Настройка --> Управление "
+"ресурсами...`, затем включите :guilabel:`Показать удалённые ресурсы`. Теперь "
+"отключённые ресурсы должны стать видимыми: выберите их и нажмите :guilabel:"
+"`Восстановить ресурс`."
+
+#: ../../reference_manual/resource_management.rst:151
+msgid "Returning a resource to the previous version"
+msgstr "Возврат ресурса к предыдущей версии"
+
+#: ../../reference_manual/resource_management.rst:153
+msgid ""
+"First go to the resource folder, :menuselection:`Settings --> Manage "
+"Resources... --> Open Resource Folder`."
+msgstr ""
+"Сначала перейдите в папку ресурсов, выбрав :menuselection:`Настройка --> "
+"Управление ресурсами... --> Открыть папку ресурсов`."
+
+#: ../../reference_manual/resource_management.rst:154
+msgid "Then go into the ``paintoppresets`` folder."
+msgstr "Затем перейдите в папку ``paintoppresets``."
+
+#: ../../reference_manual/resource_management.rst:155
+msgid ""
+"Backup (select and cut) all versions of the related resource into a place "
+"you can find them. Delete all these files from the ``paintoppresets`` folder."
+msgstr ""
+"Создайте резервную копию всех версий связанного ресурса, выделив и вырезав "
+"их в место, где их можно будет найти. Удалите все эти файлы из папки "
+"``paintoppresets``."
+
+#: ../../reference_manual/resource_management.rst:156
+msgid "restart Krita."
+msgstr "перезапустите Krita."
+
+#: ../../reference_manual/resource_management.rst:157
+msgid "add only the desired version of the resource."
+msgstr "добавьте только нужную версию ресурса."
+
+#: ../../reference_manual/resource_management.rst:162
+msgid "Deleting Backup files"
+msgstr "Удаление файлов резервных копий"
+
+#: ../../reference_manual/resource_management.rst:164
+msgid ""
+"When you delete a preset from Krita, Krita doesn't actually delete the "
+"physical copy of the preset. It just adds it to a black list so that the "
+"next time when you start Krita the presets from this list are not loaded. To "
+"delete the brushes from this list click on :guilabel:`Delete Backup Files`."
+msgstr ""
+"При удалении профиля из Krita физическая копия профиля не удаляется. Krita "
+"лишь добавляет его в чёрный список, чтобы при следующем запуске профили из "
+"этого списка не загружались. Чтобы удалить кисти из этого списка, нажмите "
+"кнопку :guilabel:`Удалить резервные файлы`."
+
+#: ../../reference_manual/resource_management.rst:169
+msgid "Deleting backup files has temporarily been disabled for 5.0."
+msgstr "Удаление резервных копий временно отключено в версии 5.0."
+
+#: ../../reference_manual/resource_management.rst:174
+msgid "Tags"
+msgstr "Теги"
+
+#: ../../reference_manual/resource_management.rst:176
+msgid ""
+"Tagging allows you to manage the resources on the fly while painting. All "
+"Krita resources can be tagged. These tags can be added via the resource "
+"manager, but also via the respective dockers such as brush preset docker, "
+"pattern docker etc. You can |mouseleft| the :guilabel:`+` icon in the docker "
+"and add a tag name. In addition to adding you can rename and delete a tag as "
+"well."
+msgstr ""
+"Теги позволяют управлять ресурсами прямо во время рисования. Теги можно "
+"присваивать всем ресурсам Krita. Добавлять их можно через управление "
+"ресурсами, а также через соответствующие панели, например панель профилей "
+"кистей, панель текстур и т. д. Чтобы добавить тег, щёлкните |mouseleft| по "
+"значку :guilabel:`+` на панели и введите название тега. Помимо добавления, "
+"тег можно переименовать или удалить."
+
+#: ../../reference_manual/resource_management.rst:181
+msgid ""
+"Resources can belong to one or more tags.  For example, you may have a Brush "
+"Preset of a favorite :dfn:`Ink Pen` variant and have it tagged so it shows "
+"in up in your Inking, Painting, Comics and Favorites groups of brushes."
+msgstr ""
+"Ресурс может иметь один или несколько тегов. Например, профиль кисти "
+"любимого варианта :dfn:`Ink Pen` можно пометить так, чтобы он показывался в "
+"группах кистей «Работа тушью», «Живопись», «Комиксы» и «Избранное»."
+
+#: ../../reference_manual/resource_management.rst:182
+msgid ""
+"Every resource can be tagged, so brushes in the :guilabel:`Predefined` tab "
+"of the Brush Settings Editor can be also tagged and grouped for convenience."
+msgstr ""
+"Любому ресурсу можно присвоить тег, поэтому кисти на вкладке :guilabel:"
+"`Предопределённое` редактора параметров кисти также можно помечать тегами и "
+"группировать для удобства."
+
+#: ../../reference_manual/resource_management.rst:184
+msgid ""
+"In the resource manager, you can tag multiple resources at once. To select "
+"multiple resources, use :kbd:`Ctrl` for adding individual resources to the "
+"selection or :kbd:`Shift` for adding every resource at once. Then press the "
+"plus icon next to the :guilabel:`tags` section to add a tag to every "
+"selected resource."
+msgstr ""
+"В диспетчере ресурсов можно присвоить теги сразу нескольким ресурсам. Чтобы "
+"выбрать несколько ресурсов, используйте :kbd:`Ctrl` для добавления отдельных "
+"ресурсов к выделению или :kbd:`Shift` для добавления сразу всех ресурсов. "
+"Затем нажмите значок плюса рядом с разделом :guilabel:`Теги`, чтобы добавить "
+"тег каждому выбранному ресурсу."
+
+#: ../../reference_manual/resource_management.rst:186
+msgid ""
+"Some tags are translated. If you make bundles for others, using such tags "
+"can be useful to ensure cross-language compatibility. The tags that get "
+"localized are..."
+msgstr ""
+"Некоторые теги переводятся. Если пакеты создаются для других, использование "
+"таких тегов помогает обеспечить совместимость между языками. Локализуются "
+"следующие теги…"
+
+#: ../../reference_manual/resource_management.rst:188
+msgid "Digital"
+msgstr "Цифровой"
+
+#: ../../reference_manual/resource_management.rst:189
+msgid "Erasers"
+msgstr "Ластики"
+
+#: ../../reference_manual/resource_management.rst:190
+msgid "FX"
+msgstr "Эффекты"
+
+#: ../../reference_manual/resource_management.rst:191
+msgid "Favorites"
+msgstr "Избранное"
+
+#: ../../reference_manual/resource_management.rst:192
+msgid "Ink"
+msgstr "Чернила"
+
+#: ../../reference_manual/resource_management.rst:193
+msgid "Paint"
+msgstr "Краска"
+
+#: ../../reference_manual/resource_management.rst:194
+msgid "Pixel_Art"
+msgstr "Пиксельная графика"
+
+#: ../../reference_manual/resource_management.rst:195
+msgid "Sketch"
+msgstr "Эскиз"
+
+#: ../../reference_manual/resource_management.rst:196
+msgid "Textures"
+msgstr "Текстуры"
+
+#: ../../reference_manual/resource_management.rst:201
+msgid "Filtering"
+msgstr "Фильтрация"
+
+#: ../../reference_manual/resource_management.rst:203
+msgid ""
+"Some dockers, for example the brush preset docker as shown below, have a "
+"resource filter, which functions like a search bar for the resource in "
+"question."
+msgstr ""
+"Некоторые панели, например панель профилей кистей, показанная ниже, имеют "
+"фильтр ресурсов, работающий как строка поиска по нужному ресурсу."
+
+#: ../../reference_manual/resource_management.rst:206
+msgid ".. image:: /images/brushes/Brushpreset-filters.png"
+msgstr ".. image:: /images/brushes/Brushpreset-filters.png"
+
+#: ../../reference_manual/resource_management.rst:207
+msgid ""
+"You can enter brush name, tag name to quickly pull up a list of brush "
+"presets you want. When you select any tag from the tag drop-down and want to "
+"include brush presets from other tags as well then you can add filters based "
+"on the partial, case insensitive name of the resources by using "
+"``partialname`` or ``!partialname``."
+msgstr ""
+"Можно ввести название кисти или тега, чтобы быстро вызвать список нужных "
+"профилей кистей. Если выбрать тег в раскрывающемся списке тегов и требуется "
+"также включить профили кистей из других тегов, можно добавить фильтры по "
+"частичному имени ресурсов без учёта регистра с помощью ``partialname`` или "
+"``!partialname``."
+
+#: ../../reference_manual/resource_management.rst:210
+msgid "Resource Zooming"
+msgstr "Масштабирование ресурсов"
+
+#: ../../reference_manual/resource_management.rst:210
+msgid ""
+"If you find the thumbnails of the resources such as color swatches brushes "
+"and pattern to be small you can make them bigger or :dfn:`Zoom in`. All "
+"resource selectors can be zoomed in and out of, by hovering over the "
+"selector and using the :kbd:`Ctrl +` |mousescroll| shortcut."
+msgstr ""
+"Если миниатюры ресурсов, таких как образцы цвета, кисти и текстуры, кажутся "
+"мелкими, их можно сделать крупнее или :dfn:`увеличить масштаб`. Масштаб всех "
+"средств выбора ресурсов можно увеличивать и уменьшать, наведя указатель на "
+"средство выбора и воспользовавшись комбинацией :kbd:`Ctrl +` |mousescroll|."
+
+#: ../../reference_manual/resource_management.rst:213
+msgid "Resource Types in Krita"
+msgstr "Типы ресурсов в Krita"
+
+#: ../../reference_manual/resource_management.rst:215
+msgid "Main Resource Types"
+msgstr "Основные типы ресурсов"
+
+#: ../../reference_manual/resource_management.rst:223
+msgid "Other Resource Types"
+msgstr "Другие типы ресурсов"
+
+#: ../../reference_manual/resource_management.rst:225
+msgid ":ref:`gamut_mask_docker`"
+msgstr ":ref:`gamut_mask_docker`"
+
+#: ../../reference_manual/resource_management.rst:226
+msgid ":ref:`layer_style`"
+msgstr ":ref:`layer_style`"
+
+#: ../../reference_manual/resource_management.rst:227
+msgid ":ref:`task_sets_docker`"
+msgstr ":ref:`task_sets_docker`"
+
+#: ../../reference_manual/resource_management.rst:228
+msgid ":ref:`vector_library_docker`"
+msgstr ":ref:`vector_library_docker`"
+
+#: ../../reference_manual/resource_management.rst:229
+msgid ":ref:`palette_docker`"
+msgstr ":ref:`palette_docker`"

@@ -1,0 +1,223 @@
+# Translation of docs_krita_org_general_concepts___file_formats___file_gih into Russian.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: "
+"docs_krita_org_general_concepts___file_formats___file_gih\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
+"PO-Revision-Date: 2026-10-10 20:44+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: ../../general_concepts/file_formats/file_gih.rst:-1
+msgid "The GIMP Image Hose file format in Krita."
+msgstr "Формат файла Image Hose GIMP в Krita."
+
+#: ../../general_concepts/file_formats/file_gih.rst:-1
+msgid ""
+".. image:: /images/category_filetypes/gih_multi_dimension_explaination.png"
+msgstr ""
+".. image:: /images/category_filetypes/gih_multi_dimension_explaination.png"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "*.gih"
+msgstr "*.gih"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "GIH"
+msgstr "GIH"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "Image Hose"
+msgstr "Шланг изображений"
+
+#: ../../general_concepts/file_formats/file_gih.rst:10
+msgid "Gimp Image Hose"
+msgstr "Шланг изображений GIMP"
+
+#: ../../general_concepts/file_formats/file_gih.rst:15
+msgid "\\*.gih"
+msgstr "\\*.gih"
+
+#: ../../general_concepts/file_formats/file_gih.rst:17
+msgid ""
+"The GIMP image hose format. Krita can open and save these, as well as import "
+"via the :ref:`predefined brush tab <predefined_brush_tip>`."
+msgstr ""
+"Формат шланга изображений GIMP. Krita позволяет открывать и сохранять такие "
+"файлы, а также импортировать их через вкладку :ref:`Предопределённые кисти "
+"<predefined_brush_tip>`."
+
+#: ../../general_concepts/file_formats/file_gih.rst:19
+msgid ""
+"Image Hose means that this file format allows you to store multiple images "
+"and then set some options to make it specify how to output the multiple "
+"images."
+msgstr ""
+"Шланг изображений означает, что этот формат файлов позволяет хранить "
+"несколько изображений, а затем задать параметры, определяющие способ вывода "
+"этих изображений."
+
+#: ../../general_concepts/file_formats/file_gih.rst:25
+msgid ".. image:: /images/brushes/Gih-examples.png"
+msgstr ".. image:: /images/brushes/Gih-examples.png"
+
+#: ../../general_concepts/file_formats/file_gih.rst:25
+msgid "From top to bottom: Incremental, Pressure and Random"
+msgstr "Сверху вниз: инкрементальный, давление, случайный"
+
+#: ../../general_concepts/file_formats/file_gih.rst:28
+msgid "Dimension and ranks."
+msgstr "Размерность и ранги."
+
+#: ../../general_concepts/file_formats/file_gih.rst:30
+msgid ""
+"The GIMP image hose format allows multiple dimensions for a given brush. You "
+"could for example have a dimension that updates incrementally, and one that "
+"updates on pressure, or updates randomly. Upon export, Krita will use the "
+"ranks to subdivide the layers per dimension. If you have a 24 layer image "
+"and three ranks, and the first dimension is set to 2, the second to 4 and "
+"the third to 3, then Krita will divide 24 into 2 groups of 12, each of which "
+"have unique images for the 2 parts of the first dimension. Then those 2 "
+"groups of 12 get divided into 8 groups of 4, each of which have unique brush "
+"tips for the four parts of the second dimension, and finally, the grouped "
+"three images have each a unique brush for the final dimension."
+msgstr ""
+"Формат шланга изображений GIMP позволяет задавать несколько измерений для "
+"одной кисти. Например, можно создать измерение, обновляющееся "
+"инкрементально, и измерение, обновляющееся при изменении давления или "
+"случайным образом. При экспорте Krita использует ранги для разделения слоёв "
+"по измерениям. Если изображение состоит из 24 слоёв и заданы три ранга, "
+"причём первое измерение имеет значение 2, второе — 4, а третье — 3, Krita "
+"разделит 24 на 2 группы по 12, каждая из которых содержит уникальные "
+"изображения для двух частей первого измерения. Затем эти 2 группы по 12 "
+"разделятся на 8 групп по 4, каждая из которых содержит уникальные кончики "
+"кистей для четырёх частей второго измерения, и наконец, сгруппированные три "
+"изображения получат по уникальной кисти для последнего измерения."
+
+#: ../../general_concepts/file_formats/file_gih.rst:32
+msgid ""
+"So, the following image has a table where dimension 1 is unique in one of 4 "
+"numbers, while dimension 2 is unique in one of 3 shapes. So our ranks for "
+"dimension 1 and dimension 2 need to be 4 and 3 respectively. Now, to order "
+"the layers, you need to subdivide the table first by the first dimension, "
+"and then by the second. So we end up with three layers each for a shape in "
+"the second dimension but for the first number, then another three layers, "
+"each for a shape, but then for the second number, and so forth."
+msgstr ""
+"Итак, на следующем изображении представлена таблица, в которой измерение 1 "
+"уникально для одного из 4 чисел, а измерение 2 — для одной из 3 фигур. "
+"Значит, ранги измерения 1 и измерения 2 должны быть равны 4 и 3 "
+"соответственно. Чтобы упорядочить слои, нужно сначала разделить таблицу по "
+"первому измерению, а затем по второму. В итоге получается три слоя для "
+"каждой фигуры второго измерения при первом числе, затем ещё три слоя для "
+"каждой фигуры, но уже при втором числе, и так далее."
+
+#: ../../general_concepts/file_formats/file_gih.rst:38
+msgid ""
+"See `the GIMP documentation <https://docs.gimp.org/2.8/en/gimp-using-"
+"animated-brushes.html>`_ for a more thorough explanation."
+msgstr ""
+"Более подробное объяснение приведено в `документации GIMP <https://docs.gimp."
+"org/2.8/en/gimp-using-animated-brushes.html>`_."
+
+#: ../../general_concepts/file_formats/file_gih.rst:41
+msgid "GIMP image hose format options:"
+msgstr "Параметры формата шланга изображений GIMP:"
+
+#: ../../general_concepts/file_formats/file_gih.rst:43
+msgid "Constant"
+msgstr "Постоянный"
+
+#: ../../general_concepts/file_formats/file_gih.rst:44
+msgid "This'll use the first image, no matter what."
+msgstr "В любом случае будет использовано первое изображение."
+
+#: ../../general_concepts/file_formats/file_gih.rst:45
+msgid "Incremental"
+msgstr "Инкрементальный"
+
+#: ../../general_concepts/file_formats/file_gih.rst:46
+msgid ""
+"This'll paint the image layers in sequence. This is good for images that can "
+"be strung together to create a pattern."
+msgstr ""
+"Слои изображения будут нарисованы последовательно. Это подходит для "
+"изображений, которые можно объединить в узор."
+
+#: ../../general_concepts/file_formats/file_gih.rst:47
+msgid "Pressure"
+msgstr "Давление"
+
+#: ../../general_concepts/file_formats/file_gih.rst:48
+msgid ""
+"This'll paint the images depending on pressure. This is good for brushes "
+"imitating the hairs of a natural brush."
+msgstr ""
+"Изображения будут отрисовываться в зависимости от давления. Это подходит для "
+"кистей, имитирующих волоски натуральной кисти."
+
+#: ../../general_concepts/file_formats/file_gih.rst:49
+msgid "Random"
+msgstr "Случайный"
+
+#: ../../general_concepts/file_formats/file_gih.rst:50
+msgid ""
+"This'll draw the images randomly. This is good for image-collections used in "
+"speedpainting as well as images that generate texture. Or perhaps more "
+"graphical symbols."
+msgstr ""
+"Изображения будут выводиться в случайном порядке. Это подходит для коллекций "
+"изображений, используемых при скоростной живописи, а также для изображений, "
+"создающих текстуру. Или, возможно, для более графических символов."
+
+#: ../../general_concepts/file_formats/file_gih.rst:52
+msgid "Angle"
+msgstr "Угол"
+
+#: ../../general_concepts/file_formats/file_gih.rst:52
+msgid "This'll use the dragging angle to determine with image to draw."
+msgstr "Угол перетаскивания определяет, какое изображение будет нарисовано."
+
+#: ../../general_concepts/file_formats/file_gih.rst:54
+msgid ""
+"When exporting a Krita file as a ``.gih``, you will also get the option to "
+"set the default spacing, the option to set the name (very important for "
+"looking it up in the UI) and the ability to choose whether or not to "
+"generate the mask from the colors."
+msgstr ""
+"При экспорте файла Krita в формат ``.gih`` также можно задать интервал по "
+"умолчанию и имя (очень важно для поиска в интерфейсе), а также выбрать, "
+"создавать ли маску из цветов."
+
+#: ../../general_concepts/file_formats/file_gih.rst:57
+msgid "Use Color as Mask"
+msgstr "Использовать цвет как маску"
+
+#: ../../general_concepts/file_formats/file_gih.rst:57
+msgid ""
+"This'll turn the darkest values of the image as the ones that paint, and the "
+"whitest as transparent. Untick this if you are using colored images for the "
+"brush."
+msgstr ""
+"В этом случае самые тёмные значения изображения будут отрисовываться, а "
+"самые светлые станут прозрачными. Снимите этот флажок, если для кисти "
+"используются цветные изображения."
+
+#: ../../general_concepts/file_formats/file_gih.rst:59
+msgid ""
+"We have a :ref:`Krita Brush tip page <brush_tip_animated_brush>` on how to "
+"create your own GIH brush."
+msgstr ""
+"Имеется страница :ref:`Кончики кистей Krita <brush_tip_animated_brush>` о "
+"том, как создать собственную кисть GIH."

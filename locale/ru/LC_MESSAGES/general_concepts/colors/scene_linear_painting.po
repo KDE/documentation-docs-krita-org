@@ -1,0 +1,775 @@
+# Translation of docs_krita_org_general_concepts___colors___scene_linear_painting into Russian.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: "
+"docs_krita_org_general_concepts___colors___scene_linear_painting\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
+"PO-Revision-Date: 2026-10-10 20:44+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:-1
+msgid "Scene Linear painting in Krita"
+msgstr "Рисование в линейном пространстве сцены в Krita"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+#: ../../general_concepts/colors/scene_linear_painting.rst:15
+msgid "Scene Linear Painting"
+msgstr "Рисование в линейном пространстве сцены"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+#: ../../general_concepts/colors/scene_linear_painting.rst:81
+msgid "Color"
+msgstr "Цвет"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+msgid "HDR"
+msgstr "HDR"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+msgid "High Dynamic Range"
+msgstr "Расширенный динамический диапазон"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+msgid "Scene Linear"
+msgstr "Линейное пространство сцены"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:10
+msgid "Scene Referred"
+msgstr "Привязка к сцене"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:17
+msgid ""
+"Previously referred to as HDR painting and Scene Referred painting, Scene "
+"Linear Painting is doing digital painting in a peculiar type of colorspace. "
+"It is painting in a color space that is..."
+msgstr ""
+"Ранее называвшаяся живописью HDR и живописью с привязкой к сцене, линейная "
+"живопись сцены — это цифровая живопись в особом типе цветового пространства. "
+"Это живопись в цветовом пространстве, которое…"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:19
+msgid ""
+"Linear - there’s no gamma encoding, or tone-mapping or whatever going on "
+"with the pixels you manipulate. (This is different from the pixels you see, "
+"but we’ll get to that later)"
+msgstr ""
+"Линейный — с обрабатываемыми пикселами не происходит ни гамма-кодирования, "
+"ни тонального отображения, ни чего-либо подобного. (Это отличается от "
+"видимых пикселов, но об этом позже)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:20
+msgid "Floating Point - So 16bit or 32bit floating point per channel."
+msgstr ""
+"Плавающая запятая — то есть 16 или 32 бита с плавающей запятой на канал."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:22
+msgid ""
+"These are the two important characteristics. The colorspace has a few more "
+"properties than this, such as the white point, or more importantly, the "
+"colorants that make up the gamut. But here’s the thing, those two could be "
+"anything, as long as the space is linear and the color depth is floating "
+"point."
+msgstr ""
+"Это две важные характеристики. У цветового пространства есть ещё несколько "
+"свойств помимо этих, например точка белого или, что важнее, красители, "
+"образующие цветовой охват. Но вот в чём дело: эти две могут быть какими "
+"угодно, если пространство линейно, а глубина цвета — с плавающей запятой."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:24
+msgid ""
+"So, *Scene Linear is not a single one colorspace, but a* **TYPE** *of "
+"colorspace*. You can have a scene linear space that uses the sRGB/Rec. 709 "
+"colorants, or one that uses adobeRGB, or maybe one that uses Rec. 2020, as "
+"long as it is *linear* and in a *floating point bit depth*."
+msgstr ""
+"Итак, *линейное пространство сцены — не одно-единственное цветовое "
+"пространство, а* **ТИП** *цветового пространства*. Можно использовать "
+"линейное пространство сцены с красителями sRGB/Rec. 709, или с Adobe RGB, "
+"или, возможно, с Rec. 2020 — главное, чтобы оно было *линейным* и имело "
+"*разрядность с плавающей запятой*."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:28
+msgid ""
+"If you want to create images for display on an HDR canvas, you will need to "
+"select the Rec. 2020 space profile with a linear gamma. The default profile "
+"in Krita for that is :guilabel:`Rec2020-elle-V4-g10.icc`."
+msgstr ""
+"Чтобы создавать изображения для показа на HDR-холсте, потребуется выбрать "
+"профиль пространства Rec. 2020 с линейной гаммой. Профиль по умолчанию в "
+"Krita для этого — :guilabel:`Rec2020-elle-V4-g10.icc`."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:30
+msgid ""
+"These two factors are for one reason: To make black and white arbitrary "
+"values. This might seem a bit weird. But when you are dealing with light-"
+"sources, you are dealing with a massive range of contrasts, and will have to "
+"decide afterwards which white and black you’d like to have. This is what the "
+"scene means in scene-linear, the relevant values are unique per scene, like "
+"a real world scene: a flower field lit by moonlight, a city in twilight or a "
+"sunny beach. You want to be able to put the right emphasis on the most "
+"important contrasting values, and being able to choose what is white and "
+"what is black is a very powerful tool here. After all, humans in the real "
+"world can see much more when they get used to the dark, or to the sun, so "
+"why not apply that to how we make our images?"
+msgstr ""
+"Эти два фактора служат одной цели — сделать чёрный и белый произвольными "
+"значениями. Это может показаться немного странным. Но при работе с "
+"источниками света приходится иметь дело с огромным диапазоном контрастов, и "
+"решение о том, какими должны быть белый и чёрный, принимается уже после. "
+"Именно это означает сцена в линейном пространстве сцены: соответствующие "
+"значения уникальны для каждой сцены, как в реальном мире — цветочное поле, "
+"освещённое лунным светом, город в сумерках или солнечный пляж. Требуется "
+"правильно расставить акценты на наиболее важных контрастных значениях, и "
+"возможность выбрать, что считать белым, а что чёрным, — очень мощный "
+"инструмент. В конце концов, в реальном мире люди видят гораздо больше, когда "
+"привыкают к темноте или к солнцу, — почему бы не применить это и к созданию "
+"изображений?"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:32
+msgid ""
+"This is also why it needs to be Linear. Gamma and Tone-mapped color spaces "
+"are already choosing which contrast is the most important to you. But for "
+"that, they too need to choose what is white or black. Linear doesn’t make "
+"such assumptions, so much better for when you want to choose yourself. You "
+"will eventually want to stick your image through some tone-mapping or gamma "
+"correction, but only at the end after you have applied filters and mixed "
+"colors!"
+msgstr ""
+"Вот почему оно должно быть линейным. Пространства с гамма-коррекцией и "
+"тональным отображением уже сами решают, какая контрастность важнее. Но для "
+"этого им тоже нужно решить, что считать белым, а что — чёрным. Линейное "
+"пространство таких допущений не делает, поэтому гораздо лучше подходит, "
+"когда выбор требуется сделать самостоятельно. В конце концов изображение всё "
+"равно придётся пропустить через тональное отображение или гамма-коррекцию, "
+"но только в самом конце — после применения фильтров и смешивания цветов!"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:34
+msgid ""
+"In fact, there’s always a non-destructive sort of transform going on while "
+"you are working on your image which includes the tone-mapping. This is "
+"called a display or view transform, and they provide a sort of set of "
+"binoculars into the world of your image. Without it, your computer cannot "
+"show these colors properly; it doesn’t know how to interpret it properly, "
+"often making the image too dark. Providing such a transform and allowing you "
+"to configure it is the prime function of color management."
+msgstr ""
+"На самом деле, пока идёт работа над изображением, всегда происходит своего "
+"рода недеструктивное преобразование, включающее тональное отображение. Оно "
+"называется преобразованием отображения или представления и служит своего "
+"рода биноклем, через который можно заглянуть в мир изображения. Без него "
+"компьютер не сможет правильно показать эти цвета: он не знает, как правильно "
+"их интерпретировать, из-за чего изображение часто получается слишком тёмным. "
+"Предоставление такого преобразования и возможности его настройки — основная "
+"функция управления цветом."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:36
+msgid ""
+"Between different view and display transforms, there’s also a difference in "
+"types. Some are really naive, others are more sophisticated, and some need "
+"to be used in a certain manner to work properly. The ICC color management "
+"can only give a certain type of view transforms, while OCIO color management "
+"in the LUT docker can give much more complex transforms easily configurable "
+"and custom settings that can be shared between programs."
+msgstr ""
+"Между различными преобразованиями представления и отображения существует "
+"также разница в типах. Некоторые из них совсем простые, другие — более "
+"сложные, а некоторые требуют определённого способа применения для корректной "
+"работы. Управление цветом ICC позволяет получить лишь определённый тип "
+"преобразований представления, тогда как управление цветом OCIO в панели LUT "
+"позволяет создавать гораздо более сложные преобразования, а также легко "
+"настраиваемые и пользовательские параметры, которые можно совместно "
+"использовать в разных программах."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:42
+msgid ".. image:: /images/color_category/Krita_scenelinear_cat_01.png"
+msgstr ".. image:: /images/color_category/Krita_scenelinear_cat_01.png"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:42
+msgid ""
+"Above, an example of the more naive transform provided by going from scene-"
+"linear sRGB to regular sRGB, and to the right a more sophisticated transform "
+"coming from the filmic blender OCIO configuration. Look at the difference "
+"between the paws. Image by Wolthera van Hövell tot Westerflier, License: CC-"
+"BY-SA"
+msgstr ""
+"Выше — пример более простого преобразования, полученного при переходе от "
+"линейного sRGB сцены к обычному sRGB, а справа — более сложное "
+"преобразование из конфигурации OCIO filmic blender. Обратите внимание на "
+"разницу между лапами. Изображение: Wolthera van Hövell tot Westerflier, "
+"лицензия CC-BY-SA"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:44
+msgid ""
+"Conversely, transforming and interpreting your image’s colors is the only "
+"thing OCIO can do, and it can do it with really complex transforms, really "
+"fast. It doesn’t understand what your image’s color space is originally, "
+"doesn’t understand what CMYK is, and there’s also no such thing as a OCIO "
+"color profile. Therefore you will need to switch to an ICC workflow if you "
+"wish to prepare for print."
+msgstr ""
+"И наоборот, преобразование и интерпретация цветов изображения — "
+"единственное, что умеет OCIO, причём делает это с помощью действительно "
+"сложных преобразований и очень быстро. OCIO не понимает, каким было исходное "
+"цветовое пространство изображения, не понимает, что такое CMYK, к тому же не "
+"существует такого понятия, как цветовой профиль OCIO. Поэтому, чтобы "
+"подготовить изображение к печати, потребуется переключиться на рабочий "
+"процесс ICC."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:47
+msgid "Yes, but what is the point?"
+msgstr "Да, но в чём смысл?"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:49
+msgid "The point is making things easier in the long run:"
+msgstr "Суть в том, что в долгосрочной перспективе это упрощает работу:"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:51
+msgid "It is easier to keep saturated non-muddy colors in a linear space."
+msgstr "В линейном пространстве проще сохранять насыщенные, чистые цвета."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:52
+msgid "The high bit depth makes it easier to get smoother color mixes."
+msgstr "Высокая разрядность упрощает получение более плавного смешения цветов."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:53
+msgid ""
+"Filters are more powerful and give nicer results in this space. It is far "
+"more easy to get nice blurring and bokeh results."
+msgstr ""
+"Фильтры в этом пространстве мощнее и дают более качественные результаты. "
+"Гораздо проще получить хорошее размытие и боке."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:54
+msgid ""
+"Simple Blending Modes like Multiply or Addition are suddenly black magic. "
+"This is because Scene-Linear is the closest you can get to the physical (as "
+"in, physics, not material) model of color where multiplying colors with one "
+"another is one of the main ways to calculate the effect of light."
+msgstr ""
+"Простые режимы смешивания, такие как «Умножение» или «Сложение», внезапно "
+"становятся чёрной магией. Это потому, что линейное пространство сцены — "
+"наиболее близкое приближение к физической (то есть физике, а не материалу) "
+"модели цвета, где перемножение цветов друг с другом — один из основных "
+"способов вычисления воздействия света."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:55
+msgid ""
+"Combining painting with other image results such as photography and "
+"physically based rendering is much easier as they too work in such a type of "
+"colorspace. So you could use such images as a reference with little qualms, "
+"or make textures that play nice with such a renderer."
+msgstr ""
+"Совмещать живопись с другими результатами работы с изображениями, такими как "
+"фотография и физически корректный рендеринг, намного проще, поскольку они "
+"тоже работают в подобном типе цветового пространства. Так что такие "
+"изображения можно без особых опасений использовать как образец или создавать "
+"текстуры, которые хорошо сочетаются с таким средством визуализации."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:57
+msgid ""
+"So the advantages are prettier colors, cooler filter results, more control "
+"and easier interchange with other methods."
+msgstr ""
+"Итак, преимущества — более красивые цвета, более качественные результаты "
+"фильтрации, больший контроль и более простой обмен с другими методами."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:60
+msgid "Okay, but why isn’t this all the rage then?"
+msgstr "Ладно, но почему тогда это не повальное увлечение?"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:62
+msgid ""
+"Simply put, because while it’s easier in the long run, you will also have to "
+"drop tools and change habits..."
+msgstr ""
+"Проще говоря, потому что, хотя в долгосрочной перспективе это проще, "
+"придётся также отказаться от инструментов и изменить привычки…"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:64
+msgid ""
+"In particular, there are many tools in a digital painter’s toolbox that have "
+"**hard-coded assumptions about black and white**."
+msgstr ""
+"В частности, многие инструменты в арсенале цифрового художника содержат "
+"**жёстко заданные допущения о чёрном и белом**."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:66
+msgid ""
+"A very simple but massive problem is one with **inversion**. Inverting "
+"colors is done code-wise by taking the color for white and subtracting the "
+"color you want to invert from it. It’s used in many blending modes. But "
+"often the color white is hardcoded in these filters. There’s currently no "
+"application out there that allows you to define the value range that "
+"inversion is done with, so inverting is useless. And that also means the "
+"filters and blending modes that use it, such as (but not limited to)..."
+msgstr ""
+"Очень простая, но при этом огромная проблема связана с **инверсией**. "
+"Инвертирование цветов выполняется на уровне кода: берётся цвет белого и из "
+"него вычитается цвет, который нужно инвертировать. Оно применяется во многих "
+"режимах смешивания. Но часто цвет белого жёстко задан в этих фильтрах. "
+"Сейчас не существует приложения, которое позволяло бы задать диапазон "
+"значений, в пределах которого выполняется инверсия, поэтому инвертирование "
+"бесполезно. А это также означает, что фильтры и режимы смешивания, которые "
+"его используют, такие как (но не только)…"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:68
+msgid "Screen (invert+multiply+invert)"
+msgstr "Экран (инверсия+умножение+инверсия)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:69
+msgid ""
+"Overlay (screens values below midtone-value, in sRGB this would be middle "
+"gray)"
+msgstr ""
+"Перекрытие (значения ниже среднего тона осветляются, как в режиме «Экран»; в "
+"sRGB это средний серый)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:70
+msgid "Color-dodge (divides the lower color with an inversion of the top one)"
+msgstr "Осветление основы (делит нижний цвет на инвертированный верхний)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:71
+msgid ""
+"Color-burn (inverts the lower color and then divides it by the top color)"
+msgstr ""
+"Затемнение основы (инвертирует нижний цвет, а затем делит его на верхний "
+"цвет)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:72
+msgid "Hardlight (a different way of doing overlay, including the inversion)"
+msgstr ""
+"Жёсткое осветление (другой способ реализации перекрытия, включая инверсию)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:73
+msgid "Softlight (uses several inversions along the way)"
+msgstr "Мягкий свет (попутно выполняется несколько инверсий)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:75
+msgid ""
+"Conversely Multiply, Linear Dodge/Addition (they’re the same thing), "
+"Subtract, Divide, Darker (only compares colors’ channel values), Lighter "
+"(ditto), and Difference *are fine to use*, as long as the program you use "
+"doesn’t do weird clipping there."
+msgstr ""
+"И наоборот, «Умножение», «Линейное осветление/Сложение» (это одно и то же), "
+"«Вычитание», «Деление», «Замена тёмным» (сравнивает только значения каналов "
+"цветов), «Осветление» (то же самое) и «Разница» *вполне можно использовать*, "
+"при условии, что используемая программа не выполняет там странного отсечения."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:77
+msgid ""
+"Another one is HSL, HSI and HSY algorithms. They too need to assume "
+"something about the top value to allow scaling to white. HSV doesn’t have "
+"this problem. So it’s best to use an HSV color selector."
+msgstr ""
+"Ещё один пример — алгоритмы HSL, HSI и HSY. Им тоже приходится делать "
+"предположения о верхнем значении, чтобы обеспечить масштабирование до "
+"белого. В HSV такой проблемы нет. Поэтому лучше всего использовать выбор "
+"цвета HSV."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:79
+msgid ""
+"For the blending modes that use HSY, there’s always the issue that they tend "
+"to be hardcoded to sRGB/Rec. 709 values, but are otherwise fine (and they "
+"give actually far more correct results in a linear space). So these are not "
+"a good idea to use with wide-gamut colorspaces, and due to the assumption "
+"about black and white, not with scene linear painting. The following "
+"blending modes use them:"
+msgstr ""
+"Для режимов смешивания, использующих HSY, всегда есть проблема: они, как "
+"правило, жёстко привязаны к значениям sRGB/Rec. 709, но в остальном вполне "
+"хороши (а в линейном пространстве они дают на самом деле гораздо более "
+"правильные результаты). Поэтому их не стоит использовать с цветовыми "
+"пространствами с широким цветовым охватом, а из-за предположения о чёрном и "
+"белом — и с рисованием в линейном пространстве сцены. Их используют "
+"следующие режимы смешивания:"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:82
+msgid "Luminosity"
+msgstr "Яркость света"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:83
+msgid "Saturation"
+msgstr "Насыщенность"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:84
+msgid "Darker Color (uses luminosity to determine the color)"
+msgstr "Темнее (для определения цвета используется яркость)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:85
+msgid "Lighter Color (Ditto)"
+msgstr "Светлее (то же)"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:87
+msgid ""
+"So that is the blending modes. Many filters suffer from similar issues, and "
+"in many applications, filters aren’t adjusted to work with arbitrary whites."
+msgstr ""
+"Итак, с режимами смешивания разобрались. Многие фильтры страдают от схожих "
+"проблем, и во многих приложениях фильтры не рассчитаны на работу с "
+"произвольными значениями белого."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:89
+msgid ""
+"Speaking of filters, when using the transform tool, you should also avoid "
+"using lanczos3, it’ll give a weird black halo to sharp contrasts in scene-"
+"linear. The bilinear interpolation filter will work just fine in this case."
+msgstr ""
+"Кстати о фильтрах: при работе с инструментом «Трансформация» также не "
+"следует использовать lanczos3 — он даёт странный чёрный ореол на резких "
+"контрастах в линейном пространстве сцены. В этом случае вполне подойдёт "
+"фильтр билинейной интерполяции."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:91
+msgid "The second big problem is that **black doesn’t work quite the same**."
+msgstr ""
+"Вторая большая проблема заключается в том, что **чёрный ведёт себя не совсем "
+"так же**."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:93
+msgid ""
+"If you have mixed pigments before, you will know that black can quite easily "
+"overpower the other colors, so you should only add the tiniest amount of it "
+"to a mixture. White in contrast gets dirtied quite easily."
+msgstr ""
+"Если раньше приходилось смешивать пигменты, то известно, что чёрный легко "
+"перекрывает другие цвета, поэтому в смесь следует добавлять лишь мельчайшую "
+"его долю. Белый, напротив, загрязняется довольно легко."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:95
+msgid ""
+"In a Scene Linear Color space, this is flipped. White is now more "
+"overpowering and black gets washed out super quickly. This relates to the "
+"additive nature of digital color theory, that becomes more obvious when "
+"working in linear."
+msgstr ""
+"В линейном цветовом пространстве сцены всё переворачивается. Белый теперь "
+"подавляет сильнее, а чёрный стремительно вымывается. Это связано с "
+"аддитивной природой цифровой теории цвета, которая становится очевиднее при "
+"работе в линейном пространстве."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:97
+msgid ""
+"This makes sketching a bit different, after all, it’s really difficult to "
+"make marks now. To get around this, you can do the following:"
+msgstr ""
+"Из-за этого рисование эскизов немного отличается: ведь наносить штрихи "
+"теперь действительно сложно. Чтобы обойти это, можно выполнить следующее:"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:99
+msgid ""
+"Sketch on a mid-gray background. This is recommended anyway, as it serves as "
+"a neutral backdrop. For a linear space, 18% or 22% gray would be a good "
+"neutral."
+msgstr ""
+"Рисуйте эскиз на среднем сером фоне. Это в любом случае рекомендуется, "
+"поскольку такой фон служит нейтральной подложкой. Для линейного пространства "
+"хорошим нейтральным тоном будет серый с яркостью 18 % или 22 %."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:100
+msgid ""
+"Make a special brush that is more opaque than the regular sketching brushes "
+"you use."
+msgstr ""
+"Создайте специальную кисть, более непрозрачную, чем обычные кисти для "
+"набросков."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:101
+msgid "Or conversely, sketch with white instead."
+msgstr "Или, наоборот, делайте набросок белым."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:102
+msgid ""
+"For painting, block out the shapes with a big opaque brush before you start "
+"doing your mixing."
+msgstr ""
+"Для живописи наметьте формы большой непрозрачной кистью, прежде чем "
+"приступить к смешиванию."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:104
+msgid ""
+"Overall, this is something that will take a little while getting used to, "
+"but you will get used to it soon enough."
+msgstr ""
+"В целом, к этому придётся привыкать какое-то время, но привыкнуть получится "
+"довольно скоро."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:106
+msgid "Finally, there’s the **issue of size**."
+msgstr "И наконец, существует **проблема размера**."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:108
+msgid ""
+"16 bit float per channel images are big. 32 bit float per channel images are "
+"bigger. This means that they will eat RAM and that painting and filtering "
+"will be slower. This is something that will fix itself over the years, but "
+"not many people have such a high-end PC yet, so it can be a blocker."
+msgstr ""
+"Изображения с 16 битами с плавающей запятой на канал занимают много места. С "
+"32 битами — ещё больше. Это означает, что они будут расходовать оперативную "
+"память, а живопись и фильтрация станут медленнее. Со временем это исправится "
+"само собой, но пока настолько мощный компьютер есть не у многих, поэтому это "
+"может стать препятствием."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:110
+msgid "So the issues are tools, expectations and size."
+msgstr "Итак, проблемы заключаются в инструментах, ожиданиях и размере."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:113
+msgid "In Summary"
+msgstr "Итог"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:115
+msgid ""
+"Scene Linear Painting is painting an image in a color space that is linear "
+"and has a floating point bit depth. This does not assume anything about the "
+"values of black and white, so you can only use tools that don’t assume "
+"anything about the values of black and white. It has the advantage of having "
+"nicer filter results and better color mixtures as well as better "
+"interoperability with other scene-linear output."
+msgstr ""
+"Рисование в линейном пространстве сцены — это рисование изображения в "
+"цветовом пространстве, которое линейно и имеет разрядность с плавающей "
+"запятой. При этом не делается никаких предположений о значениях чёрного и "
+"белого, поэтому можно использовать только инструменты, которые не делают "
+"предположений о значениях чёрного и белого. Его преимущество — более "
+"качественные результаты работы фильтров и лучшее смешивание цветов, а также "
+"лучшая совместимость с другими выходными данными в линейном пространстве "
+"сцены."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:117
+msgid ""
+"To be able to view such an image you use a view transform, also called a "
+"display conversion. Which means that if you wish to finalize your image for "
+"the web, you make a copy of the image that goes through a display conversion "
+"or view transform that then gets saved to PNG, JPEG or TIFF."
+msgstr ""
+"Чтобы просмотреть такое изображение, используется преобразование "
+"представления, также называемое преобразованием отображения. Это означает, "
+"что если требуется подготовить изображение для публикации в Интернете, "
+"создаётся копия изображения, которая проходит через преобразование "
+"отображения или представления, а затем сохраняется в формате PNG, JPEG или "
+"TIFF."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:120
+msgid "Getting to actual painting"
+msgstr "Переход к собственно рисованию"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:122
+msgid ""
+"Now we’ve covered the theory, let us look at a workflow for painting scene "
+"linear."
+msgstr ""
+"Теперь, когда теория изложена, рассмотрим порядок работы при рисовании в "
+"линейном пространстве сцены."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:125
+msgid "Setting up the Canvas"
+msgstr "Настройка холста"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:127
+msgid ""
+"Select either a 16bit or 32bit image. By default Krita will select a linear "
+"sRGB profile. If you want to create images for HDR display, you will need to "
+"make sure that the profile selected is the :guilabel:`Rec2020-elle-V4-g10."
+"icc` profile. HDR images are standardised to use the Rec. 2020 gamut, which "
+"is much larger than sRGB in size, so this ensures you've got access to all "
+"the colors."
+msgstr ""
+"Выберите 16-битное или 32-битное изображение. По умолчанию Krita выберет "
+"линейный профиль sRGB. Чтобы создавать изображения для показа в HDR, "
+"потребуется убедиться, что выбран профиль :guilabel:`Rec2020-elle-V4-g10."
+"icc`. В изображениях HDR стандартно используется цветовой охват Rec. 2020, "
+"который значительно шире sRGB, что обеспечивает доступ ко всем цветам."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:129
+msgid ""
+"If you're working on a non-HDR enabled monitor, you should enable OCIO in "
+"the LUT docker."
+msgstr ""
+"При работе на мониторе без поддержки HDR следует включить OCIO в панели LUT."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:131
+msgid ""
+"Keep in mind everything mentioned above. Not all filters and not all "
+"blending modes work. This will improve in the future. Other than that, "
+"everything else is the same."
+msgstr ""
+"Следует помнить всё вышесказанное. Не все фильтры и не все режимы смешивания "
+"работают. В будущем это улучшится. В остальном всё так же."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:134
+msgid "Picking really bright colors"
+msgstr "Выбор очень ярких цветов"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:136
+msgid ""
+"Picking regular colors is easy, but how do we pick the really bright colors? "
+"There are three ways of getting access to the really bright colors in Krita:"
+msgstr ""
+"Выбрать обычные цвета несложно, но как выбрать по-настоящему яркие цвета? В "
+"Krita есть три способа получить доступ к по-настоящему ярким цветам:"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:138
+msgid ""
+"By lowering the exposure in the LUT docker. This will increase the visible "
+"range of colors in the color selectors. You can even hotkey the exposure in "
+"the canvas input settings."
+msgstr ""
+"Понизив экспозицию в панели LUT. Это увеличит видимый диапазон цветов в "
+"средствах выбора цвета. Экспозицию даже можно назначить на комбинацию клавиш "
+"в параметрах ввода на холсте."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:139
+msgid ""
+"By setting the nits slider in the :ref:`small_color_selector` higher than "
+"100."
+msgstr "Установив ползунок «нит» в :ref:`small_color_selector` выше 100."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:140
+msgid ""
+"Or simply by opening the internal color selector by double clicking the dual "
+"color button and typing in values higher than 1 into the input field."
+msgstr ""
+"Или просто открыв встроенный выбор цвета двойным щелчком по кнопке двойного "
+"цвета и введя в поле ввода значения больше 1."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:141
+msgid ""
+"And finally by picking a really bright color from an image that has such "
+"values."
+msgstr ""
+"И наконец, выбрав действительно яркий цвет из изображения, содержащего такие "
+"значения."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:143
+msgid ""
+"Then paint. It’s recommended to make a bunch of swatches in the corner, at "
+"the least, until Krita’s new Palette docker allows you to save the values "
+"properly."
+msgstr ""
+"Затем рисуйте. Рекомендуется создать в углу несколько образцов цвета — по "
+"крайней мере, пока новая панель «Палитра» в Krita не позволит сохранить "
+"значения должным образом."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:146
+msgid "Lighting based workflow"
+msgstr "Рабочий процесс на основе освещения"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:148
+msgid ""
+"So, we have our typical value based workflow, where we only paint the grays "
+"of the image so that we can focus on the values of the image. We can do "
+"something similar with Scene Linear Painting."
+msgstr ""
+"Итак, есть типичный рабочий процесс, основанный на значениях, в котором "
+"рисуются только серые тона изображения, чтобы можно было сосредоточиться на "
+"значениях изображения. Нечто подобное можно сделать и при рисовании в "
+"линейном пространстве сцены."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:150
+msgid ""
+"Where with the value based workflow you paint the image as if it were a "
+"grayscale of what you intended to paint, with a lighting based workflow you "
+"paint as if all the objects are white. The effect of the color of an object "
+"can be determined by multiplying its base color with the color of the light. "
+"So you could paint objects as if they were white, paint the colors on a "
+"separate layer and just use the Multiply blending mode to get the right "
+"colors."
+msgstr ""
+"Тогда как при работе на основе значений изображение рисуется так, как будто "
+"это оттенки серого того, что задумано нарисовать, при работе на основе "
+"освещения всё рисуется так, как будто все объекты белые. Влияние цвета "
+"объекта можно определить, умножив его основной цвет на цвет света. Поэтому "
+"можно рисовать объекты так, как будто они белые, рисовать цвета на отдельном "
+"слое и просто использовать режим смешивания «Умножение», чтобы получить "
+"правильные цвета."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:156
+msgid ".. image:: /images/color_category/Krita_scenelinear_cat_02.png"
+msgstr ".. image:: /images/color_category/Krita_scenelinear_cat_02.png"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:156
+msgid ""
+"The leftmost image is both the lighting based one and the color layer "
+"separate, the middle with the two layers multiplied and the right a "
+"luminosity based view. This cat is a nice example as it demonstrates why "
+"having textures and lighting separate could be interesting."
+msgstr ""
+"Крайнее слева изображение показывает освещение и слой цвета по отдельности, "
+"в середине два слоя перемножены, а справа — вид на основе яркости. Этот кот "
+"— удачный пример: он наглядно показывает, почему разделение текстур и "
+"освещения может быть интересным."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:158
+msgid ""
+"You can even combine this with a value based workflow by opening a new view "
+"and setting the component to luminosity. That way you can see both the "
+"grayscale as well as the lighting based version of the image next to one "
+"another."
+msgstr ""
+"Можно даже объединить это с рабочим процессом на основе значений, открыв "
+"новое представление и задав для компонента яркость. Так версии изображения в "
+"оттенках серого и на основе освещения будут видны рядом друг с другом."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:160
+msgid ""
+"The keen minded will notice that a lighting based workflow kind of resembles "
+"the idea of a light pass and a color pass in 3d rendering. And indeed, it is "
+"basically the same, so you can use lighting passes from 3d renders here, "
+"just save them as EXR and import them as a layer. One of the examples where "
+"scene linear painting simplifies combining methods."
+msgstr ""
+"Внимательный читатель заметит, что рабочий процесс, основанный на освещении, "
+"в некотором роде напоминает идею прохода освещения и прохода цвета в "
+"трёхмерном рендеринге. И действительно, это по сути одно и то же, поэтому "
+"здесь можно использовать проходы освещения из трёхмерных рендеров — "
+"достаточно сохранить их в формате EXR и импортировать как слой. Это один из "
+"примеров того, как линейная живопись сцены упрощает совмещение методов."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:163
+msgid "Finishing up"
+msgstr "Завершение"
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:165
+msgid ""
+"When you are done, you will want to apply the view transform you have been "
+"using to the image (at the least, if you want to post the end result on the "
+"Internet)... This is called LUT baking and not possible yet in Krita. "
+"Therefore you will have to save out your image in EXR and open it in either "
+"Blender or Natron. Then, in Blender it is enough to just use the same OCIO "
+"config, select the right values and save the result as a PNG."
+msgstr ""
+"Когда всё будет готово, потребуется применить к изображению преобразование "
+"представления, которое использовалось (по крайней мере, если конечный "
+"результат нужно опубликовать в Интернете)… Это называется запеканием LUT и в "
+"Krita пока невозможно. Поэтому придётся сохранить изображение в формате EXR "
+"и открыть его в Blender или Natron. Затем в Blender достаточно использовать "
+"ту же конфигурацию OCIO, выбрать нужные значения и сохранить результат в "
+"формате PNG."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:167
+msgid "For saving HDR images, check the :ref:`hdr_display` page."
+msgstr "О сохранении HDR-изображений см. на странице :ref:`hdr_display`."
+
+#: ../../general_concepts/colors/scene_linear_painting.rst:169
+msgid ""
+"You can even use some of Blender’s or Natron’s filters at this stage, and "
+"when working with others, you would save out in EXR so that others can use "
+"those."
+msgstr ""
+"На этом этапе можно даже использовать некоторые фильтры Blender или Natron, "
+"а при работе с другими сохранять результат в EXR, чтобы они могли ими "
+"воспользоваться."

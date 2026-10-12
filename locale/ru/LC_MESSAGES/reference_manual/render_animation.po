@@ -1,0 +1,620 @@
+# Translation of docs_krita_org_reference_manual___render_animation into Russian.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: docs_krita_org_reference_manual___render_animation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-06 02:11+0000\n"
+"PO-Revision-Date: 2026-10-10 20:44+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: ../../reference_manual/render_animation.rst:-1
+msgid "How to use the render animation command in Krita."
+msgstr "Как использовать команду обработки анимации в Krita"
+
+#: ../../reference_manual/render_animation.rst:-1
+msgid "FFmpeg path."
+msgstr "Путь к FFmpeg."
+
+#: ../../reference_manual/render_animation.rst:-1
+msgid ".. image:: /images/ffmpeg_screenshot_path.png"
+msgstr ".. image:: /images/ffmpeg_screenshot_path.png"
+
+#: ../../reference_manual/render_animation.rst:13
+#: ../../reference_manual/render_animation.rst:18
+msgid "Render Animation"
+msgstr "Обработка анимации"
+
+#: ../../reference_manual/render_animation.rst:13
+msgid "Animation"
+msgstr "Анимация"
+
+#: ../../reference_manual/render_animation.rst:20
+msgid ""
+"Render animation allows you to render your animation to an image sequence "
+"and to ``.gif``, ``.mp4``, ``.mkv``, or other video files."
+msgstr ""
+"Команда «Обработать анимацию» позволяет вывести анимацию в виде "
+"последовательности изображений и в файлы ``.gif``, ``.mp4``, ``.mkv`` или "
+"другие видеофайлы."
+
+#: ../../reference_manual/render_animation.rst:22
+msgid ""
+"For rendering to an animated file format, Krita will first render to a PNG "
+"sequence and then use a video encoder to render that sequence to an animated "
+"file format. The reason for this two-step process is that animation files "
+"can be really complex and really big, and this is the best way to allow you "
+"to keep control over the export process. For example, if your computer has a "
+"hiccup, and one frame saves out weird, first saving the image sequence "
+"allows you to only resave that one weird frame before rendering."
+msgstr ""
+"Для вывода в формат анимационного файла Krita сначала обрабатывает анимацию "
+"в последовательность PNG, а затем с помощью видеокодера преобразует эту "
+"последовательность в анимационный файл. Причина такого двухэтапного процесса "
+"в том, что файлы анимации могут быть очень сложными и очень большими, и это "
+"лучший способ сохранить контроль над процессом экспорта. Например, если на "
+"компьютере случится сбой и один кадр сохранится неправильно, предварительное "
+"сохранение последовательности изображений позволит повторно сохранить только "
+"этот один неправильный кадр перед кодированием."
+
+#: ../../reference_manual/render_animation.rst:24
+msgid ""
+"This means that you will need to find a good place to stick your frames "
+"before you can start rendering. If you only do throwaway animations, you can "
+"use a spot on your hard-drive with enough room and select :guilabel:`Delete "
+"Sequence After Rendering`."
+msgstr ""
+"Это означает, что перед началом обработки потребуется найти подходящее место "
+"для размещения кадров. Если анимации создаются лишь на один раз, можно "
+"использовать место на жёстком диске с достаточным объёмом и установить "
+"флажок :guilabel:`Удалять последовательность после обработки`."
+
+#: ../../reference_manual/render_animation.rst:28
+msgid ""
+"On Android, file handling and video rendering works differently. You can "
+"only either export an image sequence or a video, not both. FFmpeg is not "
+"used, do not attempt to install it."
+msgstr ""
+"В Android работа с файлами и обработка видео выполняются иначе. Можно "
+"экспортировать либо последовательность изображений, либо видео, но не то и "
+"другое одновременно. FFmpeg не используется, не пытайтесь его установить."
+
+#: ../../reference_manual/render_animation.rst:31
+msgid "General"
+msgstr "Общие"
+
+#: ../../reference_manual/render_animation.rst:33
+msgid "First Frame"
+msgstr "Первый кадр"
+
+#: ../../reference_manual/render_animation.rst:34
+msgid ""
+"The first frame of the range of frames you wish to adjust. Automatically set "
+"to the first frame of your current selection in the timeline. This is useful "
+"when you only want to re-render a little part."
+msgstr ""
+"Первый кадр диапазона кадров, который требуется настроить. Автоматически "
+"устанавливается на первый кадр текущего выделения на временной шкале. Это "
+"удобно, если требуется повторно обработать лишь небольшую часть."
+
+#: ../../reference_manual/render_animation.rst:36
+msgid "Last Frame"
+msgstr "Последний кадр"
+
+#: ../../reference_manual/render_animation.rst:36
+msgid ""
+"As above, the last frame of the range of frames you wish to adjust. "
+"Automatically set to the last frame of your current selection in the "
+"timeline."
+msgstr ""
+"Как указано выше, последний кадр диапазона кадров, который требуется "
+"настроить. Автоматически устанавливается на последний кадр текущего "
+"выделения на временной шкале."
+
+#: ../../reference_manual/render_animation.rst:39
+msgid "Export as Image Sequence"
+msgstr "Экспорт последовательности изображений"
+
+#: ../../reference_manual/render_animation.rst:41
+msgid "File Format"
+msgstr "Формат файла"
+
+#: ../../reference_manual/render_animation.rst:42
+msgid ""
+"The file format to export the sequence to. When rendering we enforce PNG. "
+"The usual export options can be modified with the edit button next to the "
+"drop-down."
+msgstr ""
+"Формат файла, в который экспортируется последовательность. При обработке "
+"принудительно используется PNG. Обычные параметры экспорта можно изменить "
+"кнопкой «Изменить» рядом с раскрывающимся списком."
+
+#: ../../reference_manual/render_animation.rst:43
+msgid "Image Location"
+msgstr "Расположение изображений"
+
+#: ../../reference_manual/render_animation.rst:44
+msgid ""
+"Where you render the image sequence to. Some people prefer to use a flash-"
+"drive or perhaps a harddrive that is fast. On Android, you will be prompted "
+"for a directory instead."
+msgstr ""
+"Куда выводится последовательность изображений. Некоторые предпочитают "
+"использовать USB-накопитель или, возможно, быстрый жёсткий диск. В Android "
+"вместо этого будет предложено выбрать папку."
+
+#: ../../reference_manual/render_animation.rst:45
+msgid "Base Name"
+msgstr "Основное название"
+
+#: ../../reference_manual/render_animation.rst:46
+msgid ""
+"The base name of your image sequence. This will get suffixed with a number "
+"depending on the frame."
+msgstr ""
+"Основное название последовательности изображений. В зависимости от кадра к "
+"нему добавляется номер."
+
+#: ../../reference_manual/render_animation.rst:47
+msgid "Start numbering at"
+msgstr "Начало нумерации"
+
+#: ../../reference_manual/render_animation.rst:48
+msgid ""
+"The frames are named by using :guilabel:`Base Name`  above and adding a "
+"number for the frame. This allows you to set where the frame number starts, "
+"so rendering from 8 to 10 with starting point 3 will give you images named "
+"11 and 15. Useful for programs that don't understand sequences starting with "
+"0, or for precision output."
+msgstr ""
+"Кадры получают имена с помощью :guilabel:`Основное название`, указанного "
+"выше, и номера кадра. Это позволяет задать, с какого номера начинается "
+"нумерация кадров: так, при обработке кадров с 8 по 10 с начальной точкой 3 "
+"изображения получат имена 11 и 15. Это удобно для программ, не понимающих "
+"последовательности, начинающиеся с 0, или для точного вывода."
+
+#: ../../reference_manual/render_animation.rst:50
+msgid "Only Unique Frames"
+msgstr "Только уникальные кадры"
+
+#: ../../reference_manual/render_animation.rst:50
+msgid ""
+"Normally Krita generates a frame for every FPS in the sequence. Ticking this "
+"will only generate keyframes, saving space."
+msgstr ""
+"Обычно Krita создаёт кадр на каждый такт частоты кадров в "
+"последовательности. При установке этого флажка создаются только ключевые "
+"кадры, что экономит место."
+
+#: ../../reference_manual/render_animation.rst:53
+msgid "Export as Video"
+msgstr "Экспорт видео"
+
+#: ../../reference_manual/render_animation.rst:55
+msgid "Width"
+msgstr "Ширина"
+
+#: ../../reference_manual/render_animation.rst:56
+msgid "Set the desired width in pixels."
+msgstr "Укажите нужную ширину в пикселах."
+
+#: ../../reference_manual/render_animation.rst:57
+msgid "Height"
+msgstr "Высота"
+
+#: ../../reference_manual/render_animation.rst:58
+msgid "Set the desired height in pixels."
+msgstr "Задайте нужную высоту в пикселах."
+
+#: ../../reference_manual/render_animation.rst:60
+msgid "FPS"
+msgstr "Кадров в секунду"
+
+#: ../../reference_manual/render_animation.rst:60
+msgid "Set the desired frames per second."
+msgstr "Задайте нужное число кадров в секунду."
+
+#: ../../reference_manual/render_animation.rst:64
+msgid ""
+"Widths and heights above 1920 pixels and FPS values beyond 30 are not widely "
+"supported. They can cause the video export to fail outright or the resulting "
+"video may not play back properly on some devices. Krita will warn you about "
+"this, but still allows you to try such exports."
+msgstr ""
+"Ширина и высота более 1920 пикселов и значения частоты кадров более 30 "
+"поддерживаются не везде. Из-за них экспорт видео может завершиться с ошибкой "
+"или вовсе не удаться, а полученное видео может неправильно воспроизводиться "
+"на некоторых устройствах. Krita предупредит об этом, но всё же позволит "
+"попробовать такой экспорт."
+
+#: ../../reference_manual/render_animation.rst:66
+msgid ""
+"Some video formats require width and height to be even numbers. Krita will "
+"automatically adjust the size if necessary."
+msgstr ""
+"Некоторые видеоформаты требуют, чтобы ширина и высота были чётными числами. "
+"Krita автоматически скорректирует размер, если потребуется."
+
+#: ../../reference_manual/render_animation.rst:68
+msgid "Filter"
+msgstr "Фильтр"
+
+#: ../../reference_manual/render_animation.rst:69
+msgid ""
+"Set the scaling filter. :guilabel:`Bicubic` is fine for most cases, but if "
+"you want to, say, export a pixel art animation at twice the size, :guilabel:"
+"`Nearest Neighbour` will preserve the fine details better."
+msgstr ""
+"Задайте фильтр масштабирования. :guilabel:`Бикубическое` подходит для "
+"большинства случаев, но если требуется, например, экспортировать анимацию "
+"пиксельной графики вдвое большего размера, :guilabel:`Ближайшее соседнее "
+"значение` лучше сохранит мелкие детали."
+
+#: ../../reference_manual/render_animation.rst:70
+msgid "Render As"
+msgstr "Кодировать в"
+
+#: ../../reference_manual/render_animation.rst:71
+msgid ""
+"The file format to render to. Some have extra options that can be "
+"manipulated via the edit button next to the drop-down."
+msgstr ""
+"Формат файла, в который выполняется обработка. Некоторые форматы имеют "
+"дополнительные параметры, которые можно изменить кнопкой «Изменить» рядом с "
+"раскрывающимся списком."
+
+#: ../../reference_manual/render_animation.rst:73
+msgid ""
+"Location and name of the rendered animation. On Android, you will be "
+"prompted for a file name instead."
+msgstr ""
+"Расположение и имя обрабатываемой анимации. В Android вместо этого будет "
+"предложено ввести имя файла."
+
+#: ../../reference_manual/render_animation.rst:76
+msgid "Video Location"
+msgstr "Расположение видео"
+
+#: ../../reference_manual/render_animation.rst:76
+msgid "Include Audio"
+msgstr "Включить аудио"
+
+#: ../../reference_manual/render_animation.rst:76
+msgid "Include any audio you have added."
+msgstr "Включить добавленный звук."
+
+#: ../../reference_manual/render_animation.rst:79
+msgid ""
+"The location where your have FFmpeg. On Android, the operating system's "
+"video encoder is used instead."
+msgstr ""
+"Расположение FFmpeg. В Android вместо него используется кодировщик видео "
+"операционной системы."
+
+#: ../../reference_manual/render_animation.rst:81
+msgid ""
+"This is now optional. Krita's bundled FFMpeg functionality is able to "
+"provide some options, but it is still useful to set this if you want to use "
+"a specific version of FFMpeg for rendering videos."
+msgstr ""
+"Теперь это необязательно. Встроенные в Krita средства FFMpeg позволяют "
+"задать некоторые параметры, но всё же полезно указать этот путь, если "
+"требуется использовать определённую версию FFMpeg для обработки видео."
+
+#: ../../reference_manual/render_animation.rst:82
+msgid "FFmpeg"
+msgstr "FFmpeg"
+
+#: ../../reference_manual/render_animation.rst:85
+msgid ""
+"Delete the prerendered image sequence after done rendering. This allows you "
+"to choose whether to try and save some space, or to save the sequence for "
+"when encoding fails. On Android, the image sequence is only stored "
+"internally and always deleted afterwards."
+msgstr ""
+"Удалить предварительно обработанную последовательность изображений после "
+"завершения обработки. Это позволяет выбрать, сэкономить место или сохранить "
+"последовательность на случай сбоя кодирования. В Android последовательность "
+"изображений хранится только во внутренней памяти и всегда удаляется после "
+"этого."
+
+#: ../../reference_manual/render_animation.rst:89
+msgid "Delete Sequence After Rendering"
+msgstr "Удалять последовательность после обработки"
+
+#: ../../reference_manual/render_animation.rst:89
+msgid ""
+"Since 5.2, Krita will always delete the image sequence if :guilabel:`Export "
+"as Image Sequence` is not checked while :guilabel:`Export as Video` is."
+msgstr ""
+"Начиная с версии 5.2, Krita всегда удаляет последовательность изображений, "
+"если флажок :guilabel:`Экспорт последовательности изображений` не "
+"установлен, а флажок :guilabel:`Экспорт видео` установлен."
+
+#: ../../reference_manual/render_animation.rst:93
+msgid ""
+"Krita currently does not support rendering video with transparent elements, "
+"and will instead render them as black. To combat this, you can add in a "
+"fully colored, opaque layer at the bottom of the file before rendering."
+msgstr ""
+"В настоящее время Krita не поддерживает обработку видео с прозрачными "
+"элементами и вместо этого выводит их чёрными. Чтобы избежать этого, перед "
+"обработкой можно добавить в нижнюю часть файла полностью закрашенный "
+"непрозрачный слой."
+
+#: ../../reference_manual/render_animation.rst:96
+msgid "Setting Up Krita for Exporting Animations"
+msgstr "Настройка Krita для экспорта анимации"
+
+#: ../../reference_manual/render_animation.rst:100
+msgid ""
+"Since Krita 5.2, Krita bundles a small part of FFmpeg. This means that you "
+"will not strictly have to download and setup FFMpeg to render animations. "
+"Different versions of the program have different options however, and video "
+"experts might want to use a specific version of FFMpeg to get more codec "
+"options."
+msgstr ""
+"Начиная с Krita 5.2, в состав Krita входит небольшая часть FFmpeg. Это "
+"означает, что для обработки анимаций необязательно загружать и настраивать "
+"FFMpeg. Однако разные версии программы имеют разные параметры, и "
+"специалистам по видео может потребоваться определённая версия FFMpeg для "
+"получения дополнительных параметров кодеков."
+
+#: ../../reference_manual/render_animation.rst:102
+msgid ""
+"The bundled FFmpeg supports the following containers: ``Webm``, ``Matroska`` "
+"and ``OGG``, which are a wrapper around the video data (amongst others), "
+"which are encoded with codecs, of which the bundled FFMpeg supports:"
+msgstr ""
+"Встроенный FFmpeg поддерживает следующие контейнеры: ``Webm``, ``Matroska`` "
+"и ``OGG`` — это обёртки вокруг видеоданных (среди прочего), которые "
+"кодируются кодеками, поддерживаемыми встроенным FFMpeg:"
+
+#: ../../reference_manual/render_animation.rst:104
+msgid "AOM AV1"
+msgstr "AOM AV1"
+
+#: ../../reference_manual/render_animation.rst:105
+msgid "VPX VP9"
+msgstr "VPX VP9"
+
+#: ../../reference_manual/render_animation.rst:106
+msgid "VPX VP8"
+msgstr "VPX VP8"
+
+#: ../../reference_manual/render_animation.rst:107
+msgid "264 (via openH264)"
+msgstr "264 (с помощью openH264)"
+
+#: ../../reference_manual/render_animation.rst:108
+msgid "Theora"
+msgstr "Theora"
+
+#: ../../reference_manual/render_animation.rst:110
+msgid ""
+"The following instructions will explain how to get a non-bundled version of "
+"FFMpeg and set it up. The setup is a one-time thing so you won't have to do "
+"it again."
+msgstr ""
+"В следующих инструкциях объясняется, как получить отдельную версию FFMpeg и "
+"настроить её. Настройка выполняется один раз, поэтому повторять её не "
+"придётся."
+
+#: ../../reference_manual/render_animation.rst:113
+msgid "Step 1 - Downloading FFmpeg"
+msgstr "Шаг 1 — Загрузка FFmpeg"
+
+#: ../../reference_manual/render_animation.rst:116
+#: ../../reference_manual/render_animation.rst:150
+msgid "For Windows"
+msgstr "Для Windows"
+
+#: ../../reference_manual/render_animation.rst:118
+msgid "Open the FFmpeg `download page. <https://www.gyan.dev/ffmpeg/builds/>`_"
+msgstr ""
+"Откройте `страницу загрузки FFmpeg <https://www.gyan.dev/ffmpeg/builds/>`_."
+
+#: ../../reference_manual/render_animation.rst:120
+msgid ""
+"Go to :guilabel:`release` section and choose the download link that says "
+"``ffmpeg-release-essentials.zip``."
+msgstr ""
+"Перейдите в раздел :guilabel:`release` и выберите ссылку для загрузки с "
+"надписью ``ffmpeg-release-essentials.zip``."
+
+#: ../../reference_manual/render_animation.rst:124
+msgid ""
+"**Don't** download the file which filename contains the word ``shared``. It "
+"won't work with Krita."
+msgstr ""
+"**Не** загружайте файл, в имени которого содержится слово ``shared``. Он не "
+"будет работать с Krita."
+
+#: ../../reference_manual/render_animation.rst:126
+msgid ""
+"If the filename ends with ``.7z``, you can still use it, but then you need "
+"to have a program that can open 7zip archives (for example `7zip itself "
+"<https://www.gyan.dev/ffmpeg/builds/>`_). In case of a ``.zip`` file, you "
+"can open it just using the Windows file browser."
+msgstr ""
+"Если имя файла заканчивается на ``.7z``, его всё ещё можно использовать, но "
+"тогда потребуется программа, способная открывать архивы 7zip (например, `сам "
+"7zip <https://www.gyan.dev/ffmpeg/builds/>`_). Если это файл ``.zip``, его "
+"можно открыть с помощью проводника Windows."
+
+#: ../../reference_manual/render_animation.rst:130
+#: ../../reference_manual/render_animation.rst:168
+msgid "For macOS"
+msgstr "Для macOS"
+
+#: ../../reference_manual/render_animation.rst:132
+msgid ""
+"Please see the section above. However, FFmpeg is obtained from `here "
+"<https://evermeet.cx/ffmpeg/>`_ instead. Just pick the big green button on "
+"the left under the FFmpeg heading. You will also need an archiving utility "
+"that supports .7z, since FFmpeg provides their macOS builds in .7z format. "
+"If you don't have one, try something like `Keka <https://www.kekaosx.com>`_."
+msgstr ""
+"См. раздел выше. Однако FFmpeg загружается `отсюда <https://evermeet.cx/"
+"ffmpeg/>`_. Нажмите большую зелёную кнопку слева под заголовком FFmpeg. "
+"Также потребуется архиватор, поддерживающий .7z, так как FFmpeg "
+"предоставляет свои сборки для macOS в формате .7z. Если архиватора нет, "
+"попробуйте что-нибудь вроде `Keka <https://www.kekaosx.com>`_."
+
+#: ../../reference_manual/render_animation.rst:134
+msgid ""
+"Alternatively you can find the smaller text under the big green button that "
+"says :guilabel:`Download as ZIP`. Then you should be able to extract it just "
+"using Finder."
+msgstr ""
+"Кроме того, под большой зелёной кнопкой есть более мелкая надпись :guilabel:"
+"`Download as ZIP`. После этого архив можно распаковать с помощью Finder."
+
+#: ../../reference_manual/render_animation.rst:137
+#: ../../reference_manual/render_animation.rst:173
+msgid "For Linux"
+msgstr "Для Linux"
+
+#: ../../reference_manual/render_animation.rst:139
+msgid ""
+"FFmpeg can be installed from the repositories on most Linux systems. Version "
+"2.6 is required for proper GIF support, as we use the palettegen "
+"functionality."
+msgstr ""
+"FFmpeg можно установить из репозиториев большинства систем Linux. Для "
+"полноценной поддержки GIF требуется версия 2.6, так как используется функция "
+"palettegen."
+
+#: ../../reference_manual/render_animation.rst:142
+msgid "For Android"
+msgstr "Для Android"
+
+#: ../../reference_manual/render_animation.rst:144
+msgid "Krita does not use FFmpeg on Android. Don't attempt to install it."
+msgstr "В Android Krita не использует FFmpeg. Не пытайтесь его установить."
+
+#: ../../reference_manual/render_animation.rst:147
+msgid "Step 2 - Unzipping and Linking to Krita"
+msgstr "Шаг 2 — Распаковка и подключение к Krita"
+
+#: ../../reference_manual/render_animation.rst:152
+msgid ""
+"Once you've downloaded, go to the file location. Right click on the FFmpeg "
+"file, and select ``Extract All...``. Select the file destination, and rename "
+"the file to 'ffmpeg'."
+msgstr ""
+"После загрузки перейдите к расположению файла. Щёлкните правой кнопкой мыши "
+"по файлу FFmpeg и выберите ``Extract All...``. Укажите папку назначения и "
+"переименуйте файл в «ffmpeg»."
+
+#: ../../reference_manual/render_animation.rst:154
+msgid "Hint"
+msgstr "Подсказка"
+
+#: ../../reference_manual/render_animation.rst:156
+msgid ""
+"It is easiest to save the file under C: drive, but any location is fine."
+msgstr ""
+"Проще всего сохранить файл на диске C:, но подойдёт любое расположение."
+
+#: ../../reference_manual/render_animation.rst:158
+msgid ""
+"Open Krita back up and go to :menuselection:`File --> Render Animation...`. "
+"Under ``Export > Video``, click the file icon next to FFmpeg. Select this "
+"file ``C:/ffmpeg/bin/ffmpeg.exe`` and click :guilabel:`OK`."
+msgstr ""
+"Снова откройте Krita и выберите :menuselection:`Файл --> Обработать "
+"анимацию...`. В разделе ``Export > Video`` щёлкните по значку файла рядом с "
+"FFmpeg. Выберите этот файл ``C:/ffmpeg/bin/ffmpeg.exe`` и нажмите :guilabel:"
+"`ОК`."
+
+#: ../../reference_manual/render_animation.rst:163
+msgid "Tip"
+msgstr "Совет"
+
+#: ../../reference_manual/render_animation.rst:165
+msgid ""
+"If you have saved FFmpeg to a different location, choose ``<ffmpeg location>/"
+"ffmpeg/bin/ffmpeg.exe``."
+msgstr ""
+"Если FFmpeg сохранён в другом расположении, выберите ``<ffmpeg location>/"
+"ffmpeg/bin/ffmpeg.exe``."
+
+#: ../../reference_manual/render_animation.rst:170
+msgid ""
+"After downloading FFmpeg, you just need to extract it and then simply point "
+"to it in the FFmpeg location in Krita like ``/Users/user/Downloads/ffmpeg`` "
+"(assuming you downloaded and extracted the .7z file to /Users/user/"
+"Downloads)."
+msgstr ""
+"После загрузки FFmpeg достаточно распаковать его и указать путь к нему в "
+"поле :guilabel:`Расположение FFmpeg` в Krita, например ``/Users/user/"
+"Downloads/ffmpeg`` (при условии, что архив .7z загружен и распакован в /"
+"Users/user/Downloads)."
+
+#: ../../reference_manual/render_animation.rst:175
+msgid ""
+"FFmpeg is, if installed from the repositories, usually found in ``/usr/bin/"
+"ffmpeg``."
+msgstr ""
+"Если FFmpeg установлен из репозиториев, он обычно находится в ``/usr/bin/"
+"ffmpeg``."
+
+#: ../../reference_manual/render_animation.rst:178
+msgid "Step 3 - Testing out an animation"
+msgstr "Шаг 3 — Проверка анимации"
+
+#: ../../reference_manual/render_animation.rst:180
+msgid ""
+"ffmpeg.exe is what Krita uses to do all of its animation export magic. Now "
+"that it is hooked up, let us test it out."
+msgstr ""
+"Именно ffmpeg.exe выполняет в Krita всю работу по экспорту анимации. Теперь, "
+"когда он подключён, проверьте его в деле."
+
+#: ../../reference_manual/render_animation.rst:182
+msgid ""
+"Let's make an animated GIF. In the Render Animation dialog, change the :"
+"guilabel:`Render As`  field to \"GIF image\". Choose the file location where "
+"it will save with the \"File\" menu below. I just saved it to my desktop and "
+"called it \"*export.gif*\". When it is done, you should be able to open it "
+"up and see the animation."
+msgstr ""
+"Создадим анимированный GIF. В диалоговом окне обработки анимации измените "
+"значение поля :guilabel:`Кодировать в` на «Изображение GIF». Выберите "
+"расположение файла для сохранения с помощью меню «Файл» ниже. Для примера "
+"сохраним его на рабочий стол под именем *export.gif*. По завершении "
+"обработки файл можно будет открыть и увидеть анимацию."
+
+#: ../../reference_manual/render_animation.rst:186
+msgid ""
+"By default, FFmpeg will render MP4 files with a too new codec, which means "
+"that Windows Media Player won't be able to play it. So for Windows, select "
+"\"baseline\" for the profile instead of \"high422\" before rendering."
+msgstr ""
+"По умолчанию FFmpeg создаёт файлы MP4 с использованием слишком нового "
+"кодека, из-за чего Windows Media Player не сможет их воспроизвести. Поэтому "
+"в Windows перед обработкой выберите для профиля значение «baseline» вместо "
+"«high422»."
+
+#: ../../reference_manual/render_animation.rst:190
+msgid ""
+"macOS does not come with any software to play MP4 and MKV files. If you use "
+"Chrome for your web browser, you can drag the video file into that and the "
+"video should play. Otherwise you will need to get a program like VLC to see "
+"the video."
+msgstr ""
+"В состав macOS не входит программное обеспечение для воспроизведения файлов "
+"MP4 и MKV. Если браузером служит Chrome, можно перетащить видеофайл в него, "
+"и видео должно воспроизвестись. В противном случае для просмотра видео "
+"потребуется программа вроде VLC."

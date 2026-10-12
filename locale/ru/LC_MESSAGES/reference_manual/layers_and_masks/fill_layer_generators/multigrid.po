@@ -1,0 +1,311 @@
+# Translation of docs_krita_org_reference_manual___layers_and_masks___fill_layer_generators___multigrid into Russian.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: "
+"docs_krita_org_reference_manual___layers_and_masks___fill_layer_generators___multigrid\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-24 02:04+0000\n"
+"PO-Revision-Date: 2026-10-10 20:44+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:-1
+msgid "How to use the Multigrid generation in Krita."
+msgstr "Использование генератора Multigrid в Krita"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:0
+msgid ".. image:: /images/layers/multigrid-dimension-example.png"
+msgstr ".. image:: /images/layers/multigrid-dimension-example.png"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:0
+msgid ".. image:: /images/layers/multigrid-offset-examples.png"
+msgstr ".. image:: /images/layers/multigrid-offset-examples.png"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:10
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:14
+msgid "Multigrid"
+msgstr "Многосеточность"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:10
+msgid "Penrose"
+msgstr "Penrose"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:10
+msgid "Rhombs"
+msgstr "Ромбы"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:10
+msgid "Quasicrystal"
+msgstr "Квазикристалл"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:16
+msgid ""
+"A fill layer based on de Bruijn's 1981 multigrid method to generate `Penrose "
+"Tilings <https://en.wikipedia.org/wiki/Penrose_tiling>`_ . This generator "
+"projects a hyperdimensional grid lattice onto a 2d plane, giving some pretty "
+"cool patterns. Besides looking cool, there's a few interesting and "
+"potentially useful features the resulting patterns have:"
+msgstr ""
+"Слой заливки, основанный на многосеточном методе de Bruijn (1981) для "
+"построения `мозаик Penrose <https://en.wikipedia.org/wiki/Penrose_tiling>`_. "
+"Этот генератор проецирует многомерную решётку на двумерную плоскость, "
+"создавая довольно эффектные узоры. Помимо эффектного внешнего вида, "
+"получаемые узоры обладают рядом интересных и потенциально полезных свойств:"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:18
+msgid ""
+"It always produces rhombs, that is diamond or rectangle shapes. This is "
+"particularly useful for 3d artists."
+msgstr ""
+"Всегда создаются ромбы, то есть ромбовидные или прямоугольные фигуры. Это "
+"особенно полезно для художников трёхмерной графики."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:19
+msgid ""
+"For all dimensions but 3, 4 and 6 the results are aperiodic, this means that "
+"it will never repeat itself in the width or height of the image."
+msgstr ""
+"Для всех размерностей, кроме 3, 4 и 6, результаты апериодичны — это "
+"означает, что они никогда не повторяются по ширине или высоте изображения."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:20
+msgid ""
+"The results do repeat symmetrically around the center. The amount of "
+"symmetric repetitions is the same as the amount of dimensions projected."
+msgstr ""
+"Результаты симметрично повторяются относительно центра. Количество "
+"симметричных повторений совпадает с количеством проецируемых измерений."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:22
+msgid ""
+"The resulting patterns are also known to show up in nature as quasicrystals."
+msgstr ""
+"Известно также, что получающиеся узоры встречаются в природе в виде "
+"квазикристаллов."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:25
+msgid "Shapes"
+msgstr "Формы"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:27
+msgid ""
+"The meat of the algorithm. The default values for this produce the Star "
+"Penrose tiling."
+msgstr ""
+"Суть алгоритма. При значениях по умолчанию получается звёздчатая мозаика "
+"Penrose."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:31
+msgid ""
+"The amount of dimensions the hyperlattice has. 3 is a lattice of cubes, 4 is "
+"a lattice of tesseracts, 5 is a lattice of penteracts, and so forth."
+msgstr ""
+"Количество измерений гиперрешётки. 3 — решётка из кубов, 4 — решётка из "
+"тессерактов, 5 — решётка из пентерактов и так далее."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:35
+msgid "Dimensions"
+msgstr "Размерность"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:35
+msgid ""
+"Multigrid with different dimensions, starting at 3 and ending at 12. 3d, 4d "
+"and 6d are colored with the intersect color factor while the rest uses ratio "
+"exclusively. In 3d, 4d and 6d, all the rhombs have the same ratio."
+msgstr ""
+"Многосеточность с разными размерностями, от 3 до 12. 3d, 4d и 6d "
+"окрашиваются с использованием коэффициента цвета пересечения, а в остальных "
+"используется только соотношение. В 3d, 4d и 6d все ромбы имеют одинаковое "
+"соотношение."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:37
+msgid "Divisions"
+msgstr "Деления"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:38
+msgid ""
+"Effectively a zoom-out. This is the subdivisions of the length of the width "
+"between the center and the corner of the image. This is then used to "
+"determine how many lines are projected for each dimension."
+msgstr ""
+"Фактически это уменьшение масштаба. Это число делений длины отрезка от "
+"центра до угла изображения. Затем оно используется для определения "
+"количества линий, проецируемых для каждого измерения."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:40
+msgid ""
+"This controls how much each set of lines is offset from the center of the "
+"image. Changing this value changes the pattern within the same dimension "
+"significantly."
+msgstr ""
+"Определяет величину смещения каждого набора линий от центра изображения. "
+"Изменение этого значения существенно меняет узор в пределах того же "
+"измерения."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:44
+msgid ""
+"Multigrid with 5 dimensions and 20 divisions. The offsets from left to right "
+"are: 0.3, 0.1, 0.2 (Star Penrose tiling), 0.3, 0.4 (Sun Penrose Tiling), "
+"0.48."
+msgstr ""
+"Многосеточный метод с 5 измерениями и 20 делениями. Смещения слева направо: "
+"0.3, 0.1, 0.2 (звёздчатая мозаика Penrose), 0.3, 0.4 (солнечная мозаика "
+"Penrose), 0.48."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:45
+msgid "Offset"
+msgstr "Смещение"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:48
+msgid "Lines"
+msgstr "Линии"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:50
+msgid "Line Width"
+msgstr "Толщина линии"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:51
+msgid ""
+"The width of the outlines of the rhombs in image pixels. Due to the way the "
+"rhombs are drawn, there is still a hairfine line visible at 0 px."
+msgstr ""
+"Ширина контуров ромбов в пикселах изображения. Из-за способа отрисовки "
+"ромбов при значении 0 px всё ещё видна тончайшая линия."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:53
+msgid ""
+"This optionally draws lines between the different sides of the shape. This "
+"is typically used to show that a specific tiling has certain matching rules, "
+"but it also gives cool looking results."
+msgstr ""
+"При включении между разными сторонами фигуры проводятся линии. Обычно это "
+"используется, чтобы показать, что конкретная мозаика обладает определёнными "
+"правилами совмещения, но также даёт эффектные результаты."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:55
+msgid "Acute Angle"
+msgstr "Острый угол"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:56
+msgid "Draws an arc between the sides that connect to an acute angle."
+msgstr "Рисует дугу между сторонами, образующими острый угол."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:57
+msgid "Obtuse Angle"
+msgstr "Тупой угол"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:58
+msgid "Draws an arc between the sides that connect to an obtuse angle."
+msgstr "Рисует дугу между сторонами, образующими тупой угол."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:60
+msgid ""
+"Draws two lines crossed between the sides of each rhomb. Particularly "
+"interesting with 0 line width."
+msgstr ""
+"Рисует две пересекающиеся линии между сторонами каждого ромба. Особенно "
+"интересно при нулевой толщине линии."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:61
+msgid "Connector Lines"
+msgstr "Соединительные линии"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:61
+msgid "Cross"
+msgstr "Крест"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:64
+msgid "Colors"
+msgstr "Цвета"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:68
+msgid ".. image:: /images/layers/multigrid-color-examples.png"
+msgstr ".. image:: /images/layers/multigrid-color-examples.png"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:68
+msgid ""
+"Image showing the Star Penrose Tiling with 29 divisions and connector lines "
+"at the acute angles. The complex gradient and the combination of ratio and "
+"index to color the image results in some of the more impressive results that "
+"can be gotten from this fill layer."
+msgstr ""
+"Изображение, показывающее звёздчатую мозаику Penrose с 29 делениями и "
+"соединительными линиями в острых углах. Сложный градиент и сочетание "
+"соотношения с индексом для окрашивания изображения дают одни из самых "
+"впечатляющих результатов, которые можно получить с помощью этого слоя "
+"заливки."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:70
+msgid ""
+"This section controls all the colors, all grouped together because Krita's "
+"color buttons allow drag and dropping colors to one another. You can change "
+"the color for the outlines and the connector lines, and there is a gradient "
+"for coloring the individual rhombs."
+msgstr ""
+"В этом разделе настраиваются все цвета, собранные вместе, поскольку кнопки "
+"цвета Krita позволяют перетаскивать цвета с одной на другую. Можно изменить "
+"цвет контуров и соединительных линий, а также имеется градиент для "
+"окрашивания отдельных ромбов."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:72
+msgid ""
+"The color factors determine which properties of each rhomb is used to "
+"determine its coloring. This value is used as a multiplier, to finally "
+"result in a value that can be used to get the value from the gradient."
+msgstr ""
+"Коэффициенты цвета определяют, какие свойства каждого ромба используются для "
+"определения его окраски. Это значение используется как множитель, в "
+"результате чего получается значение, которое можно использовать для "
+"извлечения значения из градиента."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:74
+msgid "Ratio"
+msgstr "Соотношение"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:75
+msgid ""
+"This colors the rhombs based on their ratio. Thin rhombs have a low ratio, "
+"thick rhombs have a high ratio, and perfect squares have the largest ratio."
+msgstr ""
+"Окрашивает ромбы в зависимости от их соотношения. Тонкие ромбы имеют низкое "
+"соотношение, толстые — высокое, а идеальные квадраты — наибольшее."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:76
+msgid "Intersect"
+msgstr "Пересечение"
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:77
+msgid ""
+"This colors the rhombs based on which intersecting lines resulted in this "
+"rhomb. In effect, this colors the rhomb depending on which side of the "
+"hyperlattice the rhomb is on, as is especially clear when setting the "
+"dimension to 3."
+msgstr ""
+"Окрашивает ромбы в зависимости от того, какие пересекающиеся линии "
+"образовали этот ромб. Фактически ромб окрашивается в зависимости от того, на "
+"какой стороне гиперрешётки он находится, что особенно заметно при установке "
+"размерности 3."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:79
+msgid ""
+"This colors the rhombs based on the index of the intersecting lines from the "
+"center. In effect, rhombs closer to the center will have a lower value, "
+"while rhombs further from the center will have a higher value."
+msgstr ""
+"Окрашивает ромбы в зависимости от индекса пересекающихся линий от центра. "
+"Фактически ромбы ближе к центру имеют меньшее значение, а ромбы дальше от "
+"центра — большее."
+
+#: ../../reference_manual/layers_and_masks/fill_layer_generators/multigrid.rst:84
+msgid "Index"
+msgstr "Индекс"
