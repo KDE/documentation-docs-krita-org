@@ -1,0 +1,483 @@
+# Translation of docs_krita_org_user_manual___soft_proofing into Russian.
+# Copyright (C) licensed under the GNU Free Documentation License 1.3+ unless stated otherwise
+# This file is distributed under the same license as the Krita Manual package.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: docs_krita_org_user_manual___soft_proofing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-21 02:06+0000\n"
+"PO-Revision-Date: 2026-10-10 20:44+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: ../../user_manual/soft_proofing.rst:-1
+msgid "How to use soft proofing in Krita."
+msgstr "Использование мягкой цветопробы в Krita."
+
+#: ../../user_manual/soft_proofing.rst:0
+msgid ".. image:: /images/softproofing/Softproofing_adaptationstate.png"
+msgstr ".. image:: /images/softproofing/Softproofing_adaptationstate.png"
+
+#: ../../user_manual/soft_proofing.rst:11
+msgid "Color"
+msgstr "Цвет"
+
+#: ../../user_manual/soft_proofing.rst:11
+msgid "Softproofing"
+msgstr "Мягкая цветопроба"
+
+#: ../../user_manual/soft_proofing.rst:16
+msgid "Soft Proofing"
+msgstr "Мягкая цветопроба"
+
+#: ../../user_manual/soft_proofing.rst:19
+msgid ""
+"Soft Proofing works only with :ref:`Canvas Graphics Acceleration "
+"<display_settings>` enabled."
+msgstr ""
+"Мягкая цветопроба работает только при включённом параметре :ref:`Графическое "
+"ускорение холста <display_settings>`."
+
+#: ../../user_manual/soft_proofing.rst:21
+msgid ""
+"When we make an image in Krita, and print that out with a printer, the image "
+"tends to look different. The colors are darker, or less dark than expected, "
+"maybe the reds are more aggressive, maybe contrast is lost. For simple "
+"documents, this isn’t much of a problem, but for professional prints, this "
+"can be very sad, as it can change the look and feel of an image drastically."
+msgstr ""
+"При печати изображения, созданного в Krita, оно часто выглядит иначе. Цвета "
+"темнее или светлее ожидаемого, красный может выглядеть более агрессивно, "
+"контрастность теряется. Для простых документов это не проблема, но при "
+"профессиональной печати это может быть критично, так как кардинально меняет "
+"внешний вид изображения."
+
+#: ../../user_manual/soft_proofing.rst:23
+msgid ""
+"The reason this happens is simply because the printer uses a different color "
+"model (CMYK) and it has often access to a lower range of colors (called a "
+"gamut)."
+msgstr ""
+"Причина просто в том, что принтер использует другую цветовую модель (CMYK) и "
+"часто имеет доступ к более узкому диапазону цветов (он называется цветовым "
+"охватом)."
+
+#: ../../user_manual/soft_proofing.rst:25
+msgid ""
+"A naive person would suggest the following solution: do your work within the "
+"CMYK color model! But there are three problems with that:"
+msgstr ""
+"Наивное решение: работать сразу в цветовой модели CMYK! Но тут три проблемы:"
+
+#: ../../user_manual/soft_proofing.rst:27
+msgid ""
+"Painting in a CMYK space doesn’t guarantee that the colors will be the same "
+"on your printer. For each combination of Ink, Paper and Printing device, the "
+"resulting gamut of colors you can use is different, which means that each of "
+"these could have a different profile associated with them."
+msgstr ""
+"Рисование в пространстве CMYK не гарантирует, что цвета совпадут на вашем "
+"принтере. Для каждой комбинации чернил, бумаги и печатающего устройства "
+"доступный цветовой охват различается, поэтому у каждой такой комбинации "
+"может быть свой профиль."
+
+#: ../../user_manual/soft_proofing.rst:28
+msgid ""
+"Furthermore, even if you have the profile and are working in the exact color "
+"space that your printer can output, the CMYK color space is very irregular, "
+"meaning that the color maths isn’t as nice as in other spaces. Blending "
+"modes are different in CMYK as well."
+msgstr ""
+"Кроме того, даже если у вас есть профиль и вы работаете именно в том "
+"цветовом пространстве, которое выводит ваш принтер, пространство CMYK очень "
+"неоднородно, и вычисления с цветом в нём не так удобны, как в других "
+"пространствах. Режимы смешивания в CMYK тоже отличаются."
+
+#: ../../user_manual/soft_proofing.rst:29
+msgid ""
+"Finally, working in that specific CMYK space means that the image is stuck "
+"to that space. If you are preparing your work for different a CMYK profile, "
+"due to the paper, printer or ink being different, you might have a bigger "
+"gamut with more bright colors that you would like to take advantage of."
+msgstr ""
+"Наконец, работа в конкретном пространстве CMYK привязывает изображение к "
+"нему. Если вы готовите работу для другого профиля CMYK (из-за другой бумаги, "
+"принтера или чернил), у него может быть больший цветовой охват с более "
+"яркими цветами, которыми хотелось бы воспользоваться."
+
+#: ../../user_manual/soft_proofing.rst:31
+msgid ""
+"So ideally, you would do the image in RGB, and use all your favorite RGB "
+"tools, and let the computer do a conversion to a given CMYK space on the "
+"fly, just for preview. This is possible, and is what we call ''Soft "
+"Proofing''."
+msgstr ""
+"Поэтому в идеале изображение делают в RGB, пользуясь всеми привычными "
+"инструментами RGB, а компьютер на лету преобразует его в нужное пространство "
+"CMYK — только для просмотра. Это возможно и называется «мягкой цветопробой»."
+
+#: ../../user_manual/soft_proofing.rst:37
+msgid ".. image:: /images/softproofing/Softproofing_regularsoftproof.png"
+msgstr ".. image:: /images/softproofing/Softproofing_regularsoftproof.png"
+
+#: ../../user_manual/soft_proofing.rst:37
+msgid ""
+"On the left, the original, on the right, a view where soft proofing is "
+"turned on. The difference is subtle due to the lack of really bright colors, "
+"but the soft proofed version is slightly less blueish in the whites of the "
+"flowers and slightly less saturated in the greens of the leaves."
+msgstr ""
+"Слева — оригинал, справа — вид с включённой мягкой цветопробой. Разница едва "
+"заметна из-за отсутствия очень ярких цветов, но в версии с цветопробой белые "
+"лепестки цветов чуть менее синеватые, а зелень листьев чуть менее насыщенная."
+
+#: ../../user_manual/soft_proofing.rst:39
+msgid ""
+"You can toggle soft proofing on any image using the :kbd:`Ctrl + Y` "
+"shortcut. Unlike other programs, this is per-view, so that you can look at "
+"your image non-proofed and proofed, side by side. The proofing configuration "
+"can also be set per image, and saved into the ``.kra`` file. Just enable :"
+"guilabel:`Store Softproofing configuration in the image` in the proofing "
+"options in :menuselection:`Image --> Image Properties --> Soft Proofing`. If "
+"the checkbox is unchecked, then Krita will use global settings from :"
+"menuselection:`Settings --> Configure Krita... --> Color Management --> Soft "
+"Proofing` (for more details see :ref:`here "
+"<color_management_settings_softproofing>`)."
+msgstr ""
+"Включать и отключать мягкую цветопробу для любого изображения можно с "
+"помощью :kbd:`Ctrl + Y`. В отличие от других программ, она включается для "
+"каждого представления отдельно, поэтому изображение можно смотреть без "
+"цветопробы и с ней рядом. Параметры цветопробы можно также задать для самого "
+"изображения и сохранить в файле ``.kra``. Для этого включите :guilabel:"
+"`Сохранить параметры мягкой цветопробы в изображении` в параметрах "
+"цветопробы в :menuselection:`Изображение --> Свойства изображения --> Мягкая "
+"цветопроба`. Если флажок снят, Krita использует глобальные параметры из :"
+"menuselection:`Настройка --> Настроить Krita... --> Управление цветом --> "
+"Мягкая цветопроба` (подробнее см. :ref:`здесь "
+"<color_management_settings_softproofing>`)."
+
+#: ../../user_manual/soft_proofing.rst:42
+msgid ""
+"When :guilabel:`Store Softproofing configuration in the image` is enabled, "
+"Krita embeds the entire proofing ICC profile into ``.kra`` file. This ICC "
+"profile can be big for some output devices, especially CMYK ones."
+msgstr ""
+"Если включён параметр :guilabel:`Сохранить параметры мягкой цветопробы в "
+"изображении`, Krita встраивает в файл ``.kra`` весь ICC-профиль цветопробы. "
+"Для некоторых устройств вывода, особенно CMYK, этот ICC-профиль может быть "
+"большим."
+
+#: ../../user_manual/soft_proofing.rst:44
+msgid "There you can set the following options:"
+msgstr "Здесь можно установить следующие параметры:"
+
+#: ../../user_manual/soft_proofing.rst:47
+msgid "Model, Profile"
+msgstr "Модель, профиль"
+
+#: ../../user_manual/soft_proofing.rst:47
+msgid ""
+"Of these, only the profile is really important. This will serve as the "
+"profile you are proofing to. In a professional print workflow, this profile "
+"should be determined by the printing house."
+msgstr ""
+"Из них действительно важен только профиль: именно под него делается "
+"цветопроба. В профессиональной печати профиль должен определять типография."
+
+#: ../../user_manual/soft_proofing.rst:50
+msgid ""
+"Set the intent used to convert the image to the **proofed output device** "
+"profile. It uses the same options as the intents mentioned in the :ref:"
+"`color managed workflow <color_managed_workflow>`. This intent should "
+"coincide with the conversion intent used by your print house before "
+"printing. If your print house does not do any conversion internally, then "
+"you should perform the conversion yourself before sending the file to them."
+msgstr ""
+"Задаёт метод, которым изображение преобразуется в профиль **проверяемого "
+"устройства вывода**. Доступны те же варианты, что и в описании :ref:"
+"`управляемого цветом рабочего процесса <color_managed_workflow>`. Этот метод "
+"должен совпадать с методом преобразования, который типография применяет "
+"перед печатью. Если типография не выполняет никакого преобразования, "
+"выполните его самостоятельно перед отправкой файла."
+
+#: ../../user_manual/soft_proofing.rst:56
+msgid "Rendering Intent"
+msgstr "Обработка цветопередачи"
+
+#: ../../user_manual/soft_proofing.rst:56
+msgid ""
+"Left: Soft proofed image with Absolute Intent Chromatic Adaptation enabled. "
+"Right: Soft proofed image with Absolute Intent Chromatic Adaptation disabled."
+msgstr ""
+"Слева: изображение с цветопробой при включённой хроматической адаптации для "
+"абсолютной обработки цветопередачи. Справа: то же при отключённой "
+"хроматической адаптации для абсолютной обработки цветопередачи."
+
+#: ../../user_manual/soft_proofing.rst:59
+msgid "Black Point Compensation"
+msgstr "Компенсация чёрной точки"
+
+#: ../../user_manual/soft_proofing.rst:59
+msgid ""
+"Enables the black point compensation when converting image to the **proofed "
+"output device** profile. Turning this off will clip the shadow values to the "
+"minimum that either the screen and the proofing profile can handle, while "
+"turning this on will scale the black to the screen-range, showing you the "
+"full range of grays in the image. Like :guilabel:`Conversion Rendering "
+"Intent`, this value should coincide with the value used by the printing "
+"house when performing conversion to the device."
+msgstr ""
+"Включает компенсацию чёрной точки при преобразовании изображения в профиль "
+"**проверяемого устройства вывода**. Если отключить, значения теней будут "
+"обрезаны до минимума, который способны передать экран и профиль цветопробы; "
+"если включить, чёрный будет масштабирован к диапазону экрана, и вы увидите "
+"весь диапазон серых тонов изображения. Как и :guilabel:`Обработка "
+"цветопередачи при преобразовании`, это значение должно совпадать со "
+"значением, которое типография использует при преобразовании в профиль "
+"устройства."
+
+#: ../../user_manual/soft_proofing.rst:62
+msgid ""
+"Defines the way how the proofed (and possibly clipped) space will be shown "
+"on the screen, i.e. what rendering intent and flags will be used to convert "
+"colors from the **proofed output device** profile into the **screen** "
+"profile."
+msgstr ""
+"Определяет, как пространство цветопробы (и, возможно, обрезанное) будет "
+"показано на экране, то есть какая обработка цветопередачи и какие флаги "
+"будут применены для преобразования цветов из профиля **проверяемого "
+"устройства вывода** в профиль **экрана**."
+
+#: ../../user_manual/soft_proofing.rst:64
+msgid ""
+":guilabel:`Use global display settings` instructs Krita to render the "
+"proofed space using the global settings, set in :menuselection:`Settings --> "
+"Configure Krita... --> Color Management --> Display`."
+msgstr ""
+":guilabel:`Использовать общие параметры отображения` указывает Krita "
+"показывать пространство цветопробы с общими параметрами из :menuselection:"
+"`Настройка --> Настроить Krita... --> Управление цветом --> Монитор`."
+
+#: ../../user_manual/soft_proofing.rst:66
+msgid ""
+":guilabel:`Simulate paper white and black` is used to preview the white "
+"point (or \"color tint\") of the paper on the current display. In other "
+"words, if the paper is matte, or metallic, or has some sort of sepia effect, "
+"this will be visible on your screen. Please take it into account that the "
+"viewing conditions' white point will still be adjusted to the one of the "
+"screen. It means that you cannot visually compare the physical print and the "
+"image on the screen, unless all three white points coincide: the one in the "
+"paper profile, the one the display is configured to and the white point of "
+"the light bulb that illuminates your physical print."
+msgstr ""
+":guilabel:`Имитировать чёрно-белую бумагу` служит для предпросмотра белой "
+"точки (или «цветового оттенка») бумаги на текущем экране. Иначе говоря, если "
+"бумага матовая, металлизированная или даёт эффект сепии, это будет видно на "
+"экране. Учтите, что белая точка условий просмотра всё равно подстраивается "
+"под белую точку экрана. Поэтому оттиск и изображение на экране нельзя "
+"сравнивать на глаз, пока не совпадут все три белые точки: из профиля бумаги, "
+"из настроек экрана и белая точка лампы, освещающей оттиск."
+
+#: ../../user_manual/soft_proofing.rst:68
+msgid ""
+":guilabel:`Custom` allows you to configure the final conversion step "
+"manually. You may want to configure the pipeline depending on your goal:"
+msgstr ""
+":guilabel:`Пользовательский` позволяет настроить последний этап "
+"преобразования вручную. В зависимости от цели конвейер можно настроить так:"
+
+#: ../../user_manual/soft_proofing.rst:71
+msgid ":guilabel:`Rendering Intent` --> :guilabel:`Relative Colorimetric`"
+msgstr ""
+":guilabel:`Обработка цветопередачи` --> :guilabel:`Относительная "
+"колориметрическая`"
+
+#: ../../user_manual/soft_proofing.rst:72
+msgid ":guilabel:`Black Point Compensation` --> `Enabled`"
+msgstr ":guilabel:`Компенсация чёрной точки` --> `Включено`"
+
+#: ../../user_manual/soft_proofing.rst:74
+msgid "Preview color gamut (or \"color variety\") of the image"
+msgstr "Просмотр цветового охвата (или «цветового разнообразия») изображения"
+
+#: ../../user_manual/soft_proofing.rst:74
+msgid ""
+"If you want to use :guilabel:`Out of Gamut Warnings`, it is best to use them "
+"in this mode"
+msgstr ""
+"Если вы хотите использовать :guilabel:`Предупреждения о выходе за пределы "
+"цветового охвата`, лучше всего включать их в этом режиме"
+
+#: ../../user_manual/soft_proofing.rst:77
+msgid ":guilabel:`Rendering Intent` --> :guilabel:`Absolute Colorimetric`"
+msgstr ""
+":guilabel:`Обработка цветопередачи` --> :guilabel:`Абсолютная "
+"колориметрическая`"
+
+#: ../../user_manual/soft_proofing.rst:78
+msgid ":guilabel:`Absolute Intent Chromatic Adaptation` --> `Enabled`"
+msgstr ""
+":guilabel:`Хроматическая адаптация для абсолютной обработки цветопередачи` --"
+"> `Включено`"
+
+#: ../../user_manual/soft_proofing.rst:81
+msgid ""
+"If you are using Wayland compositor, Absolute Colorimetric intent may be "
+"**broken** (even in XWayland mode). More than that, it may be broken "
+"differently in different versions."
+msgstr ""
+"Если вы используете композитор Wayland, абсолютная колориметрическая "
+"обработка цветопередачи может работать **некорректно** (даже в режиме "
+"XWayland). Более того, в разных версиях она может ломаться по-разному."
+
+#: ../../user_manual/soft_proofing.rst:83
+msgid ""
+"In KWin 6.4.x and earlier, :guilabel:`Absolute Colorimetric` will behave as "
+"if :guilabel:`Absolute Intent Chromatic Adaptation` is **always disabled**. "
+"It will cause severe color tint if white points "
+"(`sigChromaticAdaptationTag`) of the printer and display profiles do not "
+"coincide."
+msgstr ""
+"В KWin 6.4.x и более ранних :guilabel:`Абсолютная колориметрическая` ведёт "
+"себя так, будто :guilabel:`Хроматическая адаптация для абсолютной обработки "
+"цветопередачи` **всегда отключена**. Это приведёт к сильному цветовому "
+"оттенку, если белые точки (`sigChromaticAdaptationTag`) профилей принтера и "
+"дисплея не совпадают."
+
+#: ../../user_manual/soft_proofing.rst:85
+msgid ""
+"In KWin 6.5.x and later, :guilabel:`Absolute Colorimetric` will behave as "
+"if :guilabel:`Absolute Intent Chromatic Adaptation` is **always enabled**. "
+"Given that you **keep the checkbox set**, the feature will work correctly "
+"and will let you preview contrast degradations, but you will not be able to "
+"get advanced effects of disabling color adaptation to the display space."
+msgstr ""
+"В KWin 6.5.x и более поздних :guilabel:`Абсолютная колориметрическая` ведёт "
+"себя так, будто :guilabel:`Хроматическая адаптация для абсолютной обработки "
+"цветопередачи` **всегда включена**. Если **оставить флажок установленным**, "
+"функция будет работать корректно и позволит увидеть ухудшение контраста, но "
+"получить расширенные эффекты отключения адаптации цвета к пространству "
+"дисплея не получится."
+
+#: ../../user_manual/soft_proofing.rst:87
+msgid "Display Mode"
+msgstr "Режим показа"
+
+#: ../../user_manual/soft_proofing.rst:87
+msgid "Preview contrast degradations caused by the color of the paper"
+msgstr "Просмотр ухудшения контраста из-за цвета бумаги"
+
+#: ../../user_manual/soft_proofing.rst:87
+msgid ""
+"This is a problem of the Wayland protocol specification, the fix is "
+"`discussed here <https://gitlab.freedesktop.org/wayland/wayland-protocols/-/"
+"merge_requests/439>`_."
+msgstr ""
+"Это проблема спецификации протокола Wayland, исправление `обсуждается здесь "
+"<https://gitlab.freedesktop.org/wayland/wayland-protocols/-/"
+"merge_requests/439>`_."
+
+#: ../../user_manual/soft_proofing.rst:90
+msgid "Gamut Warning"
+msgstr "Предупреждение о выходе за пределы цветового охвата"
+
+#: ../../user_manual/soft_proofing.rst:90
+msgid "Set the color of :guilabel:`Out of Gamut Warnings`."
+msgstr ""
+"Задаёт цвет :guilabel:`Предупреждений о выходе за пределы цветового охвата`."
+
+#: ../../user_manual/soft_proofing.rst:92
+msgid ""
+"You can set the defaults that Krita uses in :menuselection:`Settings --> "
+"Configure Krita... --> Color Management --> Soft Proofing`."
+msgstr ""
+"Можно установить параметры по умолчанию, которые Krita использует в :"
+"menuselection:`Настройка --> Настроить Krita... --> Управление цветом --> "
+"Цветопроба`."
+
+#: ../../user_manual/soft_proofing.rst:94
+msgid ""
+"To configure this properly, it's recommended to make a test image to print "
+"(and that is printed by a properly set-up printer) and compare against, and "
+"then approximate in the proofing options how the image looks compared to the "
+"real-life copy you have made."
+msgstr ""
+"Для правильной настройки рекомендуется создать тестовое изображение, "
+"напечатать его (на правильно настроенном принтере), сравнить с оттиском и "
+"затем подобрать в параметрах цветопробы такой вид, чтобы изображение на "
+"экране соответствовало напечатанному."
+
+#: ../../user_manual/soft_proofing.rst:97
+msgid "Out of Gamut Warning"
+msgstr "Предупреждение о выходе за пределы цветового охвата"
+
+#: ../../user_manual/soft_proofing.rst:99
+msgid ""
+"The out of gamut warning, or gamut alarm, is an extra option on top of Soft-"
+"Proofing: It allows you to see which colors are being clipped, by replacing "
+"the resulting color with the set alarm color."
+msgstr ""
+"Предупреждение о выходе за пределы цветового охвата (сигнал цветового "
+"охвата) — дополнительный режим к мягкой цветопробе: он показывает, какие "
+"цвета обрезаются, заменяя получившийся цвет заданным цветом сигнала."
+
+#: ../../user_manual/soft_proofing.rst:101
+msgid ""
+"This can be useful to determine where certain contrasts are being lost, and "
+"to allow you to change it slowly to a less contrasted image."
+msgstr ""
+"Это помогает определить, где теряется контраст, и постепенно изменить "
+"изображение на менее контрастное."
+
+#: ../../user_manual/soft_proofing.rst:107
+msgid ".. image:: /images/softproofing/Softproofing_gamutwarnings.png"
+msgstr ".. image:: /images/softproofing/Softproofing_gamutwarnings.png"
+
+#: ../../user_manual/soft_proofing.rst:107
+msgid ""
+"Left: View with original image, Right: View with soft proofing and gamut "
+"warnings turned on. Krita will save the gamut warning color alongside the "
+"proofing options into the KRA file, so pick a color that you think will "
+"stand out for your current image."
+msgstr ""
+"Слева — исходное изображение, справа — вид с включёнными мягкой цветопробой "
+"и предупреждениями о выходе за пределы цветового охвата. Krita сохраняет "
+"цвет предупреждения вместе с параметрами цветопробы в файле KRA, поэтому "
+"выбирайте цвет, который будет заметен на вашем изображении."
+
+#: ../../user_manual/soft_proofing.rst:109
+msgid ""
+"You can activate Gamut Warnings with the :kbd:`Ctrl + Shift + Y` shortcut, "
+"but it needs soft proofing activated to work fully."
+msgstr ""
+"Предупреждения о выходе за пределы цветового охвата включаются комбинацией :"
+"kbd:`Ctrl + Shift + Y`, но для полноценной работы нужна включённая "
+"цветопроба."
+
+#: ../../user_manual/soft_proofing.rst:112
+msgid ""
+"Soft Proofing doesn’t work properly in floating-point spaces, and attempting "
+"to force it will cause incorrect gamut alarms. It is therefore disabled."
+msgstr ""
+"Мягкая цветопроба неправильно работает в пространствах с плавающей запятой, "
+"а попытка включить её принудительно даст неверные сигналы о выходе за охват. "
+"Поэтому она отключена."
+
+#: ../../user_manual/soft_proofing.rst:115
+msgid ""
+"Gamut Warnings sometimes give odd warnings for linear profiles in the "
+"shadows. This is a bug in LittleCMS, see `here <https://ninedegreesbelow.com/"
+"bug-reports/soft-proofing-problems.html>`_ for more info."
+msgstr ""
+"Предупреждения о выходе за пределы цветового охвата иногда ошибочно "
+"срабатывают для линейных профилей в тенях. Это ошибка в LittleCMS, подробнее "
+"см. `здесь <https://ninedegreesbelow.com/bug-reports/soft-proofing-problems."
+"html>`_."
