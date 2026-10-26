@@ -14,9 +14,9 @@
 Setting up ssh-agent to access Krita repository on KDE Neon
 ===========================================================
 
-1) Make sure you remove all explicit calls to ``ssh-agent`` in your ``.bashrc`` and ``.bash_profile`` files.
+#) Make sure you remove all explicit calls to ``ssh-agent`` in your ``.bashrc`` and ``.bash_profile`` files.
 
-2) Disable ssh support in the GPG Agent service:
+#) Disable ssh support in the GPG Agent service:
 
     1) Comment out line `enable-ssh-support` in `~/.gnupg/gpg-agent.conf`
     
@@ -28,7 +28,24 @@ Setting up ssh-agent to access Krita repository on KDE Neon
             systemctl --user disable gpg-agent-ssh.socket
             systemctl --user mask gpg-agent-ssh.socket
 
-3) Create ssh-agent service. 
+#) Remove explicit set up of `SSH_AUTH_SOCK` in `/etc/profile.d/org.kde.neon.ksshaskpass_auth_sock.sh`. Comment-out the contents of the file so that it looked like that:
+
+    .. code:: bash
+
+        # SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+        # SPDX-FileCopyrightText: 2026 Carlos De Maine <carlosd.kde@gmail.com>
+
+        #  NOTE: Disabled! Will be set by ssh-agent.service!
+
+        # in a wayland seesion the SSH_AUTH_SOCK needs to be set as below
+        # in a X11 session this is set automatically and thus does not need to be done here
+
+        # if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+        #   export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+        # fi
+
+
+#) Create ssh-agent service.
 
     .. code:: bash
 
@@ -51,22 +68,22 @@ Setting up ssh-agent to access Krita repository on KDE Neon
 
     If you want to modify the timeout for your SSH keys, change the ``-t 60m`` flag.
 
-4) Reload the systemd daemon
+#) Reload the systemd daemon
 
     .. code:: bash
 
         systemctl --user daemon-reload
 
-5) Start the service
+#) Start the service
 
     .. code:: bash
 
         systemctl --user start ssh-agent.service
 
-6) Check if everything loaded correctly:
+#) Check if everything loaded correctly:
 
     .. code:: bash
 
         systemctl --user status ssh-agent.service
 
-7) OpenSSH's `agent-launch` uses DBus service to push variables into the user's environment. You may need to reboot the entire system to make sure the environment variable is properly loaded. Check the content of `$SSH_AUTH_SOCK` in your shell and compare it with the values in the status report of the service to verify your changes.
+#) OpenSSH's `agent-launch` uses DBus service to push variables into the user's environment. You may need to reboot the entire system to make sure the environment variable is properly loaded. Check the content of `$SSH_AUTH_SOCK` in your shell and compare it with the values in the status report of the service to verify your changes.
