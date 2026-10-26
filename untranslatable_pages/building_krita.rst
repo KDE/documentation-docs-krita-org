@@ -134,6 +134,7 @@ Set up python environment (you don't need to hand-craft the bat file with the pr
     C:\tools\Python-3.13\python.exe -m venv PythonEnv --upgrade-deps
     PythonEnv\Scripts\activate.bat
     python -m pip install -r krita-deps-management\requirements.txt
+    python -m pip install -r krita-deps-management\ci-utilities\requirements-windows.txt
 
 Getting the dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~
