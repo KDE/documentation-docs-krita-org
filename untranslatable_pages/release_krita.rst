@@ -199,7 +199,11 @@ On the branching-out day
 
     #. (TODO: really needed?) update the version of krita5.xmlgui
     #. update the CMakeLists.txt version
-    #. update the snapcraft.yaml file
+
+        * also update ``KRITA_APK_VERSION_TRANSITIONAL`` version for .apk packages. It should increase with every 
+          version released on Play Market (the version in ``build.gradle`` will be updated automatically using this
+          variable)
+
     #. add a new release into ``org.kde.krita.appdata.xml`` file, the
        section should contain the following elements:
 
@@ -219,8 +223,6 @@ On the branching-out day
         
         * the stable and release branches should NOT have ``<artifacts>`` and ``<bundle>`` sections
 
-
-    #. update Android version (keep in mind that *all* Krita releases on Android are marked as Beta at the moment): packaging/android/apk/build.gradle
     #. When releasing beta-version double-check that you updated to "beta1", not just plain "beta". Only "alpha" versions can be made without a number, because they are built nightly.
 
 3) Update versions in the stable branch (``krita/5.2``) to avoid XMLGUI conflicts
@@ -539,7 +541,7 @@ Make Windows, Linux, macOS and Android packages
 #. If you are doing **Beta_N or RC_N release from a stable branch**, then... **<FIXME>**.
 
 #. If you are doing **any release from a stable branch**, manually update the version to the next one with suffix "prealpha" to 
-   make sure that Krita Plus packages correctly show it to the user. You need to do that in ``CMakeLists.txt`` and ``build.gradle``.
+   make sure that Krita Plus packages correctly show it to the user. You need to do that in ``CMakeLists.txt``.
 
 #. Manually verify that the previous version of Krita AppImage can update to 
    the new one from the GUI. It should use the .zsync file uploaded above.
