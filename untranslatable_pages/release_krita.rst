@@ -230,6 +230,7 @@ On the branching-out day
     #. stable branch is always marked as "prealpha" (without a number in the end)
     #. (TODO: really needed?) update the version of krita.xmlgui; it should be ``$(( $VERSION_IN_RELEASE_BRANCH + 1 ))``
     #. update the CMakeLists.txt version
+        #. Also update ``KRITA_APK_VERSION_TRANSITIONAL`` to be the same as in the release branch.
     #. Copy the ``org.kde.krita.appdata.xml`` file from the release branch. They should be exactly the same.
 
 5) Update versions in the unstable branch (``master``) if necessary
@@ -237,6 +238,7 @@ On the branching-out day
     1. unstable branch is always marked as "prealpha" (without a number in the end)
     2. (TODO: really needed?) update the version of krita.xmlgui; it should be ``$(( $VERSION_IN_STABLE_BRANCH + 1 ))``
     3. update the CMakeLists.txt version
+        #. Keep ``KRITA_APK_VERSION_TRANSITIONAL`` zero to avoid version clashes in the future.
     4. update ``org.kde.krita.appdata.xml`` file
        
        * copy the already added release section from the stable branch
