@@ -639,16 +639,26 @@ do a "fourth-digit" hotfix release. It follows the same pipeline as a normal rel
 
 #) The release branch is reused. I.e. releases "5.1.0" and "5.1.0.1" will be released from the same `release/5.1.0`
    branch. Just a new tag is set.
+
 #) The artifacts for all fourth-digit releases are uploaded into the same folder on https://download.kde.org, 
    e.g. https://download.kde.org/stable/krita/5.1.0/ in our case
+
 #) The release notes page is reused for both releases (e.g. https://krita.org/en/posts/2022/krita-5-1-0-released/ in our case):
+
     * the links are updated to the new version
+
     * a ``.. note::`` clause is added to the top of the release page with the follwoing info:
+    
         * the date when the release was updated
         * the reason for the update
+
 #) The download page links point the **new** release, e.g. "5.1.0.1" in our case
+
 #) The links in ``org.kde.krita.appdata.xml`` in all three branches are updated, "5.1.0" release is **replaced** with "5.1.0.1"
+
 #) A new short post is made announcing this hotfix release and linking the old release notes page with the links
+
 #) (optionally) An announcement mail is sent to the kde-announce-apps list in case the update affects Linux distributions
+
 #) If the old version is "broken enough", the binary artifacts are removed from https://download.kde.org; the tarballs are
    kept in place to satisfy GPL conditions.
